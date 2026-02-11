@@ -1,0 +1,1716 @@
+[
+  {
+    "file": "n8n-workflow-templates\\workflows\\1498_Stopanderror_Limit_Sync_Webhook.json",
+    "name": "Notion to Clockify Sync Template",
+    "categories": [],
+    "commercial": true,
+    "integrations": [
+      "webhook",
+      "set",
+      "scheduleTrigger",
+      "clockify",
+      "compareDatasets",
+      "stopAndError",
+      "noOp",
+      "notion",
+      "if",
+      "merge",
+      "httpRequest",
+      "limit",
+      "stickyNote"
+    ],
+    "nodeCount": 68,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\0392_Stopanderror_GitHub_Automate_Webhook.json",
+    "name": "[n8n] Advanced URL Parsing and Shortening Workflow - Switchy.io Integration",
+    "categories": [],
+    "commercial": true,
+    "integrations": [
+      "splitInBatches",
+      "stickyNote",
+      "httpRequest",
+      "if",
+      "html",
+      "set",
+      "convertToFile",
+      "aggregate",
+      "github",
+      "stopAndError",
+      "formTrigger",
+      "respondToWebhook"
+    ],
+    "nodeCount": 56,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1832_Code_Webhook_Automation_Webhook.json",
+    "name": "PUQ Docker NextCloud deploy",
+    "categories": [],
+    "commercial": true,
+    "integrations": [
+      "if",
+      "set",
+      "webhook",
+      "respondToWebhook",
+      "switch",
+      "stickyNote",
+      "code",
+      "httpRequest",
+      "ssh"
+    ],
+    "nodeCount": 44,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1591_Splitout_Code_Automate_Webhook.json",
+    "name": "n8n Subworkflow Dependency Graph & Auto-Tagging",
+    "categories": [],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "n8n",
+      "code",
+      "filter",
+      "scheduleTrigger",
+      "n8nTrigger",
+      "set",
+      "splitInBatches",
+      "if",
+      "splitOut",
+      "merge",
+      "aggregate",
+      "quickChart",
+      "stickyNote",
+      "webhook",
+      "respondToWebhook"
+    ],
+    "nodeCount": 40,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1966_Code_Webhook_Automation_Webhook.json",
+    "name": "puq-docker-immich-deploy",
+    "categories": [],
+    "commercial": true,
+    "integrations": [
+      "if",
+      "set",
+      "webhook",
+      "respondToWebhook",
+      "code",
+      "ssh",
+      "switch",
+      "stickyNote"
+    ],
+    "nodeCount": 35,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Wait\\1955_Wait_Splitout_Automation_Scheduled.json",
+    "name": "HDW Lead Geländewagen",
+    "categories": [
+      "Sales",
+      "Marketing",
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "noOp",
+      "googleSheets",
+      "splitInBatches",
+      "stickyNote",
+      "hdwLinkedin",
+      "aggregate",
+      "splitOut",
+      "hdwWebParserTool",
+      "sort",
+      "if",
+      "limit",
+      "hdwLinkedinManagement",
+      "scheduleTrigger",
+      "manualTrigger",
+      "code",
+      "wait",
+      "stopAndError"
+    ],
+    "nodeCount": 93,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1955_Wait_Splitout_Automation_Scheduled.json",
+    "name": "HDW Lead Geländewagen",
+    "categories": [
+      "Sales",
+      "Marketing",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "chatTrigger",
+      "lmChatOpenAi",
+      "memoryBufferWindow",
+      "outputParserStructured",
+      "googleSheets",
+      "splitInBatches",
+      "stickyNote",
+      "hdwLinkedin",
+      "aggregate",
+      "splitOut",
+      "hdwWebParserTool",
+      "openAi",
+      "agent",
+      "sort",
+      "if",
+      "limit",
+      "hdwLinkedinManagement",
+      "scheduleTrigger",
+      "manualTrigger",
+      "code",
+      "wait"
+    ],
+    "nodeCount": 92,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1146_Splitout_Code_Automation_Webhook.json",
+    "name": "LinkedIn Leads Scraping & Enrichment (Main)",
+    "categories": [
+      "Sales",
+      "Marketing",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "formTrigger",
+      "splitOut",
+      "googleSheetsTrigger",
+      "openAi",
+      "stickyNote",
+      "set",
+      "googleSheets",
+      "scheduleTrigger",
+      "httpRequest",
+      "code",
+      "merge",
+      "if"
+    ],
+    "nodeCount": 66,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Splitout\\1146_Splitout_Code_Automation_Webhook.json",
+    "name": "LinkedIn Leads Scraping & Enrichment (Main)",
+    "categories": [
+      "Sales",
+      "Marketing",
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "formTrigger",
+      "splitOut",
+      "googleSheetsTrigger",
+      "noOp",
+      "stickyNote",
+      "set",
+      "googleSheets",
+      "scheduleTrigger",
+      "httpRequest",
+      "code",
+      "merge",
+      "if"
+    ],
+    "nodeCount": 66,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "awesome-n8n-templates\\OpenAI_and_LLMs\\🤖🧑_💻 AI Agent for Top n8n Creators Leaderboard Reporting.json",
+    "name": "🤖🧑‍💻 AI Agent for Top n8n Creators Leaderboard Reporting",
+    "categories": [
+      "Sales",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "set",
+      "aggregate",
+      "lmChatOpenAi",
+      "executeWorkflowTrigger",
+      "toolWorkflow",
+      "convertToFile",
+      "readWriteFile",
+      "stickyNote",
+      "merge",
+      "splitOut",
+      "sort",
+      "scheduleTrigger",
+      "limit",
+      "googleDrive",
+      "markdown",
+      "agent",
+      "lmChatGoogleGemini",
+      "chainLlm",
+      "gmail",
+      "telegram"
+    ],
+    "nodeCount": 49,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1113_Telegram_Splitout_Automation_Scheduled.json",
+    "name": "🤖🧑‍💻 AI Agent  for Top n8n Creators Leaderboard Reporting",
+    "categories": [
+      "Sales",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "set",
+      "aggregate",
+      "lmChatOpenAi",
+      "executeWorkflowTrigger",
+      "toolWorkflow",
+      "convertToFile",
+      "readWriteFile",
+      "stickyNote",
+      "merge",
+      "splitOut",
+      "sort",
+      "scheduleTrigger",
+      "limit",
+      "googleDrive",
+      "markdown",
+      "agent",
+      "lmChatGoogleGemini",
+      "chainLlm",
+      "gmail",
+      "telegram"
+    ],
+    "nodeCount": 49,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\2052_Telegram_Splitout_Automation_Scheduled.json",
+    "name": "🤖🧑‍💻 AI Agent for Top n8n Creators Leaderboard Reporting",
+    "categories": [
+      "Sales",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "set",
+      "aggregate",
+      "lmChatOpenAi",
+      "executeWorkflowTrigger",
+      "toolWorkflow",
+      "convertToFile",
+      "readWriteFile",
+      "stickyNote",
+      "merge",
+      "splitOut",
+      "sort",
+      "scheduleTrigger",
+      "limit",
+      "googleDrive",
+      "markdown",
+      "agent",
+      "lmChatGoogleGemini",
+      "chainLlm",
+      "gmail",
+      "telegram"
+    ],
+    "nodeCount": 49,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Telegram\\1113_Telegram_Splitout_Automation_Scheduled.json",
+    "name": "🤖🧑‍💻 AI Agent  for Top n8n Creators Leaderboard Reporting",
+    "categories": [
+      "Sales",
+      "E-commerce",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "set",
+      "aggregate",
+      "noOp",
+      "executeWorkflowTrigger",
+      "convertToFile",
+      "readWriteFile",
+      "stickyNote",
+      "merge",
+      "splitOut",
+      "sort",
+      "scheduleTrigger",
+      "limit",
+      "googleDrive",
+      "markdown",
+      "gmail",
+      "telegram"
+    ],
+    "nodeCount": 49,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Bitly\\0910_Bitly_Datetime_Update_Webhook.json",
+    "name": "Agent Workflow",
+    "categories": [
+      "Marketing",
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "noOp",
+      "bitly",
+      "dropbox",
+      "gmail",
+      "googleCalendar",
+      "googleDocs",
+      "googleSheets",
+      "pushbullet",
+      "youTube",
+      "elevenLabs",
+      "reddit",
+      "gmailTrigger",
+      "googleSheetsTrigger",
+      "stickyNote",
+      "postgresTool",
+      "redisTool",
+      "emailSendTool",
+      "gmailTool",
+      "googleCalendarTool",
+      "googleDocsTool",
+      "googleSheetsTool",
+      "twitter",
+      "calendlyTrigger",
+      "emailReadImap",
+      "googleDriveTrigger",
+      "gumroadTrigger",
+      "localFileTrigger",
+      "formTrigger",
+      "scheduleTrigger",
+      "webhook",
+      "manualTrigger",
+      "executeWorkflowTrigger",
+      "code",
+      "dateTime",
+      "set",
+      "filter",
+      "limit",
+      "removeDuplicates",
+      "splitOut",
+      "aggregate",
+      "merge",
+      "summarize",
+      "convertToFile",
+      "extractFromFile",
+      "html",
+      "markdown",
+      "renameKeys",
+      "sort",
+      "if",
+      "splitInBatches",
+      "executeWorkflow",
+      "wait",
+      "executeCommand",
+      "httpRequest",
+      "executionData",
+      "ftp",
+      "respondToWebhook",
+      "rssFeedRead",
+      "aiTransform"
+    ],
+    "nodeCount": 113,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1342_Linkedin_Telegram_Automate_Webhook.json",
+    "name": "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition",
+    "categories": [
+      "Marketing",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "chatTrigger",
+      "stickyNote",
+      "toolWorkflow",
+      "memoryBufferWindow",
+      "executeWorkflowTrigger",
+      "httpRequest",
+      "gmail",
+      "googleDocs",
+      "lmChatOpenAi",
+      "twitter",
+      "facebookGraphApi",
+      "linkedIn",
+      "set",
+      "code",
+      "agent",
+      "merge",
+      "googleDrive",
+      "telegram",
+      "switch",
+      "if",
+      "extractFromFile",
+      "noOp",
+      "toolSerpApi"
+    ],
+    "nodeCount": 100,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Linkedin\\1342_Linkedin_Telegram_Automate_Webhook.json",
+    "name": "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition",
+    "categories": [
+      "Marketing",
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "noOp",
+      "stickyNote",
+      "executeWorkflowTrigger",
+      "httpRequest",
+      "gmail",
+      "googleDocs",
+      "twitter",
+      "facebookGraphApi",
+      "linkedIn",
+      "set",
+      "code",
+      "merge",
+      "googleDrive",
+      "telegram",
+      "switch",
+      "if",
+      "extractFromFile"
+    ],
+    "nodeCount": 100,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1807_Linkedin_Googledocs_Automate_Webhook.json",
+    "name": "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition",
+    "categories": [
+      "Marketing",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "chatTrigger",
+      "stickyNote",
+      "toolWorkflow",
+      "memoryBufferWindow",
+      "executeWorkflowTrigger",
+      "httpRequest",
+      "gmail",
+      "googleDocs",
+      "lmChatOpenAi",
+      "twitter",
+      "facebookGraphApi",
+      "linkedIn",
+      "set",
+      "code",
+      "agent"
+    ],
+    "nodeCount": 56,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Linkedin\\1807_Linkedin_Googledocs_Automate_Webhook.json",
+    "name": "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition",
+    "categories": [
+      "Marketing",
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "noOp",
+      "stickyNote",
+      "executeWorkflowTrigger",
+      "httpRequest",
+      "gmail",
+      "googleDocs",
+      "twitter",
+      "facebookGraphApi",
+      "linkedIn",
+      "set",
+      "code"
+    ],
+    "nodeCount": 56,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1905_Telegram_Googleanalytics_Automation_Webhook.json",
+    "name": "Online Marketing Weekly Report",
+    "categories": [
+      "Marketing",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "scheduleTrigger",
+      "lmChatOpenAi",
+      "toolWorkflow",
+      "executeWorkflowTrigger",
+      "toolCalculator",
+      "stickyNote",
+      "googleAnalytics",
+      "code",
+      "set",
+      "summarize",
+      "httpRequest",
+      "facebookGraphApi",
+      "openAi",
+      "emailSend",
+      "agent",
+      "telegram"
+    ],
+    "nodeCount": 51,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Telegram\\1905_Telegram_Googleanalytics_Automation_Webhook.json",
+    "name": "Online Marketing Weekly Report",
+    "categories": [
+      "Marketing",
+      "E-commerce",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "scheduleTrigger",
+      "noOp",
+      "executeWorkflowTrigger",
+      "stickyNote",
+      "googleAnalytics",
+      "code",
+      "set",
+      "summarize",
+      "httpRequest",
+      "facebookGraphApi",
+      "emailSend",
+      "telegram"
+    ],
+    "nodeCount": 51,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "awesome-n8n-templates\\AI_Research_RAG_and_Data_Analysis\\Hacker News to Video Content.json",
+    "name": "Hacker News to Video Template - AlexK1919",
+    "categories": [
+      "Marketing",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "hackerNews",
+      "splitInBatches",
+      "lmChatOpenAi",
+      "toolHttpRequest",
+      "outputParserStructured",
+      "s3",
+      "set",
+      "httpRequest",
+      "wait",
+      "stickyNote",
+      "if",
+      "limit",
+      "openAi",
+      "agent",
+      "dropbox",
+      "googleDrive",
+      "microsoftOneDrive",
+      "youTube",
+      "twitter",
+      "linkedIn"
+    ],
+    "nodeCount": 48,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Webhook\\1897_Webhook_Filter_Sync_Webhook.json",
+    "name": "Realtime Notion Todoist 2-way Sync Template",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "notion",
+      "code",
+      "form",
+      "if",
+      "crypto",
+      "webhook",
+      "respondToWebhook",
+      "formTrigger",
+      "todoist",
+      "compareDatasets",
+      "splitInBatches",
+      "set",
+      "redis",
+      "filter",
+      "aggregate",
+      "scheduleTrigger",
+      "merge",
+      "html",
+      "gmail",
+      "stickyNote",
+      "executeWorkflowTrigger",
+      "noOp",
+      "switch",
+      "executionData",
+      "executeWorkflow",
+      "splitOut",
+      "stopAndError",
+      "wait"
+    ],
+    "nodeCount": 246,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Webhook\\0829_Webhook_Code_Create_Webhook.json",
+    "name": "Set Workflow",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "set",
+      "itemLists",
+      "code",
+      "if",
+      "respondToWebhook",
+      "stickyNote",
+      "webhook",
+      "googleCalendar",
+      "airtable"
+    ],
+    "nodeCount": 92,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Wait\\0668_Wait_Splitout_Create_Webhook.json",
+    "name": "Manualtrigger Workflow",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "httpRequest",
+      "splitOut",
+      "noOp",
+      "set",
+      "executeWorkflowTrigger",
+      "executionData",
+      "switch",
+      "filter",
+      "splitInBatches",
+      "wait",
+      "removeDuplicates",
+      "executeWorkflow",
+      "if",
+      "aggregate",
+      "code",
+      "googleSheets",
+      "googleDrive",
+      "stickyNote"
+    ],
+    "nodeCount": 88,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Wait\\1293_Wait_Splitout_Automation_Webhook.json",
+    "name": "Manualtrigger Workflow",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "httpRequest",
+      "splitOut",
+      "noOp",
+      "set",
+      "executeWorkflowTrigger",
+      "executionData",
+      "switch",
+      "filter",
+      "splitInBatches",
+      "wait",
+      "removeDuplicates",
+      "executeWorkflow",
+      "if",
+      "aggregate",
+      "code",
+      "googleSheets",
+      "googleDrive",
+      "stickyNote"
+    ],
+    "nodeCount": 88,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Stopanderror\\0719_Stopanderror_Splitout_Create_Webhook.json",
+    "name": "Outputparserstructured Workflow",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "noOp",
+      "set",
+      "formTrigger",
+      "splitOut",
+      "splitInBatches",
+      "form",
+      "executeWorkflowTrigger",
+      "stickyNote",
+      "executeWorkflow",
+      "executionData",
+      "switch",
+      "notion",
+      "if",
+      "markdown",
+      "httpRequest",
+      "filter",
+      "merge",
+      "code",
+      "aggregate",
+      "stopAndError"
+    ],
+    "nodeCount": 85,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Limit\\0971_Limit_Splitout_Automation_Webhook.json",
+    "name": "⚡AI-Powered YouTube Playlist & Video Summarization and Analysis v2",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "noOp",
+      "splitOut",
+      "summarize",
+      "limit",
+      "merge",
+      "set",
+      "httpRequest",
+      "stickyNote",
+      "youtubeTranscripter",
+      "redis",
+      "switch",
+      "code",
+      "if"
+    ],
+    "nodeCount": 73,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Stopanderror\\1498_Stopanderror_Limit_Sync_Webhook.json",
+    "name": "Notion to Clockify Sync Template",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "webhook",
+      "set",
+      "scheduleTrigger",
+      "clockify",
+      "compareDatasets",
+      "stopAndError",
+      "noOp",
+      "notion",
+      "if",
+      "merge",
+      "httpRequest",
+      "limit",
+      "stickyNote"
+    ],
+    "nodeCount": 68,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflows\\workflows\\Wait\\1639_Wait_Webhook_Automation_Webhook.json",
+    "name": "Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy",
+    "categories": [
+      "E-commerce",
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "merge",
+      "noOp",
+      "googleDrive",
+      "stickyNote",
+      "extractFromFile",
+      "set",
+      "webhook",
+      "httpRequest",
+      "filter",
+      "notion",
+      "wait",
+      "formTrigger",
+      "googleSheets",
+      "notionTool"
+    ],
+    "nodeCount": 67,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\0931_Telegram_Splitout_Monitor_Scheduled.json",
+    "name": "N8N Financial Tracker Telegram Invoices to Notion with AI Summaries & Reports",
+    "categories": [
+      "SaaS",
+      "AI Automation",
+      "Finance",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "lmChatGoogleGemini",
+      "chainLlm",
+      "stickyNote",
+      "scheduleTrigger",
+      "notion",
+      "summarize",
+      "quickChart",
+      "telegram",
+      "code",
+      "telegramTrigger",
+      "editImage",
+      "outputParserStructured",
+      "splitOut"
+    ],
+    "nodeCount": 28,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1765_Code_Filter_Process_Triggered.json",
+    "name": "Colombian Invoices Processing",
+    "categories": [
+      "SaaS",
+      "AI Automation",
+      "Finance",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "splitInBatches",
+      "lmChatOpenAi",
+      "toolCalculator",
+      "outputParserStructured",
+      "gmailTrigger",
+      "code",
+      "filter",
+      "compression",
+      "noOp",
+      "switch",
+      "extractFromFile",
+      "xml",
+      "merge",
+      "aggregate",
+      "agent",
+      "googleDrive",
+      "googleSheets",
+      "stickyNote"
+    ],
+    "nodeCount": 23,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1503_Manual_HTTP_Export_Webhook.json",
+    "name": "Export Zammad Objects Users, Roles, Groups and Organizations to Excel",
+    "categories": [
+      "SaaS"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "set",
+      "zammad",
+      "httpRequest",
+      "convertToFile",
+      "if"
+    ],
+    "nodeCount": 18,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1531_Splitout_Comparedatasets_Sync_Webhook.json",
+    "name": "Entra User to Zammad User Sync",
+    "categories": [
+      "SaaS"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "stickyNote",
+      "httpRequest",
+      "splitOut",
+      "if",
+      "set",
+      "zammad",
+      "merge",
+      "compareDatasets"
+    ],
+    "nodeCount": 17,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1295_Stopanderror_Webhook_Automation_Webhook.json",
+    "name": "Auth0 User Login",
+    "categories": [
+      "SaaS",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "if",
+      "stopAndError",
+      "respondToWebhook",
+      "stickyNote",
+      "set",
+      "webhook"
+    ],
+    "nodeCount": 16,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1889_Splitout_Comparedatasets_Sync_Webhook.json",
+    "name": "Entra Contacts to Zammad User Sync",
+    "categories": [
+      "SaaS"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "stickyNote",
+      "set",
+      "zammad",
+      "merge",
+      "compareDatasets",
+      "httpRequest",
+      "splitOut",
+      "if"
+    ],
+    "nodeCount": 14,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\Finance_Accounting\\unpaid_invoice_reminder.json",
+    "name": "Unpaid Invoice Reminder",
+    "categories": [
+      "SaaS",
+      "AI Automation",
+      "Finance",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStoreWeaviate",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatOpenAi",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\Misc\\onboarding_checklist_slack.json",
+    "name": "Onboarding Checklist Slack",
+    "categories": [
+      "SaaS",
+      "AI Automation",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsOpenAi",
+      "vectorStoreSupabase",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1897_Webhook_Filter_Sync_Webhook.json",
+    "name": "Realtime Notion Todoist 2-way Sync Template",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "notion",
+      "code",
+      "form",
+      "if",
+      "crypto",
+      "webhook",
+      "respondToWebhook",
+      "formTrigger",
+      "todoist",
+      "compareDatasets",
+      "splitInBatches",
+      "set",
+      "redis",
+      "filter",
+      "aggregate",
+      "scheduleTrigger",
+      "merge",
+      "html",
+      "gmail",
+      "stickyNote",
+      "executeWorkflowTrigger",
+      "noOp",
+      "switch",
+      "executionData",
+      "executeWorkflow",
+      "splitOut",
+      "stopAndError",
+      "wait"
+    ],
+    "nodeCount": 246,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1639_Wait_Webhook_Automation_Webhook.json",
+    "name": "Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "merge",
+      "outputParserStructured",
+      "chainLlm",
+      "googleDrive",
+      "stickyNote",
+      "extractFromFile",
+      "chainSummarization",
+      "informationExtractor",
+      "set",
+      "webhook",
+      "httpRequest",
+      "filter",
+      "agent",
+      "notion",
+      "wait",
+      "formTrigger",
+      "googleSheets",
+      "lmChatGoogleGemini",
+      "notionTool"
+    ],
+    "nodeCount": 67,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "awesome-n8n-templates\\AI_Research_RAG_and_Data_Analysis\\Ultimate Scraper Workflow for n8n.json",
+    "name": "Selenium Ultimate Scraper Workflow",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "html",
+      "lmChatOpenAi",
+      "httpRequest",
+      "if",
+      "limit",
+      "respondToWebhook",
+      "code",
+      "informationExtractor",
+      "convertToFile",
+      "stickyNote",
+      "set",
+      "openAi",
+      "webhook"
+    ],
+    "nodeCount": 63,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1711_Limit_Code_Automate_Webhook.json",
+    "name": "Selenium Ultimate Scraper Workflow",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "html",
+      "lmChatOpenAi",
+      "httpRequest",
+      "if",
+      "limit",
+      "respondToWebhook",
+      "code",
+      "informationExtractor",
+      "convertToFile",
+      "stickyNote",
+      "set",
+      "openAi",
+      "webhook"
+    ],
+    "nodeCount": 63,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1900_Limit_Code_Automate_Webhook.json",
+    "name": "Selenium Ultimate Scraper Workflow",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "html",
+      "lmChatOpenAi",
+      "httpRequest",
+      "if",
+      "limit",
+      "respondToWebhook",
+      "code",
+      "informationExtractor",
+      "convertToFile",
+      "stickyNote",
+      "set",
+      "openAi",
+      "webhook"
+    ],
+    "nodeCount": 63,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "awesome-n8n-templates\\OpenAI_and_LLMs\\📚 Auto-generate documentation for n8n workflows with GPT and Docsify.json",
+    "name": "Docsify example",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "set",
+      "convertToFile",
+      "if",
+      "extractFromFile",
+      "html",
+      "sort",
+      "switch",
+      "readWriteFile",
+      "respondToWebhook",
+      "n8n",
+      "chainLlm",
+      "lmChatOpenAi",
+      "outputParserStructured",
+      "outputParserAutofixing",
+      "noOp",
+      "merge",
+      "executeCommand",
+      "code",
+      "webhook",
+      "stickyNote"
+    ],
+    "nodeCount": 60,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1726_Code_Webhook_Automation_Webhook.json",
+    "name": "Docsify example",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "set",
+      "convertToFile",
+      "if",
+      "extractFromFile",
+      "html",
+      "sort",
+      "switch",
+      "readWriteFile",
+      "respondToWebhook",
+      "n8n",
+      "chainLlm",
+      "lmChatOpenAi",
+      "outputParserStructured",
+      "outputParserAutofixing",
+      "noOp",
+      "merge",
+      "executeCommand",
+      "code",
+      "webhook",
+      "stickyNote"
+    ],
+    "nodeCount": 60,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\2046_Code_Webhook_Automation_Webhook.json",
+    "name": "Docsify example",
+    "categories": [
+      "AI Automation"
+    ],
+    "commercial": true,
+    "integrations": [
+      "set",
+      "convertToFile",
+      "if",
+      "extractFromFile",
+      "html",
+      "sort",
+      "switch",
+      "readWriteFile",
+      "respondToWebhook",
+      "n8n",
+      "chainLlm",
+      "lmChatOpenAi",
+      "outputParserStructured",
+      "outputParserAutofixing",
+      "noOp",
+      "merge",
+      "executeCommand",
+      "code",
+      "webhook",
+      "stickyNote"
+    ],
+    "nodeCount": 60,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\AI_ML\\customer_sentiment_analysis.json",
+    "name": "Customer Sentiment Analysis",
+    "categories": [
+      "Customer Support",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStorePinecone",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\AI_ML\\ticket_urgency_classification.json",
+    "name": "Ticket Urgency Classification",
+    "categories": [
+      "Customer Support",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStorePinecone",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\Email_Automation\\auto_reply_to_faqs.json",
+    "name": "Auto Reply to FAQs",
+    "categories": [
+      "Customer Support",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStorePinecone",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1986_Stickynote_Jira_Create_Webhook.json",
+    "name": "Create_Unique_Jira_tickets_from_Splunk_alerts",
+    "categories": [
+      "Customer Support",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "webhook",
+      "jira",
+      "set",
+      "if",
+      "stickyNote"
+    ],
+    "nodeCount": 11,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1933_Redis_Code_Create_Webhook.json",
+    "name": "New Ticket Alerts to Teams",
+    "categories": [
+      "Customer Support",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "scheduleTrigger",
+      "code",
+      "redis",
+      "merge",
+      "httpRequest",
+      "microsoftTeams"
+    ],
+    "nodeCount": 8,
+    "complexity": "simple",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1908_Form_Asana_Automate_Triggered.json",
+    "name": "Automate Your Customer Service With WhatsApp Business Cloud & Asana",
+    "categories": [
+      "Customer Support"
+    ],
+    "commercial": true,
+    "integrations": [
+      "formTrigger",
+      "whatsApp",
+      "stickyNote",
+      "asana"
+    ],
+    "nodeCount": 7,
+    "complexity": "simple",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\0075_Manual_Noop_Update_Triggered.json",
+    "name": "Get all the contacts from GetResponse and update them",
+    "categories": [
+      "Customer Support"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "getResponse",
+      "if",
+      "noOp"
+    ],
+    "nodeCount": 5,
+    "complexity": "simple",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\0568_Manual_Zendesk_Automation_Scheduled.json",
+    "name": "Zendesk-to-slack",
+    "categories": [
+      "Customer Support",
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "manualTrigger",
+      "cron",
+      "function",
+      "slack",
+      "zendesk"
+    ],
+    "nodeCount": 5,
+    "complexity": "simple",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1494_Microsofttodo_Webhook_Automation_Webhook.json",
+    "name": "MiniBear Webhook",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "webhook",
+      "httpRequest",
+      "stickyNote",
+      "switch",
+      "lmChatOpenRouter",
+      "agent",
+      "microsoftTeams",
+      "microsoftToDo",
+      "if",
+      "microsoftOneDrive",
+      "outputParserStructured"
+    ],
+    "nodeCount": 45,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1924_Code_Webhook_Export_Webhook.json",
+    "name": "Line Save File to Google Drive and Log File's URL",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "googleSheets",
+      "googleDrive",
+      "code",
+      "merge",
+      "if",
+      "httpRequest",
+      "webhook",
+      "stickyNote"
+    ],
+    "nodeCount": 27,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1107_HTTP_GitHub_Automation_Webhook.json",
+    "name": "Dashboard",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "cron",
+      "set",
+      "httpRequest",
+      "github",
+      "function"
+    ],
+    "nodeCount": 24,
+    "complexity": "complex",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1751_Filter_Schedule_Automation_Scheduled.json",
+    "name": "Weekly_Shodan_Query___Report_Accidents__no_function_node_",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "httpRequest",
+      "itemLists",
+      "filter",
+      "set",
+      "html",
+      "markdown",
+      "splitInBatches",
+      "stickyNote",
+      "scheduleTrigger",
+      "theHive"
+    ],
+    "nodeCount": 15,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-workflow-templates\\workflows\\1958_Code_Slack_Send_Triggered.json",
+    "name": "Send Slack message from Webflow form submission",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "if",
+      "slack",
+      "set",
+      "webflowTrigger",
+      "code",
+      "stickyNote"
+    ],
+    "nodeCount": 13,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\Government_NGO\\public_form_auto_triage.json",
+    "name": "Public Form Auto Triage",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStoreSupabase",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\Misc\\blog_comment_discord.json",
+    "name": "Blog Comment Discord",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStoreSupabase",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  },
+  {
+    "file": "n8n-free-templates\\Misc\\disaster_api_sms.json",
+    "name": "Disaster API SMS",
+    "categories": [
+      "Operations"
+    ],
+    "commercial": true,
+    "integrations": [
+      "stickyNote",
+      "webhook",
+      "textSplitterCharacterTextSplitter",
+      "embeddingsCohere",
+      "vectorStoreSupabase",
+      "toolVectorStore",
+      "memoryBufferWindow",
+      "lmChatAnthropic",
+      "agent",
+      "googleSheets",
+      "slack"
+    ],
+    "nodeCount": 12,
+    "complexity": "medium",
+    "trigger": "unknown"
+  }
+]

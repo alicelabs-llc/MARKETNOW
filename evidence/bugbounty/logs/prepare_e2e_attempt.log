@@ -1,0 +1,4 @@
+2026-02-26 21:02 GMT-5
+Command: bash -lc "cd evoting-e2e-dev/end-to-end/external && printf '1\n\n' | ./prepare-e2e.sh"
+Result: ERROR Missing build.tar.gz
+Exit code: 1

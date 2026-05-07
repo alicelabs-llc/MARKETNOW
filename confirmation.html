@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Compra Exitosa! - AI Profit Army</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .confirmation-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 50px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .confirmation-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            animation: bounce 1s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+        
+        .confirmation-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .order-details {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .next-steps {
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(114, 9, 183, 0.1) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .step-content p {
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .action-button {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .action-button.primary {
+            background: linear-gradient(135deg, #4361ee 0%, #3a56d4 100%);
+            color: white;
+        }
+        
+        .action-button.secondary {
+            background: var(--light);
+            color: var(--dark);
+            border: 2px solid var(--light-gray);
+        }
+        
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .email-notice {
+            background: linear-gradient(135deg, rgba(247, 37, 133, 0.1) 0%, rgba(114, 9, 183, 0.1) 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 20px 0;
+        }
+        
+        .support-info {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--light-gray);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                🤖 <span>AI Profit Army</span>
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#precios">Precios</a>
+                <a href="index.html#demo">Demo</a>
+                <a href="index.html#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="confirmation-container">
+            <div class="confirmation-icon">🎉</div>
+            
+            <h1 class="confirmation-title">¡Felicidades! Tu Compra Fue Exitosa</h1>
+            
+            <p class="confirmation-subtitle">
+                Bienvenido a AI Profit Army. Estás a punto de automatizar tu negocio y multiplicar tus ganancias. 
+                Tu implementación comenzará en menos de <strong>24 horas</strong>.
+            </p>
+            
+            <div class="order-details">
+                <h3 style="margin-bottom: 20px; color: var(--dark);">Detalles de tu Orden</h3>
+                
+                <div class="detail-row">
+                    <span>Número de Orden:</span>
+                    <span><strong>APA-<span id="order-number">20260218-001</span></strong></span>
+                </div>
+                
+                <div class="detail-row">
+                    <span>Plan Contratado:</span>
+                    <span><strong id="plan-name">Plan Profesional</strong></span>
+                </div>
+                
+                <div class="detail-row">
+                    <span>Fecha de Compra:</span>
+                    <span><strong id="order-date">18 de Febrero, 2026</strong></span>
+                </div>
+                
+                <div class="detail-row">
+                    <span>Método de Pago:</span>
+                    <span><strong id="payment-method">Tarjeta de Crédito</strong></span>
+                </div>
+                
+                <div class="detail-row">
+                    <span>Total Pagado:</span>
+                    <span><strong style="color: var(--primary); font-size: 1.2rem;">$<span id="order-total">649.00</span></strong></span>
+                </div>
+                
+                <div class="detail-row">
+                    <span>Estado:</span>
+                    <span><strong style="color: var(--success);">✅ PAGADO - EN PROCESAMIENTO</strong></span>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3 style="margin-bottom: 25px; color: var(--dark);">📋 Próximos Pasos</h3>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Recepción de Email de Confirmación</h4>
+                        <p>En los próximos 5 minutos recibirás un email con todos los detalles de tu compra y acceso a nuestra plataforma.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Cuestionario de Implementación</h4>
+                        <p>Te enviaremos un breve cuestionario para personalizar tus workflows según tus necesidades específicas.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Reunión de Kick-off</h4>
+                        <p>Agendaremos una videollamada de 30 minutos para alinear expectativas y definir el plan de implementación.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Implementación y Entrenamiento</h4>
+                        <p>Nuestro equipo configurará tus workflows y te entrenará en su uso. Todo listo en 48 horas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="email-notice">
+                <h4 style="margin-bottom: 10px; color: var(--accent);">📧 Revisa tu Email</h4>
+                <p>Hemos enviado la confirmación a: <strong id="customer-email">cliente@ejemplo.com</strong></p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--gray);">
+                    Si no ves el email en 10 minutos, revisa tu carpeta de spam o 
+                    <a href="mailto:soporte@aiprofitarmy.com" style="color: var(--primary);">contáctanos</a>.
+                </p>
+            </div>
+            
+            <div class="countdown">
+                ⏳ Implementación comenzará en: <span id="countdown-timer">23:59:59</span>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="dashboard.html" class="action-button primary">
+                    🚀 Acceder a Mi Dashboard
+                </a>
+                <a href="index.html#catalogo" class="action-button secondary">
+                    📋 Ver Catálogo de Workflows
+                </a>
+            </div>
+            
+            <div class="support-info">
+                <h4 style="margin-bottom: 15px; color: var(--dark);">🛟 Soporte y Ayuda</h4>
+                <p style="color: var(--gray); margin-bottom: 10px;">
+                    <strong>Email:</strong> soporte@aiprofitarmy.com<br>
+                    <strong>WhatsApp:</strong> +1 (234) 567-890<br>
+                    <strong>Horario:</strong> 24/7 para clientes premium
+                </p>
+                <p style="color: var(--gray); font-size: 0.9rem;">
+                    Recuerda: Tienes <strong>garantía de 30 días</strong> para probar el servicio. 
+                    Si no estás satisfecho, te devolvemos el 100% de tu inversión.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© <span id="current-year">2026</span> AI Profit Army - Automatización con workflows n8n. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px;">Gracias por confiar en nosotros • ROI garantizado • Implementación en 48h</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Obtener parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan') || 'profesional';
+        const payment = urlParams.get('payment') || 'stripe';
+        
+        // Configurar detalles según parámetros
+        function setupConfirmation() {
+            const plans = {
+                'basico': {
+                    name: 'Plan Básico',
+                    price: '249',
+                    desc: '1 workflow específico'
+                },
+                'profesional': {
+                    name: 'Plan Profesional',
+                    price: '649',
+                    desc: '3 workflows + Personalizaciones'
+                },
+                'empresa': {
+                    name: 'Plan Empresa',
+                    price: '1999',
+                    desc: 'Workflows ilimitados + Soporte 24/7'
+                }
+            };
+            
+            const payments = {
+                'stripe': 'Tarjeta de Crédito/Débito',
+                'paypal': 'PayPal',
+                'crypto': 'Criptomonedas'
+            };
+            
+            const selectedPlan = plans[plan] || plans.profesional;
+            const selectedPayment = payments[payment] || payments.stripe;
+            
+            // Generar número de orden único
+            const orderNumber = 'APA-' + new Date().getTime().toString().slice(-6);
+            
+            // Configurar elementos
+            document.getElementById('order-number').textContent = orderNumber;
+            document.getElementById('plan-name').textContent = selectedPlan.name;
+            document.getElementById('order-total').textContent = selectedPlan.price;
+            document.getElementById('payment-method').textContent = selectedPayment;
+            
+            // Fecha actual formateada
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('order-date').textContent = now.toLocaleDateString('es-ES', options);
+            
+            // Configurar countdown
+            startCountdown();
+        }
+        
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown-timer');
+            let timeLeft = 24 * 60 * 60; // 24 horas en segundos
+            
+            function updateCountdown() {
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                
+                countdownElement.textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateCountdown, 1000);
+                } else {
+                    countdownElement.textContent = '¡IMPLEMENTACIÓN EN CURSO!';
+                    countdownElement.style.color = 'var(--success)';
+                }
+            }
+            
+            updateCountdown();
+        }
+        
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            setupConfirmation();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Simular email del cliente (en un caso real esto vendría del backend)
+            const email = localStorage.getItem('customerEmail') || 'cliente@ejemplo.com';
+            document.getElementById('customer-email').textContent = email;
+        });
+    </script>
+</body>
+</html>

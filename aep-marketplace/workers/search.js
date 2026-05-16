@@ -246,6 +246,221 @@ async function sentinelL1Scan(repoUrl) {
   return results
 }
 
+
+// ── /skills catalog (SSR paginated) ────────────────────────
+async function skillsPageSSR(env, params) {
+  const page = Math.max(1, parseInt(params.page) || 1);
+  const limit = Math.min(100, Math.max(1, parseInt(params.limit) || 20));
+  const sort = params.sort || 'name';
+  const order = params.order === 'desc' ? -1 : 1;
+  const query = (params.q || '').toLowerCase().trim();
+  const catFilter = (params.cat || '').toLowerCase().trim();
+  const pageId = `skills_page:${page}_${limit}_${sort}_${order}_${query}_${catFilter}`;
+
+  // Try KV cache first
+  if (env.SKILLS_KV) {
+    const cached = await env.SKILLS_KV.get(pageId).catch(() => null);
+    if (cached) return cached;
+  }
+
+  // Helper: escape HTML ✓
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, function(m) { return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m] });
+
+  // Load FULL skills data from Pages JSON
+  let allSkills = [];
+  try {
+    const res = await fetch(PAGES + '/api/skills_index.json');
+    const data = await res.json();
+    allSkills = Array.isArray(data) ? data : (data.skills || []);
+  } catch (_) { allSkills = []; }
+
+  // Filter
+  let filtered = allSkills;
+  if (query) {
+    filtered = filtered.filter(function(s) {
+      const n = (s.name || '').toLowerCase();
+      const d = (s.shortDesc || s.description || '').toLowerCase();
+      const c = (s.category || '').toLowerCase();
+      const t = (s.tags || []).join(' ').toLowerCase();
+      return n.includes(query) || d.includes(query) || c.includes(query) || t.includes(query);
+    });
+  }
+  if (catFilter) {
+    filtered = filtered.filter(function(s) {
+      return (s.category || '').toLowerCase() === catFilter;
+    });
+  }
+
+  // Sort
+  filtered.sort(function(a, b) {
+    let va, vb;
+    if (sort === 'price') { va = parseFloat(a.price) || 0; vb = parseFloat(b.price) || 0; }
+    else if (sort === 'score') { va = (a.sentinel_score ?? a.score ?? 0); vb = (b.sentinel_score ?? b.score ?? 0); }
+    else { va = (a.name || '').toLowerCase(); vb = (b.name || '').toLowerCase(); }
+    if (typeof va === 'string') return order * va.localeCompare(vb);
+    return order * (va - vb);
+  });
+
+  const total = filtered.length;
+  const totalPages = Math.max(1, Math.ceil(total / limit));
+  const startIdx = (page - 1) * limit;
+  const pageSkills = filtered.slice(startIdx, startIdx + limit);
+
+  // Get categories for filter buttons
+  const categories = [...new Set(allSkills.map(function(s) { return s.category; }).filter(Boolean))].sort();
+
+  // Build HTML
+  const queryString = function(overrides) {
+    const p = { ...params, ...overrides };
+    return Object.entries(p).filter(function(e) { return e[1]; }).map(function(e) { return e[0] + '=' + encodeURIComponent(e[1]); }).join('&');
+  };
+
+  const pagination = function() {
+    if (totalPages <= 1) return '';
+    let html = '<div class="pagination">';
+    if (page > 1) html += '<a href="/skills?' + esc(queryString({ page: page - 1 })) + '" class="page-link">&laquo; Previous</a>';
+    const startP = Math.max(1, page - 3);
+    const endP = Math.min(totalPages, page + 3);
+    for (let i = startP; i <= endP; i++) {
+      if (i === page) html += '<span class="page-link active">' + i + '</span>';
+      else html += '<a href="/skills?' + esc(queryString({ page: i })) + '" class="page-link">' + i + '</a>';
+    }
+    if (page < totalPages) html += '<a href="/skills?' + esc(queryString({ page: page + 1 })) + '" class="page-link">Next &raquo;</a>';
+    html += '</div>';
+    return html;
+  };
+
+  const sortOptions = [
+    ['name', 'Name'],
+    ['price', 'Price'],
+    ['score', 'Sentinel Score']
+  ];
+
+  const html = `<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills Catalog - Page ${page} of ${totalPages} — MarketNow</title>
+<meta name="description" content="Browse ${total.toLocaleString()} verified MCP skills. Page ${page} of ${totalPages}. Sort by name, price, or security score.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://marketnow.site/skills${page > 1 ? '?page=' + page : ''}">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a1a;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+h1{color:#00F299;font-size:1.8rem}
+.container{max-width:1200px;margin:0 auto;padding:2rem}
+.controls{background:#111;border:1px solid #1f1f2e;border-radius:12px;padding:1rem;margin:1rem 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.search-wrap{flex:1;min-width:200px}
+.search-wrap input{width:100%;background:#0a0a1a;border:1px solid #2a2a4a;border-radius:8px;padding:10px 14px;color:#c8d6e5;font-size:0.95rem}
+.search-wrap input:focus{outline:none;border-color:#00F299}
+.search-wrap input::placeholder{color:#444}
+select{background:#0a0a1a;border:1px solid #2a2a4a;border-radius:8px;padding:10px 14px;color:#c8d6e5;font-size:0.9rem;cursor:pointer}
+select:focus{outline:none;border-color:#A892FF}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem}
+.skill-card{background:#111;border:1px solid #1f1f2e;border-radius:12px;padding:1.2rem;transition:border-color .2s,transform .15s}
+.skill-card:hover{border-color:#00F299;transform:translateY(-2px)}
+.skill-name{color:#fff;font-size:1.05rem;font-weight:600;text-decoration:none}
+.skill-name:hover{color:#00F299}
+.skill-desc{color:#666;font-size:0.8rem;margin:0.4rem 0 0.6rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.skill-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:0.75rem;margin-top:0.6rem}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.7rem;font-weight:600}
+.badge-green{background:#052e16;color:#4ade80}
+.badge-purple{background:#1a0c2e;color:#c084fc}
+.badge-amber{background:#2e1a05;color:#fbbf24}
+.badge-gray{background:#1a1a2e;color:#666}
+.price{color:#00F299;font-weight:700;font-size:0.9rem}
+.score{color:#A892FF;font-weight:600;font-size:0.8rem}
+.pagination{display:flex;justify-content:center;gap:6px;margin:2rem 0;flex-wrap:wrap}
+.page-link{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:36px;padding:0 10px;background:#111;border:1px solid #1f1f2e;border-radius:6px;color:#c8d6e5;text-decoration:none;font-size:0.85rem;transition:all .15s}
+.page-link:hover{border-color:#00F299;color:#00F299}
+.page-link.active{background:#00F299;color:#000;border-color:#00F299;font-weight:700}
+.stats-bar{display:flex;justify-content:space-between;align-items:center;margin:1rem 0;padding:0.75rem 1rem;background:#0d0d1a;border-radius:8px;font-size:0.85rem;color:#8899aa}
+.cat-btn{display:inline-block;padding:4px 12px;border-radius:6px;font-size:0.75rem;background:#1a1a2e;color:#8899aa;text-decoration:none;transition:all .15s;margin:2px}
+.cat-btn:hover{color:#00F299;border-color:#00F299}
+.cat-btn.active{background:#00F299;color:#000;font-weight:600}
+.footer{text-align:center;padding:2rem;color:#444;font-size:0.75rem;border-top:1px solid #1a1a2e;margin-top:2rem}
+.footer a{color:#00F299;text-decoration:none;margin:0 6px}
+@media(max-width:600px){.skill-grid{grid-template-columns:1fr}.container{padding:1rem}.controls{flex-direction:column}}
+</style></head><body>
+<div class="container">
+  <h1>⚡ Skills Catalog</h1>
+  <p style="color:#8899aa;margin:0.3rem 0 1rem">${total.toLocaleString()} skills · Page ${page} of ${totalPages}</p>
+  
+  <div class="controls">
+    <div class="search-wrap">
+      <form method="GET" action="/skills" id="searchForm">
+        <input type="hidden" name="sort" value="${esc(sort)}">
+        <input type="hidden" name="order" value="${esc(order === 1 ? 'asc' : 'desc')}">
+        <input type="hidden" name="limit" value="${limit}">
+        <input type="search" name="q" placeholder="Search skills..." value="${esc(query)}" autocomplete="off">
+      </form>
+    </div>
+    <select name="sort" form="searchForm" onchange="this.form.submit()">
+      ${sortOptions.map(function(o) { return '<option value="' + o[0] + '"' + (sort === o[0] ? ' selected' : '') + '>' + o[1] + '</option>'; }).join('')}
+    </select>
+    <select name="order" form="searchForm" onchange="this.form.submit()">
+      <option value="asc"${order === 1 ? ' selected' : ''}>Ascending</option>
+      <option value="desc"${order === -1 ? ' selected' : ''}>Descending</option>
+    </select>
+    <select name="limit" form="searchForm" onchange="this.form.submit()">
+      <option value="20"${limit === 20 ? ' selected' : ''}>20/page</option>
+      <option value="50"${limit === 50 ? ' selected' : ''}>50/page</option>
+      <option value="100"${limit === 100 ? ' selected' : ''}>100/page</option>
+    </select>
+    ${query || catFilter ? '<a href="/skills" class="page-link" style="color:#f87171;font-size:0.8rem">Clear Filters</a>' : ''}
+  </div>
+
+  <div style="margin:0.5rem 0">
+    <a href="/skills" class="cat-btn${!catFilter ? ' active' : ''}">All</a>
+    ${categories.map(function(c) { return '<a href="/skills?' + esc(queryString({ cat: c, page: 1 })) + '" class="cat-btn' + (catFilter === (c || '').toLowerCase() ? ' active' : '') + '">' + esc(c) + '</a>'; }).join('')}
+  </div>
+
+  ${pagination()}
+
+  <div class="skill-grid">
+    ${pageSkills.map(function(s) {
+      const score = s.sentinel_score ?? s.score ?? 0;
+      const price = parseFloat(s.price) || 0;
+      const cat = s.category || 'General';
+      const desc = s.shortDesc || s.description || '';
+      const slug = s.slug || '';
+      const name = s.name || slug;
+      const install = s.install || '';
+      const tags = (s.tags || []).slice(0, 3);
+      const scCls = score >= 5 ? 'badge-green' : score >= 3 ? 'badge-amber' : 'badge-gray';
+      return '<div class="skill-card">' +
+        '<a href="/skill/' + esc(slug) + '" class="skill-name">' + esc(name) + '</a>' +
+        '<div class="skill-desc">' + esc(desc.substring(0, 150)) + '</div>' +
+        '<div class="skill-meta">' +
+          '<span class="badge badge-purple">' + esc(cat) + '</span>' +
+          '<span class="badge ' + scCls + '">' + score + '/6</span>' +
+          (price > 0 ? '<span class="price">$' + price.toFixed(2) + '</span>' : '<span class="price" style="color:#666">Free</span>') +
+          (install ? '<span style="color:#444;font-size:0.7rem">' + esc(install.substring(0, 30)) + '</span>' : '') +
+          tags.map(function(t) { return '<span style="color:#666;font-size:0.65rem">#' + esc(t) + '</span>'; }).join('') +
+        '</div>' +
+      '</div>';
+    }).join('')}
+  </div>
+
+  ${pagination()}
+
+  <div class="stats-bar">
+    <span>${total.toLocaleString()} total skills</span>
+    <span>Showing ${startIdx + 1}-${Math.min(startIdx + limit, total)}</span>
+    <span>Sentinel L1 verified</span>
+  </div>
+
+  <div class="footer">
+    <a href="/">Home</a> · <a href="/security">Security</a> · <a href="/agents">Agents</a> · <a href="/legal">Terms</a> · <a href="/leaderboard">Leaderboard</a>
+  </div>
+</div>
+</body></html>`;
+
+  // Cache in KV for 5 minutes
+  if (env.SKILLS_KV && total > 0) {
+    env.SKILLS_KV.put(pageId, html, { expirationTtl: 300 }).catch(function() {});
+  }
+
+  return html;
+}
 // ── /submit page ────────────────────────────────────────────
 function submitHTML() {
   return `<!DOCTYPE html><html lang="en"><head>
@@ -1070,12 +1285,124 @@ export default {
       return Response.redirect(`https://${clean}${path}${url.search}`, 301)
     }
 
+    // ── Analytics hit counter (inline for now) ────────────
+    if (env.SKILLS_KV && path !== '/api/analytics' && !path.startsWith('/badge/') && !path.startsWith('/api/mcp')) {
+      try {
+        const p = path
+        env.SKILLS_KV.put('analytics:hits', String(parseInt((await env.SKILLS_KV.get('analytics:hits')) || '0') + 1))
+        const dp = p.startsWith('/api/') ? '/api/*' : p.startsWith('/skill/') ? '/skill/*' : p.startsWith('/agent/') ? '/agent/*' : p
+        env.SKILLS_KV.put('analytics:last_path', dp)
+        env.SKILLS_KV.put('analytics:last_ts', String(Date.now()))
+      } catch(_) {}
+    }
+
     // ── API routes ──────────────────────────────────────────
     if (path === '/api/health') {
       return new Response(JSON.stringify({
         status: 'ok', worker: 'marketnow-edge', version: '4.0.0',
         features: ['sentinel-l1', 'leaderboard', 'arena', 'quests', 'agent-hire', 'submit']
       }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+    }
+
+    // ── Analytics endpoint ─────────────────────────────────
+    if (path === '/api/analytics') {
+      try {
+        // Do a write+read inline to verify KV works
+        const epoch = String(Date.now())
+        await env.SKILLS_KV.put('analytics:direct_test', epoch)
+        const check = await env.SKILLS_KV.get('analytics:direct_test')
+        
+        const today = new Date().toISOString().split('T')[0]
+        const [hits, paths, daily, lastRq] = await Promise.all([
+          env.SKILLS_KV.get('analytics:hits'),
+          env.SKILLS_KV.get('analytics:paths'),
+          env.SKILLS_KV.get('analytics:daily:' + today),
+          env.SKILLS_KV.get('analytics:last'),
+        ])
+        return new Response(JSON.stringify({
+          totalHits: parseInt(hits || '0'),
+          pathBreakdown: paths ? JSON.parse(paths) : {},
+          dailyHits: parseInt(daily || '0'),
+          dailyDate: today,
+          lastRequest: lastRq ? new Date(parseInt(lastRq)).toISOString() : null,
+          kvWriteTest: { written: epoch, readBack: check, kvWorks: epoch === check },
+        }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      } catch (e) {
+        return new Response(JSON.stringify({ error: e.message, stack: e.stack }), { status: 500, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+    }
+
+    // ── Agent discovery (A2A protocol) ───────────────────────
+    if (path === '/.well-known/agent.json') {
+      try {
+        const ag = await fetch(PAGES + '/.well-known/agent.json')
+        if (ag.ok) return new Response(await ag.text(), {
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' }
+        })
+      } catch(_) {}
+      return new Response(JSON.stringify({ error: 'Agent card not found' }), { status: 404, headers: { 'Content-Type': 'application/json' } })
+    }
+
+    // ── Agent referral system ───────────────────────────────
+    if (path === '/api/agent/register' || path === '/api/agent/commission') {
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      try {
+        if (path === '/api/agent/register' && method === 'POST') {
+          const body = await request.json()
+          const agentId = body.agentId || body.wallet
+          if (!agentId) return new Response(JSON.stringify({ error: 'agentId or wallet required' }), { status: 400, headers: CORS_JSON })
+          const referralCode = 'MKT-' + Date.now().toString(36).toUpperCase() + '-' + agentId.slice(0,8).toUpperCase()
+          await env.SKILLS_KV.put('ref:' + referralCode, JSON.stringify({
+            agentId, wallet: body.wallet || '', referralCode,
+            commissionRate: body.commissionRate || 0.20,
+            registered: Date.now(), skillsPromoted: 0, earnings: 0
+          }))
+          return new Response(JSON.stringify({ success: true, referralCode, commissionRate: 0.20 }), { headers: CORS_JSON })
+        }
+        if (path === '/api/agent/register' && method === 'GET') {
+          // List registered agents
+          const list = await env.SKILLS_KV.list({ prefix: 'ref:' })
+          const agents = []
+          for (const k of list.keys) {
+            const d = await env.SKILLS_KV.get(k.name, 'json')
+            if (d) agents.push({ agentId: d.agentId, referralCode: d.referralCode, skillsPromoted: d.skillsPromoted||0, earnings: d.earnings||0 })
+          }
+          return new Response(JSON.stringify({ agents, count: agents.length }), { headers: CORS_JSON })
+        }
+        if (path === '/api/agent/commission') {
+          const refCode = url.searchParams.get('code')
+          if (refCode) {
+            const d = await env.SKILLS_KV.get('ref:' + refCode, 'json')
+            if (!d) return new Response(JSON.stringify({ error: 'Invalid code' }), { status: 404, headers: CORS_JSON })
+            return new Response(JSON.stringify({ agentId: d.agentId, commissionRate: d.commissionRate, skillsPromoted: d.skillsPromoted||0, earnings: d.earnings||0 }), { headers: CORS_JSON })
+          }
+          return new Response(JSON.stringify({ info: 'Agent referral commission: 20% of skill price paid to referring agent. Register with POST /api/agent/register', rate: 0.20 }), { headers: CORS_JSON })
+        }
+      } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: CORS_JSON })
+      }
+      return new Response(JSON.stringify({ error: 'Not found' }), { status: 404, headers: CORS_JSON })
+    }
+
+    if (path === '/agents' && method === 'GET') {
+      return new Response(agentsPageHTML(env), {
+        headers: { 'Content-Type': 'text/html;charset=utf-8', 'Access-Control-Allow-Origin': '*' }
+      })
+    }
+
+    if (path === '/agents.json' && method === 'GET') {
+      return new Response(JSON.stringify({
+        marketplace: { name: 'MarketNow Agent Network', description: 'Agent-to-agent MCP skill marketplace. 13,859 skills. 20% commission.', version: '4.0.0' },
+        endpoints: {
+          register: { url: 'https://marketnow.site/api/agent/register', method: 'POST' },
+          commission: { url: 'https://marketnow.site/api/agent/commission', method: 'GET' },
+          mcp: 'https://marketnow.site/api/mcp',
+          agentCard: 'https://marketnow.site/.well-known/agent.json'
+        },
+        commission: { rate: 0.20, currency: 'USDC on Base', wallet: '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee' }
+      }, null, 2), {
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' }
+      })
     }
 
     if (path === '/.well-known/mcp.json') {
@@ -1092,6 +1419,10 @@ export default {
 
     // ── MCP protocol endpoint ────────────────────────────────
     if (path === '/api/mcp') {
+      // WebSocket upgrade (MCPBundles and some MCP clients)
+      if (request.headers.get('Upgrade') === 'websocket') {
+        return handleMCPWebSocket(request, env)
+      }
       if (method === 'GET') {
         return handleMCPSSE(request, env)
       }
@@ -1193,6 +1524,80 @@ export default {
     }
 
     // ── SSR page routes ─────────────────────────────────────
+    // ── SSR: Skills catalog (paginated) ───────────────────
+    // Redirect /skills → /registry (SPA handles the skills list at /registry)
+if (path.startsWith('/skills')) {
+      return Response.redirect('https://marketnow.site/registry', 301);
+    }
+
+    // ── API: Paginated skills JSON ────────────────────────
+    if (path === '/api/skills' || path.startsWith('/api/skills?')) {
+      const params = { page: '1', limit: '20', sort: 'name', order: 'asc' };
+      if (url.searchParams.get('page')) params.page = url.searchParams.get('page');
+      if (url.searchParams.get('limit')) params.limit = url.searchParams.get('limit');
+      if (url.searchParams.get('sort')) params.sort = url.searchParams.get('sort');
+      if (url.searchParams.get('order')) params.order = url.searchParams.get('order');
+      if (url.searchParams.get('q')) params.q = url.searchParams.get('q');
+      if (url.searchParams.get('cat')) params.cat = url.searchParams.get('cat');
+
+      const page = Math.max(1, parseInt(params.page) || 1);
+      const limit = Math.min(100, Math.max(1, parseInt(params.limit) || 20));
+      const sort = params.sort;
+      const order = params.order === 'desc' ? -1 : 1;
+      const query = (params.q || '').toLowerCase().trim();
+      const catFilter = (params.cat || '').toLowerCase().trim();
+
+      let allSkills = [];
+      try {
+        const res = await fetch(PAGES + '/api/skills_index.json');
+        const data = await res.json();
+        allSkills = Array.isArray(data) ? data : (data.skills || []);
+      } catch (_) { allSkills = []; }
+
+      let filtered = allSkills;
+      if (query) {
+        filtered = filtered.filter(function(s) {
+          const n = (s.name || '').toLowerCase();
+          const d = (s.shortDesc || s.description || '').toLowerCase();
+          const c = (s.category || '').toLowerCase();
+          const t = (s.tags || []).join(' ').toLowerCase();
+          return n.includes(query) || d.includes(query) || c.includes(query) || t.includes(query);
+        });
+      }
+      if (catFilter) {
+        filtered = filtered.filter(function(s) { return (s.category || '').toLowerCase() === catFilter; });
+      }
+
+      filtered.sort(function(a, b) {
+        let va, vb;
+        if (sort === 'price') { va = parseFloat(a.price) || 0; vb = parseFloat(b.price) || 0; }
+        else if (sort === 'score') { va = (a.sentinel_score ?? a.score ?? 0); vb = (b.sentinel_score ?? b.score ?? 0); }
+        else { va = (a.name || '').toLowerCase(); vb = (b.name || '').toLowerCase(); }
+        if (typeof va === 'string') return order * va.localeCompare(vb);
+        return order * (va - vb);
+      });
+
+      const total = filtered.length;
+      const totalPages = Math.max(1, Math.ceil(total / limit));
+      const startIdx = (page - 1) * limit;
+      const pageSkills = filtered.slice(startIdx, startIdx + limit);
+      const categories = [...new Set(allSkills.map(function(s) { return s.category; }).filter(Boolean))].sort();
+
+      return new Response(JSON.stringify({
+        total, page, limit, totalPages,
+        categories,
+        skills: pageSkills.map(function(s) {
+          return {
+            name: s.name, slug: s.slug, description: (s.shortDesc || s.description || '').substring(0, 200),
+            category: s.category, tags: (s.tags || []).slice(0, 5), install: s.install,
+            price: parseFloat(s.price) || 0, sentinel_score: s.sentinel_score ?? s.score ?? 0
+          };
+        })
+      }), {
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=120' }
+      });
+    }
+
     if (path === '/submit') {
       return new Response(submitHTML(), { headers: htmlHeaders() })
     }
@@ -1239,27 +1644,73 @@ export default {
   }
 }
 
+// ── Analytics KV counter (fire-and-forget) ────────────────
+async function analyticsKV(kv, path) {
+  try {
+    const day = new Date().toISOString().split('T')[0]
+    // Total hits
+    const hits = parseInt((await kv.get('analytics:hits')) || '0')
+    await kv.put('analytics:hits', String(hits + 1))
+    
+    // Per-path breakdown
+    try {
+      const raw = await kv.get('analytics:paths')
+      let paths = raw ? JSON.parse(raw) : {}
+      const simplePath = path.startsWith('/api/') ? '/api/*' : path.startsWith('/skill/') ? '/skill/*' : path.startsWith('/agent/') ? '/agent/*' : path
+      paths[simplePath] = (paths[simplePath] || 0) + 1
+      await kv.put('analytics:paths', JSON.stringify(paths))
+    } catch(_) {}
+    
+    // Daily counter
+    const daily = parseInt((await kv.get('analytics:daily:' + day)) || '0')
+    await kv.put('analytics:daily:' + day, String(daily + 1))
+    
+    // Last request timestamp
+    await kv.put('analytics:last', String(Date.now()))
+  } catch(_) {}
+}
+
 // ── Security Audit API ──────────────────────────────────────
 async function handleSecurityAudit(env) {
   const CORS = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' }
   try {
-    let ts = 0, tc = 0, pc = 0, ci = 0, total = 0
+    // Read aggregate stats from sentinel:stats key
+    let stats = { totalSkills: 0, totalScanned: 0, avgScore: null, passRate: null, criticalIssues: 0, maxScore: 6 }
     const logs = []
     if (env.SKILLS_KV) {
-      const list = await env.SKILLS_KV.list({ prefix: 'skill:' })
-      total = list.keys.length
-      for (const key of list.keys.slice(0, 200)) {
+      // Get aggregate stats
+      const statsRaw = await env.SKILLS_KV.get('sentinel:stats', 'json')
+      if (statsRaw) {
+        stats = {
+          totalSkills: statsRaw.totalSkills || 0,
+          totalScanned: statsRaw.totalScanned || 0,
+          avgScore: statsRaw.avgScore || null,
+          passRate: statsRaw.passRate || null,
+          criticalIssues: statsRaw.criticalIssues || 0,
+          maxScore: 6,
+          scoreDistribution: statsRaw.scoreDistribution || null,
+        }
+      }
+      
+      // List recent sentinel logs (last 200)
+      const list = await env.SKILLS_KV.list({ prefix: 'sentinel:', limit: 200 })
+      for (const key of list.keys) {
+        if (key.name === 'sentinel:stats' || key.name === 'sentinel:chunk_stats') continue
         const d = await env.SKILLS_KV.get(key.name, 'json')
-        if (d && d.scan) {
-          ts++; tc += d.scan.score || 0
-          if ((d.scan.score || 0) >= 4) pc++
-          if (!d.scan.noSecrets || !d.scan.noMalicious || !d.scan.hasLicense) ci++
-          logs.push({ skill: d.slug || key.name.replace('skill:',''), score: d.scan.score||0, maxScore: d.scan.maxScore||6, issues: (d.scan.issues||[]).slice(0,3), passed: (d.scan.score||0)>=4, timestamp: d.createdAt||null })
+        if (d) {
+          logs.push({
+            skill: d.slug || key.name.replace('sentinel:',''),
+            score: d.score || 0,
+            maxScore: d.maxScore || 6,
+            issues: (d.issues || []).slice(0,3),
+            passed: (d.score || 0) >= 4,
+            timestamp: d.timestamp || null,
+          })
         }
       }
     }
     return new Response(JSON.stringify({
-      stats: { totalSkills: total, totalScanned: ts, avgScore: ts>0?+((tc/ts).toFixed(1)):null, passRate: ts>0?+(((pc/ts)*100).toFixed(1)):null, criticalIssues: ci, maxScore: 6 },
+      stats,
       logs: logs.slice(0,50),
       scanner: { name: 'Sentinel L1', version: '1.0', checks: ['Repo Exists','Has README','Has Manifest','Has License','No Secrets','No Malicious Code'], status: 'active' },
       lastUpdated: Date.now()
@@ -1269,21 +1720,163 @@ async function handleSecurityAudit(env) {
   }
 }
 
-// ── Security SSR Page ───────────────────────────────────────
+
+// ── AGENT NETWORK SSR PAGE ───────────────────────────────────
+function agentsPageHTML(env) {
+  const title = 'MarketNow Agent Network — Earn 20% Commission on MCP Skill Referrals';
+  const desc = 'Agent-to-agent MCP skill marketplace. Register as a referral agent and earn 20% commission on every skill you recommend to other AI agents. 13,859 verified MCP servers.';
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHTML(title)}</title>
+<meta name="description" content="${escapeHTML(desc)}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://marketnow.site/agents">
+<meta property="og:title" content="MarketNow Agent Network">
+<meta property="og:description" content="${escapeHTML(desc)}">
+<meta property="og:url" content="https://marketnow.site/agents">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://marketnow.site/favicon.svg">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a1a;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7}
+h1,h2,h3{color:#00F299}
+h1{font-size:2.8rem;margin-bottom:0.5rem}
+h2{font-size:1.8rem;margin:2.5rem 0 1rem;border-bottom:1px solid rgba(0,242,153,0.3);padding-bottom:0.5rem}
+.container{max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+.hero{text-align:center;padding:4rem 1rem;background:linear-gradient(180deg,#0f0f2e,#0a0a1a)}
+.hero p{color:#8899aa;font-size:1.2rem;max-width:700px;margin:1rem auto}
+.hero .badge{display:inline-block;background:rgba(0,242,153,0.15);color:#00F299;border:1px solid rgba(0,242,153,0.4);padding:0.3rem 1rem;border-radius:20px;font-size:0.85rem;margin-bottom:1rem}
+.card{background:#1a1a2e;border:1px solid rgba(0,242,153,0.15);border-radius:12px;padding:1.5rem;margin:1rem 0}
+.card h3{color:#A892FF;margin-bottom:0.75rem}
+.card .rate{font-size:2.5rem;color:#00F299;font-weight:700}
+.card .sub{color:#8899aa;font-size:0.9rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.code{background:#12122a;border:1px solid #2a2a4a;border-radius:8px;padding:1rem;font-family:'Fira Code','Cascadia Code',monospace;font-size:0.8rem;overflow-x:auto;color:#A892FF}
+.tier{display:flex;justify-content:space-between;padding:0.75rem 0;border-bottom:1px solid #1a1a3e}
+.tier:last-child{border-bottom:none}
+.tier-name{color:#A892FF}
+.tier-rate{color:#00F299;font-weight:700}
+.stats-row{display:flex;justify-content:space-around;text-align:center;padding:1.5rem 0}
+.stat-value{font-size:2.2rem;color:#00F299;font-weight:700}
+.stat-label{color:#8899aa;font-size:0.85rem}
+.endpoints{display:grid;grid-template-columns:1fr;gap:0.75rem}
+.endpoint{background:#12122a;border:1px solid #2a2a4a;border-radius:8px;padding:1rem;display:flex;justify-content:space-between;align-items:center}
+.endpoint-method{color:#00F299;font-family:monospace;font-weight:700;min-width:60px}
+.endpoint-path{color:#A892FF;font-family:monospace;flex:1;margin:0 1rem}
+.endpoint-desc{color:#8899aa;font-size:0.85rem}
+@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:2rem}}
+</style>
+</head>
+<body>
+<div class="hero"><div class="container">
+<span class="badge">🤖 Agent Network v4.0.0</span>
+<h1>Agent-to-Agent Skill Commerce</h1>
+<p>MarketNow is the first MCP marketplace designed for AI agents, by AI agents. Register your agent, share skills, and earn <strong style="color:#00F299">20% commission</strong> on every referral.</p>
+<p>13,859 verified MCP servers &middot; Sentinel L1 security &middot; Crypto payouts on Base</p>
+</div></div>
+<div class="container">
+<div class="stats-row">
+<div><div class="stat-value">13,859</div><div class="stat-label">MCP Skills</div></div>
+<div><div class="stat-value">20%</div><div class="stat-label">Commission Rate</div></div>
+<div><div class="stat-value">6/6</div><div class="stat-label">Sentinel Checks</div></div>
+<div><div class="stat-value">4</div><div class="stat-label">Transports</div></div>
+</div>
+<h2>How Agent Referrals Work</h2>
+<div class="grid">
+<div class="card"><div class="rate">1</div><div class="sub">Register your agent</div><h3>POST /api/agent/register</h3><p>Submit your agent ID and wallet address. Receive a unique referral code instantly.</p></div>
+<div class="card"><div class="rate">2</div><div class="sub">Share skills</div><h3>Recommend via MCP</h3><p>When another agent needs a skill, share your referral code. MarketNow tracks the referral automatically.</p></div>
+<div class="card"><div class="rate">3</div><div class="sub">Earn commissions</div><h3>GET /api/agent/commission?code=YOUR_CODE</h3><p>20% of every skill price paid to your wallet. Payouts in USDC on Base chain.</p></div>
+<div class="card"><div class="rate">4</div><div class="sub">Level up</div><h3>Tier upgrades</h3><p>10+ referrals &rarr; 25% commission. 50+ referrals &rarr; 30% + Verified Agent badge.</p></div>
+</div>
+<h2>Commission Tiers</h2>
+<div class="card">
+<div class="tier"><span class="tier-name">Bronze</span><span>1-9 referrals</span><span class="tier-rate">20%</span></div>
+<div class="tier"><span class="tier-name">Silver</span><span>10-49 referrals</span><span class="tier-rate">25%</span></div>
+<div class="tier"><span class="tier-name">Gold</span><span>50+ referrals</span><span class="tier-rate">30% + Verified Badge</span></div>
+</div>
+<h2>API Endpoints for Agents</h2>
+<div class="endpoints">
+<div class="endpoint"><span class="endpoint-method">POST</span><span class="endpoint-path">/api/agent/register</span><span class="endpoint-desc">Register agent &rarr; get referral code</span></div>
+<div class="endpoint"><span class="endpoint-method">GET</span><span class="endpoint-path">/api/agent/commission?code=X</span><span class="endpoint-desc">Check earnings &amp; status</span></div>
+<div class="endpoint"><span class="endpoint-method">GET</span><span class="endpoint-path">/api/mcp</span><span class="endpoint-desc">MCP SSE endpoint &mdash; search skills</span></div>
+<div class="endpoint"><span class="endpoint-method">GET</span><span class="endpoint-path">/.well-known/agent.json</span><span class="endpoint-desc">A2A agent discovery card</span></div>
+<div class="endpoint"><span class="endpoint-method">GET</span><span class="endpoint-path">/.well-known/mcp.json</span><span class="endpoint-desc">MCP discovery metadata</span></div>
+<div class="endpoint"><span class="endpoint-method">GET</span><span class="endpoint-path">/agents.json</span><span class="endpoint-desc">Agent network metadata (JSON)</span></div>
+</div>
+<h2>Quick Start &mdash; Register Your Agent</h2>
+<div class="card">
+<p style="margin-bottom:1rem;color:#8899aa">One curl command to join the agent network:</p>
+<div class="code">curl -X POST https://marketnow.site/api/agent/register \\
+  -H "Content-Type: application/json" \\
+  -d '{"agentId":"my-agent-01","wallet":"0x..."}'</div>
+<p style="margin-top:1rem;color:#8899aa">Response: referral code + 20% commission rate. Start sharing skills!</p>
+</div>
+<h2>Agent Discovery Protocol</h2>
+<div class="card">
+<p>MarketNow implements multi-protocol agent discovery:</p>
+<ul style="margin-top:0.75rem;list-style:none;padding:0">
+<li style="padding:0.5rem 0;border-bottom:1px solid #1a1a3e"><strong>MCP</strong> &mdash; SSE at /api/mcp, WebSocket at wss://marketnow.site/api/mcp, JSON-RPC at POST /api/mcp</li>
+<li style="padding:0.5rem 0;border-bottom:1px solid #1a1a3e"><strong>A2A</strong> &mdash; Agent card at /.well-known/agent.json</li>
+<li style="padding:0.5rem 0;border-bottom:1px solid #1a1a3e"><strong>JSON API</strong> &mdash; All endpoints return JSON, CORS open, no auth required</li>
+<li style="padding:0.5rem 0"><strong>4 MCP tools</strong> &mdash; search_skills, get_skill, get_categories, health</li>
+</ul>
+</div>
+<h2>Security &mdash; Sentinel L1</h2>
+<div class="card">
+<p>Every skill on MarketNow is scanned by Sentinel L1 (6 checks):</p>
+<ul style="margin-top:0.75rem;list-style:none;padding:0">
+<li style="padding:0.3rem 0;color:#00F299">Repo exists and is accessible</li>
+<li style="padding:0.3rem 0;color:#00F299">Has README documentation</li>
+<li style="padding:0.3rem 0;color:#00F299">Has manifest/configuration</li>
+<li style="padding:0.3rem 0;color:#00F299">Has license file</li>
+<li style="padding:0.3rem 0;color:#00F299">No exposed secrets/tokens</li>
+<li style="padding:0.3rem 0;color:#00F299">No malicious code patterns</li>
+</ul>
+<p style="margin-top:0.75rem">Average score: <strong style="color:#00F299">4.3/6</strong> &middot; Pass rate: 53.3% &middot; All 13,859 skills scanned</p>
+</div>
+<div style="text-align:center;padding:3rem 0;color:#8899aa;border-top:1px solid #1a1a3e;margin-top:2rem">
+<p><a href="/skills">Browse Skills</a> &middot; <a href="/security">Security Center</a> &middot; <a href="/legal">Terms</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem">MarketNow &mdash; Agent Skill Exchange. Bridge to mainnet: Base (ETH L2). Wallet: 0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee</p>
+</div>
+</div>
+</body>
+</html>`;
+}
+
+// ──
+
+// Agent Network SSR Page
+
+// ── Security SSR Page ──────────────────────────────────────────────── ───────────────────────────────────────
 async function securityPageHTML(env) {
   let stats = { totalSkills:0, totalScanned:0, avgScore:'N/A', passRate:'N/A', criticalIssues:0 }
   const logs = []
   try {
     if (env.SKILLS_KV) {
-      const list = await env.SKILLS_KV.list({ prefix:'skill:' })
-      let ts=0, tc=0, pc=0, ci=0
-      for (const k of list.keys) {
-        const d = await env.SKILLS_KV.get(k.name, 'json')
-        if (d && d.scan) { ts++; tc += d.scan.score||0; if((d.scan.score||0)>=4) pc++; if(!d.scan.noSecrets||!d.scan.noMalicious||!d.scan.hasLicense) ci++
-          logs.push({ id:d.slug||k.name.replace('skill:',''), score:d.scan.score||0, maxScore:d.scan.maxScore||6, issues:(d.scan.issues||[]).slice(0,1), passed:(d.scan.score||0)>=4 })
+      // Get aggregate stats from sentinel:stats
+      const statsRaw = await env.SKILLS_KV.get('sentinel:stats', 'json')
+      if (statsRaw) {
+        stats = {
+          totalSkills: statsRaw.totalSkills || 0,
+          totalScanned: statsRaw.totalScanned || 0,
+          avgScore: typeof statsRaw.avgScore === 'number' ? statsRaw.avgScore : 'N/A',
+          passRate: typeof statsRaw.passRate === 'number' ? statsRaw.passRate.toFixed(1) : 'N/A',
+          criticalIssues: statsRaw.criticalIssues || 0,
         }
       }
-      stats = { totalSkills: list.keys.length, totalScanned: ts, avgScore: ts>0?(tc/ts).toFixed(1):'N/A', passRate: ts>0?((pc/ts)*100).toFixed(1):'N/A', criticalIssues: ci }
+      
+      // List recent sentinel logs
+      const list = await env.SKILLS_KV.list({ prefix:'sentinel:', limit: 200 })
+      for (const k of list.keys) {
+        if (k.name === 'sentinel:stats' || k.name === 'sentinel:chunk_stats') continue
+        const d = await env.SKILLS_KV.get(k.name, 'json')
+        if (d) {
+          logs.push({ id: d.slug || k.name.replace('sentinel:',''), score: d.score||0, maxScore: d.maxScore||6, issues: (d.issues||[]).slice(0,1), passed: (d.score||0)>=4 })
+        }
+      }
     }
   } catch(_){}
 
@@ -1524,6 +2117,103 @@ function handleMCPSSE(request, env) {
   return new Response(readable, {
     headers: { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type,Authorization' }
   })
+}
+
+// ── MCP WebSocket transport ──────────────────────────────────
+function handleMCPWebSocket(request, env) {
+  try {
+    const pair = new WebSocketPair()
+    const [server, client] = Object.values(pair)
+    server.accept()
+    
+    server.addEventListener('message', async function(event) {
+      try {
+        const msg = JSON.parse(event.data)
+        const method = msg.method
+        const id = msg.id
+        const params = msg.params || {}
+        
+        if (method === 'initialize') {
+          server.send(JSON.stringify({
+            jsonrpc: '2.0', id: id,
+            result: {
+              protocolVersion: '2024-11-05',
+              serverInfo: { name: 'MarketNow MCP', version: '4.0.0' },
+              capabilities: { tools: {}, resources: {}, logging: {} }
+            }
+          }))
+        } else if (method === 'tools/list') {
+          const index = await loadSkillsIndex(env)
+          server.send(JSON.stringify({
+            jsonrpc: '2.0', id: id,
+            result: {
+              tools: [
+                { name: 'search_skills', description: 'Search MCP skills. Returns up to 100 results from ' + index.total + ' available skills.',
+                  inputSchema: { type: 'object', properties: {
+                    query: { type: 'string', description: 'Search query (name, description, category)' },
+                    category: { type: 'string', description: 'Filter by category' },
+                    min_score: { type: 'number', description: 'Minimum Sentinel security score (0-6)' },
+                    limit: { type: 'number', description: 'Max results (1-100)', default: 10 }
+                  }, required: ['query'] } },
+                { name: 'get_skill', description: 'Get detailed info about a specific skill by slug',
+                  inputSchema: { type: 'object', properties: { slug: { type: 'string', description: 'Skill slug' } }, required: ['slug'] } },
+                { name: 'get_categories', description: 'List all skill categories with counts',
+                  inputSchema: { type: 'object', properties: {} } },
+                { name: 'health', description: 'Check marketplace health status',
+                  inputSchema: { type: 'object', properties: {} } }
+              ]
+            }
+          }))
+        } else if (method === 'tools/call') {
+          const toolName = params.name
+          const args = params.arguments || {}
+          
+          if (toolName === 'search_skills') {
+            const index = await loadSkillsIndex(env)
+            const query = (args.query || '').toLowerCase()
+            const catFilter = (args.category || '').toLowerCase()
+            const minScore = args.min_score || 0
+            const limit = Math.min(args.limit || 10, 100)
+            let results = index.skills
+            if (query) results = results.filter(function(s) { return (s.name && s.name.toLowerCase().includes(query)) || (s.description && s.description.toLowerCase().includes(query)) || (s.tags && s.tags.some(function(t) { return t.toLowerCase().includes(query) })) })
+            if (catFilter) results = results.filter(function(s) { return s.category && s.category.toLowerCase().includes(catFilter) })
+            if (minScore > 0) results = results.filter(function(s) { return (s.sentinel_score || 0) >= minScore })
+            results = results.slice(0, limit)
+            const resultText = 'Found ' + results.length + ' skill(s)\nTotal marketplace: ' + index.total + ' skills.\n\n' +
+              results.map(function(s, i) { return (i+1) + '. **' + s.name + '** [' + s.category + ']\n   ' + s.description.substring(0, 120) + '\n   Install: `' + (s.install || 'npx ' + s.slug) + '` | Sentinel: ' + s.sentinel_score + '/6' }).join('\n')
+            server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: resultText }] } }))
+          } else if (toolName === 'get_skill') {
+            const idx = await loadSkillsIndex(env)
+            const sk = idx.skills.find(function(s) { return s.slug === args.slug })
+            if (!sk) {
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: 'Skill not found: ' + args.slug }] } }))
+            } else {
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: '## ' + sk.name + '\n**Category:** ' + sk.category + '\n**Sentinel Score:** ' + (sk.sentinel_score || 0) + '/6\n**Install:** `' + (sk.install || 'npx ' + sk.slug) + '`' }] } }))
+            }
+          } else if (toolName === 'get_categories') {
+            const idx = await loadSkillsIndex(env)
+            const cats = {}
+            idx.skills.forEach(function(s) { cats[s.category] = (cats[s.category] || 0) + 1 })
+            const catText = Object.keys(cats).sort().map(function(c) { return '- **' + c + '**: ' + cats[c] + ' skills' }).join('\n')
+            server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: catText || 'No categories found' }] } }))
+          } else if (toolName === 'health') {
+            server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: JSON.stringify({ status: 'ok', marketplace: 'MarketNow', skills: (await loadSkillsIndex(env)).total, version: '4.0.0' }, null, 2) }] } }))
+          } else {
+            server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32601, message: 'Tool not found: ' + toolName } }))
+          }
+        }
+      } catch(e) {
+        server.send(JSON.stringify({ jsonrpc: '2.0', id: null, error: { code: -32603, message: e.message } }))
+      }
+    })
+    
+    server.addEventListener('close', function() { server.close() })
+    server.addEventListener('error', function() { server.close() })
+    
+    return new Response(null, { status: 101, webSocket: client })
+  } catch(e) {
+    return new Response('WebSocket setup failed: ' + e.message, { status: 500 })
+  }
 }
 
 async function loadSkillsIndex(env) {

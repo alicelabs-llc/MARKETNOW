@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 // Components
@@ -43,6 +43,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Hero onSignIn={() => setAuthOpen(true)} />} />
+          <Route path="/skills" element={<Navigate to="/registry" replace />} />
           <Route path="/registry" element={<Registry />} />
           <Route path="/skill/:id" element={<SkillDetail />} />
           <Route path="/vault" element={<Vault />} />

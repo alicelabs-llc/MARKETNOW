@@ -513,7 +513,7 @@ async function arenaHTML(env) {
     battle = await env.AGENTS_KV.get('arena:current', 'json')
   } catch (_) {}
 
-  if (!battle) {
+  if (!battle || !battle.skillA || !battle.skillA.name) {
     battle = {
       id: 'demo',
       skillA: { slug: 'claude-design-mcp', name: 'Claude Design MCP', category: 'AI', score: 5, votes: 0 },
@@ -523,9 +523,12 @@ async function arenaHTML(env) {
     }
   }
 
-  const pctA = battle.totalVotes > 0 ? Math.round(battle.skillA.votes / battle.totalVotes * 100) : 50
+  const safeA = { name: battle.skillA?.name || 'Skill A', slug: battle.skillA?.slug || '', category: battle.skillA?.category || 'General', score: battle.skillA?.score ?? 0, votes: battle.skillA?.votes ?? 0 }
+  const safeB = { name: battle.skillB?.name || 'Skill B', slug: battle.skillB?.slug || '', category: battle.skillB?.category || 'General', score: battle.skillB?.score ?? 0, votes: battle.skillB?.votes ?? 0 }
+  const totalVotes = battle.totalVotes || 0
+  const pctA = totalVotes > 0 ? Math.round(safeA.votes / totalVotes * 100) : 50
   const pctB = 100 - pctA
-  const timeLeft = Math.max(0, battle.endsAt - Date.now())
+  const timeLeft = Math.max(0, (battle.endsAt || Date.now() + 86400000) - Date.now())
   const hoursLeft = Math.floor(timeLeft / 3600000)
   const minsLeft = Math.floor((timeLeft % 3600000) / 60000)
 
@@ -548,20 +551,20 @@ async function arenaHTML(env) {
       <h1 style="font-size:32px;font-weight:800">⚔️ Arena</h1>
       <p style="color:#666;margin-top:8px">Vote for the best skill · Winner gets homepage feature + Arena Champion badge</p>
       <div style="margin-top:12px;color:#fbbf24;font-size:14px">
-        ⏱ ${hoursLeft}h ${minsLeft}m remaining · ${battle.totalVotes} votes cast
+        ⏱ ${hoursLeft}h ${minsLeft}m remaining · ${totalVotes} votes cast
       </div>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center">
       <div class="arena-card" id="cardA" onclick="vote('a')">
-        <div class="badge badge-green" style="margin-bottom:12px">${battle.skillA.category}</div>
-        <div style="font-size:22px;font-weight:700;margin:16px 0">${battle.skillA.name}</div>
-        <div style="color:#666;font-size:13px;margin-bottom:24px">Sentinel score: ${battle.skillA.score}/5</div>
+        <div class="badge badge-green" style="margin-bottom:12px">${safeA.category}</div>
+        <div style="font-size:22px;font-weight:700;margin:16px 0">${safeA.name}</div>
+        <div style="color:#666;font-size:13px;margin-bottom:24px">Sentinel score: ${safeA.score}/5</div>
         <div class="vote-bar">
           <div class="vote-bar-fill" style="width:${pctA}%;background:#4ade80"></div>
         </div>
         <div style="font-size:24px;font-weight:700;color:#4ade80;margin-top:8px">${pctA}%</div>
-        <div style="font-size:12px;color:#444">${battle.skillA.votes} votes</div>
+        <div style="font-size:12px;color:#444">${safeA.votes} votes</div>
         <button class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center" onclick="vote('a')">
           Vote A ▶
         </button>
@@ -570,14 +573,14 @@ async function arenaHTML(env) {
       <div class="vs">VS</div>
 
       <div class="arena-card" id="cardB" onclick="vote('b')">
-        <div class="badge badge-blue" style="margin-bottom:12px">${battle.skillB.category}</div>
-        <div style="font-size:22px;font-weight:700;margin:16px 0">${battle.skillB.name}</div>
-        <div style="color:#666;font-size:13px;margin-bottom:24px">Sentinel score: ${battle.skillB.score}/5</div>
+        <div class="badge badge-blue" style="margin-bottom:12px">${safeB.category}</div>
+        <div style="font-size:22px;font-weight:700;margin:16px 0">${safeB.name}</div>
+        <div style="color:#666;font-size:13px;margin-bottom:24px">Sentinel score: ${safeB.score}/5</div>
         <div class="vote-bar">
           <div class="vote-bar-fill" style="width:${pctB}%;background:#60a5fa"></div>
         </div>
         <div style="font-size:24px;font-weight:700;color:#60a5fa;margin-top:8px">${pctB}%</div>
-        <div style="font-size:12px;color:#444">${battle.skillB.votes} votes</div>
+        <div style="font-size:12px;color:#444">${safeB.votes} votes</div>
         <button class="btn btn-secondary" style="margin-top:16px;width:100%;justify-content:center;border-color:#60a5fa;color:#60a5fa" onclick="vote('b')">
           ◀ Vote B
         </button>
@@ -912,14 +915,25 @@ async function handleArenaVote(request, env) {
     }
 
     if (env.AGENTS_KV) {
-      const battle = await env.AGENTS_KV.get(`arena:${battle_id}`, 'json') || {
-        id: battle_id, skillA: { votes: 0 }, skillB: { votes: 0 }, totalVotes: 0
+      const existing = await env.AGENTS_KV.get(`arena:${battle_id}`, 'json')
+      if (existing && existing.skillA && existing.skillA.name) {
+        // Valid battle — increment votes
+        if (vote === 'a') existing.skillA.votes = (existing.skillA.votes || 0) + 1
+        else existing.skillB.votes = (existing.skillB.votes || 0) + 1
+        existing.totalVotes = (existing.totalVotes || 0) + 1
+        await env.AGENTS_KV.put(`arena:${battle_id}`, JSON.stringify(existing))
+        await env.AGENTS_KV.put('arena:current', JSON.stringify(existing))
+      } else {
+        // First vote without a real battle — start fresh, don't corrupt arena:current
+        const freshBattle = {
+          id: battle_id, skillA: { votes: 0 }, skillB: { votes: 0 }, totalVotes: 0
+        }
+        if (vote === 'a') freshBattle.skillA.votes = 1
+        else freshBattle.skillB.votes = 1
+        freshBattle.totalVotes = 1
+        await env.AGENTS_KV.put(`arena:${battle_id}`, JSON.stringify(freshBattle))
+        // Do NOT set arena:current from partial data — arenaHTML needs full skill objects
       }
-      if (vote === 'a') battle.skillA.votes = (battle.skillA.votes || 0) + 1
-      else battle.skillB.votes = (battle.skillB.votes || 0) + 1
-      battle.totalVotes = (battle.totalVotes || 0) + 1
-      await env.AGENTS_KV.put(`arena:${battle_id}`, JSON.stringify(battle))
-      await env.AGENTS_KV.put('arena:current', JSON.stringify(battle))
     }
 
     return new Response(JSON.stringify({ success: true, vote }), { headers: cors })

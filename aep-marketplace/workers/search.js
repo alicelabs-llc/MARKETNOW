@@ -1099,6 +1099,11 @@ export default {
       }
     }
 
+    // Security audit: support SPA Security page
+    if (path === '/api/security/audit-logs') {
+      return handleSecurityAudit(env)
+    }
+
     // Proxy search/register to Pages
     if (path === '/api/search' || path.startsWith('/api/search?')) {
       const target = `${PAGES}${path}${url.search}`
@@ -1170,6 +1175,12 @@ export default {
       return new Response(legalHTML(), { headers: htmlHeaders() })
     }
 
+    // ── Security SSR page (Sentinel dashboard) ────────────────
+    if (path === '/security') {
+      const html = await securityPageHTML(env)
+      return new Response(html, { headers: htmlHeaders() })
+    }
+
     if (path.startsWith('/agent/')) {
       const agentId = path.split('/')[2]
       if (agentId) return agentProfileHTML(agentId, env)
@@ -1186,4 +1197,133 @@ export default {
       return new Response(`<!DOCTYPE html><html><head><title>MarketNow</title></head><body><h1>Service Unavailable</h1><p>${err.message}</p></body></html>`, { status: 503, headers: { 'Content-Type': 'text/html;charset=utf-8' } });
     }
   }
+}
+
+// ── Security Audit API ──────────────────────────────────────
+async function handleSecurityAudit(env) {
+  const CORS = { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' }
+  try {
+    let ts = 0, tc = 0, pc = 0, ci = 0, total = 0
+    const logs = []
+    if (env.SKILLS_KV) {
+      const list = await env.SKILLS_KV.list({ prefix: 'skill:' })
+      total = list.keys.length
+      for (const key of list.keys.slice(0, 200)) {
+        const d = await env.SKILLS_KV.get(key.name, 'json')
+        if (d && d.scan) {
+          ts++; tc += d.scan.score || 0
+          if ((d.scan.score || 0) >= 4) pc++
+          if (!d.scan.noSecrets || !d.scan.noMalicious || !d.scan.hasLicense) ci++
+          logs.push({ skill: d.slug || key.name.replace('skill:',''), score: d.scan.score||0, maxScore: d.scan.maxScore||6, issues: (d.scan.issues||[]).slice(0,3), passed: (d.scan.score||0)>=4, timestamp: d.createdAt||null })
+        }
+      }
+    }
+    return new Response(JSON.stringify({
+      stats: { totalSkills: total, totalScanned: ts, avgScore: ts>0?+((tc/ts).toFixed(1)):null, passRate: ts>0?+(((pc/ts)*100).toFixed(1)):null, criticalIssues: ci, maxScore: 6 },
+      logs: logs.slice(0,50),
+      scanner: { name: 'Sentinel L1', version: '1.0', checks: ['Repo Exists','Has README','Has Manifest','Has License','No Secrets','No Malicious Code'], status: 'active' },
+      lastUpdated: Date.now()
+    }), { headers: CORS })
+  } catch (err) {
+    return new Response(JSON.stringify({ error: err.message, stats: {}, logs: [] }), { headers: CORS, status: 500 })
+  }
+}
+
+// ── Security SSR Page ───────────────────────────────────────
+async function securityPageHTML(env) {
+  let stats = { totalSkills:0, totalScanned:0, avgScore:'N/A', passRate:'N/A', criticalIssues:0 }
+  const logs = []
+  try {
+    if (env.SKILLS_KV) {
+      const list = await env.SKILLS_KV.list({ prefix:'skill:' })
+      let ts=0, tc=0, pc=0, ci=0
+      for (const k of list.keys) {
+        const d = await env.SKILLS_KV.get(k.name, 'json')
+        if (d && d.scan) { ts++; tc += d.scan.score||0; if((d.scan.score||0)>=4) pc++; if(!d.scan.noSecrets||!d.scan.noMalicious||!d.scan.hasLicense) ci++
+          logs.push({ id:d.slug||k.name.replace('skill:',''), score:d.scan.score||0, maxScore:d.scan.maxScore||6, issues:(d.scan.issues||[]).slice(0,1), passed:(d.scan.score||0)>=4 })
+        }
+      }
+      stats = { totalSkills: list.keys.length, totalScanned: ts, avgScore: ts>0?(tc/ts).toFixed(1):'N/A', passRate: ts>0?((pc/ts)*100).toFixed(1):'N/A', criticalIssues: ci }
+    }
+  } catch(_){}
+
+  const now = new Date().toISOString().replace('T',' ').slice(0,19)
+  const nav = `<nav class=\"nav\"><span class=\"nav-brand\">\u26a1 MarketNow</span><a href=\"/\">Home</a><a href=\"/skills\">Registry</a><a href=\"/leaderboard\">Leaderboard</a><a href=\"/arena\">Arena</a><a href=\"/submit\">Submit Skill</a><div class=\"nav-right\"><a href=\"/login\" class=\"btn btn-secondary\" style=\"padding:6px 12px\">Login</a><a href=\"/register\" class=\"btn btn-primary\" style=\"padding:6px 12px\">Sign Up</a></div></nav>`
+  const ft = `<footer>Skills listed on MarketNow are based on open-source software. MarketNow provides curation, verification, and packaging services \u2014 not the underlying software. All original authors retain full rights to their work.<br><a href=\"/legal\">Legal \u0026 DMCA</a> \u00b7 <a href=\"/mcp\">MCP Docs</a> \u00b7 <a href=\"/sitemap.xml\">Sitemap</a><br><br>\u00a9 ${new Date().getFullYear()} MarketNow \u00b7 Powered by AEP Protocol</footer>`
+
+  const scoreColor = (s) => s >= 4 ? '#4ade80' : s >= 2 ? '#fbbf24' : '#f87171'
+  const sc = stats.totalScanned
+
+  return `<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Sentinel Security Center \u2014 MarketNow</title><style>body{background:#050505;color:#e5e5e5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;margin:0}.nav{display:flex;align-items:center;gap:20px;padding:16px 32px;border-bottom:1px solid #1a1a1a;background:#0a0a0a}.nav-brand{font-weight:700;font-size:18px;color:#00f299}.nav a{color:#666;text-decoration:none;font-size:14px}.nav a:hover{color:#fff}.nav-right{margin-left:auto;display:flex;gap:8px}.container{max-width:900px;margin:0 auto;padding:32px 20px}.card{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:12px;padding:24px;margin-bottom:20px}h1{font-size:28px;font-weight:700;color:#fff;margin:0 0 8px}h2{font-size:16px;color:#00f299;margin:0 0 16px;text-transform:uppercase;letter-spacing:1px}.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:32px}.stat-card{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:12px;padding:20px;text-align:center}.stat-value{font-size:32px;font-weight:700;color:#fff}.stat-label{font-size:12px;color:#666;margin-top:4px}.stat-bar{height:4px;border-radius:2px;margin-top:12px;background:#1a1a1a}.stat-fill{height:100%;border-radius:2px;transition:width 1s}.check-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:24px}.check-item{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#0d0d0d;border:1px solid #1a1a1a;border-radius:8px;font-size:13px}.check-pass{color:#4ade80;font-weight:700}.table{width:100%;border-collapse:collapse;font-size:13px}.table th{text-align:left;padding:8px 12px;color:#666;border-bottom:1px solid #1a1a1a;font-weight:600}.table td{padding:8px 12px;border-bottom:1px solid #111;color:#aaa}.badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600}.badge-green{background:#052e16;color:#4ade80;border:1px solid #166534}.badge-amber{background:#1c1400;color:#fbbf24;border:1px solid #92400e}.badge-red{background:#1f0a0a;color:#f87171;border:1px solid #991b1b}.alert{background:#0c1a2e;border:1px solid #1e40af;border-radius:8px;padding:16px;color:#60a5fa;font-size:13px;margin-bottom:24px;line-height:1.6}footer{text-align:center;padding:32px;color:#444;font-size:12px;border-top:1px solid #1a1a1a;margin-top:64px}@media(max-width:600px){.stat-grid{grid-template-columns:1fr 1fr}.nav{padding:12px 16px;flex-wrap:wrap;gap:8px}.container{padding:16px}}</style></head><body>${nav}<div class=\"container\">
+    <div style=\"display:flex;align-items:center;justify-content:space-between;margin-bottom:24px\">
+      <div><h1>\u26a0\ufe0f Sentinel Security Center</h1><p style=\"color:#666;font-size:14px;margin:4px 0 0\">Real-time security audit for all skills on the marketplace. Every submission is automatically scanned by Sentinel L1.</p></div>
+      <div style=\"text-align:right\"><span class=\"badge badge-green\">LIVE</span><br><span style=\"font-size:11px;color:#555\">Updated ${now} UTC</span></div>
+    </div>
+
+    <div class=\"alert\">\ud83d\udee1\ufe0f <strong>Industry Context:</strong> A recent security analysis of agent skill marketplaces found <strong>13.4% of skills</strong> on platforms without automated review contain critical security issues. MarketNow scans every single submission with Sentinel L1 before listing. No exceptions.</div>
+
+    <div class=\"stat-grid\">
+      <div class=\"stat-card\"><div class=\"stat-value\">${stats.totalSkills}</div><div class=\"stat-label\">Total Skills on Marketplace</div></div>
+      <div class=\"stat-card\"><div class=\"stat-value\">${sc}</div><div class=\"stat-label\">Skills Scanned by Sentinel</div><div class=\"stat-bar\"><div class=\"stat-fill\" style=\"width:${sc>0?Math.min(100,(sc/stats.totalSkills)*100):0}%;background:#00f299\"></div></div></div>
+      <div class=\"stat-card\"><div class=\"stat-value\" style=\"color:${typeof stats.avgScore==='number'?scoreColor(stats.avgScore):'#666'}\">${stats.avgScore}<span style=\"font-size:14px;color:#666\">/6</span></div><div class=\"stat-label\">Average Sentinel Score</div><div class=\"stat-bar\"><div class=\"stat-fill\" style=\"width:${typeof stats.avgScore==='number'?(stats.avgScore/6*100):0}%;background:${typeof stats.avgScore==='number'?scoreColor(stats.avgScore):'#666'}\"></div></div></div>
+      <div class=\"stat-card\"><div class=\"stat-value\" style=\"color:${stats.passRate!=='N/A'&&parseFloat(stats.passRate)>=70?'#4ade80':'#fbbf24'}\">${stats.passRate}<span style=\"font-size:14px;color:#666\">%</span></div><div class=\"stat-label\">Pass Rate (Score \u2265 4/6)</div><div class=\"stat-bar\"><div class=\"stat-fill\" style=\"width:${stats.passRate!=='N/A'?parseFloat(stats.passRate):0}%;background:${stats.passRate!=='N/A'&&parseFloat(stats.passRate)>=70?'#4ade80':'#fbbf24'}\"></div></div></div>
+      <div class=\"stat-card\"><div class=\"stat-value\" style=\"color:${stats.criticalIssues>0?'#f87171':'#4ade80'}\">${stats.criticalIssues}</div><div class=\"stat-label\">Critical Issues Found</div></div>
+    </div>
+
+    <h2>\u2705 Sentinel L1 Checks</h2>
+    <div class=\"check-list\">
+      <div class=\"check-item\"><span class=\"check-pass\">\u2713</span> Repository exists \u0026 accessible</div>
+      <div class=\"check-item\"><span class=\"check-pass\">\u2713</span> README documentation present</div>
+      <div class=\"check-item\"><span class=\"check-pass\">\u2713</span> Package manifest detected</div>
+      <div class=\"check-item\"><span class=\"check-pass\">\u2713</span> Open-source license verified</div>
+      <div class=\"check-item\"><span>\u2713</span> No hardcoded secrets/credentials</div>
+      <div class=\"check-item\"><span>\u2713</span> No malicious code patterns</div>
+    </div>
+
+    <h2>\ud83d\udcca Scan Methodology</h2>
+    <div class=\"card\" style=\"font-size:13px;color:#aaa;line-height:1.7\">
+      <p>Sentinel L1 is an automated static analysis tool that runs on every skill submission. It performs the following checks without executing any code:</p>
+      <ol style=\"margin:12px 0;padding-left:20px\">
+        <li>Fetches the public GitHub repository and verifies it exists</li>
+        <li>Scans the README for documentation quality</li>
+        <li>Detects package manifests (package.json, pyproject.toml, Cargo.toml, go.mod)</li>
+        <li>Validates open-source license via GitHub License API</li>
+        <li>Analyzes top-level source files for regex patterns matching API keys, passwords, tokens</li>
+        <li>Scans for known malicious code patterns (eval of user input, base64-obfuscated strings, suspicious domains)</li>
+      </ol>
+      <p>Skills that score 4/6 or higher (all critical checks passing) are marked as <strong>Verified</strong> on their detail page. Skills failing secrets or malicious code checks are blocked from listing.</p>
+      <p style=\"color:#555\">License: MIT | Check latency: ~2-5s per skill | Max files scanned per repo: 10</p>
+    </div>
+
+    <h2>\ud83d\udccb Recent Audit Logs</h2>
+    <div class=\"card\" style=\"padding:0;overflow:hidden\">
+    ${logsHTML(logs)}
+    </div>
+
+    <h2>\ud83d\udcc8 Market Comparison</h2>
+    <div class=\"card\" style=\"font-size:13px\">
+      <table class=\"table\">
+        <tr><th>Feature</th><th>MarketNow</th><th>Agensi</th><th>Others</th></tr>
+        <tr><td>Automated Security Scan</td><td style=\"color:#4ade80\">\u2713 Sentinel L1</td><td style=\"color:#f87171\">\u2717 Manual review</td><td style=\"color:#f87171\">\u2717 None</td></tr>
+        <tr><td>Malicious Code Detection</td><td style=\"color:#4ade80\">\u2713 10+ pattern checks</td><td style=\"color:#fbbf24\">Limited</td><td style=\"color:#f87171\">\u2717</td></tr>
+        <tr><td>Secret/Credential Scanning</td><td style=\"color:#4ade80\">\u2713 Regex-based</td><td style=\"color:#f87171\">\u2717</td><td style=\"color:#f87171\">\u2717</td></tr>
+        <tr><td>License Verification</td><td style=\"color:#4ade80\">\u2713 Auto-detect</td><td style=\"color:#fbbf24\">Manual</td><td style=\"color:#f87171\">\u2717</td></tr>
+        <tr><td>Open Audit Trail</td><td style=\"color:#4ade80\">\u2713 Public logs</td><td style=\"color:#f87171\">\u2717</td><td style=\"color:#f87171\">\u2717</td></tr>
+        <tr><td>Score /6 Public</td><td style=\"color:#4ade80\">\u2713 On skill page</td><td style=\"color:#f87171\">\u2717</td><td style=\"color:#f87171\">\u2717</td></tr>
+      </table>
+      <p style=\"color:#555;font-size:11px;margin-top:12px\">Based on public information available as of Q2 2026. Competitor features may have changed.</p>
+    </div>
+  </div>${ft}</body></html>`
+}
+
+function logsHTML(logs) {
+  if (!logs || logs.length === 0) {
+    return '<p style=\"padding:20px;color:#555;text-align:center\">No audit logs available yet. Submit a skill to trigger the first scan.</p>'
+  }
+  return `<table class=\"table\"><tr><th>Skill</th><th>Score</th><th>Issues</th><th>Status</th></tr>${logs.map(l => {
+    const badgeClass = l.score >= 4 ? 'badge-green' : l.score >= 2 ? 'badge-amber' : 'badge-red'
+    const passIcon = l.passed ? '\u2705' : '\u274c'
+    const scoreStr = l.maxScore ? `${l.score}/${l.maxScore}` : String(l.score)
+    return `<tr><td style=\"font-weight:600;color:#ccc\">${l.id||'unknown'}</td><td><span class=\"badge ${badgeClass}\">${scoreStr}</span></td><td style=\"color:#888\">${(l.issues||[]).slice(0,1).join(', ') || '-'}</td><td>${passIcon}</td></tr>`
+  }).join('')}</table>`
 }

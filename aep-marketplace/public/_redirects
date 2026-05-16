@@ -48,9 +48,13 @@
 # Google verification (served by Worker)
 /googlecfd72b7c796e2ead.html         https://marketnow.site/googlecfd72b7c796e2ead.html       301
 
+# Security SSR (Worker now handles this with real Sentinel data)
+/security                            https://marketnow.site/security                         301
+/security/                           https://marketnow.site/security                         301
+
 # Catch-all SPA fallback (no match = SPA)
 # All these routes are served directly by Pages SPA, NOT redirected to Worker:
-#   /security   /vault   /governance   /handshake   /policies
+#   /vault   /governance   /handshake   /policies
 #   /mcp   /login   /register   /checkout   /account
 #   /skill/:id   /skills*
 #   /.well-known/*   /sitemap.xml   /robots.txt   /badge/*

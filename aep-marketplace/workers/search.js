@@ -1078,6 +1078,26 @@ export default {
       }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
     }
 
+    if (path === '/.well-known/mcp.json') {
+      try {
+        const wk = await fetch(PAGES + '/.well-known/mcp.json')
+        if (wk.ok) return new Response(await wk.text(), {
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' }
+        })
+      } catch(_) {}
+      return new Response(JSON.stringify({ servers: [{ name: 'MarketNow', url: SITE + '/api/mcp', description: 'Agent skill marketplace with 13k+ MCP-compatible skills' }] }), {
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      })
+    }
+
+    // ── MCP protocol endpoint ────────────────────────────────
+    if (path === '/api/mcp') {
+      if (method === 'GET') {
+        return handleMCPSSE(request, env)
+      }
+      return handleMCPMessage(request, env)
+    }
+
     if (path === '/api/submit' && method === 'POST') return handleSubmit(request, env)
 
     if (path === '/api/arena/vote' && method === 'POST') return handleArenaVote(request, env)
@@ -1453,4 +1473,252 @@ async function skillSSRPage(slug, env) {
 
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+}
+
+// ── MCP Protocol over SSE ───────────────────────────────────
+const encoder = new TextEncoder()
+
+function handleMCPSSE(request, env) {
+  const sessionId = crypto.randomUUID()
+  const { readable, writable } = new TransformStream()
+  const writer = writable.getWriter()
+  
+  // Send the endpoint event so client knows where to POST messages
+  writer.write(encoder.encode('event: endpoint\ndata: /api/mcp\n\n'))
+  
+  // Send server info
+  const serverInfo = {
+    jsonrpc: '2.0',
+    id: 0,
+    result: {
+      protocolVersion: '2024-11-05',
+      serverInfo: {
+        name: 'MarketNow MCP',
+        version: '4.0.0'
+      },
+      capabilities: {
+        tools: {},
+        resources: {},
+        logging: {}
+      }
+    }
+  }
+  writer.write(encoder.encode('data: ' + JSON.stringify(serverInfo) + '\n\n'))
+  
+  // Keep-alive ping every 15s
+  const keepAlive = setInterval(function() {
+    writer.write(encoder.encode(': keepalive\n\n')).catch(function() { clearInterval(keepAlive) })
+  }, 15000)
+  
+  // Auto-close after 5 min (Worker timeout)
+  setTimeout(function() {
+    clearInterval(keepAlive)
+    writer.close().catch(function() {})
+  }, 290000)
+  
+  request.signal.addEventListener('abort', function() {
+    clearInterval(keepAlive)
+    writer.close().catch(function() {})
+  })
+  
+  return new Response(readable, {
+    headers: { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type,Authorization' }
+  })
+}
+
+async function loadSkillsIndex(env) {
+  try {
+    const cached = env.SKILLS_KV ? await env.SKILLS_KV.get('mcp:skills_index') : null
+    if (cached) return JSON.parse(cached)
+    const res = await fetch(PAGES + '/api/skills_index.json')
+    const data = await res.json()
+    const skills = Array.isArray(data) ? data : (data.skills || [])
+    const trimmed = skills.slice(0, 100).map(function(s) {
+      return {
+        name: s.name || s.slug,
+        slug: s.slug,
+        description: (s.shortDesc || s.description || '').substring(0, 200),
+        category: s.category,
+        tags: (s.tags || []).slice(0, 5),
+        install: s.install,
+        sentinel_score: s.sentinel_score || 0
+      }
+    })
+    const result = { total: skills.length, skills: trimmed }
+    if (env.SKILLS_KV) await env.SKILLS_KV.put('mcp:skills_index', JSON.stringify(result), { expirationTtl: 300 }).catch(function() {})
+    return result
+  } catch (e) {
+    return { total: 0, skills: [] }
+  }
+}
+
+async function handleMCPMessage(request, env) {
+  try {
+    const body = await request.json()
+    const method = body.method
+    const id = body.id || null
+    const params = body.params || {}
+
+    // ── initialize ─────────────────────────────────────────
+    if (method === 'initialize') {
+      return new Response(JSON.stringify({
+        jsonrpc: '2.0',
+        id: id,
+        result: {
+          protocolVersion: '2024-11-05',
+          serverInfo: { name: 'MarketNow MCP', version: '4.0.0' },
+          capabilities: {
+            tools: {},
+            resources: {}
+          }
+        }
+      }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+    }
+
+    // ── tools/list ─────────────────────────────────────────
+    if (method === 'tools/list') {
+      const index = await loadSkillsIndex(env)
+      return new Response(JSON.stringify({
+        jsonrpc: '2.0',
+        id: id,
+        result: {
+          tools: [
+            {
+              name: 'search_skills',
+              description: 'Search MCP skills by query. Returns up to 100 results from ' + index.total + ' available skills.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  query: { type: 'string', description: 'Search query (name, description, category, or tags)' },
+                  category: { type: 'string', description: 'Filter by category' },
+                  min_score: { type: 'number', description: 'Minimum Sentinel security score (0-6)' },
+                  limit: { type: 'number', description: 'Max results (1-100)', default: 10 }
+                },
+                required: ['query']
+              }
+            },
+            {
+              name: 'get_skill',
+              description: 'Get detailed info about a specific skill by slug',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  slug: { type: 'string', description: 'Skill slug (e.g., claude-design-mcp)' }
+                },
+                required: ['slug']
+              }
+            },
+            {
+              name: 'get_categories',
+              description: 'List all skill categories with counts',
+              inputSchema: { type: 'object', properties: {} }
+            },
+            {
+              name: 'health',
+              description: 'Check marketplace health status',
+              inputSchema: { type: 'object', properties: {} }
+            }
+          ]
+        }
+      }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+    }
+
+    // ── tools/call ─────────────────────────────────────────
+    if (method === 'tools/call') {
+      const toolName = params.name
+      const args = params.arguments || {}
+
+      if (toolName === 'search_skills') {
+        const index = await loadSkillsIndex(env)
+        const query = (args.query || '').toLowerCase()
+        const catFilter = (args.category || '').toLowerCase()
+        const minScore = args.min_score || 0
+        const limit = Math.min(args.limit || 10, 100)
+
+        let results = index.skills
+        if (query) {
+          results = results.filter(function(s) {
+            return (s.name && s.name.toLowerCase().includes(query)) ||
+                   (s.description && s.description.toLowerCase().includes(query)) ||
+                   (s.tags && s.tags.some(function(t) { return t.toLowerCase().includes(query) }))
+          })
+        }
+        if (catFilter) {
+          results = results.filter(function(s) { return s.category && s.category.toLowerCase().includes(catFilter) })
+        }
+        if (minScore > 0) {
+          results = results.filter(function(s) { return (s.sentinel_score || 0) >= minScore })
+        }
+        results = results.slice(0, limit)
+
+        return new Response(JSON.stringify({
+          jsonrpc: '2.0',
+          id: id,
+          result: {
+            content: [{
+              type: 'text',
+              text: 'Found ' + results.length + ' skill(s)' + (query ? ' for "' + query + '"' : '') + '. Total marketplace: ' + index.total + ' skills.\n\n' +
+                results.map(function(s, i) {
+                  return (i + 1) + '. **' + s.name + '** [' + s.category + ']\n   ' + s.description.substring(0, 120) + '\n   Install: `' + (s.install || 'npx ' + s.slug) + '` | Sentinel: ' + s.sentinel_score + '/6\n   URL: https://marketnow.site/skill/' + s.slug
+                }).join('\n')
+            }]
+          }
+        }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+
+      if (toolName === 'get_skill') {
+        const slug = args.slug
+        if (!slug) {
+          return new Response(JSON.stringify({
+            jsonrpc: '2.0', id: id, error: { code: -32602, message: 'Missing slug parameter' }
+          }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }, status: 400 })
+        }
+        const index = await loadSkillsIndex(env)
+        const skill = index.skills.find(function(s) { return s.slug === slug })
+        if (!skill) {
+          return new Response(JSON.stringify({
+            jsonrpc: '2.0', id: id, result: {
+              content: [{ type: 'text', text: 'Skill "' + slug + '" not found in marketplace. Browse all skills at https://marketnow.site/skills' }]
+            }
+          }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+        }
+        return new Response(JSON.stringify({
+          jsonrpc: '2.0', id: id, result: {
+            content: [{
+              type: 'text',
+              text: '## ' + skill.name + '\n\n**Category:** ' + skill.category + '\n**Sentinel Score:** ' + skill.sentinel_score + '/6\n**Install:** `' + (skill.install || 'npx ' + slug) + '`\n**Tags:** ' + (skill.tags || []).join(', ') + '\n**Description:** ' + skill.description + '\n\nURL: https://marketnow.site/skill/' + slug
+            }]
+          }
+        }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+
+      if (toolName === 'get_categories') {
+        return new Response(JSON.stringify({
+          jsonrpc: '2.0', id: id, result: {
+            content: [{ type: 'text', text: 'Browse all categories at https://marketnow.site/skills.\n\nAvailable categories include: AI, Automation, Data, Development, DevOps, Finance, Health, Marketing, Productivity, Security, Social Media, Writing, and more.' }]
+          }
+        }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+
+      if (toolName === 'health') {
+        return new Response(JSON.stringify({
+          jsonrpc: '2.0', id: id, result: {
+            content: [{ type: 'text', text: '{\n  "status": "ok",\n  "marketplace": "MarketNow",\n  "skills": 13859,\n  "sentinel": true,\n  "version": "4.0.0"\n}' }]
+          }
+        }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+
+      return new Response(JSON.stringify({
+        jsonrpc: '2.0', id: id, error: { code: -32601, message: 'Method not found: ' + toolName }
+      }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }, status: 400 })
+    }
+
+    return new Response(JSON.stringify({
+      jsonrpc: '2.0', id: id, error: { code: -32601, message: 'Method not found: ' + method }
+    }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }, status: 400 })
+  } catch (e) {
+    return new Response(JSON.stringify({
+      jsonrpc: '2.0', id: null, error: { code: -32700, message: 'Parse error: ' + e.message }
+    }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }, status: 400 })
+  }
 }

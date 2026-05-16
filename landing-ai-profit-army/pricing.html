@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MarketNow - Premium AI Agent Skills Marketplace</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, 'Segoe UI', system-ui, sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+nav { display:flex; justify-content:space-between; align-items:center; padding:16px 5%; background:#0d0d14; border-bottom:1px solid #1a1a2e; }
+nav .logo { font-size:1.4rem; font-weight:800; background:linear-gradient(135deg,#00d4ff,#00ff88); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+nav a { color:#888; text-decoration:none; margin-left:24px; font-size:.9rem; transition:color .2s; }
+nav a:hover { color:#00d4ff; }
+.hero { text-align:center; padding:80px 5% 40px; }
+.hero h1 { font-size:3rem; font-weight:800; margin-bottom:12px; background:linear-gradient(135deg,#00d4ff 0%,#00ff88 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.hero p { color:#888; font-size:1.15rem; max-width:600px; margin:0 auto 16px; }
+.hero .stats { display:flex; gap:40px; justify-content:center; margin-top:32px; flex-wrap:wrap; }
+.hero .stat { text-align:center; }
+.hero .stat-num { font-size:2rem; font-weight:700; color:#00d4ff; }
+.hero .stat-label { font-size:.85rem; color:#666; }
+.section-title { text-align:center; font-size:1.6rem; font-weight:700; margin:48px 0 8px; }
+.section-subtitle { text-align:center; color:#666; margin-bottom:32px; font-size:.95rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; max-width:1200px; margin:0 auto; padding:0 5% 40px; }
+.card { background:#12121a; border:1px solid #1e1e30; border-radius:12px; padding:24px; transition:border-color .3s,transform .2s; display:flex; flex-direction:column; }
+.card:hover { border-color:#00d4ff; transform:translateY(-2px); }
+.card .tier { display:inline-block; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; padding:3px 10px; border-radius:20px; margin-bottom:12px; }
+.premium { background:rgba(0,212,255,.12); color:#00d4ff; border:1px solid rgba(0,212,255,.25); }
+.standard { background:rgba(0,255,136,.1); color:#00ff88; border:1px solid rgba(0,255,136,.2); }
+.card h3 { font-size:1.15rem; font-weight:700; margin-bottom:6px; }
+.card .price { font-size:2.2rem; font-weight:800; color:#fff; margin:8px 0; }
+.card .price span { font-size:1rem; font-weight:400; color:#888; }
+.card .desc { color:#888; font-size:.85rem; margin-bottom:12px; line-height:1.4; }
+.card .features { list-style:none; margin:12px 0 16px; }
+.card .features li { font-size:.85rem; color:#aaa; padding:4px 0; padding-left:20px; position:relative; }
+.card .features li::before { content:"\2713"; position:absolute; left:0; color:#00ff88; }
+.card .btn { width:100%; padding:12px; border:none; border-radius:8px; font-size:.9rem; font-weight:600; cursor:pointer; transition:opacity .2s; margin-top:auto; }
+.btn-primary { background:linear-gradient(135deg,#00d4ff,#00ff88); color:#000; }
+.btn-primary:hover { opacity:.9; }
+.btn-secondary { background:#1e1e30; color:#fff; border:1px solid #2a2a40; }
+.btn-secondary:hover { background:#2a2a40; }
+.bundles { max-width:1200px; margin:0 auto; padding:0 5% 60px; }
+.bundle-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:20px; }
+.bundle-card { background:linear-gradient(135deg,rgba(0,212,255,.05),rgba(0,255,136,.03)); border:1px solid #1e1e30; border-radius:12px; padding:28px; text-align:center; transition:border-color .3s; }
+.bundle-card:hover { border-color:#00d4ff; }
+.bundle-card .bundle-name { font-size:1.2rem; font-weight:700; margin-bottom:6px; }
+.bundle-card .bundle-price { font-size:2.8rem; font-weight:800; color:#fff; margin:8px 0; }
+.bundle-card .bundle-original { color:#666; text-decoration:line-through; font-size:.95rem; }
+.bundle-card .bundle-save { display:inline-block; background:rgba(255,107,53,.15); color:#ff6b35; padding:2px 12px; border-radius:12px; font-size:.8rem; font-weight:600; margin:6px 0 12px; }
+.bundle-card .bundle-desc { color:#888; font-size:.85rem; margin-bottom:16px; }
+.bundle-card .bundle-skills { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin:12px 0; }
+.bundle-card .bundle-skills span { background:#1a1a2e; padding:4px 12px; border-radius:16px; font-size:.75rem; color:#aaa; }
+.modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.7); backdrop-filter:blur(4px); z-index:1000; align-items:center; justify-content:center; }
+.modal-overlay.active { display:flex; }
+.modal { background:#12121a; border:1px solid #2a2a40; border-radius:16px; padding:36px; max-width:480px; width:90%; position:relative; }
+.modal h2 { font-size:1.4rem; margin-bottom:6px; }
+.modal .modal-price { font-size:2.5rem; font-weight:800; color:#00d4ff; margin:12px 0 20px; }
+.modal-close { position:absolute; top:16px; right:20px; background:none; border:none; color:#666; font-size:1.5rem; cursor:pointer; }
+.modal-close:hover { color:#fff; }
+.pay-options { display:flex; gap:12px; margin:20px 0; }
+.pay-options .pay-btn { flex:1; padding:14px; border-radius:10px; font-weight:600; font-size:.85rem; cursor:pointer; border:1px solid #2a2a40; background:#1a1a2e; color:#fff; text-align:center; transition:border-color .2s; }
+.pay-options .pay-btn:hover { border-color:#00d4ff; }
+.modal .license-input { width:100%; padding:12px; background:#0d0d14; border:1px solid #2a2a40; border-radius:8px; color:#fff; font-family:monospace; font-size:.8rem; margin-top:12px; }
+.modal .license-input:focus { border-color:#00d4ff; outline:none; }
+footer { text-align:center; padding:32px 5%; border-top:1px solid #1a1a2e; color:#444; font-size:.85rem; }
+footer a { color:#666; text-decoration:none; }
+footer a:hover { color:#00d4ff; }
+@media(max-width:768px) { .hero h1 { font-size:2rem; } .grid { grid-template-columns:1fr; } .bundles { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">MARKETNOW</div>
+<div>
+<a href="https://ai-profit-army.vercel.app">Home</a>
+<a href="#pricing">Pricing</a>
+<a href="#bundles">Bundles</a>
+<a href="https://github.com/edgarfloresguerra2011-a11y/marketnow" target="_blank">GitHub</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Premium AI Agent Skills</h1>
+<p>Production-ready skills for autonomous agents. Solve real problems. Deploy in seconds.</p>
+<div class="stats">
+<div class="stat"><div class="stat-num">10</div><div class="stat-label">Skills</div></div>
+<div class="stat"><div class="stat-num">$514</div><div class="stat-label">Individual Value</div></div>
+<div class="stat"><div class="stat-num">$297</div><div class="stat-label">Bundle Price</div></div>
+</div>
+</section>
+
+<h2 id="pricing" class="section-title">Choose Your Skills</h2>
+<p class="section-subtitle">Licensed per-skill. Free updates. Premium support.</p>
+
+<div class="grid" id="skillGrid"></div>
+
+<h2 id="bundles" class="section-title">Bundle & Save</h2>
+<p class="section-subtitle">Get more. Pay less. Stackable licenses.</p>
+
+<div class="bundles">
+<div class="bundle-grid" id="bundleGrid"></div>
+</div>
+
+<div class="modal-overlay" id="buyModal">
+<div class="modal">
+<button class="modal-close" onclick="closeModal()">&times;</button>
+<h2 id="modalTitle">Skill Name</h2>
+<p style="color:#888;font-size:.85rem;" id="modalTier">Premium</p>
+<div class="modal-price" id="modalPrice">$47</div>
+<p style="color:#888;font-size:.85rem;margin-bottom:16px;">Choose your payment method:</p>
+<div class="pay-options">
+<div class="pay-btn" onclick="alert('PayPal: Coming soon. Contact edgar.flores.guerra.2011@gmail.com')">PayPal</div>
+<div class="pay-btn" onclick="alert('Stripe: Coming soon. Contact edgar.flores.guerra.2011@gmail.com')">Stripe</div>
+<div class="pay-btn" onclick="alert('USDC/USDT: Send to wallet address provided via email')">Crypto</div>
+</div>
+<p style="color:#666;font-size:.75rem;margin:16px 0 8px;">Already purchased? Enter your license key:</p>
+<input class="license-input" placeholder="Paste license key and run: python scripts/license.py activate SLUG KEY" />
+</div>
+</div>
+
+<footer>
+<p>Built by <a href="https://github.com/eddyflores100-lang">AliceLabs LLC</a> | Skills on <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow">GitHub</a> | Deployed on Vercel</p>
+<p style="margin-top:8px;">&copy; 2026 MarketNow. All rights reserved.</p>
+</footer>
+
+<script>
+const skills = [
+{slug:"multi-platform-publisher", name:"Multi-Platform Publisher", price:47, tier:"premium", desc:"Publish across KDP, Gumroad, Hotmart, and Shopify simultaneously.", features:["Niche research with competition scoring","SEO-optimized listings per platform","Cross-platform price sync","Launch email templates"]},
+{slug:"memcore-ai", name:"MemCore AI", price:39, tier:"premium", desc:"Persistent memory architecture so agents never forget context.", features:["Hierarchical memory layers","Vector-based semantic recall","User profile persistence","Automated memory consolidation"]},
+{slug:"agent-pricing-engine", name:"Agent Pricing Engine", price:57, tier:"premium", desc:"Autonomous pricing, quoting, and negotiation for agents.", features:["4 pricing models (cost+, value, market, dynamic)","Auto quote generation","Smart negotiation engine","Billing system ready"]},
+{slug:"multimodal-content-factory", name:"Content Factory", price:44, tier:"premium", desc:"One input becomes 10+ content formats across platforms.", features:["Blog to social, video, audio, email","Tone adaptation per platform","Thread/video script generation","Multilingual SEO"]},
+{slug:"autonomous-quality-assurance", name:"Autonomous QA Agent", price:49, tier:"premium", desc:"Self-verifying agent outputs with hallucination detection.", features:["5 quality gates pipeline","Hallucination detection","Factual verification","Auto-fix common errors"]},
+{slug:"lead-generation-automation", name:"Lead Gen Automator", price:67, tier:"premium", desc:"Autonomous prospect discovery across multiple channels.", features:["Multi-channel search (LinkedIn, web, directories)","Auto data enrichment","Predictive lead scoring","Outreach sequence automation"]},
+{slug:"api-marketplace-aggregator", name:"API Aggregator", price:34, tier:"standard", desc:"API discovery, price comparison, and key vault management.", features:["50+ API marketplace search","Real-time price comparison","Secure API key vault","Integration code generation"]},
+{slug:"agent-ecommerce-suite", name:"Ecommerce Suite", price:79, tier:"premium", desc:"Full online store management from products to analytics.", features:["Store creation and config","Catalog and inventory management","Autonomous order processing","Marketing automation"]},
+{slug:"cross-platform-browser-agent", name:"Browser Agent", price:44, tier:"premium", desc:"Universal browser automation with self-healing selectors.", features:["Chrome, Firefox, Edge, Safari","Self-healing UI selectors","Website monitoring","Anti-detection for ethical scraping"]},
+{slug:"agent-sentiment-orchestrator", name:"Sentiment Orchestrator", price:54, tier:"premium", desc:"Multi-channel brand monitoring with response orchestration.", features:["20+ channel monitoring","Multi-dimensional sentiment analysis","Auto alerting and escalation","Response orchestration pipeline"]}
+];
+
+const bundles = [
+{name:"All 10 Skills", price:297, original:514, save:"42% OFF", desc:"Everything we build. All skills, all tiers.", skills:["All 10 skills above"]},
+{name:"Sales Suite", price:203, original:257, save:"21% OFF", desc:"Pricing Engine + Lead Gen + Ecommerce + Sentiment.", skills:["Pricing Engine","Lead Gen","Ecommerce","Sentiment"]},
+{name:"Content Bundle", price:91, original:145, save:"37% OFF", desc:"Publisher + Content Factory + Sentiment Orchestrator.", skills:["Publisher","Content Factory","Sentiment"]},
+{name:"Dev Tools", price:127, original:207, save:"39% OFF", desc:"QA + API Aggregator + Browser Agent + MemCore.", skills:["QA Agent","API Agg","Browser","MemCore"]}
+];
+
+function render() {
+const grid = document.getElementById('skillGrid');
+skills.forEach(s => {
+const card = document.createElement('div');
+card.className = 'card';
+card.innerHTML = `
+<div class="tier ${s.tier}">${s.tier.toUpperCase()}</div>
+<h3>${s.name}</h3>
+<div class="price">$${s.price}<span>/skill</span></div>
+<div class="desc">${s.desc}</div>
+<ul class="features">${s.features.map(f => `<li>${f}</li>`).join('')}</ul>
+<button class="btn btn-primary" onclick="openModal('${s.slug}','${s.name}','${s.price}','${s.tier}')">Buy Now - $${s.price}</button>`;
+grid.appendChild(card);
+});
+const bundleGrid = document.getElementById('bundleGrid');
+bundles.forEach(b => {
+const card = document.createElement('div');
+card.className = 'bundle-card';
+card.innerHTML = `
+<div class="bundle-name">${b.name}</div>
+<div class="bundle-price">$${b.price}</div>
+<div class="bundle-original">$${b.original}</div>
+<div class="bundle-save">SAVE ${b.save}</div>
+<div class="bundle-desc">${b.desc}</div>
+<div class="bundle-skills">${b.skills.map(s => `<span>${s}</span>`).join('')}</div>
+<button class="btn btn-primary" style="margin-top:16px" onclick="openModal('bundle-${b.name}','${b.name}','${b.price}','bundle')">Buy Bundle - $${b.price}</button>`;
+bundleGrid.appendChild(card);
+});
+}
+
+function openModal(slug, name, price, tier) {
+document.getElementById('modalTitle').textContent = name;
+document.getElementById('modalPrice').textContent = '$' + price;
+document.getElementById('modalTier').textContent = tier === 'bundle' ? 'Bundle' : tier.toUpperCase();
+document.querySelector('.license-input').placeholder = 'License key for ' + slug;
+document.getElementById('buyModal').classList.add('active');
+}
+
+function closeModal() {
+document.getElementById('buyModal').classList.remove('active');
+}
+
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+document.getElementById('buyModal').addEventListener('click', e => { if(e.target === e.currentTarget) closeModal(); });
+
+render();
+</script>
+</body>
+</html>

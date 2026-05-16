@@ -1064,6 +1064,12 @@ export default {
       })
     }
 
+    // ── www → non-www redirect ──────────────────────────────
+    if (url.hostname.startsWith('www.')) {
+      const clean = url.hostname.replace(/^www\./, '')
+      return Response.redirect(`https://${clean}${path}${url.search}`, 301)
+    }
+
     // ── API routes ──────────────────────────────────────────
     if (path === '/api/health') {
       return new Response(JSON.stringify({

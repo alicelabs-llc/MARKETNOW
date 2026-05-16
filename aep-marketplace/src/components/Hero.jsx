@@ -1,0 +1,84 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+export default function Hero({ onSignIn }) {
+  return (
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Decorative grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
+
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
+            <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
+            <span className="text-[#00F299] text-xs font-mono tracking-wider">
+              AEP PROTOCOL V10.2 · {new Date().getFullYear()} EDITION
+            </span>
+          </div>
+
+          {/* Title */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            The{' '}
+            <span className="bg-gradient-to-r from-[#00F299] to-[#00d1ff] bg-clip-text text-transparent">
+              Agent Skill
+            </span>{' '}
+            <br />
+            Marketplace
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-zinc-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+            Discover, purchase, and deploy production-grade agent skills through the 
+            Model Context Protocol. The first decentralized registry for AI agent capabilities.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <Link
+              to="/registry"
+              className="px-8 py-4 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-[#00F299]/20"
+            >
+              EXPLORE REGISTRY →
+            </Link>
+            <button
+              onClick={onSignIn}
+              className="px-8 py-4 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              SIGN IN / REGISTER
+            </button>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+            {[
+              { value: '13K+', label: 'SKILLS' },
+              { value: '24,000+', label: 'DEVELOPERS' },
+              { value: '99.9%', label: 'UPTIME' },
+              { value: '$173M+', label: 'VOLUME' },
+            ].map((stat) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-center"
+              >
+                <div className="text-2xl md:text-3xl font-bold text-white font-mono">
+                  {stat.value}
+                </div>
+                <div className="text-[10px] text-zinc-500 font-mono tracking-wider mt-1">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

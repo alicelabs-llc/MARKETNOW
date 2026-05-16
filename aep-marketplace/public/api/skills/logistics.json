@@ -1,0 +1,46 @@
+[
+  {
+    "id": "mn-03272-devdocs-mcp-integrat",
+    "name": "Devdocs MCP Integration",
+    "slug": "devdocs-mcp-integration",
+    "shortDesc": "DevDocs MCP Implementation",
+    "fullDesc": "# DevDocs MCP Implementation\r \r A Model Context Protocol (MCP) implementation for documentation management and integration.\r \r ## Project Structure\r \r ```\r src/\r ├── resources/\r │   ├── templates/      # Resource template system\r │   └── managers/       # Resource management\r ├── documentation/\r │   ├── processors/     # Documentation processing\r │   └── integrators/    # Integration handlers\r ├──",
+    "category": "Logistics",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "logistics",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y devdocs-mcp",
+    "pkgName": "devdocs-mcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "devdocs-mcp-integration",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-04154-force-fabric-mcp-ser",
+    "name": "Force Fabric MCP Server",
+    "slug": "force-fabric-mcp-server",
+    "shortDesc": "<h1 align=\"center\">Force Fabric MCP Server</h1>",
+    "fullDesc": "<h1 align=\"center\">Force Fabric MCP Server</h1>\r \r <p align=\"center\">\r   <strong>Detect issues. Auto-fix problems. Optimize your Fabric tenant.</strong><br>\r   An MCP server that scans Lakehouses, Warehouses, Eventhouses, Semantic Models, and Gateways with 158+ diagnostic rules — and can auto-fix 67 of them.\r </p>\r \r <p align=\"center\">\r   <a href=\"#quick-start\">Quick Start</a> •\r   <a href=\"#detec",
+    "category": "Logistics",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "logistics",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y fabric-optimization-mcp-server",
+    "pkgName": "fabric-optimization-mcp-server",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "Force-Fabric-MCP-Server",
+    "addedAt": "2026-05-16",
+    "price": 0
+  }
+]

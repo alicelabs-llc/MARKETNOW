@@ -1,0 +1,68 @@
+[
+  {
+    "id": "mn-02512-code-health",
+    "name": "Code Health",
+    "slug": "code-health",
+    "shortDesc": "MCP server for Code Health",
+    "fullDesc": "",
+    "category": "Healthcare",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "healthcare",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: code-health",
+    "pkgName": "code-health",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "code-health",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-06860-mcp-healthcare-serve",
+    "name": "MCP Healthcare Servers",
+    "slug": "mcp-healthcare-servers",
+    "shortDesc": "MCP server for MCP Healthcare Servers",
+    "fullDesc": "",
+    "category": "Healthcare",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "healthcare",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: mcp-healthcare-servers",
+    "pkgName": "mcp-healthcare-servers",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "mcp-healthcare-servers",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-08734-mcp-medicalterminolo",
+    "name": "MCP Medicalterminology",
+    "slug": "mcp-medicalterminology",
+    "shortDesc": "MCP server for MCP Medicalterminology",
+    "fullDesc": "",
+    "category": "Healthcare",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "healthcare",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: mcp_medicalterminology",
+    "pkgName": "mcp_medicalterminology",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "mcp_medicalterminology",
+    "addedAt": "2026-05-16",
+    "price": 0
+  }
+]

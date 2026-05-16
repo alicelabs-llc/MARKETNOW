@@ -1,0 +1,112 @@
+[
+  {
+    "id": "mn-04397-gesetze-im-internet-",
+    "name": "Gesetze Im Internet MCP",
+    "slug": "gesetze-im-internet-mcp",
+    "shortDesc": "Tools zum Herunterladen und Durchsuchen deutscher Gesetze von gesetze-im-internet.de.",
+    "fullDesc": "# German Law XML Tools\r \r Tools zum Herunterladen und Durchsuchen deutscher Gesetze von gesetze-im-internet.de.\r \r ## Voraussetzungen\r \r ```bash\r sudo apt install libxml2-utils xmlstarlet curl unzip\r ```\r \r ## Scripts\r \r ### 1. Gesetz herunterladen\r ```bash\r ./law-xml-downloader.sh <gesetz-name>\r ./law-xml-downloader.sh --force-update <gesetz-name>\r ```\r \r **Beispiele:**\r ```bash\r ./law-xml-downlo",
+    "category": "Legal",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "legal",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: gesetze-im-internet-mcp",
+    "pkgName": "gesetze-im-internet-mcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "gesetze-im-internet-mcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-09153-mocopos",
+    "name": "Mocopos",
+    "slug": "mocopos",
+    "shortDesc": "MOCOPOS (Model Context Protocol Scanner)",
+    "fullDesc": "# MOCOPOS (Model Context Protocol Scanner)\r \r ```text\r \r M   M  OOO   CCCC  OOO  PPPP   OOO   SSS \r MM MM O   O C     O   O P   P O   O S    \r M M M O   O C     O   O PPPP  O   O  SSS \r M   M O   O C     O   O P     O   O     S\r M   M  OOO   CCCC  OOO  P      OOO   SSS \r \r     MODEL CONTEXT PROTOCOL SCANNER\r              BY DarkMatter\r \r ```\r \r MOCOPOS is a terminal-first toolkit for auditing GitH",
+    "category": "Legal",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "legal",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: mocopos",
+    "pkgName": "mocopos",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "mocopos",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-09962-openclaw-mcp-adapter",
+    "name": "Openclaw MCP Adapter",
+    "slug": "openclaw-mcp-adapter",
+    "shortDesc": "MCP Adapter (OpenClaw Plugin)",
+    "fullDesc": "# MCP Adapter (OpenClaw Plugin)\r \r Exposes MCP (Model Context Protocol) server tools as native OpenClaw agent tools.\r \r Instead of running MCP servers through a CLI skill, this plugin connects to your MCP servers at startup, discovers their tools, and registers each one as a first-class tool that agents can invoke directly.\r \r ## Requirements\r \r - OpenClaw gateway\r - Node.js 18+\r - MCP servers you",
+    "category": "Legal",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "legal",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y openclaw-mcp-adapter",
+    "pkgName": "openclaw-mcp-adapter",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "openclaw-mcp-adapter",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-12395-syntax-map-mcp",
+    "name": "Syntax Map MCP",
+    "slug": "syntax-map-mcp",
+    "shortDesc": "Tree-sitter 기반 코드 분석 MCP 서버입니다. 지정한 `workspaceRoot` 아래의 JavaScript, TypeScript, TSX, Python, Rust 소스 파일을 읽고 심볼, 정의, 참조, 요약, tree-sitter query, 컨텍스트 ma",
+    "fullDesc": "# syntax-map-mcp\r \r Tree-sitter 기반 코드 분석 MCP 서버입니다. 지정한 `workspaceRoot` 아래의 JavaScript, TypeScript, TSX, Python, Rust 소스 파일을 읽고 심볼, 정의, 참조, 요약, tree-sitter query, 컨텍스트 markdown을 제공합니다.\r \r ## 설치와 빌드\r \r ```bash\r npm install\r npm run build\r ```\r \r 개발 중 검증:\r \r ```bash\r npm test\r npm run typecheck\r ```\r \r ## 실행\r \r ```bash\r npx -y syntax-map-mcp --workspace-root /path/to/workspace\r ```\r \r `workspaceRoot",
+    "category": "Legal",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "legal",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y syntax-map-mcp",
+    "pkgName": "syntax-map-mcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "syntax-map-mcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-13638-xlabmcp",
+    "name": "XLabMcp",
+    "slug": "xlabmcp",
+    "shortDesc": "Clean repository for the XLab Unity MCP server prototype.",
+    "fullDesc": "# xLabMcp\r \r Clean repository for the XLab Unity MCP server prototype.\r \r ## What is active\r \r - `dotnet-prototype/` - .NET MCP server, protocol contracts, Unity editor bridge package, and tests.\r - `Docs/` - active server backlog and verification contract.\r - `Docs/canonical_tools.md` - canonical MCP resources and tools list.\r - `Docs/runtime_tools.md` - actual tool names exposed by the current s",
+    "category": "Legal",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "legal",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: xLabMcp",
+    "pkgName": "xLabMcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "xLabMcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  }
+]

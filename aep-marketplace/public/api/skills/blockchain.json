@@ -1,0 +1,134 @@
+[
+  {
+    "id": "mn-00045-8004-mcp",
+    "name": "8004 MCP",
+    "slug": "8004-mcp",
+    "shortDesc": "Multi-chain MCP server for the ERC-8004 Agent Registry Standard. Supports Solana and EVM chains (Ethereum, Base, Polygon, BSC, Monad).",
+    "fullDesc": "# @quantulabs/8004-mcp\r \r Multi-chain MCP server for the ERC-8004 Agent Registry Standard. Supports Solana and EVM chains (Ethereum, Base, Polygon, BSC, Monad).\r \r ## Requirements\r \r - Node.js >= 20.0.0\r - `npm` if you want to pack/exec the local tarball\r - `bun` only for local development and tests\r \r ## Installation\r \r This repo should currently be treated as local-first. The package flow is tes",
+    "category": "Blockchain",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "blockchain",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y @quantulabs/8004-mcp",
+    "pkgName": "@quantulabs/8004-mcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "8004-mcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-04940-homeassistant-mcp-co",
+    "name": "Homeassistant MCP Controller",
+    "slug": "homeassistant-mcp-controller",
+    "shortDesc": "Home Assistant MCP Integration Suite",
+    "fullDesc": "# Home Assistant MCP Integration Suite\r \r Eine umfassende Integration verschiedener MCP-Server (Model Context Protocol) in Home Assistant mit vollständiger Sprachsteuerungsunterstützung. Die Suite verbindet Dienste wie Microsoft 365, BookStack und Loki mit einer einheitlichen, erweiterbaren Schnittstelle.\r \r ## Projektziele\r \r - **Umfassende Integration** von MCP-Servern in Home Assistant\r - **Spr",
+    "category": "Blockchain",
+    "lang": "unknown",
+    "transport": "stdio",
+    "tags": [
+      "blockchain",
+      "unknown",
+      "stdio"
+    ],
+    "install": "# See README: homeassistant-mcp-controller",
+    "pkgName": "homeassistant-mcp-controller",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "homeassistant-mcp-controller",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-05015-hyperlane-mcp",
+    "name": "Hyperlane MCP",
+    "slug": "hyperlane-mcp",
+    "shortDesc": "A powerful Model Context Protocol (MCP) server that provides seamless integration with the Hyperlane protocol, enabling LLM assistants to interact wit",
+    "fullDesc": "# Hyperlane MCP Server\r \r A powerful Model Context Protocol (MCP) server that provides seamless integration with the Hyperlane protocol, enabling LLM assistants to interact with cross-chain messaging and smart contracts across multiple blockchains.\r \r ## Table of Contents\r \r - [Overview](#overview)\r - [How It Works](#how-it-works)\r - [Features](#features)\r - [Requirements](#requirements)\r - [Insta",
+    "category": "Blockchain",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "blockchain",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y hyperlane-mcp",
+    "pkgName": "hyperlane-mcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "hyperlane-mcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-07862-mcp-server-web3",
+    "name": "MCP Server Web3",
+    "slug": "mcp-server-web3",
+    "shortDesc": "The web3 function plugin server base on MCP of Anthropic.",
+    "fullDesc": "# mcp-server-web3\r The web3 function plugin server base on MCP of Anthropic.\r \r ## Install the libs\r \r ```sh\r yarn\r ```\r \r ## Build the code into index.js\r ```sh\r yarn build\r ```\r \r ## Update the MCP server config according to the client\r ```sh\r # MacOS and Claude client\r code ~/Library/Application\\ Support/Claude/claude_desktop_config.json\r ```\r \r ```json\r {\r     \"mcpServers\": {\r         \"web3\":",
+    "category": "Blockchain",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "blockchain",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y mcp-server-web3",
+    "pkgName": "mcp-server-web3",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "mcp-server-web3",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-11990-solana-dev-mcp",
+    "name": "Solana Dev MCP",
+    "slug": "solana-dev-mcp",
+    "shortDesc": "Solana Model Context Protocol (MCP) Demo",
+    "fullDesc": "# Solana Model Context Protocol (MCP) Demo\r \r This repository demonstrates a simple implementation of a Model Context Protocol (MCP) server for Solana development.\r \r ## What is MCP?\r \r The Model Context Protocol (MCP) is a standardized interface for AI models to interact with tools and resources. This demo showcases a simple MCP server implementation that provides:\r \r 1. Basic RPC methods for Sol",
+    "category": "Blockchain",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "blockchain",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y solana-dev-mcp",
+    "pkgName": "solana-dev-mcp",
+    "verified": false,
+    "hasDocker": false,
+    "repoDir": "solana-dev-mcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  },
+  {
+    "id": "mn-12208-stellar-mcp",
+    "name": "Stellar MCP",
+    "slug": "stellar-mcp",
+    "shortDesc": "A Model Context Protocol server that provides Stellar blockchain interaction capabilities. This server enables LLMs to interact with both Stellar Clas",
+    "fullDesc": "# 🌟 Stellar MCP\r \r A Model Context Protocol server that provides Stellar blockchain interaction capabilities. This server enables LLMs to interact with both Stellar Classic and Soroban smart contracts, manage accounts, and perform various blockchain operations.\r \r ## 🧩 Components\r \r ### 🛠️ Tools\r \r #### 💫 Stellar Classic Operations\r \r - **stellar_create_account**\r \r   - Create a new Stellar ac",
+    "category": "Blockchain",
+    "lang": "typescript",
+    "transport": "stdio",
+    "tags": [
+      "blockchain",
+      "typescript",
+      "stdio"
+    ],
+    "install": "npx -y stellar-mcp",
+    "pkgName": "stellar-mcp",
+    "verified": false,
+    "hasDocker": true,
+    "repoDir": "stellar-mcp",
+    "addedAt": "2026-05-16",
+    "price": 0
+  }
+]

@@ -1152,6 +1152,20 @@ export default {
       }
     }
 
+    // ── Badge SVG endpoint ─────────────────────────────────
+    if (path.startsWith('/badge/') && path.endsWith('.svg')) {
+      return handleBadge(path, env)
+    }
+
+    // ── SSR: Skill detail with badge embed ──────────────────
+    if (path.startsWith('/skill/') && path !== '/skills') {
+      const slug = path.replace('/skill/', '').split('/')[0]
+      if (slug) {
+        const html = await skillSSRPage(slug, env)
+        return new Response(html, { headers: htmlHeaders() })
+      }
+    }
+
     // ── SSR page routes ─────────────────────────────────────
     if (path === '/submit') {
       return new Response(submitHTML(), { headers: htmlHeaders() })
@@ -1184,33 +1198,6 @@ export default {
     if (path.startsWith('/agent/')) {
       const agentId = path.split('/')[2]
       if (agentId) return agentProfileHTML(agentId, env)
-    }
-
-    // ── Sitemap: dynamic XML with all 13,859 skill URLs ────
-    if (path === '/sitemap.xml') {
-      const cors = { 'Content-Type': 'application/xml; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' }
-      let xml = env.SKILLS_KV ? await env.SKILLS_KV.get('sitemap:xml') : null
-      if (!xml) {
-        try {
-          const tgt = PAGES + '/api/skills_index.json'
-          const r = await fetch(tgt)
-          const d = await r.json()
-          const skills = Array.isArray(d) ? d : (d.skills || [])
-          const parts = []
-          parts.push('<?xml version="1.0" encoding="UTF-8"?>')
-          parts.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-          const sp = [['/','daily','1.0'],['/skills','daily','0.9'],['/security','daily','0.9'],['/leaderboard','daily','0.8'],['/arena','daily','0.8'],['/submit','daily','0.8'],['/quests','weekly','0.6'],['/legal','weekly','0.5'],['/mcp','weekly','0.5'],['/login','monthly','0.3'],['/register','monthly','0.3'],['/vault','monthly','0.4'],['/governance','monthly','0.4'],['/payout','weekly','0.5']]
-          for (const [p,f,pr] of sp) parts.push('  <url><loc>' + SITE + p + '</loc><changefreq>' + f + '</changefreq><priority>' + pr + '</priority></url>')
-          for (const sk of skills) { if (sk.slug) parts.push('  <url><loc>' + SITE + '/skill/' + encodeURIComponent(sk.slug) + '</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>') }
-          parts.push('</urlset>')
-          xml = parts.join('\n')
-          if (env.SKILLS_KV) await env.SKILLS_KV.put('sitemap:xml', xml, { expirationTtl: 3600 }).catch(function() {})
-        } catch (e) {
-          try { var sr = await fetch(PAGES + '/sitemap.xml'); if (sr.ok) return new Response(await sr.text(), { headers: cors }) } catch(e2) {}
-          return new Response('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE + '/</loc></url></urlset>', { headers: cors })
-        }
-      }
-      return new Response(xml, { headers: cors })
     }
 
     // Proxy remaining to Pages (existing routes: /, /skills, /skill/:slug, /security, /mcp, etc.)
@@ -1353,4 +1340,111 @@ function logsHTML(logs) {
     const scoreStr = l.maxScore ? `${l.score}/${l.maxScore}` : String(l.score)
     return `<tr><td style=\"font-weight:600;color:#ccc\">${l.id||'unknown'}</td><td><span class=\"badge ${badgeClass}\">${scoreStr}</span></td><td style=\"color:#888\">${(l.issues||[]).slice(0,1).join(', ') || '-'}</td><td>${passIcon}</td></tr>`
   }).join('')}</table>`
+}
+
+// ── Badge SVG generator ───────────────────────────────────
+function scoreColor(s) {
+  if (typeof s !== 'number') return '#9e9e9e'
+  if (s >= 5) return '#00f299'
+  if (s >= 3) return '#ffa500'
+  return '#f87171'
+}
+
+function badgeSVG(label, score, maxScore) {
+  const sc = typeof score === 'number' ? score : 0
+  const ms = maxScore || 6
+  const color = scoreColor(sc)
+  const showScore = sc > 0 ? sc + '/' + ms : 'pending'
+  const lw = 70, rw = 60, w = lw + rw, h = 20
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '">' +
+    '<linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>' +
+    '<clipPath id="c"><rect width="' + w + '" height="' + h + '" rx="3"/></clipPath>' +
+    '<g clip-path="url(#c)">' +
+    '<rect width="' + lw + '" height="' + h + '" fill="#555"/>' +
+    '<rect x="' + lw + '" width="' + rw + '" height="' + h + '" fill="' + color + '"/>' +
+    '<rect width="' + w + '" height="' + h + '" fill="url(#b)"/>' +
+    '</g>' +
+    '<g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">' +
+    '<text x="' + (lw/2) + '" y="15" fill="#fff" text-anchor="middle">' + label + '</text>' +
+    '<text x="' + (lw + rw/2) + '" y="15" fill="#fff" text-anchor="middle">' + showScore + '</text>' +
+    '</g></svg>'
+}
+
+async function handleBadge(path, env) {
+  const slug = path.replace('/badge/', '').replace('.svg', '').split('/')[0]
+  if (!slug) return new Response('Badge not found', { status: 404 })
+  const cached = env.SKILLS_KV ? await env.SKILLS_KV.get('badge:' + slug) : null
+  if (cached) return new Response(cached, { headers: { 'Content-Type': 'image/svg+xml;charset=utf-8', 'Cache-Control': 'public, max-age=3600', 'Access-Control-Allow-Origin': '*' } })
+  try {
+    const res = await fetch(PAGES + '/api/skills_index.json')
+    const data = await res.json()
+    const skills = Array.isArray(data) ? data : (data.skills || [])
+    const skill = skills.find(function(s) { return s.slug === slug })
+    const score = skill ? (skill.sentinel_score || 0) : 0
+    const svg = badgeSVG('Sentinel', score, 6)
+    if (env.SKILLS_KV) await env.SKILLS_KV.put('badge:' + slug, svg, { expirationTtl: 3600 }).catch(function() {})
+    return new Response(svg, { headers: { 'Content-Type': 'image/svg+xml;charset=utf-8', 'Cache-Control': 'public, max-age=3600, s-maxage=3600', 'Access-Control-Allow-Origin': '*' } })
+  } catch (e) {
+    return new Response(badgeSVG('Sentinel', 0, 6), { headers: { 'Content-Type': 'image/svg+xml;charset=utf-8', 'Cache-Control': 'public, max-age=600', 'Access-Control-Allow-Origin': '*' } })
+  }
+}
+
+// ── SSR: Skill detail page with badge embed ────────────────
+async function skillSSRPage(slug, env) {
+  try {
+    const res = await fetch(PAGES + '/api/skills_index.json')
+    const data = await res.json()
+    const skills = Array.isArray(data) ? data : (data.skills || [])
+    const skill = skills.find(function(s) { return s.slug === slug })
+    if (!skill) {
+      const spaRes = await fetch(PAGES + '/skill/' + slug)
+      if (spaRes.ok) return await spaRes.text()
+      return '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Skill Not Found - MarketNow</title><link rel="icon" href="' + SITE + '/favicon.ico"><meta name="robots" content="noindex"></head><body><h1>Skill Not Found</h1><a href="/">Back</a></body></html>'
+    }
+    const name = skill.name || slug
+    const desc = skill.shortDesc || skill.description || 'MCP skill on the Agent Exchange Protocol marketplace'
+    const category = skill.category || 'Uncategorized'
+    const tags = (skill.tags || []).join(', ')
+    const install = skill.install || 'npx ' + slug
+    const score = skill.sentinel_score || 0
+    const verified = score >= 4
+    const badgeMd = '[![Sentinel Verified](' + SITE + '/badge/' + slug + '.svg)](' + SITE + '/skill/' + slug + ')'
+    const badgeImg = '<img src="' + SITE + '/badge/' + slug + '.svg" alt="Sentinel Verified" style="display:block;margin-bottom:8px">'
+    return '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>' + esc(name) + ' - MarketNow MCP Skill</title>' +
+      '<meta name="description" content="' + esc(desc) + '">' +
+      '<meta name="keywords" content="MCP,skill,' + esc(category.toLowerCase()) + ',marketnow,aep">' +
+      '<meta name="robots" content="index,follow">' +
+      '<link rel="canonical" href="' + SITE + '/skill/' + slug + '">' +
+      '<meta property="og:title" content="' + esc(name) + ' - MarketNow">' +
+      '<meta property="og:description" content="' + esc(desc) + '">' +
+      '<meta property="og:url" content="' + SITE + '/skill/' + slug + '">' +
+      '<meta name="viewport" content="width=device-width,initial-scale=1">' +
+      '<style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;margin:0;padding:20px;max-width:800px;margin:0 auto;line-height:1.6}a{color:#a892ff}.badge-box{background:#1a1a2e;border:1px solid #333;border-radius:8px;padding:16px;margin:20px 0;font-size:13px}.badge-box code{display:block;background:#0a0a0f;padding:12px;border-radius:4px;margin-top:8px;color:#00f299;word-break:break-all;user-select:all}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.tag{background:#1a1a2e;border:1px solid #555;border-radius:4px;padding:2px 8px;font-size:12px;color:#aaa}.info{color:#888;font-size:14px}.sc{color:' + scoreColor(score) + ';font-weight:bold}.ibox{background:#1a1a2e;border:1px solid #333;border-radius:8px;padding:12px;font-family:monospace;user-select:all}.foot{text-align:center;color:#555;font-size:12px;margin-top:40px;padding-top:20px;border-top:1px solid #222}</style></head><body>' +
+      '<a href="/" style="color:#a892ff;text-decoration:none">&larr; Back to Marketplace</a>' +
+      '<h1>' + esc(name) + '</h1>' +
+      '<div class="meta"><span class="tag">' + esc(category) + '</span>' +
+      (tags ? tags.split(',').slice(0,4).map(function(t) { return '<span class="tag">' + esc(t.trim()) + '</span>' }).join('') : '') +
+      '</div>' +
+      '<p>' + esc(desc) + '</p>' +
+      '<div class="info">Sentinel: <span class="sc">' + score + '/6</span>' +
+      (verified ? ' <span style="color:#00f299">&#10004; Verified</span>' : '') +
+      '</div>' +
+      '<h3>Install</h3><div class="ibox">' + esc(install) + '</div>' +
+      '<h3>Add to Your README</h3>' +
+      '<div class="badge-box">' +
+      badgeImg +
+      '<strong>Copy this markdown:</strong>' +
+      '<code>' + esc(badgeMd) + '</code>' +
+      '<p style="color:#555;font-size:12px;margin:8px 0 0 0">Embedding the badge shows users this skill has passed Sentinel security checks and links back to the live skill page.</p>' +
+      '</div>' +
+      '<p><a href="' + SITE + '/skill/' + slug + '" style="color:#a892ff">View full interactive page &rarr;</a></p>' +
+      '<div class="foot"><p>MarketNow &mdash; The Agent Skill Marketplace &bull; <a href="' + SITE + '/security">Sentinel Security</a></p></div>' +
+      '</body></html>'
+  } catch (e) {
+    return '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>' + esc(slug) + ' - MarketNow</title><meta name="robots" content="index,follow"><link rel="canonical" href="' + SITE + '/skill/' + slug + '"></head><body><h1>' + esc(slug) + '</h1><p>MCP skill on MarketNow marketplace.</p><a href="/">Back</a></body></html>'
+  }
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }

@@ -1,12 +1,17 @@
-# Redirect non-static API routes to the Worker (marketnow.site)
-# Specific routes (more specific = higher priority) go BEFORE wildcards
-# Static JSON files are excluded (served directly by Pages)
+# MarketNow _redirects — Cloudflare Pages
+# 
+# CRITICAL: These redirects run BEFORE the Worker on pages.dev.
+# If a URL matches, Pages returns 301 BEFORE the Worker runs.
+# 
+# RULE: NEVER redirect API routes or static files to marketnow.site
+# The Worker handles ALL routes on marketnow.site. When the Worker
+# needs static data, it fetches from pages.dev DIRECTLY (no redirect).
+# Redirecting API routes back to marketnow.site creates infinite loops.
 #
-# IMPORTANT: Only redirect routes where the Worker has an explicit SSR handler.
-# Routes NOT handled by Worker (SPA-only) MUST NOT redirect — they cause
-# infinite fetch loops (Worker proxy → Pages 301 redirect → Worker → ...)
+# Only redirect SSR pages that have Worker handlers AND need browser HTTP redirects.
+# The Worker's built-in route handlers catch ALL incoming requests on marketnow.site.
 
-# === Worker SSR pages (Worker handles these explicitly) ===
+# Worker SSR redirects (browser visits pages.dev → redirect to Worker → SSR HTML)
 /submit                              https://marketnow.site/submit                             301
 /submit/                             https://marketnow.site/submit                             301
 /leaderboard                         https://marketnow.site/leaderboard                        301
@@ -18,44 +23,8 @@
 /legal                               https://marketnow.site/legal                             301
 /legal/                              https://marketnow.site/legal                             301
 /agent/*                             https://marketnow.site/agent/:splat                       301
+/security                            https://marketnow.site/security                           301
+/security/                           https://marketnow.site/security                           301
 
-# === Worker API routes (Worker handles these explicitly) ===
-/api/health                          https://marketnow.site/api/health                         301
-/api/submit                          https://marketnow.site/api/submit                         301
-/api/search                          https://marketnow.site/api/search                         301
-/api/search/                         https://marketnow.site/api/search                         301
-/api/skills_index.json               https://marketnow.site/api/skills_index.json              301
-/api/arena/vote                      https://marketnow.site/api/arena/vote                     301
-/api/arena/history                   https://marketnow.site/api/arena/history                  301
-/api/arena/*                         https://marketnow.site/api/arena/:splat                   301
-/api/agent/*                         https://marketnow.site/api/agent/:splat                   301
-/api/quests/*                        https://marketnow.site/api/quests/:splat                  301
-/api/leaderboard                     https://marketnow.site/api/leaderboard                    301
-/api/register                        https://marketnow.site/api/register                       301
-/api/register/                       https://marketnow.site/api/register                       301
-/api/auth/login                      https://marketnow.site/api/auth/login                     301
-/api/auth/register                   https://marketnow.site/api/auth/register                  301
-/api/checkout/create-session         https://marketnow.site/api/checkout/create-session        301
-/api/checkout/webhook                https://marketnow.site/api/checkout/webhook               301
-/api/checkout/verify-crypto          https://marketnow.site/api/checkout/verify-crypto         301
-/api/checkout/crypto                 https://marketnow.site/api/checkout/crypto                301
-/api/checkout/coinbase               https://marketnow.site/api/checkout/coinbase              301
-/api/vault                           https://marketnow.site/api/vault                          301
-/api/creator/earnings                https://marketnow.site/api/creator/earnings               301
-/api/creator/withdraw                https://marketnow.site/api/creator/withdraw               301
-/checkout/success                    https://marketnow.site/checkout/success                   301
-
-# Google verification (served by Worker)
-/googlecfd72b7c796e2ead.html         https://marketnow.site/googlecfd72b7c796e2ead.html       301
-
-# Security SSR (Worker now handles this with real Sentinel data)
-/security                            https://marketnow.site/security                         301
-/security/                           https://marketnow.site/security                         301
-
-# Catch-all SPA fallback (no match = SPA)
-# All these routes are served directly by Pages SPA, NOT redirected to Worker:
-#   /vault   /governance   /handshake   /policies
-#   /mcp   /login   /register   /checkout   /account
-#   /skill/:id   /skills*
-#   /.well-known/*   /sitemap.xml   /robots.txt   /badge/*
+# Catch-all SPA fallback
 /*                                   /index.html                                              200

@@ -1186,6 +1186,33 @@ export default {
       if (agentId) return agentProfileHTML(agentId, env)
     }
 
+    // ── Sitemap: dynamic XML with all 13,859 skill URLs ────
+    if (path === '/sitemap.xml') {
+      const cors = { 'Content-Type': 'application/xml; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' }
+      let xml = env.SKILLS_KV ? await env.SKILLS_KV.get('sitemap:xml') : null
+      if (!xml) {
+        try {
+          const tgt = PAGES + '/api/skills_index.json'
+          const r = await fetch(tgt)
+          const d = await r.json()
+          const skills = Array.isArray(d) ? d : (d.skills || [])
+          const parts = []
+          parts.push('<?xml version="1.0" encoding="UTF-8"?>')
+          parts.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+          const sp = [['/','daily','1.0'],['/skills','daily','0.9'],['/security','daily','0.9'],['/leaderboard','daily','0.8'],['/arena','daily','0.8'],['/submit','daily','0.8'],['/quests','weekly','0.6'],['/legal','weekly','0.5'],['/mcp','weekly','0.5'],['/login','monthly','0.3'],['/register','monthly','0.3'],['/vault','monthly','0.4'],['/governance','monthly','0.4'],['/payout','weekly','0.5']]
+          for (const [p,f,pr] of sp) parts.push('  <url><loc>' + SITE + p + '</loc><changefreq>' + f + '</changefreq><priority>' + pr + '</priority></url>')
+          for (const sk of skills) { if (sk.slug) parts.push('  <url><loc>' + SITE + '/skill/' + encodeURIComponent(sk.slug) + '</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>') }
+          parts.push('</urlset>')
+          xml = parts.join('\n')
+          if (env.SKILLS_KV) await env.SKILLS_KV.put('sitemap:xml', xml, { expirationTtl: 3600 }).catch(function() {})
+        } catch (e) {
+          try { var sr = await fetch(PAGES + '/sitemap.xml'); if (sr.ok) return new Response(await sr.text(), { headers: cors }) } catch(e2) {}
+          return new Response('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE + '/</loc></url></urlset>', { headers: cors })
+        }
+      }
+      return new Response(xml, { headers: cors })
+    }
+
     // Proxy remaining to Pages (existing routes: /, /skills, /skill/:slug, /security, /mcp, etc.)
     try {
       const target = `${PAGES}${path}${url.search}`;

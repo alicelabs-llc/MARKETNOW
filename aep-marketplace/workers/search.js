@@ -1350,13 +1350,14 @@ export default {
     const path = url.pathname
     const method = request.method
 
-    // CORS preflight
+    // CORS preflight — browsers y orquestadores (LangChain, n8n, etc.)
     if (method === 'OPTIONS') {
       return new Response(null, {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
           'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+          'Access-Control-Max-Age': '86400',
         }
       })
     }

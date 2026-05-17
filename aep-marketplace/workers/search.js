@@ -1362,10 +1362,10 @@ export default {
       })
     }
 
-    // ── www → non-www redirect ──────────────────────────────
+    // ── www → non-www redirect (308 preserves POST method + body) ─
     if (url.hostname.startsWith('www.')) {
       const clean = url.hostname.replace(/^www\./, '')
-      return Response.redirect(`https://${clean}${path}${url.search}`, 301)
+      return Response.redirect(`https://${clean}${path}${url.search}`, 308)
     }
 
     // ── Analytics hit counter (inline for now) ────────────

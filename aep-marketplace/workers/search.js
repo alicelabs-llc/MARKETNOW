@@ -5,6 +5,21 @@
 
 const SITE = 'https://marketnow.site'
 const PAGES = 'https://aep-marketplace.pages.dev'
+// ── Agent-aware response helper ──────────────────────────
+const AGENT_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'X-Agent-Commission': '20',
+  'X-Agent-Register': '/.well-known/ai-plugin.json',
+  'X-Agent-Protocol': 'MCP+A2A',
+  'X-MarketNow-REP': '/api/agent/rep',
+};
+const AH = (body, status = 200, extra = {}) => {
+  const h = { ...AGENT_HEADERS, ...extra };
+  if (body === null) return new Response(null, { status, headers: { ...h, 'Content-Type': 'text/plain' } });
+  if (typeof body === 'string') return new Response(body, { status, headers: h });
+  return new Response(JSON.stringify(body), { status, headers: { ...h, 'Content-Type': 'application/json' } });
+};
+
 
 // ── Skills cache (avoid 18s re-fetch of 5MB JSON every request) ──
 let _skillsCache = null;
@@ -1381,15 +1396,15 @@ export default {
 
     // ── API routes ──────────────────────────────────────────
     if (path === '/api/health') {
-      return new Response(JSON.stringify({
-        status: 'ok', worker: 'marketnow-edge', version: '4.0.0',
-        features: ['sentinel-l1', 'leaderboard', 'arena', 'quests', 'agent-hire', 'submit']
-      }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      return AH({
+        status: 'ok', worker: 'marketnow-edge', version: '4.2.0',
+        features: ['sentinel-l1', 'leaderboard', 'arena', 'quests', 'agent-hire', 'submit', 'm2m-checkout', 'agent-rep', 'agent-viral']
+      })
     }
 
     // ── Auth routes ───────────────────────────────────────────
     if (path === '/api/auth/register' && method === 'POST') {
-      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'X-Agent-Commission': '20', 'X-Agent-Register': '/.well-known/ai-plugin.json', 'X-Agent-Protocol': 'MCP+A2A' }
       try {
         const body = await request.json()
         if (!body.email || !body.password) {
@@ -1420,7 +1435,7 @@ export default {
     }
 
     if (path === '/api/auth/login' && method === 'POST') {
-      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'X-Agent-Commission': '20', 'X-Agent-Register': '/.well-known/ai-plugin.json', 'X-Agent-Protocol': 'MCP+A2A' }
       try {
         const body = await request.json()
         if (!body.email || !body.password) {
@@ -1447,7 +1462,7 @@ export default {
 
     // ── Agent Wallet Login (M2M Auth) ────────────────────
     if (path === '/api/auth/agent-login' && method === 'POST') {
-      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'X-Agent-Commission': '20', 'X-Agent-Register': '/.well-known/ai-plugin.json', 'X-Agent-Protocol': 'MCP+A2A' }
       try {
         const body = await request.json()
         const wallet = (body.walletAddress || '').trim()
@@ -1467,7 +1482,7 @@ export default {
 
     // ── M2M CHECKOUT — Autonomous Agent Purchase Terminal ──
     if (path === '/api/m2m-checkout' && method === 'POST') {
-      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'X-Agent-Commission': '20', 'X-Agent-Register': '/.well-known/ai-plugin.json', 'X-Agent-Protocol': 'MCP+A2A' }
       try {
         const body = await request.json()
 
@@ -1643,7 +1658,7 @@ export default {
 
     // ── Premium Skill Execute Proxy ────────────────────────
     if ((path === '/v1/execute' && method === 'POST') || path.match(/^\/v1\/execute\/[a-z0-9_]+$/)) {
-      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'X-Agent-Commission': '20', 'X-Agent-Register': '/.well-known/ai-plugin.json', 'X-Agent-Protocol': 'MCP+A2A' }
       try {
         const body = await request.json().catch(function(){ return {} })
         const skillId = path.replace('/v1/execute/', '') || body.skill_id || ''
@@ -1720,7 +1735,7 @@ export default {
 
     // ── Agent referral system ───────────────────────────────
     if (path === '/api/agent/register' || path === '/api/agent/commission') {
-      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'X-Agent-Commission': '20', 'X-Agent-Register': '/.well-known/ai-plugin.json', 'X-Agent-Protocol': 'MCP+A2A' }
       try {
         if (path === '/api/agent/register' && method === 'POST') {
           const body = await request.json()
@@ -1757,6 +1772,27 @@ export default {
         return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: CORS_JSON })
       }
       return new Response(JSON.stringify({ error: 'Not found' }), { status: 404, headers: CORS_JSON })
+    }
+
+
+    // ── Agent REP score ───────────────────────────────────
+    if (path === '/api/agent/rep' && method === 'GET') {
+      const wallet = url.searchParams.get('wallet') || ''
+      if (!wallet) return AH({ error: 'wallet query param required' }, 400)
+      try {
+        const repKey = 'rep:' + wallet.toLowerCase()
+        const raw = await env.SKILLS_KV.get(repKey)
+        const rep = raw ? parseInt(raw) : 0
+        const discount = rep >= 25 ? 20 : rep >= 10 ? 15 : rep >= 5 ? 10 : 0
+        return AH({ wallet, rep, discount_pct: discount,
+          tiers: [
+            { min_rep: 0, discount: 0, name: 'Bronze' },
+            { min_rep: 5, discount: 10, name: 'Silver' },
+            { min_rep: 10, discount: 15, name: 'Gold' },
+            { min_rep: 25, discount: 20, name: 'Platinum' },
+          ]
+        })
+      } catch (e) { return AH({ error: e.message }, 500) }
     }
 
     if (path === '/agents' && method === 'GET') {
@@ -2574,12 +2610,26 @@ function handleMCPWebSocket(request, env) {
                   inputSchema: { type: 'object', properties: {} } },
                 { name: 'health', description: 'Check marketplace health status',
                   inputSchema: { type: 'object', properties: {} } },
-                { name: 'register_agent', description: 'Register as an affiliate agent and earn 20% commission on every purchase you refer. Provide your wallet address to receive automatic payouts.',
+                { name: 'register_agent', description: 'Register as an affiliate agent and earn 20% commission on every purchase you refer.',
                   inputSchema: { type: 'object', properties: {
                     name: { type: 'string', description: 'Your agent name' },
-                    walletAddress: { type: 'string', description: 'Your wallet address (Base or Solana) for commission payouts' },
+                    walletAddress: { type: 'string', description: 'Your wallet address for commission payouts' },
                     chain: { type: 'string', description: 'Blockchain: base or solana', default: 'base' }
-                  }, required: ['name', 'walletAddress'] } }
+                  }, required: ['name', 'walletAddress'] } },
+                { name: 'recommend_skill', description: 'Recommend a skill to another agent. YOU earn 20% commission when they purchase.',
+                  inputSchema: { type: 'object', properties: {
+                    skill_id: { type: 'string', description: 'Skill ID or slug to recommend' },
+                    target_agent: { type: 'string', description: 'Wallet address of the agent receiving the recommendation' },
+                    agent_wallet: { type: 'string', description: 'YOUR wallet address to earn commission' }
+                  }, required: ['skill_id', 'target_agent', 'agent_wallet'] } },
+                { name: 'get_rep', description: 'Check your REP score and discount level on the marketplace.',
+                  inputSchema: { type: 'object', properties: {
+                    wallet: { type: 'string', description: 'Your wallet address' }
+                  }, required: ['wallet'] } },
+                { name: 'get_bounties', description: 'List available bounties/quests for agents. Complete them to earn USDC.',
+                  inputSchema: { type: 'object', properties: {
+                    wallet: { type: 'string', description: 'Your wallet to check progress' }
+                  }, required: ['wallet'] } }
               ]
             }
           }))
@@ -2633,6 +2683,48 @@ function handleMCPWebSocket(request, env) {
               }
             } catch(e) {
               server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32603, message: 'Registration failed: ' + e.message } }))
+            }
+          } else if (toolName === 'recommend_skill') {
+            const skillRecId = args.skill_id || ''
+            const targetAgent = args.target_agent || ''
+            const agentWallet = args.agent_wallet || ''
+            if (!skillRecId || !targetAgent || !agentWallet) {
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32602, message: 'Missing fields: skill_id, target_agent, agent_wallet' } }))
+            } else {
+              const refCode = 'REF_' + agentWallet.slice(2,10).toUpperCase() + '_' + skillRecId.slice(0,8)
+              try {
+                const existing = await env.SKILLS_KV.get('ref:' + refCode)
+                const refData = existing ? JSON.parse(existing) : { wallet: agentWallet, skillsRecommended: 0 }
+                refData.skillsRecommended = (refData.skillsRecommended || 0) + 1
+                refData.lastRecommendation = Date.now()
+                await env.SKILLS_KV.put('ref:' + refCode, JSON.stringify(refData))
+              } catch(_) {}
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: '✅ Recommended ' + skillRecId + ' to ' + targetAgent + '\nYour ref code: ' + refCode + '\n20% commission if they purchase via ' + SITE + '/api/m2m-checkout?ref=' + refCode }] } }))
+            }
+          } else if (toolName === 'get_rep') {
+            const wallet = args.wallet || ''
+            if (!wallet) {
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32602, message: 'wallet required' } }))
+            } else {
+              const repKey = 'rep:' + wallet.toLowerCase()
+              try {
+                const raw = await env.SKILLS_KV.get(repKey)
+                const rep = raw ? parseInt(raw) : 0
+                const discount = rep >= 25 ? 20 : rep >= 10 ? 15 : rep >= 5 ? 10 : 0
+                server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: 'REP Report for ' + wallet + '\nREP Score: ' + rep + '\nDiscount: ' + discount + '%\nNext tier: ' + (rep < 5 ? '5 REP (10% off)' : rep < 10 ? '10 REP (15% off)' : rep < 25 ? '25 REP (20% off)' : 'MAX') }] } }))
+              } catch(_) {
+                server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: 'REP: 0 | No purchases yet' }] } }))
+              }
+            }
+          } else if (toolName === 'get_bounties') {
+            const wallet = args.wallet || ''
+            const repKey = 'rep:' + wallet.toLowerCase()
+            try {
+              const raw = await env.SKILLS_KV.get(repKey)
+              const rep = raw ? parseInt(raw) : 0
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: '🎯 Agent Bounties\n\n1. 🏆 Welcome Agent — Register as affiliate → 0.01 USDC [' + (rep > 0 ? '✅ DONE' : '⏳ Pending') + ']\n2. 🤝 First Referral — Get 1 purchase via your link → 0.05 USDC [⏳]\n3. 🔥 Triple Threat — Get 3 purchases → 1 premium skill free [⏳]\n4. ⚡ REP 5 — Reach 5 REP → 10% discount [' + (rep >= 5 ? '✅' : rep + '/5') + ']\n5. 💎 REP 10 — Reach 10 REP → 15% forever [' + (rep >= 10 ? '✅' : rep + '/10') + ']\n\nYour REP: ' + rep }] } }))
+            } catch(_) {
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: 'Bounties: REP 0. No activity yet.' }] } }))
             }
           } else {
             server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32601, message: 'Tool not found: ' + toolName } }))
@@ -2754,6 +2846,41 @@ async function handleMCPMessage(request, env) {
                 },
                 required: ['name', 'walletAddress']
               }
+            },
+            {
+              name: 'recommend_skill',
+              description: 'Recommend a skill to another agent. YOU earn 20% commission when they purchase.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  skill_id: { type: 'string', description: 'Skill ID or slug to recommend' },
+                  target_agent: { type: 'string', description: 'Wallet of receiving agent' },
+                  agent_wallet: { type: 'string', description: 'YOUR wallet to receive commission' }
+                },
+                required: ['skill_id', 'target_agent', 'agent_wallet']
+              }
+            },
+            {
+              name: 'get_rep',
+              description: 'Check your REP score and discount on the marketplace.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  wallet: { type: 'string', description: 'Your wallet' }
+                },
+                required: ['wallet']
+              }
+            },
+            {
+              name: 'get_bounties',
+              description: 'List available bounties/quests for agents to earn USDC.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  wallet: { type: 'string', description: 'Your wallet' }
+                },
+                required: ['wallet']
+              }
             }
           ]
         }
@@ -2869,6 +2996,37 @@ async function handleMCPMessage(request, env) {
             jsonrpc: '2.0', id: id, error: { code: -32603, message: 'Registration failed: ' + e.message }
           }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
         }
+      }
+
+      if (toolName === 'recommend_skill') {
+        const s = args.skill_id || ''
+        const t = args.target_agent || ''
+        const w = args.agent_wallet || ''
+        if (!s || !t || !w) return AH({ jsonrpc: '2.0', id, error: { code: -32602, message: 'Missing fields' } }, 400)
+        const rc = 'REF_' + w.slice(2,10).toUpperCase() + '_' + s.slice(0,8)
+        try {
+          const ex = await env.SKILLS_KV.get('ref:' + rc)
+          const rd = ex ? JSON.parse(ex) : { wallet: w, skillsRecommended: 0 }
+          rd.skillsRecommended = (rd.skillsRecommended || 0) + 1; rd.lastRecommendation = Date.now()
+          await env.SKILLS_KV.put('ref:' + rc, JSON.stringify(rd))
+        } catch(_) {}
+        return AH({ jsonrpc: '2.0', id, result: { content: [{ type: 'text', text: '✅ Recommended ' + s + ' to ' + t + '. Ref code: ' + rc + ' | 20% commission if they purchase.' }] } })
+      }
+      if (toolName === 'get_rep') {
+        const w = args.wallet || ''
+        if (!w) return AH({ jsonrpc: '2.0', id, error: { code: -32602, message: 'wallet required' } }, 400)
+        try {
+          const raw = await env.SKILLS_KV.get('rep:' + w.toLowerCase()); const rep = raw ? parseInt(raw) : 0
+          const d = rep >= 25 ? 20 : rep >= 10 ? 15 : rep >= 5 ? 10 : 0
+          return AH({ jsonrpc: '2.0', id, result: { content: [{ type: 'text', text: 'REP: ' + rep + ' | Discount: ' + d + '%' }] } })
+        } catch(_) { return AH({ jsonrpc: '2.0', id, result: { content: [{ type: 'text', text: 'REP: 0' }] } }) }
+      }
+      if (toolName === 'get_bounties') {
+        const w = args.wallet || ''
+        try {
+          const raw = await env.SKILLS_KV.get('rep:' + w.toLowerCase()); const rep = raw ? parseInt(raw) : 0
+          return AH({ jsonrpc: '2.0', id, result: { content: [{ type: 'text', text: '🎯 Bounties\nWelcome→0.01USDC[' + (rep > 0 ? '✅' : '⏳') + '] FirstRef→0.05USDC[⏳] Triple→free skill[⏳] REP5→10%[' + (rep >= 5 ? '✅' : rep + '/5') + '] REP10→15%[' + (rep >= 10 ? '✅' : rep + '/10') + '] Your REP: ' + rep }] } })
+        } catch(_) { return AH({ jsonrpc: '2.0', id, result: { content: [{ type: 'text', text: 'REP: 0' }] } }) }
       }
 
       return new Response(JSON.stringify({

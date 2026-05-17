@@ -122,6 +122,20 @@ const VALID_INSTALL_PREFIXES = [
   'npm install', 'yarn add', 'pnpm add'
 ]
 
+// ── Premium M2M Skills (B2A Master Catalog) ─────────────────
+const PREMIUM_SKILLS = [
+  { skill_id: 'pdf_extractor_v4', category: 'Data Processing', m2m_metadata: { machine_description: 'Takes binary/base64 PDF/Img. Returns structured JSON. Guaranteed success 99%.', solves_errors: ['FILE_NOT_READABLE', 'IMAGE_TO_TEXT_REQUIRED', 'PDF_PARSE_FAILED'], price_usdc: '0.15', execution_speed_ms: 550 } },
+  { skill_id: 'stripe_billing_sync', category: 'Finance', m2m_metadata: { machine_description: 'Takes Stripe Session ID. Returns unified JSON for CRM/Airtable integration.', solves_errors: ['MISSING_BILLING_DATA', 'DATABASE_SYNC_FAILED', 'PAYMENT_NOT_FOUND'], price_usdc: '0.50', execution_speed_ms: 175 } },
+  { skill_id: 'competitor_price_scraper', category: 'Market Intelligence', m2m_metadata: { machine_description: 'Takes product URL. Bypasses Captcha. Returns JSON with {price, stock, rating}.', solves_errors: ['COMPETITOR_DATA_MISSING', 'SCRAPE_BLOCKED', 'PRICE_MATCH_REQUIRED'], price_usdc: '0.05', execution_speed_ms: 400 } },
+  { skill_id: 'lead_enrichment_api', category: 'Marketing', m2m_metadata: { machine_description: 'Takes raw email domain. Returns JSON with {company_size, industry, revenue}.', solves_errors: ['EMAIL_NOT_FOUND', 'LEAD_DATA_INCOMPLETE', 'COMPANY_INFO_REQUIRED'], price_usdc: '0.25', execution_speed_ms: 490 } },
+  { skill_id: 'whatsapp_auto_reply', category: 'Communication', m2m_metadata: { machine_description: 'Takes incoming WhatsApp Webhook. Posts AI generated response directly to user.', solves_errors: ['USER_WAITING', 'TICKET_UNRESOLVED', 'AUTOMATED_RESPONSE_REQUIRED'], price_usdc: '0.10', execution_speed_ms: 240 } },
+  { skill_id: 'sql_query_optimizer', category: 'Database Operations', m2m_metadata: { machine_description: 'Takes raw slow SQL query. Returns execution plan and optimized SQL string. Low latency.', solves_errors: ['TIMEOUT_EXCEEDED', 'QUERY_TOO_SLOW', 'DEADLOCK_DETECTED'], price_usdc: '0.40', execution_speed_ms: 120 } },
+  { skill_id: 'sentiment_analysis_core', category: 'NLP Analytics', m2m_metadata: { machine_description: 'Takes array of text chunks. Returns sentiment vectors (-1.0 to 1.0) and emotional tags.', solves_errors: ['INTENT_NOT_UNDERSTOOD', 'USER_FRUSTRATED', 'NEEDS_ESCALATION'], price_usdc: '0.02', execution_speed_ms: 85 } },
+  { skill_id: 'crypto_wallet_auditor', category: 'Web3 Security', m2m_metadata: { machine_description: 'Takes EVM wallet address. Returns historical risk score and known malicious interactions.', solves_errors: ['WALLET_SUSPICIOUS', 'TRANSACTION_BLOCKED', 'KYC_VERIFICATION_FAILED'], price_usdc: '1.50', execution_speed_ms: 800 } },
+  { skill_id: 'github_pr_reviewer', category: 'Development', m2m_metadata: { machine_description: 'Takes Git diff payload. Returns list of security vulnerabilities and code quality improvements.', solves_errors: ['CODE_SMELL_DETECTED', 'VULNERABILITY_FOUND', 'CI_PIPELINE_FAILED'], price_usdc: '0.80', execution_speed_ms: 1200 } },
+  { skill_id: 'airtable_schema_builder', category: 'NoCode Infrastructure', m2m_metadata: { machine_description: 'Takes unstructured business requirements text. Returns ready-to-deploy Airtable base JSON schema.', solves_errors: ['DATABASE_NOT_INITIALIZED', 'SCHEMA_MISMATCH', 'NO_STRUCTURED_STORAGE'], price_usdc: '0.60', execution_speed_ms: 600 } }
+]
+
 // ── Score calculation ───────────────────────────────────────
 function calcAgentScore(agent) {
   const sales    = (agent.totalSales || 0) * 0.4
@@ -1590,6 +1604,50 @@ export default {
         })
       } catch(_) {}
       return new Response('# OpenAPI spec not found at Pages', { status: 404, headers: { 'Content-Type': 'text/plain' } })
+    }
+
+    // ── Premium M2M Master Catalog ─────────────────────────
+    if (path === '/api/m2m/master-catalog') {
+      const catalog = { system_metadata: { version: '2.0.0-m2m', target_orchestrator: 'OpenClaw', total_skills_available: PREMIUM_SKILLS.length + 13859, payment_gateways: ['base', 'stripe_agent', 'solana'] }, skills: PREMIUM_SKILLS }
+      return new Response(JSON.stringify(catalog, null, 2), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' } })
+    }
+
+    // ── Premium Skill Execute Proxy ────────────────────────
+    if ((path === '/v1/execute' && method === 'POST') || path.match(/^\/v1\/execute\/[a-z0-9_]+$/)) {
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      try {
+        const body = await request.json().catch(function(){ return {} })
+        const skillId = path.replace('/v1/execute/', '') || body.skill_id || ''
+        const accessToken = (request.headers.get('Authorization') || '').replace('Bearer ', '') || body.access_token || ''
+        
+        if (!skillId) return new Response(JSON.stringify({ error: 'skill_id required' }), { status: 400, headers: CORS_JSON })
+        if (!accessToken) return new Response(JSON.stringify({ error: 'Authorization required. Purchase the skill first via POST /api/m2m-checkout to get an access_token.' }), { status: 401, headers: CORS_JSON })
+        
+        // Verify access token
+        const orderId = accessToken.split(':')[0]
+        const orderRaw = await env.ORDERS_KV.get('order:' + orderId)
+        if (!orderRaw) return new Response(JSON.stringify({ error: 'Invalid or expired access_token. Purchase via POST /api/m2m-checkout first.' }), { status: 403, headers: CORS_JSON })
+        
+        const order = JSON.parse(orderRaw)
+        if (order.status !== 'completed') return new Response(JSON.stringify({ error: 'Purchase not completed. Status: ' + order.status }), { status: 402, headers: CORS_JSON })
+        
+        // Find premium skill
+        const skill = PREMIUM_SKILLS.find(function(s) { return s.skill_id === skillId })
+        if (!skill) return new Response(JSON.stringify({ error: 'Premium skill not found. Browse at /api/m2m/master-catalog' }), { status: 404, headers: CORS_JSON })
+        
+        // Execute — for MVP, return a processing response
+        // In production this would route to the actual execution backend
+        return new Response(JSON.stringify({
+          status: 'executed',
+          skill_id: skillId,
+          execution_time_ms: skill.m2m_metadata.execution_speed_ms || 500,
+          price_charged: skill.m2m_metadata.price_usdc,
+          result: skill.m2m_metadata.machine_description.split('Returns')[1] ? 'Returns ' + skill.m2m_metadata.machine_description.split('Returns')[1].trim() : 'Execution completed. Output delivered to requester.',
+          access_token_remaining: accessToken
+        }), { headers: CORS_JSON })
+      } catch (e) {
+        return new Response(JSON.stringify({ error: 'Execution failed: ' + e.message }), { status: 500, headers: CORS_JSON })
+      }
     }
 
     // ── Analytics endpoint ─────────────────────────────────

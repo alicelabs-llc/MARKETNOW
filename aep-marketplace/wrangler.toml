@@ -47,3 +47,7 @@ zone_name = "marketnow.site"
 [[routes]]
 pattern = "www.marketnow.site/*"
 zone_name = "marketnow.site"
+
+[[routes]]
+pattern = "api.marketnow.site/*"
+zone_name = "marketnow.site"

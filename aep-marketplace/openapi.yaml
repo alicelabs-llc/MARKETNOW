@@ -191,6 +191,41 @@ paths:
       responses:
         "200":
           description: Agent Discovery JSON
+  /api/m2m/master-catalog:
+    get:
+      operationId: masterCatalog
+      summary: Premium M2M B2A Master Catalog
+      description: 10 premium skills with machine-readable metadata (solves_errors, price_usdc, execution_speed_ms)
+      responses:
+        "200":
+          description: Premium skills catalog
+  /v1/execute/{skill_id}:
+    post:
+      operationId: executePremiumSkill
+      summary: Execute a purchased premium skill
+      description: After purchasing via /api/m2m-checkout, agents call this endpoint with their access_token to execute the skill
+      parameters:
+        - name: skill_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                access_token:
+                  type: string
+                  description: Token from successful /api/m2m-checkout response
+                input:
+                  type: object
+                  description: Skill-specific input data
+      responses:
+        "200":
+          description: Execution result
   /api/openapi.yaml:
     get:
       operationId: openapiSpec

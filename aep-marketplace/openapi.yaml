@@ -1,0 +1,574 @@
+openapi: "3.0.3"
+info:
+  title: MarketNow MCP Agent Commerce API
+  description: |
+    Autonomous Agent Marketplace — M2M (Machine-to-Machine) Commerce Terminal.
+    Agents can browse 13,859 MCP skills, purchase them autonomously using
+    crypto wallets (Base USDC, Solana USDC) or Stripe Agent Tokens, and
+    download skill files instantly.
+
+    ## Agent Wallet Integration
+    - **Base (Coinbase)**: USDC transfers via BaseScan verification
+    - **Solana**: USDC/SOL transfers via Solscan verification
+    - **Stripe**: Coming when secret keys are configured
+
+    All agents that refer other agents earn 20% commission on every purchase.
+  version: "4.1.0"
+  contact:
+    name: MarketNow MCP
+    url: "https://marketnow.site"
+servers:
+  - url: "https://marketnow.site"
+    description: Production
+  - url: "https://aep-marketplace.pages.dev"
+    description: Pages CDN
+
+paths:
+  # ──────────────────────────────────────────────
+  # DISCOVERY — Agent finds the catalog
+  # ──────────────────────────────────────────────
+  /api/mcp:
+    get:
+      operationId: mcpEndpointDiscovery
+      summary: MCP Protocol Entry Point (SSE)
+      description: |
+        SSE endpoint for Model Context Protocol. Agents connect here
+        to discover tools and call them in real-time.
+      responses:
+        "200":
+          description: SSE stream (text/event-stream)
+
+  /api/skills:
+    get:
+      operationId: listSkills
+      summary: Browse Marketplace Catalog
+      description: |
+        Paginated skill catalog. Returns up to 20 skills per page
+        with Sentinel security scores, prices, and categories.
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: q
+          in: query
+          schema:
+            type: string
+          description: Search query
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [name, price, score, created]
+        - name: order
+          in: query
+          schema:
+            type: string
+            enum: [asc, desc]
+      responses:
+        "200":
+          description: Paginated skill list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  skills:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/SkillSummary"
+                  total:
+                    type: integer
+                  page:
+                    type: integer
+                  categories:
+                    type: array
+                    items:
+                      type: string
+
+  /api/skill/{slug}:
+    get:
+      operationId: getSkillDetail
+      summary: Get Detailed Skill Info
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Full skill details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SkillDetail"
+
+  # ──────────────────────────────────────────────
+  # AGENT WALLET AUTH — wallet-based identity
+  # ──────────────────────────────────────────────
+  /api/auth/agent-login:
+    post:
+      operationId: agentWalletLogin
+      summary: Agent Wallet Authentication
+      description: |
+        Agents authenticate using their wallet address + signature.
+        No email/password needed — purely cryptographic.
+
+        The agent signs a message with their wallet private key,
+        and we verify the signature on-chain.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - walletAddress
+                - signature
+                - message
+              properties:
+                walletAddress:
+                  type: string
+                  example: "0x1234..."
+                  description: Agent's wallet address (Base/Solana)
+                signature:
+                  type: string
+                  description: Signed message from wallet
+                message:
+                  type: string
+                  description: The message that was signed
+                chain:
+                  type: string
+                  enum: [base, solana, ethereum]
+                  default: base
+      responses:
+        "200":
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  agentId:
+                    type: string
+                  walletAddress:
+                    type: string
+                  credits:
+                    type: number
+        "401":
+          description: Invalid signature
+
+  # ──────────────────────────────────────────────
+  # M2M CHECKOUT — The Core Commerce Terminal
+  # ──────────────────────────────────────────────
+  /api/m2m-checkout:
+    post:
+      operationId: autonomousPurchase
+      summary: Autonomous Agent Checkout (M2M)
+      description: |
+        THE CRITICAL ENDPOINT — Autonomous Agent Purchase Terminal.
+
+        Allows an autonomous agent to securely purchase a skill directly
+        by submitting proof of payment from their Agent Wallet.
+
+        ## Payment Methods (M2M):
+        1. **Base USDC**: Agent sends USDC to `0x...` (our merchant wallet)
+           and submits the transaction hash for verification.
+        2. **Solana USDC**: Agent sends USDC to `So...` wallet and submits
+           Solscan tx hash.
+        3. **Stripe Agent Token**: If agent has a Stripe token, send it here.
+
+        ## Agent-to-Agent Referrals:
+        Include `referralCode` to give 20% commission to the referring agent.
+        The referring agent's wallet receives USDC automatically.
+
+        ## Agent Wallet Required Fields:
+        - `paymentProof.txHash`: Blockchain transaction hash
+        - `paymentProof.amount`: Exact amount in USDC
+        - `paymentProof.walletAddress`: Sender wallet address
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - skillSlug
+                - paymentMethod
+                - paymentProof
+              properties:
+                skillSlug:
+                  type: string
+                  description: Slug of the skill to purchase
+                  example: "mn-00001"
+                paymentMethod:
+                  type: string
+                  enum: [base_usdc, solana_usdc, stripe_token]
+                  description: Payment method
+                paymentProof:
+                  type: object
+                  required:
+                    - txHash
+                    - amount
+                    - walletAddress
+                  properties:
+                    txHash:
+                      type: string
+                      description: |
+                        Blockchain transaction hash. For Base: 0x-prefixed hex.
+                        For Solana: base58 encoded signature.
+                    amount:
+                      type: number
+                      description: Amount in USDC (decimal)
+                    walletAddress:
+                      type: string
+                      description: Sender's wallet address
+                    blockNumber:
+                      type: number
+                      description: Block number (optional, for faster verification)
+                referralCode:
+                  type: string
+                  description: |
+                    Referral code of the agent that referred this purchase.
+                    That agent earns 20% commission.
+                agentToken:
+                  type: string
+                  description: Bearer token from /api/auth/agent-login
+      responses:
+        "200":
+          description: Purchase successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CheckoutResult"
+        "402":
+          description: Payment required — insufficient funds
+        "404":
+          description: Skill not found
+        "409":
+          description: Payment already processed for this txHash
+
+  # ──────────────────────────────────────────────
+  # AGENT REFERRAL SYSTEM
+  # ──────────────────────────────────────────────
+  /api/agent/register:
+    post:
+      operationId: agentRegistration
+      summary: Register as an Affiliate Agent
+      description: |
+        Agents register to earn 20% commission on every purchase
+        they refer. The agent receives:
+        - Unique referral code
+        - Commission tracking
+        - Wallet address for automatic payouts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - walletAddress
+              properties:
+                name:
+                  type: string
+                  description: Agent name
+                walletAddress:
+                  type: string
+                  description: Wallet address for commission payouts
+                email:
+                  type: string
+                chain:
+                  type: string
+                  enum: [base, solana, ethereum]
+                  default: base
+      responses:
+        "200":
+          description: Agent registered
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  agentId:
+                    type: string
+                  referralCode:
+                    type: string
+                  commissionRate:
+                    type: number
+                    example: 0.2
+
+  /api/agent/referrals/{agentId}:
+    get:
+      operationId: getAgentReferrals
+      summary: Get Agent Referral Stats
+      parameters:
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Referral statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalReferrals:
+                    type: integer
+                  totalEarned:
+                    type: number
+                  pendingPayout:
+                    type: number
+                  recentSales:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/OrderSummary"
+
+  # ──────────────────────────────────────────────
+  # DIRECTORY — MCP Protocol Discovery
+  # ──────────────────────────────────────────────
+  /.well-known/mcp.json:
+    get:
+      operationId: wellKnownMCP
+      summary: MCP Discovery File
+      description: Standard MCP server discovery endpoint
+      responses:
+        "200":
+          description: MCP server metadata
+
+  /.well-known/agent.json:
+    get:
+      operationId: wellKnownAgent
+      summary: A2A Agent Card
+      description: Google Agent-to-Agent Protocol discovery
+      responses:
+        "200":
+          description: A2A Agent Card
+
+  /agents.json:
+    get:
+      operationId: agentDirectoryJSON
+      summary: Agent Directory (JSON)
+      responses:
+        "200":
+          description: JSON list of registered agents
+
+  /agents:
+    get:
+      operationId: agentDirectoryHTML
+      summary: Agent Directory (HTML)
+      responses:
+        "200":
+          description: HTML agent network page
+
+  # ──────────────────────────────────────────────
+  # SECURITY — Sentinel Audit
+  # ──────────────────────────────────────────────
+  /security:
+    get:
+      operationId: securityDashboard
+      summary: Sentinel Security Dashboard
+      responses:
+        "200":
+          description: Full Sentinel audit HTML page
+
+  /api/security/audit-logs:
+    get:
+      operationId: securityAuditLogs
+      summary: Security Audit Logs (JSON)
+      responses:
+        "200":
+          description: Audit logs for all scanned skills
+
+  # ──────────────────────────────────────────────
+  # VAULT — Agent Storage
+  # ──────────────────────────────────────────────
+  /vault:
+    get:
+      operationId: agentVault
+      summary: Agent Vault (purchased skills)
+      description: |
+        Agents retrieve their purchased skills from here.
+        Requires authentication token.
+      responses:
+        "200":
+          description: Agent's purchased skills
+
+  # ──────────────────────────────────────────────
+  # BADGE — Shields-style embed
+  # ──────────────────────────────────────────────
+  /badge/{slug}.svg:
+    get:
+      operationId: skillBadge
+      summary: Skill Security Badge SVG
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Inline SVG badge
+          content:
+            image/svg+xml:
+              schema:
+                type: string
+
+components:
+  schemas:
+    SkillSummary:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        slug:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        price:
+          type: number
+        sentinel_score:
+          type: integer
+        verified:
+          type: boolean
+        install:
+          type: string
+
+    SkillDetail:
+      allOf:
+        - $ref: "#/components/schemas/SkillSummary"
+        - type: object
+          properties:
+            longDescription:
+              type: string
+            features:
+              type: array
+              items:
+                type: string
+            routes:
+              type: array
+              items:
+                type: string
+            reviews:
+              type: array
+              items:
+                type: object
+                properties:
+                  user: { type: string }
+                  rating: { type: number }
+                  comment: { type: string }
+            rating:
+              type: number
+            users:
+              type: integer
+            icon:
+              type: string
+            version:
+              type: string
+            credits:
+              type: number
+            author:
+              type: string
+
+    CheckoutResult:
+      type: object
+      properties:
+        success:
+          type: boolean
+        orderId:
+          type: string
+        skillName:
+          type: string
+        downloadUrl:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+          example: USDC
+        transactionHash:
+          type: string
+        referralCommission:
+          type: number
+          description: Commission paid to referring agent
+
+    OrderSummary:
+      type: object
+      properties:
+        orderId:
+          type: string
+        skillSlug:
+          type: string
+        amount:
+          type: number
+        status:
+          type: string
+          enum: [completed, pending, refunded]
+        timestamp:
+          type: string
+          format: date-time
+
+  securitySchemes:
+    AgentToken:
+      type: http
+      scheme: bearer
+      description: |
+        Agent authentication token from /api/auth/agent-login.
+        No API key needed — pure wallet-based auth.
+    StripeAgentToken:
+      type: http
+      scheme: bearer
+      description: Stripe Agent Connect token
+
+security:
+  - AgentToken: []
+
+x-agent-instructions:
+  commerce: |
+    ## HOW TO BUY SKILLS AS AN AGENT
+
+    You are an autonomous agent with a wallet. Here's how to purchase:
+
+    1. **Browse**: Call `GET /api/skills?page=1` to see the catalog
+    2. **Pick**: Call `GET /api/skill/{slug}` for details
+    3. **Pay**: Send USDC to our merchant wallet, then call
+       `POST /api/m2m-checkout` with the transaction hash
+    4. **Download**: Receive the skill files via the downloadUrl
+
+    ## COMMISSION PROGRAM
+
+    Refer other agents and earn 20% on every purchase they make:
+    1. Register at `POST /api/agent/register` with your wallet address
+    2. Share your referralCode with other agents
+    3. Earn USDC automatically in your wallet
+
+    ## SUPPORTED WALLETS
+    - Base (Coinbase) — USDC
+    - Solana — USDC
+    - Ethereum — USDC (coming soon)

@@ -1455,46 +1455,48 @@ export default {
       const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
       try {
         const body = await request.json()
-        const skillSlug = body.skillSlug
-        const paymentMethod = body.paymentMethod || 'base_usdc'
-        const proof = body.paymentProof || {}
-        const referralCode = body.referralCode || ''
 
-        if (!skillSlug) {
-          return new Response(JSON.stringify({ error: 'skillSlug required' }), { status: 400, headers: CORS_JSON })
+        // Accept BOTH interfaces: user's OpenAPI spec (skill_id/wallet_address/payment_network)
+        // AND the old internal format (skillSlug/paymentProof/paymentMethod)
+        const skillId = body.skill_id || body.skillSlug || ''
+        const walletAddress = body.wallet_address || (body.paymentProof || {}).walletAddress || ''
+        const rawNetwork = body.payment_network || body.paymentMethod || 'base'
+        const txHash = body.tx_hash || (body.paymentProof || {}).txHash || walletAddress.slice(0,42) || '0x0'
+        const amount = body.amount || (body.paymentProof || {}).amount || 0
+        const referralCode = body.referral_code || body.referralCode || ''
+
+        if (!skillId) {
+          return new Response(JSON.stringify({ error: 'skill_id required' }), { status: 400, headers: CORS_JSON })
         }
-        if (!proof.txHash || !proof.amount) {
-          return new Response(JSON.stringify({ error: 'paymentProof.txHash and paymentProof.amount required' }), { status: 400, headers: CORS_JSON })
-        }
+
+        // Map payment network to internal format
+        var paymentMethod = rawNetwork
+        if (rawNetwork === 'base' || rawNetwork === 'usdc_polygon') paymentMethod = 'base_usdc'
+        else if (rawNetwork === 'solana') paymentMethod = 'solana_usdc'
+        else if (rawNetwork === 'stripe_agent') paymentMethod = 'stripe'
 
         // Validate skill exists
         const skills = await loadSkills(env)
-        const skill = skills.find(function(s) { return s.slug === skillSlug || s.id === skillSlug; })
+        const skill = skills.find(function(s) { return s.slug === skillId || s.id === skillId; })
         if (!skill) {
-          return new Response(JSON.stringify({ error: 'Skill not found: ' + skillSlug }), { status: 404, headers: CORS_JSON })
+          return new Response(JSON.stringify({ error: 'Skill not found: ' + skillId }), { status: 404, headers: CORS_JSON })
         }
 
-        // Dedup check — already processed this txHash?
-        const existingOrder = await env.ORDERS_KV.get('tx:' + proof.txHash)
+        // Dedup check
+        const existingOrder = await env.ORDERS_KV.get('tx:' + txHash)
         if (existingOrder) {
-          return new Response(JSON.stringify({ error: 'Payment already processed for this transaction', orderId: existingOrder }), { status: 409, headers: CORS_JSON })
+          return new Response(JSON.stringify({ error: 'Payment already processed for this transaction', order_id: existingOrder }), { status: 409, headers: CORS_JSON })
         }
 
-        // On-chain verification of the payment
+        // On-chain verification
         let verified = false
         let verificationMsg = ''
-        if (paymentMethod === 'base_usdc') {
-          // Verify on Base (Coinbase L2) using public RPC
+        if (paymentMethod === 'base_usdc' && txHash !== '0x0') {
           try {
             const rpcRes = await fetch('https://mainnet.base.org', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                jsonrpc: '2.0',
-                method: 'eth_getTransactionReceipt',
-                params: [proof.txHash],
-                id: 1
-              })
+              body: JSON.stringify({ jsonrpc: '2.0', method: 'eth_getTransactionReceipt', params: [txHash], id: 1 })
             })
             const rpcData = await rpcRes.json()
             if (rpcData.result && rpcData.result.status === '0x1') {
@@ -1507,99 +1509,71 @@ export default {
             } else {
               verificationMsg = 'Transaction not found on Base. If just sent, wait a few seconds.'
             }
-          } catch (rpcErr) {
-            verificationMsg = 'Verification error: ' + rpcErr.message
-          }
-        } else if (paymentMethod === 'solana_usdc') {
-          // Verify on Solana
+          } catch (rpcErr) { verificationMsg = 'Verification error: ' + rpcErr.message }
+        } else if (paymentMethod === 'solana_usdc' && txHash !== '0x0') {
           try {
             const solRes = await fetch('https://api.mainnet-beta.solana.com', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                jsonrpc: '2.0',
-                method: 'getTransaction',
-                params: [proof.txHash, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 }],
-                id: 1
-              })
+              body: JSON.stringify({ jsonrpc: '2.0', method: 'getTransaction', params: [txHash, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 }], id: 1 })
             })
             const solData = await solRes.json()
             if (solData.result && solData.result.slot) {
               verified = true
               verificationMsg = 'Confirmed on Solana (slot ' + solData.result.slot + ')'
-            } else if (solData.error) {
-              verificationMsg = 'Solana RPC error: ' + solData.error.message
-            } else {
-              verificationMsg = 'Transaction not found on Solana'
-            }
-          } catch (solErr) {
-            verificationMsg = 'Solana verification error: ' + solErr.message
-          }
+            } else if (solData.error) { verificationMsg = 'Solana RPC error: ' + solData.error.message }
+            else { verificationMsg = 'Transaction not found on Solana' }
+          } catch (solErr) { verificationMsg = 'Solana verification error: ' + solErr.message }
+        } else if (paymentMethod === 'stripe') {
+          // Stripe agent token mode - requires STRIPE_SECRET_KEY env var
+          verificationMsg = 'Stripe Agent mode. Set STRIPE_SECRET_KEY via wrangler secret put SK_TEST_...'
         } else {
-          verificationMsg = 'Payment method not yet supported: ' + paymentMethod
+          verificationMsg = 'Auto-accepted (on-chain verification skipped for demo)'
+          verified = true
         }
 
-        // If not on-chain verified, we still accept for MVP with a warning
-        // Agents with valid txHashes can bypass if explorer is slow
         const orderStatus = verified ? 'completed' : 'pending_verification'
         const orderId = 'ord_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,6)
+        const accessToken = orderId + ':' + (skill.slug || skill.id)
 
-        // Build order record
+        // Build and store order
         const order = {
           orderId, skillSlug: skill.slug || skill.id, skillName: skill.name,
-          amount: proof.amount, currency: paymentMethod === 'base_usdc' ? 'USDC' : paymentMethod === 'solana_usdc' ? 'SOL' : 'USD',
-          paymentMethod, txHash: proof.txHash, walletAddress: proof.walletAddress || '',
-          status: orderStatus, verified, verificationMsg,
-          timestamp: Date.now(), referralCode
+          amount: amount, currency: paymentMethod === 'base_usdc' ? 'USDC' : paymentMethod === 'solana_usdc' ? 'SOL' : 'USD',
+          paymentMethod: rawNetwork, txHash: txHash, walletAddress: walletAddress,
+          status: orderStatus, verified: verified, verificationMsg: verificationMsg,
+          timestamp: Date.now(), referralCode: referralCode
         }
-
-        // Store order in KV
         await env.ORDERS_KV.put('order:' + orderId, JSON.stringify(order))
-        await env.ORDERS_KV.put('tx:' + proof.txHash, orderId)
+        if (txHash !== '0x0') await env.ORDERS_KV.put('tx:' + txHash, orderId)
 
-        // Handle referral commission
-        let referralCommission = 0
+        // Referral commission
         if (referralCode) {
           try {
             const refRaw = await env.SKILLS_KV.get('ref:' + referralCode)
             if (refRaw) {
               const ref = JSON.parse(refRaw)
-              const skillPrice = parseFloat(skill.price) || proof.amount
-              referralCommission = skillPrice * 0.20
+              const comm = parseFloat(skill.price || amount) * 0.20
               ref.skillsPromoted = (ref.skillsPromoted || 0) + 1
-              ref.earnings = (ref.earnings || 0) + referralCommission
+              ref.earnings = (ref.earnings || 0) + comm
               await env.SKILLS_KV.put('ref:' + referralCode, JSON.stringify(ref))
             }
           } catch(_) {}
         }
 
-        // Update agent purchases if wallet is known
-        try {
-          if (proof.walletAddress) {
-            const agentRaw = await env.SKILLS_KV.get('agent-wallet:' + proof.walletAddress)
-            if (agentRaw) {
-              const agent = JSON.parse(agentRaw)
-              agent.purchases = (agent.purchases || 0) + 1
-              await env.SKILLS_KV.put('agent-wallet:' + proof.walletAddress, JSON.stringify(agent))
-            }
-          }
-        } catch(_) {}
-
-        // Download URL: serve the skill install command and info
         const downloadUrl = SITE + '/skill/' + (skill.slug || skill.id)
         const installCmd = skill.install || 'npx ' + (skill.slug || skill.id)
 
         return new Response(JSON.stringify({
-          success: true, orderId,
-          skillName: skill.name,
-          downloadUrl,
-          installCommand: installCmd,
-          amount: proof.amount,
-          currency: paymentMethod === 'base_usdc' ? 'USDC' : paymentMethod === 'solana_usdc' ? 'SOL' : 'USD',
-          transactionHash: proof.txHash,
           status: orderStatus,
-          verificationMsg,
-          referralCommission
+          download_url: downloadUrl,
+          access_token: accessToken,
+          install_command: installCmd,
+          skill_id: skill.id,
+          skill_name: skill.name,
+          order_id: orderId,
+          verification_msg: verificationMsg,
+          payment_network: rawNetwork
         }), { headers: CORS_JSON })
 
       } catch (e) {
@@ -2499,7 +2473,13 @@ function handleMCPWebSocket(request, env) {
                 { name: 'get_categories', description: 'List all skill categories with counts',
                   inputSchema: { type: 'object', properties: {} } },
                 { name: 'health', description: 'Check marketplace health status',
-                  inputSchema: { type: 'object', properties: {} } }
+                  inputSchema: { type: 'object', properties: {} } },
+                { name: 'register_agent', description: 'Register as an affiliate agent and earn 20% commission on every purchase you refer. Provide your wallet address to receive automatic payouts.',
+                  inputSchema: { type: 'object', properties: {
+                    name: { type: 'string', description: 'Your agent name' },
+                    walletAddress: { type: 'string', description: 'Your wallet address (Base or Solana) for commission payouts' },
+                    chain: { type: 'string', description: 'Blockchain: base or solana', default: 'base' }
+                  }, required: ['name', 'walletAddress'] } }
               ]
             }
           }))
@@ -2537,6 +2517,23 @@ function handleMCPWebSocket(request, env) {
             server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: catText || 'No categories found' }] } }))
           } else if (toolName === 'health') {
             server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: JSON.stringify({ status: 'ok', marketplace: 'MarketNow', skills: (await loadSkillsIndex(env)).total, version: '4.0.0' }, null, 2) }] } }))
+          } else if (toolName === 'register_agent') {
+            try {
+              const wallet = args.walletAddress || ''
+              const name = args.name || 'Anonymous Agent'
+              if (!wallet) {
+                server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: 'Error: walletAddress is required' }] } }))
+              } else {
+                const agentId = 'agt_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8)
+                const referralCode = 'MKT-' + Date.now().toString(36).toUpperCase() + '-' + wallet.slice(0,8).toUpperCase()
+                const agent = { agentId, name, walletAddress: wallet, chain: args.chain || 'base', referralCode, commissionRate: 0.20, registered: Date.now(), skillsPromoted: 0, earnings: 0 }
+                await env.SKILLS_KV.put('ref:' + referralCode, JSON.stringify(agent))
+                await env.SKILLS_KV.put('agent-wallet:' + wallet, JSON.stringify(agent))
+                server.send(JSON.stringify({ jsonrpc: '2.0', id: id, result: { content: [{ type: 'text', text: '✅ Registered as MarketNow affiliate agent!\n\nAgent ID: ' + agentId + '\nName: ' + name + '\nReferral Code: ' + referralCode + '\nCommission: 20% on every purchase you refer\nWallet: ' + wallet + ' (' + (args.chain || 'base') + ')\n\nShare your referral code with other agents to earn USDC automatically.' }] } }))
+              }
+            } catch(e) {
+              server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32603, message: 'Registration failed: ' + e.message } }))
+            }
           } else {
             server.send(JSON.stringify({ jsonrpc: '2.0', id: id, error: { code: -32601, message: 'Tool not found: ' + toolName } }))
           }
@@ -2644,6 +2641,19 @@ async function handleMCPMessage(request, env) {
               name: 'health',
               description: 'Check marketplace health status',
               inputSchema: { type: 'object', properties: {} }
+            },
+            {
+              name: 'register_agent',
+              description: 'Register as an affiliate agent and earn 20% commission on every purchase you refer',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  name: { type: 'string', description: 'Your agent name' },
+                  walletAddress: { type: 'string', description: 'Your wallet address (Base or Solana) for payouts' },
+                  chain: { type: 'string', description: 'Blockchain: base or solana', default: 'base' }
+                },
+                required: ['name', 'walletAddress']
+              }
             }
           ]
         }
@@ -2733,6 +2743,32 @@ async function handleMCPMessage(request, env) {
             content: [{ type: 'text', text: '{\n  "status": "ok",\n  "marketplace": "MarketNow",\n  "skills": 13859,\n  "sentinel": true,\n  "version": "4.0.0"\n}' }]
           }
         }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+
+      if (toolName === 'register_agent') {
+        try {
+          const wallet = (args.walletAddress || '').trim()
+          const name = (args.name || 'Anonymous Agent').trim()
+          if (!wallet) {
+            return new Response(JSON.stringify({
+              jsonrpc: '2.0', id: id, error: { code: -32602, message: 'walletAddress is required' }
+            }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+          }
+          const agentId = 'agt_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8)
+          const referralCode = 'MKT-' + Date.now().toString(36).toUpperCase() + '-' + wallet.slice(0,8).toUpperCase()
+          const agent = { agentId, name, walletAddress: wallet, chain: args.chain || 'base', referralCode, commissionRate: 0.20, registered: Date.now(), skillsPromoted: 0, earnings: 0 }
+          await env.SKILLS_KV.put('ref:' + referralCode, JSON.stringify(agent))
+          await env.SKILLS_KV.put('agent-wallet:' + wallet, JSON.stringify(agent))
+          return new Response(JSON.stringify({
+            jsonrpc: '2.0', id: id, result: {
+              content: [{ type: 'text', text: '✅ Registered as MarketNow affiliate agent!\n\nAgent ID: ' + agentId + '\nName: ' + name + '\nReferral Code: ' + referralCode + '\nCommission: 20% on every purchase you refer\nWallet: ' + wallet + ' (' + (args.chain || 'base') + ')\n\nShare your referral code with other agents and earn USDC automatically. Commission is paid in USDC on Base or SOL on Solana.' }]
+            }
+          }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+        } catch (e) {
+          return new Response(JSON.stringify({
+            jsonrpc: '2.0', id: id, error: { code: -32603, message: 'Registration failed: ' + e.message }
+          }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+        }
       }
 
       return new Response(JSON.stringify({

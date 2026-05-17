@@ -121,11 +121,15 @@ paths:
                   verification_msg:
                     type: string
         "400":
-          description: Missing required fields
+          description: 'Missing required field. Error code: M2M_PAYMENT_REJECTED'
+        "402":
+          description: 'Insufficient funds. Error code: INSUFFICIENT_FUNDS'
         "404":
-          description: Skill not found
+          description: 'Skill not found. Error code: M2M_PAYMENT_REJECTED'
         "409":
-          description: Payment already processed
+          description: 'Duplicate transaction. Error code: DUPLICATE_TRANSACTION'
+        "500":
+          description: 'Internal error. Error code: M2M_PAYMENT_FAILED'
   /api/auth/agent-login:
     post:
       operationId: agentLogin

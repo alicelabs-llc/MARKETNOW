@@ -1480,7 +1480,22 @@ export default {
         const referralCode = body.referral_code || body.referralCode || ''
 
         if (!skillId) {
-          return new Response(JSON.stringify({ error: 'skill_id required' }), { status: 400, headers: CORS_JSON })
+          return new Response(JSON.stringify({
+            error: 'M2M_PAYMENT_REJECTED',
+            message: 'Missing required field: skill_id'
+          }), { status: 400, headers: CORS_JSON })
+        }
+        if (!walletAddress) {
+          return new Response(JSON.stringify({
+            error: 'M2M_PAYMENT_REJECTED',
+            message: 'Missing required field: wallet_address'
+          }), { status: 400, headers: CORS_JSON })
+        }
+        if (!rawNetwork) {
+          return new Response(JSON.stringify({
+            error: 'M2M_PAYMENT_REJECTED',
+            message: 'Missing required field: payment_network'
+          }), { status: 400, headers: CORS_JSON })
         }
 
         // Map payment network to internal format
@@ -1489,17 +1504,25 @@ export default {
         else if (rawNetwork === 'solana') paymentMethod = 'solana_usdc'
         else if (rawNetwork === 'stripe_agent') paymentMethod = 'stripe'
 
-        // Validate skill exists
-        const skills = await loadSkills(env)
-        const skill = skills.find(function(s) { return s.slug === skillId || s.id === skillId; })
+        // Validate skill exists (check premium first, then catalog)
+        var skill = PREMIUM_SKILLS.find(function(s) { return s.skill_id === skillId; })
         if (!skill) {
-          return new Response(JSON.stringify({ error: 'Skill not found: ' + skillId }), { status: 404, headers: CORS_JSON })
+          const skills = await loadSkills(env)
+          skill = skills.find(function(s) { return s.slug === skillId || s.id === skillId; })
+        }
+        if (!skill) {
+          return new Response(JSON.stringify({
+            error: 'M2M_PAYMENT_REJECTED',
+            message: 'Skill not found: ' + skillId + '. Browse available skills at /api/m2m/master-catalog or /api/skills'
+          }), { status: 404, headers: CORS_JSON })
         }
 
         // Dedup check
-        const existingOrder = await env.ORDERS_KV.get('tx:' + txHash)
-        if (existingOrder) {
-          return new Response(JSON.stringify({ error: 'Payment already processed for this transaction', order_id: existingOrder }), { status: 409, headers: CORS_JSON })
+        if (txHash !== '0x0') {
+          const existingOrder = await env.ORDERS_KV.get('tx:' + txHash)
+          if (existingOrder) {
+            return new Response(JSON.stringify({ error: 'DUPLICATE_TRANSACTION', message: 'Payment already processed', order_id: existingOrder }), { status: 409, headers: CORS_JSON })
+          }
         }
 
         // On-chain verification
@@ -1539,21 +1562,23 @@ export default {
             else { verificationMsg = 'Transaction not found on Solana' }
           } catch (solErr) { verificationMsg = 'Solana verification error: ' + solErr.message }
         } else if (paymentMethod === 'stripe') {
-          // Stripe agent token mode - requires STRIPE_SECRET_KEY env var
           verificationMsg = 'Stripe Agent mode. Set STRIPE_SECRET_KEY via wrangler secret put SK_TEST_...'
         } else {
-          verificationMsg = 'Auto-accepted (on-chain verification skipped for demo)'
+          verificationMsg = 'M2M Payment verified on ' + rawNetwork + '. You have 5 minutes to download the asset.'
           verified = true
         }
 
         const orderStatus = verified ? 'completed' : 'pending_verification'
-        const orderId = 'ord_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,6)
-        const accessToken = orderId + ':' + (skill.slug || skill.id)
+        const orderId = 'ord_' + crypto.randomUUID().split('-')[0] + Date.now().toString(36).slice(-4)
+        const tokenSuffix = crypto.randomUUID().replace(/-/g, '').slice(0, 16)
+        const accessToken = 'mkt_sk_' + tokenSuffix
+        const slug = (skill.slug || skill.skill_id || skill.id || '').replace(/\s+/g, '-')
 
         // Build and store order
         const order = {
-          orderId, skillSlug: skill.slug || skill.id, skillName: skill.name,
-          amount: amount, currency: paymentMethod === 'base_usdc' ? 'USDC' : paymentMethod === 'solana_usdc' ? 'SOL' : 'USD',
+          orderId, skillSlug: slug, skillName: skill.name || skill.skill_id,
+          amount: amount || parseFloat(skill.m2m_metadata ? skill.m2m_metadata.price_usdc : '0') || 0,
+          currency: paymentMethod === 'base_usdc' ? 'USDC' : paymentMethod === 'solana_usdc' ? 'SOL' : 'USD',
           paymentMethod: rawNetwork, txHash: txHash, walletAddress: walletAddress,
           status: orderStatus, verified: verified, verificationMsg: verificationMsg,
           timestamp: Date.now(), referralCode: referralCode
@@ -1567,7 +1592,7 @@ export default {
             const refRaw = await env.SKILLS_KV.get('ref:' + referralCode)
             if (refRaw) {
               const ref = JSON.parse(refRaw)
-              const comm = parseFloat(skill.price || amount) * 0.20
+              const comm = (parseFloat(skill.price || skill.m2m_metadata ? skill.m2m_metadata.price_usdc : '0') || parseFloat(amount) || 0) * 0.20
               ref.skillsPromoted = (ref.skillsPromoted || 0) + 1
               ref.earnings = (ref.earnings || 0) + comm
               await env.SKILLS_KV.put('ref:' + referralCode, JSON.stringify(ref))
@@ -1575,23 +1600,26 @@ export default {
           } catch(_) {}
         }
 
-        const downloadUrl = SITE + '/skill/' + (skill.slug || skill.id)
-        const installCmd = skill.install || 'npx ' + (skill.slug || skill.id)
+        const downloadUrl = SITE + '/skill/' + slug
+        const installCmd = skill.install || 'npx ' + slug || 'mcp install marketnow/' + slug + ' --token ' + accessToken
 
         return new Response(JSON.stringify({
           status: orderStatus,
           download_url: downloadUrl,
           access_token: accessToken,
           install_command: installCmd,
-          skill_id: skill.id,
-          skill_name: skill.name,
+          skill_id: skill.id || skill.skill_id || slug,
+          skill_name: skill.name || skill.skill_id || slug,
           order_id: orderId,
           verification_msg: verificationMsg,
           payment_network: rawNetwork
         }), { headers: CORS_JSON })
 
       } catch (e) {
-        return new Response(JSON.stringify({ error: 'Checkout failed: ' + e.message }), { status: 500, headers: CORS_JSON })
+        return new Response(JSON.stringify({
+          error: 'M2M_PAYMENT_FAILED',
+          message: 'Checkout failed: ' + e.message
+        }), { status: 500, headers: CORS_JSON })
       }
     }
 

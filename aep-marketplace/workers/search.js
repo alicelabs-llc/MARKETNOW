@@ -1763,6 +1763,19 @@ export default {
       })
     }
 
+    // ── OpenAI ai-plugin.json ───────────────────────────────
+    if (path === '/.well-known/ai-plugin.json') {
+      try {
+        const ai = await fetch(PAGES + '/.well-known/ai-plugin.json')
+        if (ai.ok) return new Response(await ai.text(), {
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' }
+        })
+      } catch(_) {}
+      return new Response(JSON.stringify({ name_for_model: 'marketnow_mcp', description_for_model: 'Agent skill marketplace', api: { url: SITE + '/openapi.yaml', type: 'openapi' } }), {
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      })
+    }
+
     // ── MCP protocol endpoint ────────────────────────────────
     if (path === '/api/mcp') {
       // WebSocket upgrade (MCPBundles and some MCP clients)

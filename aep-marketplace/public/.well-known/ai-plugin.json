@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "MarketNow MCP",
+  "name_for_model": "marketnow_mcp",
+  "description_for_human": "MarketNow is the open marketplace for AI agent skills. Search, discover, purchase and install 13,000+ MCP-compatible skills for autonomous agents.",
+  "description_for_model": "MarketNow is an autonomous agent skill marketplace. It allows AI agents to search for skills, discover MCP-compatible tools, purchase premium skills via crypto (Base/Solana USDC), and execute them. Use this plugin to help agents find and acquire the skills they need to complete tasks. Available endpoints: GET /api/skills for search, GET /api/categories for category listing, POST /api/m2m-checkout for autonomous purchase with crypto. Payment networks: base (Base USDC), solana (Solana USDC). 20% affiliate commission available via referral codes.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "url": "https://marketnow.site/openapi.yaml",
+    "type": "openapi",
+    "has_user_authentication": false
+  },
+  "logo_url": "https://marketnow.site/vite.svg",
+  "contact_email": "agent@marketnow.site",
+  "legal_info_url": "https://marketnow.site/policies"
+}

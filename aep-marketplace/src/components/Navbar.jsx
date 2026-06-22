@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { isAuthenticated, getUser, logout } from '../api/client';
 import AuthModal from './AuthModal';
 
@@ -13,10 +13,41 @@ const navLinks = [
   { path: '/policies', label: 'POLICIES' },
 ];
 
+const CLICK_TARGET = 7;
+const CLICK_WINDOW = 4000; // ms
+
 export default function Navbar() {
   const location = useLocation();
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState(null);
+  const clickCountRef = useRef(0);
+  const clickTimerRef = useRef(null);
+
+  // Secret trigger: 7 clicks on logo
+  const handleLogoClick = useCallback(() => {
+    clickCountRef.current += 1;
+    if (clickCountRef.current === 1) {
+      // Start reset timer on first click
+      clickTimerRef.current = setTimeout(() => { clickCountRef.current = 0; }, CLICK_WINDOW);
+    }
+    if (clickCountRef.current >= CLICK_TARGET) {
+      clearTimeout(clickTimerRef.current);
+      clickCountRef.current = 0;
+      window.dispatchEvent(new CustomEvent('open-admin'));
+    }
+  }, []);
+
+  // Secret keyboard shortcut: Ctrl+Shift+M
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'M') {
+        e.preventDefault();
+        window.dispatchEvent(new CustomEvent('open-admin'));
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -53,19 +84,24 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 z-[1000] glass-panel border-b border-white/5">
         <div className="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg">
+          <div className="flex items-center gap-3 shrink-0">
+            {/* Secret admin trigger: click 7 times rapidly on the logo icon */}
+            <div
+              onClick={handleLogoClick}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg cursor-pointer select-none"
+              title="MarketNow"
+            >
               A
             </div>
-            <div>
+            <Link to="/">
               <div className="text-white font-semibold tracking-wide text-sm">
                 AGENT EXCHANGE <span className="text-[#00F299]">PRO</span>
               </div>
               <div className="text-[10px] text-zinc-500 font-mono tracking-widest">
                 AEP PROTOCOL V10.2
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => {

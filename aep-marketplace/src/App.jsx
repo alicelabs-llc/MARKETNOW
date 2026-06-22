@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundOrbs from './components/BackgroundOrbs';
 import AuthModal from './components/AuthModal';
+import AdminModal from './components/AdminModal';
 import { setAuth, getUser } from './api/client';
 
 // Pages
@@ -19,18 +20,25 @@ import Policies from './pages/Policies';
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
+  const [adminOpen, setAdminOpen] = useState(false);
 
   // Check URL params for login trigger
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('login') === 'true') {
       setAuthOpen(true);
-      // Clean URL
       window.history.replaceState({}, '', '/');
     }
   }, []);
 
-  const handleAuthSuccess = (userData) => {
+  // Listen for secret admin trigger event
+  useEffect(() => {
+    const handler = () => setAdminOpen(true);
+    window.addEventListener('open-admin', handler);
+    return () => window.removeEventListener('open-admin', handler);
+  }, []);
+
+  const handleAuthSuccess = () => {
     window.dispatchEvent(new Event('auth-change'));
   };
 
@@ -38,7 +46,6 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-black text-white overflow-x-hidden">
         <BackgroundOrbs />
-
         <Navbar />
 
         <Routes>
@@ -51,12 +58,20 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/handshake" element={<Handshake />} />
           <Route path="/policies" element={<Policies />} />
+          {/* /dashboard is intentionally removed — access only via secret trigger */}
+          <Route path="/dashboard" element={<Navigate to="/" replace />} />
         </Routes>
 
         <AuthModal
           isOpen={authOpen}
           onClose={() => setAuthOpen(false)}
           onAuthSuccess={handleAuthSuccess}
+        />
+
+        {/* Hidden admin panel — only visible after secret trigger */}
+        <AdminModal
+          isOpen={adminOpen}
+          onClose={() => setAdminOpen(false)}
         />
       </div>
     </BrowserRouter>

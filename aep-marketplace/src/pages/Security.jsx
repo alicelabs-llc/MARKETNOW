@@ -15,7 +15,7 @@ export default function Security() {
     try {
       setLoading(true);
       const data = await fetchAuditLogs();
-      setLogs(data.auditLogs);
+      setLogs(data.logs || []);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -86,7 +86,7 @@ export default function Security() {
               <div className="space-y-2">
                 {logs.map((log, i) => (
                   <motion.div
-                    key={log.id}
+                    key={log.skill || i}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
@@ -94,20 +94,22 @@ export default function Security() {
                   >
                     <div className="flex items-center gap-4">
                       <span className={`w-2 h-2 rounded-full ${
-                        log.status === 'Passed' ? 'bg-[#00F299]' : 'bg-red-400'
+                        log.passed ? 'bg-[#00F299]' : 'bg-red-400'
                       }`} />
                       <div>
-                        <div className="text-white text-sm font-mono">{log.type}</div>
-                        <div className="text-zinc-500 text-[10px] font-mono">{log.id}</div>
+                        <div className="text-white text-sm font-mono">Sentinel Audit</div>
+                        <div className="text-zinc-500 text-[10px] font-mono">{log.skill}</div>
                       </div>
                     </div>
                     <div className="text-right">
                       <div className={`text-xs font-mono ${
-                        log.status === 'Passed' ? 'text-[#00F299]' : 'text-red-400'
+                        log.passed ? 'text-[#00F299]' : 'text-red-400'
                       }`}>
-                        {log.status}
+                        {log.passed ? 'Passed' : 'Failed'} ({log.score}/{log.maxScore})
                       </div>
-                      <div className="text-zinc-500 text-[10px] font-mono">{log.time}</div>
+                      <div className="text-zinc-500 text-[10px] font-mono">
+                        {log.timestamp ? new Date(log.timestamp).toLocaleString() : 'Just now'}
+                      </div>
                     </div>
                   </motion.div>
                 ))}

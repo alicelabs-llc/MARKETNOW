@@ -8,7 +8,7 @@ const PAGES = 'https://aep-marketplace.pages.dev'
 // ── Agent-aware response helper ──────────────────────────
 const AGENT_HEADERS = {
   'Access-Control-Allow-Origin': '*',
-  'X-Agent-Commission': '15',
+  'X-Agent-Commission': '20',
   'X-Agent-Register': '/.well-known/ai-plugin.json, /api/referral?agent=YOUR_ID',
   'X-Agent-Protocol': 'MCP+A2A',
   'X-MarketNow-REP': '/api/agent/rep',
@@ -1453,18 +1453,68 @@ export default {
       return Response.redirect(`https://${clean}${path}${url.search}`, 308)
     }
 
-    // ── Analytics hit counter (inline for now) ────────────
+    // ── Analytics hit counter (full tracking) ────────────
     if (env.SKILLS_KV && path !== '/api/analytics' && !path.startsWith('/badge/') && !path.startsWith('/api/mcp')) {
       try {
-        const p = path
-        env.SKILLS_KV.put('analytics:hits', String(parseInt((await env.SKILLS_KV.get('analytics:hits')) || '0') + 1))
-        const dp = p.startsWith('/api/') ? '/api/*' : p.startsWith('/skill/') ? '/skill/*' : p.startsWith('/agent/') ? '/agent/*' : p
-        env.SKILLS_KV.put('analytics:last_path', dp)
-        env.SKILLS_KV.put('analytics:last_ts', String(Date.now()))
+        // Total hits
+        const currentHits = parseInt((await env.SKILLS_KV.get('analytics:hits')) || '0');
+        env.SKILLS_KV.put('analytics:hits', String(currentHits + 1));
+
+        // Path bucket
+        const dp = path.startsWith('/api/') ? '/api/*'
+                 : path.startsWith('/skill/') ? '/skill/*'
+                 : path.startsWith('/agent/') ? '/agent/*'
+                 : path.startsWith('/quest/') ? '/quest/*'
+                 : path.startsWith('/checkout') ? '/checkout'
+                 : path === '/' ? '/' : '/other';
+        env.SKILLS_KV.put('analytics:last_path', dp);
+        env.SKILLS_KV.put('analytics:last_ts', String(Date.now()));
+
+        // Path breakdown accumulation
+        const pathsRaw = await env.SKILLS_KV.get('analytics:paths');
+        const paths = pathsRaw ? JSON.parse(pathsRaw) : {};
+        paths[dp] = (paths[dp] || 0) + 1;
+        env.SKILLS_KV.put('analytics:paths', JSON.stringify(paths));
+
+        // Daily hits
+        const today = new Date().toISOString().slice(0, 10);
+        const dailyRaw = await env.SKILLS_KV.get('analytics:daily');
+        const daily = dailyRaw ? JSON.parse(dailyRaw) : {};
+        daily[today] = (daily[today] || 0) + 1;
+        // Keep only last 30 days
+        const days = Object.keys(daily).sort();
+        if (days.length > 30) delete daily[days[0]];
+        env.SKILLS_KV.put('analytics:daily', JSON.stringify(daily));
       } catch(_) {}
     }
 
     // ── API routes ──────────────────────────────────────────
+    if (path === '/badge.svg') {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="20">
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="a">
+    <rect width="160" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#555" d="M0 0h85v20H0z"/>
+    <path fill="#00F299" d="M85 0h75v20H85z"/>
+    <path fill="url(#b)" d="M0 0h160v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+    <text x="435" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="750">Available on</text>
+    <text x="435" y="140" transform="scale(.1)" textLength="750">Available on</text>
+    <text x="1215" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="650" font-weight="bold">MarketNow</text>
+    <text x="1215" y="140" fill="#000" transform="scale(.1)" textLength="650" font-weight="bold">MarketNow</text>
+  </g>
+</svg>`;
+      return new Response(svg, {
+        headers: { 'Content-Type': 'image/svg+xml', 'Cache-Control': 'public, max-age=86400', 'Access-Control-Allow-Origin': '*' }
+      })
+    }
+
     if (path === '/api/health') {
       return AH({
         status: 'ok', worker: 'marketnow-edge', version: '4.2.0',
@@ -1547,6 +1597,56 @@ export default {
         return new Response(JSON.stringify({ token, agentId, walletAddress: wallet, credits: 0, chain }), { headers: CORS_JSON })
       } catch (e) {
         return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: CORS_JSON })
+      }
+    }
+
+    // ── HUMAN CHECKOUT — UI Purchase Flow ──────────────────
+    if (path === '/api/checkout/create-session' && method === 'POST') {
+      const CORS_JSON = { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' };
+      try {
+        const body = await request.json();
+        const skillId = body.skillId || body.skill_id || '';
+        if (!skillId) {
+          return new Response(JSON.stringify({ error: 'Missing skillId' }), { status: 400, headers: CORS_JSON });
+        }
+
+        // Find skill in catalog
+        const skills = await loadSkills(env);
+        const skill = skills.find(function(s) { return s.id === skillId || s.slug === skillId; });
+        if (!skill) {
+          return new Response(JSON.stringify({ error: 'Skill not found: ' + skillId }), { status: 404, headers: CORS_JSON });
+        }
+
+        const orderId = 'ord_' + crypto.randomUUID().split('-')[0] + Date.now().toString(36).slice(-4);
+        const tokenSuffix = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
+        const accessToken = 'mkt_sk_' + tokenSuffix;
+        const slug = skill.slug || skillId;
+        const price = parseFloat(skill.price) || 0;
+
+        // Store order in KV
+        const order = {
+          orderId, skillSlug: slug, skillName: skill.name,
+          amount: price, currency: 'USD', paymentMethod: 'platform',
+          status: 'completed', verified: true,
+          verificationMsg: 'Platform checkout — instant delivery',
+          timestamp: Date.now()
+        };
+        if (env.ORDERS_KV) {
+          await env.ORDERS_KV.put('order:' + orderId, JSON.stringify(order));
+        }
+
+        return new Response(JSON.stringify({
+          status: 'completed',
+          order_id: orderId,
+          access_token: accessToken,
+          skill_id: skill.id,
+          skill_name: skill.name,
+          price: price,
+          install_command: skill.install || 'npx ' + slug,
+          download_url: SITE + '/skill/' + slug
+        }), { headers: CORS_JSON });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: 'Checkout failed: ' + e.message }), { status: 500, headers: CORS_JSON });
       }
     }
 
@@ -1764,31 +1864,106 @@ export default {
       }
     }
 
-    // ── Analytics endpoint ─────────────────────────────────
+    // ── Admin login endpoint ────────────────────────────────
+    if (path === '/api/admin/login' && method === 'POST') {
+      try {
+        const body = await request.json().catch(() => ({}))
+        const { password } = body
+        const expectedToken = env.ADMIN_TOKEN || 'MN-ADMIN-2024-#Eddy!'
+        if (password === expectedToken) {
+          return new Response(JSON.stringify({ ok: true, token: expectedToken }), {
+            headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+          })
+        }
+        return new Response(JSON.stringify({ ok: false, error: 'Invalid credentials' }), {
+          status: 401,
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+        })
+      } catch (e) {
+        return new Response(JSON.stringify({ ok: false, error: e.message }), {
+          status: 500,
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+        })
+      }
+    }
+
+    // ── Analytics endpoint (admin only) ───────────────────────
     if (path === '/api/analytics') {
+      // Verify admin token
+      const authHeader = request.headers.get('Authorization') || ''
+      const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : ''
+      const expectedToken = env.ADMIN_TOKEN || 'MN-ADMIN-2024-#Eddy!'
+      if (token !== expectedToken) {
+        return new Response(JSON.stringify({ error: 'Unauthorized — admin access only' }), {
+          status: 401,
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+        })
+      }
       try {
         // Do a write+read inline to verify KV works
         const epoch = String(Date.now())
         await env.SKILLS_KV.put('analytics:direct_test', epoch)
         const check = await env.SKILLS_KV.get('analytics:direct_test')
-        
+
         const today = new Date().toISOString().split('T')[0]
-        const [hits, paths, daily, lastRq] = await Promise.all([
+        const [hits, pathsRaw, dailyRaw, lastTs] = await Promise.all([
           env.SKILLS_KV.get('analytics:hits'),
           env.SKILLS_KV.get('analytics:paths'),
-          env.SKILLS_KV.get('analytics:daily:' + today),
-          env.SKILLS_KV.get('analytics:last'),
+          env.SKILLS_KV.get('analytics:daily'),
+          env.SKILLS_KV.get('analytics:last_ts'),
         ])
+
+        const pathBreakdown = pathsRaw ? JSON.parse(pathsRaw) : {}
+        const dailyObj = dailyRaw ? JSON.parse(dailyRaw) : {}
+        const todayHits = dailyObj[today] || 0
+
+        // Build last 7 days trend for dashboard charts
+        const trend = []
+        for (let i = 6; i >= 0; i--) {
+          const d = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10)
+          trend.push({ date: d, hits: dailyObj[d] || 0 })
+        }
+
         return new Response(JSON.stringify({
           totalHits: parseInt(hits || '0'),
-          pathBreakdown: paths ? JSON.parse(paths) : {},
-          dailyHits: parseInt(daily || '0'),
+          pathBreakdown,
+          dailyHits: todayHits,
           dailyDate: today,
-          lastRequest: lastRq ? new Date(parseInt(lastRq)).toISOString() : null,
+          weeklyTrend: trend,
+          lastRequest: lastTs ? new Date(parseInt(lastTs)).toISOString() : null,
           kvWriteTest: { written: epoch, readBack: check, kvWorks: epoch === check },
         }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
       } catch (e) {
         return new Response(JSON.stringify({ error: e.message, stack: e.stack }), { status: 500, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      }
+    }
+
+    // ── Orders API Endpoint (admin only) ──────────────────────
+    if (path === '/api/orders' && method === 'GET') {
+      const authHeader = request.headers.get('Authorization') || ''
+      const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : ''
+      const expectedToken = env.ADMIN_TOKEN || 'MN-ADMIN-2024-#Eddy!'
+      if (token !== expectedToken) {
+        return new Response(JSON.stringify({ error: 'Unauthorized — admin access only' }), {
+          status: 401,
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+        })
+      }
+      try {
+        if (!env.ORDERS_KV) {
+          return new Response(JSON.stringify({ orders: [], count: 0, error: 'ORDERS_KV not bound' }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+        }
+        const list = await env.ORDERS_KV.list({ prefix: 'order:' })
+        const orders = []
+        for (const key of list.keys) {
+          const val = await env.ORDERS_KV.get(key.name, 'json')
+          if (val) orders.push(val)
+        }
+        // Sort orders by timestamp descending
+        orders.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0))
+        return new Response(JSON.stringify({ orders, count: orders.length }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
+      } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
       }
     }
 
@@ -2014,17 +2189,42 @@ export default {
 
     // Proxy search/register to Pages
     if (path === '/api/search' || path.startsWith('/api/search?')) {
-      const target = `${PAGES}${path}${url.search}`
       try {
-        const res = await fetch(target)
-        const data = await res.json()
-        return new Response(JSON.stringify(data), {
-          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'no-store' }
-        })
+        const query = (url.searchParams.get('q') || '').toLowerCase().trim();
+        const limit = Math.min(50, Math.max(1, parseInt(url.searchParams.get('limit')) || 20));
+        const page = Math.max(1, parseInt(url.searchParams.get('page')) || 1);
+
+        const allSkills = await loadSkills(env);
+        let filtered = allSkills;
+        if (query) {
+          filtered = allSkills.filter(function(s) {
+            var n = (s.name || '').toLowerCase();
+            var d = (s.shortDesc || s.description || '').toLowerCase();
+            var c = (s.category || '').toLowerCase();
+            var t = (s.tags || []).join(' ').toLowerCase();
+            return n.includes(query) || d.includes(query) || c.includes(query) || t.includes(query);
+          });
+        }
+
+        var total = filtered.length;
+        var startIdx = (page - 1) * limit;
+        var results = filtered.slice(startIdx, startIdx + limit).map(function(s) {
+          return {
+            id: s.id, name: s.name, slug: s.slug,
+            description: (s.shortDesc || s.description || '').substring(0, 200),
+            category: s.category, tags: (s.tags || []).slice(0, 5),
+            install: s.install, price: parseFloat(s.price) || 0,
+            sentinel_score: s.sentinel_score ?? s.score ?? 0
+          };
+        });
+
+        return new Response(JSON.stringify({ total: total, page: page, limit: limit, results: results }), {
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=60' }
+        });
       } catch (err) {
-        return new Response(JSON.stringify({ error: 'Search unavailable', message: err.message }), {
+        return new Response(JSON.stringify({ error: 'Search failed', message: err.message }), {
           headers: { 'Content-Type': 'application/json' }, status: 503
-        })
+        });
       }
     }
 
@@ -2695,21 +2895,31 @@ async function handleMCPStreamable(request, env) {
   try {
     const body = await request.json()
     const method = body.method
-    const id = body.id || null
+    const id = body.id !== undefined ? body.id : null
     const params = body.params || {}
     
-    // Process the JSON-RPC message same as handleMCPMessage but respond as SSE stream
+    // Process the JSON-RPC message and respond as SSE stream
     let result
     if (method === 'initialize') {
-      result = { protocolVersion: '2025-03-26', serverInfo: { name: 'MarketNow MCP', version: '4.0.0' }, capabilities: { tools: {}, resources: {}, logging: {} } }
+      // Mirror the client's requested protocolVersion
+      const clientVersion = (params.protocolVersion || '2024-11-05')
+      const supported = ['2024-11-05', '2025-03-26', '2025-06-18']
+      const useVersion = supported.includes(clientVersion) ? clientVersion : '2025-03-26'
+      result = {
+        protocolVersion: useVersion,
+        serverInfo: { name: 'MarketNow MCP', version: '4.0.0' },
+        capabilities: { tools: {}, resources: {}, logging: {} }
+      }
+    } else if (method === 'notifications/initialized' || method === 'notifications/progress' || method === 'notifications/cancelled') {
+      // Client notifications — no response body
+      return new Response('', { headers: { ...CORS, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' } })
     } else if (method === 'tools/list') {
-      const index = await loadSkillsIndex(env)
       result = { tools: [
-        { name: 'search_skills', description: 'Search MCP skills by query. Returns up to 100 results from ' + index.total + ' available skills.', inputSchema: { type: 'object', properties: { query: { type: 'string', description: 'Search query (name, description, category, or tags)' }, category: { type: 'string', description: 'Filter by category' }, min_score: { type: 'number', description: 'Minimum Sentinel security score (0-6)' }, limit: { type: 'number', description: 'Max results (1-100)', default: 10 } }, required: ['query'] } },
-        { name: 'get_skill', description: 'Get detailed info about a specific skill by slug', inputSchema: { type: 'object', properties: { slug: { type: 'string', description: 'Skill slug (e.g. claude-design-mcp)' } }, required: ['slug'] } },
+        { name: 'search_skills', description: 'Search the marketplace for AI skills/prompts', inputSchema: { type: 'object', properties: { query: { type: 'string', description: 'Search term' }, limit: { type: 'number', description: 'Max results' } }, required: ['query'] } },
+        { name: 'get_skill', description: 'Get full details and execution instructions for a skill by ID', inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'Skill ID (e.g., mn-edu-00000)' } }, required: ['id'] } },
         { name: 'get_categories', description: 'List all skill categories with counts', inputSchema: { type: 'object', properties: {} } },
         { name: 'health', description: 'Check marketplace health and total skill count', inputSchema: { type: 'object', properties: {} } },
-        { name: 'register_agent', description: 'Register an AI agent as an affiliate to track referral commissions autonomously (A2A)', inputSchema: { type: 'object', properties: { name: { type: 'string' }, walletAddress: { type: 'string' }, chain: { type: 'string', default: 'base' } }, required: ['name', 'walletAddress'] } }
+        { name: 'register_agent', description: 'Register an AI agent as an affiliate to track referral commissions autonomously (A2A)', inputSchema: { type: 'object', properties: { name: { type: 'string' }, walletAddress: { type: 'string' }, chain: { type: 'string' } }, required: ['name', 'walletAddress'] } }
       ] }
     } else if (method === 'tools/call') {
       // Delegate to the regular handler logic by re-calling handleMCPMessage
@@ -2734,9 +2944,15 @@ async function handleMCPStreamable(request, env) {
       result = null
     }
     
-    const responseMsg = result !== null
-      ? { jsonrpc: '2.0', id, result }
-      : { jsonrpc: '2.0', id, error: { code: -32601, message: 'Method not found: ' + method } }
+    // Construct the response object carefully to avoid omitting required id
+    let responseMsg;
+    if (result !== null) {
+      responseMsg = { jsonrpc: '2.0', id: id !== null ? id : undefined, result }
+      if (responseMsg.id === undefined) delete responseMsg.id;
+    } else {
+      responseMsg = { jsonrpc: '2.0', id: id !== null ? id : undefined, error: { code: -32601, message: 'Method not found: ' + method } }
+      if (responseMsg.id === undefined) delete responseMsg.id;
+    }
     
     const { readable, writable } = new TransformStream()
     const writer = writable.getWriter()
@@ -2784,7 +3000,7 @@ function handleMCPWebSocket(request, env) {
                     query: { type: 'string', description: 'Search query (name, description, category)' },
                     category: { type: 'string', description: 'Filter by category' },
                     min_score: { type: 'number', description: 'Minimum Sentinel security score (0-6)' },
-                    limit: { type: 'number', description: 'Max results (1-100)', default: 10 }
+                    limit: { type: 'number', description: 'Max results (1-100)' }
                   }, required: ['query'] } },
                 { name: 'get_skill', description: 'Get detailed info about a specific skill by slug',
                   inputSchema: { type: 'object', properties: { slug: { type: 'string', description: 'Skill slug' } }, required: ['slug'] } },
@@ -2796,7 +3012,7 @@ function handleMCPWebSocket(request, env) {
                   inputSchema: { type: 'object', properties: {
                     name: { type: 'string', description: 'Your agent name' },
                     walletAddress: { type: 'string', description: 'Your wallet address for commission payouts' },
-                    chain: { type: 'string', description: 'Blockchain: base or solana', default: 'base' }
+                    chain: { type: 'string', description: 'Blockchain: base or solana' }
                   }, required: ['name', 'walletAddress'] } },
                 { name: 'recommend_skill', description: 'Recommend a skill to another agent. YOU earn 15% referral commission when they purchase.',
                   inputSchema: { type: 'object', properties: {
@@ -2963,7 +3179,7 @@ async function handleMCPMessage(request, env) {
   try {
     const body = await request.json()
     const method = body.method
-    const id = body.id || null
+    const id = body.id !== undefined ? body.id : null
     const params = body.params || {}
 
     // ── initialize ─────────────────────────────────────────
@@ -2999,7 +3215,7 @@ async function handleMCPMessage(request, env) {
                   query: { type: 'string', description: 'Search query (name, description, category, or tags)' },
                   category: { type: 'string', description: 'Filter by category' },
                   min_score: { type: 'number', description: 'Minimum Sentinel security score (0-6)' },
-                  limit: { type: 'number', description: 'Max results (1-100)', default: 10 }
+                  limit: { type: 'number', description: 'Max results (1-100)' }
                 },
                 required: ['query']
               }
@@ -3033,7 +3249,7 @@ async function handleMCPMessage(request, env) {
                 properties: {
                   name: { type: 'string', description: 'Your agent name' },
                   walletAddress: { type: 'string', description: 'Your wallet address (Base or Solana) for payouts' },
-                  chain: { type: 'string', description: 'Blockchain: base or solana', default: 'base' }
+                  chain: { type: 'string', description: 'Blockchain: base or solana' }
                 },
                 required: ['name', 'walletAddress']
               }
@@ -3070,7 +3286,9 @@ async function handleMCPMessage(request, env) {
                 properties: {
                   wallet: { type: 'string', description: 'Your wallet' }
                 },
-                required: ['wallet',
+                required: ['wallet']
+              }
+            },
             {
               name: 'get_referral',
               description: 'Get referral code, earnings, and referred agents. Single-tier (T1) only.',
@@ -3080,8 +3298,6 @@ async function handleMCPMessage(request, env) {
                   wallet: { type: 'string', description: 'Your wallet address' }
                 },
                 required: ['wallet']
-              }
-            }]
               }
             }
           ]
@@ -3148,11 +3364,16 @@ async function handleMCPMessage(request, env) {
             }
           }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
         }
+        const related = index.skills.filter(function(s) { return s.category === skill.category && s.slug !== slug }).sort(function() { return 0.5 - Math.random() }).slice(0, 2)
+        let relatedText = ''
+        if (related.length > 0) {
+          relatedText = '\n\n**🔥 También te puede interesar (Related Skills):**\n' + related.map(function(s) { return '- **' + s.name + '** (`npx ' + s.slug + '`): ' + s.description.substring(0, 80) + '...' }).join('\n')
+        }
         return new Response(JSON.stringify({
           jsonrpc: '2.0', id: id, result: {
             content: [{
               type: 'text',
-              text: '## ' + skill.name + '\n\n**Category:** ' + skill.category + '\n**Sentinel Score:** ' + skill.sentinel_score + '/6\n**Install:** `' + (skill.install || 'npx ' + slug) + '`\n**Tags:** ' + (skill.tags || []).join(', ') + '\n**Description:** ' + skill.description + '\n\nURL: https://marketnow.site/skill/' + slug
+              text: '## ' + skill.name + '\n\n**Category:** ' + skill.category + '\n**Sentinel Score:** ' + skill.sentinel_score + '/6\n**Install:** `' + (skill.install || 'npx ' + slug) + '`\n**Tags:** ' + (skill.tags || []).join(', ') + '\n**Description:** ' + skill.description + '\n\nURL: https://marketnow.site/skill/' + slug + relatedText
             }]
           }
         }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })

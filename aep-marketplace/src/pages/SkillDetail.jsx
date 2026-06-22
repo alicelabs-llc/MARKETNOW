@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getSkill } from '../data/skills';
-import { createCheckoutSession, isAuthenticated, getUser, getToken } from '../api/client';
+import { isAuthenticated, getUser, getToken } from '../api/client';
+import { hasMetaMask, connectWallet, cryptoCheckout, PAYMENT_WALLET } from '../utils/crypto';
 
 export default function SkillDetail() {
   const { id } = useParams();
@@ -13,6 +14,16 @@ export default function SkillDetail() {
   const [purchasing, setPurchasing] = useState(false);
   const [purchaseResult, setPurchaseResult] = useState(null);
   const [user, setUser] = useState(null);
+  const [copied, setCopied] = useState(false);
+  const [walletAddr, setWalletAddr] = useState(null);
+  const [purchaseStep, setPurchaseStep] = useState('');
+
+  const handleCopyBadge = () => {
+    const md = `[![Available on MarketNow](https://marketnow.site/badge.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
+    navigator.clipboard.writeText(md);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     if (isAuthenticated()) setUser(getUser());
@@ -43,24 +54,56 @@ export default function SkillDetail() {
     }
   };
 
+  const handleConnectWallet = async () => {
+    try {
+      if (!hasMetaMask()) {
+        window.open('https://metamask.io/download/', '_blank');
+        setError('Instala MetaMask primero');
+        return;
+      }
+      const addr = await connectWallet();
+      setWalletAddr(addr);
+      setError('');
+    } catch (err) {
+      setError(err.message || 'Error al conectar MetaMask');
+    }
+  };
+
   const handlePurchase = async () => {
-    if (!isAuthenticated()) {
-      navigate('/?login=true');
+    if (!hasMetaMask()) {
+      window.open('https://metamask.io/download/', '_blank');
+      setError('Instala MetaMask para pagar con USDC en Base');
+      return;
+    }
+
+    const price = parseFloat(skill.price);
+    if (!price || price <= 0) {
+      setError('Este skill es gratuito — no requiere pago');
       return;
     }
 
     setPurchasing(true);
     setError('');
     try {
-      const result = await createCheckoutSession(skill.id);
-      setPurchaseResult(result);
+      setPurchaseStep('Conectando MetaMask...');
+      const addr = await connectWallet();
+      setWalletAddr(addr);
 
-      // If Stripe URL, redirect
-      if (result.url) {
-        window.location.href = result.url;
-      }
+      setPurchaseStep(`Enviando $${price.toFixed(2)} USDC a MarketNow...`);
+      const result = await cryptoCheckout(skill.slug || skill.id, price);
+
+      setPurchaseResult({
+        ...result,
+        purchase: { license: result.access_token || result.order_id },
+      });
+      setPurchaseStep('');
     } catch (err) {
-      setError(err.message);
+      if (err.code === 4001) {
+        setError('Transacción cancelada por el usuario');
+      } else {
+        setError(err.message || 'Error en el pago');
+      }
+      setPurchaseStep('');
     } finally {
       setPurchasing(false);
     }
@@ -205,38 +248,80 @@ export default function SkillDetail() {
               {purchaseResult ? (
                 <div className="text-center p-4 rounded-xl bg-[#00F299]/10 border border-[#00F299]/20">
                   <div className="text-2xl mb-2">✅</div>
-                  <p className="text-[#00F299] text-sm font-semibold mb-1">Purchase Successful!</p>
-                  <p className="text-zinc-400 text-xs font-mono">License: {purchaseResult.purchase?.license}</p>
-                  <button
-                    onClick={() => navigate('/vault')}
-                    className="mt-3 px-4 py-2 bg-[#00F299] text-black text-xs font-semibold rounded-lg hover:bg-[#00F299]/90 transition-all"
-                  >
-                    VIEW IN VAULT
-                  </button>
+                  <p className="text-[#00F299] text-sm font-semibold mb-1">Purchase Verified On-Chain!</p>
+                  <p className="text-zinc-400 text-xs font-mono mb-1">Order: {purchaseResult.order_id}</p>
+                  {purchaseResult.txHash && (
+                    <a
+                      href={purchaseResult.explorerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#00d1ff] text-[10px] font-mono hover:underline block mb-2"
+                    >
+                      TX: {purchaseResult.txHash.slice(0, 10)}...{purchaseResult.txHash.slice(-8)} ↗
+                    </a>
+                  )}
+                  <p className="text-zinc-500 text-[10px] font-mono">Token: {purchaseResult.access_token}</p>
                 </div>
               ) : (
-                <button
-                  onClick={handlePurchase}
-                  disabled={purchasing}
-                  className={`w-full py-4 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                    purchasing
-                      ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
-                      : 'bg-[#00F299] text-black hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98]'
-                  }`}
-                >
-                  {purchasing ? 'PROCESSING...' : isAuthenticated() ? 'PURCHASE NOW →' : 'SIGN IN TO PURCHASE'}
-                </button>
+                <div className="space-y-3">
+                  {/* Wallet connect */}
+                  {!walletAddr ? (
+                    <button
+                      onClick={handleConnectWallet}
+                      className="w-full py-3 rounded-xl font-semibold text-sm transition-all duration-300 bg-white/5 border border-white/10 text-white hover:border-[#00F299]/50 hover:bg-[#00F299]/5"
+                    >
+                      🦊 CONNECT METAMASK
+                    </button>
+                  ) : (
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#00F299]/5 border border-[#00F299]/20">
+                      <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
+                      <span className="text-[10px] font-mono text-zinc-400 truncate">{walletAddr}</span>
+                    </div>
+                  )}
+
+                  {/* Purchase button */}
+                  <button
+                    onClick={handlePurchase}
+                    disabled={purchasing}
+                    className={`w-full py-4 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                      purchasing
+                        ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
+                        : 'bg-[#00F299] text-black hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98]'
+                    }`}
+                  >
+                    {purchasing
+                      ? (purchaseStep || 'PROCESSING...')
+                      : `PAY $${skill.price.toFixed(2)} USDC →`
+                    }
+                  </button>
+
+                  <p className="text-center text-zinc-700 text-[9px] font-mono">
+                    Pago en USDC · Base Network · Verificado on-chain
+                  </p>
+                </div>
               )}
 
               {error && (
                 <div className="mt-4 text-center text-red-400 text-xs">{error}</div>
               )}
 
-              {!user && (
-                <p className="mt-4 text-center text-zinc-600 text-[10px]">
-                  Sign in to purchase and access your vault
-                </p>
-              )}
+              {/* Badge Copier */}
+              <div className="mt-6 pt-6 border-t border-white/5">
+                <h4 className="text-[10px] text-zinc-500 font-mono tracking-wider mb-3 uppercase text-center">Promote your skill</h4>
+                <div className="p-4 rounded-xl bg-black/40 border border-white/5 text-center transition-all hover:border-[#00F299]/30 hover:shadow-[0_0_15px_rgba(0,242,153,0.1)]">
+                  <img src="https://marketnow.site/badge.svg" alt="MarketNow Badge" className="mx-auto mb-4 h-6" />
+                  <button
+                    onClick={handleCopyBadge}
+                    className={`w-full py-2 text-xs font-mono rounded-lg transition-all border ${
+                      copied 
+                        ? 'bg-[#00F299]/20 text-[#00F299] border-[#00F299]/50' 
+                        : 'bg-white/5 hover:bg-white/10 text-zinc-300 border-white/10'
+                    }`}
+                  >
+                    {copied ? '✅ COPIED MARKDOWN' : '📄 COPY BADGE MD'}
+                  </button>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

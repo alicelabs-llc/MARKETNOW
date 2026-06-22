@@ -161,6 +161,11 @@ fs.writeFileSync(
 );
 
 fs.writeFileSync(
+  path.join(__dirname, 'public', 'api', 'skills_index.json'),
+  JSON.stringify(skills)
+);
+
+fs.writeFileSync(
   path.join(__dirname, 'public', 'api', 'categories.json'),
   JSON.stringify(categoryIndex, null, 2)
 );

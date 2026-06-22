@@ -70,10 +70,22 @@ function json(data, status = 200) {
   });
 }
 
+// Static API files — pass through to Cloudflare Pages static serving
+// These large JSON files are in dist/api/ and should NOT be handled by this function.
+const STATIC_API_FILES = [
+  '/skills_index.json', '/skills.json', '/categories.json',
+  '/manifest.json', '/server.json', '/sentinel_scan.json'
+];
+
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
   const path = url.pathname.replace('/api', '');
+
+  // Pass through static JSON catalog files to Pages static file serving
+  if (STATIC_API_FILES.includes(path)) {
+    return context.next();
+  }
   const method = request.method;
 
   if (method === 'OPTIONS') return new Response(null, { status: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' } });

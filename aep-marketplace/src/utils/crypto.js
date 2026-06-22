@@ -119,6 +119,8 @@ export async function sendUSDCPayment(amountUSD) {
   return { txHash, walletAddress };
 }
 
+import { API_BASE } from '../api/client';
+
 /**
  * Full checkout flow:
  * 1. MetaMask payment
@@ -133,7 +135,7 @@ export async function cryptoCheckout(skillId, amountUSD) {
   await new Promise(r => setTimeout(r, 2000));
 
   // Verify with backend
-  const res = await fetch('/api/m2m-checkout', {
+  const res = await fetch(`${API_BASE}/api/m2m-checkout`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

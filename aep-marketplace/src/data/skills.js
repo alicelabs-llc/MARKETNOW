@@ -1,12 +1,11 @@
-// MarketNow — Skills Data Loader
-// Fetches from static index or search Worker
+import { API_BASE } from '../api/client';
 
 let skillsCache = null;
 
 export async function getAllSkills() {
   if (skillsCache) return skillsCache;
   try {
-    const res = await fetch('/api/skills_index.json');
+    const res = await fetch(`${API_BASE}/api/skills_index.json`);
     if (res.ok) { skillsCache = await res.json(); return skillsCache; }
   } catch {}
   return [];
@@ -31,7 +30,7 @@ export async function searchSkills(query, cat = '', lang = '', limit = 20, offse
   params.set('limit', '' + limit);
   params.set('offset', '' + offset);
   try {
-    const res = await fetch('/api/search?' + params.toString());
+    const res = await fetch(`${API_BASE}/api/search?` + params.toString());
     if (res.ok) return await res.json();
   } catch {}
   return { total: 0, results: [] };
@@ -39,7 +38,7 @@ export async function searchSkills(query, cat = '', lang = '', limit = 20, offse
 
 export async function getCategories() {
   try {
-    const res = await fetch('/api/categories.json');
+    const res = await fetch(`${API_BASE}/api/categories.json`);
     if (res.ok) return await res.json();
   } catch {}
   return [];

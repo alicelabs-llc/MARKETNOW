@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { API_BASE } from '../api/client';
 
 // ─── Constants ────────────────────────────────────────────────
 const SESSION_KEY = 'mn_adm_tk';
@@ -50,7 +51,7 @@ function LoginPanel({ onSuccess }) {
     if (attempts >= 5) { setError('Sesión bloqueada. Cierra y vuelve a intentar.'); return; }
     setLoading(true); setError('');
     try {
-      const res = await fetch('/api/admin/login', {
+      const res = await fetch(`${API_BASE}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password }),
@@ -152,9 +153,9 @@ function DashboardPanel({ token, onLogout }) {
   const load = useCallback(async () => {
     try {
       const [ar, sr, or] = await Promise.all([
-        fetch('/api/analytics', { headers: { Authorization: `Bearer ${token}` } }),
-        fetch('/api/skills?limit=1'),
-        fetch('/api/orders', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch(`${API_BASE}/api/analytics`, { headers: { Authorization: `Bearer ${token}` } }),
+        fetch(`${API_BASE}/api/skills?limit=1`),
+        fetch(`${API_BASE}/api/orders`, { headers: { Authorization: `Bearer ${token}` } }),
       ]);
       if (ar.status === 401) { onLogout(); return; }
       if (!ar.ok) throw new Error('Error al cargar métricas');

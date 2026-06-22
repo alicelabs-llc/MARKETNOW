@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { API_BASE } from '../api/client';
 
 const SESSION_KEY = 'mn_admin_token';
 const REFRESH_INTERVAL = 30000;
@@ -70,7 +71,7 @@ function LoginScreen({ onSuccess }) {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/admin/login', {
+      const res = await fetch(`${API_BASE}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password }),
@@ -190,8 +191,8 @@ export default function Dashboard() {
     if (!t) return;
     try {
       const [analyticsRes, skillsRes] = await Promise.all([
-        fetch('/api/analytics', { headers: { Authorization: `Bearer ${t}` } }),
-        fetch('/api/skills?limit=1'),
+        fetch(`${API_BASE}/api/analytics`, { headers: { Authorization: `Bearer ${t}` } }),
+        fetch(`${API_BASE}/api/skills?limit=1`),
       ]);
 
       if (analyticsRes.status === 401) {

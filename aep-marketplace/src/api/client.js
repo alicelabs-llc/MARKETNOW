@@ -3,7 +3,11 @@
 
 // En producción (Cloudflare Pages), las rutas /api/* se manejan desde el mismo dominio
 // En desarrollo local, usar VITE_API_URL o fallback a localhost:3001
-const API_BASE = import.meta.env.VITE_API_URL || '';
+export const API_BASE = import.meta.env.VITE_API_URL || 
+  (typeof window !== 'undefined' && 
+   !window.location.hostname.includes('marketnow.site')
+     ? 'https://marketnow.site'
+     : '');
 
 async function request(endpoint, options = {}) {
   const { method = 'GET', body, auth = false } = options;

@@ -1,0 +1,13 @@
+{
+  "name": "MarketNow Skills API",
+  "version": "2.1.0",
+  "total_skills": 13859,
+  "categories": 23,
+  "endpoints": {
+    "index": "/api/skills_index.json",
+    "categories": "/api/categories.json",
+    "search": "/api/search?q={query}&cat={cat}&lang={lang}&limit={n}&offset={n}",
+    "register": "POST /api/register"
+  },
+  "generated_at": "2026-05-16T00:46:24.611Z"
+}

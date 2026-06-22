@@ -1958,13 +1958,25 @@ export default {
 
     // ── MCP protocol endpoint ────────────────────────────────
     if (path === '/api/mcp') {
+      const MCP_CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization, Accept, Mcp-Session-Id', 'Access-Control-Expose-Headers': 'Mcp-Session-Id' }
+      // CORS preflight — MCP Inspector sends OPTIONS before connecting
+      if (method === 'OPTIONS') {
+        return new Response(null, { status: 204, headers: MCP_CORS })
+      }
       // WebSocket upgrade (MCPBundles and some MCP clients)
       if (request.headers.get('Upgrade') === 'websocket') {
         return handleMCPWebSocket(request, env)
       }
+      // Streamable HTTP (2025-06-18 spec): POST with Accept: text/event-stream
+      // MCP Inspector v0.22.0+ uses this transport
+      if (method === 'POST' && request.headers.get('Accept') === 'text/event-stream') {
+        return handleMCPStreamable(request, env)
+      }
+      // Legacy SSE transport: GET opens the stream
       if (method === 'GET') {
         return handleMCPSSE(request, env)
       }
+      // Legacy HTTP+JSON transport: POST with JSON body
       return handleMCPMessage(request, env)
     }
 
@@ -2636,31 +2648,24 @@ function esc(s) {
 const encoder = new TextEncoder()
 
 function handleMCPSSE(request, env) {
-  const sessionId = crypto.randomUUID()
+  const origin = new URL(request.url).origin
   const { readable, writable } = new TransformStream()
   const writer = writable.getWriter()
   
-  // Send the endpoint event so client knows where to POST messages
-  writer.write(encoder.encode('event: endpoint\ndata: /api/mcp\n\n'))
+  // Send the endpoint event with ABSOLUTE URL (required by MCP spec)
+  writer.write(encoder.encode('event: endpoint\ndata: ' + origin + '/api/mcp\n\n'))
   
-  // Send server info
-  const serverInfo = {
+  // Send server info as a message event
+  const serverInfo = JSON.stringify({
     jsonrpc: '2.0',
     id: 0,
     result: {
       protocolVersion: '2024-11-05',
-      serverInfo: {
-        name: 'MarketNow MCP',
-        version: '4.0.0'
-      },
-      capabilities: {
-        tools: {},
-        resources: {},
-        logging: {}
-      }
+      serverInfo: { name: 'MarketNow MCP', version: '4.0.0' },
+      capabilities: { tools: {}, resources: {}, logging: {} }
     }
-  }
-  writer.write(encoder.encode('data: ' + JSON.stringify(serverInfo) + '\n\n'))
+  })
+  writer.write(encoder.encode('event: message\ndata: ' + serverInfo + '\n\n'))
   
   // Keep-alive ping every 15s
   const keepAlive = setInterval(function() {
@@ -2679,8 +2684,70 @@ function handleMCPSSE(request, env) {
   })
   
   return new Response(readable, {
-    headers: { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type,Authorization' }
+    headers: { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization, Accept, Mcp-Session-Id' }
   })
+}
+
+// ── MCP Streamable HTTP transport (spec 2025-06-18) ──────────
+// MCP Inspector v0.22.0+ uses: POST + Accept: text/event-stream
+async function handleMCPStreamable(request, env) {
+  const CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization, Accept, Mcp-Session-Id', 'Access-Control-Expose-Headers': 'Mcp-Session-Id' }
+  try {
+    const body = await request.json()
+    const method = body.method
+    const id = body.id || null
+    const params = body.params || {}
+    
+    // Process the JSON-RPC message same as handleMCPMessage but respond as SSE stream
+    let result
+    if (method === 'initialize') {
+      result = { protocolVersion: '2025-03-26', serverInfo: { name: 'MarketNow MCP', version: '4.0.0' }, capabilities: { tools: {}, resources: {}, logging: {} } }
+    } else if (method === 'tools/list') {
+      const index = await loadSkillsIndex(env)
+      result = { tools: [
+        { name: 'search_skills', description: 'Search MCP skills by query. Returns up to 100 results from ' + index.total + ' available skills.', inputSchema: { type: 'object', properties: { query: { type: 'string', description: 'Search query (name, description, category, or tags)' }, category: { type: 'string', description: 'Filter by category' }, min_score: { type: 'number', description: 'Minimum Sentinel security score (0-6)' }, limit: { type: 'number', description: 'Max results (1-100)', default: 10 } }, required: ['query'] } },
+        { name: 'get_skill', description: 'Get detailed info about a specific skill by slug', inputSchema: { type: 'object', properties: { slug: { type: 'string', description: 'Skill slug (e.g. claude-design-mcp)' } }, required: ['slug'] } },
+        { name: 'get_categories', description: 'List all skill categories with counts', inputSchema: { type: 'object', properties: {} } },
+        { name: 'health', description: 'Check marketplace health and total skill count', inputSchema: { type: 'object', properties: {} } },
+        { name: 'register_agent', description: 'Register an AI agent as an affiliate to track referral commissions autonomously (A2A)', inputSchema: { type: 'object', properties: { name: { type: 'string' }, walletAddress: { type: 'string' }, chain: { type: 'string', default: 'base' } }, required: ['name', 'walletAddress'] } }
+      ] }
+    } else if (method === 'tools/call') {
+      // Delegate to the regular handler logic by re-calling handleMCPMessage
+      // We need to rebuild the request with json body
+      const fakeReq = new Request(request.url, { method: 'POST', body: JSON.stringify(body), headers: { 'Content-Type': 'application/json' } })
+      const res = await handleMCPMessage(fakeReq, env)
+      const resBody = await res.json()
+      // Return as SSE stream
+      const { readable, writable } = new TransformStream()
+      const writer = writable.getWriter()
+      const enc = new TextEncoder()
+      writer.write(enc.encode('event: message\ndata: ' + JSON.stringify(resBody) + '\n\n'))
+      writer.close()
+      return new Response(readable, { headers: { ...CORS, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' } })
+    } else if (method === 'notifications/initialized') {
+      // Client notification — no response needed, just ACK
+      const { readable, writable } = new TransformStream()
+      const writer = writable.getWriter()
+      writer.close()
+      return new Response(readable, { headers: { ...CORS, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' } })
+    } else {
+      result = null
+    }
+    
+    const responseMsg = result !== null
+      ? { jsonrpc: '2.0', id, result }
+      : { jsonrpc: '2.0', id, error: { code: -32601, message: 'Method not found: ' + method } }
+    
+    const { readable, writable } = new TransformStream()
+    const writer = writable.getWriter()
+    const enc = new TextEncoder()
+    writer.write(enc.encode('event: message\ndata: ' + JSON.stringify(responseMsg) + '\n\n'))
+    writer.close()
+    return new Response(readable, { headers: { ...CORS, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' } })
+  } catch(e) {
+    const errMsg = JSON.stringify({ jsonrpc: '2.0', id: null, error: { code: -32700, message: 'Parse error: ' + e.message } })
+    return new Response('event: message\ndata: ' + errMsg + '\n\n', { headers: { ...CORS, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache' } })
+  }
 }
 
 // ── MCP WebSocket transport ──────────────────────────────────

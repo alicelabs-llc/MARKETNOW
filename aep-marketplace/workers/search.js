@@ -154,7 +154,7 @@ async function loadSkills(env) {
         }
       } catch (_) {}
     }
-    // Fallback: fetch from Pages
+    // Fetch from Pages (slow once, then cached) if R2 failed
     if (!arr || arr.length === 0) {
       try {
         const res = await fetch(PAGES + '/api/skills_index.json', { signal: AbortSignal.timeout(30000) });
@@ -162,10 +162,12 @@ async function loadSkills(env) {
         arr = Array.isArray(data) ? data : (data.skills || []);
       } catch (e) {
         if (_skillsCache) return _skillsCache;
-        return [];
+        arr = [];
       }
     }
+  }
 
+  arr = arr || [];
   if (arr.length > 0) {
     _skillsCache = arr;
     _skillsCacheTime = now;
@@ -174,6 +176,9 @@ async function loadSkills(env) {
     if (env && env.SKILLS_KV && !fromKV) {
       env.SKILLS_KV.put('all_skills_cache', JSON.stringify(arr), { expirationTtl: 86400 }).catch(() => {});
     }
+  } else {
+    // If somehow empty, make sure sorted arrays are at least initialized as empty arrays to avoid null reference
+    _ensureSortedArrays([]);
   }
   return arr;
 }

@@ -1,0 +1,37 @@
+name: marketnow-mcp
+displayName: MarketNow MCP
+description: "Agent skill marketplace with 13,800+ MCP skills. Search, discover and install tools for AI agents instantly."
+version: "1.0.0"
+license: MIT
+homepage: https://marketnow.site
+repository: https://github.com/alicelab/marketnow-mcp
+icon: https://marketnow.site/logo.png
+
+server:
+  type: sse
+  url: https://marketnow.site/api/mcp
+
+tools:
+  - name: search_skills
+    description: Search 13,800+ MCP skills by name, category, or keyword
+  - name: get_skill
+    description: Get detailed information and installation instructions for a specific skill
+  - name: list_categories
+    description: List all available skill categories in the marketplace
+  - name: install_skill
+    description: Get step-by-step installation instructions for a skill
+
+categories:
+  - marketplace
+  - productivity
+  - developer-tools
+  - ai-tools
+
+tags:
+  - mcp
+  - marketplace
+  - skills
+  - agents
+  - tools
+  - ai
+  - automation

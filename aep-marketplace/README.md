@@ -1,16 +1,67 @@
-# React + Vite
+# MarketNow — Agent Skill Marketplace (MCP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> The largest open marketplace of MCP skills for AI agents — 13,800+ curated tools and skills ready to install in one click.
 
-Currently, two official plugins are available:
+**Live site:** https://marketnow.site  
+**MCP Endpoint:** https://marketnow.site/api/mcp  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What is MarketNow?
 
-## React Compiler
+MarketNow is an **Agent Skill Marketplace** that exposes thousands of MCP (Model Context Protocol) tools to AI agents and developers. It acts as a central hub where:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🤖 **AI Agents** can discover and use skills automatically
+- 👩‍💻 **Developers** can browse, install, and integrate tools via MCP
+- 🏪 **Skill Providers** can list their MCP servers for global discovery
 
-## Expanding the ESLint configuration
+## MCP Integration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Connect any MCP-compatible AI client (Claude, Cursor, Windsurf, etc.) to MarketNow:
+
+### Remote SSE (recommended)
+```json
+{
+  "mcpServers": {
+    "marketnow": {
+      "url": "https://marketnow.site/api/mcp",
+      "type": "sse"
+    }
+  }
+}
+```
+
+### Available MCP Tools
+
+| Tool | Description |
+|------|-------------|
+| `search_skills` | Search 13,800+ skills by name, category, or keyword |
+| `get_skill` | Get detailed info about a specific skill |
+| `list_categories` | List all skill categories |
+| `install_skill` | Get installation instructions for a skill |
+
+## Stats
+
+- 📦 **13,800+** skills indexed
+- 🗂️ **20+** categories (AI, DevOps, Messaging, Finance, etc.)
+- 🔄 Updated daily via automated crawlers
+- ⚡ Sub-100ms search response time
+
+## Categories
+
+`AI` · `DevOps` · `Finance` · `Messaging` · `Database` · `Productivity` · `Code` · `Search` · `Media` · `General` · and more
+
+## Tech Stack
+
+- **Frontend:** React + Vite (deployed on Cloudflare Pages)
+- **Backend:** Cloudflare Workers (edge-deployed, global)
+- **Storage:** Cloudflare KV (skill metadata cache)
+- **MCP Protocol:** SSE-based remote server
+
+## Links
+
+- 🌐 Website: https://marketnow.site
+- 🔌 MCP API: https://marketnow.site/api/mcp
+- 📘 OpenAPI Spec: https://marketnow.site/openapi.yaml
+
+## License
+
+MIT © AliceLabs

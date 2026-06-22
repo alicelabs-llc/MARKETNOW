@@ -1,6 +1,7 @@
 // ============================================================
-// MarketNow Worker v4.0 — Full Agent Marketplace
+// MarketNow Worker v4.1 — Full Agent Marketplace
 // Cloudflare Workers + KV + Stripe + Crypto
+// Cache refresh: 2026-06-22
 // ============================================================
 
 const SITE = 'https://marketnow.site'
@@ -1457,8 +1458,10 @@ export default {
     if (env.SKILLS_KV && path !== '/api/analytics' && !path.startsWith('/badge/') && !path.startsWith('/api/mcp')) {
       try {
         // Total hits
-        const currentHits = parseInt((await env.SKILLS_KV.get('analytics:hits')) || '0');
-        env.SKILLS_KV.put('analytics:hits', String(currentHits + 1));
+        try {
+          const currentHits = parseInt((await env.SKILLS_KV.get('analytics:hits')) || '0');
+          await env.SKILLS_KV.put('analytics:hits', String(currentHits + 1));
+        } catch (_) {}
 
         // Path bucket
         const dp = path.startsWith('/api/') ? '/api/*'
@@ -1467,24 +1470,31 @@ export default {
                  : path.startsWith('/quest/') ? '/quest/*'
                  : path.startsWith('/checkout') ? '/checkout'
                  : path === '/' ? '/' : '/other';
-        env.SKILLS_KV.put('analytics:last_path', dp);
-        env.SKILLS_KV.put('analytics:last_ts', String(Date.now()));
+        
+        try {
+          await env.SKILLS_KV.put('analytics:last_path', dp);
+          await env.SKILLS_KV.put('analytics:last_ts', String(Date.now()));
+        } catch (_) {}
 
         // Path breakdown accumulation
-        const pathsRaw = await env.SKILLS_KV.get('analytics:paths');
-        const paths = pathsRaw ? JSON.parse(pathsRaw) : {};
-        paths[dp] = (paths[dp] || 0) + 1;
-        env.SKILLS_KV.put('analytics:paths', JSON.stringify(paths));
+        try {
+          const pathsRaw = await env.SKILLS_KV.get('analytics:paths');
+          const paths = pathsRaw ? JSON.parse(pathsRaw) : {};
+          paths[dp] = (paths[dp] || 0) + 1;
+          await env.SKILLS_KV.put('analytics:paths', JSON.stringify(paths));
+        } catch (_) {}
 
         // Daily hits
-        const today = new Date().toISOString().slice(0, 10);
-        const dailyRaw = await env.SKILLS_KV.get('analytics:daily');
-        const daily = dailyRaw ? JSON.parse(dailyRaw) : {};
-        daily[today] = (daily[today] || 0) + 1;
-        // Keep only last 30 days
-        const days = Object.keys(daily).sort();
-        if (days.length > 30) delete daily[days[0]];
-        env.SKILLS_KV.put('analytics:daily', JSON.stringify(daily));
+        try {
+          const today = new Date().toISOString().slice(0, 10);
+          const dailyRaw = await env.SKILLS_KV.get('analytics:daily');
+          const daily = dailyRaw ? JSON.parse(dailyRaw) : {};
+          daily[today] = (daily[today] || 0) + 1;
+          // Keep only last 30 days
+          const days = Object.keys(daily).sort();
+          if (days.length > 30) delete daily[days[0]];
+          await env.SKILLS_KV.put('analytics:daily', JSON.stringify(daily));
+        } catch (_) {}
       } catch(_) {}
     }
 
@@ -1900,21 +1910,41 @@ export default {
         })
       }
       try {
-        // Do a write+read inline to verify KV works
-        const epoch = String(Date.now())
-        await env.SKILLS_KV.put('analytics:direct_test', epoch)
-        const check = await env.SKILLS_KV.get('analytics:direct_test')
+        // Do a write+read inline to verify KV works (wrapped in try-catch in case of daily limit exhaustion)
+        let kvWorks = false;
+        let epoch = String(Date.now());
+        let check = null;
+        try {
+          await env.SKILLS_KV.put('analytics:direct_test', epoch);
+          check = await env.SKILLS_KV.get('analytics:direct_test');
+          kvWorks = (epoch === check);
+        } catch (kvErr) {
+          console.error("Direct KV write test failed:", kvErr);
+        }
 
         const today = new Date().toISOString().split('T')[0]
-        const [hits, pathsRaw, dailyRaw, lastTs] = await Promise.all([
-          env.SKILLS_KV.get('analytics:hits'),
-          env.SKILLS_KV.get('analytics:paths'),
-          env.SKILLS_KV.get('analytics:daily'),
-          env.SKILLS_KV.get('analytics:last_ts'),
-        ])
+        let hits = '0'
+        let pathsRaw = '{}'
+        let dailyRaw = '{}'
+        let lastTs = null
 
-        const pathBreakdown = pathsRaw ? JSON.parse(pathsRaw) : {}
-        const dailyObj = dailyRaw ? JSON.parse(dailyRaw) : {}
+        try {
+          const [h, p, d, lt] = await Promise.all([
+            env.SKILLS_KV.get('analytics:hits'),
+            env.SKILLS_KV.get('analytics:paths'),
+            env.SKILLS_KV.get('analytics:daily'),
+            env.SKILLS_KV.get('analytics:last_ts'),
+          ])
+          hits = h || '0'
+          pathsRaw = p || '{}'
+          dailyRaw = d || '{}'
+          lastTs = lt
+        } catch (readErr) {
+          console.error("KV read failed:", readErr);
+        }
+
+        const pathBreakdown = JSON.parse(pathsRaw)
+        const dailyObj = JSON.parse(dailyRaw)
         const todayHits = dailyObj[today] || 0
 
         // Build last 7 days trend for dashboard charts
@@ -1931,7 +1961,7 @@ export default {
           dailyDate: today,
           weeklyTrend: trend,
           lastRequest: lastTs ? new Date(parseInt(lastTs)).toISOString() : null,
-          kvWriteTest: { written: epoch, readBack: check, kvWorks: epoch === check },
+          kvWriteTest: { written: epoch, readBack: check, kvWorks },
         }), { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })
       } catch (e) {
         return new Response(JSON.stringify({ error: e.message, stack: e.stack }), { status: 500, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } })

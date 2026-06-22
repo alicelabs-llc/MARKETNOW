@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.edgarfloresguerra2011-a11y/marketnow-mcp",
+  "title": "MarketNow MCP",
+  "description": "Agent skill marketplace with 13,800+ MCP skills for AI agents.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://marketnow.site/api/mcp"
+    }
+  ]
+}

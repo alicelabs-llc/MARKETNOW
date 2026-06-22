@@ -40,7 +40,7 @@ const subjects = [
   'Satellite Data', 'Network Traffic', 'Code Repositories'
 ];
 
-const pricePoints = [0, 9, 19, 29, 49, 79, 99, 149, 199, 249, 299, 499, 749, 999, 1200, 2400];
+const pricePoints = [5, 9, 19, 29, 49, 79, 99, 149, 199, 249, 299, 499, 749, 999, 1200, 2400];
 
 // ─── Seeded pseudo-random para builds deterministas ────────────────────────
 let seed = 42;

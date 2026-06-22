@@ -15,6 +15,10 @@ binding = "SKILLS_KV"
 id = "7763872fdabf43ffb04307805214fe45"
 preview_id = "7763872fdabf43ffb04307805214fe45"
 
+[[r2_buckets]]
+binding = "SKILLS_BUCKET"
+bucket_name = "aep-skills"
+
 [[kv_namespaces]]
 binding = "ORDERS_KV"
 id = "4470eeee886744a3a9c3e4c8801b3496"

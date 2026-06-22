@@ -143,16 +143,29 @@ async function loadSkills(env) {
   if (fromKV) {
     arr = fromKV;
   } else {
-    // Fetch from Pages (slow once, then cached)
-    try {
-      const res = await fetch(PAGES + '/api/skills_index.json', { signal: AbortSignal.timeout(30000) });
-      const data = await res.json();
-      arr = Array.isArray(data) ? data : (data.skills || []);
-    } catch (e) {
-      if (_skillsCache) return _skillsCache;
-      return [];
+    // Try R2 bucket first (direct upload, no Pages deploy needed)
+    if (env && env.SKILLS_BUCKET) {
+      try {
+        const obj = await env.SKILLS_BUCKET.get('skills_index.json');
+        if (obj) {
+          const text = await obj.text();
+          const data = JSON.parse(text);
+          arr = Array.isArray(data) ? data : (data.skills || []);
+        }
+      } catch (_) {}
     }
-  }
+    // Fallback: fetch from Pages
+    if (!arr || arr.length === 0) {
+      try {
+        const res = await fetch(PAGES + '/api/skills_index.json', { signal: AbortSignal.timeout(30000) });
+        const data = await res.json();
+        arr = Array.isArray(data) ? data : (data.skills || []);
+      } catch (e) {
+        if (_skillsCache) return _skillsCache;
+        return [];
+      }
+    }
+
   if (arr.length > 0) {
     _skillsCache = arr;
     _skillsCacheTime = now;

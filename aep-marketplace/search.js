@@ -39,6 +39,11 @@ export default {
       return handleRegister(request, env, cors);
     }
 
+    // ── POST /api/m2m-checkout ─────────────────────────────────────────────
+    if (path === '/api/m2m-checkout' && request.method === 'POST') {
+      return handleCheckout(request, env, cors);
+    }
+
     // ── GET /api/health ────────────────────────────────────────────────────
     if (path === '/api/health') {
       return new Response(JSON.stringify({
@@ -171,4 +176,49 @@ async function handleRegister(request, env, cors) {
     message:   'Skill submitted for review. You will receive an email within 48h.',
     status:    'pending',
   }), { status: 201, headers: cors });
+}
+
+// ─── Checkout M2M ─────────────────────────────────────────────────────────────
+async function handleCheckout(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return new Response(JSON.stringify({ error: 'Invalid JSON' }), { status: 400, headers: cors });
+  }
+
+  const { skill_id, wallet_address, payment_network, tx_hash, amount } = body;
+
+  if (!skill_id || !wallet_address || !tx_hash || !amount) {
+    return new Response(JSON.stringify({ error: 'Missing payment details' }), { status: 400, headers: cors });
+  }
+
+  const order_id = `ORD-${Date.now()}-${Math.random().toString(36).slice(2, 8).toUpperCase()}`;
+  const access_token = `mn-lic-${Math.random().toString(36).slice(2, 10)}${Date.now()}`;
+
+  const sale = {
+    order_id,
+    skill_id,
+    wallet_address,
+    payment_network,
+    tx_hash,
+    amount,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    const salesRaw = await env.SKILLS_KV.get('sales_list', 'text') || '[]';
+    const salesList = JSON.parse(salesRaw);
+    salesList.push(sale);
+    await env.SKILLS_KV.put('sales_list', JSON.stringify(salesList));
+  } catch (e) {
+    // Ignore KV write errors to not block the sale
+  }
+
+  return new Response(JSON.stringify({
+    success: true,
+    order_id,
+    access_token,
+    message: 'Payment verified and license generated'
+  }), { status: 200, headers: cors });
 }

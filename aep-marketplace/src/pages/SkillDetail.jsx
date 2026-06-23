@@ -161,7 +161,6 @@ export default function SkillDetail() {
 
   if (!skill) return null;
 
-  const githubUrl = `https://github.com/search?q=${encodeURIComponent(skill.slug || skill.name)}&type=repositories`;
   const isFree = !skill.price || skill.price === 0;
 
   return (
@@ -271,18 +270,10 @@ export default function SkillDetail() {
               )}
 
               {/* Footer */}
-              <div className="flex items-center justify-between pt-6 border-t border-white/5">
+              <div className="pt-6 border-t border-white/5">
                 <div className="text-sm text-zinc-500">
                   By <span className="text-zinc-300">{skill.author}</span>
                 </div>
-                <a
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 text-xs font-mono transition-all"
-                >
-                  <span>⭐</span> View on GitHub
-                </a>
               </div>
             </div>
 

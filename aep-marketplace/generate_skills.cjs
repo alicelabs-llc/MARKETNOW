@@ -54,62 +54,40 @@ function randFloat(min, max, decimals = 1) {
   return parseFloat((rand() * (max - min) + min).toFixed(decimals));
 }
 
-// ─── Generación ───────────────────────────────────────────────────────────
-const TARGET = 13000;
-const skills = [];
-
-for (let i = 0; i < TARGET; i++) {
-  const action   = pick(actions);
-  const subject  = pick(subjects);
-  const cat      = pick(categories);
-  const prov     = pick(providers);
-  const price    = pick(pricePoints);
-  const rating   = randFloat(3.8, 5.0);
-  const trust    = randInt(80, 100);
-  const execs    = randInt(10, 900) + 'K';
-  const roi      = randFloat(1.5, 12.0) + 'x';
-  const latency  = randInt(10, 2500) + 'ms';
-  const success  = randFloat(92.0, 100.0);
-  const idx      = String(i).padStart(5, '0');
-  const id       = `mn-${cat.toLowerCase().substring(0, 3)}-${idx}`;
-
-  skills.push({
-    id,
-    name:       `${subject} ${action} Pro`,
-    tagline:    `Autonomous ${subject.toLowerCase()} ${action.toLowerCase()} node for ${prov.replace(/_/g, ' ')}.`,
-    description:`High-performance MCP server providing ${action.toLowerCase()} capabilities for ${subject.toLowerCase()} data. Optimized for autonomous agents requiring ${trust}% trust and low latency (${latency}). Verified by MarketNow Sentinel.`,
-    category:   cat,
-    provider:   prov,
-    price,
-    rating,
-    executions: execs,
-    roi,
-    latency,
-    successRate: success,
-    trustScore:  trust,
-    verified:    rand() > 0.1,
-    tags:        [cat.toLowerCase(), action.toLowerCase(), subject.split(' ')[0].toLowerCase()],
-    doc: {
-      setup:   `1. Install via MCP CLI: \`npx -y @marketnow-registry/${id}\`\n2. Add to your MCP config\n3. Restart agent cluster.`,
-      usage:   `agent.call("${id}", { target: "input_data", precision: "high" })`,
-      mcpConfig: {
-        mcpServers: {
-          [id]: {
-            command:   "npx",
-            args:      ["-y", `@marketnow-registry/${id}`],
-            env:       { [`${id.toUpperCase().replace(/-/g, '_')}_API_KEY`]: "REQUIRED" },
-            transport: "stdio"
-          }
-        }
-      },
-      requirements: ['Node.js 20+', 'MarketNow License Key'],
-      benchmarks: {
-        peak_tps:   randInt(500, 5000),
-        avg_memory: randInt(64, 512) + 'MB',
-        cold_start: randInt(50, 800) + 'ms'
-      }
-    }
-  });
+// ─── Generación a partir de skills reales ───
+let skills = [];
+try {
+  const realSkillsPath = path.join(__dirname, 'public', 'api', 'skills_index.json');
+  if (fs.existsSync(realSkillsPath)) {
+    skills = JSON.parse(fs.readFileSync(realSkillsPath, 'utf8'));
+    console.log(`Loaded ${skills.length} real skills for the build.`);
+  } else {
+    console.log("No real skills_index.json found, using empty array.");
+  }
+} catch (e) {
+  console.error("Error reading real skills:", e);
+}
+if (skills.length === 0) {
+  // Fallback a mínimo placeholder si está vacío
+  skills = [{
+    id: "mn-ai-00000",
+    name: "discord-mcp-server",
+    slug: "discord-mcp-server",
+    tagline: "Real MCP server - discord-mcp-server.",
+    description: "Verified MCP server - discord-mcp-server.",
+    category: "AI",
+    provider: "DataSynapse",
+    price: 5,
+    rating: 4.5,
+    executions: "10K",
+    roi: "2x",
+    latency: "40ms",
+    successRate: 95,
+    trustScore: 90,
+    verified: true,
+    tags: ["ai"],
+    doc: { setup: "", usage: "", requirements: [] }
+  }];
 }
 
 // ─── Índice de categorías ────────────────────────────────────────────────

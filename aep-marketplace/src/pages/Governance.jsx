@@ -2,9 +2,17 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fetchProposals, castVote, isAuthenticated } from '../api/client';
 
+/**
+ * MarketNow — Community & Roadmap
+ *
+ * Cambios vs. versión anterior:
+ *  - Eliminadas las métricas falsas de "AEP tokens staked", "delegators", "inflation"
+ *  - Eliminada la mención a "staking" (no hay token AEP real)
+ *  - Re-enfocada como una página de propuestas comunitarias abiertas
+ *  - Las proposals reales vienen del backend (db.json)
+ */
 export default function Governance() {
   const [proposals, setProposals] = useState([]);
-  const [stats, setStats] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [voting, setVoting] = useState(null);
@@ -18,8 +26,7 @@ export default function Governance() {
     try {
       setLoading(true);
       const data = await fetchProposals();
-      setProposals(data.proposals);
-      setStats(data.stats);
+      setProposals(data.proposals || []);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -29,14 +36,14 @@ export default function Governance() {
 
   const handleVote = async (proposalId) => {
     if (!isAuthenticated()) {
-      setMessage('Sign in to vote');
+      setMessage('Sign in to vote on proposals');
       return;
     }
     setVoting(proposalId);
     try {
       const result = await castVote(proposalId);
       setMessage(result.message);
-      loadProposals(); // Refresh
+      loadProposals();
     } catch (err) {
       setError(err.message);
     } finally {
@@ -62,32 +69,32 @@ export default function Governance() {
           className="text-center mb-12"
         >
           <h1 className="text-4xl font-bold text-white mb-4">
-            AEP <span className="text-[#00F299]">GOVERNANCE</span>
+            COMMUNITY <span className="text-[#00F299]">PROPOSALS</span>
           </h1>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            Decentralized governance for the Agent Exchange Protocol. Stake AEP tokens to vote on proposals and shape the future of the network.
+            Vote on upcoming features and policy changes for the MarketNow marketplace.
+            Every signed-in user can vote once per proposal — no tokens or staking required.
           </p>
         </motion.div>
 
-        {/* Stats */}
+        {/* How it works */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="grid grid-cols-3 gap-4 mb-10"
+          transition={{ delay: 0.05 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10"
         >
-          <div className="premium-card p-5 text-center">
-            <div className="text-2xl font-bold text-white font-mono">{stats.totalStaked}</div>
-            <div className="text-[10px] text-zinc-500 font-mono mt-1">TOTAL STAKED</div>
-          </div>
-          <div className="premium-card p-5 text-center">
-            <div className="text-2xl font-bold text-white font-mono">{stats.totalDelegators?.toLocaleString()}</div>
-            <div className="text-[10px] text-zinc-500 font-mono mt-1">DELEGATORS</div>
-          </div>
-          <div className="premium-card p-5 text-center">
-            <div className="text-2xl font-bold text-[#00F299] font-mono">{stats.inflation}</div>
-            <div className="text-[10px] text-zinc-500 font-mono mt-1">INFLATION</div>
-          </div>
+          {[
+            { step: '1', title: 'Sign in', desc: 'Create a free MarketNow account to participate.' },
+            { step: '2', title: 'Read proposals', desc: 'Review active proposals and their expected impact.' },
+            { step: '3', title: 'Vote', desc: 'Cast a single vote per proposal. Results are public.' },
+          ].map((s) => (
+            <div key={s.step} className="premium-card p-5">
+              <div className="text-[#00F299] font-mono text-xs mb-2">STEP {s.step}</div>
+              <div className="text-white font-semibold mb-1">{s.title}</div>
+              <div className="text-zinc-400 text-sm">{s.desc}</div>
+            </div>
+          ))}
         </motion.div>
 
         {message && (
@@ -106,6 +113,12 @@ export default function Governance() {
           <div className="text-center py-20">
             <div className="inline-block w-8 h-8 border-2 border-[#00F299] border-t-transparent rounded-full animate-spin mb-4" />
             <p className="text-zinc-500 font-mono text-sm">Loading proposals...</p>
+          </div>
+        ) : proposals.length === 0 ? (
+          <div className="premium-card p-12 text-center">
+            <div className="text-5xl mb-4">🗳️</div>
+            <h2 className="text-xl font-semibold text-white mb-2">No Active Proposals</h2>
+            <p className="text-zinc-400">Check back soon — new proposals are posted regularly.</p>
           </div>
         ) : (
           <div className="space-y-4">

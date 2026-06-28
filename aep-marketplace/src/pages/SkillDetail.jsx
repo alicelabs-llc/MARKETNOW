@@ -11,23 +11,20 @@ function normalizeSkill(s) {
     ...s,
     name: s.name || s.slug || s.id || 'Unknown Skill',
     icon: s.icon || '🧩',
-    category: s.category || 'AI/ML',
+    category: s.category || 'Developer Tools',
     version: s.version || '1.0.0',
-    author: s.author || 'AEP Community',
+    author: s.author && s.author !== 'AEP Community' ? s.author : 'Open Source Community',
     price: typeof s.price === 'number' ? s.price : parseFloat(s.price) || 0,
-    rating: s.rating ?? 4.5,
-    users: s.users ?? Math.floor(Math.random() * 3000 + 500),
-    credits: s.credits ?? Math.round((s.price || 5) * 10),
     features: Array.isArray(s.features) && s.features.length > 0
       ? s.features
-      : (s.tags || ['MCP Protocol', 'AI Agent Ready', 'Open Source']).slice(0, 4),
+      : (s.tags || []).slice(0, 4),
     routes: Array.isArray(s.routes) && s.routes.length > 0 ? s.routes : [],
     reviews: Array.isArray(s.reviews) && s.reviews.length > 0 ? s.reviews : [],
-    description: s.description || `${s.name || s.id} — MCP server for AI agent integration.`,
+    description: s.description || `${s.name || s.id} — MCP server available on MarketNow.`,
     longDescription: s.longDescription || s.description || `${s.name || s.id} is a verified MCP server available on MarketNow. Connect it to Claude, Cursor, or any MCP-compatible agent runtime.`,
-    tagline: s.tagline || `Real MCP server · ${s.category || 'AI'} · Open Source`,
+    tagline: s.tagline || `Real MCP server · ${s.category || 'Developer Tools'} · Open Source`,
     slug: s.slug || s.id,
-    sentinel_score: s.sentinel_score ?? 8,
+    sentinel_score: s.sentinel_score ?? 6,
     install: s.install || `npx -y @marketnow/install ${s.slug || s.id}`,
     verified: s.verified ?? true,
   };
@@ -308,22 +305,12 @@ export default function SkillDetail() {
                 {isFree ? (
                   <div className="text-4xl font-bold text-[#00F299] mb-1">FREE</div>
                 ) : (
-                  <>
-                    <div className="text-4xl font-bold text-white mb-1">${skill.price.toFixed(2)}</div>
-                    <div className="text-zinc-500 text-sm">or {skill.credits} credits</div>
-                  </>
+                  <div className="text-4xl font-bold text-white mb-1">${skill.price.toFixed(2)}</div>
                 )}
+                <div className="text-zinc-500 text-sm">One-time payment · Lifetime license</div>
               </div>
 
               <div className="space-y-3 mb-6">
-                <div className="flex justify-between text-sm">
-                  <span className="text-zinc-400">Rating</span>
-                  <span className="text-white">★ {skill.rating}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-zinc-400">Users</span>
-                  <span className="text-white">{skill.users.toLocaleString()}</span>
-                </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-zinc-400">Version</span>
                   <span className="text-white font-mono">{skill.version}</span>
@@ -331,6 +318,10 @@ export default function SkillDetail() {
                 <div className="flex justify-between text-sm">
                   <span className="text-zinc-400">Sentinel Score</span>
                   <span className="text-purple-400 font-mono">{skill.sentinel_score}/10</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-zinc-400">License</span>
+                  <span className="text-white font-mono">Open Source</span>
                 </div>
               </div>
 

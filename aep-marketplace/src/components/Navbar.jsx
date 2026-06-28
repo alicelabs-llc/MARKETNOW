@@ -91,14 +91,14 @@ export default function Navbar() {
               className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg cursor-pointer select-none"
               title="MarketNow"
             >
-              A
+              M
             </div>
             <Link to="/">
               <div className="text-white font-semibold tracking-wide text-sm">
-                AGENT EXCHANGE <span className="text-[#00F299]">PRO</span>
+                MARKET<span className="text-[#00F299]">NOW</span>
               </div>
               <div className="text-[10px] text-zinc-500 font-mono tracking-widest">
-                AEP PROTOCOL V10.2
+                AGENT SKILL MARKETPLACE
               </div>
             </Link>
           </div>
@@ -156,7 +156,7 @@ export default function Navbar() {
               className="hidden sm:flex items-center gap-2 px-5 py-2 border border-[#00F299]/30 rounded-full text-xs font-mono tracking-wider text-[#00F299] hover:bg-[#00F299]/10 hover:border-[#00F299]/50 transition-all duration-300"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#00F299] animate-pulse" />
-              CONNECT_NODE
+              API ACCESS
             </Link>
           </div>
         </div>

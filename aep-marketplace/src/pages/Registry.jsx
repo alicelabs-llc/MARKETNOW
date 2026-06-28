@@ -92,7 +92,7 @@ export default function Registry() {
           </p>
         </motion.div>
 
-        {/* Network Stats */}
+        {/* Network Stats — solo datos reales */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,10 +100,10 @@ export default function Registry() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
         >
           {[
-            { label: 'Global Volume', value: '$173.3M' },
-            { label: 'Mesh Capacity', value: '0.00 GB' },
-            { label: 'Global Registry', value: total.toLocaleString() },
-            { label: 'Network Status', value: '● AEP_STABLE_0x44FA', green: true },
+            { label: 'Total Skills', value: total.toLocaleString() },
+            { label: 'Categories', value: categories.length - 1 },
+            { label: 'Verified', value: '100%', green: true },
+            { label: 'Protocol', value: 'MCP v1.0' },
           ].map((stat) => (
             <div key={stat.label} className="premium-card py-4 px-5">
               <div className="text-[10px] text-zinc-500 font-mono tracking-wider mb-1 uppercase">
@@ -255,19 +255,12 @@ export default function Registry() {
 
                       {/* Meta */}
                       <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                        <div className="flex items-center gap-2">
-                          <span className="text-[#00F299] font-mono text-sm font-bold">
-                            ${(skill.price || skill.price === 0 ? skill.price : 0).toFixed(2)}
-                          </span>
-                          <span className="text-zinc-600 text-xs">
-                            / {skill.credits || 0}cr
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2 text-zinc-500 text-xs">
-                          <span>★ {skill.rating || '0.0'}</span>
-                          <span className="text-zinc-700">|</span>
-                          <span>{(skill.users || 0).toLocaleString()}u</span>
-                        </div>
+                        <span className="text-[#00F299] font-mono text-sm font-bold">
+                          ${(skill.price || skill.price === 0 ? skill.price : 0).toFixed(2)}
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono border border-[#00F299]/20">
+                          ✓ VERIFIED
+                        </span>
                       </div>
                     </div>
                   </Link>

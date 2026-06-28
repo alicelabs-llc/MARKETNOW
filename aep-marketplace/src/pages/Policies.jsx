@@ -4,24 +4,27 @@ import BackgroundOrbs from '../components/BackgroundOrbs';
 const sections = [
   {
     title: 'Terms of Service',
-    content: `By accessing or using the Agent Exchange Protocol (AEP) marketplace, you agree to be bound by these terms. AEP provides a decentralized marketplace for MCP server skills. All transactions are final. Users must maintain node integrity and comply with network policies.`,
+    content: `By accessing or using MarketNow, you agree to be bound by these terms. MarketNow is a marketplace for MCP-compatible agent skills. Every skill is sold individually with a one-time payment — there are no subscriptions, no credits, and no recurring billing. Users must comply with each skill's upstream open-source license (MIT, Apache-2.0, etc.) when using the installed skill.`,
   },
   {
-    title: 'Pricing Tiers',
-    content: `Skills are priced in USD with an equivalent AEP credit option. Credit packages: Starter (1,000 credits - $99), Pro (5,000 credits - $449), Enterprise (25,000 credits - $1,999). Credits are non-refundable and expire after 12 months of inactivity.`,
-    pricing: [
-      { name: 'Starter', credits: '1,000', price: '$99', features: ['Access to basic skills', 'Community support', '1 concurrent session'] },
-      { name: 'Pro', credits: '5,000', price: '$449', features: ['All skills access', 'Priority support', '10 concurrent sessions', 'Custom routing'] },
-      { name: 'Enterprise', credits: '25,000', price: '$1,999', features: ['Unlimited access', 'Dedicated support', 'Unlimited sessions', 'On-premise deployment', 'SLA guarantee'] },
-    ],
+    title: 'Pricing Model',
+    content: `Every skill on MarketNow has a single, transparent price in USD displayed on its detail page. You pay once and receive a license key plus installation instructions. There are no Starter, Pro, or Enterprise tiers, no credit packages, and no per-call fees. Prices are set by MarketNow based on the skill's category and complexity, and are clearly listed before checkout.`,
   },
   {
     title: 'Refund Policy',
-    content: `Skills purchased via Stripe are eligible for a full refund within 14 days if less than 100 API calls have been made. Credit purchases are non-refundable. Enterprise custom deployments are subject to separate agreements.`,
+    content: `Skills purchased via Stripe are eligible for a full refund within 14 days if less than 100 API calls have been made using the license key. To request a refund, email support@marketnow.site with your order ID. Refunds are processed back to the original payment method within 5-10 business days. Skills marked as Free do not require a refund.`,
   },
   {
     title: 'Privacy Policy',
-    content: `AEP collects minimal data required for network operations: node addresses, skill usage metrics, and payment records. No personal data is sold. All data in transit is encrypted with TLS 1.3. On-chain governance votes are publicly verifiable.`,
+    content: `MarketNow collects minimal data required to operate the marketplace: your email address (for account login), payment records (processed by Stripe), and the list of skills you have purchased. We do not sell personal data. All data in transit is encrypted with TLS 1.3. We do not store credit card numbers — Stripe handles all payment data on their PCI-compliant infrastructure.`,
+  },
+  {
+    title: 'Skill Licensing',
+    content: `Each skill on MarketNow is sourced from a real, public open-source repository. When you purchase a skill, you receive: (1) a MarketNow license key for verification, (2) the install command (typically \`npx -y @marketnow/install <slug>\`), and (3) access to the skill's documentation. The underlying open-source license (MIT, Apache-2.0, etc.) of each skill still applies to your usage of the code itself.`,
+  },
+  {
+    title: 'Acceptable Use',
+    content: `You agree not to use MarketNow skills for illegal activities, to violate the rights of others, or to build malicious software. Skills must not be redistributed or resold without explicit permission. MarketNow reserves the right to revoke licenses in cases of abuse, fraud, or violations of these terms.`,
   },
 ];
 
@@ -49,29 +52,7 @@ export default function Policies() {
               className="premium-card"
             >
               <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>
-              <p className="text-zinc-400 leading-relaxed mb-6">{section.content}</p>
-
-              {section.pricing && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {section.pricing.map((tier, j) => (
-                    <div key={tier.name} className={`glass-panel rounded-2xl p-6 ${
-                      tier.name === 'Pro' ? 'border-[#00F299]/30' : ''
-                    }`}>
-                      <h3 className="text-white font-semibold text-lg mb-1">{tier.name}</h3>
-                      <div className="text-2xl font-bold text-[#00F299] mb-1">{tier.price}</div>
-                      <div className="text-zinc-500 text-sm mb-4">{tier.credits} credits</div>
-                      <ul className="space-y-2">
-                        {tier.features.map(f => (
-                          <li key={f} className="flex items-center gap-2 text-sm text-zinc-400">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#00F299] shrink-0" />
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <p className="text-zinc-400 leading-relaxed whitespace-pre-line">{section.content}</p>
             </motion.div>
           ))}
         </div>

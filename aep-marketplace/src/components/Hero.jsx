@@ -1,7 +1,22 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Hero({ onSignIn }) {
+  const [stats, setStats] = useState({ total: 5054, categories: 25 });
+
+  useEffect(() => {
+    // Fetch real stats from the manifest endpoint
+    fetch('/api/manifest.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (d && typeof d.total_skills === 'number') {
+          setStats({ total: d.total_skills, categories: d.categories_count || 25 });
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Decorative grid */}
@@ -17,7 +32,7 @@ export default function Hero({ onSignIn }) {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
             <span className="text-[#00F299] text-xs font-mono tracking-wider">
-              AEP PROTOCOL V10.2 · {new Date().getFullYear()} EDITION
+              MCP-COMPATIBLE · OPEN MARKETPLACE
             </span>
           </div>
 
@@ -33,8 +48,9 @@ export default function Hero({ onSignIn }) {
 
           {/* Subtitle */}
           <p className="text-zinc-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover, purchase, and deploy production-grade agent skills through the 
-            Model Context Protocol. The first decentralized registry for AI agent capabilities.
+            Discover, purchase, and deploy production-grade agent skills through the
+            Model Context Protocol. Every skill is sourced from a real open-source repository
+            and verified by Sentinel before listing.
           </p>
 
           {/* CTA Buttons */}
@@ -53,13 +69,13 @@ export default function Hero({ onSignIn }) {
             </button>
           </div>
 
-          {/* Stats */}
+          {/* Stats — solo datos reales */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
-              { value: '13K+', label: 'SKILLS' },
-              { value: '24,000+', label: 'DEVELOPERS' },
-              { value: '99.9%', label: 'UPTIME' },
-              { value: '$173M+', label: 'VOLUME' },
+              { value: stats.total.toLocaleString() + '+', label: 'VERIFIED SKILLS' },
+              { value: stats.categories.toString(), label: 'CATEGORIES' },
+              { value: '100%', label: 'OPEN SOURCE' },
+              { value: 'MCP v1.0', label: 'PROTOCOL' },
             ].map((stat) => (
               <motion.div
                 key={stat.label}

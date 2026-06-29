@@ -108,8 +108,18 @@ function normalizeSkill(s) {
     sentinel_score: s.sentinel_score ?? 6,
     install: s.install || `npx -y @marketnow/install ${s.slug || s.id}`,
     verified: s.verified ?? true,
+    translations: s.translations || null,
+    language: s.language || 'en',
   };
 }
+
+const SUPPORTED_LANGUAGES = [
+  { code: 'en', label: 'English', flag: '🇺🇸' },
+  { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
+  { code: 'pt', label: 'Português', flag: '🇧🇷' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+];
 
 export default function SkillDetail() {
   const { id } = useParams();
@@ -123,6 +133,7 @@ export default function SkillDetail() {
   const [copiedInstall, setCopiedInstall] = useState(false);
   const [walletAddr, setWalletAddr] = useState(null);
   const [purchaseStep, setPurchaseStep] = useState('');
+  const [selectedLang, setSelectedLang] = useState('en');
 
   const handleCopyBadge = () => {
     const md = `[![Available on MarketNow](https://marketnow.site/badge.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
@@ -329,6 +340,57 @@ export default function SkillDetail() {
                   </span>
                 </div>
               </div>
+
+              {/* System Prompt (with language selector) */}
+              {skill.doc?.system_prompt && (
+                <div className="mb-8">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm text-zinc-500 font-mono tracking-wider uppercase">System Prompt</h3>
+                    {skill.translations && (
+                      <div className="flex items-center gap-1">
+                        {SUPPORTED_LANGUAGES.filter(l => skill.translations[l.code]).map(lang => (
+                          <button
+                            key={lang.code}
+                            onClick={() => setSelectedLang(lang.code)}
+                            className={`px-2 py-1 rounded text-xs font-mono transition-all ${
+                              selectedLang === lang.code
+                                ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
+                                : 'bg-white/5 text-zinc-500 border border-white/5 hover:bg-white/10'
+                            }`}
+                            title={lang.label}
+                          >
+                            {lang.flag} {lang.code.toUpperCase()}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    onClick={() => {
+                      const promptText = skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt;
+                      navigator.clipboard.writeText(promptText);
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 2000);
+                    }}
+                    className="p-4 rounded-xl bg-black/60 border border-white/5 cursor-pointer hover:border-[#00F299]/30 transition-all group"
+                  >
+                    <pre className="text-[#00F299] text-xs font-mono whitespace-pre-wrap break-words max-h-80 overflow-y-auto">
+                      {skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt}
+                    </pre>
+                    <div className="mt-2 text-right">
+                      <span className="text-zinc-600 text-xs font-mono group-hover:text-[#00F299] transition-colors">
+                        {copied ? '✅ COPIED' : '📋 COPY PROMPT'}
+                      </span>
+                    </div>
+                  </div>
+                  {skill.translations && (
+                    <p className="text-zinc-600 text-[10px] mt-2 font-mono">
+                      🌐 Available in {Object.keys(skill.translations).length} languages ·
+                      Showing: {SUPPORTED_LANGUAGES.find(l => l.code === selectedLang)?.label || selectedLang}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Features */}
               {skill.features.length > 0 && (

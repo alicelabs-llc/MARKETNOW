@@ -73,6 +73,12 @@ export default function Hero({ onSignIn }) {
               BROWSE REGISTRY →
             </Link>
             <Link
+              to="/submit"
+              className="px-8 py-4 border border-[#00F299]/30 bg-[#00F299]/10 text-[#00F299] font-bold rounded-xl hover:bg-[#00F299]/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              + SELL YOUR SKILL
+            </Link>
+            <Link
               to="/handshake"
               className="px-8 py-4 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >

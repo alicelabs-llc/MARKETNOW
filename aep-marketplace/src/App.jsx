@@ -17,6 +17,7 @@ import Governance from './pages/Governance';
 import Security from './pages/Security';
 import Handshake from './pages/Handshake';
 import Policies from './pages/Policies';
+import Submit from './pages/Submit';
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -26,15 +27,32 @@ function App() {
   // When a user hits /registry directly, GitHub Pages serves 404.html
   // which redirects to /?p=/registry. We need to convert that back to
   // the real path so React Router can handle it.
+  // SECURITY: strict validation — only allow relative paths starting with '/'
+  // and NOT starting with '//', '/\', or protocol-relative URLs. Prevents
+  // open-redirect phishing via ?p=//evil.com
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const p = params.get('p');
     if (p) {
-      // Remove ?p= from URL and replace with the actual path
-      params.delete('p');
-      const remaining = params.toString();
-      const newUrl = p + (remaining ? '?' + remaining : '');
-      window.history.replaceState({}, '', newUrl);
+      // Strict allowlist of known internal routes
+      const ALLOWED_ROUTES = [
+        '/registry', '/vault', '/governance', '/security',
+        '/handshake', '/policies', '/submit', '/dashboard',
+      ];
+      // Allow /skill/:id pattern (starts with /skill/)
+      const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
+      const isAllowedRoute = ALLOWED_ROUTES.includes(p);
+
+      if (isAllowedRoute || isSkillRoute) {
+        params.delete('p');
+        const remaining = params.toString();
+        const newUrl = p + (remaining ? '?' + remaining : '');
+        window.history.replaceState({}, '', newUrl);
+      } else {
+        // Reject anything else — redirect to home
+        console.warn('Rejected suspicious ?p= parameter:', p);
+        window.history.replaceState({}, '', '/');
+      }
     }
   }, []);
 
@@ -74,6 +92,7 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/handshake" element={<Handshake />} />
           <Route path="/policies" element={<Policies />} />
+          <Route path="/submit" element={<Submit />} />
           {/* /dashboard is intentionally removed — access only via secret trigger */}
           <Route path="/dashboard" element={<Navigate to="/" replace />} />
         </Routes>

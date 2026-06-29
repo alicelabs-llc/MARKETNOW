@@ -303,11 +303,16 @@ export default function SkillDetail() {
             <div className="premium-card p-6 sticky top-28">
               <div className="text-center mb-6">
                 {isFree ? (
-                  <div className="text-4xl font-bold text-[#00F299] mb-1">FREE</div>
+                  <>
+                    <div className="text-4xl font-bold text-[#00F299] mb-1">FREE</div>
+                    <div className="text-zinc-500 text-sm">Open source · No payment required</div>
+                  </>
                 ) : (
-                  <div className="text-4xl font-bold text-white mb-1">${skill.price.toFixed(2)}</div>
+                  <>
+                    <div className="text-4xl font-bold text-white mb-1">${skill.price.toFixed(2)}</div>
+                    <div className="text-zinc-500 text-sm">One-time payment · Lifetime license</div>
+                  </>
                 )}
-                <div className="text-zinc-500 text-sm">One-time payment · Lifetime license</div>
               </div>
 
               <div className="space-y-3 mb-6">

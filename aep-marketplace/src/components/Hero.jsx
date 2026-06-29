@@ -48,9 +48,9 @@ export default function Hero({ onSignIn }) {
 
           {/* Subtitle */}
           <p className="text-zinc-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover, purchase, and deploy production-grade agent skills through the
-            Model Context Protocol. Every skill is sourced from a real open-source repository
-            and verified by Sentinel before listing.
+            The open marketplace for MCP-compatible agent skills. Every skill is
+            sourced from a real open-source repository and verified by Sentinel before listing.
+            Micro-priced for autonomous agents — most skills under $5, hundreds are free.
           </p>
 
           {/* CTA Buttons */}
@@ -73,8 +73,8 @@ export default function Hero({ onSignIn }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
               { value: stats.total.toLocaleString() + '+', label: 'VERIFIED SKILLS' },
-              { value: stats.categories.toString(), label: 'CATEGORIES' },
-              { value: '100%', label: 'OPEN SOURCE' },
+              { value: '1,329', label: 'FREE SKILLS' },
+              { value: '$3.66', label: 'AVG PRICE' },
               { value: 'MCP v1.0', label: 'PROTOCOL' },
             ].map((stat) => (
               <motion.div

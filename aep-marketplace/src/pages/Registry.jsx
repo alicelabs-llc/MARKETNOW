@@ -283,9 +283,15 @@ export default function Registry() {
 
                       {/* Meta */}
                       <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                        <span className="text-[#00F299] font-mono text-sm font-bold">
-                          ${(skill.price || skill.price === 0 ? skill.price : 0).toFixed(2)}
-                        </span>
+                        {skill.price === 0 ? (
+                          <span className="px-2 py-0.5 rounded bg-[#00F299]/20 text-[#00F299] text-xs font-mono font-bold border border-[#00F299]/40">
+                            FREE
+                          </span>
+                        ) : (
+                          <span className="text-[#00F299] font-mono text-sm font-bold">
+                            ${skill.price.toFixed(2)}
+                          </span>
+                        )}
                         <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono border border-[#00F299]/20">
                           ✓ VERIFIED
                         </span>

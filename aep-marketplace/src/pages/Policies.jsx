@@ -7,8 +7,15 @@ const sections = [
     content: `By accessing or using MarketNow, you agree to be bound by these terms. MarketNow is a marketplace for MCP-compatible agent skills. Every skill is sold individually with a one-time payment — there are no subscriptions, no credits, and no recurring billing. Users must comply with each skill's upstream open-source license (MIT, Apache-2.0, etc.) when using the installed skill.`,
   },
   {
-    title: 'Pricing Model',
-    content: `Every skill on MarketNow has a single, transparent price in USD displayed on its detail page. You pay once and receive a license key plus installation instructions. There are no Starter, Pro, or Enterprise tiers, no credit packages, and no per-call fees. Prices are set by MarketNow based on the skill's category and complexity, and are clearly listed before checkout.`,
+    title: 'Pricing Model — Micro-Transactions for Agents',
+    content: `MarketNow uses a micro-transaction pricing model designed for autonomous agents. Every skill has a single, transparent one-time price in USD displayed on its detail page:
+
+• FREE — 1,329 skills (26% of catalog), mostly simple wrappers and open-source utilities
+• $0.99 to $4.99 — 3,579 skills (71%), the standard range for most MCP servers
+• $9.99 to $19.99 — 146 skills (3%), sophisticated multi-feature tools
+• No skill exceeds $19.99 — we keep the ceiling low so agents can buy many skills without breaking budget
+
+Average paid skill price: $3.66. There are no subscriptions, no credits, no per-call fees, and no tiered plans. Agents can programmatically discover, evaluate, and purchase skills via the public API at /api/skills.json. Humans can browse and buy via the web UI with the same transparent prices.`,
   },
   {
     title: 'Refund Policy',

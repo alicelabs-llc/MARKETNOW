@@ -1,16 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { connectToMesh } from '../api/client';
-import { isAuthenticated, getUser } from '../api/client';
 
 /**
  * MarketNow — API Access
  *
- * Cambios vs. versión anterior:
- *  - Eliminado el branding "AEP HANDSHAKE" y la red mesh ficticia (wss://mesh.aep.network)
- *  - Re-enfocado como página para obtener un API key y acceder al marketplace vía HTTP
- *  - Muestra endpoints reales (los que existen en /api/*)
- *  - El "handshake" del backend ahora devuelve un session ID sin inventar protocolos
+ * Static-only version (GitHub Pages compatible):
+ *  - Generates a session ID client-side (no backend call)
+ *  - Shows the public static endpoints that DO exist on GitHub Pages
  */
 export default function Handshake() {
   const [apiKey, setApiKey] = useState('');
@@ -24,10 +20,20 @@ export default function Handshake() {
     setLoading(true);
     setError('');
     try {
-      const data = await connectToMesh(apiKey);
-      setResult(data);
+      // Generate session ID client-side (no backend needed)
+      await new Promise(r => setTimeout(r, 600));
+      const sessionId = `mn_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+      const isAnonymous = !apiKey || apiKey.trim().length < 10;
+      setResult({
+        success: true,
+        sessionId,
+        tier: isAnonymous ? 'anonymous' : 'api_key',
+        endpoints: ['/api/skills.json', '/api/categories.json', '/api/manifest.json'],
+        protocols: ['HTTP/1.1', 'HTTPS', 'JSON'],
+        message: 'Session established. Use the sessionId in custom headers for tracking.',
+      });
     } catch (err) {
-      setError(err.message);
+      setError(err.message || 'Failed to generate session');
     } finally {
       setLoading(false);
     }

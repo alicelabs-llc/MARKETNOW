@@ -133,7 +133,6 @@ export default function Navbar() {
               <div className="flex items-center gap-3">
                 <span className="text-xs text-zinc-400 hidden sm:block">
                   <span className="text-[#00F299] font-mono">{user.username}</span>
-                  <span className="text-zinc-600 ml-2">{user.credits} credits</span>
                 </span>
                 <button
                   onClick={handleLogout}

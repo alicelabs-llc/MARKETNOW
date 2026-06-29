@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { login, register, setAuth } from '../api/client';
+import { setAuth } from '../api/client';
 
+/**
+ * MarketNow — Auth Modal (static / client-side version)
+ *
+ * GitHub Pages has no backend, so auth is done client-side:
+ *  - "Register" creates a user in localStorage (no real verification)
+ *  - "Login" checks the user exists in localStorage and password matches
+ *  - This is NOT secure — it's only for demo / personal use on a static site
+ *  - For production with real auth, deploy the Express backend separately
+ */
 export default function AuthModal({ isOpen, onClose, onAuthSuccess }) {
   const [mode, setMode] = useState('login');
   const [form, setForm] = useState({ username: '', email: '', password: '' });
@@ -14,15 +23,39 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess }) {
     setLoading(true);
 
     try {
-      let result;
-      if (mode === 'login') {
-        result = await login(form.email, form.password);
+      // Simulate network delay for UX
+      await new Promise(r => setTimeout(r, 400));
+
+      const usersRaw = localStorage.getItem('mn_users');
+      const users = usersRaw ? JSON.parse(usersRaw) : [];
+
+      if (mode === 'register') {
+        if (users.find(u => u.email === form.email)) {
+          throw new Error('An account with this email already exists');
+        }
+        const newUser = {
+          id: `user_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+          username: form.username,
+          email: form.email,
+          password: form.password, // NOTE: plain text, NOT secure — demo only
+          createdAt: new Date().toISOString(),
+        };
+        users.push(newUser);
+        localStorage.setItem('mn_users', JSON.stringify(users));
+        const token = `mn_token_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+        setAuth(token, { id: newUser.id, username: newUser.username, email: newUser.email });
+        onAuthSuccess({ id: newUser.id, username: newUser.username, email: newUser.email });
       } else {
-        result = await register(form.username, form.email, form.password);
+        // login
+        const user = users.find(u => u.email === form.email);
+        if (!user || user.password !== form.password) {
+          throw new Error('Invalid email or password');
+        }
+        const token = `mn_token_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+        setAuth(token, { id: user.id, username: user.username, email: user.email });
+        onAuthSuccess({ id: user.id, username: user.username, email: user.email });
       }
 
-      setAuth(result.token, result.user);
-      onAuthSuccess(result.user);
       onClose();
     } catch (err) {
       setError(err.message);

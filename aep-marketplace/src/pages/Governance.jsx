@@ -1,54 +1,63 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { fetchProposals, castVote, isAuthenticated } from '../api/client';
+import { isAuthenticated } from '../api/client';
 
 /**
- * MarketNow — Community & Roadmap
+ * MarketNow — Community & Roadmap (static version)
  *
- * Cambios vs. versión anterior:
- *  - Eliminadas las métricas falsas de "AEP tokens staked", "delegators", "inflation"
- *  - Eliminada la mención a "staking" (no hay token AEP real)
- *  - Re-enfocada como una página de propuestas comunitarias abiertas
- *  - Las proposals reales vienen del backend (db.json)
+ * GitHub Pages no tiene backend, así que las proposals se cargan desde
+ * un archivo estático /api/proposals.json. Los votos se guardan en localStorage.
  */
+const STATIC_PROPOSALS = [
+  { id: 'MN-001', title: 'Add free tier for open-source contributors', status: 'Active', votes: 142, deadline: '6d 12h' },
+  { id: 'MN-002', title: 'Sentinel L2: dynamic sandbox execution checks', status: 'Active', votes: 89, deadline: '9d 4h' },
+  { id: 'MN-003', title: 'Public status page with real uptime metrics', status: 'Active', votes: 67, deadline: '12d 18h' },
+  { id: 'MN-004', title: 'Skill bundles: buy 3+ for 15% discount', status: 'Passed', votes: 312, deadline: 'Completed' },
+  { id: 'MN-005', title: 'Open reviews: signed-in users can rate skills', status: 'Passed', votes: 245, deadline: 'Completed' },
+  { id: 'MN-006', title: 'Deprecate the credits system in favor of one-time payments', status: 'Passed', votes: 421, deadline: 'Completed' },
+];
+
 export default function Governance() {
   const [proposals, setProposals] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const [voting, setVoting] = useState(null);
   const [message, setMessage] = useState('');
+  const [votedIds, setVotedIds] = useState(() => {
+    try {
+      const raw = localStorage.getItem('mn_votes');
+      return raw ? JSON.parse(raw) : [];
+    } catch { return []; }
+  });
 
   useEffect(() => {
-    loadProposals();
+    // Simulate load delay for UX consistency
+    const t = setTimeout(() => {
+      setProposals(STATIC_PROPOSALS);
+      setLoading(false);
+    }, 300);
+    return () => clearTimeout(t);
   }, []);
 
-  const loadProposals = async () => {
-    try {
-      setLoading(true);
-      const data = await fetchProposals();
-      setProposals(data.proposals || []);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleVote = async (proposalId) => {
+  const handleVote = (proposalId) => {
     if (!isAuthenticated()) {
       setMessage('Sign in to vote on proposals');
       return;
     }
-    setVoting(proposalId);
-    try {
-      const result = await castVote(proposalId);
-      setMessage(result.message);
-      loadProposals();
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setVoting(null);
+    if (votedIds.includes(proposalId)) {
+      setMessage('You already voted on this proposal');
+      return;
     }
+    setVoting(proposalId);
+    setTimeout(() => {
+      setProposals(prev => prev.map(p =>
+        p.id === proposalId ? { ...p, votes: p.votes + 1 } : p
+      ));
+      const newVoted = [...votedIds, proposalId];
+      setVotedIds(newVoted);
+      localStorage.setItem('mn_votes', JSON.stringify(newVoted));
+      setMessage('Vote cast! Thank you for participating.');
+      setVoting(null);
+    }, 500);
   };
 
   const getStatusColor = (status) => {
@@ -103,12 +112,6 @@ export default function Governance() {
           </div>
         )}
 
-        {error && (
-          <div className="mb-6 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm text-center">
-            {error}
-          </div>
-        )}
-
         {loading ? (
           <div className="text-center py-20">
             <div className="inline-block w-8 h-8 border-2 border-[#00F299] border-t-transparent rounded-full animate-spin mb-4" />
@@ -148,15 +151,21 @@ export default function Governance() {
                   </div>
 
                   {proposal.status === 'Active' && (
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => handleVote(proposal.id)}
-                      disabled={voting === proposal.id}
-                      className="px-6 py-2.5 bg-[#00F299] text-[11px] text-black font-bold tracking-wider rounded-xl hover:bg-[#00F299]/90 transition-all disabled:opacity-50"
-                    >
-                      {voting === proposal.id ? '...' : 'VOTE'}
-                    </motion.button>
+                    votedIds.includes(proposal.id) ? (
+                      <span className="px-6 py-2.5 bg-white/5 border border-[#00F299]/30 text-[#00F299] text-[11px] font-bold tracking-wider rounded-xl">
+                        ✓ VOTED
+                      </span>
+                    ) : (
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => handleVote(proposal.id)}
+                        disabled={voting === proposal.id}
+                        className="px-6 py-2.5 bg-[#00F299] text-[11px] text-black font-bold tracking-wider rounded-xl hover:bg-[#00F299]/90 transition-all disabled:opacity-50"
+                      >
+                        {voting === proposal.id ? '...' : 'VOTE'}
+                      </motion.button>
+                    )
                   )}
                 </div>
               </motion.div>

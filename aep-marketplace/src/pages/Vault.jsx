@@ -1,34 +1,29 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { fetchVault, isAuthenticated, getUser } from '../api/client';
+import { isAuthenticated, getUser } from '../api/client';
 import { Link } from 'react-router-dom';
 
+/**
+ * MarketNow — Vault (static version)
+ *
+ * GitHub Pages no tiene backend, así que el vault lee las compras
+ * desde localStorage (donde se guardan tras el checkout client-side).
+ */
 export default function Vault() {
   const [purchases, setPurchases] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     if (isAuthenticated()) {
       setUser(getUser());
-      loadVault();
-    } else {
-      setLoading(false);
+      try {
+        const raw = localStorage.getItem('mn_purchases');
+        setPurchases(raw ? JSON.parse(raw) : []);
+      } catch {
+        setPurchases([]);
+      }
     }
   }, []);
-
-  const loadVault = async () => {
-    try {
-      setLoading(true);
-      const data = await fetchVault();
-      setPurchases(data.purchases);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   if (!isAuthenticated()) {
     return (
@@ -66,24 +61,12 @@ export default function Vault() {
           {user && (
             <div className="text-right">
               <div className="text-[#00F299] text-sm font-semibold">{user.username}</div>
-              <div className="text-zinc-500 text-xs font-mono">{user.credits} credits</div>
+              <div className="text-zinc-500 text-xs font-mono">{purchases.length} skill{purchases.length === 1 ? '' : 's'} purchased</div>
             </div>
           )}
         </motion.div>
 
-        {error && (
-          <div className="mb-6 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
-            {error}
-            <button onClick={loadVault} className="ml-3 underline">Retry</button>
-          </div>
-        )}
-
-        {loading ? (
-          <div className="text-center py-20">
-            <div className="inline-block w-8 h-8 border-2 border-[#00F299] border-t-transparent rounded-full animate-spin mb-4" />
-            <p className="text-zinc-500 font-mono text-sm">Loading vault...</p>
-          </div>
-        ) : purchases.length === 0 ? (
+        {purchases.length === 0 ? (
           <div className="premium-card p-12 text-center">
             <div className="text-6xl mb-4">📦</div>
             <h2 className="text-xl font-semibold text-white mb-2">Your Vault is Empty</h2>

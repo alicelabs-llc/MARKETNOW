@@ -1,0 +1,75 @@
+{
+  "bundles": [
+    {
+      "id": "web-scraping-bundle",
+      "name": "Web Scraping Bundle",
+      "description": "Everything you need to scrape, extract, and process web data",
+      "skills": ["mn-gen-00003", "mn-gen-00009", "mn-gen-00014"],
+      "original_price": 8.97,
+      "bundle_price": 4.99,
+      "savings": 44,
+      "category": "Data",
+      "icon": "🕸️"
+    },
+    {
+      "id": "devops-bundle",
+      "name": "DevOps Automation Bundle",
+      "description": "5 essential DevOps skills for CI/CD, monitoring, and deployment",
+      "skills": ["mn-gen-00015", "mn-prompt-01arquitecto", "mn-prompt-02extractor", "mn-prompt-08generador", "mn-prompt-13generador"],
+      "original_price": 19.95,
+      "bundle_price": 9.99,
+      "savings": 50,
+      "category": "DevOps",
+      "icon": "🔄"
+    },
+    {
+      "id": "ai-ml-bundle",
+      "name": "AI/ML Engineer Bundle",
+      "description": "Core skills for AI/ML development, testing, and deployment",
+      "skills": [],
+      "original_price": 14.97,
+      "bundle_price": 7.99,
+      "savings": 47,
+      "category": "AI/ML",
+      "icon": "🧠"
+    },
+    {
+      "id": "security-bundle",
+      "name": "Security Audit Bundle",
+      "description": "Security scanning, auditing, and compliance skills",
+      "skills": [],
+      "original_price": 11.97,
+      "bundle_price": 6.99,
+      "savings": 42,
+      "category": "Security",
+      "icon": "🛡️"
+    },
+    {
+      "id": "content-creation-bundle",
+      "name": "Content Creation Bundle",
+      "description": "Multi-platform content, video editing, and SEO skills",
+      "skills": [],
+      "original_price": 9.97,
+      "bundle_price": 5.99,
+      "savings": 40,
+      "category": "Media",
+      "icon": "🎬"
+    },
+    {
+      "id": "startup-bundle",
+      "name": "Startup Founder Bundle",
+      "description": "Pitch decks, financial analysis, legal audits, and B2B emails",
+      "skills": [],
+      "original_price": 24.95,
+      "bundle_price": 12.99,
+      "savings": 48,
+      "category": "Finance",
+      "icon": "🚀"
+    }
+  ],
+  "meta": {
+    "total_bundles": 6,
+    "avg_savings": 45,
+    "currency": "USD"
+  }
+}

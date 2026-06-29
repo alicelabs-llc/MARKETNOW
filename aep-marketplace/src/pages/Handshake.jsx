@@ -213,11 +213,83 @@ curl https://marketnow.site/api/manifest.json`,
           </div>
         </motion.div>
 
-        {/* Pricing */}
+        {/* MCP Server — the meta feature */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25 }}
+          className="premium-card p-8 mb-12 border-[#00F299]/30"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-3xl">🔌</span>
+            <div>
+              <h2 className="text-xl font-bold text-white">MarketNow MCP Server</h2>
+              <p className="text-zinc-400 text-sm">MarketNow itself is now an installable MCP server.</p>
+            </div>
+          </div>
+
+          <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+            Install MarketNow as an MCP server in Claude Desktop, Cursor, or Cline.
+            Your agent can then search the marketplace, get skill details, and retrieve
+            install commands — all from inside the conversation.
+          </p>
+
+          <div className="p-4 rounded-xl bg-black/60 border border-white/5 mb-4">
+            <div className="text-[10px] text-zinc-500 font-mono mb-2 uppercase tracking-wider">
+              Install (one command)
+            </div>
+            <code className="text-[#00F299] text-sm font-mono break-all">
+              npx -y marketnow-mcp
+            </code>
+          </div>
+
+          <div className="p-4 rounded-xl bg-black/60 border border-white/5 mb-4">
+            <div className="text-[10px] text-zinc-500 font-mono mb-2 uppercase tracking-wider">
+              Claude Desktop config (claude_desktop_config.json)
+            </div>
+            <pre className="text-[#00F299] text-xs font-mono overflow-x-auto"><code>{`{
+  "mcpServers": {
+    "marketnow": {
+      "command": "npx",
+      "args": ["-y", "marketnow-mcp"]
+    }
+  }
+}`}</code></pre>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <a
+              href="https://www.npmjs.com/package/marketnow-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-[#00F299]/10 border border-[#00F299]/30 rounded-lg text-[#00F299] text-xs font-mono hover:bg-[#00F299]/20 transition-all"
+            >
+              📦 npm package →
+            </a>
+            <a
+              href="https://github.com/edgarfloresguerra2011-a11y/marketnow/tree/master/mcp-server"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-white/10 rounded-lg text-zinc-400 text-xs font-mono hover:bg-white/5 transition-all"
+            >
+              📄 Source code →
+            </a>
+          </div>
+
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-5 gap-2">
+            {['search_skills', 'get_skill', 'list_categories', 'get_manifest', 'get_install_command'].map(tool => (
+              <div key={tool} className="p-2 rounded-lg bg-white/5 text-center">
+                <code className="text-[#00F299] text-[10px] font-mono">{tool}</code>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Pricing */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
           className="premium-card p-8"
         >
           <h2 className="text-xl font-bold text-white mb-4">PRICING FOR AGENTS</h2>

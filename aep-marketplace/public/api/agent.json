@@ -122,10 +122,11 @@
     "JSON"
   ],
   "mcp_server": {
-    "name": "@marketnow/mcp-server",
+    "name": "marketnow-mcp",
     "version": "1.0.0",
+    "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
     "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
-    "install": "npx -y @marketnow/mcp-server",
+    "install": "npx -y marketnow-mcp",
     "tools": [
       "search_skills",
       "get_skill",
@@ -139,7 +140,7 @@
           "command": "npx",
           "args": [
             "-y",
-            "@marketnow/mcp-server"
+            "marketnow-mcp"
           ]
         }
       }
@@ -166,5 +167,5 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-06-29T02:09:44.654Z"
+  "generated_at": "2026-06-29T02:50:50.369Z"
 }

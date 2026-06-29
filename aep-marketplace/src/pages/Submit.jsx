@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { getUserTier, getUserSkillCount, canSubmitSkill, recordSubmission, TIERS } from '../utils/monetization';
 
 /**
  * MarketNow — Skill Submission Portal
@@ -40,6 +41,9 @@ export default function Submit() {
   const [scanning, setScanning] = useState(false);
   const [scanResult, setScanResult] = useState(null);
   const [scanError, setScanError] = useState('');
+  const [userTier, setUserTier] = useState('FREE');
+  const [skillCount, setSkillCount] = useState(0);
+  const [showPaywall, setShowPaywall] = useState(false);
   const [skill, setSkill] = useState({
     name: '',
     slug: '',
@@ -52,6 +56,16 @@ export default function Submit() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  // Check user's tier and skill count on mount
+  useEffect(() => {
+    setUserTier(getUserTier());
+    setSkillCount(getUserSkillCount());
+  }, []);
+
+  const canSubmit = canSubmitSkill(skillCount, userTier);
+  const tier = TIERS[userTier] || TIERS.FREE;
+  const remainingFree = Math.max(0, tier.maxSkills - skillCount);
 
   // ─── Sentinel L1 Pre-Scan (client-side) ──────────────────────────────────
   const runSentinelScan = async () => {
@@ -171,6 +185,13 @@ export default function Submit() {
   // ─── Generate submission JSON and open GitHub Issue ───────────────────────
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if user can submit (paywall)
+    if (!canSubmit) {
+      setShowPaywall(true);
+      return;
+    }
+
     setSubmitting(true);
 
     try {
@@ -235,6 +256,10 @@ If all checks pass, merge this skill into \`public/api/skills_index.json\` via P
       // Open the issue in a new tab
       window.open(issueUrl, '_blank');
       setSubmitted(true);
+
+      // Record the submission locally (for tier quota tracking)
+      const newCount = recordSubmission(skill.slug);
+      setSkillCount(newCount);
     } catch (err) {
       setScanError(err.message);
     } finally {
@@ -281,6 +306,77 @@ If all checks pass, merge this skill into \`public/api/skills_index.json\` via P
             </div>
           ))}
         </div>
+
+        {/* Submission quota banner */}
+        {!submitted && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className={`premium-card p-5 mb-6 ${canSubmit ? '' : 'border-red-500/30'}`}
+          >
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{canSubmit ? '✅' : '⚠️'}</span>
+                <div>
+                  <div className="text-white font-semibold text-sm">
+                    {userTier} TIER · {skillCount}/{tier.maxSkills === Infinity ? '∞' : tier.maxSkills} skills submitted
+                  </div>
+                  <div className="text-zinc-400 text-xs">
+                    {canSubmit
+                      ? `${remainingFree} skill${remainingFree === 1 ? '' : 's'} remaining in your current plan`
+                      : 'You have reached your plan limit. Upgrade to submit more skills.'}
+                  </div>
+                </div>
+              </div>
+              {(!canSubmit || (userTier === 'FREE' && remainingFree <= 1)) && (
+                <Link
+                  to="/pricing"
+                  className="px-4 py-2 bg-[#00F299] text-black text-xs font-bold rounded-lg hover:bg-[#00F299]/90 transition-all"
+                >
+                  UPGRADE →
+                </Link>
+              )}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Paywall overlay when user can't submit */}
+        {showPaywall && !canSubmit && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 z-[3000] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            onClick={() => setShowPaywall(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              className="premium-card p-8 max-w-md mx-4"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="text-5xl mb-4 text-center">🚀</div>
+              <h2 className="text-2xl font-bold text-white text-center mb-2">UPGRADE TO SUBMIT MORE</h2>
+              <p className="text-zinc-400 text-center text-sm mb-6">
+                You've reached the FREE tier limit of {TIERS.FREE.maxSkills} skills.
+                Upgrade to PRO for $9.99/mo and list up to 25 skills — or pay $0.50/month per additional skill.
+              </p>
+              <div className="space-y-3">
+                <Link
+                  to="/pricing"
+                  className="block w-full py-3 bg-[#00F299] text-black font-bold text-center rounded-xl hover:bg-[#00F299]/90 transition-all"
+                >
+                  UPGRADE TO PRO ($9.99/mo)
+                </Link>
+                <button
+                  onClick={() => setShowPaywall(false)}
+                  className="block w-full py-3 border border-white/10 text-zinc-400 text-center rounded-xl hover:bg-white/5 transition-all"
+                >
+                  MAYBE LATER
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
 
         {/* Step 1: Repo URL + Sentinel scan */}
         {step === 1 && (

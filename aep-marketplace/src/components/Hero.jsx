@@ -70,21 +70,36 @@ export default function Hero({ onSignIn }) {
               to="/registry"
               className="px-8 py-4 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-[#00F299]/20"
             >
-              BROWSE REGISTRY →
+              BROWSE 5,054 SKILLS →
             </Link>
             <Link
               to="/submit"
               className="px-8 py-4 border border-[#00F299]/30 bg-[#00F299]/10 text-[#00F299] font-bold rounded-xl hover:bg-[#00F299]/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              + SELL YOUR SKILL
+              + SELL YOUR SKILLS (3 FREE)
             </Link>
             <Link
-              to="/handshake"
+              to="/pricing"
               className="px-8 py-4 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              API QUICKSTART
+              SEE PRICING
             </Link>
           </div>
+
+          {/* Urgency / social proof */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="mb-12 text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/5 border border-[#00F299]/20">
+              <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
+              <span className="text-[#00F299] text-xs font-mono tracking-wider">
+                JOIN 5,000+ SKILLS ALREADY LISTED · LIST YOUR FIRST 3 FREE
+              </span>
+            </div>
+          </motion.div>
 
           {/* Stats — agent-relevant */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">

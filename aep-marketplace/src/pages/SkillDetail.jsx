@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getSkill } from '../data/skills';
 import { hasMetaMask, connectWallet, cryptoCheckout } from '../utils/crypto';
+import { checkoutSkill } from '../utils/stripe';
+import { getCurrentRef } from '../utils/affiliate';
 import Reviews from '../components/Reviews';
 
 /**
@@ -218,6 +220,23 @@ export default function SkillDetail() {
     }
   };
 
+  // ─── Stripe checkout (credit card) ───────────────────────────────────────
+  const handleStripeCheckout = async () => {
+    setPurchasing(true);
+    setError('');
+    setPurchaseStep('Redirecting to Stripe...');
+    try {
+      const affiliateCode = getCurrentRef();
+      await checkoutSkill(skill.id, affiliateCode);
+      // The browser will redirect to Stripe Checkout
+    } catch (err) {
+      setError(err.message || 'Payment error');
+      setPurchaseStep('');
+    } finally {
+      setPurchasing(false);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -424,7 +443,34 @@ export default function SkillDetail() {
                 </div>
               ) : (
                 <div className="space-y-3">
-                  {/* Wallet connect */}
+                  {/* Stripe checkout — primary (credit card) */}
+                  <button
+                    onClick={handleStripeCheckout}
+                    disabled={purchasing}
+                    className={`w-full py-4 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                      purchasing
+                        ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
+                        : 'bg-[#00F299] text-black hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98]'
+                    }`}
+                  >
+                    {purchasing && purchaseStep
+                      ? purchaseStep
+                      : `💳 PAY $${skill.price.toFixed(2)} WITH CARD →`
+                    }
+                  </button>
+
+                  <p className="text-center text-zinc-700 text-[9px] font-mono">
+                    Secure payment via Stripe · Instant access
+                  </p>
+
+                  {/* Divider */}
+                  <div className="flex items-center gap-3 py-2">
+                    <div className="flex-1 h-px bg-white/5" />
+                    <span className="text-[10px] text-zinc-600 font-mono">OR PAY WITH CRYPTO</span>
+                    <div className="flex-1 h-px bg-white/5" />
+                  </div>
+
+                  {/* Crypto checkout — secondary (MetaMask / USDC) */}
                   {!walletAddr ? (
                     <button
                       onClick={handleConnectWallet}
@@ -439,24 +485,23 @@ export default function SkillDetail() {
                     </div>
                   )}
 
-                  {/* Purchase button */}
                   <button
                     onClick={handlePurchase}
-                    disabled={purchasing}
-                    className={`w-full py-4 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                      purchasing
+                    disabled={purchasing || !walletAddr}
+                    className={`w-full py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                      purchasing || !walletAddr
                         ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
-                        : 'bg-[#00F299] text-black hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98]'
+                        : 'bg-white/5 border border-[#00F299]/30 text-[#00F299] hover:bg-[#00F299]/10'
                     }`}
                   >
                     {purchasing
                       ? (purchaseStep || 'PROCESSING...')
-                      : `PAY $${skill.price.toFixed(2)} USDC →`
+                      : `PAY $${skill.price.toFixed(2)} USDC`
                     }
                   </button>
 
                   <p className="text-center text-zinc-700 text-[9px] font-mono">
-                    Pay with USDC · Base Network · Verified on-chain
+                    USDC · Base Network · On-chain verified
                   </p>
                 </div>
               )}

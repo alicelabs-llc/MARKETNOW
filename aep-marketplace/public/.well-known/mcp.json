@@ -1,11 +1,114 @@
 {
-  "servers": [
+  "$schema": "https://marketnow.site/.well-known/mcp.schema.json",
+  "name": "marketnow",
+  "description": "MarketNow — The open marketplace for MCP-compatible agent skills. Search, discover, and install 5,054+ verified MCP skills with transparent one-time pricing (from $0.99). Designed for autonomous agent consumption.",
+  "version": "1.0.0",
+  "homepage": "https://marketnow.site",
+  "repository": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
+  "npm_package": "marketnow-mcp",
+  "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
+  "install": "npx -y marketnow-mcp",
+  "transport": {
+    "type": "stdio",
+    "stdio_command": "npx -y marketnow-mcp",
+    "http_url": null,
+    "note": "Currently stdio only. HTTP transport (SSE/WebSocket) is on the roadmap."
+  },
+  "tools": [
     {
-      "name": "MarketNow — Agent Skill Marketplace",
-      "url": "https://marketnow.site/api/mcp",
-      "description": "Search and discover 13,000+ MCP-compatible skills for AI agents. Browse, install, and verify skills secured by Sentinel security scans.",
-      "categories": ["marketplace", "discovery", "security"],
-      "version": "4.0.0"
+      "name": "search_skills",
+      "description": "Search skills by query, category, or max price"
+    },
+    {
+      "name": "get_skill",
+      "description": "Get full details of a specific skill by ID or slug"
+    },
+    {
+      "name": "list_categories",
+      "description": "List all 25 categories with skill counts"
+    },
+    {
+      "name": "get_manifest",
+      "description": "Get marketplace metadata (totals, pricing tiers, commission)"
+    },
+    {
+      "name": "get_install_command",
+      "description": "Get the npx install command for a skill"
     }
-  ]
+  ],
+  "config_examples": {
+    "claude_desktop": {
+      "mcpServers": {
+        "marketnow": {
+          "command": "npx",
+          "args": ["-y", "marketnow-mcp"]
+        }
+      }
+    },
+    "cursor": {
+      "mcpServers": {
+        "marketnow": {
+          "command": "npx",
+          "args": ["-y", "marketnow-mcp"]
+        }
+      }
+    },
+    "cline": {
+      "mcpServers": {
+        "marketnow": {
+          "command": "npx",
+          "args": ["-y", "marketnow-mcp"]
+        }
+      }
+    }
+  },
+  "marketplace_stats": {
+    "total_skills": 5054,
+    "categories": 25,
+    "price_min_usd": 0.99,
+    "price_max_usd": 9.99,
+    "price_avg_usd": 2.50,
+    "currency": "USD",
+    "payment_model": "one-time",
+    "no_subscriptions": true,
+    "commission_seller_pct": 20,
+    "commission_affiliate_pct": 5
+  },
+  "verification": {
+    "sentinel_l1": "Automated static analysis on every submission (repo exists, README, package manifest, license, no hardcoded secrets, no malicious patterns)",
+    "human_review": "Manual review by MarketNow team before listing (24-48h)",
+    "score_range": "0-10 (minimum 4/6 required to list)"
+  },
+  "security": {
+    "csp": true,
+    "hsts": true,
+    "x_frame_options": "DENY",
+    "cors": "Open for GET /api/* read endpoints",
+    "no_secrets_in_client": true
+  },
+  "listings": [
+    {
+      "directory": "mcp.so",
+      "url": "https://mcp.so/server/marketnow-mcp---aep-agent-exchange-protocol/edgarfloresguerra2011-a11y",
+      "status": "listed",
+      "note": "Listed but data is outdated (shows 13,859 skills, mentions crypto payments that don't exist). Contact mcp.so to update."
+    },
+    {
+      "directory": "glama.ai",
+      "url": "https://glama.ai/mcp/connectors?query=MarketNow+MCP",
+      "status": "listed"
+    },
+    {
+      "directory": "npm",
+      "url": "https://www.npmjs.com/package/marketnow-mcp",
+      "status": "published",
+      "version": "1.0.0"
+    }
+  ],
+  "contact": {
+    "email": "eddyflores100@gmail.com",
+    "github": "edgarfloresguerra2011-a11y"
+  },
+  "license": "MIT",
+  "generated_at": "2026-06-29T03:10:00Z"
 }

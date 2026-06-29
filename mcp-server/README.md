@@ -1,11 +1,13 @@
 # MarketNow MCP Server
 
-> Search, discover, and install MCP skills from any agent runtime.
+> Search, discover, and install 5,054+ verified MCP skills from any agent runtime.
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The [MarketNow](https://marketnow.site) marketplace as an MCP server. Allows any MCP-compatible agent (Claude Desktop, Cursor, Cline, etc.) to search and discover skills directly from their runtime — without leaving the conversation.
+
+**Stats:** 5,054 skills · 25 categories · $0.99–$9.99 · avg $2.50 · one-time payment
 
 ## Install
 

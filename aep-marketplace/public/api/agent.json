@@ -1,0 +1,133 @@
+{
+  "$schema": "https://marketnow.site/api/agent.schema.json",
+  "name": "MarketNow",
+  "description": "Open marketplace for MCP-compatible agent skills. Every skill is a real, verified open-source MCP server with a transparent one-time price (minimum $0.99). Designed for autonomous agent consumption.",
+  "url": "https://marketnow.site",
+  "api_base": "https://marketnow.site/api",
+  "pricing": {
+    "model": "one-time per skill",
+    "currency": "USD",
+    "min": 0.99,
+    "max": 9.99,
+    "average": 2.5,
+    "tiers": [
+      {
+        "price": 0.99,
+        "label": "utility",
+        "description": "Single-function MCP servers, simple wrappers"
+      },
+      {
+        "price": 1.99,
+        "label": "standard",
+        "description": "Standard integrations, one API/service"
+      },
+      {
+        "price": 2.99,
+        "label": "multi-feature",
+        "description": "Multi-feature tools, common choice"
+      },
+      {
+        "price": 4.99,
+        "label": "sophisticated",
+        "description": "Multi-endpoint, complex logic"
+      },
+      {
+        "price": 9.99,
+        "label": "enterprise",
+        "description": "Enterprise-grade, specialized"
+      }
+    ],
+    "no_subscriptions": true,
+    "no_credits": true,
+    "no_recurring_billing": true
+  },
+  "endpoints": {
+    "list_all_skills": {
+      "method": "GET",
+      "path": "/api/skills.json",
+      "returns": "Array of all 5,054 skills with price, category, tags, install command",
+      "cache": "1 hour",
+      "size_hint": "~7 MB uncompressed, ~1.5 MB gzipped"
+    },
+    "get_skill": {
+      "method": "GET",
+      "path": "/api/skills/{id}.json",
+      "returns": "Single skill detail (NOTE: not yet implemented, use list_all_skills and filter client-side)",
+      "fallback": "GET /api/skills.json and filter by id"
+    },
+    "categories": {
+      "method": "GET",
+      "path": "/api/categories.json",
+      "returns": "Array of {name, slug, count} for all 25 categories"
+    },
+    "manifest": {
+      "method": "GET",
+      "path": "/api/manifest.json",
+      "returns": "API metadata, total_skills count, version"
+    },
+    "agent_instructions": {
+      "method": "GET",
+      "path": "/api/agent.json",
+      "returns": "This file — machine-readable agent instructions"
+    },
+    "search": {
+      "method": "GET",
+      "path": "/api/skills.json",
+      "note": "Filter client-side by name, description, or tags. Example: skills.filter(s => s.name.toLowerCase().includes(query))"
+    }
+  },
+  "skill_schema": {
+    "id": "string, format: mn-{category-abbrev}-{number}, e.g. mn-ai-00001",
+    "name": "string, human-readable",
+    "slug": "string, URL-safe, used in install command",
+    "description": "string, real description from source repository",
+    "category": "string, one of 25 categories (see /api/categories.json)",
+    "tags": "string[], keywords for search and filtering",
+    "price": "number, USD, minimum 0.99, maximum 9.99",
+    "currency": "string, always 'USD'",
+    "payment": "string, always 'one-time'",
+    "license": "string, always 'perpetual'",
+    "verified": "boolean, always true (all skills pass Sentinel L1)",
+    "sentinel_score": "number, 0-10, security audit score",
+    "install": "string, shell command to install the skill",
+    "author": "string, upstream repo owner",
+    "version": "string, semver"
+  },
+  "workflow_for_agents": {
+    "step_1_discover": "GET /api/skills.json — fetch the full catalog",
+    "step_2_filter": "Filter client-side by category, tags, price, or description keywords",
+    "step_3_evaluate": "Read the 'description', 'tags', and 'sentinel_score' fields to assess fit",
+    "step_4_purchase": "POST /api/checkout/create-session with {skillId} (requires auth token — see /handshake page in UI)",
+    "step_5_install": "Run the 'install' field as a shell command, e.g. `npx -y @marketnow/install <slug>`",
+    "step_6_use": "Call the skill from your agent runtime, e.g. agent.call('<slug>', { ... })"
+  },
+  "rate_limits": {
+    "anonymous": "60 requests per minute to /api/* endpoints",
+    "authenticated": "600 requests per minute to /api/* endpoints",
+    "bulk_download_hint": "Cache /api/skills.json locally — refresh every 24h max"
+  },
+  "authentication": {
+    "optional": "Most read endpoints are public (no auth required)",
+    "required_for": [
+      "/api/checkout/create-session",
+      "/api/vault"
+    ],
+    "method": "Bearer token in Authorization header",
+    "obtain_via": "Sign up via the web UI at https://marketnow.site/?login=true"
+  },
+  "protocols": [
+    "MCP v1.0",
+    "HTTP/1.1",
+    "HTTPS",
+    "JSON"
+  ],
+  "content_type": "application/json; charset=utf-8",
+  "cors": "Access-Control-Allow-Origin: * (open for agent consumption)",
+  "documentation": {
+    "quickstart": "https://marketnow.site/handshake",
+    "policies": "https://marketnow.site/policies",
+    "registry": "https://marketnow.site/registry",
+    "this_file": "https://marketnow.site/api/agent.json"
+  },
+  "generated_at": "2026-06-29T01:21:57.510Z"
+}

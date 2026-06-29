@@ -3,35 +3,40 @@ import BackgroundOrbs from '../components/BackgroundOrbs';
 
 const sections = [
   {
-    title: 'Terms of Service',
-    content: `By accessing or using MarketNow, you agree to be bound by these terms. MarketNow is a marketplace for MCP-compatible agent skills. Every skill is sold individually with a one-time payment — there are no subscriptions, no credits, and no recurring billing. Users must comply with each skill's upstream open-source license (MIT, Apache-2.0, etc.) when using the installed skill.`,
+    title: 'Terms of Service — For Agents and Humans',
+    content: `By accessing or using MarketNow, you agree to be bound by these terms. MarketNow is a marketplace for MCP-compatible agent skills, designed for consumption by both autonomous agents (via the public JSON API) and human developers (via the web UI). Every skill is sold individually with a one-time payment — there are no subscriptions, no credits, and no recurring billing. Agents and users must comply with each skill's upstream open-source license (MIT, Apache-2.0, etc.) when using the installed skill.`,
   },
   {
-    title: 'Pricing Model — Micro-Transactions for Agents',
-    content: `MarketNow uses a micro-transaction pricing model designed for autonomous agents. Every skill has a single, transparent one-time price in USD displayed on its detail page:
+    title: 'Pricing — Micro-Transactions for Autonomous Agents',
+    content: `MarketNow uses a micro-transaction pricing model optimized for autonomous agent consumption. Every skill has a single, transparent one-time price in USD displayed on its detail page and in the /api/skills.json response:
 
-• FREE — 1,329 skills (26% of catalog), mostly simple wrappers and open-source utilities
-• $0.99 to $4.99 — 3,579 skills (71%), the standard range for most MCP servers
-• $9.99 to $19.99 — 146 skills (3%), sophisticated multi-feature tools
-• No skill exceeds $19.99 — we keep the ceiling low so agents can buy many skills without breaking budget
+• $0.99 — 1,321 skills (26%) — utility, single-function MCP servers
+• $1.99 — 649 skills (13%) — standard integrations
+• $2.99 — 2,742 skills (54%) — multi-feature tools (most common)
+• $4.99 — 312 skills (6%) — sophisticated multi-endpoint tools
+• $9.99 — 30 skills (0.6%) — enterprise-grade, specialized
 
-Average paid skill price: $3.66. There are no subscriptions, no credits, no per-call fees, and no tiered plans. Agents can programmatically discover, evaluate, and purchase skills via the public API at /api/skills.json. Humans can browse and buy via the web UI with the same transparent prices.`,
+Average price: $2.50. Minimum: $0.99. Maximum: $9.99. No skill is free — every skill requires a one-time payment, which keeps the marketplace sustainable while remaining accessible for autonomous agents. There are no subscriptions, no credits, no per-call fees, and no tiered plans. Agents can programmatically discover, evaluate, and purchase skills via the public API at /api/skills.json.`,
   },
   {
     title: 'Refund Policy',
-    content: `Skills purchased via Stripe are eligible for a full refund within 14 days if less than 100 API calls have been made using the license key. To request a refund, email support@marketnow.site with your order ID. Refunds are processed back to the original payment method within 5-10 business days. Skills marked as Free do not require a refund.`,
+    content: `All skill purchases are eligible for a full refund within 14 days if less than 100 API calls have been made using the license key. To request a refund, email support@marketnow.site with your order ID. Refunds are processed back to the original payment method within 5-10 business days. Skills priced at $0.99 are still eligible for refund, but the transaction fee may exceed the refund amount in some cases.`,
   },
   {
     title: 'Privacy Policy',
-    content: `MarketNow collects minimal data required to operate the marketplace: your email address (for account login), payment records (processed by Stripe), and the list of skills you have purchased. We do not sell personal data. All data in transit is encrypted with TLS 1.3. We do not store credit card numbers — Stripe handles all payment data on their PCI-compliant infrastructure.`,
+    content: `MarketNow collects minimal data required to operate the marketplace: email address (for account login), payment records (processed by Stripe), and the list of skills you have purchased. We do not sell personal data. All data in transit is encrypted with TLS 1.3. We do not store credit card numbers — Stripe handles all payment data on their PCI-compliant infrastructure. Agent API consumption is logged by IP and User-Agent for rate limiting and abuse prevention, but not linked to personal identity unless you sign in.`,
   },
   {
     title: 'Skill Licensing',
-    content: `Each skill on MarketNow is sourced from a real, public open-source repository. When you purchase a skill, you receive: (1) a MarketNow license key for verification, (2) the install command (typically \`npx -y @marketnow/install <slug>\`), and (3) access to the skill's documentation. The underlying open-source license (MIT, Apache-2.0, etc.) of each skill still applies to your usage of the code itself.`,
+    content: `Each skill on MarketNow is sourced from a real, public open-source repository. When you purchase a skill, you receive: (1) a MarketNow license key for verification, (2) the install command (typically \`npx -y @marketnow/install <slug>\`), and (3) access to the skill's documentation. The underlying open-source license (MIT, Apache-2.0, etc.) of each skill still applies to your usage of the code itself. MarketNow's value-add is curation, verification (Sentinel L1), and packaging — not the underlying code, which remains free under its original license.`,
+  },
+  {
+    title: 'Agent API Usage',
+    content: `Autonomous agents are welcome to consume the MarketNow API at /api/*. Read endpoints (skills.json, categories.json, manifest.json, agent.json) are public and require no authentication. Rate limits: 60 requests/minute for anonymous, 600/minute for authenticated. For bulk consumption, cache /api/skills.json locally and refresh at most every 24 hours — the catalog changes infrequently. The /api/agent.json endpoint provides machine-readable instructions, schema, and workflow examples specifically designed for agent consumption.`,
   },
   {
     title: 'Acceptable Use',
-    content: `You agree not to use MarketNow skills for illegal activities, to violate the rights of others, or to build malicious software. Skills must not be redistributed or resold without explicit permission. MarketNow reserves the right to revoke licenses in cases of abuse, fraud, or violations of these terms.`,
+    content: `You agree not to use MarketNow skills for illegal activities, to violate the rights of others, or to build malicious software. Skills must not be redistributed or resold without explicit permission. MarketNow reserves the right to revoke licenses in cases of abuse, fraud, or violations of these terms. Scraping the website HTML is prohibited — use the public JSON API instead, which is designed for programmatic access.`,
   },
 ];
 
@@ -46,7 +51,7 @@ export default function Policies() {
           className="mb-10"
         >
           <h1 className="text-4xl font-bold text-white mb-2">POLICIES</h1>
-          <p className="text-zinc-400">Terms, pricing, refunds, and privacy policy.</p>
+          <p className="text-zinc-400">Terms, pricing, refunds, and API usage — for agents and humans.</p>
         </motion.div>
 
         <div className="space-y-8">

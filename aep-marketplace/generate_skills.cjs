@@ -107,6 +107,25 @@ fs.writeFileSync(
   JSON.stringify(apiManifest, null, 2)
 );
 
+// Copy agent.json (machine-readable instructions for autonomous agents) if it exists
+const agentJsonPath = path.join(__dirname, 'public', 'api', 'agent.json');
+if (fs.existsSync(agentJsonPath)) {
+  // Update total_skills in agent.json to match current count
+  const agentJson = JSON.parse(fs.readFileSync(agentJsonPath, 'utf8'));
+  if (agentJson.pricing) {
+    // Recompute average from current skills
+    const prices = skills.map(s => s.price).filter(p => typeof p === 'number');
+    if (prices.length > 0) {
+      agentJson.pricing.average = parseFloat((prices.reduce((a, b) => a + b, 0) / prices.length).toFixed(2));
+      agentJson.pricing.min = Math.min(...prices);
+      agentJson.pricing.max = Math.max(...prices);
+    }
+  }
+  agentJson.generated_at = new Date().toISOString();
+  fs.writeFileSync(agentJsonPath, JSON.stringify(agentJson, null, 2));
+  console.log(`   → public/api/agent.json       (machine-readable agent instructions)`);
+}
+
 console.log(`✅ MarketNow — ${skills.length} skills reales escritas`);
 console.log(`   → src/data/all_skills.json`);
 console.log(`   → public/api/skills.json       (accesible para agentes)`);

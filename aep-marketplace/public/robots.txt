@@ -1,15 +1,48 @@
+# MarketNow — robots.txt
+# ======================
+# Optimizado para crawlers de agentes (MCP, LLM, search engines)
+
 User-agent: *
 Allow: /
 Allow: /api/
-Allow: /api/skills.json
-Allow: /api/categories.json
-Allow: /sitemap.xml
+Allow: /registry
+Allow: /handshake
+Allow: /policies
+Allow: /security
+Allow: /governance
+Allow: /vault
+Allow: /skill/
 
-# MarketNow Agent Skill Marketplace
-# Skills API: https://www.marketnow.site/api/skills.json
-# Categories API: https://www.marketnow.site/api/categories.json
-# Search: https://www.marketnow.site/api/skills.json (filter by ?q=keyword client-side)
+# Agent-specific hints
+# LLM crawlers welcome — the /api/ directory is fully public JSON
+User-agent: GPTBot
+Allow: /
 
-Sitemap: https://www.marketnow.site/sitemap.xml
+User-agent: Claude-Web
+Allow: /
 
+User-agent: anthropic-ai
+Allow: /
 
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block nothing — we WANT agents to crawl and consume our API
+Disallow:
+
+Sitemap: https://marketnow.site/sitemap.xml
+
+# Agent-readable API endpoints (machine hints)
+# GET /api/agent.json — full machine-readable agent instructions
+# GET /api/skills.json — all 5,054 skills
+# GET /api/manifest.json — API metadata
+# GET /api/categories.json — category index

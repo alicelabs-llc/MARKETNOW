@@ -137,15 +137,15 @@ export default function Registry() {
         >
           {[
             { label: 'Total Skills', value: allSkills.length.toLocaleString() },
-            { label: 'Categories', value: Math.max(0, allCategories.length - 1) },
-            { label: 'Verified', value: '100%', green: true },
+            { label: 'Avg Price', value: '$' + (allSkills.length > 0 ? (allSkills.reduce((a,s) => a + (s.price||0), 0) / allSkills.length).toFixed(2) : '0.00') },
+            { label: 'From', value: '$0.99' },
             { label: 'Protocol', value: 'MCP v1.0' },
           ].map((stat) => (
             <div key={stat.label} className="premium-card py-4 px-5">
               <div className="text-[10px] text-zinc-500 font-mono tracking-wider mb-1 uppercase">
                 {stat.label}
               </div>
-              <div className={`text-lg font-mono font-semibold ${stat.green ? 'text-[#00F299]' : 'text-white'}`}>
+              <div className="text-lg font-mono font-semibold text-white">
                 {stat.value}
               </div>
             </div>
@@ -283,15 +283,9 @@ export default function Registry() {
 
                       {/* Meta */}
                       <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                        {skill.price === 0 ? (
-                          <span className="px-2 py-0.5 rounded bg-[#00F299]/20 text-[#00F299] text-xs font-mono font-bold border border-[#00F299]/40">
-                            FREE
-                          </span>
-                        ) : (
-                          <span className="text-[#00F299] font-mono text-sm font-bold">
-                            ${skill.price.toFixed(2)}
-                          </span>
-                        )}
+                        <span className="text-[#00F299] font-mono text-sm font-bold">
+                          ${skill.price.toFixed(2)}
+                        </span>
                         <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono border border-[#00F299]/20">
                           ✓ VERIFIED
                         </span>

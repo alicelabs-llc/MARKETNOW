@@ -3,15 +3,26 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 export default function Hero({ onSignIn }) {
-  const [stats, setStats] = useState({ total: 5054, categories: 25 });
+  const [stats, setStats] = useState({ total: 5054, categories: 25, avgPrice: 2.50 });
 
   useEffect(() => {
-    // Fetch real stats from the manifest endpoint
     fetch('/api/manifest.json')
       .then(r => r.ok ? r.json() : null)
       .then(d => {
         if (d && typeof d.total_skills === 'number') {
-          setStats({ total: d.total_skills, categories: d.categories_count || 25 });
+          setStats(s => ({
+            ...s,
+            total: d.total_skills,
+            categories: d.categories_count || 25,
+          }));
+        }
+      })
+      .catch(() => {});
+    fetch('/api/agent.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (d && d.pricing && typeof d.pricing.average === 'number') {
+          setStats(s => ({ ...s, avgPrice: d.pricing.average }));
         }
       })
       .catch(() => {});
@@ -32,7 +43,7 @@ export default function Hero({ onSignIn }) {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
             <span className="text-[#00F299] text-xs font-mono tracking-wider">
-              MCP-COMPATIBLE · OPEN MARKETPLACE
+              MCP-COMPATIBLE · BUILT FOR AUTONOMOUS AGENTS
             </span>
           </div>
 
@@ -46,11 +57,11 @@ export default function Hero({ onSignIn }) {
             Marketplace
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle — for agents */}
           <p className="text-zinc-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            The open marketplace for MCP-compatible agent skills. Every skill is
-            sourced from a real open-source repository and verified by Sentinel before listing.
-            Micro-priced for autonomous agents — most skills under $5, hundreds are free.
+            Discover, evaluate, and install {stats.total.toLocaleString()}+ verified MCP skills
+            through a public JSON API. Micro-priced from $0.99 — designed for autonomous
+            agents to buy and deploy without human intervention.
           </p>
 
           {/* CTA Buttons */}
@@ -59,22 +70,22 @@ export default function Hero({ onSignIn }) {
               to="/registry"
               className="px-8 py-4 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-[#00F299]/20"
             >
-              EXPLORE REGISTRY →
+              BROWSE REGISTRY →
             </Link>
-            <button
-              onClick={onSignIn}
+            <Link
+              to="/handshake"
               className="px-8 py-4 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              SIGN IN / REGISTER
-            </button>
+              API QUICKSTART
+            </Link>
           </div>
 
-          {/* Stats — solo datos reales */}
+          {/* Stats — agent-relevant */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {[
               { value: stats.total.toLocaleString() + '+', label: 'VERIFIED SKILLS' },
-              { value: '1,329', label: 'FREE SKILLS' },
-              { value: '$3.66', label: 'AVG PRICE' },
+              { value: '$' + stats.avgPrice.toFixed(2), label: 'AVG PRICE (USD)' },
+              { value: '$0.99', label: 'MINIMUM PRICE' },
               { value: 'MCP v1.0', label: 'PROTOCOL' },
             ].map((stat) => (
               <motion.div
@@ -93,6 +104,23 @@ export default function Hero({ onSignIn }) {
               </motion.div>
             ))}
           </div>
+
+          {/* Agent curl example */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mt-12 max-w-2xl mx-auto"
+          >
+            <div className="text-left p-4 rounded-xl bg-black/60 border border-white/5">
+              <div className="text-[10px] text-zinc-500 font-mono mb-2 uppercase tracking-wider">
+                Try the API
+              </div>
+              <code className="text-[#00F299] text-sm font-mono break-all">
+                curl https://marketnow.site/api/skills.json | jq '.[0:3] | .[] | {"{{name, price}}"}'
+              </code>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>

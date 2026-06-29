@@ -3,6 +3,85 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getSkill } from '../data/skills';
 import { hasMetaMask, connectWallet, cryptoCheckout } from '../utils/crypto';
+import Reviews from '../components/Reviews';
+
+/**
+ * Inject a <script type="application/ld+json"> tag with Product schema
+ * for SEO. Also updates document.title and meta description dynamically.
+ */
+function injectSkillSeo(skill) {
+  if (!skill) return;
+
+  // Update document title
+  document.title = `${skill.name} — $${skill.price.toFixed(2)} · MarketNow`;
+
+  // Update meta description
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement('meta');
+    metaDesc.name = 'description';
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.content = `${skill.name}: ${skill.description?.slice(0, 140) || 'MCP server'} — $${skill.price.toFixed(2)} on MarketNow`;
+
+  // Update OG tags
+  const ogUpdates = {
+    'og:title': `${skill.name} — $${skill.price.toFixed(2)} · MarketNow`,
+    'og:description': skill.description?.slice(0, 200) || '',
+    'og:type': 'product',
+    'og:url': `https://marketnow.site/skill/${skill.id}`,
+    'product:price:amount': skill.price.toFixed(2),
+    'product:price:currency': 'USD',
+  };
+  for (const [k, v] of Object.entries(ogUpdates)) {
+    let tag = document.querySelector(`meta[property="${k}"]`);
+    if (!tag) {
+      tag = document.createElement('meta');
+      tag.setAttribute('property', k);
+      document.head.appendChild(tag);
+    }
+    tag.content = v;
+  }
+
+  // Inject JSON-LD Product schema
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    'name': skill.name,
+    'description': skill.description,
+    'category': skill.category,
+    'brand': { '@type': 'Brand', 'name': skill.author || 'Open Source Community' },
+    'offers': {
+      '@type': 'Offer',
+      'price': skill.price.toFixed(2),
+      'priceCurrency': 'USD',
+      'availability': 'https://schema.org/InStock',
+      'url': `https://marketnow.site/skill/${skill.id}`,
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': String(skill.sentinel_score || 6),
+      'bestRating': '10',
+      'ratingCount': '1',
+    },
+  };
+
+  let scriptTag = document.getElementById('skill-jsonld');
+  if (!scriptTag) {
+    scriptTag = document.createElement('script');
+    scriptTag.id = 'skill-jsonld';
+    scriptTag.type = 'application/ld+json';
+    document.head.appendChild(scriptTag);
+  }
+  scriptTag.textContent = JSON.stringify(jsonLd);
+
+  // Cleanup when component unmounts
+  return () => {
+    document.title = 'MarketNow — Agent Skill Marketplace';
+    const cleanupTag = document.getElementById('skill-jsonld');
+    if (cleanupTag) cleanupTag.remove();
+  };
+}
 
 // Helper to normalize a skill to always have safe default fields
 function normalizeSkill(s) {
@@ -59,6 +138,14 @@ export default function SkillDetail() {
   useEffect(() => {
     loadSkill();
   }, [id]);
+
+  // Inject SEO + JSON-LD when skill loads
+  useEffect(() => {
+    if (skill) {
+      const cleanup = injectSkillSeo(skill);
+      return cleanup;
+    }
+  }, [skill]);
 
   const loadSkill = async () => {
     try {
@@ -274,23 +361,8 @@ export default function SkillDetail() {
               </div>
             </div>
 
-            {/* Reviews (only if present) */}
-            {skill.reviews.length > 0 && (
-              <div className="mt-6 premium-card p-8">
-                <h3 className="text-white font-semibold mb-6">REVIEWS ({skill.reviews.length})</h3>
-                <div className="space-y-4">
-                  {skill.reviews.map((review, i) => (
-                    <div key={i} className="p-4 rounded-xl bg-white/5">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white text-sm font-mono">{review.user}</span>
-                        <span className="text-[#00F299] text-xs">{'★'.repeat(review.rating)}</span>
-                      </div>
-                      <p className="text-zinc-400 text-sm">{review.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+            {/* Reviews — client-side review system */}
+            <Reviews skillId={skill.id} />
           </motion.div>
 
           {/* Sidebar */}

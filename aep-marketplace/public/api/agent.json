@@ -121,6 +121,43 @@
     "HTTPS",
     "JSON"
   ],
+  "mcp_server": {
+    "name": "@marketnow/mcp-server",
+    "version": "1.0.0",
+    "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
+    "install": "npx -y @marketnow/mcp-server",
+    "tools": [
+      "search_skills",
+      "get_skill",
+      "list_categories",
+      "get_manifest",
+      "get_install_command"
+    ],
+    "config_claude_desktop": {
+      "mcpServers": {
+        "marketnow": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@marketnow/mcp-server"
+          ]
+        }
+      }
+    },
+    "repo": "https://github.com/edgarfloresguerra2011-a11y/marketnow/tree/master/mcp-server"
+  },
+  "affiliate_program": {
+    "commission": "5% of sale price",
+    "how_it_works": "Generate your affiliate code at /dashboard, share links with your code, earn 5% per sale",
+    "payout_threshold_usd": 50,
+    "payout_schedule": "monthly via Stripe Connect"
+  },
+  "seller_program": {
+    "commission": "20% per sale (seller keeps 80%)",
+    "submit_url": "https://marketnow.site/submit",
+    "verification": "Sentinel L1 (automated) + human review (24-48h)",
+    "payout_schedule": "monthly via Stripe Connect"
+  },
   "content_type": "application/json; charset=utf-8",
   "cors": "Access-Control-Allow-Origin: * (open for agent consumption)",
   "documentation": {
@@ -129,5 +166,5 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-06-29T01:49:10.779Z"
+  "generated_at": "2026-06-29T02:09:44.654Z"
 }

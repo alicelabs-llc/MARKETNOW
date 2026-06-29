@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { matchSkills, generateRecommendation } from '../utils/skillMatcher';
 
 const PAGE_SIZE = 24;
 
@@ -15,6 +16,9 @@ export default function Registry() {
   const [searchInput, setSearchInput] = useState('');
   const [sort, setSort] = useState('name');
   const [order, setOrder] = useState('asc');
+  const [aiQuery, setAiQuery] = useState('');
+  const [aiMatches, setAiMatches] = useState(null);
+  const [aiLoading, setAiLoading] = useState(false);
 
   // ─── Load all skills + categories once (from static JSON) ───────────────
   useEffect(() => {
@@ -102,6 +106,18 @@ export default function Registry() {
     else if (v === 'score-desc') { setSort('score'); setOrder('desc'); }
   };
 
+  const handleAiSearch = (e) => {
+    e.preventDefault();
+    if (!aiQuery.trim() || allSkills.length === 0) return;
+    setAiLoading(true);
+    // Simulate small delay for UX
+    setTimeout(() => {
+      const matches = matchSkills(allSkills, aiQuery, 5);
+      setAiMatches(matches);
+      setAiLoading(false);
+    }, 300);
+  };
+
   // Page numbers (windowed)
   const pageNumbers = [];
   const maxVisible = 7;
@@ -126,6 +142,79 @@ export default function Registry() {
             Browse, install, and deploy autonomous agent skills from the global MCP registry.
             Each skill is verified, versioned, and ready for production.
           </p>
+        </motion.div>
+
+        {/* AI Skill Matcher */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+          className="premium-card p-6 mb-10"
+        >
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-2xl">🤖</span>
+            <div>
+              <h2 className="text-white font-semibold text-sm">AI SKILL MATCHER</h2>
+              <p className="text-zinc-500 text-xs">Describe what you need in natural language — we'll find the best skills.</p>
+            </div>
+          </div>
+          <form onSubmit={handleAiSearch} className="flex gap-2">
+            <input
+              type="text"
+              value={aiQuery}
+              onChange={(e) => setAiQuery(e.target.value)}
+              placeholder="e.g. 'I need to scrape a website and extract product prices'"
+              className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:border-[#00F299]/50 focus:outline-none text-sm"
+            />
+            <button
+              type="submit"
+              disabled={aiLoading || !aiQuery.trim()}
+              className="px-6 py-3 bg-[#00F299] text-black font-bold text-sm rounded-xl hover:bg-[#00F299]/90 transition-all disabled:opacity-50"
+            >
+              {aiLoading ? 'MATCHING...' : 'FIND SKILLS'}
+            </button>
+          </form>
+
+          {aiMatches && (
+            <div className="mt-6 space-y-3">
+              {aiMatches.length === 0 ? (
+                <div className="text-center py-6 text-zinc-500 text-sm">
+                  No matches found. Try different keywords.
+                </div>
+              ) : (
+                aiMatches.map((m, i) => (
+                  <Link
+                    key={m.skill.id}
+                    to={`/skill/${m.skill.id}`}
+                    className="block p-4 rounded-xl bg-white/5 border border-white/5 hover:border-[#00F299]/30 hover:bg-[#00F299]/5 transition-all group"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-[10px] text-zinc-500 font-mono">#{i + 1}</span>
+                          <span className="text-white font-semibold text-sm group-hover:text-[#00F299] transition-colors">
+                            {m.skill.name}
+                          </span>
+                          <span className="px-2 py-0.5 rounded bg-white/5 text-[10px] text-zinc-500 font-mono">
+                            {m.skill.category}
+                          </span>
+                        </div>
+                        <p className="text-zinc-400 text-xs line-clamp-2">{m.skill.description}</p>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <div className="text-[#00F299] font-mono font-bold text-sm">
+                          ${m.skill.price.toFixed(2)}
+                        </div>
+                        <div className="text-[10px] text-zinc-500 font-mono">
+                          match: {(m.score).toFixed(1)}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))
+              )}
+            </div>
+          )}
         </motion.div>
 
         {/* Network Stats — solo datos reales */}

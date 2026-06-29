@@ -8,6 +8,7 @@ import BackgroundOrbs from './components/BackgroundOrbs';
 import AuthModal from './components/AuthModal';
 import AdminModal from './components/AdminModal';
 import { setAuth, getUser } from './api/client';
+import { captureAffiliateRef } from './utils/affiliate';
 
 // Pages
 import Registry from './pages/Registry';
@@ -18,10 +19,16 @@ import Security from './pages/Security';
 import Handshake from './pages/Handshake';
 import Policies from './pages/Policies';
 import Submit from './pages/Submit';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
   const [adminOpen, setAdminOpen] = useState(false);
+
+  // Capture affiliate ref from URL on first load
+  useEffect(() => {
+    captureAffiliateRef();
+  }, []);
 
   // GitHub Pages SPA fallback:
   // When a user hits /registry directly, GitHub Pages serves 404.html
@@ -93,8 +100,8 @@ function App() {
           <Route path="/handshake" element={<Handshake />} />
           <Route path="/policies" element={<Policies />} />
           <Route path="/submit" element={<Submit />} />
-          {/* /dashboard is intentionally removed — access only via secret trigger */}
-          <Route path="/dashboard" element={<Navigate to="/" replace />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          {/* /dashboard is now publicly accessible */}
         </Routes>
 
         <AuthModal

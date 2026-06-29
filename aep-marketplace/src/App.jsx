@@ -22,6 +22,22 @@ function App() {
   const [authOpen, setAuthOpen] = useState(false);
   const [adminOpen, setAdminOpen] = useState(false);
 
+  // GitHub Pages SPA fallback:
+  // When a user hits /registry directly, GitHub Pages serves 404.html
+  // which redirects to /?p=/registry. We need to convert that back to
+  // the real path so React Router can handle it.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get('p');
+    if (p) {
+      // Remove ?p= from URL and replace with the actual path
+      params.delete('p');
+      const remaining = params.toString();
+      const newUrl = p + (remaining ? '?' + remaining : '');
+      window.history.replaceState({}, '', newUrl);
+    }
+  }, []);
+
   // Check URL params for login trigger
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

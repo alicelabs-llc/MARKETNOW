@@ -1,30 +1,7 @@
-# MarketNow _redirects — Cloudflare Pages
-# 
-# CRITICAL: These redirects run BEFORE the Worker on pages.dev.
-# If a URL matches, Pages returns 301 BEFORE the Worker runs.
-# 
-# RULE: NEVER redirect API routes or static files to marketnow.site
-# The Worker handles ALL routes on marketnow.site. When the Worker
-# needs static data, it fetches from pages.dev DIRECTLY (no redirect).
-# Redirecting API routes back to marketnow.site creates infinite loops.
-#
-# Only redirect SSR pages that have Worker handlers AND need browser HTTP redirects.
-# The Worker's built-in route handlers catch ALL incoming requests on marketnow.site.
+# MarketNow _redirects
+# GitHub Pages ignores _redirects by default (it's a Cloudflare/Nettle feature).
+# We use 404.html instead for SPA fallback.
+# This file is kept for compatibility with other hosts that may use it.
 
-# Worker SSR redirects (browser visits pages.dev → redirect to Worker → SSR HTML)
-/submit                              https://marketnow.site/submit                             301
-/submit/                             https://marketnow.site/submit                             301
-/leaderboard                         https://marketnow.site/leaderboard                        301
-/leaderboard/                        https://marketnow.site/leaderboard                        301
-/arena                               https://marketnow.site/arena                              301
-/arena/                              https://marketnow.site/arena                              301
-/quests                              https://marketnow.site/quests                             301
-/quests/                             https://marketnow.site/quests                             301
-/legal                               https://marketnow.site/legal                             301
-/legal/                              https://marketnow.site/legal                             301
-/agent/*                             https://marketnow.site/agent/:splat                       301
-/security                            https://marketnow.site/security                           301
-/security/                           https://marketnow.site/security                           301
-
-# Catch-all SPA fallback
-/*                                   /index.html                                              200
+# SPA fallback — send all non-file requests to index.html
+/*    /index.html   200

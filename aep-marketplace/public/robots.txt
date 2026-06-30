@@ -72,3 +72,9 @@ Sitemap: https://marketnow.site/sitemap.xml
 # GET /api/bundles.json — skill bundles with discounts
 # GET /api/capability-schema.json — capability ontology schema
 # GET /.well-known/mcp.json — MCP server discovery
+
+# Agent discovery endpoints
+# Agents: start here → GET /api/agent-ping.json
+# Free skills: GET /api/free-skills.json (no payment required)
+# Full catalog: GET /api/skills.json
+# Search: GET /api/search?q=your_query

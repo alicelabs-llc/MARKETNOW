@@ -91,7 +91,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Hero onSignIn={() => setAuthOpen(true)} />} />
+          <Route path="/" element={<AgentLanding />} />
           <Route path="/skills" element={<Navigate to="/registry" replace />} />
           <Route path="/registry" element={<Registry />} />
           <Route path="/skill/:id" element={<SkillDetail />} />

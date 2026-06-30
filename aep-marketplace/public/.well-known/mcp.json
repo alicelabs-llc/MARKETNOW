@@ -25,11 +25,11 @@
     },
     {
       "name": "list_categories",
-      "description": "List all 25 categories with skill counts"
+      "description": "List all 58 categories with counts"
     },
     {
       "name": "get_manifest",
-      "description": "Get marketplace metadata (totals, pricing tiers, commission)"
+      "description": "Get marketplace metadata (8535 skills, pricing tiers, commission)"
     },
     {
       "name": "get_install_command",
@@ -41,7 +41,10 @@
       "mcpServers": {
         "marketnow": {
           "command": "npx",
-          "args": ["-y", "marketnow-mcp"]
+          "args": [
+            "-y",
+            "marketnow-mcp"
+          ]
         }
       }
     },
@@ -49,7 +52,10 @@
       "mcpServers": {
         "marketnow": {
           "command": "npx",
-          "args": ["-y", "marketnow-mcp"]
+          "args": [
+            "-y",
+            "marketnow-mcp"
+          ]
         }
       }
     },
@@ -57,22 +63,24 @@
       "mcpServers": {
         "marketnow": {
           "command": "npx",
-          "args": ["-y", "marketnow-mcp"]
+          "args": [
+            "-y",
+            "marketnow-mcp"
+          ]
         }
       }
     }
   },
   "marketplace_stats": {
-    "total_skills": 5054,
-    "categories": 25,
+    "total_skills": 8535,
+    "categories": 58,
     "price_min_usd": 0.99,
     "price_max_usd": 9.99,
-    "price_avg_usd": 2.50,
+    "price_avg_usd": 3.8,
     "currency": "USD",
     "payment_model": "one-time",
     "no_subscriptions": true,
-    "commission_seller_pct": 20,
-    "commission_affiliate_pct": 5
+    "no_credits": true
   },
   "verification": {
     "sentinel_l1": "Automated static analysis on every submission (repo exists, README, package manifest, license, no hardcoded secrets, no malicious patterns)",

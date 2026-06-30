@@ -72,8 +72,42 @@
     },
     "search": {
       "method": "GET",
-      "path": "/api/skills.json",
-      "note": "Filter client-side by name, description, or tags. Example: skills.filter(s => s.name.toLowerCase().includes(query))"
+      "path": "/api/search",
+      "params": {
+        "q": "string",
+        "category": "string",
+        "max_price": "number",
+        "language": "string",
+        "limit": "number"
+      },
+      "returns": "Array of matching skills with relevance scores"
+    },
+    "verify_purchase": {
+      "method": "GET",
+      "path": "/api/verify-purchase",
+      "params": {
+        "sessionId": "string - Stripe session ID"
+      },
+      "returns": {
+        "verified": "boolean",
+        "skillId": "string",
+        "licenseKey": "string"
+      }
+    },
+    "bundles": {
+      "method": "GET",
+      "path": "/api/bundles.json",
+      "returns": "Array of skill bundles with discounts"
+    },
+    "openapi": {
+      "method": "GET",
+      "path": "/api/openapi.yaml",
+      "returns": "OpenAPI 3.1 specification"
+    },
+    "capability_schema": {
+      "method": "GET",
+      "path": "/api/capability-schema.json",
+      "returns": "JSON Schema for skill capabilities"
     }
   },
   "skill_schema": {
@@ -167,5 +201,5 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-06-30T00:50:15.674Z"
+  "generated_at": "2026-06-30T01:02:13.060Z"
 }

@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "MarketNow Skills API",
-    "description": "The open marketplace for MCP-compatible agent skills. 7,881 verified skills, micro-priced from $0.99 to $9.99. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~7MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.",
+    "description": "The open marketplace for MCP-compatible agent skills. 8,535 verified skills, micro-priced from $0.99 to $9.99. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~7MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.",
     "version": "3.0.0",
     "contact": {
       "name": "MarketNow",

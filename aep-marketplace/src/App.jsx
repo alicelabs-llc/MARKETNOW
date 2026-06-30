@@ -102,6 +102,7 @@ function App() {
           <Route path="/policies" element={<Policies />} />
           <Route path="/submit" element={<Submit />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/agents" element={<AgentLanding />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

@@ -1,20 +1,34 @@
 # MarketNow — robots.txt
 # ======================
-# Optimizado para crawlers de agentes (MCP, LLM, search engines)
+# ALL crawlers, LLMs, and agents are WELCOME.
+# Everything is public. No restrictions.
 
 User-agent: *
 Allow: /
 Allow: /api/
+Allow: /api/skills.json
+Allow: /api/search
+Allow: /api/agent.json
+Allow: /api/manifest.json
+Allow: /api/categories.json
+Allow: /api/openapi.yaml
+Allow: /api/bundles.json
+Allow: /api/verify-purchase
+Allow: /api/capability-schema.json
+Allow: /api/catalog.jsonld
 Allow: /registry
+Allow: /submit
+Allow: /pricing
 Allow: /handshake
 Allow: /policies
 Allow: /security
 Allow: /governance
 Allow: /vault
 Allow: /skill/
+Allow: /sitemap.xml
+Allow: /.well-known/mcp.json
 
-# Agent-specific hints
-# LLM crawlers welcome — the /api/ directory is fully public JSON
+# Explicitly allow AI/LLM crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -36,13 +50,25 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Block nothing — we WANT agents to crawl and consume our API
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
 Disallow:
 
 Sitemap: https://marketnow.site/sitemap.xml
 
-# Agent-readable API endpoints (machine hints)
-# GET /api/agent.json — full machine-readable agent instructions
-# GET /api/skills.json — all 5,054 skills
-# GET /api/manifest.json — API metadata
-# GET /api/categories.json — category index
+# Agent-readable API endpoints
+# GET /api/agent.json — full machine-readable agent instructions (8,535 skills)
+# GET /api/skills.json — all 8,535 skills with capabilities and system prompts
+# GET /api/search?q=query — server-side search with relevance scoring
+# GET /api/manifest.json — marketplace metadata (v4.0.0)
+# GET /api/categories.json — 58 categories with counts
+# GET /api/openapi.yaml — OpenAPI 3.1 specification
+# GET /api/verify-purchase?sessionId=X — verify a Stripe purchase
+# GET /api/bundles.json — skill bundles with discounts
+# GET /api/capability-schema.json — capability ontology schema
+# GET /.well-known/mcp.json — MCP server discovery

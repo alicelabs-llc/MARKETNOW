@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
     if (!stripeRes.ok) {
       if (stripeRes.status === 404) {
-        return res.status(404).json({ error: 'Session not found' });
+        return res.status(404).json({ error: 'Payment not completed or session not found' });
       }
       throw new Error(`Stripe API error: ${stripeRes.status}`);
     }

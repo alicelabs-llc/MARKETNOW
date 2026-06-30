@@ -5,6 +5,7 @@
   "rewrites": [
     { "source": "/api/categories.json", "destination": "/api/categories" },
     { "source": "/api/manifest.json", "destination": "/api/manifest" },
+    { "source": "/api/bundles.json", "destination": "/api/bundles" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }

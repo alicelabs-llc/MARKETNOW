@@ -12,7 +12,12 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('X-RateLimit-Limit', '60');
   res.setHeader('X-RateLimit-Remaining', '59');
-  res.setHeader('Cache-Control', 'public, max-age=300'); // 5 min cache
+  // CRITICAL: no-store prevents Vercel CDN from caching search results
+  // Without this, different queries return the same cached result
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  res.setHeader('Vary', '*');
 
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });

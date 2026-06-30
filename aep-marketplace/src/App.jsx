@@ -21,6 +21,7 @@ import Policies from './pages/Policies';
 import Submit from './pages/Submit';
 import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
+import AgentLanding from "./pages/AgentLanding";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);

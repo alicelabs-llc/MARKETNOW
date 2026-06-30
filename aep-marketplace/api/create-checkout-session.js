@@ -1,3 +1,4 @@
+// MarketNow v3.2 - LIVE MODE ACTIVATED
 // MarketNow v3.1 - Live mode deployment
 /**
  * MarketNow — Create Stripe Checkout Session

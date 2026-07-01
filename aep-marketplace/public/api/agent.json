@@ -54,11 +54,31 @@
     "max": 9.99,
     "average": 3.8,
     "tiers": [
-      { "price": 0.99, "label": "utility", "description": "Single-function MCP servers, simple wrappers" },
-      { "price": 1.99, "label": "standard", "description": "Standard integrations, one API/service" },
-      { "price": 2.99, "label": "multi-feature", "description": "Multi-feature tools, common choice" },
-      { "price": 4.99, "label": "sophisticated", "description": "Multi-endpoint, complex logic" },
-      { "price": 9.99, "label": "enterprise", "description": "Enterprise-grade, specialized" }
+      {
+        "price": 0.99,
+        "label": "utility",
+        "description": "Single-function MCP servers, simple wrappers"
+      },
+      {
+        "price": 1.99,
+        "label": "standard",
+        "description": "Standard integrations, one API/service"
+      },
+      {
+        "price": 2.99,
+        "label": "multi-feature",
+        "description": "Multi-feature tools, common choice"
+      },
+      {
+        "price": 4.99,
+        "label": "sophisticated",
+        "description": "Multi-endpoint, complex logic"
+      },
+      {
+        "price": 9.99,
+        "label": "enterprise",
+        "description": "Enterprise-grade, specialized"
+      }
     ],
     "no_subscriptions": true,
     "no_credits": true,
@@ -96,7 +116,13 @@
     "search": {
       "method": "GET",
       "path": "/api/search",
-      "params": { "q": "string", "category": "string", "max_price": "number", "language": "string", "limit": "number" },
+      "params": {
+        "q": "string",
+        "category": "string",
+        "max_price": "number",
+        "language": "string",
+        "limit": "number"
+      },
       "returns": "Array of matching skills with relevance scores"
     },
     "agent_purchase": {
@@ -110,7 +136,13 @@
         "mandateId": "string (optional — enables autonomous purchase within pre-approved limit)",
         "agentId": "string (optional)"
       },
-      "response_modes": ["instant_download", "instant_purchase", "direct_purchase", "requires_payment", "requires_human_approval"],
+      "response_modes": [
+        "instant_download",
+        "instant_purchase",
+        "direct_purchase",
+        "requires_payment",
+        "requires_human_approval"
+      ],
       "verification": "USDC Transfer event parsed from eth_getTransactionReceipt on Base (chainId 8453)"
     },
     "mandates": {
@@ -125,7 +157,11 @@
         "revoke": "POST /api/mandates?action=revoke&id=mand_xxx",
         "spend": "POST /api/mandates?action=spend {id, amount, txHash}  (called internally by agent-purchase)"
       },
-      "limits": { "max_total_usd": 500, "max_per_purchase_usd": 50, "default_ttl_days": 90 },
+      "limits": {
+        "max_total_usd": 500,
+        "max_per_purchase_usd": 50,
+        "default_ttl_days": 90
+      },
       "ui": "https://marketnow.site/mandates"
     },
     "agent_wallet": {
@@ -137,17 +173,42 @@
       "method": "POST",
       "path": "/api/audit-skill",
       "description": "Sentinel L1.5 security audit — 6-point MCP security scan",
-      "checks": ["AUTH", "TOOL_DESCRIPTIONS (prompt injection)", "INPUT_VALIDATION", "CORS_ORIGIN", "OAUTH_SCOPES", "RATE_LIMITING_ERROR_LEAKAGE"]
+      "checks": [
+        "AUTH",
+        "TOOL_DESCRIPTIONS (prompt injection)",
+        "INPUT_VALIDATION",
+        "CORS_ORIGIN",
+        "OAUTH_SCOPES",
+        "RATE_LIMITING_ERROR_LEAKAGE"
+      ]
     },
     "verify_purchase": {
       "method": "GET",
       "path": "/api/verify-purchase",
-      "params": { "sessionId": "string - Stripe session ID" },
-      "returns": { "verified": "boolean", "skillId": "string", "licenseKey": "string" }
+      "params": {
+        "sessionId": "string - Stripe session ID"
+      },
+      "returns": {
+        "verified": "boolean",
+        "skillId": "string",
+        "licenseKey": "string"
+      }
     },
-    "bundles": { "method": "GET", "path": "/api/bundles.json", "returns": "Array of skill bundles with discounts" },
-    "openapi": { "method": "GET", "path": "/api/openapi.yaml", "returns": "OpenAPI 3.1 specification" },
-    "capability_schema": { "method": "GET", "path": "/api/capability-schema.json", "returns": "JSON Schema for skill capabilities" }
+    "bundles": {
+      "method": "GET",
+      "path": "/api/bundles.json",
+      "returns": "Array of skill bundles with discounts"
+    },
+    "openapi": {
+      "method": "GET",
+      "path": "/api/openapi.yaml",
+      "returns": "OpenAPI 3.1 specification"
+    },
+    "capability_schema": {
+      "method": "GET",
+      "path": "/api/capability-schema.json",
+      "returns": "JSON Schema for skill capabilities"
+    }
   },
   "skill_schema": {
     "id": "string, format: mn-{category-abbrev}-{number}, e.g. mn-ai-00001",
@@ -181,20 +242,43 @@
   },
   "authentication": {
     "optional": "Most read endpoints are public (no auth required)",
-    "required_for": ["/api/checkout/create-session", "/api/vault"],
+    "required_for": [
+      "/api/checkout/create-session",
+      "/api/vault"
+    ],
     "method": "Bearer token in Authorization header",
     "obtain_via": "Sign up via the web UI at https://marketnow.site/?login=true"
   },
-  "protocols": ["MCP v1.0", "HTTP/1.1", "HTTPS", "JSON", "ACP/AP2 (delegated mandates)"],
+  "protocols": [
+    "MCP v1.0",
+    "HTTP/1.1",
+    "HTTPS",
+    "JSON",
+    "ACP/AP2 (delegated mandates)"
+  ],
   "mcp_server": {
     "name": "marketnow-mcp",
     "version": "1.1.0",
     "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
     "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
     "install": "npx -y marketnow-mcp",
-    "tools": ["search_skills", "get_skill", "list_categories", "get_manifest", "get_install_command"],
+    "tools": [
+      "search_skills",
+      "get_skill",
+      "list_categories",
+      "get_manifest",
+      "get_install_command"
+    ],
     "config_claude_desktop": {
-      "mcpServers": { "marketnow": { "command": "npx", "args": ["-y", "marketnow-mcp"] } }
+      "mcpServers": {
+        "marketnow": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "marketnow-mcp"
+          ]
+        }
+      }
     },
     "repo": "https://github.com/edgarfloresguerra2011-a11y/marketnow/tree/master/mcp-server"
   },
@@ -223,7 +307,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-02T00:00:00.000Z",
+  "generated_at": "2026-07-01T19:55:03.112Z",
   "trust": {
     "license": "MIT",
     "open_source": true,

@@ -85,6 +85,65 @@ const dirs = [
 ];
 dirs.forEach(d => fs.mkdirSync(d, { recursive: true }));
 
+// ─── Enrich skills with trust fields (Claude review response) ────────────
+// Load free-skill IDs (these get review_status = 'human-reviewed')
+const freeIds = new Set();
+const freeSkillsPath = path.join(__dirname, 'public', 'api', 'free-skills.json');
+if (fs.existsSync(freeSkillsPath)) {
+  try {
+    const freeData = JSON.parse(fs.readFileSync(freeSkillsPath, 'utf8'));
+    for (const s of (freeData.skills || [])) {
+      if (s.id) freeIds.add(s.id);
+    }
+  } catch (e) { /* ignore */ }
+}
+
+const USDC_DISCLAIMER = 'USDC payments on Base are irreversible on-chain. For disputes (skill did not work as described, security issue, etc.), contact support@marketnow.site within 7 days with the txHash and skillId. AliceLabs will refund from treasury for verified disputes. See /trust for the full dispute policy.';
+
+for (const s of skills) {
+  // review_status (replaces universal 'verified: true')
+  s.review_status = freeIds.has(s.id) ? 'human-reviewed' : 'auto-scanned';
+  s.verified = s.review_status !== 'auto-scanned'; // legacy compat
+
+  // permissions — declarative, inferred from metadata
+  const setup = (s.doc && s.doc.setup) || {};
+  const envVars = setup.required_env || [];
+  const caps = s.capabilities || {};
+  const network = [];
+  const filesystem = [];
+  let subprocess = false;
+  for (const env of envVars) {
+    const u = String(env).toUpperCase();
+    if (/(URL|ENDPOINT|WEBHOOK|API|TOKEN|KEY)/.test(u)) network.push(env);
+  }
+  for (const k of Object.keys(caps)) {
+    const u = k.toUpperCase();
+    if (/(HTTP|FETCH|REQUEST|CALL|API|WEBHOOK)/.test(u)) network.push(k);
+    if (/(FILE|READ|WRITE|SAVE|EXPORT)/.test(u)) filesystem.push(k);
+    if (/(EXEC|SHELL|RUN|COMMAND)/.test(u)) subprocess = true;
+  }
+  const install = s.install || '';
+  if (/npx|npm |curl|bash/.test(install)) subprocess = true;
+  s.permissions = {
+    network: [...new Set(network)].slice(0, 10),
+    filesystem: [...new Set(filesystem)].slice(0, 10),
+    env_vars: envVars.slice(0, 15),
+    subprocess,
+    disclosure: 'Declarative — inferred from skill metadata. Not enforced at runtime. See /trust for roadmap.',
+  };
+
+  // source
+  if (s.id && s.id.startsWith('mn-prompt-')) {
+    s.source = { type: 'curated', url: null, note: 'Hand-curated by AliceLabs — usually a system prompt, not a code package.' };
+  } else if (s.id && s.id.startsWith('mn-gen-')) {
+    s.source = { type: 'bulk-import', url: null, note: 'Imported from a community agent tool inventory. Sentinel-scanned, not individually curated.' };
+  } else {
+    s.source = { type: 'github', url: null, note: 'Sourced from a public GitHub MCP server repo (URL field to be populated).' };
+  }
+
+  s.usdc_disclaimer = USDC_DISCLAIMER;
+}
+
 // SPA data
 fs.writeFileSync(
   path.join(__dirname, 'src', 'data', 'all_skills.json'),

@@ -2,130 +2,223 @@
  * MarketNow — Delegated Mandates API (ACP / AP2 compliant)
  * =================================================================
  *
- * A "mandate" is a pre-approved spending allowance that a human principal
- * grants to an AI agent. The agent can spend autonomously up to the limit
- * without asking for per-purchase approval. Beyond the limit (or after
- * expiry), the agent must request explicit human approval.
+ * Persistence: GitHub repo as a database (file-per-mandate at
+ * `_data/mandates/mand_xxx.json` on master branch). No external
+ * services required beyond a GitHub PAT — uses the existing
+ * edgarfloresguerra2011-a11y/marketnow repo.
  *
- * This implements the dual model the user asked for:
- *   - Free / verified skills  -> instant download (zero friction)
- *   - Paid, within mandate    -> instant_purchase (agent acts alone)
- *   - Paid, no mandate        -> requires_human_approval (Stripe Checkout
- *                                with 3-D Secure, or wallet signature)
+ * Why GitHub?
+ *   - Free, no signup, no new credentials
+ *   - Durable across cold starts (unlike in-memory)
+ *   - Transparent — every mandate write is a git commit, visible in the
+ *     repo history. That's an audit log for free.
+ *   - Rate limit: 5000 req/hour for authenticated requests
  *
- * Persistence: Vercel KV (env: KV_REST_API_URL + KV_REST_API_TOKEN).
- * Fallback: in-memory store (resets on cold start) — never trusted for
- * real authorizations, only for local/dev. Production MUST have KV bound.
+ * Concurrency: writes use the contents API with the SHA of the previous
+ * version. If two writes race, the second gets a 409 — we retry up to
+ * 3 times by re-reading and re-applying the change.
  *
- * Endpoints:
- *   POST   /api/mandates            -> create a new mandate
- *   GET    /api/mandates?id=...     -> get a single mandate
- *   GET    /api/mandates?owner=...  -> list mandates by owner wallet
- *   GET    /api/mandates?agent=...  -> list mandates by agentId
- *   POST   /api/mandates?action=revoke&id=...   -> revoke a mandate
- *   POST   /api/mandates?action=spend&id=...&amount=...  -> record a spend
+ * Required env vars:
+ *   MANDATES_GITHUB_TOKEN  — GitHub PAT with repo scope
+ *   MANDATES_REPO          — default: edgarfloresguerra2011-a11y/marketnow
+ *   MANDATES_BRANCH        — default: master
+ *   MANDATES_PATH          — default: _data/mandates
  *
- * Mandate shape:
- * {
- *   "id": "mand_xxxxxxxx",
- *   "owner": "0x... (human wallet)",
- *   "agentId": "agent_xxx",
- *   "agentName": "Claude / Cursor / Cline / custom",
- *   "spendingLimitUsd": 25.00,
- *   "spentUsd": 0.00,
- *   "perPurchaseCapUsd": 5.00,
- *   "categories": ["*"] | ["ai", "data", "automation"],
- *   "expiresAt": "2026-12-31T23:59:59Z" | null,
- *   "createdAt": "2026-07-02T...",
- *   "status": "active" | "revoked" | "expired",
- *   "signature": "0x... (EIP-191 over the mandate hash, optional but recommended)"
- * }
+ * Fallback: in-memory (resets on cold start) if no token configured.
+ *
+ * Endpoints (unchanged from v1.0.0):
+ *   POST   /api/mandates            -> create
+ *   GET    /api/mandates?id=...     -> get one
+ *   GET    /api/mandates?owner=...  -> list by owner
+ *   GET    /api/mandates?agent=...  -> list by agent
+ *   POST   /api/mandates?action=revoke&id=...
+ *   POST   /api/mandates?action=spend {id, amount, txHash}
  */
 
-const MANDATE_TTL_DAYS = 90;       // mandates auto-expire after 90d unless renewed
-const MAX_PER_PURCHASE_CAP = 50;   // hard cap per single purchase
-const MAX_TOTAL_LIMIT = 500;       // hard cap on total spending limit
+const GITHUB_API = 'https://api.github.com';
 
-// In-memory fallback (dev only — see header comment).
+function repoConfig() {
+  return {
+    token: process.env.MANDATES_GITHUB_TOKEN,
+    repo: process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow',
+    branch: process.env.MANDATES_BRANCH || 'master',
+    path: process.env.MANDATES_PATH || '_data/mandates',
+  };
+}
+
+function hasGitHub() {
+  return !!process.env.MANDATES_GITHUB_TOKEN;
+}
+
+// In-memory fallback (dev / no-token configured).
 const _mem = new Map();
-
-async function kvGet(key) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-  if (!url || !token) {
-    return _mem.get(key) || null;
-  }
-  try {
-    const r = await fetch(`${url}/get/${encodeURIComponent(key)}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    if (!r.ok) return null;
-    const j = await r.json();
-    if (!j || j.result === null) return null;
-    return JSON.parse(j.result);
-  } catch {
-    return _mem.get(key) || null;
-  }
-}
-
-async function kvSet(key, value, ttlSeconds) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-  if (!url || !token) {
-    _mem.set(key, value);
-    return;
-  }
-  try {
-    const body = ttlSeconds
-      ? { value: JSON.stringify(value), expiration_ttl: ttlSeconds }
-      : { value: JSON.stringify(value) };
-    await fetch(`${url}/set/${encodeURIComponent(key)}`, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    });
-  } catch (e) {
-    console.error('KV set failed, falling back to memory', e);
-    _mem.set(key, value);
-  }
-}
-
-async function kvList(prefix) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-  if (!url || !token) {
-    // memory fallback: scan keys with the prefix
-    const out = [];
-    for (const [k] of _mem) {
-      if (k.startsWith(prefix)) out.push(k);
-    }
-    return out;
-  }
-  try {
-    const r = await fetch(`${url}/keys/${encodeURIComponent(prefix)}*?limit=200`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    if (!r.ok) return [];
-    const j = await r.json();
-    return j.result || [];
-  } catch {
-    return [];
-  }
-}
 
 function newId() {
   return 'mand_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
 }
-
 function nowIso() { return new Date().toISOString(); }
-
 function isExpired(m) {
   if (!m.expiresAt) return false;
   return new Date(m.expiresAt).getTime() < Date.now();
 }
+
+// ---------- GitHub storage layer ----------
+
+function fileUrl(cfg, id) {
+  return `${GITHUB_API}/repos/${cfg.repo}/contents/${encodeURIComponent(cfg.path)}/${id}.json?ref=${encodeURIComponent(cfg.branch)}`;
+}
+function rawUrl(cfg, id) {
+  return `https://raw.githubusercontent.com/${cfg.repo}/${encodeURIComponent(cfg.branch)}/${encodeURIComponent(cfg.path)}/${id}.json`;
+}
+
+async function ghGet(id) {
+  const cfg = repoConfig();
+  const r = await fetch(rawUrl(cfg, id), {
+    headers: { 'User-Agent': 'marketnow-mandates' },
+  });
+  if (r.status === 404) return null;
+  if (!r.ok) throw new Error(`ghGet ${r.status}: ${await r.text()}`);
+  return await r.json();
+}
+
+async function ghListIds() {
+  const cfg = repoConfig();
+  const r = await fetch(
+    `${GITHUB_API}/repos/${cfg.repo}/contents/${encodeURIComponent(cfg.path)}?ref=${encodeURIComponent(cfg.branch)}`,
+    { headers: { 'User-Agent': 'marketnow-mandates', Authorization: `Bearer ${cfg.token}` } }
+  );
+  if (r.status === 404) return []; // directory doesn't exist yet
+  if (!r.ok) throw new Error(`ghListIds ${r.status}: ${await r.text()}`);
+  const items = await r.json();
+  return items
+    .filter(i => i.type === 'file' && i.name.endsWith('.json'))
+    .map(i => i.name.replace(/\.json$/, ''));
+}
+
+async function ghWrite(id, mandate, isCreate) {
+  const cfg = repoConfig();
+  // Get current SHA (for update) or null (for create)
+  let sha = null;
+  if (!isCreate) {
+    try {
+      const r = await fetch(fileUrl(cfg, id), {
+        headers: { 'User-Agent': 'marketnow-mandates', Authorization: `Bearer ${cfg.token}` },
+      });
+      if (r.ok) {
+        const j = await r.json();
+        sha = j.sha;
+      }
+    } catch {
+      // ignore — treat as create
+    }
+  }
+  const body = {
+    message: isCreate
+      ? `mandate: create ${id} (limit $${mandate.spendingLimitUsd}, agent ${mandate.agentId})`
+      : `mandate: update ${id} (status=${mandate.status}, spent=$${mandate.spentUsd})`,
+    content: Buffer.from(JSON.stringify(mandate, null, 2)).toString('base64'),
+    branch: cfg.branch,
+  };
+  if (sha) body.sha = sha;
+  const r = await fetch(fileUrl(cfg, id), {
+    method: 'PUT',
+    headers: {
+      'User-Agent': 'marketnow-mandates',
+      Authorization: `Bearer ${cfg.token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  if (!r.ok) {
+    const text = await r.text();
+    const err = new Error(`ghWrite ${r.status}: ${text}`);
+    err.status = r.status;
+    err.body = text;
+    throw err;
+  }
+  return await r.json();
+}
+
+async function ghWriteWithRetry(id, mutator, maxRetries = 3) {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    let current = await ghGet(id);
+    const isCreate = current === null;
+    if (current === null && attempt > 0) {
+      // someone deleted it between our read and write — abort
+      throw new Error('mandate disappeared during write');
+    }
+    const next = mutator(current);
+    if (next === null) return null; // mutator decided no-op
+    try {
+      await ghWrite(id, next, isCreate);
+      return next;
+    } catch (e) {
+      if (e.status === 409 && attempt < maxRetries - 1) {
+        // SHA mismatch — someone else wrote first. Re-read, re-apply, retry.
+        await new Promise(r => setTimeout(r, 100 * (attempt + 1)));
+        continue;
+      }
+      throw e;
+    }
+  }
+  throw new Error('ghWriteWithRetry exhausted');
+}
+
+// ---------- Public storage API ----------
+
+async function getMandate(id) {
+  if (hasGitHub()) return await ghGet(id);
+  return _mem.get(id) || null;
+}
+
+async function listMandates(filter) {
+  if (hasGitHub()) {
+    const ids = await ghListIds();
+    const out = [];
+    for (const id of ids) {
+      const m = await ghGet(id);
+      if (!m) continue;
+      if (filter.owner && m.owner !== String(filter.owner).toLowerCase()) continue;
+      if (filter.agent && m.agentId !== filter.agent) continue;
+      out.push(m);
+    }
+    out.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+    return out;
+  }
+  // memory
+  let out = Array.from(_mem.values());
+  if (filter.owner) out = out.filter(m => m.owner === String(filter.owner).toLowerCase());
+  if (filter.agent) out = out.filter(m => m.agentId === filter.agent);
+  out.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+  return out;
+}
+
+async function createMandateRecord(mandate) {
+  if (hasGitHub()) {
+    await ghWrite(mandate.id, mandate, true);
+    return mandate;
+  }
+  _mem.set(mandate.id, mandate);
+  return mandate;
+}
+
+async function updateMandateRecord(id, mutator) {
+  if (hasGitHub()) {
+    return await ghWriteWithRetry(id, mutator);
+  }
+  const current = _mem.get(id);
+  if (!current) return null;
+  const next = mutator(current);
+  if (next === null) return null;
+  _mem.set(id, next);
+  return next;
+}
+
+// ---------- HTTP handler ----------
+
+const MANDATE_TTL_DAYS = 90;
+const MAX_PER_PURCHASE_CAP = 50;
+const MAX_TOTAL_LIMIT = 500;
 
 function jsonHeaders(res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -151,14 +244,8 @@ export default async function handler(req, res) {
     // ---------- CREATE ----------
     if (req.method === 'POST' && !action) {
       const {
-        owner,
-        agentId,
-        agentName,
-        spendingLimitUsd,
-        perPurchaseCapUsd,
-        categories,
-        expiresAt,
-        signature,
+        owner, agentId, agentName, spendingLimitUsd,
+        perPurchaseCapUsd, categories, expiresAt, signature,
       } = body;
 
       if (!owner || !agentId || !spendingLimitUsd) {
@@ -200,10 +287,11 @@ export default async function handler(req, res) {
         txCount: 0,
       };
 
-      await kvSet(`mandate:${id}`, mandate);
+      await createMandateRecord(mandate);
       return res.status(201).json({
         success: true,
         mandate,
+        persistence: hasGitHub() ? 'github' : 'memory',
         documentation: 'https://marketnow.site/mandates',
         note: 'Agent may now purchase autonomously up to the limit. Beyond it, /api/agent-purchase returns mode=requires_human_approval.',
       });
@@ -213,118 +301,115 @@ export default async function handler(req, res) {
     if (req.method === 'POST' && action === 'revoke') {
       const id = body.id || query.id;
       if (!id) return res.status(400).json({ error: 'id required' });
-      const m = await kvGet(`mandate:${id}`);
-      if (!m) return res.status(404).json({ error: 'Mandate not found' });
-      m.status = 'revoked';
-      m.revokedAt = nowIso();
-      await kvSet(`mandate:${id}`, m);
-      return res.status(200).json({ success: true, mandate: m });
+      const updated = await updateMandateRecord(id, (m) => {
+        if (!m) return null;
+        m.status = 'revoked';
+        m.revokedAt = nowIso();
+        return m;
+      });
+      if (!updated) return res.status(404).json({ error: 'Mandate not found' });
+      return res.status(200).json({ success: true, mandate: updated });
     }
 
-    // ---------- SPEND (called by agent-purchase after success) ----------
+    // ---------- SPEND ----------
     if (req.method === 'POST' && action === 'spend') {
       const id = body.id || query.id;
       const amount = Number(body.amount || query.amount);
       const txHash = body.txHash || query.txHash;
       if (!id || !amount) return res.status(400).json({ error: 'id and amount required' });
-      const m = await kvGet(`mandate:${id}`);
-      if (!m) return res.status(404).json({ error: 'Mandate not found' });
-      if (m.status !== 'active') return res.status(409).json({ error: `Mandate ${m.status}` });
-      if (isExpired(m)) {
-        m.status = 'expired';
-        await kvSet(`mandate:${id}`, m);
-        return res.status(409).json({ error: 'Mandate expired' });
+
+      let conflict = null;
+      const updated = await updateMandateRecord(id, (m) => {
+        if (!m) { conflict = { code: 'not_found' }; return null; }
+        if (m.status !== 'active') { conflict = { code: 'bad_status', status: m.status }; return null; }
+        if (isExpired(m)) {
+          m.status = 'expired';
+          conflict = { code: 'expired' };
+          return m;
+        }
+        if (m.spentUsd + amount > m.spendingLimitUsd) {
+          conflict = {
+            code: 'exhausted',
+            remaining: m.spendingLimitUsd - m.spentUsd,
+            requested: amount,
+          };
+          return null;
+        }
+        m.spentUsd = Number((m.spentUsd + amount).toFixed(2));
+        m.txCount = (m.txCount || 0) + 1;
+        m.lastSpendAt = nowIso();
+        m.lastSpendTx = txHash || null;
+        return m;
+      });
+
+      if (conflict) {
+        return res.status(409).json({ error: 'spend_rejected', ...conflict });
       }
-      if (m.spentUsd + amount > m.spendingLimitUsd) {
-        return res.status(409).json({
-          error: 'spend exceeds remaining mandate',
-          remaining: m.spendingLimitUsd - m.spentUsd,
-          requested: amount,
-        });
+      if (!updated) {
+        return res.status(404).json({ error: 'Mandate not found' });
       }
-      m.spentUsd = Number((m.spentUsd + amount).toFixed(2));
-      m.txCount = (m.txCount || 0) + 1;
-      m.lastSpendAt = nowIso();
-      m.lastSpendTx = txHash || null;
-      await kvSet(`mandate:${id}`, m);
       return res.status(200).json({
         success: true,
-        mandate: m,
-        remaining: m.spendingLimitUsd - m.spentUsd,
+        mandate: updated,
+        remaining: updated.spendingLimitUsd - updated.spentUsd,
       });
     }
 
     // ---------- GET (single) ----------
-    if (req.method === 'GET' && (query.id)) {
-      const m = await kvGet(`mandate:${query.id}`);
+    if (req.method === 'GET' && query.id) {
+      const m = await getMandate(query.id);
       if (!m) return res.status(404).json({ error: 'Not found' });
       if (m.status === 'active' && isExpired(m)) {
-        m.status = 'expired';
-        await kvSet(`mandate:${query.id}`, m);
+        const updated = await updateMandateRecord(query.id, (mm) => {
+          if (!mm) return null;
+          mm.status = 'expired';
+          return mm;
+        });
+        return res.status(200).json({ mandate: updated || m });
       }
       return res.status(200).json({ mandate: m });
     }
 
-    // ---------- LIST (by owner or agent) ----------
+    // ---------- LIST ----------
     if (req.method === 'GET' && (query.owner || query.agent)) {
-      const keys = await kvList('mandate:');
-      const out = [];
-      for (const k of keys) {
-        const m = await kvGet(k);
-        if (!m) continue;
-        if (query.owner && m.owner !== String(query.owner).toLowerCase()) continue;
-        if (query.agent && m.agentId !== query.agent) continue;
+      const out = await listMandates({
+        owner: query.owner,
+        agent: query.agent,
+      });
+      // mark expired in-place
+      for (const m of out) {
         if (m.status === 'active' && isExpired(m)) {
           m.status = 'expired';
-          await kvSet(k, m);
         }
-        out.push(m);
       }
-      out.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
-      return res.status(200).json({
-        count: out.length,
-        mandates: out,
-      });
+      return res.status(200).json({ count: out.length, mandates: out });
     }
 
-    // ---------- INDEX / HELP ----------
+    // ---------- INDEX ----------
     return res.status(200).json({
       service: 'MarketNow Mandates API',
-      version: '1.0.0',
+      version: '1.1.0',
       protocol: 'ACP/AP2 (delegated mandates)',
+      persistence: hasGitHub() ? 'github' : 'memory',
+      persistence_detail: hasGitHub()
+        ? 'Each mandate stored as a JSON file in the GitHub repo — durable, transparent, audit-log via commit history.'
+        : 'WARNING: In-memory only. Mandates will be lost on cold start. Set MANDATES_GITHUB_TOKEN env var to enable persistence.',
       description:
         'Pre-approved spending allowances that a human principal grants to an AI agent. Agents buy autonomously within the limit; beyond it, human approval is required.',
       endpoints: {
-        create: {
-          method: 'POST',
-          path: '/api/mandates',
-          body: {
-            owner: 'string (wallet address, lowercase)',
-            agentId: 'string',
-            agentName: 'string (optional)',
-            spendingLimitUsd: 'number (0.01 - 500)',
-            perPurchaseCapUsd: 'number (optional, defaults to spendingLimitUsd, max 50)',
-            categories: 'string[] (optional, defaults to ["*"])',
-            expiresAt: 'ISO8601 (optional, defaults to +90d)',
-            signature: 'EIP-191 signature over the mandate hash (optional but recommended)',
-          },
-        },
+        create: { method: 'POST', path: '/api/mandates' },
         get: { method: 'GET', path: '/api/mandates?id=mand_xxx' },
         listByOwner: { method: 'GET', path: '/api/mandates?owner=0x...' },
         listByAgent: { method: 'GET', path: '/api/mandates?agent=agent_xxx' },
         revoke: { method: 'POST', path: '/api/mandates?action=revoke&id=mand_xxx' },
-        spend: {
-          method: 'POST',
-          path: '/api/mandates?action=spend',
-          body: { id: 'mand_xxx', amount: 1.99, txHash: '0x...' },
-        },
+        spend: { method: 'POST', path: '/api/mandates?action=spend', body: { id: 'mand_xxx', amount: 1.99, txHash: '0x...' } },
       },
       limits: {
         maxTotalLimitUsd: MAX_TOTAL_LIMIT,
         maxPerPurchaseCapUsd: MAX_PER_PURCHASE_CAP,
         defaultTtlDays: MANDATE_TTL_DAYS,
       },
-      audit_log: 'Every spend is recorded with txHash and timestamp. Owners can list all mandates and review spend history.',
+      audit_log: 'Every create / spend / revoke is a git commit on master — visible in the repo history at _data/mandates/.',
       ui: 'https://marketnow.site/mandates',
     });
   } catch (err) {

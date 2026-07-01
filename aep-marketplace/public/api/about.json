@@ -1,0 +1,63 @@
+{
+  "service": "MarketNow",
+  "page": "About",
+  "version": "1.0.0",
+  "effective_date": "2026-07-02",
+  "url": "https://marketnow.site/about",
+  "company": {
+    "legal_name": "AliceLabs LLC",
+    "founder": "Edgar Flores",
+    "country": "Ecuador",
+    "founded": "2024",
+    "email": "eddyflores100@gmail.com",
+    "domain": "marketnow.site"
+  },
+  "public_accounts": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
+      "description": "Full source code, MIT licensed. Every commit visible."
+    },
+    {
+      "platform": "npm",
+      "url": "https://www.npmjs.com/package/marketnow-mcp",
+      "description": "Our MCP server package. Download counts are public."
+    },
+    {
+      "platform": "Smithery",
+      "url": "https://smithery.ai/servers/eddyflores100/marketnow",
+      "description": "Smithery registry listing with quality score (84/100)."
+    },
+    {
+      "platform": "Payment wallet (Base L2)",
+      "url": "0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee",
+      "description": "All USDC payments go here. Auditable on Basescan."
+    }
+  ],
+  "what_we_are_not": [
+    "We are not a funded startup. We have no Series A, no angel investors, no VC backing.",
+    "We are not a security firm. Our Sentinel audit is automated and self-declared — see /trust for the disclosure.",
+    "We do not have a sustained track record yet. We launched in 2026. Trust is earned over time, not claimed.",
+    "We do not have third-party press coverage yet. We are working on it.",
+    "We do not have a bug bounty program yet (private one running; public launch when 1,000 active mandates exist)."
+  ],
+  "what_we_are": [
+    "Open source — MIT licensed, full code on GitHub, every change is a public commit",
+    "Transparent — every mandate spend is a git commit visible at _data/mandates/",
+    "Honest — our /trust roadmap admits what is done, partial, and pending",
+    "Agent-native — our API and MCP server are designed for AI consumption, not just humans",
+    "Human-first defaults — mandates notify the principal by default; 'silent' mode requires explicit opt-in"
+  ],
+  "contact": {
+    "email": "eddyflores100@gmail.com",
+    "pgp": "Available on request. Security disclosures accepted via encrypted email; we will acknowledge within 48h.",
+    "purpose": "Disputes, security disclosures, or business inquiries"
+  },
+  "disclosure": {
+    "maintainer_identity": "AliceLabs LLC (Ecuador) — founder Edgar Flores",
+    "launch_date": "2026",
+    "track_record": "No third-party press coverage yet. No public bug bounty yet. See /trust for the full roadmap.",
+    "security_audit": "Sentinel L1.5 is self-declared (automated 6-point MCP security scan). Third-party audit pending.",
+    "trust_roadmap": "https://marketnow.site/trust"
+  }
+}

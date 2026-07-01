@@ -98,7 +98,7 @@ const POINTS = [
       'Stripe purchases (credit card) already have full chargeback rights via Stripe — the agent can route through Stripe when reversibility matters',
     ],
     stillPending: [
-      'On-chain escrow smart contract: USDC payment goes to a time-locked contract, released to seller after 24h cooling-off period unless disputed (targeting Q1 2026)',
+      'On-chain escrow smart contract: USDC payment goes to a time-locked contract, released to seller after 24h cooling-off period unless disputed (targeting Q1 2027)',
       'Automated dispute window for mandates (notify_and_veto mode) — currently the spend commits immediately, the alert is post-hoc',
       'Public dispute log so users can see how disputes were resolved',
     ],

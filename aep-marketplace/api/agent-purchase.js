@@ -61,7 +61,28 @@ async function fetchSkill(req, skillId) {
   const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
   if (!skillsRes.ok) throw new Error('Failed to fetch skills catalog');
   const skills = await skillsRes.json();
-  return skills.find(s => s.id === skillId || s.slug === skillId);
+  let skill = skills.find(s => s.id === skillId || s.slug === skillId);
+  // If not found or not free, check the free-skills.json curated list.
+  // Some skills are marked free in free-skills.json but priced in skills.json.
+  try {
+    const freeRes = await fetch(`${baseUrl}/api/free-skills.json`);
+    if (freeRes.ok) {
+      const freeData = await freeRes.json();
+      const freeList = freeData.skills || freeData;
+      const freeSkill = freeList.find(s => s.id === skillId || s.slug === skillId);
+      if (freeSkill) {
+        // Merge free flag onto the catalog entry (catalog has richer data: doc, capabilities, sentinel)
+        if (skill) {
+          skill = { ...skill, ...freeSkill, price: 0, free: true };
+        } else {
+          skill = freeSkill;
+        }
+      }
+    }
+  } catch (e) {
+    console.error('free-skills fetch failed (non-fatal):', e);
+  }
+  return skill;
 }
 
 async function getMandate(req, mandateId) {

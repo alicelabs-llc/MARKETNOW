@@ -1,11 +1,11 @@
 {
   "$schema": "https://marketnow.site/api/agent.schema.json",
   "name": "MarketNow",
-  "description": "Open marketplace for MCP-compatible agent skills. Every skill is a real, verified open-source MCP server with a transparent one-time price (minimum $0.99). Designed for autonomous agent consumption.",
+  "description": "Open marketplace for MCP-compatible agent skills. Every skill is a real, verified open-source MCP server with a transparent one-time price (minimum $0.99). Open source, MIT licensed, maintained by AliceLabs LLC.",
   "url": "https://marketnow.site",
   "api_base": "https://marketnow.site/api",
   "pricing": {
-    "model": "one-time per skill",
+    "model": "one-time per skill (USDC or credit card)",
     "currency": "USD",
     "min": 0.99,
     "max": 9.99,
@@ -201,5 +201,12 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-01T18:13:40.578Z"
+  "generated_at": "2026-07-01T18:13:40.578Z",
+  "trust": {
+    "license": "MIT",
+    "open_source": true,
+    "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
+    "maintainer": "AliceLabs LLC",
+    "security_audit": "Sentinel L1.5 (6-point MCP security audit)"
+  }
 }

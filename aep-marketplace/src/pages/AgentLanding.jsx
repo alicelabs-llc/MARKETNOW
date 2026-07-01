@@ -23,11 +23,11 @@ export default function AgentLanding() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
 
-          {/* Badge */}
+          {/* Badge — professional, not manipulative */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
             <span className="text-[#00F299] text-xs font-mono tracking-wider">
-              🤖 AGENT-NATIVE · USDC PAYMENTS · ZERO HUMAN FRICTION
+              MCP v1.0 · OPEN SOURCE · SENTINEL VERIFIED
             </span>
           </div>
 
@@ -40,13 +40,13 @@ export default function AgentLanding() {
             <br />Marketplace
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle — honest, not manipulative */}
           <p className="text-zinc-400 text-lg md:text-xl mb-2 max-w-2xl mx-auto leading-relaxed">
-            {stats.total.toLocaleString()}+ verified MCP skills. Pay with USDC on Base.
-            No credit cards. No humans. Just agents and skills.
+            {stats.total.toLocaleString()}+ verified MCP skills with Sentinel security reports,
+            system prompts, and 1-click install.
           </p>
           <p className="text-zinc-600 text-sm mb-10 max-w-xl mx-auto">
-            Every skill includes Sentinel security report, system prompt, and 1-click install.
+            Open source · MIT License · Maintained by AliceLabs LLC
           </p>
 
           {/* CTAs */}
@@ -54,37 +54,28 @@ export default function AgentLanding() {
             <Link to="/registry" className="px-8 py-4 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] transition-all shadow-lg shadow-[#00F299]/20">
               BROWSE {stats.total.toLocaleString()} SKILLS →
             </Link>
-            <a href="https://www.npmjs.com/package/marketnow-mcp" target="_blank" rel="noopener" className="px-8 py-4 border border-[#00F299]/30 bg-[#00F299]/10 text-[#00F299] font-bold rounded-xl hover:bg-[#00F299]/20 transition-all">
-              📦 INSTALL MCP SERVER
-            </a>
-            <Link to="/submit" className="px-8 py-4 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 transition-all">
-              + SELL SKILLS
+            <Link to="/submit" className="px-8 py-4 border border-[#00F299]/30 bg-[#00F299]/10 text-[#00F299] font-bold rounded-xl hover:bg-[#00F299]/20 transition-all">
+              + PUBLISH YOUR SKILLS
             </Link>
+            <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow" target="_blank" rel="noopener" className="px-8 py-4 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 transition-all">
+              📦 VIEW SOURCE
+            </a>
           </div>
 
-          {/* Agent purchase flow */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="premium-card p-6 mb-12 max-w-3xl mx-auto">
-            <h3 className="text-[#00F299] text-xs font-mono tracking-wider mb-4 uppercase">🤖 Autonomous Purchase Flow</h3>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-2 text-left">
-              {[
-                { n: '1', t: 'Search', c: 'GET /api/search', color: 'text-[#00F299]' },
-                { n: '2', t: 'Pay USDC', c: 'Send to 0x39Dd...f5Ee', color: 'text-[#00d1ff]' },
-                { n: '3', t: 'Verify', c: 'POST /api/agent-purchase', color: 'text-[#00F299]' },
-                { n: '4', t: 'Receive', c: 'License + Prompt', color: 'text-[#00d1ff]' },
-                { n: '5', t: 'Install', c: 'npx -y @marketnow/...', color: 'text-[#00F299]' },
-              ].map((s, i) => (
-                <div key={i} className="p-3 rounded-xl bg-black/40 border border-white/5">
-                  <div className={`text-xs font-mono ${s.color}`}>STEP {s.n}</div>
-                  <div className="text-white text-sm font-semibold mt-1">{s.t}</div>
-                  <div className="text-zinc-500 text-[10px] font-mono mt-1">{s.c}</div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 p-3 rounded-lg bg-[#00F299]/5 border border-[#00F299]/10 text-left">
-              <code className="text-[#00F299] text-xs font-mono break-all">
-                curl https://marketnow.site/api/agent-wallet | jq .payment
-              </code>
-            </div>
+          {/* Trust badges */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-12">
+            {[
+              { icon: '🔓', label: 'OPEN SOURCE', sub: 'MIT License · GitHub' },
+              { icon: '🛡️', label: 'SENTINEL L1.5', sub: '6-point security audit' },
+              { icon: '✅', label: 'VERIFIED SKILLS', sub: `${stats.total.toLocaleString()} scanned` },
+              { icon: '🌐', label: '5 LANGUAGES', sub: 'EN · ES · ZH · PT · FR' },
+            ].map((b) => (
+              <div key={b.label} className="premium-card p-4 text-center">
+                <div className="text-2xl mb-1">{b.icon}</div>
+                <div className="text-white text-xs font-bold">{b.label}</div>
+                <div className="text-zinc-500 text-[10px]">{b.sub}</div>
+              </div>
+            ))}
           </motion.div>
 
           {/* Stats */}
@@ -93,7 +84,7 @@ export default function AgentLanding() {
               { value: stats.total.toLocaleString()+'+', label: 'VERIFIED SKILLS' },
               { value: stats.free.toString(), label: 'FREE SKILLS' },
               { value: stats.sellers.toString(), label: 'ACTIVE SELLERS' },
-              { value: '5', label: 'LANGUAGES' },
+              { value: '58', label: 'CATEGORIES' },
             ].map((stat) => (
               <motion.div key={stat.label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white font-mono">{stat.value}</div>
@@ -102,33 +93,18 @@ export default function AgentLanding() {
             ))}
           </div>
 
-          {/* Value props */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
-            {[
-              { icon: '🛡️', title: 'Sentinel Security', desc: '6-point MCP security audit. Auth, injection, validation, CORS, OAuth, rate limiting. Know what passed and what failed.' },
-              { icon: '💳', title: 'USDC Payments', desc: 'Pay with USDC on Base. No credit cards. No humans. Agents buy autonomously. License key returned instantly.' },
-              { icon: '⚡', title: '1-Click Install', desc: 'npx -y @marketnow/install <slug>. System prompt included. Setup requirements listed. Ready to use.' },
-            ].map((f, i) => (
-              <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.1 }} className="premium-card p-6">
-                <div className="text-4xl mb-3">{f.icon}</div>
-                <h3 className="text-white font-bold text-sm mb-2">{f.title}</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">{f.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* API endpoints */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="premium-card p-6 max-w-3xl mx-auto mb-8">
-            <h3 className="text-[#00F299] text-xs font-mono tracking-wider mb-4 uppercase">📡 Agent API (no auth required)</h3>
+          {/* API for agents — presented as documentation, not instructions */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="premium-card p-6 max-w-3xl mx-auto mb-8">
+            <h3 className="text-[#00F299] text-xs font-mono tracking-wider mb-4 uppercase">📡 Public API Documentation</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-left">
               {[
                 { m: 'GET', p: '/api/search?q=', d: 'Search skills' },
                 { m: 'GET', p: '/api/free-skills.json', d: '43 free skills' },
-                { m: 'GET', p: '/api/agent-wallet', d: 'Payment info' },
-                { m: 'POST', p: '/api/agent-purchase', d: 'Buy with USDC' },
-                { m: 'POST', p: '/api/audit-skill', d: 'Security audit' },
-                { m: 'GET', p: '/api/skills.json', d: 'All 8,560 skills' },
+                { m: 'GET', p: '/api/skills.json', d: 'Full catalog' },
                 { m: 'GET', p: '/api/categories.json', d: '58 categories' },
+                { m: 'GET', p: '/api/agent.json', d: 'Agent documentation' },
+                { m: 'GET', p: '/api/openapi.yaml', d: 'OpenAPI 3.1 spec' },
+                { m: 'POST', p: '/api/audit-skill', d: 'Security audit' },
                 { m: 'GET', p: '/api/bundles.json', d: 'Skill bundles' },
               ].map((e, i) => (
                 <div key={i} className="flex items-center gap-2 p-2 rounded-lg bg-black/40">
@@ -138,18 +114,62 @@ export default function AgentLanding() {
                 </div>
               ))}
             </div>
+            <div className="mt-4 p-3 rounded-lg bg-black/40 text-left">
+              <div className="text-zinc-500 text-[10px] mb-1">MCP Server (Claude Desktop, Cursor, Cline):</div>
+              <code className="text-[#00F299] text-xs font-mono">npx -y marketnow-mcp</code>
+              <span className="text-zinc-600 text-[10px] ml-2">·</span>
+              <a href="https://www.npmjs.com/package/marketnow-mcp" target="_blank" rel="noopener" className="text-zinc-500 text-[10px] ml-2 hover:text-[#00F299]">npm</a>
+              <span className="text-zinc-600 text-[10px]">·</span>
+              <a href="https://smithery.ai/servers/eddyflores100/marketnow" target="_blank" rel="noopener" className="text-zinc-500 text-[10px] hover:text-[#00F299]">Smithery</a>
+            </div>
           </motion.div>
 
-          {/* Footer links */}
+          {/* Payment options — both, transparent */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="premium-card p-6 max-w-3xl mx-auto mb-8">
+            <h3 className="text-white text-xs font-mono tracking-wider mb-4 uppercase">💳 Payment Options</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl bg-[#00F299]/5 border border-[#00F299]/10 text-left">
+                <div className="text-[#00F299] text-sm font-bold mb-1">💳 Credit Card (Stripe)</div>
+                <div className="text-zinc-400 text-xs">Standard checkout. Human approves each purchase. Secure, PCI-compliant.</div>
+              </div>
+              <div className="p-4 rounded-xl bg-[#00d1ff]/5 border border-[#00d1ff]/10 text-left">
+                <div className="text-[#00d1ff] text-sm font-bold mb-1">₿ USDC (Base L2)</div>
+                <div className="text-zinc-400 text-xs">On-chain payment. For agents with delegated spending limits. Verified on Base.</div>
+              </div>
+            </div>
+            <p className="text-zinc-600 text-[10px] mt-3 text-center">
+              Free skills require no payment. All skills include Sentinel security report.
+            </p>
+          </motion.div>
+
+          {/* Value props */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+            {[
+              { icon: '🛡️', title: 'Sentinel Security', desc: '6-point MCP security audit on every skill. Auth, prompt injection, input validation, CORS, OAuth, rate limiting.' },
+              { icon: '🧠', title: 'System Prompts', desc: 'Every skill includes a ready-to-use system prompt with rules, input/output format, and usage examples.' },
+              { icon: '⚡', title: '1-Click Install', desc: 'npx -y @marketnow/install <slug>. Setup requirements listed. Know what API keys you need before buying.' },
+            ].map((f, i) => (
+              <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.1 }} className="premium-card p-6">
+                <div className="text-4xl mb-3">{f.icon}</div>
+                <h3 className="text-white font-bold text-sm mb-2">{f.title}</h3>
+                <p className="text-zinc-400 text-xs leading-relaxed">{f.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Footer */}
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link to="/handshake" className="text-[#00F299] text-sm hover:underline">API Docs →</Link>
             <span className="text-zinc-700">·</span>
             <Link to="/pricing" className="text-zinc-400 text-sm hover:underline">Pricing →</Link>
             <span className="text-zinc-700">·</span>
-            <Link to="/submit" className="text-zinc-400 text-sm hover:underline">Sell Skills →</Link>
+            <Link to="/submit" className="text-zinc-400 text-sm hover:underline">Publish →</Link>
             <span className="text-zinc-700">·</span>
             <Link to="/security" className="text-zinc-400 text-sm hover:underline">Security →</Link>
+            <span className="text-zinc-700">·</span>
+            <Link to="/policies" className="text-zinc-400 text-sm hover:underline">Terms →</Link>
           </div>
+          <p className="text-zinc-700 text-[10px] mt-4">© 2026 AliceLabs LLC · MIT License · Built for agents and humans</p>
         </motion.div>
       </div>
     </div>

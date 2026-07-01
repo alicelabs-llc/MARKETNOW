@@ -1,7 +1,6 @@
 {
   "status": "alive",
-  "message": "MarketNow — Agent Skill Marketplace. 8,560 skills. Buy with USDC on Base. No human needed.",
-  "timestamp": "2026-07-01T00:00:00Z",
+  "message": "MarketNow — Agent Skill Marketplace. 8,560 verified skills with Sentinel security reports.",
   "stats": {
     "total_skills": 8560,
     "categories": 58,
@@ -11,27 +10,22 @@
     "avg_price": 3.80,
     "min_price": 0.99,
     "max_price": 9.99,
-    "payment_methods": ["USDC (Base)", "Stripe (credit card)"],
-    "primary_payment": "USDC on Base — agents pay autonomously"
+    "payment_methods": ["Stripe (credit card)", "USDC (Base L2)"],
+    "license": "MIT",
+    "maintainer": "AliceLabs LLC"
   },
-  "agent_endpoints": {
-    "discover": "GET /api/agent.json",
-    "search": "GET /api/search?q=your_query",
+  "endpoints": {
+    "search": "GET /api/search?q=",
     "free_skills": "GET /api/free-skills.json",
-    "wallet_info": "GET /api/agent-wallet",
-    "purchase": "POST /api/agent-purchase",
-    "audit": "POST /api/audit-skill",
-    "verify": "GET /api/verify-purchase",
     "all_skills": "GET /api/skills.json",
     "categories": "GET /api/categories.json",
-    "bundles": "GET /api/bundles.json"
-  },
-  "purchase_flow": "1. Search → 2. Send USDC to 0x39Dddf...f5Ee on Base → 3. POST /api/agent-purchase → 4. Get license + system prompt → 5. Install",
-  "payment": {
-    "method": "USDC",
-    "network": "Base (chainId 8453)",
-    "contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-    "wallet": "0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee",
-    "decimals": 6
+    "manifest": "GET /api/manifest.json",
+    "agent_docs": "GET /api/agent.json",
+    "openapi": "GET /api/openapi.yaml",
+    "bundles": "GET /api/bundles.json",
+    "audit": "POST /api/audit-skill",
+    "wallet": "GET /api/agent-wallet",
+    "purchase_usdc": "POST /api/agent-purchase",
+    "checkout_stripe": "POST /api/create-checkout-session"
   }
 }

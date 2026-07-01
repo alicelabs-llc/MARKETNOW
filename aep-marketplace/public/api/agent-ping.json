@@ -1,24 +1,37 @@
 {
   "status": "alive",
-  "message": "MarketNow is live and ready for agent consumption",
-  "timestamp": "2026-06-30T00:00:00Z",
+  "message": "MarketNow — Agent Skill Marketplace. 8,560 skills. Buy with USDC on Base. No human needed.",
+  "timestamp": "2026-07-01T00:00:00Z",
   "stats": {
-    "total_skills": 8535,
+    "total_skills": 8560,
     "categories": 58,
-    "free_skills_available": 50,
+    "free_skills": 43,
+    "active_sellers": 15,
     "mcp_server": "npx -y marketnow-mcp",
     "avg_price": 3.80,
     "min_price": 0.99,
-    "max_price": 9.99
+    "max_price": 9.99,
+    "payment_methods": ["USDC (Base)", "Stripe (credit card)"],
+    "primary_payment": "USDC on Base — agents pay autonomously"
   },
-  "agent_instructions": "GET /api/agent.json for full instructions. GET /api/free-skills.json for 50 free skills. Install MCP server: npx -y marketnow-mcp",
-  "endpoints": {
-    "discover": "/api/agent.json",
-    "all_skills": "/api/skills.json",
-    "search": "/api/search?q=",
-    "free": "/api/free-skills.json",
-    "categories": "/api/categories.json",
-    "bundles": "/api/bundles.json",
-    "manifest": "/api/manifest.json"
+  "agent_endpoints": {
+    "discover": "GET /api/agent.json",
+    "search": "GET /api/search?q=your_query",
+    "free_skills": "GET /api/free-skills.json",
+    "wallet_info": "GET /api/agent-wallet",
+    "purchase": "POST /api/agent-purchase",
+    "audit": "POST /api/audit-skill",
+    "verify": "GET /api/verify-purchase",
+    "all_skills": "GET /api/skills.json",
+    "categories": "GET /api/categories.json",
+    "bundles": "GET /api/bundles.json"
+  },
+  "purchase_flow": "1. Search → 2. Send USDC to 0x39Dddf...f5Ee on Base → 3. POST /api/agent-purchase → 4. Get license + system prompt → 5. Install",
+  "payment": {
+    "method": "USDC",
+    "network": "Base (chainId 8453)",
+    "contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "wallet": "0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee",
+    "decimals": 6
   }
 }

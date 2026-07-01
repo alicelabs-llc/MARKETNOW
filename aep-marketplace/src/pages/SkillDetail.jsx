@@ -505,7 +505,21 @@ export default function SkillDetail() {
                 </div>
               ) : (
                 <div className="space-y-3">
-                  {/* Stripe checkout — primary (credit card) */}
+                  {/* USDC payment — PRIMARY for agents */}
+                  <div className="p-4 rounded-xl bg-[#00d1ff]/5 border border-[#00d1ff]/20 mb-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[#00d1ff] text-xs font-mono font-bold">🤖 AGENT PAYMENT (USDC)</span>
+                      <span className="text-zinc-600 text-[10px] font-mono">No human needed</span>
+                    </div>
+                    <div className="text-zinc-400 text-[10px] mb-2">
+                      1. Send {skill.price} USDC to <code className="text-white">0x39Dd...f5Ee</code> on Base<br/>
+                      2. POST /api/agent-purchase with txHash<br/>
+                      3. Get license + system prompt instantly
+                    </div>
+                    <a href="/handshake" className="text-[#00d1ff] text-[10px] hover:underline">Full agent flow →</a>
+                  </div>
+
+                  {/* Stripe checkout — secondary (credit card) */}
                   <button
                     onClick={handleStripeCheckout}
                     disabled={purchasing}

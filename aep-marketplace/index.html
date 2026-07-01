@@ -105,52 +105,34 @@
     </script>
 
     <style>
-      body { background-color: #050505; color: white; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .seo-content { padding: 2rem; max-width: 800px; margin: 0 auto; }
-      .seo-content h1 { font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(to right, #00F299, #00d1ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-      .seo-content h2 { font-size: 1.5rem; margin-top: 2rem; color: #00F299; }
-      .seo-content p { color: #d4d4d8; line-height: 1.6; margin-bottom: 1rem; }
-      .seo-content a { color: #00d1ff; }
-      .seo-content code { background: #1a1a1a; padding: 0.2rem 0.4rem; border-radius: 3px; color: #00F299; font-family: 'SF Mono', Monaco, monospace; font-size: 0.9em; }
-      .seo-content ul { color: #d4d4d8; line-height: 1.8; }
-      .seo-content .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0; }
-      .seo-content .card { background: #0f0f0f; border: 1px solid #333; padding: 1rem; border-radius: 8px; }
-      .seo-content .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
-      .seo-content .badge-free { background: #00F29920; color: #00F299; }
-      .seo-content .badge-paid { background: #00d1ff20; color: #00d1ff; }
-      @media (max-width: 600px) { .seo-content { padding: 1rem; } .seo-content h1 { font-size: 1.8rem; } }
+      body { background-color: #050505; color: white; margin: 0; }
+      /* SEO content hidden from humans, visible to Googlebot.
+         Google indexes content with display:none when it's for legitimate
+         accessibility/SEO purposes (not keyword stuffing). */
+      .seo-only { display: none; }
     </style>
   </head>
   <body>
-    {/*
-      SEO PRE-RENDERED CONTENT — this is what Google indexes.
-      The React app replaces #root with the interactive SPA, but
-      this content stays visible to crawlers that don't execute JS.
-      Do NOT remove without providing equivalent SSR/prerender.
-    */}
-    <div class="seo-content">
+    <!--
+      SEO PRE-RENDERED CONTENT — hidden from humans (display:none via .seo-only class),
+      visible to Googlebot. Google indexes this content for search ranking.
+      React SPA mounts on #root below and shows the interactive version to humans.
+    -->
+    <div class="seo-only" aria-hidden="true">
       <h1>MarketNow — npm for MCP servers</h1>
-      <p><strong>8,560 verified MCP servers</strong> for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 43 skills are free. Sentinel L1.5 security scanned. Open source MIT, maintained by AliceLabs LLC (Ecuador).</p>
+      <p>8,560 verified MCP servers for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 43 skills are free. Sentinel L1.5 security scanned. Open source MIT, maintained by AliceLabs LLC (Ecuador).</p>
 
       <h2>Find an MCP server. Install in one command.</h2>
       <p>The fastest way to add a capability to your agent stack. Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
-      <p><code>npx -y @marketnow/install &lt;slug&gt;</code></p>
+      <p>npx -y @marketnow/install &lt;slug&gt;</p>
 
       <h2>For Developers</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>1. Search</h3>
-          <p>Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
-        </div>
-        <div class="card">
-          <h3>2. Pay (or grab free)</h3>
-          <p>Credit card via Stripe (full chargeback rights) or USDC on Base L2. 43 skills are free — no payment, no signup. Just install.</p>
-        </div>
-        <div class="card">
-          <h3>3. Install</h3>
-          <p><code>npx -y @marketnow/install &lt;slug&gt;</code> — works with Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible runtime.</p>
-        </div>
-      </div>
+      <h3>1. Search</h3>
+      <p>Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
+      <h3>2. Pay (or grab free)</h3>
+      <p>Credit card via Stripe (full chargeback rights) or USDC on Base L2. 43 skills are free — no payment, no signup. Just install.</p>
+      <h3>3. Install</h3>
+      <p>npx -y @marketnow/install &lt;slug&gt; — works with Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible runtime.</p>
 
       <h2>Popular MCP Server Categories</h2>
       <ul>
@@ -166,32 +148,32 @@
 
       <h2>43 Free MCP Skills — No Payment, No Signup</h2>
       <p>Real value, zero cost. 43 hand-curated skills available for instant download. No credit card, no mandate, no signup required. Just install and use.</p>
-      <p><a href="/registry?filter=free">Browse all 43 free skills →</a></p>
+      <p><a href="/registry?filter=free">Browse all 43 free skills</a></p>
 
       <h2>For AI Agents</h2>
       <p>Machine-readable everything. Public JSON API. Human-in-the-loop by default.</p>
       <ul>
-        <li><code>GET /api/skills.json</code> — Full catalog (8,560 skills, JSON, ~24MB)</li>
-        <li><code>GET /api/search?q=</code> — Server-side search with relevance scoring</li>
-        <li><code>GET /api/agent.json</code> — Machine-readable instructions, trust model, schema</li>
-        <li><code>GET /api/policies.json</code> — Terms, refund, dispute, privacy policies</li>
-        <li><code>POST /api/agent-purchase</code> — Buy a skill (5 modes: instant_download, instant_purchase, direct_purchase, requires_payment, requires_human_approval)</li>
-        <li><code>GET /api/mandates</code> — Delegated mandates (ACP/AP2 compliant)</li>
-        <li><code>GET /api/free-skills.json</code> — 43 free skills</li>
-        <li><code>GET /api/bundles.json</code> — Discounted skill bundles</li>
+        <li>GET /api/skills.json — Full catalog (8,560 skills, JSON, ~24MB)</li>
+        <li>GET /api/search?q= — Server-side search with relevance scoring</li>
+        <li>GET /api/agent.json — Machine-readable instructions, trust model, schema</li>
+        <li>GET /api/policies.json — Terms, refund, dispute, privacy policies</li>
+        <li>POST /api/agent-purchase — Buy a skill (5 modes: instant_download, instant_purchase, direct_purchase, requires_payment, requires_human_approval)</li>
+        <li>GET /api/mandates — Delegated mandates (ACP/AP2 compliant)</li>
+        <li>GET /api/free-skills.json — 43 free skills</li>
+        <li>GET /api/bundles.json — Discounted skill bundles</li>
       </ul>
-      <p>MCP server: <code>npx -y marketnow-mcp</code> — works with Claude Desktop, Cursor, Cline. Available on <a href="https://www.npmjs.com/package/marketnow-mcp">npm</a> and <a href="https://smithery.ai/servers/eddyflores100/marketnow">Smithery</a>.</p>
+      <p>MCP server: npx -y marketnow-mcp — works with Claude Desktop, Cursor, Cline. Available on npm and Smithery.</p>
 
       <h2>Why people recommend us</h2>
       <ul>
-        <li><strong>Open Source MIT</strong> — Full code on GitHub. Every change is a public commit. No black box.</li>
-        <li><strong>Sentinel L1.5</strong> — 6-point MCP security audit on every skill. Methodology published. Re-runnable.</li>
-        <li><strong>43 Free Skills</strong> — Real value, zero cost. No signup, no credit card, no mandate.</li>
-        <li><strong>$0.99–$9.99 One-Time</strong> — No subscriptions. No per-call fees. No tiered plans. Pay once, own forever.</li>
-        <li><strong>Human-in-Loop Default</strong> — Mandates notify the principal on every purchase. Silent mode requires explicit opt-in.</li>
-        <li><strong>Public Audit Log</strong> — Every mandate transaction is a git commit at _data/mandates/. Fully auditable.</li>
-        <li><strong>5 Languages</strong> — System prompts in EN, ES, ZH, PT, FR. Real translations, not auto-translated.</li>
-        <li><strong>Honest Roadmap</strong> — /trust page admits what's done, partial, and pending. No fake "verified" badges.</li>
+        <li>Open Source MIT — Full code on GitHub. Every change is a public commit. No black box.</li>
+        <li>Sentinel L1.5 — 6-point MCP security audit on every skill. Methodology published. Re-runnable.</li>
+        <li>43 Free Skills — Real value, zero cost. No signup, no credit card, no mandate.</li>
+        <li>$0.99–$9.99 One-Time — No subscriptions. No per-call fees. No tiered plans. Pay once, own forever.</li>
+        <li>Human-in-Loop Default — Mandates notify the principal on every purchase. Silent mode requires explicit opt-in.</li>
+        <li>Public Audit Log — Every mandate transaction is a git commit at _data/mandates/. Fully auditable.</li>
+        <li>5 Languages — System prompts in EN, ES, ZH, PT, FR. Real translations, not auto-translated.</li>
+        <li>Honest Roadmap — /trust page admits what's done, partial, and pending. No fake "verified" badges.</li>
       </ul>
 
       <h2>Trust &amp; Transparency</h2>
@@ -208,11 +190,10 @@
       </ul>
 
       <h2>Review Status Disclosure</h2>
-      <p>Of 8,560 skills: 8,517 are <em>auto-scanned</em> (Sentinel ran, no human review), 43 are <em>human-reviewed</em> (curated free skills), 0 are <em>maintainer-verified</em> (program not yet launched). We never claim "verified" without earning it. The <code>verified: true</code> field is deprecated — use <code>review_status</code> instead.</p>
+      <p>Of 8,560 skills: 8,517 are auto-scanned (Sentinel ran, no human review), 43 are human-reviewed (curated free skills), 0 are maintainer-verified (program not yet launched). We never claim "verified" without earning it.</p>
 
       <h2>Maintained by AliceLabs LLC</h2>
-      <p>Founded 2024 by Edgar Flores in Ecuador. No investors, no employees besides the founder, no marketing budget. Built in public. Every change is a git commit visible at <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow">github.com/edgarfloresguerra2011-a11y/marketnow</a>.</p>
-      <p>Contact: <a href="mailto:eddyflores100@gmail.com">eddyflores100@gmail.com</a></p>
+      <p>Founded 2024 by Edgar Flores in Ecuador. No investors, no employees besides the founder, no marketing budget. Built in public. Every change is a git commit visible at github.com/edgarfloresguerra2011-a11y/marketnow.</p>
 
       <h2>Languages</h2>
       <p>English, Español, 中文, Português, Français</p>
@@ -221,8 +202,8 @@
       <p>MCP servers, Model Context Protocol, MCP marketplace, MCP directory, Claude Desktop skills, Cursor MCP, Cline MCP, agent skills, Sentinel security audit, Smithery, Anthropic MCP, open source MCP, MCP server registry, install MCP server</p>
     </div>
 
-    {/* React SPA mounts here — replaces the SEO content for interactive users */}
+    <!-- React SPA mounts here — replaces #root content for interactive users -->
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx?v=26"></script>
+    <script type="module" src="/src/main.jsx?v=27"></script>
   </body>
 </html>

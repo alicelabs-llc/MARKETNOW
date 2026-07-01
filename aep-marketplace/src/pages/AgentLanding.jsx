@@ -23,11 +23,11 @@ export default function AgentLanding() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
 
-          {/* Badge — professional, not manipulative */}
+          {/* Badge — honest, not manipulative */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
             <span className="text-[#00F299] text-xs font-mono tracking-wider">
-              MCP v1.0 · OPEN SOURCE · SENTINEL VERIFIED
+              HUMAN-IN-LOOP BY DEFAULT · OPEN SOURCE · SENTINEL L1.5
             </span>
           </div>
 
@@ -40,13 +40,13 @@ export default function AgentLanding() {
             <br />Marketplace
           </h1>
 
-          {/* Subtitle — honest, not manipulative */}
+          {/* Subtitle — honest, human-first */}
           <p className="text-zinc-400 text-lg md:text-xl mb-2 max-w-2xl mx-auto leading-relaxed">
             {stats.total.toLocaleString()}+ verified MCP skills with Sentinel security reports,
             system prompts, and 1-click install.
           </p>
           <p className="text-zinc-600 text-sm mb-10 max-w-xl mx-auto">
-            Open source · MIT License · Maintained by AliceLabs LLC
+            Humans set the bounds. Agents act within them. Open source · MIT License · Maintained by AliceLabs LLC
           </p>
 
           {/* CTAs */}
@@ -155,9 +155,9 @@ export default function AgentLanding() {
                 <div className="text-zinc-400 text-xs">Instant download. No payment, no mandate. Zero friction.</div>
               </div>
               <div className="p-4 rounded-xl bg-[#00d1ff]/5 border border-[#00d1ff]/10 text-left">
-                <div className="text-[#00d1ff] text-[10px] font-mono mb-1">MODE 2</div>
-                <div className="text-white text-sm font-bold mb-1">Within Mandate</div>
-                <div className="text-zinc-400 text-xs">Agent buys autonomously. Human set the limit once. Every spend is logged on-chain + in our mandate ledger.</div>
+                <div className="text-[#00d1ff] text-[10px] font-mono mb-1">MODE 2 · DEFAULT</div>
+                <div className="text-white text-sm font-bold mb-1">Within Mandate (notify)</div>
+                <div className="text-zinc-400 text-xs">Agent buys autonomously. Human is notified on every purchase (email/webhook). "Silent" mode requires explicit opt-in.</div>
               </div>
               <div className="p-4 rounded-xl bg-yellow-500/5 border border-yellow-500/10 text-left">
                 <div className="text-yellow-400 text-[10px] font-mono mb-1">MODE 3</div>
@@ -166,8 +166,17 @@ export default function AgentLanding() {
               </div>
             </div>
             <p className="text-zinc-600 text-[10px] mt-4 text-center">
-              Humans stay in control of spending. Agents stay autonomous within bounds. No surprises.
+              Humans stay in control of spending. Agents stay autonomous within bounds. Every purchase is logged in a public git commit at _data/mandates/.
             </p>
+          </motion.div>
+
+          {/* Trust roadmap link */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="text-center mb-12">
+            <Link to="/trust" className="inline-flex items-center gap-2 px-5 py-3 border border-white/10 rounded-xl hover:bg-white/5 text-zinc-400 text-sm">
+              <span>📋</span>
+              <span>Read our public trust roadmap — what we've done and what's still pending</span>
+              <span className="text-[#00F299]">→</span>
+            </Link>
           </motion.div>
 
           {/* Value props */}

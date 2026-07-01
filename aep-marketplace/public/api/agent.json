@@ -6,7 +6,13 @@
   "api_base": "https://marketnow.site/api",
   "trust_model": {
     "protocol": "ACP / AP2 (delegated mandates)",
-    "summary": "Three purchase modes designed for both human oversight and agent autonomy.",
+    "summary": "Three purchase modes designed for both human oversight and agent autonomy. Human-in-the-loop is the default; silent autonomous spending is opt-in only.",
+    "default_notification_mode": "notify",
+    "notification_modes": {
+      "notify": "DEFAULT — agent buys autonomously, principal gets email/webhook alert on every purchase",
+      "notify_and_veto": "agent buys, principal gets alert + 5-minute veto window (veto flow on roadmap)",
+      "silent": "fully autonomous, no alerts. Requires explicit confirmSilentAutonomy=true field — opt-in only"
+    },
     "modes": [
       {
         "mode": "instant_download",
@@ -17,10 +23,10 @@
       },
       {
         "mode": "instant_purchase",
-        "applies_to": "Paid skills where a valid mandate exists and price <= perPurchaseCapUsd and price <= (spendingLimit - spent)",
+        "applies_to": "Paid skills where a valid mandate exists and price <= perPurchaseCapUsd and price <= (spendingLimit - spent). Default notificationMode is 'notify' — the principal is alerted on every purchase.",
         "agent_action": "POST /api/agent-purchase with {skillId, mandateId, txHash, walletAddress}",
-        "human_action": "None required — human pre-approved by creating the mandate",
-        "response": "license key + system_prompt after on-chain USDC verification; mandate ledger updated"
+        "human_action": "None required at purchase time — but receives a notification (email/webhook) immediately after. Can revoke the mandate at any time.",
+        "response": "license key + system_prompt after on-chain USDC verification; mandate ledger updated; notification sent"
       },
       {
         "mode": "requires_human_approval",
@@ -32,10 +38,13 @@
     ],
     "guarantees": [
       "Every paid purchase is verified on-chain via eth_getTransactionReceipt on Base",
-      "Every mandate spend is recorded in a ledger (Vercel KV) with txHash + timestamp",
-      "Mandates can be revoked instantly by the principal (human wallet owner)",
-      "Hard caps: max $500 total per mandate, max $50 per single purchase",
-      "Default 90-day expiry; mandates auto-expire"
+      "Every mandate spend is recorded in a public git commit at _data/mandates/ — auditable in the repo history",
+      "Mandates default to 'notify' mode — the principal is alerted on every purchase",
+      "'silent' mode (no notifications) requires explicit confirmSilentAutonomy=true — opt-in only",
+      "Mandates can be revoked instantly by the principal (human wallet owner) from /mandates",
+      "Hard caps: max $500 total per mandate, max $50 per single purchase (cannot be raised)",
+      "Default 90-day expiry; mandates auto-expire",
+      "Sentinel L1.5 security audit is self-declared — see /trust for the full disclosure and roadmap to third-party audit"
     ]
   },
   "pricing": {
@@ -206,6 +215,10 @@
   "documentation": {
     "quickstart": "https://marketnow.site/handshake",
     "mandates_ui": "https://marketnow.site/mandates",
+    "trust_roadmap": "https://marketnow.site/trust",
+    "about_us": "https://marketnow.site/about",
+    "catalog_transparency": "https://marketnow.site/catalog",
+    "security_methodology": "https://marketnow.site/security",
     "policies": "https://marketnow.site/policies",
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
@@ -215,8 +228,10 @@
     "license": "MIT",
     "open_source": true,
     "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
-    "maintainer": "AliceLabs LLC",
-    "security_audit": "Sentinel L1.5 (6-point MCP security audit)",
-    "human_oversight": "Dual-mode commerce — agents act within delegated mandates, humans approve beyond"
+    "maintainer": "AliceLabs LLC (Ecuador) — founder Edgar Flores",
+    "security_audit": "Sentinel L1.5 (self-declared, automated 6-point MCP security scan). Third-party audit pending — see /trust.",
+    "human_oversight": "Default mandate mode is 'notify' — humans are alerted on every purchase. Silent autonomous mode requires explicit opt-in.",
+    "track_record_disclosure": "Launched 2026. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
+    "public_roadmap": "https://marketnow.site/trust"
   }
 }

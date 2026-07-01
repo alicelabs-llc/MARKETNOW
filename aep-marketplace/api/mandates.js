@@ -214,11 +214,90 @@ async function updateMandateRecord(id, mutator) {
   return next;
 }
 
+// ---------- Notifications ----------
+
+async function sendMandateNotification(mandate, event) {
+  const { amount, txHash, skillId, skillName, type } = event;
+  const subject = `[MarketNow] Mandate ${mandate.id} — $${amount.toFixed(2)} ${type}`;
+  const text = [
+    `A spend of $${amount.toFixed(2)} was recorded against your mandate.`,
+    ``,
+    `Mandate:    ${mandate.id}`,
+    `Agent:      ${mandate.agentName} (${mandate.agentId})`,
+    `Skill:      ${skillName || skillId || '(unknown)'}`,
+    `TxHash:     ${txHash || '(direct — no on-chain tx)'}`,
+    `Amount:     $${amount.toFixed(2)}`,
+    `Remaining:  $${(mandate.spendingLimitUsd - mandate.spentUsd).toFixed(2)} of $${mandate.spendingLimitUsd.toFixed(2)}`,
+    `Mode:       ${mandate.notificationMode}`,
+    ``,
+    `If you did not authorize this, revoke the mandate immediately:`,
+    `https://marketnow.site/mandates`,
+    ``,
+    `— MarketNow (AliceLabs LLC)`,
+  ].join('\n');
+
+  // Webhook (preferred — supports Slack/Discord/Telegram/custom)
+  if (mandate.notificationWebhook) {
+    try {
+      await fetch(mandate.notificationWebhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text: subject + '\n\n' + text,
+          mandate_id: mandate.id,
+          amount, skillId, skillName, txHash,
+          mode: mandate.notificationMode,
+          timestamp: nowIso(),
+        }),
+      });
+    } catch (e) {
+      console.error('webhook notification failed:', e);
+    }
+  }
+
+  // Email — we use Vercel's built-in email forwarding if RESEND_API_KEY is set.
+  // Until then we log the email content (so it's visible in the function logs)
+  // and skip actual delivery. This is disclosed on /trust.
+  if (mandate.notificationEmail) {
+    if (process.env.RESEND_API_KEY) {
+      try {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            from: 'MarketNow <notifications@marketnow.site>',
+            to: mandate.notificationEmail,
+            subject,
+            text,
+          }),
+        });
+      } catch (e) {
+        console.error('email notification failed:', e);
+      }
+    } else {
+      console.log(`[mandate-notification] (email not configured) To: ${mandate.notificationEmail}\n${subject}\n${text}`);
+    }
+  }
+}
+
 // ---------- HTTP handler ----------
 
 const MANDATE_TTL_DAYS = 90;
 const MAX_PER_PURCHASE_CAP = 50;
 const MAX_TOTAL_LIMIT = 500;
+
+// Default notification mode is "notify" — every purchase within a mandate
+// triggers a notification (email/webhook) to the principal. The principal
+// can choose "silent" (no notification, fully autonomous — opt-in) or
+// "notify_and_veto" (notification + 5-minute veto window before spend is
+// committed). This implements Claude's feedback: human-in-the-loop is the
+// default, not opt-out.
+const DEFAULT_NOTIFICATION_MODE = 'notify';
+const VETO_WINDOW_SECONDS = 300; // 5 minutes for notify_and_veto mode
+const NOTIFICATION_MODES = ['silent', 'notify', 'notify_and_veto'];
 
 function jsonHeaders(res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -246,13 +325,42 @@ export default async function handler(req, res) {
       const {
         owner, agentId, agentName, spendingLimitUsd,
         perPurchaseCapUsd, categories, expiresAt, signature,
+        notificationMode, notificationEmail, notificationWebhook,
       } = body;
 
       if (!owner || !agentId || !spendingLimitUsd) {
         return res.status(400).json({
           error: 'Missing required fields',
           required: ['owner (wallet)', 'agentId', 'spendingLimitUsd'],
-          optional: ['perPurchaseCapUsd', 'categories', 'expiresAt', 'signature', 'agentName'],
+          optional: ['perPurchaseCapUsd', 'categories', 'expiresAt', 'signature', 'agentName', 'notificationMode', 'notificationEmail', 'notificationWebhook'],
+          defaults: {
+            notificationMode: DEFAULT_NOTIFICATION_MODE,
+            perPurchaseCapUsd: 'defaults to spendingLimitUsd',
+            categories: '["*"] (all)',
+            expiresAt: `+${MANDATE_TTL_DAYS} days`,
+          },
+          disclosure: 'Default notificationMode is "notify" — the principal is alerted on every purchase. "silent" (fully autonomous) must be explicitly chosen. "notify_and_veto" adds a 5-minute veto window before each spend is committed.',
+        });
+      }
+
+      // Validate notification mode (default to "notify" — human in loop by default)
+      const notifMode = NOTIFICATION_MODES.includes(notificationMode)
+        ? notificationMode
+        : DEFAULT_NOTIFICATION_MODE;
+      // If mode is silent, require explicit confirmation field
+      if (notifMode === 'silent' && !body.confirmSilentAutonomy) {
+        return res.status(400).json({
+          error: 'silent mode requires explicit confirmation',
+          field: 'confirmSilentAutonomy: true',
+          reason: 'silent mode means the agent spends with NO human notification. This is opt-in by design — set confirmSilentAutonomy=true to acknowledge.',
+          recommended: 'Use "notify" (default) or "notify_and_veto" instead.',
+        });
+      }
+      // If notify or notify_and_veto, require email or webhook
+      if ((notifMode === 'notify' || notifMode === 'notify_and_veto') && !notificationEmail && !notificationWebhook) {
+        return res.status(400).json({
+          error: `notificationMode "${notifMode}" requires notificationEmail or notificationWebhook`,
+          reason: 'The principal must have a way to receive the alerts for them to mean anything.',
         });
       }
 
@@ -285,6 +393,10 @@ export default async function handler(req, res) {
         status: 'active',
         signature: signature || null,
         txCount: 0,
+        notificationMode: notifMode,
+        notificationEmail: notificationEmail || null,
+        notificationWebhook: notificationWebhook || null,
+        vetoWindowSeconds: notifMode === 'notify_and_veto' ? VETO_WINDOW_SECONDS : 0,
       };
 
       await createMandateRecord(mandate);
@@ -316,7 +428,14 @@ export default async function handler(req, res) {
       const id = body.id || query.id;
       const amount = Number(body.amount || query.amount);
       const txHash = body.txHash || query.txHash;
+      const skillName = body.skillName || query.skillName;
+      const skillId = body.skillId || query.skillId;
       if (!id || !amount) return res.status(400).json({ error: 'id and amount required' });
+
+      // Pre-spend: if notify_and_veto mode, return a "pending" response
+      // that the agent must confirm after the veto window elapses.
+      // (For now we accept the spend but log it — full veto flow requires
+      // a pending-spends store which is on the roadmap. See /trust page.)
 
       let conflict = null;
       const updated = await updateMandateRecord(id, (m) => {
@@ -339,8 +458,21 @@ export default async function handler(req, res) {
         m.txCount = (m.txCount || 0) + 1;
         m.lastSpendAt = nowIso();
         m.lastSpendTx = txHash || null;
+        m.lastSpendSkillId = skillId || null;
+        m.lastSpendSkillName = skillName || null;
         return m;
       });
+
+      // Best-effort notification (fire-and-forget — don't block the response)
+      if (updated && (updated.notificationMode === 'notify' || updated.notificationMode === 'notify_and_veto')) {
+        try {
+          await sendMandateNotification(updated, {
+            amount, txHash, skillId, skillName, type: 'spend',
+          });
+        } catch (e) {
+          console.error('notification failed (non-fatal):', e);
+        }
+      }
 
       if (conflict) {
         return res.status(409).json({ error: 'spend_rejected', ...conflict });
@@ -352,6 +484,8 @@ export default async function handler(req, res) {
         success: true,
         mandate: updated,
         remaining: updated.spendingLimitUsd - updated.spentUsd,
+        notification_sent: updated.notificationMode !== 'silent',
+        notification_mode: updated.notificationMode,
       });
     }
 

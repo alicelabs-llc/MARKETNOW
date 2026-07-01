@@ -23,6 +23,9 @@ import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
 import AgentLanding from "./pages/AgentLanding";
 import Mandates from "./pages/Mandates";
+import Trust from "./pages/Trust";
+import About from "./pages/About";
+import Catalog from "./pages/Catalog";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -48,6 +51,7 @@ function App() {
       const ALLOWED_ROUTES = [
         '/registry', '/vault', '/governance', '/security',
         '/handshake', '/policies', '/submit', '/pricing', '/dashboard', '/mandates',
+        '/trust', '/about', '/catalog',
       ];
       // Allow /skill/:id pattern (starts with /skill/)
       const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
@@ -106,6 +110,9 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/agents" element={<AgentLanding />} />
           <Route path="/mandates" element={<Mandates />} />
+          <Route path="/trust" element={<Trust />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/catalog" element={<Catalog />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

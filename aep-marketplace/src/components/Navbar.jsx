@@ -8,10 +8,13 @@ const navLinks = [
   { path: '/registry', label: 'REGISTRY' },
   { path: '/submit', label: 'SUBMIT SKILL' },
   { path: '/mandates', label: 'MANDATES' },
+  { path: '/trust', label: 'TRUST' },
+  { path: '/catalog', label: 'CATALOG' },
   { path: '/pricing', label: 'PRICING' },
   { path: '/dashboard', label: 'DASHBOARD' },
   { path: '/vault', label: 'MY VAULT' },
   { path: '/security', label: 'SECURITY' },
+  { path: '/about', label: 'ABOUT' },
   { path: '/handshake', label: 'API' },
   { path: '/policies', label: 'POLICIES' },
 ];

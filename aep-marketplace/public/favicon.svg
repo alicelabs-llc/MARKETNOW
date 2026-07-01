@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="#050505"/>
-  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.4"/>
-  <path d="M14 18 L24 18 L32 38 L40 18 L50 18 L36 50 L28 50 Z" fill="url(#g)"/>
-  <circle cx="50" cy="14" r="3" fill="#00F299"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="url(#g)" stroke-width="1.5" opacity="0.3"/>
+  <!-- M shape: two verticals + V notch in middle -->
+  <path d="M 14 16 L 14 50 L 19 50 L 19 22 L 28 40 L 36 40 L 45 22 L 45 50 L 50 50 L 50 16 L 45 16 L 32 34 L 19 16 Z" fill="url(#g)"/>
 </svg>

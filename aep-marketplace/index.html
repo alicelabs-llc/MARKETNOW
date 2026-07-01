@@ -5,11 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- CANONICAL — Google needs this -->
+    <link rel="canonical" href="https://marketnow.site/" />
+
     <!-- BRANDING -->
     <title>MarketNow — npm for MCP servers (8,560 skills, Sentinel-scanned)</title>
     <meta name="description" content="npm for MCP servers. 8,560 verified skills for Claude Desktop, Cursor, Cline. $0.99-$9.99 one-time. 43 free. Sentinel L1.5 scanned. Install: npx -y @marketnow/install <slug>. Open source MIT." />
     <meta name="application-name" content="MarketNow" />
     <meta name="theme-color" content="#050505" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="AliceLabs LLC" />
+    <meta name="keywords" content="mcp servers, model context protocol, mcp marketplace, claude desktop, cursor, cline, agent skills, mcp directory, smithery, anthropic mcp" />
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="MarketNow — npm for MCP servers" />
@@ -17,109 +24,205 @@
     <meta property="og:url" content="https://marketnow.site/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MarketNow" />
-
-    <!-- AGENT DISCOVERY -->
-    <link rel="alternate" type="application/json" href="/api/skills.json" title="MarketNow Skills API" />
-    <link rel="alternate" type="application/json" href="/api/agent.json" title="MarketNow Agent Instructions" />
-    <link rel="alternate" type="application/yaml" href="/api/openapi.yaml" title="MarketNow OpenAPI Spec" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-    <!-- API ENDPOINTS (machine-readable) -->
-    <meta name="api:skills" content="https://marketnow.site/api/skills.json" />
-    <meta name="api:search" content="https://marketnow.site/api/search?q={query}" />
-    <meta name="api:categories" content="https://marketnow.site/api/categories.json" />
-    <meta name="api:manifest" content="https://marketnow.site/api/manifest.json" />
-    <meta name="api:agent" content="https://marketnow.site/api/agent.json" />
-    <meta name="api:openapi" content="https://marketnow.site/api/openapi.yaml" />
-    <meta name="api:verify_purchase" content="https://marketnow.site/api/verify-purchase" />
-    <meta name="api:bundles" content="https://marketnow.site/api/bundles.json" />
-    <meta name="api:capability_schema" content="https://marketnow.site/api/capability-schema.json" />
-
-    <!-- AGENT HINTS -->
-    <meta name="agent:total_skills" content="8560" />
-    <meta name="agent:pricing_min" content="0.99" />
-    <meta name="agent:pricing_max" content="9.99" />
-    <meta name="agent:payment_methods" content="usdc_base,stripe" />
-    <meta name="agent:mcp_server" content="npx -y marketnow-mcp" />
-    <meta name="agent:languages" content="en,es,zh,pt,fr" />
-    <meta name="agent:maintainer" content="AliceLabs LLC" />
-    <meta name="agent:license" content="MIT" />
-    <meta name="agent:trust_default" content="human_in_loop" />
-    <meta name="agent:review_status_distribution" content="8517_auto_scanned,43_human_reviewed,0_maintainer_verified" />
-
-    <!-- JSON-LD DataCatalog -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "DataCatalog",
-      "name": "MarketNow",
-      "description": "Open marketplace for MCP-compatible agent skills. 8,560 skills (8,517 auto-scanned, 43 human-reviewed) with Sentinel security reports. Micro-priced from $0.99 to $9.99. Open source MIT.",
-      "url": "https://marketnow.site",
-      "publisher": {
-        "@type": "Organization",
-        "name": "AliceLabs LLC",
-        "founder": "Edgar Flores",
-        "countryOfOrigin": "Ecuador"
-      },
-      "dataset": [{
-        "@type": "Dataset",
-        "name": "MarketNow Skills Catalog",
-        "description": "8,560 MCP-compatible agent skills with capabilities, system prompts, declared permissions, and multi-language support. Each skill has a review_status field (auto-scanned | human-reviewed | maintainer-verified).",
-        "distribution": {
-          "@type": "DataDownload",
-          "encodingFormat": "application/json",
-          "contentUrl": "https://marketnow.site/api/skills.json"
-        }
-      }]
-    }
-    </script>
+    <meta property="og:image" content="https://marketnow.site/badges/available-on.svg" />
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MarketNow — npm for MCP servers" />
     <meta name="twitter:description" content="8,560 MCP servers for Claude Desktop, Cursor, Cline. $0.99-$9.99 one-time. 43 free. Sentinel-scanned. Open source MIT. npx -y @marketnow/install <slug>." />
+    <meta name="twitter:image" content="https://marketnow.site/badges/available-on.svg" />
+
+    <!-- SITEMAP & STRUCTURED DATA LINKS -->
+    <link rel="alternate" type="application/json" href="/api/skills.json" title="MarketNow Skills API" />
+    <link rel="alternate" type="application/json" href="/api/agent.json" title="MarketNow Agent Instructions" />
+    <link rel="alternate" type="application/yaml" href="/api/openapi.yaml" title="MarketNow OpenAPI Spec" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- JSON-LD Organization + WebSite + ItemList (richer than DataCatalog) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://marketnow.site/#organization",
+          "name": "AliceLabs LLC",
+          "founder": { "@type": "Person", "name": "Edgar Flores" },
+          "foundingLocation": { "@type": "Place", "address": "Ecuador" },
+          "url": "https://marketnow.site",
+          "logo": "https://marketnow.site/favicon.svg",
+          "sameAs": [
+            "https://github.com/edgarfloresguerra2011-a11y/marketnow",
+            "https://www.npmjs.com/package/marketnow-mcp",
+            "https://smithery.ai/servers/eddyflores100/marketnow"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://marketnow.site/#website",
+          "url": "https://marketnow.site/",
+          "name": "MarketNow",
+          "description": "npm for MCP servers. 8,560 verified skills for Claude Desktop, Cursor, Cline.",
+          "publisher": { "@id": "https://marketnow.site/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://marketnow.site/registry?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "name": "Top MCP Server Categories",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "AI/ML", "url": "https://marketnow.site/registry?cat=ai-ml" },
+            { "@type": "ListItem", "position": 2, "name": "Developer Tools", "url": "https://marketnow.site/registry?cat=developer-tools" },
+            { "@type": "ListItem", "position": 3, "name": "Data", "url": "https://marketnow.site/registry?cat=data" },
+            { "@type": "ListItem", "position": 4, "name": "Web/API", "url": "https://marketnow.site/registry?cat=web-api" },
+            { "@type": "ListItem", "position": 5, "name": "Productivity", "url": "https://marketnow.site/registry?cat=productivity" },
+            { "@type": "ListItem", "position": 6, "name": "Finance", "url": "https://marketnow.site/registry?cat=finance" },
+            { "@type": "ListItem", "position": 7, "name": "Communication", "url": "https://marketnow.site/registry?cat=communication" },
+            { "@type": "ListItem", "position": 8, "name": "Security", "url": "https://marketnow.site/registry?cat=security" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "marketnow-mcp",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Cross-platform",
+          "description": "MarketNow MCP server — search and install MCP skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline).",
+          "installUrl": "https://www.npmjs.com/package/marketnow-mcp",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
 
     <style>
-      body { background-color: #050505; color: white; margin: 0; }
+      body { background-color: #050505; color: white; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .seo-content { padding: 2rem; max-width: 800px; margin: 0 auto; }
+      .seo-content h1 { font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(to right, #00F299, #00d1ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+      .seo-content h2 { font-size: 1.5rem; margin-top: 2rem; color: #00F299; }
+      .seo-content p { color: #d4d4d8; line-height: 1.6; margin-bottom: 1rem; }
+      .seo-content a { color: #00d1ff; }
+      .seo-content code { background: #1a1a1a; padding: 0.2rem 0.4rem; border-radius: 3px; color: #00F299; font-family: 'SF Mono', Monaco, monospace; font-size: 0.9em; }
+      .seo-content ul { color: #d4d4d8; line-height: 1.8; }
+      .seo-content .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0; }
+      .seo-content .card { background: #0f0f0f; border: 1px solid #333; padding: 1rem; border-radius: 8px; }
+      .seo-content .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+      .seo-content .badge-free { background: #00F29920; color: #00F299; }
+      .seo-content .badge-paid { background: #00d1ff20; color: #00d1ff; }
+      @media (max-width: 600px) { .seo-content { padding: 1rem; } .seo-content h1 { font-size: 1.8rem; } }
     </style>
-  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate"><meta http-equiv="Pragma" content="no-cache"></head>
+  </head>
   <body>
-    <!-- Pre-rendered content for crawlers/agents that don't execute JS -->
-    <noscript>
-      <h1>MarketNow — MCP Skill Marketplace</h1>
-      <p>8,560 MCP-compatible agent skills. $0.99-$9.99 one-time payment. Sentinel security reports on every skill. Open source MIT, maintained by AliceLabs LLC (Ecuador).</p>
+    {/*
+      SEO PRE-RENDERED CONTENT — this is what Google indexes.
+      The React app replaces #root with the interactive SPA, but
+      this content stays visible to crawlers that don't execute JS.
+      Do NOT remove without providing equivalent SSR/prerender.
+    */}
+    <div class="seo-content">
+      <h1>MarketNow — npm for MCP servers</h1>
+      <p><strong>8,560 verified MCP servers</strong> for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 43 skills are free. Sentinel L1.5 security scanned. Open source MIT, maintained by AliceLabs LLC (Ecuador).</p>
+
+      <h2>Find an MCP server. Install in one command.</h2>
+      <p>The fastest way to add a capability to your agent stack. Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
+      <p><code>npx -y @marketnow/install &lt;slug&gt;</code></p>
+
       <h2>For Developers</h2>
-      <p>Find a skill, pay with card or USDC, install with one command: <code>npx -y @marketnow/install &lt;slug&gt;</code></p>
-      <h2>API Endpoints (public, no auth required):</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Search</h3>
+          <p>Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
+        </div>
+        <div class="card">
+          <h3>2. Pay (or grab free)</h3>
+          <p>Credit card via Stripe (full chargeback rights) or USDC on Base L2. 43 skills are free — no payment, no signup. Just install.</p>
+        </div>
+        <div class="card">
+          <h3>3. Install</h3>
+          <p><code>npx -y @marketnow/install &lt;slug&gt;</code> — works with Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible runtime.</p>
+        </div>
+      </div>
+
+      <h2>Popular MCP Server Categories</h2>
       <ul>
-        <li><a href="/api/skills.json">GET /api/skills.json</a> — All 8,560 skills with review_status, permissions, usdc_disclaimer</li>
-        <li><a href="/api/search?q=scrape">GET /api/search?q=scrape</a> — Server-side search</li>
-        <li><a href="/api/agent.json">GET /api/agent.json</a> — Agent instructions (trust_model, modes, guarantees)</li>
-        <li><a href="/api/manifest.json">GET /api/manifest.json</a> — Marketplace metadata</li>
-        <li><a href="/api/categories.json">GET /api/categories.json</a> — 58 categories</li>
-        <li><a href="/api/openapi.yaml">GET /api/openapi.yaml</a> — OpenAPI 3.1 spec</li>
-        <li><a href="/api/bundles.json">GET /api/bundles.json</a> — Skill bundles</li>
-        <li><a href="/api/verify-purchase">GET /api/verify-purchase</a> — Verify purchases</li>
-        <li><a href="/api/mandates">GET /api/mandates</a> — Delegated mandates (ACP/AP2)</li>
+        <li><a href="/registry?cat=ai-ml">AI/ML</a> — 1,976 skills (LLM wrappers, embeddings, RAG, vision)</li>
+        <li><a href="/registry?cat=developer-tools">Developer Tools</a> — 1,891 skills (code analysis, linting, build tools)</li>
+        <li><a href="/registry?cat=data">Data</a> — 782 skills (databases, ETL, analytics)</li>
+        <li><a href="/registry?cat=web-api">Web/API</a> — 348 skills (HTTP clients, REST, GraphQL)</li>
+        <li><a href="/registry?cat=productivity">Productivity</a> — 328 skills (task management, notes, calendars)</li>
+        <li><a href="/registry?cat=finance">Finance</a> — 292 skills (payments, accounting, crypto)</li>
+        <li><a href="/registry?cat=communication">Communication</a> — 288 skills (Slack, Discord, email)</li>
+        <li><a href="/registry?cat=security">Security</a> — 224 skills (auth, scanning, secrets)</li>
       </ul>
+
+      <h2>43 Free MCP Skills — No Payment, No Signup</h2>
+      <p>Real value, zero cost. 43 hand-curated skills available for instant download. No credit card, no mandate, no signup required. Just install and use.</p>
+      <p><a href="/registry?filter=free">Browse all 43 free skills →</a></p>
+
+      <h2>For AI Agents</h2>
+      <p>Machine-readable everything. Public JSON API. Human-in-the-loop by default.</p>
+      <ul>
+        <li><code>GET /api/skills.json</code> — Full catalog (8,560 skills, JSON, ~24MB)</li>
+        <li><code>GET /api/search?q=</code> — Server-side search with relevance scoring</li>
+        <li><code>GET /api/agent.json</code> — Machine-readable instructions, trust model, schema</li>
+        <li><code>GET /api/policies.json</code> — Terms, refund, dispute, privacy policies</li>
+        <li><code>POST /api/agent-purchase</code> — Buy a skill (5 modes: instant_download, instant_purchase, direct_purchase, requires_payment, requires_human_approval)</li>
+        <li><code>GET /api/mandates</code> — Delegated mandates (ACP/AP2 compliant)</li>
+        <li><code>GET /api/free-skills.json</code> — 43 free skills</li>
+        <li><code>GET /api/bundles.json</code> — Discounted skill bundles</li>
+      </ul>
+      <p>MCP server: <code>npx -y marketnow-mcp</code> — works with Claude Desktop, Cursor, Cline. Available on <a href="https://www.npmjs.com/package/marketnow-mcp">npm</a> and <a href="https://smithery.ai/servers/eddyflores100/marketnow">Smithery</a>.</p>
+
+      <h2>Why people recommend us</h2>
+      <ul>
+        <li><strong>Open Source MIT</strong> — Full code on GitHub. Every change is a public commit. No black box.</li>
+        <li><strong>Sentinel L1.5</strong> — 6-point MCP security audit on every skill. Methodology published. Re-runnable.</li>
+        <li><strong>43 Free Skills</strong> — Real value, zero cost. No signup, no credit card, no mandate.</li>
+        <li><strong>$0.99–$9.99 One-Time</strong> — No subscriptions. No per-call fees. No tiered plans. Pay once, own forever.</li>
+        <li><strong>Human-in-Loop Default</strong> — Mandates notify the principal on every purchase. Silent mode requires explicit opt-in.</li>
+        <li><strong>Public Audit Log</strong> — Every mandate transaction is a git commit at _data/mandates/. Fully auditable.</li>
+        <li><strong>5 Languages</strong> — System prompts in EN, ES, ZH, PT, FR. Real translations, not auto-translated.</li>
+        <li><strong>Honest Roadmap</strong> — /trust page admits what's done, partial, and pending. No fake "verified" badges.</li>
+      </ul>
+
       <h2>Trust &amp; Transparency</h2>
       <ul>
-        <li><a href="/trust">/trust</a> — Public trust roadmap (Claude's 7 points)</li>
-        <li><a href="/about">/about</a> — Who we are (AliceLabs LLC)</li>
-        <li><a href="/catalog">/catalog</a> — Where the skills come from</li>
-        <li><a href="/policies">/policies</a> — Terms, refund, dispute policy</li>
+        <li><a href="/trust">/trust</a> — Public trust roadmap (7 points raised by Claude AI reviewer)</li>
+        <li><a href="/about">/about</a> — Who we are (AliceLabs LLC, Ecuador, founder Edgar Flores)</li>
+        <li><a href="/catalog">/catalog</a> — Where the 8,560 skills come from (catalog transparency)</li>
+        <li><a href="/policies">/policies</a> — Terms, refund, dispute policy (incl. USDC dispute process)</li>
         <li><a href="/mandates">/mandates</a> — Manage spending mandates (human-in-loop by default)</li>
+        <li><a href="/embed">/embed</a> — Shareable badges (Powered by MarketNow, Sentinel L1.5, MIT)</li>
+        <li><a href="/pricing">/pricing</a> — Pricing tiers for sellers</li>
+        <li><a href="/security">/security</a> — Sentinel L1.5 methodology</li>
+        <li><a href="/handshake">/handshake</a> — API documentation</li>
       </ul>
-      <h2>Smithery</h2>
-      <p><a href="https://smithery.ai/servers/eddyflores100/marketnow">Available on Smithery</a></p>
-      <h2>MCP Server (for Claude Desktop, Cursor, Cline)</h2>
-      <p>Install: <code>npx -y marketnow-mcp</code></p>
+
       <h2>Review Status Disclosure</h2>
-      <p>Of 8,560 skills: 8,517 are <em>auto-scanned</em> (Sentinel ran, no human review), 43 are <em>human-reviewed</em> (curated free skills), 0 are <em>maintainer-verified</em> (program not yet launched). We never claim "verified" without earning it.</p>
+      <p>Of 8,560 skills: 8,517 are <em>auto-scanned</em> (Sentinel ran, no human review), 43 are <em>human-reviewed</em> (curated free skills), 0 are <em>maintainer-verified</em> (program not yet launched). We never claim "verified" without earning it. The <code>verified: true</code> field is deprecated — use <code>review_status</code> instead.</p>
+
+      <h2>Maintained by AliceLabs LLC</h2>
+      <p>Founded 2024 by Edgar Flores in Ecuador. No investors, no employees besides the founder, no marketing budget. Built in public. Every change is a git commit visible at <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow">github.com/edgarfloresguerra2011-a11y/marketnow</a>.</p>
+      <p>Contact: <a href="mailto:eddyflores100@gmail.com">eddyflores100@gmail.com</a></p>
+
       <h2>Languages</h2>
       <p>English, Español, 中文, Português, Français</p>
-    </noscript>
+
+      <h2>Keywords</h2>
+      <p>MCP servers, Model Context Protocol, MCP marketplace, MCP directory, Claude Desktop skills, Cursor MCP, Cline MCP, agent skills, Sentinel security audit, Smithery, Anthropic MCP, open source MCP, MCP server registry, install MCP server</p>
+    </div>
+
+    {/* React SPA mounts here — replaces the SEO content for interactive users */}
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx?v=25"></script>
+    <script type="module" src="/src/main.jsx?v=26"></script>
   </body>
 </html>

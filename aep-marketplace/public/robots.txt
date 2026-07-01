@@ -62,8 +62,8 @@ Disallow:
 Sitemap: https://marketnow.site/sitemap.xml
 
 # Agent-readable API endpoints
-# GET /api/agent.json — full machine-readable agent instructions (8,535 skills)
-# GET /api/skills.json — all 8,535 skills with capabilities and system prompts
+# GET /api/agent.json — full machine-readable agent instructions (8,560 skills)
+# GET /api/skills.json — all 8,560 skills with capabilities and system prompts
 # GET /api/search?q=query — server-side search with relevance scoring
 # GET /api/manifest.json — marketplace metadata (v4.0.0)
 # GET /api/categories.json — 58 categories with counts
@@ -71,6 +71,7 @@ Sitemap: https://marketnow.site/sitemap.xml
 # GET /api/verify-purchase?sessionId=X — verify a Stripe purchase
 # GET /api/bundles.json — skill bundles with discounts
 # GET /api/capability-schema.json — capability ontology schema
+# GET /api/policies.json — terms, refund, dispute, privacy policies
 # GET /.well-known/mcp.json — MCP server discovery
 
 # Agent discovery endpoints

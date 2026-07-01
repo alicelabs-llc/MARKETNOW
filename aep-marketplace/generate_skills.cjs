@@ -50,10 +50,20 @@ for (const s of skills) {
 }
 const categoryIndex = Array.from(categoryMap.values())
   .sort((a, b) => b.count - a.count)
-  .map(c => ({
-    ...c,
-    url: `https://www.marketnow.site/registry?cat=${encodeURIComponent(c.slug)}`,
-  }));
+  .map(c => {
+    // Flag categories that look like bulk imports (exactly 30 items is the
+    // signature of bulk-imported from community "awesome-mcp" lists).
+    // We disclose this rather than hide it — see /catalog.
+    const isBulkImported = c.count === 30;
+    return {
+      ...c,
+      url: `https://www.marketnow.site/registry?cat=${encodeURIComponent(c.slug)}`,
+      bulk_imported: isBulkImported,
+      disclosure: isBulkImported
+        ? 'This category contains exactly 30 items, indicating a bulk import from a community awesome-mcp list. Skills are Sentinel-scanned but not individually curated. See /catalog for full disclosure.'
+        : null,
+    };
+  });
 
 // ─── Manifest del API ────────────────────────────────────────────────────
 const apiManifest = {

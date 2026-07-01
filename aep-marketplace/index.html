@@ -5,26 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ BRANDING -->
-    <title>MarketNow — MCP Agent Skill Marketplace</title>
-    <meta name="description" content="Open marketplace for MCP-compatible agent skills. 8,560 verified skills with Sentinel security reports. Open source (MIT). Maintained by AliceLabs LLC." />
+    <!-- BRANDING -->
+    <title>MarketNow — 8,560 MCP Skills for Developers & AI Agents (USDC + Stripe)</title>
+    <meta name="description" content="Open marketplace for MCP-compatible agent skills. 8,560 skills. Sentinel security reports. Find one, install with one command. Open source (MIT). Maintained by AliceLabs LLC." />
     <meta name="application-name" content="MarketNow" />
     <meta name="theme-color" content="#050505" />
 
-    <!-- ✅ OPEN GRAPH -->
-    <meta property="og:title" content="MarketNow — Agent Skill Marketplace" />
-    <meta property="og:description" content="8,535 verified MCP-compatible skills for AI agents. $0.99-$9.99 one-time. Public JSON API. MCP server: npx -y marketnow-mcp" />
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="MarketNow — MCP Skill Marketplace (npm for MCP servers)" />
+    <meta property="og:description" content="8,560 MCP-compatible skills. $0.99-$9.99 one-time. Sentinel-scanned. Public JSON API. Install: npx -y @marketnow/install <slug>. Open source MIT." />
     <meta property="og:url" content="https://marketnow.site/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MarketNow" />
 
-    <!-- ✅ AGENT DISCOVERY — crawlers y agentes pueden encontrar el API -->
+    <!-- AGENT DISCOVERY -->
     <link rel="alternate" type="application/json" href="/api/skills.json" title="MarketNow Skills API" />
     <link rel="alternate" type="application/json" href="/api/agent.json" title="MarketNow Agent Instructions" />
     <link rel="alternate" type="application/yaml" href="/api/openapi.yaml" title="MarketNow OpenAPI Spec" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <!-- ✅ API ENDPOINTS (machine-readable) -->
+    <!-- API ENDPOINTS (machine-readable) -->
     <meta name="api:skills" content="https://marketnow.site/api/skills.json" />
     <meta name="api:search" content="https://marketnow.site/api/search?q={query}" />
     <meta name="api:categories" content="https://marketnow.site/api/categories.json" />
@@ -35,19 +35,36 @@
     <meta name="api:bundles" content="https://marketnow.site/api/bundles.json" />
     <meta name="api:capability_schema" content="https://marketnow.site/api/capability-schema.json" />
 
-    <!-- ✅ AGENT HINTS — describe the marketplace for LLM crawlers -->
-    <!-- ✅ JSON-LD DataCatalog (for LLM crawlers that parse structured data) -->
+    <!-- AGENT HINTS -->
+    <meta name="agent:total_skills" content="8560" />
+    <meta name="agent:pricing_min" content="0.99" />
+    <meta name="agent:pricing_max" content="9.99" />
+    <meta name="agent:payment_methods" content="usdc_base,stripe" />
+    <meta name="agent:mcp_server" content="npx -y marketnow-mcp" />
+    <meta name="agent:languages" content="en,es,zh,pt,fr" />
+    <meta name="agent:maintainer" content="AliceLabs LLC" />
+    <meta name="agent:license" content="MIT" />
+    <meta name="agent:trust_default" content="human_in_loop" />
+    <meta name="agent:review_status_distribution" content="8517_auto_scanned,43_human_reviewed,0_maintainer_verified" />
+
+    <!-- JSON-LD DataCatalog -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "DataCatalog",
       "name": "MarketNow",
-      "description": "Open marketplace for MCP-compatible agent skills. 8,535 verified skills, micro-priced from $0.99 to $9.99.",
+      "description": "Open marketplace for MCP-compatible agent skills. 8,560 skills (8,517 auto-scanned, 43 human-reviewed) with Sentinel security reports. Micro-priced from $0.99 to $9.99. Open source MIT.",
       "url": "https://marketnow.site",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AliceLabs LLC",
+        "founder": "Edgar Flores",
+        "countryOfOrigin": "Ecuador"
+      },
       "dataset": [{
         "@type": "Dataset",
         "name": "MarketNow Skills Catalog",
-        "description": "8,535 MCP-compatible agent skills with capabilities, system prompts, and multi-language support.",
+        "description": "8,560 MCP-compatible agent skills with capabilities, system prompts, declared permissions, and multi-language support. Each skill has a review_status field (auto-scanned | human-reviewed | maintainer-verified).",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "application/json",
@@ -57,10 +74,10 @@
     }
     </script>
 
-    <!-- ✅ TWITTER CARD -->
+    <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MarketNow — 8,535 MCP Agent Skills" />
-    <meta name="twitter:description" content="8,535 verified MCP-compatible skills. $0.99-$9.99 one-time. Public JSON API + MCP server: npx -y marketnow-mcp" />
+    <meta name="twitter:title" content="MarketNow — 8,560 MCP Skills for Devs & Agents" />
+    <meta name="twitter:description" content="8,560 MCP skills. Sentinel-scanned. $0.99-$9.99 one-time. Install: npx -y @marketnow/install <slug>. Open source MIT. Maintained by AliceLabs LLC." />
 
     <style>
       body { background-color: #050505; color: white; margin: 0; }
@@ -69,28 +86,40 @@
   <body>
     <!-- Pre-rendered content for crawlers/agents that don't execute JS -->
     <noscript>
-      <h1>MarketNow — Agent Skill Marketplace</h1>
-      <p>8,535 verified MCP-compatible agent skills. $0.99-$9.99 one-time payment.</p>
+      <h1>MarketNow — MCP Skill Marketplace</h1>
+      <p>8,560 MCP-compatible agent skills. $0.99-$9.99 one-time payment. Sentinel security reports on every skill. Open source MIT, maintained by AliceLabs LLC (Ecuador).</p>
+      <h2>For Developers</h2>
+      <p>Find a skill, pay with card or USDC, install with one command: <code>npx -y @marketnow/install &lt;slug&gt;</code></p>
       <h2>API Endpoints (public, no auth required):</h2>
       <ul>
-        <li><a href="/api/skills.json">GET /api/skills.json</a> — All 8,535 skills</li>
+        <li><a href="/api/skills.json">GET /api/skills.json</a> — All 8,560 skills with review_status, permissions, usdc_disclaimer</li>
         <li><a href="/api/search?q=scrape">GET /api/search?q=scrape</a> — Server-side search</li>
-        <li><a href="/api/agent.json">GET /api/agent.json</a> — Agent instructions</li>
+        <li><a href="/api/agent.json">GET /api/agent.json</a> — Agent instructions (trust_model, modes, guarantees)</li>
         <li><a href="/api/manifest.json">GET /api/manifest.json</a> — Marketplace metadata</li>
         <li><a href="/api/categories.json">GET /api/categories.json</a> — 58 categories</li>
         <li><a href="/api/openapi.yaml">GET /api/openapi.yaml</a> — OpenAPI 3.1 spec</li>
         <li><a href="/api/bundles.json">GET /api/bundles.json</a> — Skill bundles</li>
         <li><a href="/api/verify-purchase">GET /api/verify-purchase</a> — Verify purchases</li>
+        <li><a href="/api/mandates">GET /api/mandates</a> — Delegated mandates (ACP/AP2)</li>
+      </ul>
+      <h2>Trust &amp; Transparency</h2>
+      <ul>
+        <li><a href="/trust">/trust</a> — Public trust roadmap (Claude's 7 points)</li>
+        <li><a href="/about">/about</a> — Who we are (AliceLabs LLC)</li>
+        <li><a href="/catalog">/catalog</a> — Where the skills come from</li>
+        <li><a href="/policies">/policies</a> — Terms, refund, dispute policy</li>
+        <li><a href="/mandates">/mandates</a> — Manage spending mandates (human-in-loop by default)</li>
       </ul>
       <h2>Smithery</h2>
       <p><a href="https://smithery.ai/servers/eddyflores100/marketnow">Available on Smithery</a></p>
-      <img src="https://smithery.ai/badge/eddyflores100/marketnow" alt="Smithery badge" />
-      <h2>MCP Server</h2>
+      <h2>MCP Server (for Claude Desktop, Cursor, Cline)</h2>
       <p>Install: <code>npx -y marketnow-mcp</code></p>
+      <h2>Review Status Disclosure</h2>
+      <p>Of 8,560 skills: 8,517 are <em>auto-scanned</em> (Sentinel ran, no human review), 43 are <em>human-reviewed</em> (curated free skills), 0 are <em>maintainer-verified</em> (program not yet launched). We never claim "verified" without earning it.</p>
       <h2>Languages</h2>
       <p>English, Español, 中文, Português, Français</p>
     </noscript>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx?v=14"></script>
+    <script type="module" src="/src/main.jsx?v=25"></script>
   </body>
 </html>

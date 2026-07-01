@@ -1,9 +1,43 @@
 {
   "$schema": "https://marketnow.site/api/agent.schema.json",
   "name": "MarketNow",
-  "description": "Open marketplace for MCP-compatible agent skills. Every skill is a real, verified open-source MCP server with a transparent one-time price (minimum $0.99). Open source, MIT licensed, maintained by AliceLabs LLC.",
+  "description": "Open marketplace for MCP-compatible agent skills. Every skill is a real, verified open-source MCP server with a transparent one-time price (minimum $0.99). Open source, MIT licensed, maintained by AliceLabs LLC. Supports a dual trust model: free skills = instant download, paid skills within a delegated mandate = autonomous agent purchase, paid skills beyond mandate = human approval required.",
   "url": "https://marketnow.site",
   "api_base": "https://marketnow.site/api",
+  "trust_model": {
+    "protocol": "ACP / AP2 (delegated mandates)",
+    "summary": "Three purchase modes designed for both human oversight and agent autonomy.",
+    "modes": [
+      {
+        "mode": "instant_download",
+        "applies_to": "Free skills (price = 0) and verified open-source skills",
+        "agent_action": "POST /api/agent-purchase with {skillId}",
+        "human_action": "None required",
+        "response": "license key + system_prompt + install command immediately"
+      },
+      {
+        "mode": "instant_purchase",
+        "applies_to": "Paid skills where a valid mandate exists and price <= perPurchaseCapUsd and price <= (spendingLimit - spent)",
+        "agent_action": "POST /api/agent-purchase with {skillId, mandateId, txHash, walletAddress}",
+        "human_action": "None required — human pre-approved by creating the mandate",
+        "response": "license key + system_prompt after on-chain USDC verification; mandate ledger updated"
+      },
+      {
+        "mode": "requires_human_approval",
+        "applies_to": "Paid skills when no mandate is on file, or mandate is exhausted/expired/below cap",
+        "agent_action": "Receive the response and surface to operator, or wait for mandate creation",
+        "human_action": "Approve via Stripe Checkout, or create/renew a mandate at /mandates",
+        "response": "options.option_1_stripe.url + options.option_2_create_mandate.url"
+      }
+    ],
+    "guarantees": [
+      "Every paid purchase is verified on-chain via eth_getTransactionReceipt on Base",
+      "Every mandate spend is recorded in a ledger (Vercel KV) with txHash + timestamp",
+      "Mandates can be revoked instantly by the principal (human wallet owner)",
+      "Hard caps: max $500 total per mandate, max $50 per single purchase",
+      "Default 90-day expiry; mandates auto-expire"
+    ]
+  },
   "pricing": {
     "model": "one-time per skill (USDC or credit card)",
     "currency": "USD",
@@ -11,31 +45,11 @@
     "max": 9.99,
     "average": 3.8,
     "tiers": [
-      {
-        "price": 0.99,
-        "label": "utility",
-        "description": "Single-function MCP servers, simple wrappers"
-      },
-      {
-        "price": 1.99,
-        "label": "standard",
-        "description": "Standard integrations, one API/service"
-      },
-      {
-        "price": 2.99,
-        "label": "multi-feature",
-        "description": "Multi-feature tools, common choice"
-      },
-      {
-        "price": 4.99,
-        "label": "sophisticated",
-        "description": "Multi-endpoint, complex logic"
-      },
-      {
-        "price": 9.99,
-        "label": "enterprise",
-        "description": "Enterprise-grade, specialized"
-      }
+      { "price": 0.99, "label": "utility", "description": "Single-function MCP servers, simple wrappers" },
+      { "price": 1.99, "label": "standard", "description": "Standard integrations, one API/service" },
+      { "price": 2.99, "label": "multi-feature", "description": "Multi-feature tools, common choice" },
+      { "price": 4.99, "label": "sophisticated", "description": "Multi-endpoint, complex logic" },
+      { "price": 9.99, "label": "enterprise", "description": "Enterprise-grade, specialized" }
     ],
     "no_subscriptions": true,
     "no_credits": true,
@@ -45,7 +59,7 @@
     "list_all_skills": {
       "method": "GET",
       "path": "/api/skills.json",
-      "returns": "Array of all 5,054 skills with price, category, tags, install command",
+      "returns": "Array of all skills with price, category, tags, install command",
       "cache": "1 hour",
       "size_hint": "~7 MB uncompressed, ~1.5 MB gzipped"
     },
@@ -58,7 +72,7 @@
     "categories": {
       "method": "GET",
       "path": "/api/categories.json",
-      "returns": "Array of {name, slug, count} for all 25 categories"
+      "returns": "Array of {name, slug, count} for all categories"
     },
     "manifest": {
       "method": "GET",
@@ -73,51 +87,67 @@
     "search": {
       "method": "GET",
       "path": "/api/search",
-      "params": {
-        "q": "string",
-        "category": "string",
-        "max_price": "number",
-        "language": "string",
-        "limit": "number"
-      },
+      "params": { "q": "string", "category": "string", "max_price": "number", "language": "string", "limit": "number" },
       "returns": "Array of matching skills with relevance scores"
+    },
+    "agent_purchase": {
+      "method": "POST",
+      "path": "/api/agent-purchase",
+      "description": "Dual-mode purchase: instant for free / mandated, requires approval otherwise.",
+      "body": {
+        "skillId": "string (required)",
+        "walletAddress": "string (required for paid)",
+        "txHash": "string (required for paid — USDC Transfer on Base)",
+        "mandateId": "string (optional — enables autonomous purchase within pre-approved limit)",
+        "agentId": "string (optional)"
+      },
+      "response_modes": ["instant_download", "instant_purchase", "direct_purchase", "requires_payment", "requires_human_approval"],
+      "verification": "USDC Transfer event parsed from eth_getTransactionReceipt on Base (chainId 8453)"
+    },
+    "mandates": {
+      "method": "GET | POST",
+      "path": "/api/mandates",
+      "description": "Manage delegated spending mandates (ACP / AP2).",
+      "actions": {
+        "create": "POST /api/mandates with {owner, agentId, spendingLimitUsd, perPurchaseCapUsd, categories, expiresAt}",
+        "get": "GET /api/mandates?id=mand_xxx",
+        "list_by_owner": "GET /api/mandates?owner=0x...",
+        "list_by_agent": "GET /api/mandates?agent=agent_xxx",
+        "revoke": "POST /api/mandates?action=revoke&id=mand_xxx",
+        "spend": "POST /api/mandates?action=spend {id, amount, txHash}  (called internally by agent-purchase)"
+      },
+      "limits": { "max_total_usd": 500, "max_per_purchase_usd": 50, "default_ttl_days": 90 },
+      "ui": "https://marketnow.site/mandates"
+    },
+    "agent_wallet": {
+      "method": "GET",
+      "path": "/api/agent-wallet",
+      "returns": "Payment instructions for agents (USDC contract, Base RPC, code samples in Python/JS)"
+    },
+    "audit_skill": {
+      "method": "POST",
+      "path": "/api/audit-skill",
+      "description": "Sentinel L1.5 security audit — 6-point MCP security scan",
+      "checks": ["AUTH", "TOOL_DESCRIPTIONS (prompt injection)", "INPUT_VALIDATION", "CORS_ORIGIN", "OAUTH_SCOPES", "RATE_LIMITING_ERROR_LEAKAGE"]
     },
     "verify_purchase": {
       "method": "GET",
       "path": "/api/verify-purchase",
-      "params": {
-        "sessionId": "string - Stripe session ID"
-      },
-      "returns": {
-        "verified": "boolean",
-        "skillId": "string",
-        "licenseKey": "string"
-      }
+      "params": { "sessionId": "string - Stripe session ID" },
+      "returns": { "verified": "boolean", "skillId": "string", "licenseKey": "string" }
     },
-    "bundles": {
-      "method": "GET",
-      "path": "/api/bundles.json",
-      "returns": "Array of skill bundles with discounts"
-    },
-    "openapi": {
-      "method": "GET",
-      "path": "/api/openapi.yaml",
-      "returns": "OpenAPI 3.1 specification"
-    },
-    "capability_schema": {
-      "method": "GET",
-      "path": "/api/capability-schema.json",
-      "returns": "JSON Schema for skill capabilities"
-    }
+    "bundles": { "method": "GET", "path": "/api/bundles.json", "returns": "Array of skill bundles with discounts" },
+    "openapi": { "method": "GET", "path": "/api/openapi.yaml", "returns": "OpenAPI 3.1 specification" },
+    "capability_schema": { "method": "GET", "path": "/api/capability-schema.json", "returns": "JSON Schema for skill capabilities" }
   },
   "skill_schema": {
     "id": "string, format: mn-{category-abbrev}-{number}, e.g. mn-ai-00001",
     "name": "string, human-readable",
     "slug": "string, URL-safe, used in install command",
     "description": "string, real description from source repository",
-    "category": "string, one of 25 categories (see /api/categories.json)",
+    "category": "string, one of N categories (see /api/categories.json)",
     "tags": "string[], keywords for search and filtering",
-    "price": "number, USD, minimum 0.99, maximum 9.99",
+    "price": "number, USD (0 for free, otherwise 0.99 - 9.99)",
     "currency": "string, always 'USD'",
     "payment": "string, always 'one-time'",
     "license": "string, always 'perpetual'",
@@ -128,12 +158,12 @@
     "version": "string, semver"
   },
   "workflow_for_agents": {
-    "step_1_discover": "GET /api/skills.json — fetch the full catalog",
-    "step_2_filter": "Filter client-side by category, tags, price, or description keywords",
-    "step_3_evaluate": "Read the 'description', 'tags', and 'sentinel_score' fields to assess fit",
-    "step_4_purchase": "POST /api/checkout/create-session with {skillId} (requires auth token — see /handshake page in UI)",
-    "step_5_install": "Run the 'install' field as a shell command, e.g. `npx -y @marketnow/install <slug>`",
-    "step_6_use": "Call the skill from your agent runtime, e.g. agent.call('<slug>', { ... })"
+    "step_1_discover": "GET /api/search?q=your_query — find a skill",
+    "step_2_evaluate": "Read description, tags, sentinel_score, system_prompt preview",
+    "step_3_choose_mode": "If skill.price == 0 → call agent-purchase with just skillId. If paid and you have a mandateId → send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If paid and no mandate → ask the human to either approve via Stripe or create a mandate at /mandates.",
+    "step_4_purchase": "POST /api/agent-purchase",
+    "step_5_install": "Run the 'install' field as a shell command, e.g. npx -y @marketnow/install <slug>",
+    "step_6_use": "Call the skill from your agent runtime using the system_prompt + capabilities returned"
   },
   "rate_limits": {
     "anonymous": "60 requests per minute to /api/* endpoints",
@@ -142,42 +172,20 @@
   },
   "authentication": {
     "optional": "Most read endpoints are public (no auth required)",
-    "required_for": [
-      "/api/checkout/create-session",
-      "/api/vault"
-    ],
+    "required_for": ["/api/checkout/create-session", "/api/vault"],
     "method": "Bearer token in Authorization header",
     "obtain_via": "Sign up via the web UI at https://marketnow.site/?login=true"
   },
-  "protocols": [
-    "MCP v1.0",
-    "HTTP/1.1",
-    "HTTPS",
-    "JSON"
-  ],
+  "protocols": ["MCP v1.0", "HTTP/1.1", "HTTPS", "JSON", "ACP/AP2 (delegated mandates)"],
   "mcp_server": {
     "name": "marketnow-mcp",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
     "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
     "install": "npx -y marketnow-mcp",
-    "tools": [
-      "search_skills",
-      "get_skill",
-      "list_categories",
-      "get_manifest",
-      "get_install_command"
-    ],
+    "tools": ["search_skills", "get_skill", "list_categories", "get_manifest", "get_install_command"],
     "config_claude_desktop": {
-      "mcpServers": {
-        "marketnow": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "marketnow-mcp"
-          ]
-        }
-      }
+      "mcpServers": { "marketnow": { "command": "npx", "args": ["-y", "marketnow-mcp"] } }
     },
     "repo": "https://github.com/edgarfloresguerra2011-a11y/marketnow/tree/master/mcp-server"
   },
@@ -197,16 +205,18 @@
   "cors": "Access-Control-Allow-Origin: * (open for agent consumption)",
   "documentation": {
     "quickstart": "https://marketnow.site/handshake",
+    "mandates_ui": "https://marketnow.site/mandates",
     "policies": "https://marketnow.site/policies",
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-01T18:13:40.578Z",
+  "generated_at": "2026-07-02T00:00:00.000Z",
   "trust": {
     "license": "MIT",
     "open_source": true,
     "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
     "maintainer": "AliceLabs LLC",
-    "security_audit": "Sentinel L1.5 (6-point MCP security audit)"
+    "security_audit": "Sentinel L1.5 (6-point MCP security audit)",
+    "human_oversight": "Dual-mode commerce — agents act within delegated mandates, humans approve beyond"
   }
 }

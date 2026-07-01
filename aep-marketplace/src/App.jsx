@@ -22,6 +22,7 @@ import Submit from './pages/Submit';
 import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
 import AgentLanding from "./pages/AgentLanding";
+import Mandates from "./pages/Mandates";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -46,7 +47,7 @@ function App() {
       // Strict allowlist of known internal routes
       const ALLOWED_ROUTES = [
         '/registry', '/vault', '/governance', '/security',
-        '/handshake', '/policies', '/submit', '/pricing', '/dashboard',
+        '/handshake', '/policies', '/submit', '/pricing', '/dashboard', '/mandates',
       ];
       // Allow /skill/:id pattern (starts with /skill/)
       const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
@@ -104,6 +105,7 @@ function App() {
           <Route path="/submit" element={<Submit />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/agents" element={<AgentLanding />} />
+          <Route path="/mandates" element={<Mandates />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

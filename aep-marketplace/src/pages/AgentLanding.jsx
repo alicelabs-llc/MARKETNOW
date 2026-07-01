@@ -142,6 +142,34 @@ export default function AgentLanding() {
             </p>
           </motion.div>
 
+          {/* DUAL MODEL — ACP/AP2 delegated mandates */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.75 }} className="premium-card p-6 max-w-4xl mx-auto mb-12">
+            <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+              <h3 className="text-white text-xs font-mono tracking-wider uppercase">🤝 Dual Trust Model (ACP / AP2)</h3>
+              <Link to="/mandates" className="text-[#00F299] text-xs hover:underline">Manage mandates →</Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="p-4 rounded-xl bg-[#00F299]/5 border border-[#00F299]/10 text-left">
+                <div className="text-[#00F299] text-[10px] font-mono mb-1">MODE 1</div>
+                <div className="text-white text-sm font-bold mb-1">Free / Verified</div>
+                <div className="text-zinc-400 text-xs">Instant download. No payment, no mandate. Zero friction.</div>
+              </div>
+              <div className="p-4 rounded-xl bg-[#00d1ff]/5 border border-[#00d1ff]/10 text-left">
+                <div className="text-[#00d1ff] text-[10px] font-mono mb-1">MODE 2</div>
+                <div className="text-white text-sm font-bold mb-1">Within Mandate</div>
+                <div className="text-zinc-400 text-xs">Agent buys autonomously. Human set the limit once. Every spend is logged on-chain + in our mandate ledger.</div>
+              </div>
+              <div className="p-4 rounded-xl bg-yellow-500/5 border border-yellow-500/10 text-left">
+                <div className="text-yellow-400 text-[10px] font-mono mb-1">MODE 3</div>
+                <div className="text-white text-sm font-bold mb-1">Beyond Mandate</div>
+                <div className="text-zinc-400 text-xs">Agent must request approval. Human approves via Stripe or extends the mandate.</div>
+              </div>
+            </div>
+            <p className="text-zinc-600 text-[10px] mt-4 text-center">
+              Humans stay in control of spending. Agents stay autonomous within bounds. No surprises.
+            </p>
+          </motion.div>
+
           {/* Value props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
             {[

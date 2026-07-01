@@ -4,7 +4,7 @@
   "agentId": "agent_claude_persistent_test",
   "agentName": "Claude",
   "spendingLimitUsd": 15,
-  "spentUsd": 0,
+  "spentUsd": 2.5,
   "perPurchaseCapUsd": 3,
   "categories": [
     "*"
@@ -13,5 +13,7 @@
   "createdAt": "2026-07-01T19:09:41.831Z",
   "status": "active",
   "signature": null,
-  "txCount": 0
+  "txCount": 1,
+  "lastSpendAt": "2026-07-01T19:09:58.485Z",
+  "lastSpendTx": "0xdeadbeef"
 }

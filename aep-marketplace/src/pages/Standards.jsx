@@ -195,7 +195,7 @@ export default function Standards() {
           <p className="text-zinc-500 text-xs leading-relaxed">
             We will support multiple payment rails (x402 today, AP2 mandates, MPP when it stabilizes) and
             multiple discovery formats (our agent.json superset, MCP Server Cards when standard, Smithery format).
-            Compliance > purity.
+            Compliance over purity.
           </p>
         </motion.div>
 

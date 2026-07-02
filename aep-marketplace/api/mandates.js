@@ -295,8 +295,12 @@ const VETO_WINDOW_SECONDS = 300;
 const NOTIFICATION_MODES = ['silent', 'notify', 'notify_and_veto'];
 
 // Internal secret for agent-purchase → mandates spend calls
-// Prevents external callers from hitting ?action=spend directly
-const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET || 'mn_internal_' + Buffer.from(process.env.MANDATES_GITHUB_TOKEN || 'fallback').toString('hex').slice(0, 16);
+// SECURITY FIX 2.1a: Must be set as independent env var, NOT derived from GitHub token
+// If not set, we fail closed (reject all internal spend calls)
+const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET;
+if (!INTERNAL_SECRET && process.env.NODE_ENV === 'production') {
+  console.error('FATAL: MANDATES_INTERNAL_SECRET not set. Internal spend calls will be rejected.');
+}
 
 // ============================================================
 // EIP-191 Signature Verification (FIX 1.2 complete)
@@ -480,13 +484,50 @@ export default async function handler(req, res) {
     }
 
     // ---------- REVOKE ----------
+    // SECURITY FIX 2.1b: Require EIP-191 signature from owner to revoke
     if (req.method === 'POST' && action === 'revoke') {
       const id = body.id || query.id;
       if (!id) return res.status(400).json({ error: 'id required' });
+      
+      // Fetch the mandate first to check ownership
+      const mandate = await getMandate(id);
+      if (!mandate) return res.status(404).json({ error: 'Mandate not found' });
+      
+      // Require signature from the owner wallet
+      const revokeSignature = body.signature || query.signature;
+      if (!revokeSignature) {
+        return res.status(400).json({
+          error: 'signature is required to revoke',
+          reason: 'You must sign the revoke message with the owner wallet to prove you control it.',
+          how_to_sign: `Sign this message with your wallet: marketnow-revoke:${id}`,
+          owner: mandate.owner,
+        });
+      }
+      
+      // Verify the signature cryptographically
+      const revokeMessage = `marketnow-revoke:${id}`;
+      let sigValid = false;
+      try {
+        const recoveredAddress = verifyMessage(revokeMessage, revokeSignature);
+        sigValid = recoveredAddress.toLowerCase() === mandate.owner.toLowerCase();
+      } catch (e) {
+        console.error('Revoke signature verification error:', e.message);
+      }
+      
+      if (!sigValid) {
+        return res.status(403).json({
+          error: 'invalid_signature',
+          reason: 'The signature does not match the owner wallet of this mandate. Only the owner can revoke.',
+          expected_message: revokeMessage,
+          expected_signer: mandate.owner,
+        });
+      }
+      
       const updated = await updateMandateRecord(id, (m) => {
         if (!m) return null;
         m.status = 'revoked';
         m.revokedAt = nowIso();
+        m.revokedBy = mandate.owner;
         return m;
       });
       if (!updated) return res.status(404).json({ error: 'Mandate not found' });

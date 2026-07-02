@@ -99,7 +99,11 @@ async function getMandate(req, mandateId) {
 
 async function recordMandateSpend(req, mandateId, amount, txHash) {
   const baseUrl = `https://${req.headers.host}`;
-  const internalSecret = process.env.MANDATES_INTERNAL_SECRET || 'mn_internal_' + Buffer.from(process.env.MANDATES_GITHUB_TOKEN || 'fallback').toString('hex').slice(0, 16);
+  const internalSecret = process.env.MANDATES_INTERNAL_SECRET;
+  if (!internalSecret) {
+    console.error('[mandate-spend] MANDATES_INTERNAL_SECRET not set — cannot record spend internally');
+    return;
+  }
   try {
     await fetch(`${baseUrl}/api/mandates`, {
       method: 'POST',
@@ -130,9 +134,10 @@ function ghConfig() {
 async function checkTxHashUsed(txHash) {
   const cfg = ghConfig();
   if (!cfg.token) {
-    // Fallback: can't verify, but log warning
-    console.warn('[anti-replay] No GitHub token, cannot verify txHash uniqueness');
-    return false;
+    // SECURITY FIX 1.1: Fail CLOSED — if we can't verify, reject the purchase
+    // rather than risk a replay attack
+    console.error('[anti-replay] No GitHub token — REJECTING purchase (fail-closed)');
+    return null; // null = "cannot verify, reject"
   }
   const filename = `${txHash}.json`;
   const rawUrl = `https://raw.githubusercontent.com/${cfg.repo}/${encodeURIComponent(cfg.branch)}/${encodeURIComponent(cfg.path)}/${filename}`;
@@ -140,9 +145,11 @@ async function checkTxHashUsed(txHash) {
     const r = await fetch(rawUrl, {
       headers: { 'User-Agent': 'marketnow-anti-replay' },
     });
-    return r.ok; // 200 = already used, 404 = not used
+    return r.ok; // true = already used, false = not used
   } catch {
-    return false; // assume not used if we can't check (fail open, but log)
+    // Fail CLOSED on network errors too
+    console.error('[anti-replay] Network error checking txHash — REJECTING (fail-closed)');
+    return null;
   }
 }
 
@@ -413,8 +420,17 @@ export default async function handler(req, res) {
         });
       }
 
-      // ANTI-REPLAY: Check if txHash was already used
+      // ANTI-REPLAY: Check if txHash was already used (fail-closed)
       const txAlreadyUsed = await checkTxHashUsed(txHash);
+      if (txAlreadyUsed === null) {
+        return res.status(503).json({
+          success: false,
+          mode: 'requires_payment',
+          reason: 'anti_replay_check_unavailable',
+          txHash,
+          message: 'Cannot verify transaction uniqueness at this time. Please try again in a moment.',
+        });
+      }
       if (txAlreadyUsed) {
         return res.status(409).json({
           success: false,
@@ -509,8 +525,17 @@ export default async function handler(req, res) {
     // MODE 3: PAID SKILL, NO MANDATE — direct USDC if txHash, else require human approval
     // ============================================================
     if (txHash && walletAddress) {
-      // ANTI-REPLAY: Check if txHash was already used
+      // ANTI-REPLAY: Check if txHash was already used (fail-closed)
       const txAlreadyUsed = await checkTxHashUsed(txHash);
+      if (txAlreadyUsed === null) {
+        return res.status(503).json({
+          success: false,
+          mode: 'requires_payment',
+          reason: 'anti_replay_check_unavailable',
+          txHash,
+          message: 'Cannot verify transaction uniqueness at this time. Please try again in a moment.',
+        });
+      }
       if (txAlreadyUsed) {
         return res.status(409).json({
           success: false,

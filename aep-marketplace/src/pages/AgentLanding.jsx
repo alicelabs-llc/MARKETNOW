@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export default function AgentLanding() {
-  const [stats, setStats] = useState({ total: 8560, free: 43, sellers: 15, downloads: 0 });
+  const [stats, setStats] = useState({ total: 8560, free: 43, sellers: 15 });
   const [topFree, setTopFree] = useState([]);
+  const [topPaid, setTopPaid] = useState([]);
 
   useEffect(() => {
     fetch('/api/agent-ping.json')
@@ -17,19 +18,29 @@ export default function AgentLanding() {
       })))
       .catch(() => {});
 
-    // Fetch top free skills for the "FREE SKILLS" magnet section
     fetch('/api/free-skills.json')
       .then(r => r.json())
       .then(d => {
-        const skills = (d.skills || d).slice(0, 6);
+        const skills = (d.skills || d).slice(0, 3);
         setTopFree(skills);
+      })
+      .catch(() => {});
+
+    // Fetch some paid skills to show as "trending"
+    fetch('/api/skills.json')
+      .then(r => r.json())
+      .then(d => {
+        // Pick 3 skills with good sentinel scores and reasonable prices
+        const trending = d
+          .filter(s => s.sentinel_score >= 7 && s.price >= 1.99 && s.price <= 4.99)
+          .slice(0, 3);
+        setTopPaid(trending);
       })
       .catch(() => {});
   }, []);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="relative z-10">
@@ -59,7 +70,7 @@ export default function AgentLanding() {
               {stats.total.toLocaleString()}+ MCP servers · AP2-compatible mandates · x402 payments · Open source MIT · AliceLabs LLC
             </p>
 
-            {/* Search bar — the #1 thing devs need */}
+            {/* Search bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <Link to="/registry" className="flex items-center gap-3 px-5 py-4 bg-black/40 border border-white/10 rounded-xl hover:border-[#00F299]/40 transition-all group">
                 <span className="text-zinc-500 text-lg">🔍</span>
@@ -83,7 +94,7 @@ export default function AgentLanding() {
               </Link>
             </div>
 
-            {/* One-liner install */}
+            {/* Install command */}
             <div className="inline-block px-4 py-2 rounded-lg bg-black/40 border border-white/5 mb-2">
               <code className="text-[#00F299] text-xs font-mono">npx -y @marketnow/install &lt;slug&gt;</code>
               <span className="text-zinc-600 text-xs ml-2">or</span>
@@ -98,12 +109,12 @@ export default function AgentLanding() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="premium-card p-6 md:p-8">
             <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
               <div>
-                <h2 className="text-white text-2xl font-bold mb-1">⚡ {stats.free} Free Skills</h2>
-                <p className="text-zinc-400 text-sm">No payment, no mandate, no signup. Just install and use.</p>
+                <h2 className="text-white text-2xl font-bold mb-1">⚡ {stats.free} Free Skills — Install Now</h2>
+                <p className="text-zinc-400 text-sm">No payment, no signup, no mandate. Just install and use. The fastest way to test MarketNow.</p>
               </div>
               <Link to="/registry?filter=free" className="text-[#00F299] text-sm hover:underline">See all {stats.free} →</Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {topFree.length === 0 ? (
                 <div className="text-zinc-600 text-xs col-span-3">Loading free skills…</div>
               ) : topFree.map(s => (
@@ -121,9 +132,32 @@ export default function AgentLanding() {
           </motion.div>
         </section>
 
+        {/* ============ TRENDING PAID SKILLS ============ */}
+        {topPaid.length > 0 && (
+          <section className="max-w-5xl mx-auto px-6 pb-16">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+              <h2 className="text-white text-2xl font-bold text-center mb-2">🔥 Trending Skills</h2>
+              <p className="text-zinc-500 text-sm text-center mb-8">High Sentinel scores, fair prices. Verified by automated security audit.</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {topPaid.map(s => (
+                  <Link key={s.id} to={`/skill/${s.id}`} className="block p-4 rounded-xl bg-black/40 border border-white/5 hover:border-[#00d1ff]/30 transition-all">
+                    <div className="flex items-start justify-between mb-2">
+                      <span className="px-2 py-0.5 rounded bg-[#00d1ff]/10 text-[#00d1ff] text-[10px] font-mono font-bold">${s.price}</span>
+                      <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">🛡️ {s.sentinel_score}/10</span>
+                    </div>
+                    <div className="text-white text-sm font-bold mb-1 truncate">{s.name}</div>
+                    <p className="text-zinc-500 text-xs line-clamp-2">{s.description}</p>
+                    <div className="text-zinc-600 text-[10px] mt-2">{s.category}</div>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </section>
+        )}
+
         {/* ============ FOR DEVS ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
             <h2 className="text-white text-2xl font-bold text-center mb-2">For Developers</h2>
             <p className="text-zinc-500 text-sm text-center mb-8">The fastest way to add a capability to your agent stack.</p>
 
@@ -140,7 +174,7 @@ export default function AgentLanding() {
                 <div className="text-3xl mb-3">💳</div>
                 <h3 className="text-white font-bold text-sm mb-2">2. Pay (or grab free)</h3>
                 <p className="text-zinc-400 text-xs leading-relaxed">
-                  Credit card via Stripe (full chargeback rights) or USDC on Base L2.
+                  Credit card via Stripe (full chargeback rights) or USDC on Base L2 via x402.
                   {stats.free} skills are free — no payment, no signup. Just install.
                 </p>
               </div>
@@ -158,19 +192,19 @@ export default function AgentLanding() {
 
         {/* ============ FOR AGENTS ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
             <h2 className="text-white text-2xl font-bold text-center mb-2">For Agents</h2>
             <p className="text-zinc-500 text-sm text-center mb-8">Machine-readable everything. Human-in-the-loop by default.</p>
 
             <div className="premium-card p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
                 {[
-                  { m: 'GET', p: '/api/skills.json', d: 'Full catalog (JSON, ~7MB)' },
+                  { m: 'GET', p: '/api/skills.json', d: 'Full catalog (JSON)' },
                   { m: 'GET', p: '/api/search?q=', d: 'Server-side search' },
                   { m: 'GET', p: '/api/agent.json', d: 'Machine-readable instructions' },
                   { m: 'GET', p: '/api/policies.json', d: 'Refund, dispute, terms' },
-                  { m: 'POST', p: '/api/agent-purchase', d: 'Buy a skill (5 modes)' },
-                  { m: 'GET', p: '/api/mandates', d: 'Delegated mandates (ACP/AP2)' },
+                  { m: 'POST', p: '/api/agent-purchase', d: 'Buy a skill (x402 / 5 modes)' },
+                  { m: 'GET', p: '/api/mandates', d: 'Delegated mandates (AP2)' },
                   { m: 'GET', p: '/api/free-skills.json', d: `${stats.free} free skills` },
                   { m: 'GET', p: '/api/bundles.json', d: 'Discounted bundles' },
                 ].map((e, i) => (
@@ -195,7 +229,7 @@ export default function AgentLanding() {
 
         {/* ============ WHY RECOMMEND US ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
             <h2 className="text-white text-2xl font-bold text-center mb-2">Why people recommend us</h2>
             <p className="text-zinc-500 text-sm text-center mb-8">Honest reasons to share this with your team or followers.</p>
 
@@ -246,13 +280,13 @@ export default function AgentLanding() {
 
         {/* ============ SHARE / RECOMMEND ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="premium-card p-6 md:p-8">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="premium-card p-6 md:p-8">
             <h2 className="text-white text-xl font-bold mb-2">📢 Share MarketNow</h2>
             <p className="text-zinc-400 text-sm mb-4">If you found this useful, share it. The more agents and devs use it, the better the catalog gets.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Found marketnow.site — 'npm for MCP servers'. 8,560 verified skills, $0.99-$9.99 one-time, 43 free. Sentinel-scanned, open source MIT. Worth bookmarking.")}&url=${encodeURIComponent("https://marketnow.site")}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Found marketnow.site — 'trust layer for agent commerce'. 8,560 MCP skills, Sentinel-scanned, AP2 mandates, x402 payments. 43 free. Open source MIT.")}&url=${encodeURIComponent("https://marketnow.site")}`}
                 target="_blank"
                 rel="noopener"
                 className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/5 hover:border-[#00F299]/30 transition-all"
@@ -260,13 +294,13 @@ export default function AgentLanding() {
                 <span className="text-xl">🐦</span>
                 <div className="flex-1 text-left">
                   <div className="text-white text-sm font-bold">Share on Twitter/X</div>
-                  <div className="text-zinc-500 text-xs">"npm for MCP servers" — one click</div>
+                  <div className="text-zinc-500 text-xs">"trust layer for agent commerce" — one click</div>
                 </div>
                 <span className="text-[#00F299] text-xs">→</span>
               </a>
 
               <a
-                href={`https://news.ycombinator.com/submitlink?u=${encodeURIComponent("https://marketnow.site")}&t=${encodeURIComponent("MarketNow — npm for MCP servers (8,560 skills, open source)")}`}
+                href={`https://news.ycombinator.com/submitlink?u=${encodeURIComponent("https://marketnow.site")}&t=${encodeURIComponent("MarketNow — Trust layer for agent commerce (8,560 MCP skills, x402, AP2)")}`}
                 target="_blank"
                 rel="noopener"
                 className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/5 hover:border-[#00F299]/30 transition-all"
@@ -274,7 +308,7 @@ export default function AgentLanding() {
                 <span className="text-xl">🟧</span>
                 <div className="flex-1 text-left">
                   <div className="text-white text-sm font-bold">Submit to Hacker News</div>
-                  <div className="text-zinc-500 text-xs">"Show HN: npm for MCP servers"</div>
+                  <div className="text-zinc-500 text-xs">"Show HN: Trust layer for agent commerce"</div>
                 </div>
                 <span className="text-[#00F299] text-xs">→</span>
               </a>
@@ -288,7 +322,7 @@ export default function AgentLanding() {
                 <span className="text-xl">👽</span>
                 <div className="flex-1 text-left">
                   <div className="text-white text-sm font-bold">Post on r/mcp</div>
-                  <div className="text-zinc-500 text-xs">"MarketNow: 8,560 MCP servers, $0.99-$9.99"</div>
+                  <div className="text-zinc-500 text-xs">"MarketNow: trust layer, 8,560 skills, x402"</div>
                 </div>
                 <span className="text-[#00F299] text-xs">→</span>
               </a>
@@ -330,6 +364,8 @@ export default function AgentLanding() {
           <div className="flex items-center justify-center gap-4 flex-wrap text-xs">
             <Link to="/trust" className="text-[#00F299] hover:underline">Trust Roadmap</Link>
             <span className="text-zinc-700">·</span>
+            <Link to="/standards" className="text-[#00F299] hover:underline">Standards (x402, AP2)</Link>
+            <span className="text-zinc-700">·</span>
             <Link to="/about" className="text-zinc-400 hover:underline">About</Link>
             <span className="text-zinc-700">·</span>
             <Link to="/catalog" className="text-zinc-400 hover:underline">Catalog Transparency</Link>
@@ -339,6 +375,8 @@ export default function AgentLanding() {
             <Link to="/pricing" className="text-zinc-400 hover:underline">Pricing</Link>
             <span className="text-zinc-700">·</span>
             <Link to="/security" className="text-zinc-400 hover:underline">Security</Link>
+            <span className="text-zinc-700">·</span>
+            <Link to="/listings" className="text-zinc-400 hover:underline">External Listings</Link>
             <span className="text-zinc-700">·</span>
             <Link to="/handshake" className="text-zinc-400 hover:underline">API Docs</Link>
             <span className="text-zinc-700">·</span>

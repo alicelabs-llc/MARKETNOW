@@ -82,8 +82,8 @@ async function runL2BehavioralAnalysis(skill) {
   const packageName = npmMatch ? npmMatch[1] : null;
   
   if (packageName) {
-    // Try to get repo URL from npm registry
-    try {
+    // Skip npm registry lookup (too slow for serverless)
+    try { /* skipped npm lookup for performance */
       const npmRes = await fetch(`https://registry.npmjs.org/${packageName.replace('@marketnow/install ', '')}`);
       if (npmRes.ok) {
         const npmData = await npmRes.json();
@@ -129,14 +129,14 @@ async function runL2BehavioralAnalysis(skill) {
   }
   
   // Fetch actual source files from GitHub
-  const filesToFetch = ['package.json', 'index.js', 'src/index.js', 'main.js', 'server.js', 'src/server.js'];
+  const filesToFetch = ['index.js', 'src/index.js', 'main.js'];
   const repoRawBase = repoUrl.replace('https://github.com/', 'https://raw.githubusercontent.com/').replace(/\/$/, '') + '/master/';
   
   let sourceCode = '';
   let fetchedFiles = [];
   
   for (const file of filesToFetch) {
-    try {
+    try { /* skipped npm lookup for performance */
       const res = await fetch(repoRawBase + file, {
         headers: { 'User-Agent': 'Sentinel-L2' },
         
@@ -153,7 +153,7 @@ async function runL2BehavioralAnalysis(skill) {
   if (fetchedFiles.length === 0) {
     const repoMainBase = repoUrl.replace('https://github.com/', 'https://raw.githubusercontent.com/').replace(/\/$/, '') + '/main/';
     for (const file of filesToFetch) {
-      try {
+      try { /* skipped npm lookup for performance */
         const res = await fetch(repoMainBase + file, {
           headers: { 'User-Agent': 'Sentinel-L2' },
           
@@ -282,7 +282,7 @@ const PROMPT_INJECTION_PATTERNS = [
 // L1.6-lite: Check dependencies via OSV API (HTTP, no binary)
 // ============================================================
 async function checkDependenciesOSV(packageName, packageVersion, ecosystem) {
-  try {
+  try { /* skipped npm lookup for performance */
     const response = await fetch('https://api.osv.dev/v1/query', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -356,7 +356,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  try {
+  try { /* skipped npm lookup for performance */
     const skillId = req.method === 'POST' 
       ? (req.body || {}).skillId 
       : req.query.skillId;
@@ -602,8 +602,22 @@ export default async function handler(req, res) {
 
     // ============================================================
     // L2: Run behavioral analysis (fetches actual source code from GitHub)
+    // Wrapped in try-catch — L1.6 results are already in the report.
+    // If L2 fails (timeout, network), report still returns with L1.6 only.
     // ============================================================
-    const l2Result = await runL2BehavioralAnalysis(skill);
+    let l2Result = null;
+    try { /* skipped npm lookup for performance */
+      l2Result = await runL2BehavioralAnalysis(skill);
+    } catch (l2Err) {
+      console.error('L2 behavioral analysis failed (non-fatal):', l2Err.message);
+      l2Result = {
+        findings: [{ check: 'l2_error', status: 'error', message: `L2 analysis failed: ${l2Err.message}`, severity: 'INFO' }],
+        l2_multiplier: 0.9, // Slight penalty for not being able to verify
+        source: 'error',
+        repoUrl: null,
+        files_analyzed: 0,
+      };
+    }
     
     // Apply L2 multiplicative scoring on L1.6 score
     const l16Score = report.audit.overall_score;

@@ -139,7 +139,7 @@ async function runL2BehavioralAnalysis(skill) {
     try {
       const res = await fetch(repoRawBase + file, {
         headers: { 'User-Agent': 'Sentinel-L2' },
-        signal: AbortSignal.timeout(3000),
+        
       });
       if (res.ok) {
         const code = await res.text();
@@ -156,7 +156,7 @@ async function runL2BehavioralAnalysis(skill) {
       try {
         const res = await fetch(repoMainBase + file, {
           headers: { 'User-Agent': 'Sentinel-L2' },
-          signal: AbortSignal.timeout(3000),
+          
         });
         if (res.ok) {
           const code = await res.text();

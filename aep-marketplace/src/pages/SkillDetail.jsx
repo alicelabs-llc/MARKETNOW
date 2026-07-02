@@ -129,6 +129,7 @@ export default function SkillDetail() {
   const [error, setError] = useState('');
   const [purchasing, setPurchasing] = useState(false);
   const [purchaseResult, setPurchaseResult] = useState(null);
+  const [purchased, setPurchased] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copiedInstall, setCopiedInstall] = useState(false);
   const [walletAddr, setWalletAddr] = useState(null);
@@ -218,6 +219,7 @@ export default function SkillDetail() {
         ...result,
         purchase: { license: result.access_token || result.order_id },
       });
+      setPurchased(true); // Unlock the full system prompt
       setPurchaseStep('');
     } catch (err) {
       if (err.code === 4001) {
@@ -276,6 +278,8 @@ export default function SkillDetail() {
   if (!skill) return null;
 
   const isFree = !skill.price || skill.price === 0;
+  // Free skills: prompt is unlocked by default
+  const promptUnlocked = purchased || isFree;
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -341,49 +345,81 @@ export default function SkillDetail() {
                 </div>
               </div>
 
-              {/* System Prompt (with language selector) */}
+              {/* System Prompt — PREVIEW ONLY (locked until purchase) */}
               {skill.doc?.system_prompt && (
                 <div className="mb-8">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-sm text-zinc-500 font-mono tracking-wider uppercase">System Prompt</h3>
-                    {skill.translations && (
-                      <div className="flex items-center gap-1">
-                        {SUPPORTED_LANGUAGES.filter(l => skill.translations[l.code]).map(lang => (
+                    <div className="flex items-center gap-2">
+                      {promptUnlocked ? (
+                        <span className="px-2 py-1 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">✓ UNLOCKED</span>
+                      ) : (
+                        <span className="px-2 py-1 rounded bg-yellow-500/10 text-yellow-400 text-[10px] font-mono font-bold">🔒 PREVIEW — PURCHASE TO UNLOCK</span>
+                      )}
+                      {promptUnlocked && skill.translations && (
+                        <div className="flex items-center gap-1">
+                          {SUPPORTED_LANGUAGES.filter(l => skill.translations[l.code]).map(lang => (
+                            <button
+                              key={lang.code}
+                              onClick={() => setSelectedLang(lang.code)}
+                              className={`px-2 py-1 rounded text-xs font-mono transition-all ${
+                                selectedLang === lang.code
+                                  ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
+                                  : 'bg-white/5 text-zinc-500 border border-white/5 hover:bg-white/10'
+                              }`}
+                              title={lang.label}
+                            >
+                              {lang.flag} {lang.code.toUpperCase()}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className={`relative rounded-xl bg-black/60 border border-white/5 overflow-hidden ${promptUnlocked ? '' : 'cursor-pointer'}`}
+                    onClick={() => { if (!promptUnlocked) { document.getElementById('purchase-section')?.scrollIntoView({behavior:'smooth'}); } }}
+                  >
+                    {promptUnlocked ? (
+                      /* FULL PROMPT — only visible after purchase */
+                      <div className="p-4">
+                        <pre className="text-[#00F299] text-xs font-mono whitespace-pre-wrap break-words max-h-96 overflow-y-auto select-all">
+                          {skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt}
+                        </pre>
+                        <div className="mt-2 text-right">
                           <button
-                            key={lang.code}
-                            onClick={() => setSelectedLang(lang.code)}
-                            className={`px-2 py-1 rounded text-xs font-mono transition-all ${
-                              selectedLang === lang.code
-                                ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
-                                : 'bg-white/5 text-zinc-500 border border-white/5 hover:bg-white/10'
-                            }`}
-                            title={lang.label}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              const promptText = skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt;
+                              navigator.clipboard.writeText(promptText);
+                              setCopied(true);
+                              setTimeout(() => setCopied(false), 2000);
+                            }}
+                            className="text-zinc-600 text-xs font-mono hover:text-[#00F299] transition-colors"
                           >
-                            {lang.flag} {lang.code.toUpperCase()}
+                            {copied ? '✅ COPIED' : '📋 COPY PROMPT'}
                           </button>
-                        ))}
+                        </div>
+                      </div>
+                    ) : (
+                      /* PREVIEW ONLY — truncated + blurred */
+                      <div className="p-4">
+                        <pre className="text-[#00F299]/60 text-xs font-mono whitespace-pre-wrap break-words overflow-hidden" style={{maxHeight: '120px'}}>
+                          {(skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt).slice(0, 200)}
+                        </pre>
+                        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black via-black/90 to-transparent flex items-end justify-center pb-3">
+                          <span className="text-yellow-400 text-xs font-mono">
+                            🔒 +{(skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt).length - 200} characters locked
+                          </span>
+                        </div>
                       </div>
                     )}
                   </div>
-                  <div
-                    onClick={() => {
-                      const promptText = skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt;
-                      navigator.clipboard.writeText(promptText);
-                      setCopied(true);
-                      setTimeout(() => setCopied(false), 2000);
-                    }}
-                    className="p-4 rounded-xl bg-black/60 border border-white/5 cursor-pointer hover:border-[#00F299]/30 transition-all group"
-                  >
-                    <pre className="text-[#00F299] text-xs font-mono whitespace-pre-wrap break-words max-h-80 overflow-y-auto">
-                      {skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt}
-                    </pre>
-                    <div className="mt-2 text-right">
-                      <span className="text-zinc-600 text-xs font-mono group-hover:text-[#00F299] transition-colors">
-                        {copied ? '✅ COPIED' : '📋 COPY PROMPT'}
-                      </span>
-                    </div>
-                  </div>
-                  {skill.translations && (
+                  {!promptUnlocked && (
+                    <p className="text-zinc-600 text-[10px] mt-2 font-mono">
+                      ⚠️ Preview shows first 200 characters only. Full prompt ({(skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt).length} chars) unlocked after purchase.
+                    </p>
+                  )}
+                  {promptUnlocked && skill.translations && (
                     <p className="text-zinc-600 text-[10px] mt-2 font-mono">
                       🌐 Available in {Object.keys(skill.translations).length} languages ·
                       Showing: {SUPPORTED_LANGUAGES.find(l => l.code === selectedLang)?.label || selectedLang}
@@ -453,7 +489,7 @@ export default function SkillDetail() {
             transition={{ delay: 0.1 }}
             className="lg:col-span-1"
           >
-            <div className="premium-card p-6 sticky top-28">
+            <div className="premium-card p-6 sticky top-28" id="purchase-section">
               <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-white mb-1">${skill.price.toFixed(2)}</div>
                 <div className="text-zinc-500 text-sm">One-time payment · Lifetime license</div>

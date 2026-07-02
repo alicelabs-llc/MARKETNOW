@@ -29,6 +29,14 @@ const CLIENT_URL = process.env.CLIENT_URL || 'https://marketnow.site';
 // MarketNow commission (20%) — stored as metadata for the webhook
 const COMMISSION_RATE = 0.20;
 
+// FIX 4.4: Validate email before passing to Stripe
+// Prevents injection of malformed/invalid emails via header
+function validateEmail(email) {
+  if (!email) return null;
+  const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  return regex.test(email) ? email : null;
+}
+
 /**
  * Fetch a skill by ID from the static JSON.
  * In production, this could query a database instead.
@@ -120,7 +128,7 @@ export default async function handler(req, res) {
         affiliate_code: affiliateCode || '',
         marketplace: 'marketnow',
       },
-      customer_email: req.headers['x-user-email'] || undefined, // Optional: pre-fill email
+      customer_email: validateEmail(req.headers['x-user-email']) || undefined, // Optional: pre-fill email (validated)
       billing_address_collection: 'auto',
       allow_promotion_codes: true,
     });

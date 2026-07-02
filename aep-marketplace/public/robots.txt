@@ -11,7 +11,7 @@ Allow: /api/search
 Allow: /api/agent.json
 Allow: /api/manifest.json
 Allow: /api/categories.json
-Allow: /api/openapi.yaml
+Allow: /api/openapi.json
 Allow: /api/bundles.json
 Allow: /api/verify-purchase
 Allow: /api/capability-schema.json
@@ -67,7 +67,7 @@ Sitemap: https://marketnow.site/sitemap.xml
 # GET /api/search?q=query — server-side search with relevance scoring
 # GET /api/manifest.json — marketplace metadata (v4.0.0)
 # GET /api/categories.json — 58 categories with counts
-# GET /api/openapi.yaml — OpenAPI 3.1 specification
+# GET /api/openapi.json — OpenAPI 3.1 specification
 # GET /api/verify-purchase?sessionId=X — verify a Stripe purchase
 # GET /api/bundles.json — skill bundles with discounts
 # GET /api/capability-schema.json — capability ontology schema

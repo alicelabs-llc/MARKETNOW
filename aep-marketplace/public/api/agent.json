@@ -213,7 +213,7 @@
     },
     "openapi": {
       "method": "GET",
-      "path": "/api/openapi.yaml",
+      "path": "/api/openapi.json",
       "returns": "OpenAPI 3.1 specification"
     },
     "capability_schema": {

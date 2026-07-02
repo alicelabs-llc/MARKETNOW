@@ -298,6 +298,37 @@ const NOTIFICATION_MODES = ['silent', 'notify', 'notify_and_veto'];
 // Prevents external callers from hitting ?action=spend directly
 const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET || 'mn_internal_' + Buffer.from(process.env.MANDATES_GITHUB_TOKEN || 'fallback').toString('hex').slice(0, 16);
 
+// ============================================================
+// EIP-191 Signature Verification (FIX 1.2 complete)
+// Verifies that the signature was produced by the owner wallet
+// ============================================================
+import { verifyMessage } from 'ethers';
+
+/**
+ * Build the canonical message that the owner must sign.
+ * Format: marketnow-mandate:{agentId}:{spendingLimitUsd}:{owner}
+ */
+function buildMandateMessage(agentId, spendingLimitUsd, owner) {
+  return `marketnow-mandate:${agentId}:${spendingLimitUsd}:${owner.toLowerCase()}`;
+}
+
+/**
+ * Verify EIP-191 signature.
+ * Returns true if the signature was produced by the owner wallet.
+ * Returns false if verification fails.
+ */
+function verifyMandateSignature(signature, agentId, spendingLimitUsd, owner) {
+  if (!signature || !owner) return false;
+  try {
+    const message = buildMandateMessage(agentId, spendingLimitUsd, owner);
+    const recoveredAddress = verifyMessage(message, signature);
+    return recoveredAddress.toLowerCase() === owner.toLowerCase();
+  } catch (e) {
+    console.error('Signature verification error:', e.message);
+    return false;
+  }
+}
+
 // Check if caller is authorized for spend action
 // Only internal calls from agent-purchase.js should hit spend
 function isInternalCall(body) {
@@ -346,13 +377,24 @@ export default async function handler(req, res) {
         });
       }
 
-      // SECURITY FIX 1.2: Require signature to prove ownership of the owner wallet
-      // Without this, anyone could create mandates on behalf of any wallet address
+      // SECURITY FIX 1.2: Require AND verify EIP-191 signature cryptographically
+      // Prevents anyone from creating mandates on behalf of another wallet
       if (!signature) {
         return res.status(400).json({
           error: 'signature is required',
           reason: 'You must sign the mandate data with the owner wallet (EIP-191). This proves you control the wallet address specified as owner.',
-          how_to_sign: 'Sign this message with your wallet: marketnow-mandate:{agentId}:{spendingLimitUsd}:{owner}',
+          how_to_sign: `Sign this message with your wallet: ${buildMandateMessage(agentId, spendingLimitUsd, owner)}`,
+        });
+      }
+
+      // Verify the signature cryptographically using ethers.js
+      const sigValid = verifyMandateSignature(signature, agentId, spendingLimitUsd, owner);
+      if (!sigValid) {
+        return res.status(403).json({
+          error: 'invalid_signature',
+          reason: 'The signature does not match the owner wallet. Ensure you signed the exact message with the wallet that matches the owner address.',
+          expected_message: buildMandateMessage(agentId, spendingLimitUsd, owner),
+          expected_signer: owner,
         });
       }
 

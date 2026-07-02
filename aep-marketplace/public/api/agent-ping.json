@@ -24,7 +24,7 @@
     "categories": "GET /api/categories.json",
     "manifest": "GET /api/manifest.json",
     "agent_docs": "GET /api/agent.json",
-    "openapi": "GET /api/openapi.yaml",
+    "openapi": "GET /api/openapi.json",
     "bundles": "GET /api/bundles.json",
     "audit": "POST /api/audit-skill",
     "wallet": "GET /api/agent-wallet",

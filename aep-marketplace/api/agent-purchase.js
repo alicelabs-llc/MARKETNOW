@@ -99,14 +99,91 @@ async function getMandate(req, mandateId) {
 
 async function recordMandateSpend(req, mandateId, amount, txHash) {
   const baseUrl = `https://${req.headers.host}`;
+  const internalSecret = process.env.MANDATES_INTERNAL_SECRET || 'mn_internal_' + Buffer.from(process.env.MANDATES_GITHUB_TOKEN || 'fallback').toString('hex').slice(0, 16);
   try {
     await fetch(`${baseUrl}/api/mandates`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'spend', id: mandateId, amount, txHash }),
+      body: JSON.stringify({ action: 'spend', id: mandateId, amount, txHash, _internal: true, _secret: internalSecret }),
     });
   } catch (e) {
     console.error('mandate spend recording failed (non-fatal):', e);
+  }
+}
+
+// ============================================================
+// ANTI-REPLAY: Track used txHashes to prevent double-spending
+// Uses GitHub repo as DB (same pattern as mandates)
+// ============================================================
+
+const GITHUB_API_BASE = 'https://api.github.com';
+
+function ghConfig() {
+  return {
+    token: process.env.MANDATES_GITHUB_TOKEN,
+    repo: process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow',
+    branch: process.env.MANDATES_BRANCH || 'master',
+    path: '_data/used_txs',
+  };
+}
+
+async function checkTxHashUsed(txHash) {
+  const cfg = ghConfig();
+  if (!cfg.token) {
+    // Fallback: can't verify, but log warning
+    console.warn('[anti-replay] No GitHub token, cannot verify txHash uniqueness');
+    return false;
+  }
+  const filename = `${txHash}.json`;
+  const rawUrl = `https://raw.githubusercontent.com/${cfg.repo}/${encodeURIComponent(cfg.branch)}/${encodeURIComponent(cfg.path)}/${filename}`;
+  try {
+    const r = await fetch(rawUrl, {
+      headers: { 'User-Agent': 'marketnow-anti-replay' },
+    });
+    return r.ok; // 200 = already used, 404 = not used
+  } catch {
+    return false; // assume not used if we can't check (fail open, but log)
+  }
+}
+
+async function markTxHashUsed(txHash, purchaseData) {
+  const cfg = ghConfig();
+  if (!cfg.token) {
+    console.warn('[anti-replay] No GitHub token, cannot mark txHash as used');
+    return;
+  }
+  const filename = `${txHash}.json`;
+  const fileUrl = `${GITHUB_API_BASE}/repos/${cfg.repo}/contents/${encodeURIComponent(cfg.path)}/${filename}?ref=${encodeURIComponent(cfg.branch)}`;
+  const record = {
+    txHash,
+    skillId: purchaseData.skillId,
+    skillName: purchaseData.skillName,
+    price: purchaseData.price,
+    mandateId: purchaseData.mandateId || null,
+    licenseKey: purchaseData.licenseKey,
+    walletAddress: purchaseData.walletAddress,
+    timestamp: new Date().toISOString(),
+  };
+  const body = {
+    message: `anti-replay: mark tx ${txHash.slice(0, 18)}... as used (skill ${purchaseData.skillId})`,
+    content: Buffer.from(JSON.stringify(record, null, 2)).toString('base64'),
+    branch: cfg.branch,
+  };
+  try {
+    const r = await fetch(fileUrl, {
+      method: 'PUT',
+      headers: {
+        'User-Agent': 'marketnow-anti-replay',
+        Authorization: `Bearer ${cfg.token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!r.ok) {
+      console.error('[anti-replay] Failed to mark txHash as used:', r.status, await r.text());
+    }
+  } catch (e) {
+    console.error('[anti-replay] Error marking txHash:', e);
   }
 }
 
@@ -336,6 +413,18 @@ export default async function handler(req, res) {
         });
       }
 
+      // ANTI-REPLAY: Check if txHash was already used
+      const txAlreadyUsed = await checkTxHashUsed(txHash);
+      if (txAlreadyUsed) {
+        return res.status(409).json({
+          success: false,
+          mode: 'requires_payment',
+          reason: 'tx_hash_already_used',
+          txHash,
+          message: 'This transaction hash has already been used to purchase a skill. Each payment can only be redeemed once.',
+        });
+      }
+
       // Verify USDC payment on-chain
       const expectedAmountRaw = Math.round(skill.price * 10 ** USDC_DECIMALS);
       const v = await verifyUsdcTx(txHash, expectedAmountRaw);
@@ -354,6 +443,17 @@ export default async function handler(req, res) {
             : `Payment verification failed: ${v.code}`,
         });
       }
+
+      // Payment verified — mark txHash as used (anti-replay)
+      const licenseKeyVal = licenseKey(skill.id);
+      await markTxHashUsed(txHash, {
+        skillId: skill.id,
+        skillName: skill.name,
+        price: skill.price,
+        mandateId,
+        licenseKey: licenseKeyVal,
+        walletAddress: walletAddress || mandate.owner,
+      });
 
       // Payment verified — record spend against the mandate
       await recordMandateSpend(req, mandateId, skill.price, txHash);
@@ -409,6 +509,18 @@ export default async function handler(req, res) {
     // MODE 3: PAID SKILL, NO MANDATE — direct USDC if txHash, else require human approval
     // ============================================================
     if (txHash && walletAddress) {
+      // ANTI-REPLAY: Check if txHash was already used
+      const txAlreadyUsed = await checkTxHashUsed(txHash);
+      if (txAlreadyUsed) {
+        return res.status(409).json({
+          success: false,
+          mode: 'requires_payment',
+          reason: 'tx_hash_already_used',
+          txHash,
+          message: 'This transaction hash has already been used to purchase a skill. Each payment can only be redeemed once.',
+        });
+      }
+
       const expectedAmountRaw = Math.round(skill.price * 10 ** USDC_DECIMALS);
       const v = await verifyUsdcTx(txHash, expectedAmountRaw);
       if (!v.ok) {
@@ -422,6 +534,17 @@ export default async function handler(req, res) {
           network: 'Base',
         });
       }
+
+      // Payment verified — mark txHash as used (anti-replay)
+      const directLicenseKey = licenseKey(skill.id);
+      await markTxHashUsed(txHash, {
+        skillId: skill.id,
+        skillName: skill.name,
+        price: skill.price,
+        mandateId: null,
+        licenseKey: directLicenseKey,
+        walletAddress,
+      });
 
       const sellerEarnings = skill.price * (1 - COMMISSION_RATE);
       const marketnowRevenue = skill.price * COMMISSION_RATE;

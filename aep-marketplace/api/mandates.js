@@ -290,14 +290,19 @@ const MAX_PER_PURCHASE_CAP = 50;
 const MAX_TOTAL_LIMIT = 500;
 
 // Default notification mode is "notify" — every purchase within a mandate
-// triggers a notification (email/webhook) to the principal. The principal
-// can choose "silent" (no notification, fully autonomous — opt-in) or
-// "notify_and_veto" (notification + 5-minute veto window before spend is
-// committed). This implements Claude's feedback: human-in-the-loop is the
-// default, not opt-out.
 const DEFAULT_NOTIFICATION_MODE = 'notify';
-const VETO_WINDOW_SECONDS = 300; // 5 minutes for notify_and_veto mode
+const VETO_WINDOW_SECONDS = 300;
 const NOTIFICATION_MODES = ['silent', 'notify', 'notify_and_veto'];
+
+// Internal secret for agent-purchase → mandates spend calls
+// Prevents external callers from hitting ?action=spend directly
+const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET || 'mn_internal_' + Buffer.from(process.env.MANDATES_GITHUB_TOKEN || 'fallback').toString('hex').slice(0, 16);
+
+// Check if caller is authorized for spend action
+// Only internal calls from agent-purchase.js should hit spend
+function isInternalCall(body) {
+  return body._internal === true && body._secret === INTERNAL_SECRET;
+}
 
 function jsonHeaders(res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -335,15 +340,19 @@ export default async function handler(req, res) {
       if (!owner || !agentId || !spendingLimitUsd) {
         return res.status(400).json({
           error: 'Missing required fields',
-          required: ['owner (wallet)', 'agentId', 'spendingLimitUsd'],
-          optional: ['perPurchaseCapUsd', 'categories', 'expiresAt', 'signature', 'agentName', 'notificationMode', 'notificationEmail', 'notificationWebhook'],
-          defaults: {
-            notificationMode: DEFAULT_NOTIFICATION_MODE,
-            perPurchaseCapUsd: 'defaults to spendingLimitUsd',
-            categories: '["*"] (all)',
-            expiresAt: `+${MANDATE_TTL_DAYS} days`,
-          },
-          disclosure: 'Default notificationMode is "notify" — the principal is alerted on every purchase. "silent" (fully autonomous) must be explicitly chosen. "notify_and_veto" adds a 5-minute veto window before each spend is committed.',
+          required: ['owner (wallet)', 'agentId', 'spendingLimitUsd', 'signature (EIP-191)'],
+          optional: ['perPurchaseCapUsd', 'categories', 'expiresAt', 'agentName', 'notificationMode', 'notificationEmail', 'notificationWebhook'],
+          security_note: 'signature is now REQUIRED — EIP-191 signature over mandate data, signed by the owner wallet. Prevents creating mandates on behalf of another wallet.',
+        });
+      }
+
+      // SECURITY FIX 1.2: Require signature to prove ownership of the owner wallet
+      // Without this, anyone could create mandates on behalf of any wallet address
+      if (!signature) {
+        return res.status(400).json({
+          error: 'signature is required',
+          reason: 'You must sign the mandate data with the owner wallet (EIP-191). This proves you control the wallet address specified as owner.',
+          how_to_sign: 'Sign this message with your wallet: marketnow-mandate:{agentId}:{spendingLimitUsd}:{owner}',
         });
       }
 
@@ -443,7 +452,15 @@ export default async function handler(req, res) {
     }
 
     // ---------- SPEND ----------
+    // SECURITY: spend is INTERNAL ONLY — only agent-purchase.js should call this
+    // after verifying the USDC payment on-chain. External callers are rejected.
     if (req.method === 'POST' && action === 'spend') {
+      if (!isInternalCall(body)) {
+        return res.status(403).json({
+          error: 'forbidden',
+          reason: 'spend action is internal-only. External callers must use POST /api/agent-purchase which verifies payment on-chain before recording spend.',
+        });
+      }
       const id = body.id || query.id;
       const amount = Number(body.amount || query.amount);
       const txHash = body.txHash || query.txHash;

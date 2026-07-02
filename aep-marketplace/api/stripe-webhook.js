@@ -105,17 +105,26 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Get the raw body (Stripe needs it for signature verification)
-  const payload = req.body; // Vercel provides this as a Buffer/string
+  // SECURITY FIX 3.1: Use raw body for Stripe signature verification
+  // Stripe signs the exact bytes it sends. If Vercel's body parser
+  // already parsed req.body into an object, JSON.stringify won't
+  // reproduce the exact original bytes (key order, whitespace).
+  // Solution: disable body parser (in config below) and read raw buffer.
+  const chunks = [];
+  for await (const chunk of req) {
+    chunks.push(chunk);
+  }
+  const rawBody = Buffer.concat(chunks).toString('utf-8');
+  
   const signature = req.headers['stripe-signature'];
 
   if (!signature) {
     return res.status(400).json({ error: 'Missing stripe-signature header' });
   }
 
-  // Verify the webhook signature
+  // Verify the webhook signature with the RAW body
   const event = verifySignature(
-    typeof payload === 'string' ? payload : JSON.stringify(payload),
+    rawBody,
     signature,
     process.env.STRIPE_WEBHOOK_SECRET
   );
@@ -158,11 +167,10 @@ export default async function handler(req, res) {
   }
 }
 
-// Vercel needs this to parse the raw body for signature verification
+// SECURITY FIX 3.1: Disable body parser so we get the raw body
+// This is required for Stripe signature verification
 export const config = {
   api: {
-    bodyParser: {
-      sizeLimit: '1mb',
-    },
+    bodyParser: false,
   },
 };

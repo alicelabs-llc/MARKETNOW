@@ -1,4 +1,5 @@
 ![smithery badge](https://smithery.ai/badge/eddyflores100/marketnow)](https://smithery.ai/servers/eddyflores100/marketnow)
+[![License: MNNC-1.0](https://img.shields.io/badge/License-MNNC--1.0-red)](./LICENSE)
 
 # MarketNow — Trust Layer for Agent Commerce
 

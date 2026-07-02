@@ -120,7 +120,7 @@ export default function About() {
           <ul className="space-y-2 text-sm text-zinc-400">
             <li className="flex gap-2">
               <span className="text-[#00F299]">✓</span>
-              <span>Open source — MIT licensed, full code on GitHub, every change is a public commit</span>
+              <span>Open source — MNNC-1.0 licensed, full code on GitHub, every change is a public commit</span>
             </li>
             <li className="flex gap-2">
               <span className="text-[#00F299]">✓</span>

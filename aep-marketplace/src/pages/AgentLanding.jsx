@@ -67,7 +67,7 @@ export default function AgentLanding() {
               MarketNow is the trust layer — every skill Sentinel-scanned, every payment verified on-chain, every mandate human-approved by default.
             </p>
             <p className="text-zinc-500 text-sm mb-10 max-w-xl mx-auto">
-              {stats.total.toLocaleString()}+ MCP servers · AP2-compatible mandates · x402 payments · Open source MIT · AliceLabs LLC
+              {stats.total.toLocaleString()}+ MCP servers · AP2-compatible mandates · x402 payments · Source-available MNNC-1.0 · AliceLabs LLC
             </p>
 
             {/* Search bar */}
@@ -286,7 +286,7 @@ export default function AgentLanding() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Found marketnow.site — 'trust layer for agent commerce'. 8,560 MCP skills, Sentinel-scanned, AP2 mandates, x402 payments. 43 free. Open source MIT.")}&url=${encodeURIComponent("https://marketnow.site")}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Found marketnow.site — 'trust layer for agent commerce'. 8,560 MCP skills, Sentinel-scanned, AP2 mandates, x402 payments. 43 free. Source-available MNNC-1.0.")}&url=${encodeURIComponent("https://marketnow.site")}`}
                 target="_blank"
                 rel="noopener"
                 className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/5 hover:border-[#00F299]/30 transition-all"
@@ -383,7 +383,7 @@ export default function AgentLanding() {
             <Link to="/policies" className="text-zinc-400 hover:underline">Terms</Link>
           </div>
           <p className="text-zinc-700 text-[10px] mt-4">
-            © 2026 AliceLabs LLC · MIT License · Built for developers and agents · Ecuador 🇪🇨
+            © 2026 AliceLabs LLC · MNNC-1.0 License · Built for developers and agents · Ecuador 🇪🇨
           </p>
         </section>
       </div>

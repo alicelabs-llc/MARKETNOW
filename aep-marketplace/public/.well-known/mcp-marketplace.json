@@ -72,8 +72,8 @@
     "email": "contacto@alicelabs.site",
     "github": "https://github.com/alicelabs-llc"
   },
-  "license": "MIT",
-  "open_source": true,
+  "license": "MNNC-1.0 (Non-Commercial)",
+  "open_source": false,
   "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
   "npm": "https://www.npmjs.com/package/marketnow-mcp",
   "mcp_server": {
@@ -93,5 +93,6 @@
     "trust_json": "https://marketnow.site/api/trust.json",
     "standards_json": "https://marketnow.site/api/standards.json",
     "listings_json": "https://marketnow.site/api/listings.json"
-  }
+  },
+  "source_available": true
 }

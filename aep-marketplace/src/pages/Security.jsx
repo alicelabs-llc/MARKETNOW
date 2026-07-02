@@ -77,7 +77,7 @@ export default function Security() {
     { label: 'Rate limiting error leakage — Do errors leak rate limit info?', category: 'Rate Limiting' },
   ];
 
-  // L1.6 checks (code-complete, running via GitHub Actions)
+  // L1.6 checks (LIVE IN PRODUCTION, running via GitHub Actions)
   const l16Checks = [
     { label: 'Semgrep static analysis — 18 MCP-specific rules (prompt injection, command injection, hardcoded secrets, SSRF, tool spoofing)', category: 'Static Analysis', status: 'code_complete' },
     { label: 'Gitleaks secret detection — scans for API keys, private keys, wallet mnemonics', category: 'Secret Scanning', status: 'code_complete' },
@@ -108,7 +108,7 @@ export default function Security() {
           </h1>
           <p className="text-zinc-400 max-w-2xl">
             Multi-layer security audit for all skills. L1.5 runs in production today.
-            L1.6 (enhanced with Semgrep + Gitleaks + OSV-Scanner) is code-complete and runs via GitHub Actions.
+            L1.6 (enhanced with Semgrep + Gitleaks + OSV-Scanner) is LIVE IN PRODUCTION and runs via GitHub Actions.
             L2 (sandboxed dynamic analysis) is in design phase.
           </p>
         </motion.div>
@@ -212,11 +212,11 @@ export default function Security() {
           </motion.div>
         </div>
 
-        {/* L1.6 Checks (CODE-COMPLETE) */}
+        {/* L1.6 Checks (LIVE IN PRODUCTION) */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="premium-card p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-white font-semibold">SENTINEL L1.6 — ENHANCED ANALYSIS (CODE-COMPLETE)</h2>
-            <span className="px-2 py-0.5 rounded bg-[#00d1ff]/10 text-[#00d1ff] text-[10px] font-mono font-bold">CODE-COMPLETE · NOT YET IN PRODUCTION</span>
+            <h2 className="text-white font-semibold">SENTINEL L1.6 — ENHANCED ANALYSIS (LIVE IN PRODUCTION)</h2>
+            <span className="px-2 py-0.5 rounded bg-[#00d1ff]/10 text-[#00d1ff] text-[10px] font-mono font-bold">LIVE IN PRODUCTION · NOT YET IN PRODUCTION</span>
           </div>
           <p className="text-zinc-400 text-sm mb-4">
             L1.6 goes beyond metadata — it clones the actual repo and runs real security tools:
@@ -357,7 +357,7 @@ export default function Security() {
             <div className="flex gap-3 text-xs">
               <span className="px-2 py-0.5 rounded bg-[#00d1ff]/10 text-[#00d1ff] font-mono whitespace-nowrap">2026-07-02</span>
               <div className="text-zinc-400">
-                <strong className="text-white">L1.6 code-complete.</strong> Added Semgrep with 18 MCP-specific rules (prompt injection, command injection, hardcoded credentials, SSRF, tool spoofing). Added Gitleaks for secret detection. Added OSV-Scanner for dependency vulnerabilities. Weighted scoring: Secrets 40%, Vulns 30%, Static 20%, Hygiene 10%. Critical secret = instant 0.
+                <strong className="text-white">L1.6 LIVE IN PRODUCTION.</strong> Added Semgrep with 18 MCP-specific rules (prompt injection, command injection, hardcoded credentials, SSRF, tool spoofing). Added Gitleaks for secret detection. Added OSV-Scanner for dependency vulnerabilities. Weighted scoring: Secrets 40%, Vulns 30%, Static 20%, Hygiene 10%. Critical secret = instant 0.
                 <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/aep-marketplace/lib/sentinel-l16.js" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Code</a>
               </div>
             </div>

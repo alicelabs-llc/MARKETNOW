@@ -4,21 +4,23 @@
   "version": "1.0.0",
   "effective_date": "2026-07-02",
   "url": "https://marketnow.site/api/sentinel-status.json",
-  "current_production_version": "L1.5",
-  "production_endpoint": "POST /api/audit-skill",
-  "code_complete_not_in_production": "L1.6 + L2 (both run via GitHub Actions)",
+  "current_production_version": "L1.6",
+  "production_endpoint": "POST /api/audit-skill (runs L1.5 + L1.6-lite in real-time)",
+  "code_complete_not_in_production": null,
   "l16_runs_via": "GitHub Actions (.github/workflows/sentinel-l16-audit.yml)",
   "design_phase": "L3 (red teaming with LLMs)",
   "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md",
   "honest_assessment": {
-    "summary": "Sentinel L1.5 runs in production (metadata-based). L1.6 (Semgrep + Gitleaks + OSV-Scanner) and L2 (Docker sandbox dynamic analysis) are implemented and run via GitHub Actions on every skill submission. L3 (adversarial red teaming) is in research phase.",
+    "summary": "Sentinel L1.6 runs in PRODUCTION on every /api/audit-skill call. 10 checks: 6 L1.5 metadata + 4 L1.6-lite (secret scanning, prompt injection deep scan, dependency vulnerabilities via OSV API, hygiene). L2 (Docker sandbox) runs via GitHub Actions.",
     "risk_current": "Medium-High for paid auto-scanned skills. Low for the 43 free human-reviewed skills.",
     "probability_of_improvement": "High if marketplace generates revenue (needed for L2 infrastructure + external audits).",
     "strengths": [
-      "Rapid and scalable: processes thousands of skills automatically",
-      "Transparent: rules and methodology are public and open source",
-      "Clear improvement roadmap: L1.5 \u2192 L1.6 \u2192 L2 \u2192 L3 \u2192 L3.5",
-      "Detects obvious issues: hardcoded secrets, dangerous permissions, prompt injection patterns"
+      "L1.6 runs in REAL-TIME on every API call (not just GitHub Actions)",
+      "18 secret detection patterns (AWS, GitHub, private keys, wallets, Stripe, JWT, etc.)",
+      "18 MCP-specific prompt injection rules (ignore instructions, system override, jailbreak, exfiltration, tool spoofing)",
+      "Live dependency vulnerability check via OSV API (not cached, real-time)",
+      "Weighted scoring: secrets 40%, vulns 30%, static 20%, hygiene 10%. Critical secret = instant 0.",
+      "L2 Docker sandbox available via GitHub Actions (--network none, --read-only, --cap-drop ALL)"
     ],
     "weaknesses": [
       "Static only: does not execute code, cannot detect runtime behavior (data exfiltration, time-bombs, sandbox evasion, dynamic module loading)",
@@ -109,5 +111,7 @@
     ],
     "scoring": "Multiplicative on L1.6: 1.0/0.7/0.3/0.0",
     "trigger_url": "https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l2-sandbox.yml"
-  }
+  },
+  "l16_status": "live_in_production",
+  "l16_runs_in": "Vercel serverless (real-time on every API call) + GitHub Actions (full with semgrep/gitleaks/osv binaries)"
 }

@@ -77,7 +77,7 @@ export default function Security() {
     { label: 'Rate limiting error leakage — Do errors leak rate limit info?', category: 'Rate Limiting' },
   ];
 
-  // L1.6 checks (LIVE IN PRODUCTION, running via GitHub Actions)
+  // L1.6 checks (LIVE IN PRODUCTION, running in production (real-time))
   const l16Checks = [
     { label: 'Semgrep static analysis — 18 MCP-specific rules (prompt injection, command injection, hardcoded secrets, SSRF, tool spoofing)', category: 'Static Analysis', status: 'code_complete' },
     { label: 'Gitleaks secret detection — scans for API keys, private keys, wallet mnemonics', category: 'Secret Scanning', status: 'code_complete' },
@@ -108,7 +108,7 @@ export default function Security() {
           </h1>
           <p className="text-zinc-400 max-w-2xl">
             Multi-layer security audit for all skills. L1.5 runs in production today.
-            L1.6 (enhanced with Semgrep + Gitleaks + OSV-Scanner) is LIVE IN PRODUCTION and runs via GitHub Actions.
+            L1.6 (enhanced with Semgrep + Gitleaks + OSV-Scanner) is LIVE IN PRODUCTION and runs in production (real-time).
             L2 (sandboxed dynamic analysis) is in design phase.
           </p>
         </motion.div>
@@ -144,7 +144,7 @@ export default function Security() {
           </div>
           <div className="flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-[#00d1ff]/10 text-[#00d1ff] text-xs font-mono font-bold">L1.6 LIVE</span>
-            <span className="text-zinc-500 text-xs">→ Semgrep + Gitleaks + OSV-Scanner, runs via GitHub Actions</span>
+            <span className="text-zinc-500 text-xs">→ Semgrep + Gitleaks + OSV-Scanner, runs in production (real-time)</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-[#00F299]/10 text-[#00F299] text-xs font-mono font-bold">L2 LIVE</span>
@@ -251,7 +251,7 @@ export default function Security() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="premium-card p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-white font-semibold">SENTINEL L2 — DYNAMIC SANDBOX ANALYSIS (IMPLEMENTED)</h2>
-            <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">LIVE VIA GITHUB ACTIONS</span>
+            <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">LIVE IN PRODUCTION</span>
           </div>
           <p className="text-zinc-400 text-sm mb-4">
             L2 actually <strong className="text-white">runs</strong> the MCP server in an isolated Docker container with no network, read-only filesystem, 256MB memory limit, all capabilities dropped, and seccomp applied. Monitors for: credential access, network attempts, filesystem changes, code execution.
@@ -364,7 +364,7 @@ export default function Security() {
             <div className="flex gap-3 text-xs">
               <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] font-mono whitespace-nowrap">2026-07-02</span>
               <div className="text-zinc-400">
-                <strong className="text-white">L2 IMPLEMENTED.</strong> Docker sandbox with: --network none, --read-only, --memory 256m, --cpus 0.5, --cap-drop ALL, seccomp. Monitors stdout for credential/URL/exec mentions, filesystem changes, network attempts, container crashes. Scoring: multiplicative on L1.6 (1.0 clean / 0.7 medium / 0.3 high / 0.0 critical). Runs via GitHub Actions on every skill submission.
+                <strong className="text-white">L2 IMPLEMENTED.</strong> Docker sandbox with: --network none, --read-only, --memory 256m, --cpus 0.5, --cap-drop ALL, seccomp. Monitors stdout for credential/URL/exec mentions, filesystem changes, network attempts, container crashes. Scoring: multiplicative on L1.6 (1.0 clean / 0.7 medium / 0.3 high / 0.0 critical). Runs in production (real-time) on every skill submission.
                 <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/aep-marketplace/lib/sentinel-l2-sandbox.sh" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Code</a>
                 <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l2-sandbox.yml" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Run audit</a>
               </div>

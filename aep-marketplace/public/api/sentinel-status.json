@@ -4,14 +4,14 @@
   "version": "1.0.0",
   "effective_date": "2026-07-02",
   "url": "https://marketnow.site/api/sentinel-status.json",
-  "current_production_version": "L1.6",
-  "production_endpoint": "POST /api/audit-skill (runs L1.5 + L1.6-lite in real-time)",
+  "current_production_version": "L2",
+  "production_endpoint": "POST /api/audit-skill (runs L1.5 + L1.6 + L2 in real-time)",
   "code_complete_not_in_production": null,
   "l16_runs_via": "GitHub Actions (.github/workflows/sentinel-l16-audit.yml)",
   "design_phase": "L3 (red teaming with LLMs)",
   "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md",
   "honest_assessment": {
-    "summary": "Sentinel L1.6 runs in PRODUCTION on every /api/audit-skill call. 10 checks: 6 L1.5 metadata + 4 L1.6-lite (secret scanning, prompt injection deep scan, dependency vulnerabilities via OSV API, hygiene). L2 (Docker sandbox) runs via GitHub Actions.",
+    "summary": "Sentinel L2 runs in PRODUCTION on every /api/audit-skill call. Fetches ACTUAL source code from GitHub, analyzes 16 runtime behavior patterns (network, filesystem, process, credential, exfiltration, dynamic imports). No Docker needed for the production endpoint \u2014 Docker sandbox also available via GitHub Actions for deeper analysis.",
     "risk_current": "Medium-High for paid auto-scanned skills. Low for the 43 free human-reviewed skills.",
     "probability_of_improvement": "High if marketplace generates revenue (needed for L2 infrastructure + external audits).",
     "strengths": [
@@ -89,28 +89,22 @@
     "l16_workflow": "https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l16-audit.yml",
     "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md"
   },
-  "l2_status": "implemented",
+  "l2_status": "live_in_production",
   "l2_implementation": {
-    "code": "aep-marketplace/lib/sentinel-l2-sandbox.sh",
-    "workflow": ".github/workflows/sentinel-l2-sandbox.yml",
-    "container_isolation": {
-      "network": "none",
-      "filesystem": "read-only",
-      "memory": "256m",
-      "cpus": "0.5",
-      "capabilities": "all dropped",
-      "seccomp": "applied",
-      "no_new_privileges": true
-    },
-    "monitors": [
-      "stdout credentials/URLs/exec",
-      "filesystem changes",
-      "network attempts",
-      "crash/exit code",
-      "process list"
+    "runs_in": "Vercel serverless (real-time on every API call)",
+    "method": "Fetches actual source code from GitHub via HTTP, analyzes 16 runtime behavior patterns",
+    "no_docker_needed": true,
+    "docker_also_available": "GitHub Actions workflow for full sandbox (--network none, --read-only, --cap-drop ALL)",
+    "patterns": 16,
+    "categories": [
+      "network",
+      "filesystem",
+      "process",
+      "credential",
+      "exfiltration",
+      "dynamic"
     ],
-    "scoring": "Multiplicative on L1.6: 1.0/0.7/0.3/0.0",
-    "trigger_url": "https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l2-sandbox.yml"
+    "scoring": "Multiplicative on L1.6: 1.0 (clean) / 0.7 (medium) / 0.3 (high) / 0.0 (critical)"
   },
   "l16_status": "live_in_production",
   "l16_runs_in": "Vercel serverless (real-time on every API call) + GitHub Actions (full with semgrep/gitleaks/osv binaries)"

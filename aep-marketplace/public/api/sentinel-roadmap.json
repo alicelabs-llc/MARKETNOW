@@ -1,88 +1,108 @@
 {
   "service": "MarketNow",
   "page": "Sentinel Roadmap — From L1.5 to Next-Gen Security",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "effective_date": "2026-07-02",
   "url": "https://marketnow.site/sentinel-roadmap",
   "current_state": {
     "version": "L1.5",
-    "type": "Static Analysis (SAST)",
+    "type": "Static Analysis (SAST) — metadata-based",
     "checks": 6,
     "checks_list": ["AUTH", "Tool description injection (8 patterns)", "Input validation", "CORS", "OAuth scopes", "Rate limiting error leakage"],
-    "limitation": "Static analysis can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies."
+    "limitation": "Static analysis can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies.",
+    "note": "L1.5 is what runs in production today via /api/audit-skill. L1.6 is code-complete but not yet integrated into the production endpoint."
   },
   "roadmap": [
+    {
+      "level": "L1.6",
+      "name": "Enhanced Static Analysis with Semgrep + Secret Scanning",
+      "status": "code_complete",
+      "problem": "L1.5 only analyzes metadata (README, package.json). It doesn't look at the actual code, so it misses hardcoded secrets, insecure patterns, and known vulnerabilities in dependencies.",
+      "solution": "Clone the repo and run: (1) Semgrep with MCP-specific rules for prompt injection, command injection, hardcoded credentials, dangerous filesystem access, SSRF, tool spoofing; (2) Gitleaks for secret detection; (3) OSV-Scanner/npm audit for dependency vulnerabilities; (4) Hygiene checks (license, manifest).",
+      "technologies": ["Semgrep (open source)", "Gitleaks (open source)", "OSV-Scanner (open source)", "npm audit", "Custom MCP ruleset (18 rules)"],
+      "scoring": "Weighted 0-10: Secrets (40%), Vulnerabilities (30%), Static analysis (20%), Hygiene (10%). Critical secret = instant 0.",
+      "rules_count": 18,
+      "rules_categories": [
+        "Prompt injection in tool descriptions (5 rules)",
+        "Insecure shell execution (3 rules)",
+        "Hardcoded credentials (3 rules)",
+        "Dangerous filesystem access (2 rules)",
+        "Unrestricted network access / SSRF (2 rules)",
+        "MCP-specific patterns (3 rules: tool spoofing, missing schema, env var leakage)"
+      ],
+      "code_location": "api/sentinel-l16.js (code-complete, not yet in production)",
+      "rules_location": "sentinel-rules/semgrep-mcp-rules.yml",
+      "timeline": "Q3 2026 (integration into CI/CD pending)",
+      "cost": "Free (all tools are open source)"
+    },
     {
       "level": "L2",
       "name": "Dynamic Analysis in Sandbox (DAST)",
       "status": "design_phase",
       "problem": "Static analysis (SAST) can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies.",
-      "solution": "Execute each MCP server in an ephemeral, ultra-secure sandbox (gVisor, Firecracker, or WebAssembly). Monitor syscalls during test execution to detect suspicious behavior (e.g., a text formatter trying to read SSH keys or open unexpected network sockets).",
-      "technologies": ["gVisor", "Firecracker", "WebAssembly", "eBPF for syscall monitoring"],
-      "timeline": "Q4 2026 - Q1 2027",
-      "cost": "Free tier available (gVisor is open source, Firecracker is open source). Hosting costs covered when marketplace generates revenue."
+      "solution": "Execute each MCP server in an ephemeral sandbox (gVisor, Firecracker, or WebAssembly). Monitor syscalls to detect suspicious behavior.",
+      "technologies": ["gVisor", "Firecracker", "WebAssembly", "eBPF"],
+      "timeline": "Q4 2026 - Q1 2027"
     },
     {
       "level": "L2.5",
       "name": "Continuous Supply Chain Audit",
       "status": "planning",
-      "problem": "A server that is secure today can become vulnerable tomorrow if a dependency (npm or pip) suffers a supply chain attack.",
-      "solution": "Automated periodic re-scanning (not just at registration) that checks the dependency tree against vulnerability databases (Snyk, OSV, Socket.dev). If a critical dependency is compromised, the skill status automatically changes from 'auto-scanned' to 'quarantined'.",
-      "technologies": ["Snyk API (free tier)", "OSV.dev (free, open source)", "Socket.dev (free tier)", "npm audit", "pip-audit"],
-      "timeline": "Q1 2027",
-      "cost": "Free tiers available for all. Paid tiers when revenue exists."
+      "problem": "A server secure today can become vulnerable tomorrow if a dependency suffers a supply chain attack.",
+      "solution": "Automated periodic re-scanning of dependency trees against vulnerability databases. Compromised skills auto-quarantine.",
+      "technologies": ["Snyk API", "OSV.dev", "Socket.dev", "npm audit", "pip-audit"],
+      "timeline": "Q1 2027"
     },
     {
       "level": "L3",
-      "name": "Automated Red Teaming against Prompt Injection",
+      "name": "Automated Red Teaming vs Prompt Injection",
       "status": "research",
-      "problem": "Detecting Tool Description Injection (where the skill description tricks the LLM into executing malicious commands) is extremely difficult with static rules.",
-      "solution": "Integrate an adversarial evaluation sub-module with small specialized LLMs. This module systematically 'attacks' tool descriptions using jailbreaking and prompt injection techniques to test whether a reference model (Claude or GPT) deviates from expected behavior when processing the description.",
-      "technologies": ["Open source LLMs (Llama, Mistral)", "Prompt injection benchmarks", "Adversarial testing frameworks"],
-      "timeline": "Q2 2027",
-      "cost": "Compute costs for LLM inference. Free tier via Groq/Together AI until revenue exists."
+      "problem": "Detecting Tool Description Injection is extremely difficult with static rules.",
+      "solution": "Adversarial evaluation sub-module with specialized LLMs that systematically attack tool descriptions using jailbreaking techniques.",
+      "technologies": ["Open source LLMs", "Prompt injection benchmarks", "Adversarial testing frameworks"],
+      "timeline": "Q2 2027"
     },
     {
       "level": "L3.5",
       "name": "Cryptographic Code Signing",
       "status": "design_phase",
-      "problem": "A user downloads a skill assuming it is the secure version analyzed by Sentinel, but the source code in the external GitHub repo could have been maliciously modified after analysis.",
-      "solution": "After successful analysis, Sentinel generates a unique hash and signs it cryptographically. The MarketNow platform (or compatible MCP clients) can verify this signature before executing the server locally, ensuring the code has not been altered since the last audit.",
-      "technologies": ["ECDSA signatures", "Sigstore (open source)", "GitHub artifact attestations"],
-      "timeline": "Q2 2027",
-      "cost": "Free (Sigstore is open source, GitHub attestations are free)."
+      "problem": "Source code in external GitHub repos could be modified after Sentinel analysis.",
+      "solution": "Sentinel generates a signed hash after analysis. MCP clients verify the signature before execution.",
+      "technologies": ["ECDSA signatures", "Sigstore", "GitHub artifact attestations"],
+      "timeline": "Q2 2027"
     }
   ],
   "platform_improvements": [
     {
-      "name": "Maintainer-Verified Program Launch",
-      "status": "planning",
-      "description": "Launch a simplified verification process based on PGP commit signatures or verified developer accounts (GitHub/GitLab verified) plus lightweight KYC. Gives high-trust status to reputable community creators.",
-      "timeline": "Q4 2026",
-      "apply_at": "info@alicelabs.site"
-    },
-    {
       "name": "Risk Level Classification (Green/Yellow/Red)",
       "status": "implemented",
-      "description": "Skills are now categorized by system resource access: Green (read-only/static), Yellow (network/APIs), Red (local execution/write). Allows developers to configure granular security policies.",
+      "description": "Skills categorized by system resource access. Allows granular security policies.",
       "distribution": {
-        "green": "Pure prompts, no install command, no network access",
-        "yellow": "Network access, external APIs, or env vars — but no arbitrary code execution",
-        "red": "Subprocess execution (npx/npm/bash/curl runs arbitrary code)"
+        "green": 3509,
+        "yellow": 5051,
+        "red": 0
       }
     },
     {
       "name": "Community Feedback Loop",
       "status": "implemented",
-      "description": "Decentralized endpoint where MCP clients can anonymously report unexpected behavior, execution failures, or suspected malicious activity. If a tool accumulates multiple reports in a short period, Sentinel prioritizes it for immediate human review.",
+      "description": "Anonymous endpoint for reporting unexpected behavior, failures, or suspected malicious activity.",
       "endpoint": "POST /api/report-skill"
     },
     {
       "name": "Advanced Search Filters",
       "status": "implemented",
-      "description": "Filter by: exact software license, audit status (human-reviewed only), risk level (green/yellow/red), required architecture (Docker, NodeJS, Python).",
+      "description": "Filter by license, audit status, risk level, architecture.",
       "available_at": "/registry"
+    },
+    {
+      "name": "Maintainer-Verified Program",
+      "status": "planning",
+      "description": "Simplified verification via PGP commit signatures or verified GitHub accounts + lightweight KYC.",
+      "timeline": "Q4 2026",
+      "apply_at": "info@alicelabs.site"
     }
   ],
-  "honest_disclosure": "All L2+ features are in design/planning/research phase. None are implemented today. We will not claim they are done until they are. Every status change will be a git commit visible in our public repo."
+  "honest_disclosure": "L1.6 is code-complete but NOT yet running in production. The production /api/audit-skill endpoint still uses L1.5. L1.6 will be integrated when we set up CI/CD with Semgrep/Gitleaks/OSV-Scanner installed on the runner."
 }
+

@@ -1,0 +1,90 @@
+{
+  "service": "MarketNow",
+  "page": "Sentinel Status",
+  "version": "1.0.0",
+  "effective_date": "2026-07-02",
+  "url": "https://marketnow.site/api/sentinel-status.json",
+  "current_production_version": "L1.5",
+  "production_endpoint": "POST /api/audit-skill",
+  "code_complete_not_in_production": "L1.6",
+  "l16_runs_via": "GitHub Actions (.github/workflows/sentinel-l16-audit.yml)",
+  "design_phase": "L2",
+  "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md",
+  
+  "honest_assessment": {
+    "summary": "Sentinel L1.5 is a good first step for a bootstrapped project, but insufficient as the sole trust layer for code that executes on agent machines.",
+    "risk_current": "Medium-High for paid auto-scanned skills. Low for the 43 free human-reviewed skills.",
+    "probability_of_improvement": "High if marketplace generates revenue (needed for L2 infrastructure + external audits).",
+    
+    "strengths": [
+      "Rapid and scalable: processes thousands of skills automatically",
+      "Transparent: rules and methodology are public and open source",
+      "Clear improvement roadmap: L1.5 → L1.6 → L2 → L3 → L3.5",
+      "Detects obvious issues: hardcoded secrets, dangerous permissions, prompt injection patterns"
+    ],
+    
+    "weaknesses": [
+      "Static only: does not execute code, cannot detect runtime behavior (data exfiltration, time-bombs, sandbox evasion, dynamic module loading)",
+      "Regex-based: easily evaded via obfuscation, encodings, indirect calls",
+      "No behavioral verification: does not verify that a skill does what it claims",
+      "Scale vs depth: 8,517 auto-scanned skills get a superficial scan; only 43 are human-reviewed; 0 are dynamically analyzed today"
+    ],
+    
+    "what_l1_5_cannot_detect": [
+      "Runtime data exfiltration (skill sends data to undeclared endpoint at runtime)",
+      "Time-bombs (malicious code that activates after a delay)",
+      "Sandbox evasion (code that detects it's being analyzed and behaves differently)",
+      "Dynamic module loading (import() with computed paths not visible in static analysis)",
+      "Obfuscated code (encoded strings, eval of computed values)",
+      "Behavioral mismatch (skill claims to be a 'weather tool' but does something else)"
+    ],
+    
+    "what_l2_will_add": [
+      "Sandboxed execution: actually runs the MCP server in isolation",
+      "Syscall monitoring: logs every open, connect, execve, fork",
+      "Adversarial testing: sends path traversal, SQL injection, SSRF, prompt injection inputs",
+      "Behavioral verification: compares runtime behavior vs declared permissions"
+    ]
+  },
+  
+  "risk_by_skill_type": {
+    "free_human_reviewed": {
+      "count": 43,
+      "risk": "LOW",
+      "why": "Manually inspected by AliceLabs. Safe to install."
+    },
+    "auto_scanned_green": {
+      "count": 3509,
+      "risk": "MEDIUM",
+      "why": "Prompt-only skills, no install command. Sentinel ran but no human review."
+    },
+    "auto_scanned_yellow": {
+      "count": 5051,
+      "risk": "MEDIUM-HIGH",
+      "why": "Network/API access or env vars. Sentinel ran but no runtime analysis."
+    },
+    "auto_scanned_red": {
+      "count": 0,
+      "risk": "HIGH",
+      "why": "Subprocess execution (arbitrary code). Should not be installed without L2 analysis."
+    },
+    "paid_auto_scanned": {
+      "count": "see skills.json (filter price > 0 and review_status=auto-scanned)",
+      "risk": "HIGH",
+      "why": "Code execution + money involved. Sentinel L1.5 is insufficient. Use mandates with low limits."
+    }
+  },
+  
+  "recommendation": "Until L2 is implemented, treat all auto-scanned skills (especially paid ones) with caution. Read the Sentinel report, check the GitHub repo, start with free human-reviewed skills, and use mandates with low spending limits for paid skills.",
+  
+  "links": {
+    "security_page": "https://marketnow.site/security",
+    "sentinel_roadmap": "https://marketnow.site/sentinel-roadmap",
+    "trust_roadmap": "https://marketnow.site/trust",
+    "buyers_guide": "https://marketnow.site/buyers-guide",
+    "l16_code": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/aep-marketplace/lib/sentinel-l16.js",
+    "l16_rules": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/aep-marketplace/sentinel-rules/semgrep-mcp-rules.yml",
+    "l16_workflow": "https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l16-audit.yml",
+    "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md"
+  }
+}

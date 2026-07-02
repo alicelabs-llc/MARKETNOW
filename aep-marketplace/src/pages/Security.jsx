@@ -288,7 +288,70 @@ export default function Security() {
           </div>
         </motion.div>
 
-        {/* Changelog */}
+        {/* Honest limitations */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.28 }} className="premium-card p-6 mb-8 border-l-4 border-yellow-500/50">
+          <h2 className="text-white font-semibold mb-4">HONEST LIMITATIONS OF SENTINEL L1.5</h2>
+          <p className="text-zinc-400 text-sm mb-4">
+            We will not pretend L1.5 is sufficient. Here's exactly what it cannot do, and why L2 matters.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-3 rounded-lg bg-red-500/5 border border-red-500/10">
+              <div className="text-red-400 text-xs font-mono mb-1">⚠️ STATIC ONLY</div>
+              <p className="text-zinc-400 text-xs">Does not execute code. Cannot detect runtime behavior: data exfiltration, time-bombs, sandbox evasion, dynamic module loading.</p>
+            </div>
+            <div className="p-3 rounded-lg bg-red-500/5 border border-red-500/10">
+              <div className="text-red-400 text-xs font-mono mb-1">⚠️ REGEX-BASED</div>
+              <p className="text-zinc-400 text-xs">Easily evaded via obfuscation, encodings, indirect calls. Semgrep rules catch patterns, not intent.</p>
+            </div>
+            <div className="p-3 rounded-lg bg-red-500/5 border border-red-500/10">
+              <div className="text-red-400 text-xs font-mono mb-1">⚠️ NO BEHAVIORAL VERIFICATION</div>
+              <p className="text-zinc-400 text-xs">Does not verify that a skill does what it claims. A "weather" skill could declare weather behavior but do something else at runtime.</p>
+            </div>
+            <div className="p-3 rounded-lg bg-red-500/5 border border-red-500/10">
+              <div className="text-red-400 text-xs font-mono mb-1">⚠️ SCALE vs DEPTH</div>
+              <p className="text-zinc-400 text-xs">8,517 auto-scanned skills get a superficial scan. Only 43 are human-reviewed. No skill is dynamically analyzed today.</p>
+            </div>
+          </div>
+          <div className="mt-4 p-3 rounded-lg bg-black/40">
+            <div className="text-zinc-300 text-xs font-bold mb-2">RISK ASSESSMENT BY SKILL TYPE</div>
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b border-white/10">
+                  <th className="text-left py-2 text-zinc-400">Skill Type</th>
+                  <th className="text-left py-2 text-zinc-400">Risk Level</th>
+                  <th className="text-left py-2 text-zinc-400">Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-white/5">
+                  <td className="py-2 text-green-400">Free (human-reviewed)</td>
+                  <td className="py-2 text-green-400">LOW</td>
+                  <td className="py-2 text-zinc-400">43 skills manually inspected by AliceLabs</td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-2 text-yellow-400">Auto-scanned, risk_level=green</td>
+                  <td className="py-2 text-yellow-400">MEDIUM</td>
+                  <td className="py-2 text-zinc-400">Prompt-only, no install. Sentinel ran but no human review.</td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-2 text-orange-400">Auto-scanned, risk_level=yellow</td>
+                  <td className="py-2 text-orange-400">MEDIUM-HIGH</td>
+                  <td className="py-2 text-zinc-400">Network/API access. Sentinel ran but no runtime analysis.</td>
+                </tr>
+                <tr>
+                  <td className="py-2 text-red-400">Paid, auto-scanned</td>
+                  <td className="py-2 text-red-400">HIGH</td>
+                  <td className="py-2 text-zinc-400">Code execution + money involved. Sentinel L1.5 is insufficient. Use mandates with low limits.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-zinc-500 text-xs mt-4">
+            <strong className="text-zinc-300">Bottom line:</strong> Sentinel L1.5 is a good first step for a bootstrapped project, but insufficient as the sole trust layer for code that executes on your machine. L2 (sandboxed dynamic analysis) is the real fix — and it's in design phase, not production.
+          </p>
+        </motion.div>
+
+
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="premium-card p-6">
           <h2 className="text-white font-semibold mb-4">SENTINEL CHANGELOG</h2>
           <div className="space-y-3">

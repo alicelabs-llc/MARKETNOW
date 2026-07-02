@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.1.0",
-  "description": "MarketNow MCP Server — Search, discover, and install 8,535+ verified MCP-compatible agent skills from any agent runtime (Claude Desktop, Cursor, Cline). Every skill includes a Sentinel security report, ready-to-use system prompt, and auto-configured install. 5 languages: EN, ES, ZH, PT, FR.",
+  "version": "1.2.0",
+  "description": "MarketNow MCP Server — Trust layer for agent commerce. Search 8,560 MCP-compatible skills from any agent runtime (Claude Desktop, Cursor, Cline). Every skill has a Sentinel L1.5 security report, review_status (auto-scanned | human-reviewed | maintainer-verified), declared permissions, and system prompt. AP2-compatible mandates, x402 payments. Open source MIT.",
   "type": "module",
   "main": "index.js",
   "bin": {

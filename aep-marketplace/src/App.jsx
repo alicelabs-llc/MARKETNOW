@@ -28,6 +28,7 @@ import About from "./pages/About";
 import Catalog from "./pages/Catalog";
 import Embed from "./pages/Embed";
 import Standards from "./pages/Standards";
+import Listings from "./pages/Listings";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -53,7 +54,7 @@ function App() {
       const ALLOWED_ROUTES = [
         '/registry', '/vault', '/governance', '/security',
         '/handshake', '/policies', '/submit', '/pricing', '/dashboard', '/mandates',
-        '/trust', '/about', '/catalog', '/embed', '/standards',
+        '/trust', '/about', '/catalog', '/embed', '/standards', '/listings',
       ];
       // Allow /skill/:id pattern (starts with /skill/)
       const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
@@ -117,6 +118,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/embed" element={<Embed />} />
           <Route path="/standards" element={<Standards />} />
+          <Route path="/listings" element={<Listings />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

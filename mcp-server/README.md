@@ -1,13 +1,23 @@
 # MarketNow MCP Server
 
-> Search, discover, and install 5,054+ verified MCP skills from any agent runtime.
+> Trust layer for agent commerce. Search 8,560 MCP skills from any agent runtime.
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The [MarketNow](https://marketnow.site) marketplace as an MCP server. Allows any MCP-compatible agent (Claude Desktop, Cursor, Cline, etc.) to search and discover skills directly from their runtime — without leaving the conversation.
 
-**Stats:** 5,054 skills · 25 categories · $0.99–$9.99 · avg $2.50 · one-time payment
+**Stats:** 8,560 skills · 58 categories · $0.99–$9.99 · 43 free · one-time payment
+
+## What is MarketNow?
+
+MarketNow is the **trust layer for agent commerce**. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides:
+- **Sentinel L1.5** security audit on every skill (6-point MCP security scan)
+- **review_status** on every skill: `auto-scanned` (8,517) | `human-reviewed` (43) | `maintainer-verified` (0)
+- **Declared permissions** per skill (network, filesystem, env_vars, subprocess)
+- **AP2-compatible mandates** — human-in-the-loop by default, silent mode requires explicit opt-in
+- **x402 payments** — HTTP 402 Payment Required protocol, USDC on Base
+- **Public audit log** — every mandate transaction is a git commit
 
 ## Install
 

@@ -66,7 +66,7 @@ const POINTS = [
     ],
     stillPending: [
       'Human review queue — currently backlogged. Targeting 24-48h SLA for new submissions',
-      'Verified Maintainer program: GitHub identity verification via signed commits (GPG/SSH)',
+      'Verified Maintainer program: GitHub identity verification via signed commits (GPG/SSH). Program opens Q4 2026 — apply at info@alicelabs.site',
       'Public reviewer profiles and review history (so reviewers are accountable)',
     ],
   },

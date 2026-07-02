@@ -77,7 +77,7 @@ export default function About() {
               className="block p-4 rounded-lg bg-black/40 hover:bg-black/60 transition-colors"
             >
               <div className="text-white text-sm font-bold">Smithery — eddyflores100/marketnow</div>
-              <div className="text-zinc-500 text-xs">Smithery registry listing with quality score (84/100).</div>
+              <div className="text-zinc-500 text-xs">Smithery registry listing with quality score (<a href="https://smithery.ai/servers/eddyflores100/marketnow" target="_blank" rel="noopener" className="text-[#00F299] hover:underline">84/100 — verify ↗</a>).</div>
             </a>
             <div className="p-4 rounded-lg bg-black/40">
               <div className="text-white text-sm font-bold">Payment wallet (Base L2)</div>

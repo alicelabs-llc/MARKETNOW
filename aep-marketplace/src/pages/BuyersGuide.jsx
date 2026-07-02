@@ -9,7 +9,7 @@ const STEPS = [
     values: [
       { value: 'auto-scanned', desc: 'Sentinel L1.5 ran automated checks. No human reviewed. Most skills are here (8,517). Safe to install, but treat with appropriate caution.', color: '#fbbf24' },
       { value: 'human-reviewed', desc: 'A human at AliceLabs inspected the GitHub repo, code, and Sentinel report. Higher trust. 43 skills today.', color: '#00F299' },
-      { value: 'maintainer-verified', desc: 'The GitHub maintainer signed a claim of authorship (GPG). Highest trust. 0 skills today (program not launched).', color: '#00d1ff' },
+      { value: 'maintainer-verified', desc: 'The GitHub maintainer signed a claim of authorship (GPG). Highest trust. 0 skills today — program opens Q4 2026, apply at info@alicelabs.site.', color: '#00d1ff' },
     ],
     tip: 'If a skill is auto-scanned only, read the Sentinel report carefully before installing.',
   },

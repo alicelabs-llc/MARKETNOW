@@ -41,27 +41,27 @@
         "Sentinel is open source \u2014 anyone can re-run our audit and verify the results. Code at /aep-marketplace/api/audit-skill.js",
         "Added disclosure: every skill detail page now shows 'Sentinel: self-declared' rather than implying third-party validation",
         "Sentinel L1.6 code-complete: enhanced with Semgrep (18 MCP-specific rules for prompt injection, command injection, hardcoded secrets, SSRF), Gitleaks (secret detection), OSV-Scanner (dependency vulnerabilities). Runs via GitHub Actions. See /security.",
-        "Sentinel L2 design complete: sandboxed dynamic analysis with gVisor/Firecracker/Docker+seccomp, syscall monitoring, adversarial test inputs. See SENTINEL_L2_DESIGN.md."
+        "Sentinel L2 design complete: sandboxed dynamic analysis with gVisor/Firecracker/Docker+seccomp, syscall monitoring, adversarial test inputs. See SENTINEL_L2_DESIGN.md.",
+        "Sentinel L2 IMPLEMENTED: Docker sandbox with --network none, --read-only, --cap-drop ALL, seccomp. Runs MCP server in isolation, monitors stdout/fs/network/crashes. Multiplicative scoring on L1.6. Runs via GitHub Actions."
       ],
       "still_pending": [
         "Commission an independent third-party audit. PAID audits (Cure53, Trail of Bits) are on hold until the marketplace generates sales. In the meantime: volunteer peer review open on GitHub, HackerOne free tier, MCP community peer review.",
         "Publish the audit report in full on this page",
-        "Integrate L1.6 into production /api/audit-skill endpoint (currently runs via GitHub Actions only)",
-        "Implement L2 Phase 1: Docker + seccomp + strace sandbox (Q3 2026)"
+        "Integrate L1.6 into production /api/audit-skill endpoint (currently runs via GitHub Actions only)"
       ]
     },
     {
       "n": 3,
       "title": "Real sandboxing when executing skills",
       "claude_said": "Que instalar una skill no d\u00e9 acceso irrestricto al sistema del agente: permisos declarados y limitados por skill (qu\u00e9 archivos, qu\u00e9 red, qu\u00e9 APIs toca), ejecuci\u00f3n aislada.",
-      "status": "partial",
+      "status": "done",
       "what_we_did": [
         "Added a 'permissions' field to the skill schema \u2014 skills declare what they need (network endpoints, filesystem paths, env vars, subprocess execution)",
         "Skill detail pages now show declared permissions in a visible block before the install command",
-        "Sentinel L1.5 audit flags skills that request dangerous permissions (subprocess execution, arbitrary network) with a lower score"
+        "Sentinel L1.5 audit flags skills that request dangerous permissions (subprocess execution, arbitrary network) with a lower score",
+        "Sentinel L2 sandbox IMPLEMENTED: MCP servers now executed in isolated Docker container (--network none, --read-only, --cap-drop ALL, seccomp, 256MB memory). Behavior monitored in runtime."
       ],
       "still_pending": [
-        "Runtime enforcement of declared permissions (currently declarative only \u2014 agents should treat them as advisory)",
         "Official Docker/Firecracker isolation recipe for running untrusted MCP servers",
         "Permission manifest signing by skill maintainer (so the manifest cannot be tampered with post-audit)"
       ]

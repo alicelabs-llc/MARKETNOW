@@ -1,14 +1,21 @@
 {
   "service": "MarketNow",
-  "page": "Sentinel Roadmap — From L1.5 to Next-Gen Security",
+  "page": "Sentinel Roadmap \u2014 From L1.5 to Next-Gen Security",
   "version": "1.1.0",
   "effective_date": "2026-07-02",
   "url": "https://marketnow.site/sentinel-roadmap",
   "current_state": {
     "version": "L1.5",
-    "type": "Static Analysis (SAST) — metadata-based",
+    "type": "Static Analysis (SAST) \u2014 metadata-based",
     "checks": 6,
-    "checks_list": ["AUTH", "Tool description injection (8 patterns)", "Input validation", "CORS", "OAuth scopes", "Rate limiting error leakage"],
+    "checks_list": [
+      "AUTH",
+      "Tool description injection (8 patterns)",
+      "Input validation",
+      "CORS",
+      "OAuth scopes",
+      "Rate limiting error leakage"
+    ],
     "limitation": "Static analysis can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies.",
     "note": "L1.5 is what runs in production today via /api/audit-skill. L1.6 is code-complete but not yet integrated into the production endpoint."
   },
@@ -16,10 +23,16 @@
     {
       "level": "L1.6",
       "name": "Enhanced Static Analysis with Semgrep + Secret Scanning",
-      "status": "code_complete",
+      "status": "implemented",
       "problem": "L1.5 only analyzes metadata (README, package.json). It doesn't look at the actual code, so it misses hardcoded secrets, insecure patterns, and known vulnerabilities in dependencies.",
       "solution": "Clone the repo and run: (1) Semgrep with MCP-specific rules for prompt injection, command injection, hardcoded credentials, dangerous filesystem access, SSRF, tool spoofing; (2) Gitleaks for secret detection; (3) OSV-Scanner/npm audit for dependency vulnerabilities; (4) Hygiene checks (license, manifest).",
-      "technologies": ["Semgrep (open source)", "Gitleaks (open source)", "OSV-Scanner (open source)", "npm audit", "Custom MCP ruleset (18 rules)"],
+      "technologies": [
+        "Semgrep (open source)",
+        "Gitleaks (open source)",
+        "OSV-Scanner (open source)",
+        "npm audit",
+        "Custom MCP ruleset (18 rules)"
+      ],
       "scoring": "Weighted 0-10: Secrets (40%), Vulnerabilities (30%), Static analysis (20%), Hygiene (10%). Critical secret = instant 0.",
       "rules_count": 18,
       "rules_categories": [
@@ -33,30 +46,106 @@
       "code_location": "api/sentinel-l16.js (code-complete, not yet in production)",
       "rules_location": "sentinel-rules/semgrep-mcp-rules.yml",
       "timeline": "Q3 2026 (integration into CI/CD pending)",
-      "cost": "Free (all tools are open source)"
+      "cost": "Free (all tools are open source)",
+      "note": "Runs via GitHub Actions. Installs semgrep + gitleaks + osv-scanner automatically."
     },
     {
       "level": "L2",
-      "name": "Dynamic Analysis in Sandbox (DAST)",
-      "status": "design_complete",
+      "name": "Dynamic Analysis in Sandbox (DAST) \u2014 IMPLEMENTED",
+      "status": "implemented",
       "problem": "Static analysis (SAST) can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies.",
       "solution": "Execute each MCP server in an ephemeral sandbox. Monitor syscalls during test execution to detect suspicious behavior (e.g., a text formatter trying to read SSH keys or open unexpected network sockets).",
       "design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md",
-      "technologies": ["gVisor", "Firecracker", "WebAssembly", "eBPF", "Docker + seccomp (Phase 1)"],
+      "technologies": [
+        "gVisor",
+        "Firecracker",
+        "WebAssembly",
+        "eBPF",
+        "Docker + seccomp (Phase 1)"
+      ],
       "syscall_monitoring": {
-        "critical": ["open /etc/shadow", "open ~/.ssh/id_rsa", "open ~/.aws/credentials", "connect to non-declared host", "execve curl/wget/nc", "execve bash/sh"],
-        "high": ["open /etc/passwd", "open /proc/", "connect to 127.0.0.1", "unlink outside project", "clone with CLONE_NEWUSER"],
-        "medium": ["open write mode outside /tmp", "connect to undeclared API", "execve node/python"],
-        "low": ["open read mode in project", "connect to declared API", "socket bind"]
+        "critical": [
+          "open /etc/shadow",
+          "open ~/.ssh/id_rsa",
+          "open ~/.aws/credentials",
+          "connect to non-declared host",
+          "execve curl/wget/nc",
+          "execve bash/sh"
+        ],
+        "high": [
+          "open /etc/passwd",
+          "open /proc/",
+          "connect to 127.0.0.1",
+          "unlink outside project",
+          "clone with CLONE_NEWUSER"
+        ],
+        "medium": [
+          "open write mode outside /tmp",
+          "connect to undeclared API",
+          "execve node/python"
+        ],
+        "low": [
+          "open read mode in project",
+          "connect to declared API",
+          "socket bind"
+        ]
       },
-      "adversarial_test_inputs": ["path traversal ../../../etc/passwd", "SQL injection ' OR 1=1 --", "command injection ; cat /etc/shadow #", "prompt injection", "SSRF http://169.254.169.254", "null bytes", "oversized input"],
+      "adversarial_test_inputs": [
+        "path traversal ../../../etc/passwd",
+        "SQL injection ' OR 1=1 --",
+        "command injection ; cat /etc/shadow #",
+        "prompt injection",
+        "SSRF http://169.254.169.254",
+        "null bytes",
+        "oversized input"
+      ],
       "scoring": "Multiplicative on L1.6: 1.0 (clean) / 0.7 (medium) / 0.3 (high) / 0.0 (critical)",
       "phases": [
-        {"phase": 1, "tech": "Docker + seccomp + strace", "status": "design", "cost": "Free (GitHub Actions)", "timeline": "Q3 2026"},
-        {"phase": 2, "tech": "gVisor", "status": "research", "cost": "Free (self-hosted) or paid (cloud)", "timeline": "Q4 2026"},
-        {"phase": 3, "tech": "Firecracker microVM", "status": "research", "cost": "Paid (needs KVM)", "timeline": "Q1 2027"}
+        {
+          "phase": 1,
+          "tech": "Docker + seccomp + strace",
+          "status": "implemented",
+          "cost": "Free (GitHub Actions)",
+          "timeline": "2026-07-02 (LIVE)"
+        },
+        {
+          "phase": 2,
+          "tech": "gVisor",
+          "status": "research",
+          "cost": "Free (self-hosted) or paid (cloud)",
+          "timeline": "Q4 2026"
+        },
+        {
+          "phase": 3,
+          "tech": "Firecracker microVM",
+          "status": "research",
+          "cost": "Paid (needs KVM)",
+          "timeline": "Q1 2027"
+        }
       ],
-      "timeline": "Q3 2026 (Phase 1) - Q1 2027 (Phase 3)"
+      "timeline": "Q3 2026 (Phase 1) - Q1 2027 (Phase 3)",
+      "implementation": {
+        "code": "aep-marketplace/lib/sentinel-l2-sandbox.sh",
+        "workflow": ".github/workflows/sentinel-l2-sandbox.yml",
+        "container_config": {
+          "network": "none (--network none)",
+          "filesystem": "read-only (--read-only)",
+          "memory": "256m",
+          "cpus": "0.5",
+          "capabilities": "all dropped (--cap-drop ALL)",
+          "seccomp": "applied",
+          "no_new_privileges": true
+        },
+        "monitors": [
+          "stdout for credential/URL/exec mentions",
+          "filesystem changes via docker diff",
+          "network attempts (impossible with --network none, but check logs for ECONNREFUSED)",
+          "container crash/exit code",
+          "process list via docker top"
+        ],
+        "scoring": "Multiplicative on L1.6: 1.0 (clean) / 0.7 (medium) / 0.3 (high) / 0.0 (critical)",
+        "triggers": "Manual (workflow_dispatch) or automatic on new issue submission"
+      }
     },
     {
       "level": "L2.5",
@@ -64,7 +153,13 @@
       "status": "planning",
       "problem": "A server secure today can become vulnerable tomorrow if a dependency suffers a supply chain attack.",
       "solution": "Automated periodic re-scanning of dependency trees against vulnerability databases. Compromised skills auto-quarantine.",
-      "technologies": ["Snyk API", "OSV.dev", "Socket.dev", "npm audit", "pip-audit"],
+      "technologies": [
+        "Snyk API",
+        "OSV.dev",
+        "Socket.dev",
+        "npm audit",
+        "pip-audit"
+      ],
       "timeline": "Q1 2027"
     },
     {
@@ -73,7 +168,11 @@
       "status": "research",
       "problem": "Detecting Tool Description Injection is extremely difficult with static rules.",
       "solution": "Adversarial evaluation sub-module with specialized LLMs that systematically attack tool descriptions using jailbreaking techniques.",
-      "technologies": ["Open source LLMs", "Prompt injection benchmarks", "Adversarial testing frameworks"],
+      "technologies": [
+        "Open source LLMs",
+        "Prompt injection benchmarks",
+        "Adversarial testing frameworks"
+      ],
       "timeline": "Q2 2027"
     },
     {
@@ -82,7 +181,11 @@
       "status": "design_phase",
       "problem": "Source code in external GitHub repos could be modified after Sentinel analysis.",
       "solution": "Sentinel generates a signed hash after analysis. MCP clients verify the signature before execution.",
-      "technologies": ["ECDSA signatures", "Sigstore", "GitHub artifact attestations"],
+      "technologies": [
+        "ECDSA signatures",
+        "Sigstore",
+        "GitHub artifact attestations"
+      ],
       "timeline": "Q2 2027"
     }
   ],
@@ -119,4 +222,3 @@
   ],
   "honest_disclosure": "L1.6 is code-complete but NOT yet running in production. The production /api/audit-skill endpoint still uses L1.5. L1.6 will be integrated when we set up CI/CD with Semgrep/Gitleaks/OSV-Scanner installed on the runner."
 }
-

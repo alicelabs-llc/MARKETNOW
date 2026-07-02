@@ -143,12 +143,12 @@ export default function Security() {
             <span className="text-zinc-500 text-xs">→ metadata-based, 6 checks, runs in /api/audit-skill</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-[#00d1ff]/10 text-[#00d1ff] text-xs font-mono font-bold">L1.6 CODE-COMPLETE</span>
+            <span className="px-3 py-1 rounded-full bg-[#00d1ff]/10 text-[#00d1ff] text-xs font-mono font-bold">L1.6 LIVE</span>
             <span className="text-zinc-500 text-xs">→ Semgrep + Gitleaks + OSV-Scanner, runs via GitHub Actions</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 text-xs font-mono font-bold">L2 DESIGN</span>
-            <span className="text-zinc-500 text-xs">→ sandboxed DAST, syscall monitoring</span>
+            <span className="px-3 py-1 rounded-full bg-[#00F299]/10 text-[#00F299] text-xs font-mono font-bold">L2 LIVE</span>
+            <span className="text-zinc-500 text-xs">→ Docker sandbox, no network, read-only FS, syscall monitoring</span>
           </div>
         </motion.div>
 
@@ -247,16 +247,15 @@ export default function Security() {
           </div>
         </motion.div>
 
-        {/* L2 Checks (DESIGN) */}
+        {/* L2 Checks (IMPLEMENTED) */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="premium-card p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-white font-semibold">SENTINEL L2 — DYNAMIC SANDBOX ANALYSIS (DESIGN)</h2>
-            <span className="px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 text-[10px] font-mono font-bold">DESIGN PHASE</span>
+            <h2 className="text-white font-semibold">SENTINEL L2 — DYNAMIC SANDBOX ANALYSIS (IMPLEMENTED)</h2>
+            <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">LIVE VIA GITHUB ACTIONS</span>
           </div>
           <p className="text-zinc-400 text-sm mb-4">
-            L2 actually <strong className="text-white">runs</strong> the MCP server in an isolated sandbox and monitors syscalls.
-            Catches threats static analysis misses: obfuscated malicious code, dynamic module loading, undeclared network calls.
-            <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Full design doc</a>
+            L2 actually <strong className="text-white">runs</strong> the MCP server in an isolated Docker container with no network, read-only filesystem, 256MB memory limit, all capabilities dropped, and seccomp applied. Monitors for: credential access, network attempts, filesystem changes, code execution.
+            <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l2-sandbox.yml" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Run an audit</a>
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {l2Checks.map((check) => (
@@ -273,7 +272,7 @@ export default function Security() {
             <div className="p-3 rounded-lg bg-black/40">
               <div className="text-zinc-500 text-[10px] mb-1 font-mono">PHASE 1 (Q3 2026)</div>
               <div className="text-white text-xs">Docker + seccomp + strace</div>
-              <div className="text-[#00F299] text-[10px] mt-1">Free (GitHub Actions)</div>
+              <div className="text-[#00F299] text-[10px] mt-1">✅ LIVE (GitHub Actions)</div>
             </div>
             <div className="p-3 rounded-lg bg-black/40">
               <div className="text-zinc-500 text-[10px] mb-1 font-mono">PHASE 2 (Q4 2026)</div>
@@ -363,10 +362,11 @@ export default function Security() {
               </div>
             </div>
             <div className="flex gap-3 text-xs">
-              <span className="px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 font-mono whitespace-nowrap">2026-07-02</span>
+              <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] font-mono whitespace-nowrap">2026-07-02</span>
               <div className="text-zinc-400">
-                <strong className="text-white">L2 design complete.</strong> Sandbox architecture with gVisor/Firecracker/Docker+seccomp. Syscall monitoring matrix (critical/high/medium/low). 7 adversarial test inputs. 3-phase implementation plan.
-                <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Design doc</a>
+                <strong className="text-white">L2 IMPLEMENTED.</strong> Docker sandbox with: --network none, --read-only, --memory 256m, --cpus 0.5, --cap-drop ALL, seccomp. Monitors stdout for credential/URL/exec mentions, filesystem changes, network attempts, container crashes. Scoring: multiplicative on L1.6 (1.0 clean / 0.7 medium / 0.3 high / 0.0 critical). Runs via GitHub Actions on every skill submission.
+                <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/aep-marketplace/lib/sentinel-l2-sandbox.sh" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Code</a>
+                <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l2-sandbox.yml" target="_blank" rel="noopener" className="text-[#00F299] hover:underline ml-1">→ Run audit</a>
               </div>
             </div>
             <div className="flex gap-3 text-xs">

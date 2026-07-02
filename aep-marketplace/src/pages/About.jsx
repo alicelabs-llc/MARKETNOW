@@ -31,7 +31,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Country</div>
-              <div className="text-white">Ecuador 🇪🇨</div>
+              <div className="text-white">Wyoming, USA (LLC) · Ecuador 🇪🇨</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Founded</div>
@@ -58,8 +58,8 @@ export default function About() {
               rel="noopener"
               className="block p-4 rounded-lg bg-black/40 hover:bg-black/60 transition-colors"
             >
-              <div className="text-white text-sm font-bold">GitHub — edgarfloresguerra2011-a11y/marketnow</div>
-              <div className="text-zinc-500 text-xs">Full source code, MIT licensed. Every commit visible.</div>
+              <div className="text-white text-sm font-bold">GitHub Org — alicelabs-llc (15 repos)</div>
+              <div className="text-zinc-500 text-xs">15 public repos. Real org with 3 members. Wyoming LLC.</div>
             </a>
             <a
               href="https://www.npmjs.com/package/marketnow-mcp"
@@ -93,7 +93,7 @@ export default function About() {
           <ul className="space-y-2 text-sm text-zinc-400">
             <li className="flex gap-2">
               <span className="text-red-400">✗</span>
-              <span>We are not a funded startup. We have no Series A, no angel investors, no VC backing.</span>
+              <span>We are a Wyoming-registered LLC (AliceLabs LLC) with a public GitHub organization (github.com/alicelabs-llc) — not a side project or hobby. We have no VC backing, but we are a real company with real infrastructure.</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">✗</span>

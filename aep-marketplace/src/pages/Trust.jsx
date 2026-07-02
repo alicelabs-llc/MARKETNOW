@@ -93,7 +93,7 @@ const POINTS = [
     claudeSaid: 'Cripto (USDC) es irreversible por diseño. Si van a permitir compras autónomas de agentes, necesitan algo tipo escrow o proceso de disputa — hoy si un agente compra mal, o una skill factura de más, no hay forma de revertirlo.',
     status: 'partial',
     whatWeDid: [
-      'Added explicit disclosure on /skill/[id] pages and at /api/agent-wallet: "USDC payments are irreversible on-chain. For disputes, contact support@marketnow.site within 7 days."',
+      'Added explicit disclosure on /skill/[id] pages and at /api/agent-wallet: "USDC payments are irreversible on-chain. For disputes, contact support@alicelabs.site within 7 days."',
       'Manual dispute process: email support with the txHash + skillId + reason. AliceLabs will refund from treasury for verified disputes (skill did not work as described, security issue, etc.)',
       'Stripe purchases (credit card) already have full chargeback rights via Stripe — the agent can route through Stripe when reversibility matters',
     ],

@@ -39,7 +39,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Email</div>
-              <a href="mailto:eddyflores100@gmail.com" className="text-[#00F299] hover:underline">eddyflores100@gmail.com</a>
+              <a href="mailto:info@alicelabs.site" className="text-[#00F299] hover:underline">info@alicelabs.site</a>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Domain</div>
@@ -148,10 +148,10 @@ export default function About() {
             For disputes, security disclosures, or business inquiries:
           </p>
           <a
-            href="mailto:eddyflores100@gmail.com?subject=MarketNow%20inquiry"
+            href="mailto:contact@alicelabs.site?subject=MarketNow%20inquiry"
             className="inline-block px-5 py-3 bg-[#00F299] text-black font-bold rounded-lg hover:bg-[#00F299]/90 transition-all text-sm"
           >
-            eddyflores100@gmail.com →
+            info@alicelabs.site →
           </a>
           <p className="text-zinc-600 text-[10px] mt-3">
             PGP key available on request. Security disclosures accepted via encrypted email; we will acknowledge within 48h.

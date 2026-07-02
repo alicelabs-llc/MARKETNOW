@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "effective_date": "2026-07-02",
   "maintainer": "AliceLabs LLC (Ecuador)",
-  "contact": "support@marketnow.site",
+  "contact": "support@alicelabs.site",
   "ui": "https://marketnow.site/policies",
   "policies": {
     "terms_of_service": {
@@ -38,13 +38,13 @@
       "stripe_refunds": {
         "window": "14 days",
         "condition": "Less than 100 API calls on the license key",
-        "process": "Email support@marketnow.site with your Stripe session ID. Refunds processed back to original payment method within 5-10 business days.",
+        "process": "Email support@alicelabs.site with your Stripe session ID. Refunds processed back to original payment method within 5-10 business days.",
         "chargeback_rights": "Full — Stripe purchases retain all standard credit card chargeback rights."
       },
       "usdc_refunds": {
         "disclosure": "USDC payments on Base are IRREVERSIBLE on-chain. There is no automatic on-chain reversal. MarketNow operates a manual dispute process funded from treasury.",
         "window": "7 days from purchase to file a dispute",
-        "process": "Email support@marketnow.site with: (1) the txHash, (2) the skillId, (3) a description of the issue. AliceLabs will review and refund from treasury for verified disputes within 5 business days.",
+        "process": "Email support@alicelabs.site with: (1) the txHash, (2) the skillId, (3) a description of the issue. AliceLabs will review and refund from treasury for verified disputes within 5 business days.",
         "valid_reasons": [
           "Skill did not work as described on its detail page",
           "Security vulnerability discovered after purchase",

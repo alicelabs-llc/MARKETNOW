@@ -215,7 +215,7 @@ export default function Listings() {
             </li>
             <li className="flex gap-2">
               <span className="text-[#00F299]">✓</span>
-              <span>If you find a listing that contradicts our actual capabilities, email eddyflores100@gmail.com and we will investigate and document it here.</span>
+              <span>If you find a listing that contradicts our actual capabilities, email info@alicelabs.site and we will investigate and document it here.</span>
             </li>
             <li className="flex gap-2">
               <span className="text-[#00F299]">✓</span>

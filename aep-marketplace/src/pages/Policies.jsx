@@ -20,7 +20,7 @@ Average price: $2.50. Minimum: $0.99. Maximum: $9.99. No skill is free — every
   },
   {
     title: 'Refund Policy',
-    content: `All skill purchases are eligible for a full refund within 14 days if less than 100 API calls have been made using the license key. To request a refund, email support@marketnow.site with your order ID. Refunds are processed back to the original payment method within 5-10 business days. Skills priced at $0.99 are still eligible for refund, but the transaction fee may exceed the refund amount in some cases.`,
+    content: `All skill purchases are eligible for a full refund within 14 days if less than 100 API calls have been made using the license key. To request a refund, email support@alicelabs.site with your order ID. Refunds are processed back to the original payment method within 5-10 business days. Skills priced at $0.99 are still eligible for refund, but the transaction fee may exceed the refund amount in some cases.`,
   },
   {
     title: 'Privacy Policy',

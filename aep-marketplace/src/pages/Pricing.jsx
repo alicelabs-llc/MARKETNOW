@@ -285,7 +285,7 @@ export default function Pricing() {
               },
               {
                 q: 'Do you offer custom enterprise plans?',
-                a: 'Yes. For teams listing 100+ skills or with custom requirements (on-prem deployment, custom commission rates, SSO), contact us at eddyflores100@gmail.com for a custom quote.',
+                a: 'Yes. For teams listing 100+ skills or with custom requirements (on-prem deployment, custom commission rates, SSO), contact us at contact@alicelabs.site for a custom quote.',
               },
             ].map((item, i) => (
               <details key={i} className="premium-card p-5 group">

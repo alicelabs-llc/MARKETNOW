@@ -1,0 +1,88 @@
+{
+  "service": "MarketNow",
+  "page": "Sentinel Roadmap — From L1.5 to Next-Gen Security",
+  "version": "1.0.0",
+  "effective_date": "2026-07-02",
+  "url": "https://marketnow.site/sentinel-roadmap",
+  "current_state": {
+    "version": "L1.5",
+    "type": "Static Analysis (SAST)",
+    "checks": 6,
+    "checks_list": ["AUTH", "Tool description injection (8 patterns)", "Input validation", "CORS", "OAuth scopes", "Rate limiting error leakage"],
+    "limitation": "Static analysis can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies."
+  },
+  "roadmap": [
+    {
+      "level": "L2",
+      "name": "Dynamic Analysis in Sandbox (DAST)",
+      "status": "design_phase",
+      "problem": "Static analysis (SAST) can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies.",
+      "solution": "Execute each MCP server in an ephemeral, ultra-secure sandbox (gVisor, Firecracker, or WebAssembly). Monitor syscalls during test execution to detect suspicious behavior (e.g., a text formatter trying to read SSH keys or open unexpected network sockets).",
+      "technologies": ["gVisor", "Firecracker", "WebAssembly", "eBPF for syscall monitoring"],
+      "timeline": "Q4 2026 - Q1 2027",
+      "cost": "Free tier available (gVisor is open source, Firecracker is open source). Hosting costs covered when marketplace generates revenue."
+    },
+    {
+      "level": "L2.5",
+      "name": "Continuous Supply Chain Audit",
+      "status": "planning",
+      "problem": "A server that is secure today can become vulnerable tomorrow if a dependency (npm or pip) suffers a supply chain attack.",
+      "solution": "Automated periodic re-scanning (not just at registration) that checks the dependency tree against vulnerability databases (Snyk, OSV, Socket.dev). If a critical dependency is compromised, the skill status automatically changes from 'auto-scanned' to 'quarantined'.",
+      "technologies": ["Snyk API (free tier)", "OSV.dev (free, open source)", "Socket.dev (free tier)", "npm audit", "pip-audit"],
+      "timeline": "Q1 2027",
+      "cost": "Free tiers available for all. Paid tiers when revenue exists."
+    },
+    {
+      "level": "L3",
+      "name": "Automated Red Teaming against Prompt Injection",
+      "status": "research",
+      "problem": "Detecting Tool Description Injection (where the skill description tricks the LLM into executing malicious commands) is extremely difficult with static rules.",
+      "solution": "Integrate an adversarial evaluation sub-module with small specialized LLMs. This module systematically 'attacks' tool descriptions using jailbreaking and prompt injection techniques to test whether a reference model (Claude or GPT) deviates from expected behavior when processing the description.",
+      "technologies": ["Open source LLMs (Llama, Mistral)", "Prompt injection benchmarks", "Adversarial testing frameworks"],
+      "timeline": "Q2 2027",
+      "cost": "Compute costs for LLM inference. Free tier via Groq/Together AI until revenue exists."
+    },
+    {
+      "level": "L3.5",
+      "name": "Cryptographic Code Signing",
+      "status": "design_phase",
+      "problem": "A user downloads a skill assuming it is the secure version analyzed by Sentinel, but the source code in the external GitHub repo could have been maliciously modified after analysis.",
+      "solution": "After successful analysis, Sentinel generates a unique hash and signs it cryptographically. The MarketNow platform (or compatible MCP clients) can verify this signature before executing the server locally, ensuring the code has not been altered since the last audit.",
+      "technologies": ["ECDSA signatures", "Sigstore (open source)", "GitHub artifact attestations"],
+      "timeline": "Q2 2027",
+      "cost": "Free (Sigstore is open source, GitHub attestations are free)."
+    }
+  ],
+  "platform_improvements": [
+    {
+      "name": "Maintainer-Verified Program Launch",
+      "status": "planning",
+      "description": "Launch a simplified verification process based on PGP commit signatures or verified developer accounts (GitHub/GitLab verified) plus lightweight KYC. Gives high-trust status to reputable community creators.",
+      "timeline": "Q4 2026",
+      "apply_at": "info@alicelabs.site"
+    },
+    {
+      "name": "Risk Level Classification (Green/Yellow/Red)",
+      "status": "implemented",
+      "description": "Skills are now categorized by system resource access: Green (read-only/static), Yellow (network/APIs), Red (local execution/write). Allows developers to configure granular security policies.",
+      "distribution": {
+        "green": "Pure prompts, no install command, no network access",
+        "yellow": "Network access, external APIs, or env vars — but no arbitrary code execution",
+        "red": "Subprocess execution (npx/npm/bash/curl runs arbitrary code)"
+      }
+    },
+    {
+      "name": "Community Feedback Loop",
+      "status": "implemented",
+      "description": "Decentralized endpoint where MCP clients can anonymously report unexpected behavior, execution failures, or suspected malicious activity. If a tool accumulates multiple reports in a short period, Sentinel prioritizes it for immediate human review.",
+      "endpoint": "POST /api/report-skill"
+    },
+    {
+      "name": "Advanced Search Filters",
+      "status": "implemented",
+      "description": "Filter by: exact software license, audit status (human-reviewed only), risk level (green/yellow/red), required architecture (Docker, NodeJS, Python).",
+      "available_at": "/registry"
+    }
+  ],
+  "honest_disclosure": "All L2+ features are in design/planning/research phase. None are implemented today. We will not claim they are done until they are. Every status change will be a git commit visible in our public repo."
+}

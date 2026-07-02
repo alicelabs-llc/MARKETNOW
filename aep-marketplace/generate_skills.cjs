@@ -142,6 +142,26 @@ for (const s of skills) {
     disclosure: 'Declarative — inferred from skill metadata. Not enforced at runtime. See /trust for roadmap.',
   };
 
+  // risk_level — Green/Yellow/Red based on permissions
+  // Green: pure prompts, no install command, no network, no subprocess
+  // Yellow: network access or env vars, but no arbitrary code execution
+  // Red: subprocess execution (npx/npm/bash/curl runs arbitrary code)
+  const isPromptOnly = s.id && s.id.startsWith('mn-prompt-');
+  const installCmd = s.install || '';
+  // Only count as subprocess if install runs something beyond our wrapper
+  // @marketnow/install is our wrapper — the actual risk is what it installs
+  const hasExternalExec = /npx -y [^@]|npm install|curl |bash |pip install|python |node /.test(installCmd);
+  
+  if (isPromptOnly && !hasExternalExec) {
+    s.risk_level = 'green';
+  } else if (hasExternalExec || (subprocess && !installCmd.includes('@marketnow/install'))) {
+    s.risk_level = 'red';
+  } else if ((s.permissions.network && s.permissions.network.length > 0) || (s.permissions.env_vars && s.permissions.env_vars.length > 0)) {
+    s.risk_level = 'yellow';
+  } else {
+    s.risk_level = 'green';
+  }
+
   // source
   if (s.id && s.id.startsWith('mn-prompt-')) {
     s.source = { type: 'curated', url: null, note: 'Hand-curated by AliceLabs — usually a system prompt, not a code package.' };

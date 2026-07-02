@@ -16,21 +16,6 @@
  * 
  * Scoring: weighted 0-10, L2 is multiplicative on L1.6
  */
- * 1. AUTH 2. Tool descriptions 3. Input validation 
- * 4. CORS 5. OAuth 6. Rate limiting
- * 
- * L1.6-lite checks (run IN PRODUCTION, not just GitHub Actions):
- * 7. Secret scanning (regex patterns — AWS keys, GitHub tokens, private keys, wallet mnemonics)
- * 8. Prompt injection patterns (18 MCP-specific rules as JS RegExp)
- * 9. Dependency vulnerabilities (via OSV API — HTTP, no binary needed)
- * 10. Hygiene (license, manifest, README presence)
- * 
- * Scoring: weighted 0-10
- * - Secrets (40%): critical = instant 0
- * - Vulnerabilities (30%): -2 per CVE
- * - Static analysis (20%): -2.5 per ERROR, -1 per WARNING
- * - Hygiene (10%): -4 no license, -6 no manifest
- */
 
 // ============================================================
 // L2: Behavioral Analysis — fetches ACTUAL source code from GitHub

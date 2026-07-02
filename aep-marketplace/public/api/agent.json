@@ -232,7 +232,7 @@
     "price": "number, USD (0 for free, otherwise 0.99 - 9.99)",
     "currency": "string, always 'USD'",
     "payment": "string, always 'one-time'",
-    "license": "string, always 'perpetual'",
+    "license": "string, always 'AliceLabs LLC' (MarketNow licenses are issued by AliceLabs LLC)",
     "verified": "boolean — DEPRECATED. True only for human-reviewed skills (43 today). Use review_status instead.",
     "review_status": "string — one of: 'auto-scanned' (Sentinel L1.5 ran, no human review — 8,517 skills today), 'human-reviewed' (a human at AliceLabs inspected the repo — 43 skills today), 'maintainer-verified' (GitHub maintainer signed a claim of authorship — 0 today, program not launched)",
     "permissions": "object — { network: string[], filesystem: string[], env_vars: string[], subprocess: bool, disclosure: string }. Declarative only — not enforced at runtime. See /trust.",
@@ -323,7 +323,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-02T03:59:23.405Z",
+  "generated_at": "2026-07-02T15:53:04.852Z",
   "trust": {
     "license": "MIT",
     "open_source": true,
@@ -331,7 +331,7 @@
     "maintainer": "AliceLabs LLC (Ecuador) — founder Edison Flores",
     "security_audit": "Sentinel L1.5 (self-declared, automated 6-point MCP security scan). Third-party audit pending — see /trust.",
     "human_oversight": "Default mandate mode is 'notify' — humans are alerted on every purchase. Silent autonomous mode requires explicit opt-in.",
-    "track_record_disclosure": "AliceLabs LLC founded 2024, MarketNow launched publicly 2026. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
+    "track_record_disclosure": "Launched 2026. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
     "public_roadmap": "https://marketnow.site/trust"
   }
 }

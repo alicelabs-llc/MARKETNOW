@@ -3,7 +3,8 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "redirects": [
-    { "source": "/:path*", "has": [{ "type": "host", "value": "www.marketnow.site" }], "destination": "https://marketnow.site/:path*", "permanent": true }
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.marketnow.site" }], "destination": "https://marketnow.site/:path*", "statusCode": 301 },
+    { "source": "/", "has": [{ "type": "host", "value": "www.marketnow.site" }], "destination": "https://marketnow.site/", "statusCode": 301 }
   ],
   "rewrites": [
     { "source": "/api/categories.json", "destination": "/api/categories" },

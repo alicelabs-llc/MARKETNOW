@@ -109,7 +109,7 @@ const POINTS = [
     claudeSaid: 'Identidad verificable del equipo, cobertura de terceros, historial sin incidentes sostenido. Esto no se arregla con un cambio puntual, se construye.',
     status: 'partial',
     whatWeDid: [
-      'Created /about page with team identity: AliceLabs LLC (Ecuador), founder Edgar Flores, public GitHub at github.com/edgarfloresguerra2011-a11y',
+      'Created /about page with team identity: AliceLabs LLC (Ecuador), founder Edison Flores, public GitHub at github.com/edgarfloresguerra2011-a11y',
       'This /trust page is itself part of the track record — every status change is a git commit, visible in the repo history',
       'Public roadmap below shows what we have done and what is still pending — no pretending things are done when they are not',
     ],

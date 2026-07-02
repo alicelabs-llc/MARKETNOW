@@ -20,7 +20,7 @@
 | **Payment methods** | USDC on Base (x402 protocol) + Stripe (credit card) |
 | **Languages** | EN, ES, ZH, PT, FR |
 | **License** | MIT |
-| **Maintainer** | AliceLabs LLC (Ecuador) — founder Edgar Flores |
+| **Maintainer** | AliceLabs LLC (Ecuador) — founder Edison Flores |
 | **MCP server** | `npx -y marketnow-mcp` |
 | **npm** | https://www.npmjs.com/package/marketnow-mcp |
 | **GitHub** | https://github.com/edgarfloresguerra2011-a11y/marketnow |

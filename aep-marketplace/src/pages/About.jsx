@@ -27,7 +27,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Founder</div>
-              <div className="text-white">Edgar Flores</div>
+              <div className="text-white">Edison Flores</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Country</div>

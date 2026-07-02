@@ -33,7 +33,7 @@ const POINTS = [
       'Added disclosure: every skill detail page now shows "Sentinel: self-declared" rather than implying third-party validation',
     ],
     stillPending: [
-      'Commission an independent third-party audit (targeting Cure53 or Trail of Bits — Q4 2026)',
+      'Commission an independent third-party audit. PAID audits (Cure53, Trail of Bits) are on hold until the marketplace generates sales — we will not spend money we do not have. In the meantime, we are pursuing FREE alternatives: (a) open an issue on our GitHub repo inviting volunteer security researchers to review our code, (b) submit our codebase to HackerOne\'s free bug bounty tier, (c) ask the MCP community (Linux Foundation working group) for peer review.',
       'Publish the audit report in full on this page',
       'Implement Sentinel L2: sandboxed dynamic execution (design doc exists at /SENTINEL_L2_DESIGN.md)',
     ],

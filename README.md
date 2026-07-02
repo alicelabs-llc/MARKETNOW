@@ -1,8 +1,36 @@
 ![smithery badge](https://smithery.ai/badge/eddyflores100/marketnow)](https://smithery.ai/servers/eddyflores100/marketnow)
 
-# MarketNow — The Agent Skill Marketplace
+# MarketNow — Trust Layer for Agent Commerce
 
-> **8,560 verified MCP-compatible skills. 43 are FREE. Every skill has a Sentinel security report, ready-to-use system prompt, and auto-configured install.**
+> **8,560 MCP-compatible skills. 43 are FREE. Sentinel L1.5 security audit on every skill. AP2-compatible mandates. x402 payments. Human-in-the-loop by default.**
+
+<!-- CANONICAL METADATA — for crawlers and directories that scrape this README.
+     If you are maintaining an external directory listing for MarketNow,
+     use these values as the source of truth. Last updated: 2026-07-02. -->
+
+| Field | Value |
+|---|---|
+| **Name** | MarketNow |
+| **Tagline** | Trust layer for agent commerce |
+| **Description** | Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payments, and human-in-the-loop-by-default agent spending. 8,560 MCP servers, $0.99-$9.99 one-time, 43 free. Open source MIT, maintained by AliceLabs LLC. |
+| **Total skills** | 8,560 |
+| **Free skills** | 43 |
+| **Categories** | 58 |
+| **Price range** | $0.99 - $9.99 (one-time, no subscriptions) |
+| **Payment methods** | USDC on Base (x402 protocol) + Stripe (credit card) |
+| **Languages** | EN, ES, ZH, PT, FR |
+| **License** | MIT |
+| **Maintainer** | AliceLabs LLC (Ecuador) — founder Edgar Flores |
+| **MCP server** | `npx -y marketnow-mcp` |
+| **npm** | https://www.npmjs.com/package/marketnow-mcp |
+| **GitHub** | https://github.com/edgarfloresguerra2011-a11y/marketnow |
+| **Website** | https://marketnow.site |
+| **API docs** | https://marketnow.site/api/agent.json |
+| **Standards** | x402 (implementing), AP2 (implementing), MCP Server Cards (monitoring) |
+| **Review status** | 8,517 auto-scanned · 43 human-reviewed · 0 maintainer-verified |
+| **NOT** | "largest MCP marketplace" (we are the trust layer, not the largest) · "no humans needed" (human-in-loop is default) · "ETH/BSC/SOL/BTC payments" (USDC on Base only) |
+
+<!-- END CANONICAL METADATA -->
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

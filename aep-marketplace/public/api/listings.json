@@ -46,7 +46,13 @@
         "Listing reportedly says 'open registry with no manual approval needed' — we removed this framing; human-in-loop is now the default for mandates",
         "Listing reportedly says 'largest open MCP skill marketplace' — we no longer claim to be the largest; we position as the trust layer"
       ],
-      "notes": "We cannot directly edit the mcp.so listing — it appears to be auto-scraped or user-submitted, and mcp.so is behind Cloudflare anti-bot protection (we cannot verify the exact content programmatically). We are working on contacting mcp.so to request an update."
+      "actions_taken": [
+        "Opened GitHub issue #2977 on chatmcp/mcpso repo requesting listing update: https://github.com/chatmcp/mcpso/issues/2977",
+        "Created /.well-known/mcp-marketplace.json with canonical metadata any scraper can pull",
+        "Updated GitHub repo README with canonical metadata table for crawlers",
+        "Listed contact options: email, GitHub, Discord, Twitter — all free"
+      ],
+      "notes": "mcp.so is operated by chatmcp (GitHub: chatmcp/mcpso). The directory is open source — listings appear to be added/updated via GitHub issues. We opened issue #2977 requesting the update. mcp.so is behind Cloudflare anti-bot protection so we cannot verify the exact current listing content programmatically; we rely on Claude's earlier observation."
     },
     {
       "name": "Glama.ai",

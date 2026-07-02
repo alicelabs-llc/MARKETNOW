@@ -6,30 +6,26 @@
   "url": "https://marketnow.site/api/sentinel-status.json",
   "current_production_version": "L1.5",
   "production_endpoint": "POST /api/audit-skill",
-  "code_complete_not_in_production": "L1.6",
+  "code_complete_not_in_production": "L1.6 + L2 (both run via GitHub Actions)",
   "l16_runs_via": "GitHub Actions (.github/workflows/sentinel-l16-audit.yml)",
-  "design_phase": "L2",
+  "design_phase": "L3 (red teaming with LLMs)",
   "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md",
-  
   "honest_assessment": {
-    "summary": "Sentinel L1.5 is a good first step for a bootstrapped project, but insufficient as the sole trust layer for code that executes on agent machines.",
+    "summary": "Sentinel L1.5 runs in production (metadata-based). L1.6 (Semgrep + Gitleaks + OSV-Scanner) and L2 (Docker sandbox dynamic analysis) are implemented and run via GitHub Actions on every skill submission. L3 (adversarial red teaming) is in research phase.",
     "risk_current": "Medium-High for paid auto-scanned skills. Low for the 43 free human-reviewed skills.",
     "probability_of_improvement": "High if marketplace generates revenue (needed for L2 infrastructure + external audits).",
-    
     "strengths": [
       "Rapid and scalable: processes thousands of skills automatically",
       "Transparent: rules and methodology are public and open source",
-      "Clear improvement roadmap: L1.5 → L1.6 → L2 → L3 → L3.5",
+      "Clear improvement roadmap: L1.5 \u2192 L1.6 \u2192 L2 \u2192 L3 \u2192 L3.5",
       "Detects obvious issues: hardcoded secrets, dangerous permissions, prompt injection patterns"
     ],
-    
     "weaknesses": [
       "Static only: does not execute code, cannot detect runtime behavior (data exfiltration, time-bombs, sandbox evasion, dynamic module loading)",
       "Regex-based: easily evaded via obfuscation, encodings, indirect calls",
       "No behavioral verification: does not verify that a skill does what it claims",
       "Scale vs depth: 8,517 auto-scanned skills get a superficial scan; only 43 are human-reviewed; 0 are dynamically analyzed today"
     ],
-    
     "what_l1_5_cannot_detect": [
       "Runtime data exfiltration (skill sends data to undeclared endpoint at runtime)",
       "Time-bombs (malicious code that activates after a delay)",
@@ -38,15 +34,21 @@
       "Obfuscated code (encoded strings, eval of computed values)",
       "Behavioral mismatch (skill claims to be a 'weather tool' but does something else)"
     ],
-    
     "what_l2_will_add": [
       "Sandboxed execution: actually runs the MCP server in isolation",
       "Syscall monitoring: logs every open, connect, execve, fork",
       "Adversarial testing: sends path traversal, SQL injection, SSRF, prompt injection inputs",
       "Behavioral verification: compares runtime behavior vs declared permissions"
+    ],
+    "what_l2_does": [
+      "Executes MCP server in isolated Docker container (--network none, --read-only, --cap-drop ALL)",
+      "Monitors stdout for credential mentions, URLs, exec calls",
+      "Monitors filesystem changes via docker diff",
+      "Detects network attempts (ECONNREFUSED = tried to connect)",
+      "Checks container crash/exit code for suspicious behavior",
+      "Multiplicative scoring: clean=1.0, medium=0.7, high=0.3, critical=0.0"
     ]
   },
-  
   "risk_by_skill_type": {
     "free_human_reviewed": {
       "count": 43,
@@ -74,9 +76,7 @@
       "why": "Code execution + money involved. Sentinel L1.5 is insufficient. Use mandates with low limits."
     }
   },
-  
   "recommendation": "Until L2 is implemented, treat all auto-scanned skills (especially paid ones) with caution. Read the Sentinel report, check the GitHub repo, start with free human-reviewed skills, and use mandates with low spending limits for paid skills.",
-  
   "links": {
     "security_page": "https://marketnow.site/security",
     "sentinel_roadmap": "https://marketnow.site/sentinel-roadmap",
@@ -86,5 +86,28 @@
     "l16_rules": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/aep-marketplace/sentinel-rules/semgrep-mcp-rules.yml",
     "l16_workflow": "https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l16-audit.yml",
     "l2_design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md"
+  },
+  "l2_status": "implemented",
+  "l2_implementation": {
+    "code": "aep-marketplace/lib/sentinel-l2-sandbox.sh",
+    "workflow": ".github/workflows/sentinel-l2-sandbox.yml",
+    "container_isolation": {
+      "network": "none",
+      "filesystem": "read-only",
+      "memory": "256m",
+      "cpus": "0.5",
+      "capabilities": "all dropped",
+      "seccomp": "applied",
+      "no_new_privileges": true
+    },
+    "monitors": [
+      "stdout credentials/URLs/exec",
+      "filesystem changes",
+      "network attempts",
+      "crash/exit code",
+      "process list"
+    ],
+    "scoring": "Multiplicative on L1.6: 1.0/0.7/0.3/0.0",
+    "trigger_url": "https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l2-sandbox.yml"
   }
 }

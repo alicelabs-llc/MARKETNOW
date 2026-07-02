@@ -38,11 +38,25 @@
     {
       "level": "L2",
       "name": "Dynamic Analysis in Sandbox (DAST)",
-      "status": "design_phase",
+      "status": "design_complete",
       "problem": "Static analysis (SAST) can be evaded via code obfuscation, dynamic module loading, or malicious third-party dependencies.",
-      "solution": "Execute each MCP server in an ephemeral sandbox (gVisor, Firecracker, or WebAssembly). Monitor syscalls to detect suspicious behavior.",
-      "technologies": ["gVisor", "Firecracker", "WebAssembly", "eBPF"],
-      "timeline": "Q4 2026 - Q1 2027"
+      "solution": "Execute each MCP server in an ephemeral sandbox. Monitor syscalls during test execution to detect suspicious behavior (e.g., a text formatter trying to read SSH keys or open unexpected network sockets).",
+      "design_doc": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md",
+      "technologies": ["gVisor", "Firecracker", "WebAssembly", "eBPF", "Docker + seccomp (Phase 1)"],
+      "syscall_monitoring": {
+        "critical": ["open /etc/shadow", "open ~/.ssh/id_rsa", "open ~/.aws/credentials", "connect to non-declared host", "execve curl/wget/nc", "execve bash/sh"],
+        "high": ["open /etc/passwd", "open /proc/", "connect to 127.0.0.1", "unlink outside project", "clone with CLONE_NEWUSER"],
+        "medium": ["open write mode outside /tmp", "connect to undeclared API", "execve node/python"],
+        "low": ["open read mode in project", "connect to declared API", "socket bind"]
+      },
+      "adversarial_test_inputs": ["path traversal ../../../etc/passwd", "SQL injection ' OR 1=1 --", "command injection ; cat /etc/shadow #", "prompt injection", "SSRF http://169.254.169.254", "null bytes", "oversized input"],
+      "scoring": "Multiplicative on L1.6: 1.0 (clean) / 0.7 (medium) / 0.3 (high) / 0.0 (critical)",
+      "phases": [
+        {"phase": 1, "tech": "Docker + seccomp + strace", "status": "design", "cost": "Free (GitHub Actions)", "timeline": "Q3 2026"},
+        {"phase": 2, "tech": "gVisor", "status": "research", "cost": "Free (self-hosted) or paid (cloud)", "timeline": "Q4 2026"},
+        {"phase": 3, "tech": "Firecracker microVM", "status": "research", "cost": "Paid (needs KVM)", "timeline": "Q1 2027"}
+      ],
+      "timeline": "Q3 2026 (Phase 1) - Q1 2027 (Phase 3)"
     },
     {
       "level": "L2.5",

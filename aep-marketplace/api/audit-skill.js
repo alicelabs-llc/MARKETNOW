@@ -269,7 +269,14 @@ export default async function handler(req, res) {
       },
     };
 
-    return res.status(200).json(report);
+    return res.status(200).json({
+      ...report,
+      sentinel_version: 'L1.5',
+      l16_available: false,
+      l16_note: 'Sentinel L1.6 (enhanced with Semgrep + Gitleaks + OSV-Scanner) is code-complete but not yet integrated into this endpoint. L1.6 runs via GitHub Actions. See /sentinel-roadmap for details.',
+      l16_github_workflow: 'https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/sentinel-l16-audit.yml',
+      l16_design_doc_l2: 'https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/SENTINEL_L2_DESIGN.md',
+    });
   } catch (err) {
     console.error('Audit error:', err);
     return res.status(500).json({ error: 'Audit failed', message: err.message });

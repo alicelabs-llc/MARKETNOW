@@ -31,11 +31,14 @@ const POINTS = [
       'Published the full Sentinel L1.5 methodology — 6 checks documented at /api/audit-skill (AUTH, tool description injection, input validation, CORS, OAuth scopes, rate limiting error leakage)',
       'Sentinel is open source — anyone can re-run our audit and verify the results. Code at /aep-marketplace/api/audit-skill.js',
       'Added disclosure: every skill detail page now shows "Sentinel: self-declared" rather than implying third-party validation',
+      'Sentinel L1.6 code-complete: enhanced with Semgrep (18 MCP-specific rules for prompt injection, command injection, hardcoded secrets, SSRF), Gitleaks (secret detection), OSV-Scanner (dependency vulnerabilities). Runs via GitHub Actions. See /security.',
+      'Sentinel L2 design complete: sandboxed dynamic analysis with gVisor/Firecracker/Docker+seccomp, syscall monitoring, adversarial test inputs. See SENTINEL_L2_DESIGN.md.',
     ],
     stillPending: [
       'Commission an independent third-party audit. PAID audits (Cure53, Trail of Bits) are on hold until the marketplace generates sales — we will not spend money we do not have. In the meantime, we are pursuing FREE alternatives: (a) open an issue on our GitHub repo inviting volunteer security researchers to review our code, (b) submit our codebase to HackerOne\'s free bug bounty tier, (c) ask the MCP community (Linux Foundation working group) for peer review.',
       'Publish the audit report in full on this page',
-      'Implement Sentinel L2: sandboxed dynamic execution (design doc exists at /SENTINEL_L2_DESIGN.md)',
+      'Integrate L1.6 into production /api/audit-skill endpoint (currently runs via GitHub Actions only)',
+      'Implement L2 Phase 1: Docker + seccomp + strace sandbox (Q3 2026)',
     ],
   },
   {

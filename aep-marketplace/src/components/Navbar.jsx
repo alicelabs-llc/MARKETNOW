@@ -19,7 +19,7 @@ const NAV_GROUPS = [
     items: [
       { path: '/trust', label: 'Trust Roadmap' },
       { path: '/standards', label: 'Standards (x402, AP2)' },
-      { path: '/security', label: 'Sentinel L1.5' },
+      { path: '/security', label: 'Sentinel L1.5 → L1.6' },
       { path: '/sentinel-roadmap', label: 'Sentinel Roadmap (L2+)' },
       { path: '/compare', label: 'vs Smithery vs Glama' },
       { path: '/listings', label: 'External Listings' },

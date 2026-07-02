@@ -30,6 +30,9 @@ import Embed from "./pages/Embed";
 import Standards from "./pages/Standards";
 import Listings from "./pages/Listings";
 import Blog from "./pages/Blog";
+import Compare from "./pages/Compare";
+import BuyersGuide from "./pages/BuyersGuide";
+import Onboarding from "./pages/Onboarding";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -56,6 +59,7 @@ function App() {
         '/registry', '/vault', '/governance', '/security',
         '/handshake', '/policies', '/submit', '/pricing', '/dashboard', '/mandates',
         '/trust', '/about', '/catalog', '/embed', '/standards', '/listings',
+        '/blog', '/compare', '/buyers-guide', '/onboarding',
       ];
       // Allow /skill/:id pattern (starts with /skill/)
       const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
@@ -121,6 +125,9 @@ function App() {
           <Route path="/standards" element={<Standards />} />
           <Route path="/listings" element={<Listings />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/buyers-guide" element={<BuyersGuide />} />
+          <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

@@ -236,7 +236,7 @@ export default function AgentLanding() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <div className="p-4 rounded-xl bg-black/40 border border-white/5">
                 <div className="text-2xl mb-2">🔓</div>
-                <div className="text-white text-xs font-bold mb-1">Open Source MIT</div>
+                <div className="text-white text-xs font-bold mb-1">Source-Available MNNC-1.0</div>
                 <div className="text-zinc-500 text-[11px]">Full code on GitHub. Every change is a public commit. No black box.</div>
               </div>
               <div className="p-4 rounded-xl bg-black/40 border border-white/5">

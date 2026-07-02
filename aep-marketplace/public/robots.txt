@@ -10,6 +10,8 @@ Disallow: /api/skills.json
 Disallow: /api/skills_index.json
 Disallow: /api/all_skills.json
 Disallow: /api/skills.min.json
+Disallow: /api/skills_index.json
+Allow: /api/skills-lite.json
 
 # Allow lightweight API endpoints
 Allow: /api/agent.json

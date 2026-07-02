@@ -219,5 +219,20 @@ if (fs.existsSync(agentJsonPath)) {
 console.log(`✅ MarketNow — ${skills.length} skills reales escritas`);
 console.log(`   → src/data/all_skills.json`);
 console.log(`   → public/api/skills.json       (accesible para agentes)`);
+
+// Lite version for web (no system prompts, no capabilities, truncated descriptions)
+const liteSkills = skills.map(s => ({
+  id: s.id, name: s.name, slug: s.slug,
+  description: (s.description || "").slice(0, 200),
+  category: s.category, price: s.price,
+  sentinel_score: s.sentinel_score, review_status: s.review_status,
+  risk_level: s.risk_level, install: s.install,
+  author: s.author, version: s.version, tags: (s.tags || []).slice(0, 5),
+}));
+fs.writeFileSync(
+  path.join(__dirname, "public", "api", "skills-lite.json"),
+  JSON.stringify(liteSkills)
+);
+console.log(`   → public/api/skills-lite.json  (web-optimized, ~4MB)`);
 console.log(`   → public/api/categories.json   (${categoryIndex.length} categorías)`);
 console.log(`   → public/api/manifest.json`);

@@ -29,6 +29,7 @@ import Catalog from "./pages/Catalog";
 import Embed from "./pages/Embed";
 import Standards from "./pages/Standards";
 import Listings from "./pages/Listings";
+import Blog from "./pages/Blog";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -119,6 +120,7 @@ function App() {
           <Route path="/embed" element={<Embed />} />
           <Route path="/standards" element={<Standards />} />
           <Route path="/listings" element={<Listings />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

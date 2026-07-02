@@ -40,22 +40,23 @@ export default function AgentLanding() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
               <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
               <span className="text-[#00F299] text-xs font-mono tracking-wider">
-                NPM FOR MCP SERVERS · OPEN SOURCE · SENTINEL L1.5
+                TRUST LAYER FOR AGENT COMMERCE · AP2 · x402 · OPEN SOURCE
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Find an MCP server.<br />
+              The trust layer for<br />
               <span className="bg-gradient-to-r from-[#00F299] to-[#00d1ff] bg-clip-text text-transparent">
-                Install in one command.
+                agent commerce.
               </span>
             </h1>
 
             <p className="text-zinc-300 text-lg md:text-xl mb-3 max-w-2xl mx-auto leading-relaxed">
-              {stats.total.toLocaleString()}+ verified MCP servers for Claude Desktop, Cursor, Cline, and any MCP-compatible agent.
+              Discovery is solved (MCP registry, Smithery, Glama). <strong className="text-white">Trust is not.</strong>
+              MarketNow is the trust layer — every skill Sentinel-scanned, every payment verified on-chain, every mandate human-approved by default.
             </p>
             <p className="text-zinc-500 text-sm mb-10 max-w-xl mx-auto">
-              $0.99–$9.99 one-time. {stats.free} free. Sentinel-scanned. Open source MIT. Maintained by AliceLabs LLC.
+              {stats.total.toLocaleString()}+ MCP servers · AP2-compatible mandates · x402 payments · Open source MIT · AliceLabs LLC
             </p>
 
             {/* Search bar — the #1 thing devs need */}

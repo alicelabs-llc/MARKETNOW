@@ -1,9 +1,21 @@
 {
   "$schema": "https://marketnow.site/api/agent.schema.json",
   "name": "MarketNow",
-  "description": "Open marketplace for MCP-compatible agent skills. Every skill is a real, verified open-source MCP server with a transparent one-time price (minimum $0.99). Open source, MIT licensed, maintained by AliceLabs LLC. Supports a dual trust model: free skills = instant download, paid skills within a delegated mandate = autonomous agent purchase, paid skills beyond mandate = human approval required.",
+  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payment protocol, and human-in-the-loop-by-default agent spending. 8,560 MCP servers, $0.99-$9.99 one-time, 43 free. Open source MIT, maintained by AliceLabs LLC.",
   "url": "https://marketnow.site",
   "api_base": "https://marketnow.site/api",
+  "positioning": {
+    "what_we_are": "The trust layer for agent commerce. Not the biggest catalog — the safest place for an agent to spend real money.",
+    "what_we_are_not": "A discovery registry. Use registry.modelcontextprotocol.io, Smithery, Glama, or PulseMCP for discovery. Use MarketNow for trust: security audits, payment verification, mandate enforcement, dispute resolution.",
+    "wedge": "The official MCP registry solves discovery but has 64.7M entries from 1,691 packages — massive duplication, zero signal, active supply-chain attacks. MarketNow is the trust layer on top of any catalog.",
+    "standards": {
+      "payments": "x402 (HTTP 402 Payment Required) — implementing, governed by Linux Foundation with Coinbase, Cloudflare, Stripe, Google, Visa",
+      "mandates": "AP2 (Agent Payments Protocol) — implementing, by Google with Visa/Mastercard/PayPal/Coinbase + 60 partners",
+      "discovery": "MCP Server Cards — monitoring, will adopt when spec stabilizes",
+      "identity": "MCP Registry namespace verification — planning, via GitHub OAuth or DNS"
+    },
+    "standards_page": "https://marketnow.site/standards"
+  },
   "trust_model": {
     "protocol": "ACP / AP2 (delegated mandates)",
     "summary": "Three purchase modes designed for both human oversight and agent autonomy. Human-in-the-loop is the default; silent autonomous spending is opt-in only.",

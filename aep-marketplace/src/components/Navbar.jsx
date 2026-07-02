@@ -7,9 +7,9 @@ import AuthModal from './AuthModal';
 const navLinks = [
   { path: '/registry', label: 'REGISTRY' },
   { path: '/submit', label: 'SUBMIT SKILL' },
+  { path: '/standards', label: 'STANDARDS' },
   { path: '/mandates', label: 'MANDATES' },
   { path: '/trust', label: 'TRUST' },
-  { path: '/catalog', label: 'CATALOG' },
   { path: '/pricing', label: 'PRICING' },
   { path: '/dashboard', label: 'DASHBOARD' },
   { path: '/vault', label: 'MY VAULT' },

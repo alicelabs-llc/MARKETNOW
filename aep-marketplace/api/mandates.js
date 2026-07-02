@@ -326,6 +326,10 @@ export default async function handler(req, res) {
         owner, agentId, agentName, spendingLimitUsd,
         perPurchaseCapUsd, categories, expiresAt, signature,
         notificationMode, notificationEmail, notificationWebhook,
+        // AP2-compatible fields (Agent Payments Protocol)
+        ap2_format, ap2_mandate_id, ap2_signature, ap2_issuer,
+        // Task-scoped mandate fields (future direction)
+        task_description, task_hash,
       } = body;
 
       if (!owner || !agentId || !spendingLimitUsd) {
@@ -397,6 +401,21 @@ export default async function handler(req, res) {
         notificationEmail: notificationEmail || null,
         notificationWebhook: notificationWebhook || null,
         vetoWindowSeconds: notifMode === 'notify_and_veto' ? VETO_WINDOW_SECONDS : 0,
+        // AP2 compatibility fields — if a mandate was issued by an AP2-compliant
+        // issuer, we store the cross-platform reference so it can be verified
+        // by any AP2-aware agent. See /standards.
+        ap2: ap2_format ? {
+          format: ap2_format,
+          mandate_id: ap2_mandate_id || null,
+          signature: ap2_signature || null,
+          issuer: ap2_issuer || null,
+          verified: false, // we have not yet verified the AP2 signature
+        } : null,
+        // Task-scoped mandate fields (roadmap — see /standards)
+        taskScope: task_description ? {
+          description: task_description,
+          hash: task_hash || null,
+        } : null,
       };
 
       await createMandateRecord(mandate);

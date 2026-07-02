@@ -272,10 +272,51 @@ export default async function handler(req, res) {
       }
 
       // Mandate is valid and within all caps. Now require USDC payment.
+      // x402 protocol: return HTTP 402 Payment Required with payment challenge.
+      // The agent pays on-chain and retries with the x-payment header.
       if (!txHash) {
-        return res.status(200).json({
+        // x402 Payment Required response
+        res.setHeader('WWW-Authenticate', `x402 realm="marketnow", chain="base", token="USDC"`);
+        res.setHeader('X-Payment-Required', 'true');
+        res.setHeader('X-Payment-Amount', String(skill.price * 10 ** USDC_DECIMALS));
+        res.setHeader('X-Payment-Token', 'USDC');
+        res.setHeader('X-Payment-Chain', 'base');
+        res.setHeader('X-Payment-Contract', USDC_CONTRACT);
+        res.setHeader('X-Payment-To', PAYMENT_WALLET);
+        res.setHeader('X-Payment-Description', `MarketNow skill: ${skill.name} (${skill.id})`);
+        return res.status(402).json({
           success: false,
           mode: 'requires_payment',
+          x402: {
+            status: 402,
+            message: 'Payment Required',
+            accepts: {
+              scheme: 'x402',
+              network: 'base',
+              asset: 'USDC',
+              contract: USDC_CONTRACT,
+              amount: skill.price,
+              amount_raw: skill.price * 10 ** USDC_DECIMALS,
+              to: PAYMENT_WALLET,
+              description: `MarketNow skill: ${skill.name} (${skill.id})`,
+              max_amount: skill.price,
+              asset_type: 'native_token',
+            },
+            retry_instructions: {
+              method: 'POST',
+              url: 'https://marketnow.site/api/agent-purchase',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: {
+                skillId,
+                mandateId,
+                walletAddress,
+                txHash: '<USDC Transfer transaction hash on Base>',
+              },
+              note: 'After sending the USDC payment on Base, retry this endpoint with the txHash in the body. The x-payment header is optional — we accept txHash in the body for backwards compatibility.',
+            },
+          },
           mandate,
           skill: { id: skill.id, name: skill.name, price: skill.price },
           payment: {
@@ -291,7 +332,7 @@ export default async function handler(req, res) {
               javascript: `const { ethers } = require('ethers');\nconst p = new ethers.JsonRpcProvider('https://mainnet.base.org');\nconst usdc = new ethers.Contract('${USDC_CONTRACT}', ['function transfer(address,uint256) returns (bool)'], signer);\nconst tx = await usdc.transfer('${PAYMENT_WALLET}', ethers.parseUnits('${skill.price}', 6));\nawait tx.wait();\n// then POST /api/agent-purchase with txHash: tx.hash`,
             },
           },
-          message: 'Send the USDC payment on Base, then retry this endpoint with the txHash.',
+          message: 'HTTP 402 Payment Required. Send the USDC payment on Base, then retry with txHash. See x402.accepts for payment details.',
         });
       }
 

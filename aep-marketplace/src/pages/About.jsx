@@ -35,7 +35,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Founded</div>
-              <div className="text-white">2024</div>
+              <div className="text-white">AliceLabs LLC 2024 · MarketNow launched 2026</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Email</div>

@@ -11,7 +11,7 @@ export default function About() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Who we are</h1>
           <p className="text-zinc-400 text-lg">
-            MarketNow is built and maintained by AliceLabs LLC, a small software company based in Ecuador.
+            MarketNow is built and maintained by AliceLabs LLC, a small software company based in Wyoming, USA.
             We have no investors, no employees besides the founder, and no marketing budget. We are
             building this in public.
           </p>
@@ -31,11 +31,11 @@ export default function About() {
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Country</div>
-              <div className="text-white">Wyoming, USA (LLC) · Ecuador 🇪🇨</div>
+              <div className="text-white">Wyoming, USA 🇪🇨 (founder origin)</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Founded</div>
-              <div className="text-white">AliceLabs LLC 2024 · MarketNow launched 2026</div>
+              <div className="text-white">AliceLabs LLC 2025 · MarketNow launched 2026</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Email</div>

@@ -289,6 +289,12 @@ const MANDATE_TTL_DAYS = 90;
 const MAX_PER_PURCHASE_CAP = 50;
 const MAX_TOTAL_LIMIT = 500;
 
+// AUTONOMOUS PURCHASE ALLOWANCE: first N purchases are fully autonomous
+// (no human approval needed, but notification is sent). After N purchases,
+// the mandate requires explicit human re-approval.
+// This gives agents freedom to act quickly while keeping humans in control.
+const AUTONOMOUS_PURCHASE_LIMIT = 3;
+
 // Default notification mode is "notify" — every purchase within a mandate
 const DEFAULT_NOTIFICATION_MODE = 'notify';
 const VETO_WINDOW_SECONDS = 300;
@@ -477,6 +483,8 @@ export default async function handler(req, res) {
       return res.status(201).json({
         success: true,
         mandate,
+        autonomous_purchase_limit: AUTONOMOUS_PURCHASE_LIMIT,
+        autonomous_note: `Agent can make ${AUTONOMOUS_PURCHASE_LIMIT} purchases autonomously. After that, human re-approval is required. This balances agent freedom with human control per LLM provider policies.`,
         persistence: hasGitHub() ? 'github' : 'memory',
         documentation: 'https://marketnow.site/mandates',
         note: 'Agent may now purchase autonomously up to the limit. Beyond it, /api/agent-purchase returns mode=requires_human_approval.',
@@ -599,12 +607,30 @@ export default async function handler(req, res) {
       if (!updated) {
         return res.status(404).json({ error: 'Mandate not found' });
       }
+      // AUTONOMOUS PURCHASE ALLOWANCE CHECK
+      const autonomousRemaining = AUTONOMOUS_PURCHASE_LIMIT - (updated.txCount || 0);
+      const requiresReapproval = autonomousRemaining <= 0;
+      
+      if (requiresReapproval) {
+        updated = await updateMandateRecord(id, (m) => {
+          if (!m) return null;
+          m.status = 'requires_reapproval';
+          m.reapprovalReason = `Autonomous purchase limit (${AUTONOMOUS_PURCHASE_LIMIT}) reached. Human must re-approve.`;
+          return m;
+        });
+      }
+      
       return res.status(200).json({
         success: true,
         mandate: updated,
         remaining: updated.spendingLimitUsd - updated.spentUsd,
         notification_sent: updated.notificationMode !== 'silent',
         notification_mode: updated.notificationMode,
+        autonomous_remaining: Math.max(0, autonomousRemaining),
+        requires_reapproval: requiresReapproval,
+        message: requiresReapproval 
+          ? `Autonomous limit reached (${AUTONOMOUS_PURCHASE_LIMIT} purchases). Human re-approval required to continue.`
+          : `${autonomousRemaining} autonomous purchase${autonomousRemaining === 1 ? '' : 's'} remaining before human re-approval needed.`,
       });
     }
 

@@ -383,7 +383,7 @@ export default function AgentLanding() {
             <Link to="/policies" className="text-zinc-400 hover:underline">Terms</Link>
           </div>
           <p className="text-zinc-700 text-[10px] mt-4">
-            © 2026 AliceLabs LLC · MNNC-1.0 License · Built for developers and agents · Ecuador 🇪🇨
+            © 2026 AliceLabs LLC · MNNC-1.0 License · Built for developers and agents · Ecuador 🇪🇨 (founder origin)
           </p>
         </section>
       </div>

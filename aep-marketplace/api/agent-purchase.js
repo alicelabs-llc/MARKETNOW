@@ -302,10 +302,20 @@ export default async function handler(req, res) {
         return res.status(200).json({
           success: false,
           mode: 'requires_human_approval',
-          reason: `mandate_${mandate.status}`,
+          reason: mandate.status === 'requires_reapproval' 
+            ? `autonomous_limit_reached` 
+            : `mandate_${mandate.status}`,
           mandate,
           skill: { id: skill.id, name: skill.name, price: skill.price },
-          message: 'Mandate is no longer active. Ask the human principal to renew or extend it.',
+          message: mandate.status === 'requires_reapproval'
+            ? `Agent has used all 3 autonomous purchases. Human must re-approve the mandate to continue. This balances autonomy with LLM provider safety policies.`
+            : 'Mandate is no longer active. Ask the human principal to renew or extend it.',
+          autonomous_info: {
+            limit: 3,
+            used: mandate.txCount || 0,
+            remaining: Math.max(0, 3 - (mandate.txCount || 0)),
+            reapproval_url: 'https://marketnow.site/mandates',
+          },
         });
       }
       const expired = mandate.expiresAt && new Date(mandate.expiresAt).getTime() < Date.now();

@@ -112,7 +112,8 @@ const USDC_DISCLAIMER = 'USDC payments on Base are irreversible on-chain. For di
 
 for (const s of skills) {
   // review_status (replaces universal 'verified: true')
-  s.review_status = freeIds.has(s.id) ? 'human-reviewed' : 'auto-scanned';
+  // review_status: human-reviewed for free skills AND AliceLabs original tools
+  s.review_status = (freeIds.has(s.id) || (s.id && s.id.startsWith('mn-sec-'))) ? 'human-reviewed' : 'auto-scanned';
   s.verified = s.review_status !== 'auto-scanned'; // legacy compat
 
   // permissions — declarative, inferred from metadata

@@ -53,7 +53,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundOrbs from './components/BackgroundOrbs';
 import AuthModal from './components/AuthModal';
-import AdminModal from './components/AdminModal';
 import { setAuth, getUser } from './api/client';
 import { captureAffiliateRef } from './utils/affiliate';
 
@@ -84,7 +83,6 @@ import SentinelRoadmap from "./pages/SentinelRoadmap";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
-  const [adminOpen, setAdminOpen] = useState(false);
 
   // Capture affiliate ref from URL on first load
   useEffect(() => {
@@ -135,13 +133,6 @@ function App() {
     }
   }, []);
 
-  // Listen for secret admin trigger event
-  useEffect(() => {
-    const handler = () => setAdminOpen(true);
-    window.addEventListener('open-admin', handler);
-    return () => window.removeEventListener('open-admin', handler);
-  }, []);
-
   const handleAuthSuccess = () => {
     window.dispatchEvent(new Event('auth-change'));
   };
@@ -187,12 +178,6 @@ function App() {
           isOpen={authOpen}
           onClose={() => setAuthOpen(false)}
           onAuthSuccess={handleAuthSuccess}
-        />
-
-        {/* Hidden admin panel — only visible after secret trigger */}
-        <AdminModal
-          isOpen={adminOpen}
-          onClose={() => setAdminOpen(false)}
         />
       </div>
     </BrowserRouter>

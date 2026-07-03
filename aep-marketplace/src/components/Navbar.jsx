@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { isAuthenticated, getUser, logout } from '../api/client';
 import AuthModal from './AuthModal';
 
@@ -19,46 +19,11 @@ const navLinks = [
   { path: '/policies', label: 'POLICIES' },
 ];
 
-// Admin access shortcuts (no longer 7-click on logo):
-//   Primary: Ctrl+Shift+M
-//   Easter egg backup: Konami code (↑↑↓↓←→←→BA)
-const KONAMI_SEQUENCE = [
-  'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-  'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a',
-];
-
-function triggerAdmin() {
-  window.dispatchEvent(new CustomEvent('open-admin'));
-}
-
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState(null);
-  const konamiRef = useRef([]);
-
-  // Admin shortcut: Ctrl+Shift+M (primary) + Konami code (easter egg backup)
-  useEffect(() => {
-    const handler = (e) => {
-      // Primary shortcut: Ctrl+Shift+M
-      if (e.ctrlKey && e.shiftKey && (e.key === 'M' || e.key === 'm')) {
-        e.preventDefault();
-        triggerAdmin();
-        return;
-      }
-      // Easter egg backup: Konami code
-      const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-      konamiRef.current = [...konamiRef.current, key].slice(-KONAMI_SEQUENCE.length);
-      if (konamiRef.current.length === KONAMI_SEQUENCE.length &&
-          konamiRef.current.every((k, i) => k === KONAMI_SEQUENCE[i])) {
-        triggerAdmin();
-        konamiRef.current = [];
-      }
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, []);
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -91,7 +56,7 @@ export default function Navbar() {
     window.dispatchEvent(new Event('auth-change'));
   };
 
-  // Click on logo OR name → navigate to home (no admin trigger on click)
+  // Click on logo OR name → navigate to home
   const goHome = () => {
     navigate('/');
   };
@@ -100,12 +65,12 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 z-[1000] glass-panel border-b border-white/5">
         <div className="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo + name — both navigate to home. Admin access via Ctrl+Shift+M or Konami code. */}
+          {/* Logo + name — both navigate to home */}
           <button
             type="button"
             onClick={goHome}
             className="flex items-center gap-3 shrink-0 cursor-pointer group focus:outline-none"
-            title="MarketNow — Go to home (Admin: Ctrl+Shift+M)"
+            title="MarketNow — Go to home"
             aria-label="MarketNow home"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg select-none group-hover:scale-105 transition-transform">

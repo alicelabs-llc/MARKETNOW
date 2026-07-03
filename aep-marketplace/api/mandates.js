@@ -2,6 +2,12 @@
  * MarketNow — Delegated Mandates API (ACP / AP2 compliant)
  * =================================================================
  *
+ * v2.0 — Concurrency fixes (4 julio 2026)
+ *   - Cache de lectura en memoria (TTL 30s) — reduce llamadas GitHub API
+ *   - Invalidación write-through: writes invalidan cache
+ *   - Rate limiting REAL por IP (30 req/min)
+ *   - Sin esto, 100 usuarios activos saturaban los 5000 req/hour de GitHub
+ *
  * Persistence: GitHub repo as a database (file-per-mandate at
  * `_data/mandates/mand_xxx.json` on master branch). No external
  * services required beyond a GitHub PAT — uses the existing
@@ -34,6 +40,9 @@
  *   POST   /api/mandates?action=revoke&id=...
  *   POST   /api/mandates?action=spend {id, amount, txHash}
  */
+
+import * as mandateCache from '../lib/mandate-cache.mjs';
+import { checkRateLimit } from '../lib/rate-limit.mjs';
 
 const GITHUB_API = 'https://api.github.com';
 
@@ -167,8 +176,23 @@ async function ghWriteWithRetry(id, mutator, maxRetries = 3) {
 // ---------- Public storage API ----------
 
 async function getMandate(id) {
-  if (hasGitHub()) return await ghGet(id);
-  return _mem.get(id) || null;
+  // 1. Revisar cache de lectura (TTL 30s)
+  const cached = mandateCache.get(id);
+  if (cached) return cached;
+
+  // 2. Fetch desde GitHub o memory
+  let mandate;
+  if (hasGitHub()) {
+    mandate = await ghGet(id);
+  } else {
+    mandate = _mem.get(id) || null;
+  }
+
+  // 3. Guardar en cache si se encontró
+  if (mandate) {
+    mandateCache.set(id, mandate);
+  }
+  return mandate;
 }
 
 async function listMandates(filter) {
@@ -196,22 +220,33 @@ async function listMandates(filter) {
 async function createMandateRecord(mandate) {
   if (hasGitHub()) {
     await ghWrite(mandate.id, mandate, true);
-    return mandate;
+  } else {
+    _mem.set(mandate.id, mandate);
   }
-  _mem.set(mandate.id, mandate);
+  // Write-through cache
+  mandateCache.set(mandate.id, mandate);
   return mandate;
 }
 
 async function updateMandateRecord(id, mutator) {
+  let result;
   if (hasGitHub()) {
-    return await ghWriteWithRetry(id, mutator);
+    result = await ghWriteWithRetry(id, mutator);
+  } else {
+    const current = _mem.get(id);
+    if (!current) return null;
+    const next = mutator(current);
+    if (next === null) return null;
+    _mem.set(id, next);
+    result = next;
   }
-  const current = _mem.get(id);
-  if (!current) return null;
-  const next = mutator(current);
-  if (next === null) return null;
-  _mem.set(id, next);
-  return next;
+  // Invalidar cache para que la próxima lectura vea la versión nueva
+  if (result) {
+    mandateCache.set(id, result);
+  } else {
+    mandateCache.invalidate(id);
+  }
+  return result;
 }
 
 // ---------- Notifications ----------
@@ -314,6 +349,9 @@ export default async function handler(req, res) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     return res.status(405).json({ error: 'GET or POST only' });
   }
+
+  // ===== FIX: Rate limiting REAL (30 req/min) =====
+  if (checkRateLimit(req, res, 'mandates')) return;
 
   try {
     const body = req.body || {};

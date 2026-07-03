@@ -2,41 +2,36 @@
  * MarketNow — Agent Programmatic Purchase (USDC on Base) + Mandate-aware
  * =====================================================================
  *
- * Dual-mode commerce (ACP / AP2 delegated mandates):
- *   1. FREE skill                 -> mode: instant_download (no payment)
- *   2. PAID skill + valid mandate -> mode: instant_purchase  (agent autonomous)
- *   3. PAID skill + no mandate    -> mode: requires_human_approval
+ * v2.0 — Concurrency fixes (4 julio 2026)
+ *   - Cache de skills en memoria (elimina fetch de 30MB por request)
+ *   - Cache de mandates en memoria (reduce llamadas GitHub API)
+ *   - Cache de txHash verificados (reduce llamadas Base RPC)
+ *   - Pool de RPCs de Base (fallback si uno cae)
+ *   - Rate limiting real por IP
+ *   - Elimina self-fetch antipattern
  *
  * Endpoint: POST /api/agent-purchase
  * Body:
  *   {
  *     "skillId": "mn-gen-00015",
- *     "walletAddress": "0x...",        // agent's wallet
- *     "txHash": "0x...",               // optional: USDC payment hash (Base)
- *     "agentId": "agent_xxx",          // optional
- *     "mandateId": "mand_xxx"          // optional: pre-approved mandate
+ *     "walletAddress": "0x...",
+ *     "txHash": "0x...",
+ *     "agentId": "agent_xxx",
+ *     "mandateId": "mand_xxx"
  *   }
- *
- * Flow:
- *   - If skill.price == 0 -> return license + prompt (instant_download)
- *   - If mandateId provided:
- *       GET /api/mandates?id=mandateId
- *       if active && !expired && spent + price <= limit && price <= perPurchaseCap
- *         if txHash provided -> verify USDC tx on Base, then mark spend
- *         else -> return mode: requires_payment (agent must send USDC then retry with txHash)
- *       else -> return mode: requires_human_approval (mandate exhausted/expired/cap exceeded)
- *   - If no mandateId but txHash provided -> verify USDC tx, treat as direct pay
- *   - Else -> return mode: requires_human_approval with Stripe URL
- *
- * NO HUMAN INTERVENTION REQUIRED for free skills or paid skills within mandate.
- * Humans are only involved when a paid purchase exceeds an active mandate.
  *
  * Payment wallet: 0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee
  * Network: Base (Layer 2, chainId 8453)
  * Token:  USDC (0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913)
  */
 
-const BASE_RPC = 'https://mainnet.base.org';
+import crypto from 'crypto';
+import { findSkillMerged } from '../lib/skills-cache.mjs';
+import { checkRateLimit } from '../lib/rate-limit.mjs';
+import * as mandateCache from '../lib/mandate-cache.mjs';
+import * as txCache from '../lib/tx-cache.mjs';
+import * as baseRpc from '../lib/base-rpc-pool.mjs';
+
 const USDC_CONTRACT = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
 const PAYMENT_WALLET = '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee';
 const USDC_DECIMALS = 6;
@@ -53,107 +48,114 @@ function jsonHeaders(res) {
 }
 
 function licenseKey(skillId, prefix = 'MN') {
-  return `${prefix}-${skillId.slice(-8).toUpperCase()}-${Date.now().toString(36).toUpperCase()}`;
-}
-
-async function fetchSkill(req, skillId) {
-  const baseUrl = `https://${req.headers.host}`;
-  const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
-  if (!skillsRes.ok) throw new Error('Failed to fetch skills catalog');
-  const skills = await skillsRes.json();
-  let skill = skills.find(s => s.id === skillId || s.slug === skillId);
-  // If not found or not free, check the free-skills.json curated list.
-  // Some skills are marked free in free-skills.json but priced in skills.json.
-  try {
-    const freeRes = await fetch(`${baseUrl}/api/free-skills.json`);
-    if (freeRes.ok) {
-      const freeData = await freeRes.json();
-      const freeList = freeData.skills || freeData;
-      const freeSkill = freeList.find(s => s.id === skillId || s.slug === skillId);
-      if (freeSkill) {
-        // Merge free flag onto the catalog entry (catalog has richer data: doc, capabilities, sentinel)
-        if (skill) {
-          skill = { ...skill, ...freeSkill, price: 0, free: true };
-        } else {
-          skill = freeSkill;
-        }
-      }
-    }
-  } catch (e) {
-    console.error('free-skills fetch failed (non-fatal):', e);
-  }
-  return skill;
+  const hash = crypto.createHash('sha256')
+    .update(`${skillId}:${Date.now()}:${Math.random()}`)
+    .digest('hex')
+    .slice(0, 12)
+    .toUpperCase();
+  return `${prefix}-${skillId.slice(-8).toUpperCase()}-${hash}`;
 }
 
 async function getMandate(req, mandateId) {
+  // 1. Revisar cache
+  const cached = mandateCache.get(mandateId);
+  if (cached) return cached;
+
+  // 2. Fetch desde /api/mandates
   const baseUrl = `https://${req.headers.host}`;
   try {
     const r = await fetch(`${baseUrl}/api/mandates?id=${encodeURIComponent(mandateId)}`);
     if (!r.ok) return null;
     const j = await r.json();
-    return j.mandate || null;
+    const mandate = j.mandate || null;
+    if (mandate) {
+      mandateCache.set(mandateId, mandate);
+    }
+    return mandate;
   } catch {
     return null;
+  }
+}
+
+async function verifyUsdcTx(txHash, expectedAmountRaw) {
+  // 1. Revisar cache de txHash
+  const cachedResult = txCache.get(txHash);
+  if (cachedResult) {
+    return cachedResult;
+  }
+
+  // 2. Verificar via pool de RPCs
+  try {
+    const { result: receipt } = await baseRpc.call('eth_getTransactionReceipt', [txHash]);
+
+    if (!receipt) {
+      const result = { ok: false, code: 'tx_not_found', receipt: null };
+      txCache.set(txHash, result);
+      return result;
+    }
+    if (receipt.status !== '0x1') {
+      const result = { ok: false, code: 'tx_failed', receipt };
+      txCache.set(txHash, result);
+      return result;
+    }
+    if (!receipt.logs || !Array.isArray(receipt.logs)) {
+      const result = { ok: false, code: 'no_logs', receipt };
+      txCache.set(txHash, result);
+      return result;
+    }
+
+    for (const log of receipt.logs) {
+      if (log.address?.toLowerCase() !== USDC_CONTRACT.toLowerCase()) continue;
+      if (!log.topics || log.topics[0] !== TRANSFER_TOPIC) continue;
+      const from = '0x' + log.topics[1].slice(26);
+      const to = '0x' + log.topics[2].slice(26);
+      const value = BigInt(log.data);
+      if (to.toLowerCase() === PAYMENT_WALLET.toLowerCase()) {
+        if (Number(value) < expectedAmountRaw) {
+          const result = {
+            ok: false, code: 'insufficient_amount', receipt,
+            expected: expectedAmountRaw, received: Number(value),
+          };
+          txCache.set(txHash, result);
+          return result;
+        }
+        const result = { ok: true, from, to, amount: Number(value), receipt };
+        txCache.set(txHash, result);
+        return result;
+      }
+    }
+    const result = { ok: false, code: 'no_transfer_to_marketnow', receipt };
+    txCache.set(txHash, result);
+    return result;
+  } catch (e) {
+    return { ok: false, code: 'rpc_error', error: e.message };
   }
 }
 
 async function recordMandateSpend(req, mandateId, amount, txHash) {
   const baseUrl = `https://${req.headers.host}`;
   try {
-    await fetch(`${baseUrl}/api/mandates`, {
+    const r = await fetch(`${baseUrl}/api/mandates`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action: 'spend', id: mandateId, amount, txHash }),
     });
+    mandateCache.invalidate(mandateId);
+    return r.ok;
   } catch (e) {
     console.error('mandate spend recording failed (non-fatal):', e);
+    mandateCache.invalidate(mandateId);
+    return false;
   }
-}
-
-async function verifyUsdcTx(txHash, expectedAmountRaw) {
-  const txRes = await fetch(BASE_RPC, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      jsonrpc: '2.0', id: 1,
-      method: 'eth_getTransactionReceipt',
-      params: [txHash],
-    }),
-  });
-  const txData = await txRes.json();
-  const receipt = txData.result;
-  if (!receipt) {
-    return { ok: false, code: 'tx_not_found', receipt: null };
-  }
-  if (receipt.status !== '0x1') {
-    return { ok: false, code: 'tx_failed', receipt };
-  }
-  if (!receipt.logs || !Array.isArray(receipt.logs)) {
-    return { ok: false, code: 'no_logs', receipt };
-  }
-  for (const log of receipt.logs) {
-    if (log.address?.toLowerCase() !== USDC_CONTRACT.toLowerCase()) continue;
-    if (!log.topics || log.topics[0] !== TRANSFER_TOPIC) continue;
-    const from = '0x' + log.topics[1].slice(26);
-    const to = '0x' + log.topics[2].slice(26);
-    const value = BigInt(log.data);
-    if (to.toLowerCase() === PAYMENT_WALLET.toLowerCase()) {
-      if (Number(value) < expectedAmountRaw) {
-        return {
-          ok: false, code: 'insufficient_amount', receipt,
-          expected: expectedAmountRaw, received: Number(value),
-        };
-      }
-      return { ok: true, from, to, amount: Number(value), receipt };
-    }
-  }
-  return { ok: false, code: 'no_transfer_to_marketnow', receipt };
 }
 
 export default async function handler(req, res) {
   jsonHeaders(res);
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
+
+  // Rate limiting: 20 purchases/min por IP
+  if (checkRateLimit(req, res, 'purchase')) return;
 
   try {
     const { skillId, walletAddress, txHash, agentId, mandateId } = req.body || {};
@@ -174,13 +176,14 @@ export default async function handler(req, res) {
       });
     }
 
-    const skill = await fetchSkill(req, skillId);
+    // ===== FIX: usar cache en vez de fetch de 30MB =====
+    const skill = await findSkillMerged(skillId);
     if (!skill) {
       return res.status(404).json({ error: 'Skill not found', skillId });
     }
 
     // ============================================================
-    // MODE 1: FREE SKILL — instant download, no payment
+    // MODE 1: FREE SKILL — instant download
     // ============================================================
     if (skill.price === 0 || skill.free) {
       return res.status(200).json({
@@ -234,7 +237,6 @@ export default async function handler(req, res) {
           skill: { id: skill.id, name: skill.name, price: skill.price },
         });
       }
-      // Category check
       if (mandate.categories && !mandate.categories.includes('*')) {
         if (!mandate.categories.includes(skill.category)) {
           return res.status(200).json({
@@ -247,7 +249,6 @@ export default async function handler(req, res) {
           });
         }
       }
-      // Per-purchase cap
       if (skill.price > mandate.perPurchaseCapUsd) {
         return res.status(200).json({
           success: false,
@@ -258,7 +259,6 @@ export default async function handler(req, res) {
           cap: mandate.perPurchaseCapUsd,
         });
       }
-      // Total limit
       const remaining = mandate.spendingLimitUsd - mandate.spentUsd;
       if (skill.price > remaining) {
         return res.status(200).json({
@@ -271,11 +271,7 @@ export default async function handler(req, res) {
         });
       }
 
-      // Mandate is valid and within all caps. Now require USDC payment.
-      // x402 protocol: return HTTP 402 Payment Required with payment challenge.
-      // The agent pays on-chain and retries with the x-payment header.
       if (!txHash) {
-        // x402 Payment Required response
         res.setHeader('WWW-Authenticate', `x402 realm="marketnow", chain="base", token="USDC"`);
         res.setHeader('X-Payment-Required', 'true');
         res.setHeader('X-Payment-Amount', String(skill.price * 10 ** USDC_DECIMALS));
@@ -305,16 +301,12 @@ export default async function handler(req, res) {
             retry_instructions: {
               method: 'POST',
               url: 'https://marketnow.site/api/agent-purchase',
-              headers: {
-                'Content-Type': 'application/json',
-              },
+              headers: { 'Content-Type': 'application/json' },
               body: {
-                skillId,
-                mandateId,
-                walletAddress,
+                skillId, mandateId, walletAddress,
                 txHash: '<USDC Transfer transaction hash on Base>',
               },
-              note: 'After sending the USDC payment on Base, retry this endpoint with the txHash in the body. The x-payment header is optional — we accept txHash in the body for backwards compatibility.',
+              note: 'After sending the USDC payment on Base, retry this endpoint with the txHash in the body.',
             },
           },
           mandate,
@@ -327,16 +319,12 @@ export default async function handler(req, res) {
             amount_raw: skill.price * 10 ** USDC_DECIMALS,
             to: PAYMENT_WALLET,
             from: walletAddress || mandate.owner,
-            code_samples: {
-              python: `from web3 import Web3\nw3 = Web3(Web3.HTTPProvider('https://mainnet.base.org'))\nusdc = w3.eth.contract(address='${USDC_CONTRACT}', abi=[{"inputs":[{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}])\ntx = usdc.functions.transfer('${PAYMENT_WALLET}', ${skill.price * 10 ** USDC_DECIMALS}).build_transaction({...})\n# sign & send, then POST /api/agent-purchase with the txHash`,
-              javascript: `const { ethers } = require('ethers');\nconst p = new ethers.JsonRpcProvider('https://mainnet.base.org');\nconst usdc = new ethers.Contract('${USDC_CONTRACT}', ['function transfer(address,uint256) returns (bool)'], signer);\nconst tx = await usdc.transfer('${PAYMENT_WALLET}', ethers.parseUnits('${skill.price}', 6));\nawait tx.wait();\n// then POST /api/agent-purchase with txHash: tx.hash`,
-            },
           },
-          message: 'HTTP 402 Payment Required. Send the USDC payment on Base, then retry with txHash. See x402.accepts for payment details.',
+          message: 'HTTP 402 Payment Required. Send the USDC payment on Base, then retry with txHash.',
         });
       }
 
-      // Verify USDC payment on-chain
+      // ===== FIX: verificar USDC tx con cache + pool de RPCs =====
       const expectedAmountRaw = Math.round(skill.price * 10 ** USDC_DECIMALS);
       const v = await verifyUsdcTx(txHash, expectedAmountRaw);
       if (!v.ok) {
@@ -351,11 +339,12 @@ export default async function handler(req, res) {
           network: 'Base (chainId 8453)',
           message: v.code === 'tx_not_found'
             ? 'TX not found on Base. Make sure you sent it on chainId 8453.'
-            : `Payment verification failed: ${v.code}`,
+            : v.code === 'rpc_error'
+              ? `Base RPC temporarily unavailable. Please retry in a few seconds. (${v.error})`
+              : `Payment verification failed: ${v.code}`,
         });
       }
 
-      // Payment verified — record spend against the mandate
       await recordMandateSpend(req, mandateId, skill.price, txHash);
 
       const sellerEarnings = skill.price * (1 - COMMISSION_RATE);
@@ -372,28 +361,16 @@ export default async function handler(req, res) {
           limit: mandate.spendingLimitUsd,
         },
         skill: {
-          id: skill.id,
-          name: skill.name,
-          slug: skill.slug,
-          category: skill.category,
-          price: skill.price,
+          id: skill.id, name: skill.name, slug: skill.slug,
+          category: skill.category, price: skill.price,
         },
         payment: {
-          txHash,
-          network: 'Base',
-          token: 'USDC',
-          amount: skill.price,
-          amountRaw: v.amount,
-          from: v.from,
-          to: PAYMENT_WALLET,
-          verifiedAt: new Date().toISOString(),
+          txHash, network: 'Base', token: 'USDC', amount: skill.price, amountRaw: v.amount,
+          from: v.from, to: PAYMENT_WALLET, verifiedAt: new Date().toISOString(),
         },
         license: {
-          key: licenseKey(skill.id),
-          type: 'perpetual',
-          expires: null,
-          sellerEarnings,
-          marketnowCommission: marketnowRevenue,
+          key: licenseKey(skill.id), type: 'perpetual', expires: null,
+          sellerEarnings, marketnowCommission: marketnowRevenue,
         },
         system_prompt: skill.doc?.system_prompt || '',
         sentinel: skill.sentinel || {},
@@ -406,7 +383,7 @@ export default async function handler(req, res) {
     }
 
     // ============================================================
-    // MODE 3: PAID SKILL, NO MANDATE — direct USDC if txHash, else require human approval
+    // MODE 3: PAID SKILL, NO MANDATE — direct USDC if txHash
     // ============================================================
     if (txHash && walletAddress) {
       const expectedAmountRaw = Math.round(skill.price * 10 ** USDC_DECIMALS);
@@ -420,6 +397,9 @@ export default async function handler(req, res) {
           expected_amount_raw: expectedAmountRaw,
           payment_wallet: PAYMENT_WALLET,
           network: 'Base',
+          message: v.code === 'rpc_error'
+            ? `Base RPC temporarily unavailable. Please retry in a few seconds. (${v.error})`
+            : `Payment verification failed: ${v.code}`,
         });
       }
 
@@ -429,17 +409,13 @@ export default async function handler(req, res) {
         success: true,
         mode: 'direct_purchase',
         verified: true,
-        skill: {
-          id: skill.id, name: skill.name, slug: skill.slug, category: skill.category, price: skill.price,
-        },
+        skill: { id: skill.id, name: skill.name, slug: skill.slug, category: skill.category, price: skill.price },
         payment: {
           txHash, network: 'Base', token: 'USDC', amount: skill.price, amountRaw: v.amount,
           from: v.from, to: PAYMENT_WALLET, verifiedAt: new Date().toISOString(),
         },
         license: {
-          key: licenseKey(skill.id),
-          type: 'perpetual',
-          expires: null,
+          key: licenseKey(skill.id), type: 'perpetual', expires: null,
           sellerEarnings, marketnowCommission: marketnowRevenue,
         },
         system_prompt: skill.doc?.system_prompt || '',
@@ -452,7 +428,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // No mandate, no txHash -> human approval required
+    // No mandate, no txHash → human approval required
     return res.status(200).json({
       success: false,
       mode: 'requires_human_approval',

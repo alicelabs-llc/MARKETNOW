@@ -11,7 +11,7 @@ export default function About() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Who we are</h1>
           <p className="text-zinc-400 text-lg">
-            MarketNow is built and maintained by AliceLabs LLC, a small software company based in Ecuador.
+            MarketNow is built and maintained by AliceLabs LLC, a small software company based in Wyoming, USA.
             We have no investors, no employees besides the founder, and no marketing budget. We are
             building this in public.
           </p>
@@ -31,11 +31,11 @@ export default function About() {
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Country</div>
-              <div className="text-white">Ecuador 🇪🇨</div>
+              <div className="text-white">Wyoming, USA 🇪🇨 (founder origin)</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Founded</div>
-              <div className="text-white">2024</div>
+              <div className="text-white">AliceLabs LLC 2025 · MarketNow launched 2026</div>
             </div>
             <div>
               <div className="text-zinc-500 text-xs mb-1">Email</div>
@@ -58,8 +58,8 @@ export default function About() {
               rel="noopener"
               className="block p-4 rounded-lg bg-black/40 hover:bg-black/60 transition-colors"
             >
-              <div className="text-white text-sm font-bold">GitHub — edgarfloresguerra2011-a11y/marketnow</div>
-              <div className="text-zinc-500 text-xs">Full source code, MIT licensed. Every commit visible.</div>
+              <div className="text-white text-sm font-bold">GitHub Org — alicelabs-llc (15 repos)</div>
+              <div className="text-zinc-500 text-xs">15 public repos. Real org with 3 members. Wyoming LLC.</div>
             </a>
             <a
               href="https://www.npmjs.com/package/marketnow-mcp"
@@ -77,7 +77,7 @@ export default function About() {
               className="block p-4 rounded-lg bg-black/40 hover:bg-black/60 transition-colors"
             >
               <div className="text-white text-sm font-bold">Smithery — eddyflores100/marketnow</div>
-              <div className="text-zinc-500 text-xs">Smithery registry listing with quality score (84/100).</div>
+              <div className="text-zinc-500 text-xs">Smithery registry listing with quality score (<a href="https://smithery.ai/servers/eddyflores100/marketnow" target="_blank" rel="noopener" className="text-[#00F299] hover:underline">84/100 — verify ↗</a>).</div>
             </a>
             <div className="p-4 rounded-lg bg-black/40">
               <div className="text-white text-sm font-bold">Payment wallet (Base L2)</div>
@@ -93,7 +93,7 @@ export default function About() {
           <ul className="space-y-2 text-sm text-zinc-400">
             <li className="flex gap-2">
               <span className="text-red-400">✗</span>
-              <span>We are not a funded startup. We have no Series A, no angel investors, no VC backing.</span>
+              <span>We are a Wyoming-registered LLC (AliceLabs LLC) with a public GitHub organization (github.com/alicelabs-llc) — not a side project or hobby. We have no VC backing, but we are a real company with real infrastructure.</span>
             </li>
             <li className="flex gap-2">
               <span className="text-red-400">✗</span>
@@ -120,7 +120,7 @@ export default function About() {
           <ul className="space-y-2 text-sm text-zinc-400">
             <li className="flex gap-2">
               <span className="text-[#00F299]">✓</span>
-              <span>Open source — MIT licensed, full code on GitHub, every change is a public commit</span>
+              <span>Open source — MNNC-1.0 licensed, full code on GitHub, every change is a public commit</span>
             </li>
             <li className="flex gap-2">
               <span className="text-[#00F299]">✓</span>

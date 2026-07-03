@@ -1,13 +1,16 @@
 /**
  * MarketNow — Dynamic Categories API
+ * ===================================
+ *
+ * v2.0 — Concurrency fixes (4 julio 2026)
+ *   - Usa skills-cache.mjs (no fetch de 30MB por request)
+ *
  * GET /api/categories
- * 
- * Serverless function that ALWAYS returns fresh data.
- * Cannot be cached by CDN.
  */
 
+import { getSkills } from '../lib/skills-cache.mjs';
+
 export default async function handler(req, res) {
-  // Aggressive no-cache headers
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
   res.setHeader('Pragma', 'no-cache');
@@ -20,13 +23,9 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   try {
-    // Fetch the skills data from the static file
-    const baseUrl = `https://${req.headers.host}`;
-    const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
-    if (!skillsRes.ok) throw new Error('Failed to fetch skills');
-    const skills = await skillsRes.json();
+    // ===== FIX: cache en memoria =====
+    const skills = await getSkills();
 
-    // Compute categories dynamically
     const catMap = new Map();
     for (const s of skills) {
       const cat = s.category || 'Unknown';
@@ -39,9 +38,6 @@ export default async function handler(req, res) {
     const categories = Array.from(catMap.values())
       .sort((a, b) => b.count - a.count)
       .map(c => {
-        // Flag categories that look like bulk imports (exactly 30 items is
-        // the signature of bulk-imported from community "awesome-mcp" lists).
-        // We disclose this rather than hide it — see /catalog.
         const isBulkImported = c.count === 30;
         return {
           ...c,

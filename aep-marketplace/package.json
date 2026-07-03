@@ -17,6 +17,7 @@
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
+    "ethers": "^6.17.0",
     "express": "^5.2.1",
     "framer-motion": "^12.38.0",
     "jsonwebtoken": "^9.0.3",
@@ -39,5 +40,6 @@
     "tailwindcss": "^4.3.0",
     "vite": "^8.0.12",
     "wrangler": "^4.105.0"
-  }
+  },
+  "license": "MNNC-1.0"
 }

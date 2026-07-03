@@ -1,0 +1,36 @@
+name: Publish npm package with provenance
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # Required for npm provenance
+    
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      
+      - name: Install dependencies
+        run: cd aep-marketplace/mcp-server && npm install
+      
+      - name: Publish with provenance (code signing via Sigstore)
+        run: |
+          cd aep-marketplace/mcp-server
+          npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Verify provenance
+        run: |
+          echo "Package published with Sigstore provenance attestation"
+          echo "Verify at: https://www.npmjs.com/package/marketnow-mcp"
+          echo "Command: npm audit signatures marketnow-mcp"

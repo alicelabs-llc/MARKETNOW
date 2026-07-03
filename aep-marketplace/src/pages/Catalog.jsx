@@ -169,7 +169,7 @@ export default function Catalog() {
             </li>
             <li className="flex gap-2">
               <code className="text-[#00d1ff] font-mono text-xs flex-shrink-0">maintainer-verified</code>
-              <span className="text-zinc-400">The skill's GitHub maintainer signed a claim of authorship (GPG-signed commit). <strong className="text-zinc-300">Coming soon.</strong></span>
+              <span className="text-zinc-400">The skill's GitHub maintainer signed a claim of authorship (GPG-signed commit). <strong className="text-zinc-300">0 today — program opens Q4 2026, apply at info@alicelabs.site.</strong></span>
             </li>
           </ul>
           <p className="text-zinc-500 text-xs mt-4">

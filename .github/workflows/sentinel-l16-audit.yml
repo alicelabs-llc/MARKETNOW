@@ -1,0 +1,156 @@
+name: Sentinel L1.6 Security Audit
+
+on:
+  # Manual trigger for any repo URL
+  workflow_dispatch:
+    inputs:
+      repo_url:
+        description: 'GitHub repo URL to audit (e.g. https://github.com/user/repo)'
+        required: true
+        type: string
+      skill_id:
+        description: 'MarketNow skill ID (optional, for tracking)'
+        required: false
+        type: string
+  # Auto-trigger when a new issue is created with "Submit" in the title
+  issues:
+    types: [opened]
+
+jobs:
+  sentinel-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout MarketNow repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      - name: Install Gitleaks
+        run: |
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.18.1/gitleaks_8.18.1_linux_x64.tar.gz | tar -xz -C /usr/local/bin gitleaks
+          chmod +x /usr/local/bin/gitleaks
+
+      - name: Install OSV-Scanner
+        run: |
+          curl -sSfL https://github.com/google/osv-scanner/releases/download/v1.7.0/osv-scanner_linux_amd64 -o /usr/local/bin/osv-scanner
+          chmod +x /usr/local/bin/osv-scanner
+
+      - name: Determine repo URL
+        id: repo-url
+        run: |
+          if [ -n "${{ github.event.inputs.repo_url }}" ]; then
+            echo "url=${{ github.event.inputs.repo_url }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "issues" ]; then
+            # Try to extract GitHub URL from issue body
+            ISSUE_BODY='${{ github.event.issue.body }}'
+            URL=$(echo "$ISSUE_BODY" | grep -oE 'https://github\.com/[a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+' | head -1)
+            if [ -n "$URL" ]; then
+              echo "url=$URL" >> $GITHUB_OUTPUT
+            else
+              echo "url=" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "url=" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run Sentinel L1.6 audit
+        if: steps.repo-url.outputs.url != ''
+        run: |
+          cd aep-marketplace
+          node lib/sentinel-l16.js "${{ steps.repo-url.outputs.url }}" > /tmp/audit-report.json 2>&1 || true
+          cat /tmp/audit-report.json
+
+      - name: Upload audit report as artifact
+        if: steps.repo-url.outputs.url != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentinel-audit-report
+          path: /tmp/audit-report.json
+          retention-days: 30
+
+      - name: Comment on issue (if triggered by issue)
+        if: github.event_name == 'issues' && steps.repo-url.outputs.url != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report;
+            try {
+              report = JSON.parse(fs.readFileSync('/tmp/audit-report.json', 'utf8'));
+            } catch (e) {
+              report = { error: 'Could not read audit report', score: 0 };
+            }
+            
+            const score = report.score || 0;
+            const passed = score >= 4.0;
+            const emoji = passed ? '✅' : '❌';
+            
+            let comment = `## ${emoji} Sentinel L1.6 Security Audit Complete\n\n`;
+            comment += `**Repository:** ${{ steps.repo-url.outputs.url }}\n`;
+            comment += `**Score:** ${score}/10 ${passed ? '(PASSES — listed on MarketNow)' : '(FAILS — below minimum 4.0)'}\n\n`;
+            
+            if (report.categories) {
+              comment += `### Category Scores\n\n`;
+              comment += `| Category | Score | Weight | Findings |\n`;
+              comment += `|---|---|---|---|\n`;
+              
+              const weights = { hygiene: '10%', secrets: '40%', vulnerabilities: '30%', staticAnalysis: '20%' };
+              for (const [cat, data] of Object.entries(report.categories)) {
+                const findings = data.details.length;
+                comment += `| ${cat} | ${data.score}/10 | ${weights[cat] || '?'} | ${findings} |\n`;
+              }
+              comment += `\n`;
+              
+              // Show details if any findings
+              for (const [cat, data] of Object.entries(report.categories)) {
+                if (data.details.length > 0) {
+                  comment += `### ${cat} findings (${data.details.length})\n\n`;
+                  for (const d of data.details.slice(0, 10)) {
+                    comment += `- **${d.severity}**: ${d.message}\n`;
+                  }
+                  if (data.details.length > 10) {
+                    comment += `- ... and ${data.details.length - 10} more\n`;
+                  }
+                  comment += `\n`;
+                }
+              }
+            }
+            
+            if (report.error) {
+              comment += `### Error\n\n\`\`\`\n${report.error}\n\`\`\`\n`;
+            }
+            
+            comment += `\n---\n`;
+            comment += `**About Sentinel L1.6:** Enhanced static analysis with Semgrep (18 MCP-specific rules), Gitleaks (secret detection), and OSV-Scanner (dependency vulnerabilities). See [sentinel-roadmap](https://marketnow.site/sentinel-roadmap) for details.\n`;
+            comment += `**Audit run:** ${new Date().toISOString()}\n`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+      - name: Fail if score below minimum
+        if: steps.repo-url.outputs.url != ''
+        run: |
+          SCORE=$(cat /tmp/audit-report.json | jq '.score // 0')
+          if (( $(echo "$SCORE < 4.0" | bc -l) )); then
+            echo "❌ Audit FAILED: score $SCORE is below minimum 4.0"
+            exit 1
+          else
+            echo "✅ Audit PASSED: score $SCORE"
+          fi

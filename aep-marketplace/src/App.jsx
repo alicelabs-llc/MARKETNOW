@@ -1,5 +1,52 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Component } from 'react';
+
+// Error Boundary — catches any render crash and shows a message instead of black screen
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, info) {
+    console.error('Page crash:', error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center px-6">
+          <div className="premium-card p-8 max-w-lg text-center">
+            <div className="text-5xl mb-4">⚠️</div>
+            <h2 className="text-xl font-bold text-white mb-2">Something went wrong</h2>
+            <p className="text-zinc-400 text-sm mb-4">
+              This page crashed. Try refreshing, or go back to the home page.
+            </p>
+            <p className="text-zinc-600 text-xs font-mono mb-6 break-all">
+              {this.state.error?.message || 'Unknown error'}
+            </p>
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={() => window.location.reload()}
+                className="px-5 py-2.5 bg-[#00F299] text-black font-bold rounded-lg hover:bg-[#00F299]/90 text-sm"
+              >
+                REFRESH
+              </button>
+              <a
+                href="/"
+                className="px-5 py-2.5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 text-sm"
+              >
+                HOME
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // Components
 import Navbar from './components/Navbar';
@@ -29,6 +76,11 @@ import Catalog from "./pages/Catalog";
 import Embed from "./pages/Embed";
 import Standards from "./pages/Standards";
 import Listings from "./pages/Listings";
+import Blog from "./pages/Blog";
+import Compare from "./pages/Compare";
+import BuyersGuide from "./pages/BuyersGuide";
+import Onboarding from "./pages/Onboarding";
+import SentinelRoadmap from "./pages/SentinelRoadmap";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -55,6 +107,7 @@ function App() {
         '/registry', '/vault', '/governance', '/security',
         '/handshake', '/policies', '/submit', '/pricing', '/dashboard', '/mandates',
         '/trust', '/about', '/catalog', '/embed', '/standards', '/listings',
+        '/blog', '/compare', '/buyers-guide', '/onboarding', '/sentinel-roadmap',
       ];
       // Allow /skill/:id pattern (starts with /skill/)
       const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
@@ -99,6 +152,7 @@ function App() {
         <BackgroundOrbs />
         <Navbar />
 
+        <ErrorBoundary>
         <Routes>
           <Route path="/" element={<AgentLanding />} />
           <Route path="/skills" element={<Navigate to="/registry" replace />} />
@@ -119,9 +173,15 @@ function App() {
           <Route path="/embed" element={<Embed />} />
           <Route path="/standards" element={<Standards />} />
           <Route path="/listings" element={<Listings />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/buyers-guide" element={<BuyersGuide />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/sentinel-roadmap" element={<SentinelRoadmap />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>
+        </ErrorBoundary>
 
         <AuthModal
           isOpen={authOpen}

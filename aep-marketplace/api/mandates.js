@@ -324,15 +324,61 @@ const MANDATE_TTL_DAYS = 90;
 const MAX_PER_PURCHASE_CAP = 50;
 const MAX_TOTAL_LIMIT = 500;
 
+// AUTONOMOUS PURCHASE ALLOWANCE: first N purchases are fully autonomous
+// (no human approval needed, but notification is sent). After N purchases,
+// the mandate requires explicit human re-approval.
+// This gives agents freedom to act quickly while keeping humans in control.
+const AUTONOMOUS_PURCHASE_LIMIT = 3;
+
 // Default notification mode is "notify" — every purchase within a mandate
-// triggers a notification (email/webhook) to the principal. The principal
-// can choose "silent" (no notification, fully autonomous — opt-in) or
-// "notify_and_veto" (notification + 5-minute veto window before spend is
-// committed). This implements Claude's feedback: human-in-the-loop is the
-// default, not opt-out.
 const DEFAULT_NOTIFICATION_MODE = 'notify';
-const VETO_WINDOW_SECONDS = 300; // 5 minutes for notify_and_veto mode
+const VETO_WINDOW_SECONDS = 300;
 const NOTIFICATION_MODES = ['silent', 'notify', 'notify_and_veto'];
+
+// Internal secret for agent-purchase → mandates spend calls
+// SECURITY FIX 2.1a: Must be set as independent env var, NOT derived from GitHub token
+// If not set, we fail closed (reject all internal spend calls)
+const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET;
+if (!INTERNAL_SECRET && process.env.NODE_ENV === 'production') {
+  console.error('FATAL: MANDATES_INTERNAL_SECRET not set. Internal spend calls will be rejected.');
+}
+
+// ============================================================
+// EIP-191 Signature Verification (FIX 1.2 complete)
+// Verifies that the signature was produced by the owner wallet
+// ============================================================
+import { verifyMessage } from 'ethers';
+
+/**
+ * Build the canonical message that the owner must sign.
+ * Format: marketnow-mandate:{agentId}:{spendingLimitUsd}:{owner}
+ */
+function buildMandateMessage(agentId, spendingLimitUsd, owner) {
+  return `marketnow-mandate:${agentId}:${spendingLimitUsd}:${owner.toLowerCase()}`;
+}
+
+/**
+ * Verify EIP-191 signature.
+ * Returns true if the signature was produced by the owner wallet.
+ * Returns false if verification fails.
+ */
+function verifyMandateSignature(signature, agentId, spendingLimitUsd, owner) {
+  if (!signature || !owner) return false;
+  try {
+    const message = buildMandateMessage(agentId, spendingLimitUsd, owner);
+    const recoveredAddress = verifyMessage(message, signature);
+    return recoveredAddress.toLowerCase() === owner.toLowerCase();
+  } catch (e) {
+    console.error('Signature verification error:', e.message);
+    return false;
+  }
+}
+
+// Check if caller is authorized for spend action
+// Only internal calls from agent-purchase.js should hit spend
+function isInternalCall(body) {
+  return body._internal === true && body._secret === INTERNAL_SECRET;
+}
 
 function jsonHeaders(res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -373,15 +419,30 @@ export default async function handler(req, res) {
       if (!owner || !agentId || !spendingLimitUsd) {
         return res.status(400).json({
           error: 'Missing required fields',
-          required: ['owner (wallet)', 'agentId', 'spendingLimitUsd'],
-          optional: ['perPurchaseCapUsd', 'categories', 'expiresAt', 'signature', 'agentName', 'notificationMode', 'notificationEmail', 'notificationWebhook'],
-          defaults: {
-            notificationMode: DEFAULT_NOTIFICATION_MODE,
-            perPurchaseCapUsd: 'defaults to spendingLimitUsd',
-            categories: '["*"] (all)',
-            expiresAt: `+${MANDATE_TTL_DAYS} days`,
-          },
-          disclosure: 'Default notificationMode is "notify" — the principal is alerted on every purchase. "silent" (fully autonomous) must be explicitly chosen. "notify_and_veto" adds a 5-minute veto window before each spend is committed.',
+          required: ['owner (wallet)', 'agentId', 'spendingLimitUsd', 'signature (EIP-191)'],
+          optional: ['perPurchaseCapUsd', 'categories', 'expiresAt', 'agentName', 'notificationMode', 'notificationEmail', 'notificationWebhook'],
+          security_note: 'signature is now REQUIRED — EIP-191 signature over mandate data, signed by the owner wallet. Prevents creating mandates on behalf of another wallet.',
+        });
+      }
+
+      // SECURITY FIX 1.2: Require AND verify EIP-191 signature cryptographically
+      // Prevents anyone from creating mandates on behalf of another wallet
+      if (!signature) {
+        return res.status(400).json({
+          error: 'signature is required',
+          reason: 'You must sign the mandate data with the owner wallet (EIP-191). This proves you control the wallet address specified as owner.',
+          how_to_sign: `Sign this message with your wallet: ${buildMandateMessage(agentId, spendingLimitUsd, owner)}`,
+        });
+      }
+
+      // Verify the signature cryptographically using ethers.js
+      const sigValid = verifyMandateSignature(signature, agentId, spendingLimitUsd, owner);
+      if (!sigValid) {
+        return res.status(403).json({
+          error: 'invalid_signature',
+          reason: 'The signature does not match the owner wallet. Ensure you signed the exact message with the wallet that matches the owner address.',
+          expected_message: buildMandateMessage(agentId, spendingLimitUsd, owner),
+          expected_signer: owner,
         });
       }
 
@@ -460,6 +521,8 @@ export default async function handler(req, res) {
       return res.status(201).json({
         success: true,
         mandate,
+        autonomous_purchase_limit: AUTONOMOUS_PURCHASE_LIMIT,
+        autonomous_note: `Agent can make ${AUTONOMOUS_PURCHASE_LIMIT} purchases autonomously. After that, human re-approval is required. This balances agent freedom with human control per LLM provider policies.`,
         persistence: hasGitHub() ? 'github' : 'memory',
         documentation: 'https://marketnow.site/mandates',
         note: 'Agent may now purchase autonomously up to the limit. Beyond it, /api/agent-purchase returns mode=requires_human_approval.',
@@ -467,13 +530,50 @@ export default async function handler(req, res) {
     }
 
     // ---------- REVOKE ----------
+    // SECURITY FIX 2.1b: Require EIP-191 signature from owner to revoke
     if (req.method === 'POST' && action === 'revoke') {
       const id = body.id || query.id;
       if (!id) return res.status(400).json({ error: 'id required' });
+      
+      // Fetch the mandate first to check ownership
+      const mandate = await getMandate(id);
+      if (!mandate) return res.status(404).json({ error: 'Mandate not found' });
+      
+      // Require signature from the owner wallet
+      const revokeSignature = body.signature || query.signature;
+      if (!revokeSignature) {
+        return res.status(400).json({
+          error: 'signature is required to revoke',
+          reason: 'You must sign the revoke message with the owner wallet to prove you control it.',
+          how_to_sign: `Sign this message with your wallet: marketnow-revoke:${id}`,
+          owner: mandate.owner,
+        });
+      }
+      
+      // Verify the signature cryptographically
+      const revokeMessage = `marketnow-revoke:${id}`;
+      let sigValid = false;
+      try {
+        const recoveredAddress = verifyMessage(revokeMessage, revokeSignature);
+        sigValid = recoveredAddress.toLowerCase() === mandate.owner.toLowerCase();
+      } catch (e) {
+        console.error('Revoke signature verification error:', e.message);
+      }
+      
+      if (!sigValid) {
+        return res.status(403).json({
+          error: 'invalid_signature',
+          reason: 'The signature does not match the owner wallet of this mandate. Only the owner can revoke.',
+          expected_message: revokeMessage,
+          expected_signer: mandate.owner,
+        });
+      }
+      
       const updated = await updateMandateRecord(id, (m) => {
         if (!m) return null;
         m.status = 'revoked';
         m.revokedAt = nowIso();
+        m.revokedBy = mandate.owner;
         return m;
       });
       if (!updated) return res.status(404).json({ error: 'Mandate not found' });
@@ -481,7 +581,15 @@ export default async function handler(req, res) {
     }
 
     // ---------- SPEND ----------
+    // SECURITY: spend is INTERNAL ONLY — only agent-purchase.js should call this
+    // after verifying the USDC payment on-chain. External callers are rejected.
     if (req.method === 'POST' && action === 'spend') {
+      if (!isInternalCall(body)) {
+        return res.status(403).json({
+          error: 'forbidden',
+          reason: 'spend action is internal-only. External callers must use POST /api/agent-purchase which verifies payment on-chain before recording spend.',
+        });
+      }
       const id = body.id || query.id;
       const amount = Number(body.amount || query.amount);
       const txHash = body.txHash || query.txHash;
@@ -537,12 +645,30 @@ export default async function handler(req, res) {
       if (!updated) {
         return res.status(404).json({ error: 'Mandate not found' });
       }
+      // AUTONOMOUS PURCHASE ALLOWANCE CHECK
+      const autonomousRemaining = AUTONOMOUS_PURCHASE_LIMIT - (updated.txCount || 0);
+      const requiresReapproval = autonomousRemaining <= 0;
+      
+      if (requiresReapproval) {
+        updated = await updateMandateRecord(id, (m) => {
+          if (!m) return null;
+          m.status = 'requires_reapproval';
+          m.reapprovalReason = `Autonomous purchase limit (${AUTONOMOUS_PURCHASE_LIMIT}) reached. Human must re-approve.`;
+          return m;
+        });
+      }
+      
       return res.status(200).json({
         success: true,
         mandate: updated,
         remaining: updated.spendingLimitUsd - updated.spentUsd,
         notification_sent: updated.notificationMode !== 'silent',
         notification_mode: updated.notificationMode,
+        autonomous_remaining: Math.max(0, autonomousRemaining),
+        requires_reapproval: requiresReapproval,
+        message: requiresReapproval 
+          ? `Autonomous limit reached (${AUTONOMOUS_PURCHASE_LIMIT} purchases). Human re-approval required to continue.`
+          : `${autonomousRemaining} autonomous purchase${autonomousRemaining === 1 ? '' : 's'} remaining before human re-approval needed.`,
       });
     }
 

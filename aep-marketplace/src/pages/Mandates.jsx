@@ -166,7 +166,7 @@ export default function Mandates() {
                       </div>
                       <span className={`px-2 py-0.5 rounded text-[10px] font-mono ${
                         m.status === 'active' ? 'bg-[#00F299]/10 text-[#00F299]'
-                        : m.status === 'revoked' ? 'bg-red-500/10 text-red-400'
+                        : m.status === 'revoked' ? 'bg-red-500/10 text-red-400' : m.status === 'requires_reapproval' ? 'bg-yellow-500/10 text-yellow-400'
                         : 'bg-yellow-500/10 text-yellow-400'
                       }`}>{m.status.toUpperCase()}</span>
                     </div>
@@ -179,6 +179,12 @@ export default function Mandates() {
                       <div className="flex justify-between text-xs">
                         <span className="text-zinc-500">Spent</span>
                         <span className="text-white font-mono">${m.spentUsd.toFixed(2)} ({m.txCount || 0} txs)</span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span className="text-zinc-500">Autonomous remaining</span>
+                        <span className={`font-mono ${Math.max(0, 3 - (m.txCount || 0)) > 0 ? 'text-[#00F299]' : 'text-yellow-400'}`}>
+                          {Math.max(0, 3 - (m.txCount || 0))}/3 {m.status === 'requires_reapproval' ? '🔒 RE-APPROVE NEEDED' : ''}
+                        </span>
                       </div>
                       <div className="flex justify-between text-xs">
                         <span className="text-zinc-500">Remaining</span>

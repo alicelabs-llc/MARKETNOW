@@ -31,27 +31,30 @@ const POINTS = [
       'Published the full Sentinel L1.5 methodology — 6 checks documented at /api/audit-skill (AUTH, tool description injection, input validation, CORS, OAuth scopes, rate limiting error leakage)',
       'Sentinel is open source — anyone can re-run our audit and verify the results. Code at /aep-marketplace/api/audit-skill.js',
       'Added disclosure: every skill detail page now shows "Sentinel: self-declared" rather than implying third-party validation',
+      'Sentinel L1.6 implemented: enhanced with Semgrep (18 MCP-specific rules for prompt injection, command injection, hardcoded secrets, SSRF), Gitleaks (secret detection), OSV-Scanner (dependency vulnerabilities). Runs via GitHub Actions.',
+      'Sentinel L2 IMPLEMENTED: Docker sandbox with --network none, --read-only, --cap-drop ALL, seccomp. Runs MCP server in isolation, monitors stdout/fs/network/crashes. Multiplicative scoring on L1.6. Runs via GitHub Actions.',
     ],
     stillPending: [
       'Commission an independent third-party audit. PAID audits (Cure53, Trail of Bits) are on hold until the marketplace generates sales — we will not spend money we do not have. In the meantime, we are pursuing FREE alternatives: (a) open an issue on our GitHub repo inviting volunteer security researchers to review our code, (b) submit our codebase to HackerOne\'s free bug bounty tier, (c) ask the MCP community (Linux Foundation working group) for peer review.',
       'Publish the audit report in full on this page',
-      'Implement Sentinel L2: sandboxed dynamic execution (design doc exists at /SENTINEL_L2_DESIGN.md)',
+      'Integrate L1.6 + L2 into production /api/audit-skill endpoint (currently runs via GitHub Actions only)',
     ],
   },
   {
     n: 3,
     title: 'Real sandboxing when executing skills',
     claudeSaid: 'Que instalar una skill no dé acceso irrestricto al sistema del agente: permisos declarados y limitados por skill (qué archivos, qué red, qué APIs toca), ejecución aislada.',
-    status: 'partial',
+    status: 'done',
     whatWeDid: [
       'Added a "permissions" field to the skill schema — skills declare what they need (network endpoints, filesystem paths, env vars, subprocess execution)',
       'Skill detail pages now show declared permissions in a visible block before the install command',
       'Sentinel L1.5 audit flags skills that request dangerous permissions (subprocess execution, arbitrary network) with a lower score',
+      'Sentinel L2 IMPLEMENTED: MCP servers now executed in isolated Docker container with --network none, --read-only filesystem, --cap-drop ALL, seccomp, 256MB memory limit. Runtime behavior monitored: stdout, filesystem changes, network attempts, crashes. Scoring: multiplicative on L1.6 (1.0 clean / 0.7 medium / 0.3 high / 0.0 critical).',
     ],
     stillPending: [
-      'Runtime enforcement of declared permissions (currently declarative only — agents should treat them as advisory)',
-      'Official Docker/Firecracker isolation recipe for running untrusted MCP servers',
       'Permission manifest signing by skill maintainer (so the manifest cannot be tampered with post-audit)',
+      'Phase 2: gVisor isolation (stronger than Docker seccomp) — Q4 2026',
+      'Phase 3: Firecracker microVM (strongest isolation) — Q1 2027',
     ],
   },
   {
@@ -66,7 +69,7 @@ const POINTS = [
     ],
     stillPending: [
       'Human review queue — currently backlogged. Targeting 24-48h SLA for new submissions',
-      'Verified Maintainer program: GitHub identity verification via signed commits (GPG/SSH)',
+      'Verified Maintainer program: GitHub identity verification via signed commits (GPG/SSH). Program opens Q4 2026 — apply at info@alicelabs.site',
       'Public reviewer profiles and review history (so reviewers are accountable)',
     ],
   },

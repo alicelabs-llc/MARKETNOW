@@ -222,7 +222,9 @@ export default function Pricing() {
             </div>
           </div>
           <div className="mt-6 text-center text-zinc-500 text-xs">
-            Example: A skill sold at $2.99 → Seller gets $2.39 · MarketNow gets $0.60 · Affiliate gets $0.15
+            <p className="mb-2"><strong className="text-zinc-300">Standard sale (no affiliate):</strong> Seller 80% · MarketNow 20% = 100%</p>
+            <p className="mb-2"><strong className="text-zinc-300">Affiliate sale (5% comes from MarketNow's share):</strong> Seller 80% · MarketNow 15% · Affiliate 5% = 100%</p>
+            <p className="text-zinc-600 mt-3">Example: A skill sold at $2.99 → Seller gets $2.39 (80%) · MarketNow gets $0.45 (15%) · Affiliate gets $0.15 (5%)</p>
           </div>
         </motion.div>
 

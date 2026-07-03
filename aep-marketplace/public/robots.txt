@@ -1,32 +1,36 @@
 # MarketNow — robots.txt
 # ======================
-# ALL crawlers, LLMs, and agents are WELCOME.
-# Everything is public. No restrictions.
+# All crawlers and LLMs are welcome.
 
 User-agent: *
 Allow: /
-Allow: /api/
-Allow: /api/skills.json
-Allow: /api/search
+
+# Block heavy API endpoints from crawlers to preserve crawl budget
+Disallow: /api/skills.json
+Disallow: /api/skills_index.json
+Disallow: /api/all_skills.json
+Disallow: /api/skills.min.json
+Disallow: /api/skills_index.json
+Allow: /api/skills-lite.json
+
+# Allow lightweight API endpoints
 Allow: /api/agent.json
 Allow: /api/manifest.json
 Allow: /api/categories.json
-Allow: /api/openapi.yaml
+Allow: /api/free-skills.json
 Allow: /api/bundles.json
-Allow: /api/verify-purchase
-Allow: /api/capability-schema.json
-Allow: /api/catalog.jsonld
-Allow: /registry
-Allow: /submit
-Allow: /pricing
-Allow: /handshake
-Allow: /policies
-Allow: /security
-Allow: /governance
-Allow: /vault
-Allow: /skill/
-Allow: /sitemap.xml
-Allow: /.well-known/mcp.json
+Allow: /api/policies.json
+Allow: /api/openapi.json
+Allow: /api/search
+Allow: /api/agent-ping.json
+Allow: /api/trust.json
+Allow: /api/about.json
+Allow: /api/catalog.json
+Allow: /api/standards.json
+Allow: /api/listings.json
+Allow: /api/sentinel-roadmap.json
+Allow: /api/sentinel-status.json
+Allow: /api/mandates-info.json
 
 # Explicitly allow AI/LLM crawlers
 User-agent: GPTBot
@@ -50,32 +54,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: *
-Disallow:
-
 Sitemap: https://marketnow.site/sitemap.xml
-
-# Agent-readable API endpoints
-# GET /api/agent.json — full machine-readable agent instructions (8,560 skills)
-# GET /api/skills.json — all 8,560 skills with capabilities and system prompts
-# GET /api/search?q=query — server-side search with relevance scoring
-# GET /api/manifest.json — marketplace metadata (v4.0.0)
-# GET /api/categories.json — 58 categories with counts
-# GET /api/openapi.yaml — OpenAPI 3.1 specification
-# GET /api/verify-purchase?sessionId=X — verify a Stripe purchase
-# GET /api/bundles.json — skill bundles with discounts
-# GET /api/capability-schema.json — capability ontology schema
-# GET /api/policies.json — terms, refund, dispute, privacy policies
-# GET /.well-known/mcp.json — MCP server discovery
-
-# Agent discovery endpoints
-# Agents: start here → GET /api/agent-ping.json
-# Free skills: GET /api/free-skills.json (no payment required)
-# Full catalog: GET /api/skills.json
-# Search: GET /api/search?q=your_query

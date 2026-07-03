@@ -1,16 +1,19 @@
 {
   "status": "alive",
-  "message": "MarketNow — Agent Skill Marketplace. 8,560 verified skills with Sentinel security reports.",
+  "message": "MarketNow \u2014 Agent Skill Marketplace. 8,560 verified skills with Sentinel security reports.",
   "stats": {
     "total_skills": 8560,
     "categories": 58,
     "free_skills": 43,
     "active_sellers": 15,
     "mcp_server": "npx -y marketnow-mcp",
-    "avg_price": 3.80,
+    "avg_price": 3.8,
     "min_price": 0.99,
     "max_price": 9.99,
-    "payment_methods": ["Stripe (credit card)", "USDC (Base L2)"],
+    "payment_methods": [
+      "Stripe (credit card)",
+      "USDC (Base L2)"
+    ],
     "license": "MIT",
     "maintainer": "AliceLabs LLC"
   },
@@ -21,7 +24,7 @@
     "categories": "GET /api/categories.json",
     "manifest": "GET /api/manifest.json",
     "agent_docs": "GET /api/agent.json",
-    "openapi": "GET /api/openapi.yaml",
+    "openapi": "GET /api/openapi.json",
     "bundles": "GET /api/bundles.json",
     "audit": "POST /api/audit-skill",
     "wallet": "GET /api/agent-wallet",

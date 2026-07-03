@@ -11,7 +11,13 @@
     "total_skills": 8560,
     "free_skills": 43,
     "categories": 58,
-    "languages": ["en", "es", "zh", "pt", "fr"]
+    "languages": [
+      "en",
+      "es",
+      "zh",
+      "pt",
+      "fr"
+    ]
   },
   "pricing": {
     "model": "one-time",
@@ -37,16 +43,16 @@
     }
   ],
   "standards": {
-    "payments": "x402 (HTTP 402 Payment Required) — implementing, governed by Linux Foundation",
-    "mandates": "AP2 (Agent Payments Protocol) — implementing, by Google",
-    "discovery": "MCP Server Cards — monitoring",
-    "identity": "MCP Registry namespace verification — planning"
+    "payments": "x402 (HTTP 402 Payment Required) \u2014 implementing, governed by Linux Foundation",
+    "mandates": "AP2 (Agent Payments Protocol) \u2014 implementing, by Google",
+    "discovery": "MCP Server Cards \u2014 monitoring",
+    "identity": "MCP Registry namespace verification \u2014 planning"
   },
   "review_status": {
     "auto_scanned": 8517,
     "human_reviewed": 43,
     "maintainer_verified": 0,
-    "disclosure": "We never mark a skill 'verified' if it has only been auto-scanned. The legacy 'verified: true' field is deprecated — use review_status instead."
+    "disclosure": "We never mark a skill 'verified' if it has only been auto-scanned. The legacy 'verified: true' field is deprecated \u2014 use review_status instead."
   },
   "trust_model": {
     "default_notification_mode": "notify",
@@ -61,12 +67,13 @@
   "maintainer": {
     "legal_name": "AliceLabs LLC",
     "founder": "Edison Flores",
-    "country": "Ecuador",
-    "founded": "2024",
-    "email": "info@alicelabs.site"
+    "country": "Wyoming, USA",
+    "founded": "AliceLabs LLC 2025 \u00b7 MarketNow launched 2026",
+    "email": "contacto@alicelabs.site",
+    "github": "https://github.com/alicelabs-llc"
   },
-  "license": "MIT",
-  "open_source": true,
+  "license": "MNNC-1.0 (Non-Commercial)",
+  "open_source": false,
   "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
   "npm": "https://www.npmjs.com/package/marketnow-mcp",
   "mcp_server": {
@@ -86,5 +93,6 @@
     "trust_json": "https://marketnow.site/api/trust.json",
     "standards_json": "https://marketnow.site/api/standards.json",
     "listings_json": "https://marketnow.site/api/listings.json"
-  }
+  },
+  "source_available": true
 }

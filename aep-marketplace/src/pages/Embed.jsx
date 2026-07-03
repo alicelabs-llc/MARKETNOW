@@ -19,10 +19,10 @@ const BADGES = [
   },
   {
     id: 'open-source',
-    label: 'Open Source MIT',
-    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="28" viewBox="0 0 140 28"><rect width="140" height="28" rx="4" fill="#050505" stroke="#00d1ff"/><text x="70" y="19" font-family="monospace" font-size="11" font-weight="bold" fill="#00d1ff" text-anchor="middle">🔓 MIT License</text></svg>`,
-    markdown: '![MIT License](https://marketnow.site/badges/open-source.svg)](https://github.com/edgarfloresguerra2011-a11y/marketnow)',
-    html: '<a href="https://github.com/edgarfloresguerra2011-a11y/marketnow"><img src="https://marketnow.site/badges/open-source.svg" alt="Open Source MIT" /></a>',
+    label: 'Source-Available MNNC-1.0',
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="28" viewBox="0 0 140 28"><rect width="140" height="28" rx="4" fill="#050505" stroke="#00d1ff"/><text x="70" y="19" font-family="monospace" font-size="11" font-weight="bold" fill="#00d1ff" text-anchor="middle">🔓 MNNC-1.0 License</text></svg>`,
+    markdown: '![MNNC-1.0 License](https://marketnow.site/badges/open-source.svg)](https://github.com/edgarfloresguerra2011-a11y/marketnow)',
+    html: '<a href="https://github.com/edgarfloresguerra2011-a11y/marketnow"><img src="https://marketnow.site/badges/open-source.svg" alt="Source-Available MNNC-1.0" /></a>',
   },
   {
     id: 'available-on',

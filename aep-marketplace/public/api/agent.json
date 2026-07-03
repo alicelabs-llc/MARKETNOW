@@ -64,7 +64,7 @@
     "currency": "USD",
     "min": 0.99,
     "max": 9.99,
-    "average": 3.8,
+    "average": 3.81,
     "tiers": [
       {
         "price": 0.99,
@@ -213,7 +213,7 @@
     },
     "openapi": {
       "method": "GET",
-      "path": "/api/openapi.yaml",
+      "path": "/api/openapi.json",
       "returns": "OpenAPI 3.1 specification"
     },
     "capability_schema": {
@@ -232,7 +232,7 @@
     "price": "number, USD (0 for free, otherwise 0.99 - 9.99)",
     "currency": "string, always 'USD'",
     "payment": "string, always 'one-time'",
-    "license": "string, always 'perpetual'",
+    "license": "string, always 'AliceLabs LLC' (MarketNow licenses are issued by AliceLabs LLC)",
     "verified": "boolean — DEPRECATED. True only for human-reviewed skills (43 today). Use review_status instead.",
     "review_status": "string — one of: 'auto-scanned' (Sentinel L1.5 ran, no human review — 8,517 skills today), 'human-reviewed' (a human at AliceLabs inspected the repo — 43 skills today), 'maintainer-verified' (GitHub maintainer signed a claim of authorship — 0 today, program not launched)",
     "permissions": "object — { network: string[], filesystem: string[], env_vars: string[], subprocess: bool, disclosure: string }. Declarative only — not enforced at runtime. See /trust.",
@@ -323,15 +323,16 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-02T00:04:17.322Z",
+  "generated_at": "2026-07-02T23:33:18.533Z",
   "trust": {
-    "license": "MIT",
-    "open_source": true,
-    "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
-    "maintainer": "AliceLabs LLC (Ecuador) — founder Edison Flores",
+    "license": "MNNC-1.0 (Non-Commercial — source available, not for commercial use)",
+    "open_source": false,
+    "github": "https://github.com/alicelabs-llc",
+    "maintainer": "AliceLabs LLC (Wyoming, USA, founded 2025) — founder Edison Flores. Public GitHub org: github.com/alicelabs-llc",
     "security_audit": "Sentinel L1.5 (self-declared, automated 6-point MCP security scan). Third-party audit pending — see /trust.",
     "human_oversight": "Default mandate mode is 'notify' — humans are alerted on every purchase. Silent autonomous mode requires explicit opt-in.",
-    "track_record_disclosure": "Launched 2026. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
-    "public_roadmap": "https://marketnow.site/trust"
+    "track_record_disclosure": "AliceLabs LLC founded 2025 in Wyoming, USA. MarketNow launched publicly 2026. Founder Edison Flores is Ecuadorian. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
+    "public_roadmap": "https://marketnow.site/trust",
+    "source_available": true
   }
 }

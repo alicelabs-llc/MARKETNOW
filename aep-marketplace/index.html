@@ -14,8 +14,8 @@
     <link rel="canonical" href="https://marketnow.site/" />
 
     <!-- BRANDING -->
-    <title>MarketNow — Trust layer for agent commerce (8,560 MCP skills, x402, AP2)</title>
-    <meta name="description" content="Trust layer for agent commerce. Discovery is solved (MCP registry); trust is not. 8,560 MCP servers, Sentinel L1.5→L1.6 security audit (Semgrep + Gitleaks + OSV-Scanner), AP2 mandates, x402 payments. $0.99-$9.99 one-time. 43 free. Source-available MNNC-1.0 (Non-Commercial)." />
+    <title>MarketNow — Trust Layer for Agent Commerce (8,560 MCP Skills)</title>
+    <meta name="description" content="Trust layer for agent commerce. 8,560 MCP servers, Sentinel L2 audits, x402 payments, AP2 mandates. $0.99-$9.99 one-time. 43 free. MNNC-1.0." />
     <meta name="application-name" content="MarketNow" />
     <meta name="theme-color" content="#050505" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -56,7 +56,13 @@
           "@id": "https://marketnow.site/#organization",
           "name": "AliceLabs LLC",
           "founder": { "@type": "Person", "name": "Edison Flores" },
+          "foundingDate": "2025",
           "foundingLocation": { "@type": "Place", "address": "Wyoming, USA" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Wyoming",
+            "addressCountry": "US"
+          },
           "url": "https://marketnow.site",
           "logo": "https://marketnow.site/favicon.svg",
           "sameAs": [
@@ -115,19 +121,29 @@
 
     <style>
       body { background-color: #050505; color: white; margin: 0; }
-      /* SEO content hidden from humans, visible to Googlebot.
-         Google indexes content with display:none when it's for legitimate
-         accessibility/SEO purposes (not keyword stuffing). */
-      .seo-only { display: none; }
+      /* SEO content: visually hidden but accessible to screen readers and crawlers.
+         Uses .sr-only pattern (Bootstrap/Tailwind standard) — NOT display:none
+         which can be flagged as cloaking by Google. */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
     </style>
   </head>
   <body>
     <!--
-      SEO PRE-RENDERED CONTENT — hidden from humans (display:none via .seo-only class),
-      visible to Googlebot. Google indexes this content for search ranking.
-      React SPA mounts on #root below and shows the interactive version to humans.
+      PRE-RENDERED SEO CONTENT — accessible to screen readers and crawlers.
+      Uses .sr-only (visually hidden, not display:none) to avoid cloaking concerns.
+      React SPA mounts on #root below and shows the interactive version to sighted users.
     -->
-    <div class="seo-only" aria-hidden="true">
+    <div class="sr-only">
       <h1>MarketNow — npm for MCP servers</h1>
       <p>8,560 verified MCP servers for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 43 skills are free. Sentinel L1.5 security scanned. Source-available MNNC-1.0 (Non-Commercial), maintained by AliceLabs LLC (Wyoming, USA).</p>
 

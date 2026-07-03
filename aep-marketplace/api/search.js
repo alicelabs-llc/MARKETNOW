@@ -11,15 +11,15 @@
 
 import { getSkills } from '../lib/skills-cache.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
+import { setCorsHeaders } from '../lib/cors.mjs';
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // H1 FIX: CORS allowlist
+  setCorsHeaders(req, res);
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
   res.setHeader('Pragma', 'no-cache');
   res.setHeader('Expires', '0');
-  res.setHeader('Vary', '*');
+  res.setHeader('Vary', 'Origin');
 
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });

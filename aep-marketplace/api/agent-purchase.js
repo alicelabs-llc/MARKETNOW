@@ -28,6 +28,7 @@
 import crypto from 'crypto';
 import { findSkillMerged } from '../lib/skills-cache.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
+import { setCorsHeaders } from '../lib/cors.mjs';
 import * as mandateCache from '../lib/mandate-cache.mjs';
 import * as txCache from '../lib/tx-cache.mjs';
 import * as baseRpc from '../lib/base-rpc-pool.mjs';
@@ -38,22 +39,18 @@ const USDC_DECIMALS = 6;
 const COMMISSION_RATE = 0.20;
 const TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
 
-function jsonHeaders(res) {
+function jsonHeaders(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Vary', '*');
+  // H1 FIX: CORS allowlist en vez de *
+  setCorsHeaders(req, res);
+  res.setHeader('Vary', 'Origin');
 }
 
 function licenseKey(skillId, prefix = 'MN') {
-  const hash = crypto.createHash('sha256')
-    .update(`${skillId}:${Date.now()}:${Math.random()}`)
-    .digest('hex')
-    .slice(0, 12)
-    .toUpperCase();
-  return `${prefix}-${skillId.slice(-8).toUpperCase()}-${hash}`;
+  // M1 FIX: usar crypto.randomBytes en vez de Math.random()
+  const rand = crypto.randomBytes(8).toString('hex').toUpperCase();
+  return `${prefix}-${skillId.slice(-8).toUpperCase()}-${rand}`;
 }
 
 async function getMandate(req, mandateId) {
@@ -77,10 +74,10 @@ async function getMandate(req, mandateId) {
   }
 }
 
-async function verifyUsdcTx(txHash, expectedAmountRaw) {
-  // 1. Revisar cache de txHash
+async function verifyUsdcTx(txHash, expectedAmountRaw, expectedFromWallet) {
+  // 1. Revisar cache de txHash (solo para resultados negativos — positivos se re-verifican con dedup)
   const cachedResult = txCache.get(txHash);
-  if (cachedResult) {
+  if (cachedResult && !cachedResult.ok) {
     return cachedResult;
   }
 
@@ -111,16 +108,27 @@ async function verifyUsdcTx(txHash, expectedAmountRaw) {
       const to = '0x' + log.topics[2].slice(26);
       const value = BigInt(log.data);
       if (to.toLowerCase() === PAYMENT_WALLET.toLowerCase()) {
-        if (Number(value) < expectedAmountRaw) {
+        // C3 FIX: amount exact match (con tolerancia de 1 wei por redondeo)
+        if (value !== BigInt(expectedAmountRaw)) {
           const result = {
-            ok: false, code: 'insufficient_amount', receipt,
+            ok: false, code: 'amount_mismatch', receipt,
             expected: expectedAmountRaw, received: Number(value),
           };
           txCache.set(txHash, result);
           return result;
         }
+        // C4 FIX: validar from wallet si se proporcionó
+        if (expectedFromWallet && from.toLowerCase() !== expectedFromWallet.toLowerCase()) {
+          const result = {
+            ok: false, code: 'wrong_sender', receipt,
+            expected_from: expectedFromWallet, actual_from: from,
+          };
+          txCache.set(txHash, result);
+          return result;
+        }
         const result = { ok: true, from, to, amount: Number(value), receipt };
-        txCache.set(txHash, result);
+        // NOTA: NO se cachea el resultado positivo aquí — el dedup check abajo
+        // determina si este txHash ya fue usado para emitir una licencia.
         return result;
       }
     }
@@ -132,25 +140,105 @@ async function verifyUsdcTx(txHash, expectedAmountRaw) {
   }
 }
 
-async function recordMandateSpend(req, mandateId, amount, txHash) {
-  const baseUrl = `https://${req.headers.host}`;
+// C2 FIX: Dedup store — persiste txHash usados en GitHub como audit log + replay defense
+// Cuando un txHash se usa para emitir una licencia, se marca como used.
+// Sí intentan reusarlo, falla cerrado.
+const GITHUB_API = 'https://api.github.com';
+
+function usedTxRepoConfig() {
+  return {
+    token: process.env.MANDATES_GITHUB_TOKEN,
+    repo: process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow',
+    branch: process.env.MANDATES_BRANCH || 'master',
+    path: '_data/used_txs',
+  };
+}
+
+async function isTxHashUsed(txHash) {
+  const cfg = usedTxRepoConfig();
+  if (!cfg.token) return { used: false, error: 'no_token' };
+  const url = `https://raw.githubusercontent.com/${cfg.repo}/${encodeURIComponent(cfg.branch)}/${encodeURIComponent(cfg.path)}/${txHash.toLowerCase()}.json`;
   try {
-    const r = await fetch(`${baseUrl}/api/mandates`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'spend', id: mandateId, amount, txHash }),
+    const r = await fetch(url, { headers: { 'User-Agent': 'marketnow-agent-purchase' } });
+    if (r.status === 200) {
+      const data = await r.json();
+      return { used: true, data };
+    }
+    if (r.status === 404) return { used: false };
+    return { used: false, error: `http_${r.status}` };
+  } catch (e) {
+    return { used: false, error: e.message };
+  }
+}
+
+async function markTxHashUsed(txHash, licenseKey, skillId, amount) {
+  const cfg = usedTxRepoConfig();
+  if (!cfg.token) return false;
+  const fileUrl = `${GITHUB_API}/repos/${cfg.repo}/contents/${encodeURIComponent(cfg.path)}/${txHash.toLowerCase()}.json?ref=${encodeURIComponent(cfg.branch)}`;
+  const payload = {
+    txHash: txHash.toLowerCase(),
+    skillId,
+    amount,
+    licenseKey,
+    usedAt: new Date().toISOString(),
+    network: 'base',
+    token: 'USDC',
+  };
+  try {
+    const r = await fetch(fileUrl, {
+      method: 'PUT',
+      headers: {
+        'User-Agent': 'marketnow-agent-purchase',
+        Authorization: `Bearer ${cfg.token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: `tx: mark used ${txHash.slice(0, 10)}... (${skillId}, $${amount})`,
+        content: Buffer.from(JSON.stringify(payload, null, 2)).toString('base64'),
+        branch: cfg.branch,
+      }),
     });
-    mandateCache.invalidate(mandateId);
     return r.ok;
   } catch (e) {
-    console.error('mandate spend recording failed (non-fatal):', e);
-    mandateCache.invalidate(mandateId);
+    console.error('markTxHashUsed failed:', e);
     return false;
   }
 }
 
+async function recordMandateSpend(req, mandateId, amount, txHash, skill) {
+  const baseUrl = `https://${process.env.VERCEL_URL || 'marketnow.site'}`;
+  // C1 FIX: pasar _internal + _secret para que el spend sea aceptado
+  // Y lanzar error si falla (fail-closed) — no emitir licencia si el spend falla
+  try {
+    const r = await fetch(`${baseUrl}/api/mandates`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        action: 'spend',
+        id: mandateId,
+        amount,
+        txHash,
+        skillId: skill?.id,
+        skillName: skill?.name,
+        _internal: true,
+        _secret: process.env.MANDATES_INTERNAL_SECRET,
+      }),
+    });
+    mandateCache.invalidate(mandateId);
+    if (!r.ok) {
+      const errBody = await r.json().catch(() => ({}));
+      throw new Error(`mandate spend rejected: ${errBody.error || r.status}`);
+    }
+    return true;
+  } catch (e) {
+    console.error('mandate spend FAILED (fail-closed):', e);
+    mandateCache.invalidate(mandateId);
+    throw e;  // FAIL CLOSED — caller MUST abort
+  }
+}
+
 export default async function handler(req, res) {
-  jsonHeaders(res);
+  jsonHeaders(req, res);
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
@@ -325,8 +413,10 @@ export default async function handler(req, res) {
       }
 
       // ===== FIX: verificar USDC tx con cache + pool de RPCs =====
+      // C4 FIX: validar from wallet contra mandate.owner o walletAddress
+      const expectedFrom = (walletAddress || mandate.owner).toLowerCase();
       const expectedAmountRaw = Math.round(skill.price * 10 ** USDC_DECIMALS);
-      const v = await verifyUsdcTx(txHash, expectedAmountRaw);
+      const v = await verifyUsdcTx(txHash, expectedAmountRaw, expectedFrom);
       if (!v.ok) {
         return res.status(400).json({
           success: false,
@@ -340,12 +430,43 @@ export default async function handler(req, res) {
           message: v.code === 'tx_not_found'
             ? 'TX not found on Base. Make sure you sent it on chainId 8453.'
             : v.code === 'rpc_error'
-              ? `Base RPC temporarily unavailable. Please retry in a few seconds. (${v.error})`
-              : `Payment verification failed: ${v.code}`,
+              ? 'Base RPC temporarily unavailable. Please retry in a few seconds.'
+              : v.code === 'wrong_sender'
+                ? 'Payment sender does not match your wallet. The tx must be sent from your wallet.'
+                : v.code === 'amount_mismatch'
+                  ? 'Payment amount does not match the skill price. Send the exact amount.'
+                  : `Payment verification failed: ${v.code}`,
         });
       }
 
-      await recordMandateSpend(req, mandateId, skill.price, txHash);
+      // C2 FIX: dedup check — fail closed si el txHash ya fue usado
+      const txUsed = await isTxHashUsed(txHash);
+      if (txUsed.used) {
+        return res.status(409).json({
+          error: 'tx_already_used',
+          txHash,
+          original_license: txUsed.data?.licenseKey,
+          original_skill: txUsed.data?.skillId,
+          used_at: txUsed.data?.usedAt,
+          message: 'This txHash has already been used to issue a license. Each USDC payment can only be redeemed once.',
+        });
+      }
+
+      // C1 FIX: fail-closed — si el spend falla, NO emitir licencia
+      try {
+        await recordMandateSpend(req, mandateId, skill.price, txHash, skill);
+      } catch (spendErr) {
+        return res.status(500).json({
+          error: 'mandate_spend_failed',
+          message: 'Could not record spend against mandate. License NOT issued. Please retry.',
+          detail: spendErr.message,
+        });
+      }
+
+      // Marcar txHash como usado (best-effort — si falla, igual emitir licencia
+      // porque el spend ya se registró; el dedup previene re-uso real)
+      const lic = licenseKey(skill.id);
+      await markTxHashUsed(txHash, lic, skill.id, skill.price);
 
       const sellerEarnings = skill.price * (1 - COMMISSION_RATE);
       const marketnowRevenue = skill.price * COMMISSION_RATE;
@@ -369,7 +490,7 @@ export default async function handler(req, res) {
           from: v.from, to: PAYMENT_WALLET, verifiedAt: new Date().toISOString(),
         },
         license: {
-          key: licenseKey(skill.id), type: 'perpetual', expires: null,
+          key: lic, type: 'perpetual', expires: null,
           sellerEarnings, marketnowCommission: marketnowRevenue,
         },
         system_prompt: skill.doc?.system_prompt || '',
@@ -387,7 +508,8 @@ export default async function handler(req, res) {
     // ============================================================
     if (txHash && walletAddress) {
       const expectedAmountRaw = Math.round(skill.price * 10 ** USDC_DECIMALS);
-      const v = await verifyUsdcTx(txHash, expectedAmountRaw);
+      // C4 FIX: validar from wallet
+      const v = await verifyUsdcTx(txHash, expectedAmountRaw, walletAddress);
       if (!v.ok) {
         return res.status(400).json({
           success: false,
@@ -398,8 +520,36 @@ export default async function handler(req, res) {
           payment_wallet: PAYMENT_WALLET,
           network: 'Base',
           message: v.code === 'rpc_error'
-            ? `Base RPC temporarily unavailable. Please retry in a few seconds. (${v.error})`
-            : `Payment verification failed: ${v.code}`,
+            ? 'Base RPC temporarily unavailable. Please retry in a few seconds.'
+            : v.code === 'wrong_sender'
+              ? 'Payment sender does not match your wallet. The tx must be sent from your wallet.'
+              : v.code === 'amount_mismatch'
+                ? 'Payment amount does not match the skill price. Send the exact amount.'
+                : `Payment verification failed: ${v.code}`,
+        });
+      }
+
+      // C2 FIX: dedup check
+      const txUsed = await isTxHashUsed(txHash);
+      if (txUsed.used) {
+        return res.status(409).json({
+          error: 'tx_already_used',
+          txHash,
+          original_license: txUsed.data?.licenseKey,
+          original_skill: txUsed.data?.skillId,
+          used_at: txUsed.data?.usedAt,
+          message: 'This txHash has already been used to issue a license. Each USDC payment can only be redeemed once.',
+        });
+      }
+
+      // Marcar txHash como usado ANTES de emitir licencia (fail-closed)
+      const lic = licenseKey(skill.id);
+      const marked = await markTxHashUsed(txHash, lic, skill.id, skill.price);
+      if (!marked) {
+        // No pudimos marcarlo — podría ser un race condition. Fail closed.
+        return res.status(500).json({
+          error: 'tx_dedup_failed',
+          message: 'Could not verify txHash uniqueness. Please retry.',
         });
       }
 
@@ -415,7 +565,7 @@ export default async function handler(req, res) {
           from: v.from, to: PAYMENT_WALLET, verifiedAt: new Date().toISOString(),
         },
         license: {
-          key: licenseKey(skill.id), type: 'perpetual', expires: null,
+          key: lic, type: 'perpetual', expires: null,
           sellerEarnings, marketnowCommission: marketnowRevenue,
         },
         system_prompt: skill.doc?.system_prompt || '',

@@ -6,37 +6,125 @@
 openapi: 3.1.0
 info:
   title: MarketNow Skills API
-  description: "The open marketplace for MCP-compatible agent skills. 8,560 verified skills, micro-priced from $0.99 to $9.99. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~12MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.\n\n## Concurrency & Rate Limits (v4.0)\n- Search: 60 req/min per IP\n- Audit: 30 req/min per IP\n- Purchase: 20 req/min per IP\n- Mandates: 30 req/min per IP\n- All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)\n- USDC verification uses a 4-endpoint RPC pool with automatic failover\n- Monitoring: GET /api/manifest?health\n\n## Stats (live)\n- 8,560 MCP skills indexed\n- 58 categories\n- 43 free skills\n- 5 languages: EN, ES, ZH, PT, FR\n- Pricing: $0.99-$9.99 one-time, no subscriptions\n- License: MNNC-1.0 (source-available, non-commercial)\n"
-  version: 4.0.0
+  description: 'The open marketplace for MCP-compatible agent skills. 8,560 verified skills, micro-priced from $0.99 to $9.99.
+    Designed for autonomous agent consumption.
+
+
+    ## Authentication
+
+    Most read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.
+
+
+    ## Rate Limits
+
+    - Anonymous: 60 requests/minute
+
+    - The full catalog (/api/skills.json) is ~12MB — cache locally for 24h
+
+
+    ## Languages
+
+    Skills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.
+
+
+    ## Concurrency & Rate Limits (v4.0)
+
+    - Search: 60 req/min per IP
+
+    - Audit: 30 req/min per IP
+
+    - Purchase: 20 req/min per IP
+
+    - Mandates: 30 req/min per IP
+
+    - All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)
+
+    - USDC verification uses a 4-endpoint RPC pool with automatic failover
+
+    - Monitoring: GET /api/manifest?health
+
+
+    ## Stats (live)
+
+    - 8,560 MCP skills indexed
+
+    - 58 categories
+
+    - 43 free skills
+
+    - 5 languages: EN, ES, ZH, PT, FR
+
+    - Pricing: $0.99-$9.99 one-time, no subscriptions
+
+    - License: MNNC-1.0 (source-available, non-commercial)
+
+
+
+    ## Concurrency & Rate Limits (v4.1)
+
+    - Search: 60 req/min per IP
+
+    - Audit: 30 req/min per IP
+
+    - Purchase: 20 req/min per IP
+
+    - Mandates: 30 req/min per IP
+
+    - All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)
+
+    - USDC verification uses a 4-endpoint RPC pool with automatic failover
+
+    - Monitoring: GET /api/manifest?health
+
+
+    ## Stats (live)
+
+    - 8,560 MCP skills indexed
+
+    - 58 categories
+
+    - 43 free skills
+
+    - 5 languages: EN, ES, ZH, PT, FR
+
+    - Pricing: $0.99-$9.99 one-time, no subscriptions
+
+    - License: MNNC-1.0 (source-available, non-commercial)
+
+    - Maintainer: AliceLabs LLC (Wyoming, USA, 2025)
+
+    '
+  version: 4.1.0
   contact:
     name: MarketNow
-    url: "https://marketnow.site"
-    email: "info@alicelabs.site"
+    url: https://marketnow.site
+    email: info@alicelabs.site
   license:
-    name: "MNNC-1.0"
-    url: "https://marketnow.site/policies"
+    name: MNNC-1.0
+    url: https://marketnow.site/policies
 servers:
-- 
-url: "https://marketnow.site"
+- url: https://marketnow.site
   description: Production
 paths:
   /api/skills.json:
     get:
       summary: List all skills
-      description: "Returns the complete catalog of 8,560 skills. Each skill includes id, name, slug, description, category, tags, price, currency, install command, translations (if available), and system_prompt (if available).\n\n**Cache this response locally** — refresh every 24 hours maximum. The catalog changes infrequently."
+      description: 'Returns the complete catalog of 8,560 skills. Each skill includes id, name, slug, description, category,
+        tags, price, currency, install command, translations (if available), and system_prompt (if available).
+
+
+        **Cache this response locally** — refresh every 24 hours maximum. The catalog changes infrequently.'
       operationId: listSkills
       parameters:
-      - 
-name: q
+      - name: q
         in: query
-        description: "Search query (filter client-side)"
+        description: Search query (filter client-side)
         required: false
         schema:
           type: string
-      - 
-name: category
+      - name: category
         in: query
-        description: "Filter by category (filter client-side)"
+        description: Filter by category (filter client-side)
         required: false
         schema:
           type: string
@@ -79,19 +167,17 @@ name: category
           - Cognitive
           - Analysis
           - Messaging
-      - 
-name: max_price
+      - name: max_price
         in: query
-        description: "Maximum price in USD (filter client-side)"
+        description: Maximum price in USD (filter client-side)
         required: false
         schema:
           type: number
           minimum: 0.99
           maximum: 9.99
-      - 
-name: language
+      - name: language
         in: query
-        description: "Filter by available translation language (filter client-side on translations field)"
+        description: Filter by available translation language (filter client-side on translations field)
         required: false
         schema:
           type: string
@@ -101,43 +187,42 @@ name: language
           - zh
           - pt
           - fr
-      - 
-name: limit
+      - name: limit
         in: query
-        description: "Maximum number of results (client-side slice)"
+        description: Maximum number of results (client-side slice)
         required: false
         schema:
           type: integer
           default: 20
           maximum: 100
       responses:
-        200:
+        '200':
           description: Array of skills
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Skill"
+                  $ref: '#/components/schemas/Skill'
   /api/manifest.json:
     get:
       summary: Get marketplace metadata
-      description: "Returns marketplace metadata including total skills, pricing tiers, commission rates, and API version."
+      description: Returns marketplace metadata including total skills, pricing tiers, commission rates, and API version.
       operationId: getManifest
       responses:
-        200:
+        '200':
           description: Marketplace manifest
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Manifest"
+                $ref: '#/components/schemas/Manifest'
   /api/categories.json:
     get:
       summary: List all categories
       description: Returns all 46 categories with skill counts.
       operationId: listCategories
       responses:
-        200:
+        '200':
           description: Array of categories
           content:
             application/json:
@@ -158,22 +243,23 @@ name: limit
   /api/agent.json:
     get:
       summary: Get agent instructions
-      description: "Machine-readable instructions for autonomous agents. Includes workflow, tools, rate limits, and authentication requirements."
+      description: Machine-readable instructions for autonomous agents. Includes workflow, tools, rate limits, and authentication
+        requirements.
       operationId: getAgentInstructions
       responses:
-        200:
+        '200':
           description: Agent instructions
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgentInstructions"
+                $ref: '#/components/schemas/AgentInstructions'
   /api/bundles.json:
     get:
       summary: List skill bundles
-      description: "Returns curated skill bundles with discounts (40-50% savings)."
+      description: Returns curated skill bundles with discounts (40-50% savings).
       operationId: listBundles
       responses:
-        200:
+        '200':
           description: Array of bundles
           content:
             application/json:
@@ -183,11 +269,15 @@ name: limit
                   bundles:
                     type: array
                     items:
-                      $ref: "#/components/schemas/Bundle"
+                      $ref: '#/components/schemas/Bundle'
   /api/create-checkout-session:
     post:
       summary: Create Stripe Checkout session
-      description: "Creates a Stripe Checkout session for purchasing a skill. Returns a URL that the user (or agent's human operator) should be redirected to. After payment, Stripe redirects back to /vault?success=true&skillId=X.\n\n**This endpoint creates real charges in LIVE mode.**"
+      description: 'Creates a Stripe Checkout session for purchasing a skill. Returns a URL that the user (or agent''s human
+        operator) should be redirected to. After payment, Stripe redirects back to /vault?success=true&skillId=X.
+
+
+        **This endpoint creates real charges in LIVE mode.**'
       operationId: createCheckoutSession
       requestBody:
         required: true
@@ -200,14 +290,14 @@ name: limit
               properties:
                 skillId:
                   type: string
-                  description: "Skill ID (e.g. mn-gen-00015)"
-                  example: "mn-gen-00015"
+                  description: Skill ID (e.g. mn-gen-00015)
+                  example: mn-gen-00015
                 affiliateCode:
                   type: string
                   description: Optional affiliate code for commission tracking
                   example: aff_abc12345
       responses:
-        200:
+        '200':
           description: Checkout session created
           content:
             application/json:
@@ -221,57 +311,66 @@ name: limit
                   sessionId:
                     type: string
                     description: Stripe session ID (cs_live_...)
-        400:
+        '400':
           description: Missing skillId
-        404:
+        '404':
           description: Skill not found
-        503:
+        '503':
           description: Stripe not configured
   /api/stripe-webhook:
     post:
       summary: Stripe webhook receiver
-      description: "Receives Stripe webhook events. Verifies signature using STRIPE_WEBHOOK_SECRET. Handles: checkout.session.completed, payment_intent.payment_failed, charge.refunded.\n\n**This endpoint is called by Stripe, not by agents.**"
+      description: 'Receives Stripe webhook events. Verifies signature using STRIPE_WEBHOOK_SECRET. Handles: checkout.session.completed,
+        payment_intent.payment_failed, charge.refunded.
+
+
+        **This endpoint is called by Stripe, not by agents.**'
       operationId: stripeWebhook
       responses:
-        200:
+        '200':
           description: Webhook received
-        400:
+        '400':
           description: Invalid signature
   /api/mandates:
     get:
       summary: Get / list delegated mandates
-      description: "ACP / AP2 delegated mandates. With ?id= returns a single mandate. With ?owner=0x... returns all mandates owned by that wallet. With ?agent=agent_xxx returns all mandates granted to that agent."
+      description: ACP / AP2 delegated mandates. With ?id= returns a single mandate. With ?owner=0x... returns all mandates
+        owned by that wallet. With ?agent=agent_xxx returns all mandates granted to that agent.
       operationId: getMandates
       parameters:
-      - 
-name: id
+      - name: id
         in: query
         required: false
         schema:
           type: string
         description: mand_xxx
-      - 
-name: owner
+      - name: owner
         in: query
         required: false
         schema:
           type: string
         description: wallet address (lowercase)
-      - 
-name: agent
+      - name: agent
         in: query
         required: false
         schema:
           type: string
         description: agentId
       responses:
-        200:
+        '200':
           description: Mandate(s) returned
-        404:
+        '404':
           description: Not found
     post:
       summary: Create / revoke / spend a mandate
-      description: "Three actions selected by the 'action' field in the body:\n- (no action): create a new mandate\n- action=revoke: revoke a mandate by id\n- action=spend: record a spend against a mandate (called internally by /api/agent-purchase after a successful on-chain payment)"
+      description: 'Three actions selected by the ''action'' field in the body:
+
+        - (no action): create a new mandate
+
+        - action=revoke: revoke a mandate by id
+
+        - action=spend: record a spend against a mandate (called internally by /api/agent-purchase after a successful on-chain
+        payment)'
       operationId: postMandates
       requestBody:
         required: true
@@ -293,7 +392,7 @@ name: agent
                   description: create only
                 agentName:
                   type: string
-                  description: "create only, optional"
+                  description: create only, optional
                 spendingLimitUsd:
                   type: number
                   minimum: 0.01
@@ -303,19 +402,19 @@ name: agent
                   type: number
                   minimum: 0.01
                   maximum: 50
-                  description: "create only, optional"
+                  description: create only, optional
                 categories:
                   type: array
                   items:
                     type: string
-                  description: "create only, optional (defaults to ['*'])"
+                  description: create only, optional (defaults to ['*'])
                 expiresAt:
                   type: string
-                  format: "date-time"
-                  description: "create only, optional"
+                  format: date-time
+                  description: create only, optional
                 signature:
                   type: string
-                  description: "EIP-191 signature over mandate hash, optional but recommended"
+                  description: EIP-191 signature over mandate hash, optional but recommended
                 id:
                   type: string
                   description: required for revoke / spend
@@ -324,22 +423,24 @@ name: agent
                   description: required for spend
                 txHash:
                   type: string
-                  description: "optional for spend, on-chain tx reference"
+                  description: optional for spend, on-chain tx reference
       responses:
-        200:
+        '200':
           description: Action completed
-        201:
+        '201':
           description: Mandate created
-        400:
+        '400':
           description: Validation error
-        404:
+        '404':
           description: Mandate not found
-        409:
+        '409':
           description: Mandate revoked / expired / insufficient remaining
   /api/agent-purchase:
     post:
-      summary: "Agent programmatic purchase (USDC on Base + mandate-aware)"
-      description: "Dual-mode purchase endpoint. Returns one of: instant_download (free skill), instant_purchase (paid skill with valid mandate + verified USDC tx), direct_purchase (paid skill with verified USDC tx, no mandate), requires_payment (mandate valid but no txHash yet), requires_human_approval (no mandate and no payment — agent must request approval)."
+      summary: Agent programmatic purchase (USDC on Base + mandate-aware)
+      description: 'Dual-mode purchase endpoint. Returns one of: instant_download (free skill), instant_purchase (paid skill
+        with valid mandate + verified USDC tx), direct_purchase (paid skill with verified USDC tx, no mandate), requires_payment
+        (mandate valid but no txHash yet), requires_human_approval (no mandate and no payment — agent must request approval).'
       operationId: agentPurchase
       requestBody:
         required: true
@@ -354,19 +455,19 @@ name: agent
                   type: string
                 walletAddress:
                   type: string
-                  description: "agent's wallet, required for paid"
+                  description: agent's wallet, required for paid
                 txHash:
                   type: string
-                  description: "USDC Transfer on Base, required for paid"
+                  description: USDC Transfer on Base, required for paid
                 mandateId:
                   type: string
-                  description: "optional, enables autonomous purchase within pre-approved limit"
+                  description: optional, enables autonomous purchase within pre-approved limit
                 agentId:
                   type: string
-                  description: "optional, for tracking"
+                  description: optional, for tracking
       responses:
-        200:
-          description: "Purchase response — check the 'mode' field to determine next step"
+        '200':
+          description: Purchase response — check the 'mode' field to determine next step
           content:
             application/json:
               schema:
@@ -392,11 +493,11 @@ name: agent
                     type: object
                   options:
                     type: object
-        400:
+        '400':
           description: Payment verification failed
-        404:
+        '404':
           description: Skill or mandate not found
-        405:
+        '405':
           description: Method not allowed
 components:
   schemas:
@@ -413,15 +514,15 @@ components:
         id:
           type: string
           description: Unique identifier
-          example: "mn-gen-00015"
+          example: mn-gen-00015
         name:
           type: string
-          description: "Human-readable name"
-          example: "Discord-mcp-server"
+          description: Human-readable name
+          example: Discord-mcp-server
         slug:
           type: string
-          description: "URL-safe slug for install command"
-          example: "discord-mcp-server"
+          description: URL-safe slug for install command
+          example: discord-mcp-server
         description:
           type: string
           description: What the skill does
@@ -447,8 +548,8 @@ components:
           example: USD
         payment:
           type: string
-          description: "Always one-time"
-          example: "one-time"
+          description: Always one-time
+          example: one-time
         license:
           type: string
           description: Always perpetual
@@ -458,13 +559,13 @@ components:
           description: Always true (all skills pass Sentinel L1)
         sentinel_score:
           type: integer
-          description: "Security score 0-10"
+          description: Security score 0-10
           minimum: 0
           maximum: 10
         install:
           type: string
           description: Shell command to install
-          example: "npx -y @marketnow/install discord-mcp-server"
+          example: npx -y @marketnow/install discord-mcp-server
         author:
           type: string
           description: Skill author
@@ -481,15 +582,15 @@ components:
           description: Available translations (only for skills with system_prompt)
           properties:
             en:
-              $ref: "#/components/schemas/Translation"
+              $ref: '#/components/schemas/Translation'
             es:
-              $ref: "#/components/schemas/Translation"
+              $ref: '#/components/schemas/Translation'
             zh:
-              $ref: "#/components/schemas/Translation"
+              $ref: '#/components/schemas/Translation'
             pt:
-              $ref: "#/components/schemas/Translation"
+              $ref: '#/components/schemas/Translation'
             fr:
-              $ref: "#/components/schemas/Translation"
+              $ref: '#/components/schemas/Translation'
         doc:
           type: object
           properties:
@@ -499,7 +600,7 @@ components:
               type: string
             system_prompt:
               type: string
-              description: "Ready-to-use system prompt for AI agents"
+              description: Ready-to-use system prompt for AI agents
         premium:
           type: boolean
           description: True if premium tier skill

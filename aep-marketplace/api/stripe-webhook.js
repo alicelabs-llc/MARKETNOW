@@ -23,14 +23,21 @@
  */
 
 import Stripe from 'stripe';
+import crypto from 'crypto';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder');
+// H4 FIX: fail fast si STRIPE_SECRET_KEY no está configurada
+const STRIPE_KEY = process.env.STRIPE_SECRET_KEY;
+if (!STRIPE_KEY) {
+  console.error('CRITICAL: STRIPE_SECRET_KEY is not set. Webhook verification will fail.');
+}
+const stripe = STRIPE_KEY ? new Stripe(STRIPE_KEY) : null;
 const CLIENT_URL = process.env.CLIENT_URL || 'https://marketnow.site';
 
 /**
  * Verify the webhook signature (security critical).
  */
 function verifySignature(payload, signature, secret) {
+  if (!stripe) return null;
   try {
     const event = stripe.webhooks.constructEvent(payload, signature, secret);
     return event;
@@ -61,24 +68,10 @@ async function handleCheckoutComplete(session) {
   const marketnowRevenue = skillPrice * commissionRate;
   const affiliatePayout = affiliateCode ? skillPrice * 0.05 : 0;
 
-  // Generate license key
-  const licenseKey = `MN-STRIPE-${skillId?.slice(-8).toUpperCase() || 'XXXX'}-${Date.now().toString(36).toUpperCase()}`;
+  // L2 FIX: license key determinístico (SHA-256 de sessionId:skillId)
+  const licenseKey = `MN-STRIPE-${skillId?.slice(-8).toUpperCase() || 'XXXX'}-${crypto.createHash('sha256').update(`${session.id}:${skillId}`).digest('hex').slice(0, 12).toUpperCase()}`;
 
-  console.log('✅ Payment successful:', {
-    sessionId: session.id,
-    skillId,
-    skillName,
-    price: skillPrice,
-    sellerEarnings,
-    marketnowRevenue,
-    affiliatePayout,
-    affiliateCode,
-    licenseKey,
-    customerEmail: session.customer_email || session.customer_details?.email,
-  });
-
-  // FIX 3.2: Persist purchase record to GitHub (same pattern as mandates)
-  // This creates a public audit trail of Stripe purchases
+  // H5 FIX: idempotencia — verificar si ya existe el archivo antes de escribir
   try {
     const cfg = {
       token: process.env.MANDATES_GITHUB_TOKEN,
@@ -86,6 +79,33 @@ async function handleCheckoutComplete(session) {
       branch: process.env.MANDATES_BRANCH || 'master',
     };
     if (cfg.token) {
+      const filename = `stripe_${session.id}.json`;
+      const checkUrl = `https://api.github.com/repos/${cfg.repo}/contents/_data/purchases/${filename}?ref=${encodeURIComponent(cfg.branch)}`;
+      const existsResp = await fetch(checkUrl, {
+        headers: {
+          'User-Agent': 'marketnow-stripe-webhook',
+          Authorization: `Bearer ${cfg.token}`,
+        },
+      });
+      if (existsResp.status === 200) {
+        // Ya procesado — idempotency hit
+        console.log(`[stripe-webhook] Duplicate event for ${session.id}, skipping (idempotent)`);
+        return { success: true, already_processed: true, licenseKey };
+      }
+
+      console.log('✅ Payment successful:', {
+        sessionId: session.id,
+        skillId,
+        skillName,
+        price: skillPrice,
+        sellerEarnings,
+        marketnowRevenue,
+        affiliatePayout,
+        affiliateCode,
+        licenseKey,
+        customerEmail: session.customer_email || session.customer_details?.email,
+      });
+
       const record = {
         purchaseId: session.id,
         source: 'stripe',
@@ -101,7 +121,6 @@ async function handleCheckoutComplete(session) {
         purchasedAt: new Date().toISOString(),
         status: 'completed',
       };
-      const filename = `stripe_${session.id}.json`;
       const fileUrl = `https://api.github.com/repos/${cfg.repo}/contents/_data/purchases/${filename}?ref=${encodeURIComponent(cfg.branch)}`;
       const body = {
         message: `purchase: Stripe ${session.id} — ${skillName} ($${skillPrice})`,

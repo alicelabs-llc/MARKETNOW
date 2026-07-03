@@ -12,13 +12,13 @@
 
 import { findSkill } from '../lib/skills-cache.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
+import { setCorsHeaders } from '../lib/cors.mjs';
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // H1 FIX: CORS allowlist
+  setCorsHeaders(req, res);
 
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'POST' && req.method !== 'GET') {

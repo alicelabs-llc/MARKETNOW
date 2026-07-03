@@ -43,8 +43,47 @@
 
 import * as mandateCache from '../lib/mandate-cache.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
+import { setCorsHeaders } from '../lib/cors.mjs';
 
 const GITHUB_API = 'https://api.github.com';
+
+// L4 FIX: fail closed si INTERNAL_SECRET no está configurado
+const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET;
+if (!INTERNAL_SECRET && process.env.NODE_ENV === 'production') {
+  console.error('CRITICAL: MANDATES_INTERNAL_SECRET is not set. Internal spend calls will fail closed.');
+}
+
+// M7 FIX: allowlist de webhooks permitidos (anti-SSRF)
+const ALLOWED_WEBHOOK_HOSTS = [
+  'hooks.slack.com',
+  'discord.com',
+  'discordapp.com',
+  'api.telegram.org',
+  'events.hookdeck.com',
+  'hook.us1.make.com',
+  'zapier.com',
+  'hooks.zapier.com',
+];
+
+function validateWebhookUrl(url) {
+  if (!url) return { ok: true };
+  try {
+    const u = new URL(url);
+    if (u.protocol !== 'https:') {
+      return { ok: false, error: 'webhook must be https' };
+    }
+    const hostname = u.hostname.toLowerCase();
+    const allowed = ALLOWED_WEBHOOK_HOSTS.some(h =>
+      hostname === h || hostname.endsWith('.' + h)
+    );
+    if (!allowed) {
+      return { ok: false, error: `webhook host '${hostname}' not allowlisted. Allowed: ${ALLOWED_WEBHOOK_HOSTS.join(', ')}` };
+    }
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: `invalid webhook URL: ${e.message}` };
+  }
+}
 
 function repoConfig() {
   return {
@@ -337,11 +376,8 @@ const NOTIFICATION_MODES = ['silent', 'notify', 'notify_and_veto'];
 
 // Internal secret for agent-purchase → mandates spend calls
 // SECURITY FIX 2.1a: Must be set as independent env var, NOT derived from GitHub token
-// If not set, we fail closed (reject all internal spend calls)
-const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET;
-if (!INTERNAL_SECRET && process.env.NODE_ENV === 'production') {
-  console.error('FATAL: MANDATES_INTERNAL_SECRET not set. Internal spend calls will be rejected.');
-}
+// If not set, we fail closed (reject all internal spend calls) — declared at top of file
+// (INTERNAL_SECRET is already declared above with L4 fix)
 
 // ============================================================
 // EIP-191 Signature Verification (FIX 1.2 complete)
@@ -377,20 +413,21 @@ function verifyMandateSignature(signature, agentId, spendingLimitUsd, owner) {
 // Check if caller is authorized for spend action
 // Only internal calls from agent-purchase.js should hit spend
 function isInternalCall(body) {
+  // L4 FIX: fail closed si INTERNAL_SECRET no está configurado
+  if (!INTERNAL_SECRET) return false;
   return body._internal === true && body._secret === INTERNAL_SECRET;
 }
 
-function jsonHeaders(res) {
+function jsonHeaders(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Vary', '*');
+  // H1 FIX: CORS allowlist en vez de *
+  setCorsHeaders(req, res);
+  res.setHeader('Vary', 'Origin');
 }
 
 export default async function handler(req, res) {
-  jsonHeaders(res);
+  jsonHeaders(req, res);
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'GET' && req.method !== 'POST') {
     return res.status(405).json({ error: 'GET or POST only' });
@@ -467,8 +504,22 @@ export default async function handler(req, res) {
         });
       }
 
+      // M7 FIX: validar webhook URL contra allowlist (anti-SSRF)
+      if (notificationWebhook) {
+        const webhookCheck = validateWebhookUrl(notificationWebhook);
+        if (!webhookCheck.ok) {
+          return res.status(400).json({
+            error: 'invalid_webhook',
+            message: webhookCheck.error,
+          });
+        }
+      }
+
       const limit = Number(spendingLimitUsd);
-      const perPurchase = Number(perPurchaseCapUsd || limit);
+      // M6 FIX: default perPurchase a min(MAX_PER_PURCHASE_CAP, limit), no al limit completo
+      const perPurchase = perPurchaseCapUsd != null
+        ? Number(perPurchaseCapUsd)
+        : Math.min(MAX_PER_PURCHASE_CAP, limit);
 
       if (isNaN(limit) || limit <= 0 || limit > MAX_TOTAL_LIMIT) {
         return res.status(400).json({
@@ -699,7 +750,28 @@ export default async function handler(req, res) {
           m.status = 'expired';
         }
       }
-      return res.status(200).json({ count: out.length, mandates: out });
+      // H2 FIX: redact PII en list responses (emails, webhooks)
+      // Para ver detalles completos, usar GET /api/mandates?id=mand_xxx
+      const redacted = out.map(m => ({
+        id: m.id,
+        owner: m.owner,
+        agentId: m.agentId,
+        agentName: m.agentName,
+        spendingLimitUsd: m.spendingLimitUsd,
+        spentUsd: m.spentUsd,
+        perPurchaseCapUsd: m.perPurchaseCapUsd,
+        categories: m.categories,
+        expiresAt: m.expiresAt,
+        createdAt: m.createdAt,
+        status: m.status,
+        txCount: m.txCount,
+        notificationMode: m.notificationMode,
+        hasEmail: !!m.notificationEmail,
+        hasWebhook: !!m.notificationWebhook,
+        lastSpendAt: m.lastSpendAt || null,
+        lastSpendSkillName: m.lastSpendSkillName || null,
+      }));
+      return res.status(200).json({ count: redacted.length, mandates: redacted });
     }
 
     // ---------- INDEX ----------

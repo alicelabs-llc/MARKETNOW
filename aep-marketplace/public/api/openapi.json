@@ -2,16 +2,16 @@
   "openapi": "3.1.0",
   "info": {
     "title": "MarketNow Skills API",
-    "description": "The open marketplace for MCP-compatible agent skills. 8,535 verified skills, micro-priced from $0.99 to $9.99. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~7MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.",
-    "version": "3.0.0",
+    "description": "The open marketplace for MCP-compatible agent skills. 8,560 verified skills, micro-priced from $0.99 to $9.99. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~12MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.\n\n## Concurrency & Rate Limits (v4.0)\n- Search: 60 req/min per IP\n- Audit: 30 req/min per IP\n- Purchase: 20 req/min per IP\n- Mandates: 30 req/min per IP\n- All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)\n- USDC verification uses a 4-endpoint RPC pool with automatic failover\n- Monitoring: GET /api/manifest?health\n\n## Stats (live)\n- 8,560 MCP skills indexed\n- 58 categories\n- 43 free skills\n- 5 languages: EN, ES, ZH, PT, FR\n- Pricing: $0.99-$9.99 one-time, no subscriptions\n- License: MNNC-1.0 (source-available, non-commercial)\n",
+    "version": "4.0.0",
     "contact": {
       "name": "MarketNow",
       "url": "https://marketnow.site",
       "email": "info@alicelabs.site"
     },
     "license": {
-      "name": "MIT",
-      "url": "https://opensource.org/licenses/MIT"
+      "name": "MNNC-1.0",
+      "url": "https://marketnow.site/policies"
     }
   },
   "servers": [
@@ -24,7 +24,7 @@
     "/api/skills.json": {
       "get": {
         "summary": "List all skills",
-        "description": "Returns the complete catalog of 7,881 skills. Each skill includes id, name, slug, description, category, tags, price, currency, install command, translations (if available), and system_prompt (if available).\n\n**Cache this response locally** — refresh every 24 hours maximum. The catalog changes infrequently.",
+        "description": "Returns the complete catalog of 8,560 skills. Each skill includes id, name, slug, description, category, tags, price, currency, install command, translations (if available), and system_prompt (if available).\n\n**Cache this response locally** — refresh every 24 hours maximum. The catalog changes infrequently.",
         "operationId": "listSkills",
         "parameters": [
           {
@@ -32,35 +32,96 @@
             "in": "query",
             "description": "Search query (filter client-side)",
             "required": false,
-            "schema": { "type": "string" }
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "category",
             "in": "query",
             "description": "Filter by category (filter client-side)",
             "required": false,
-            "schema": { "type": "string", "enum": ["AI/ML", "Developer Tools", "Data", "Security", "DevOps", "Finance", "Communication", "Media", "Healthcare", "Legal", "Education", "Research", "Analytics", "IoT", "Web/API", "Automation", "Productivity", "Blockchain", "Sales", "Marketing", "Agent Reliability", "Agent Tool Use", "Agent Context Management", "Agent Production", "Agent Safety", "Agent Performance", "Cloud", "Database", "Mobile", "Gaming", "Government", "Scientific", "Voice", "Network", "System", "Cognitive", "Analysis", "Messaging"] }
+            "schema": {
+              "type": "string",
+              "enum": [
+                "AI/ML",
+                "Developer Tools",
+                "Data",
+                "Security",
+                "DevOps",
+                "Finance",
+                "Communication",
+                "Media",
+                "Healthcare",
+                "Legal",
+                "Education",
+                "Research",
+                "Analytics",
+                "IoT",
+                "Web/API",
+                "Automation",
+                "Productivity",
+                "Blockchain",
+                "Sales",
+                "Marketing",
+                "Agent Reliability",
+                "Agent Tool Use",
+                "Agent Context Management",
+                "Agent Production",
+                "Agent Safety",
+                "Agent Performance",
+                "Cloud",
+                "Database",
+                "Mobile",
+                "Gaming",
+                "Government",
+                "Scientific",
+                "Voice",
+                "Network",
+                "System",
+                "Cognitive",
+                "Analysis",
+                "Messaging"
+              ]
+            }
           },
           {
             "name": "max_price",
             "in": "query",
             "description": "Maximum price in USD (filter client-side)",
             "required": false,
-            "schema": { "type": "number", "minimum": 0.99, "maximum": 9.99 }
+            "schema": {
+              "type": "number",
+              "minimum": 0.99,
+              "maximum": 9.99
+            }
           },
           {
             "name": "language",
             "in": "query",
             "description": "Filter by available translation language (filter client-side on translations field)",
             "required": false,
-            "schema": { "type": "string", "enum": ["en", "es", "zh", "pt", "fr"] }
+            "schema": {
+              "type": "string",
+              "enum": [
+                "en",
+                "es",
+                "zh",
+                "pt",
+                "fr"
+              ]
+            }
           },
           {
             "name": "limit",
             "in": "query",
             "description": "Maximum number of results (client-side slice)",
             "required": false,
-            "schema": { "type": "integer", "default": 20, "maximum": 100 }
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "maximum": 100
+            }
           }
         ],
         "responses": {
@@ -70,7 +131,9 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "$ref": "#/components/schemas/Skill" }
+                  "items": {
+                    "$ref": "#/components/schemas/Skill"
+                  }
                 }
               }
             }
@@ -88,7 +151,9 @@
             "description": "Marketplace manifest",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Manifest" }
+                "schema": {
+                  "$ref": "#/components/schemas/Manifest"
+                }
               }
             }
           }
@@ -110,10 +175,19 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                      "name": { "type": "string" },
-                      "slug": { "type": "string" },
-                      "count": { "type": "integer" },
-                      "url": { "type": "string", "format": "uri" }
+                      "name": {
+                        "type": "string"
+                      },
+                      "slug": {
+                        "type": "string"
+                      },
+                      "count": {
+                        "type": "integer"
+                      },
+                      "url": {
+                        "type": "string",
+                        "format": "uri"
+                      }
                     }
                   }
                 }
@@ -133,7 +207,9 @@
             "description": "Agent instructions",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/AgentInstructions" }
+                "schema": {
+                  "$ref": "#/components/schemas/AgentInstructions"
+                }
               }
             }
           }
@@ -155,7 +231,9 @@
                   "properties": {
                     "bundles": {
                       "type": "array",
-                      "items": { "$ref": "#/components/schemas/Bundle" }
+                      "items": {
+                        "$ref": "#/components/schemas/Bundle"
+                      }
                     }
                   }
                 }
@@ -176,7 +254,9 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["skillId"],
+                "required": [
+                  "skillId"
+                ],
                 "properties": {
                   "skillId": {
                     "type": "string",
@@ -201,16 +281,29 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "url": { "type": "string", "format": "uri", "description": "Stripe Checkout URL" },
-                    "sessionId": { "type": "string", "description": "Stripe session ID (cs_live_...)" }
+                    "url": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "Stripe Checkout URL"
+                    },
+                    "sessionId": {
+                      "type": "string",
+                      "description": "Stripe session ID (cs_live_...)"
+                    }
                   }
                 }
               }
             }
           },
-          "400": { "description": "Missing skillId" },
-          "404": { "description": "Skill not found" },
-          "503": { "description": "Stripe not configured" }
+          "400": {
+            "description": "Missing skillId"
+          },
+          "404": {
+            "description": "Skill not found"
+          },
+          "503": {
+            "description": "Stripe not configured"
+          }
         }
       }
     },
@@ -220,8 +313,12 @@
         "description": "Receives Stripe webhook events. Verifies signature using STRIPE_WEBHOOK_SECRET. Handles: checkout.session.completed, payment_intent.payment_failed, charge.refunded.\n\n**This endpoint is called by Stripe, not by agents.**",
         "operationId": "stripeWebhook",
         "responses": {
-          "200": { "description": "Webhook received" },
-          "400": { "description": "Invalid signature" }
+          "200": {
+            "description": "Webhook received"
+          },
+          "400": {
+            "description": "Invalid signature"
+          }
         }
       }
     },
@@ -231,13 +328,41 @@
         "description": "ACP / AP2 delegated mandates. With ?id= returns a single mandate. With ?owner=0x... returns all mandates owned by that wallet. With ?agent=agent_xxx returns all mandates granted to that agent.",
         "operationId": "getMandates",
         "parameters": [
-          { "name": "id", "in": "query", "required": false, "schema": { "type": "string" }, "description": "mand_xxx" },
-          { "name": "owner", "in": "query", "required": false, "schema": { "type": "string" }, "description": "wallet address (lowercase)" },
-          { "name": "agent", "in": "query", "required": false, "schema": { "type": "string" }, "description": "agentId" }
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "mand_xxx"
+          },
+          {
+            "name": "owner",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "wallet address (lowercase)"
+          },
+          {
+            "name": "agent",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "agentId"
+          }
         ],
         "responses": {
-          "200": { "description": "Mandate(s) returned" },
-          "404": { "description": "Not found" }
+          "200": {
+            "description": "Mandate(s) returned"
+          },
+          "404": {
+            "description": "Not found"
+          }
         }
       },
       "post": {
@@ -251,29 +376,86 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "action": { "type": "string", "enum": ["revoke", "spend"] },
-                  "owner": { "type": "string", "description": "wallet address (create only)" },
-                  "agentId": { "type": "string", "description": "create only" },
-                  "agentName": { "type": "string", "description": "create only, optional" },
-                  "spendingLimitUsd": { "type": "number", "minimum": 0.01, "maximum": 500, "description": "create only" },
-                  "perPurchaseCapUsd": { "type": "number", "minimum": 0.01, "maximum": 50, "description": "create only, optional" },
-                  "categories": { "type": "array", "items": { "type": "string" }, "description": "create only, optional (defaults to ['*'])" },
-                  "expiresAt": { "type": "string", "format": "date-time", "description": "create only, optional" },
-                  "signature": { "type": "string", "description": "EIP-191 signature over mandate hash, optional but recommended" },
-                  "id": { "type": "string", "description": "required for revoke / spend" },
-                  "amount": { "type": "number", "description": "required for spend" },
-                  "txHash": { "type": "string", "description": "optional for spend, on-chain tx reference" }
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "revoke",
+                      "spend"
+                    ]
+                  },
+                  "owner": {
+                    "type": "string",
+                    "description": "wallet address (create only)"
+                  },
+                  "agentId": {
+                    "type": "string",
+                    "description": "create only"
+                  },
+                  "agentName": {
+                    "type": "string",
+                    "description": "create only, optional"
+                  },
+                  "spendingLimitUsd": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 500,
+                    "description": "create only"
+                  },
+                  "perPurchaseCapUsd": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 50,
+                    "description": "create only, optional"
+                  },
+                  "categories": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "create only, optional (defaults to ['*'])"
+                  },
+                  "expiresAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "create only, optional"
+                  },
+                  "signature": {
+                    "type": "string",
+                    "description": "EIP-191 signature over mandate hash, optional but recommended"
+                  },
+                  "id": {
+                    "type": "string",
+                    "description": "required for revoke / spend"
+                  },
+                  "amount": {
+                    "type": "number",
+                    "description": "required for spend"
+                  },
+                  "txHash": {
+                    "type": "string",
+                    "description": "optional for spend, on-chain tx reference"
+                  }
                 }
               }
             }
           }
         },
         "responses": {
-          "200": { "description": "Action completed" },
-          "201": { "description": "Mandate created" },
-          "400": { "description": "Validation error" },
-          "404": { "description": "Mandate not found" },
-          "409": { "description": "Mandate revoked / expired / insufficient remaining" }
+          "200": {
+            "description": "Action completed"
+          },
+          "201": {
+            "description": "Mandate created"
+          },
+          "400": {
+            "description": "Validation error"
+          },
+          "404": {
+            "description": "Mandate not found"
+          },
+          "409": {
+            "description": "Mandate revoked / expired / insufficient remaining"
+          }
         }
       }
     },
@@ -288,13 +470,29 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["skillId"],
+                "required": [
+                  "skillId"
+                ],
                 "properties": {
-                  "skillId": { "type": "string" },
-                  "walletAddress": { "type": "string", "description": "agent's wallet, required for paid" },
-                  "txHash": { "type": "string", "description": "USDC Transfer on Base, required for paid" },
-                  "mandateId": { "type": "string", "description": "optional, enables autonomous purchase within pre-approved limit" },
-                  "agentId": { "type": "string", "description": "optional, for tracking" }
+                  "skillId": {
+                    "type": "string"
+                  },
+                  "walletAddress": {
+                    "type": "string",
+                    "description": "agent's wallet, required for paid"
+                  },
+                  "txHash": {
+                    "type": "string",
+                    "description": "USDC Transfer on Base, required for paid"
+                  },
+                  "mandateId": {
+                    "type": "string",
+                    "description": "optional, enables autonomous purchase within pre-approved limit"
+                  },
+                  "agentId": {
+                    "type": "string",
+                    "description": "optional, for tracking"
+                  }
                 }
               }
             }
@@ -308,21 +506,48 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "success": { "type": "boolean" },
-                    "mode": { "type": "string", "enum": ["instant_download", "instant_purchase", "direct_purchase", "requires_payment", "requires_human_approval"] },
-                    "license": { "type": "object" },
-                    "system_prompt": { "type": "string" },
-                    "install": { "type": "string" },
-                    "mandate": { "type": "object" },
-                    "options": { "type": "object" }
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "mode": {
+                      "type": "string",
+                      "enum": [
+                        "instant_download",
+                        "instant_purchase",
+                        "direct_purchase",
+                        "requires_payment",
+                        "requires_human_approval"
+                      ]
+                    },
+                    "license": {
+                      "type": "object"
+                    },
+                    "system_prompt": {
+                      "type": "string"
+                    },
+                    "install": {
+                      "type": "string"
+                    },
+                    "mandate": {
+                      "type": "object"
+                    },
+                    "options": {
+                      "type": "object"
+                    }
                   }
                 }
               }
             }
           },
-          "400": { "description": "Payment verification failed" },
-          "404": { "description": "Skill or mandate not found" },
-          "405": { "description": "Method not allowed" }
+          "400": {
+            "description": "Payment verification failed"
+          },
+          "404": {
+            "description": "Skill or mandate not found"
+          },
+          "405": {
+            "description": "Method not allowed"
+          }
         }
       }
     }
@@ -331,92 +556,246 @@
     "schemas": {
       "Skill": {
         "type": "object",
-        "required": ["id", "name", "slug", "description", "category", "price"],
+        "required": [
+          "id",
+          "name",
+          "slug",
+          "description",
+          "category",
+          "price"
+        ],
         "properties": {
-          "id": { "type": "string", "description": "Unique identifier", "example": "mn-gen-00015" },
-          "name": { "type": "string", "description": "Human-readable name", "example": "Discord-mcp-server" },
-          "slug": { "type": "string", "description": "URL-safe slug for install command", "example": "discord-mcp-server" },
-          "description": { "type": "string", "description": "What the skill does", "example": "A comprehensive MCP server for Discord interaction" },
-          "category": { "type": "string", "description": "Skill category", "example": "Communication" },
-          "tags": { "type": "array", "items": { "type": "string" }, "description": "Searchable tags" },
-          "price": { "type": "number", "description": "Price in USD", "minimum": 0.99, "maximum": 9.99, "example": 1.99 },
-          "currency": { "type": "string", "description": "Always USD", "example": "USD" },
-          "payment": { "type": "string", "description": "Always one-time", "example": "one-time" },
-          "license": { "type": "string", "description": "Always perpetual", "example": "perpetual" },
-          "verified": { "type": "boolean", "description": "Always true (all skills pass Sentinel L1)" },
-          "sentinel_score": { "type": "integer", "description": "Security score 0-10", "minimum": 0, "maximum": 10 },
-          "install": { "type": "string", "description": "Shell command to install", "example": "npx -y @marketnow/install discord-mcp-server" },
-          "author": { "type": "string", "description": "Skill author" },
-          "version": { "type": "string", "description": "Semver version", "example": "1.0.0" },
-          "language": { "type": "string", "description": "Source language", "example": "es" },
+          "id": {
+            "type": "string",
+            "description": "Unique identifier",
+            "example": "mn-gen-00015"
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable name",
+            "example": "Discord-mcp-server"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-safe slug for install command",
+            "example": "discord-mcp-server"
+          },
+          "description": {
+            "type": "string",
+            "description": "What the skill does",
+            "example": "A comprehensive MCP server for Discord interaction"
+          },
+          "category": {
+            "type": "string",
+            "description": "Skill category",
+            "example": "Communication"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Searchable tags"
+          },
+          "price": {
+            "type": "number",
+            "description": "Price in USD",
+            "minimum": 0.99,
+            "maximum": 9.99,
+            "example": 1.99
+          },
+          "currency": {
+            "type": "string",
+            "description": "Always USD",
+            "example": "USD"
+          },
+          "payment": {
+            "type": "string",
+            "description": "Always one-time",
+            "example": "one-time"
+          },
+          "license": {
+            "type": "string",
+            "description": "Always perpetual",
+            "example": "perpetual"
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "Always true (all skills pass Sentinel L1)"
+          },
+          "sentinel_score": {
+            "type": "integer",
+            "description": "Security score 0-10",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "install": {
+            "type": "string",
+            "description": "Shell command to install",
+            "example": "npx -y @marketnow/install discord-mcp-server"
+          },
+          "author": {
+            "type": "string",
+            "description": "Skill author"
+          },
+          "version": {
+            "type": "string",
+            "description": "Semver version",
+            "example": "1.0.0"
+          },
+          "language": {
+            "type": "string",
+            "description": "Source language",
+            "example": "es"
+          },
           "translations": {
             "type": "object",
             "description": "Available translations (only for skills with system_prompt)",
             "properties": {
-              "en": { "$ref": "#/components/schemas/Translation" },
-              "es": { "$ref": "#/components/schemas/Translation" },
-              "zh": { "$ref": "#/components/schemas/Translation" },
-              "pt": { "$ref": "#/components/schemas/Translation" },
-              "fr": { "$ref": "#/components/schemas/Translation" }
+              "en": {
+                "$ref": "#/components/schemas/Translation"
+              },
+              "es": {
+                "$ref": "#/components/schemas/Translation"
+              },
+              "zh": {
+                "$ref": "#/components/schemas/Translation"
+              },
+              "pt": {
+                "$ref": "#/components/schemas/Translation"
+              },
+              "fr": {
+                "$ref": "#/components/schemas/Translation"
+              }
             }
           },
           "doc": {
             "type": "object",
             "properties": {
-              "setup": { "type": "string" },
-              "usage": { "type": "string" },
-              "system_prompt": { "type": "string", "description": "Ready-to-use system prompt for AI agents" }
+              "setup": {
+                "type": "string"
+              },
+              "usage": {
+                "type": "string"
+              },
+              "system_prompt": {
+                "type": "string",
+                "description": "Ready-to-use system prompt for AI agents"
+              }
             }
           },
-          "premium": { "type": "boolean", "description": "True if premium tier skill" },
-          "tier": { "type": "string", "description": "Premium tier name" }
+          "premium": {
+            "type": "boolean",
+            "description": "True if premium tier skill"
+          },
+          "tier": {
+            "type": "string",
+            "description": "Premium tier name"
+          }
         }
       },
       "Translation": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
-          "description": { "type": "string" },
-          "system_prompt": { "type": "string" }
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "system_prompt": {
+            "type": "string"
+          }
         }
       },
       "Manifest": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
-          "version": { "type": "string" },
-          "total_skills": { "type": "integer" },
-          "categories_count": { "type": "integer" },
-          "pricing": { "type": "object" },
-          "commission_rate": { "type": "number" },
-          "endpoints": { "type": "object" }
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "total_skills": {
+            "type": "integer"
+          },
+          "categories_count": {
+            "type": "integer"
+          },
+          "pricing": {
+            "type": "object"
+          },
+          "commission_rate": {
+            "type": "number"
+          },
+          "endpoints": {
+            "type": "object"
+          }
         }
       },
       "Bundle": {
         "type": "object",
         "properties": {
-          "id": { "type": "string" },
-          "name": { "type": "string" },
-          "description": { "type": "string" },
-          "skills": { "type": "array", "items": { "type": "string" } },
-          "original_price": { "type": "number" },
-          "bundle_price": { "type": "number" },
-          "savings": { "type": "integer" },
-          "category": { "type": "string" }
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "original_price": {
+            "type": "number"
+          },
+          "bundle_price": {
+            "type": "number"
+          },
+          "savings": {
+            "type": "integer"
+          },
+          "category": {
+            "type": "string"
+          }
         }
       },
       "AgentInstructions": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
-          "description": { "type": "string" },
-          "url": { "type": "string" },
-          "api_base": { "type": "string" },
-          "pricing": { "type": "object" },
-          "endpoints": { "type": "object" },
-          "workflow_for_agents": { "type": "object" },
-          "rate_limits": { "type": "object" },
-          "mcp_server": { "type": "object" }
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "api_base": {
+            "type": "string"
+          },
+          "pricing": {
+            "type": "object"
+          },
+          "endpoints": {
+            "type": "object"
+          },
+          "workflow_for_agents": {
+            "type": "object"
+          },
+          "rate_limits": {
+            "type": "object"
+          },
+          "mcp_server": {
+            "type": "object"
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { isAuthenticated, getUser, logout } from '../api/client';
 import AuthModal from './AuthModal';
 
@@ -19,36 +19,41 @@ const navLinks = [
   { path: '/policies', label: 'POLICIES' },
 ];
 
-const CLICK_TARGET = 7;
-const CLICK_WINDOW = 4000; // ms
+// Admin access shortcuts (no longer 7-click on logo):
+//   Primary: Ctrl+Shift+M
+//   Easter egg backup: Konami code (↑↑↓↓←→←→BA)
+const KONAMI_SEQUENCE = [
+  'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+  'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a',
+];
+
+function triggerAdmin() {
+  window.dispatchEvent(new CustomEvent('open-admin'));
+}
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState(null);
-  const clickCountRef = useRef(0);
-  const clickTimerRef = useRef(null);
+  const konamiRef = useRef([]);
 
-  // Secret trigger: 7 clicks on logo
-  const handleLogoClick = useCallback(() => {
-    clickCountRef.current += 1;
-    if (clickCountRef.current === 1) {
-      // Start reset timer on first click
-      clickTimerRef.current = setTimeout(() => { clickCountRef.current = 0; }, CLICK_WINDOW);
-    }
-    if (clickCountRef.current >= CLICK_TARGET) {
-      clearTimeout(clickTimerRef.current);
-      clickCountRef.current = 0;
-      window.dispatchEvent(new CustomEvent('open-admin'));
-    }
-  }, []);
-
-  // Secret keyboard shortcut: Ctrl+Shift+M
+  // Admin shortcut: Ctrl+Shift+M (primary) + Konami code (easter egg backup)
   useEffect(() => {
     const handler = (e) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'M') {
+      // Primary shortcut: Ctrl+Shift+M
+      if (e.ctrlKey && e.shiftKey && (e.key === 'M' || e.key === 'm')) {
         e.preventDefault();
-        window.dispatchEvent(new CustomEvent('open-admin'));
+        triggerAdmin();
+        return;
+      }
+      // Easter egg backup: Konami code
+      const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      konamiRef.current = [...konamiRef.current, key].slice(-KONAMI_SEQUENCE.length);
+      if (konamiRef.current.length === KONAMI_SEQUENCE.length &&
+          konamiRef.current.every((k, i) => k === KONAMI_SEQUENCE[i])) {
+        triggerAdmin();
+        konamiRef.current = [];
       }
     };
     window.addEventListener('keydown', handler);
@@ -86,28 +91,35 @@ export default function Navbar() {
     window.dispatchEvent(new Event('auth-change'));
   };
 
+  // Click on logo OR name → navigate to home (no admin trigger on click)
+  const goHome = () => {
+    navigate('/');
+  };
+
   return (
     <>
       <nav className="sticky top-0 z-[1000] glass-panel border-b border-white/5">
         <div className="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3 shrink-0">
-            {/* Secret admin trigger: click 7 times rapidly on the logo icon */}
-            <div
-              onClick={handleLogoClick}
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg cursor-pointer select-none"
-              title="MarketNow"
-            >
+          {/* Logo + name — both navigate to home. Admin access via Ctrl+Shift+M or Konami code. */}
+          <button
+            type="button"
+            onClick={goHome}
+            className="flex items-center gap-3 shrink-0 cursor-pointer group focus:outline-none"
+            title="MarketNow — Go to home (Admin: Ctrl+Shift+M)"
+            aria-label="MarketNow home"
+          >
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg select-none group-hover:scale-105 transition-transform">
               M
             </div>
-            <Link to="/">
+            <div className="text-left">
               <div className="text-white font-semibold tracking-wide text-sm">
                 MARKET<span className="text-[#00F299]">NOW</span>
               </div>
               <div className="text-[10px] text-zinc-500 font-mono tracking-widest">
                 AGENT SKILL MARKETPLACE
               </div>
-            </Link>
-          </div>
+            </div>
+          </button>
 
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => {

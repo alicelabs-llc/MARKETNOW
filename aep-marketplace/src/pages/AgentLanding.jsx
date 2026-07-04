@@ -65,11 +65,7 @@ export default function AgentLanding() {
             </h1>
 
             <p className="text-zinc-300 text-lg md:text-xl mb-3 max-w-2xl mx-auto leading-relaxed">
-              {lang === 'es' ? (
-                <>El descubrimiento está resuelto (MCP registry, Smithery, Glama). <strong className="text-white">La confianza no.</strong> {t('hero.body')}</>
-              ) : (
-                <>Discovery is solved (MCP registry, Smithery, Glama). <strong className="text-white">Trust is not.</strong> {t('hero.body')}</>
-              )}
+              {t('hero.body')}
             </p>
             <p className="text-zinc-500 text-sm mb-10 max-w-xl mx-auto">
               {stats.total.toLocaleString()}+ {t('hero.meta')}
@@ -89,7 +85,7 @@ export default function AgentLanding() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
               <Link to="/registry" className="px-7 py-3.5 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] transition-all shadow-lg shadow-[#00F299]/20 text-sm">
-                {t('hero.ctaBrowse').replace('SKILLS', `${stats.total.toLocaleString()} ${lang === 'es' ? 'SKILLS' : 'SKILLS'}`)}
+                {t('hero.ctaBrowse')}
               </Link>
               <Link to="/registry?filter=free" className="px-7 py-3.5 border border-[#00d1ff]/30 bg-[#00d1ff]/10 text-[#00d1ff] font-bold rounded-xl hover:bg-[#00d1ff]/20 transition-all text-sm">
                 ⚡ {stats.free} {t('hero.ctaFree')}

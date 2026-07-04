@@ -5,57 +5,58 @@ import { isAuthenticated, getUser, logout } from '../api/client';
 import { useLang } from '../context/LanguageContext.jsx';
 import AuthModal from './AuthModal';
 
+// Grouped nav structure — labels come from i18n t() at render time
+const NAV_GROUPS = [
+  {
+    labelKey: 'nav.marketplace',
+    items: [
+      { path: '/registry', labelKey: 'nav.browse' },
+      { path: '/submit', labelKey: 'nav.publish' },
+      { path: '/pricing', labelKey: 'nav.pricing' },
+    ],
+  },
+  {
+    labelKey: 'nav.trust',
+    items: [
+      { path: '/trust', labelKey: 'nav.trustRoadmap' },
+      { path: '/standards', labelKey: 'nav.standards' },
+      { path: '/security', labelKey: 'nav.sentinel' },
+      { path: '/compare', labelKey: 'nav.compare' },
+      { path: '/listings', labelKey: 'nav.listings' },
+    ],
+  },
+  {
+    labelKey: 'nav.resources',
+    items: [
+      { path: '/blog', labelKey: 'nav.blog' },
+      { path: '/buyers-guide', labelKey: 'nav.buyersGuide' },
+      { path: '/onboarding', labelKey: 'nav.onboarding' },
+      { path: '/catalog', labelKey: 'nav.catalog' },
+      { path: '/embed', labelKey: 'nav.badges' },
+      { path: '/handshake', labelKey: 'nav.apiDocs' },
+      { path: '/policies', labelKey: 'nav.terms' },
+    ],
+  },
+  {
+    labelKey: 'nav.account',
+    items: [
+      { path: '/mandates', labelKey: 'nav.mandates' },
+      { path: '/vault', labelKey: 'nav.vault' },
+      { path: '/dashboard', labelKey: 'nav.dashboard' },
+      { path: '/about', labelKey: 'nav.about' },
+    ],
+  },
+];
+
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { t, lang, toggleLang } = useLang();
+  const { lang, t, toggleLang } = useLang();
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [openGroup, setOpenGroup] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef(null);
-
-  const NAV_GROUPS = [
-    {
-      label: t('nav.marketplace'),
-      items: [
-        { path: '/registry', label: t('nav.browse') },
-        { path: '/submit', label: t('nav.publish') },
-        { path: '/pricing', label: t('nav.pricing') },
-      ],
-    },
-    {
-      label: t('nav.trust'),
-      items: [
-        { path: '/trust', label: t('nav.trustRoadmap') },
-        { path: '/standards', label: t('nav.standards') },
-        { path: '/security', label: t('nav.sentinel') },
-        { path: '/compare', label: t('nav.compare') },
-        { path: '/listings', label: t('nav.listings') },
-      ],
-    },
-    {
-      label: t('nav.resources'),
-      items: [
-        { path: '/blog', label: t('nav.blog') },
-        { path: '/buyers-guide', label: t('nav.buyersGuide') },
-        { path: '/onboarding', label: t('nav.onboarding') },
-        { path: '/catalog', label: t('nav.catalog') },
-        { path: '/embed', label: t('nav.badges') },
-        { path: '/handshake', label: t('nav.apiDocs') },
-        { path: '/policies', label: t('nav.terms') },
-      ],
-    },
-    {
-      label: t('nav.account'),
-      items: [
-        { path: '/mandates', label: t('nav.mandates') },
-        { path: '/vault', label: t('nav.vault') },
-        { path: '/dashboard', label: t('nav.dashboard') },
-        { path: '/about', label: t('nav.about') },
-      ],
-    },
-  ];
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -127,7 +128,7 @@ export default function Navbar() {
             onClick={goHome}
             className="flex items-center gap-2 shrink-0 cursor-pointer group focus:outline-none"
             title={t('nav.goHome')}
-            aria-label="MarketNow home"
+            aria-label={t('nav.goHome')}
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg select-none group-hover:scale-105 transition-transform">
               M
@@ -140,20 +141,20 @@ export default function Navbar() {
           {/* Desktop nav with dropdowns */}
           <div className="hidden lg:flex items-center gap-1" ref={dropdownRef}>
             {NAV_GROUPS.map((group) => (
-              <div key={group.label} className="relative">
+              <div key={group.labelKey} className="relative">
                 <button
-                  onClick={() => setOpenGroup(openGroup === group.label ? null : group.label)}
-                  onMouseEnter={() => setOpenGroup(group.label)}
+                  onClick={() => setOpenGroup(openGroup === group.labelKey ? null : group.labelKey)}
+                  onMouseEnter={() => setOpenGroup(group.labelKey)}
                   className={`px-3 py-2 text-xs font-mono tracking-wider transition-colors rounded-lg flex items-center gap-1 ${
-                    isGroupActive(group) || openGroup === group.label
+                    isGroupActive(group) || openGroup === group.labelKey
                       ? 'text-[#00F299] bg-[#00F299]/5'
                       : 'text-zinc-400 hover:text-white'
                   }`}
                 >
-                  {group.label}
-                  <span className={`text-[8px] transition-transform ${openGroup === group.label ? 'rotate-180' : ''}`}>▼</span>
+                  {t(group.labelKey)}
+                  <span className={`text-[8px] transition-transform ${openGroup === group.labelKey ? 'rotate-180' : ''}`}>▼</span>
                 </button>
-                {openGroup === group.label && (
+                {openGroup === group.labelKey && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -171,7 +172,7 @@ export default function Navbar() {
                             : 'text-zinc-400 hover:text-white hover:bg-white/5'
                         }`}
                       >
-                        {item.label}
+                        {t(item.labelKey)}
                       </Link>
                     ))}
                   </motion.div>
@@ -180,17 +181,18 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Auth + language section */}
+          {/* Auth + Language section */}
           <div className="flex items-center gap-2">
-            {/* Language toggle */}
+            {/* Language toggle: EN | ES */}
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-mono font-bold text-zinc-400 hover:text-[#00F299] border border-white/10 rounded-lg hover:border-[#00F299]/30 transition-all"
+              className="flex items-center gap-1 px-2 py-1.5 rounded-lg border border-white/10 text-xs font-mono hover:border-[#00F299]/40 hover:bg-white/5 transition-all"
               title={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
               aria-label="Toggle language"
             >
-              <span className="text-sm">{lang === 'en' ? '🇺🇸' : '🇪🇸'}</span>
-              <span>{lang.toUpperCase()}</span>
+              <span className={lang === 'en' ? 'text-[#00F299]' : 'text-zinc-500'}>EN</span>
+              <span className="text-zinc-700">|</span>
+              <span className={lang === 'es' ? 'text-[#00F299]' : 'text-zinc-500'}>ES</span>
             </button>
 
             {user ? (
@@ -242,8 +244,8 @@ export default function Navbar() {
           >
             <div className="px-4 py-4 space-y-4">
               {NAV_GROUPS.map((group) => (
-                <div key={group.label}>
-                  <div className="text-zinc-600 text-[10px] font-mono tracking-wider mb-2">{group.label}</div>
+                <div key={group.labelKey}>
+                  <div className="text-zinc-600 text-[10px] font-mono tracking-wider mb-2">{t(group.labelKey)}</div>
                   <div className="space-y-1">
                     {group.items.map((item) => (
                       <Link
@@ -255,7 +257,7 @@ export default function Navbar() {
                             : 'text-zinc-400 hover:text-white hover:bg-white/5'
                         }`}
                       >
-                        {item.label}
+                        {t(item.labelKey)}
                       </Link>
                     ))}
                   </div>

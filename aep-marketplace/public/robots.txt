@@ -1,18 +1,21 @@
 # MarketNow — robots.txt
 # ======================
-# All crawlers and LLMs are welcome.
+# All search engines, AI crawlers, and LLMs are welcome.
+# We want to be discoverable on Google, Bing, Baidu, Yandex, DuckDuckGo,
+# Naver, Sogou, 360, Shenma, and ALL AI platforms (ChatGPT, Claude, etc.)
 
+# ─── Default: allow everything ─────────────────────────────────
 User-agent: *
 Allow: /
 
-# Block heavy API endpoints from crawlers to preserve crawl budget
+# Block only heavy API endpoints to preserve crawl budget
 Disallow: /api/skills.json
 Disallow: /api/skills_index.json
 Disallow: /api/all_skills.json
 Disallow: /api/skills.min.json
-Allow: /api/skills-lite.json
 
 # Allow lightweight API endpoints
+Allow: /api/skills-lite.json
 Allow: /api/agent.json
 Allow: /api/manifest.json
 Allow: /api/categories.json
@@ -20,6 +23,7 @@ Allow: /api/free-skills.json
 Allow: /api/bundles.json
 Allow: /api/policies.json
 Allow: /api/openapi.json
+Allow: /api/openapi.yaml
 Allow: /api/search
 Allow: /api/agent-ping.json
 Allow: /api/trust.json
@@ -31,26 +35,189 @@ Allow: /api/sentinel-roadmap.json
 Allow: /api/sentinel-status.json
 Allow: /api/mandates-info.json
 
-# Explicitly allow AI/LLM crawlers
-User-agent: GPTBot
+# ─── Google ─────────────────────────────────────────────────────
+User-agent: Googlebot
 Allow: /
 
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
+User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+# ─── Bing / Microsoft ───────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# ─── Baidu (China — 百度) ───────────────────────────────────────
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Baiduspider-image
+Allow: /
+
+User-agent: Baiduspider-news
+Allow: /
+
+User-agent: Baiduspider-video
+Allow: /
+
+User-agent: Baidu
+Allow: /
+
+# ─── Sogou (China — 搜狗) ───────────────────────────────────────
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: Sogou inst spider
+Allow: /
+
+User-agent: Sogou spider2
+Allow: /
+
+User-agent: Sogou blog
+Allow: /
+
+User-agent: Sogou News Spider
+Allow: /
+
+User-agent: sogou spider
+Allow: /
+
+# ─── 360 Search (China — 360搜索) ───────────────────────────────
+User-agent: 360Spider
+Allow: /
+
+User-agent: 360Spider-Image
+Allow: /
+
+User-agent: 360Spider-Video
+Allow: /
+
+User-agent: HaoSouSpider
+Allow: /
+
+# ─── Shenma (China — 神马搜索, mobile) ──────────────────────────
+User-agent: YisouSpider
+Allow: /
+
+# ─── Yandex (Russia — Яндекс) ───────────────────────────────────
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
+User-agent: YandexMetrika
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# ─── DuckDuckGo ─────────────────────────────────────────────────
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: DuckDuckGo-Favicons-Bot
+Allow: /
+
+# ─── Naver (Korea — 네이버) ─────────────────────────────────────
+User-agent: NaverBot
+Allow: /
+
+User-agent: Naverbot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+# ─── Seznam (Czech) ─────────────────────────────────────────────
+User-agent: SeznamBot
+Allow: /
+
+# ─── Exalead ────────────────────────────────────────────────────
+User-agent: Exabot
+Allow: /
+
+# ─── AI / LLM Crawlers ──────────────────────────────────────────
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI / Facebook
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon / AWS
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance / TikTok (China — 字节跳动)
 User-agent: Bytespider
 Allow: /
 
+# Common Crawl
 User-agent: CCBot
 Allow: /
 
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Apple
+User-agent: AppleBot
+Allow: /
+
+# ─── Archive.org ────────────────────────────────────────────────
+User-agent: archive.org_bot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# ─── Crawl-delay ────────────────────────────────────────────────
+Crawl-delay: 1
+
+# ─── Sitemaps ───────────────────────────────────────────────────
 Sitemap: https://marketnow.site/sitemap.xml
+Sitemap: https://marketnow.site/api/skills-lite.json

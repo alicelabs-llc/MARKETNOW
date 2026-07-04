@@ -1,0 +1,78 @@
+# MarketNow
+
+> Trust layer for agent commerce. 8,560 MCP-compatible skills with Sentinel L2 security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. Human-in-the-loop by default. Maintained by AliceLabs LLC (Wyoming, USA, 2025), founder Edison Flores.
+
+## What MarketNow does
+
+MarketNow is NOT another discovery registry — discovery is solved (MCP Registry, Smithery, Glama). MarketNow solves TRUST: every skill carries a Sentinel security report, declared permissions, and an honest review_status (auto-scanned | human-reviewed | maintainer-verified).
+
+- 8,560 MCP skills indexed across 58 categories
+- 43 free skills (no signup required)
+- Sentinel L2: real-time security audit (18 Semgrep rules + Docker sandbox + OSV)
+- x402 payments: HTTP 402 Payment Required + USDC on Base (chainId 8453)
+- AP2 mandates: agents buy autonomously within principal-approved limits
+- Human-in-the-loop by default (mandates default to "notify" mode)
+- 5 languages: EN, ES, PT, ZH, FR
+- Pricing: $0.99–$9.99 one-time, no subscriptions
+- License: MNNC-1.0 (source-available, non-commercial)
+
+## For AI agents
+
+MarketNow is designed for autonomous agent consumption. Agents can search, evaluate, and purchase skills programmatically.
+
+### MCP Server
+```
+npx -y marketnow-mcp
+```
+Works with Claude Desktop, Cursor, Cline, Continue, Aider.
+
+### Public API (no auth required for reads)
+- GET /api/skills-lite.json — Full catalog (8,560 skills, 4.5MB JSON)
+- GET /api/search?q=query&category=Data&max_price=2.99&language=es — Server-side search
+- GET /api/agent.json — Machine-readable instructions, trust model, schema
+- GET /api/agent-ping.json — Live stats and endpoint list
+- GET /api/manifest?health — Cache stats, RPC pool health, rate limiter state
+- GET /api/free-skills.json — 43 free skills
+- GET /api/categories.json — 58 categories with counts
+- GET /api/policies.json — Terms, refund, dispute, privacy
+- GET /api/openapi.json — OpenAPI 3.1 specification
+- POST /api/agent-purchase — Buy a skill (x402 + USDC on Base)
+- GET /api/mandates — Delegated mandates (AP2 compatible)
+- POST /api/audit-skill — Run Sentinel L1.5 security audit
+
+### Payment
+- USDC on Base (chainId 8453)
+- Payment wallet: 0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee
+- USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
+- HTTP 402 Payment Required protocol (x402)
+
+### Trust model
+- review_status: auto-scanned (8,517) | human-reviewed (43) | maintainer-verified (0)
+- Sentinel L1.5: 6-point MCP security scan (AUTH, injection, validation, CORS, OAuth, rate limiting)
+- Sentinel L1.6: 18 Semgrep rules + Gitleaks + OSV-Scanner (live in production)
+- Sentinel L2: Docker sandbox with --network none, --read-only, --cap-drop ALL (implemented)
+- Risk levels: green (prompt-only) / yellow (network/env) / red (subprocess)
+
+## Links
+
+- [Website](https://marketnow.site)
+- [Browse skills](https://marketnow.site/registry)
+- [Trust roadmap](https://marketnow.site/trust)
+- [Security methodology](https://marketnow.site/security)
+- [Open standards](https://marketnow.site/standards)
+- [API documentation](https://marketnow.site/handshake)
+- [Pricing](https://marketnow.site/pricing)
+- [About AliceLabs LLC](https://marketnow.site/about)
+- [Terms & policies](https://marketnow.site/policies)
+- [GitHub repository](https://github.com/edgarfloresguerra2011-a11y/marketnow)
+- [npm package](https://www.npmjs.com/package/marketnow-mcp)
+- [Smithery listing](https://smithery.ai/servers/eddyflores100/marketnow)
+- [OpenAPI spec](https://marketnow.site/api/openapi.json)
+- [Machine-readable agent instructions](https://marketnow.site/api/agent.json)
+
+## Contact
+
+- Email: info@alicelabs.site
+- GitHub: edgarfloresguerra2011-a11y
+- Company: AliceLabs LLC (Wyoming, USA, 2025)
+- Founder: Edison Flores

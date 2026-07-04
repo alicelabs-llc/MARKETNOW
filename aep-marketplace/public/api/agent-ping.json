@@ -1,31 +1,40 @@
 {
   "status": "alive",
-  "message": "MarketNow — Agent Skill Marketplace. 8,560 verified skills with Sentinel security reports.",
+  "message": "MarketNow \u2014 Agent Skill Marketplace. 8,560 verified skills with Sentinel security reports.",
   "stats": {
     "total_skills": 8560,
     "categories": 58,
     "free_skills": 43,
     "active_sellers": 15,
     "mcp_server": "npx -y marketnow-mcp",
-    "avg_price": 3.80,
+    "avg_price": 3.8,
     "min_price": 0.99,
     "max_price": 9.99,
-    "payment_methods": ["Stripe (credit card)", "USDC (Base L2)"],
-    "license": "MIT",
-    "maintainer": "AliceLabs LLC"
+    "payment_methods": [
+      "Stripe (credit card)",
+      "USDC (Base L2)"
+    ],
+    "license": "MNNC-1.0",
+    "maintainer": "AliceLabs LLC",
+    "company": "AliceLabs LLC (Wyoming, USA, 2025)",
+    "founder": "Edison Flores"
   },
   "endpoints": {
     "search": "GET /api/search?q=",
     "free_skills": "GET /api/free-skills.json",
     "all_skills": "GET /api/skills.json",
+    "skills_lite": "GET /api/skills-lite.json",
     "categories": "GET /api/categories.json",
     "manifest": "GET /api/manifest.json",
+    "health": "GET /api/manifest?health",
     "agent_docs": "GET /api/agent.json",
-    "openapi": "GET /api/openapi.yaml",
+    "openapi": "GET /api/openapi.json",
+    "openapi_yaml": "GET /api/openapi.yaml",
     "bundles": "GET /api/bundles.json",
     "audit": "POST /api/audit-skill",
     "wallet": "GET /api/agent-wallet",
     "purchase_usdc": "POST /api/agent-purchase",
-    "checkout_stripe": "POST /api/create-checkout-session"
+    "checkout_stripe": "POST /api/create-checkout-session",
+    "mandates": "GET/POST /api/mandates"
   }
 }

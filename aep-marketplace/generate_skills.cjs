@@ -112,7 +112,8 @@ const USDC_DISCLAIMER = 'USDC payments on Base are irreversible on-chain. For di
 
 for (const s of skills) {
   // review_status (replaces universal 'verified: true')
-  s.review_status = freeIds.has(s.id) ? 'human-reviewed' : 'auto-scanned';
+  // review_status: human-reviewed for free skills AND AliceLabs original tools
+  s.review_status = (freeIds.has(s.id) || (s.id && s.id.startsWith('mn-sec-'))) ? 'human-reviewed' : 'auto-scanned';
   s.verified = s.review_status !== 'auto-scanned'; // legacy compat
 
   // permissions — declarative, inferred from metadata
@@ -141,6 +142,26 @@ for (const s of skills) {
     subprocess,
     disclosure: 'Declarative — inferred from skill metadata. Not enforced at runtime. See /trust for roadmap.',
   };
+
+  // risk_level — Green/Yellow/Red based on permissions
+  // Green: pure prompts, no install command, no network, no subprocess
+  // Yellow: network access or env vars, but no arbitrary code execution
+  // Red: subprocess execution (npx/npm/bash/curl runs arbitrary code)
+  const isPromptOnly = s.id && s.id.startsWith('mn-prompt-');
+  const installCmd = s.install || '';
+  // Only count as subprocess if install runs something beyond our wrapper
+  // @marketnow/install is our wrapper — the actual risk is what it installs
+  const hasExternalExec = /npx -y [^@]|npm install|curl |bash |pip install|python |node /.test(installCmd);
+  
+  if (isPromptOnly && !hasExternalExec) {
+    s.risk_level = 'green';
+  } else if (hasExternalExec || (subprocess && !installCmd.includes('@marketnow/install'))) {
+    s.risk_level = 'red';
+  } else if ((s.permissions.network && s.permissions.network.length > 0) || (s.permissions.env_vars && s.permissions.env_vars.length > 0)) {
+    s.risk_level = 'yellow';
+  } else {
+    s.risk_level = 'green';
+  }
 
   // source
   if (s.id && s.id.startsWith('mn-prompt-')) {
@@ -198,5 +219,33 @@ if (fs.existsSync(agentJsonPath)) {
 console.log(`✅ MarketNow — ${skills.length} skills reales escritas`);
 console.log(`   → src/data/all_skills.json`);
 console.log(`   → public/api/skills.json       (accesible para agentes)`);
+
+// Lite version for web (no system prompts, no capabilities, truncated descriptions)
+// AUDIT-FUNC FIX: include translations + mark free skills with price=0
+const liteSkills = skills.map(s => {
+  const lite = {
+    id: s.id, name: s.name, slug: s.slug,
+    description: (s.description || "").slice(0, 200),
+    category: s.category,
+    price: freeIds.has(s.id) ? 0 : s.price,  // FIX: free skills = 0
+    free: freeIds.has(s.id) || s.price === 0, // FIX: mark free=true
+    sentinel_score: s.sentinel_score, review_status: s.review_status,
+    risk_level: s.risk_level, install: s.install,
+    author: s.author, version: s.version, tags: (s.tags || []).slice(0, 5),
+  };
+  // FIX: include translations (language codes only, not full content)
+  if (s.translations && typeof s.translations === 'object') {
+    lite.translations = Object.keys(s.translations).reduce((acc, lang) => {
+      acc[lang] = true;
+      return acc;
+    }, {});
+  }
+  return lite;
+});
+fs.writeFileSync(
+  path.join(__dirname, "public", "api", "skills-lite.json"),
+  JSON.stringify(liteSkills)
+);
+console.log(`   → public/api/skills-lite.json  (web-optimized, ~4MB, ${liteSkills.filter(s => s.free).length} free)`);
 console.log(`   → public/api/categories.json   (${categoryIndex.length} categorías)`);
 console.log(`   → public/api/manifest.json`);

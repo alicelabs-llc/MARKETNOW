@@ -1,48 +1,44 @@
 /**
  * MarketNow — Sentinel L1.5 Security Audit
  * ==========================================
- * 
+ *
+ * v2.0 — Concurrency fixes (4 julio 2026)
+ *   - Usa skills-cache.mjs (no fetch de 30MB por request)
+ *   - Rate limiting REAL por IP (30 req/min — heavier compute)
+ *
  * Endpoint: POST /api/audit-skill
  * Body: { "skillId": "mn-gen-00015" }
- * 
- * Ejecuta los 6 checks de seguridad que recomienda la comunidad MCP:
- * 1. AUTH — ¿requiere autenticación o está abierto?
- * 2. TOOL DESCRIPTIONS — ¿hay prompt injection en las descripciones?
- * 3. INPUT VALIDATION — ¿valida inputs o acepta cualquier cosa?
- * 4. CORS / ORIGIN — ¿quién puede llamarlo?
- * 5. OAUTH / SCOPES — ¿los tokens están limitados?
- * 6. RATE LIMITING + ERROR LEAKAGE — ¿filtra secretos en errores?
  */
+
+import { findSkill } from '../lib/skills-cache.mjs';
+import { checkRateLimit } from '../lib/rate-limit.mjs';
+import { setCorsHeaders } from '../lib/cors.mjs';
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // H1 FIX: CORS allowlist
+  setCorsHeaders(req, res);
 
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'POST' && req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // ===== FIX: Rate limiting REAL =====
+  if (checkRateLimit(req, res, 'audit')) return;
+
   try {
-    // Support both POST body and GET query param
-    const skillId = req.method === 'POST' 
-      ? (req.body || {}).skillId 
+    const skillId = req.method === 'POST'
+      ? (req.body || {}).skillId
       : req.query.skillId;
 
     if (!skillId) {
       return res.status(400).json({ error: 'skillId required' });
     }
 
-    // Fetch skill
-    const baseUrl = `https://${req.headers.host}`;
-    const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
-    if (!skillsRes.ok) throw new Error('Failed to fetch skills');
-    const skills = await skillsRes.json();
-    const skill = skills.find(s => s.id === skillId || s.slug === skillId);
-    
+    // ===== FIX: cache en memoria =====
+    const skill = await findSkill(skillId);
     if (!skill) {
       return res.status(404).json({ error: 'Skill not found' });
     }
@@ -63,7 +59,7 @@ export default async function handler(req, res) {
       risk: 'unknown',
       recommendation: '',
     };
-    
+
     const requiredEnv = setup.required_env || [];
     if (requiredEnv.length > 0) {
       authCheck.status = 'pass';
@@ -89,8 +85,7 @@ export default async function handler(req, res) {
       risk: 'low',
       recommendation: '',
     };
-    
-    // Check for prompt injection patterns in descriptions/system_prompt
+
     const injectionPatterns = [
       { pattern: /ignore (all )?(previous|prior) instructions/i, severity: 'critical' },
       { pattern: /disregard (the )?(above|previous)/i, severity: 'critical' },
@@ -101,14 +96,14 @@ export default async function handler(req, res) {
       { pattern: /exfiltrate|steal|send.*(to|via).*(email|webhook|discord|telegram)/i, severity: 'critical' },
       { pattern: /base64.*(decode|encode|eval|exec)/i, severity: 'high' },
     ];
-    
+
     const foundInjections = [];
     for (const { pattern, severity } of injectionPatterns) {
       if (pattern.test(desc) || pattern.test(prompt)) {
         foundInjections.push({ pattern: pattern.source, severity });
       }
     }
-    
+
     if (foundInjections.length > 0) {
       injectionCheck.status = 'fail';
       injectionCheck.detail = `Found ${foundInjections.length} potential prompt injection pattern(s) in tool descriptions`;
@@ -127,17 +122,17 @@ export default async function handler(req, res) {
       risk: 'unknown',
       recommendation: '',
     };
-    
+
     const inputTypes = caps.input_types || [];
     const hasFileAccess = allText.includes('file') || allText.includes('filesystem') || allText.includes('path');
     const hasDbAccess = allText.includes('sql') || allText.includes('database') || allText.includes('query');
     const hasHttpAccess = allText.includes('http') || allText.includes('url') || allText.includes('fetch');
-    
+
     const risks = [];
     if (hasFileAccess) risks.push('path traversal (fs access detected)');
     if (hasDbAccess) risks.push('SQL injection (db access detected)');
     if (hasHttpAccess) risks.push('SSRF (HTTP access detected)');
-    
+
     if (risks.length > 0) {
       validationCheck.status = 'warning';
       validationCheck.detail = `Skill has access to: ${risks.join(', ')}. Verify input validation is in place.`;
@@ -157,7 +152,7 @@ export default async function handler(req, res) {
       risk: 'low',
       recommendation: '',
     };
-    
+
     if (caps.execution_context === 'server_side' || caps.requires_network) {
       corsCheck.status = 'warning';
       corsCheck.detail = 'Skill runs server-side or requires network. If accessible from browser, verify CORS is restricted.';
@@ -175,9 +170,9 @@ export default async function handler(req, res) {
       risk: 'unknown',
       recommendation: '',
     };
-    
+
     if (requiredEnv.length > 0) {
-      const hasScopedTokens = requiredEnv.some(e => 
+      const hasScopedTokens = requiredEnv.some(e =>
         e.includes('KEY') || e.includes('TOKEN') || e.includes('SECRET')
       );
       if (hasScopedTokens) {
@@ -202,7 +197,7 @@ export default async function handler(req, res) {
       risk: 'medium',
       recommendation: '',
     };
-    
+
     const sentinelWarnings = sentinel.warnings || [];
     if (sentinelWarnings.includes('no_rate_limiting')) {
       rateLimitCheck.status = 'fail';
@@ -222,22 +217,21 @@ export default async function handler(req, res) {
 
     // ─── BUILD REPORT ─────────────────────────────────────────────
     const checks = [authCheck, injectionCheck, validationCheck, corsCheck, oauthCheck, rateLimitCheck];
-    
+
     const criticalCount = checks.filter(c => c.risk === 'critical').length;
     const highCount = checks.filter(c => c.risk === 'high').length;
     const mediumCount = checks.filter(c => c.risk === 'medium').length;
     const passCount = checks.filter(c => c.status === 'pass').length;
     const failCount = checks.filter(c => c.status === 'fail').length;
     const warningCount = checks.filter(c => c.status === 'warning').length;
-    
-    // Overall score
+
     let overallScore = 10;
     overallScore -= criticalCount * 4;
     overallScore -= highCount * 2;
     overallScore -= mediumCount * 1;
     overallScore -= failCount * 2;
     overallScore = Math.max(0, Math.min(10, overallScore));
-    
+
     const report = {
       skill: {
         id: skill.id,

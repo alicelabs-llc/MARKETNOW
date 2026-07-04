@@ -2,10 +2,210 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { matchSkills, generateRecommendation } from '../utils/skillMatcher';
+import { useLang } from '../context/LanguageContext.jsx';
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CONTENT — all UI strings in 5 languages (en, es, pt, zh, fr)
+// ═══════════════════════════════════════════════════════════════════════════
+const CONTENT = {
+  en: {
+    titlePre: 'AGENT ',
+    titleHighlight: 'SKILL',
+    titlePost: ' REGISTRY',
+    subtitle: 'Browse, install, and deploy autonomous agent skills from the global MCP registry. Each skill is verified, versioned, and ready for production.',
+    matcherTitle: 'AI SKILL MATCHER',
+    matcherDesc: "Describe what you need in natural language — we'll find the best skills.",
+    matcherPlaceholder: "e.g. 'I need to scrape a website and extract product prices'",
+    matcherMatching: 'MATCHING...',
+    matcherFind: 'FIND SKILLS',
+    matcherNoMatches: 'No matches found. Try different keywords.',
+    matchLabel: 'match:',
+    stats: {
+      total: 'Total Skills',
+      avg: 'Avg Price',
+      from: 'From',
+      protocol: 'Protocol',
+    },
+    retry: 'Retry',
+    searchPlaceholder: 'Search skills...',
+    sortOptions: {
+      'name-asc': 'Name ↑',
+      'name-desc': 'Name ↓',
+      'price-asc': 'Price ↑',
+      'price-desc': 'Price ↓',
+      'score-asc': 'Score ↑',
+      'score-desc': 'Score ↓',
+    },
+    pageOf: 'Page {current}/{total}',
+    prev: '← Prev',
+    next: 'Next →',
+    loadingRegistry: 'Loading registry...',
+    showingOf: 'Showing {shown} of {total} skills',
+    verified: '✓ VERIFIED',
+    noSkillsFound: 'No skills found',
+  },
+  es: {
+    titlePre: 'REGISTRO DE ',
+    titleHighlight: 'SKILLS',
+    titlePost: ' PARA AGENTES',
+    subtitle: 'Explora, instala y despliega skills para agentes autónomos desde el registro global MCP. Cada skill está verificada, versionada y lista para producción.',
+    matcherTitle: 'BUSCADOR DE SKILLS POR IA',
+    matcherDesc: 'Describe lo que necesitas en lenguaje natural — encontraremos las mejores skills.',
+    matcherPlaceholder: "p. ej. 'Necesito scrapear un sitio web y extraer precios de productos'",
+    matcherMatching: 'BUSCANDO...',
+    matcherFind: 'ENCONTRAR SKILLS',
+    matcherNoMatches: 'No se encontraron coincidencias. Prueba con otras palabras clave.',
+    matchLabel: 'coincidencia:',
+    stats: {
+      total: 'Skills Totales',
+      avg: 'Precio Prom.',
+      from: 'Desde',
+      protocol: 'Protocolo',
+    },
+    retry: 'Reintentar',
+    searchPlaceholder: 'Buscar skills...',
+    sortOptions: {
+      'name-asc': 'Nombre ↑',
+      'name-desc': 'Nombre ↓',
+      'price-asc': 'Precio ↑',
+      'price-desc': 'Precio ↓',
+      'score-asc': 'Puntaje ↑',
+      'score-desc': 'Puntaje ↓',
+    },
+    pageOf: 'Página {current}/{total}',
+    prev: '← Anterior',
+    next: 'Siguiente →',
+    loadingRegistry: 'Cargando registro...',
+    showingOf: 'Mostrando {shown} de {total} skills',
+    verified: '✓ VERIFICADA',
+    noSkillsFound: 'No se encontraron skills',
+  },
+  pt: {
+    titlePre: 'REGISTRO DE ',
+    titleHighlight: 'SKILLS',
+    titlePost: ' PARA AGENTES',
+    subtitle: 'Navegue, instale e implante skills de agentes autônomos do registro global MCP. Cada skill é verificada, versionada e pronta para produção.',
+    matcherTitle: 'BUSCADOR DE SKILLS POR IA',
+    matcherDesc: 'Descreva o que você precisa em linguagem natural — encontraremos as melhores skills.',
+    matcherPlaceholder: "ex. 'Preciso fazer scrape de um site e extrair preços de produtos'",
+    matcherMatching: 'BUSCANDO...',
+    matcherFind: 'ENCONTRAR SKILLS',
+    matcherNoMatches: 'Nenhuma correspondência encontrada. Tente palavras-chave diferentes.',
+    matchLabel: 'correspondência:',
+    stats: {
+      total: 'Skills Totais',
+      avg: 'Preço Médio',
+      from: 'A partir de',
+      protocol: 'Protocolo',
+    },
+    retry: 'Tentar novamente',
+    searchPlaceholder: 'Buscar skills...',
+    sortOptions: {
+      'name-asc': 'Nome ↑',
+      'name-desc': 'Nome ↓',
+      'price-asc': 'Preço ↑',
+      'price-desc': 'Preço ↓',
+      'score-asc': 'Pontuação ↑',
+      'score-desc': 'Pontuação ↓',
+    },
+    pageOf: 'Página {current}/{total}',
+    prev: '← Anterior',
+    next: 'Próximo →',
+    loadingRegistry: 'Carregando registro...',
+    showingOf: 'Mostrando {shown} de {total} skills',
+    verified: '✓ VERIFICADA',
+    noSkillsFound: 'Nenhuma skill encontrada',
+  },
+  zh: {
+    titlePre: '代理 ',
+    titleHighlight: 'SKILL',
+    titlePost: ' 注册表',
+    subtitle: '从全球 MCP 注册表浏览、安装并部署自主代理 skill。每个 skill 均经过验证、版本化，可用于生产环境。',
+    matcherTitle: 'AI SKILL 匹配器',
+    matcherDesc: '用自然语言描述你的需求——我们会为你找到最合适的 skill。',
+    matcherPlaceholder: "例如：「我需要爬取一个网站并提取产品价格」",
+    matcherMatching: '匹配中...',
+    matcherFind: '查找 SKILL',
+    matcherNoMatches: '未找到匹配项。请尝试其他关键词。',
+    matchLabel: '匹配度:',
+    stats: {
+      total: 'Skill 总数',
+      avg: '平均价格',
+      from: '起价',
+      protocol: '协议',
+    },
+    retry: '重试',
+    searchPlaceholder: '搜索 skill...',
+    sortOptions: {
+      'name-asc': '名称 ↑',
+      'name-desc': '名称 ↓',
+      'price-asc': '价格 ↑',
+      'price-desc': '价格 ↓',
+      'score-asc': '评分 ↑',
+      'score-desc': '评分 ↓',
+    },
+    pageOf: '第 {current}/{total} 页',
+    prev: '← 上一页',
+    next: '下一页 →',
+    loadingRegistry: '正在加载注册表...',
+    showingOf: '显示 {shown} / {total} 个 skill',
+    verified: '✓ 已验证',
+    noSkillsFound: '未找到 skill',
+  },
+  fr: {
+    titlePre: 'REGISTRE DE ',
+    titleHighlight: 'SKILLS',
+    titlePost: ' POUR AGENTS',
+    subtitle: "Parcourez, installez et déployez des skills d'agents autonomes depuis le registre global MCP. Chaque skill est vérifiée, versionnée et prête pour la production.",
+    matcherTitle: 'RECHERCHE DE SKILLS PAR IA',
+    matcherDesc: 'Décrivez ce dont vous avez besoin en langage naturel — nous trouverons les meilleures skills.',
+    matcherPlaceholder: "ex. « J'ai besoin de scraper un site web et d'extraire les prix des produits »",
+    matcherMatching: 'RECHERCHE...',
+    matcherFind: 'TROUVER DES SKILLS',
+    matcherNoMatches: 'Aucune correspondance trouvée. Essayez d\'autres mots-clés.',
+    matchLabel: 'correspondance :',
+    stats: {
+      total: 'Skills Totales',
+      avg: 'Prix Moyen',
+      from: 'À partir de',
+      protocol: 'Protocole',
+    },
+    retry: 'Réessayer',
+    searchPlaceholder: 'Rechercher des skills...',
+    sortOptions: {
+      'name-asc': 'Nom ↑',
+      'name-desc': 'Nom ↓',
+      'price-asc': 'Prix ↑',
+      'price-desc': 'Prix ↓',
+      'score-asc': 'Score ↑',
+      'score-desc': 'Score ↓',
+    },
+    pageOf: 'Page {current}/{total}',
+    prev: '← Précédent',
+    next: 'Suivant →',
+    loadingRegistry: 'Chargement du registre...',
+    showingOf: 'Affichage de {shown} sur {total} skills',
+    verified: '✓ VÉRIFIÉE',
+    noSkillsFound: 'Aucune skill trouvée',
+  },
+};
+
+// Tiny template helper: replaces {var} placeholders
+function fmt(str, vars) {
+  if (!vars) return str;
+  let out = str;
+  for (const [k, v] of Object.entries(vars)) {
+    out = out.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+  }
+  return out;
+}
 
 const PAGE_SIZE = 24;
 
 export default function Registry() {
+  const { lang, t } = useLang();
+  const c = CONTENT[lang] || CONTENT.en;
+
   const [allSkills, setAllSkills] = useState([]);
   const [allCategories, setAllCategories] = useState(['All']);
   const [loading, setLoading] = useState(true);
@@ -38,7 +238,7 @@ export default function Registry() {
         if (catsRes.ok) {
           const cats = await catsRes.json();
           if (cancelled) return;
-          setAllCategories(['All', ...cats.map(c => c.name)]);
+          setAllCategories(['All', ...cats.map(cat => cat.name)]);
         }
       } catch (err) {
         if (!cancelled) setError(err.message);
@@ -126,6 +326,14 @@ export default function Registry() {
   if (endP - startP < maxVisible - 1) startP = Math.max(1, endP - maxVisible + 1);
   for (let i = startP; i <= endP; i++) pageNumbers.push(i);
 
+  // Network stats — translated labels
+  const networkStats = [
+    { label: c.stats.total, value: allSkills.length.toLocaleString() },
+    { label: c.stats.avg, value: '$' + (allSkills.length > 0 ? (allSkills.reduce((a,s) => a + (s.price||0), 0) / allSkills.length).toFixed(2) : '0.00') },
+    { label: c.stats.from, value: '$0.99' },
+    { label: c.stats.protocol, value: 'MCP v1.0' },
+  ];
+
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="max-w-[1440px] mx-auto px-6">
@@ -136,11 +344,10 @@ export default function Registry() {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            AGENT <span className="text-[#00F299]">SKILL</span> REGISTRY
+            {c.titlePre}<span className="text-[#00F299]">{c.titleHighlight}</span>{c.titlePost}
           </h1>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            Browse, install, and deploy autonomous agent skills from the global MCP registry.
-            Each skill is verified, versioned, and ready for production.
+            {c.subtitle}
           </p>
         </motion.div>
 
@@ -154,8 +361,8 @@ export default function Registry() {
           <div className="flex items-center gap-3 mb-3">
             <span className="text-2xl">🤖</span>
             <div>
-              <h2 className="text-white font-semibold text-sm">AI SKILL MATCHER</h2>
-              <p className="text-zinc-500 text-xs">Describe what you need in natural language — we'll find the best skills.</p>
+              <h2 className="text-white font-semibold text-sm">{c.matcherTitle}</h2>
+              <p className="text-zinc-500 text-xs">{c.matcherDesc}</p>
             </div>
           </div>
           <form onSubmit={handleAiSearch} className="flex gap-2">
@@ -163,7 +370,7 @@ export default function Registry() {
               type="text"
               value={aiQuery}
               onChange={(e) => setAiQuery(e.target.value)}
-              placeholder="e.g. 'I need to scrape a website and extract product prices'"
+              placeholder={c.matcherPlaceholder}
               className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:border-[#00F299]/50 focus:outline-none text-sm"
             />
             <button
@@ -171,7 +378,7 @@ export default function Registry() {
               disabled={aiLoading || !aiQuery.trim()}
               className="px-6 py-3 bg-[#00F299] text-black font-bold text-sm rounded-xl hover:bg-[#00F299]/90 transition-all disabled:opacity-50"
             >
-              {aiLoading ? 'MATCHING...' : 'FIND SKILLS'}
+              {aiLoading ? c.matcherMatching : c.matcherFind}
             </button>
           </form>
 
@@ -179,7 +386,7 @@ export default function Registry() {
             <div className="mt-6 space-y-3">
               {aiMatches.length === 0 ? (
                 <div className="text-center py-6 text-zinc-500 text-sm">
-                  No matches found. Try different keywords.
+                  {c.matcherNoMatches}
                 </div>
               ) : (
                 aiMatches.map((m, i) => (
@@ -206,7 +413,7 @@ export default function Registry() {
                           ${m.skill.price.toFixed(2)}
                         </div>
                         <div className="text-[10px] text-zinc-500 font-mono">
-                          match: {(m.score).toFixed(1)}
+                          {c.matchLabel} {(m.score).toFixed(1)}
                         </div>
                       </div>
                     </div>
@@ -224,12 +431,7 @@ export default function Registry() {
           transition={{ delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
         >
-          {[
-            { label: 'Total Skills', value: allSkills.length.toLocaleString() },
-            { label: 'Avg Price', value: '$' + (allSkills.length > 0 ? (allSkills.reduce((a,s) => a + (s.price||0), 0) / allSkills.length).toFixed(2) : '0.00') },
-            { label: 'From', value: '$0.99' },
-            { label: 'Protocol', value: 'MCP v1.0' },
-          ].map((stat) => (
+          {networkStats.map((stat) => (
             <div key={stat.label} className="premium-card py-4 px-5">
               <div className="text-[10px] text-zinc-500 font-mono tracking-wider mb-1 uppercase">
                 {stat.label}
@@ -245,7 +447,7 @@ export default function Registry() {
         {error && (
           <div className="mb-8 px-6 py-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-center">
             {error}
-            <button onClick={() => window.location.reload()} className="ml-4 underline hover:text-red-300">Retry</button>
+            <button onClick={() => window.location.reload()} className="ml-4 underline hover:text-red-300">{c.retry}</button>
           </div>
         )}
 
@@ -256,7 +458,7 @@ export default function Registry() {
               type="text"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
-              placeholder="Search skills..."
+              placeholder={c.searchPlaceholder}
               className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-[#00F299]/50"
             />
           </form>
@@ -265,33 +467,37 @@ export default function Registry() {
             onChange={handleSort}
             className="px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-[#00F299]/50 cursor-pointer"
           >
-            <option value="name-asc">Name ↑</option>
-            <option value="name-desc">Name ↓</option>
-            <option value="price-asc">Price ↑</option>
-            <option value="price-desc">Price ↓</option>
-            <option value="score-asc">Score ↑</option>
-            <option value="score-desc">Score ↓</option>
+            <option value="name-asc">{c.sortOptions['name-asc']}</option>
+            <option value="name-desc">{c.sortOptions['name-desc']}</option>
+            <option value="price-asc">{c.sortOptions['price-asc']}</option>
+            <option value="price-desc">{c.sortOptions['price-desc']}</option>
+            <option value="score-asc">{c.sortOptions['score-asc']}</option>
+            <option value="score-desc">{c.sortOptions['score-desc']}</option>
           </select>
           <span className="text-xs text-zinc-500 font-mono whitespace-nowrap">
-            Page {safePage}/{totalPages}
+            {fmt(c.pageOf, { current: safePage, total: totalPages })}
           </span>
         </div>
 
         {/* Category Filter */}
         <div className="flex flex-wrap gap-2 mb-8">
-          {allCategories.slice(0, 16).map((cat) => (
-            <button
-              key={cat}
-              onClick={() => handleCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all duration-300 ${
-                activeCategory === cat
-                  ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
-                  : 'bg-white/5 text-zinc-400 border border-white/5 hover:bg-white/10 hover:text-white'
-              }`}
-            >
-              {cat.toUpperCase()}
-            </button>
-          ))}
+          {allCategories.slice(0, 16).map((cat) => {
+            const catKey = cat === 'All' ? 'cat.all' : `cat.${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+            const catLabel = t(catKey) !== catKey ? t(catKey) : cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => handleCategory(cat)}
+                className={`px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all duration-300 ${
+                  activeCategory === cat
+                    ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
+                    : 'bg-white/5 text-zinc-400 border border-white/5 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                {cat === 'All' ? catLabel.toUpperCase() : catLabel.toUpperCase()}
+              </button>
+            );
+          })}
         </div>
 
         {/* Pagination top */}
@@ -302,7 +508,7 @@ export default function Registry() {
               disabled={safePage <= 1}
               className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-zinc-300 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
             >
-              ← Prev
+              {c.prev}
             </button>
             {startP > 1 && <span className="text-zinc-600 text-xs px-1">...</span>}
             {pageNumbers.map(n => (
@@ -324,7 +530,7 @@ export default function Registry() {
               disabled={safePage >= totalPages}
               className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-zinc-300 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
             >
-              Next →
+              {c.next}
             </button>
           </div>
         )}
@@ -333,12 +539,12 @@ export default function Registry() {
         {loading ? (
           <div className="text-center py-20">
             <div className="inline-block w-8 h-8 border-2 border-[#00F299] border-t-transparent rounded-full animate-spin mb-4" />
-            <p className="text-zinc-500 font-mono text-sm">Loading registry...</p>
+            <p className="text-zinc-500 font-mono text-sm">{c.loadingRegistry}</p>
           </div>
         ) : (
           <>
             <div className="text-xs text-zinc-600 font-mono mb-4">
-              Showing {pageSkills.length} of {total.toLocaleString()} skills
+              {fmt(c.showingOf, { shown: pageSkills.length, total: total.toLocaleString() })}
             </div>
             <motion.div
               layout
@@ -376,7 +582,7 @@ export default function Registry() {
                           ${skill.price.toFixed(2)}
                         </span>
                         <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono border border-[#00F299]/20">
-                          ✓ VERIFIED
+                          {c.verified}
                         </span>
                       </div>
                     </div>
@@ -389,7 +595,7 @@ export default function Registry() {
             {pageSkills.length === 0 && !loading && (
               <div className="text-center py-16">
                 <div className="text-5xl mb-4">🔍</div>
-                <p className="text-zinc-500 font-mono text-sm">No skills found</p>
+                <p className="text-zinc-500 font-mono text-sm">{c.noSkillsFound}</p>
               </div>
             )}
 
@@ -401,7 +607,7 @@ export default function Registry() {
                   disabled={safePage <= 1}
                   className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-zinc-300 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                 >
-                  ← Prev
+                  {c.prev}
                 </button>
                 {startP > 1 && <span className="text-zinc-600 text-xs px-1">...</span>}
                 {pageNumbers.map(n => (
@@ -423,7 +629,7 @@ export default function Registry() {
                   disabled={safePage >= totalPages}
                   className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-zinc-300 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                 >
-                  Next →
+                  {c.next}
                 </button>
               </div>
             )}

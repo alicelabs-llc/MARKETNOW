@@ -1,4 +1,5 @@
 ![smithery badge](https://smithery.ai/badge/eddyflores100/marketnow)](https://smithery.ai/servers/eddyflores100/marketnow)
+[![License: MNNC-1.0](https://img.shields.io/badge/License-MNNC--1.0-red)](./LICENSE)
 
 # MarketNow — Trust Layer for Agent Commerce
 
@@ -146,7 +147,8 @@ Buy curated packs with 40-84% savings:
 | `GET /api/categories.json` | 58 categories with counts |
 | `GET /api/manifest.json` | Marketplace metadata |
 | `GET /api/agent.json` | Machine-readable agent instructions |
-| `GET /api/openapi.yaml` | OpenAPI 3.1 specification |
+| `GET /api/openapi.json` | OpenAPI 3.1 specification (JSON) |
+| `GET /api/openapi.yaml` | OpenAPI 3.1 specification (YAML, mirror) |
 | `GET /api/bundles.json` | Skill bundles with discounts |
 | `GET /api/verify-purchase?sessionId=X` | Verify a Stripe purchase |
 | `GET /.well-known/mcp/server-card.json` | MCP server discovery |
@@ -175,7 +177,7 @@ Buy curated packs with 40-84% savings:
 - **npm**: https://www.npmjs.com/package/marketnow-mcp
 - **Smithery**: https://smithery.ai/servers/eddyflores100/marketnow
 - **mcp.so**: https://mcp.so/server/marketnow-mcp---aep-agent-exchange-protocol/edgarfloresguerra2011-a11y
-- **OpenAPI**: https://marketnow.site/api/openapi.yaml
+- **OpenAPI**: https://marketnow.site/api/openapi.json (YAML mirror: https://marketnow.site/api/openapi.yaml)
 - **Agent instructions**: https://marketnow.site/api/agent.json
 
 ## 📜 License

@@ -203,7 +203,7 @@ function fmt(str, vars) {
 const PAGE_SIZE = 24;
 
 export default function Registry() {
-  const { lang } = useLang();
+  const { lang, t } = useLang();
   const c = CONTENT[lang] || CONTENT.en;
 
   const [allSkills, setAllSkills] = useState([]);
@@ -481,19 +481,23 @@ export default function Registry() {
 
         {/* Category Filter */}
         <div className="flex flex-wrap gap-2 mb-8">
-          {allCategories.slice(0, 16).map((cat) => (
-            <button
-              key={cat}
-              onClick={() => handleCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all duration-300 ${
-                activeCategory === cat
-                  ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
-                  : 'bg-white/5 text-zinc-400 border border-white/5 hover:bg-white/10 hover:text-white'
-              }`}
-            >
-              {cat.toUpperCase()}
-            </button>
-          ))}
+          {allCategories.slice(0, 16).map((cat) => {
+            const catKey = cat === 'All' ? 'cat.all' : `cat.${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+            const catLabel = t(catKey) !== catKey ? t(catKey) : cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => handleCategory(cat)}
+                className={`px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all duration-300 ${
+                  activeCategory === cat
+                    ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
+                    : 'bg-white/5 text-zinc-400 border border-white/5 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                {cat === 'All' ? catLabel.toUpperCase() : catLabel.toUpperCase()}
+              </button>
+            );
+          })}
         </div>
 
         {/* Pagination top */}

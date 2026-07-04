@@ -27,6 +27,9 @@ export default async function handler(req, res) {
   res.setHeader('X-Robots-Tag', 'index, follow');
 
   if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   // ===== Sub-endpoint: /api/manifest?health =====
   if ('health' in req.query) {

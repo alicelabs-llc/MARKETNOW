@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext.jsx';
 
 const CATEGORIES = [
   'ai', 'automation', 'data', 'devtools', 'scraping', 'search',
@@ -9,6 +10,7 @@ const CATEGORIES = [
 ];
 
 export default function Mandates() {
+  const { t } = useLang();
   const [wallet, setWallet] = useState('');
   const [mandates, setMandates] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -114,10 +116,9 @@ export default function Mandates() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-4">
             <span className="text-[#00F299] text-[10px] font-mono tracking-wider">ACP / AP2 · DELEGATED MANDATES</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Agent Mandates</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{t('mandates.title')}</h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Grant an AI agent a pre-approved spending allowance. The agent buys autonomously
-            within the limit. Beyond it, you approve each purchase. You can revoke anytime.
+            {t('mandates.subtitle')}
           </p>
         </motion.div>
 

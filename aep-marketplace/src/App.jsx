@@ -53,7 +53,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundOrbs from './components/BackgroundOrbs';
 import AuthModal from './components/AuthModal';
-import LanguageNotice from './components/LanguageNotice';
 import { setAuth, getUser } from './api/client';
 import { captureAffiliateRef } from './utils/affiliate';
 
@@ -142,7 +141,6 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-black text-white overflow-x-hidden">
         <BackgroundOrbs />
-        <LanguageNotice />
         <Navbar />
 
         <ErrorBoundary>

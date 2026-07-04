@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext.jsx';
 
 export default function Security() {
+  const { t } = useLang();
   const [stats, setStats] = useState({
     total: 0,
     scanned: 0,
@@ -104,12 +106,10 @@ export default function Security() {
             <span className="text-[#00F299] text-[10px] font-mono tracking-wider">SENTINEL L1.5 → L1.6 → L2</span>
           </div>
           <h1 className="text-4xl font-bold text-white mb-4">
-            SENTINEL <span className="text-[#00F299]">SECURITY</span> CENTER
+            {t('security.title')}
           </h1>
           <p className="text-zinc-400 max-w-2xl">
-            Multi-layer security audit for all skills. L1.5 runs in production today.
-            L1.6 (enhanced with Semgrep + Gitleaks + OSV-Scanner) is LIVE IN PRODUCTION and runs in production (real-time).
-            L2 (sandboxed dynamic analysis) is in design phase.
+            {t('security.subtitle')}
           </p>
         </motion.div>
 

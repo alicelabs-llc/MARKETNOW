@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import BackgroundOrbs from '../components/BackgroundOrbs';
 import { TIERS, ADDONS, COMMISSION, STORAGE_FEE } from '../utils/monetization';
+import { useLang } from '../context/LanguageContext.jsx';
 
 /**
  * MarketNow — Pricing Page
@@ -14,6 +15,7 @@ import { TIERS, ADDONS, COMMISSION, STORAGE_FEE } from '../utils/monetization';
  * - Afiliados: 5% comisión por venta referida
  */
 export default function Pricing() {
+  const { t } = useLang();
   const [billing, setBilling] = useState('monthly'); // monthly | yearly
   const yearlyDiscount = 0.20; // 20% off yearly
 
@@ -28,10 +30,10 @@ export default function Pricing() {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            PRICING FOR <span className="text-[#00F299]">SELLERS</span>
+            {t('pricing.title')}
           </h1>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            List your MCP skills on the world's largest agent marketplace.
+            {t('pricing.subtitle')}
             Start free with 3 skills — upgrade when you're ready to scale.
             Buyers always pay one-time per skill ($0.99–$9.99), no subscriptions for them.
           </p>

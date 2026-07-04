@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext.jsx';
 
 export default function About() {
+  const { t } = useLang();
   return (
     <div className="min-h-screen pt-20 pb-20 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
@@ -9,11 +11,9 @@ export default function About() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-4">
             <span className="text-[#00F299] text-[10px] font-mono tracking-wider">ABOUT · ALICELABS LLC</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Who we are</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{t('about.title')}</h1>
           <p className="text-zinc-400 text-lg">
-            MarketNow is built and maintained by AliceLabs LLC, a small software company based in Wyoming, USA.
-            We have no investors, no employees besides the founder, and no marketing budget. We are
-            building this in public.
+            {t('about.companyDesc')}
           </p>
         </motion.div>
 

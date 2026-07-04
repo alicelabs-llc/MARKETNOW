@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext.jsx';
 
 const STANDARDS = [
   {
@@ -84,6 +85,7 @@ const STATUS_META = {
 };
 
 export default function Standards() {
+  const { t } = useLang();
   return (
     <div className="min-h-screen pt-20 pb-20 px-4 md:px-8">
       <div className="max-w-4xl mx-auto">
@@ -91,9 +93,9 @@ export default function Standards() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-4">
             <span className="text-[#00F299] text-[10px] font-mono tracking-wider">STANDARDS COMMITMENT</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Open Standards We're Adopting</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{t('standards.title')}</h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            We are not building a walled garden. MarketNow is migrating to open, governance-backed standards for payments, agent authorization, and server discovery. Here is exactly where we are with each one.
+            {t('standards.subtitle')}
           </p>
         </motion.div>
 

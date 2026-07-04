@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext.jsx';
 
 // Each item: what Claude asked for, what we did, what's still pending, status
 const POINTS = [
@@ -132,6 +133,7 @@ const STATUS_META = {
 };
 
 export default function Trust() {
+  const { t } = useLang();
   const done = POINTS.filter(p => p.status === 'done').length;
   const partial = POINTS.filter(p => p.status === 'partial').length;
   const pending = POINTS.filter(p => p.status === 'pending').length;
@@ -144,11 +146,9 @@ export default function Trust() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-4">
             <span className="text-[#00F299] text-[10px] font-mono tracking-wider">PUBLIC TRUST ROADMAP</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Trust Roadmap</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{t('trust.title')}</h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            An AI agent reviewer (Claude) reviewed our marketplace and asked for 7 changes.
-            This page is our public response — what we have done, what is partial, and what is still pending.
-            No fluff, no pretending. Every status here is a git commit you can verify.
+            {t('trust.subtitle')}
           </p>
         </motion.div>
 

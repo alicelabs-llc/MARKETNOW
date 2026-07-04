@@ -51,12 +51,14 @@ const NAV_GROUPS = [
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { lang, t, toggleLang } = useLang();
+  const { lang, t, changeLang, languages } = useLang();
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [openGroup, setOpenGroup] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const langRef = useRef(null);
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -82,6 +84,9 @@ export default function Navbar() {
     const handler = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setOpenGroup(null);
+      }
+      if (langRef.current && !langRef.current.contains(e.target)) {
+        setLangOpen(false);
       }
     };
     document.addEventListener('mousedown', handler);
@@ -183,17 +188,45 @@ export default function Navbar() {
 
           {/* Auth + Language section */}
           <div className="flex items-center gap-2">
-            {/* Language toggle: EN | ES */}
-            <button
-              onClick={toggleLang}
-              className="flex items-center gap-1 px-2 py-1.5 rounded-lg border border-white/10 text-xs font-mono hover:border-[#00F299]/40 hover:bg-white/5 transition-all"
-              title={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
-              aria-label="Toggle language"
-            >
-              <span className={lang === 'en' ? 'text-[#00F299]' : 'text-zinc-500'}>EN</span>
-              <span className="text-zinc-700">|</span>
-              <span className={lang === 'es' ? 'text-[#00F299]' : 'text-zinc-500'}>ES</span>
-            </button>
+            {/* Language dropdown — 5 languages */}
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1 px-2 py-1.5 rounded-lg border border-white/10 text-xs font-mono hover:border-[#00F299]/40 hover:bg-white/5 transition-all"
+                title={t('nav.language')}
+                aria-label={t('nav.language')}
+              >
+                <span className="text-sm">{languages.find(l => l.code === lang)?.flag}</span>
+                <span className="text-[#00F299]">{languages.find(l => l.code === lang)?.label}</span>
+                <span className={`text-[8px] text-zinc-500 transition-transform ${langOpen ? 'rotate-180' : ''}`}>▼</span>
+              </button>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute top-full right-0 mt-1 min-w-[140px] bg-black/95 border border-white/10 rounded-xl shadow-2xl py-1 backdrop-blur-xl z-50"
+                >
+                  {languages.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => {
+                        changeLang(l.code);
+                        setLangOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-2 px-3 py-2 text-xs transition-colors ${
+                        lang === l.code
+                          ? 'text-[#00F299] bg-[#00F299]/5'
+                          : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                      }`}
+                    >
+                      <span className="text-sm">{l.flag}</span>
+                      <span>{l.name}</span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </div>
 
             {user ? (
               <>

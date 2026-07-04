@@ -44,11 +44,13 @@ export function LanguageProvider({ children }) {
     [lang]
   );
 
-  const toggleLang = useCallback(() => {
-    setLang(prev => (prev === 'en' ? 'es' : 'en'));
+  const changeLang = useCallback((newLang) => {
+    if (TRANSLATIONS[newLang]) {
+      setLang(newLang);
+    }
   }, []);
 
-  const value = { lang, setLang, toggleLang, t, languages: LANGUAGES };
+  const value = { lang, setLang, changeLang, t, languages: LANGUAGES };
 
   return (
     <LanguageContext.Provider value={value}>

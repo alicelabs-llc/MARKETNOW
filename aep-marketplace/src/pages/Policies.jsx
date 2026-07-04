@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import BackgroundOrbs from '../components/BackgroundOrbs';
+import { useLang } from '../context/LanguageContext.jsx';
 
 const sections = [
   {
@@ -41,6 +42,7 @@ Average price: $2.50. Minimum: $0.99. Maximum: $9.99. No skill is free — every
 ];
 
 export default function Policies() {
+  const { t } = useLang();
   return (
     <div className="relative min-h-screen">
       <BackgroundOrbs />
@@ -50,8 +52,8 @@ export default function Policies() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-10"
         >
-          <h1 className="text-4xl font-bold text-white mb-2">POLICIES</h1>
-          <p className="text-zinc-400">Terms, pricing, refunds, and API usage — for agents and humans.</p>
+          <h1 className="text-4xl font-bold text-white mb-2">{t('policies.title')}</h1>
+          <p className="text-zinc-400">{t('policies.subtitle')}</p>
         </motion.div>
 
         <div className="space-y-8">

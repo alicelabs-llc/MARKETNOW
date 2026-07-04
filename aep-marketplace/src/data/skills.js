@@ -6,6 +6,13 @@ let freeSkillsCache = null;
 export async function getAllSkills() {
   if (skillsCache) return skillsCache;
   try {
+    // FIX: Use skills-lite.json (4.5MB) instead of skills_index.json (20MB)
+    // skills-lite has the free flag and price=0 for free skills
+    const res = await fetch(`${API_BASE}/api/skills-lite.json`);
+    if (res.ok) { skillsCache = await res.json(); return skillsCache; }
+  } catch {}
+  // Fallback to skills_index.json if skills-lite fails
+  try {
     const res = await fetch(`${API_BASE}/api/skills_index.json`);
     if (res.ok) { skillsCache = await res.json(); return skillsCache; }
   } catch {}

@@ -470,7 +470,7 @@ export default function SkillDetail() {
   const [selectedLang, setSelectedLang] = useState('en');
 
   const handleCopyBadge = () => {
-    const md = `[![Available on MarketNow](https://marketnow.site/badge.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
+    const md = `[![Available on MarketNow](https://marketnow.site/badges/available-on.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
     navigator.clipboard.writeText(md);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -959,7 +959,7 @@ export default function SkillDetail() {
               <div className="mt-6 pt-6 border-t border-white/5">
                 <h4 className="text-[10px] text-zinc-500 font-mono tracking-wider mb-3 uppercase text-center">{c.promoteTitle}</h4>
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5 text-center transition-all hover:border-[#00F299]/30 hover:shadow-[0_0_15px_rgba(0,242,153,0.1)]">
-                  <img src="https://marketnow.site/badge.svg" alt={c.badgeAlt} className="mx-auto mb-4 h-6" />
+                  <img src="https://marketnow.site/badges/available-on.svg" alt={c.badgeAlt} className="mx-auto mb-4 h-6" />
                   <button
                     onClick={handleCopyBadge}
                     className={`w-full py-2 text-xs font-mono rounded-lg transition-all border ${

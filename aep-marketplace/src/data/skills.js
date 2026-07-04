@@ -1,6 +1,7 @@
 import { API_BASE } from '../api/client';
 
 let skillsCache = null;
+let freeSkillsCache = null;
 
 export async function getAllSkills() {
   if (skillsCache) return skillsCache;
@@ -11,9 +12,35 @@ export async function getAllSkills() {
   return [];
 }
 
+export async function getFreeSkills() {
+  if (freeSkillsCache) return freeSkillsCache;
+  try {
+    const res = await fetch(`${API_BASE}/api/free-skills.json`);
+    if (res.ok) {
+      const data = await res.json();
+      freeSkillsCache = data.skills || data;
+      return freeSkillsCache;
+    }
+  } catch {}
+  return [];
+}
+
 export async function getSkill(id) {
   const skills = await getAllSkills();
-  return skills.find(s => s.id === id) || null;
+  let skill = skills.find(s => s.id === id) || null;
+
+  // FIX: Check if this skill is in the free list
+  // skills_index.json doesn't have the free flag, so we need to cross-reference
+  if (skill) {
+    const freeSkills = await getFreeSkills();
+    const freeSkill = freeSkills.find(s => s.id === id);
+    if (freeSkill) {
+      // Override price and free flag
+      skill = { ...skill, ...freeSkill, price: 0, free: true };
+    }
+  }
+
+  return skill;
 }
 
 export async function getSkillsByCategory(category) {

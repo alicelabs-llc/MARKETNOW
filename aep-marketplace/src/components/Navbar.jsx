@@ -2,59 +2,60 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import { isAuthenticated, getUser, logout } from '../api/client';
+import { useLang } from '../context/LanguageContext.jsx';
 import AuthModal from './AuthModal';
-
-// Grouped nav structure with dropdowns
-const NAV_GROUPS = [
-  {
-    label: 'MARKETPLACE',
-    items: [
-      { path: '/registry', label: 'Browse Skills' },
-      { path: '/submit', label: 'Publish a Skill' },
-      { path: '/pricing', label: 'Pricing' },
-    ],
-  },
-  {
-    label: 'TRUST',
-    items: [
-      { path: '/trust', label: 'Trust Roadmap' },
-      { path: '/standards', label: 'Standards (x402, AP2)' },
-      { path: '/security', label: 'Sentinel Security' },
-      { path: '/compare', label: 'vs Smithery vs Glama' },
-      { path: '/listings', label: 'External Listings' },
-    ],
-  },
-  {
-    label: 'RESOURCES',
-    items: [
-      { path: '/blog', label: 'Blog' },
-      { path: '/buyers-guide', label: "Buyer's Guide" },
-      { path: '/onboarding', label: 'Seller Onboarding' },
-      { path: '/catalog', label: 'Catalog Transparency' },
-      { path: '/embed', label: 'Badges' },
-      { path: '/handshake', label: 'API Docs' },
-      { path: '/policies', label: 'Terms & Policies' },
-    ],
-  },
-  {
-    label: 'ACCOUNT',
-    items: [
-      { path: '/mandates', label: 'Mandates' },
-      { path: '/vault', label: 'My Vault' },
-      { path: '/dashboard', label: 'Dashboard' },
-      { path: '/about', label: 'About Us' },
-    ],
-  },
-];
 
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t, lang, toggleLang } = useLang();
   const [authOpen, setAuthOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [openGroup, setOpenGroup] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  const NAV_GROUPS = [
+    {
+      label: t('nav.marketplace'),
+      items: [
+        { path: '/registry', label: t('nav.browse') },
+        { path: '/submit', label: t('nav.publish') },
+        { path: '/pricing', label: t('nav.pricing') },
+      ],
+    },
+    {
+      label: t('nav.trust'),
+      items: [
+        { path: '/trust', label: t('nav.trustRoadmap') },
+        { path: '/standards', label: t('nav.standards') },
+        { path: '/security', label: t('nav.sentinel') },
+        { path: '/compare', label: t('nav.compare') },
+        { path: '/listings', label: t('nav.listings') },
+      ],
+    },
+    {
+      label: t('nav.resources'),
+      items: [
+        { path: '/blog', label: t('nav.blog') },
+        { path: '/buyers-guide', label: t('nav.buyersGuide') },
+        { path: '/onboarding', label: t('nav.onboarding') },
+        { path: '/catalog', label: t('nav.catalog') },
+        { path: '/embed', label: t('nav.badges') },
+        { path: '/handshake', label: t('nav.apiDocs') },
+        { path: '/policies', label: t('nav.terms') },
+      ],
+    },
+    {
+      label: t('nav.account'),
+      items: [
+        { path: '/mandates', label: t('nav.mandates') },
+        { path: '/vault', label: t('nav.vault') },
+        { path: '/dashboard', label: t('nav.dashboard') },
+        { path: '/about', label: t('nav.about') },
+      ],
+    },
+  ];
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -125,7 +126,7 @@ export default function Navbar() {
             type="button"
             onClick={goHome}
             className="flex items-center gap-2 shrink-0 cursor-pointer group focus:outline-none"
-            title="MarketNow — Go to home"
+            title={t('nav.goHome')}
             aria-label="MarketNow home"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#00F299] to-[#00d1ff] flex items-center justify-center text-black font-bold text-lg select-none group-hover:scale-105 transition-transform">
@@ -179,8 +180,19 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Auth section */}
+          {/* Auth + language section */}
           <div className="flex items-center gap-2">
+            {/* Language toggle */}
+            <button
+              onClick={toggleLang}
+              className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-mono font-bold text-zinc-400 hover:text-[#00F299] border border-white/10 rounded-lg hover:border-[#00F299]/30 transition-all"
+              title={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
+              aria-label="Toggle language"
+            >
+              <span className="text-sm">{lang === 'en' ? '🇺🇸' : '🇪🇸'}</span>
+              <span>{lang.toUpperCase()}</span>
+            </button>
+
             {user ? (
               <>
                 <span className="text-[#00F299] text-xs font-mono hidden sm:block">
@@ -190,7 +202,7 @@ export default function Navbar() {
                   onClick={handleLogout}
                   className="px-3 py-1.5 text-xs text-zinc-400 hover:text-white border border-white/10 rounded-lg hover:bg-white/5 transition-all"
                 >
-                  SIGN OUT
+                  {t('nav.signOut')}
                 </button>
               </>
             ) : (
@@ -198,7 +210,7 @@ export default function Navbar() {
                 onClick={() => setAuthOpen(true)}
                 className="px-4 py-1.5 text-xs font-bold bg-[#00F299] text-black rounded-lg hover:bg-[#00F299]/90 transition-all"
               >
-                SIGN IN
+                {t('nav.signIn')}
               </button>
             )}
 
@@ -207,14 +219,14 @@ export default function Navbar() {
               className="hidden md:flex items-center gap-2 px-4 py-1.5 border border-[#00F299]/30 rounded-full text-xs font-mono tracking-wider text-[#00F299] hover:bg-[#00F299]/10 hover:border-[#00F299]/50 transition-all duration-300"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#00F299] animate-pulse" />
-              API
+              {t('nav.api')}
             </Link>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 text-white"
-              aria-label="Toggle menu"
+              aria-label={t('nav.toggleMenu')}
             >
               {mobileOpen ? '✕' : '☰'}
             </button>

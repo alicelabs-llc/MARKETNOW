@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext.jsx';
 
 export default function AgentLanding() {
+  const { t, lang } = useLang();
   const [stats, setStats] = useState({ total: 8560, free: 43, sellers: 15 });
   const [topFree, setTopFree] = useState([]);
   const [topPaid, setTopPaid] = useState([]);
@@ -51,23 +53,26 @@ export default function AgentLanding() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F299]/10 border border-[#00F299]/20 mb-8">
               <span className="w-2 h-2 rounded-full bg-[#00F299] animate-pulse" />
               <span className="text-[#00F299] text-xs font-mono tracking-wider">
-                TRUST LAYER FOR AGENT COMMERCE · AP2 · x402 · OPEN SOURCE
+                {t('hero.badge')}
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              The trust layer for<br />
+              {t('hero.title1')}<br />
               <span className="bg-gradient-to-r from-[#00F299] to-[#00d1ff] bg-clip-text text-transparent">
-                agent commerce.
+                {t('hero.title2')}
               </span>
             </h1>
 
             <p className="text-zinc-300 text-lg md:text-xl mb-3 max-w-2xl mx-auto leading-relaxed">
-              Discovery is solved (MCP registry, Smithery, Glama). <strong className="text-white">Trust is not.</strong>
-              MarketNow is the trust layer — every skill Sentinel-scanned, every payment verified on-chain, every mandate human-approved by default.
+              {lang === 'es' ? (
+                <>El descubrimiento está resuelto (MCP registry, Smithery, Glama). <strong className="text-white">La confianza no.</strong> {t('hero.body')}</>
+              ) : (
+                <>Discovery is solved (MCP registry, Smithery, Glama). <strong className="text-white">Trust is not.</strong> {t('hero.body')}</>
+              )}
             </p>
             <p className="text-zinc-500 text-sm mb-10 max-w-xl mx-auto">
-              {stats.total.toLocaleString()}+ MCP servers · AP2-compatible mandates · x402 payments · Source-available MNNC-1.0 · AliceLabs LLC
+              {stats.total.toLocaleString()}+ {t('hero.meta')}
             </p>
 
             {/* Search bar */}
@@ -75,7 +80,7 @@ export default function AgentLanding() {
               <Link to="/registry" className="flex items-center gap-3 px-5 py-4 bg-black/40 border border-white/10 rounded-xl hover:border-[#00F299]/40 transition-all group">
                 <span className="text-zinc-500 text-lg">🔍</span>
                 <span className="text-zinc-500 text-sm md:text-base flex-1 text-left group-hover:text-zinc-400">
-                  Search 8,560 skills — try "scrape web", "postgres", "discord"...
+                  {t('hero.searchPlaceholder')}
                 </span>
                 <span className="text-[#00F299] text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">→</span>
               </Link>
@@ -84,13 +89,13 @@ export default function AgentLanding() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
               <Link to="/registry" className="px-7 py-3.5 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] transition-all shadow-lg shadow-[#00F299]/20 text-sm">
-                BROWSE {stats.total.toLocaleString()} SKILLS →
+                {t('hero.ctaBrowse').replace('SKILLS', `${stats.total.toLocaleString()} ${lang === 'es' ? 'SKILLS' : 'SKILLS'}`)}
               </Link>
               <Link to="/registry?filter=free" className="px-7 py-3.5 border border-[#00d1ff]/30 bg-[#00d1ff]/10 text-[#00d1ff] font-bold rounded-xl hover:bg-[#00d1ff]/20 transition-all text-sm">
-                ⚡ {stats.free} FREE SKILLS
+                ⚡ {stats.free} {t('hero.ctaFree')}
               </Link>
               <Link to="/submit" className="px-7 py-3.5 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 transition-all text-sm">
-                + PUBLISH YOUR SKILL
+                {t('hero.ctaPublish')}
               </Link>
             </div>
 

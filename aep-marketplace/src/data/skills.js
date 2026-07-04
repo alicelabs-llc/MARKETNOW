@@ -6,14 +6,13 @@ let freeSkillsCache = null;
 export async function getAllSkills() {
   if (skillsCache) return skillsCache;
   try {
-    // FIX: Use skills-lite.json (4.5MB) instead of skills_index.json (20MB)
-    // skills-lite has the free flag and price=0 for free skills
-    const res = await fetch(`${API_BASE}/api/skills-lite.json`);
+    // Use skills_index.json — has full data (doc, capabilities, sentinel)
+    const res = await fetch(`${API_BASE}/api/skills_index.json`);
     if (res.ok) { skillsCache = await res.json(); return skillsCache; }
   } catch {}
-  // Fallback to skills_index.json if skills-lite fails
+  // Fallback to skills-lite.json (less data but smaller)
   try {
-    const res = await fetch(`${API_BASE}/api/skills_index.json`);
+    const res = await fetch(`${API_BASE}/api/skills-lite.json`);
     if (res.ok) { skillsCache = await res.json(); return skillsCache; }
   } catch {}
   return [];
@@ -33,16 +32,16 @@ export async function getFreeSkills() {
 }
 
 export async function getSkill(id) {
+  // 1. Load from skills_index.json (has full data: doc, capabilities, sentinel)
   const skills = await getAllSkills();
-  let skill = skills.find(s => s.id === id) || null;
+  let skill = skills.find(s => s.id === id || s.slug === id) || null;
 
-  // FIX: Check if this skill is in the free list
-  // skills_index.json doesn't have the free flag, so we need to cross-reference
+  // 2. Cross-reference with free-skills.json to get the free flag
   if (skill) {
     const freeSkills = await getFreeSkills();
-    const freeSkill = freeSkills.find(s => s.id === id);
+    const freeSkill = freeSkills.find(s => s.id === skill.id);
     if (freeSkill) {
-      // Override price and free flag
+      // Override: mark as free with price=0
       skill = { ...skill, ...freeSkill, price: 0, free: true };
     }
   }

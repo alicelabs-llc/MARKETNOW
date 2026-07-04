@@ -121,114 +121,16 @@
 
     <style>
       body { background-color: #050505; color: white; margin: 0; }
-      /* SEO content: visually hidden but accessible to screen readers and crawlers.
-         Uses .sr-only pattern (Bootstrap/Tailwind standard) — NOT display:none
-         which can be flagged as cloaking by Google. */
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
     </style>
   </head>
   <body>
     <!--
-      PRE-RENDERED SEO CONTENT — accessible to screen readers and crawlers.
-      Uses .sr-only (visually hidden, not display:none) to avoid cloaking concerns.
-      React SPA mounts on #root below and shows the interactive version to sighted users.
+      React SPA mounts on #root below.
+      SEO is handled via meta tags + JSON-LD structured data in <head>.
+      Google executes JavaScript, so the React-rendered content is indexed.
+      No pre-rendered HTML content here — it caused mixed-language display.
     -->
-    <div class="sr-only">
-      <h1>MarketNow — npm for MCP servers</h1>
-      <p>8,560 verified MCP servers for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 43 skills are free. Sentinel L1.5 security scanned. Source-available MNNC-1.0 (Non-Commercial), maintained by AliceLabs LLC (Wyoming, USA).</p>
-
-      <h2>Find an MCP server. Install in one command.</h2>
-      <p>The fastest way to add a capability to your agent stack. Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
-      <p>npx -y @marketnow/install &lt;slug&gt;</p>
-
-      <h2>For Developers</h2>
-      <h3>1. Search</h3>
-      <p>Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
-      <h3>2. Pay (or grab free)</h3>
-      <p>Credit card via Stripe (full chargeback rights) or USDC on Base L2. 43 skills are free — no payment, no signup. Just install.</p>
-      <h3>3. Install</h3>
-      <p>npx -y @marketnow/install &lt;slug&gt; — works with Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible runtime.</p>
-
-      <h2>Popular MCP Server Categories</h2>
-      <ul>
-        <li><a href="/registry?cat=ai-ml">AI/ML</a> — 1,976 skills (LLM wrappers, embeddings, RAG, vision)</li>
-        <li><a href="/registry?cat=developer-tools">Developer Tools</a> — 1,891 skills (code analysis, linting, build tools)</li>
-        <li><a href="/registry?cat=data">Data</a> — 782 skills (databases, ETL, analytics)</li>
-        <li><a href="/registry?cat=web-api">Web/API</a> — 348 skills (HTTP clients, REST, GraphQL)</li>
-        <li><a href="/registry?cat=productivity">Productivity</a> — 328 skills (task management, notes, calendars)</li>
-        <li><a href="/registry?cat=finance">Finance</a> — 292 skills (payments, accounting, crypto)</li>
-        <li><a href="/registry?cat=communication">Communication</a> — 288 skills (Slack, Discord, email)</li>
-        <li><a href="/registry?cat=security">Security</a> — 224 skills (auth, scanning, secrets)</li>
-      </ul>
-
-      <h2>43 Free MCP Skills — No Payment, No Signup</h2>
-      <p>Real value, zero cost. 43 hand-curated skills available for instant download. No credit card, no mandate, no signup required. Just install and use.</p>
-      <p><a href="/registry?filter=free">Browse all 43 free skills</a></p>
-
-      <h2>For AI Agents</h2>
-      <p>Machine-readable everything. Public JSON API. Human-in-the-loop by default.</p>
-      <ul>
-        <li>GET /api/skills.json — Full catalog (8,560 skills, JSON, ~24MB)</li>
-        <li>GET /api/search?q= — Server-side search with relevance scoring</li>
-        <li>GET /api/agent.json — Machine-readable instructions, trust model, schema</li>
-        <li>GET /api/policies.json — Terms, refund, dispute, privacy policies</li>
-        <li>POST /api/agent-purchase — Buy a skill (5 modes: instant_download, instant_purchase, direct_purchase, requires_payment, requires_human_approval)</li>
-        <li>GET /api/mandates — Delegated mandates (ACP/AP2 compliant)</li>
-        <li>GET /api/free-skills.json — 43 free skills</li>
-        <li>GET /api/bundles.json — Discounted skill bundles</li>
-      </ul>
-      <p>MCP server: npx -y marketnow-mcp — works with Claude Desktop, Cursor, Cline. Available on npm and Smithery.</p>
-
-      <h2>Why people recommend us</h2>
-      <ul>
-        <li>Source-Available MNNC-1.0 — Full code on GitHub. Every change is a public commit. No black box.</li>
-        <li>Sentinel L1.5 — 6-point MCP security audit on every skill. Methodology published. Re-runnable.</li>
-        <li>43 Free Skills — Real value, zero cost. No signup, no credit card, no mandate.</li>
-        <li>$0.99–$9.99 One-Time — No subscriptions. No per-call fees. No tiered plans. Pay once, own forever.</li>
-        <li>Human-in-Loop Default — Mandates notify the principal on every purchase. Silent mode requires explicit opt-in.</li>
-        <li>Public Audit Log — Every mandate transaction is a git commit at _data/mandates/. Fully auditable.</li>
-        <li>5 Languages — System prompts in EN, ES, ZH, PT, FR. Real translations, not auto-translated.</li>
-        <li>Honest Roadmap — /trust page admits what's done, partial, and pending. No fake "verified" badges.</li>
-      </ul>
-
-      <h2>Trust &amp; Transparency</h2>
-      <ul>
-        <li><a href="/trust">/trust</a> — Public trust roadmap (7 points raised by Claude AI reviewer)</li>
-        <li><a href="/about">/about</a> — Who we are (AliceLabs LLC, Wyoming, USA, founder Edison Flores)</li>
-        <li><a href="/catalog">/catalog</a> — Where the 8,560 skills come from (catalog transparency)</li>
-        <li><a href="/policies">/policies</a> — Terms, refund, dispute policy (incl. USDC dispute process)</li>
-        <li><a href="/mandates">/mandates</a> — Manage spending mandates (human-in-loop by default)</li>
-        <li><a href="/embed">/embed</a> — Shareable badges (Powered by MarketNow, Sentinel L1.5, MIT)</li>
-        <li><a href="/pricing">/pricing</a> — Pricing tiers for sellers</li>
-        <li><a href="/security">/security</a> — Sentinel L1.5 methodology</li>
-        <li><a href="/handshake">/handshake</a> — API documentation</li>
-      </ul>
-
-      <h2>Review Status Disclosure</h2>
-      <p>Of 8,560 skills: 8,517 are auto-scanned (Sentinel ran, no human review), 43 are human-reviewed (curated free skills), 0 are maintainer-verified (program not yet launched). We never claim "verified" without earning it.</p>
-
-      <h2>Maintained by AliceLabs LLC</h2>
-      <p>AliceLabs LLC founded 2025 · MarketNow launched publicly 2026. Founded by Edison Flores in Wyoming, USA (founder is Ecuadorian). No investors, no employees besides the founder, no marketing budget. Built in public. Every change is a git commit visible at github.com/edgarfloresguerra2011-a11y/marketnow.</p>
-
-      <h2>Languages</h2>
-      <p>English, Español, 中文, Português, Français</p>
-
-      <h2>Keywords</h2>
-      <p>MCP servers, Model Context Protocol, MCP marketplace, MCP directory, Claude Desktop skills, Cursor MCP, Cline MCP, agent skills, Sentinel security audit, Smithery, Anthropic MCP, open source MCP, MCP server registry, install MCP server</p>
-    </div>
-
-    <!-- React SPA mounts here — replaces #root content for interactive users -->
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx?v=27"></script>
+    <script type="module" src="/src/main.jsx?v=28"></script>
   </body>
 </html>

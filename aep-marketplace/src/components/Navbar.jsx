@@ -146,10 +146,14 @@ export default function Navbar() {
           {/* Desktop nav with dropdowns */}
           <div className="hidden lg:flex items-center gap-1" ref={dropdownRef}>
             {NAV_GROUPS.map((group) => (
-              <div key={group.labelKey} className="relative">
+              <div
+                key={group.labelKey}
+                className="relative"
+                onMouseEnter={() => setOpenGroup(group.labelKey)}
+                onMouseLeave={() => setOpenGroup(null)}
+              >
                 <button
                   onClick={() => setOpenGroup(openGroup === group.labelKey ? null : group.labelKey)}
-                  onMouseEnter={() => setOpenGroup(group.labelKey)}
                   className={`px-3 py-2 text-xs font-mono tracking-wider transition-colors rounded-lg flex items-center gap-1 ${
                     isGroupActive(group) || openGroup === group.labelKey
                       ? 'text-[#00F299] bg-[#00F299]/5'
@@ -164,22 +168,24 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 min-w-[200px] bg-black/95 border border-white/10 rounded-xl shadow-2xl py-2 backdrop-blur-xl"
-                    onMouseLeave={() => setOpenGroup(null)}
+                    className="absolute top-full left-0 pt-1 min-w-[200px] z-50"
                   >
-                    {group.items.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        className={`block px-4 py-2 text-xs transition-colors ${
-                          isActive(item.path)
-                            ? 'text-[#00F299] bg-[#00F299]/5'
-                            : 'text-zinc-400 hover:text-white hover:bg-white/5'
-                        }`}
-                      >
-                        {t(item.labelKey)}
-                      </Link>
-                    ))}
+                    <div className="bg-black/95 border border-white/10 rounded-xl shadow-2xl py-2 backdrop-blur-xl">
+                      {group.items.map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          onClick={() => setOpenGroup(null)}
+                          className={`block px-4 py-2 text-xs transition-colors ${
+                            isActive(item.path)
+                              ? 'text-[#00F299] bg-[#00F299]/5'
+                              : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                          }`}
+                        >
+                          {t(item.labelKey)}
+                        </Link>
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </div>

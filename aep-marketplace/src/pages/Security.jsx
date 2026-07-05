@@ -233,6 +233,12 @@ const CONTENT = {
       refresh: '↻ Refresh',
       loading: 'Loading live audit data…',
       error: 'Could not fetch live audit data. The endpoint may be cold-starting — try refresh.',
+      certTitle: 'SENTINEL CERTIFICATES',
+      certDesc: 'Every skill in the catalog gets a signed Sentinel certificate with a verified score. Certificates are regenerated weekly by the batch audit.',
+      certLoading: 'Loading certificate count…',
+      certVerified: 'Certified skills',
+      certByRisk: 'By risk level',
+      certViewAll: '→ View all certificates in repo',
     },
   },
 
@@ -1451,6 +1457,32 @@ export default function Security() {
                     <div className="text-zinc-500 text-xs">{ls.l2Audited}</div>
                   </div>
                 </div>
+
+                {/* Sentinel Certificates panel — shows total certified skills */}
+                {sentinelStatus.data.certificates && (
+                  <div className="mt-4 pt-4 border-t border-white/5">
+                    <div className="text-zinc-300 text-xs font-bold uppercase tracking-wider mb-2">{ls.certTitle}</div>
+                    <p className="text-zinc-500 text-[10px] mb-3">{ls.certDesc}</p>
+                    <div className="flex items-baseline gap-4">
+                      <div>
+                        <div className="text-[#00F299] text-2xl font-mono">{sentinelStatus.data.certificates.count}</div>
+                        <div className="text-zinc-500 text-xs">{ls.certVerified}</div>
+                      </div>
+                      {sentinelStatus.data.certificates.by_risk &&
+                       Object.keys(sentinelStatus.data.certificates.by_risk).length > 0 && (
+                        <div className="flex gap-3 text-xs">
+                          <span className="text-[#00F299]">low: {sentinelStatus.data.certificates.by_risk.low || 0}</span>
+                          <span className="text-yellow-400">med: {sentinelStatus.data.certificates.by_risk.medium || 0}</span>
+                          <span className="text-orange-400">high: {sentinelStatus.data.certificates.by_risk.high || 0}</span>
+                          <span className="text-red-400">crit: {sentinelStatus.data.certificates.by_risk.critical || 0}</span>
+                        </div>
+                      )}
+                    </div>
+                    <a href={sentinelStatus.data.certificates.repo_path} target="_blank" rel="noopener" className="text-[#00F299] hover:underline text-xs mt-2 inline-block">
+                      {ls.certViewAll} →
+                    </a>
+                  </div>
+                )}
 
                 {/* Breakdown by execution_status — shows the honest picture:
                     ran (server started + produced output, trusted)

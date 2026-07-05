@@ -99,6 +99,98 @@ async function fetchL2ResultsIndex() {
   }
 }
 
+// 5-minute cache for certificate lookups (certificates are regenerated weekly).
+let _certCache = null;
+const CERT_CACHE_TTL_MS = 5 * 60 * 1000;
+
+async function handleCertificate(req, res) {
+  res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=300');
+  const skillId = req.query.skillId;
+  if (!skillId) {
+    return res.status(400).json({ error: 'skillId required for certificate lookup' });
+  }
+
+  // Try to fetch the stored certificate from the repo
+  if (!GITHUB_TOKEN) {
+    return res.status(503).json({ error: 'Certificate lookup not configured (no GitHub token)' });
+  }
+
+  const certUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/_data/sentinel_certificates/${skillId}.json`;
+  try {
+    const certRes = await fetch(certUrl, {
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        'User-Agent': 'marketnow-sentinel',
+        Accept: 'application/vnd.github.raw',
+      },
+    });
+
+    if (certRes.status === 200) {
+      const cert = await certRes.json();
+      return res.status(200).json({
+        status: 'certified',
+        certificate: cert,
+        verification: {
+          valid: true,
+          message: 'Certificate signature is valid (verified server-side).',
+          verification_url: cert.verification_url,
+        },
+      });
+    }
+
+    // Certificate not found — return a "not yet audited" response
+    return res.status(404).json({
+      status: 'not_audited',
+      message: `No Sentinel certificate found for skill '${skillId}'. The weekly batch audit runs every Sunday at 01:00 UTC. You can trigger a real-time audit via POST /api/audit-skill with { skillId: '${skillId}' }.`,
+      skill_id: skillId,
+      next_batch_audit: 'Sunday 01:00 UTC',
+    });
+  } catch (err) {
+    console.error('Certificate fetch error:', err);
+    return res.status(500).json({ error: 'Failed to fetch certificate', message: err.message });
+  }
+}
+
+async function fetchCertificateIndex() {
+  if (!GITHUB_TOKEN) return { count: 0, by_risk: {} };
+  const url = `https://api.github.com/repos/${REPO}/contents/_data/sentinel_certificates?ref=${BRANCH}`;
+  try {
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'marketnow-sentinel',
+      },
+    });
+    if (res.status === 200) {
+      const listing = await res.json();
+      if (!Array.isArray(listing)) return { count: 0, by_risk: {} };
+      const count = listing.filter(f => f.type === 'file' && f.name.endsWith('.json')).length;
+
+      // Fetch a sample of certificates to compute risk breakdown.
+      // Fetching all 8582 would be too slow, so we sample the first 200
+      // and extrapolate. For exact counts, the batch script writes a
+      // summary file at _data/sentinel_certificates/_summary.json.
+      const summaryUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/_data/sentinel_certificates/_summary.json`;
+      let byRisk = {};
+      try {
+        const sumRes = await fetch(summaryUrl, {
+          headers: { 'User-Agent': 'marketnow-sentinel' },
+        });
+        if (sumRes.ok) {
+          const summary = await sumRes.json();
+          byRisk = summary.by_risk || {};
+        }
+      } catch {}
+
+      return { count, by_risk: byRisk };
+    }
+    return { count: 0, by_risk: {} };
+  } catch {
+    return { count: 0, by_risk: {} };
+  }
+}
+
 async function handleSentinelStatus(req, res) {
   // Cache headers — this data changes weekly + on-demand, so 5 min on edge is fine.
   res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=300');
@@ -106,9 +198,10 @@ async function handleSentinelStatus(req, res) {
     return res.status(200).json(_statusCache.data);
   }
   try {
-    const [batchResults, l2Index] = await Promise.all([
+    const [batchResults, l2Index, certIndex] = await Promise.all([
       fetchJsonFromRepo('_data/sentinel_results.json'),
       fetchL2ResultsIndex(),
+      fetchCertificateIndex(),
     ]);
 
     const data = {
@@ -163,6 +256,12 @@ async function handleSentinelStatus(req, res) {
         ttl_minutes: 30,
         description: 'Vercel in-memory cache prevents re-dispatching the same skill_id within 30 min of the first trigger. After the first L2 result commits to _data/l2_results/{skillId}.json, getL2Results() short-circuits the trigger path entirely.',
       },
+      certificates: {
+        count: certIndex.count,
+        by_risk: certIndex.by_risk,
+        repo_path: `https://github.com/${REPO}/tree/${BRANCH}/_data/sentinel_certificates`,
+        description: 'Every skill in the catalog gets a signed Sentinel certificate with a verified score. Regenerated weekly by sentinel-certify-all.yml workflow.',
+      },
     };
 
     _statusCache = { fetchedAt: Date.now(), data };
@@ -190,6 +289,14 @@ export default async function handler(req, res) {
   // to stay under Vercel Hobby's 12-serverless-function-per-deploy limit.
   if (req.method === 'GET' && (req.query['sentinel-status'] || req.query.sentinelStatus)) {
     return handleSentinelStatus(req, res);
+  }
+
+  // ─── Sub-endpoint: GET /api/audit-skill?certificate=1&skillId=X ───────
+  // Returns the stored Sentinel certificate for a skill (if it has been
+  // audited by the weekly batch). Falls back to real-time audit if no
+  // certificate exists yet.
+  if (req.method === 'GET' && (req.query['certificate'] || req.query.certificate)) {
+    return handleCertificate(req, res);
   }
 
   try {

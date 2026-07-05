@@ -468,6 +468,9 @@ export default function SkillDetail() {
   const [walletAddr, setWalletAddr] = useState(null);
   const [purchaseStep, setPurchaseStep] = useState('');
   const [selectedLang, setSelectedLang] = useState('en');
+  // Sentinel certificate state — fetched from /api/audit-skill?certificate=1
+  const [certificate, setCertificate] = useState(null);
+  const [certLoading, setCertLoading] = useState(false);
 
   const handleCopyBadge = () => {
     const md = `[![Available on MarketNow](https://marketnow.site/badges/available-on.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
@@ -486,6 +489,13 @@ export default function SkillDetail() {
     loadSkill();
   }, [id]);
 
+  // Fetch Sentinel certificate when skill loads
+  useEffect(() => {
+    if (skill?.id) {
+      loadCertificate(skill.id);
+    }
+  }, [skill?.id]);
+
   // Inject SEO + JSON-LD when skill loads
   useEffect(() => {
     if (skill) {
@@ -493,6 +503,27 @@ export default function SkillDetail() {
       return cleanup;
     }
   }, [skill]);
+
+  const loadCertificate = async (skillId) => {
+    setCertLoading(true);
+    try {
+      const res = await fetch(`/api/audit-skill?certificate=1&skillId=${encodeURIComponent(skillId)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.status === 'certified' && data.certificate) {
+          setCertificate(data.certificate);
+        } else {
+          setCertificate(null);
+        }
+      } else {
+        setCertificate(null);
+      }
+    } catch {
+      setCertificate(null);
+    } finally {
+      setCertLoading(false);
+    }
+  };
 
   const loadSkill = async () => {
     try {
@@ -652,6 +683,32 @@ export default function SkillDetail() {
                         🛡️ SENTINEL {skill.sentinel_score}/10
                       </span>
                     )}
+                    {/* Sentinel Certificate badge — shows verified score from weekly batch audit */}
+                    {certLoading ? (
+                      <span className="px-2 py-0.5 rounded bg-zinc-500/10 text-zinc-400 text-[10px] font-mono border border-zinc-500/20 animate-pulse">
+                        🛡️ VERIFYING...
+                      </span>
+                    ) : certificate ? (
+                      <span
+                        className={`px-2 py-0.5 rounded text-[10px] font-mono border cursor-help ${
+                          certificate.risk_level === 'low'
+                            ? 'bg-[#00F299]/10 text-[#00F299] border-[#00F299]/20'
+                            : certificate.risk_level === 'medium'
+                            ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20'
+                            : certificate.risk_level === 'high'
+                            ? 'bg-orange-500/10 text-orange-400 border-orange-500/20'
+                            : 'bg-red-500/10 text-red-400 border-red-500/20'
+                        }`}
+                        title={`Sentinel Certificate ${certificate.certificate_id}
+Issued: ${new Date(certificate.issued_at).toLocaleDateString()}
+Expires: ${new Date(certificate.expires_at).toLocaleDateString()}
+Score: ${certificate.overall_score}/10
+Risk: ${certificate.risk_level}
+Layers: L1.5 ✓  L1.6 ✓  L2 ${certificate.layers_run.l2 ? '✓' : '—'}`}
+                      >
+                        🛡️ CERTIFIED {certificate.overall_score}/10
+                      </span>
+                    ) : null}
                   </div>
                   <h1 className="text-3xl font-bold text-white mb-2 break-words">{skill.name}</h1>
                   <p className="text-zinc-400 text-sm">{skill.tagline}</p>

@@ -62,7 +62,7 @@
   "pricing": {
     "model": "one-time per skill (USDC or credit card)",
     "currency": "USD",
-    "min": 0.99,
+    "min": 0,
     "max": 9.99,
     "average": 3.81,
     "tiers": [
@@ -323,7 +323,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-02T23:33:18.533Z",
+  "generated_at": "2026-07-05T21:27:03.473Z",
   "trust": {
     "license": "MNNC-1.0 (Non-Commercial — source available, not for commercial use)",
     "open_source": false,

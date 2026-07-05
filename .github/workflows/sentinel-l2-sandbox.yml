@@ -44,19 +44,70 @@ jobs:
             echo "repo_url=${{ inputs.repo_url }}" >> $GITHUB_OUTPUT
           fi
 
-      - name: Clone MCP server repo
+      - name: Clone MCP server repo (supports subpath URLs)
+        env:
+          REPO_URL: ${{ steps.vars.outputs.repo_url }}
+          SKILL_ID: ${{ steps.vars.outputs.skill_id }}
         run: |
-          REPO_URL="${{ steps.vars.outputs.repo_url }}"
-          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
           echo "Auditing skill: $SKILL_ID"
-          echo "Repo: $REPO_URL"
-          git clone "$REPO_URL" /tmp/mcp-server || exit 1
+          echo "Repo URL: $REPO_URL"
+
+          # The repo_url can be in 3 forms:
+          #   1. https://github.com/owner/repo                    → clone full repo, default branch
+          #   2. https://github.com/owner/repo/tree/main          → clone full repo, checkout 'main'
+          #   3. https://github.com/owner/repo/tree/main/src/foo  → sparse checkout of src/foo only
+          #
+          # We parse with Python (avoids brittle bash regex) and emit bash vars.
+          eval "$(python3 <<'PYEOF'
+          import os, re
+          url = os.environ['REPO_URL']
+          # Strip trailing slash and .git
+          url = url.rstrip('/').removesuffix('.git')
+          m = re.match(r'^https?://github\.com/([^/]+/[^/]+)(?:/tree/([^/]+)(?:/(.+))?)?$', url)
+          if not m:
+              print(f'echo "::error::Invalid GitHub URL: {url}"; exit 1')
+          else:
+              owner_repo = m.group(1)
+              ref = m.group(2) or ''
+              subpath = m.group(3) or ''
+              print(f'OWNER_REPO="{owner_repo}"')
+              print(f'REF="{ref}"')
+              print(f'SUBPATH="{subpath}"')
+              print(f'CLONE_URL="https://github.com/{owner_repo}.git"')
+          PYEOF
+          )"
+
+          echo "  owner/repo: $OWNER_REPO"
+          echo "  ref:        ${REF:-<default>}"
+          echo "  subpath:    ${SUBPATH:-<root>}"
+
+          # Clone with --depth 1 (faster, we only need the latest tree).
+          # If a ref is specified, clone that branch; otherwise clone default.
+          if [ -n "$REF" ]; then
+            git clone --depth 1 --branch "$REF" "$CLONE_URL" /tmp/mcp-server || exit 1
+          else
+            git clone --depth 1 "$CLONE_URL" /tmp/mcp-server || exit 1
+          fi
+
+          # If a subpath was specified, move into it so the Dockerfile context
+          # is correct. We don't sparse-checkout (depth 1 is already minimal)
+          # — just cd into the subpath for the build step.
+          if [ -n "$SUBPATH" ]; then
+            echo "  → Using subpath: $SUBPATH"
+            echo "$SUBPATH" > /tmp/mcp-server-subpath.txt
+          else
+            echo "" > /tmp/mcp-server-subpath.txt
+          fi
 
       - name: Build Docker image (or use fallback)
         run: |
-          cd /tmp/mcp-server
+          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
+          SUBPATH=$(cat /tmp/mcp-server-subpath.txt)
+          BUILD_DIR="/tmp/mcp-server/$SUBPATH"
+          echo "Build directory: $BUILD_DIR"
+          cd "$BUILD_DIR" || { echo "::error::Subpath $SUBPATH does not exist in repo"; exit 1; }
           docker build -t mcp-audit-target . 2>/dev/null || {
-            echo "No Dockerfile — creating fallback"
+            echo "No Dockerfile in $BUILD_DIR — creating fallback"
             cat > Dockerfile.audit << 'EOD'
           FROM node:18-slim
           COPY . /app
@@ -65,7 +116,7 @@ jobs:
           RUN pip install -r requirements.txt 2>/dev/null || true
           CMD ["node", "index.js"]
           EOD
-            docker build -t mcp-audit-target -f Dockerfile.audit /tmp/mcp-server
+            docker build -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR"
           }
 
       - name: Run L2 Behavioral Sandbox Audit

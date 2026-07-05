@@ -46,7 +46,7 @@ async function fetchJsonFromRepo(path) {
 }
 
 async function fetchL2ResultsIndex() {
-  if (!GITHUB_TOKEN) return { count: 0, skills: [] };
+  if (!GITHUB_TOKEN) return { count: 0, skills: [], summaries: [] };
   const url = `https://api.github.com/repos/${REPO}/contents/_data/l2_results?ref=${BRANCH}`;
   try {
     const res = await fetch(url, {
@@ -58,15 +58,44 @@ async function fetchL2ResultsIndex() {
     });
     if (res.status === 200) {
       const listing = await res.json();
-      if (!Array.isArray(listing)) return { count: 0, skills: [] };
-      const skills = listing
+      if (!Array.isArray(listing)) return { count: 0, skills: [], summaries: [] };
+      const files = listing
         .filter(f => f.type === 'file' && f.name.endsWith('.json'))
-        .map(f => f.name.replace(/\.json$/, ''));
-      return { count: skills.length, skills };
+        .map(f => ({ name: f.name.replace(/\.json$/, ''), download_url: f.download_url }));
+      const skillIds = files.map(f => f.name);
+
+      // Fetch each result file in parallel to extract execution_status,
+      // failure_reason, and l2_score. Files are tiny (<2KB), so fanning
+      // out is fine even at 50+ skills.
+      const summaries = await Promise.all(files.map(async f => {
+        try {
+          const fileRes = await fetch(f.download_url, {
+            headers: { 'User-Agent': 'marketnow-sentinel' },
+          });
+          if (!fileRes.ok) return null;
+          const d = await fileRes.json();
+          return {
+            skill_id: d.skill_id || f.name,
+            execution_status: d.execution_status || 'unknown',
+            l2_score: d.l2_score ?? null,
+            l2_risk_level: d.l2_risk_level || 'unknown',
+            failure_reason: d.failure_reason || null,
+            timestamp: d.timestamp || null,
+          };
+        } catch {
+          return null;
+        }
+      }));
+
+      return {
+        count: skillIds.length,
+        skills: skillIds,
+        summaries: summaries.filter(Boolean),
+      };
     }
-    return { count: 0, skills: [] };
+    return { count: 0, skills: [], summaries: [] };
   } catch {
-    return { count: 0, skills: [] };
+    return { count: 0, skills: [], summaries: [] };
   }
 }
 
@@ -113,6 +142,21 @@ async function handleSentinelStatus(req, res) {
         status: l2Index.count > 0 ? 'available' : 'no_results_yet',
         completed_runs: l2Index.count,
         audited_skills: l2Index.skills,
+        // Per-skill summaries with execution_status + failure_reason so the
+        // UI can show WHY a skill got a particular L2 result (ran, ran_idle,
+        // failed_to_start with reason, etc.).
+        summaries: l2Index.summaries || [],
+        // Pre-computed breakdowns so the UI doesn't have to iterate.
+        breakdown_by_status: (l2Index.summaries || []).reduce((acc, s) => {
+          const k = s.execution_status || 'unknown';
+          acc[k] = (acc[k] || 0) + 1;
+          return acc;
+        }, {}),
+        breakdown_by_risk: (l2Index.summaries || []).reduce((acc, s) => {
+          const k = s.l2_risk_level || 'unknown';
+          acc[k] = (acc[k] || 0) + 1;
+          return acc;
+        }, {}),
         repo_path: `https://github.com/${REPO}/tree/${BRANCH}/_data/l2_results`,
       },
       l2_dedup: {

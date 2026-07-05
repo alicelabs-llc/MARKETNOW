@@ -1451,7 +1451,67 @@ export default function Security() {
                     <div className="text-zinc-500 text-xs">{ls.l2Audited}</div>
                   </div>
                 </div>
-                {sentinelStatus.data.l2_sandbox?.audited_skills?.length > 0 ? (
+
+                {/* Breakdown by execution_status — shows the honest picture:
+                    ran (server started + produced output, trusted)
+                    ran_idle (server started, waited for stdin — normal MCP stdio)
+                    failed_to_start (crash / MODULE_NOT_FOUND, NOT trusted) */}
+                {sentinelStatus.data.l2_sandbox?.breakdown_by_status &&
+                 Object.keys(sentinelStatus.data.l2_sandbox.breakdown_by_status).length > 0 && (
+                  <div className="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-white/5 text-xs">
+                    <div className="text-center">
+                      <div className="text-[#00F299] text-base font-mono">
+                        {sentinelStatus.data.l2_sandbox.breakdown_by_status.ran || 0}
+                      </div>
+                      <div className="text-zinc-500 text-[10px]">ran</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-[#00d1ff] text-base font-mono">
+                        {sentinelStatus.data.l2_sandbox.breakdown_by_status.ran_idle || 0}
+                      </div>
+                      <div className="text-zinc-500 text-[10px]">ran_idle</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-orange-400 text-base font-mono">
+                        {sentinelStatus.data.l2_sandbox.breakdown_by_status.failed_to_start || 0}
+                      </div>
+                      <div className="text-zinc-500 text-[10px]">failed_to_start</div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Per-skill list with execution_status badges + failure_reason for failed ones */}
+                {sentinelStatus.data.l2_sandbox?.summaries?.length > 0 ? (
+                  <div className="mt-3 space-y-1.5 max-h-64 overflow-y-auto">
+                    {sentinelStatus.data.l2_sandbox.summaries.map(s => {
+                      const statusColor = s.execution_status === 'ran'
+                        ? 'bg-[#00F299]/10 text-[#00F299]'
+                        : s.execution_status === 'ran_idle'
+                        ? 'bg-[#00d1ff]/10 text-[#00d1ff]'
+                        : s.execution_status === 'failed_to_start'
+                        ? 'bg-orange-500/10 text-orange-400'
+                        : 'bg-zinc-500/10 text-zinc-400';
+                      return (
+                        <div key={s.skill_id} className="text-[11px]">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="font-mono text-zinc-300 truncate">{s.skill_id}</span>
+                            <div className="flex items-center gap-2 shrink-0">
+                              <span className="text-zinc-500">{s.l2_score ?? '?'}/10</span>
+                              <span className={`px-1.5 py-0.5 rounded font-mono text-[9px] ${statusColor}`}>
+                                {s.execution_status || 'unknown'}
+                              </span>
+                            </div>
+                          </div>
+                          {s.failure_reason && (
+                            <div className="text-orange-400/70 text-[10px] mt-0.5 pl-2 border-l border-orange-500/20">
+                              {s.failure_reason}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : sentinelStatus.data.l2_sandbox?.audited_skills?.length > 0 ? (
                   <div className="flex flex-wrap gap-1 mt-2">
                     {sentinelStatus.data.l2_sandbox.audited_skills.slice(0, 12).map(sid => (
                       <span key={sid} className="text-[10px] font-mono bg-[#00F299]/10 text-[#00F299] px-1.5 py-0.5 rounded">{sid}</span>

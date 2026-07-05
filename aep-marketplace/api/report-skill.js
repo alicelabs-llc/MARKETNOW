@@ -1,13 +1,19 @@
 /**
  * MarketNow — Community Skill Report Endpoint
  * ============================================
- * 
+ *
  * Allows MCP clients and users to anonymously report unexpected behavior,
  * execution failures, or suspected malicious activity in a skill.
- * 
+ *
  * If a skill accumulates multiple reports in a short period, Sentinel
  * prioritizes it for immediate human review.
- * 
+ *
+ * AUTO-L2-TRIGGER: If the reported skill has source.url pointing to a
+ * GitHub repo AND has no L2 result yet (or the existing result is older
+ * than 7 days), we automatically fire a repository_dispatch to re-run
+ * the L2 Docker sandbox. Reports are a strong signal that something may
+ * have changed in the skill's behavior — worth a fresh sandbox run.
+ *
  * Endpoint: POST /api/report-skill
  * Body: {
  *   "skillId": "mn-gen-00003",
@@ -16,10 +22,13 @@
  *   "agentId": "optional, for tracking",
  *   "anonymous": true
  * }
- * 
+ *
  * Reports are stored as JSON files in _data/reports/ (git commits, like mandates).
  * No PII collected unless explicitly provided.
  */
+
+import { triggerL2, getL2Results } from '../lib/sentinel-l2-trigger.mjs';
+import { findSkill } from '../lib/skills-cache.mjs';
 
 function jsonHeaders(res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -39,6 +48,9 @@ const VALID_REPORT_TYPES = [
 ];
 
 const REPORTS_PATH = '_data/reports';
+
+// L2 re-audit threshold: if existing L2 result is older than this, re-trigger.
+const L2_REAUDIT_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
 async function ghWriteReport(report) {
   const cfg = {
@@ -74,6 +86,47 @@ async function ghWriteReport(report) {
     }
   } catch (e) {
     console.error('ghWriteReport error:', e);
+  }
+}
+
+/**
+ * Auto-trigger L2 sandbox re-audit if the reported skill has a GitHub
+ * repo and either (a) has no L2 result yet, or (b) the existing result
+ * is older than L2_REAUDIT_AGE_MS.
+ *
+ * This runs in the background — the report response is returned
+ * immediately, the L2 dispatch is fire-and-forget.
+ */
+async function maybeTriggerL2Reaudit(skillId) {
+  try {
+    const skill = await findSkill(skillId);
+    if (!skill) return { triggered: false, reason: 'skill_not_found' };
+    if (!skill.source?.url || !skill.source.url.includes('github.com')) {
+      return { triggered: false, reason: 'no_github_repo' };
+    }
+
+    // Check existing L2 result age
+    const existing = await getL2Results(skill.id);
+    if (existing?.timestamp) {
+      const age = Date.now() - new Date(existing.timestamp).getTime();
+      if (age < L2_REAUDIT_AGE_MS) {
+        return {
+          triggered: false,
+          reason: `recent_l2_result (${Math.round(age / (24 * 60 * 60 * 1000))}d old, threshold ${L2_REAUDIT_AGE_MS / (24 * 60 * 60 * 1000)}d)`,
+        };
+      }
+    }
+
+    // Fire the dispatch
+    const result = await triggerL2(skill.id, skill.source.url);
+    return {
+      triggered: result.triggered,
+      deduped: result.deduped || false,
+      reason: result.triggered ? 'dispatched' : (result.deduped ? 'deduped' : result.message),
+    };
+  } catch (e) {
+    console.error('[report-skill] L2 re-audit trigger error:', e);
+    return { triggered: false, reason: `error: ${e.message}` };
   }
 }
 
@@ -119,12 +172,48 @@ export default async function handler(req, res) {
     // Write to GitHub (async, don't block response)
     ghWriteReport(report).catch(e => console.error('Report write failed:', e));
 
+    // ─── Auto-trigger L2 re-audit if eligible ──────────────────────────
+    // A user report is a strong signal that something may have changed in
+    // the skill's behavior. If the skill has a GitHub repo and its L2
+    // result is stale or missing, we fire a fresh sandbox run.
+    //
+    // For 'security_issue' and 'suspected_malicious' reports, we ALWAYS
+    // re-trigger (even if recent) — the user is telling us something is
+    // wrong, so we should re-verify.
+    const isSecurityRelevant = reportType === 'security_issue' || reportType === 'suspected_malicious';
+    let l2Reaudit = { triggered: false, reason: 'not_attempted' };
+    if (isSecurityRelevant) {
+      // Force re-trigger for security reports (bypass the age check by
+      // calling triggerL2 directly — but the 30-min dedup cache still
+      // applies to prevent abuse).
+      try {
+        const skill = await findSkill(skillId);
+        if (skill?.source?.url?.includes('github.com')) {
+          const result = await triggerL2(skill.id, skill.source.url);
+          l2Reaudit = {
+            triggered: result.triggered,
+            deduped: result.deduped || false,
+            reason: result.triggered ? 'dispatched (security report forces re-audit)' : (result.deduped ? 'deduped (30min window)' : result.message),
+          };
+        } else {
+          l2Reaudit = { triggered: false, reason: 'no_github_repo' };
+        }
+      } catch (e) {
+        l2Reaudit = { triggered: false, reason: `error: ${e.message}` };
+      }
+    } else {
+      // Non-security reports: use the age-based threshold
+      l2Reaudit = await maybeTriggerL2Reaudit(skillId);
+    }
+
     return res.status(201).json({
       success: true,
       reportId: report.id,
       message: 'Report received. If this skill accumulates multiple reports, it will be prioritized for human review.',
       disclosure: 'Reports are stored as public git commits at _data/reports/ for transparency. No PII collected unless you explicitly provide it.',
       view_reports: 'https://github.com/edgarfloresguerra2011-a11y/marketnow/tree/master/_data/reports',
+      // New: surface the L2 re-audit decision to the user
+      l2_reaudit: l2Reaudit,
     });
   } catch (err) {
     console.error('Report error:', err);

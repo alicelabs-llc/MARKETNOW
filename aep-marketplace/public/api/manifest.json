@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "description": "Open marketplace for AI agent skills — MCP compatible. Every skill has a real description from its source repository.",
   "base_url": "https://www.marketnow.site/api",
-  "total_skills": 8567,
-  "categories_count": 59,
+  "total_skills": 8582,
+  "categories_count": 61,
   "endpoints": {
     "all_skills": "/api/skills.json",
     "categories": "/api/categories.json",
@@ -17,5 +17,5 @@
     "by_tag": "Filter client-side: skills.filter(s => s.tags.includes('mcp'))",
     "search": "Filter client-side: skills.filter(s => s.name.toLowerCase().includes(query))"
   },
-  "generated_at": "2026-07-05T21:27:02.912Z"
+  "generated_at": "2026-07-05T22:11:00.412Z"
 }

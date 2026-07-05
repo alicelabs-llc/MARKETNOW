@@ -6,6 +6,336 @@ import { hasMetaMask, connectWallet, cryptoCheckout } from '../utils/crypto';
 import { checkoutSkill } from '../utils/stripe';
 import { getCurrentRef } from '../utils/affiliate';
 import Reviews from '../components/Reviews';
+import { useLang } from '../context/LanguageContext.jsx';
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CONTENT — all UI strings in 5 languages (en, es, pt, zh, fr)
+// Brand / technical terms preserved untranslated per task rules:
+//   MarketNow, AliceLabs, MetaMask, USDC, Base, MCP, Sentinel, Stripe,
+//   sentinel_score, Open Source, npx, POST /api/agent-purchase, txHash.
+// ═══════════════════════════════════════════════════════════════════════════
+const CONTENT = {
+  en: {
+    // Loading + error states
+    loadingSkill: 'Loading skill...',
+    skillNotFound: 'Skill not found',
+    backToRegistry: '← BACK TO REGISTRY',
+    // Sidebar labels
+    oneTimeLifetime: 'One-time payment · Lifetime license',
+    version: 'Version',
+    sentinelScore: 'Sentinel Score',
+    license: 'License',
+    openSource: 'Open Source',
+    // Section headings (uppercase labels)
+    about: 'About',
+    install: 'Install',
+    systemPrompt: 'System Prompt',
+    features: 'Features',
+    tags: 'Tags',
+    mcpRoutes: 'MCP Routes',
+    by: 'By',
+    // Install + prompt UI
+    copy: '📋 COPY',
+    copied: '✅ COPIED',
+    copyPrompt: '📋 COPY PROMPT',
+    unlocked: '✓ UNLOCKED',
+    previewPurchase: '🔒 PREVIEW — PURCHASE TO UNLOCK',
+    charsLocked: '🔒 +{n} characters locked',
+    previewNote: '⚠️ Preview shows first 200 characters only. Full prompt ({total} chars) unlocked after purchase.',
+    availableIn: '🌐 Available in {count} languages ·',
+    showing: 'Showing: {lang}',
+    // Purchase results + free
+    purchaseVerified: 'Purchase Verified On-Chain!',
+    order: 'Order:',
+    tx: 'TX:',
+    token: 'Token:',
+    copyInstallCommand: '📋 COPY INSTALL COMMAND',
+    copiedExclaim: '✅ COPIED!',
+    freeOpenSourceNpx: 'Free · Open Source · Install with npx',
+    // Agent payment block
+    agentPayment: '🤖 AGENT PAYMENT (USDC)',
+    noHumanNeeded: 'No human needed',
+    agentStep1: '1. Send {price} USDC to ',
+    agentStep2: ' on Base',
+    agentStep3: '2. POST /api/agent-purchase with txHash',
+    agentStep4: '3. Get license + system prompt instantly',
+    fullAgentFlow: 'Full agent flow →',
+    // Stripe
+    payWithCard: '💳 PAY ${price} WITH CARD →',
+    securePaymentStripe: 'Secure payment via Stripe · Instant access',
+    orPayWithCrypto: 'OR PAY WITH CRYPTO',
+    connectMetamask: '🦊 CONNECT METAMASK',
+    payUsdc: 'PAY ${price} USDC',
+    processing: 'PROCESSING...',
+    usdcBaseVerified: 'USDC · Base Network · On-chain verified',
+    // Purchase steps
+    stepConnecting: 'Connecting MetaMask...',
+    stepSending: 'Sending ${price} USDC to MarketNow...',
+    stepRedirecting: 'Redirecting to Stripe...',
+    // Errors
+    errInstallMetamaskConnect: 'Install MetaMask first to pay with USDC on Base',
+    errInstallMetamaskPay: 'Install MetaMask to pay with USDC on Base',
+    errConnectMetamask: 'Error connecting MetaMask',
+    errFreeNoPay: 'This skill is free — no payment required',
+    errCancelled: 'Transaction cancelled by user',
+    errPayment: 'Payment error',
+    // Promote skill + badge
+    promoteTitle: 'Promote this skill',
+    badgeAlt: 'MarketNow Badge',
+    copyBadgeMd: '📄 COPY BADGE MD',
+    copiedMarkdown: '✅ COPIED MARKDOWN',
+  },
+  es: {
+    loadingSkill: 'Cargando skill...',
+    skillNotFound: 'Skill no encontrada',
+    backToRegistry: '← VOLVER AL REGISTRO',
+    oneTimeLifetime: 'Pago único · Licencia de por vida',
+    version: 'Versión',
+    sentinelScore: 'Sentinel Score',
+    license: 'Licencia',
+    openSource: 'Open Source',
+    about: 'Acerca de',
+    install: 'Instalar',
+    systemPrompt: 'System Prompt',
+    features: 'Características',
+    tags: 'Etiquetas',
+    mcpRoutes: 'Rutas MCP',
+    by: 'Por',
+    copy: '📋 COPIAR',
+    copied: '✅ COPIADO',
+    copyPrompt: '📋 COPIAR PROMPT',
+    unlocked: '✓ DESBLOQUEADO',
+    previewPurchase: '🔒 VISTA PREVIA — COMPRA PARA DESBLOQUEAR',
+    charsLocked: '🔒 +{n} caracteres bloqueados',
+    previewNote: '⚠️ La vista previa muestra solo los primeros 200 caracteres. El prompt completo ({total} caracteres) se desbloquea tras la compra.',
+    availableIn: '🌐 Disponible en {count} idiomas ·',
+    showing: 'Mostrando: {lang}',
+    purchaseVerified: '¡Compra verificada on-chain!',
+    order: 'Pedido:',
+    tx: 'TX:',
+    token: 'Token:',
+    copyInstallCommand: '📋 COPIAR COMANDO DE INSTALACIÓN',
+    copiedExclaim: '✅ ¡COPIADO!',
+    freeOpenSourceNpx: 'Gratis · Open Source · Instalar con npx',
+    agentPayment: '🤖 PAGO PARA AGENTES (USDC)',
+    noHumanNeeded: 'Sin intervención humana',
+    agentStep1: '1. Envía {price} USDC a ',
+    agentStep2: ' en Base',
+    agentStep3: '2. POST /api/agent-purchase con txHash',
+    agentStep4: '3. Obtén licencia + system prompt al instante',
+    fullAgentFlow: 'Flujo completo del agente →',
+    payWithCard: '💳 PAGAR ${price} CON TARJETA →',
+    securePaymentStripe: 'Pago seguro vía Stripe · Acceso instantáneo',
+    orPayWithCrypto: 'O PAGA CON CRIPTO',
+    connectMetamask: '🦊 CONECTAR METAMASK',
+    payUsdc: 'PAGAR ${price} USDC',
+    processing: 'PROCESANDO...',
+    usdcBaseVerified: 'USDC · Red Base · Verificado on-chain',
+    stepConnecting: 'Conectando MetaMask...',
+    stepSending: 'Enviando ${price} USDC a MarketNow...',
+    stepRedirecting: 'Redirigiendo a Stripe...',
+    errInstallMetamaskConnect: 'Instala MetaMask primero para pagar con USDC en Base',
+    errInstallMetamaskPay: 'Instala MetaMask para pagar con USDC en Base',
+    errConnectMetamask: 'Error al conectar MetaMask',
+    errFreeNoPay: 'Esta skill es gratuita — no se requiere pago',
+    errCancelled: 'Transacción cancelada por el usuario',
+    errPayment: 'Error de pago',
+    promoteTitle: 'Promociona esta skill',
+    badgeAlt: 'Insignia de MarketNow',
+    copyBadgeMd: '📄 COPIAR MD DE INSIGNIA',
+    copiedMarkdown: '✅ MD COPIADO',
+  },
+  pt: {
+    loadingSkill: 'Carregando skill...',
+    skillNotFound: 'Skill não encontrada',
+    backToRegistry: '← VOLTAR AO REGISTRO',
+    oneTimeLifetime: 'Pagamento único · Licença vitalícia',
+    version: 'Versão',
+    sentinelScore: 'Sentinel Score',
+    license: 'Licença',
+    openSource: 'Open Source',
+    about: 'Sobre',
+    install: 'Instalar',
+    systemPrompt: 'System Prompt',
+    features: 'Recursos',
+    tags: 'Tags',
+    mcpRoutes: 'Rotas MCP',
+    by: 'Por',
+    copy: '📋 COPIAR',
+    copied: '✅ COPIADO',
+    copyPrompt: '📋 COPIAR PROMPT',
+    unlocked: '✓ DESBLOQUEADO',
+    previewPurchase: '🔒 PRÉVIA — COMPRE PARA DESBLOQUEAR',
+    charsLocked: '🔒 +{n} caracteres bloqueados',
+    previewNote: '⚠️ A prévia mostra apenas os primeiros 200 caracteres. O prompt completo ({total} caracteres) é desbloqueado após a compra.',
+    availableIn: '🌐 Disponível em {count} idiomas ·',
+    showing: 'Mostrando: {lang}',
+    purchaseVerified: 'Compra verificada on-chain!',
+    order: 'Pedido:',
+    tx: 'TX:',
+    token: 'Token:',
+    copyInstallCommand: '📋 COPIAR COMANDO DE INSTALAÇÃO',
+    copiedExclaim: '✅ COPIADO!',
+    freeOpenSourceNpx: 'Grátis · Open Source · Instalar com npx',
+    agentPayment: '🤖 PAGAMENTO PARA AGENTES (USDC)',
+    noHumanNeeded: 'Sem intervenção humana',
+    agentStep1: '1. Envie {price} USDC para ',
+    agentStep2: ' na Base',
+    agentStep3: '2. POST /api/agent-purchase com txHash',
+    agentStep4: '3. Receba licença + system prompt instantaneamente',
+    fullAgentFlow: 'Fluxo completo do agente →',
+    payWithCard: '💳 PAGAR ${price} COM CARTÃO →',
+    securePaymentStripe: 'Pagamento seguro via Stripe · Acesso instantâneo',
+    orPayWithCrypto: 'OU PAGUE COM CRIPTO',
+    connectMetamask: '🦊 CONECTAR METAMASK',
+    payUsdc: 'PAGAR ${price} USDC',
+    processing: 'PROCESSANDO...',
+    usdcBaseVerified: 'USDC · Rede Base · Verificado on-chain',
+    stepConnecting: 'Conectando MetaMask...',
+    stepSending: 'Enviando ${price} USDC para MarketNow...',
+    stepRedirecting: 'Redirecionando para Stripe...',
+    errInstallMetamaskConnect: 'Instale MetaMask primeiro para pagar com USDC na Base',
+    errInstallMetamaskPay: 'Instale MetaMask para pagar com USDC na Base',
+    errConnectMetamask: 'Erro ao conectar MetaMask',
+    errFreeNoPay: 'Esta skill é gratuita — nenhum pagamento necessário',
+    errCancelled: 'Transação cancelada pelo usuário',
+    errPayment: 'Erro de pagamento',
+    promoteTitle: 'Divulgue esta skill',
+    badgeAlt: 'Selo do MarketNow',
+    copyBadgeMd: '📄 COPIAR MD DO SELO',
+    copiedMarkdown: '✅ MD COPIADO',
+  },
+  zh: {
+    loadingSkill: '正在加载 skill...',
+    skillNotFound: '未找到 skill',
+    backToRegistry: '← 返回注册表',
+    oneTimeLifetime: '一次性付款 · 终身授权',
+    version: '版本',
+    sentinelScore: 'Sentinel Score',
+    license: '授权',
+    openSource: 'Open Source',
+    about: '关于',
+    install: '安装',
+    systemPrompt: 'System Prompt',
+    features: '功能',
+    tags: '标签',
+    mcpRoutes: 'MCP 路由',
+    by: '作者：',
+    copy: '📋 复制',
+    copied: '✅ 已复制',
+    copyPrompt: '📋 复制 PROMPT',
+    unlocked: '✓ 已解锁',
+    previewPurchase: '🔒 预览 — 购买后解锁',
+    charsLocked: '🔒 还有 {n} 字符已锁定',
+    previewNote: '⚠️ 预览仅显示前 200 个字符。完整 prompt（{total} 字符）将在购买后解锁。',
+    availableIn: '🌐 共有 {count} 种语言版本 ·',
+    showing: '当前显示：{lang}',
+    purchaseVerified: '购买已在链上验证！',
+    order: '订单：',
+    tx: 'TX：',
+    token: 'Token：',
+    copyInstallCommand: '📋 复制安装命令',
+    copiedExclaim: '✅ 已复制！',
+    freeOpenSourceNpx: '免费 · Open Source · 使用 npx 安装',
+    agentPayment: '🤖 代理付款（USDC）',
+    noHumanNeeded: '无需人工介入',
+    agentStep1: '1. 向 ',
+    agentStep2: ' 发送 {price} USDC（Base 网络）',
+    agentStep3: '2. 使用 txHash 调用 POST /api/agent-purchase',
+    agentStep4: '3. 立即获取 license 和 system prompt',
+    fullAgentFlow: '查看完整代理流程 →',
+    payWithCard: '💳 用银行卡支付 ${price} →',
+    securePaymentStripe: '通过 Stripe 安全支付 · 立即访问',
+    orPayWithCrypto: '或使用加密货币支付',
+    connectMetamask: '🦊 连接 METAMASK',
+    payUsdc: '支付 ${price} USDC',
+    processing: '处理中...',
+    usdcBaseVerified: 'USDC · Base 网络 · 链上验证',
+    stepConnecting: '正在连接 MetaMask...',
+    stepSending: '正在向 MarketNow 发送 ${price} USDC...',
+    stepRedirecting: '正在跳转至 Stripe...',
+    errInstallMetamaskConnect: '请先安装 MetaMask 才能使用 Base 上的 USDC 支付',
+    errInstallMetamaskPay: '请安装 MetaMask 才能使用 Base 上的 USDC 支付',
+    errConnectMetamask: '连接 MetaMask 时出错',
+    errFreeNoPay: '此 skill 为免费 — 无需付款',
+    errCancelled: '用户已取消交易',
+    errPayment: '支付错误',
+    promoteTitle: '推广此 skill',
+    badgeAlt: 'MarketNow 徽章',
+    copyBadgeMd: '📄 复制徽章 MD',
+    copiedMarkdown: '✅ MD 已复制',
+  },
+  fr: {
+    loadingSkill: 'Chargement de la skill...',
+    skillNotFound: 'Skill introuvable',
+    backToRegistry: '← RETOUR AU REGISTRE',
+    oneTimeLifetime: 'Paiement unique · Licence à vie',
+    version: 'Version',
+    sentinelScore: 'Sentinel Score',
+    license: 'Licence',
+    openSource: 'Open Source',
+    about: 'À propos',
+    install: 'Installer',
+    systemPrompt: 'System Prompt',
+    features: 'Fonctionnalités',
+    tags: 'Tags',
+    mcpRoutes: 'Routes MCP',
+    by: 'Par',
+    copy: '📋 COPIER',
+    copied: '✅ COPIÉ',
+    copyPrompt: '📋 COPIER LE PROMPT',
+    unlocked: '✓ DÉVERROUILLÉ',
+    previewPurchase: '🔒 APERÇU — ACHETEZ POUR DÉVERROUILLER',
+    charsLocked: '🔒 +{n} caractères verrouillés',
+    previewNote: "⚠️ L'aperçu n'affiche que les 200 premiers caractères. Le prompt complet ({total} caractères) est déverrouillé après l'achat.",
+    availableIn: '🌐 Disponible en {count} langues ·',
+    showing: 'Affiché : {lang}',
+    purchaseVerified: 'Achat vérifié on-chain !',
+    order: 'Commande :',
+    tx: 'TX :',
+    token: 'Token :',
+    copyInstallCommand: '📋 COPIER LA COMMANDE D\'INSTALLATION',
+    copiedExclaim: '✅ COPIÉ !',
+    freeOpenSourceNpx: 'Gratuit · Open Source · Installer avec npx',
+    agentPayment: '🤖 PAIEMENT AGENT (USDC)',
+    noHumanNeeded: 'Aucune intervention humaine',
+    agentStep1: '1. Envoyez {price} USDC à ',
+    agentStep2: ' sur Base',
+    agentStep3: '2. POST /api/agent-purchase avec txHash',
+    agentStep4: '3. Recevez la licence + system prompt instantanément',
+    fullAgentFlow: 'Flux agent complet →',
+    payWithCard: '💳 PAYER ${price} PAR CARTE →',
+    securePaymentStripe: 'Paiement sécurisé via Stripe · Accès instantané',
+    orPayWithCrypto: 'OU PAYEZ EN CRYPTO',
+    connectMetamask: '🦊 CONNECTER METAMASK',
+    payUsdc: 'PAYER ${price} USDC',
+    processing: 'TRAITEMENT...',
+    usdcBaseVerified: 'USDC · Réseau Base · Vérifié on-chain',
+    stepConnecting: 'Connexion à MetaMask...',
+    stepSending: 'Envoi de ${price} USDC à MarketNow...',
+    stepRedirecting: 'Redirection vers Stripe...',
+    errInstallMetamaskConnect: 'Installez MetaMask pour payer en USDC sur Base',
+    errInstallMetamaskPay: 'Installez MetaMask pour payer en USDC sur Base',
+    errConnectMetamask: 'Erreur de connexion à MetaMask',
+    errFreeNoPay: 'Cette skill est gratuite — aucun paiement requis',
+    errCancelled: 'Transaction annulée par l\'utilisateur',
+    errPayment: 'Erreur de paiement',
+    promoteTitle: 'Promouvoir cette skill',
+    badgeAlt: 'Badge MarketNow',
+    copyBadgeMd: '📄 COPIER LE MD DU BADGE',
+    copiedMarkdown: '✅ MD COPIÉ',
+  },
+};
+
+// Tiny template helper: replaces {var} placeholders
+function fmt(str, vars) {
+  if (!vars) return str;
+  let out = str;
+  for (const [k, v] of Object.entries(vars)) {
+    out = out.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+  }
+  return out;
+}
 
 /**
  * Inject a <script type="application/ld+json"> tag with Product schema
@@ -122,6 +452,9 @@ const SUPPORTED_LANGUAGES = [
 ];
 
 export default function SkillDetail() {
+  const { lang } = useLang();
+  const c = CONTENT[lang] || CONTENT.en;
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [skill, setSkill] = useState(null);
@@ -129,6 +462,7 @@ export default function SkillDetail() {
   const [error, setError] = useState('');
   const [purchasing, setPurchasing] = useState(false);
   const [purchaseResult, setPurchaseResult] = useState(null);
+  const [purchased, setPurchased] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copiedInstall, setCopiedInstall] = useState(false);
   const [walletAddr, setWalletAddr] = useState(null);
@@ -136,7 +470,7 @@ export default function SkillDetail() {
   const [selectedLang, setSelectedLang] = useState('en');
 
   const handleCopyBadge = () => {
-    const md = `[![Available on MarketNow](https://marketnow.site/badge.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
+    const md = `[![Available on MarketNow](https://marketnow.site/badges/available-on.svg)](https://marketnow.site/skill/${skill?.slug || id})`;
     navigator.clipboard.writeText(md);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -167,7 +501,7 @@ export default function SkillDetail() {
       if (found) {
         setSkill(normalizeSkill(found));
       } else {
-        setError('Skill not found');
+        setError(c.skillNotFound);
       }
     } catch (err) {
       setError(err.message);
@@ -180,50 +514,51 @@ export default function SkillDetail() {
     try {
       if (!hasMetaMask()) {
         window.open('https://metamask.io/download/', '_blank');
-        setError('Install MetaMask first to pay with USDC on Base');
+        setError(c.errInstallMetamaskConnect);
         return;
       }
       const addr = await connectWallet();
       setWalletAddr(addr);
       setError('');
     } catch (err) {
-      setError(err.message || 'Error connecting MetaMask');
+      setError(err.message || c.errConnectMetamask);
     }
   };
 
   const handlePurchase = async () => {
     if (!hasMetaMask()) {
       window.open('https://metamask.io/download/', '_blank');
-      setError('Install MetaMask to pay with USDC on Base');
+      setError(c.errInstallMetamaskPay);
       return;
     }
 
     const price = parseFloat(skill.price);
     if (!price || price <= 0) {
-      setError('This skill is free — no payment required');
+      setError(c.errFreeNoPay);
       return;
     }
 
     setPurchasing(true);
     setError('');
     try {
-      setPurchaseStep('Connecting MetaMask...');
+      setPurchaseStep(c.stepConnecting);
       const addr = await connectWallet();
       setWalletAddr(addr);
 
-      setPurchaseStep(`Sending $${price.toFixed(2)} USDC to MarketNow...`);
+      setPurchaseStep(fmt(c.stepSending, { price: price.toFixed(2) }));
       const result = await cryptoCheckout(skill.slug || skill.id, price);
 
       setPurchaseResult({
         ...result,
         purchase: { license: result.access_token || result.order_id },
       });
+      setPurchased(true); // Unlock the full system prompt
       setPurchaseStep('');
     } catch (err) {
       if (err.code === 4001) {
-        setError('Transaction cancelled by user');
+        setError(c.errCancelled);
       } else {
-        setError(err.message || 'Payment error');
+        setError(err.message || c.errPayment);
       }
       setPurchaseStep('');
     } finally {
@@ -235,13 +570,13 @@ export default function SkillDetail() {
   const handleStripeCheckout = async () => {
     setPurchasing(true);
     setError('');
-    setPurchaseStep('Redirecting to Stripe...');
+    setPurchaseStep(c.stepRedirecting);
     try {
       const affiliateCode = getCurrentRef();
       await checkoutSkill(skill.id, affiliateCode);
       // The browser will redirect to Stripe Checkout
     } catch (err) {
-      setError(err.message || 'Payment error');
+      setError(err.message || c.errPayment);
       setPurchaseStep('');
     } finally {
       setPurchasing(false);
@@ -253,7 +588,7 @@ export default function SkillDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="inline-block w-8 h-8 border-2 border-[#00F299] border-t-transparent rounded-full animate-spin mb-4" />
-          <p className="text-zinc-500 font-mono text-sm">Loading skill...</p>
+          <p className="text-zinc-500 font-mono text-sm">{c.loadingSkill}</p>
         </div>
       </div>
     );
@@ -266,7 +601,7 @@ export default function SkillDetail() {
           <div className="text-4xl mb-4">⚠️</div>
           <p className="text-red-400 mb-4">{error}</p>
           <button onClick={() => navigate('/registry')} className="px-6 py-3 bg-[#00F299]/10 border border-[#00F299]/30 rounded-xl text-[#00F299] text-sm">
-            BACK TO REGISTRY
+            {c.backToRegistry}
           </button>
         </div>
       </div>
@@ -276,6 +611,8 @@ export default function SkillDetail() {
   if (!skill) return null;
 
   const isFree = !skill.price || skill.price === 0;
+  // Free skills: prompt is unlocked by default
+  const promptUnlocked = purchased || isFree;
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -286,7 +623,7 @@ export default function SkillDetail() {
           onClick={() => navigate('/registry')}
           className="mb-8 text-zinc-400 hover:text-white text-sm transition-colors flex items-center gap-2"
         >
-          ← BACK TO REGISTRY
+          {c.backToRegistry}
         </motion.button>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -323,70 +660,102 @@ export default function SkillDetail() {
 
               {/* Description */}
               <div className="mb-8">
-                <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">About</h3>
+                <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">{c.about}</h3>
                 <p className="text-zinc-300 text-sm leading-relaxed">{skill.longDescription}</p>
               </div>
 
               {/* Install command */}
               <div className="mb-8">
-                <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">Install</h3>
+                <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">{c.install}</h3>
                 <div
                   onClick={handleCopyInstall}
                   className="flex items-center justify-between gap-4 p-4 rounded-xl bg-black/60 border border-white/5 cursor-pointer hover:border-[#00F299]/30 transition-all group"
                 >
                   <code className="text-[#00F299] text-sm font-mono break-all">{skill.install}</code>
                   <span className="text-zinc-600 text-xs font-mono shrink-0 group-hover:text-[#00F299] transition-colors">
-                    {copiedInstall ? '✅ COPIED' : '📋 COPY'}
+                    {copiedInstall ? c.copied : c.copy}
                   </span>
                 </div>
               </div>
 
-              {/* System Prompt (with language selector) */}
+              {/* System Prompt — PREVIEW ONLY (locked until purchase) */}
               {skill.doc?.system_prompt && (
                 <div className="mb-8">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-sm text-zinc-500 font-mono tracking-wider uppercase">System Prompt</h3>
-                    {skill.translations && (
-                      <div className="flex items-center gap-1">
-                        {SUPPORTED_LANGUAGES.filter(l => skill.translations[l.code]).map(lang => (
+                    <h3 className="text-sm text-zinc-500 font-mono tracking-wider uppercase">{c.systemPrompt}</h3>
+                    <div className="flex items-center gap-2">
+                      {promptUnlocked ? (
+                        <span className="px-2 py-1 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">{c.unlocked}</span>
+                      ) : (
+                        <span className="px-2 py-1 rounded bg-yellow-500/10 text-yellow-400 text-[10px] font-mono font-bold">{c.previewPurchase}</span>
+                      )}
+                      {promptUnlocked && skill.translations && (
+                        <div className="flex items-center gap-1">
+                          {SUPPORTED_LANGUAGES.filter(l => skill.translations[l.code]).map(lang => (
+                            <button
+                              key={lang.code}
+                              onClick={() => setSelectedLang(lang.code)}
+                              className={`px-2 py-1 rounded text-xs font-mono transition-all ${
+                                selectedLang === lang.code
+                                  ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
+                                  : 'bg-white/5 text-zinc-500 border border-white/5 hover:bg-white/10'
+                              }`}
+                              title={lang.label}
+                            >
+                              {lang.flag} {lang.code.toUpperCase()}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className={`relative rounded-xl bg-black/60 border border-white/5 overflow-hidden ${promptUnlocked ? '' : 'cursor-pointer'}`}
+                    onClick={() => { if (!promptUnlocked) { document.getElementById('purchase-section')?.scrollIntoView({behavior:'smooth'}); } }}
+                  >
+                    {promptUnlocked ? (
+                      /* FULL PROMPT — only visible after purchase */
+                      <div className="p-4">
+                        <pre className="text-[#00F299] text-xs font-mono whitespace-pre-wrap break-words max-h-96 overflow-y-auto select-all">
+                          {skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt}
+                        </pre>
+                        <div className="mt-2 text-right">
                           <button
-                            key={lang.code}
-                            onClick={() => setSelectedLang(lang.code)}
-                            className={`px-2 py-1 rounded text-xs font-mono transition-all ${
-                              selectedLang === lang.code
-                                ? 'bg-[#00F299]/20 text-[#00F299] border border-[#00F299]/40'
-                                : 'bg-white/5 text-zinc-500 border border-white/5 hover:bg-white/10'
-                            }`}
-                            title={lang.label}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              const promptText = skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt;
+                              navigator.clipboard.writeText(promptText);
+                              setCopied(true);
+                              setTimeout(() => setCopied(false), 2000);
+                            }}
+                            className="text-zinc-600 text-xs font-mono hover:text-[#00F299] transition-colors"
                           >
-                            {lang.flag} {lang.code.toUpperCase()}
+                            {copied ? c.copied : c.copyPrompt}
                           </button>
-                        ))}
+                        </div>
+                      </div>
+                    ) : (
+                      /* PREVIEW ONLY — truncated + blurred */
+                      <div className="p-4">
+                        <pre className="text-[#00F299]/60 text-xs font-mono whitespace-pre-wrap break-words overflow-hidden" style={{maxHeight: '120px'}}>
+                          {(skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt).slice(0, 200)}
+                        </pre>
+                        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black via-black/90 to-transparent flex items-end justify-center pb-3">
+                          <span className="text-yellow-400 text-xs font-mono">
+                            {fmt(c.charsLocked, { n: (skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt).length - 200 })}
+                          </span>
+                        </div>
                       </div>
                     )}
                   </div>
-                  <div
-                    onClick={() => {
-                      const promptText = skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt;
-                      navigator.clipboard.writeText(promptText);
-                      setCopied(true);
-                      setTimeout(() => setCopied(false), 2000);
-                    }}
-                    className="p-4 rounded-xl bg-black/60 border border-white/5 cursor-pointer hover:border-[#00F299]/30 transition-all group"
-                  >
-                    <pre className="text-[#00F299] text-xs font-mono whitespace-pre-wrap break-words max-h-80 overflow-y-auto">
-                      {skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt}
-                    </pre>
-                    <div className="mt-2 text-right">
-                      <span className="text-zinc-600 text-xs font-mono group-hover:text-[#00F299] transition-colors">
-                        {copied ? '✅ COPIED' : '📋 COPY PROMPT'}
-                      </span>
-                    </div>
-                  </div>
-                  {skill.translations && (
+                  {!promptUnlocked && (
                     <p className="text-zinc-600 text-[10px] mt-2 font-mono">
-                      🌐 Available in {Object.keys(skill.translations).length} languages ·
-                      Showing: {SUPPORTED_LANGUAGES.find(l => l.code === selectedLang)?.label || selectedLang}
+                      {fmt(c.previewNote, { total: (skill.translations?.[selectedLang]?.system_prompt || skill.doc.system_prompt).length })}
+                    </p>
+                  )}
+                  {promptUnlocked && skill.translations && (
+                    <p className="text-zinc-600 text-[10px] mt-2 font-mono">
+                      {fmt(c.availableIn, { count: Object.keys(skill.translations).length })}&nbsp;
+                      {fmt(c.showing, { lang: SUPPORTED_LANGUAGES.find(l => l.code === selectedLang)?.label || selectedLang })}
                     </p>
                   )}
                 </div>
@@ -395,7 +764,7 @@ export default function SkillDetail() {
               {/* Features */}
               {skill.features.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">Features</h3>
+                  <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">{c.features}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skill.features.map((f, i) => (
                       <span key={i} className="px-3 py-1.5 rounded-lg bg-[#00F299]/5 border border-[#00F299]/20 text-[11px] text-[#00F299] font-mono">
@@ -409,7 +778,7 @@ export default function SkillDetail() {
               {/* Tags */}
               {Array.isArray(skill.tags) && skill.tags.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">Tags</h3>
+                  <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">{c.tags}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skill.tags.map((t, i) => (
                       <span key={i} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[10px] text-zinc-500 font-mono">
@@ -423,7 +792,7 @@ export default function SkillDetail() {
               {/* MCP Routes (only if present) */}
               {skill.routes.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">MCP Routes</h3>
+                  <h3 className="text-sm text-zinc-500 font-mono tracking-wider mb-3 uppercase">{c.mcpRoutes}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skill.routes.map((r, i) => (
                       <code key={i} className="px-3 py-1.5 rounded-lg bg-black/40 border border-white/5 text-[11px] text-zinc-400 font-mono">
@@ -437,7 +806,7 @@ export default function SkillDetail() {
               {/* Footer */}
               <div className="pt-6 border-t border-white/5">
                 <div className="text-sm text-zinc-500">
-                  By <span className="text-zinc-300">{skill.author}</span>
+                  {c.by} <span className="text-zinc-300">{skill.author}</span>
                 </div>
               </div>
             </div>
@@ -453,32 +822,32 @@ export default function SkillDetail() {
             transition={{ delay: 0.1 }}
             className="lg:col-span-1"
           >
-            <div className="premium-card p-6 sticky top-28">
+            <div className="premium-card p-6 sticky top-28" id="purchase-section">
               <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-white mb-1">${skill.price.toFixed(2)}</div>
-                <div className="text-zinc-500 text-sm">One-time payment · Lifetime license</div>
+                <div className="text-zinc-500 text-sm">{c.oneTimeLifetime}</div>
               </div>
 
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-sm">
-                  <span className="text-zinc-400">Version</span>
+                  <span className="text-zinc-400">{c.version}</span>
                   <span className="text-white font-mono">{skill.version}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-zinc-400">Sentinel Score</span>
+                  <span className="text-zinc-400">{c.sentinelScore}</span>
                   <span className="text-purple-400 font-mono">{skill.sentinel_score}/10</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-zinc-400">License</span>
-                  <span className="text-white font-mono">Open Source</span>
+                  <span className="text-zinc-400">{c.license}</span>
+                  <span className="text-white font-mono">{c.openSource}</span>
                 </div>
               </div>
 
               {purchaseResult ? (
                 <div className="text-center p-4 rounded-xl bg-[#00F299]/10 border border-[#00F299]/20">
                   <div className="text-2xl mb-2">✅</div>
-                  <p className="text-[#00F299] text-sm font-semibold mb-1">Purchase Verified On-Chain!</p>
-                  <p className="text-zinc-400 text-xs font-mono mb-1">Order: {purchaseResult.order_id}</p>
+                  <p className="text-[#00F299] text-sm font-semibold mb-1">{c.purchaseVerified}</p>
+                  <p className="text-zinc-400 text-xs font-mono mb-1">{c.order} {purchaseResult.order_id}</p>
                   {purchaseResult.txHash && (
                     <a
                       href={purchaseResult.explorerUrl}
@@ -486,10 +855,10 @@ export default function SkillDetail() {
                       rel="noopener noreferrer"
                       className="text-[#00d1ff] text-[10px] font-mono hover:underline block mb-2"
                     >
-                      TX: {purchaseResult.txHash.slice(0, 10)}...{purchaseResult.txHash.slice(-8)} ↗
+                      {c.tx} {purchaseResult.txHash.slice(0, 10)}...{purchaseResult.txHash.slice(-8)} ↗
                     </a>
                   )}
-                  <p className="text-zinc-500 text-[10px] font-mono">Token: {purchaseResult.access_token}</p>
+                  <p className="text-zinc-500 text-[10px] font-mono">{c.token} {purchaseResult.access_token}</p>
                 </div>
               ) : isFree ? (
                 <div className="space-y-3">
@@ -497,10 +866,10 @@ export default function SkillDetail() {
                     onClick={handleCopyInstall}
                     className="w-full py-4 rounded-xl font-semibold text-sm transition-all duration-300 bg-[#00F299] text-black hover:bg-[#00F299]/90 hover:scale-[1.02] active:scale-[0.98]"
                   >
-                    {copiedInstall ? '✅ COPIED!' : '📋 COPY INSTALL COMMAND'}
+                    {copiedInstall ? c.copiedExclaim : c.copyInstallCommand}
                   </button>
                   <p className="text-center text-zinc-700 text-[9px] font-mono">
-                    Free · Open Source · Install with npx
+                    {c.freeOpenSourceNpx}
                   </p>
                 </div>
               ) : (
@@ -508,15 +877,15 @@ export default function SkillDetail() {
                   {/* USDC payment — PRIMARY for agents */}
                   <div className="p-4 rounded-xl bg-[#00d1ff]/5 border border-[#00d1ff]/20 mb-3">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[#00d1ff] text-xs font-mono font-bold">🤖 AGENT PAYMENT (USDC)</span>
-                      <span className="text-zinc-600 text-[10px] font-mono">No human needed</span>
+                      <span className="text-[#00d1ff] text-xs font-mono font-bold">{c.agentPayment}</span>
+                      <span className="text-zinc-600 text-[10px] font-mono">{c.noHumanNeeded}</span>
                     </div>
                     <div className="text-zinc-400 text-[10px] mb-2">
-                      1. Send {skill.price} USDC to <code className="text-white">0x39Dd...f5Ee</code> on Base<br/>
-                      2. POST /api/agent-purchase with txHash<br/>
-                      3. Get license + system prompt instantly
+                      {fmt(c.agentStep1, { price: skill.price })}<code className="text-white">0x39Dd...f5Ee</code>{c.agentStep2}<br/>
+                      {c.agentStep3}<br/>
+                      {c.agentStep4}
                     </div>
-                    <a href="/handshake" className="text-[#00d1ff] text-[10px] hover:underline">Full agent flow →</a>
+                    <a href="/handshake" className="text-[#00d1ff] text-[10px] hover:underline">{c.fullAgentFlow}</a>
                   </div>
 
                   {/* Stripe checkout — secondary (credit card) */}
@@ -531,18 +900,18 @@ export default function SkillDetail() {
                   >
                     {purchasing && purchaseStep
                       ? purchaseStep
-                      : `💳 PAY $${skill.price.toFixed(2)} WITH CARD →`
+                      : fmt(c.payWithCard, { price: skill.price.toFixed(2) })
                     }
                   </button>
 
                   <p className="text-center text-zinc-700 text-[9px] font-mono">
-                    Secure payment via Stripe · Instant access
+                    {c.securePaymentStripe}
                   </p>
 
                   {/* Divider */}
                   <div className="flex items-center gap-3 py-2">
                     <div className="flex-1 h-px bg-white/5" />
-                    <span className="text-[10px] text-zinc-600 font-mono">OR PAY WITH CRYPTO</span>
+                    <span className="text-[10px] text-zinc-600 font-mono">{c.orPayWithCrypto}</span>
                     <div className="flex-1 h-px bg-white/5" />
                   </div>
 
@@ -552,7 +921,7 @@ export default function SkillDetail() {
                       onClick={handleConnectWallet}
                       className="w-full py-3 rounded-xl font-semibold text-sm transition-all duration-300 bg-white/5 border border-white/10 text-white hover:border-[#00F299]/50 hover:bg-[#00F299]/5"
                     >
-                      🦊 CONNECT METAMASK
+                      {c.connectMetamask}
                     </button>
                   ) : (
                     <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#00F299]/5 border border-[#00F299]/20">
@@ -571,13 +940,13 @@ export default function SkillDetail() {
                     }`}
                   >
                     {purchasing
-                      ? (purchaseStep || 'PROCESSING...')
-                      : `PAY $${skill.price.toFixed(2)} USDC`
+                      ? (purchaseStep || c.processing)
+                      : fmt(c.payUsdc, { price: skill.price.toFixed(2) })
                     }
                   </button>
 
                   <p className="text-center text-zinc-700 text-[9px] font-mono">
-                    USDC · Base Network · On-chain verified
+                    {c.usdcBaseVerified}
                   </p>
                 </div>
               )}
@@ -588,9 +957,9 @@ export default function SkillDetail() {
 
               {/* Badge Copier */}
               <div className="mt-6 pt-6 border-t border-white/5">
-                <h4 className="text-[10px] text-zinc-500 font-mono tracking-wider mb-3 uppercase text-center">Promote this skill</h4>
+                <h4 className="text-[10px] text-zinc-500 font-mono tracking-wider mb-3 uppercase text-center">{c.promoteTitle}</h4>
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5 text-center transition-all hover:border-[#00F299]/30 hover:shadow-[0_0_15px_rgba(0,242,153,0.1)]">
-                  <img src="https://marketnow.site/badge.svg" alt="MarketNow Badge" className="mx-auto mb-4 h-6" />
+                  <img src="https://marketnow.site/badges/available-on.svg" alt={c.badgeAlt} className="mx-auto mb-4 h-6" />
                   <button
                     onClick={handleCopyBadge}
                     className={`w-full py-2 text-xs font-mono rounded-lg transition-all border ${
@@ -599,7 +968,7 @@ export default function SkillDetail() {
                         : 'bg-white/5 hover:bg-white/10 text-zinc-300 border-white/10'
                     }`}
                   >
-                    {copied ? '✅ COPIED MARKDOWN' : '📄 COPY BADGE MD'}
+                    {copied ? c.copiedMarkdown : c.copyBadgeMd}
                   </button>
                 </div>
               </div>

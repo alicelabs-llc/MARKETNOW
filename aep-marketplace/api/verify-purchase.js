@@ -8,10 +8,11 @@
 
 const STRIPE_KEY = process.env.STRIPE_SECRET_KEY;
 
+import { setCorsHeaders } from '../lib/cors.mjs';
+
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  // H1 FIX: CORS allowlist
+  setCorsHeaders(req, res);
 
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
@@ -55,8 +56,11 @@ export default async function handler(req, res) {
     const skillId = metadata.skill_id;
     const skillName = metadata.skill_name;
 
-    // Generate a license key
-    const licenseKey = `MN-LIC-${skillId?.replace(/[^a-zA-Z0-9]/g, '').toUpperCase().slice(0, 8) || 'GENERIC'}-${Date.now().toString(36).toUpperCase()}`;
+    // FIX 4.1: Idempotent license key — deterministic from sessionId, not random
+    // Same sessionId always returns the same license key (no new key on page reload)
+    const crypto = await import('crypto');
+    const hash = crypto.createHash('sha256').update(`${sessionId}:${skillId}`).digest('hex');
+    const licenseKey = `MN-LIC-${skillId?.replace(/[^a-zA-Z0-9]/g, '').toUpperCase().slice(0, 8) || 'GENERIC'}-${hash.slice(0, 8).toUpperCase()}`;
 
     return res.status(200).json({
       verified: true,

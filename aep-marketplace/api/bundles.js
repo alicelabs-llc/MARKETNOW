@@ -1,10 +1,14 @@
 /**
  * MarketNow — Dynamic Bundles API
+ * =================================
+ *
+ * v2.0 — Concurrency fixes (4 julio 2026)
+ *   - Usa skills-cache.mjs (no fetch de 30MB por request)
+ *
  * GET /api/bundles
- * 
- * Always returns fresh bundle data with skill_ids.
- * Cannot be cached by CDN.
  */
+
+import { getSkills } from '../lib/skills-cache.mjs';
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -17,12 +21,9 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   try {
-    const baseUrl = `https://${req.headers.host}`;
-    const res2 = await fetch(`${baseUrl}/api/skills.json`);
-    if (!res2.ok) throw new Error('Failed to fetch skills');
-    const skills = await res2.json();
+    // ===== FIX: cache en memoria =====
+    const skills = await getSkills();
 
-    // Build category index
     const byCat = {};
     for (const s of skills) {
       const c = s.category || 'Unknown';
@@ -41,11 +42,9 @@ export default async function handler(req, res) {
 
     const bundles = bundleDefs.map(def => {
       let candidates = byCat[def.category] || [];
-      
-      // Sort by sentinel score
       candidates = [...candidates].sort((a, b) => (b.sentinel_score || 0) - (a.sentinel_score || 0));
       candidates = candidates.slice(0, def.count);
-      
+
       return {
         id: def.id,
         name: def.name,

@@ -92,8 +92,8 @@ export const ADDONS = {
 
 export const COMMISSION = {
   seller: 0.80,    // Seller keeps 80%
-  marketnow: 0.20, // MarketNow takes 20%
-  affiliate: 0.05, // Affiliate gets 5% (out of total, not seller's share)
+  marketnow: 0.20, // MarketNow takes 20% (15% when affiliate is used)
+  affiliate: 0.05, // Affiliate gets 5% (deducted from MarketNow's share, not seller's)
 };
 
 export const STORAGE_FEE = {

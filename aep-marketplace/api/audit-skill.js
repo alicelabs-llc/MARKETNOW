@@ -153,6 +153,29 @@ async function handleCertificate(req, res) {
 
 async function fetchCertificateIndex() {
   if (!GITHUB_TOKEN) return { count: 0, by_risk: {} };
+
+  // The batch audit script writes _data/sentinel_certificates/_summary.json
+  // with the exact total_certified count and by_risk breakdown. This is
+  // MUCH faster and more accurate than listing 8583 files via the GitHub
+  // Contents API (which is capped at 1000 entries per response).
+  const summaryUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/_data/sentinel_certificates/_summary.json`;
+  try {
+    const res = await fetch(summaryUrl, {
+      headers: { 'User-Agent': 'marketnow-sentinel' },
+    });
+    if (res.ok) {
+      const summary = await res.json();
+      return {
+        count: summary.total_certified || 0,
+        by_risk: summary.by_risk || {},
+        by_score: summary.by_score || {},
+        generated_at: summary.generated_at || null,
+        with_l2: summary.with_l2 || 0,
+      };
+    }
+  } catch {}
+
+  // Fallback: try the Contents API (capped at 1000 files, but better than nothing)
   const url = `https://api.github.com/repos/${REPO}/contents/_data/sentinel_certificates?ref=${BRANCH}`;
   try {
     const res = await fetch(url, {
@@ -165,30 +188,12 @@ async function fetchCertificateIndex() {
     if (res.status === 200) {
       const listing = await res.json();
       if (!Array.isArray(listing)) return { count: 0, by_risk: {} };
-      const count = listing.filter(f => f.type === 'file' && f.name.endsWith('.json')).length;
-
-      // Fetch a sample of certificates to compute risk breakdown.
-      // Fetching all 8582 would be too slow, so we sample the first 200
-      // and extrapolate. For exact counts, the batch script writes a
-      // summary file at _data/sentinel_certificates/_summary.json.
-      const summaryUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/_data/sentinel_certificates/_summary.json`;
-      let byRisk = {};
-      try {
-        const sumRes = await fetch(summaryUrl, {
-          headers: { 'User-Agent': 'marketnow-sentinel' },
-        });
-        if (sumRes.ok) {
-          const summary = await sumRes.json();
-          byRisk = summary.by_risk || {};
-        }
-      } catch {}
-
-      return { count, by_risk: byRisk };
+      const count = listing.filter(f => f.type === 'file' && f.name.endsWith('.json') && f.name !== '_summary.json').length;
+      return { count, by_risk: {} };
     }
-    return { count: 0, by_risk: {} };
-  } catch {
-    return { count: 0, by_risk: {} };
-  }
+  } catch {}
+
+  return { count: 0, by_risk: {} };
 }
 
 async function handleSentinelStatus(req, res) {
@@ -259,6 +264,9 @@ async function handleSentinelStatus(req, res) {
       certificates: {
         count: certIndex.count,
         by_risk: certIndex.by_risk,
+        by_score: certIndex.by_score || {},
+        with_l2: certIndex.with_l2 || 0,
+        generated_at: certIndex.generated_at || null,
         repo_path: `https://github.com/${REPO}/tree/${BRANCH}/_data/sentinel_certificates`,
         description: 'Every skill in the catalog gets a signed Sentinel certificate with a verified score. Regenerated weekly by sentinel-certify-all.yml workflow.',
       },

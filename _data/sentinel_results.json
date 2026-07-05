@@ -1,0 +1,61 @@
+{
+  "audit_type": "sentinel-l16-batch",
+  "timestamp": "2026-07-05T20:08:59.023Z",
+  "tools": {
+    "semgrep": {
+      "rules": 18,
+      "findings": 0
+    },
+    "gitleaks": {
+      "findings": 6
+    },
+    "osv": {
+      "vulnerabilities": 0
+    }
+  },
+  "totals": {
+    "critical": 6,
+    "high": 0,
+    "medium": 0
+  },
+  "semgrep_findings": [],
+  "secret_findings": [
+    {
+      "rule": "stripe-access-token",
+      "file": "aep-marketplace/api/create-checkout-session.js",
+      "startLine": 15,
+      "secret": "sk_t…der'"
+    },
+    {
+      "rule": "stripe-access-token",
+      "file": "aep-marketplace/api/create-checkout-session.js",
+      "startLine": 37,
+      "secret": "sk_t…der'"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/utils/stripe.js",
+      "startLine": 24,
+      "secret": "pk_l…LWuD"
+    },
+    {
+      "rule": "jwt",
+      "file": "n8n-workflows/Customer_Support/1986_Stickynote_Jira_Create_Webhook.json",
+      "startLine": 271,
+      "secret": "eyJh…sync"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "n8n-workflows/Other/1832_Code_Webhook_Automation_Webhook.json",
+      "startLine": 1750,
+      "secret": "d01-…q.pl"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "n8n-workflows/Other/1832_Code_Webhook_Automation_Webhook.json",
+      "startLine": 1773,
+      "secret": "d02-…q.pl"
+    }
+  ],
+  "osv_findings": []
+}

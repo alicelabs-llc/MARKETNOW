@@ -110,23 +110,34 @@ jobs:
           cd "$BUILD_DIR" || { echo "::error::Subpath $SUBPATH does not exist in repo"; exit 1; }
 
           # If the repo ships a Dockerfile, use it.
-          # NOTE: monorepo Dockerfiles (like modelcontextprotocol/servers) often
-          # use COPY paths relative to the REPO ROOT (e.g. "COPY src/everything /app"),
-          # not relative to the subpath. So we set the build context to REPO_ROOT
-          # and -f to the subpath's Dockerfile. This matches what would happen in
-          # the CI of the upstream repo.
+          # Tricky case: monorepo Dockerfiles are inconsistent about build context.
+          # Some use COPY paths relative to REPO_ROOT (e.g. "COPY src/everything /app")
+          # while others assume context IS the subpath (e.g. "COPY uv.lock /uv.lock").
+          # We try BOTH and use whichever succeeds:
+          #   attempt 1: context=$BUILD_DIR, Dockerfile=$BUILD_DIR/Dockerfile  (subpath context)
+          #   attempt 2: context=$REPO_ROOT, Dockerfile=$BUILD_DIR/Dockerfile  (root context)
           if [ -f "Dockerfile" ] || [ -f "Dockerfile.dev" ]; then
             DOCKERFILE_PATH="Dockerfile"
             [ -f "Dockerfile" ] || DOCKERFILE_PATH="Dockerfile.dev"
             echo "✓ Found $DOCKERFILE_PATH in $BUILD_DIR"
-            echo "  Building with context=REPO_ROOT ($REPO_ROOT) — required for monorepo COPY paths"
+
+            echo "  Attempt 1: build with context=SUBPATH ($BUILD_DIR)"
+            if docker build -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$BUILD_DIR" 2>&1 | tail -40; then
+              if docker image inspect mcp-audit-target >/dev/null 2>&1; then
+                echo "✓ Image built with subpath context"
+                exit 0
+              fi
+            fi
+            echo "  Attempt 1 failed — image not found, trying with context=REPO_ROOT"
+
+            echo "  Attempt 2: build with context=REPO_ROOT ($REPO_ROOT)"
             docker build -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$REPO_ROOT" 2>&1 | tail -40
-            # Verify the image actually got built (docker build with errors still exits 0 sometimes)
             if ! docker image inspect mcp-audit-target >/dev/null 2>&1; then
-              echo "::error::docker build reported success but image mcp-audit-target not found"
+              echo "::error::Both build attempts failed — image mcp-audit-target not found"
+              echo "::error::This skill's Dockerfile is incompatible with the sandbox. Marking as failed_to_start."
               exit 1
             fi
-            echo "✓ Image built from repo's own Dockerfile"
+            echo "✓ Image built with repo-root context"
             exit 0
           fi
 

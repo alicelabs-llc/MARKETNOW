@@ -169,7 +169,7 @@ jobs:
           patterns = {
               'network_attempts':    r'ECONNREFUSED|ENOTFOUND|ETIMEDOUT|\bconnect\b|\bfetch\b|\bhttp\b',
               'fs_write_attempts':   r'EROFS|read.only|permission.denied|EACCES',
-              'process_spawns':      r'spawn|exec|fork|child_process',
+              'process_spawns':      r'\bspawn\b|\bexec\b|\bfork\b|child_process',
               'credential_leakage':  r'api.key|token|secret|password|private.key|mnemonic',
               'crash_detected':      r'SIGSEGV|SIGKILL|OOM|crash|fatal',
               'dynamic_imports':     r'require\(|import.*dynamic|eval\(',
@@ -187,6 +187,26 @@ jobs:
           sample = text[:500]
           sample = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]', '', sample).replace('\n', ' ').replace('\r', ' ')
 
+          # ─── Detect "did_not_run" — false-negative guard ────────────────
+          # If stdout is empty OR contains MODULE_NOT_FOUND / Cannot find module,
+          # the MCP server NEVER actually ran in the sandbox. A score of 10/10
+          # would be a FALSE NEGATIVE: we'd be telling users "this skill is
+          # safe" when in reality we just failed to execute it.
+          #
+          # In that case, mark execution_status='failed_to_start' and force
+          # score=0 with risk='unknown' (not 'low'). This is the honest answer.
+          execution_status = 'ran'
+          failure_reason = None
+          if len(raw) == 0:
+              execution_status = 'failed_to_start'
+              failure_reason = 'Empty stdout — Docker container produced no output. Build may have failed silently.'
+          elif re.search(r'Cannot find module|MODULE_NOT_FOUND|Error: Cannot find', text):
+              execution_status = 'failed_to_start'
+              failure_reason = 'Node.js MODULE_NOT_FOUND — the fallback Dockerfile CMD ["node", "index.js"] does not match this server\'s entrypoint. The MCP server never actually ran.'
+          elif re.search(r'Command \[.*\] exited with|sh: .*: not found|No such file or directory', text):
+              execution_status = 'failed_to_start'
+              failure_reason = 'Container command failed to execute — see stdout_sample.'
+
           result = {
               'skill_id': skill_id,
               'timestamp': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
@@ -199,6 +219,8 @@ jobs:
                   'pids': '64',
                   'timeout': '60s',
               },
+              'execution_status': execution_status,
+              'failure_reason': failure_reason,
               'behavioral_analysis': behavioral,
               'stdout_size_bytes': len(raw),
               'stdout_sample': sample,
@@ -207,17 +229,24 @@ jobs:
           }
 
           # Calculate L2 score (same weights as before)
-          score = 10
-          if behavioral['network_attempts']    > 0: score -= 3
-          if behavioral['fs_write_attempts']   > 0: score -= 2
-          if behavioral['credential_leakage']  > 0: score -= 5
-          if behavioral['crash_detected']      > 0: score -= 2
-          score = max(0, score)
+          if execution_status == 'failed_to_start':
+              # Honest answer: we don't know because it didn't run.
+              # Score 0, risk 'unknown' — NOT 'low'. The UI should show this
+              # differently from a real 'low' risk.
+              score = 0
+              risk = 'unknown'
+          else:
+              score = 10
+              if behavioral['network_attempts']    > 0: score -= 3
+              if behavioral['fs_write_attempts']   > 0: score -= 2
+              if behavioral['credential_leakage']  > 0: score -= 5
+              if behavioral['crash_detected']      > 0: score -= 2
+              score = max(0, score)
 
-          if   score < 2: risk = 'critical'
-          elif score < 4: risk = 'high'
-          elif score < 7: risk = 'medium'
-          else:           risk = 'low'
+              if   score < 2: risk = 'critical'
+              elif score < 4: risk = 'high'
+              elif score < 7: risk = 'medium'
+              else:           risk = 'low'
 
           result['l2_score'] = score
           result['l2_risk_level'] = risk

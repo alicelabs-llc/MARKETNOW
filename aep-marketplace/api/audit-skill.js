@@ -371,15 +371,22 @@ export default async function handler(req, res) {
     let l2Data = { status: 'not_triggered', results: null, trigger: null };
     const l2Existing = await getL2Results(skill.id);
     if (l2Existing) {
-      l2Data.status = 'completed';
+      // Distinguish 'completed' (sandbox actually ran the server) from
+      // 'failed_to_start' (sandbox couldn't execute the server — empty
+      // stdout, MODULE_NOT_FOUND, etc.). In the failed case we DON'T
+      // apply the L2 multiplier because there's no behavioral signal
+      // to trust — instead we surface the failure to the user.
+      l2Data.status = l2Existing.execution_status === 'failed_to_start'
+        ? 'failed_to_start'
+        : 'completed';
       l2Data.results = l2Existing;
-      if (l2Existing.l2_score !== undefined) {
+      if (l2Existing.l2_score !== undefined && l2Data.status === 'completed') {
         const l2Mult = l2Existing.l2_score / 10;
         overallScore = Math.round(overallScore * l2Mult);
       }
     } else if (skill.source?.url && skill.source.url.includes('github.com')) {
       const l2Trig = await triggerL2(skill.id, skill.source.url);
-      l2Data.status = l2Trig.triggered ? 'triggered_async' : 'not_available';
+      l2Data.status = l2Trig.triggered ? 'triggered_async' : (l2Trig.deduped ? 'deduped' : 'not_available');
       l2Data.trigger = l2Trig;
     } else {
       l2Data.status = 'no_github_repo';
@@ -455,7 +462,12 @@ export default async function handler(req, res) {
     // even if the static score looks clean. Bug fix: previously L2 only adjusted
     // overall_score, never risk_level — a sandbox-detected credential thief could
     // end up with score 0 but risk_level: "low".
-    const riskRank = { low: 0, medium: 1, high: 2, critical: 3 };
+    //
+    // Special case: L2 risk='unknown' (sandbox couldn't execute the server) is
+    // treated as 'medium' for ranking purposes — we refuse to call a skill 'low'
+    // risk when we couldn't actually observe its runtime behavior. The user
+    // sees risk_breakdown.l2 = 'unknown' so they know it's not a real 'medium'.
+    const riskRank = { low: 0, medium: 1, high: 2, critical: 3, unknown: 1 };
     const l15l16Risk = allCritical > 0 ? 'critical'
       : allHigh > 0 ? 'high'
       : mediumCount > 0 ? 'medium'

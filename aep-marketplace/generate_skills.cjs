@@ -163,11 +163,16 @@ for (const s of skills) {
     s.risk_level = 'green';
   }
 
-  // source
+  // source — preserve source.url if it was already set (e.g. by add-official-mcp-skills.cjs
+  // or expand-catalog-awesome-mcp.cjs). Only set the default note when url is missing.
+  const existingUrl = s.source?.url;
   if (s.id && s.id.startsWith('mn-prompt-')) {
     s.source = { type: 'curated', url: null, note: 'Hand-curated by AliceLabs — usually a system prompt, not a code package.' };
   } else if (s.id && s.id.startsWith('mn-gen-')) {
     s.source = { type: 'bulk-import', url: null, note: 'Imported from a community agent tool inventory. Sentinel-scanned, not individually curated.' };
+  } else if (existingUrl) {
+    // Keep the URL — just ensure type is set
+    s.source = { type: 'github', url: existingUrl, note: s.source?.note || 'Sourced from a public GitHub MCP server repo.' };
   } else {
     s.source = { type: 'github', url: null, note: 'Sourced from a public GitHub MCP server repo (URL field to be populated).' };
   }

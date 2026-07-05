@@ -1,18 +1,18 @@
 /**
- * MarketNow — Sentinel L1.5 Security Audit
- * ==========================================
- * 
+ * MarketNow — Sentinel L1.5 + L1.6 Security Audit
+ * =================================================
+ *
+ * Runs TWO layers in real-time on every call:
+ *   L1.5: 6 metadata checks (AUTH, injection, validation, CORS, OAuth, rate limiting)
+ *   L1.6: 18 Semgrep rules + 18 secret patterns + OSV dependency check
+ *
+ * L2 (Docker sandbox) runs via GitHub Actions — results are static in the catalog.
+ *
  * Endpoint: POST /api/audit-skill
  * Body: { "skillId": "mn-gen-00015" }
- * 
- * Ejecuta los 6 checks de seguridad que recomienda la comunidad MCP:
- * 1. AUTH — ¿requiere autenticación o está abierto?
- * 2. TOOL DESCRIPTIONS — ¿hay prompt injection en las descripciones?
- * 3. INPUT VALIDATION — ¿valida inputs o acepta cualquier cosa?
- * 4. CORS / ORIGIN — ¿quién puede llamarlo?
- * 5. OAUTH / SCOPES — ¿los tokens están limitados?
- * 6. RATE LIMITING + ERROR LEAKAGE — ¿filtra secretos en errores?
  */
+
+import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from '../lib/sentinel-l16.mjs';
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -230,13 +230,84 @@ export default async function handler(req, res) {
     const failCount = checks.filter(c => c.status === 'fail').length;
     const warningCount = checks.filter(c => c.status === 'warning').length;
     
-    // Overall score
+    // Overall score (L1.5)
     let overallScore = 10;
     overallScore -= criticalCount * 4;
     overallScore -= highCount * 2;
     overallScore -= mediumCount * 1;
     overallScore -= failCount * 2;
     overallScore = Math.max(0, Math.min(10, overallScore));
+
+    // ═══ L1.6: Run enhanced analysis (Semgrep + Secrets + OSV) ═══
+    const l16Result = await runL16(skill);
+    
+    // Apply L1.6 score adjustment
+    overallScore += l16Result.score_adjustment;
+    overallScore = Math.max(0, Math.min(10, overallScore));
+
+    // Build L1.6 checks for report
+    const l16Checks = [];
+    if (l16Result.findings.semgrep.length > 0) {
+      l16Checks.push({
+        name: 'L1.6 SEMGREP RULES',
+        status: 'fail',
+        detail: `${l16Result.findings.semgrep.length} finding(s): ${l16Result.findings.semgrep.map(s => s.name).join(', ')}`,
+        risk: l16Result.findings.total_critical > 0 ? 'critical' : 'high',
+        recommendation: l16Result.findings.semgrep[0]?.fix || 'Review Semgrep findings',
+        patterns: l16Result.findings.semgrep,
+      });
+    } else {
+      l16Checks.push({
+        name: 'L1.6 SEMGREP RULES',
+        status: 'pass',
+        detail: `${SEMGREP_RULES.length} rules checked, 0 findings`,
+        risk: 'low',
+        recommendation: '',
+      });
+    }
+
+    if (l16Result.findings.secrets.length > 0) {
+      l16Checks.push({
+        name: 'L1.6 SECRET DETECTION',
+        status: 'fail',
+        detail: `${l16Result.findings.secrets.length} secret(s) found: ${l16Result.findings.secrets.map(s => s.name).join(', ')}`,
+        risk: l16Result.findings.secrets.some(s => s.severity === 'critical') ? 'critical' : 'high',
+        recommendation: 'Remove all hardcoded secrets immediately',
+        patterns: l16Result.findings.secrets,
+      });
+    } else {
+      l16Checks.push({
+        name: 'L1.6 SECRET DETECTION',
+        status: 'pass',
+        detail: `${SECRET_PATTERNS.length} patterns checked, 0 secrets found`,
+        risk: 'low',
+        recommendation: '',
+      });
+    }
+
+    if (l16Result.findings.osv.length > 0) {
+      l16Checks.push({
+        name: 'L1.6 OSV DEPENDENCIES',
+        status: 'fail',
+        detail: `${l16Result.findings.osv.length} vulnerable dependencies: ${l16Result.findings.osv.map(v => v.id).join(', ')}`,
+        risk: 'high',
+        recommendation: 'Update vulnerable dependencies to patched versions',
+        vulnerabilities: l16Result.findings.osv,
+      });
+    } else {
+      l16Checks.push({
+        name: 'L1.6 OSV DEPENDENCIES',
+        status: 'pass',
+        detail: 'OSV API checked — no known vulnerabilities',
+        risk: 'low',
+        recommendation: '',
+      });
+    }
+
+    // Merge L1.5 + L1.6 checks
+    const allChecks = [...checks, ...l16Checks];
+    const allCritical = criticalCount + l16Result.findings.total_critical;
+    const allHigh = highCount + l16Result.findings.total_high;
     
     const report = {
       skill: {
@@ -249,14 +320,26 @@ export default async function handler(req, res) {
       },
       audit: {
         timestamp: new Date().toISOString(),
-        auditor: 'Sentinel L1.5 (MCP Security Audit)',
+        auditor: 'Sentinel L1.5 + L1.6 (Real-time Security Audit)',
         overall_score: overallScore,
         max_score: 10,
-        summary: `${passCount} passed, ${warningCount} warnings, ${failCount} failed`,
-        risk_level: criticalCount > 0 ? 'critical' : highCount > 0 ? 'high' : mediumCount > 0 ? 'medium' : 'low',
+        summary: `L1.5: ${passCount} passed, ${warningCount} warnings, ${failCount} failed | L1.6: ${l16Result.findings.semgrep.length} semgrep, ${l16Result.findings.secrets.length} secrets, ${l16Result.findings.osv.length} OSV vulns`,
+        risk_level: allCritical > 0 ? 'critical' : allHigh > 0 ? 'high' : mediumCount > 0 ? 'medium' : 'low',
+        layers: {
+          l15: { checks_run: 6, findings: criticalCount + highCount + mediumCount },
+          l16: {
+            semgrep_rules_run: SEMGREP_RULES.length,
+            secret_patterns_run: SECRET_PATTERNS.length,
+            osv_checked: true,
+            semgrep_findings: l16Result.findings.semgrep.length,
+            secret_findings: l16Result.findings.secrets.length,
+            osv_findings: l16Result.findings.osv.length,
+          },
+          l2: { status: 'runs via GitHub Actions (Docker sandbox)', results_in_catalog: true },
+        },
       },
-      checks,
-      recommendations: checks
+      checks: allChecks,
+      recommendations: allChecks
         .filter(c => c.recommendation)
         .map(c => `[${c.name}] ${c.recommendation}`),
       testing_guide: {

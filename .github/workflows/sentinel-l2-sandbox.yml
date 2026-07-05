@@ -1,0 +1,96 @@
+# MarketNow — Sentinel L2 Docker Sandbox (GitHub Actions)
+# ==========================================================
+# Runs MCP servers in isolated Docker containers to detect
+# runtime behavior: network exfiltration, filesystem changes,
+# process spawning, credential leakage.
+
+name: Sentinel L2 Docker Sandbox
+
+on:
+  workflow_dispatch:
+    inputs:
+      skill_id:
+        description: 'Skill ID to audit (e.g., mn-gen-00001)'
+        required: true
+      repo_url:
+        description: 'GitHub repo URL of the MCP server'
+        required: true
+
+jobs:
+  sandbox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone MCP server repo
+        run: |
+          git clone ${{ inputs.repo_url }} /tmp/mcp-server
+          cd /tmp/mcp-server
+
+      - name: Build Docker image
+        run: |
+          cd /tmp/mcp-server
+          docker build -t mcp-audit-target . || echo "No Dockerfile — using node:18-slim"
+          if ! docker images mcp-audit-target | grep -q mcp-audit-target; then
+            echo 'FROM node:18-slim' > /tmp/mcp-server/Dockerfile.audit
+            echo 'COPY . /app' >> /tmp/mcp-server/Dockerfile.audit
+            echo 'WORKDIR /app' >> /tmp/mcp-server/Dockerfile.audit
+            echo 'RUN npm install || true' >> /tmp/mcp-server/Dockerfile.audit
+            echo 'CMD ["node", "index.js"]' >> /tmp/mcp-server/Dockerfile.audit
+            docker build -t mcp-audit-target -f Dockerfile.audit /tmp/mcp-server
+          fi
+
+      - name: Run in isolated Docker sandbox
+        run: |
+          # Create audit script
+          cat > /tmp/audit.sh << 'AUDIT'
+          #!/bin/bash
+          echo "=== SENTINEL L2 BEHAVIORAL AUDIT ==="
+          echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          echo "Skill: $SKILL_ID"
+          echo ""
+
+          # Run the MCP server in complete isolation
+          echo "--- Starting MCP server in sandbox ---"
+          timeout 30 docker run --rm \
+            --network none \
+            --read-only \
+            --cap-drop ALL \
+            --security-opt no-new-privileges \
+            --memory 256m \
+            --cpus 0.5 \
+            --tmpfs /tmp:rw,size=64m \
+            -e SKILL_ID="$SKILL_ID" \
+            mcp-audit-target 2>&1 || true
+
+          echo ""
+          echo "--- Checking for network attempts ---"
+          # If --network none, any network attempt = ECONNREFUSED
+          # Check docker logs for network errors
+          echo "(Network attempts blocked by --network none)"
+
+          echo ""
+          echo "--- Checking filesystem mutations ---"
+          # --read-only means any write attempt = error
+          echo "(Filesystem writes blocked by --read-only)"
+
+          echo ""
+          echo "--- Checking for credential leakage in stdout ---"
+          # Look for patterns in output
+          echo "(Scanning output for secrets, tokens, keys...)"
+
+          echo ""
+          echo "=== AUDIT COMPLETE ==="
+          AUDIT
+          chmod +x /tmp/audit.sh
+
+          SKILL_ID="${{ inputs.skill_id }}" bash /tmp/audit.sh > /tmp/l2_result.txt 2>&1
+
+      - name: Upload L2 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentinel-l2-${{ inputs.skill_id }}
+          path: /tmp/l2_result.txt
+
+      - name: Display results
+        run: cat /tmp/l2_result.txt

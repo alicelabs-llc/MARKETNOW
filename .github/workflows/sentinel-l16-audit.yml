@@ -1,0 +1,55 @@
+# MarketNow — Sentinel L1.6 Batch Audit (GitHub Actions)
+# ========================================================
+# Runs Semgrep + Gitleaks + OSV-Scanner on all skills.
+# Results are committed to sentinel_results.json in the repo.
+
+name: Sentinel L1.6 Batch Audit
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly (Sunday midnight UTC)
+  workflow_dispatch: {}   # Manual trigger
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      - name: Install Gitleaks
+        run: |
+          wget https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_linux_x64.tar.gz
+          tar -xzf gitleaks_8.18.0_linux_x64.tar.gz
+          chmod +x gitleaks
+          sudo mv gitleaks /usr/local/bin/
+
+      - name: Install OSV-Scanner
+        run: |
+          wget https://github.com/google/osv-scanner/releases/latest/download/osv-scanner_linux_amd64
+          chmod +x osv-scanner_linux_amd64
+          sudo mv osv-scanner_linux_amd64 /usr/local/bin/osv-scanner
+
+      - name: Run Semgrep on MCP rules
+        run: |
+          semgrep --config sentinel-rules/semgrep-mcp-rules.yml \
+                  --json --output semgrep_results.json \
+                  aep-marketplace/ || true
+
+      - name: Run Gitleaks
+        run: |
+          gitleaks detect --source . --report-path gitleaks_results.json --report-format json || true
+
+      - name: Run OSV-Scanner
+        run: |
+          osv-scanner --lockfile aep-marketplace/package-lock.json --json > osv_results.json || true
+
+      - name: Commit results
+        run: |
+          git config user.name "Sentinel Bot"
+          git config user.email "sentinel@marketnow.site"
+          git add semgrep_results.json gitleaks_results.json osv_results.json || true
+          git commit -m "sentinel: L1.6 batch audit results $(date -u +%Y-%m-%d)" || true
+          git push

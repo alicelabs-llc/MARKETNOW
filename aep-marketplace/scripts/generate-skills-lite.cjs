@@ -73,6 +73,17 @@ const lite = skills.map(s => {
     };
   }
 
+  // source — needed by /api/report-skill (auto-L2-trigger) and /api/audit-skill
+  // to decide whether the skill has a GitHub repo for L2 sandbox audit.
+  // Without this, findSkill() returns a skill without source.url and the
+  // auto-trigger always returns 'no_github_repo'.
+  if (s.source && typeof s.source === 'object') {
+    liteSkill.source = {
+      type: s.source.type || null,
+      url: s.source.url || null,
+    };
+  }
+
   if (s.doc && typeof s.doc === 'object') {
     liteSkill.doc = {
       system_prompt: s.doc.system_prompt || '',

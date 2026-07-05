@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410996",
+  "skill_id": "mn-prompt-0bcfd992",
+  "skill_name": "Especialista Data Labeling + Label Studio",
+  "issued_at": "2026-07-05T23:16:50.996Z",
+  "expires_at": "2026-07-12T23:16:50.996Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "418a11ed47e3dba3dd19eea7647760b06a428fc8deda83de15d1b38435f0046e",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0bcfd992"
+}

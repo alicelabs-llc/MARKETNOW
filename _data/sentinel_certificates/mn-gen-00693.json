@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-2682818",
+  "skill_id": "mn-gen-00693",
+  "skill_name": "Aligo-sms-mcp-server",
+  "issued_at": "2026-07-05T23:04:42.818Z",
+  "expires_at": "2026-07-12T23:04:42.818Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "017909c36f273796c361501377f448ec8367dbc6079935e3149916c73c7c92f9",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00693"
+}

@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410411",
+  "skill_id": "mn-gen-10678",
+  "skill_name": "Proaksy",
+  "issued_at": "2026-07-05T23:16:50.411Z",
+  "expires_at": "2026-07-12T23:16:50.411Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "10c92958688af40944dc6da23bfdb5a9d999b1e235a86228e249b34c57a5e4d4",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10678"
+}

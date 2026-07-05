@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411891",
+  "skill_id": "mn-arl-027",
+  "skill_name": "Prompt Injection Detector",
+  "issued_at": "2026-07-05T23:16:51.891Z",
+  "expires_at": "2026-07-12T23:16:51.891Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 0,
+  "max_score": 10,
+  "risk_level": "critical",
+  "risk_breakdown": {
+    "l15_l16": "critical",
+    "l2": "not_available",
+    "final": "critical"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 2,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "2cd2de8a2e04d2e2b4939a3519e92dce4e5c15e98ffdae176e705624189c211c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-027"
+}

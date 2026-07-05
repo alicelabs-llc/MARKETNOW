@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410314",
+  "skill_id": "mn-gen-10002",
+  "skill_name": "Openinsider-mcp",
+  "issued_at": "2026-07-05T23:16:50.314Z",
+  "expires_at": "2026-07-12T23:16:50.314Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "24e55fc29e0168a5415e12d31d0c21ebd2630a788f6af0e1dcba735d9a05bcd5",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10002"
+}

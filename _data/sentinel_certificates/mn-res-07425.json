@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3409969",
+  "skill_id": "mn-res-07425",
+  "skill_name": "Eci-soundscribe/mcp-research-insights",
+  "issued_at": "2026-07-05T23:16:49.969Z",
+  "expires_at": "2026-07-12T23:16:49.969Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 3,
+  "max_score": 10,
+  "risk_level": "high",
+  "risk_breakdown": {
+    "l15_l16": "high",
+    "l2": "not_available",
+    "final": "high"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "9dd2e9598bfa97d12886894ccd4ac7b62372c8f79ad7f78d969620db18127c7e",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-07425"
+}

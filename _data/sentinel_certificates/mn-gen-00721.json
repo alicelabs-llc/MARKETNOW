@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-2961462",
+  "skill_id": "mn-gen-00721",
+  "skill_name": "Jolab/alphagenome-mcp",
+  "issued_at": "2026-07-05T23:09:21.462Z",
+  "expires_at": "2026-07-12T23:09:21.462Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "eea7b8b107bb791213f656a39f73fa459baca532c3525f93f1eca1f704860800",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00721"
+}

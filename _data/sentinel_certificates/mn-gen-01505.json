@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3225308",
+  "skill_id": "mn-gen-01505",
+  "skill_name": "Boot-mcp",
+  "issued_at": "2026-07-05T23:13:45.308Z",
+  "expires_at": "2026-07-12T23:13:45.308Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "af4b4194eab64333b1351ff8182d14b39afb821c34862a2ee629c6680704eb97",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01505"
+}

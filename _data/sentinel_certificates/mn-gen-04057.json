@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3409500",
+  "skill_id": "mn-gen-04057",
+  "skill_name": "Kameldhakwani90/firebase-app-builder-mcp",
+  "issued_at": "2026-07-05T23:16:49.500Z",
+  "expires_at": "2026-07-12T23:16:49.500Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "7eb7f18c28b1ec595305012acf1a99eaa38fc05220f1f2949993786d6520173f",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04057"
+}

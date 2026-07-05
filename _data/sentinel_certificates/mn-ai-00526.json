@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-2499708",
+  "skill_id": "mn-ai-00526",
+  "skill_name": "Ai-meta-mcp-server",
+  "issued_at": "2026-07-05T23:01:39.708Z",
+  "expires_at": "2026-07-12T23:01:39.708Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "ba4767e40b7b93bc979f4017b78762d7d9a299526fb157accadec9a3fe576f52",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00526"
+}

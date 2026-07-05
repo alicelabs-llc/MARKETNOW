@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412068",
+  "skill_id": "mn-hea-00019",
+  "skill_name": "UMLS Terminology Service",
+  "issued_at": "2026-07-05T23:16:52.068Z",
+  "expires_at": "2026-07-12T23:16:52.068Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "be258b78c682208d7e5040d1636b73fb86aa9e2a71f45ac747a08484f27a9340",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00019"
+}

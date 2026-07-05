@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410503",
+  "skill_id": "mn-sal-11418",
+  "skill_name": "Sales-intelligence-mcp-server",
+  "issued_at": "2026-07-05T23:16:50.503Z",
+  "expires_at": "2026-07-12T23:16:50.503Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "ab1ff89d19b03c6e9bea8b890b2d8b2618326f6d30c5e1a8ab6cecb32218f07e",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-11418"
+}

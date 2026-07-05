@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412164",
+  "skill_id": "mn-pro-ea6e99f7",
+  "skill_name": "Data Pipeline Observability",
+  "issued_at": "2026-07-05T23:16:52.164Z",
+  "expires_at": "2026-07-12T23:16:52.164Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "5876e9826cac2f8bc094cf89fed1f36807670cd0d2885707c5eae10927ca7e8c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-ea6e99f7"
+}

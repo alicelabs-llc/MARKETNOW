@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411564",
+  "skill_id": "mn-prompt-ba5abbd1",
+  "skill_name": "Product feedback loop VOC",
+  "issued_at": "2026-07-05T23:16:51.564Z",
+  "expires_at": "2026-07-12T23:16:51.564Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 5,
+  "max_score": 10,
+  "risk_level": "high",
+  "risk_breakdown": {
+    "l15_l16": "high",
+    "l2": "not_available",
+    "final": "high"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "66a54697120a1d5a60cfefabf44323c1793a261f35bd1bea365c2124e4756f70",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ba5abbd1"
+}

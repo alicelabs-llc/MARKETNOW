@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411330",
+  "skill_id": "mn-prompt-462a7c35",
+  "skill_name": "Especialista Agriculture + AgTech",
+  "issued_at": "2026-07-05T23:16:51.330Z",
+  "expires_at": "2026-07-12T23:16:51.330Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "b2b195ee3cb0d9a03f1ddc5b90fa04379d20230cc62a71691328e131f75c8b0a",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-462a7c35"
+}

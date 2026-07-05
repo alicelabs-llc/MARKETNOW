@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412211",
+  "skill_id": "mn-pro-89b9e6b3",
+  "skill_name": "Edge Function Debugger",
+  "issued_at": "2026-07-05T23:16:52.211Z",
+  "expires_at": "2026-07-12T23:16:52.211Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "29834ad7df221c6c7141aafc5e7faa5f04c5158886f2c58d39433930271b5029",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-89b9e6b3"
+}

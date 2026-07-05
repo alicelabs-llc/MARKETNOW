@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410554",
+  "skill_id": "mn-gen-11746",
+  "skill_name": "Best-shopify-mcp",
+  "issued_at": "2026-07-05T23:16:50.554Z",
+  "expires_at": "2026-07-12T23:16:50.554Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "9df97d8388c0a4eed9ffbc659684e40ad60aec0a5cbeb710c6c89037a98fa16c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11746"
+}

@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410913",
+  "skill_id": "mn-prompt-2b7952c0",
+  "skill_name": "Especialista Event-Driven Architecture",
+  "issued_at": "2026-07-05T23:16:50.913Z",
+  "expires_at": "2026-07-12T23:16:50.913Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "276248a8e63bd3145841fd8a2746b5c33300da4ab82c7e6347f0e95a7cc5d37d",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2b7952c0"
+}

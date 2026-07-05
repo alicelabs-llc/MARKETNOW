@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411390",
+  "skill_id": "mn-prompt-1b3c6f51",
+  "skill_name": "Diseñador de monorepo con Bazel/Nx",
+  "issued_at": "2026-07-05T23:16:51.390Z",
+  "expires_at": "2026-07-12T23:16:51.390Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "a6fb99fd5beabd08e65ea4976358b6de5b127c1eb739e8cac1dff9737538ef5a",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1b3c6f51"
+}

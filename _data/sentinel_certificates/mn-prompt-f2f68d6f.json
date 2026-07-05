@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411115",
+  "skill_id": "mn-prompt-f2f68d6f",
+  "skill_name": "Especialista Financial Close + Month-End",
+  "issued_at": "2026-07-05T23:16:51.115Z",
+  "expires_at": "2026-07-12T23:16:51.115Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "d9f3ddbb067b649417609132fde1750d2cc4d54fc1eada9a353f097c9361c835",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f2f68d6f"
+}

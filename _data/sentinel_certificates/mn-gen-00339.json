@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-2492876",
+  "skill_id": "mn-gen-00339",
+  "skill_name": "Agentgram/mcp-server",
+  "issued_at": "2026-07-05T23:01:32.876Z",
+  "expires_at": "2026-07-12T23:01:32.876Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "fde87b8cb706d33dcf0e8b7fa1811a5816e2f4b60660a72beb705955fe43ceca",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00339"
+}

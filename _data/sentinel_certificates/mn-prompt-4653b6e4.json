@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411295",
+  "skill_id": "mn-prompt-4653b6e4",
+  "skill_name": "Especialista Energy Law + Regulation",
+  "issued_at": "2026-07-05T23:16:51.295Z",
+  "expires_at": "2026-07-12T23:16:51.295Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "c15629c8fc5fa0e3234bd1000e791e35b8f20cb44ffc61cc759c3e56ea848517",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4653b6e4"
+}

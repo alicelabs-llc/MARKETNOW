@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411328",
+  "skill_id": "mn-prompt-044537d3",
+  "skill_name": "Especialista Spa + Wellness Center Operations",
+  "issued_at": "2026-07-05T23:16:51.328Z",
+  "expires_at": "2026-07-12T23:16:51.328Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "ba32ffe1e1ab89d97adc2c7fdddeb6bedc88fc0a2dce722c437d7a5b36afa380",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-044537d3"
+}

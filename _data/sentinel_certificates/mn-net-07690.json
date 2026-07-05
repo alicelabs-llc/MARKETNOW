@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3409998",
+  "skill_id": "mn-net-07690",
+  "skill_name": "Mcp-server-iru-api",
+  "issued_at": "2026-07-05T23:16:49.998Z",
+  "expires_at": "2026-07-12T23:16:49.998Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "81699ac59010467c5d4d84fc4cc0d737e037efa317feaa89515db91ce18e3bb1",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-07690"
+}

@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412003",
+  "skill_id": "mn-apf-039",
+  "skill_name": "Multi-Level Cache",
+  "issued_at": "2026-07-05T23:16:52.003Z",
+  "expires_at": "2026-07-12T23:16:52.003Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 10,
+  "max_score": 10,
+  "risk_level": "low",
+  "risk_breakdown": {
+    "l15_l16": "low",
+    "l2": "not_available",
+    "final": "low"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 0,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "529d821562e4dd6a6e9786f64fb82e1a7b97af7ff62d7a2db2623f720dd54c2c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-039"
+}

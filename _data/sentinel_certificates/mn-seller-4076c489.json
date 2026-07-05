@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412607",
+  "skill_id": "mn-seller-4076c489",
+  "skill_name": "Dependency Vulnerability Scanner",
+  "issued_at": "2026-07-05T23:16:52.607Z",
+  "expires_at": "2026-07-12T23:16:52.607Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "4d69def45e4625e08c8a626586fad9afc865aeb8d0955165392645a72e8d7aa0",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-seller-4076c489"
+}

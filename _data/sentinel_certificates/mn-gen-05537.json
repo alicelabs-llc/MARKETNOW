@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3409692",
+  "skill_id": "mn-gen-05537",
+  "skill_name": "Mrbaeksang/korea-stock-analyzer-mcp",
+  "issued_at": "2026-07-05T23:16:49.692Z",
+  "expires_at": "2026-07-12T23:16:49.692Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "5a65b18b28da40a9e26c2151ce8707dffb1a66d7641615850ecdb4019058706b",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05537"
+}

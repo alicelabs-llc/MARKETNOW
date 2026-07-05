@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410881",
+  "skill_id": "mn-fin-13663",
+  "skill_name": "Yahoo-finance-mcp-server",
+  "issued_at": "2026-07-05T23:16:50.881Z",
+  "expires_at": "2026-07-12T23:16:50.881Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "e5a3384e19a7c73630313db63b7aa27d53c5774b4f1196587c39637da03d6925",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fin-13663"
+}

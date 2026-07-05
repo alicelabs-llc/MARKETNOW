@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410701",
+  "skill_id": "mn-gen-12877",
+  "skill_name": "Twenty-mcp-server",
+  "issued_at": "2026-07-05T23:16:50.701Z",
+  "expires_at": "2026-07-12T23:16:50.701Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "741dd32a860fb332d548cca154a47d1b7b2d7d1a692f21e083681b5a9a5502a5",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12877"
+}

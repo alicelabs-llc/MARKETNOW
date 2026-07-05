@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410160",
+  "skill_id": "mn-gen-08819",
+  "skill_name": "Mcx",
+  "issued_at": "2026-07-05T23:16:50.160Z",
+  "expires_at": "2026-07-12T23:16:50.160Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "0b9a32ddcb87f91d530d9c4720604496645766452b66abce1f23f1669f708340",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08819"
+}

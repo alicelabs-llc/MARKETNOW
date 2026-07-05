@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411078",
+  "skill_id": "mn-prompt-1f43e284",
+  "skill_name": "Especialista Local Marketing + GMB",
+  "issued_at": "2026-07-05T23:16:51.078Z",
+  "expires_at": "2026-07-12T23:16:51.078Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "742583ccde8a952d38a63e83c4bd4d50bc82fc9c80b89d6590467a9d47a5d8ab",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1f43e284"
+}

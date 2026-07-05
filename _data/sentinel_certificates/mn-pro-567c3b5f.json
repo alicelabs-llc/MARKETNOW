@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412207",
+  "skill_id": "mn-pro-567c3b5f",
+  "skill_name": "Database Change Tracker",
+  "issued_at": "2026-07-05T23:16:52.207Z",
+  "expires_at": "2026-07-12T23:16:52.207Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "d40ed7f379b4fd73007a826cfcb914da6fb740e0b2927b81f1bdd0c8ad91c488",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-567c3b5f"
+}

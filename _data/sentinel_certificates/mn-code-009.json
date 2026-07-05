@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3412348",
+  "skill_id": "mn-code-009",
+  "skill_name": "Build System",
+  "issued_at": "2026-07-05T23:16:52.348Z",
+  "expires_at": "2026-07-12T23:16:52.348Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "4f6f5324450c0c497b3c88a8830c7bad0a09e2c8c7c1b33c5dd3af86d9048ac5",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-009"
+}

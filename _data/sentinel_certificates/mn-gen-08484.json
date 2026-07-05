@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410119",
+  "skill_id": "mn-gen-08484",
+  "skill_name": "Mcpgraph",
+  "issued_at": "2026-07-05T23:16:50.119Z",
+  "expires_at": "2026-07-12T23:16:50.119Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "6746342341c4e307156c4acb6b168b052b95a33a0a80d646892c65a59ff8ff01",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08484"
+}

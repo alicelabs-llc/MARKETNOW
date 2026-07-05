@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411187",
+  "skill_id": "mn-prompt-a8fae282",
+  "skill_name": "Especialista Ecommerce Personalization + Recommendations",
+  "issued_at": "2026-07-05T23:16:51.187Z",
+  "expires_at": "2026-07-12T23:16:51.187Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "fc6e8bf563ecb5d091f3a6af1b7c6d861b94f361ac75eff48d458c3888d5539e",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a8fae282"
+}

@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411391",
+  "skill_id": "mn-prompt-1847dd64",
+  "skill_name": "Especialista en performance web con Core Web Vitals",
+  "issued_at": "2026-07-05T23:16:51.391Z",
+  "expires_at": "2026-07-12T23:16:51.391Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "fa631bd5a52cb9b22c0001f1bc7c76e4d6b6cb103a74d37d845151ca91aa4a09",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1847dd64"
+}

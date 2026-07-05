@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3410785",
+  "skill_id": "mn-gen-13202",
+  "skill_name": "Vite-mcp",
+  "issued_at": "2026-07-05T23:16:50.785Z",
+  "expires_at": "2026-07-12T23:16:50.785Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "d6abca558c1680994000dd3d2d8c990fdeeda4eb7c1a1854f80e70285ff2610f",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13202"
+}

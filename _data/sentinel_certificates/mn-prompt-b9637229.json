@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-3411811",
+  "skill_id": "mn-prompt-b9637229",
+  "skill_name": "Media content monetization",
+  "issued_at": "2026-07-05T23:16:51.811Z",
+  "expires_at": "2026-07-12T23:16:51.811Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "2ee8f5ec32aa5ce27b79ca3112958afe61b333aba9a432dc657d7027dd3d9ccc",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b9637229"
+}

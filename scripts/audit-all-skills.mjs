@@ -28,12 +28,12 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { auditSkill, generateCertificate } from '../marketnow/aep-marketplace/lib/sentinel-audit.mjs';
+import { auditSkill, generateCertificate } from '../aep-marketplace/lib/sentinel-audit.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const REPO_ROOT = path.join(__dirname, '..', 'marketnow');
+const REPO_ROOT = path.join(__dirname, '..');
 const SKILLS_PATH = path.join(REPO_ROOT, 'aep-marketplace', 'public', 'api', 'skills_index.json');
 const CERTS_DIR = path.join(REPO_ROOT, '_data', 'sentinel_certificates');
 

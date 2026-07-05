@@ -13,6 +13,7 @@
  */
 
 import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from '../lib/sentinel-l16.mjs';
+import { triggerL2, getL2Results } from '../lib/sentinel-l2-trigger.mjs';
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -240,10 +241,28 @@ export default async function handler(req, res) {
 
     // ═══ L1.6: Run enhanced analysis (Semgrep + Secrets + OSV) ═══
     const l16Result = await runL16(skill);
-    
+
     // Apply L1.6 score adjustment
     overallScore += l16Result.score_adjustment;
     overallScore = Math.max(0, Math.min(10, overallScore));
+
+    // ═══ L2: Check existing Docker sandbox results + trigger async ═══
+    let l2Data = { status: 'not_triggered', results: null, trigger: null };
+    const l2Existing = await getL2Results(skill.id);
+    if (l2Existing) {
+      l2Data.status = 'completed';
+      l2Data.results = l2Existing;
+      if (l2Existing.l2_score !== undefined) {
+        const l2Mult = l2Existing.l2_score / 10;
+        overallScore = Math.round(overallScore * l2Mult);
+      }
+    } else if (skill.source?.url && skill.source.url.includes('github.com')) {
+      const l2Trig = await triggerL2(skill.id, skill.source.url);
+      l2Data.status = l2Trig.triggered ? 'triggered_async' : 'not_available';
+      l2Data.trigger = l2Trig;
+    } else {
+      l2Data.status = 'no_github_repo';
+    }
 
     // Build L1.6 checks for report
     const l16Checks = [];
@@ -335,7 +354,7 @@ export default async function handler(req, res) {
             secret_findings: l16Result.findings.secrets.length,
             osv_findings: l16Result.findings.osv.length,
           },
-          l2: { status: 'runs via GitHub Actions (Docker sandbox)', results_in_catalog: true },
+          l2: { status: l2Data.status, has_results: !!l2Data.results, score: l2Data.results?.l2_score },
         },
       },
       checks: allChecks,
@@ -350,6 +369,7 @@ export default async function handler(req, res) {
         step5: 'Test SSRF (http://169.254.169.254) if http access detected',
         step6: 'Verify rate limiting by sending 100 rapid requests',
       },
+      l2_docker_sandbox: l2Data,
     };
 
     return res.status(200).json(report);

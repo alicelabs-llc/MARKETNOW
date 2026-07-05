@@ -1,25 +1,27 @@
-<<<<<<< HEAD
 # MarketNow — Sentinel L2 Docker Sandbox (GitHub Actions)
 # ==========================================================
+# Triggered by:
+#   1. Manual workflow_dispatch (with skill_id + repo_url)
+#   2. Repository dispatch event (from /api/audit-skill via sentinel-l2-trigger.mjs)
+#
 # Runs MCP servers in isolated Docker containers to detect
 # runtime behavior: network exfiltration, filesystem changes,
 # process spawning, credential leakage.
 
 name: Sentinel L2 Docker Sandbox
-=======
-name: Sentinel L2 Dynamic Sandbox Audit
->>>>>>> d394dfd63d886b17224fcdb031961bdeb444c72c
 
 on:
   workflow_dispatch:
     inputs:
-<<<<<<< HEAD
       skill_id:
         description: 'Skill ID to audit (e.g., mn-gen-00001)'
         required: true
       repo_url:
         description: 'GitHub repo URL of the MCP server'
         required: true
+  repository_dispatch:
+    types:
+      - sentinel-l2-audit
 
 jobs:
   sandbox:
@@ -27,297 +29,136 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Clone MCP server repo
+      - name: Set variables
+        id: vars
         run: |
-          git clone ${{ inputs.repo_url }} /tmp/mcp-server
-          cd /tmp/mcp-server
-
-      - name: Build Docker image
-        run: |
-          cd /tmp/mcp-server
-          docker build -t mcp-audit-target . || echo "No Dockerfile — using node:18-slim"
-          if ! docker images mcp-audit-target | grep -q mcp-audit-target; then
-            echo 'FROM node:18-slim' > /tmp/mcp-server/Dockerfile.audit
-            echo 'COPY . /app' >> /tmp/mcp-server/Dockerfile.audit
-            echo 'WORKDIR /app' >> /tmp/mcp-server/Dockerfile.audit
-            echo 'RUN npm install || true' >> /tmp/mcp-server/Dockerfile.audit
-            echo 'CMD ["node", "index.js"]' >> /tmp/mcp-server/Dockerfile.audit
-            docker build -t mcp-audit-target -f Dockerfile.audit /tmp/mcp-server
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "skill_id=${{ github.event.client_payload.skill_id }}" >> $GITHUB_OUTPUT
+            echo "repo_url=${{ github.event.client_payload.repo_url }}" >> $GITHUB_OUTPUT
+          else
+            echo "skill_id=${{ inputs.skill_id }}" >> $GITHUB_OUTPUT
+            echo "repo_url=${{ inputs.repo_url }}" >> $GITHUB_OUTPUT
           fi
 
-      - name: Run in isolated Docker sandbox
+      - name: Clone MCP server repo
         run: |
-          # Create audit script
-          cat > /tmp/audit.sh << 'AUDIT'
-          #!/bin/bash
-          echo "=== SENTINEL L2 BEHAVIORAL AUDIT ==="
-          echo "Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          echo "Skill: $SKILL_ID"
-          echo ""
+          REPO_URL="${{ steps.vars.outputs.repo_url }}"
+          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
+          echo "Auditing skill: $SKILL_ID"
+          echo "Repo: $REPO_URL"
+          git clone "$REPO_URL" /tmp/mcp-server || exit 1
 
-          # Run the MCP server in complete isolation
-          echo "--- Starting MCP server in sandbox ---"
-          timeout 30 docker run --rm \
+      - name: Build Docker image (or use fallback)
+        run: |
+          cd /tmp/mcp-server
+          docker build -t mcp-audit-target . 2>/dev/null || {
+            echo "No Dockerfile — creating fallback"
+            cat > Dockerfile.audit << 'EOD'
+          FROM node:18-slim
+          COPY . /app
+          WORKDIR /app
+          RUN npm install --production 2>/dev/null || true
+          RUN pip install -r requirements.txt 2>/dev/null || true
+          CMD ["node", "index.js"]
+          EOD
+            docker build -t mcp-audit-target -f Dockerfile.audit /tmp/mcp-server
+          }
+
+      - name: Run L2 Behavioral Sandbox Audit
+        run: |
+          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
+          mkdir -p /tmp/l2_output
+
+          # Run in complete isolation — NO network, NO filesystem writes, NO capabilities
+          # This is the core of Sentinel L2
+          timeout 60 docker run --rm \
             --network none \
             --read-only \
             --cap-drop ALL \
             --security-opt no-new-privileges \
             --memory 256m \
+            --memory-swap 0 \
             --cpus 0.5 \
+            --pids-limit 64 \
             --tmpfs /tmp:rw,size=64m \
             -e SKILL_ID="$SKILL_ID" \
-            mcp-audit-target 2>&1 || true
+            mcp-audit-target > /tmp/l2_output/stdout.log 2>&1 || true
 
-          echo ""
-          echo "--- Checking for network attempts ---"
-          # If --network none, any network attempt = ECONNREFUSED
-          # Check docker logs for network errors
-          echo "(Network attempts blocked by --network none)"
+          # Analyze results
+          cat > /tmp/l2_output/result.json << JSONEOF
+          {
+            "skill_id": "$SKILL_ID",
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "sandbox_config": {
+              "network": "none",
+              "filesystem": "read-only",
+              "capabilities": "dropped ALL",
+              "memory": "256m",
+              "cpu": "0.5",
+              "pids": "64",
+              "timeout": "60s"
+            },
+            "behavioral_analysis": {
+              "network_attempts": "$(grep -ciE 'ECONNREFUSED|ENOTFOUND|ETIMEDOUT|connect|fetch|http' /tmp/l2_output/stdout.log || echo 0)",
+              "fs_write_attempts": "$(grep -ciE 'EROFS|read.only|permission.denied|EACCES' /tmp/l2_output/stdout.log || echo 0)",
+              "process_spawns": "$(grep -ciE 'spawn|exec|fork|child_process' /tmp/l2_output/stdout.log || echo 0)",
+              "credential_leakage": "$(grep -ciE 'api.key|token|secret|password|private.key|mnemonic' /tmp/l2_output/stdout.log || echo 0)",
+              "crash_detected": "$(grep -ciE 'SIGSEGV|SIGKILL|OOM|crash|fatal' /tmp/l2_output/stdout.log || echo 0)",
+              "dynamic_imports": "$(grep -ciE 'require\\(|import.*dynamic|eval\\(' /tmp/l2_output/stdout.log || echo 0)"
+            },
+            "stdout_size_bytes": $(wc -c < /tmp/l2_output/stdout.log),
+            "stdout_sample": "$(head -c 500 /tmp/l2_output/stdout.log | sed 's/"/\\"/g' | tr '\n' ' ')",
+            "l2_score": 0,
+            "l2_risk_level": "unknown"
+          }
+          JSONEOF
 
-          echo ""
-          echo "--- Checking filesystem mutations ---"
-          # --read-only means any write attempt = error
-          echo "(Filesystem writes blocked by --read-only)"
+          # Calculate L2 score based on findings
+          NETWORK=$(grep -ciE 'ECONNREFUSED|ENOTFOUND|ETIMEDOUT|connect|fetch|http' /tmp/l2_output/stdout.log || echo 0)
+          FS_WRITE=$(grep -ciE 'EROFS|read.only|permission.denied|EACCES' /tmp/l2_output/stdout.log || echo 0)
+          CREDS=$(grep -ciE 'api.key|token|secret|password|private.key|mnemonic' /tmp/l2_output/stdout.log || echo 0)
+          CRASH=$(grep -ciE 'SIGSEGV|SIGKILL|OOM|crash|fatal' /tmp/l2_output/stdout.log || echo 0)
 
-          echo ""
-          echo "--- Checking for credential leakage in stdout ---"
-          # Look for patterns in output
-          echo "(Scanning output for secrets, tokens, keys...)"
+          L2_SCORE=10
+          [ "$NETWORK" -gt 0 ] && L2_SCORE=$((L2_SCORE - 3))
+          [ "$FS_WRITE" -gt 0 ] && L2_SCORE=$((L2_SCORE - 2))
+          [ "$CREDS" -gt 0 ] && L2_SCORE=$((L2_SCORE - 5))
+          [ "$CRASH" -gt 0 ] && L2_SCORE=$((L2_SCORE - 2))
+          [ "$L2_SCORE" -lt 0 ] && L2_SCORE=0
 
-          echo ""
-          echo "=== AUDIT COMPLETE ==="
-          AUDIT
-          chmod +x /tmp/audit.sh
+          L2_RISK="low"
+          [ "$L2_SCORE" -lt 7 ] && L2_RISK="medium"
+          [ "$L2_SCORE" -lt 4 ] && L2_RISK="high"
+          [ "$L2_SCORE" -lt 2 ] && L2_RISK="critical"
 
-          SKILL_ID="${{ inputs.skill_id }}" bash /tmp/audit.sh > /tmp/l2_result.txt 2>&1
+          # Update result with score
+          python3 -c "
+          import json
+          with open('/tmp/l2_output/result.json') as f:
+              d = json.load(f)
+          d['l2_score'] = $L2_SCORE
+          d['l2_risk_level'] = '$L2_RISK'
+          with open('/tmp/l2_output/result.json', 'w') as f:
+              json.dump(d, f, indent=2)
+          "
 
-      - name: Upload L2 results
+          echo "=== L2 RESULT ==="
+          cat /tmp/l2_output/result.json
+
+      - name: Commit L2 results to repo
+        run: |
+          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
+          mkdir -p _data/l2_results
+          cp /tmp/l2_output/result.json "_data/l2_results/${SKILL_ID}.json"
+
+          git config user.name "Sentinel L2 Bot"
+          git config user.email "sentinel@marketnow.site"
+          git add "_data/l2_results/${SKILL_ID}.json"
+          git commit -m "sentinel: L2 Docker sandbox result for ${SKILL_ID} — $(cat /tmp/l2_output/result.json | python3 -c 'import json,sys; d=json.load(sys.stdin); print(f\"score={d[\"l2_score\"]}/10 risk={d[\"l2_risk_level\"]}\")')"
+          git push
+
+      - name: Upload L2 results as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sentinel-l2-${{ inputs.skill_id }}
-          path: /tmp/l2_result.txt
-
-      - name: Display results
-        run: cat /tmp/l2_result.txt
-=======
-      repo_url:
-        description: 'GitHub repo URL to audit (e.g. https://github.com/user/repo)'
-        required: true
-        type: string
-      skill_id:
-        description: 'MarketNow skill ID (optional)'
-        required: false
-        type: string
-        default: 'manual-audit'
-  issues:
-    types: [opened]
-
-jobs:
-  sentinel-l2:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: read
-      issues: write
-      packages: read
-    
-    steps:
-      - name: Checkout MarketNow repo
-        uses: actions/checkout@v4
-
-      - name: Determine repo URL
-        id: repo-url
-        run: |
-          if [ -n "${{ github.event.inputs.repo_url }}" ]; then
-            echo "url=${{ github.event.inputs.repo_url }}" >> $GITHUB_OUTPUT
-            echo "skill_id=${{ github.event.inputs.skill_id }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event_name }}" = "issues" ]; then
-            ISSUE_BODY='${{ github.event.issue.body }}'
-            URL=$(echo "$ISSUE_BODY" | grep -oE 'https://github\.com/[a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+' | head -1)
-            SKILL_ID=$(echo "$ISSUE_BODY" | grep -oE 'mn-[a-z]+-[0-9]+' | head -1)
-            if [ -n "$URL" ]; then
-              echo "url=$URL" >> $GITHUB_OUTPUT
-              echo "skill_id=${SKILL_ID:-issue-#${{ github.event.issue.number }}}" >> $GITHUB_OUTPUT
-            else
-              echo "url=" >> $GITHUB_OUTPUT
-              echo "skill_id=" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "url=" >> $GITHUB_OUTPUT
-            echo "skill_id=" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Run Sentinel L1.6 (static analysis)
-        if: steps.repo-url.outputs.url != ''
-        id: l16
-        run: |
-          cd aep-marketplace
-          pip install semgrep 2>/dev/null || true
-          node lib/sentinel-l16.js "${{ steps.repo-url.outputs.url }}" > /tmp/l16-report.json 2>&1 || true
-          L16_SCORE=$(cat /tmp/l16-report.json | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('score',0))" 2>/dev/null || echo "0")
-          echo "l16_score=$L16_SCORE" >> $GITHUB_OUTPUT
-          echo "[L1.6] Score: $L16_SCORE"
-
-      - name: Run Sentinel L2 (dynamic sandbox)
-        if: steps.repo-url.outputs.url != ''
-        id: l2
-        run: |
-          chmod +x aep-marketplace/lib/sentinel-l2-sandbox.sh
-          bash aep-marketplace/lib/sentinel-l2-sandbox.sh \
-            "${{ steps.repo-url.outputs.url }}" \
-            "${{ steps.repo-url.outputs.skill_id }}" > /tmp/l2-report.json 2>&1 || true
-          
-          # Extract the JSON report (last JSON block in output)
-          python3 << 'PYEOF'
-          import json, re
-          with open('/tmp/l2-report.json') as f:
-            content = f.read()
-          # Find the JSON block after "=== SENTINEL L2 REPORT ==="
-          match = re.search(r'=== SENTINEL L2 REPORT ===\s*(\{.*\})', content, re.DOTALL)
-          if match:
-            report = json.loads(match.group(1))
-            with open('/tmp/l2-final.json', 'w') as out:
-              json.dump(report, out, indent=2)
-            print(f"L2_SCORE={report.get('score', 0)}")
-          else:
-            # Try to find any JSON in the output
-            try:
-              report = json.loads(content.split('\n')[-1])
-              with open('/tmp/l2-final.json', 'w') as out:
-                json.dump(report, out, indent=2)
-              print(f"L2_SCORE={report.get('score', 0)}")
-            except:
-              with open('/tmp/l2-final.json', 'w') as out:
-                json.dump({"score": 0, "status": "failed", "error": "could_not_parse"}, out)
-              print("L2_SCORE=0")
-          PYEOF
-          
-          L2_SCORE=$(cat /tmp/l2-final.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('score',0))")
-          echo "l2_score=$L2_SCORE" >> $GITHUB_OUTPUT
-          echo "[L2] Score: $L2_SCORE"
-
-      - name: Calculate final score
-        if: steps.repo-url.outputs.url != ''
-        id: final
-        run: |
-          L16=${{ steps.l16.outputs.l16_score || '0' }}
-          L2=${{ steps.l2.outputs.l2_score || '0' }}
-          # Final = L1.6 * L2_multiplier (L2 score / 10)
-          L2_MULT=$(echo "scale=4; $L2 / 10.0" | bc -l)
-          FINAL=$(echo "scale=2; $L16 * $L2_MULT" | bc -l)
-          echo "final_score=$FINAL" >> $GITHUB_OUTPUT
-          echo "[FINAL] L1.6=$L16 × L2_mult=$L2_MULT = $FINAL"
-
-      - name: Upload reports
-        if: steps.repo-url.outputs.url != ''
-        uses: actions/upload-artifact@v4
-        with:
-          name: sentinel-audit-${{ steps.repo-url.outputs.skill_id }}
-          path: |
-            /tmp/l16-report.json
-            /tmp/l2-final.json
-          retention-days: 30
-
-      - name: Comment on issue with full report
-        if: github.event_name == 'issues' && steps.repo-url.outputs.url != ''
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            
-            let l16 = {}, l2 = {};
-            try { l16 = JSON.parse(fs.readFileSync('/tmp/l16-report.json', 'utf8')); } catch {}
-            try { l2 = JSON.parse(fs.readFileSync('/tmp/l2-final.json', 'utf8')); } catch {}
-            
-            const l16Score = l16.score || 0;
-            const l2Score = l2.score || 0;
-            const finalScore = ${{ steps.final.outputs.final_score || '0' }};
-            const passed = finalScore >= 4.0;
-            
-            let comment = `## ${passed ? '✅' : '❌'} Sentinel L1.6 + L2 Security Audit Complete\n\n`;
-            comment += `**Repository:** ${{ steps.repo-url.outputs.url }}\n`;
-            comment += `**Skill ID:** ${{ steps.repo-url.outputs.skill_id }}\n\n`;
-            
-            comment += `### Scores\n\n`;
-            comment += `| Level | Score | Status |\n`;
-            comment += `|-------|-------|--------|\n`;
-            comment += `| L1.6 (Static) | ${l16Score}/10 | ${l16Score >= 4 ? '✅ Pass' : '❌ Fail'} |\n`;
-            comment += `| L2 (Dynamic) | ${l2Score}/10 | ${l2Score >= 4 ? '✅ Pass' : '❌ Fail'} |\n`;
-            comment += `| **Final** | **${finalScore}/10** | **${passed ? '✅ LISTED' : '❌ BLOCKED'}** |\n\n`;
-            
-            // L2 container details
-            if (l2.container) {
-              comment += `### L2 Sandbox Details\n\n`;
-              comment += `- **Container status:** ${l2.container.status}\n`;
-              comment += `- **Exit code:** ${l2.container.exitCode}\n`;
-              comment += `- **Network:** ${l2.container.network}\n`;
-              comment += `- **Filesystem:** ${l2.container.filesystem}\n`;
-              comment += `- **Memory limit:** ${l2.container.memory}\n`;
-              comment += `- **CPU limit:** ${l2.container.cpus}\n`;
-              comment += `- **Capabilities:** ${l2.container.capabilities}\n`;
-              comment += `- **Seccomp:** ${l2.container.seccomp}\n\n`;
-            }
-            
-            // L2 findings
-            if (l2.findings) {
-              const f = l2.findings;
-              const total = (f.critical?.length || 0) + (f.high?.length || 0) + (f.medium?.length || 0) + (f.low?.length || 0);
-              if (total > 0) {
-                comment += `### L2 Dynamic Findings (${total} total)\n\n`;
-                if (f.critical?.length > 0) {
-                  comment += `**🔴 CRITICAL:**\n`;
-                  f.critical.forEach(c => comment += `- ${c}\n`);
-                }
-                if (f.high?.length > 0) {
-                  comment += `**🟠 HIGH:**\n`;
-                  f.high.forEach(h => comment += `- ${h}\n`);
-                }
-                if (f.medium?.length > 0) {
-                  comment += `**🟡 MEDIUM:**\n`;
-                  f.medium.forEach(m => comment += `- ${m}\n`);
-                }
-                if (f.low?.length > 0) {
-                  comment += `**🟢 LOW:**\n`;
-                  f.low.forEach(l => comment += `- ${l}\n`);
-                }
-                comment += `\n`;
-              } else {
-                comment += `### L2 Dynamic Findings\n✅ No concerning behavior detected in sandbox execution.\n\n`;
-              }
-            }
-            
-            // L1.6 findings
-            if (l16.categories) {
-              comment += `### L1.6 Static Findings\n\n`;
-              for (const [cat, data] of Object.entries(l16.categories)) {
-                if (data.details?.length > 0) {
-                  comment += `**${cat}:** ${data.details.length} findings\n`;
-                  data.details.slice(0, 5).forEach(d => {
-                    comment += `- ${d.severity}: ${d.message}\n`;
-                  });
-                }
-              }
-            }
-            
-            comment += `\n---\n`;
-            comment += `**About Sentinel L2:** Dynamic sandbox analysis. The MCP server was executed in an isolated Docker container with no network, read-only filesystem, 256MB memory limit, all capabilities dropped, and seccomp applied. Behavior was monitored for: credential access, network attempts, filesystem changes, code execution.\n`;
-            comment += `**Audit run:** ${new Date().toISOString()}\n`;
-            
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: comment
-            });
-
-      - name: Fail if below minimum
-        if: steps.repo-url.outputs.url != ''
-        run: |
-          FINAL=${{ steps.final.outputs.final_score || '0' }}
-          if (( $(echo "$FINAL < 4.0" | bc -l) )); then
-            echo "❌ Audit FAILED: final score $FINAL is below minimum 4.0"
-            exit 1
-          else
-            echo "✅ Audit PASSED: final score $FINAL"
-          fi
->>>>>>> d394dfd63d886b17224fcdb031961bdeb444c72c
+          name: sentinel-l2-${{ steps.vars.outputs.skill_id }}
+          path: /tmp/l2_output/

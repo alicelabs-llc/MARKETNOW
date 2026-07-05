@@ -65,8 +65,9 @@ jobs:
           }
 
       - name: Run L2 Behavioral Sandbox Audit
+        env:
+          SKILL_ID: ${{ steps.vars.outputs.skill_id }}
         run: |
-          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
           mkdir -p /tmp/l2_output
 
           # Run in complete isolation — NO network, NO filesystem writes, NO capabilities
@@ -84,66 +85,96 @@ jobs:
             -e SKILL_ID="$SKILL_ID" \
             mcp-audit-target > /tmp/l2_output/stdout.log 2>&1 || true
 
-          # Analyze results
-          cat > /tmp/l2_output/result.json << JSONEOF
-          {
-            "skill_id": "$SKILL_ID",
-            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-            "sandbox_config": {
-              "network": "none",
-              "filesystem": "read-only",
-              "capabilities": "dropped ALL",
-              "memory": "256m",
-              "cpu": "0.5",
-              "pids": "64",
-              "timeout": "60s"
-            },
-            "behavioral_analysis": {
-              "network_attempts": "$(grep -ciE 'ECONNREFUSED|ENOTFOUND|ETIMEDOUT|connect|fetch|http' /tmp/l2_output/stdout.log || echo 0)",
-              "fs_write_attempts": "$(grep -ciE 'EROFS|read.only|permission.denied|EACCES' /tmp/l2_output/stdout.log || echo 0)",
-              "process_spawns": "$(grep -ciE 'spawn|exec|fork|child_process' /tmp/l2_output/stdout.log || echo 0)",
-              "credential_leakage": "$(grep -ciE 'api.key|token|secret|password|private.key|mnemonic' /tmp/l2_output/stdout.log || echo 0)",
-              "crash_detected": "$(grep -ciE 'SIGSEGV|SIGKILL|OOM|crash|fatal' /tmp/l2_output/stdout.log || echo 0)",
-              "dynamic_imports": "$(grep -ciE 'require\\(|import.*dynamic|eval\\(' /tmp/l2_output/stdout.log || echo 0)"
-            },
-            "stdout_size_bytes": $(wc -c < /tmp/l2_output/stdout.log),
-            "stdout_sample": "$(head -c 500 /tmp/l2_output/stdout.log | sed 's/"/\\"/g' | tr '\n' ' ')",
-            "l2_score": 0,
-            "l2_risk_level": "unknown"
-          }
-          JSONEOF
-
-          # Calculate L2 score based on findings
-          NETWORK=$(grep -ciE 'ECONNREFUSED|ENOTFOUND|ETIMEDOUT|connect|fetch|http' /tmp/l2_output/stdout.log || echo 0)
-          FS_WRITE=$(grep -ciE 'EROFS|read.only|permission.denied|EACCES' /tmp/l2_output/stdout.log || echo 0)
-          CREDS=$(grep -ciE 'api.key|token|secret|password|private.key|mnemonic' /tmp/l2_output/stdout.log || echo 0)
-          CRASH=$(grep -ciE 'SIGSEGV|SIGKILL|OOM|crash|fatal' /tmp/l2_output/stdout.log || echo 0)
-
-          L2_SCORE=10
-          [ "$NETWORK" -gt 0 ] && L2_SCORE=$((L2_SCORE - 3))
-          [ "$FS_WRITE" -gt 0 ] && L2_SCORE=$((L2_SCORE - 2))
-          [ "$CREDS" -gt 0 ] && L2_SCORE=$((L2_SCORE - 5))
-          [ "$CRASH" -gt 0 ] && L2_SCORE=$((L2_SCORE - 2))
-          [ "$L2_SCORE" -lt 0 ] && L2_SCORE=0
-
-          L2_RISK="low"
-          [ "$L2_SCORE" -lt 7 ] && L2_RISK="medium"
-          [ "$L2_SCORE" -lt 4 ] && L2_RISK="high"
-          [ "$L2_SCORE" -lt 2 ] && L2_RISK="critical"
-
-          # Update result with score
-          python3 -c "
+          # Build the result JSON with Python (not a bash heredoc) so we
+          # never have to deal with control-char escaping or grep regex
+          # quoting issues. This fixes the 3 bugs that broke the first run:
+          #   - `grep: Unmatched ( or \(` on the `require\\(` pattern
+          #   - `[: 0\n0: integer expression expected` from grep output multilines
+          #   - `JSONDecodeError: Invalid control character` from stdout_sample
+          python3 << 'PYEOF'
           import json
-          with open('/tmp/l2_output/result.json') as f:
-              d = json.load(f)
-          d['l2_score'] = $L2_SCORE
-          d['l2_risk_level'] = '$L2_RISK'
-          with open('/tmp/l2_output/result.json', 'w') as f:
-              json.dump(d, f, indent=2)
-          "
+          import re
+          import os
+          import datetime
 
-          echo "=== L2 RESULT ==="
-          cat /tmp/l2_output/result.json
+          skill_id = os.environ['SKILL_ID']
+          stdout_path = '/tmp/l2_output/stdout.log'
+          result_path = '/tmp/l2_output/result.json'
+
+          try:
+              with open(stdout_path, 'rb') as f:
+                  raw = f.read()
+              # Decode defensively — Docker output can contain weird bytes.
+              text = raw.decode('utf-8', errors='replace')
+          except FileNotFoundError:
+              text = ''
+
+          # Each pattern is a plain string (no shell quoting issues).
+          # `re.escape` would also work, but these are intentionally simple.
+          patterns = {
+              'network_attempts':    r'ECONNREFUSED|ENOTFOUND|ETIMEDOUT|\bconnect\b|\bfetch\b|\bhttp\b',
+              'fs_write_attempts':   r'EROFS|read.only|permission.denied|EACCES',
+              'process_spawns':      r'spawn|exec|fork|child_process',
+              'credential_leakage':  r'api.key|token|secret|password|private.key|mnemonic',
+              'crash_detected':      r'SIGSEGV|SIGKILL|OOM|crash|fatal',
+              'dynamic_imports':     r'require\(|import.*dynamic|eval\(',
+          }
+
+          behavioral = {}
+          for key, pat in patterns.items():
+              try:
+                  # count matching LINES (not matches) — same semantics as `grep -c`
+                  behavioral[key] = sum(1 for line in text.splitlines() if re.search(pat, line, re.IGNORECASE))
+              except re.error:
+                  behavioral[key] = 0
+
+          # Truncate sample to 500 chars and strip control chars (except \n → space)
+          sample = text[:500]
+          sample = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]', '', sample).replace('\n', ' ').replace('\r', ' ')
+
+          result = {
+              'skill_id': skill_id,
+              'timestamp': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'sandbox_config': {
+                  'network': 'none',
+                  'filesystem': 'read-only',
+                  'capabilities': 'dropped ALL',
+                  'memory': '256m',
+                  'cpu': '0.5',
+                  'pids': '64',
+                  'timeout': '60s',
+              },
+              'behavioral_analysis': behavioral,
+              'stdout_size_bytes': len(raw),
+              'stdout_sample': sample,
+              'l2_score': 0,        # filled in below
+              'l2_risk_level': 'unknown',
+          }
+
+          # Calculate L2 score (same weights as before)
+          score = 10
+          if behavioral['network_attempts']    > 0: score -= 3
+          if behavioral['fs_write_attempts']   > 0: score -= 2
+          if behavioral['credential_leakage']  > 0: score -= 5
+          if behavioral['crash_detected']      > 0: score -= 2
+          score = max(0, score)
+
+          if   score < 2: risk = 'critical'
+          elif score < 4: risk = 'high'
+          elif score < 7: risk = 'medium'
+          else:           risk = 'low'
+
+          result['l2_score'] = score
+          result['l2_risk_level'] = risk
+
+          with open(result_path, 'w') as f:
+              json.dump(result, f, indent=2)
+
+          print('=== L2 RESULT ===')
+          print(json.dumps(result, indent=2))
+          print(f'=== stdout (first 500 chars) ===')
+          print(sample)
+          PYEOF
 
       - name: Commit L2 results to repo
         run: |

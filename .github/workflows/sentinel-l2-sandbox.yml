@@ -106,18 +106,106 @@ jobs:
           BUILD_DIR="/tmp/mcp-server/$SUBPATH"
           echo "Build directory: $BUILD_DIR"
           cd "$BUILD_DIR" || { echo "::error::Subpath $SUBPATH does not exist in repo"; exit 1; }
-          docker build -t mcp-audit-target . 2>/dev/null || {
-            echo "No Dockerfile in $BUILD_DIR — creating fallback"
-            cat > Dockerfile.audit << 'EOD'
-          FROM node:18-slim
-          COPY . /app
+
+          # If the repo ships a Dockerfile, use it.
+          if [ -f "Dockerfile" ] || [ -f "Dockerfile.dev" ]; then
+            echo "✓ Found Dockerfile in $BUILD_DIR — using it"
+            docker build -t mcp-audit-target . 2>&1 | tail -20
+            exit 0
+          fi
+
+          # No Dockerfile — generate a smart one based on package.json.
+          # The previous fallback used CMD ["node", "index.js"] which fails
+          # for most real MCP servers (they use TypeScript compiled to
+          # dist/index.js, or have a 'bin' entry, or use src/index.ts).
+          echo "No Dockerfile — generating smart fallback based on package.json"
+
+          # Extract entrypoint info with Python (more robust than jq, which
+          # may not be installed on the runner).
+          ENTRYPOINT=$(python3 <<'PYEOF'
+          import json, os
+          try:
+              with open('package.json') as f:
+                  pkg = json.load(f)
+          except FileNotFoundError:
+              print('node index.js')
+              exit(0)
+
+          # Priority: scripts.start > bin[first] > main > dist/index.js > index.js
+          scripts = pkg.get('scripts', {}) or {}
+          if 'start' in scripts:
+              # Use the start script directly via sh -c
+              print(f"sh -c \"{scripts['start']}\"")
+              exit(0)
+
+          bin = pkg.get('bin', {})
+          if isinstance(bin, dict) and bin:
+              first_bin = list(bin.values())[0]
+              print(f"node {first_bin}")
+              exit(0)
+          if isinstance(bin, str):
+              print(f"node {bin}")
+              exit(0)
+
+          main = pkg.get('main')
+          if main:
+              print(f"node {main}")
+              exit(0)
+
+          # Common defaults for MCP servers
+          if os.path.exists('dist/index.js'):
+              print('node dist/index.js')
+          elif os.path.exists('index.js'):
+              print('node index.js')
+          else:
+              print('node index.js')
+          PYEOF
+          )
+
+          echo "  Detected entrypoint: $ENTRYPOINT"
+          HAS_TS=$(python3 - <<'PYEOF'
+          import json
+          try:
+              with open('package.json') as f:
+                  d = json.load(f)
+              deps = {**(d.get('dependencies') or {}), **(d.get('devDependencies') or {})}
+              print('yes' if 'typescript' in deps else 'no')
+          except Exception:
+              print('no')
+          PYEOF
+          )
+
+          cat > Dockerfile.audit << EOD
+          FROM node:20-slim
           WORKDIR /app
-          RUN npm install --production 2>/dev/null || true
-          RUN pip install -r requirements.txt 2>/dev/null || true
-          CMD ["node", "index.js"]
+          COPY package*.json ./
+          RUN npm install --no-audit --no-fund 2>/dev/null || true
           EOD
-            docker build -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR"
-          }
+
+          if [ "$HAS_TS" = "yes" ]; then
+            echo "  Detected TypeScript — adding build step"
+            cat >> Dockerfile.audit << 'EOD'
+          COPY tsconfig.json ./
+          RUN npm run build 2>/dev/null || npx tsc 2>/dev/null || true
+          EOD
+          fi
+
+          cat >> Dockerfile.audit << EOD
+          COPY . .
+          EOD
+
+          # Use exec form if entrypoint is just "node <file>", else use sh -c
+          if echo "$ENTRYPOINT" | grep -q '^node '; then
+            echo "CMD [\"$ENTRYPOINT\"]" | sed 's/ /", "/g' >> Dockerfile.audit
+          else
+            echo "CMD [\"sh\", \"-c\", \"$ENTRYPOINT\"]" >> Dockerfile.audit
+          fi
+
+          echo "=== Generated Dockerfile.audit ==="
+          cat Dockerfile.audit
+          echo "==================================="
+
+          docker build -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR" 2>&1 | tail -20
 
       - name: Run L2 Behavioral Sandbox Audit
         env:

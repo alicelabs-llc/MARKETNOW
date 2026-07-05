@@ -1057,7 +1057,7 @@ export default function Security() {
   const loadSentinelStatus = async () => {
     setSentinelStatus(s => ({ ...s, state: 'loading' }));
     try {
-      const res = await fetch('/api/sentinel-status');
+      const res = await fetch('/api/audit-skill?sentinel-status=1');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       setSentinelStatus({ state: 'loaded', data });

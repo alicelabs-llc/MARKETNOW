@@ -1,6 +1,6 @@
 /**
- * MarketNow — Sentinel L1.5 + L1.6 Security Audit
- * =================================================
+ * MarketNow — Sentinel L1.5 + L1.6 + L2 Security Audit
+ * =====================================================
  *
  * Runs TWO layers in real-time on every call:
  *   L1.5: 6 metadata checks (AUTH, injection, validation, CORS, OAuth, rate limiting)
@@ -8,12 +8,126 @@
  *
  * L2 (Docker sandbox) runs via GitHub Actions — results are static in the catalog.
  *
- * Endpoint: POST /api/audit-skill
- * Body: { "skillId": "mn-gen-00015" }
+ * Endpoints:
+ *   POST /api/audit-skill          → run audit for a skill
+ *        Body: { "skillId": "mn-gen-00015" }
+ *   GET  /api/audit-skill?skillId=mn-gen-00015
+ *   GET  /api/audit-skill?sentinel-status=1   → batch audit status + L2 coverage
+ *        (sub-endpoint merged here to stay under Vercel Hobby's 12-function limit)
  */
 
 import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from '../lib/sentinel-l16.mjs';
 import { triggerL2, getL2Results } from '../lib/sentinel-l2-trigger.mjs';
+
+const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
+const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
+const BRANCH = 'master';
+
+// 5-minute in-memory cache for the sentinel-status sub-endpoint.
+const STATUS_CACHE_TTL_MS = 5 * 60 * 1000;
+let _statusCache = null;
+
+async function fetchJsonFromRepo(path) {
+  if (!GITHUB_TOKEN) return null;
+  const url = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${path}`;
+  try {
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        'User-Agent': 'marketnow-sentinel',
+        Accept: 'application/vnd.github.raw',
+      },
+    });
+    if (res.status === 200) return await res.json();
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+async function fetchL2ResultsIndex() {
+  if (!GITHUB_TOKEN) return { count: 0, skills: [] };
+  const url = `https://api.github.com/repos/${REPO}/contents/_data/l2_results?ref=${BRANCH}`;
+  try {
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'marketnow-sentinel',
+      },
+    });
+    if (res.status === 200) {
+      const listing = await res.json();
+      if (!Array.isArray(listing)) return { count: 0, skills: [] };
+      const skills = listing
+        .filter(f => f.type === 'file' && f.name.endsWith('.json'))
+        .map(f => f.name.replace(/\.json$/, ''));
+      return { count: skills.length, skills };
+    }
+    return { count: 0, skills: [] };
+  } catch {
+    return { count: 0, skills: [] };
+  }
+}
+
+async function handleSentinelStatus(req, res) {
+  // Cache headers — this data changes weekly + on-demand, so 5 min on edge is fine.
+  res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=300');
+  if (_statusCache && Date.now() - _statusCache.fetchedAt < STATUS_CACHE_TTL_MS) {
+    return res.status(200).json(_statusCache.data);
+  }
+  try {
+    const [batchResults, l2Index] = await Promise.all([
+      fetchJsonFromRepo('_data/sentinel_results.json'),
+      fetchL2ResultsIndex(),
+    ]);
+
+    const data = {
+      endpoint: '/api/audit-skill?sentinel-status=1',
+      generated_at: new Date().toISOString(),
+      architecture: 'L1.5 (Vercel real-time) → L1.6 (Vercel real-time + weekly batch) → L2 (GitHub Actions Docker sandbox)',
+      l16_batch: batchResults
+        ? {
+            status: 'available',
+            audit_type: batchResults.audit_type,
+            timestamp: batchResults.timestamp,
+            tools: batchResults.tools,
+            totals: batchResults.totals,
+            finding_counts: {
+              semgrep: (batchResults.semgrep_findings || []).length,
+              secrets: (batchResults.secret_findings || []).length,
+              osv: (batchResults.osv_findings || []).length,
+            },
+            sample_findings: {
+              semgrep: (batchResults.semgrep_findings || []).slice(0, 20),
+              secrets: (batchResults.secret_findings || []).slice(0, 20),
+              osv: (batchResults.osv_findings || []).slice(0, 20),
+            },
+            repo_path: `https://github.com/${REPO}/blob/${BRANCH}/_data/sentinel_results.json`,
+          }
+        : {
+            status: 'not_run_yet',
+            message: 'No L1.6 batch audit has run yet. The cron is weekly (Sunday midnight UTC). Manual dispatch: Actions tab → Sentinel L1.6 Batch Audit → Run workflow.',
+          },
+      l2_sandbox: {
+        status: l2Index.count > 0 ? 'available' : 'no_results_yet',
+        completed_runs: l2Index.count,
+        audited_skills: l2Index.skills,
+        repo_path: `https://github.com/${REPO}/tree/${BRANCH}/_data/l2_results`,
+      },
+      l2_dedup: {
+        ttl_minutes: 30,
+        description: 'Vercel in-memory cache prevents re-dispatching the same skill_id within 30 min of the first trigger. After the first L2 result commits to _data/l2_results/{skillId}.json, getL2Results() short-circuits the trigger path entirely.',
+      },
+    };
+
+    _statusCache = { fetchedAt: Date.now(), data };
+    return res.status(200).json(data);
+  } catch (err) {
+    console.error('sentinel-status error:', err);
+    return res.status(500).json({ error: 'Failed to fetch sentinel status', message: err.message });
+  }
+}
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -25,6 +139,13 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
   if (req.method !== 'POST' && req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  // ─── Sub-endpoint: GET /api/audit-skill?sentinel-status=1 ─────────────
+  // Returns the latest L1.6 batch audit + L2 sandbox coverage. Merged here
+  // to stay under Vercel Hobby's 12-serverless-function-per-deploy limit.
+  if (req.method === 'GET' && (req.query['sentinel-status'] || req.query.sentinelStatus)) {
+    return handleSentinelStatus(req, res);
   }
 
   try {

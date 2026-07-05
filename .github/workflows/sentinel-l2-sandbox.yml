@@ -23,6 +23,10 @@ on:
     types:
       - sentinel-l2-audit
 
+# Required so the GITHUB_TOKEN can push commits back to master.
+permissions:
+  contents: write
+
 jobs:
   sandbox:
     runs-on: ubuntu-latest
@@ -177,15 +181,27 @@ jobs:
           PYEOF
 
       - name: Commit L2 results to repo
+        env:
+          SKILL_ID: ${{ steps.vars.outputs.skill_id }}
         run: |
-          SKILL_ID="${{ steps.vars.outputs.skill_id }}"
           mkdir -p _data/l2_results
           cp /tmp/l2_output/result.json "_data/l2_results/${SKILL_ID}.json"
+
+          # Build the commit message summary in Python (avoids nested-quote
+          # hell that broke the previous version with SyntaxError: unexpected
+          # character after line continuation character).
+          SUMMARY=$(python3 - <<'PYEOF'
+          import json
+          with open('/tmp/l2_output/result.json') as f:
+              d = json.load(f)
+          print(f"score={d['l2_score']}/10 risk={d['l2_risk_level']}")
+          PYEOF
+          )
 
           git config user.name "Sentinel L2 Bot"
           git config user.email "sentinel@marketnow.site"
           git add "_data/l2_results/${SKILL_ID}.json"
-          git commit -m "sentinel: L2 Docker sandbox result for ${SKILL_ID} — $(cat /tmp/l2_output/result.json | python3 -c 'import json,sys; d=json.load(sys.stdin); print(f\"score={d[\"l2_score\"]}/10 risk={d[\"l2_risk_level\"]}\")')"
+          git commit -m "sentinel: L2 Docker sandbox result for ${SKILL_ID} — ${SUMMARY}"
           git push
 
       - name: Upload L2 results as artifact

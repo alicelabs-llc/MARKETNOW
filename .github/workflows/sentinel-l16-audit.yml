@@ -1,8 +1,19 @@
-<<<<<<< HEAD
 # MarketNow — Sentinel L1.6 Batch Audit (GitHub Actions)
 # ========================================================
-# Runs Semgrep + Gitleaks + OSV-Scanner on all skills.
-# Results are committed to sentinel_results.json in the repo.
+# Weekly batch scan of the entire MarketNow catalog using:
+#   - Semgrep (18 MCP-specific rules in sentinel-rules/semgrep-mcp-rules.yml)
+#   - Gitleaks (secret detection)
+#   - OSV-Scanner (dependency vulnerabilities)
+#
+# Output: a single consolidated _data/sentinel_results.json committed to master.
+#
+# Triggers:
+#   - schedule: weekly (Sunday midnight UTC)
+#   - workflow_dispatch: manual run from the Actions tab
+#
+# NOTE: On-demand audits of individual MCP server repos are handled by
+#       sentinel-l2-sandbox.yml via the repository_dispatch pattern.
+#       Do NOT re-add an `issues:` trigger here — it conflicts with that flow.
 
 name: Sentinel L1.6 Batch Audit
 
@@ -11,37 +22,21 @@ on:
     - cron: '0 0 * * 0'  # Weekly (Sunday midnight UTC)
   workflow_dispatch: {}   # Manual trigger
 
+# Prevent overlapping batch runs from clobbering each other.
+concurrency:
+  group: sentinel-l16-batch
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # Required to commit sentinel_results.json back to master
+
 jobs:
   audit:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-=======
-name: Sentinel L1.6 Security Audit
+    timeout-minutes: 20
 
-on:
-  # Manual trigger for any repo URL
-  workflow_dispatch:
-    inputs:
-      repo_url:
-        description: 'GitHub repo URL to audit (e.g. https://github.com/user/repo)'
-        required: true
-        type: string
-      skill_id:
-        description: 'MarketNow skill ID (optional, for tracking)'
-        required: false
-        type: string
-  # Auto-trigger when a new issue is created with "Submit" in the title
-  issues:
-    types: [opened]
-
-jobs:
-  sentinel-audit:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
     steps:
-      - name: Checkout MarketNow repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -53,159 +48,115 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
->>>>>>> d394dfd63d886b17224fcdb031961bdeb444c72c
 
       - name: Install Semgrep
         run: pip install semgrep
 
       - name: Install Gitleaks
         run: |
-<<<<<<< HEAD
-          wget https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_linux_x64.tar.gz
-          tar -xzf gitleaks_8.18.0_linux_x64.tar.gz
-          chmod +x gitleaks
-          sudo mv gitleaks /usr/local/bin/
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.18.1/gitleaks_8.18.1_linux_x64.tar.gz \
+            | tar -xz -C /usr/local/bin gitleaks
+          chmod +x /usr/local/bin/gitleaks
 
       - name: Install OSV-Scanner
         run: |
-          wget https://github.com/google/osv-scanner/releases/latest/download/osv-scanner_linux_amd64
-          chmod +x osv-scanner_linux_amd64
-          sudo mv osv-scanner_linux_amd64 /usr/local/bin/osv-scanner
+          curl -sSfL https://github.com/google/osv-scanner/releases/download/v1.7.0/osv-scanner_linux_amd64 \
+            -o /usr/local/bin/osv-scanner
+          chmod +x /usr/local/bin/osv-scanner
 
       - name: Run Semgrep on MCP rules
         run: |
           semgrep --config sentinel-rules/semgrep-mcp-rules.yml \
-                  --json --output semgrep_results.json \
+                  --json --output /tmp/semgrep_results.json \
                   aep-marketplace/ || true
 
       - name: Run Gitleaks
         run: |
-          gitleaks detect --source . --report-path gitleaks_results.json --report-format json || true
+          gitleaks detect --source . \
+            --report-path /tmp/gitleaks_results.json \
+            --report-format json || true
 
       - name: Run OSV-Scanner
         run: |
-          osv-scanner --lockfile aep-marketplace/package-lock.json --json > osv_results.json || true
+          osv-scanner --lockfile aep-marketplace/package-lock.json \
+            --json > /tmp/osv_results.json || true
+
+      - name: Consolidate results into sentinel_results.json
+        run: |
+          node <<'JS'
+          const fs = require('fs');
+
+          let semgrep = { results: [] };
+          let gitleaks = [];
+          let osv = { results: [] };
+          try { semgrep = JSON.parse(fs.readFileSync('/tmp/semgrep_results.json', 'utf8')); } catch {}
+          try { gitleaks = JSON.parse(fs.readFileSync('/tmp/gitleaks_results.json', 'utf8')); } catch {}
+          try { osv = JSON.parse(fs.readFileSync('/tmp/osv_results.json', 'utf8')); } catch {}
+
+          const semgrepFindings = (semgrep.results || []).map(r => ({
+            id: r.check_id,
+            path: r.path,
+            start: r.start?.line,
+            severity: r.extra?.severity || 'INFO',
+            message: r.extra?.message || '',
+          }));
+
+          const secretFindings = (gitleaks || []).map(f => ({
+            rule: f.RuleID,
+            file: f.File,
+            startLine: f.StartLine,
+            secret: f.Secret ? f.Secret.slice(0, 4) + '…' + f.Secret.slice(-4) : '(redacted)',
+          }));
+
+          const osvFindings = (osv.results || []).map(v => ({
+            id: v.vuln?.id || v.id,
+            package: v.package?.name,
+            version: v.package?.version,
+            fixed: v.fixed_version,
+          }));
+
+          const critical = semgrepFindings.filter(f => f.severity === 'ERROR').length
+                          + secretFindings.length;
+          const high = semgrepFindings.filter(f => f.severity === 'WARNING').length;
+
+          const report = {
+            audit_type: 'sentinel-l16-batch',
+            timestamp: new Date().toISOString(),
+            tools: {
+              semgrep: { rules: 18, findings: semgrepFindings.length },
+              gitleaks: { findings: secretFindings.length },
+              osv: { vulnerabilities: osvFindings.length },
+            },
+            totals: {
+              critical,
+              high,
+              medium: semgrepFindings.filter(f => f.severity === 'INFO').length,
+            },
+            semgrep_findings: semgrepFindings,
+            secret_findings: secretFindings,
+            osv_findings: osvFindings,
+          };
+
+          fs.mkdirSync('_data', { recursive: true });
+          fs.writeFileSync('_data/sentinel_results.json', JSON.stringify(report, null, 2));
+          console.log(JSON.stringify(report.totals, null, 2));
+          JS
 
       - name: Commit results
         run: |
           git config user.name "Sentinel Bot"
           git config user.email "sentinel@marketnow.site"
-          git add semgrep_results.json gitleaks_results.json osv_results.json || true
-          git commit -m "sentinel: L1.6 batch audit results $(date -u +%Y-%m-%d)" || true
-          git push
-=======
-          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.18.1/gitleaks_8.18.1_linux_x64.tar.gz | tar -xz -C /usr/local/bin gitleaks
-          chmod +x /usr/local/bin/gitleaks
+          git add _data/sentinel_results.json
+          git commit -m "sentinel: L1.6 batch audit $(date -u +%Y-%m-%d)" || echo "No changes to commit"
+          git push || echo "Push skipped (no changes)"
 
-      - name: Install OSV-Scanner
-        run: |
-          curl -sSfL https://github.com/google/osv-scanner/releases/download/v1.7.0/osv-scanner_linux_amd64 -o /usr/local/bin/osv-scanner
-          chmod +x /usr/local/bin/osv-scanner
-
-      - name: Determine repo URL
-        id: repo-url
-        run: |
-          if [ -n "${{ github.event.inputs.repo_url }}" ]; then
-            echo "url=${{ github.event.inputs.repo_url }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event_name }}" = "issues" ]; then
-            # Try to extract GitHub URL from issue body
-            ISSUE_BODY='${{ github.event.issue.body }}'
-            URL=$(echo "$ISSUE_BODY" | grep -oE 'https://github\.com/[a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+' | head -1)
-            if [ -n "$URL" ]; then
-              echo "url=$URL" >> $GITHUB_OUTPUT
-            else
-              echo "url=" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "url=" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Run Sentinel L1.6 audit
-        if: steps.repo-url.outputs.url != ''
-        run: |
-          cd aep-marketplace
-          node lib/sentinel-l16.js "${{ steps.repo-url.outputs.url }}" > /tmp/audit-report.json 2>&1 || true
-          cat /tmp/audit-report.json
-
-      - name: Upload audit report as artifact
-        if: steps.repo-url.outputs.url != ''
+      - name: Upload raw artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: sentinel-audit-report
-          path: /tmp/audit-report.json
+          name: sentinel-l16-raw-${{ github.run_id }}
+          path: |
+            /tmp/semgrep_results.json
+            /tmp/gitleaks_results.json
+            /tmp/osv_results.json
           retention-days: 30
-
-      - name: Comment on issue (if triggered by issue)
-        if: github.event_name == 'issues' && steps.repo-url.outputs.url != ''
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            let report;
-            try {
-              report = JSON.parse(fs.readFileSync('/tmp/audit-report.json', 'utf8'));
-            } catch (e) {
-              report = { error: 'Could not read audit report', score: 0 };
-            }
-            
-            const score = report.score || 0;
-            const passed = score >= 4.0;
-            const emoji = passed ? '✅' : '❌';
-            
-            let comment = `## ${emoji} Sentinel L1.6 Security Audit Complete\n\n`;
-            comment += `**Repository:** ${{ steps.repo-url.outputs.url }}\n`;
-            comment += `**Score:** ${score}/10 ${passed ? '(PASSES — listed on MarketNow)' : '(FAILS — below minimum 4.0)'}\n\n`;
-            
-            if (report.categories) {
-              comment += `### Category Scores\n\n`;
-              comment += `| Category | Score | Weight | Findings |\n`;
-              comment += `|---|---|---|---|\n`;
-              
-              const weights = { hygiene: '10%', secrets: '40%', vulnerabilities: '30%', staticAnalysis: '20%' };
-              for (const [cat, data] of Object.entries(report.categories)) {
-                const findings = data.details.length;
-                comment += `| ${cat} | ${data.score}/10 | ${weights[cat] || '?'} | ${findings} |\n`;
-              }
-              comment += `\n`;
-              
-              // Show details if any findings
-              for (const [cat, data] of Object.entries(report.categories)) {
-                if (data.details.length > 0) {
-                  comment += `### ${cat} findings (${data.details.length})\n\n`;
-                  for (const d of data.details.slice(0, 10)) {
-                    comment += `- **${d.severity}**: ${d.message}\n`;
-                  }
-                  if (data.details.length > 10) {
-                    comment += `- ... and ${data.details.length - 10} more\n`;
-                  }
-                  comment += `\n`;
-                }
-              }
-            }
-            
-            if (report.error) {
-              comment += `### Error\n\n\`\`\`\n${report.error}\n\`\`\`\n`;
-            }
-            
-            comment += `\n---\n`;
-            comment += `**About Sentinel L1.6:** Enhanced static analysis with Semgrep (18 MCP-specific rules), Gitleaks (secret detection), and OSV-Scanner (dependency vulnerabilities). See [sentinel-roadmap](https://marketnow.site/sentinel-roadmap) for details.\n`;
-            comment += `**Audit run:** ${new Date().toISOString()}\n`;
-            
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: comment
-            });
-
-      - name: Fail if score below minimum
-        if: steps.repo-url.outputs.url != ''
-        run: |
-          SCORE=$(cat /tmp/audit-report.json | jq '.score // 0')
-          if (( $(echo "$SCORE < 4.0" | bc -l) )); then
-            echo "❌ Audit FAILED: score $SCORE is below minimum 4.0"
-            exit 1
-          else
-            echo "✅ Audit PASSED: score $SCORE"
-          fi
->>>>>>> d394dfd63d886b17224fcdb031961bdeb444c72c

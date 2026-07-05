@@ -327,7 +327,23 @@ export default async function handler(req, res) {
     const allChecks = [...checks, ...l16Checks];
     const allCritical = criticalCount + l16Result.findings.total_critical;
     const allHigh = highCount + l16Result.findings.total_high;
-    
+
+    // ─── FINAL risk_level: take the WORST of (L1.5+L1.6) and (L2 sandbox) ───
+    // L2 detects runtime behavior (credential exfiltration, network calls, fs writes)
+    // that static analysis cannot see — if L2 says critical, the skill is critical
+    // even if the static score looks clean. Bug fix: previously L2 only adjusted
+    // overall_score, never risk_level — a sandbox-detected credential thief could
+    // end up with score 0 but risk_level: "low".
+    const riskRank = { low: 0, medium: 1, high: 2, critical: 3 };
+    const l15l16Risk = allCritical > 0 ? 'critical'
+      : allHigh > 0 ? 'high'
+      : mediumCount > 0 ? 'medium'
+      : 'low';
+    const l2Risk = l2Data.results?.l2_risk_level || null;
+    const finalRisk = (l2Risk && riskRank[l2Risk] > riskRank[l15l16Risk])
+      ? l2Risk
+      : l15l16Risk;
+
     const report = {
       skill: {
         id: skill.id,
@@ -339,11 +355,16 @@ export default async function handler(req, res) {
       },
       audit: {
         timestamp: new Date().toISOString(),
-        auditor: 'Sentinel L1.5 + L1.6 (Real-time Security Audit)',
+        auditor: 'Sentinel L1.5 + L1.6 + L2 (Real-time Security Audit)',
         overall_score: overallScore,
         max_score: 10,
-        summary: `L1.5: ${passCount} passed, ${warningCount} warnings, ${failCount} failed | L1.6: ${l16Result.findings.semgrep.length} semgrep, ${l16Result.findings.secrets.length} secrets, ${l16Result.findings.osv.length} OSV vulns`,
-        risk_level: allCritical > 0 ? 'critical' : allHigh > 0 ? 'high' : mediumCount > 0 ? 'medium' : 'low',
+        summary: `L1.5: ${passCount} passed, ${warningCount} warnings, ${failCount} failed | L1.6: ${l16Result.findings.semgrep.length} semgrep, ${l16Result.findings.secrets.length} secrets, ${l16Result.findings.osv.length} OSV vulns | L2: ${l2Data.status}`,
+        risk_level: finalRisk,
+        risk_breakdown: {
+          l15_l16: l15l16Risk,
+          l2: l2Risk || 'not_available',
+          final: finalRisk,
+        },
         layers: {
           l15: { checks_run: 6, findings: criticalCount + highCount + mediumCount },
           l16: {

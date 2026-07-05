@@ -371,16 +371,19 @@ export default async function handler(req, res) {
     let l2Data = { status: 'not_triggered', results: null, trigger: null };
     const l2Existing = await getL2Results(skill.id);
     if (l2Existing) {
-      // Distinguish 'completed' (sandbox actually ran the server) from
-      // 'failed_to_start' (sandbox couldn't execute the server — empty
-      // stdout, MODULE_NOT_FOUND, etc.). In the failed case we DON'T
-      // apply the L2 multiplier because there's no behavioral signal
-      // to trust — instead we surface the failure to the user.
-      l2Data.status = l2Existing.execution_status === 'failed_to_start'
+      // Three execution_status values:
+      //   'ran'             → server started and produced output. Trust score.
+      //   'ran_idle'        → server started, waited for stdin (normal MCP stdio
+      //                        behavior). Trust score — no malicious behavior.
+      //   'failed_to_start' → server crashed / MODULE_NOT_FOUND / etc. DON'T
+      //                        trust the score (it would be 0/unknown). Surface
+      //                        the failure to the user.
+      const status = l2Existing.execution_status;
+      l2Data.status = status === 'failed_to_start'
         ? 'failed_to_start'
-        : 'completed';
+        : (status === 'ran_idle' ? 'completed_idle' : 'completed');
       l2Data.results = l2Existing;
-      if (l2Existing.l2_score !== undefined && l2Data.status === 'completed') {
+      if (l2Existing.l2_score !== undefined && status !== 'failed_to_start') {
         const l2Mult = l2Existing.l2_score / 10;
         overallScore = Math.round(overallScore * l2Mult);
       }

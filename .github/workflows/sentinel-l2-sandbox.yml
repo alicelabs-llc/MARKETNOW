@@ -231,7 +231,7 @@ jobs:
           print(sample)
           PYEOF
 
-      - name: Commit L2 results to repo
+      - name: Commit L2 results to repo (with retry on race)
         env:
           SKILL_ID: ${{ steps.vars.outputs.skill_id }}
         run: |
@@ -253,7 +253,29 @@ jobs:
           git config user.email "sentinel@marketnow.site"
           git add "_data/l2_results/${SKILL_ID}.json"
           git commit -m "sentinel: L2 Docker sandbox result for ${SKILL_ID} — ${SUMMARY}"
-          git push
+
+          # Retry push with rebase — multiple L2 sandbox runs can fire in
+          # parallel (one per skill), and they all push to master. The first
+          # one succeeds; the rest get 'rejected (fetch first)'. We pull
+          # --rebase and retry up to 5 times with exponential backoff.
+          MAX_RETRIES=5
+          for i in $(seq 1 $MAX_RETRIES); do
+            if git push 2>&1; then
+              echo "✓ Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "⚠ Push attempt $i failed (race condition with parallel L2 run) — pulling rebase and retrying..."
+            sleep $((i * 2))
+            git pull --rebase origin master || {
+              echo "✗ git pull --rebase failed on attempt $i"
+              # If rebase fails, abort and bail — the result.json is preserved
+              # as an artifact and can be committed manually.
+              git rebase --abort 2>/dev/null || true
+              exit 1
+            }
+          done
+          echo "✗ Could not push after $MAX_RETRIES attempts — result is in artifact"
+          exit 1
 
       - name: Upload L2 results as artifact
         uses: actions/upload-artifact@v4

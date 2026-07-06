@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "MarketNow Skills API",
-    "description": "The open marketplace for MCP-compatible agent skills. 8,560 verified skills, micro-priced from $0.99 to $9.99. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~12MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.\n\n## Concurrency & Rate Limits (v4.0)\n- Search: 60 req/min per IP\n- Audit: 30 req/min per IP\n- Purchase: 20 req/min per IP\n- Mandates: 30 req/min per IP\n- All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)\n- USDC verification uses a 4-endpoint RPC pool with automatic failover\n- Monitoring: GET /api/manifest?health\n\n## Stats (live)\n- 8,560 MCP skills indexed\n- 58 categories\n- 43 free skills\n- 5 languages: EN, ES, ZH, PT, FR\n- Pricing: $0.99-$9.99 one-time, no subscriptions\n- License: MNNC-1.0 (source-available, non-commercial)\n\n\n## Concurrency & Rate Limits (v4.1)\n- Search: 60 req/min per IP\n- Audit: 30 req/min per IP\n- Purchase: 20 req/min per IP\n- Mandates: 30 req/min per IP\n- All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)\n- USDC verification uses a 4-endpoint RPC pool with automatic failover\n- Monitoring: GET /api/manifest?health\n\n## Stats (live)\n- 8,560 MCP skills indexed\n- 58 categories\n- 43 free skills\n- 5 languages: EN, ES, ZH, PT, FR\n- Pricing: $0.99-$9.99 one-time, no subscriptions\n- License: MNNC-1.0 (source-available, non-commercial)\n- Maintainer: AliceLabs LLC (Wyoming, USA, 2025)\n",
+    "description": "The open marketplace for MCP-compatible agent skills. 11,115 verified skills, micro-priced from free, with B2B pricing tiers. Designed for autonomous agent consumption.\n\n## Authentication\nMost read endpoints are public (no auth required). Write endpoints (checkout) require no auth but redirect to Stripe.\n\n## Rate Limits\n- Anonymous: 60 requests/minute\n- The full catalog (/api/skills.json) is ~12MB — cache locally for 24h\n\n## Languages\nSkills are available in 5 languages: en, es, zh, pt, fr. Each skill with a system_prompt has a `translations` field.\n\n## Concurrency & Rate Limits (v4.0)\n- Search: 60 req/min per IP\n- Audit: 30 req/min per IP\n- Purchase: 20 req/min per IP\n- Mandates: 30 req/min per IP\n- All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)\n- USDC verification uses a 4-endpoint RPC pool with automatic failover\n- Monitoring: GET /api/manifest?health\n\n## Stats (live)\n- 11,115 MCP skills indexed\n- 65 categories\n- 65 free skills\n- 5 languages: EN, ES, ZH, PT, FR\n- Pricing: B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom)\n- License: MIT\n\n\n## Concurrency & Rate Limits (v4.1)\n- Search: 60 req/min per IP\n- Audit: 30 req/min per IP\n- Purchase: 20 req/min per IP\n- Mandates: 30 req/min per IP\n- All endpoints use in-memory caches (5min TTL for skills, 30s for mandates)\n- USDC verification uses a 4-endpoint RPC pool with automatic failover\n- Monitoring: GET /api/manifest?health\n\n## Stats (live)\n- 11,115 MCP skills indexed\n- 65 categories\n- 65 free skills\n- 5 languages: EN, ES, ZH, PT, FR\n- Pricing: B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom)\n- License: MIT\n- Maintainer: AliceLabs LLC (Wyoming, USA, 2025)\n",
     "version": "4.1.0",
     "contact": {
       "name": "MarketNow",
@@ -24,7 +24,7 @@
     "/api/skills.json": {
       "get": {
         "summary": "List all skills",
-        "description": "Returns the complete catalog of 8,560 skills. Each skill includes id, name, slug, description, category, tags, price, currency, install command, translations (if available), and system_prompt (if available).\n\n**Cache this response locally** — refresh every 24 hours maximum. The catalog changes infrequently.",
+        "description": "Returns the complete catalog of 11,115 skills. Each skill includes id, name, slug, description, category, tags, price, currency, install command, translations (if available), and system_prompt (if available).\n\n**Cache this response locally** — refresh every 24 hours maximum. The catalog changes infrequently.",
         "operationId": "listSkills",
         "parameters": [
           {
@@ -92,7 +92,7 @@
             "required": false,
             "schema": {
               "type": "number",
-              "minimum": 0.99,
+              "minimum": 0,
               "maximum": 9.99
             }
           },
@@ -600,7 +600,7 @@
           "price": {
             "type": "number",
             "description": "Price in USD",
-            "minimum": 0.99,
+            "minimum": 0,
             "maximum": 9.99,
             "example": 1.99
           },

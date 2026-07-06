@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "effective_date": "2026-07-02",
   "url": "https://marketnow.site/catalog",
-  "total_skills": 8560,
+  "total_skills": 11115,
   "summary": "Claude noticed that some categories had exactly '30' items \u2014 a sign of bulk import rather than organic curation. This page is our honest disclosure of how the catalog was built, where each skill came from, and what 'verified' actually means.",
   "catalog_breakdown": [
     {
       "count": 5054,
       "label": "Curated open-source MCP servers",
-      "description": "Sourced from public GitHub repositories tagged with 'mcp-server' or 'model-context-protocol'. Each was scanned by Sentinel L1.5, given a category based on its README, and assigned a price based on complexity (single-function = $0.99, enterprise-grade = $9.99). These are real, working MCP servers you can verify on GitHub."
+      "description": "Sourced from public GitHub repositories tagged with 'mcp-server' or 'model-context-protocol'. Each was scanned by Sentinel L1.5, given a category based on its README, and assigned a price based on complexity (single-function = free, with B2B pricing tiers). These are real, working MCP servers you can verify on GitHub."
     },
     {
       "count": 3506,
@@ -25,7 +25,7 @@
     {
       "count": 0,
       "label": "Synthetic or fake",
-      "description": "We previously had ~13,000 synthetic skills. They were removed in early 2026 in a cleanup pass. The current catalog of 8,560 skills is real software. You can verify each one by checking its GitHub repo (when source is known) or running its install command."
+      "description": "We previously had ~13,000 synthetic skills. They were removed in early 2026 in a cleanup pass. The current catalog of 11,115 skills is real software. You can verify each one by checking its GitHub repo (when source is known) or running its install command."
     }
   ],
   "categories_with_bulk_import_flag": 14,
@@ -34,7 +34,7 @@
     "auto-scanned": 8517,
     "human-reviewed": 43,
     "maintainer-verified": 0,
-    "explanation": "Of 8,560 skills: 8,517 are auto-scanned (Sentinel ran, no human review), 43 are human-reviewed (curated free skills), 0 are maintainer-verified (program not launched). We never mark a skill 'verified' if it has only been auto-scanned."
+    "explanation": "Of 11,115 skills: 8,517 are auto-scanned (Sentinel ran, no human review), 43 are human-reviewed (curated free skills), 0 are maintainer-verified (program not launched). We never mark a skill 'verified' if it has only been auto-scanned."
   },
   "what_verified_means": {
     "auto-scanned": "Sentinel L1.5 ran automated checks. No human has reviewed. Most catalog skills are here.",

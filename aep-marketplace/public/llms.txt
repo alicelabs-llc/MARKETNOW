@@ -1,20 +1,20 @@
 # MarketNow
 
-> Trust layer for agent commerce. 8,560 MCP-compatible skills with Sentinel L2 security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. Human-in-the-loop by default. Maintained by AliceLabs LLC (Wyoming, USA, 2025), founder Edison Flores.
+> Trust layer for agent commerce. 11,115 MCP-compatible skills with Sentinel L2 security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. Human-in-the-loop by default. Maintained by AliceLabs LLC (Wyoming, USA, 2025), founder Edison Flores.
 
 ## What MarketNow does
 
 MarketNow is NOT another discovery registry — discovery is solved (MCP Registry, Smithery, Glama). MarketNow solves TRUST: every skill carries a Sentinel security report, declared permissions, and an honest review_status (auto-scanned | human-reviewed | maintainer-verified).
 
-- 8,560 MCP skills indexed across 58 categories
-- 43 free skills (no signup required)
+- 11,115 MCP skills indexed across 65 categories
+- 65 free skills (no signup required)
 - Sentinel L2: real-time security audit (18 Semgrep rules + Docker sandbox + OSV)
 - x402 payments: HTTP 402 Payment Required + USDC on Base (chainId 8453)
 - AP2 mandates: agents buy autonomously within principal-approved limits
 - Human-in-the-loop by default (mandates default to "notify" mode)
 - 5 languages: EN, ES, PT, ZH, FR
-- Pricing: $0.99–$9.99 one-time, no subscriptions
-- License: MNNC-1.0 (source-available, non-commercial)
+- Pricing: B2B: Community (Free) / Team ($99/mo) / Enterprise (Custom)
+- License: MIT
 
 ## For AI agents
 
@@ -27,13 +27,13 @@ npx -y marketnow-mcp
 Works with Claude Desktop, Cursor, Cline, Continue, Aider.
 
 ### Public API (no auth required for reads)
-- GET /api/skills-lite.json — Full catalog (8,560 skills, 4.5MB JSON)
+- GET /api/skills-lite.json — Full catalog (11,115 skills, 4.5MB JSON)
 - GET /api/search?q=query&category=Data&max_price=2.99&language=es — Server-side search
 - GET /api/agent.json — Machine-readable instructions, trust model, schema
 - GET /api/agent-ping.json — Live stats and endpoint list
 - GET /api/manifest?health — Cache stats, RPC pool health, rate limiter state
-- GET /api/free-skills.json — 43 free skills
-- GET /api/categories.json — 58 categories with counts
+- GET /api/free-skills.json — 65 free skills
+- GET /api/categories.json — 65 categories with counts
 - GET /api/policies.json — Terms, refund, dispute, privacy
 - GET /api/openapi.json — OpenAPI 3.1 specification
 - POST /api/agent-purchase — Buy a skill (x402 + USDC on Base)

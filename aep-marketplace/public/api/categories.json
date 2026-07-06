@@ -2,7 +2,7 @@
   {
     "name": "Developer Tools",
     "slug": "developer-tools",
-    "count": 2372,
+    "count": 3640,
     "url": "https://www.marketnow.site/registry?cat=developer-tools",
     "bulk_imported": false,
     "disclosure": null
@@ -10,7 +10,7 @@
   {
     "name": "AI/ML",
     "slug": "ai-ml",
-    "count": 1983,
+    "count": 2040,
     "url": "https://www.marketnow.site/registry?cat=ai-ml",
     "bulk_imported": false,
     "disclosure": null
@@ -18,15 +18,23 @@
   {
     "name": "Data",
     "slug": "data",
-    "count": 783,
+    "count": 870,
     "url": "https://www.marketnow.site/registry?cat=data",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Finance",
+    "slug": "finance",
+    "count": 422,
+    "url": "https://www.marketnow.site/registry?cat=finance",
     "bulk_imported": false,
     "disclosure": null
   },
   {
     "name": "Web/API",
     "slug": "web-api",
-    "count": 347,
+    "count": 319,
     "url": "https://www.marketnow.site/registry?cat=web-api",
     "bulk_imported": false,
     "disclosure": null
@@ -34,47 +42,47 @@
   {
     "name": "Productivity",
     "slug": "productivity",
-    "count": 329,
+    "count": 314,
     "url": "https://www.marketnow.site/registry?cat=productivity",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Finance",
-    "slug": "finance",
-    "count": 292,
-    "url": "https://www.marketnow.site/registry?cat=finance",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Communication",
-    "slug": "communication",
-    "count": 288,
-    "url": "https://www.marketnow.site/registry?cat=communication",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Media",
-    "slug": "media",
-    "count": 234,
-    "url": "https://www.marketnow.site/registry?cat=media",
     "bulk_imported": false,
     "disclosure": null
   },
   {
     "name": "Security",
     "slug": "security",
-    "count": 230,
+    "count": 312,
     "url": "https://www.marketnow.site/registry?cat=security",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Communication",
+    "slug": "communication",
+    "count": 278,
+    "url": "https://www.marketnow.site/registry?cat=communication",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Search",
+    "slug": "search",
+    "count": 278,
+    "url": "https://www.marketnow.site/registry?cat=search",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Media",
+    "slug": "media",
+    "count": 216,
+    "url": "https://www.marketnow.site/registry?cat=media",
     "bulk_imported": false,
     "disclosure": null
   },
   {
     "name": "Sales",
     "slug": "sales",
-    "count": 152,
+    "count": 151,
     "url": "https://www.marketnow.site/registry?cat=sales",
     "bulk_imported": false,
     "disclosure": null
@@ -82,31 +90,31 @@
   {
     "name": "Analytics",
     "slug": "analytics",
-    "count": 150,
+    "count": 136,
     "url": "https://www.marketnow.site/registry?cat=analytics",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Automation",
-    "slug": "automation",
-    "count": 114,
-    "url": "https://www.marketnow.site/registry?cat=automation",
     "bulk_imported": false,
     "disclosure": null
   },
   {
     "name": "Legal",
     "slug": "legal",
-    "count": 113,
+    "count": 109,
     "url": "https://www.marketnow.site/registry?cat=legal",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Automation",
+    "slug": "automation",
+    "count": 108,
+    "url": "https://www.marketnow.site/registry?cat=automation",
     "bulk_imported": false,
     "disclosure": null
   },
   {
     "name": "DevOps",
     "slug": "devops",
-    "count": 112,
+    "count": 103,
     "url": "https://www.marketnow.site/registry?cat=devops",
     "bulk_imported": false,
     "disclosure": null
@@ -120,17 +128,9 @@
     "disclosure": null
   },
   {
-    "name": "IoT",
-    "slug": "iot",
-    "count": 90,
-    "url": "https://www.marketnow.site/registry?cat=iot",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
     "name": "Education",
     "slug": "education",
-    "count": 89,
+    "count": 88,
     "url": "https://www.marketnow.site/registry?cat=education",
     "bulk_imported": false,
     "disclosure": null
@@ -138,8 +138,40 @@
   {
     "name": "Healthcare",
     "slug": "healthcare",
-    "count": 89,
+    "count": 88,
     "url": "https://www.marketnow.site/registry?cat=healthcare",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "IoT",
+    "slug": "iot",
+    "count": 81,
+    "url": "https://www.marketnow.site/registry?cat=iot",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "File System",
+    "slug": "file-system",
+    "count": 77,
+    "url": "https://www.marketnow.site/registry?cat=file-system",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Version Control",
+    "slug": "version-control",
+    "count": 63,
+    "url": "https://www.marketnow.site/registry?cat=version-control",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Browser Automation",
+    "slug": "browser-automation",
+    "count": 59,
+    "url": "https://www.marketnow.site/registry?cat=browser-automation",
     "bulk_imported": false,
     "disclosure": null
   },
@@ -160,18 +192,18 @@
     "disclosure": null
   },
   {
-    "name": "Agent Performance",
-    "slug": "agent-performance",
-    "count": 49,
-    "url": "https://www.marketnow.site/registry?cat=agent-performance",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
     "name": "Agent Tool Use",
     "slug": "agent-tool-use",
     "count": 48,
     "url": "https://www.marketnow.site/registry?cat=agent-tool-use",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Agent Performance",
+    "slug": "agent-performance",
+    "count": 48,
+    "url": "https://www.marketnow.site/registry?cat=agent-performance",
     "bulk_imported": false,
     "disclosure": null
   },
@@ -192,14 +224,6 @@
     "disclosure": null
   },
   {
-    "name": "Cognitive",
-    "slug": "cognitive",
-    "count": 45,
-    "url": "https://www.marketnow.site/registry?cat=cognitive",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
     "name": "EdTech & Learning",
     "slug": "edtech-learning",
     "count": 41,
@@ -212,6 +236,22 @@
     "slug": "proptech-real-estate",
     "count": 41,
     "url": "https://www.marketnow.site/registry?cat=proptech-real-estate",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Cloud Platforms",
+    "slug": "cloud-platforms",
+    "count": 39,
+    "url": "https://www.marketnow.site/registry?cat=cloud-platforms",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Cognitive",
+    "slug": "cognitive",
+    "count": 38,
+    "url": "https://www.marketnow.site/registry?cat=cognitive",
     "bulk_imported": false,
     "disclosure": null
   },
@@ -232,10 +272,10 @@
     "disclosure": null
   },
   {
-    "name": "Blockchain",
-    "slug": "blockchain",
-    "count": 36,
-    "url": "https://www.marketnow.site/registry?cat=blockchain",
+    "name": "Monitoring",
+    "slug": "monitoring",
+    "count": 35,
+    "url": "https://www.marketnow.site/registry?cat=monitoring",
     "bulk_imported": false,
     "disclosure": null
   },
@@ -376,6 +416,14 @@
     "disclosure": "This category contains exactly 30 items, indicating a bulk import from a community awesome-mcp list. Skills are Sentinel-scanned but not individually curated. See /catalog for full disclosure."
   },
   {
+    "name": "Blockchain",
+    "slug": "blockchain",
+    "count": 29,
+    "url": "https://www.marketnow.site/registry?cat=blockchain",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
     "name": "Security & Compliance",
     "slug": "security-compliance",
     "count": 29,
@@ -408,9 +456,17 @@
     "disclosure": null
   },
   {
+    "name": "Web APIs",
+    "slug": "web-apis",
+    "count": 21,
+    "url": "https://www.marketnow.site/registry?cat=web-apis",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
     "name": "AI & ML Tools",
     "slug": "ai-ml-tools",
-    "count": 10,
+    "count": 9,
     "url": "https://www.marketnow.site/registry?cat=ai-ml-tools",
     "bulk_imported": false,
     "disclosure": null
@@ -418,7 +474,7 @@
   {
     "name": "Research",
     "slug": "research",
-    "count": 8,
+    "count": 7,
     "url": "https://www.marketnow.site/registry?cat=research",
     "bulk_imported": false,
     "disclosure": null
@@ -426,16 +482,8 @@
   {
     "name": "AI",
     "slug": "ai",
-    "count": 4,
+    "count": 3,
     "url": "https://www.marketnow.site/registry?cat=ai",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Network",
-    "slug": "network",
-    "count": 4,
-    "url": "https://www.marketnow.site/registry?cat=network",
     "bulk_imported": false,
     "disclosure": null
   },
@@ -444,6 +492,14 @@
     "slug": "system",
     "count": 3,
     "url": "https://www.marketnow.site/registry?cat=system",
+    "bulk_imported": false,
+    "disclosure": null
+  },
+  {
+    "name": "Network",
+    "slug": "network",
+    "count": 2,
+    "url": "https://www.marketnow.site/registry?cat=network",
     "bulk_imported": false,
     "disclosure": null
   },
@@ -460,30 +516,6 @@
     "slug": "data-science-analytics",
     "count": 1,
     "url": "https://www.marketnow.site/registry?cat=data-science-analytics",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Web APIs",
-    "slug": "web-apis",
-    "count": 1,
-    "url": "https://www.marketnow.site/registry?cat=web-apis",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Browser Automation",
-    "slug": "browser-automation",
-    "count": 1,
-    "url": "https://www.marketnow.site/registry?cat=browser-automation",
-    "bulk_imported": false,
-    "disclosure": null
-  },
-  {
-    "name": "Search",
-    "slug": "search",
-    "count": 1,
-    "url": "https://www.marketnow.site/registry?cat=search",
     "bulk_imported": false,
     "disclosure": null
   }

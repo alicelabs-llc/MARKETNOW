@@ -297,6 +297,19 @@ except FileNotFoundError:
 # 7. COMBINED SCORING (v2.5 — 6 analysis layers)
 # ═══════════════════════════════════════════════════════════════════════════
 
+# Read gVisor status (written by the workflow)
+gvisor_status = 'unknown'
+try:
+    with open('/tmp/l2_output/gvisor_status.txt', 'r') as f:
+        gvisor_status = f.read().strip()
+except FileNotFoundError:
+    # If gvisor_status.txt doesn't exist, check if runsc was used
+    # by looking at gvisor_syscalls.log content
+    if gvisor_text:
+        gvisor_status = 'gvisor-active'
+    else:
+        gvisor_status = 'seccomp-fallback'
+
 # Build enhanced result
 result = {
     'skill_id': skill_id,
@@ -310,9 +323,8 @@ result = {
         'cpu': '0.5',
         'pids': '64',
         'timeout': '60s',
-        'strace': 'enabled',
-        'gvisor': 'attempted (falls back to seccomp if not installed)',
-        'seccomp_profile': 'L2.5 strict (blocks ptrace, bpf, mount, kexec, clone3, etc.)',
+        'gvisor': gvisor_status,
+        'seccomp_profile': 'L2.5 strict (blocks ptrace, bpf, mount, kexec, clone3, unshare, etc.)' if gvisor_status == 'seccomp-fallback' else 'n/a (gVisor userspace kernel active)',
     },
     'execution_status': execution_status,
     'failure_reason': failure_reason,
@@ -405,7 +417,7 @@ result['findings_summary'] = {
 with open(result_path, 'w') as f:
     json.dump(result, f, indent=2)
 
-print('=== L2 RESULT (v2.0 — ACTIVE) ===')
+print('=== L2 RESULT (v2.5 — gVisor + seccomp + suspicious files) ===')
 print(json.dumps(result, indent=2))
 print(f'=== stdout sample ===')
 print(sample)

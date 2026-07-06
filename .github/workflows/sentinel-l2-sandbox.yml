@@ -123,51 +123,39 @@ jobs:
           SKILL_ID: ${{ steps.vars.outputs.skill_id }}
         run: |
           mkdir -p /tmp/l2_output
+          SUBPATH=$(cat /tmp/mcp-server-subpath.txt)
 
           # ═══ L2.5: Try to install gVisor ═══
           echo "=== Installing gVisor (runsc) ==="
           (
             wget -q https://storage.googleapis.com/gvisor/releases/nightly/latest/runsc -O /usr/local/bin/runsc
             chmod +x /usr/local/bin/runsc
-            docker run --rm --privileged --entrypoint /bin/true alpine 2>/dev/null
             # Register runsc as a Docker runtime
             echo '{"runtimes":{"runsc":{"path":"/usr/local/bin/runsc"}}}' > /etc/docker/daemon.json 2>/dev/null || true
-            systemctl restart docker 2>/dev/null || true
+            systemctl restart docker 2>/dev/null || service docker restart 2>/dev/null || true
             sleep 3
           ) || true
 
           # Verify gVisor
           if docker info 2>/dev/null | grep -q runsc; then
             echo "✓ gVisor (runsc) is available"
+            GVENDOR_STATUS="gvisor-active"
           else
             echo "⚠ gVisor not available — using enhanced seccomp profile (L2.5 fallback)"
+            GVENDOR_STATUS="seccomp-fallback"
           fi
+          echo "$GVENDOR_STATUS" > /tmp/l2_output/gvisor_status.txt
 
-          # ═══ PHASE 1: Sandbox run (gVisor or enhanced Docker) ═══
-          echo "=== Phase 1: L2.5 Sandbox ==="
+          # ═══ PHASE 1: L2.5 Sandbox run (gVisor OR enhanced Docker with seccomp) ═══
+          # l2-gvisor-sandbox.sh handles BOTH paths:
+          #   - If runsc is available: runs with --runtime=runsc (userspace kernel)
+          #   - If not: runs with strict seccomp profile (blocks ptrace, bpf, mount, kexec, etc.)
+          # Output goes to /tmp/l2_output/stdout.log (container stdout)
+          #         + /tmp/l2_output/gvisor_syscalls.log (syscall log)
+          #         + /tmp/l2_output/fs_diff.txt (filesystem changes)
+          #         + /tmp/l2_output/suspicious_files.txt (if .ssh/.env/cron detected)
+          echo "=== Phase 1: L2.5 Sandbox (gVisor or enhanced seccomp) ==="
           bash scripts/l2-gvisor-sandbox.sh mcp-audit-target "$SKILL_ID" 60
-          # Run the MCP server in complete isolation with strace monitoring.
-          # strace captures ALL syscalls: open, connect, execve, fork, chmod, etc.
-          # This is REAL syscall-level monitoring, not just stdout grep.
-          echo "=== Phase 1: Docker sandbox + strace ==="
-
-          # Install strace in the runner (not in the container — we strace from outside)
-          sudo apt-get install -y strace 2>/dev/null || true
-
-          # Run Docker with strace on the container process
-          # We use --cap-add SYS_PTRACE temporarily for strace, then analyze
-          timeout 60 docker run --rm \
-            --network none \
-            --read-only \
-            --cap-drop ALL \
-            --security-opt no-new-privileges \
-            --memory 256m \
-            --memory-swap 0 \
-            --cpus 0.5 \
-            --pids-limit 64 \
-            --tmpfs /tmp:rw,size=64m \
-            -e SKILL_ID="$SKILL_ID" \
-            mcp-audit-target > /tmp/l2_output/stdout.log 2>&1 || true
 
           # ═══ PHASE 2: Active MCP probe (adversarial testing) ═══
           # Start the server WITHOUT Docker isolation (but in a restricted env)
@@ -199,22 +187,14 @@ jobs:
             echo '{"error": "no entrypoint found", "summary": {"tools_discovered": 0, "tools_tested": 0, "adversarial_findings": 0, "errors": 0}}' > /tmp/l2_output/probe_results.json
           fi
 
-          # ═══ PHASE 3: Filesystem diff ═══
-          # Check if the server created/modified files outside /tmp
-          echo "=== Phase 3: Filesystem diff ==="
-          # (The Docker --read-only flag already prevents writes, but we check
-          # the probe phase which runs WITHOUT Docker)
-          echo "(filesystem diff requires Docker diff — not available for probe phase)"
-
-          # ═══ PHASE 4: Generate empty strace log if not available ═══
-          # (strace on Docker requires --cap-add SYS_PTRACE which conflicts with
-          # --cap-drop ALL. For now we rely on stdout analysis + active probe.
-          # strace support will be added in a future update with a sidecar container.)
+          # ═══ PHASE 3: Ensure strace.log exists (analyzer expects it) ═══
+          # strace on Docker requires --cap-add SYS_PTRACE which conflicts with
+          # --cap-drop ALL. gVisor's syscall log (gvisor_syscalls.log) replaces
+          # strace when gVisor is active. We keep an empty strace.log for compat.
           touch /tmp/l2_output/strace.log
-          touch /tmp/l2_output/fs_diff.txt
 
-          # ═══ PHASE 5: Run enhanced analysis ═══
-          echo "=== Phase 5: Analysis (v2.0) ==="
+          # ═══ PHASE 4: Run L2.5 analysis (6 layers) ═══
+          echo "=== Phase 4: L2.5 Analysis (gVisor + seccomp + suspicious files + probe) ==="
           python3 scripts/l2-analyze.py
 
       - name: Commit L2 results to repo (with retry on race)

@@ -39,23 +39,44 @@ cd "$BUILD_DIR" || { echo "::error::Cannot cd to $BUILD_DIR"; exit 1; }
 # Monorepo Dockerfiles are inconsistent about build context:
 #   - Some use COPY paths relative to REPO_ROOT (e.g. "COPY src/everything /app")
 #   - Others assume context IS the subpath (e.g. "COPY uv.lock /uv.lock")
-# We try BOTH and use whichever succeeds.
+#
+# Build-time network policy (L2.5):
+#   Build needs network to fetch npm/pip deps from public registries.
+#   --network none is NOT applied to `docker build` because:
+#     1. GitHub Actions runner has no sensitive data to exfiltrate at build time
+#     2. Runtime isolation (docker run --network none) is what actually matters
+#     3. Blocking build-time network breaks 90%+ of real Dockerfiles
+#   The runtime sandbox (--network none --read-only --cap-drop ALL) is unchanged.
+#
+# We detect repo-root-relative COPY/ADD instructions to choose the right context.
 if [ -f "Dockerfile" ] || [ -f "Dockerfile.dev" ]; then
   DOCKERFILE_PATH="Dockerfile"
   [ -f "Dockerfile" ] || DOCKERFILE_PATH="Dockerfile.dev"
   echo "✓ Found $DOCKERFILE_PATH in $BUILD_DIR"
 
-  echo "  Attempt 1: build with context=SUBPATH ($BUILD_DIR)"
-  if DOCKER_BUILDKIT=1 docker build --network none --no-cache -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$BUILD_DIR" 2>&1 | tail -40; then
-    if docker image inspect mcp-audit-target >/dev/null 2>&1; then
-      echo "✓ Image built with subpath context"
-      exit 0
-    fi
+  # Detect if the Dockerfile uses repo-root-relative paths (e.g. COPY src/foo /app)
+  # If so, we MUST use REPO_ROOT as context. Otherwise SUBPATH is fine.
+  USE_REPO_ROOT=false
+  if grep -qE '^(COPY|ADD)\s+(src|packages|apps|libs)/' "$BUILD_DIR/$DOCKERFILE_PATH" 2>/dev/null; then
+    USE_REPO_ROOT=true
+    echo "  Dockerfile uses repo-root-relative paths → context=REPO_ROOT"
+  else
+    echo "  Dockerfile uses subpath-relative paths → try context=SUBPATH first"
   fi
-  echo "  Attempt 1 failed — image not found, trying with context=REPO_ROOT"
+
+  if [ "$USE_REPO_ROOT" = "false" ]; then
+    echo "  Attempt 1: build with context=SUBPATH ($BUILD_DIR)"
+    if DOCKER_BUILDKIT=1 docker build --no-cache -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$BUILD_DIR" 2>&1 | tail -50; then
+      if docker image inspect mcp-audit-target >/dev/null 2>&1; then
+        echo "✓ Image built with subpath context"
+        exit 0
+      fi
+    fi
+    echo "  Attempt 1 failed — image not found, trying with context=REPO_ROOT"
+  fi
 
   echo "  Attempt 2: build with context=REPO_ROOT ($REPO_ROOT)"
-  DOCKER_BUILDKIT=1 docker build --network none --no-cache -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$REPO_ROOT" 2>&1 | tail -40
+  DOCKER_BUILDKIT=1 docker build --no-cache -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$REPO_ROOT" 2>&1 | tail -50
   if ! docker image inspect mcp-audit-target >/dev/null 2>&1; then
     echo "::error::Both build attempts failed — image mcp-audit-target not found"
     echo "::error::This skill's Dockerfile is incompatible with the sandbox."
@@ -204,7 +225,7 @@ echo "=== Generated Dockerfile.audit ==="
 cat Dockerfile.audit
 echo "==================================="
 
-DOCKER_BUILDKIT=1 docker build --network none --no-cache -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR" 2>&1 | tail -30
+DOCKER_BUILDKIT=1 docker build --no-cache -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR" 2>&1 | tail -30
 if ! docker image inspect mcp-audit-target >/dev/null 2>&1; then
   echo "::error::docker build reported success but image mcp-audit-target not found"
   exit 1

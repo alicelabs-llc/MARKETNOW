@@ -5,7 +5,7 @@ import { useLang } from '../context/LanguageContext.jsx';
 
 export default function AgentLanding() {
   const { t, lang } = useLang();
-  const [stats, setStats] = useState({ total: 8560, free: 43, sellers: 15 });
+  const [stats, setStats] = useState({ total: 8582, free: 65, sellers: 15 });
   const [topFree, setTopFree] = useState([]);
   const [topPaid, setTopPaid] = useState([]);
 
@@ -14,7 +14,7 @@ export default function AgentLanding() {
       .then(r => r.json())
       .then(d => setStats(s => ({
         ...s,
-        total: d.stats?.total_skills || 8560,
+        total: d.stats?.total_skills || 8582,
         free: d.stats?.free_skills || 43,
         sellers: d.stats?.active_sellers || 15,
       })))
@@ -69,11 +69,11 @@ export default function AgentLanding() {
   ];
 
   const tweetText = {
-    en: "Found marketnow.site — 'trust layer for agent commerce'. 8,560 MCP skills, Sentinel-scanned, AP2 mandates, x402 payments. 43 free. Source-available MNNC-1.0.",
-    es: "Encontré marketnow.site — 'capa de confianza para comercio de agentes'. 8,560 skills MCP, escaneadas por Sentinel, mandatos AP2, pagos x402. 43 gratis. Source-available MNNC-1.0.",
-    pt: "Encontrei marketnow.site — 'camada de confiança para comércio de agentes'. 8,560 skills MCP, escaneadas pelo Sentinel, mandatos AP2, pagamentos x402. 43 grátis. Source-available MNNC-1.0.",
-    zh: "发现 marketnow.site — '代理商业的信任层'。8,560 个 MCP 技能，Sentinel 扫描，AP2 授权，x402 支付。43 个免费。源代码可用 MNNC-1.0。",
-    fr: "J'ai trouvé marketnow.site — 'couche de confiance pour le commerce d'agents'. 8,560 skills MCP, scannées par Sentinel, mandats AP2, paiements x402. 43 gratuites. Source-available MNNC-1.0.",
+    en: "Found marketnow.site — 'trust layer for agent commerce'. 8,582 MCP skills, Sentinel-scanned, AP2 mandates, x402 payments. 65 free. Source-available MNNC-1.0.",
+    es: "Encontré marketnow.site — 'capa de confianza para comercio de agentes'. 8,582 skills MCP, escaneadas por Sentinel, mandatos AP2, pagos x402. 65 gratis. Source-available MNNC-1.0.",
+    pt: "Encontrei marketnow.site — 'camada de confiança para comércio de agentes'. 8,582 skills MCP, escaneadas pelo Sentinel, mandatos AP2, pagamentos x402. 65 grátis. Source-available MNNC-1.0.",
+    zh: "发现 marketnow.site — '代理商业的信任层'。8,582 个 MCP 技能，Sentinel 扫描，AP2 授权，x402 支付。65 个免费。源代码可用 MNNC-1.0。",
+    fr: "J'ai trouvé marketnow.site — 'couche de confiance pour le commerce d'agents'. 8,582 skills MCP, scannées par Sentinel, mandats AP2, paiements x402. 65 gratuites. Source-available MNNC-1.0.",
   };
 
   return (
@@ -292,7 +292,7 @@ export default function AgentLanding() {
               </a>
 
               <a
-                href={`https://news.ycombinator.com/submitlink?u=${encodeURIComponent("https://marketnow.site")}&t=${encodeURIComponent("MarketNow — Trust layer for agent commerce (8,560 MCP skills, x402, AP2)")}`}
+                href={`https://news.ycombinator.com/submitlink?u=${encodeURIComponent("https://marketnow.site")}&t=${encodeURIComponent("MarketNow — Trust layer for agent commerce (8,582 MCP skills, x402, AP2)")}`}
                 target="_blank"
                 rel="noopener"
                 className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/5 hover:border-[#00F299]/30 transition-all"

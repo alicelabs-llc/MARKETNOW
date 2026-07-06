@@ -11,7 +11,7 @@ import { useLang } from '../context/LanguageContext.jsx';
 const CONTENT = {
   en: {
     headerExtra:
-      "Start free with 3 skills — upgrade when you're ready to scale. Buyers always pay one-time per skill ($0.99–$9.99), no subscriptions for them.",
+      "Start free with the Community plan. Upgrade to Team ($99/mo) when you need monitoring and analytics. Enterprise available for custom deployments.",
     billingMonthly: 'MONTHLY',
     billingYearly: 'YEARLY',
     billingYearlyDiscount: '-20%',
@@ -54,11 +54,11 @@ const CONTENT = {
     faq: [
       {
         q: 'Do buyers need a subscription?',
-        a: 'No. Buyers always pay a one-time price per skill ($0.99–$9.99). No subscriptions, no credits, no recurring billing for buyers. The seller tiers on this page are only for people who want to LIST skills for sale.',
+        a: 'No. MarketNow uses B2B pricing: Community (Free), Team ($99/mo), Enterprise (Custom). All 8,582 skills are Sentinel-certified and browsable for free.',
       },
       {
         q: 'What happens if I exceed my free tier limit?',
-        a: 'FREE tier includes 3 skills. If you want to list more, you can either upgrade to PRO ($9.99/mo for 25 skills) or pay a storage fee of ${price}/skill/month for each additional skill.',
+        a: 'Community plan is free. For team monitoring, upgrade to Team ($99/mo). Enterprise available for custom deployments.',
       },
       {
         q: 'How do I get paid as a seller?',
@@ -145,7 +145,7 @@ const CONTENT = {
 
   es: {
     headerExtra:
-      'Empieza gratis con 3 skills — sube de plan cuando estés listo para escalar. Los compradores siempre pagan una vez por skill ($0.99–$9.99), sin suscripciones.',
+      'Empieza gratis con el plan Community. Sube a Team ($99/mes) cuando necesites monitoreo y analíticas. Enterprise disponible para despliegues personalizados.',
     billingMonthly: 'MENSUAL',
     billingYearly: 'ANUAL',
     billingYearlyDiscount: '-20%',
@@ -188,11 +188,11 @@ const CONTENT = {
     faq: [
       {
         q: '¿Los compradores necesitan suscripción?',
-        a: 'No. Los compradores siempre pagan un precio único por skill ($0.99–$9.99). Sin suscripciones, sin créditos, sin facturación recurrente para compradores. Los planes de vendedor en esta página son solo para quienes quieren PUBLICAR skills para la venta.',
+        a: 'No. MarketNow usa precios B2B: Community (Gratis), Team ($99/mes), Enterprise (Custom). Las 8,582 skills están certificadas por Sentinel y son navegables gratis.',
       },
       {
         q: '¿Qué pasa si excedo el límite del plan free?',
-        a: 'El plan FREE incluye 3 skills. Si quieres publicar más, puedes subir a PRO ($9.99/mes por 25 skills) o pagar una tarifa de almacenamiento de ${price}/skill/mes por cada skill adicional.',
+        a: 'El plan Community es gratis. Para monitoreo de equipo, sube a Team ($99/mes). Enterprise disponible para despliegues personalizados.',
       },
       {
         q: '¿Cómo recibo mis pagos como vendedor?',
@@ -281,7 +281,7 @@ const CONTENT = {
 
   pt: {
     headerExtra:
-      'Comece grátis com 3 skills — faça upgrade quando estiver pronto para escalar. Compradores sempre pagam uma vez por skill ($0.99–$9.99), sem assinaturas para eles.',
+      'Comece grátis com o plano Community. Faça upgrade para Team ($99/mês) quando precisar de monitoramento e análises. Enterprise disponível para implantações personalizadas.',
     billingMonthly: 'MENSAL',
     billingYearly: 'ANUAL',
     billingYearlyDiscount: '-20%',
@@ -324,11 +324,11 @@ const CONTENT = {
     faq: [
       {
         q: 'Compradores precisam de assinatura?',
-        a: 'Não. Compradores sempre pagam um preço único por skill ($0.99–$9.99). Sem assinaturas, sem créditos, sem cobrança recorrente para compradores. Os planos de vendedor nesta página são apenas para quem quer LISTAR skills para venda.',
+        a: 'Não. O MarketNow usa preços B2B: Community (Grátis), Team ($99/mês), Enterprise (Custom). Todas as 8,582 skills são certificadas pelo Sentinel e navegáveis gratuitamente.',
       },
       {
         q: 'O que acontece se eu exceder o limite do plano free?',
-        a: 'O plano FREE inclui 3 skills. Se você quiser listar mais, pode fazer upgrade para PRO ($9.99/mês por 25 skills) ou pagar uma taxa de armazenamento de ${price}/skill/mês por cada skill adicional.',
+        a: 'O plano Community é gratuito. Para monitoramento de equipe, faça upgrade para Team ($99/mês). Enterprise disponível para implantações personalizadas.',
       },
       {
         q: 'Como recebo meus pagamentos como vendedor?',
@@ -417,7 +417,7 @@ const CONTENT = {
 
   zh: {
     headerExtra:
-      '免费发布 3 个 skill 开始使用 —— 准备扩大规模时再升级。买家始终按 skill 单次付费（$0.99–$9.99），无需订阅。',
+      '从 Community 免费计划开始。需要团队监控和分析时升级到 Team（$99/月）。Enterprise 可用于定制部署。',
     billingMonthly: '月付',
     billingYearly: '年付',
     billingYearlyDiscount: '-20%',
@@ -459,11 +459,11 @@ const CONTENT = {
     faq: [
       {
         q: '买家需要订阅吗？',
-        a: '不需要。买家始终按 skill 单次付费（$0.99–$9.99）。无订阅、无积分、无循环计费。本页面的卖家套餐仅面向想要上架 skill 出售的人。',
+        a: '不需要。MarketNow 使用 B2B 定价：Community（免费）、Team（$99/月）、Enterprise（定制）。所有 8,582 个技能都通过 Sentinel 认证，可免费浏览。',
       },
       {
         q: '如果超出免费套餐限额会怎样？',
-        a: 'FREE 套餐包含 3 个 skill。如需上架更多，可升级到 PRO（$9.99/月，25 个 skill），或为每个额外 skill 支付 ${price}/skill/月的存储费。',
+        a: 'Community 计划免费。如需团队监控，请升级到 Team（$99/月）。Enterprise 可用于定制部署。',
       },
       {
         q: '作为卖家如何收款？',
@@ -549,7 +549,7 @@ const CONTENT = {
 
   fr: {
     headerExtra:
-      "Commencez gratuitement avec 3 skills — passez à un plan supérieur quand vous êtes prêt à monter en charge. Les acheteurs paient toujours à l'unité par skill ($0.99–$9.99), pas d'abonnement pour eux.",
+      "Commencez gratuitement avec le plan Community. Passez à Team ($99/mois) quand vous avez besoin de surveillance et d'analyses. Enterprise disponible pour les déploiements personnalisés.",
     billingMonthly: 'MENSUEL',
     billingYearly: 'ANNUEL',
     billingYearlyDiscount: '-20%',
@@ -592,11 +592,11 @@ const CONTENT = {
     faq: [
       {
         q: 'Les acheteurs ont-ils besoin d\'un abonnement ?',
-        a: "Non. Les acheteurs paient toujours un prix unique par skill ($0.99–$9.99). Pas d'abonnements, pas de crédits, pas de facturation récurrente pour les acheteurs. Les plans vendeur sur cette page sont uniquement pour ceux qui veulent PUBLIER des skills à la vente.",
+        a: "Non. MarketNow utilise une tarification B2B : Community (Gratuit), Team ($99/mois), Enterprise (Sur mesure). Les 8 582 skills sont certifiées par Sentinel et naviguables gratuitement.",
       },
       {
         q: 'Que se passe-t-il si je dépasse la limite du plan gratuit ?',
-        a: 'Le plan FREE inclut 3 skills. Si vous voulez en lister plus, vous pouvez soit passer à PRO ($9.99/mois pour 25 skills) soit payer des frais de stockage de ${price}/skill/mois pour chaque skill supplémentaire.',
+        a: 'Le plan Community est gratuit. Pour la surveillance d`équipe, passez à Team ($99/mois). Enterprise disponible pour les déploiements personnalisés.',
       },
       {
         q: 'Comment suis-je payé en tant que vendeur ?',
@@ -697,8 +697,8 @@ function fmt(str, vars) {
  * MarketNow — Pricing Page
  *
  * Modelo de monetización completo:
- * - Compradores: pagan precio de skill ($0.99-$9.99)
- * - Vendedores: FREE (3 skills) / PRO ($9.99/mo) / ENTERPRISE ($49.99/mo)
+ * - Compradores: B2B pricing (Community/Team/Enterprise)
+ * - Planes: Community (Free) / Team ($99/mo) / Enterprise (Custom)
  * - Add-ons: Featured listing, Verified Seller badge, Priority Review
  * - Afiliados: 5% comisión por venta referida
  */

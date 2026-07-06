@@ -21,7 +21,7 @@ const CONTENT = {
         colorClass: 'text-[#00F299]',
         title: '5,054 skills — Curated open-source MCP servers',
         bodyPre:
-          'Sourced from public GitHub repositories tagged with "mcp-server" or "model-context-protocol". Each was scanned by Sentinel L1.5, given a category based on its README, and assigned a price based on complexity (single-function = $0.99, enterprise-grade = $9.99).',
+          'Sourced from public GitHub repositories tagged with "mcp-server" or "model-context-protocol". Each was scanned by Sentinel L1.5, given a category based on its README, and certified by Sentinel with a signed SHA-256 certificate.',
         bodyStrong: 'These are real, working MCP servers you can verify on GitHub.',
         bodyPost: '',
       },
@@ -112,7 +112,7 @@ const CONTENT = {
         colorClass: 'text-[#00F299]',
         title: '5,054 skills — Servidores MCP open-source curados',
         bodyPre:
-          'Obtenidos de repositorios públicos de GitHub etiquetados con "mcp-server" o "model-context-protocol". Cada uno fue escaneado por Sentinel L1.5, recibió una categoría basada en su README y se le asignó un precio según su complejidad (función única = $0.99, nivel empresarial = $9.99).',
+          'Obtenidos de repositorios públicos de GitHub etiquetados con "mcp-server" o "model-context-protocol". Cada uno fue escaneado por Sentinel L1.5, recibió una categoría basada en su README y certificada por Sentinel con un certificado SHA-256 firmado.',
         bodyStrong: 'Estos son servidores MCP reales y funcionales que puedes verificar en GitHub.',
         bodyPost: '',
       },
@@ -203,7 +203,7 @@ const CONTENT = {
         colorClass: 'text-[#00F299]',
         title: '5.054 skills — Servidores MCP open-source curados',
         bodyPre:
-          'Obtidos de repositórios públicos do GitHub marcados com "mcp-server" ou "model-context-protocol". Cada um foi escaneado pelo Sentinel L1.5, recebeu uma categoria com base no seu README e teve um preço atribuído conforme a complexidade (função única = $0.99, nível empresarial = $9.99).',
+          'Obtidos de repositórios públicos do GitHub marcados com "mcp-server" ou "model-context-protocol". Cada um foi escaneado pelo Sentinel L1.5, recebeu uma categoria com base no seu README e certificada pelo Sentinel com um certificado SHA-256 assinado.',
         bodyStrong: 'Estes são servidores MCP reais e funcionais que você pode verificar no GitHub.',
         bodyPost: '',
       },
@@ -294,7 +294,7 @@ const CONTENT = {
         colorClass: 'text-[#00F299]',
         title: '5,054 个 skill —— 精选的开源 MCP 服务器',
         bodyPre:
-          '来源于 GitHub 上标记为 "mcp-server" 或 "model-context-protocol" 的公开仓库。每个都由 Sentinel L1.5 扫描,根据其 README 分配分类,并根据复杂度定价(单一功能 = $0.99,企业级 = $9.99)。',
+          '来源于 GitHub 上标记为 "mcp-server" 或 "model-context-protocol" 的公开仓库。每个都由 Sentinel L1.5 扫描,根据其 README 分配分类,并由 Sentinel 认证,附带签名的 SHA-256 证书。',
         bodyStrong: '这些是真实可用的 MCP 服务器,你可以在 GitHub 上验证。',
         bodyPost: '',
       },

@@ -330,7 +330,7 @@ export default function Registry() {
   const networkStats = [
     { label: c.stats.total, value: allSkills.length.toLocaleString() },
     { label: c.stats.avg, value: '$' + (allSkills.length > 0 ? (allSkills.reduce((a,s) => a + (s.price||0), 0) / allSkills.length).toFixed(2) : '0.00') },
-    { label: c.stats.from, value: '$0.99' },
+    { label: c.stats.from, value: 'FREE' },
     { label: c.stats.protocol, value: 'MCP v1.0' },
   ];
 

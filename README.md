@@ -1,5 +1,5 @@
 ![smithery badge](https://smithery.ai/badge/eddyflores100/marketnow)](https://smithery.ai/servers/eddyflores100/marketnow)
-[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/LICENSE)
 [![Sentinel Certified](https://img.shields.io/badge/Sentinel-Certified%208%2C582%20skills%20%F0%9F%9B%A1%EF%B8%8F-00F299)](https://marketnow.site/sentinel-transparency)
 
 # MarketNow — Trust Layer for Agent Commerce
@@ -14,7 +14,7 @@
 |---|---|
 | **Name** | MarketNow |
 | **Tagline** | Trust layer for agent commerce — every skill Sentinel-certified |
-| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 8,582 MCP servers is audited by Sentinel (3-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 Docker sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). Open source MIT, maintained by AliceLabs LLC (Wyoming, USA). |
+| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 8,582 MCP servers is audited by Sentinel (3-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 Docker sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). AliceLabs LLC proprietary, maintained by AliceLabs LLC (Wyoming, USA). |
 | **Total skills** | 8,582 |
 | **Certified skills** | 8,582 (100%) |
 | **Free skills** | 65 |
@@ -22,7 +22,7 @@
 | **Pricing** | B2B: Community (Free) / Team ($99/mo, COMING SOON) / Enterprise (Custom) |
 | **Payment methods** | Stripe (credit card) + USDC on Base |
 | **Languages** | EN, ES, ZH, PT, FR |
-| **License** | MIT |
+| **License** | AliceLabs LLC Proprietary |
 | **Maintainer** | AliceLabs LLC (Wyoming, USA) — founder Edison Flores |
 | **MCP server** | `npx -y marketnow-mcp` |
 | **npm** | https://www.npmjs.com/package/marketnow-mcp |
@@ -37,7 +37,7 @@
 <!-- END CANONICAL METADATA -->
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/LICENSE)
 [![Sentinel Certified](https://img.shields.io/badge/🛡️_Sentinel-Certified%208%2C582-00F299)](https://marketnow.site/sentinel-transparency)
 
 ## 🤖 What is MarketNow?

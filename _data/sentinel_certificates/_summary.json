@@ -1,7 +1,6 @@
 {
-  "generated_at": "2026-07-06T02:10:17.388Z",
+  "generated_at": "2026-07-06T02:55:56.008Z",
   "total_certified": 8582,
-  "total_failed": 0,
   "by_risk": {
     "low": 6,
     "medium": 8473,
@@ -22,6 +21,8 @@
     "9": 3209,
     "10": 6
   },
-  "with_l2": 17,
-  "l2_coverage_pct": "0.20%"
+  "with_l2": 67,
+  "l2_coverage_pct": "0.78%",
+  "l2_results_count": 67,
+  "note": "with_l2 now counts actual L2 result files, not just certificates with layers_run.l2=true (which updates on next cert regeneration)"
 }

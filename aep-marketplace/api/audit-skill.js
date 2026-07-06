@@ -382,7 +382,9 @@ export default async function handler(req, res) {
 
     // Fetch skill
     // H1 FIX: Don't trust req.headers.host (spoofable). Use VERCEL_URL or fallback.
-    const baseUrl = `https://${process.env.VERCEL_URL || 'marketnow.site'}`;
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL.replace(/^https?:\/\//, '')}`
+      : 'https://marketnow.site';
     const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
     if (!skillsRes.ok) throw new Error('Failed to fetch skills');
     const skills = await skillsRes.json();

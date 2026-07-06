@@ -59,7 +59,8 @@ async function getMandate(req, mandateId) {
   if (cached) return cached;
 
   // 2. Fetch desde /api/mandates
-  const baseUrl = `https://${req.headers.host}`;
+  // H1 FIX: Don't trust req.headers.host (spoofable, enables SSRF + cache poisoning)
+  const baseUrl = `https://${process.env.VERCEL_URL || 'marketnow.site'}`;
   try {
     const r = await fetch(`${baseUrl}/api/mandates?id=${encodeURIComponent(mandateId)}`);
     if (!r.ok) return null;

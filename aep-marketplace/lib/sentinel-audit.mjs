@@ -243,6 +243,10 @@ export async function auditSkill(skill, options = {}) {
         const l2Mult = l2Existing.l2_score / 10;
         overallScore = Math.round(overallScore * l2Mult);
       }
+      // H15 FIX: If L2 failed to start, cap score at 5 and surface failure
+      if (status === 'failed_to_start') {
+        overallScore = Math.min(overallScore, 5);
+      }
     } else if (skill.source?.url && skill.source.url.includes('github.com')) {
       l2Data.status = 'not_audited_yet';
     } else {

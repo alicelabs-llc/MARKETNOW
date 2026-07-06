@@ -46,7 +46,7 @@ if [ -f "Dockerfile" ] || [ -f "Dockerfile.dev" ]; then
   echo "✓ Found $DOCKERFILE_PATH in $BUILD_DIR"
 
   echo "  Attempt 1: build with context=SUBPATH ($BUILD_DIR)"
-  if docker build -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$BUILD_DIR" 2>&1 | tail -40; then
+  if DOCKER_BUILDKIT=1 docker build --network none --no-cache -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$BUILD_DIR" 2>&1 | tail -40; then
     if docker image inspect mcp-audit-target >/dev/null 2>&1; then
       echo "✓ Image built with subpath context"
       exit 0
@@ -55,7 +55,7 @@ if [ -f "Dockerfile" ] || [ -f "Dockerfile.dev" ]; then
   echo "  Attempt 1 failed — image not found, trying with context=REPO_ROOT"
 
   echo "  Attempt 2: build with context=REPO_ROOT ($REPO_ROOT)"
-  docker build -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$REPO_ROOT" 2>&1 | tail -40
+  DOCKER_BUILDKIT=1 docker build --network none --no-cache -t mcp-audit-target -f "$BUILD_DIR/$DOCKERFILE_PATH" "$REPO_ROOT" 2>&1 | tail -40
   if ! docker image inspect mcp-audit-target >/dev/null 2>&1; then
     echo "::error::Both build attempts failed — image mcp-audit-target not found"
     echo "::error::This skill's Dockerfile is incompatible with the sandbox."
@@ -204,7 +204,7 @@ echo "=== Generated Dockerfile.audit ==="
 cat Dockerfile.audit
 echo "==================================="
 
-docker build -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR" 2>&1 | tail -30
+DOCKER_BUILDKIT=1 docker build --network none --no-cache -t mcp-audit-target -f Dockerfile.audit "$BUILD_DIR" 2>&1 | tail -30
 if ! docker image inspect mcp-audit-target >/dev/null 2>&1; then
   echo "::error::docker build reported success but image mcp-audit-target not found"
   exit 1

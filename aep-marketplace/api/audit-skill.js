@@ -32,6 +32,7 @@
 
 import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from '../lib/sentinel-l16.mjs';
 import { triggerL2, getL2Results } from '../lib/sentinel-l2-trigger.mjs';
+import { checkRateLimit } from '../lib/rate-limit.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -141,6 +142,17 @@ async function handleCertificate(req, res) {
 
     if (certRes.status === 200) {
       const cert = await certRes.json();
+
+      // C15 FIX: Check if certificate has expired
+      if (cert.expires_at && new Date(cert.expires_at) < new Date()) {
+        return res.status(410).json({
+          status: 'expired',
+          message: `Certificate for skill '${skillId}' expired on ${cert.expires_at}. The weekly batch audit regenerates certificates every Sunday at 01:00 UTC.`,
+          skill_id: skillId,
+          expired_at: cert.expires_at,
+          certificate: cert,
+        });
+      }
 
       // SECURITY FIX: Actually verify the certificate signature server-side.
       // Previously the endpoint returned valid: true without checking —
@@ -340,6 +352,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // H3 FIX: Rate limit audit endpoint (30 req/min — each call does 6+ fetches)
+  if (checkRateLimit(req, res, 'audit')) return;
+
   // ─── Sub-endpoint: GET /api/audit-skill?sentinel-status=1 ─────────────
   // Returns the latest L1.6 batch audit + L2 sandbox coverage. Merged here
   // to stay under Vercel Hobby's 12-serverless-function-per-deploy limit.
@@ -366,7 +381,8 @@ export default async function handler(req, res) {
     }
 
     // Fetch skill
-    const baseUrl = `https://${req.headers.host}`;
+    // H1 FIX: Don't trust req.headers.host (spoofable). Use VERCEL_URL or fallback.
+    const baseUrl = `https://${process.env.VERCEL_URL || 'marketnow.site'}`;
     const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
     if (!skillsRes.ok) throw new Error('Failed to fetch skills');
     const skills = await skillsRes.json();

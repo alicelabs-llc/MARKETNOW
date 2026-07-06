@@ -35,14 +35,32 @@ jobs:
 
       - name: Set variables
         id: vars
+        env:
+          DISPATCH_SKILL_ID: ${{ github.event.client_payload.skill_id }}
+          DISPATCH_REPO_URL: ${{ github.event.client_payload.repo_url }}
+          INPUT_SKILL_ID: ${{ inputs.skill_id }}
+          INPUT_REPO_URL: ${{ inputs.repo_url }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
-            echo "skill_id=${{ github.event.client_payload.skill_id }}" >> $GITHUB_OUTPUT
-            echo "repo_url=${{ github.event.client_payload.repo_url }}" >> $GITHUB_OUTPUT
+          if [ "$EVENT_NAME" = "repository_dispatch" ]; then
+            SKILL_ID="$DISPATCH_SKILL_ID"
+            REPO_URL="$DISPATCH_REPO_URL"
           else
-            echo "skill_id=${{ inputs.skill_id }}" >> $GITHUB_OUTPUT
-            echo "repo_url=${{ inputs.repo_url }}" >> $GITHUB_OUTPUT
+            SKILL_ID="$INPUT_SKILL_ID"
+            REPO_URL="$INPUT_REPO_URL"
           fi
+          # C10 FIX: Validate skill_id (alphanumeric + dashes only)
+          if ! echo "$SKILL_ID" | grep -qE '^[a-zA-Z0-9_-]+$'; then
+            echo "::error::Invalid skill_id: $SKILL_ID"
+            exit 1
+          fi
+          # C11 FIX: Validate repo_url (must be https://github.com/...)
+          if ! echo "$REPO_URL" | grep -qE '^https://github\.com/[a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+'; then
+            echo "::error::Invalid repo_url: $REPO_URL"
+            exit 1
+          fi
+          echo "skill_id=$SKILL_ID" >> $GITHUB_OUTPUT
+          echo "repo_url=$REPO_URL" >> $GITHUB_OUTPUT
 
       - name: Clone MCP server repo (supports subpath URLs)
         env:
@@ -57,8 +75,16 @@ jobs:
           #   2. https://github.com/owner/repo/tree/main          → clone full repo, checkout 'main'
           #   3. https://github.com/owner/repo/tree/main/src/foo  → sparse checkout of src/foo only
           #
-          # Parse with the external script (avoids heredoc/YAML issues).
-          eval "$(python3 scripts/l2-parse-url.py "$REPO_URL")"
+          # C11 FIX: Parse URL with JSON output (no more eval — prevents shell injection)
+          PARSED=$(python3 scripts/l2-parse-url.py "$REPO_URL")
+          if echo "$PARSED" | grep -q '"error"'; then
+            echo "::error::$PARSED"
+            exit 1
+          fi
+          OWNER_REPO=$(echo "$PARSED" | python3 -c "import json,sys; print(json.load(sys.stdin)['OWNER_REPO'])")
+          REF=$(echo "$PARSED" | python3 -c "import json,sys; print(json.load(sys.stdin)['REF'])")
+          SUBPATH=$(echo "$PARSED" | python3 -c "import json,sys; print(json.load(sys.stdin)['SUBPATH'])")
+          CLONE_URL=$(echo "$PARSED" | python3 -c "import json,sys; print(json.load(sys.stdin)['CLONE_URL'])")
 
           echo "  owner/repo: $OWNER_REPO"
           echo "  ref:        ${REF:-<default>}"

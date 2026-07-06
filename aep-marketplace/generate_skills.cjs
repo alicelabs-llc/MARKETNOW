@@ -110,9 +110,36 @@ if (fs.existsSync(freeSkillsPath)) {
 
 const USDC_DISCLAIMER = 'USDC payments on Base are irreversible on-chain. For disputes (skill did not work as described, security issue, etc.), contact support@alicelabs.site within 7 days with the txHash and skillId. AliceLabs will refund from treasury for verified disputes. See /trust for the full dispute policy.';
 
+// C14 FIX: Load certificate scores to override fabricated sentinel_score
+const certDir = path.join(__dirname, '..', '_data', 'sentinel_certificates');
+const certScores = new Map();
+if (fs.existsSync(certDir)) {
+  for (const f of fs.readdirSync(certDir)) {
+    if (!f.endsWith('.json') || f === '_summary.json') continue;
+    try {
+      const cert = JSON.parse(fs.readFileSync(path.join(certDir, f), 'utf8'));
+      if (cert.skill_id && cert.overall_score !== undefined) {
+        certScores.set(cert.skill_id, {
+          score: cert.overall_score,
+          risk: cert.risk_level,
+        });
+      }
+    } catch (e) {}
+  }
+}
+console.log(`Loaded ${certScores.size} certificate scores for sentinel_score override.`);
+
 for (const s of skills) {
+  // C14 FIX: Override fabricated sentinel_score with real certificate score
+  if (certScores.has(s.id)) {
+    const certData = certScores.get(s.id);
+    s.sentinel_score = certData.score;
+    s.risk_level_audit = certData.risk; // audit-based risk (separate from permissions-based risk_level)
+  } else if (!s.sentinel_score || s.sentinel_score < 1) {
+    s.sentinel_score = 0; // No certificate = no score (honest)
+  }
+
   // review_status (replaces universal 'verified: true')
-  // review_status: human-reviewed for free skills AND AliceLabs original tools
   s.review_status = (freeIds.has(s.id) || (s.id && s.id.startsWith('mn-sec-'))) ? 'human-reviewed' : 'auto-scanned';
   s.verified = s.review_status !== 'auto-scanned'; // legacy compat
 

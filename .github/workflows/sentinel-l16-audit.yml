@@ -145,7 +145,7 @@ jobs:
       - name: Commit results
         run: |
           git config user.name "Sentinel Bot"
-          git config user.email "sentinel@marketnow.site"
+          git config user.email "support@alicelabs.site"
           git add _data/sentinel_results.json
           git commit -m "sentinel: L1.6 batch audit $(date -u +%Y-%m-%d)" || echo "No changes to commit"
           git push || echo "Push skipped (no changes)"

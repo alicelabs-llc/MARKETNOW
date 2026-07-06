@@ -93,7 +93,7 @@ jobs:
           fi
 
           git config user.name "Sentinel Cert Bot"
-          git config user.email "sentinel@marketnow.site"
+          git config user.email "support@alicelabs.site"
 
           # Add all certificates
           git add _data/sentinel_certificates/

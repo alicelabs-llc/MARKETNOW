@@ -186,7 +186,13 @@ jobs:
             echo "  Running probe with: $ENTRYPOINT"
             # Run the MCP probe — sends initialize, tools/list, tools/call with adversarial inputs
             # Use absolute path to the probe script (we may be cd'd into MCP_DIR)
-            python3 "$REPO_WS/scripts/l2-mcp-probe.py" --command "$ENTRYPOINT" --timeout 30 --output /tmp/l2_output/probe_results.json || true
+            # Hard timeout of 90s prevents hangs when the server doesn't respond to tools/call
+            # (e.g., filesystem server needs allowed directories that the probe doesn't provide)
+            timeout 90 python3 "$REPO_WS/scripts/l2-mcp-probe.py" --command "$ENTRYPOINT" --timeout 30 --output /tmp/l2_output/probe_results.json || true
+            # If the probe was killed by timeout, create a minimal result so the analyzer doesn't fail
+            if [ ! -f /tmp/l2_output/probe_results.json ]; then
+              echo '{"error": "probe timed out (90s hard limit)", "summary": {"tools_discovered": 0, "tools_tested": 0, "adversarial_findings": 0, "errors": 1}}' > /tmp/l2_output/probe_results.json
+            fi
           else
             echo "  No entrypoint found — skipping active probe"
             echo '{"error": "no entrypoint found", "summary": {"tools_discovered": 0, "tools_tested": 0, "adversarial_findings": 0, "errors": 0}}' > /tmp/l2_output/probe_results.json

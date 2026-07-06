@@ -56,11 +56,12 @@ export default async function handler(req, res) {
     const skillId = metadata.skill_id;
     const skillName = metadata.skill_name;
 
-    // FIX 4.1: Idempotent license key — deterministic from sessionId, not random
-    // Same sessionId always returns the same license key (no new key on page reload)
+    // FIX: Unify license key format with stripe-webhook.js
+    // Both now use: MN-STRIPE-{last 8 of skillId}-{first 12 of SHA-256 hash}
+    // This ensures the key the buyer sees matches the one persisted in GitHub
     const crypto = await import('crypto');
     const hash = crypto.createHash('sha256').update(`${sessionId}:${skillId}`).digest('hex');
-    const licenseKey = `MN-LIC-${skillId?.replace(/[^a-zA-Z0-9]/g, '').toUpperCase().slice(0, 8) || 'GENERIC'}-${hash.slice(0, 8).toUpperCase()}`;
+    const licenseKey = `MN-STRIPE-${skillId?.slice(-8).toUpperCase() || 'XXXX'}-${hash.slice(0, 12).toUpperCase()}`;
 
     return res.status(200).json({
       verified: true,

@@ -177,27 +177,49 @@ export default function Vault() {
     const sessionId = params.get('sessionId');
 
     if (success && skillId) {
-      // Save the purchase to localStorage
-      try {
-        const raw = localStorage.getItem('mn_purchases');
-        const existing = raw ? JSON.parse(raw) : [];
+      // SECURITY FIX: Verify the purchase with the server before trusting it.
+      // Previously, this just read ?success=true from the URL and saved it to
+      // localStorage — anyone could fake the URL params and get free access.
+      // Now we call /api/verify-purchase which checks the real Stripe session
+      // and only saves to localStorage if the server confirms payment.
+      (async () => {
+        try {
+          const verifyRes = await fetch(`/api/verify-purchase?sessionId=${encodeURIComponent(sessionId || '')}`);
+          if (!verifyRes.ok) {
+            console.warn('Purchase verification failed:', verifyRes.status);
+            setJustPurchased({ skillId, status: 'Verification Failed', error: 'Server rejected purchase' });
+            return;
+          }
+          const verifyData = await verifyRes.json();
+          if (!verifyData.verified) {
+            console.warn('Purchase not verified by server:', verifyData);
+            setJustPurchased({ skillId, status: 'Verification Failed', error: verifyData.error || 'Not verified' });
+            return;
+          }
 
-        // Check if this purchase already exists (avoid duplicates)
-        if (!existing.find(p => p.sessionId === sessionId)) {
-          const newPurchase = {
-            id: sessionId || `pur_${Date.now()}`,
-            skillId,
-            sessionId,
-            purchasedAt: new Date().toISOString(),
-            status: 'Active',
-          };
-          existing.push(newPurchase);
-          localStorage.setItem('mn_purchases', JSON.stringify(existing));
-          setJustPurchased(newPurchase);
+          // Server confirmed the purchase — save to localStorage
+          const raw = localStorage.getItem('mn_purchases');
+          const existing = raw ? JSON.parse(raw) : [];
+
+          if (!existing.find(p => p.sessionId === sessionId)) {
+            const newPurchase = {
+              id: sessionId || `pur_${Date.now()}`,
+              skillId,
+              sessionId,
+              purchasedAt: new Date().toISOString(),
+              status: 'Active',
+              licenseKey: verifyData.licenseKey || null,
+              verified: true,
+            };
+            existing.push(newPurchase);
+            localStorage.setItem('mn_purchases', JSON.stringify(existing));
+            setJustPurchased(newPurchase);
+          }
+        } catch (e) {
+          console.error('Error verifying purchase:', e);
+          setJustPurchased({ skillId, status: 'Verification Error', error: e.message });
         }
-      } catch (e) {
-        console.error('Error saving purchase:', e);
-      }
+      })();
 
       // Clean the URL (remove ?success=true&skillId=X&sessionId=Y)
       params.delete('success');

@@ -440,6 +440,13 @@ export default async function handler(req, res) {
       }
 
       // C2 FIX: dedup check — fail closed si el txHash ya fue usado
+      // TOCTOU FIX: mark txHash as used BEFORE recording mandate spend.
+      // Previously: isTxHashUsed() → recordMandateSpend() → markTxHashUsed()
+      // Two concurrent requests could both pass isTxHashUsed() before either
+      // called markTxHashUsed(), spending the mandate twice for one payment.
+      // Now: isTxHashUsed() → markTxHashUsed() (atomic) → recordMandateSpend()
+      // If markTxHashUsed fails because another request created the file first
+      // (GitHub returns 409), we treat it as already used.
       const txUsed = await isTxHashUsed(txHash);
       if (txUsed.used) {
         return res.status(409).json({
@@ -452,21 +459,45 @@ export default async function handler(req, res) {
         });
       }
 
-      // C1 FIX: fail-closed — si el spend falla, NO emitir licencia
+      // TOCTOU FIX: Mark txHash as used IMMEDIATELY (before mandate spend).
+      // The markTxHashUsedAtomic function creates the file with a unique
+      // commit message. If two concurrent requests try to create the same
+      // file, GitHub's API ensures only one succeeds (the other gets 409).
+      const lic = licenseKey(skill.id);
+      const marked = await markTxHashUsed(txHash, lic, skill.id, skill.price);
+      if (!marked) {
+        // Another request may have marked it between our check and mark
+        const recheck = await isTxHashUsed(txHash);
+        if (recheck.used) {
+          return res.status(409).json({
+            error: 'tx_already_used',
+            txHash,
+            original_license: recheck.data?.licenseKey,
+            original_skill: recheck.data?.skillId,
+            used_at: recheck.data?.usedAt,
+            message: 'This txHash was claimed by another request. Each USDC payment can only be redeemed once.',
+          });
+        }
+        // If still not used but mark failed, fail-closed (don't issue license)
+        return res.status(500).json({
+          error: 'tx_hash_lock_failed',
+          message: 'Could not lock txHash. License NOT issued. Please retry.',
+        });
+      }
+
+      // C1 FIX: fail-closed — si el spend falla, NO emitir licencia.
+      // txHash is already marked as used (above), so the user can retry
+      // with the same txHash and we'll recognize it as already-locked.
+      // The mandate spend is idempotent (it checks txHash internally).
       try {
         await recordMandateSpend(req, mandateId, skill.price, txHash, skill);
       } catch (spendErr) {
         return res.status(500).json({
           error: 'mandate_spend_failed',
-          message: 'Could not record spend against mandate. License NOT issued. Please retry.',
+          message: 'Could not record spend against mandate. License NOT issued. The txHash is locked — please contact support if you were charged.',
           detail: spendErr.message,
         });
       }
-
-      // Marcar txHash como usado (best-effort — si falla, igual emitir licencia
-      // porque el spend ya se registró; el dedup previene re-uso real)
-      const lic = licenseKey(skill.id);
-      await markTxHashUsed(txHash, lic, skill.id, skill.price);
 
       const sellerEarnings = skill.price * (1 - COMMISSION_RATE);
       const marketnowRevenue = skill.price * COMMISSION_RATE;
@@ -529,7 +560,7 @@ export default async function handler(req, res) {
         });
       }
 
-      // C2 FIX: dedup check
+      // C2 FIX: dedup check — TOCTOU safe (same pattern as Mode 2 above)
       const txUsed = await isTxHashUsed(txHash);
       if (txUsed.used) {
         return res.status(409).json({
@@ -542,14 +573,24 @@ export default async function handler(req, res) {
         });
       }
 
-      // Marcar txHash como usado ANTES de emitir licencia (fail-closed)
+      // TOCTOU FIX: Mark txHash BEFORE issuing license (same as Mode 2)
       const lic = licenseKey(skill.id);
       const marked = await markTxHashUsed(txHash, lic, skill.id, skill.price);
       if (!marked) {
-        // No pudimos marcarlo — podría ser un race condition. Fail closed.
+        const recheck = await isTxHashUsed(txHash);
+        if (recheck.used) {
+          return res.status(409).json({
+            error: 'tx_already_used',
+            txHash,
+            original_license: recheck.data?.licenseKey,
+            original_skill: recheck.data?.skillId,
+            used_at: recheck.data?.usedAt,
+            message: 'This txHash was claimed by another request.',
+          });
+        }
         return res.status(500).json({
-          error: 'tx_dedup_failed',
-          message: 'Could not verify txHash uniqueness. Please retry.',
+          error: 'tx_hash_lock_failed',
+          message: 'Could not lock txHash. License NOT issued. Please retry.',
         });
       }
 

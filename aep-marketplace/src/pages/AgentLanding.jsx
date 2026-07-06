@@ -5,7 +5,7 @@ import { useLang } from '../context/LanguageContext.jsx';
 
 export default function AgentLanding() {
   const { t, lang } = useLang();
-  const [stats, setStats] = useState({ total: 5023, free: 65, sellers: 15 });
+  const [stats, setStats] = useState({ total: 7156, free: 65, sellers: 15 });
   const [topFree, setTopFree] = useState([]);
   const [topPaid, setTopPaid] = useState([]);
 
@@ -14,7 +14,7 @@ export default function AgentLanding() {
       .then(r => r.json())
       .then(d => setStats(s => ({
         ...s,
-        total: d.stats?.total_skills || 5023,
+        total: d.stats?.total_skills || 7156,
         free: d.stats?.free_skills || 43,
         sellers: d.stats?.active_sellers || 15,
       })))

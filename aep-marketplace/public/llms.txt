@@ -1,12 +1,12 @@
 # MarketNow
 
-> Trust layer for agent commerce. 5,023 MCP-compatible skills with Sentinel L2 security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. Human-in-the-loop by default. Maintained by AliceLabs LLC (Wyoming, USA, 2025), founder Edison Flores.
+> Trust layer for agent commerce. 7,156 MCP-compatible skills with Sentinel L2 security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. Human-in-the-loop by default. Maintained by AliceLabs LLC (Wyoming, USA, 2025), founder Edison Flores.
 
 ## What MarketNow does
 
 MarketNow is NOT another discovery registry — discovery is solved (MCP Registry, Smithery, Glama). MarketNow solves TRUST: every skill carries a Sentinel security report, declared permissions, and an honest review_status (auto-scanned | human-reviewed | maintainer-verified).
 
-- 5,023 MCP skills indexed across 65 categories
+- 7,156 MCP skills indexed across 65 categories
 - 65 free skills (no signup required)
 - Sentinel L2: real-time security audit (18 Semgrep rules + Docker sandbox + OSV)
 - x402 payments: HTTP 402 Payment Required + USDC on Base (chainId 8453)
@@ -27,7 +27,7 @@ npx -y marketnow-mcp
 Works with Claude Desktop, Cursor, Cline, Continue, Aider.
 
 ### Public API (no auth required for reads)
-- GET /api/skills-lite.json — Full catalog (5,023 skills, 4.5MB JSON)
+- GET /api/skills-lite.json — Full catalog (7,156 skills, 4.5MB JSON)
 - GET /api/search?q=query&category=Data&max_price=2.99&language=es — Server-side search
 - GET /api/agent.json — Machine-readable instructions, trust model, schema
 - GET /api/agent-ping.json — Live stats and endpoint list

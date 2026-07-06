@@ -4,7 +4,7 @@
 
 # MarketNow — Trust Layer for Agent Commerce
 
-> **5,023 MCP servers. All Sentinel-certified with signed SHA-256 certificates. 3-layer security audit (L1.5 + L1.6 + L2 Docker sandbox). Public verification at marketnow.site/verify.**
+> **7,156 MCP servers. All Sentinel-certified with signed SHA-256 certificates. 3-layer security audit (L1.5 + L1.6 + L2 Docker sandbox). Public verification at marketnow.site/verify.**
 
 <!-- CANONICAL METADATA — for crawlers and directories that scrape this README.
      If you are maintaining an external directory listing for MarketNow,
@@ -14,9 +14,9 @@
 |---|---|
 | **Name** | MarketNow |
 | **Tagline** | Trust layer for agent commerce — every skill Sentinel-certified |
-| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 5,023 MCP servers is audited by Sentinel (3-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 Docker sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). AliceLabs LLC proprietary, maintained by AliceLabs LLC (Wyoming, USA). |
-| **Total skills** | 5,023 |
-| **Certified skills** | 5,023 (100%) |
+| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 7,156 MCP servers is audited by Sentinel (3-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 Docker sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). AliceLabs LLC proprietary, maintained by AliceLabs LLC (Wyoming, USA). |
+| **Total skills** | 7,156 |
+| **Certified skills** | 7,156 (100%) |
 | **Free skills** | 65 |
 | **Categories** | 61 |
 | **Pricing** | B2B: Community (Free) / Team ($99/mo, COMING SOON) / Enterprise (Custom) |
@@ -85,7 +85,7 @@ Analyzes stdout for: network attempts, fs writes, process spawns, credential lea
 | High | 92 | 2-4/10 |
 | Critical | 11 | 0-1/10 |
 
-**L2 coverage**: 17 of 5,023 skills (0.2%) have L2 Docker sandbox results. The remaining 8,565 are certified with L1.5+L1.6 (static analysis). L2 coverage grows as more skills get `source.url` populated — L2 requires a GitHub repo to clone and run in the sandbox.
+**L2 coverage**: 17 of 7,156 skills (0.2%) have L2 Docker sandbox results. The remaining 8,565 are certified with L1.5+L1.6 (static analysis). L2 coverage grows as more skills get `source.url` populated — L2 requires a GitHub repo to clone and run in the sandbox.
 
 Each skill gets a **signed SHA-256 certificate** with:
 - `certificate_id` (MN-SC-2026-XXXXXXX)
@@ -108,8 +108,8 @@ Skill authors can embed a certified badge in their READMEs:
 
 | Metric | Value |
 |---|---|
-| Total skills | 5,023 |
-| Certified skills | 5,023 (100%) |
+| Total skills | 7,156 |
+| Certified skills | 7,156 (100%) |
 | Categories | 61 |
 | Free skills | 65 |
 | L2 sandbox runs | 17 |
@@ -132,7 +132,7 @@ Skill authors can embed a certified badge in their READMEs:
 ```
 
 Now your agent can:
-- Search 5,023 certified skills by query, category, or language
+- Search 7,156 certified skills by query, category, or language
 - Get full skill details with system prompts and Sentinel security reports
 - Verify any skill's signed certificate
 - Get install commands for any skill
@@ -163,7 +163,7 @@ MarketNow uses B2B pricing — no per-skill purchases:
 
 | Tier | Price | Features |
 |---|---|---|
-| **Community** | FREE | Browse all 5,023 skills, install free skills, basic search |
+| **Community** | FREE | Browse all 7,156 skills, install free skills, basic search |
 | **Team** ($99/mo) | COMING SOON | Team monitoring, analytics, priority support, bulk install |
 | **Enterprise** | Custom | On-prem deployment, custom SLAs, dedicated Sentinel audits, SSO |
 
@@ -173,7 +173,7 @@ MarketNow uses B2B pricing — no per-skill purchases:
 
 | Endpoint | Description |
 |---|---|
-| `GET /api/skills.json` | All 5,023 skills (bulk download) |
+| `GET /api/skills.json` | All 7,156 skills (bulk download) |
 | `GET /api/search?q=query` | Server-side search with relevance scoring |
 | `GET /api/free-skills.json` | 65 free skills |
 | `GET /api/categories.json` | 61 categories with counts |

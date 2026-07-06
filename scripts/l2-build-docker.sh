@@ -133,7 +133,11 @@ COPY . .
 EOD
 
   if echo "$ENTRYPOINT" | grep -q '^node '; then
-    echo "CMD [\"$ENTRYPOINT\"]" | sed 's/ /", "/g' >> Dockerfile.audit
+    # Convert "node dist/index.js" → CMD ["node", "dist/index.js"]
+    # Bug fix: sed was replacing ALL spaces including after CMD, producing
+    # invalid Dockerfile syntax: CMD", "node", "dist/index.js"]"
+    ENTRIES=$(echo "$ENTRYPOINT" | sed 's/ /", "/g')
+    echo "CMD [\"$ENTRIES\"]" >> Dockerfile.audit
   else
     echo "CMD [\"sh\", \"-c\", \"$ENTRYPOINT\"]" >> Dockerfile.audit
   fi

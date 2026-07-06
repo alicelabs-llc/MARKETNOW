@@ -82,7 +82,7 @@ const CONTENT = {
       },
       {
         q: 'Do you offer custom enterprise plans?',
-        a: 'Yes. For teams listing 100+ skills or with custom requirements (on-prem deployment, custom commission rates, SSO), contact us at contact@alicelabs.site for a custom quote.',
+        a: 'Yes. For teams listing 100+ skills or with custom requirements (on-prem deployment, custom commission rates, SSO), contact us at info@alicelabs.site for a custom quote.',
       },
     ],
 
@@ -216,7 +216,7 @@ const CONTENT = {
       },
       {
         q: '¿Ofrecen planes enterprise personalizados?',
-        a: 'Sí. Para equipos que publican 100+ skills o con requisitos personalizados (despliegue on-prem, comisiones custom, SSO), contáctanos en contact@alicelabs.site para una cotización personalizada.',
+        a: 'Sí. Para equipos que publican 100+ skills o con requisitos personalizados (despliegue on-prem, comisiones custom, SSO), contáctanos en info@alicelabs.site para una cotización personalizada.',
       },
     ],
 
@@ -352,7 +352,7 @@ const CONTENT = {
       },
       {
         q: 'Vocês oferecem planos enterprise personalizados?',
-        a: 'Sim. Para equipes que listam 100+ skills ou com requisitos personalizados (deploy on-prem, comissões customizadas, SSO), entre em contato em contact@alicelabs.site para um orçamento personalizado.',
+        a: 'Sim. Para equipes que listam 100+ skills ou com requisitos personalizados (deploy on-prem, comissões customizadas, SSO), entre em contato em info@alicelabs.site para um orçamento personalizado.',
       },
     ],
 
@@ -487,7 +487,7 @@ const CONTENT = {
       },
       {
         q: '提供定制企业套餐吗？',
-        a: '提供。对于上架 100+ skill 的团队或有定制需求（私有化部署、定制佣金率、SSO）的团队，请通过 contact@alicelabs.site 联系我们获取定制报价。',
+        a: '提供。对于上架 100+ skill 的团队或有定制需求（私有化部署、定制佣金率、SSO）的团队，请通过 info@alicelabs.site 联系我们获取定制报价。',
       },
     ],
 
@@ -620,7 +620,7 @@ const CONTENT = {
       },
       {
         q: 'Proposez-vous des plans enterprise personnalisés ?',
-        a: 'Oui. Pour les équipes listant 100+ skills ou avec des exigences personnalisées (déploiement on-prem, taux de commission personnalisés, SSO), contactez-nous à contact@alicelabs.site pour un devis personnalisé.',
+        a: 'Oui. Pour les équipes listant 100+ skills ou avec des exigences personnalisées (déploiement on-prem, taux de commission personnalisés, SSO), contactez-nous à info@alicelabs.site pour un devis personnalisé.',
       },
     ],
 

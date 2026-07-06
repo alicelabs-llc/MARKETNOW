@@ -371,7 +371,7 @@ export default function About() {
             {c.contactBody}
           </p>
           <a
-            href="mailto:contact@alicelabs.site?subject=MarketNow%20inquiry"
+            href="mailto:info@alicelabs.site?subject=MarketNow%20inquiry"
             className="inline-block px-5 py-3 bg-[#00F299] text-black font-bold rounded-lg hover:bg-[#00F299]/90 transition-all text-sm"
           >
             {c.contactBtn}

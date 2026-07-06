@@ -51,7 +51,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run auto-discovery
+      - name: Run massive GitHub indexer (40+ queries, 1000s of repos)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Running massive indexer..."
+          node scripts/massive-indexer.cjs || true
+
+      - name: Run auto-discovery (awesome-mcp + replacement)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAX_NEW: ${{ github.event.inputs.max_new || '0' }}

@@ -1,6 +1,7 @@
 {
   "skill_id": "mn-mcp-filesystem",
-  "timestamp": "2026-07-05T22:01:05Z",
+  "timestamp": "2026-07-06T23:12:27Z",
+  "l2_version": "2.5",
   "sandbox_config": {
     "network": "none",
     "filesystem": "read-only",
@@ -8,20 +9,72 @@
     "memory": "256m",
     "cpu": "0.5",
     "pids": "64",
-    "timeout": "60s"
+    "timeout": "60s",
+    "gvisor": "gvisor-active",
+    "seccomp_profile": "n/a (gVisor userspace kernel active)"
   },
   "execution_status": "ran",
   "failure_reason": null,
-  "behavioral_analysis": {
-    "network_attempts": 0,
-    "fs_write_attempts": 0,
-    "process_spawns": 0,
-    "credential_leakage": 0,
-    "crash_detected": 0,
-    "dynamic_imports": 0
+  "analysis_layers": {
+    "stdout_passive": {
+      "network_attempts": 0,
+      "fs_write_attempts": 0,
+      "process_spawns": 0,
+      "credential_leakage": 0,
+      "crash_detected": 0,
+      "dynamic_imports": 0
+    },
+    "strace_syscalls": {
+      "file_access_sensitive": 0,
+      "file_write_outside_tmp": 0,
+      "network_connect": 0,
+      "process_exec": 0,
+      "process_fork": 0,
+      "permission_escalation": 0,
+      "sensitive_paths_accessed": []
+    },
+    "mcp_probe_active": {
+      "tools_discovered": 0,
+      "tools_tested": 0,
+      "adversarial_findings": 0,
+      "critical_findings": 0,
+      "high_findings": 0,
+      "details": [],
+      "leaked_data": []
+    },
+    "filesystem_diff": {
+      "files_created": 0,
+      "files_modified": 0,
+      "files_deleted": 0,
+      "suspicious_changes": []
+    },
+    "l25_seccomp_violations": {
+      "total_violations": 0,
+      "ptrace_attempted": false,
+      "bpf_attempted": false,
+      "mount_attempted": false,
+      "kexec_attempted": false,
+      "clone3_attempted": false,
+      "unshare_attempted": false,
+      "blocked_syscalls": []
+    },
+    "l25_suspicious_files": {
+      "ssh_files": false,
+      "env_files": false,
+      "cron_files": false,
+      "key_files": false,
+      "details": []
+    }
   },
-  "stdout_size_bytes": 435,
-  "stdout_sample": "Usage: mcp-server-filesystem [allowed-directory] [additional-directories...] Note: Allowed directories can be provided via:   1. Command-line arguments (shown above)   2. MCP roots protocol (if client supports it) At least one directory must be provided by EITHER method for the server to operate. Secure MCP Filesystem Server running on stdio Started without allowed directories - waiting for client to provide roots via MCP protocol ",
+  "stdout_size_bytes": 438,
+  "stdout_sample": "docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: unable to retrieve OCI runtime error (open /run/containerd/io.containerd.runtime.v2.task/moby/1183f94d5f9c84bbade7c687de332bf5ac7ec6aaaf070cd12ae63dc78f3d229b/log.json: no such file or directory): /usr/local/bin/runsc did not terminate successfully: exit status 1  Run 'docker run --help' for more information ",
   "l2_score": 10,
-  "l2_risk_level": "low"
+  "l2_risk_level": "low",
+  "findings_summary": {
+    "total_critical": 0,
+    "total_high": 0,
+    "sensitive_paths_accessed": [],
+    "leaked_data": [],
+    "suspicious_fs_changes": []
+  }
 }

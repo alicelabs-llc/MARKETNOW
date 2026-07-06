@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0060842",
+  "certificate_id": "MN-SC-2026-9563167",
   "skill_id": "mn-ai-00625",
   "skill_name": "Aipim",
-  "issued_at": "2026-07-06T03:54:20.842Z",
-  "expires_at": "2026-07-13T03:54:20.842Z",
+  "issued_at": "2026-07-06T03:46:03.167Z",
+  "expires_at": "2026-07-13T03:46:03.167Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a7ba1108fc5eda43ee4204dc1c17ec7479a8de0017ee25ae3e866756eacfe87",
+  "signature": "27c33d753000c4e1e2474eed5866dde7e849a3efb76a4b1b065dc94f22e7d468",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00625"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0050691",
+  "certificate_id": "MN-SC-2026-9686227",
   "skill_id": "mn-gen-00250",
   "skill_name": "Agent-glance",
-  "issued_at": "2026-07-06T03:54:10.691Z",
-  "expires_at": "2026-07-13T03:54:10.691Z",
+  "issued_at": "2026-07-06T03:48:06.227Z",
+  "expires_at": "2026-07-13T03:48:06.227Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e2ca05821b30b189ebb125ac1a9ca7e50d71c4faebeb41ae7e4e83c49ee197d0",
+  "signature": "b662ea35a9838e1c4fe3d75ab897ab57a2249f1f527dc9737fb87137ce41a475",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00250"
 }

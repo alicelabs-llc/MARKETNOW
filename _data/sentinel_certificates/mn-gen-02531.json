@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0129713",
+  "certificate_id": "MN-SC-2026-9678013",
   "skill_id": "mn-gen-02531",
   "skill_name": "Codeagent-mobile-clients",
-  "issued_at": "2026-07-06T03:55:29.713Z",
-  "expires_at": "2026-07-13T03:55:29.713Z",
+  "issued_at": "2026-07-06T03:47:58.013Z",
+  "expires_at": "2026-07-13T03:47:58.013Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66e59b362e42ccebffe93d6be0bf5f2575352e7e9c1f09794cd833c7188c2b92",
+  "signature": "b264a4e789c1e37bc47cb391e85b93135e74626a1297ff663168bcc3adafd5f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02531"
 }

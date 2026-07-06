@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0112955",
+  "certificate_id": "MN-SC-2026-9651516",
   "skill_id": "mn-gen-02112",
   "skill_name": "Claude-dialogue-mcp",
-  "issued_at": "2026-07-06T03:55:12.955Z",
-  "expires_at": "2026-07-13T03:55:12.955Z",
+  "issued_at": "2026-07-06T03:47:31.516Z",
+  "expires_at": "2026-07-13T03:47:31.516Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d2e71b70716e36a89e6e6c42b0e3d364ca616cef8631ca659421dabfacb138d",
+  "signature": "223b254371fb538c46705105bd6d3dc278945e38bc32e1a5addf82081e691bd7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02112"
 }

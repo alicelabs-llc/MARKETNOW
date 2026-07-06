@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0214753",
+  "certificate_id": "MN-SC-2026-9817977",
   "skill_id": "mn-gen-04813",
   "skill_name": "Hacknotts-cli",
-  "issued_at": "2026-07-06T03:56:54.753Z",
-  "expires_at": "2026-07-13T03:56:54.753Z",
+  "issued_at": "2026-07-06T03:50:17.977Z",
+  "expires_at": "2026-07-13T03:50:17.977Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a106987828095c711c9737c525d3691506620dcc028068e3d5303b458ff7a6c5",
+  "signature": "092e6c10180e32cf411053cc9746845eeef9c6a59414a22ad840790610ff8118",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04813"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0082024",
+  "certificate_id": "MN-SC-2026-9599067",
   "skill_id": "mn-ai-01300",
   "skill_name": "Bavimail/mcp-server",
-  "issued_at": "2026-07-06T03:54:42.024Z",
-  "expires_at": "2026-07-13T03:54:42.024Z",
+  "issued_at": "2026-07-06T03:46:39.067Z",
+  "expires_at": "2026-07-13T03:46:39.067Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03783506f571b4a4e0e153e6b7af2cb03b2946e8244c7e8dba914d3be82d48a9",
+  "signature": "fb4a1f5633f287cf8a611ad1f1e04a5da348e0914e34c26ba118419d753c6b06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01300"
 }

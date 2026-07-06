@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0099775",
+  "certificate_id": "MN-SC-2026-9628570",
   "skill_id": "mn-gen-01765",
   "skill_name": "Claude-code-prompt-engineer-mcp",
-  "issued_at": "2026-07-06T03:54:59.775Z",
-  "expires_at": "2026-07-13T03:54:59.775Z",
+  "issued_at": "2026-07-06T03:47:08.570Z",
+  "expires_at": "2026-07-13T03:47:08.570Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7f9bbcfd16d41b70e07077adf5fcddf3f884f9ed732f45ea0083b54d8bf1931b",
+  "signature": "12cb065c80bf1a1fc38b2ad5572dfa79e640815bbcf6ebebb78bc4f88c805df8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01765"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0053457",
+  "certificate_id": "MN-SC-2026-9549528",
   "skill_id": "mn-gen-00321",
   "skill_name": "Swarmclawai/agentbox",
-  "issued_at": "2026-07-06T03:54:13.457Z",
-  "expires_at": "2026-07-13T03:54:13.457Z",
+  "issued_at": "2026-07-06T03:45:49.528Z",
+  "expires_at": "2026-07-13T03:45:49.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad508637581334555335865ac55940f684902d3ea12c17d11fe412d622200ff7",
+  "signature": "dc97f4e30c02f9c2e7c27d29f752f40ba4ff16ec43291f2428b71f3add336ce5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00321"
 }

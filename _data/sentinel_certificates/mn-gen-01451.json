@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0086838",
+  "certificate_id": "MN-SC-2026-9606440",
   "skill_id": "mn-gen-01451",
   "skill_name": "Blendops",
-  "issued_at": "2026-07-06T03:54:46.838Z",
-  "expires_at": "2026-07-13T03:54:46.838Z",
+  "issued_at": "2026-07-06T03:46:46.440Z",
+  "expires_at": "2026-07-13T03:46:46.440Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "272b26627e626ea081f9d18fdd3b81fe3e041c82727cdb89c5099115b36e1f86",
+  "signature": "abcdcc0089682ca11d3fb3fcabee9d907334ff1fa55b3aacdcb98c1db8164743",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01451"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0147818",
+  "certificate_id": "MN-SC-2026-9706148",
   "skill_id": "mn-gen-02921",
   "skill_name": "Crunchbase-mcp-server",
-  "issued_at": "2026-07-06T03:55:47.818Z",
-  "expires_at": "2026-07-13T03:55:47.818Z",
+  "issued_at": "2026-07-06T03:48:26.148Z",
+  "expires_at": "2026-07-13T03:48:26.148Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ef2f8e1dcbe267d1b3f050f3a65750808ed8ffb3eb477ce2b42ac51b1650b31",
+  "signature": "a8467fbc096ba2cb8b4f63bd3e38cc788a17433cf833d8dcfd384b62a0fb0fa8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02921"
 }

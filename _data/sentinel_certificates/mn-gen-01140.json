@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0078078",
+  "certificate_id": "MN-SC-2026-9592163",
   "skill_id": "mn-gen-01140",
   "skill_name": "Awesome-copilot-for-testers",
-  "issued_at": "2026-07-06T03:54:38.078Z",
-  "expires_at": "2026-07-13T03:54:38.078Z",
+  "issued_at": "2026-07-06T03:46:32.163Z",
+  "expires_at": "2026-07-13T03:46:32.163Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1dea46d51bdce4ad85d35677e3c85804bf91c9ebc379c31c5cdf6ed78cce6e98",
+  "signature": "042da52dee8ca81109358560e8e4374812d34cfedf66dedc9523be2aa25c4590",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01140"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0100156",
+  "certificate_id": "MN-SC-2026-9629349",
   "skill_id": "mn-gen-01788",
   "skill_name": "Certus-drug-information-mcp-server",
-  "issued_at": "2026-07-06T03:55:00.156Z",
-  "expires_at": "2026-07-13T03:55:00.156Z",
+  "issued_at": "2026-07-06T03:47:09.349Z",
+  "expires_at": "2026-07-13T03:47:09.349Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f6c2ccc718020eec2ae38b77219560a98c752cfa62b846924a5deef451979109",
+  "signature": "db34d5c405fa524a4332c3a4248a4c9cb99ab3af225f3b26ebd467b7f7809204",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01788"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0094615",
+  "certificate_id": "MN-SC-2026-9619173",
   "skill_id": "mn-gen-01624",
   "skill_name": "Bundestag-mcp",
-  "issued_at": "2026-07-06T03:54:54.615Z",
-  "expires_at": "2026-07-13T03:54:54.615Z",
+  "issued_at": "2026-07-06T03:46:59.173Z",
+  "expires_at": "2026-07-13T03:46:59.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0363bff6a3d29ff1ba6a339389c4d06f7c23af72afe9fa6efad787cd72f810f",
+  "signature": "60951d6c65c2ef3df1d34ccfeb20064bb625a554e2ad2d8c2fa9afb0de8b70f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01624"
 }

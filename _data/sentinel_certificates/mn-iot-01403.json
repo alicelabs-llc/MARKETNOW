@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0085483",
+  "certificate_id": "MN-SC-2026-9604205",
   "skill_id": "mn-iot-01403",
   "skill_name": "Biotools-mcp-server",
-  "issued_at": "2026-07-06T03:54:45.483Z",
-  "expires_at": "2026-07-13T03:54:45.483Z",
+  "issued_at": "2026-07-06T03:46:44.205Z",
+  "expires_at": "2026-07-13T03:46:44.205Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "231c5a6f33ae0c3cab8579d073429e54941fa96568148f9cd0815ea1f5e3874c",
+  "signature": "79c1118648a32b5bcd8dfe247c2ff2af93cd0199f038989bc644047fa57ab85e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-iot-01403"
 }

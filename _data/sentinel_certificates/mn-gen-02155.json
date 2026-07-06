@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114040",
+  "certificate_id": "MN-SC-2026-9653028",
   "skill_id": "mn-gen-02155",
   "skill_name": "Claude-lens",
-  "issued_at": "2026-07-06T03:55:14.040Z",
-  "expires_at": "2026-07-13T03:55:14.040Z",
+  "issued_at": "2026-07-06T03:47:33.028Z",
+  "expires_at": "2026-07-13T03:47:33.028Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e734866c7cc9a7ae8a673c6bb8530fdd01d5976de8937983da2fd73bf1f2e6b9",
+  "signature": "1a68ab231584a1b7dca5cbce3e6425a86a48de10361d5686b32201af4bd61efb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02155"
 }

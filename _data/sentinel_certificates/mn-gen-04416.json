@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0201058",
+  "certificate_id": "MN-SC-2026-9794290",
   "skill_id": "mn-gen-04416",
   "skill_name": "Ghostsecurity-mcp",
-  "issued_at": "2026-07-06T03:56:41.058Z",
-  "expires_at": "2026-07-13T03:56:41.058Z",
+  "issued_at": "2026-07-06T03:49:54.290Z",
+  "expires_at": "2026-07-13T03:49:54.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b3ccc5da7fd1a4084ec8198be14d96ad83e49cb47ec70493fabd0809eb39d942",
+  "signature": "d6f4a6d4eae53f01c2079c65c06158fdd8d44c89dbb5fe2c69e37464966be966",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04416"
 }

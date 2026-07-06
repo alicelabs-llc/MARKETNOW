@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0156537",
+  "certificate_id": "MN-SC-2026-9720346",
   "skill_id": "mn-gen-03192",
   "skill_name": "Deepseek-thinking-claude-3-5-sonnet-cline-mcp",
-  "issued_at": "2026-07-06T03:55:56.538Z",
-  "expires_at": "2026-07-13T03:55:56.538Z",
+  "issued_at": "2026-07-06T03:48:40.346Z",
+  "expires_at": "2026-07-13T03:48:40.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8b09341cd76e9288d001973a83b09127ebe3318d7b1b10a2d5f922dd0b6d32d",
+  "signature": "516e04e30baff868048f1d2ab99f08801bcab8a5da3e337ed1b26fd7520a4f82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03192"
 }

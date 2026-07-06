@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0150008",
+  "certificate_id": "MN-SC-2026-9709957",
   "skill_id": "mn-gen-03008",
   "skill_name": "Cut-copy-paste-mcp",
-  "issued_at": "2026-07-06T03:55:50.008Z",
-  "expires_at": "2026-07-13T03:55:50.008Z",
+  "issued_at": "2026-07-06T03:48:29.957Z",
+  "expires_at": "2026-07-13T03:48:29.957Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "026dd49c51c5e5ac30ede61e9a7c5936246d7de17ab70dbe43f0f60aab2613cc",
+  "signature": "e912ca5c73c782595191cba2b094f39a767444fef0f92dc7e744562a17d6d45d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03008"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0046975",
+  "certificate_id": "MN-SC-2026-9681828",
   "skill_id": "mn-gen-00189",
   "skill_name": "Advanced-reasoning-mcp",
-  "issued_at": "2026-07-06T03:54:06.975Z",
-  "expires_at": "2026-07-13T03:54:06.975Z",
+  "issued_at": "2026-07-06T03:48:01.828Z",
+  "expires_at": "2026-07-13T03:48:01.828Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79134fbebc82abab905515ab080cc1234d8a319531cc2c9ebba6cdcbc0afd73e",
+  "signature": "3e4597cf888132dd19fc67d001797bb3dd07c65370c85846915cda9d6aa880d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00189"
 }

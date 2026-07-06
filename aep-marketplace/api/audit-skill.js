@@ -8,7 +8,7 @@
  * "Sentinel" is a trademark of AliceLabs LLC.
  * Patent pending on the 3-layer audit pipeline (L1.5 → L1.6 → L2).
  *
- * For licensing: legal@marketnow.site
+ * For licensing: legal@alicelabs.site
  * For verification: https://marketnow.site/verify
  */
 
@@ -160,7 +160,7 @@ async function handleCertificate(req, res) {
           certificate: cert,
           verification: {
             valid: false,
-            message: 'ERROR: Server misconfiguration — SENTINEL_CERT_SECRET is not set. Certificate signature cannot be verified. Contact support@marketnow.site.',
+            message: 'ERROR: Server misconfiguration — SENTINEL_CERT_SECRET is not set. Certificate signature cannot be verified. Contact support@alicelabs.site.',
             verified_at: new Date().toISOString(),
           },
         });

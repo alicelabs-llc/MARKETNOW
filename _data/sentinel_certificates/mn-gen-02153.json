@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114012",
+  "certificate_id": "MN-SC-2026-9653094",
   "skill_id": "mn-gen-02153",
   "skill_name": "Claude-launchpad",
-  "issued_at": "2026-07-06T03:55:14.012Z",
-  "expires_at": "2026-07-13T03:55:14.012Z",
+  "issued_at": "2026-07-06T03:47:33.094Z",
+  "expires_at": "2026-07-13T03:47:33.094Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09b389d53cb24923fbca50569a1c637c7da94a817d474bbcdeb39a6cad04189c",
+  "signature": "38c6b66d7fa6700e53a840407148d0cb5db8dab087669538dfd218ed8c37568a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02153"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0115319",
+  "certificate_id": "MN-SC-2026-9655308",
   "skill_id": "mn-ai-02186",
   "skill_name": "M365-attachment-reader-mcp-local",
-  "issued_at": "2026-07-06T03:55:15.319Z",
-  "expires_at": "2026-07-13T03:55:15.319Z",
+  "issued_at": "2026-07-06T03:47:35.308Z",
+  "expires_at": "2026-07-13T03:47:35.308Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a3a5a8149599669bbb94d128334ea79c9bd36cceb3ea3ed20cd2b77d5f45cc77",
+  "signature": "2926bd98381f17f4bdfb73f186b9088ea62f5f036d4bbb6ce2069e922f06f887",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-02186"
 }

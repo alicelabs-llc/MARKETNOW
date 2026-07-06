@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0118664",
+  "certificate_id": "MN-SC-2026-9660639",
   "skill_id": "mn-gen-02261",
   "skill_name": "Claude-ready-monorepo",
-  "issued_at": "2026-07-06T03:55:18.664Z",
-  "expires_at": "2026-07-13T03:55:18.664Z",
+  "issued_at": "2026-07-06T03:47:40.639Z",
+  "expires_at": "2026-07-13T03:47:40.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb627943dea940a5b67b77866923a33fdbbf0e30ca781148d7d4a1632d137b75",
+  "signature": "5a66c38a16d0290e1744ff0a6b5fcc409608ddb1c0aebd296ddb85d57e5909e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02261"
 }

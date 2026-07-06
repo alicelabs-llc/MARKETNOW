@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0177979",
+  "certificate_id": "MN-SC-2026-9752519",
   "skill_id": "mn-gen-03757",
   "skill_name": "Eve-online-osint-mcp",
-  "issued_at": "2026-07-06T03:56:17.979Z",
-  "expires_at": "2026-07-13T03:56:17.979Z",
+  "issued_at": "2026-07-06T03:49:12.519Z",
+  "expires_at": "2026-07-13T03:49:12.519Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "87c5d632cc2b7671ab6b777f98cbf6eb78b137ccdc80dff160acfd0193824fdb",
+  "signature": "ea04c3133bcb78084dadd37c5dbf0f98bd1ce6921df20db2cd6e1fc322ce0405",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03757"
 }

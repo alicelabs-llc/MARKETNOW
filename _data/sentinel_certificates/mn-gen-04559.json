@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0205924",
+  "certificate_id": "MN-SC-2026-9802688",
   "skill_id": "mn-gen-04559",
   "skill_name": "GoDe",
-  "issued_at": "2026-07-06T03:56:45.924Z",
-  "expires_at": "2026-07-13T03:56:45.924Z",
+  "issued_at": "2026-07-06T03:50:02.688Z",
+  "expires_at": "2026-07-13T03:50:02.688Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "07eef873be6cc226ad5dedb093ad17cc1295b3177b40ac440326ec8bb4dfd3b6",
+  "signature": "c70379c346edff809602e77a65a8d9c7bebf60d3111991aeefe93b7397627e64",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04559"
 }

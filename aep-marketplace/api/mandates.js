@@ -342,7 +342,7 @@ async function sendMandateNotification(mandate, event) {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            from: 'MarketNow <notifications@marketnow.site>',
+            from: 'MarketNow <notifications@alicelabs.site>',
             to: mandate.notificationEmail,
             subject,
             text,

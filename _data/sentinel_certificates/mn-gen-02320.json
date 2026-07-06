@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0121365",
+  "certificate_id": "MN-SC-2026-9665145",
   "skill_id": "mn-gen-02320",
   "skill_name": "Claude-worktree-agent-mcp",
-  "issued_at": "2026-07-06T03:55:21.365Z",
-  "expires_at": "2026-07-13T03:55:21.365Z",
+  "issued_at": "2026-07-06T03:47:45.145Z",
+  "expires_at": "2026-07-13T03:47:45.145Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a68101147237e3e88a27f56bb90f99ca6bf33f43c87cc8e55218b760ff0cc4ce",
+  "signature": "343ac44f1c5990a25f24e4e19ed99e318add8d9848cb2db69195fdfe8b6bb411",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02320"
 }

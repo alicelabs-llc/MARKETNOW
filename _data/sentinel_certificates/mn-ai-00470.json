@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0056928",
+  "certificate_id": "MN-SC-2026-9555482",
   "skill_id": "mn-ai-00470",
   "skill_name": "Opencap-monorepo",
-  "issued_at": "2026-07-06T03:54:16.928Z",
-  "expires_at": "2026-07-13T03:54:16.928Z",
+  "issued_at": "2026-07-06T03:45:55.482Z",
+  "expires_at": "2026-07-13T03:45:55.482Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d56faf3115436e071220aa679d56257795ab0a5b831975205cf17a4c55eab9a",
+  "signature": "65531412e8de982649f2bcd4085d11f9ce0a74d99d5e974ce7a99ea3d7d9ac81",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00470"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0057824",
+  "certificate_id": "MN-SC-2026-9556938",
   "skill_id": "mn-ai-00495",
   "skill_name": "Ai-driven-testing",
-  "issued_at": "2026-07-06T03:54:17.824Z",
-  "expires_at": "2026-07-13T03:54:17.824Z",
+  "issued_at": "2026-07-06T03:45:56.938Z",
+  "expires_at": "2026-07-13T03:45:56.938Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a673c924f79176625e5e7eb8f6281f97692dda71d703a532c612e36e923deea",
+  "signature": "70864ed9dae79c4137e03b1496d2cafc415624c541bbec223f2785f4346505b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00495"
 }

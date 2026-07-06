@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0059122",
+  "certificate_id": "MN-SC-2026-9560211",
   "skill_id": "mn-ai-00553",
   "skill_name": "Ai-sdk-5-migration-mcp-server",
-  "issued_at": "2026-07-06T03:54:19.122Z",
-  "expires_at": "2026-07-13T03:54:19.122Z",
+  "issued_at": "2026-07-06T03:46:00.211Z",
+  "expires_at": "2026-07-13T03:46:00.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ddaa5c33072d7edf04fd51e06e5b609fa904b6ae34677f584e30d39ce0e5d92e",
+  "signature": "35c76871519dab219438807cc239e73fdb4f63380ebf55ff6ee62f167d4713be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00553"
 }

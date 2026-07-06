@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0155658",
+  "certificate_id": "MN-SC-2026-9718867",
   "skill_id": "mn-gen-03172",
   "skill_name": "Decoy-scan",
-  "issued_at": "2026-07-06T03:55:55.658Z",
-  "expires_at": "2026-07-13T03:55:55.658Z",
+  "issued_at": "2026-07-06T03:48:38.867Z",
+  "expires_at": "2026-07-13T03:48:38.867Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "64aef6fe06a616fbc09639c8d703cf39bdeecb7cbde6fb900e7b69c9b6ea2d51",
+  "signature": "6f23f0d751847db3ab07caf1e4871ef1655a2591a6c5a9c62d74db0970fe07d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03172"
 }

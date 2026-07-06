@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0179666",
+  "certificate_id": "MN-SC-2026-9755636",
   "skill_id": "mn-gen-03800",
   "skill_name": "Execbox-workspace",
-  "issued_at": "2026-07-06T03:56:19.666Z",
-  "expires_at": "2026-07-13T03:56:19.666Z",
+  "issued_at": "2026-07-06T03:49:15.636Z",
+  "expires_at": "2026-07-13T03:49:15.636Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8e8eead1f7c41cacef9170cbebd6194e15c8349f6453da11457cd9b98fc08267",
+  "signature": "9562fd11ee2da809d7a5d676263c664008fc142ab122972dbe7846a26d9948be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03800"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0144592",
+  "certificate_id": "MN-SC-2026-9700705",
   "skill_id": "mn-gen-02833",
   "skill_name": "Fozikio/cortex-engine",
-  "issued_at": "2026-07-06T03:55:44.592Z",
-  "expires_at": "2026-07-13T03:55:44.592Z",
+  "issued_at": "2026-07-06T03:48:20.705Z",
+  "expires_at": "2026-07-13T03:48:20.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fbfb5f97be438b0485fc8ba1a6ff099d902c0d0134333f2c65a77d86b91136ef",
+  "signature": "e3e4b95b94a86209b8c31b68e5ddea0e1114480f7e4c733291d354e875344968",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02833"
 }

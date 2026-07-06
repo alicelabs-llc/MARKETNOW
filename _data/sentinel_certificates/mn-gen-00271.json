@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0051128",
+  "certificate_id": "MN-SC-2026-9686907",
   "skill_id": "mn-gen-00271",
   "skill_name": "Agent-orchestra/core",
-  "issued_at": "2026-07-06T03:54:11.128Z",
-  "expires_at": "2026-07-13T03:54:11.128Z",
+  "issued_at": "2026-07-06T03:48:06.907Z",
+  "expires_at": "2026-07-13T03:48:06.907Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "67389eaaa3603856364ddf627b4e4ad372866eec2620e255573991c15fb97590",
+  "signature": "adead04a7c0b0ba64f3007ea7493a81f3a302ad2b782487b19fbe09ddcb9dbe8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00271"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0093188",
+  "certificate_id": "MN-SC-2026-9616944",
   "skill_id": "mn-gen-01600",
   "skill_name": "Buffett-code-mcp-server",
-  "issued_at": "2026-07-06T03:54:53.188Z",
-  "expires_at": "2026-07-13T03:54:53.188Z",
+  "issued_at": "2026-07-06T03:46:56.944Z",
+  "expires_at": "2026-07-13T03:46:56.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be106a3491eb3114699e4ceca24c10b33ac1f2d81297030b6eb955caa46f67cb",
+  "signature": "21fc05575ff21c06848e3a6c10eb3744823b0b4ff7cd44dac3bb54eb12425fb4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01600"
 }

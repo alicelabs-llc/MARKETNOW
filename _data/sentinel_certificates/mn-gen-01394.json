@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0085602",
+  "certificate_id": "MN-SC-2026-9604239",
   "skill_id": "mn-gen-01394",
   "skill_name": "Biogrid-mcp-server",
-  "issued_at": "2026-07-06T03:54:45.602Z",
-  "expires_at": "2026-07-13T03:54:45.602Z",
+  "issued_at": "2026-07-06T03:46:44.239Z",
+  "expires_at": "2026-07-13T03:46:44.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6fedeba3c20192240eff00e2662b07b2c313c7fa321ae93c9ad568b7f483884b",
+  "signature": "59ef5009b77237ebfd902915516ce6f2a40754c30f432fac253940611740d072",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01394"
 }

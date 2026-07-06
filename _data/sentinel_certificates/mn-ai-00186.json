@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0046472",
+  "certificate_id": "MN-SC-2026-9681053",
   "skill_id": "mn-ai-00186",
   "skill_name": "Gmail-mcp",
-  "issued_at": "2026-07-06T03:54:06.472Z",
-  "expires_at": "2026-07-13T03:54:06.472Z",
+  "issued_at": "2026-07-06T03:48:01.053Z",
+  "expires_at": "2026-07-13T03:48:01.053Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ba3b7057cf242392fea4086d0aa5ee98677f9c824cdbe1f542cc91c5d098a76",
+  "signature": "b27f9f9ed8da0654edd2148e72e58716dbc28ce32d198465bc824a1077de24bb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00186"
 }

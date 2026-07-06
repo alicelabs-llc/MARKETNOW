@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0218459",
+  "certificate_id": "MN-SC-2026-9825101",
   "skill_id": "mn-gen-04939",
   "skill_name": "ha-mcp",
-  "issued_at": "2026-07-06T03:56:58.459Z",
-  "expires_at": "2026-07-13T03:56:58.459Z",
+  "issued_at": "2026-07-06T03:50:25.101Z",
+  "expires_at": "2026-07-13T03:50:25.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ccbc19c7192e3f9b1732e15bbc50c510d415c60b518aa71313eb741b432c567",
+  "signature": "c9fd5582c70df6e810ebb7cbf04d45ad1b01549a27e666f2a9315f3ea71ef771",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04939"
 }

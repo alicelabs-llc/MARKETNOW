@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0071846",
+  "certificate_id": "MN-SC-2026-9581520",
   "skill_id": "mn-gen-00910",
   "skill_name": "Aps-mcp-server",
-  "issued_at": "2026-07-06T03:54:31.846Z",
-  "expires_at": "2026-07-13T03:54:31.846Z",
+  "issued_at": "2026-07-06T03:46:21.520Z",
+  "expires_at": "2026-07-13T03:46:21.520Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7fb8ac632be959a23ac44527a396472cd664bb90e6a4e8a1c7b62ad5e7db5947",
+  "signature": "516c1d19e4f37da250b8b51670af43d2e89871b2867a3beba8425d9908740672",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00910"
 }

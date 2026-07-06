@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0108291",
+  "certificate_id": "MN-SC-2026-9643917",
   "skill_id": "mn-gen-02001",
   "skill_name": "Claude-client-installer",
-  "issued_at": "2026-07-06T03:55:08.291Z",
-  "expires_at": "2026-07-13T03:55:08.291Z",
+  "issued_at": "2026-07-06T03:47:23.917Z",
+  "expires_at": "2026-07-13T03:47:23.917Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c1e795c82105819791643b10bcacfe57ace17f19d43651a2dc3c69a32facef4",
+  "signature": "b09223bd44ea802eaeee2d569f45a63faaf5a93e9faf8f489d2d595af2291007",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02001"
 }

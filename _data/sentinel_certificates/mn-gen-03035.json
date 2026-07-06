@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0151294",
+  "certificate_id": "MN-SC-2026-9712204",
   "skill_id": "mn-gen-03035",
   "skill_name": "D3figurer",
-  "issued_at": "2026-07-06T03:55:51.294Z",
-  "expires_at": "2026-07-13T03:55:51.294Z",
+  "issued_at": "2026-07-06T03:48:32.204Z",
+  "expires_at": "2026-07-13T03:48:32.204Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "16afce6c39c2351e2503677db263412bb90716fa47f6caf5564cd17c3e72ec4c",
+  "signature": "9e9674efaed73eee267cb662006d463bf6bda9ccc24370d0a9257d8ffa6eccbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03035"
 }

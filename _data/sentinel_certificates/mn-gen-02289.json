@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0120028",
+  "certificate_id": "MN-SC-2026-9662888",
   "skill_id": "mn-gen-02289",
   "skill_name": "Claude-status-dashboard",
-  "issued_at": "2026-07-06T03:55:20.028Z",
-  "expires_at": "2026-07-13T03:55:20.028Z",
+  "issued_at": "2026-07-06T03:47:42.888Z",
+  "expires_at": "2026-07-13T03:47:42.888Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c18959fa7a18cc69d6b7630f0f49638e4823c5c4f3d86e88ef27ce9fa5f3280",
+  "signature": "30983500d653f5a6e79d151e006e824906751f965ff3e3ec583f6492e16e3bf2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02289"
 }

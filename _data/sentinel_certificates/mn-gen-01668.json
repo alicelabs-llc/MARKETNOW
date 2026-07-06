@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0095718",
+  "certificate_id": "MN-SC-2026-9621133",
   "skill_id": "mn-gen-01668",
   "skill_name": "caldav-mcp",
-  "issued_at": "2026-07-06T03:54:55.718Z",
-  "expires_at": "2026-07-13T03:54:55.718Z",
+  "issued_at": "2026-07-06T03:47:01.133Z",
+  "expires_at": "2026-07-13T03:47:01.133Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8346646951092a044bd48c6475e0a0a9d508e5a3a99449bc8590a021cb6dedac",
+  "signature": "76a28fc4c76cf83f88a79dfe3d00041f1b53151bebe209db5fea168a56682b76",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01668"
 }

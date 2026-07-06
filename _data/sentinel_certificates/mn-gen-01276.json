@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0081034",
+  "certificate_id": "MN-SC-2026-9597586",
   "skill_id": "mn-gen-01276",
   "skill_name": "baozi-mcp",
-  "issued_at": "2026-07-06T03:54:41.034Z",
-  "expires_at": "2026-07-13T03:54:41.034Z",
+  "issued_at": "2026-07-06T03:46:37.586Z",
+  "expires_at": "2026-07-13T03:46:37.586Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f0aba81545d1479ef6b2b621a3d70ec6deaa8f8176848280370a77b7354eb00",
+  "signature": "e19bd04f0c2422ce0ca060b28c45d5c06d28cbb7311f9a415e389a56b97e48b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01276"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0127928",
+  "certificate_id": "MN-SC-2026-9674874",
   "skill_id": "mn-gen-02479",
   "skill_name": "Server-cmd",
-  "issued_at": "2026-07-06T03:55:27.928Z",
-  "expires_at": "2026-07-13T03:55:27.928Z",
+  "issued_at": "2026-07-06T03:47:54.874Z",
+  "expires_at": "2026-07-13T03:47:54.874Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb3fdbe85bef9dcc07dae7a53a8f22dd71e2e261727d60043971d9c87fe5d0db",
+  "signature": "e63cc652cccc63276d1ca3242011746cdd810ba22b8873f304032564252f9931",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02479"
 }

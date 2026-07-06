@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0072121",
+  "certificate_id": "MN-SC-2026-9582000",
   "skill_id": "mn-gen-00936",
   "skill_name": "mcp-architect",
-  "issued_at": "2026-07-06T03:54:32.121Z",
-  "expires_at": "2026-07-13T03:54:32.121Z",
+  "issued_at": "2026-07-06T03:46:22.000Z",
+  "expires_at": "2026-07-13T03:46:22.000Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7dd323c4da955d5a3f61ba2ffe5f22ca49c2c97e647187816e15761f8e312c71",
+  "signature": "0824875b37d55d781ee50cf5732a65db9839c94118c782dd6f94bae472df6707",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00936"
 }

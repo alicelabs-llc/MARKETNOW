@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0121769",
+  "certificate_id": "MN-SC-2026-9665850",
   "skill_id": "mn-ai-02324",
   "skill_name": "Claudeai-mcp-bridge",
-  "issued_at": "2026-07-06T03:55:21.769Z",
-  "expires_at": "2026-07-13T03:55:21.769Z",
+  "issued_at": "2026-07-06T03:47:45.850Z",
+  "expires_at": "2026-07-13T03:47:45.850Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "104ffd064545ea3030d6c3d260f7b3b859f6ba5bf6c7747ddc8fe781025ce0f2",
+  "signature": "9fc278d4844b7f439e7d002a3cf465412724b8c445dc2680d72ab4b05e3cf430",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-02324"
 }

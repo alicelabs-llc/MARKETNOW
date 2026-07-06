@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0215187",
+  "certificate_id": "MN-SC-2026-9818711",
   "skill_id": "mn-gen-04818",
   "skill_name": "Hal-mcp",
-  "issued_at": "2026-07-06T03:56:55.187Z",
-  "expires_at": "2026-07-13T03:56:55.187Z",
+  "issued_at": "2026-07-06T03:50:18.711Z",
+  "expires_at": "2026-07-13T03:50:18.711Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24ae785bec944057a383c7a55bfad1445ac2f8a70f901132fce8fe2673719e79",
+  "signature": "fdd46da729952eb98ae8695100508877642cd27ca22274a8fcd63b9e6e641a8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04818"
 }

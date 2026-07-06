@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0061231",
+  "certificate_id": "MN-SC-2026-9563894",
   "skill_id": "mn-ai-00629",
   "skill_name": "Binalyze/air-mcp",
-  "issued_at": "2026-07-06T03:54:21.231Z",
-  "expires_at": "2026-07-13T03:54:21.231Z",
+  "issued_at": "2026-07-06T03:46:03.894Z",
+  "expires_at": "2026-07-13T03:46:03.894Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65fce5393b086315f18a0e1ca224d3ff9bb99c17335a3d9edcc0c38ce0681f74",
+  "signature": "5bb07a3e47330f92861762a67c668163841948c9dc983638834f1b05daeb4c5c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00629"
 }

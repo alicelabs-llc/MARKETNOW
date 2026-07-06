@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0126636",
+  "certificate_id": "MN-SC-2026-9672646",
   "skill_id": "mn-gen-02450",
   "skill_name": "Clojars-MCP-Server",
-  "issued_at": "2026-07-06T03:55:26.636Z",
-  "expires_at": "2026-07-13T03:55:26.636Z",
+  "issued_at": "2026-07-06T03:47:52.646Z",
+  "expires_at": "2026-07-13T03:47:52.646Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96a90cd8dcca98c3b1b3c8764c6a64a6846f63143f439567ae85f0a6c193bcc0",
+  "signature": "a9a8fa43e932fba6b4941a168dcd698206dbe9f79943b29c3ac444aac009f112",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02450"
 }

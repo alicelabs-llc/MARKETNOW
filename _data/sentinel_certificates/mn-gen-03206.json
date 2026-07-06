@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0157080",
+  "certificate_id": "MN-SC-2026-9721394",
   "skill_id": "mn-gen-03206",
   "skill_name": "Deggo-mcp",
-  "issued_at": "2026-07-06T03:55:57.080Z",
-  "expires_at": "2026-07-13T03:55:57.080Z",
+  "issued_at": "2026-07-06T03:48:41.394Z",
+  "expires_at": "2026-07-13T03:48:41.394Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85ae5e5952a3d88961674087db0072ba6841c981dd82b240746bf37912797db9",
+  "signature": "9707fcdc3a3485153b74ce4fac328f205ca42af1acb27de31b56bf69af7ff9cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03206"
 }

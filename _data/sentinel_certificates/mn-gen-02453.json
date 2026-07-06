@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0126579",
+  "certificate_id": "MN-SC-2026-9672635",
   "skill_id": "mn-gen-02453",
   "skill_name": "Cloud-logging-mcp",
-  "issued_at": "2026-07-06T03:55:26.579Z",
-  "expires_at": "2026-07-13T03:55:26.579Z",
+  "issued_at": "2026-07-06T03:47:52.635Z",
+  "expires_at": "2026-07-13T03:47:52.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c06961ea159bd6af501f363d0289de484c5e7222a7c49bae938e1ad55428acb",
+  "signature": "ffb72fc50f3488eb732f95ed4fa82756c01109e5957174e8e8f3b1f4cf8a8a74",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02453"
 }

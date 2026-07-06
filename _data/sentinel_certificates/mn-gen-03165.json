@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0155734",
+  "certificate_id": "MN-SC-2026-9718776",
   "skill_id": "mn-gen-03165",
   "skill_name": "Aitool/decision-cli",
-  "issued_at": "2026-07-06T03:55:55.734Z",
-  "expires_at": "2026-07-13T03:55:55.734Z",
+  "issued_at": "2026-07-06T03:48:38.776Z",
+  "expires_at": "2026-07-13T03:48:38.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d45457cf2d0209f2f542728a97f8d62866cb2ce04b6ea426bd1dd4d860679c4",
+  "signature": "4ad2a447a1e052ca00a770f9a4cb5313c6cf7da3a1ba01c54519db4a09d5cb7b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03165"
 }

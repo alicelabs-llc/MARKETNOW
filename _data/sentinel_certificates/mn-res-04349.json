@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0198657",
+  "certificate_id": "MN-SC-2026-9790458",
   "skill_id": "mn-res-04349",
   "skill_name": "Lohzi97/gemini-search-mcp",
-  "issued_at": "2026-07-06T03:56:38.657Z",
-  "expires_at": "2026-07-13T03:56:38.657Z",
+  "issued_at": "2026-07-06T03:49:50.458Z",
+  "expires_at": "2026-07-13T03:49:50.458Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29b01a28f097085c738c0ae8ddcf1e4938725da17a1cfc109212bebaa9df3907",
+  "signature": "f3484ea51dd771496d6377ee483b25cbf7f958bb45ff762999b9ac83ca052679",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-04349"
 }

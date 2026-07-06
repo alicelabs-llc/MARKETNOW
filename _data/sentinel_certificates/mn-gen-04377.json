@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0199762",
+  "certificate_id": "MN-SC-2026-9792044",
   "skill_id": "mn-gen-04377",
   "skill_name": "Genexus-mcp",
-  "issued_at": "2026-07-06T03:56:39.762Z",
-  "expires_at": "2026-07-13T03:56:39.762Z",
+  "issued_at": "2026-07-06T03:49:52.044Z",
+  "expires_at": "2026-07-13T03:49:52.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97ddd0e8a80a0ab520726692612b4e8acff70bc93241f1882a71ff3d04f2149b",
+  "signature": "5491daeda46f4fa437a6e7a2cd6275cde37be47c0e178b09b705058876d2b5f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04377"
 }

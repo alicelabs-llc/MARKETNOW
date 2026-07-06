@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0111041",
+  "certificate_id": "MN-SC-2026-9647129",
   "skill_id": "mn-gen-02067",
   "skill_name": "Claude-code-toolkit",
-  "issued_at": "2026-07-06T03:55:11.041Z",
-  "expires_at": "2026-07-13T03:55:11.041Z",
+  "issued_at": "2026-07-06T03:47:27.129Z",
+  "expires_at": "2026-07-13T03:47:27.129Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33ba762ab29053b483fb494fb7715e73bcae62e963ec3b18663a341902ce48d6",
+  "signature": "83fc30809131515924aeaf4f44f5b5a778a6d1f1b91d978b9d91bec897d156d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02067"
 }

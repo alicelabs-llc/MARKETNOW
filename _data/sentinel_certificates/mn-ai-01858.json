@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0102416",
+  "certificate_id": "MN-SC-2026-9634122",
   "skill_id": "mn-ai-01858",
   "skill_name": "Checkirai",
-  "issued_at": "2026-07-06T03:55:02.416Z",
-  "expires_at": "2026-07-13T03:55:02.416Z",
+  "issued_at": "2026-07-06T03:47:14.122Z",
+  "expires_at": "2026-07-13T03:47:14.122Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52fd8268011e208ef744d84b2807a42a07ae03079d2d1a9f82cdc769dedbf03a",
+  "signature": "183a2d4dbe9c023178e47b0f9e96399c5007e3abc2a42fb966fa836f26b0f642",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01858"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114072",
+  "certificate_id": "MN-SC-2026-9653038",
   "skill_id": "mn-gen-02151",
   "skill_name": "Claude-json-reporter-mcp-server",
-  "issued_at": "2026-07-06T03:55:14.072Z",
-  "expires_at": "2026-07-13T03:55:14.072Z",
+  "issued_at": "2026-07-06T03:47:33.038Z",
+  "expires_at": "2026-07-13T03:47:33.038Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa86fe91d7b696122d8e6dd53bd35b5245deda5268181354df447af1dd35d413",
+  "signature": "c990df690f41ed615ce76630821f730ee2f23113f6ff7fa5fd070a479d6a996e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02151"
 }

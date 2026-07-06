@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0110194",
+  "certificate_id": "MN-SC-2026-9645462",
   "skill_id": "mn-gen-02021",
   "skill_name": "Claude-code-gemini-ui-assistant-mcp",
-  "issued_at": "2026-07-06T03:55:10.194Z",
-  "expires_at": "2026-07-13T03:55:10.194Z",
+  "issued_at": "2026-07-06T03:47:25.462Z",
+  "expires_at": "2026-07-13T03:47:25.462Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d79d6fae4b9deefa87577bc597eb3a9893823d115023e0d29aaf7f7976e87c7",
+  "signature": "de7edc93e7cd3436fc2d041ced2e4ef42695061e970b5c23ab066ead2d110ceb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02021"
 }

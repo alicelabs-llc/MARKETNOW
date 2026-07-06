@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0128749",
+  "certificate_id": "MN-SC-2026-9676301",
   "skill_id": "mn-ai-02495",
   "skill_name": "Cobrain",
-  "issued_at": "2026-07-06T03:55:28.749Z",
-  "expires_at": "2026-07-13T03:55:28.749Z",
+  "issued_at": "2026-07-06T03:47:56.301Z",
+  "expires_at": "2026-07-13T03:47:56.301Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ebb120e5729ff7591d4ded33b103ab60fc9fbe334374cf9b178fbdf7449bb258",
+  "signature": "a839b43d33126c7dada2c61ee69d627c4ed24d20f981efaf8bbf600b77f17bcc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-02495"
 }

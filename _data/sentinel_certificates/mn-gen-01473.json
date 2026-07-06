@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0087249",
+  "certificate_id": "MN-SC-2026-9607193",
   "skill_id": "mn-gen-01473",
   "skill_name": "Bluesky-mcp-server",
-  "issued_at": "2026-07-06T03:54:47.249Z",
-  "expires_at": "2026-07-13T03:54:47.249Z",
+  "issued_at": "2026-07-06T03:46:47.193Z",
+  "expires_at": "2026-07-13T03:46:47.193Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac2a7620878efc5cfa6ee68c6d8cbc1603bb8745fde43e765ffee69e8fa8461a",
+  "signature": "e8ca96783b693f1bdb83c69c840511c7d8874c34d5d15293514b3b286300f1fe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01473"
 }

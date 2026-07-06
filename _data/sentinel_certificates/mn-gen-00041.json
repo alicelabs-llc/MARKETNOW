@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0042021",
+  "certificate_id": "MN-SC-2026-9672815",
   "skill_id": "mn-gen-00041",
   "skill_name": "4q-tokenz",
-  "issued_at": "2026-07-06T03:54:02.021Z",
-  "expires_at": "2026-07-13T03:54:02.021Z",
+  "issued_at": "2026-07-06T03:47:52.815Z",
+  "expires_at": "2026-07-13T03:47:52.815Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f409610b1f524c2a5a66069277cd208755220bda2554a14c9652623621346269",
+  "signature": "a10d60fba348e4c41c19e6a1002ddd95bfa37900bcdc8156ce24201be517651a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00041"
 }

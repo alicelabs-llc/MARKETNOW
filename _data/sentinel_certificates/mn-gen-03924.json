@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0183335",
+  "certificate_id": "MN-SC-2026-9763114",
   "skill_id": "mn-gen-03924",
   "skill_name": "Fatsecret-mcp-server",
-  "issued_at": "2026-07-06T03:56:23.335Z",
-  "expires_at": "2026-07-13T03:56:23.336Z",
+  "issued_at": "2026-07-06T03:49:23.114Z",
+  "expires_at": "2026-07-13T03:49:23.114Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83acce1306dd40609d69a50471eddbec8082bf56b978c6ec010eba99c1ea5ac7",
+  "signature": "1f7fe93f046be9a8a04fb8063c22773bb620ea2df088687aa39607103238e09d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03924"
 }

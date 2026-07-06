@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0117323",
+  "certificate_id": "MN-SC-2026-9658281",
   "skill_id": "mn-gen-02234",
   "skill_name": "Claude-orator-mcp",
-  "issued_at": "2026-07-06T03:55:17.323Z",
-  "expires_at": "2026-07-13T03:55:17.323Z",
+  "issued_at": "2026-07-06T03:47:38.281Z",
+  "expires_at": "2026-07-13T03:47:38.281Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30318dcf6e0dfc6d9dd3d68687a8d0b188aeb8bca75b616e34f7c6dbe39e8cac",
+  "signature": "43bedf6c7ea7ba4082d503a52d629674c40a103d6f6bfbee113431908422f76f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02234"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0091124",
+  "certificate_id": "MN-SC-2026-9614684",
   "skill_id": "mn-gen-01563",
   "skill_name": "Browser-ext-mcp",
-  "issued_at": "2026-07-06T03:54:51.124Z",
-  "expires_at": "2026-07-13T03:54:51.124Z",
+  "issued_at": "2026-07-06T03:46:54.684Z",
+  "expires_at": "2026-07-13T03:46:54.684Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "183abb2b7e5f660e370fb9269147aee657be23842a8ca3095d62a71c5edbe8ef",
+  "signature": "e5549da1e0360351e25e9f71b1eb77a167649ba4d18cf588a012732efd5bc420",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01563"
 }

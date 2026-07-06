@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0132879",
+  "certificate_id": "MN-SC-2026-9684529",
   "skill_id": "mn-gen-02608",
   "skill_name": "Codex-subagents-mcp",
-  "issued_at": "2026-07-06T03:55:32.879Z",
-  "expires_at": "2026-07-13T03:55:32.879Z",
+  "issued_at": "2026-07-06T03:48:04.529Z",
+  "expires_at": "2026-07-13T03:48:04.529Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d8156eb15e198e829191833b0ae67993238ec47a12b5316e4c5e0c11b86a68c",
+  "signature": "1e91643b31e575308d23c87b424823eaf516b3d240db78c88b0cf81b0ea93e04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02608"
 }

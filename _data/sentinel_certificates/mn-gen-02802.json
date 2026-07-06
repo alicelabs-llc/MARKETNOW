@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0143641",
+  "certificate_id": "MN-SC-2026-9699198",
   "skill_id": "mn-gen-02802",
   "skill_name": "Copilot-extension",
-  "issued_at": "2026-07-06T03:55:43.641Z",
-  "expires_at": "2026-07-13T03:55:43.641Z",
+  "issued_at": "2026-07-06T03:48:19.198Z",
+  "expires_at": "2026-07-13T03:48:19.198Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b7e0c71942ec483130c1ba35a7b598e2974a8c519bc68b0842a67260b5ad947",
+  "signature": "b8a502326a7b3a30e04d80d95e3bcc3032aa41efb74469773aba56e7f575d508",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02802"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0071382",
+  "certificate_id": "MN-SC-2026-9580799",
   "skill_id": "mn-gen-00904",
   "skill_name": "Appstore-mcp",
-  "issued_at": "2026-07-06T03:54:31.382Z",
-  "expires_at": "2026-07-13T03:54:31.382Z",
+  "issued_at": "2026-07-06T03:46:20.799Z",
+  "expires_at": "2026-07-13T03:46:20.799Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3136856017fe4928439e6dfd49c4c686155196b9c5fcaeaa21c9ff85f9ec82c9",
+  "signature": "c2f696876fe3c59215e3eda743587531c18169363e8a4914f55fa584ff2da792",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00904"
 }

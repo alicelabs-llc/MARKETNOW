@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0100173",
+  "certificate_id": "MN-SC-2026-9629277",
   "skill_id": "mn-gen-01780",
   "skill_name": "Bluerfalcon/census-mcp-server",
-  "issued_at": "2026-07-06T03:55:00.173Z",
-  "expires_at": "2026-07-13T03:55:00.173Z",
+  "issued_at": "2026-07-06T03:47:09.277Z",
+  "expires_at": "2026-07-13T03:47:09.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d6f6afeaf2df3e9ba040070c7d155e30d8a1637a6a2f21de23b662f32f0c632b",
+  "signature": "0a2c6f9986859d30df3e793f73bbc590f725878fce0882a53b4e9474743d26f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01780"
 }

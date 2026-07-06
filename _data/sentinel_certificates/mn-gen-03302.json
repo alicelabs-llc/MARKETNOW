@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0160291",
+  "certificate_id": "MN-SC-2026-9726593",
   "skill_id": "mn-gen-03302",
   "skill_name": "Devtools-debugger-mcp",
-  "issued_at": "2026-07-06T03:56:00.291Z",
-  "expires_at": "2026-07-13T03:56:00.291Z",
+  "issued_at": "2026-07-06T03:48:46.593Z",
+  "expires_at": "2026-07-13T03:48:46.593Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14ae4eb71b378ddf7fc15a739165397a227cb9406b1021fe6fb41a6092045940",
+  "signature": "050da597e8627ce7911cae831b1eb05cc814c4be4de45de3909831eb07507943",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03302"
 }

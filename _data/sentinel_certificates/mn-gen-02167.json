@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114552",
+  "certificate_id": "MN-SC-2026-9653790",
   "skill_id": "mn-gen-02167",
   "skill_name": "Claude-mcp-bridge",
-  "issued_at": "2026-07-06T03:55:14.552Z",
-  "expires_at": "2026-07-13T03:55:14.552Z",
+  "issued_at": "2026-07-06T03:47:33.790Z",
+  "expires_at": "2026-07-13T03:47:33.790Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ed57efc3f4f012db2b785fb56227e470d4041204e7a1d794bbaebff0aaf32e3",
+  "signature": "83846f2a52b6e9b78764c21d422e377aa5a28366654e94cf35ccdc894d096d8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02167"
 }

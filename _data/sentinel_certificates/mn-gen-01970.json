@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0107412",
+  "certificate_id": "MN-SC-2026-9642405",
   "skill_id": "mn-gen-01970",
   "skill_name": "Claude-agent-sdk-starter",
-  "issued_at": "2026-07-06T03:55:07.412Z",
-  "expires_at": "2026-07-13T03:55:07.412Z",
+  "issued_at": "2026-07-06T03:47:22.405Z",
+  "expires_at": "2026-07-13T03:47:22.405Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbb62a34e5968c796c2012820c9eb67c14dfe94078c38339309b3f81549856ac",
+  "signature": "f8a96f8dd340fd3a767f8df598a69553ffdc3b9bc55b7667d3f8a6204457324a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01970"
 }

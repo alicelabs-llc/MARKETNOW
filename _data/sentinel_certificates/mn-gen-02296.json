@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0120439",
+  "certificate_id": "MN-SC-2026-9663630",
   "skill_id": "mn-gen-02296",
   "skill_name": "Claude-team",
-  "issued_at": "2026-07-06T03:55:20.439Z",
-  "expires_at": "2026-07-13T03:55:20.439Z",
+  "issued_at": "2026-07-06T03:47:43.630Z",
+  "expires_at": "2026-07-13T03:47:43.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81c8608d26fdc5e47ffcf2a3be12b1fde20b7eb4e5595f5d4cadda07b8f3bc38",
+  "signature": "1ce41364f8a51a659852996eff48702eefed7650c1f50b83f4a1c9af7584221e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02296"
 }

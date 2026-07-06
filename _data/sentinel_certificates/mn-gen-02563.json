@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0130521",
+  "certificate_id": "MN-SC-2026-9680639",
   "skill_id": "mn-gen-02563",
   "skill_name": "Codemogger",
-  "issued_at": "2026-07-06T03:55:30.521Z",
-  "expires_at": "2026-07-13T03:55:30.521Z",
+  "issued_at": "2026-07-06T03:48:00.639Z",
+  "expires_at": "2026-07-13T03:48:00.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "78eb28e2f0a59093028d0f8027b5144dcfd56cb3cc28975497eba7f2dbcc6182",
+  "signature": "a8c9890916e7c133caacca8fb0d9ea45942d7170c15b2ead27ffbea848173ff7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02563"
 }

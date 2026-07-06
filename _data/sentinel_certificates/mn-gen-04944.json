@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0218615",
+  "certificate_id": "MN-SC-2026-9825370",
   "skill_id": "mn-gen-04944",
   "skill_name": "Homebox-mcp",
-  "issued_at": "2026-07-06T03:56:58.615Z",
-  "expires_at": "2026-07-13T03:56:58.615Z",
+  "issued_at": "2026-07-06T03:50:25.370Z",
+  "expires_at": "2026-07-13T03:50:25.370Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4289718db62722edf7b5e83a69998c7d4e6b65b4e0540cbd55a887bd1bf02c02",
+  "signature": "14fea5be3e7addb6a37a20492a56b6771bb3e409c1712c0d9ab154bc86ad4a20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04944"
 }

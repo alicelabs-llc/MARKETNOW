@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0168543",
+  "certificate_id": "MN-SC-2026-9738344",
   "skill_id": "mn-gen-03489",
   "skill_name": "Douban-mcp-cli",
-  "issued_at": "2026-07-06T03:56:08.543Z",
-  "expires_at": "2026-07-13T03:56:08.543Z",
+  "issued_at": "2026-07-06T03:48:58.344Z",
+  "expires_at": "2026-07-13T03:48:58.344Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94123111715000760cf0085c17b3005a568570b9f355f0df52af4b83f2b5dfc2",
+  "signature": "2a6ce34a1ce9cf1edc9292800c2febd00c98a1458c9e16759606f1967dd2a6b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03489"
 }

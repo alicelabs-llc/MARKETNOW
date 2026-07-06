@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0132910",
+  "certificate_id": "MN-SC-2026-9684527",
   "skill_id": "mn-gen-02606",
   "skill_name": "Codex-persistent-remote-mcp",
-  "issued_at": "2026-07-06T03:55:32.910Z",
-  "expires_at": "2026-07-13T03:55:32.910Z",
+  "issued_at": "2026-07-06T03:48:04.527Z",
+  "expires_at": "2026-07-13T03:48:04.527Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ba98f24234a1e83a6570d830eaf7b7fd2131647879c23a01e48181830652d784",
+  "signature": "df4d5080b944c88d02ce03ce4eba6e5d15bd90b4cc9601c054f65ba50454b907",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02606"
 }

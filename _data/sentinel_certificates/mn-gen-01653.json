@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0095437",
+  "certificate_id": "MN-SC-2026-9620673",
   "skill_id": "mn-gen-01653",
   "skill_name": "Cachebro",
-  "issued_at": "2026-07-06T03:54:55.437Z",
-  "expires_at": "2026-07-13T03:54:55.437Z",
+  "issued_at": "2026-07-06T03:47:00.673Z",
+  "expires_at": "2026-07-13T03:47:00.673Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "560c17aabd995bcf8cac46b570910ad12391e1ff46e5c6eaa1d16451494c6106",
+  "signature": "1efc6c0ec24d2b6883ceda283aea9591727d22ab92e611a6fb48762485b8a186",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01653"
 }

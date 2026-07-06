@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0209334",
+  "certificate_id": "MN-SC-2026-9808897",
   "skill_id": "mn-gen-04662",
   "skill_name": "Goose-flow",
-  "issued_at": "2026-07-06T03:56:49.334Z",
-  "expires_at": "2026-07-13T03:56:49.334Z",
+  "issued_at": "2026-07-06T03:50:08.897Z",
+  "expires_at": "2026-07-13T03:50:08.897Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ea1b3e8f0277e9455ea15656d45e93a5283ad239ab699eedf0e0c6655244a2d2",
+  "signature": "d7bbfa59f5eaab0470cc05a63a4cfb1a74d93fe6d49eb964bcdacff07c4cf895",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04662"
 }

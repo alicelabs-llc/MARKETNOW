@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0077184",
+  "certificate_id": "MN-SC-2026-9590688",
   "skill_id": "mn-gen-01083",
   "skill_name": "Audio-transcription-mcp",
-  "issued_at": "2026-07-06T03:54:37.184Z",
-  "expires_at": "2026-07-13T03:54:37.184Z",
+  "issued_at": "2026-07-06T03:46:30.688Z",
+  "expires_at": "2026-07-13T03:46:30.688Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8b42a1b4f2c39f557137e8824ab8a69ba86828747e89fc64e9cd3b7887f222a6",
+  "signature": "d2315fa34f941b2bc9f3c8bdfec9546bff03521e8b46b463fdaad4ff79891764",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01083"
 }

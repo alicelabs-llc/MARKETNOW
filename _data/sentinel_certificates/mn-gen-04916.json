@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0217630",
+  "certificate_id": "MN-SC-2026-9823140",
   "skill_id": "mn-gen-04916",
   "skill_name": "Hive-memory",
-  "issued_at": "2026-07-06T03:56:57.630Z",
-  "expires_at": "2026-07-13T03:56:57.630Z",
+  "issued_at": "2026-07-06T03:50:23.140Z",
+  "expires_at": "2026-07-13T03:50:23.140Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "86d815d4b28222e651459876c482a7774d4505886465936112ded6ae7c953281",
+  "signature": "4587dc812733d88c6afbe778ef84f95c1659b4ee6fc3a9482769164309220486",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04916"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114927",
+  "certificate_id": "MN-SC-2026-9654573",
   "skill_id": "mn-dat-02172",
   "skill_name": "Claude-mcp-data-explorer",
-  "issued_at": "2026-07-06T03:55:14.927Z",
-  "expires_at": "2026-07-13T03:55:14.927Z",
+  "issued_at": "2026-07-06T03:47:34.573Z",
+  "expires_at": "2026-07-13T03:47:34.573Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8cb1d2a02a7138dfa8634a44519e6193457e3ef032492629f0ca76ff85e0645f",
+  "signature": "6cc38999b702f66d4d3301f8899f01118a547ac8ad622de145fb6850d5945219",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-02172"
 }

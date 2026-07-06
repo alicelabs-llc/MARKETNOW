@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0087646",
+  "certificate_id": "MN-SC-2026-9608410",
   "skill_id": "mn-gen-01480",
   "skill_name": "Say-mcp-server",
-  "issued_at": "2026-07-06T03:54:47.646Z",
-  "expires_at": "2026-07-13T03:54:47.646Z",
+  "issued_at": "2026-07-06T03:46:48.410Z",
+  "expires_at": "2026-07-13T03:46:48.410Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c3d8b1033dfbe530174b967211ee81bd94c164ac1670c44569750dcac08a2ca",
+  "signature": "205a9eed484b7cdf34ef9cfbb68fdab27a85a797da7c947732c7f20d14036ebb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01480"
 }

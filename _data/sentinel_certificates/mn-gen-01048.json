@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0075527",
+  "certificate_id": "MN-SC-2026-9587703",
   "skill_id": "mn-gen-01048",
   "skill_name": "Athena-mcp-backend",
-  "issued_at": "2026-07-06T03:54:35.527Z",
-  "expires_at": "2026-07-13T03:54:35.527Z",
+  "issued_at": "2026-07-06T03:46:27.703Z",
+  "expires_at": "2026-07-13T03:46:27.703Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "daeaa03a6672228a032a54895b52dd4f78dc1cfb0549e0db383326813f111c64",
+  "signature": "dfe6c969424d4a649c4cd68a10c618bc3429c989631fb4c0430fe27b26e94a6a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01048"
 }

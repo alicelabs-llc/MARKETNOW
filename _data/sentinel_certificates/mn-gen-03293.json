@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0159790",
+  "certificate_id": "MN-SC-2026-9725829",
   "skill_id": "mn-gen-03293",
   "skill_name": "Devora_no/prompt-assistant-mcp",
-  "issued_at": "2026-07-06T03:55:59.790Z",
-  "expires_at": "2026-07-13T03:55:59.790Z",
+  "issued_at": "2026-07-06T03:48:45.829Z",
+  "expires_at": "2026-07-13T03:48:45.829Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a153b4a88ace69de751d43bb9c58a05528f2e0c4c4bf2a17e23430d11b24da05",
+  "signature": "349ab2dc65ff4d07d283ad0f1db78f01c0fe1758e82974793ac3759680f5c87a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03293"
 }

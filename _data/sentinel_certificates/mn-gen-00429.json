@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0056131",
+  "certificate_id": "MN-SC-2026-9554062",
   "skill_id": "mn-gen-00429",
   "skill_name": "Agentstore",
-  "issued_at": "2026-07-06T03:54:16.131Z",
-  "expires_at": "2026-07-13T03:54:16.131Z",
+  "issued_at": "2026-07-06T03:45:54.062Z",
+  "expires_at": "2026-07-13T03:45:54.062Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8125e7c28d92beb2a6af207822176666ca745e7ad3cdd4b79833f6c2dfa55363",
+  "signature": "f7fd16fc533009ea3ba301a9ac285164387a1f557b71ee29b60e905d10d23aa0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00429"
 }

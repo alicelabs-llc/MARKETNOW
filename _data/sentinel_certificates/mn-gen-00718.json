@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0064576",
+  "certificate_id": "MN-SC-2026-9569068",
   "skill_id": "mn-gen-00718",
   "skill_name": "Ghostnetwork/openclaw-alpha-mcp",
-  "issued_at": "2026-07-06T03:54:24.576Z",
-  "expires_at": "2026-07-13T03:54:24.576Z",
+  "issued_at": "2026-07-06T03:46:09.068Z",
+  "expires_at": "2026-07-13T03:46:09.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "60dc744588cf7a0a22fd30cab5f9ec1b96466eb325d9675e12a5a8b718a7620d",
+  "signature": "3f21df2cfd4586801c9774dca6461083e470ca705e0ff63847f80bf5930196b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00718"
 }

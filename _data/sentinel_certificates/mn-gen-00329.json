@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0053913",
+  "certificate_id": "MN-SC-2026-9550228",
   "skill_id": "mn-gen-00329",
   "skill_name": "Agentdrop-mcp-server",
-  "issued_at": "2026-07-06T03:54:13.913Z",
-  "expires_at": "2026-07-13T03:54:13.913Z",
+  "issued_at": "2026-07-06T03:45:50.228Z",
+  "expires_at": "2026-07-13T03:45:50.228Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "820bd99df028ae607c5d2374fdab68ad85ccfea84d537a08b7abda16251721b1",
+  "signature": "d7a746ad4d628727f226e4df0647a298570bc1c00612721e2b9401f37f8d698d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00329"
 }

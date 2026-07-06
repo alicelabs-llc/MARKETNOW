@@ -228,9 +228,11 @@ See:
 
 **Patent pending** on the 3-layer audit pipeline design (L1.5 → L1.6 → L2).
 
-For licensing inquiries: **legal@marketnow.site**
+For licensing inquiries: **legal@alicelabs.site**
+For support: **support@alicelabs.site**
+General inquiries: **info@alicelabs.site**
 
-Report IP violations: **legal@marketnow.site**
+Report IP violations: **legal@alicelabs.site**
 
 ---
 

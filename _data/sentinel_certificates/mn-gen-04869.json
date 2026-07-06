@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0216382",
+  "certificate_id": "MN-SC-2026-9820948",
   "skill_id": "mn-gen-04869",
   "skill_name": "Hello-world-mcp",
-  "issued_at": "2026-07-06T03:56:56.382Z",
-  "expires_at": "2026-07-13T03:56:56.382Z",
+  "issued_at": "2026-07-06T03:50:20.948Z",
+  "expires_at": "2026-07-13T03:50:20.948Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85a91f2190ba30cd123b627acb2680d6bc63bbbafe762fc59396c9d1d042bea5",
+  "signature": "a24639a18ae074c39e2d3dea10683660d7ef8dae7a09076ce80a10eabebceaab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04869"
 }

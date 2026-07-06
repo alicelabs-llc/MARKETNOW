@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0149125",
+  "certificate_id": "MN-SC-2026-9708528",
   "skill_id": "mn-gen-02981",
   "skill_name": "Cursor-docker-mcp",
-  "issued_at": "2026-07-06T03:55:49.125Z",
-  "expires_at": "2026-07-13T03:55:49.125Z",
+  "issued_at": "2026-07-06T03:48:28.528Z",
+  "expires_at": "2026-07-13T03:48:28.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "600c92262fdfe117617417d2710faccfada18e24a7f3fea71554def8beeb9bab",
+  "signature": "734582c3497dc58755b863ff17013a746e06084fec2390209b0e3feaa8ff1dea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02981"
 }

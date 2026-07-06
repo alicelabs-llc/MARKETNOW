@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0192002",
+  "certificate_id": "MN-SC-2026-9779303",
   "skill_id": "mn-gen-04144",
   "skill_name": "Foaas-mcp",
-  "issued_at": "2026-07-06T03:56:32.002Z",
-  "expires_at": "2026-07-13T03:56:32.002Z",
+  "issued_at": "2026-07-06T03:49:39.303Z",
+  "expires_at": "2026-07-13T03:49:39.303Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5af03128d1b081214227468aed5071d16a87c58b7bffacc9faf33e0c38f4322d",
+  "signature": "ad0cd074ac8831c88f5e130d8af72327a202de09cabf77c2b3ae92cc5e9fa0d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04144"
 }

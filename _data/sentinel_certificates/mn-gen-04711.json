@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0211229",
+  "certificate_id": "MN-SC-2026-9811883",
   "skill_id": "mn-gen-04711",
   "skill_name": "Graphql-agent-toolkit",
-  "issued_at": "2026-07-06T03:56:51.229Z",
-  "expires_at": "2026-07-13T03:56:51.229Z",
+  "issued_at": "2026-07-06T03:50:11.883Z",
+  "expires_at": "2026-07-13T03:50:11.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "167ebb9a3f747ce314e1de932424a60d570e432683c030151659c8242a723bdb",
+  "signature": "68f04643ca8090ff7303443ec71c70545d1390e37423ad0b3f4988de2dc81653",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04711"
 }

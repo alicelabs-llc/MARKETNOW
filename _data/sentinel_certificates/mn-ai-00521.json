@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0058253",
+  "certificate_id": "MN-SC-2026-9558010",
   "skill_id": "mn-ai-00521",
   "skill_name": "Global-mcp-client",
-  "issued_at": "2026-07-06T03:54:18.253Z",
-  "expires_at": "2026-07-13T03:54:18.253Z",
+  "issued_at": "2026-07-06T03:45:58.010Z",
+  "expires_at": "2026-07-13T03:45:58.010Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c9e972fc0ebb59c82ec11f7dd3101628367b8fcc959f5beefb7926b8053bbc0",
+  "signature": "df100d8b46f0ba1cdfb5d08f542f1db05a23b3039d85f39513846d9c35fb00b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00521"
 }

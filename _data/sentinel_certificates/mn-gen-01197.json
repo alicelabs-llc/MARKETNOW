@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0078932",
+  "certificate_id": "MN-SC-2026-9593656",
   "skill_id": "mn-gen-01197",
   "skill_name": "Axion-mcp",
-  "issued_at": "2026-07-06T03:54:38.932Z",
-  "expires_at": "2026-07-13T03:54:38.932Z",
+  "issued_at": "2026-07-06T03:46:33.656Z",
+  "expires_at": "2026-07-13T03:46:33.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d9f83a039c5b0d0eea75cf721a85668be3a5c19ff4e2a83d4025f8369be4bb8e",
+  "signature": "a8ce6adba21248a39915bca87943402d31f4f2c2a2125adbd980ee923c418e79",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01197"
 }

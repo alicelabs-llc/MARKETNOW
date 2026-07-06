@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0081558",
+  "certificate_id": "MN-SC-2026-9598296",
   "skill_id": "mn-gen-01280",
   "skill_name": "Base-network-mcp-server",
-  "issued_at": "2026-07-06T03:54:41.558Z",
-  "expires_at": "2026-07-13T03:54:41.558Z",
+  "issued_at": "2026-07-06T03:46:38.296Z",
+  "expires_at": "2026-07-13T03:46:38.296Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8dc0316bbf31d1047a41e0f4818ac65a62e81b403b86e910a0ff4f6b2ab19fa8",
+  "signature": "2c93fb2fcc4bce47daa41ccf8334ef39321956bd2de23ff521a374ad250500b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01280"
 }

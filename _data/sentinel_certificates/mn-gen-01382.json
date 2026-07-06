@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0085508",
+  "certificate_id": "MN-SC-2026-9604245",
   "skill_id": "mn-gen-01382",
   "skill_name": "Binance-mcp-server",
-  "issued_at": "2026-07-06T03:54:45.508Z",
-  "expires_at": "2026-07-13T03:54:45.508Z",
+  "issued_at": "2026-07-06T03:46:44.245Z",
+  "expires_at": "2026-07-13T03:46:44.245Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66e3b2d867d6ea081b39d179f63f66e8a8a760e28493ebaa9e61fcbbd87d0ef8",
+  "signature": "c6098207630c00891d73e76645cf42d9596fad0c240de01748e32e8266f3e83f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01382"
 }

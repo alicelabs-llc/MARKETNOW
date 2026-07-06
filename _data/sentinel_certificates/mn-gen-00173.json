@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0045642",
+  "certificate_id": "MN-SC-2026-9680363",
   "skill_id": "mn-gen-00173",
   "skill_name": "Admtools-mcp",
-  "issued_at": "2026-07-06T03:54:05.642Z",
-  "expires_at": "2026-07-13T03:54:05.642Z",
+  "issued_at": "2026-07-06T03:48:00.363Z",
+  "expires_at": "2026-07-13T03:48:00.363Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5e6b4f7ad96cc62bf54a16e6aa68cd4da280e925885447343b5ca5390b3f722b",
+  "signature": "b9f5b65fb6ba4b262595757b50709e072d597ea52ac3b43b24c8f8a452610c33",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00173"
 }

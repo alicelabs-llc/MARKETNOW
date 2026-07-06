@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0147781",
+  "certificate_id": "MN-SC-2026-9706146",
   "skill_id": "mn-gen-02914",
   "skill_name": "Cross-agent-teams-mcp",
-  "issued_at": "2026-07-06T03:55:47.781Z",
-  "expires_at": "2026-07-13T03:55:47.781Z",
+  "issued_at": "2026-07-06T03:48:26.146Z",
+  "expires_at": "2026-07-13T03:48:26.146Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1962eb75fc59f62bb7c8fa7b05cc1ebe0a4b37bc252c0951232b5d839f4aa91b",
+  "signature": "d59f7cb409fc915a45aa45bec2f7f09f66f573bd73ef7f624a2c9f0c3177e044",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02914"
 }

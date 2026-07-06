@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0207350",
+  "certificate_id": "MN-SC-2026-9805067",
   "skill_id": "mn-gen-04600",
   "skill_name": "Gong-mcp",
-  "issued_at": "2026-07-06T03:56:47.350Z",
-  "expires_at": "2026-07-13T03:56:47.350Z",
+  "issued_at": "2026-07-06T03:50:05.067Z",
+  "expires_at": "2026-07-13T03:50:05.067Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0293ae96d4638ee2fb8da206bd0a9623c7a62425bb0f6dc1ec158b2911774f48",
+  "signature": "a61f0819e39cfd90a8e7c50265cba4d6669a610f76730130c34af5259f780d6a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04600"
 }

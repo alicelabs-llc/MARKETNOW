@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0059990",
+  "certificate_id": "MN-SC-2026-9561630",
   "skill_id": "mn-ai-00596",
   "skill_name": "Aidefend-mcp-parser",
-  "issued_at": "2026-07-06T03:54:19.990Z",
-  "expires_at": "2026-07-13T03:54:19.990Z",
+  "issued_at": "2026-07-06T03:46:01.630Z",
+  "expires_at": "2026-07-13T03:46:01.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81472ade3e14a70ebc180a9fb36026fc78b7025ca33d9a6fe2eb7a1a5e3f2911",
+  "signature": "84582c3dc26d6a23b7ef8f9c873996e53e44a208932f8af7cde690e95aaa9306",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00596"
 }

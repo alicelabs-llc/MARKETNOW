@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0039898",
+  "certificate_id": "MN-SC-2026-9672137",
   "skill_id": "mn-gen-00028",
   "skill_name": "Mcsacca/2pay-mcp-server",
-  "issued_at": "2026-07-06T03:53:59.898Z",
-  "expires_at": "2026-07-13T03:53:59.898Z",
+  "issued_at": "2026-07-06T03:47:52.137Z",
+  "expires_at": "2026-07-13T03:47:52.137Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01912a9e1bf5905662a7e335d9cd726762b06052c0d689526bf2ab319244c063",
+  "signature": "82ff591c2cbb42f0675f9d2681385700e189b8b5ef72d47839c8b12c4e44d8bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00028"
 }

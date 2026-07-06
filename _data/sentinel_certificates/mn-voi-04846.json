@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0216008",
+  "certificate_id": "MN-SC-2026-9820162",
   "skill_id": "mn-voi-04846",
   "skill_name": "Headless360-voice",
-  "issued_at": "2026-07-06T03:56:56.008Z",
-  "expires_at": "2026-07-13T03:56:56.008Z",
+  "issued_at": "2026-07-06T03:50:20.162Z",
+  "expires_at": "2026-07-13T03:50:20.162Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f99a47b3793fd7490fc8069be172c97181c3b335775db12befd132cc7997371b",
+  "signature": "423bd035b4d8c88ebba5e7149f138c66c3b8cbe28721668fc6b4f9d06af36cd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-04846"
 }

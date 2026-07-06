@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0187726",
+  "certificate_id": "MN-SC-2026-9771742",
   "skill_id": "mn-ana-04040",
   "skill_name": "Financial-mcp-server",
-  "issued_at": "2026-07-06T03:56:27.726Z",
-  "expires_at": "2026-07-13T03:56:27.726Z",
+  "issued_at": "2026-07-06T03:49:31.742Z",
+  "expires_at": "2026-07-13T03:49:31.742Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "714cc5198212136cfeb0a969bd93bbe87c273fd582a8430828fd4b86a8adc735",
+  "signature": "50fb9e521552042798c221a00fa7a09e851cd6fdaa5323683bd8725eda8bfd78",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ana-04040"
 }

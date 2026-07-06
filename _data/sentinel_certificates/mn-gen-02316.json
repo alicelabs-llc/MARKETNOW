@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0121334",
+  "certificate_id": "MN-SC-2026-9665116",
   "skill_id": "mn-gen-02316",
   "skill_name": "Claude-whatsapp-mcp",
-  "issued_at": "2026-07-06T03:55:21.334Z",
-  "expires_at": "2026-07-13T03:55:21.334Z",
+  "issued_at": "2026-07-06T03:47:45.116Z",
+  "expires_at": "2026-07-13T03:47:45.116Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "796dd731a6aedb9949a95d8c67d970f0e18b5b9c0cd1182e0e08a5eaa35eb41c",
+  "signature": "fed21c7e350693b4d9b168406f79b18877571efc18895086a187fe5d5dbe85ab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02316"
 }

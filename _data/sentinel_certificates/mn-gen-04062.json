@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0188148",
+  "certificate_id": "MN-SC-2026-9772458",
   "skill_id": "mn-gen-04062",
   "skill_name": "firecrawl-mcp-server",
-  "issued_at": "2026-07-06T03:56:28.148Z",
-  "expires_at": "2026-07-13T03:56:28.148Z",
+  "issued_at": "2026-07-06T03:49:32.458Z",
+  "expires_at": "2026-07-13T03:49:32.458Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c2d3808ca87f645f1465345f05e33a6e02bdf2642350fc91a58bdd217e2c470",
+  "signature": "03b56a45d3369349f4bfca8a2d2f44a184234b31b61e05a29a0fa789b53cdf7c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04062"
 }

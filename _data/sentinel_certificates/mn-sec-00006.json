@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0086427",
+  "certificate_id": "MN-SC-2026-9605696",
   "skill_id": "mn-sec-00006",
   "skill_name": "MCP Security Gateway",
-  "issued_at": "2026-07-06T03:54:46.427Z",
-  "expires_at": "2026-07-13T03:54:46.427Z",
+  "issued_at": "2026-07-06T03:46:45.696Z",
+  "expires_at": "2026-07-13T03:46:45.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 0,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41657f5acee0d9a5de8143a6364693f878358d5cee9d533c025d6138e305f3d9",
+  "signature": "98aaca9635a0f4b3ba5f3847c465980d0f4572379e9bc3a13b9d9868cd8cdcbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-00006"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0065119",
+  "certificate_id": "MN-SC-2026-9569843",
   "skill_id": "mn-gen-00726",
   "skill_name": "Alterlab-mcp-server",
-  "issued_at": "2026-07-06T03:54:25.119Z",
-  "expires_at": "2026-07-13T03:54:25.119Z",
+  "issued_at": "2026-07-06T03:46:09.843Z",
+  "expires_at": "2026-07-13T03:46:09.843Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02a28bcb6fb041086d4bb670eec481cfcbce7446b374059223838ca5cbe89be7",
+  "signature": "6faf185f17d735583933fc8702cb68d626f2c27a6b96ce418a10190d96ff0b86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00726"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0133486",
+  "certificate_id": "MN-SC-2026-9685233",
   "skill_id": "mn-gen-02629",
   "skill_name": "Cognigy/mcp-server",
-  "issued_at": "2026-07-06T03:55:33.486Z",
-  "expires_at": "2026-07-13T03:55:33.486Z",
+  "issued_at": "2026-07-06T03:48:05.233Z",
+  "expires_at": "2026-07-13T03:48:05.233Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b873ca2eb73c0dafd5ca6436cd2e5485e355a8760b4b9db80b2affdfa54cf13e",
+  "signature": "4c23713516454e1dae4882c3d741a2e64ef3b20c6d79f7965cb5ed70b9654baf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02629"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0075024",
+  "certificate_id": "MN-SC-2026-9586974",
   "skill_id": "mn-gen-01029",
   "skill_name": "Astra-os",
-  "issued_at": "2026-07-06T03:54:35.024Z",
-  "expires_at": "2026-07-13T03:54:35.024Z",
+  "issued_at": "2026-07-06T03:46:26.974Z",
+  "expires_at": "2026-07-13T03:46:26.974Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e56e808a85cb13bf797ec8f9e994b129ddede84c0b81c9505011224d1bb889eb",
+  "signature": "9a82cb9e8e3445d18417e83776fe9158c697f4ddb9f3a76138deb748ff0c3901",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01029"
 }

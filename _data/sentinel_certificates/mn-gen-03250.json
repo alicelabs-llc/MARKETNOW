@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0158406",
+  "certificate_id": "MN-SC-2026-9723606",
   "skill_id": "mn-gen-03250",
   "skill_name": "Desktop-pilot-mcp",
-  "issued_at": "2026-07-06T03:55:58.406Z",
-  "expires_at": "2026-07-13T03:55:58.406Z",
+  "issued_at": "2026-07-06T03:48:43.606Z",
+  "expires_at": "2026-07-13T03:48:43.606Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05e131a1fcb7b07cadfb469071fc7243d1057259b25ea62c883ce1343ad0e7ed",
+  "signature": "af3dc0af0698c6a77c66a5f21847e6eb7f31efdf81d5575fcd5115a4687fff48",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03250"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0060844",
+  "certificate_id": "MN-SC-2026-9563173",
   "skill_id": "mn-ai-00626",
   "skill_name": "Ai-playbook-mcp-server",
-  "issued_at": "2026-07-06T03:54:20.844Z",
-  "expires_at": "2026-07-13T03:54:20.844Z",
+  "issued_at": "2026-07-06T03:46:03.173Z",
+  "expires_at": "2026-07-13T03:46:03.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f5b8707c437c81d14bda6aa33eaf415f66c2377e6c975fcf6d7cdf253fb0660",
+  "signature": "57e52f9eb4320fd117410f2de9a66213d9cdc3fa44ea041caee9f239fa6b2c68",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00626"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0070993",
+  "certificate_id": "MN-SC-2026-9580049",
   "skill_id": "mn-gen-00893",
   "skill_name": "Apple-reminders-mcp-server",
-  "issued_at": "2026-07-06T03:54:30.993Z",
-  "expires_at": "2026-07-13T03:54:30.993Z",
+  "issued_at": "2026-07-06T03:46:20.049Z",
+  "expires_at": "2026-07-13T03:46:20.049Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a7aee498272d8a4a64747895350e40d0a05176d49e99396d33ca230107c52bd1",
+  "signature": "b804bdc0be8f2f7f8f3ed5bb1bc8e53b44daf287421525b9ac7950f1af2925b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00893"
 }

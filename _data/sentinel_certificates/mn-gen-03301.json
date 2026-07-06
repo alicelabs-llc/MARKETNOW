@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0160279",
+  "certificate_id": "MN-SC-2026-9726587",
   "skill_id": "mn-gen-03301",
   "skill_name": "Devtools-bridge-mcp",
-  "issued_at": "2026-07-06T03:56:00.279Z",
-  "expires_at": "2026-07-13T03:56:00.279Z",
+  "issued_at": "2026-07-06T03:48:46.587Z",
+  "expires_at": "2026-07-13T03:48:46.587Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "237c6d301303f59769d979b5392027f7bff6d252cfbd2b741b27197cabb66790",
+  "signature": "d094f6939bdfd5080dc9a5ca30988475ff077d60bdfe88eb3395a9e4ccc6c437",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03301"
 }

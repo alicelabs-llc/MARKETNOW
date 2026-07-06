@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114079",
+  "certificate_id": "MN-SC-2026-9653050",
   "skill_id": "mn-gen-02148",
   "skill_name": "Claude-interrogate-mcp",
-  "issued_at": "2026-07-06T03:55:14.079Z",
-  "expires_at": "2026-07-13T03:55:14.079Z",
+  "issued_at": "2026-07-06T03:47:33.050Z",
+  "expires_at": "2026-07-13T03:47:33.050Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9d5093a0b3eeb8f958f76e0e397de7449ee6faa75ccdd3fcde57d14811f1235",
+  "signature": "0bac34a127afae0e4d5864a7b0ce6b110c77ddacc5222b93584003b6a438ab13",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02148"
 }

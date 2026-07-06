@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0191776",
+  "certificate_id": "MN-SC-2026-9778982",
   "skill_id": "mn-gen-04159",
   "skill_name": "forgejo-mcp",
-  "issued_at": "2026-07-06T03:56:31.776Z",
-  "expires_at": "2026-07-13T03:56:31.776Z",
+  "issued_at": "2026-07-06T03:49:38.982Z",
+  "expires_at": "2026-07-13T03:49:38.982Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d03ff19cc0861fc51f617de8cedd8288d751b53c8747a70ad20ff5b55076abb",
+  "signature": "89e033a3cf05e5f454694967547a5f85a868100d418a8600712e6f8a59c08011",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04159"
 }

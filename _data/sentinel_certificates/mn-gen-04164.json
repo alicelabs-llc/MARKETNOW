@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0192468",
+  "certificate_id": "MN-SC-2026-9780000",
   "skill_id": "mn-gen-04164",
   "skill_name": "Studiometa/forge-tools",
-  "issued_at": "2026-07-06T03:56:32.468Z",
-  "expires_at": "2026-07-13T03:56:32.468Z",
+  "issued_at": "2026-07-06T03:49:40.000Z",
+  "expires_at": "2026-07-13T03:49:40.000Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cbe4401745320068613ad50dd85e2d346bd5cb4ff0a850f5965a1ee331c2e15e",
+  "signature": "ed4cb5bd3a9d5b7fe286a8bcaacdaded4ab22df07ff1e6a179719e072c484280",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04164"
 }

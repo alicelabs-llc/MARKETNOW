@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0091108",
+  "certificate_id": "MN-SC-2026-9614704",
   "skill_id": "mn-gen-01558",
   "skill_name": "Browser-connect-mcp",
-  "issued_at": "2026-07-06T03:54:51.108Z",
-  "expires_at": "2026-07-13T03:54:51.108Z",
+  "issued_at": "2026-07-06T03:46:54.704Z",
+  "expires_at": "2026-07-13T03:46:54.704Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "034ee2663ce9c61dab23013917642ad3e0d800847216ef305f1bea9ab477fbfc",
+  "signature": "d926b25a87e31dbcb8c85a09b0c8890062b9d32b5b25b790716cef6f18a9a6f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01558"
 }

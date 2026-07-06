@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0168064",
+  "certificate_id": "MN-SC-2026-9737573",
   "skill_id": "mn-gen-03457",
   "skill_name": "Domangcha",
-  "issued_at": "2026-07-06T03:56:08.064Z",
-  "expires_at": "2026-07-13T03:56:08.064Z",
+  "issued_at": "2026-07-06T03:48:57.573Z",
+  "expires_at": "2026-07-13T03:48:57.573Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca0536085d0fa26b575e6a53a7c808d9f4fb43f0580b301629205b546972a03b",
+  "signature": "9b2eee9d7455fdbe00c08a7e74cc5ff91b2a436056c819cf47cb3dd4184592da",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03457"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0095445",
+  "certificate_id": "MN-SC-2026-9620650",
   "skill_id": "mn-gen-01649",
   "skill_name": "C64-debug-mcp",
-  "issued_at": "2026-07-06T03:54:55.445Z",
-  "expires_at": "2026-07-13T03:54:55.445Z",
+  "issued_at": "2026-07-06T03:47:00.650Z",
+  "expires_at": "2026-07-13T03:47:00.650Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6391f04bc75b474509be8bcc0d4e3395ffb4f1b39e506f33b04db853f82f2012",
+  "signature": "555956d6a5fee8cb915c4bee57099a5f6f482cfd49600a9e3220dcb9dfe7f199",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01649"
 }

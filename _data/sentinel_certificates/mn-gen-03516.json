@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0169973",
+  "certificate_id": "MN-SC-2026-9739784",
   "skill_id": "mn-gen-03516",
   "skill_name": "drift",
-  "issued_at": "2026-07-06T03:56:09.973Z",
-  "expires_at": "2026-07-13T03:56:09.973Z",
+  "issued_at": "2026-07-06T03:48:59.784Z",
+  "expires_at": "2026-07-13T03:48:59.784Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "553ce4a8e5031504e9227fc79793760a0ec9f511f0a438d85f4d9c79aafebc9c",
+  "signature": "38e42c0672b665e2f38bdfd64f71ce7135384cec6740e12e7400f532df0e053d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03516"
 }

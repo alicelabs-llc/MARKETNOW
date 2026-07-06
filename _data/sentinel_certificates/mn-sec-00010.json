@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0128734",
+  "certificate_id": "MN-SC-2026-9676298",
   "skill_id": "mn-sec-00010",
   "skill_name": "VectorGuard Pro",
-  "issued_at": "2026-07-06T03:55:28.734Z",
-  "expires_at": "2026-07-13T03:55:28.734Z",
+  "issued_at": "2026-07-06T03:47:56.298Z",
+  "expires_at": "2026-07-13T03:47:56.298Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a573dc4fbab354cabb1002bf156c9490c8ab1e7e65d1ac6772b92a6bc72365e",
+  "signature": "b50036e07e05e042b23edc8827f4a0e766738b88b64d56b6cffabbc498436b80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-00010"
 }

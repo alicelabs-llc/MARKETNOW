@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0088156",
+  "certificate_id": "MN-SC-2026-9609114",
   "skill_id": "mn-gen-01493",
   "skill_name": "Book-series-mcp",
-  "issued_at": "2026-07-06T03:54:48.156Z",
-  "expires_at": "2026-07-13T03:54:48.156Z",
+  "issued_at": "2026-07-06T03:46:49.114Z",
+  "expires_at": "2026-07-13T03:46:49.114Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "463d869ed5628a002c1e883030045c42922c74728fa4dd12162b4061ead3520c",
+  "signature": "8f133e8d0dc874b423db96ec51488b88ce6a65e95180b7cc7ce36dc3ddd36dc3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01493"
 }

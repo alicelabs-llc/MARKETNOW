@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0154483",
+  "certificate_id": "MN-SC-2026-9717331",
   "skill_id": "mn-gen-03152",
   "skill_name": "Ddc-ci-control-bridge",
-  "issued_at": "2026-07-06T03:55:54.483Z",
-  "expires_at": "2026-07-13T03:55:54.483Z",
+  "issued_at": "2026-07-06T03:48:37.331Z",
+  "expires_at": "2026-07-13T03:48:37.331Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3131841b91a65f77b624471013dba0bb55d2c14121d53e6ea90723ea56a2855b",
+  "signature": "acb6257fa3c35471eb0a2055c2f8418491de352547579147516a4206cb814872",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03152"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0049424",
+  "certificate_id": "MN-SC-2026-9685434",
   "skill_id": "mn-gen-00246",
   "skill_name": "Agent-fabric",
-  "issued_at": "2026-07-06T03:54:09.424Z",
-  "expires_at": "2026-07-13T03:54:09.424Z",
+  "issued_at": "2026-07-06T03:48:05.434Z",
+  "expires_at": "2026-07-13T03:48:05.434Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e226110173069705625271457a7486f5245ccf40ea1549e98efe793c23da755",
+  "signature": "88cb0801bc806ad1ed7f41b50aa2e01a735a4031e261aa4756c9c47530d1b149",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00246"
 }

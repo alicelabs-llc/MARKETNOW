@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0086812",
+  "certificate_id": "MN-SC-2026-9606450",
   "skill_id": "mn-dat-01429",
   "skill_name": "bldbl-mcp",
-  "issued_at": "2026-07-06T03:54:46.812Z",
-  "expires_at": "2026-07-13T03:54:46.812Z",
+  "issued_at": "2026-07-06T03:46:46.450Z",
+  "expires_at": "2026-07-13T03:46:46.450Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dca5c2aab86d12f17322134faede679d3d6535a6ca84e2791ec4a464acf560f3",
+  "signature": "b2a24b5218139c7886245f353cbb5fe8069ec713e31cf09650c623294053f80f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-01429"
 }

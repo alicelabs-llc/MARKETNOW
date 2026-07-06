@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0047449",
+  "certificate_id": "MN-SC-2026-9682517",
   "skill_id": "mn-gen-00203",
   "skill_name": "Aegis-rewrite",
-  "issued_at": "2026-07-06T03:54:07.449Z",
-  "expires_at": "2026-07-13T03:54:07.449Z",
+  "issued_at": "2026-07-06T03:48:02.517Z",
+  "expires_at": "2026-07-13T03:48:02.517Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23fe847d231fb2501a5d649b743b15bb3d855d830a32aea059fa90d720eaff3e",
+  "signature": "5e2edaed9c4693ce16a2c8c09b03141af35a0803ff543e35b741f81668aeba3f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00203"
 }

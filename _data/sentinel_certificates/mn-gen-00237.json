@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0049015",
+  "certificate_id": "MN-SC-2026-9684735",
   "skill_id": "mn-gen-00237",
   "skill_name": "Azeth-agent-commerce-demo",
-  "issued_at": "2026-07-06T03:54:09.015Z",
-  "expires_at": "2026-07-13T03:54:09.015Z",
+  "issued_at": "2026-07-06T03:48:04.735Z",
+  "expires_at": "2026-07-13T03:48:04.735Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f72fd4f9511abfeb296e26105ae569c2dd30c62ec39634de5461a6a70a36dcd",
+  "signature": "733f80f24fc1e40fd00f9ef75f9dd404a5455790b7bfebf9b44f39646c5fbbfe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00237"
 }

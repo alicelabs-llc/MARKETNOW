@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0114541",
+  "certificate_id": "MN-SC-2026-9653799",
   "skill_id": "mn-gen-02170",
   "skill_name": "Claude-mcp-config-manager",
-  "issued_at": "2026-07-06T03:55:14.541Z",
-  "expires_at": "2026-07-13T03:55:14.541Z",
+  "issued_at": "2026-07-06T03:47:33.799Z",
+  "expires_at": "2026-07-13T03:47:33.799Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1f5dc97d97a7d24fab1a100769a4e4d498d1c721b82a38977bde658b23f1203b",
+  "signature": "87f374a01706ebcbac10064b3e5ebe1227afd3d3d61dba80599bfecc8058e447",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02170"
 }

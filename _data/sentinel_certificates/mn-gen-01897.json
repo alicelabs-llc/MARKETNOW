@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0103825",
+  "certificate_id": "MN-SC-2026-9636449",
   "skill_id": "mn-gen-01897",
   "skill_name": "Chrome-extension-mcp",
-  "issued_at": "2026-07-06T03:55:03.825Z",
-  "expires_at": "2026-07-13T03:55:03.825Z",
+  "issued_at": "2026-07-06T03:47:16.449Z",
+  "expires_at": "2026-07-13T03:47:16.449Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e0b17b8cd7cb429d92959fc15cfeadd6a5f6a534edea6c02bec27aa54a086386",
+  "signature": "435479d7635a1360408cc99d20db0d06dfedc089d63ea484862f8bb190ec5758",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01897"
 }

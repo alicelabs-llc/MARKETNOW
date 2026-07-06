@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0084261",
+  "certificate_id": "MN-SC-2026-9601994",
   "skill_id": "mn-gen-01348",
   "skill_name": "Betterprompt-mcp",
-  "issued_at": "2026-07-06T03:54:44.261Z",
-  "expires_at": "2026-07-13T03:54:44.261Z",
+  "issued_at": "2026-07-06T03:46:41.994Z",
+  "expires_at": "2026-07-13T03:46:41.994Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb31f5f405f2bfc25fb2cd244580153d4cb31e967a84310cd31eee8125967a31",
+  "signature": "2bd18b924456141444abf0b764f4b1b74ce37b14f7ed4b3a958b4e242317ff09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01348"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0078957",
+  "certificate_id": "MN-SC-2026-9593667",
   "skill_id": "mn-gen-01193",
   "skill_name": "Ax-agent-studio",
-  "issued_at": "2026-07-06T03:54:38.957Z",
-  "expires_at": "2026-07-13T03:54:38.957Z",
+  "issued_at": "2026-07-06T03:46:33.667Z",
+  "expires_at": "2026-07-13T03:46:33.667Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abfaf54bc605fe83ef4d300854d5e2a2a529313841edb72a8a4006977e8b3896",
+  "signature": "f75c2669c1f0e85d91634b870e1f3319c08510d91742fc11447aeaba7c2592c9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01193"
 }

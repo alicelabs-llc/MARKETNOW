@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0059991",
+  "certificate_id": "MN-SC-2026-9561616",
   "skill_id": "mn-ai-00586",
   "skill_name": "Universal-agent-ai",
-  "issued_at": "2026-07-06T03:54:19.991Z",
-  "expires_at": "2026-07-13T03:54:19.991Z",
+  "issued_at": "2026-07-06T03:46:01.616Z",
+  "expires_at": "2026-07-13T03:46:01.616Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4d88a71305715ea59fb866eb88b9f10a075ae6cf8fff6cc0b358a9d85dcbb1f",
+  "signature": "9fabfdad398d6e5e38f68265ec25efa09717d43a0926e604091e9475e9e49910",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00586"
 }

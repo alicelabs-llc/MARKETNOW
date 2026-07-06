@@ -108,7 +108,7 @@ if (fs.existsSync(freeSkillsPath)) {
   } catch (e) { /* ignore */ }
 }
 
-const USDC_DISCLAIMER = 'USDC payments on Base are irreversible on-chain. For disputes (skill did not work as described, security issue, etc.), contact support@marketnow.site within 7 days with the txHash and skillId. AliceLabs will refund from treasury for verified disputes. See /trust for the full dispute policy.';
+const USDC_DISCLAIMER = 'USDC payments on Base are irreversible on-chain. For disputes (skill did not work as described, security issue, etc.), contact support@alicelabs.site within 7 days with the txHash and skillId. AliceLabs will refund from treasury for verified disputes. See /trust for the full dispute policy.';
 
 for (const s of skills) {
   // review_status (replaces universal 'verified: true')

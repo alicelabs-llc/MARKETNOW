@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0048975",
+  "certificate_id": "MN-SC-2026-9684727",
   "skill_id": "mn-ai-00234",
   "skill_name": "Vk0/agent-claim-mcp",
-  "issued_at": "2026-07-06T03:54:08.975Z",
-  "expires_at": "2026-07-13T03:54:08.975Z",
+  "issued_at": "2026-07-06T03:48:04.727Z",
+  "expires_at": "2026-07-13T03:48:04.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05969b6c8020098e7aa0eedcb108b92a9a0165ea482adf7cd20b7c59e93a3909",
+  "signature": "2b98b97034ab03b233403311c769be6d887d728afaf0cd9a2016654b0efb5a21",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00234"
 }

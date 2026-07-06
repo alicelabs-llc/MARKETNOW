@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0145060",
+  "certificate_id": "MN-SC-2026-9701758",
   "skill_id": "mn-gen-02845",
   "skill_name": "Cost-management-mcp",
-  "issued_at": "2026-07-06T03:55:45.060Z",
-  "expires_at": "2026-07-13T03:55:45.060Z",
+  "issued_at": "2026-07-06T03:48:21.758Z",
+  "expires_at": "2026-07-13T03:48:21.758Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01c3495e9d69a877a01bfd6b6e4f1e98ee76d7f6c401210c799b4633304adea3",
+  "signature": "8eed60afdde637e10d84f8656a49093fffde7b3143537ca3416246abaeb114ba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02845"
 }

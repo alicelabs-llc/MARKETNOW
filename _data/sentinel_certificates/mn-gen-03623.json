@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0172981",
+  "certificate_id": "MN-SC-2026-9745070",
   "skill_id": "mn-gen-03623",
   "skill_name": "Ejentum-mcp",
-  "issued_at": "2026-07-06T03:56:12.981Z",
-  "expires_at": "2026-07-13T03:56:12.981Z",
+  "issued_at": "2026-07-06T03:49:05.070Z",
+  "expires_at": "2026-07-13T03:49:05.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3a2e4398c7509b39366fd10d18e3688a883fedca95aaba4f748c02f5857c1896",
+  "signature": "66cdb4d9f870de9069911407466b3f3b1be2b0b1396f1a48751b24c34ae7ec9b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03623"
 }

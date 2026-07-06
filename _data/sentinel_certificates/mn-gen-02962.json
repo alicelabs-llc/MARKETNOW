@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0148574",
+  "certificate_id": "MN-SC-2026-9707327",
   "skill_id": "mn-gen-02962",
   "skill_name": "android-mcp-server",
-  "issued_at": "2026-07-06T03:55:48.574Z",
-  "expires_at": "2026-07-13T03:55:48.574Z",
+  "issued_at": "2026-07-06T03:48:27.327Z",
+  "expires_at": "2026-07-13T03:48:27.327Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "71f370e9cd79450225fbbd94e6924b7478722cb0067b01458c7fba463c3ca56c",
+  "signature": "c94a672ed4e8a2b62d11a161c4d241289be58f31f647579c1e1c47204f5ac38d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02962"
 }

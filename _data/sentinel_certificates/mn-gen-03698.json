@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0176285",
+  "certificate_id": "MN-SC-2026-9749590",
   "skill_id": "mn-gen-03698",
   "skill_name": "Envia-mcp",
-  "issued_at": "2026-07-06T03:56:16.285Z",
-  "expires_at": "2026-07-13T03:56:16.285Z",
+  "issued_at": "2026-07-06T03:49:09.590Z",
+  "expires_at": "2026-07-13T03:49:09.590Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "43668ec90d069b780222d602967e3734783fbdccf3626f5f3c8ce093d827f85f",
+  "signature": "f290b1ad1cd26da28f534cd42389172ef1bad58a7af61fc33d3d82309ed52eb8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03698"
 }

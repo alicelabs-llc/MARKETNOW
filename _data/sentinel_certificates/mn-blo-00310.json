@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0052959",
+  "certificate_id": "MN-SC-2026-9548694",
   "skill_id": "mn-blo-00310",
   "skill_name": "Kaditang/agent-wallet-mcp",
-  "issued_at": "2026-07-06T03:54:12.959Z",
-  "expires_at": "2026-07-13T03:54:12.959Z",
+  "issued_at": "2026-07-06T03:45:48.694Z",
+  "expires_at": "2026-07-13T03:45:48.694Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4998624367d5e3fb724102b5d5849ecb7c81f90cd0fa17587fd187edfd6a435d",
+  "signature": "deeea0955b499a4dcb413c390db0c1112e86e3b2dc5386af3cfff04802058740",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-00310"
 }

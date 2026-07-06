@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0146428",
+  "certificate_id": "MN-SC-2026-9703929",
   "skill_id": "mn-gen-02881",
   "skill_name": "Crawlbase/mcp",
-  "issued_at": "2026-07-06T03:55:46.428Z",
-  "expires_at": "2026-07-13T03:55:46.428Z",
+  "issued_at": "2026-07-06T03:48:23.929Z",
+  "expires_at": "2026-07-13T03:48:23.929Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6bab284572e98496bf0fe7952b958e812f315b6b97369f5d290e51f848beaa9",
+  "signature": "b96a6de9218ff7914cbf60907e164718b15cc0bcc5287931f7d5f60d235520e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02881"
 }

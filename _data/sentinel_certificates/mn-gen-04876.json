@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0216388",
+  "certificate_id": "MN-SC-2026-9820920",
   "skill_id": "mn-gen-04876",
   "skill_name": "Hemmabo-mcp-server",
-  "issued_at": "2026-07-06T03:56:56.388Z",
-  "expires_at": "2026-07-13T03:56:56.388Z",
+  "issued_at": "2026-07-06T03:50:20.920Z",
+  "expires_at": "2026-07-13T03:50:20.920Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b5283083a853841afc902c49a221da4a61f6a1bc7d5620a5e5ab000d71174a4",
+  "signature": "e242ec2ec7e20cc3137a3c1eebdd547e33bba481e09439117804e584ac6058a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04876"
 }

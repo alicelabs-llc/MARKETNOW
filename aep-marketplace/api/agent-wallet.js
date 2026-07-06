@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         amount: 'skill.price USDC (e.g., 1.99 USDC for a $1.99 skill)',
         contract: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
         to: '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee',
-        note: '1 USDC = 1 USD. Send exact amount or more.',
+        note: '1 USDC = 1 USD. Send the EXACT amount. Sending more will be rejected and funds are irreversible on-chain.',
       },
       step4_verify: {
         action: 'POST /api/agent-purchase',

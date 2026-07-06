@@ -141,13 +141,30 @@ async function handleCertificate(req, res) {
 
     if (certRes.status === 200) {
       const cert = await certRes.json();
+
+      // SECURITY FIX: Actually verify the certificate signature server-side.
+      // Previously the endpoint returned valid: true without checking —
+      // "teatro de verificación". Now we call verifyCertificate() which
+      // recomputes the SHA-256 hash and compares it to the stored signature.
+      const { verifyCertificate } = await import('../lib/sentinel-audit.mjs');
+      const CERT_SECRET = process.env.SENTINEL_CERT_SECRET || 'marketnow-sentinel-default-secret-2026';
+      let signatureValid = false;
+      try {
+        signatureValid = await verifyCertificate(cert, CERT_SECRET);
+      } catch (e) {
+        console.error('Certificate verification error:', e.message);
+      }
+
       return res.status(200).json({
         status: 'certified',
         certificate: cert,
         verification: {
-          valid: true,
-          message: 'Certificate signature is valid (verified server-side).',
+          valid: signatureValid,
+          message: signatureValid
+            ? 'Certificate signature verified server-side (SHA-256).'
+            : 'WARNING: Certificate signature does NOT match. This certificate may be tampered.',
           verification_url: cert.verification_url,
+          verified_at: new Date().toISOString(),
         },
       });
     }

@@ -697,24 +697,38 @@ export default async function handler(req, res) {
         return res.status(404).json({ error: 'Mandate not found' });
       }
       // AUTONOMOUS PURCHASE ALLOWANCE CHECK
+      // BUG FIX: was `updated = await updateMandateRecord(...)` which crashes
+      // with TypeError: Assignment to constant variable (updated is const).
+      // This was triggered every time an agent hit the AUTONOMOUS_PURCHASE_LIMIT
+      // (3 purchases), crashing the /api/mandates?action=spend endpoint with 500
+      // instead of cleanly setting the mandate to requires_reapproval.
+      // Fix: use a separate `let` variable for the re-approval update.
       const autonomousRemaining = AUTONOMOUS_PURCHASE_LIMIT - (updated.txCount || 0);
       const requiresReapproval = autonomousRemaining <= 0;
-      
+      let finalMandate = updated;
+
       if (requiresReapproval) {
-        updated = await updateMandateRecord(id, (m) => {
+        finalMandate = await updateMandateRecord(id, (m) => {
           if (!m) return null;
           m.status = 'requires_reapproval';
           m.reapprovalReason = `Autonomous purchase limit (${AUTONOMOUS_PURCHASE_LIMIT}) reached. Human must re-approve.`;
           return m;
         });
+        // If the re-approval update failed, still return the original updated record
+        // but flag that re-approval is needed (don't crash)
+        if (!finalMandate) {
+          finalMandate = updated;
+          finalMandate.status = 'requires_reapproval';
+          finalMandate.reapprovalReason = `Autonomous purchase limit (${AUTONOMOUS_PURCHASE_LIMIT}) reached. Human must re-approve.`;
+        }
       }
       
       return res.status(200).json({
         success: true,
-        mandate: updated,
-        remaining: updated.spendingLimitUsd - updated.spentUsd,
-        notification_sent: updated.notificationMode !== 'silent',
-        notification_mode: updated.notificationMode,
+        mandate: finalMandate,
+        remaining: finalMandate.spendingLimitUsd - finalMandate.spentUsd,
+        notification_sent: finalMandate.notificationMode !== 'silent',
+        notification_mode: finalMandate.notificationMode,
         autonomous_remaining: Math.max(0, autonomousRemaining),
         requires_reapproval: requiresReapproval,
         message: requiresReapproval 

@@ -82,9 +82,24 @@ function checkRateLimit(req, res, tier = 'general') {
 }
 
 function getClientIp(req) {
+  // SECURITY FIX: Use x-vercel-forwarded-for (Vercel's trusted header) first.
+  // This header is set by Vercel's edge network and CANNOT be spoofed by clients.
+  // Then fall back to the LAST value in x-forwarded-for (the real client IP
+  // added by the proxy), NOT the first value (which can be spoofed by the client).
+  //
+  // Previously: xff.split(',')[0] — the client could send a fake
+  // X-Forwarded-For: 1.2.3.4 header, and we'd use that as the IP,
+  // bypassing rate limits entirely.
+  const vercelIp = req.headers['x-vercel-forwarded-for'];
+  if (vercelIp) {
+    return vercelIp.split(',').pop().trim();
+  }
   const xff = req.headers['x-forwarded-for'];
   if (xff) {
-    return xff.split(',')[0].trim();
+    // Use the LAST value — proxies append the real client IP at the end.
+    // The first value can be client-controlled and spoofed.
+    const parts = xff.split(',').map(s => s.trim());
+    return parts[parts.length - 1] || 'unknown';
   }
   if (req.headers['x-real-ip']) {
     return req.headers['x-real-ip'];

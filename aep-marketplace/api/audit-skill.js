@@ -147,7 +147,24 @@ async function handleCertificate(req, res) {
       // "teatro de verificación". Now we call verifyCertificate() which
       // recomputes the SHA-256 hash and compares it to the stored signature.
       const { verifyCertificate } = await import('../lib/sentinel-audit.mjs');
-      const CERT_SECRET = process.env.SENTINEL_CERT_SECRET || 'marketnow-sentinel-default-secret-2026';
+      // SECURITY FIX: NO fallback secret. If SENTINEL_CERT_SECRET is missing,
+      // we fail LOUD — return valid: false with an error message. Using a
+      // hardcoded fallback secret would allow anyone to forge certificates
+      // (the old default 'marketnow-sentinel-default-secret-2026' is now
+      // public in git history and must never be used again).
+      const CERT_SECRET = process.env.SENTINEL_CERT_SECRET;
+      if (!CERT_SECRET) {
+        console.error('CRITICAL: SENTINEL_CERT_SECRET env var is not set. Certificate verification cannot be performed.');
+        return res.status(200).json({
+          status: 'certified',
+          certificate: cert,
+          verification: {
+            valid: false,
+            message: 'ERROR: Server misconfiguration — SENTINEL_CERT_SECRET is not set. Certificate signature cannot be verified. Contact support@marketnow.site.',
+            verified_at: new Date().toISOString(),
+          },
+        });
+      }
       let signatureValid = false;
       try {
         signatureValid = await verifyCertificate(cert, CERT_SECRET);

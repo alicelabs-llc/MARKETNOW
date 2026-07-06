@@ -51,9 +51,21 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Check SENTINEL_CERT_SECRET is set
+        env:
+          SENTINEL_CERT_SECRET: ${{ secrets.SENTINEL_CERT_SECRET }}
+        run: |
+          if [ -z "$SENTINEL_CERT_SECRET" ]; then
+            echo "::error::SENTINEL_CERT_SECRET GitHub Actions secret is not set."
+            echo "::error::The old default secret is PUBLIC in git history and must never be used."
+            echo "::error::Set the secret in: Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+          echo "✓ SENTINEL_CERT_SECRET is set (length: ${#SENTINEL_CERT_SECRET})"
+
       - name: Run batch audit
         env:
-          SENTINEL_CERT_SECRET: ${{ secrets.SENTINEL_CERT_SECRET || 'marketnow-sentinel-default-secret-2026' }}
+          SENTINEL_CERT_SECRET: ${{ secrets.SENTINEL_CERT_SECRET }}
           MANDATES_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAX_SKILLS: ${{ github.event.inputs.max_skills || '0' }}
           ONLY_SKILL: ${{ github.event.inputs.skill_id || '' }}

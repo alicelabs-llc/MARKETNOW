@@ -51,7 +51,18 @@ const REPO_ROOT = path.join(__dirname, '..');
 const SKILLS_PATH = path.join(REPO_ROOT, 'aep-marketplace', 'public', 'api', 'skills_index.json');
 const CERTS_DIR = path.join(REPO_ROOT, '_data', 'sentinel_certificates');
 
-const CERT_SECRET = process.env.SENTINEL_CERT_SECRET || 'marketnow-sentinel-default-secret-2026';
+// SECURITY: NO fallback secret. The old default 'marketnow-sentinel-default-secret-2026'
+// is now public in git history and must never be used. If SENTINEL_CERT_SECRET
+// is not set, we fail LOUD — no certificates are generated.
+const CERT_SECRET = process.env.SENTINEL_CERT_SECRET;
+if (!CERT_SECRET) {
+  console.error('✗ CRITICAL: SENTINEL_CERT_SECRET env var is not set.');
+  console.error('  Without this secret, certificates cannot be signed and verified.');
+  console.error('  Set it in GitHub Actions secrets and Vercel env vars.');
+  console.error('  The old default secret (marketnow-sentinel-default-secret-2026) is');
+  console.error('  PUBLIC in git history and must NEVER be used again.');
+  process.exit(1);
+}
 
 // CLI args
 const args = process.argv.slice(2);

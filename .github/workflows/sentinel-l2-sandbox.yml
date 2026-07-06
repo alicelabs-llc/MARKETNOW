@@ -118,13 +118,34 @@ jobs:
           BUILD_DIR="/tmp/mcp-server/$SUBPATH"
           REPO_ROOT="/tmp/mcp-server"
           bash scripts/l2-build-docker.sh "$BUILD_DIR" "$REPO_ROOT"
-      - name: Run L2 Behavioral Sandbox Audit (v2.0 — ACTIVE testing)
+      - name: Run L2.5 Sandbox Audit (gVisor + Active MCP Probe + Seccomp)
         env:
           SKILL_ID: ${{ steps.vars.outputs.skill_id }}
         run: |
           mkdir -p /tmp/l2_output
 
-          # ═══ PHASE 1: Passive Docker run with strace ═══
+          # ═══ L2.5: Try to install gVisor ═══
+          echo "=== Installing gVisor (runsc) ==="
+          (
+            wget -q https://storage.googleapis.com/gvisor/releases/nightly/latest/runsc -O /usr/local/bin/runsc
+            chmod +x /usr/local/bin/runsc
+            docker run --rm --privileged --entrypoint /bin/true alpine 2>/dev/null
+            # Register runsc as a Docker runtime
+            echo '{"runtimes":{"runsc":{"path":"/usr/local/bin/runsc"}}}' > /etc/docker/daemon.json 2>/dev/null || true
+            systemctl restart docker 2>/dev/null || true
+            sleep 3
+          ) || true
+
+          # Verify gVisor
+          if docker info 2>/dev/null | grep -q runsc; then
+            echo "✓ gVisor (runsc) is available"
+          else
+            echo "⚠ gVisor not available — using enhanced seccomp profile (L2.5 fallback)"
+          fi
+
+          # ═══ PHASE 1: Sandbox run (gVisor or enhanced Docker) ═══
+          echo "=== Phase 1: L2.5 Sandbox ==="
+          bash scripts/l2-gvisor-sandbox.sh mcp-audit-target "$SKILL_ID" 60
           # Run the MCP server in complete isolation with strace monitoring.
           # strace captures ALL syscalls: open, connect, execve, fork, chmod, etc.
           # This is REAL syscall-level monitoring, not just stdout grep.

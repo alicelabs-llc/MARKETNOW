@@ -33,6 +33,7 @@
 import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from '../lib/sentinel-l16.mjs';
 import { triggerL2, getL2Results } from '../lib/sentinel-l2-trigger.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
+import { findSkill } from '../lib/skills-cache.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -380,15 +381,11 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'skillId required' });
     }
 
-    // Fetch skill
-    // H1 FIX: Don't trust req.headers.host (spoofable). Use VERCEL_URL or fallback.
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL.replace(/^https?:\/\//, '')}`
-      : 'https://marketnow.site';
-    const skillsRes = await fetch(`${baseUrl}/api/skills.json`);
-    if (!skillsRes.ok) throw new Error('Failed to fetch skills');
-    const skills = await skillsRes.json();
-    const skill = skills.find(s => s.id === skillId || s.slug === skillId);
+    // Fetch skill — use local cache (skills-cache.mjs) instead of self-fetch.
+    // H1 FIX: Previously used req.headers.host for self-fetch (SSRF risk).
+    // H3 FIX: Self-fetch of 40MB skills.json was slow and no rate limit.
+    // Now uses findSkill() which reads from local filesystem (fast, no network).
+    const skill = await findSkill(skillId);
     
     if (!skill) {
       return res.status(404).json({ error: 'Skill not found' });

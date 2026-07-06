@@ -1,18 +1,18 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "MarketNow",
-  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payment protocol, and human-in-the-loop-by-default agent spending. 11,115 MCP servers, B2B pricing. MIT licensed, maintained by AliceLabs LLC.",
+  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payment protocol, and human-in-the-loop-by-default agent spending. 11,115 MCP servers, B2B pricing. AliceLabs LLC proprietary (see SENTINEL-LICENSE), maintained by AliceLabs LLC.",
   "url": "https://marketnow.site",
   "api_base": "https://marketnow.site/api",
   "positioning": {
-    "what_we_are": "The trust layer for agent commerce. Not the biggest catalog — the safest place for an agent to spend real money.",
+    "what_we_are": "The trust layer for agent commerce. Not the biggest catalog \u2014 the safest place for an agent to spend real money.",
     "what_we_are_not": "A discovery registry. Use registry.modelcontextprotocol.io, Smithery, Glama, or PulseMCP for discovery. Use MarketNow for trust: security audits, payment verification, mandate enforcement, dispute resolution.",
-    "wedge": "The official MCP registry solves discovery but has 64.7M entries from 1,691 packages — massive duplication, zero signal, active supply-chain attacks. MarketNow is the trust layer on top of any catalog.",
+    "wedge": "The official MCP registry solves discovery but has 64.7M entries from 1,691 packages \u2014 massive duplication, zero signal, active supply-chain attacks. MarketNow is the trust layer on top of any catalog.",
     "standards": {
-      "payments": "x402 (HTTP 402 Payment Required) — implementing, governed by Linux Foundation with Coinbase, Cloudflare, Stripe, Google, Visa",
-      "mandates": "AP2 (Agent Payments Protocol) — implementing, by Google with Visa/Mastercard/PayPal/Coinbase + 60 partners",
-      "discovery": "MCP Server Cards — monitoring, will adopt when spec stabilizes",
-      "identity": "MCP Registry namespace verification — planning, via GitHub OAuth or DNS"
+      "payments": "x402 (HTTP 402 Payment Required) \u2014 implementing, governed by Linux Foundation with Coinbase, Cloudflare, Stripe, Google, Visa",
+      "mandates": "AP2 (Agent Payments Protocol) \u2014 implementing, by Google with Visa/Mastercard/PayPal/Coinbase + 60 partners",
+      "discovery": "MCP Server Cards \u2014 monitoring, will adopt when spec stabilizes",
+      "identity": "MCP Registry namespace verification \u2014 planning, via GitHub OAuth or DNS"
     },
     "standards_page": "https://marketnow.site/standards"
   },
@@ -21,9 +21,9 @@
     "summary": "Three purchase modes designed for both human oversight and agent autonomy. Human-in-the-loop is the default; silent autonomous spending is opt-in only.",
     "default_notification_mode": "notify",
     "notification_modes": {
-      "notify": "DEFAULT — agent buys autonomously, principal gets email/webhook alert on every purchase",
+      "notify": "DEFAULT \u2014 agent buys autonomously, principal gets email/webhook alert on every purchase",
       "notify_and_veto": "agent buys, principal gets alert + 5-minute veto window (veto flow on roadmap)",
-      "silent": "fully autonomous, no alerts. Requires explicit confirmSilentAutonomy=true field — opt-in only"
+      "silent": "fully autonomous, no alerts. Requires explicit confirmSilentAutonomy=true field \u2014 opt-in only"
     },
     "modes": [
       {
@@ -35,9 +35,9 @@
       },
       {
         "mode": "instant_purchase",
-        "applies_to": "Paid skills where a valid mandate exists and price <= perPurchaseCapUsd and price <= (spendingLimit - spent). Default notificationMode is 'notify' — the principal is alerted on every purchase.",
+        "applies_to": "Paid skills where a valid mandate exists and price <= perPurchaseCapUsd and price <= (spendingLimit - spent). Default notificationMode is 'notify' \u2014 the principal is alerted on every purchase.",
         "agent_action": "POST /api/agent-purchase with {skillId, mandateId, txHash, walletAddress}",
-        "human_action": "None required at purchase time — but receives a notification (email/webhook) immediately after. Can revoke the mandate at any time.",
+        "human_action": "None required at purchase time \u2014 but receives a notification (email/webhook) immediately after. Can revoke the mandate at any time.",
         "response": "license key + system_prompt after on-chain USDC verification; mandate ledger updated; notification sent"
       },
       {
@@ -50,13 +50,13 @@
     ],
     "guarantees": [
       "Every paid purchase is verified on-chain via eth_getTransactionReceipt on Base",
-      "Every mandate spend is recorded in a public git commit at _data/mandates/ — auditable in the repo history",
-      "Mandates default to 'notify' mode — the principal is alerted on every purchase",
-      "'silent' mode (no notifications) requires explicit confirmSilentAutonomy=true — opt-in only",
+      "Every mandate spend is recorded in a public git commit at _data/mandates/ \u2014 auditable in the repo history",
+      "Mandates default to 'notify' mode \u2014 the principal is alerted on every purchase",
+      "'silent' mode (no notifications) requires explicit confirmSilentAutonomy=true \u2014 opt-in only",
       "Mandates can be revoked instantly by the principal (human wallet owner) from /mandates",
       "Hard caps: max $500 total per mandate, max $50 per single purchase (cannot be raised)",
       "Default 90-day expiry; mandates auto-expire",
-      "Sentinel L1.5 security audit is self-declared — see /trust for the full disclosure and roadmap to third-party audit"
+      "Sentinel L1.5 security audit is self-declared \u2014 see /trust for the full disclosure and roadmap to third-party audit"
     ]
   },
   "pricing": {
@@ -123,7 +123,7 @@
     "agent_instructions": {
       "method": "GET",
       "path": "/api/agent.json",
-      "returns": "This file — machine-readable agent instructions"
+      "returns": "This file \u2014 machine-readable agent instructions"
     },
     "search": {
       "method": "GET",
@@ -144,8 +144,8 @@
       "body": {
         "skillId": "string (required)",
         "walletAddress": "string (required for paid)",
-        "txHash": "string (required for paid — USDC Transfer on Base)",
-        "mandateId": "string (optional — enables autonomous purchase within pre-approved limit)",
+        "txHash": "string (required for paid \u2014 USDC Transfer on Base)",
+        "mandateId": "string (optional \u2014 enables autonomous purchase within pre-approved limit)",
         "agentId": "string (optional)"
       },
       "response_modes": [
@@ -184,7 +184,7 @@
     "audit_skill": {
       "method": "POST",
       "path": "/api/audit-skill",
-      "description": "Sentinel L1.5+L1.6+L2 security audit — runs 3 layers: 6 metadata checks + 18 Semgrep rules + 18 secret patterns + OSV API + L2 Docker sandbox results",
+      "description": "Sentinel L1.5+L1.6+L2 security audit \u2014 runs 3 layers: 6 metadata checks + 18 Semgrep rules + 18 secret patterns + OSV API + L2 Docker sandbox results",
       "checks": [
         "AUTH",
         "TOOL_DESCRIPTIONS (prompt injection)",
@@ -291,20 +291,20 @@
     "currency": "string, always 'USD'",
     "payment": "string, always 'one-time'",
     "license": "string, always 'AliceLabs LLC' (MarketNow licenses are issued by AliceLabs LLC)",
-    "verified": "boolean — DEPRECATED. True only for human-reviewed skills (43 today). Use review_status instead.",
-    "review_status": "string — one of: 'auto-scanned' (Sentinel L1.5 ran, no human review — 8,517 skills today), 'human-reviewed' (a human at AliceLabs inspected the repo — 43 skills today), 'maintainer-verified' (GitHub maintainer signed a claim of authorship — 0 today, program not launched)",
-    "permissions": "object — { network: string[], filesystem: string[], env_vars: string[], subprocess: bool, disclosure: string }. Declarative only — not enforced at runtime. See /trust.",
-    "source": "object — { type: 'github' | 'curated' | 'bulk-import', url: str | null, note: string }. Discloses where the skill listing came from.",
-    "usdc_disclaimer": "string — standard text on every skill explaining USDC is irreversible on-chain and the dispute process",
+    "verified": "boolean \u2014 DEPRECATED. True only for human-reviewed skills (43 today). Use review_status instead.",
+    "review_status": "string \u2014 one of: 'auto-scanned' (Sentinel L1.5 ran, no human review \u2014 8,517 skills today), 'human-reviewed' (a human at AliceLabs inspected the repo \u2014 43 skills today), 'maintainer-verified' (GitHub maintainer signed a claim of authorship \u2014 0 today, program not launched)",
+    "permissions": "object \u2014 { network: string[], filesystem: string[], env_vars: string[], subprocess: bool, disclosure: string }. Declarative only \u2014 not enforced at runtime. See /trust.",
+    "source": "object \u2014 { type: 'github' | 'curated' | 'bulk-import', url: str | null, note: string }. Discloses where the skill listing came from.",
+    "usdc_disclaimer": "string \u2014 standard text on every skill explaining USDC is irreversible on-chain and the dispute process",
     "sentinel_score": "number, 0-10, security audit score",
     "install": "string, shell command to install the skill",
     "author": "string, upstream repo owner",
     "version": "string, semver"
   },
   "workflow_for_agents": {
-    "step_1_discover": "GET /api/search?q=your_query — find a skill",
+    "step_1_discover": "GET /api/search?q=your_query \u2014 find a skill",
     "step_2_evaluate": "Read description, tags, sentinel_score, system_prompt preview",
-    "step_3_choose_mode": "If skill.price == 0 → call agent-purchase with just skillId. If paid and you have a mandateId → send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If paid and no mandate → ask the human to either approve via Stripe or create a mandate at /mandates.",
+    "step_3_choose_mode": "If skill.price == 0 \u2192 call agent-purchase with just skillId. If paid and you have a mandateId \u2192 send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If paid and no mandate \u2192 ask the human to either approve via Stripe or create a mandate at /mandates.",
     "step_4_purchase": "POST /api/agent-purchase",
     "step_5_install": "Run the 'install' field as a shell command, e.g. npx -y @marketnow/install <slug>",
     "step_6_use": "Call the skill from your agent runtime using the system_prompt + capabilities returned"
@@ -312,7 +312,7 @@
   "rate_limits": {
     "anonymous": "60 requests per minute to /api/* endpoints",
     "authenticated": "600 requests per minute to /api/* endpoints",
-    "bulk_download_hint": "Cache /api/skills.json locally — refresh every 24h max"
+    "bulk_download_hint": "Cache /api/skills.json locally \u2014 refresh every 24h max"
   },
   "authentication": {
     "optional": "Most read endpoints are public (no auth required)",
@@ -334,7 +334,7 @@
     "name": "marketnow-mcp",
     "version": "1.1.0",
     "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
-    "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
+    "description": "MarketNow as an MCP server \u2014 search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
     "install": "npx -y marketnow-mcp",
     "tools": [
       "search_skills",
@@ -386,9 +386,9 @@
     "license": "MIT",
     "open_source": false,
     "github": "https://github.com/alicelabs-llc",
-    "maintainer": "AliceLabs LLC (Wyoming, USA, founded 2025) — founder Edison Flores. Public GitHub org: github.com/alicelabs-llc",
-    "security_audit": "Sentinel L1.5 (self-declared, automated 6-point MCP security scan). Third-party audit pending — see /trust.",
-    "human_oversight": "Default mandate mode is 'notify' — humans are alerted on every purchase. Silent autonomous mode requires explicit opt-in.",
+    "maintainer": "AliceLabs LLC (Wyoming, USA, founded 2025) \u2014 founder Edison Flores. Public GitHub org: github.com/alicelabs-llc",
+    "security_audit": "Sentinel L1.5 (self-declared, automated 6-point MCP security scan). Third-party audit pending \u2014 see /trust.",
+    "human_oversight": "Default mandate mode is 'notify' \u2014 humans are alerted on every purchase. Silent autonomous mode requires explicit opt-in.",
     "track_record_disclosure": "AliceLabs LLC founded 2025 in Wyoming, USA. MarketNow launched publicly 2026. Founder Edison Flores is Ecuadorian. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
     "public_roadmap": "https://marketnow.site/trust",
     "source_available": true

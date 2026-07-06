@@ -1,5 +1,5 @@
 ![smithery badge](https://smithery.ai/badge/eddyflores100/marketnow)](https://smithery.ai/servers/eddyflores100/marketnow)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Sentinel Certified](https://img.shields.io/badge/Sentinel-Certified%208%2C582%20skills%20%F0%9F%9B%A1%EF%B8%8F-00F299)](https://marketnow.site/sentinel-transparency)
 
 # MarketNow — Trust Layer for Agent Commerce
@@ -37,7 +37,7 @@
 <!-- END CANONICAL METADATA -->
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Sentinel Certified](https://img.shields.io/badge/🛡️_Sentinel-Certified%208%2C582-00F299)](https://marketnow.site/sentinel-transparency)
 
 ## 🤖 What is MarketNow?
@@ -208,17 +208,20 @@ MarketNow uses B2B pricing — no per-skill purchases:
 
 ## 📜 License & IP Protection
 
-This repository contains TWO categories of code with DIFFERENT licenses:
+**ALL code in this repository is PROPRIETARY — property of AliceLabs LLC.**
 
-| Component | License | Can copy? | Can build competing product? |
-|-----------|---------|-----------|------------------------------|
-| **Marketplace code** (UI, API, search) | MIT (Open Source) | ✅ Yes | ✅ Yes |
-| **Sentinel audit engine** | Proprietary (All Rights Reserved) | ❌ No | ❌ No |
-| **Sentinel badges** (SVG) | CC-BY 4.0 | ✅ Display only | ❌ No |
-| **"Sentinel" name & logo** | Trademark™ | ❌ No | ❌ No |
+| Component | License | Can copy? | Can build competing product? | Can commercialize? |
+|-----------|---------|-----------|------------------------------|-------------------|
+| **Marketplace code** (UI, API, search) | AliceLabs LLC Proprietary | ❌ No | ❌ No | ❌ Requires written permission |
+| **Sentinel audit engine** | AliceLabs LLC Proprietary | ❌ No | ❌ No | ❌ Requires written permission |
+| **Sentinel badges** (SVG) | CC-BY 4.0 (display only) | ✅ Display only | ❌ No | ❌ No |
+| **"Sentinel" name & logo** | Trademark™ AliceLabs LLC | ❌ No | ❌ No | ❌ No |
+| **"MarketNow" name** | Trademark™ AliceLabs LLC | ❌ No | ❌ No | ❌ No |
+
+**Anyone who wants to commercialize, redistribute, or build upon any part of this codebase MUST obtain written permission from AliceLabs LLC.**
 
 See:
-- [LICENSE](./LICENSE) — Full license summary (MIT + Proprietary + CC-BY)
+- [LICENSE](./LICENSE) — Full license terms (Proprietary)
 - [SENTINEL-LICENSE](./SENTINEL-LICENSE) — Sentinel proprietary license terms
 - [TRADEMARK_NOTICE](./TRADEMARK_NOTICE) — Trademark usage guidelines
 - [CLA](./CLA) — Contributor License Agreement
@@ -231,4 +234,4 @@ Report IP violations: **legal@marketnow.site**
 
 ---
 
-**Built for autonomous agents. Every skill has a signed Sentinel certificate, a ready-to-use system prompt, and auto-configured install. The marketplace code is open source. The Sentinel audit engine is proprietary. What you pay for is trust, certification, and integration.**
+**Built for autonomous agents. Every skill has a signed Sentinel certificate, a ready-to-use system prompt, and auto-configured install. ALL code is proprietary property of AliceLabs LLC. Commercial use requires written permission.**

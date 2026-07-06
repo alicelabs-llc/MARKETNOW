@@ -81,9 +81,11 @@ Analyzes stdout for: network attempts, fs writes, process spawns, credential lea
 | Risk Level | Count | Score |
 |---|---|---|
 | Low | 6 | 10/10 |
-| Medium | 8,474 | 6-9/10 |
-| High | 91 | 2-4/10 |
+| Medium | 8,473 | 6-9/10 |
+| High | 92 | 2-4/10 |
 | Critical | 11 | 0-1/10 |
+
+**L2 coverage**: 17 of 8,582 skills (0.2%) have L2 Docker sandbox results. The remaining 8,565 are certified with L1.5+L1.6 (static analysis). L2 coverage grows as more skills get `source.url` populated — L2 requires a GitHub repo to clone and run in the sandbox.
 
 Each skill gets a **signed SHA-256 certificate** with:
 - `certificate_id` (MN-SC-2026-XXXXXXX)

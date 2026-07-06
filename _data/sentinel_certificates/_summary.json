@@ -1,26 +1,27 @@
 {
-  "generated_at": "2026-07-05T23:45:08.514Z",
+  "generated_at": "2026-07-06T02:10:17.388Z",
   "total_certified": 8582,
   "total_failed": 0,
   "by_risk": {
     "low": 6,
-    "medium": 8474,
-    "high": 91,
+    "medium": 8473,
+    "high": 92,
     "critical": 11,
     "unknown": 0
   },
   "by_score": {
     "0": 8,
-    "1": 2,
+    "1": 3,
     "2": 8,
     "3": 19,
     "4": 28,
     "5": 30,
     "6": 774,
-    "7": 1485,
+    "7": 1484,
     "8": 3013,
     "9": 3209,
     "10": 6
   },
-  "with_l2": 0
+  "with_l2": 17,
+  "l2_coverage_pct": "0.20%"
 }

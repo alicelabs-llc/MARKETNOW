@@ -213,6 +213,14 @@ export default function SentinelTransparency() {
                 );
               })}
             </div>
+
+            {/* Honest L2 rollout disclosure — don't oversell */}
+            <div className="p-3 rounded bg-orange-500/5 border border-orange-500/10 text-orange-400/80 text-xs leading-relaxed mb-4">
+              <strong className="text-orange-400">⚠️ L2 rollout in progress:</strong>{' '}
+              {l2.completed_runs || 0} of {certCount.toLocaleString()} skills ({certCount > 0 ? ((l2.completed_runs || 0) / certCount * 100).toFixed(2) : 0}%) have L2 results.
+              The remaining {certCount - (l2.completed_runs || 0)} are certified with L1.5+L1.6 (static analysis only).
+              L2 coverage grows as more skills get source.url populated.
+            </div>
             {l2Summaries.length > 0 && (
               <div className="space-y-1 max-h-48 overflow-y-auto">
                 <div className="text-zinc-500 text-xs uppercase tracking-wider mb-2">Recently Audited Skills</div>

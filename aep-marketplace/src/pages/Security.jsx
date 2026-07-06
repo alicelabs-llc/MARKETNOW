@@ -229,6 +229,7 @@ const CONTENT = {
       l2None: 'No L2 sandbox results yet — they appear here automatically after the first /api/audit-skill call for a skill with a GitHub repo.',
       l2Dedup: 'Dedup window',
       l2DedupValue: '30 min (per Vercel instance, prevents duplicate dispatches)',
+      l2RolloutNote: 'L2 rollout in progress — currently 17 of 8,582 skills have L2 results. The remaining 8,565 are certified with L1.5+L1.6 (static analysis). L2 coverage grows as more skills get source.url populated.',
       viewRaw: '→ View raw JSON in repo',
       refresh: '↻ Refresh',
       loading: 'Loading live audit data…',
@@ -1559,6 +1560,11 @@ export default function Security() {
                   <span className="text-zinc-500">{ls.l2Dedup}:</span>
                   <span className="text-zinc-300 font-mono">{ls.l2DedupValue}</span>
                 </div>
+                {ls.l2RolloutNote && (
+                  <div className="mt-2 p-2 rounded bg-orange-500/5 border border-orange-500/10 text-orange-400/80 text-[10px] leading-relaxed">
+                    ⚠️ {ls.l2RolloutNote}
+                  </div>
+                )}
               </div>
             </div>
           )}

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * ⚠️ SENTINEL PROPRIETARY — Copyright (c) 2026 AliceLabs LLC. All Rights Reserved.
  *
@@ -12,7 +13,6 @@
  * For verification: https://marketnow.site/verify
  */
 
-#!/usr/bin/env node
 /**
  * MarketNow — GitHub Issue Monitor
  * =================================

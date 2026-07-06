@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * ⚠️ SENTINEL PROPRIETARY — Copyright (c) 2026 AliceLabs LLC. All Rights Reserved.
  *
@@ -12,7 +13,6 @@
  * For verification: https://marketnow.site/verify
  */
 
-#!/usr/bin/env node
 /**
  * MarketNow — Batch Audit All Skills + Generate Sentinel Certificates
  * ====================================================================
@@ -185,10 +185,46 @@ async function processBatch(batch, batchNum) {
   if (DRY_RUN) {
     console.log(`\n[DRY RUN] No certificates written. Re-run without --dry-run to commit.`);
   } else {
-    console.log(`\n✅ ${stats.certified || stats.audited} certificates written to _data/sentinel_certificates/`);
+    // ─── Regenerate _summary.json by scanning ALL certificate files ──────
+    // Bug fix: previously the summary only counted stats from THIS run,
+    // which meant certificates from previous runs (especially those with
+    // L2 results) were not included. Now we scan the entire directory
+    // to get accurate totals.
+    console.log(`\nRegenerating _summary.json by scanning all certificate files...`);
+    const allFiles = fs.readdirSync(CERTS_DIR).filter(f => f.endsWith('.json') && f !== '_summary.json');
+    const summaryByRisk = { low: 0, medium: 0, high: 0, critical: 0, unknown: 0 };
+    const summaryByScore = {};
+    let summaryWithL2 = 0;
+
+    for (const f of allFiles) {
+      try {
+        const cert = JSON.parse(fs.readFileSync(path.join(CERTS_DIR, f), 'utf8'));
+        if (cert.risk_level) summaryByRisk[cert.risk_level] = (summaryByRisk[cert.risk_level] || 0) + 1;
+        if (cert.overall_score !== undefined) summaryByScore[cert.overall_score] = (summaryByScore[cert.overall_score] || 0) + 1;
+        if (cert.layers_run?.l2 === true) summaryWithL2++;
+      } catch (e) {}
+    }
+
+    const summary = {
+      generated_at: new Date().toISOString(),
+      total_certified: allFiles.length,
+      total_failed: stats.failed,
+      by_risk: summaryByRisk,
+      by_score: summaryByScore,
+      with_l2: summaryWithL2,
+      l2_coverage_pct: allFiles.length > 0 ? (summaryWithL2 / allFiles.length * 100).toFixed(2) + '%' : '0%',
+    };
+    fs.writeFileSync(
+      path.join(CERTS_DIR, '_summary.json'),
+      JSON.stringify(summary, null, 2)
+    );
+    console.log(`✅ Summary regenerated: ${allFiles.length} certified, ${summaryWithL2} with L2 (${summary.l2_coverage_pct})`);
+
+    console.log(`\n✅ ${stats.audited} certificates written to _data/sentinel_certificates/`);
+    console.log(`   Summary: _data/sentinel_certificates/_summary.json`);
     console.log(`\nNext steps:`);
     console.log(`  1. git add _data/sentinel_certificates/`);
-    console.log(`  2. git commit -m "sentinel: batch audit ${stats.audited} skills — ${stats.by_risk.low} low, ${stats.by_risk.medium} medium, ${stats.by_risk.high} high, ${stats.by_risk.critical} critical"`);
+    console.log(`  2. git commit -m "sentinel: batch audit ${stats.audited} skills — ${summaryByRisk.low} low, ${summaryByRisk.medium} medium, ${summaryByRisk.high} high, ${summaryByRisk.critical} critical"`);
     console.log(`  3. git push`);
   }
 })();

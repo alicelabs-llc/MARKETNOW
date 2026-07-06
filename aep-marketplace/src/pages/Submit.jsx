@@ -1153,6 +1153,38 @@ If all checks pass, merge this skill into \`public/api/skills_index.json\` via P
                 </button>
               </div>
             </form>
+
+            {/* Sentinel Certification Preview — shows what badge the skill will get */}
+            <div className="mt-6 pt-6 border-t border-white/10">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">🛡️</span>
+                <h3 className="text-white text-sm font-semibold">Sentinel Certification Preview</h3>
+              </div>
+              <p className="text-zinc-500 text-xs mb-4">
+                Once your skill is listed, it will receive a signed Sentinel certificate with a verified score. Here's what buyers will see:
+              </p>
+              <div className="bg-black/30 rounded-lg p-4 flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className={`px-3 py-1.5 rounded font-mono text-xs border ${
+                    scanResult?.passed
+                      ? 'bg-[#00F299]/10 text-[#00F299] border-[#00F299]/20'
+                      : 'bg-orange-500/10 text-orange-400 border-orange-500/20'
+                  }`}>
+                    🛡️ CERTIFIED {scanResult?.score || '?'}/10
+                  </div>
+                  <div className="text-zinc-500 text-xs">
+                    <div>Badge in your skill page + README</div>
+                    <div className="text-zinc-600 text-[10px]">Color-coded by risk level</div>
+                  </div>
+                </div>
+                <Link to="/verify" className="text-[#00d1ff] text-xs hover:underline whitespace-nowrap">
+                  → See how it looks
+                </Link>
+              </div>
+              <div className="mt-3 text-zinc-600 text-[10px] font-mono">
+                Markdown: <span className="text-zinc-400">[![Sentinel Certified](https://marketnow.site/badges/sentinel-certified-{'{skillId}'}.svg)](https://marketnow.site/skill/{'{skillId}'})</span>
+              </div>
+            </div>
           </motion.div>
         )}
 
@@ -1168,6 +1200,21 @@ If all checks pass, merge this skill into \`public/api/skills_index.json\` via P
             <p className="text-zinc-400 mb-6 max-w-md mx-auto">
               {c.submittedBody}
             </p>
+
+            {/* Sentinel certification info post-submit */}
+            <div className="bg-[#00F299]/5 border border-[#00F299]/10 rounded-lg p-4 mb-6 max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <span className="text-lg">🛡️</span>
+                <span className="text-[#00F299] text-sm font-semibold">Sentinel Certified</span>
+              </div>
+              <p className="text-zinc-400 text-xs mb-3">
+                Once listed, your skill will receive a signed certificate with a verified score. Buyers can verify it anytime at:
+              </p>
+              <Link to="/verify" className="text-[#00d1ff] text-xs hover:underline font-mono">
+                marketnow.site/verify
+              </Link>
+            </div>
+
             <div className="flex gap-3 justify-center">
               <Link
                 to="/registry"

@@ -38,7 +38,11 @@ Works with Claude Desktop, Cursor, Cline, Continue, Aider.
 - GET /api/openapi.json — OpenAPI 3.1 specification
 - POST /api/agent-purchase — Buy a skill (x402 + USDC on Base)
 - GET /api/mandates — Delegated mandates (AP2 compatible)
-- POST /api/audit-skill — Run Sentinel L1.5 security audit
+- POST /api/audit-skill — Run Sentinel L1.5+L1.6+L2 real-time security audit
+- GET /api/audit-skill?certificate=1&skillId=X — Retrieve signed Sentinel certificate for a skill
+- GET /api/audit-skill?sentinel-status=1 — Aggregate Sentinel status (batch audit + L2 coverage + certified count)
+- GET /verify — Public certificate verification page (https://marketnow.site/verify)
+- GET /badges/sentinel-certified-{skillId}.svg — SVG badge for embedding in READMEs
 
 ### Payment
 - USDC on Base (chainId 8453)
@@ -49,8 +53,10 @@ Works with Claude Desktop, Cursor, Cline, Continue, Aider.
 ### Trust model
 - review_status: auto-scanned (8,517) | human-reviewed (43) | maintainer-verified (0)
 - Sentinel L1.5: 6-point MCP security scan (AUTH, injection, validation, CORS, OAuth, rate limiting)
-- Sentinel L1.6: 18 Semgrep rules + Gitleaks + OSV-Scanner (live in production)
-- Sentinel L2: Docker sandbox with --network none, --read-only, --cap-drop ALL (implemented)
+- Sentinel L1.6: 18 Semgrep rules + 18 secret patterns + OSV API (live in production)
+- Sentinel L2: Docker sandbox (--network none, --read-only, --cap-drop ALL) via GitHub Actions
+- Sentinel Certificates: 8,582 skills certified with signed SHA-256 certificates (weekly batch)
+- Certificate verification: GET /api/audit-skill?certificate=1&skillId=X or https://marketnow.site/verify
 - Risk levels: green (prompt-only) / yellow (network/env) / red (subprocess)
 
 ## Links

@@ -184,15 +184,69 @@
     "audit_skill": {
       "method": "POST",
       "path": "/api/audit-skill",
-      "description": "Sentinel L1.5 security audit — 6-point MCP security scan",
+      "description": "Sentinel L1.5+L1.6+L2 security audit — runs 3 layers: 6 metadata checks + 18 Semgrep rules + 18 secret patterns + OSV API + L2 Docker sandbox results",
       "checks": [
         "AUTH",
         "TOOL_DESCRIPTIONS (prompt injection)",
         "INPUT_VALIDATION",
         "CORS_ORIGIN",
         "OAUTH_SCOPES",
-        "RATE_LIMITING_ERROR_LEAKAGE"
-      ]
+        "RATE_LIMITING_ERROR_LEAKAGE",
+        "L1.6 SEMGREP RULES (18 MCP-specific patterns)",
+        "L1.6 SECRET DETECTION (Stripe, AWS, GitHub, JWT, private keys)",
+        "L1.6 OSV DEPENDENCIES (real-time api.osv.dev)",
+        "L2 Docker sandbox (if skill has GitHub repo)"
+      ],
+      "returns": {
+        "overall_score": "0-10 (L1.5 + L1.6 adjusted by L2 multiplier)",
+        "risk_level": "low | medium | high | critical",
+        "risk_breakdown": {
+          "l15_l16": "risk from static analysis",
+          "l2": "risk from Docker sandbox (or 'not_available')",
+          "final": "worst of l15_l16 and l2"
+        }
+      }
+    },
+    "certificate_lookup": {
+      "method": "GET",
+      "path": "/api/audit-skill?certificate=1&skillId={skillId}",
+      "description": "Retrieve the signed Sentinel certificate for a skill. Certificates are regenerated weekly by the batch audit (Sunday 01:00 UTC) and signed with SHA-256.",
+      "params": {
+        "certificate": "must be '1'",
+        "skillId": "the skill ID (e.g., mn-gen-00003)"
+      },
+      "returns": {
+        "status": "certified | not_audited",
+        "certificate": {
+          "certificate_id": "MN-SC-2026-XXXXXXX",
+          "skill_id": "string",
+          "skill_name": "string",
+          "issued_at": "ISO 8601 timestamp",
+          "expires_at": "ISO 8601 timestamp (7 days from issue)",
+          "overall_score": "0-10",
+          "risk_level": "low | medium | high | critical",
+          "risk_breakdown": "object",
+          "layers_run": { "l15": "boolean", "l16": "boolean", "l2": "boolean" },
+          "layer_details": "object with findings per layer",
+          "signature": "SHA-256 hex string",
+          "signature_algorithm": "SHA-256",
+          "verification_url": "https://marketnow.site/verify?skillId=X"
+        }
+      },
+      "example": "GET https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00003"
+    },
+    "sentinel_status": {
+      "method": "GET",
+      "path": "/api/audit-skill?sentinel-status=1",
+      "description": "Aggregate Sentinel status: latest L1.6 batch audit, L2 sandbox coverage, and total certified skills count.",
+      "returns": {
+        "l16_batch": "latest weekly batch audit results (Semgrep + Gitleaks + OSV)",
+        "l2_sandbox": "Docker sandbox coverage with per-skill summaries",
+        "certificates": {
+          "count": "total certified skills (from _summary.json)",
+          "by_risk": "object with low/medium/high/critical counts"
+        }
+      }
     },
     "verify_purchase": {
       "method": "GET",

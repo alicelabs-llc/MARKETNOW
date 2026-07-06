@@ -81,6 +81,7 @@ import BuyersGuide from "./pages/BuyersGuide";
 import Onboarding from "./pages/Onboarding";
 import SentinelRoadmap from "./pages/SentinelRoadmap";
 import VerifyCertificate from "./pages/VerifyCertificate";
+import SentinelTransparency from "./pages/SentinelTransparency";
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -107,7 +108,7 @@ function App() {
         '/handshake', '/policies', '/submit', '/pricing', '/dashboard', '/mandates',
         '/trust', '/about', '/catalog', '/embed', '/standards', '/listings',
         '/blog', '/compare', '/buyers-guide', '/onboarding', '/sentinel-roadmap',
-        '/verify',
+        '/verify', '/sentinel-transparency',
       ];
       // Allow /skill/:id pattern (starts with /skill/)
       const isSkillRoute = p.startsWith('/skill/') && p.length > 7 && p.length < 100;
@@ -172,6 +173,7 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/sentinel-roadmap" element={<SentinelRoadmap />} />
           <Route path="/verify" element={<VerifyCertificate />} />
+          <Route path="/sentinel-transparency" element={<SentinelTransparency />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* /dashboard is now publicly accessible */}
         </Routes>

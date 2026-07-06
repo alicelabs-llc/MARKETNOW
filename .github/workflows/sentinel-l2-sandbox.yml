@@ -124,15 +124,18 @@ jobs:
         run: |
           mkdir -p /tmp/l2_output
           SUBPATH=$(cat /tmp/mcp-server-subpath.txt)
+          # Save the repo root (GitHub Actions checkout dir) so we can find scripts
+          # after we cd into the MCP server dir for npm install / probe.
+          REPO_WS="$GITHUB_WORKSPACE"
 
           # ═══ L2.5: Try to install gVisor ═══
           echo "=== Installing gVisor (runsc) ==="
           (
-            wget -q https://storage.googleapis.com/gvisor/releases/nightly/latest/runsc -O /usr/local/bin/runsc
-            chmod +x /usr/local/bin/runsc
-            # Register runsc as a Docker runtime
-            echo '{"runtimes":{"runsc":{"path":"/usr/local/bin/runsc"}}}' > /etc/docker/daemon.json 2>/dev/null || true
-            systemctl restart docker 2>/dev/null || service docker restart 2>/dev/null || true
+            sudo wget -q https://storage.googleapis.com/gvisor/releases/nightly/latest/runsc -O /usr/local/bin/runsc
+            sudo chmod +x /usr/local/bin/runsc
+            # Register runsc as a Docker runtime (needs root)
+            echo '{"runtimes":{"runsc":{"path":"/usr/local/bin/runsc"}}}' | sudo tee /etc/docker/daemon.json > /dev/null
+            sudo systemctl restart docker 2>/dev/null || sudo service docker restart 2>/dev/null || true
             sleep 3
           ) || true
 
@@ -155,7 +158,7 @@ jobs:
           #         + /tmp/l2_output/fs_diff.txt (filesystem changes)
           #         + /tmp/l2_output/suspicious_files.txt (if .ssh/.env/cron detected)
           echo "=== Phase 1: L2.5 Sandbox (gVisor or enhanced seccomp) ==="
-          bash scripts/l2-gvisor-sandbox.sh mcp-audit-target "$SKILL_ID" 60
+          bash "$REPO_WS/scripts/l2-gvisor-sandbox.sh" mcp-audit-target "$SKILL_ID" 60
 
           # ═══ PHASE 2: Active MCP probe (adversarial testing) ═══
           # Start the server WITHOUT Docker isolation (but in a restricted env)
@@ -165,23 +168,25 @@ jobs:
 
           # Determine the entrypoint command
           ENTRYPOINT=""
-          if [ -f "/tmp/mcp-server/$SUBPATH/package.json" ]; then
-            ENTRYPOINT=$(python3 scripts/l2-detect-entrypoint.py "/tmp/mcp-server/$SUBPATH/package.json" "node")
-            cd "/tmp/mcp-server/$SUBPATH"
+          MCP_DIR="/tmp/mcp-server/$SUBPATH"
+          if [ -f "$MCP_DIR/package.json" ]; then
+            ENTRYPOINT=$(python3 "$REPO_WS/scripts/l2-detect-entrypoint.py" "$MCP_DIR/package.json" "node")
+            cd "$MCP_DIR"
             npm install --no-audit --no-fund 2>/dev/null || true
             if grep -q '"typescript"' package.json 2>/dev/null; then
               npm run build 2>/dev/null || npx tsc 2>/dev/null || true
             fi
-          elif [ -f "/tmp/mcp-server/$SUBPATH/pyproject.toml" ]; then
-            ENTRYPOINT=$(python3 scripts/l2-detect-entrypoint.py "/tmp/mcp-server/$SUBPATH/pyproject.toml" "python")
-            cd "/tmp/mcp-server/$SUBPATH"
+          elif [ -f "$MCP_DIR/pyproject.toml" ]; then
+            ENTRYPOINT=$(python3 "$REPO_WS/scripts/l2-detect-entrypoint.py" "$MCP_DIR/pyproject.toml" "python")
+            cd "$MCP_DIR"
             pip install -e . 2>/dev/null || pip install -r requirements.txt 2>/dev/null || true
           fi
 
           if [ -n "$ENTRYPOINT" ]; then
             echo "  Running probe with: $ENTRYPOINT"
             # Run the MCP probe — sends initialize, tools/list, tools/call with adversarial inputs
-            python3 scripts/l2-mcp-probe.py --command "$ENTRYPOINT" --timeout 30 --output /tmp/l2_output/probe_results.json || true
+            # Use absolute path to the probe script (we may be cd'd into MCP_DIR)
+            python3 "$REPO_WS/scripts/l2-mcp-probe.py" --command "$ENTRYPOINT" --timeout 30 --output /tmp/l2_output/probe_results.json || true
           else
             echo "  No entrypoint found — skipping active probe"
             echo '{"error": "no entrypoint found", "summary": {"tools_discovered": 0, "tools_tested": 0, "adversarial_findings": 0, "errors": 0}}' > /tmp/l2_output/probe_results.json
@@ -194,8 +199,10 @@ jobs:
           touch /tmp/l2_output/strace.log
 
           # ═══ PHASE 4: Run L2.5 analysis (6 layers) ═══
+          # cd back to repo root so the analyzer can find its expected paths
+          cd "$REPO_WS"
           echo "=== Phase 4: L2.5 Analysis (gVisor + seccomp + suspicious files + probe) ==="
-          python3 scripts/l2-analyze.py
+          python3 "$REPO_WS/scripts/l2-analyze.py"
 
       - name: Commit L2 results to repo (with retry on race)
         env:

@@ -204,10 +204,29 @@ MarketNow uses B2B pricing — no per-skill purchases:
 - **OpenAPI**: https://marketnow.site/api/openapi.json
 - **Agent instructions**: https://marketnow.site/api/agent.json
 
-## 📜 License
+## 📜 License & IP Protection
 
-MIT — The marketplace code is open source. Individual skills retain their original licenses.
+This repository contains TWO categories of code with DIFFERENT licenses:
+
+| Component | License | Can copy? | Can build competing product? |
+|-----------|---------|-----------|------------------------------|
+| **Marketplace code** (UI, API, search) | MIT (Open Source) | ✅ Yes | ✅ Yes |
+| **Sentinel audit engine** | Proprietary (All Rights Reserved) | ❌ No | ❌ No |
+| **Sentinel badges** (SVG) | CC-BY 4.0 | ✅ Display only | ❌ No |
+| **"Sentinel" name & logo** | Trademark™ | ❌ No | ❌ No |
+
+See:
+- [LICENSE](./LICENSE) — Full license summary (MIT + Proprietary + CC-BY)
+- [SENTINEL-LICENSE](./SENTINEL-LICENSE) — Sentinel proprietary license terms
+- [TRADEMARK_NOTICE](./TRADEMARK_NOTICE) — Trademark usage guidelines
+- [CLA](./CLA) — Contributor License Agreement
+
+**Patent pending** on the 3-layer audit pipeline design (L1.5 → L1.6 → L2).
+
+For licensing inquiries: **legal@marketnow.site**
+
+Report IP violations: **legal@marketnow.site**
 
 ---
 
-**Built for autonomous agents. Every skill has a signed Sentinel certificate, a ready-to-use system prompt, and auto-configured install. The code is open source. What you pay for is trust, certification, and integration.**
+**Built for autonomous agents. Every skill has a signed Sentinel certificate, a ready-to-use system prompt, and auto-configured install. The marketplace code is open source. The Sentinel audit engine is proprietary. What you pay for is trust, certification, and integration.**

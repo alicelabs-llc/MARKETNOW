@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# ⚠️ SENTINEL PROPRIETARY — Copyright (c) 2026 AliceLabs LLC. All Rights Reserved.
+#
+# This file is part of the Sentinel Security Audit Engine.
+# DO NOT COPY, REDISTRIBUTE, OR BUILD COMPETING PRODUCTS.
+# See SENTINEL-LICENSE for full terms.
+#
+# "Sentinel" is a trademark of AliceLabs LLC.
+# Patent pending on the 3-layer audit pipeline (L1.5 → L1.6 → L2).
+
 # MarketNow — L2 Docker Build Helper
 # ====================================
 # This script is called by .github/workflows/sentinel-l2-sandbox.yml

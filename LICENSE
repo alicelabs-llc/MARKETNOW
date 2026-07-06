@@ -1,77 +1,108 @@
-# MarketNow Non-Commercial License (MNNC)
+MarketNow License Summary
+==========================
 
-Version 1.0 — July 2026
-Copyright © 2026 AliceLabs LLC. All rights reserved.
+This repository contains TWO categories of code with DIFFERENT licenses:
 
-## Permitted Uses
+╔══════════════════════════════════════════════════════════════════╗
+║  CATEGORY 1: MARKETPLACE CODE — MIT License (Open Source)       ║
+╚══════════════════════════════════════════════════════════════════╝
 
-You MAY:
-- ✅ View, read, and analyze the source code
-- ✅ Download and clone the repository
-- ✅ Run the software locally for personal, non-commercial use
-- ✅ Study the security implementation (Sentinel, sandbox, audit rules)
-- ✅ Fork the repository for personal learning
-- ✅ Submit issues, pull requests, and security reports
-- ✅ Reference the code in academic papers, blog posts, or documentation
-- ✅ Use the Semgrep rules and sandbox scripts for personal security audits
-- ✅ Link to the project from other projects or articles
+The marketplace UI, API endpoints (search, purchase, mandates), and
+infrastructure code is licensed under the MIT License.
 
-## Prohibited Uses
+MIT License
 
-You may NOT:
-- ❌ Commercialize this software in any form
-- ❌ Sell, sublicense, or distribute this software for profit
-- ❌ Use this software as part of a commercial product or service
-- ❌ Host a public instance of this marketplace for paying customers
-- ❌ Remove or alter this license, copyright notices, or attribution
-- ❌ Use the AliceLabs LLC name, logo, or branding without written permission
-- ❌ Copy the Sentinel security rules, sandbox scripts, or audit methodology
-  into a competing commercial product
-- ❌ Use the skills catalog, skill metadata, or curated data in a
-  competing marketplace or commercial service
+Copyright (c) 2026 AliceLabs LLC
 
-## Commercial License
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-For commercial use of any part of this software, including:
-- Hosting a public marketplace instance
-- Using Sentinel rules in a commercial security product
-- Integrating the skills catalog into a paid service
-- White-labeling or reselling any component
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Contact AliceLabs LLC for a commercial license:
-- Email: contacto@alicelabs.site
-- Website: https://alicelabs.site
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-## Attribution
+Files covered by MIT:
+  - src/pages/*.jsx (UI pages, EXCEPT Security.jsx which documents Sentinel)
+  - src/components/*.jsx
+  - src/utils/*.js (EXCEPT sentinel-related utilities)
+  - api/search.js
+  - api/categories.js
+  - api/manifest.js
+  - api/create-checkout-session.js
+  - api/stripe-webhook.js
+  - api/verify-purchase.js
+  - api/agent-purchase.js
+  - api/agent-wallet.js
+  - api/mandates.js
+  - api/bundles.js
+  - api/report-skill.js
+  - lib/skills-cache.mjs
+  - lib/rate-limit.mjs
+  - lib/cors.mjs
+  - lib/mandate-cache.mjs
+  - lib/tx-cache.mjs
+  - lib/base-rpc-pool.mjs
 
-This software is built and maintained by AliceLabs LLC.
-Any fork, derivative, or reference must include visible attribution:
+╔══════════════════════════════════════════════════════════════════╗
+║  CATEGORY 2: SENTINEL AUDIT ENGINE — Proprietary License         ║
+╚══════════════════════════════════════════════════════════════════╝
 
-> "Based on MarketNow by AliceLabs LLC — https://marketnow.site"
+The Sentinel security audit engine is PROPRIETARY and All Rights Reserved.
+See SENTINEL-LICENSE for full terms.
 
-## Security Research Exemption
+You may NOT copy, redistribute, or build competing products using the
+Sentinel architecture without express written permission from AliceLabs LLC.
 
-Security researchers MAY:
-- Test the software for vulnerabilities (including running it locally)
-- Publish findings following responsible disclosure (90-day window)
-- Use the Sentinel rules and sandbox scripts to audit third-party MCP servers
-  (personal use, not as a commercial service)
+Files covered by Sentinel Proprietary License:
+  - lib/sentinel-audit.mjs          (audit engine + certificate signing)
+  - lib/sentinel-l16.mjs            (L1.6 static analysis: Semgrep + secrets + OSV)
+  - lib/sentinel-l2-trigger.mjs     (L2 Docker sandbox trigger)
+  - api/audit-skill.js              (audit endpoint + certificate lookup)
+  - scripts/l2-analyze.py           (L2 behavioral analysis)
+  - scripts/l2-build-docker.sh      (L2 Docker image builder)
+  - scripts/l2-parse-url.py         (L2 URL parser)
+  - scripts/audit-all-skills.mjs    (batch certification script)
+  - scripts/generate-badges.mjs     (badge generator)
+  - .github/workflows/sentinel-l16-audit.yml
+  - .github/workflows/sentinel-l2-sandbox.yml
+  - .github/workflows/sentinel-l2-reaudit.yml
+  - .github/workflows/sentinel-certify-all.yml
+  - The Sentinel certificate format (MN-SC-YYYY-XXXXXXX)
+  - The 3-layer audit pipeline design (L1.5 → L1.6 → L2)
+  - The certificate signing algorithm (SHA-256 + secret)
+  - The behavioral analysis patterns (network_attempts, credential_leakage, etc.)
+  - The execution_status taxonomy (ran, ran_idle, failed_to_start)
 
-## Disclaimer
+╔══════════════════════════════════════════════════════════════════╗
+║  CATEGORY 3: BADGE ASSETS — CC-BY 4.0                           ║
+╚══════════════════════════════════════════════════════════════════╝
 
-THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
-AliceLabs LLC is not liable for any damages arising from the use of this software.
+The "Sentinel Certified" SVG badges are licensed under Creative Commons
+Attribution 4.0 International (CC-BY 4.0).
 
-## Contact
+Skill authors MAY display the badges in their READMEs when their skill
+has been certified by MarketNow. Attribution must include a link to
+https://marketnow.site/verify.
 
-- AliceLabs LLC
-- Wyoming, USA
-- Email: contacto@alicelabs.site
-- Website: https://alicelabs.site
-- GitHub: https://github.com/alicelabs-llc
+╔══════════════════════════════════════════════════════════════════╗
+║  TRADEMARK NOTICE                                                ║
+╚══════════════════════════════════════════════════════════════════╝
 
----
+"Sentinel", "Sentinel Certified", "MarketNow", and the Sentinel shield
+logo are trademarks of AliceLabs LLC. See TRADEMARK_NOTICE for details.
 
-This license is not open source in the traditional sense (MIT, Apache, GPL).
-It is a **source-available, non-commercial license** — you can see everything,
-but you cannot make money from it without our permission.
+=====================================================================
+
+For licensing inquiries: legal@marketnow.site
+AliceLabs LLC — Wyoming, USA — https://marketnow.site

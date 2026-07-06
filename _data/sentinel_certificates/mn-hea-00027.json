@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0760778",
+  "certificate_id": "MN-SC-2026-6098177",
   "skill_id": "mn-hea-00027",
   "skill_name": "Claim Submission MCP",
-  "issued_at": "2026-07-06T04:06:00.778Z",
-  "expires_at": "2026-07-13T04:06:00.778Z",
+  "issued_at": "2026-07-06T05:34:58.177Z",
+  "expires_at": "2026-07-13T05:34:58.177Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c315235686b35aa65d7d16e4daafdc05381a16d1ac1dff04bd49d7102aeba59",
+  "signature": "b0660e2f139d9c1f97f7a5fb991722f477682c370bfe487622603c460b48b51a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00027"
 }

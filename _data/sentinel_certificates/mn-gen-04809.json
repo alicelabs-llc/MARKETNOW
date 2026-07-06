@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9817177",
+  "certificate_id": "MN-SC-2026-5480010",
   "skill_id": "mn-gen-04809",
   "skill_name": "Hackbrowser-mcp",
-  "issued_at": "2026-07-06T03:50:17.177Z",
-  "expires_at": "2026-07-13T03:50:17.177Z",
+  "issued_at": "2026-07-06T05:24:40.010Z",
+  "expires_at": "2026-07-13T05:24:40.010Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ea88f11fe190e0c54c1233aaaf920d5c9bf7580afd8ae71592e624e82d62f57",
+  "signature": "fa50922c6a85b4de48bca0f9aa005e11a8940c6b491c91aa9e3cfec8cab86819",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04809"
 }

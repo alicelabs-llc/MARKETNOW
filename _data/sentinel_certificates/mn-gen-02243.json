@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9659086",
+  "certificate_id": "MN-SC-2026-5367901",
   "skill_id": "mn-gen-02243",
   "skill_name": "Claude-playwright",
-  "issued_at": "2026-07-06T03:47:39.086Z",
-  "expires_at": "2026-07-13T03:47:39.086Z",
+  "issued_at": "2026-07-06T05:22:47.901Z",
+  "expires_at": "2026-07-13T05:22:47.901Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a5dc29c7210baa1c35a4c2dce3a10c06fda01301593730b7ebf064d3cb3947ad",
+  "signature": "be6ccd87157132752cce683f2a93698dfb2ef2ab41672bc834d6ed6184bd375a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02243"
 }

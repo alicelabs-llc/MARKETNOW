@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0901892",
+  "certificate_id": "MN-SC-2026-6263495",
   "skill_id": "mn-awmcp-periscopemcp",
   "skill_name": "periscope-mcp",
-  "issued_at": "2026-07-06T04:08:21.892Z",
-  "expires_at": "2026-07-13T04:08:21.892Z",
+  "issued_at": "2026-07-06T05:37:43.495Z",
+  "expires_at": "2026-07-13T05:37:43.495Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "98a0d410925f72471c41e427b4272a0111714c472fe20f5f89ef377929642db0",
+  "signature": "cc7c7f2dfde6b0a6d86b6579963aec2062b7a717fd5cafe5d0c7a3066c719e0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-periscopemcp"
 }

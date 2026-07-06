@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0231670",
+  "certificate_id": "MN-SC-2026-5502433",
   "skill_id": "mn-gen-05323",
   "skill_name": "jobgpt-mcp-server",
-  "issued_at": "2026-07-06T03:57:11.670Z",
-  "expires_at": "2026-07-13T03:57:11.670Z",
+  "issued_at": "2026-07-06T05:25:02.433Z",
+  "expires_at": "2026-07-13T05:25:02.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac3924da7685282ce79e6e3c591562635a2c831f5899be88426a7c29688c3b70",
+  "signature": "a56cae1ac406c475ceb93a68a07b922d56135b1f6c55aa19f542c4280d698665",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05323"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9634103",
+  "certificate_id": "MN-SC-2026-5352172",
   "skill_id": "mn-gen-01865",
   "skill_name": "Cherry-chrome-mcp",
-  "issued_at": "2026-07-06T03:47:14.103Z",
-  "expires_at": "2026-07-13T03:47:14.103Z",
+  "issued_at": "2026-07-06T05:22:32.172Z",
+  "expires_at": "2026-07-13T05:22:32.172Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d154c72aff2367547a9f59fc4fdb50170bce49ffb38e1c08d9f13e497e446f10",
+  "signature": "faf33e3f1398790a4bbe3de65e052aae94509feaf973968fae4ae886f295d058",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01865"
 }

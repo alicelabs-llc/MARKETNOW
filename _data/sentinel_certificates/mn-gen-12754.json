@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0509763",
+  "certificate_id": "MN-SC-2026-5803132",
   "skill_id": "mn-gen-12754",
   "skill_name": "topaz-mcp",
-  "issued_at": "2026-07-06T04:01:49.763Z",
-  "expires_at": "2026-07-13T04:01:49.763Z",
+  "issued_at": "2026-07-06T05:30:03.132Z",
+  "expires_at": "2026-07-13T05:30:03.132Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9763804aff6f977831c82a4b0e616fbb5e858c40fe34b48adb30a01aeac8c1da",
+  "signature": "7390bcb50a4d7b73b81a2c1bb4a61c234ae8853fe31142519742f273b1c516d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12754"
 }

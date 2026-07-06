@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1061467",
+  "certificate_id": "MN-SC-2026-6453303",
   "skill_id": "mn-real-vesselapimcp",
   "skill_name": "vesselapi-mcp",
-  "issued_at": "2026-07-06T04:11:01.467Z",
-  "expires_at": "2026-07-13T04:11:01.467Z",
+  "issued_at": "2026-07-06T05:40:53.303Z",
+  "expires_at": "2026-07-13T05:40:53.303Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3849dbfc1ffd44bf0eb33e7d76992c499790df1edc860cda83922143004aaeb3",
+  "signature": "3484edd88c4ae137e7b08a6fd111c096257e0613a88bf4ae4f6fbf52b5171277",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vesselapimcp"
 }

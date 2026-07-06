@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0902833",
+  "certificate_id": "MN-SC-2026-6264632",
   "skill_id": "mn-awmcp-transcriptormcp",
   "skill_name": "transcriptor-mcp",
-  "issued_at": "2026-07-06T04:08:22.833Z",
-  "expires_at": "2026-07-13T04:08:22.833Z",
+  "issued_at": "2026-07-06T05:37:44.632Z",
+  "expires_at": "2026-07-13T05:37:44.632Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "b6e3cd4946fc7cb51d2e41333fc20337a8df71d13ee963a0a564349db74e6155",
+  "signature": "7332481e10d6ec2a50e69ceec3412aca518224fe437a44198c333e448756d0e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-transcriptormcp"
 }

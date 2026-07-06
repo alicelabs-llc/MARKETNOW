@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0258380",
+  "certificate_id": "MN-SC-2026-5532376",
   "skill_id": "mn-gen-06121",
   "skill_name": "Matrix-mcp",
-  "issued_at": "2026-07-06T03:57:38.380Z",
-  "expires_at": "2026-07-13T03:57:38.380Z",
+  "issued_at": "2026-07-06T05:25:32.376Z",
+  "expires_at": "2026-07-13T05:25:32.376Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1710aba7500ba186043a15c162c7f6c252cac5c15a70df563fb3ebe7af267bcb",
+  "signature": "94aa29c8377abe803ef066fe9de1069e380f63b4bc8189779cd852f9780df354",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06121"
 }

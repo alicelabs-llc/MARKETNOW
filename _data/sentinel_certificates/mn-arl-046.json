@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0731681",
+  "certificate_id": "MN-SC-2026-6063662",
   "skill_id": "mn-arl-046",
   "skill_name": "Agent Reflection Engine",
-  "issued_at": "2026-07-06T04:05:31.681Z",
-  "expires_at": "2026-07-13T04:05:31.681Z",
+  "issued_at": "2026-07-06T05:34:23.662Z",
+  "expires_at": "2026-07-13T05:34:23.662Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4edb679a3a728a077eedb0741da78fb4be65cd59ceb1d8ff8c2c4f59570b81f",
+  "signature": "0d442fac3b5e1b5141a58e9fec5fd6aee6faf183539bad3af11910657435abf8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-046"
 }

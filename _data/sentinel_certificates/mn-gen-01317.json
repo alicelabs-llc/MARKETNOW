@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9600534",
+  "certificate_id": "MN-SC-2026-5328932",
   "skill_id": "mn-gen-01317",
   "skill_name": "my-bear-mcp-server",
-  "issued_at": "2026-07-06T03:46:40.534Z",
-  "expires_at": "2026-07-13T03:46:40.534Z",
+  "issued_at": "2026-07-06T05:22:08.932Z",
+  "expires_at": "2026-07-13T05:22:08.932Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "744554c0ba0275522b392d8e82826e17fd0a10e7c87762930c5aa9a3d21de263",
+  "signature": "5d3d216a938555135079c9ba38ad396079bde9151143c172703497ec6f100bdb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01317"
 }

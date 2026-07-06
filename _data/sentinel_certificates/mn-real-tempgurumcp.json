@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1068341",
+  "certificate_id": "MN-SC-2026-6461842",
   "skill_id": "mn-real-tempgurumcp",
   "skill_name": "tempguru-mcp",
-  "issued_at": "2026-07-06T04:11:08.341Z",
-  "expires_at": "2026-07-13T04:11:08.341Z",
+  "issued_at": "2026-07-06T05:41:01.842Z",
+  "expires_at": "2026-07-13T05:41:01.842Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "898055d41164b38f05069162542f6e04da8942dbb6570dbd5704b8f658345432",
+  "signature": "0d41e75e44444a507a0f92e41fab7ed3fef5e84f34d83aa99a781eb78519a0a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tempgurumcp"
 }

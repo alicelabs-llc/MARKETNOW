@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0264938",
+  "certificate_id": "MN-SC-2026-5540008",
   "skill_id": "mn-gen-06309",
   "skill_name": "Mcp-brex",
-  "issued_at": "2026-07-06T03:57:44.938Z",
-  "expires_at": "2026-07-13T03:57:44.938Z",
+  "issued_at": "2026-07-06T05:25:40.008Z",
+  "expires_at": "2026-07-13T05:25:40.008Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9ade581904ca7d0da745d62887c86e6467f804ce72c6389f2beeba3aa453a1c6",
+  "signature": "00c680da4e099bc0e857435160a4379acf7cda79e7b4418b80a79bc65c57aac2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06309"
 }

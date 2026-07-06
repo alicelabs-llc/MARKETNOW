@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0952344",
+  "certificate_id": "MN-SC-2026-6323317",
   "skill_id": "mn-real-callout",
   "skill_name": "callout",
-  "issued_at": "2026-07-06T04:09:12.344Z",
-  "expires_at": "2026-07-13T04:09:12.344Z",
+  "issued_at": "2026-07-06T05:38:43.317Z",
+  "expires_at": "2026-07-13T05:38:43.317Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "239e2e967c7abf14184834b14f4fab1085ffd29c120d3eee8662a5763d322c85",
+  "signature": "d3ade2ac39d11c3b8dd1c7fe2ae7c9e9787561f622695907baebe6fda8258e69",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-callout"
 }

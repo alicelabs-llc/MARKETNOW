@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0483366",
+  "certificate_id": "MN-SC-2026-5775258",
   "skill_id": "mn-gen-12054",
   "skill_name": "Spec2tools-monorepo",
-  "issued_at": "2026-07-06T04:01:23.366Z",
-  "expires_at": "2026-07-13T04:01:23.366Z",
+  "issued_at": "2026-07-06T05:29:35.258Z",
+  "expires_at": "2026-07-13T05:29:35.258Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "27454b8b24f728bca752aa5261523be3709482bcaddc925f5a1551dd6c343b1a",
+  "signature": "cd5bd0ae116c6a17ff6bbeaabd67291654ca12ea8f9688dc68b69a043328d396",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12054"
 }

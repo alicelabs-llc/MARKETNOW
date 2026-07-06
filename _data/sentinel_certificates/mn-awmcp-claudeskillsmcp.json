@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0885325",
+  "certificate_id": "MN-SC-2026-6245597",
   "skill_id": "mn-awmcp-claudeskillsmcp",
   "skill_name": "claude-skills-mcp",
-  "issued_at": "2026-07-06T04:08:05.325Z",
-  "expires_at": "2026-07-13T04:08:05.325Z",
+  "issued_at": "2026-07-06T05:37:25.597Z",
+  "expires_at": "2026-07-13T05:37:25.597Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "55d2f2d66753eb8bf288d2b622bb594b11dc93c8a169ff9efaa2c21826efc975",
+  "signature": "9f398f108b1480ccca8ae66b029a817b3ab5659d297f409ccbe2b807fe8ad605",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-claudeskillsmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0474223",
+  "certificate_id": "MN-SC-2026-5765963",
   "skill_id": "mn-gen-11825",
   "skill_name": "Sitefire-bing-mcp",
-  "issued_at": "2026-07-06T04:01:14.223Z",
-  "expires_at": "2026-07-13T04:01:14.223Z",
+  "issued_at": "2026-07-06T05:29:25.963Z",
+  "expires_at": "2026-07-13T05:29:25.963Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f6f986aa700d067cf09652e5886046c2f1b87014eecd5e45fd5bd65914c8634",
+  "signature": "a0cf38f3da24fea05285e526b0c0a2bf1334fe99de9b4435d8938127ec85e221",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11825"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0434474",
+  "certificate_id": "MN-SC-2026-5729915",
   "skill_id": "mn-gen-10890",
   "skill_name": "Qa-mcp",
-  "issued_at": "2026-07-06T04:00:34.474Z",
-  "expires_at": "2026-07-13T04:00:34.474Z",
+  "issued_at": "2026-07-06T05:28:49.915Z",
+  "expires_at": "2026-07-13T05:28:49.915Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d3fbe3674196d540e0d1420134981c8a0bc1dd50ba864536ccbc2aeaf8c05f4",
+  "signature": "5655acc2c0a216ae5172cc607462ee19f10de1f5e2774a2e7c6542a3f49fbbd9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10890"
 }

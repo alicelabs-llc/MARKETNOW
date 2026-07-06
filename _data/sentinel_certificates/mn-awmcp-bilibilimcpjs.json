@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0900114",
+  "certificate_id": "MN-SC-2026-6261055",
   "skill_id": "mn-awmcp-bilibilimcpjs",
   "skill_name": "bilibili-mcp-js",
-  "issued_at": "2026-07-06T04:08:20.114Z",
-  "expires_at": "2026-07-13T04:08:20.114Z",
+  "issued_at": "2026-07-06T05:37:41.055Z",
+  "expires_at": "2026-07-13T05:37:41.055Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "3917630d77f2d0e5d51d50970fb9cfcbdc2f6f07e36834998dea72655358a14c",
+  "signature": "3c75937ea41f0e7ea00cc81ad668bfdd766ffe99867669accf86ef24b51b9e98",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-bilibilimcpjs"
 }

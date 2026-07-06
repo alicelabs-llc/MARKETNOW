@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0282071",
+  "certificate_id": "MN-SC-2026-5558768",
   "skill_id": "mn-gen-06738",
   "skill_name": "Mcp-flux-schnell",
-  "issued_at": "2026-07-06T03:58:02.071Z",
-  "expires_at": "2026-07-13T03:58:02.071Z",
+  "issued_at": "2026-07-06T05:25:58.768Z",
+  "expires_at": "2026-07-13T05:25:58.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e28e445ff4f12502395af7f7a84c7b029b70132d4c7d7326faffdfc9c4e9f461",
+  "signature": "3be862037b6b5a49ddf3019436498d463ca630dc48945f8b4df2086067754351",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06738"
 }

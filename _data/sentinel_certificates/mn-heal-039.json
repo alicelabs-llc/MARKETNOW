@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0859908",
+  "certificate_id": "MN-SC-2026-6215055",
   "skill_id": "mn-heal-039",
   "skill_name": "Insurance Eligibility Verifier",
-  "issued_at": "2026-07-06T04:07:39.908Z",
-  "expires_at": "2026-07-13T04:07:39.908Z",
+  "issued_at": "2026-07-06T05:36:55.055Z",
+  "expires_at": "2026-07-13T05:36:55.055Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ec4188daf0716b518a2d26b3b7085ce5e6a7188747be339f038f312e52ec35f",
+  "signature": "ded5d1792c1ca4b351c7b2360cc60909d9d357094f9974baa103d0b7750d0bd6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-heal-039"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9558700",
+  "certificate_id": "MN-SC-2026-5298557",
   "skill_id": "mn-ai-00537",
   "skill_name": "Ai-orchestrator",
-  "issued_at": "2026-07-06T03:45:58.700Z",
-  "expires_at": "2026-07-13T03:45:58.700Z",
+  "issued_at": "2026-07-06T05:21:38.557Z",
+  "expires_at": "2026-07-13T05:21:38.557Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5dad54d37c55515826baae33cd5ec7472ebd86fe894884f3068bd7845e9e48a7",
+  "signature": "e92140ce2a81e0763289b86afdf37d9a4564c1aa884c154adb411c453689cc05",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00537"
 }

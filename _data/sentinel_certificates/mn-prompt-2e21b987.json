@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0720185",
+  "certificate_id": "MN-SC-2026-6050082",
   "skill_id": "mn-prompt-2e21b987",
   "skill_name": "Cleaning business operations",
-  "issued_at": "2026-07-06T04:05:20.185Z",
-  "expires_at": "2026-07-13T04:05:20.185Z",
+  "issued_at": "2026-07-06T05:34:10.082Z",
+  "expires_at": "2026-07-13T05:34:10.082Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "098a737694b7e398efa8631d4402ac48cfaf6f38f1a797c72ffbbc370d80df96",
+  "signature": "dcf1ee9fe1037151a6a1ca93a6dd21e4134a4c39c16ebefca409c96d98b5dcaf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2e21b987"
 }

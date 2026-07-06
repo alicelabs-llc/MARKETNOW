@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1062941",
+  "certificate_id": "MN-SC-2026-6454965",
   "skill_id": "mn-real-quipmcp",
   "skill_name": "quip-mcp",
-  "issued_at": "2026-07-06T04:11:02.941Z",
-  "expires_at": "2026-07-13T04:11:02.941Z",
+  "issued_at": "2026-07-06T05:40:54.965Z",
+  "expires_at": "2026-07-13T05:40:54.965Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8b597c496a63709c74b51ad67471958c707c4c6c3bc40038fdebc83f39ec0d3c",
+  "signature": "efb6ced50712343a1730d5d6049df2a4241654361a06e2a46868813a1fe225ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-quipmcp"
 }

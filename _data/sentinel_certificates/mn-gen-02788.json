@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9697250",
+  "certificate_id": "MN-SC-2026-5394724",
   "skill_id": "mn-gen-02788",
   "skill_name": "coolify-mcp",
-  "issued_at": "2026-07-06T03:48:17.250Z",
-  "expires_at": "2026-07-13T03:48:17.250Z",
+  "issued_at": "2026-07-06T05:23:14.724Z",
+  "expires_at": "2026-07-13T05:23:14.724Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ed8c219c560331c863b4b1a88ba00e768977cf6675d8c98d5e67b681c9885423",
+  "signature": "980e8482e2144b12cf9d88b3e3e1f23de515b3a92685467aec1736f44f0a210d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02788"
 }

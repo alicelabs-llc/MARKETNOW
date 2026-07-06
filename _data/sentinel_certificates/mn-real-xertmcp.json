@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1056084",
+  "certificate_id": "MN-SC-2026-6448692",
   "skill_id": "mn-real-xertmcp",
   "skill_name": "xert-mcp",
-  "issued_at": "2026-07-06T04:10:56.084Z",
-  "expires_at": "2026-07-13T04:10:56.084Z",
+  "issued_at": "2026-07-06T05:40:48.692Z",
+  "expires_at": "2026-07-13T05:40:48.692Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2831b22bf68c927a015c83e6a0f38ddc66e74faa5305306eca0064714277ae42",
+  "signature": "48afd30239c592ec1e9b86a0cb0b7bdc7062150302afd6b8de6706e744ee50d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xertmcp"
 }

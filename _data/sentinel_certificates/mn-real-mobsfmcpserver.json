@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1049209",
+  "certificate_id": "MN-SC-2026-6440081",
   "skill_id": "mn-real-mobsfmcpserver",
   "skill_name": "mobsf-mcp-server",
-  "issued_at": "2026-07-06T04:10:49.209Z",
-  "expires_at": "2026-07-13T04:10:49.209Z",
+  "issued_at": "2026-07-06T05:40:40.081Z",
+  "expires_at": "2026-07-13T05:40:40.081Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24cf5e8d0f7fd15b37053edb45b4e47795ab1ebca1d9504b23ba18c34bf95684",
+  "signature": "224c3a175794d276e732a2c4a04f237f3935ac1a0a31b95a147501a9e2a74207",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mobsfmcpserver"
 }

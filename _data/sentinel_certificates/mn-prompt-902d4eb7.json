@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0575709",
+  "certificate_id": "MN-SC-2026-5874153",
   "skill_id": "mn-prompt-902d4eb7",
   "skill_name": "Especialista SCA + Dependency Scanning",
-  "issued_at": "2026-07-06T04:02:55.709Z",
-  "expires_at": "2026-07-13T04:02:55.709Z",
+  "issued_at": "2026-07-06T05:31:14.153Z",
+  "expires_at": "2026-07-13T05:31:14.153Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ecab061762e5ccd004475ae2c03ea1917e64bdbf468316d49380ed836a78b664",
+  "signature": "41449c5eeb1c56ae63cfa0252c7f8bb5d3c7f462f099b22ec2e3739d42dbe736",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-902d4eb7"
 }

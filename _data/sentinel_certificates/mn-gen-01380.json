@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9603485",
+  "certificate_id": "MN-SC-2026-5331676",
   "skill_id": "mn-gen-01380",
   "skill_name": "Binance-mate-mcp",
-  "issued_at": "2026-07-06T03:46:43.485Z",
-  "expires_at": "2026-07-13T03:46:43.485Z",
+  "issued_at": "2026-07-06T05:22:11.676Z",
+  "expires_at": "2026-07-13T05:22:11.676Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2ba5d4fd4672b9ae97a25d0d640089672739595f59777bc88c5d068d7d5ea55",
+  "signature": "285d1eb0987d2bbf95e3807154df7e4a7fd7117259fd158ea5ce33f906a38afc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01380"
 }

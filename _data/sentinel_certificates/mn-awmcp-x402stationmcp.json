@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0887723",
+  "certificate_id": "MN-SC-2026-6247730",
   "skill_id": "mn-awmcp-x402stationmcp",
   "skill_name": "x402station-mcp",
-  "issued_at": "2026-07-06T04:08:07.723Z",
-  "expires_at": "2026-07-13T04:08:07.723Z",
+  "issued_at": "2026-07-06T05:37:27.730Z",
+  "expires_at": "2026-07-13T05:37:27.730Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "d6af9f835872699d8656dd29f274e5354ed81f671fb7adae93b15cebd95dc374",
+  "signature": "88afceb00ad66d0be10c6b338293cc8d4fd5e5c488c5340b62422ec920c87d1f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-x402stationmcp"
 }

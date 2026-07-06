@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9796541",
+  "certificate_id": "MN-SC-2026-5465202",
   "skill_id": "mn-gen-04451",
   "skill_name": "Claude-channel-github",
-  "issued_at": "2026-07-06T03:49:56.541Z",
-  "expires_at": "2026-07-13T03:49:56.541Z",
+  "issued_at": "2026-07-06T05:24:25.202Z",
+  "expires_at": "2026-07-13T05:24:25.202Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "886c989698b1778a10a21ed2ec4fb307f409c74d43949d5ae557026b164647c4",
+  "signature": "48efa93293b80d42fcb64f174b5a5cce53a8709cc3f5c0425b3bd01e246e804b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04451"
 }

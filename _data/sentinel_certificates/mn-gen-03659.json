@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9747230",
+  "certificate_id": "MN-SC-2026-5432179",
   "skill_id": "mn-gen-03659",
   "skill_name": "Ember-cli-mcp",
-  "issued_at": "2026-07-06T03:49:07.230Z",
-  "expires_at": "2026-07-13T03:49:07.230Z",
+  "issued_at": "2026-07-06T05:23:52.179Z",
+  "expires_at": "2026-07-13T05:23:52.179Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3bc2170d24bf433df63bdace03a820640483ff7ca9525d8e305d8658cc6dd7cb",
+  "signature": "b5769142757f1ba3d4771558ee247792fe12495590b2cdf91e4cb019a57239d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03659"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0978275",
+  "certificate_id": "MN-SC-2026-6355428",
   "skill_id": "mn-real-mcpcbrrates",
   "skill_name": "mcp-cbr-rates",
-  "issued_at": "2026-07-06T04:09:38.275Z",
-  "expires_at": "2026-07-13T04:09:38.275Z",
+  "issued_at": "2026-07-06T05:39:15.428Z",
+  "expires_at": "2026-07-13T05:39:15.428Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d76ef31333ab46c25de7d0ca7324f681d3e4f7c093cc0d3f547c20d4428ae47",
+  "signature": "18eaecec2c85d758fe6e5627fb258b0a98dfd3a26675fda504e911c5e3fa54d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcbrrates"
 }

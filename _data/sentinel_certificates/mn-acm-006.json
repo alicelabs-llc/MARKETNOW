@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0739056",
+  "certificate_id": "MN-SC-2026-6070088",
   "skill_id": "mn-acm-006",
   "skill_name": "Context Compression Engine",
-  "issued_at": "2026-07-06T04:05:39.056Z",
-  "expires_at": "2026-07-13T04:05:39.056Z",
+  "issued_at": "2026-07-06T05:34:30.088Z",
+  "expires_at": "2026-07-13T05:34:30.088Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41c1e6ff33917bc709e646206a6c57ad2f97cd119cf12310f998d8491a8fe4de",
+  "signature": "2d624fcba0bdaba0fb9d1231ae5daf90da3751149aa23aa8b2ed644884386603",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-006"
 }

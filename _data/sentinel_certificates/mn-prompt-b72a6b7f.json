@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0675955",
+  "certificate_id": "MN-SC-2026-5998550",
   "skill_id": "mn-prompt-b72a6b7f",
   "skill_name": "HR audit comprehensive",
-  "issued_at": "2026-07-06T04:04:35.955Z",
-  "expires_at": "2026-07-13T04:04:35.955Z",
+  "issued_at": "2026-07-06T05:33:18.550Z",
+  "expires_at": "2026-07-13T05:33:18.550Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4aab076b4dfcd69dcd1627356fc635a161aab42faa282f51908a96318fc94328",
+  "signature": "4617d968299446a1a945cdd8fba3205899524471511b94800c58c347759dffaa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b72a6b7f"
 }

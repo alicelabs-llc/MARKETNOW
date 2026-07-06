@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1081859",
+  "certificate_id": "MN-SC-2026-6477830",
   "skill_id": "mn-real-jsreversemcp",
   "skill_name": "js-reverse-mcp",
-  "issued_at": "2026-07-06T04:11:21.859Z",
-  "expires_at": "2026-07-13T04:11:21.859Z",
+  "issued_at": "2026-07-06T05:41:17.830Z",
+  "expires_at": "2026-07-13T05:41:17.830Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b51b3b7479b7588724e778f4e11067cf9641c31674cb07dd45f6390a191aaa5",
+  "signature": "f774a0aa08b0be90c08f23bb0ab87f28ae14194eea61a380d780c17a90b36888",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jsreversemcp"
 }

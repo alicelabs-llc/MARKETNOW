@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0935839",
+  "certificate_id": "MN-SC-2026-6306803",
   "skill_id": "mn-real-mcpconfluent",
   "skill_name": "mcp-confluent",
-  "issued_at": "2026-07-06T04:08:55.839Z",
-  "expires_at": "2026-07-13T04:08:55.839Z",
+  "issued_at": "2026-07-06T05:38:26.803Z",
+  "expires_at": "2026-07-13T05:38:26.803Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de19263c4326114bfa921f625501fc0ee23b3c3d7ba9e383630242e6dfaf6c8a",
+  "signature": "ec1e71ae2bde6cda0c8bd95948afd7cede1cda1daa8624582f7e2bd453df1cae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpconfluent"
 }

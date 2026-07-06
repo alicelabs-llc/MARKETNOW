@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1033467",
+  "certificate_id": "MN-SC-2026-6423840",
   "skill_id": "mn-real-gophermcp",
   "skill_name": "gopher-mcp",
-  "issued_at": "2026-07-06T04:10:33.467Z",
-  "expires_at": "2026-07-13T04:10:33.467Z",
+  "issued_at": "2026-07-06T05:40:23.840Z",
+  "expires_at": "2026-07-13T05:40:23.840Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8af1d94df3dfaf45ef33cf0f06f2db83f460edc040eede8278123535e894b02",
+  "signature": "ca60d7fcb9432616aab573248f346a265927ab0118989079a1d23fc2226fd340",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gophermcp"
 }

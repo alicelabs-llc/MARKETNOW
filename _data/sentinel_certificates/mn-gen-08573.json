@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0349064",
+  "certificate_id": "MN-SC-2026-5638557",
   "skill_id": "mn-gen-08573",
   "skill_name": "Mcpsec",
-  "issued_at": "2026-07-06T03:59:09.064Z",
-  "expires_at": "2026-07-13T03:59:09.064Z",
+  "issued_at": "2026-07-06T05:27:18.557Z",
+  "expires_at": "2026-07-13T05:27:18.557Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32f356fb7c1dd7674830169e3b7a96f96bf49cfc4f38ffa720231a43d253bb46",
+  "signature": "b4326eb78457d8778b1068be6dd3ca4ebf62a092a5b61018590a6058854c432a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08573"
 }

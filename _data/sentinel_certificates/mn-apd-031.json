@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0745189",
+  "certificate_id": "MN-SC-2026-6078719",
   "skill_id": "mn-apd-031",
   "skill_name": "Agent Capacity Planner",
-  "issued_at": "2026-07-06T04:05:45.189Z",
-  "expires_at": "2026-07-13T04:05:45.189Z",
+  "issued_at": "2026-07-06T05:34:38.719Z",
+  "expires_at": "2026-07-13T05:34:38.719Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f63eba85bb341ce43d31feb78d0da2569acc1dc1910581509d2ce0ac178e62e6",
+  "signature": "87719d2fcdecfa33cf0f215e969a8f20f2ac0d5443e2b0084b667bcd20941a40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-031"
 }

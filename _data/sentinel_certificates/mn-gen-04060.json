@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9772484",
+  "certificate_id": "MN-SC-2026-5448126",
   "skill_id": "mn-gen-04060",
   "skill_name": "Fireblocks/mcp-server",
-  "issued_at": "2026-07-06T03:49:32.484Z",
-  "expires_at": "2026-07-13T03:49:32.484Z",
+  "issued_at": "2026-07-06T05:24:08.126Z",
+  "expires_at": "2026-07-13T05:24:08.126Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e7408fea615a8701d22c5453fc6ad32bbeaafa5fa542e3340b5aa2f64c684e82",
+  "signature": "2569de975b3db476b75a6850fe1134f73d48d69d13b97b1cdf1fb7d7657ce041",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04060"
 }

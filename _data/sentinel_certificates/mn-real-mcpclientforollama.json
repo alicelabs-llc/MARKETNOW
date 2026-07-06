@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1087902",
+  "certificate_id": "MN-SC-2026-6485079",
   "skill_id": "mn-real-mcpclientforollama",
   "skill_name": "mcp-client-for-ollama",
-  "issued_at": "2026-07-06T04:11:27.902Z",
-  "expires_at": "2026-07-13T04:11:27.902Z",
+  "issued_at": "2026-07-06T05:41:25.079Z",
+  "expires_at": "2026-07-13T05:41:25.079Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad1b58f728ea40c24724ce8a717e770be5bcc10bf38fd5243c748cc9f117eb58",
+  "signature": "447ef2978857a04968253ee276d9318349feb31c475f71a68fc675d30383b013",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpclientforollama"
 }

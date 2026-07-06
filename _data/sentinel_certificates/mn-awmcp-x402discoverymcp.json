@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0889131",
+  "certificate_id": "MN-SC-2026-6249211",
   "skill_id": "mn-awmcp-x402discoverymcp",
   "skill_name": "x402-discovery-mcp",
-  "issued_at": "2026-07-06T04:08:09.131Z",
-  "expires_at": "2026-07-13T04:08:09.131Z",
+  "issued_at": "2026-07-06T05:37:29.211Z",
+  "expires_at": "2026-07-13T05:37:29.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "fa84d0d240a61cd8d077457e712ab42469a16cc32306e63ae4855de2b4878941",
+  "signature": "eebf0d738bc55dcebb184a350f2930be3f60f47a7095ff052e6d4acbc4cafbae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-x402discoverymcp"
 }

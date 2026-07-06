@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0271875",
+  "certificate_id": "MN-SC-2026-5547341",
   "skill_id": "mn-com-06496",
   "skill_name": "Mcp-compliance-validator",
-  "issued_at": "2026-07-06T03:57:51.875Z",
-  "expires_at": "2026-07-13T03:57:51.875Z",
+  "issued_at": "2026-07-06T05:25:47.341Z",
+  "expires_at": "2026-07-13T05:25:47.341Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e4f3ee304d8d88a5e543be20d6a951d9afb40425edb94262f340fbefdd5cbc3b",
+  "signature": "02b71b86b730eac7d25ee811849058f57f3c6e3d893099a364c7cf4b20104f3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-com-06496"
 }

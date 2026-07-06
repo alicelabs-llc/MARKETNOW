@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1086092",
+  "certificate_id": "MN-SC-2026-6482844",
   "skill_id": "mn-real-aigateway",
   "skill_name": "AI-Gateway",
-  "issued_at": "2026-07-06T04:11:26.092Z",
-  "expires_at": "2026-07-13T04:11:26.092Z",
+  "issued_at": "2026-07-06T05:41:22.844Z",
+  "expires_at": "2026-07-13T05:41:22.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dce68c326d4fafc85def553d19fbd68c5858bce6e8e76a801629a02fe062165f",
+  "signature": "c45c2c669ba2425af1295a1fa8c57ffe2a1161aa8054987a77c5e08a0d81edad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aigateway"
 }

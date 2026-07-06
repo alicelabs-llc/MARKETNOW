@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0900534",
+  "certificate_id": "MN-SC-2026-6261584",
   "skill_id": "mn-awmcp-agentfetchmcp",
   "skill_name": "agentfetch-mcp",
-  "issued_at": "2026-07-06T04:08:20.534Z",
-  "expires_at": "2026-07-13T04:08:20.534Z",
+  "issued_at": "2026-07-06T05:37:41.584Z",
+  "expires_at": "2026-07-13T05:37:41.584Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "b0d7c187b0f0409e61cd17208147c1cd18c24c45c7c82ca7b8e8695db10dd2f6",
+  "signature": "11521672a9d43d11ba5e19e826a497e60cb3e92dd8d150c970b2d33aec28c12f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agentfetchmcp"
 }

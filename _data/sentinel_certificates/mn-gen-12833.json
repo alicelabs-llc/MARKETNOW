@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0512420",
+  "certificate_id": "MN-SC-2026-5806187",
   "skill_id": "mn-gen-12833",
   "skill_name": "Triplus",
-  "issued_at": "2026-07-06T04:01:52.420Z",
-  "expires_at": "2026-07-13T04:01:52.420Z",
+  "issued_at": "2026-07-06T05:30:06.187Z",
+  "expires_at": "2026-07-13T05:30:06.187Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c46e2f6713e6c82d598a92ecb1982b2b6dc3796784ff0e0805c03cc2a418d51a",
+  "signature": "ab48ddd0890cd7fcb43384a0ae7d03dbebe791763a972c2a15766e17535cec73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12833"
 }

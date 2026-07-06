@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0390030",
+  "certificate_id": "MN-SC-2026-5687835",
   "skill_id": "mn-gen-09900",
   "skill_name": "Open-harness",
-  "issued_at": "2026-07-06T03:59:50.030Z",
-  "expires_at": "2026-07-13T03:59:50.030Z",
+  "issued_at": "2026-07-06T05:28:07.835Z",
+  "expires_at": "2026-07-13T05:28:07.835Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50f4c71d2842e48841adb5daa4eb494d912a61d4ba72b044a18efc69e6182df7",
+  "signature": "fe68a328859205fa7ddf9330ecc56799ddc7725cb77f4b11ee427b8511090d5c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09900"
 }

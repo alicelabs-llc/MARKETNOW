@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0684077",
+  "certificate_id": "MN-SC-2026-6007340",
   "skill_id": "mn-prompt-5c08fad3",
   "skill_name": "UX heuristic evaluation",
-  "issued_at": "2026-07-06T04:04:44.077Z",
-  "expires_at": "2026-07-13T04:04:44.077Z",
+  "issued_at": "2026-07-06T05:33:27.340Z",
+  "expires_at": "2026-07-13T05:33:27.340Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d08ae02f637ba7a6c2912e8d6ae980119587a287885f390f02b6f06c5e45b7c",
+  "signature": "f5bce8b90f6ae74ff0b7118449e5cc5426a23c330c6a25e6302a4e810cbe9610",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5c08fad3"
 }

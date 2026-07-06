@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0738247",
+  "certificate_id": "MN-SC-2026-6069098",
   "skill_id": "mn-atu-043",
   "skill_name": "Tool Dependency Graph",
-  "issued_at": "2026-07-06T04:05:38.247Z",
-  "expires_at": "2026-07-13T04:05:38.247Z",
+  "issued_at": "2026-07-06T05:34:29.098Z",
+  "expires_at": "2026-07-13T05:34:29.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40105df7644c406352974cc19ae02e9e0c83f1119a351f6dcceeb4c80e9fe8f2",
+  "signature": "0e845c593fd6993f22326962b2e2a6a2eaa9ce9ffd9fb5969e11c950aae08b75",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-043"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0729145",
+  "certificate_id": "MN-SC-2026-6060349",
   "skill_id": "mn-arl-015",
   "skill_name": "Output Consistency Checker",
-  "issued_at": "2026-07-06T04:05:29.145Z",
-  "expires_at": "2026-07-13T04:05:29.145Z",
+  "issued_at": "2026-07-06T05:34:20.349Z",
+  "expires_at": "2026-07-13T05:34:20.349Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8c5bf3090496d59c3297127b4734f8245b68f0ca5b413242eef764f44d653ea",
+  "signature": "412923053cc6b6a8eaca772bdd511a4aaf4b4e1d69e9c128eb3cb04a0238864f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-015"
 }

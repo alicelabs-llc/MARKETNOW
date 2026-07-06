@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1043575",
+  "certificate_id": "MN-SC-2026-6434188",
   "skill_id": "mn-real-jamjetpolicy",
   "skill_name": "jamjet-policy",
-  "issued_at": "2026-07-06T04:10:43.575Z",
-  "expires_at": "2026-07-13T04:10:43.575Z",
+  "issued_at": "2026-07-06T05:40:34.188Z",
+  "expires_at": "2026-07-13T05:40:34.188Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "54aa5ac32306f315e2105173f2d1cf76240b68605185d84b22efac3267333508",
+  "signature": "1558d91194f1c20c530a989a598e86edeae898a111c3a939ccb2d2b5da4ced53",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jamjetpolicy"
 }

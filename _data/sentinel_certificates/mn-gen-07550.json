@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0312344",
+  "certificate_id": "MN-SC-2026-5596386",
   "skill_id": "mn-gen-07550",
   "skill_name": "Mcp-server-agents-md",
-  "issued_at": "2026-07-06T03:58:32.344Z",
-  "expires_at": "2026-07-13T03:58:32.344Z",
+  "issued_at": "2026-07-06T05:26:36.386Z",
+  "expires_at": "2026-07-13T05:26:36.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a52b343531cbf6d7fbb3aa1d4cca79c945d1cfbbd6a5fe86f5fd5982b714713",
+  "signature": "66411ea25ec4ab598ba745a90613f2c0e34e83c6d6b52ae72de93b8669f4120e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07550"
 }

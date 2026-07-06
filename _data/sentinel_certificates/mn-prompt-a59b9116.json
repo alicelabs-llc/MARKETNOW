@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0724435",
+  "certificate_id": "MN-SC-2026-6054610",
   "skill_id": "mn-prompt-a59b9116",
   "skill_name": "ATM business operations",
-  "issued_at": "2026-07-06T04:05:24.435Z",
-  "expires_at": "2026-07-13T04:05:24.435Z",
+  "issued_at": "2026-07-06T05:34:14.610Z",
+  "expires_at": "2026-07-13T05:34:14.610Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0de9dde935c31bf3350ee84981cf49ec3f4ee4292b572814b332e0b47c9871c5",
+  "signature": "debdda2ca9ad6d37790b1bd4b9a74caa91afa520e9870b46bbfbadea75fb3615",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a59b9116"
 }

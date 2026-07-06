@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9700687",
+  "certificate_id": "MN-SC-2026-5396787",
   "skill_id": "mn-gen-02835",
   "skill_name": "Cortex-token-monitor",
-  "issued_at": "2026-07-06T03:48:20.687Z",
-  "expires_at": "2026-07-13T03:48:20.687Z",
+  "issued_at": "2026-07-06T05:23:16.787Z",
+  "expires_at": "2026-07-13T05:23:16.787Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ecfa117ba842a4bd86715e965ca541151a2c86b86f8654f63b7aee22fb3e0139",
+  "signature": "68803ef4917f108edb2b7409c8c235af6ca3cc512217901b438270a2b62107bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02835"
 }

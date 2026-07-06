@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0885333",
+  "certificate_id": "MN-SC-2026-6245550",
   "skill_id": "mn-awmcp-ragmap",
   "skill_name": "ragmap",
-  "issued_at": "2026-07-06T04:08:05.333Z",
-  "expires_at": "2026-07-13T04:08:05.333Z",
+  "issued_at": "2026-07-06T05:37:25.550Z",
+  "expires_at": "2026-07-13T05:37:25.550Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "882e797b349b1a7a9b8e40bcea6e31a95b9be3aa292ab87450065ba4cd4b76ca",
+  "signature": "eec6ce991c339ebecb86bb79321468287c77bcf665ffe6fc71d25577da6f015e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ragmap"
 }

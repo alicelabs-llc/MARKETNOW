@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0235113",
+  "certificate_id": "MN-SC-2026-5505966",
   "skill_id": "mn-gen-05422",
   "skill_name": "Katzilla-sdk",
-  "issued_at": "2026-07-06T03:57:15.113Z",
-  "expires_at": "2026-07-13T03:57:15.113Z",
+  "issued_at": "2026-07-06T05:25:05.966Z",
+  "expires_at": "2026-07-13T05:25:05.966Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8ea224b1fecba7b0153c278609922c3b67ae84adea41bb386c2ae83b728d7a1",
+  "signature": "6cd4f7994719bba86c71f4b3e54e871a28d151d9285358aa95087ea475782b40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05422"
 }

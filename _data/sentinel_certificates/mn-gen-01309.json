@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9599823",
+  "certificate_id": "MN-SC-2026-5328340",
   "skill_id": "mn-gen-01309",
   "skill_name": "Bbox-mcp-server",
-  "issued_at": "2026-07-06T03:46:39.823Z",
-  "expires_at": "2026-07-13T03:46:39.823Z",
+  "issued_at": "2026-07-06T05:22:08.340Z",
+  "expires_at": "2026-07-13T05:22:08.340Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51faa481f98956f02e037f47782dad3df4cfafb2db2a68800b4219f1fba344f8",
+  "signature": "99221d54a7e14cf6f03706ace195f623fda9b65a80a7b56a04a71095e1292fc7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01309"
 }

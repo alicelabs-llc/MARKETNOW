@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0866191",
+  "certificate_id": "MN-SC-2026-6220395",
   "skill_id": "mn-lega-031",
   "skill_name": "Conflict Check Engine",
-  "issued_at": "2026-07-06T04:07:46.191Z",
-  "expires_at": "2026-07-13T04:07:46.191Z",
+  "issued_at": "2026-07-06T05:37:00.395Z",
+  "expires_at": "2026-07-13T05:37:00.395Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd0884f0da2398e11ee3e7912e2022487ef6660fc33dee56982ab2615eb075a6",
+  "signature": "c3600978612d972ab32c8f16df28670a6ea210815f35437871f44b3d603400e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-lega-031"
 }

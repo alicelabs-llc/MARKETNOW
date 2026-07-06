@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1100788",
+  "certificate_id": "MN-SC-2026-6500639",
   "skill_id": "mn-real-agentgateway",
   "skill_name": "agentgateway",
-  "issued_at": "2026-07-06T04:11:40.788Z",
-  "expires_at": "2026-07-13T04:11:40.788Z",
+  "issued_at": "2026-07-06T05:41:40.639Z",
+  "expires_at": "2026-07-13T05:41:40.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9483785b93ab0c73c96a79dad3e4391bf26b7d25220f8fae9bca462eb3fed21",
+  "signature": "93ab7df83ff6720945b6de72a12aa91333e8dd2a2a88f09c895e1b3bb4a12f03",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentgateway"
 }

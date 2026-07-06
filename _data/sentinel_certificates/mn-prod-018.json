@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0834660",
+  "certificate_id": "MN-SC-2026-6185231",
   "skill_id": "mn-prod-018",
   "skill_name": "Weekly Review",
-  "issued_at": "2026-07-06T04:07:14.660Z",
-  "expires_at": "2026-07-13T04:07:14.660Z",
+  "issued_at": "2026-07-06T05:36:25.231Z",
+  "expires_at": "2026-07-13T05:36:25.231Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e70987c6a74a5925fe8075e7aab1618ac9991b68d0b1ed83a12151e566cdbff4",
+  "signature": "aa161b3269cf1bf2123be30442613275aff40d7e2f817e3b39c228debc916066",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-018"
 }

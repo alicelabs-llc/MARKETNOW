@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9672140",
+  "certificate_id": "MN-SC-2026-5276555",
   "skill_id": "mn-gen-00036",
   "skill_name": "40k-mcp-server",
-  "issued_at": "2026-07-06T03:47:52.140Z",
-  "expires_at": "2026-07-13T03:47:52.140Z",
+  "issued_at": "2026-07-06T05:21:16.555Z",
+  "expires_at": "2026-07-13T05:21:16.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a3d104389823ee278a6a316c25e33196bffbd9317bc84e83273611f4da75608",
+  "signature": "8bb015314d465214d72a4fe7da6fb9d0f6652bc09981c7842ffea55cbeb83efb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00036"
 }

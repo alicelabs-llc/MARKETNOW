@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0955246",
+  "certificate_id": "MN-SC-2026-6327459",
   "skill_id": "mn-real-restcsvmcpserver",
   "skill_name": "RestCsvMcpServer",
-  "issued_at": "2026-07-06T04:09:15.246Z",
-  "expires_at": "2026-07-13T04:09:15.246Z",
+  "issued_at": "2026-07-06T05:38:47.459Z",
+  "expires_at": "2026-07-13T05:38:47.459Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7ad70a1bedd018ba6cb8354324dce84000f3d2d58afdaa1d8dc3312daadafd41",
+  "signature": "9dc52cd77d4e8dbd80fa873c603aef9b9904604bc8cb32aff4e02ceb840d2ce4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-restcsvmcpserver"
 }

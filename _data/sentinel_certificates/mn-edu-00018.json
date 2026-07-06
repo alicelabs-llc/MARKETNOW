@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0756866",
+  "certificate_id": "MN-SC-2026-6093584",
   "skill_id": "mn-edu-00018",
   "skill_name": "Plagiarism Checker X",
-  "issued_at": "2026-07-06T04:05:56.866Z",
-  "expires_at": "2026-07-13T04:05:56.866Z",
+  "issued_at": "2026-07-06T05:34:53.584Z",
+  "expires_at": "2026-07-13T05:34:53.584Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be1f1d33a2933e66a5a264186031c3035af47bc7f1cde5faa13d79df8bf3da86",
+  "signature": "307a64f6c1126e2304e59a1c7cc2de86ef59b80dc49121363de05f631d092d72",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edu-00018"
 }

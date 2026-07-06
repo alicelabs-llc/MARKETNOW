@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0386898",
+  "certificate_id": "MN-SC-2026-5683215",
   "skill_id": "mn-gen-09801",
   "skill_name": "Okta-mcp-server",
-  "issued_at": "2026-07-06T03:59:46.898Z",
-  "expires_at": "2026-07-13T03:59:46.898Z",
+  "issued_at": "2026-07-06T05:28:03.215Z",
+  "expires_at": "2026-07-13T05:28:03.215Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a88d17471a76621ce39ca324540ce8615fafa80f2842e3df35d4b473bf9bbbf",
+  "signature": "06df081eda6233a48c0d304801d85c05bb11a2ac84b66e3324644482b59270d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09801"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0260213",
+  "certificate_id": "MN-SC-2026-5534483",
   "skill_id": "mn-ai-06201",
   "skill_name": "aimemo",
-  "issued_at": "2026-07-06T03:57:40.213Z",
-  "expires_at": "2026-07-13T03:57:40.213Z",
+  "issued_at": "2026-07-06T05:25:34.483Z",
+  "expires_at": "2026-07-13T05:25:34.483Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6276c5383ab13eeb5d1ccdfd82ac89ec3ba327cf4300f94a9b01804785b053db",
+  "signature": "81431b6e49971e3327863ac7e343d1e8cb2d8a8d9ad5c62f24319ae440d05aeb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06201"
 }

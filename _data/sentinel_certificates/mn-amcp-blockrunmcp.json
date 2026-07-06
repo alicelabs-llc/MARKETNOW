@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0880300",
+  "certificate_id": "MN-SC-2026-6239400",
   "skill_id": "mn-amcp-blockrunmcp",
   "skill_name": "blockrun-mcp",
-  "issued_at": "2026-07-06T04:08:00.300Z",
-  "expires_at": "2026-07-13T04:08:00.300Z",
+  "issued_at": "2026-07-06T05:37:19.400Z",
+  "expires_at": "2026-07-13T05:37:19.400Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "a3a1b915c4198d07e21c19b6703e7b17a05fb1dadb5005e5cdca295ddc0d563c",
+  "signature": "d76208f41366d5e909ec3c743da7fae70ddaf785d5626907d582074c5ea03e48",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-blockrunmcp"
 }

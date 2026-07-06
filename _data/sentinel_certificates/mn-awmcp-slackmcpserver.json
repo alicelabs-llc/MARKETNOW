@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0929195",
+  "certificate_id": "MN-SC-2026-6299631",
   "skill_id": "mn-awmcp-slackmcpserver",
   "skill_name": "slack-mcp-server",
-  "issued_at": "2026-07-06T04:08:49.195Z",
-  "expires_at": "2026-07-13T04:08:49.195Z",
+  "issued_at": "2026-07-06T05:38:19.631Z",
+  "expires_at": "2026-07-13T05:38:19.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0f7f211a04d000478cd723d40bf685e2e7c4614c78526be3220600429fa78cc",
+  "signature": "e53e82429a723131c4af2ebd18af4c327a809d3ea0e1598bb7bac29b71266a0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-slackmcpserver"
 }

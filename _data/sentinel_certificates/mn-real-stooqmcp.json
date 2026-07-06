@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0984587",
+  "certificate_id": "MN-SC-2026-6363588",
   "skill_id": "mn-real-stooqmcp",
   "skill_name": "stooq-mcp",
-  "issued_at": "2026-07-06T04:09:44.587Z",
-  "expires_at": "2026-07-13T04:09:44.587Z",
+  "issued_at": "2026-07-06T05:39:23.588Z",
+  "expires_at": "2026-07-13T05:39:23.588Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "addaf5223f135efd68d350187743e6c6fbaee482af4dadd77a817cb6153d7f8f",
+  "signature": "51d0bd9beb0c3263559d1dc8668408a3d5de97a1cf691ef1d2aab38b5950e39d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stooqmcp"
 }

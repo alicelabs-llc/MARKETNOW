@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0949148",
+  "certificate_id": "MN-SC-2026-6320593",
   "skill_id": "mn-real-buildkitemcpserver",
   "skill_name": "buildkite-mcp-server",
-  "issued_at": "2026-07-06T04:09:09.148Z",
-  "expires_at": "2026-07-13T04:09:09.148Z",
+  "issued_at": "2026-07-06T05:38:40.593Z",
+  "expires_at": "2026-07-13T05:38:40.593Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8ac8f2cf7d9f7b670055b9c0d68f0136fddf948ae4f1d44467989640fc5853c",
+  "signature": "d772a342d5937a92327a14e9f08a51c74674efd509ca232208b06b3da20cd308",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-buildkitemcpserver"
 }

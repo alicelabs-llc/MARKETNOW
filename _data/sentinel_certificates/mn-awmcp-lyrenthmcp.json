@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0903317",
+  "certificate_id": "MN-SC-2026-6265180",
   "skill_id": "mn-awmcp-lyrenthmcp",
   "skill_name": "lyrenth-mcp",
-  "issued_at": "2026-07-06T04:08:23.317Z",
-  "expires_at": "2026-07-13T04:08:23.317Z",
+  "issued_at": "2026-07-06T05:37:45.180Z",
+  "expires_at": "2026-07-13T05:37:45.180Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "ce5bb1d0ffc02557cf3bc284dab60d9a208d152c90c4840c812f063f0c40c155",
+  "signature": "b5881e405e1d99f1751fc51f5ef302a7b6b31c018f2ff9a6b6a32ba6de40a46f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-lyrenthmcp"
 }

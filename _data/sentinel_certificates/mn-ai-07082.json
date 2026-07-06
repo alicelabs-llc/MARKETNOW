@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0294138",
+  "certificate_id": "MN-SC-2026-5574093",
   "skill_id": "mn-ai-07082",
   "skill_name": "mermaid-mcp-server",
-  "issued_at": "2026-07-06T03:58:14.138Z",
-  "expires_at": "2026-07-13T03:58:14.138Z",
+  "issued_at": "2026-07-06T05:26:14.093Z",
+  "expires_at": "2026-07-13T05:26:14.093Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5c4da677398a29b240648984eaa9c9f74141a99663ac29df5fe155660b0191ca",
+  "signature": "42b27884675b899800df00617cf7cf62bafcb008847a504758b5dc871e353a6c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07082"
 }

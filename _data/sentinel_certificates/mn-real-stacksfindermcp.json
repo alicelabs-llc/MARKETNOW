@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0953537",
+  "certificate_id": "MN-SC-2026-6325522",
   "skill_id": "mn-real-stacksfindermcp",
   "skill_name": "stacksfinder-mcp",
-  "issued_at": "2026-07-06T04:09:13.537Z",
-  "expires_at": "2026-07-13T04:09:13.537Z",
+  "issued_at": "2026-07-06T05:38:45.522Z",
+  "expires_at": "2026-07-13T05:38:45.522Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ebf0f64b74eb3aed57085dc54753f811b891630ebebade7a4ca68de3623ea56c",
+  "signature": "aea61b7204d5bef0177bbed75d16b7f28734b4142e2453685578ef5dbe265698",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stacksfindermcp"
 }

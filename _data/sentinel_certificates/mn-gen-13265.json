@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0531481",
+  "certificate_id": "MN-SC-2026-5824957",
   "skill_id": "mn-gen-13265",
   "skill_name": "Hkopenai/vtube-studio-plugin-mcp-server",
-  "issued_at": "2026-07-06T04:02:11.481Z",
-  "expires_at": "2026-07-13T04:02:11.481Z",
+  "issued_at": "2026-07-06T05:30:24.957Z",
+  "expires_at": "2026-07-13T05:30:24.957Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8ed13b85d6f3b38c1da9b7da9b1d7c1977da1259dacdfc43eaf0ea6ce66e015",
+  "signature": "3db7ed10dbfc3836e92e87c042e242d1313233f38eaacd17b49921b65409399f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13265"
 }

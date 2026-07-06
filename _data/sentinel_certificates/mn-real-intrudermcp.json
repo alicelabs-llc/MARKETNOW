@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1047019",
+  "certificate_id": "MN-SC-2026-6437371",
   "skill_id": "mn-real-intrudermcp",
   "skill_name": "intruder-mcp",
-  "issued_at": "2026-07-06T04:10:47.019Z",
-  "expires_at": "2026-07-13T04:10:47.019Z",
+  "issued_at": "2026-07-06T05:40:37.371Z",
+  "expires_at": "2026-07-13T05:40:37.371Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38e8c922f4223cf7689f5284b000b01a1cb89b92c4b6550cd6a95312736cdfa7",
+  "signature": "3c41b3f42352cde8bd6e6d9cdf1584ec450b89fd633e025cef1db92d87037717",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-intrudermcp"
 }

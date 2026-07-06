@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0338366",
+  "certificate_id": "MN-SC-2026-5627422",
   "skill_id": "mn-gen-08198",
   "skill_name": "mcp-video-analyzer",
-  "issued_at": "2026-07-06T03:58:58.366Z",
-  "expires_at": "2026-07-13T03:58:58.366Z",
+  "issued_at": "2026-07-06T05:27:07.422Z",
+  "expires_at": "2026-07-13T05:27:07.422Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d38f4c068f92db59a59f52553bf88a0572bb413de0ed9438d2b0be629df8ab89",
+  "signature": "de8bace7d3684f765735fa71af14df6047a5365dc352b765d7a33c582b489e4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08198"
 }

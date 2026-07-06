@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0916000",
+  "certificate_id": "MN-SC-2026-6281229",
   "skill_id": "mn-awmcp-agentnexus",
   "skill_name": "agent-nexus",
-  "issued_at": "2026-07-06T04:08:36.000Z",
-  "expires_at": "2026-07-13T04:08:36.000Z",
+  "issued_at": "2026-07-06T05:38:01.229Z",
+  "expires_at": "2026-07-13T05:38:01.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc9f74be16f114368bd59aa259acedbcfa85abfeea946a923d7501319ba33012",
+  "signature": "520ec11c5fc9ed0d4de6f36e5cbf27735f19addc81379d66c9b4a025582c15c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agentnexus"
 }

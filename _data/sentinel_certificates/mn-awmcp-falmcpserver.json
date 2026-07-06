@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0894821",
+  "certificate_id": "MN-SC-2026-6255738",
   "skill_id": "mn-awmcp-falmcpserver",
   "skill_name": "fal-mcp-server",
-  "issued_at": "2026-07-06T04:08:14.821Z",
-  "expires_at": "2026-07-13T04:08:14.821Z",
+  "issued_at": "2026-07-06T05:37:35.738Z",
+  "expires_at": "2026-07-13T05:37:35.738Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "371d1be64f93aa516c6e197ae1d31026bd611f6299ba852c5c2aa81f9c2cbd56",
+  "signature": "642b75d17b3c7b9ee172af5ca1ee9f88c27701ffcb3c6acd2c8dd244f5f43077",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-falmcpserver"
 }

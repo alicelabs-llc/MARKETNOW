@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0905329",
+  "certificate_id": "MN-SC-2026-6267082",
   "skill_id": "mn-awmcp-websearch",
   "skill_name": "web-search",
-  "issued_at": "2026-07-06T04:08:25.329Z",
-  "expires_at": "2026-07-13T04:08:25.329Z",
+  "issued_at": "2026-07-06T05:37:47.082Z",
+  "expires_at": "2026-07-13T05:37:47.082Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "12c5f4335baaf78b2147ad0ca160a2dabf56d1e7027cc9b92f147becbeac7f33",
+  "signature": "b1162bfdf7df5263ccb53e9f6fc91054086a7ed0310e0061d9a0e9b3a59dee4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-websearch"
 }

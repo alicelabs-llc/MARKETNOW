@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0507061",
+  "certificate_id": "MN-SC-2026-5800037",
   "skill_id": "mn-gen-12678",
   "skill_name": "Todo-list-mcp",
-  "issued_at": "2026-07-06T04:01:47.061Z",
-  "expires_at": "2026-07-13T04:01:47.061Z",
+  "issued_at": "2026-07-06T05:30:00.037Z",
+  "expires_at": "2026-07-13T05:30:00.037Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e06cb00d339ae3d584a9644a6e7d67bf7ce9fc9112e6150dd12ad99eee9b4c93",
+  "signature": "6b3094f1c5a1de70b22fb283145c098c0c13c518ec9d59a336cdedb116b08d25",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12678"
 }

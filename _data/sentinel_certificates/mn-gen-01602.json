@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9617715",
+  "certificate_id": "MN-SC-2026-5341536",
   "skill_id": "mn-gen-01602",
   "skill_name": "Bug-tracker-mcp-server",
-  "issued_at": "2026-07-06T03:46:57.715Z",
-  "expires_at": "2026-07-13T03:46:57.715Z",
+  "issued_at": "2026-07-06T05:22:21.536Z",
+  "expires_at": "2026-07-13T05:22:21.536Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "10127bfa664193d4007b673e333229868e38cf015ea7bcb1b364f378df7cad8d",
+  "signature": "f4cbdb8ceafb38711853c7a00983be5fcec9f9959dd8b6c6cbd2191fd70e4c1f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01602"
 }

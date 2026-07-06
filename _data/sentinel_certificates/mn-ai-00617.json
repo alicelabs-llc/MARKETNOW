@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9563205",
+  "certificate_id": "MN-SC-2026-5302430",
   "skill_id": "mn-ai-00617",
   "skill_name": "Aime",
-  "issued_at": "2026-07-06T03:46:03.205Z",
-  "expires_at": "2026-07-13T03:46:03.205Z",
+  "issued_at": "2026-07-06T05:21:42.430Z",
+  "expires_at": "2026-07-13T05:21:42.430Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "630577b5fa8deba2937aa054eb056543be46c96b10fcd45e7cedda54d92b7396",
+  "signature": "b4742310ce9c55438508a09537bd5cdd8298619270cfd3ac0a02f5028b6adfba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00617"
 }

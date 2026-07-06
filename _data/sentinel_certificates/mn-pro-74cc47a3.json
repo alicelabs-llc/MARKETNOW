@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0785443",
+  "certificate_id": "MN-SC-2026-6124969",
   "skill_id": "mn-pro-74cc47a3",
   "skill_name": "Privileged Access Manager",
-  "issued_at": "2026-07-06T04:06:25.443Z",
-  "expires_at": "2026-07-13T04:06:25.443Z",
+  "issued_at": "2026-07-06T05:35:24.969Z",
+  "expires_at": "2026-07-13T05:35:24.969Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dfa7304028abf6ff184de1e9a999c34b9367196e047d40636c7833672b6e5ff4",
+  "signature": "bb7bf1cba9d161b5972f2c3eba3e5d42b5b23739835644b16398fc8c0efef554",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-74cc47a3"
 }

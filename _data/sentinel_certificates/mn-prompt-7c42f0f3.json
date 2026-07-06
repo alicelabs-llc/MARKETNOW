@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0676940",
+  "certificate_id": "MN-SC-2026-5999546",
   "skill_id": "mn-prompt-7c42f0f3",
   "skill_name": "HR metrics dashboard exec",
-  "issued_at": "2026-07-06T04:04:36.940Z",
-  "expires_at": "2026-07-13T04:04:36.940Z",
+  "issued_at": "2026-07-06T05:33:19.546Z",
+  "expires_at": "2026-07-13T05:33:19.546Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c96e5482db8d47e584ca2425f4d4992729fc6c8904d01dca46e14e12ac2cb777",
+  "signature": "00f8ccd08b11a1ac95e06a7c9e288cf4873aea78ee19aef4987b77d447693fe6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7c42f0f3"
 }

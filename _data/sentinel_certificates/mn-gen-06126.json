@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0258480",
+  "certificate_id": "MN-SC-2026-5532363",
   "skill_id": "mn-gen-06126",
   "skill_name": "Mcp-maven-deps",
-  "issued_at": "2026-07-06T03:57:38.480Z",
-  "expires_at": "2026-07-13T03:57:38.480Z",
+  "issued_at": "2026-07-06T05:25:32.363Z",
+  "expires_at": "2026-07-13T05:25:32.363Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "969057e1207d55d9e548900f36fe0d860401b06f8c78bc93b1966039bdc979ec",
+  "signature": "fe19d56fc5ce202fc6e4dda2d52f088c358c7b53e977083c115ce14f37abbb00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06126"
 }

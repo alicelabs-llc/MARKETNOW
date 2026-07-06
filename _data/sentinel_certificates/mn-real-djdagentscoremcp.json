@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0985838",
+  "certificate_id": "MN-SC-2026-6365084",
   "skill_id": "mn-real-djdagentscoremcp",
   "skill_name": "djd-agent-score-mcp",
-  "issued_at": "2026-07-06T04:09:45.838Z",
-  "expires_at": "2026-07-13T04:09:45.838Z",
+  "issued_at": "2026-07-06T05:39:25.084Z",
+  "expires_at": "2026-07-13T05:39:25.084Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4df5eea83929cd5eca9ce3dcb000619956c4f0b9cc9f923ecccaf9ea558315c9",
+  "signature": "7bb8eae1b3af979d19484e821daf65e2f2cb08b08f26fdcc362fb0afce54c53b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-djdagentscoremcp"
 }

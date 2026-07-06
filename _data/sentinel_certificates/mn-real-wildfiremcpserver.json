@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0973862",
+  "certificate_id": "MN-SC-2026-6349201",
   "skill_id": "mn-real-wildfiremcpserver",
   "skill_name": "wildfire-mcp-server",
-  "issued_at": "2026-07-06T04:09:33.862Z",
-  "expires_at": "2026-07-13T04:09:33.862Z",
+  "issued_at": "2026-07-06T05:39:09.201Z",
+  "expires_at": "2026-07-13T05:39:09.201Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "834a89b9b1bdff84dcda0cafb073f3d376cb0677c9274d44b28517ef7d0b0c7c",
+  "signature": "7bd1b133d7baf1fe538062af3a6d23836e469020882f2bc8b9e1d70822d03117",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wildfiremcpserver"
 }

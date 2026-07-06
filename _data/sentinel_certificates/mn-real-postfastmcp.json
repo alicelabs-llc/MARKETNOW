@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1053817",
+  "certificate_id": "MN-SC-2026-6446354",
   "skill_id": "mn-real-postfastmcp",
   "skill_name": "postfast-mcp",
-  "issued_at": "2026-07-06T04:10:53.817Z",
-  "expires_at": "2026-07-13T04:10:53.817Z",
+  "issued_at": "2026-07-06T05:40:46.354Z",
+  "expires_at": "2026-07-13T05:40:46.354Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a6065fa0a021654baa13c400a0ef809c66a99f6954e618a58198755f2798276",
+  "signature": "e8a2de543e50a1dbedb472a496fcf347b4f0bb58584c0b7625f3a14ec1612411",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-postfastmcp"
 }

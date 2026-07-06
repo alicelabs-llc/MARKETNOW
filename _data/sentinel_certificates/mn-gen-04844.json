@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9819417",
+  "certificate_id": "MN-SC-2026-5481565",
   "skill_id": "mn-gen-04844",
   "skill_name": "Headless-editor-mcp",
-  "issued_at": "2026-07-06T03:50:19.417Z",
-  "expires_at": "2026-07-13T03:50:19.417Z",
+  "issued_at": "2026-07-06T05:24:41.565Z",
+  "expires_at": "2026-07-13T05:24:41.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbc0581d0c8e7c5c2a2c4dd92f9f080dda8296af7583fa5e6151515177638585",
+  "signature": "4e490c2d8b2241900a533adcb00a45ecaaa0dae3d9556f29643b6ab09cec29d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04844"
 }

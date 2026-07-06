@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0854879",
+  "certificate_id": "MN-SC-2026-6209384",
   "skill_id": "mn-fint-027",
   "skill_name": "Robo-Advisor Engine",
-  "issued_at": "2026-07-06T04:07:34.879Z",
-  "expires_at": "2026-07-13T04:07:34.879Z",
+  "issued_at": "2026-07-06T05:36:49.384Z",
+  "expires_at": "2026-07-13T05:36:49.384Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cdcb444ed8232453cb18fc7bd4c15d527a6459c671f865235b1472b3198ac6b0",
+  "signature": "752ea175a91791b4fc2343f8241aa7f33c0970dd2d771e80775ed48f46bfe9f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-027"
 }

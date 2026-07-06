@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0764283",
+  "certificate_id": "MN-SC-2026-6101692",
   "skill_id": "mn-leg-00024",
   "skill_name": "PCI DSS Scanner",
-  "issued_at": "2026-07-06T04:06:04.283Z",
-  "expires_at": "2026-07-13T04:06:04.283Z",
+  "issued_at": "2026-07-06T05:35:01.692Z",
+  "expires_at": "2026-07-13T05:35:01.692Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "22a05d1b5f3f35635289792456c6e210f111a70dffc009f4b4756dec3e46b30c",
+  "signature": "c22717f2311a3ebda5d7630b9d894e0853da7e2221bc53a549874dcd7c11e9ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00024"
 }

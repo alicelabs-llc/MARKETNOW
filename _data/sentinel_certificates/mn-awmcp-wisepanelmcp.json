@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0889648",
+  "certificate_id": "MN-SC-2026-6249751",
   "skill_id": "mn-awmcp-wisepanelmcp",
   "skill_name": "wisepanel-mcp",
-  "issued_at": "2026-07-06T04:08:09.648Z",
-  "expires_at": "2026-07-13T04:08:09.648Z",
+  "issued_at": "2026-07-06T05:37:29.751Z",
+  "expires_at": "2026-07-13T05:37:29.751Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "fb4da622daa1d36dce0e4aa24299536c6a3faec12d08dbf90fbcaf05a5488cfe",
+  "signature": "4433b89d4bd58b70c412e9730d690de7925bafa4695102c9171b23b0278c8eb2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-wisepanelmcp"
 }

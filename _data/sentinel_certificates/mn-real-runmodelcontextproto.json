@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1108372",
+  "certificate_id": "MN-SC-2026-6508532",
   "skill_id": "mn-real-runmodelcontextproto",
   "skill_name": "run-model-context-protocol-servers-with-aws-lambda",
-  "issued_at": "2026-07-06T04:11:48.372Z",
-  "expires_at": "2026-07-13T04:11:48.372Z",
+  "issued_at": "2026-07-06T05:41:48.532Z",
+  "expires_at": "2026-07-13T05:41:48.532Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "356defb16024f964a70bc9df0752c53071fefbe05094b0d4d57786ad65cb4bd4",
+  "signature": "35a90c551292671dbe896ef74c91800ba9118699f6418c9c3e6a3f780a033124",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-runmodelcontextproto"
 }

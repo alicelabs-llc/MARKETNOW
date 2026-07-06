@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0908242",
+  "certificate_id": "MN-SC-2026-6270836",
   "skill_id": "mn-awmcp-dockermcpserver",
   "skill_name": "docker-mcp-server",
-  "issued_at": "2026-07-06T04:08:28.242Z",
-  "expires_at": "2026-07-13T04:08:28.242Z",
+  "issued_at": "2026-07-06T05:37:50.836Z",
+  "expires_at": "2026-07-13T05:37:50.836Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8aac9b3bd583673b42ecd1010fb2d4df97cff456a41dc75d8fd229ae12f7eb6",
+  "signature": "5584be89a977b5c1a19de89b34ec5c3c7897fffffbb911a9fc691435d36286b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-dockermcpserver"
 }

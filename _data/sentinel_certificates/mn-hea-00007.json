@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0759118",
+  "certificate_id": "MN-SC-2026-6096239",
   "skill_id": "mn-hea-00007",
   "skill_name": "CDA Document Parser",
-  "issued_at": "2026-07-06T04:05:59.118Z",
-  "expires_at": "2026-07-13T04:05:59.118Z",
+  "issued_at": "2026-07-06T05:34:56.239Z",
+  "expires_at": "2026-07-13T05:34:56.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dba581472cda004faf2ddb279d956c4a2092b9e5c1821644afa5531588a0e5b7",
+  "signature": "b4a1aefc8a52957d563220f849351bc7810d74eb93524bac2c505feebaa037a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00007"
 }

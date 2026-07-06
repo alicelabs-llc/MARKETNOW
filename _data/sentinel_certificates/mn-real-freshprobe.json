@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1025202",
+  "certificate_id": "MN-SC-2026-6413282",
   "skill_id": "mn-real-freshprobe",
   "skill_name": "freshprobe",
-  "issued_at": "2026-07-06T04:10:25.202Z",
-  "expires_at": "2026-07-13T04:10:25.202Z",
+  "issued_at": "2026-07-06T05:40:13.282Z",
+  "expires_at": "2026-07-13T05:40:13.282Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "677478ab34f9b7108be6a3d4d6e93e2d54343f8c1d11f473a5f65364666e4239",
+  "signature": "c0ee8ae74b065b645f3712c55eaea630589d4f189b4d2a34fab24a74a6145c86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-freshprobe"
 }

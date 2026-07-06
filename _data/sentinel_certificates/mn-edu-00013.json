@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0756415",
+  "certificate_id": "MN-SC-2026-6093100",
   "skill_id": "mn-edu-00013",
   "skill_name": "Wolfram Alpha Education",
-  "issued_at": "2026-07-06T04:05:56.415Z",
-  "expires_at": "2026-07-13T04:05:56.415Z",
+  "issued_at": "2026-07-06T05:34:53.100Z",
+  "expires_at": "2026-07-13T05:34:53.100Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11964c89d89ea46032390c692b2c329a40b609f5b02eff5f697dece003618277",
+  "signature": "1fab7b32971817a00e4e7d911bd64ee2204874d7c15d9e84513ebe860ded7535",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edu-00013"
 }

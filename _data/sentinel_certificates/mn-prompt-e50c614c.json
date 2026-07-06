@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0653602",
+  "certificate_id": "MN-SC-2026-5973903",
   "skill_id": "mn-prompt-e50c614c",
   "skill_name": "Franchise disclosure document (FDD)",
-  "issued_at": "2026-07-06T04:04:13.602Z",
-  "expires_at": "2026-07-13T04:04:13.602Z",
+  "issued_at": "2026-07-06T05:32:53.903Z",
+  "expires_at": "2026-07-13T05:32:53.903Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25fd5a6ebeec15f20e63484947abb1edb99e378fa8c533d6e3c1de81b6a38945",
+  "signature": "c02b1b542bfa21908426a24c60d14c615bab0e3e1911a0b720dfc0666fd950ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e50c614c"
 }

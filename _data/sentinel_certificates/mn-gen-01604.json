@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9617716",
+  "certificate_id": "MN-SC-2026-5341541",
   "skill_id": "mn-gen-01604",
   "skill_name": "bugherd-mcp",
-  "issued_at": "2026-07-06T03:46:57.716Z",
-  "expires_at": "2026-07-13T03:46:57.716Z",
+  "issued_at": "2026-07-06T05:22:21.541Z",
+  "expires_at": "2026-07-13T05:22:21.541Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b678a9abbe0f75a4a8be40f6322f8c604bdf861ab2efa3fb3f5f83a1fbdefa6a",
+  "signature": "152958ae78d6ab56300805fafe55a52e88de2a7b3dfe190bafea921c4ccf4523",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01604"
 }

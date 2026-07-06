@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0400166",
+  "certificate_id": "MN-SC-2026-5698311",
   "skill_id": "mn-gen-10134",
   "skill_name": "Outline-mcp-server",
-  "issued_at": "2026-07-06T04:00:00.166Z",
-  "expires_at": "2026-07-13T04:00:00.166Z",
+  "issued_at": "2026-07-06T05:28:18.311Z",
+  "expires_at": "2026-07-13T05:28:18.311Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "07139cff6f205c38fab35dd52af3fd1573467bfc1d44db54e78e364355f04eb4",
+  "signature": "35a0dbe2656f3686382d787e3a87ad767d85351e6116f7aa3e93772d7b0682a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10134"
 }

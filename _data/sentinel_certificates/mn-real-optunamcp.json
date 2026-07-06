@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0970418",
+  "certificate_id": "MN-SC-2026-6345223",
   "skill_id": "mn-real-optunamcp",
   "skill_name": "optuna-mcp",
-  "issued_at": "2026-07-06T04:09:30.418Z",
-  "expires_at": "2026-07-13T04:09:30.418Z",
+  "issued_at": "2026-07-06T05:39:05.223Z",
+  "expires_at": "2026-07-13T05:39:05.223Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8e8b7f54a1c8e292026f23f851ceb0acee8da05af23ac42450cc6c02a487992a",
+  "signature": "0a5d5889c28e935c15d6224de50e2efcde44e03a53ea5e0bbc54c2ba90a5743c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-optunamcp"
 }

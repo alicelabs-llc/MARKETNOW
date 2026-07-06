@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0245295",
+  "certificate_id": "MN-SC-2026-5518284",
   "skill_id": "mn-net-05759",
   "skill_name": "linkedapi-mcp",
-  "issued_at": "2026-07-06T03:57:25.295Z",
-  "expires_at": "2026-07-13T03:57:25.295Z",
+  "issued_at": "2026-07-06T05:25:18.284Z",
+  "expires_at": "2026-07-13T05:25:18.284Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31019b152bb5ac8848a73f1c370480eac5a6fccf7ba90b2d43901a3994868f8f",
+  "signature": "ca4a19114979fe9d5e72ccd284dd8fd09541bbb6bb47c59579e58adc378ce14b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-05759"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0327088",
+  "certificate_id": "MN-SC-2026-5612291",
   "skill_id": "mn-sys-07875",
   "skill_name": "Mcp-server-wsl-filesystem",
-  "issued_at": "2026-07-06T03:58:47.088Z",
-  "expires_at": "2026-07-13T03:58:47.088Z",
+  "issued_at": "2026-07-06T05:26:52.291Z",
+  "expires_at": "2026-07-13T05:26:52.291Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "98b510e622ff2af86ae6919cffdb8aa1b08e8d1cdbc116d436060a10ffeca0d4",
+  "signature": "76f36ae8647ffec4304d22f084c1ceeab3783b8764f175e9e6ad5718a5dc8b1e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sys-07875"
 }

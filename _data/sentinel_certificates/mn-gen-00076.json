@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9675803",
+  "certificate_id": "MN-SC-2026-5278802",
   "skill_id": "mn-gen-00076",
   "skill_name": "Ab-ibge-mcp-server",
-  "issued_at": "2026-07-06T03:47:55.803Z",
-  "expires_at": "2026-07-13T03:47:55.803Z",
+  "issued_at": "2026-07-06T05:21:18.802Z",
+  "expires_at": "2026-07-13T05:21:18.802Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09891647ab7bcec82f6133cb567d671779ba235397062c082c823a4a2c2888d4",
+  "signature": "9d20ce38be313e7c28e51e510fdb941cdec2ebef905a7498a6cd4a5c8abc70e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00076"
 }

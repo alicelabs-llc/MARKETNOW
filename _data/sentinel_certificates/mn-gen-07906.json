@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0328468",
+  "certificate_id": "MN-SC-2026-5615165",
   "skill_id": "mn-gen-07906",
   "skill_name": "Burtthecoder/mcp-shodan",
-  "issued_at": "2026-07-06T03:58:48.468Z",
-  "expires_at": "2026-07-13T03:58:48.468Z",
+  "issued_at": "2026-07-06T05:26:55.165Z",
+  "expires_at": "2026-07-13T05:26:55.165Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "47a10e8ebbddb7858fc0a1477ffaa6a962470a925f10a66694aa6ae8363434c3",
+  "signature": "840e9665e775da277195835db3ba0208cd832eec477b2da30e048d3e97179428",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07906"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1051110",
+  "certificate_id": "MN-SC-2026-6443156",
   "skill_id": "mn-real-arai",
   "skill_name": "arai",
-  "issued_at": "2026-07-06T04:10:51.110Z",
-  "expires_at": "2026-07-13T04:10:51.110Z",
+  "issued_at": "2026-07-06T05:40:43.156Z",
+  "expires_at": "2026-07-13T05:40:43.156Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ed377002103f194a64e696b05fc7472b21420ed320d943fb23c10a42f226ba56",
+  "signature": "f0bb4b299517f0ed3fdb10cd900f4bcfaff5d98d7770e911a0f5fdaa83d793b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-arai"
 }

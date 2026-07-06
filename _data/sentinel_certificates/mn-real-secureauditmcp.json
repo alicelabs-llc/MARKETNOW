@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1049668",
+  "certificate_id": "MN-SC-2026-6440577",
   "skill_id": "mn-real-secureauditmcp",
   "skill_name": "SecureAudit-MCP",
-  "issued_at": "2026-07-06T04:10:49.668Z",
-  "expires_at": "2026-07-13T04:10:49.668Z",
+  "issued_at": "2026-07-06T05:40:40.577Z",
+  "expires_at": "2026-07-13T05:40:40.577Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4495c614fc333434238cc71f0dc0fb3122a855c66d17306dfb9a6241570c207d",
+  "signature": "643e16b26ad73477d45bf567e069c83542cfb7059bff9566e266057f21232f08",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-secureauditmcp"
 }

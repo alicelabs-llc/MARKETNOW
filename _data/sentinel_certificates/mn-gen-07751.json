@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0321723",
+  "certificate_id": "MN-SC-2026-5606990",
   "skill_id": "mn-gen-07751",
   "skill_name": "Mcp-server-nyantify",
-  "issued_at": "2026-07-06T03:58:41.723Z",
-  "expires_at": "2026-07-13T03:58:41.723Z",
+  "issued_at": "2026-07-06T05:26:46.990Z",
+  "expires_at": "2026-07-13T05:26:46.990Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec1f9685a683280263d98d4b6084bfeb73f03cef5a7e75cd852478950e5e70de",
+  "signature": "b46c00d7a5c24e8465ced07b3a527fa87b4db3e0289d69d8737082e12a81d844",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07751"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0860328",
+  "certificate_id": "MN-SC-2026-6215526",
   "skill_id": "mn-hrt-001",
   "skill_name": "ATS Integration Hub",
-  "issued_at": "2026-07-06T04:07:40.328Z",
-  "expires_at": "2026-07-13T04:07:40.328Z",
+  "issued_at": "2026-07-06T05:36:55.526Z",
+  "expires_at": "2026-07-13T05:36:55.526Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "36fc673a45049f9195024a0e6b38914cd4db73848b8c5d2233123e02c13dce5e",
+  "signature": "0e9d926a3c6696c4d3fd4c5c3d9d241618e52493f0a5c1669dc0d1651469e84c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hrt-001"
 }

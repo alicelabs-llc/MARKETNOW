@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1060735",
+  "certificate_id": "MN-SC-2026-6453152",
   "skill_id": "mn-real-mcpgitingest",
   "skill_name": "mcp-git-ingest",
-  "issued_at": "2026-07-06T04:11:00.735Z",
-  "expires_at": "2026-07-13T04:11:00.735Z",
+  "issued_at": "2026-07-06T05:40:53.153Z",
+  "expires_at": "2026-07-13T05:40:53.153Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca5350e0428746ffbb32dd47326f1f2aa98128c665c5f1933e495eef8d72e910",
+  "signature": "219868e7bbe56b09db559ef98c2a9858ef87431c157effc2c7d2fe9bd203b5eb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgitingest"
 }

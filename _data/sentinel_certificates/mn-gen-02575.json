@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9682323",
+  "certificate_id": "MN-SC-2026-5383944",
   "skill_id": "mn-gen-02575",
   "skill_name": "Codescan-mcp-server",
-  "issued_at": "2026-07-06T03:48:02.323Z",
-  "expires_at": "2026-07-13T03:48:02.323Z",
+  "issued_at": "2026-07-06T05:23:03.944Z",
+  "expires_at": "2026-07-13T05:23:03.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "efc09da7841fc200457082b60dc85ef5c0d6004b9786a2b502e2b095b1c1b86b",
+  "signature": "4503476c4d745249f7b48b6e90b07f3962a6c315d59bb09d72b9de756f9ba8ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02575"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0899634",
+  "certificate_id": "MN-SC-2026-6260581",
   "skill_id": "mn-awmcp-applehealthmcpserver",
   "skill_name": "apple-health-mcp-server",
-  "issued_at": "2026-07-06T04:08:19.634Z",
-  "expires_at": "2026-07-13T04:08:19.634Z",
+  "issued_at": "2026-07-06T05:37:40.581Z",
+  "expires_at": "2026-07-13T05:37:40.581Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "f29b31a72de5f98efa4b917a1fd0ee48905c374f9e5164899862caf19341f8fb",
+  "signature": "6efbecb70c06293895938e8e98f2d5854a3ecfd1cc47f0a45bf583ce9e07c91f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-applehealthmcpserver"
 }

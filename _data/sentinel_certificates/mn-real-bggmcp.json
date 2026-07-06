@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1001478",
+  "certificate_id": "MN-SC-2026-6384308",
   "skill_id": "mn-real-bggmcp",
   "skill_name": "bgg-mcp",
-  "issued_at": "2026-07-06T04:10:01.478Z",
-  "expires_at": "2026-07-13T04:10:01.478Z",
+  "issued_at": "2026-07-06T05:39:44.308Z",
+  "expires_at": "2026-07-13T05:39:44.308Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "796eced04bfccde6604495993688f9015b3445ce827c71742d059c3634d2a807",
+  "signature": "e0bb986cbc89d99af71df3111506362c6a15fcef7f22e99ff9c286cca5f258fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bggmcp"
 }

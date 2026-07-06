@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0969765",
+  "certificate_id": "MN-SC-2026-6344428",
   "skill_id": "mn-real-llmadvisormcp",
   "skill_name": "llm-advisor-mcp",
-  "issued_at": "2026-07-06T04:09:29.765Z",
-  "expires_at": "2026-07-13T04:09:29.765Z",
+  "issued_at": "2026-07-06T05:39:04.428Z",
+  "expires_at": "2026-07-13T05:39:04.428Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42b89ec4e0de327a85ee7407efa2515c7fcf874ca027c9a775824b15921d0112",
+  "signature": "2b009ac0a5c26b7d1fe6ba230b7abda7959fedccbf8f6ddf0d9a05cdcd9be740",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-llmadvisormcp"
 }

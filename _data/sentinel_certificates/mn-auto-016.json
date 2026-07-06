@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0816723",
+  "certificate_id": "MN-SC-2026-6162435",
   "skill_id": "mn-auto-016",
   "skill_name": "Merger",
-  "issued_at": "2026-07-06T04:06:56.723Z",
-  "expires_at": "2026-07-13T04:06:56.723Z",
+  "issued_at": "2026-07-06T05:36:02.435Z",
+  "expires_at": "2026-07-13T05:36:02.435Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "78208f84a64e21ec825ade694dc36cb4f08abc9263981dac8bd4859926856f4d",
+  "signature": "a53050498397716fe75ae00458597f06a88b5eb7dead308bc7b31234c314372f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-016"
 }

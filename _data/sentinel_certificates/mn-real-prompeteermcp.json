@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1065217",
+  "certificate_id": "MN-SC-2026-6457634",
   "skill_id": "mn-real-prompeteermcp",
   "skill_name": "prompeteer-mcp",
-  "issued_at": "2026-07-06T04:11:05.217Z",
-  "expires_at": "2026-07-13T04:11:05.217Z",
+  "issued_at": "2026-07-06T05:40:57.634Z",
+  "expires_at": "2026-07-13T05:40:57.634Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9105402b76a10b06bd83d06d32a0e78b58af569f488fdf9f34e747cc298159c0",
+  "signature": "b23bc74fed6fc01a0f8bd150a0d1d35fed582a9de2d057b740eff082abcea3e7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-prompeteermcp"
 }

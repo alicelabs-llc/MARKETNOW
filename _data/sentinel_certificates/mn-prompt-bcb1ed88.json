@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0660890",
+  "certificate_id": "MN-SC-2026-5983558",
   "skill_id": "mn-prompt-bcb1ed88",
   "skill_name": "Sales onboarding 30/60/90 ramp",
-  "issued_at": "2026-07-06T04:04:20.890Z",
-  "expires_at": "2026-07-13T04:04:20.890Z",
+  "issued_at": "2026-07-06T05:33:03.558Z",
+  "expires_at": "2026-07-13T05:33:03.558Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09a6247cbb50463a6dadf6d32f269e97b3548a506521375c1fc5ac5e498be162",
+  "signature": "1e5bb10f097323f309bbbf081ddb716d7e7cfd1b6210ebed1f6f8b8d18edff9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bcb1ed88"
 }

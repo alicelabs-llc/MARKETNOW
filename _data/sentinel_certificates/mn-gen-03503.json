@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9739072",
+  "certificate_id": "MN-SC-2026-5426318",
   "skill_id": "mn-gen-03503",
   "skill_name": "Drand-mcp-server",
-  "issued_at": "2026-07-06T03:48:59.072Z",
-  "expires_at": "2026-07-13T03:48:59.072Z",
+  "issued_at": "2026-07-06T05:23:46.318Z",
+  "expires_at": "2026-07-13T05:23:46.318Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8109c21e1f5bf98283465cb01316a98804eb73ff16250eda6bc2a73e3f78b094",
+  "signature": "18d3914d2f363bf66ce1df08f1e41208b9f617f1407ecda7c8b6fa12da9eeb04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03503"
 }

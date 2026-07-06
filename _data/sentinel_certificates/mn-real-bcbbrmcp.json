@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0995008",
+  "certificate_id": "MN-SC-2026-6377191",
   "skill_id": "mn-real-bcbbrmcp",
   "skill_name": "bcb-br-mcp",
-  "issued_at": "2026-07-06T04:09:55.008Z",
-  "expires_at": "2026-07-13T04:09:55.008Z",
+  "issued_at": "2026-07-06T05:39:37.191Z",
+  "expires_at": "2026-07-13T05:39:37.191Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ee5306cf484c0eef9ebbca54b52e5769d5890933f1948b83ee45277a730503b",
+  "signature": "c9fab3ff7f9ed21085289935b776b203bc70dec4a8643dcc453e897815c9b284",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bcbbrmcp"
 }

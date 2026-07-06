@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1081418",
+  "certificate_id": "MN-SC-2026-6477183",
   "skill_id": "mn-real-ghidramcp",
   "skill_name": "ghidra-mcp",
-  "issued_at": "2026-07-06T04:11:21.418Z",
-  "expires_at": "2026-07-13T04:11:21.418Z",
+  "issued_at": "2026-07-06T05:41:17.183Z",
+  "expires_at": "2026-07-13T05:41:17.183Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9e7ed151f9211abbed07b56b7e386c341f4b08a312eda2c13f24a9a8efb8c05e",
+  "signature": "d352a2337ad271191602590b32f2ba74729ea2a837889a5b9446b2f1ce5014fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ghidramcp"
 }

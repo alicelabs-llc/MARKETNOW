@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0824290",
+  "certificate_id": "MN-SC-2026-6172064",
   "skill_id": "mn-comm-024",
   "skill_name": "Fraud Checker",
-  "issued_at": "2026-07-06T04:07:04.290Z",
-  "expires_at": "2026-07-13T04:07:04.290Z",
+  "issued_at": "2026-07-06T05:36:12.064Z",
+  "expires_at": "2026-07-13T05:36:12.064Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fffe3a962f17a45ec195691878b6235afd681372e9c9f7a7d9fe5ad6eaf8192c",
+  "signature": "68512ec3f0e18402480924439e90e8ae2c6d46ff1e439c897f207ad6006530a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-024"
 }

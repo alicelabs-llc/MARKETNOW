@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9718851",
+  "certificate_id": "MN-SC-2026-5412278",
   "skill_id": "mn-gen-03171",
   "skill_name": "Decoy-redteam",
-  "issued_at": "2026-07-06T03:48:38.851Z",
-  "expires_at": "2026-07-13T03:48:38.851Z",
+  "issued_at": "2026-07-06T05:23:32.278Z",
+  "expires_at": "2026-07-13T05:23:32.278Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58e9a0e7d279aa761aff9f5ff7b9c04c3f9477af95d73277663593fe9de00c7d",
+  "signature": "0c3b2820563cf9556055a0991ff31bc33483a772c26cf08326a550b0549f2561",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03171"
 }

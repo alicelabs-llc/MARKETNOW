@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0864848",
+  "certificate_id": "MN-SC-2026-6219000",
   "skill_id": "mn-lega-013",
   "skill_name": "Legal Billing Engine",
-  "issued_at": "2026-07-06T04:07:44.848Z",
-  "expires_at": "2026-07-13T04:07:44.848Z",
+  "issued_at": "2026-07-06T05:36:59.000Z",
+  "expires_at": "2026-07-13T05:36:59.000Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e6ac84c552fcec8e74b09c7244b051dc2c0d332386d6ee8c3b759def9a83b681",
+  "signature": "ad46160ec4c3a086b24efd8744fceb47955e3225a0739b73d3af6ac6deac695d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-lega-013"
 }

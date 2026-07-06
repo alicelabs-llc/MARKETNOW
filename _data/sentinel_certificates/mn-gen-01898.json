@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9636468",
+  "certificate_id": "MN-SC-2026-5353727",
   "skill_id": "mn-gen-01898",
   "skill_name": "Chrome-local-mcp",
-  "issued_at": "2026-07-06T03:47:16.468Z",
-  "expires_at": "2026-07-13T03:47:16.468Z",
+  "issued_at": "2026-07-06T05:22:33.727Z",
+  "expires_at": "2026-07-13T05:22:33.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a013bc80e04af4e7134f7f346c700fbf1611d1d6ca60209110ac003ecebded35",
+  "signature": "7b93138b411632115b6af937ef07cb52289f4b205c2c4393fc4136b863276591",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01898"
 }

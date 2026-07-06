@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9647582",
+  "certificate_id": "MN-SC-2026-5361032",
   "skill_id": "mn-gen-02086",
   "skill_name": "context-cli",
-  "issued_at": "2026-07-06T03:47:27.582Z",
-  "expires_at": "2026-07-13T03:47:27.582Z",
+  "issued_at": "2026-07-06T05:22:41.032Z",
+  "expires_at": "2026-07-13T05:22:41.032Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a4bffcccf8009eba5d9c0cf5b9acf463140546a2e85c9593f331c340dbfb3711",
+  "signature": "fe2ec42adf6a63b9e873b1c390c293e6e4d9a09114804660fef39517b668c8a5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02086"
 }

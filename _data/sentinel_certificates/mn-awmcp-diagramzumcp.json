@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0897368",
+  "certificate_id": "MN-SC-2026-6257771",
   "skill_id": "mn-awmcp-diagramzumcp",
   "skill_name": "diagramzu-mcp",
-  "issued_at": "2026-07-06T04:08:17.368Z",
-  "expires_at": "2026-07-13T04:08:17.368Z",
+  "issued_at": "2026-07-06T05:37:37.771Z",
+  "expires_at": "2026-07-13T05:37:37.771Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "fe0e4b11ef4db6da5eb0a829af6a14a486e9b29ff627c29b513637497afd5253",
+  "signature": "8f7de25591f222c5d470bffc006a25ddc683a8e69f78dcb80e917616529fc2f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-diagramzumcp"
 }

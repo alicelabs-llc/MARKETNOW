@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1092483",
+  "certificate_id": "MN-SC-2026-6490729",
   "skill_id": "mn-real-roamcode",
   "skill_name": "roam-code",
-  "issued_at": "2026-07-06T04:11:32.483Z",
-  "expires_at": "2026-07-13T04:11:32.483Z",
+  "issued_at": "2026-07-06T05:41:30.729Z",
+  "expires_at": "2026-07-13T05:41:30.729Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cfe643b04528a7c7b439b276822114f347c7750bed8ac723edf76af8d6f3e05e",
+  "signature": "25607bab50cf00fc461cc71170fa12bd476e8385907e1299a0c9d755b91702d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-roamcode"
 }

@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0898766",
+  "certificate_id": "MN-SC-2026-6259434",
   "skill_id": "mn-awmcp-opengenesmcp",
   "skill_name": "opengenes-mcp",
-  "issued_at": "2026-07-06T04:08:18.766Z",
-  "expires_at": "2026-07-13T04:08:18.766Z",
+  "issued_at": "2026-07-06T05:37:39.434Z",
+  "expires_at": "2026-07-13T05:37:39.434Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "c7af96543b2ac65ee514a050b85324992c026f1c99a7cef9aab9b32c16750730",
+  "signature": "373d1c5006d3f8eae6d06c355468cf3ac60ad9c03747bef41613b621e0e66852",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-opengenesmcp"
 }

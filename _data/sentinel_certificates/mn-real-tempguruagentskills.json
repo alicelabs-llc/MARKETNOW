@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1068347",
+  "certificate_id": "MN-SC-2026-6461847",
   "skill_id": "mn-real-tempguruagentskills",
   "skill_name": "tempguru-agent-skills",
-  "issued_at": "2026-07-06T04:11:08.347Z",
-  "expires_at": "2026-07-13T04:11:08.347Z",
+  "issued_at": "2026-07-06T05:41:01.847Z",
+  "expires_at": "2026-07-13T05:41:01.847Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "628ce623f85980058c10d48a303e5460736bfec5d8b80a42ac386b0078ca0e79",
+  "signature": "0948e3e563589811d5503a96572b3037ed3e61495356a7ce8f75da44c50ba724",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tempguruagentskills"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0914323",
+  "certificate_id": "MN-SC-2026-6278968",
   "skill_id": "mn-awmcp-vmwarensxsecurity",
   "skill_name": "VMware-NSX-Security",
-  "issued_at": "2026-07-06T04:08:34.323Z",
-  "expires_at": "2026-07-13T04:08:34.323Z",
+  "issued_at": "2026-07-06T05:37:58.968Z",
+  "expires_at": "2026-07-13T05:37:58.968Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e667262383c9b7077326c85ec1f007b0a2caf0ad649fccd1c6ebe1352aed45a",
+  "signature": "657f92ca505af1bc85f75b8627a532d8eb0a16871fd5905d1953a58a7250823b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-vmwarensxsecurity"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0748346",
+  "certificate_id": "MN-SC-2026-6082273",
   "skill_id": "mn-asf-021",
   "skill_name": "Adversarial Attack Detector",
-  "issued_at": "2026-07-06T04:05:48.346Z",
-  "expires_at": "2026-07-13T04:05:48.346Z",
+  "issued_at": "2026-07-06T05:34:42.273Z",
+  "expires_at": "2026-07-13T05:34:42.273Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "afb39c52fd36ea2d07f16646a078815dbbc6e940aaf4b112c862abe966fd1f68",
+  "signature": "6c7ab353c66f3d9bef7db5a30446a5098711d35b24bd8ddee8b4491b20db51ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-021"
 }

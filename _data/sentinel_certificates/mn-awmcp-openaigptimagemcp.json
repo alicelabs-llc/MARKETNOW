@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0888195",
+  "certificate_id": "MN-SC-2026-6248259",
   "skill_id": "mn-awmcp-openaigptimagemcp",
   "skill_name": "openai-gpt-image-mcp",
-  "issued_at": "2026-07-06T04:08:08.195Z",
-  "expires_at": "2026-07-13T04:08:08.195Z",
+  "issued_at": "2026-07-06T05:37:28.259Z",
+  "expires_at": "2026-07-13T05:37:28.259Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "860b1ee75c205658625761104aec14e5bd9dc59111a1e3fad28cf768df3fffdd",
+  "signature": "6b56d9ad009269c37f4dcd79b3ca69b979032b881561068d73a6863e2a676dc0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-openaigptimagemcp"
 }

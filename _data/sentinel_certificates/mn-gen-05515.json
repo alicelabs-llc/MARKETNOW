@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0237648",
+  "certificate_id": "MN-SC-2026-5509014",
   "skill_id": "mn-gen-05515",
   "skill_name": "Kobana-mcp-servers",
-  "issued_at": "2026-07-06T03:57:17.648Z",
-  "expires_at": "2026-07-13T03:57:17.648Z",
+  "issued_at": "2026-07-06T05:25:09.014Z",
+  "expires_at": "2026-07-13T05:25:09.014Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc842412e92983788c4f3877b0442c57d25d3d691a9df81d63d9365c22707718",
+  "signature": "2d3b1533e614b14bec79980fdc9c86bf0501af49bd4a2c47ed421a42f282b2ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05515"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1021064",
+  "certificate_id": "MN-SC-2026-6408618",
   "skill_id": "mn-real-aivisibilitymcp",
   "skill_name": "ai-visibility-mcp",
-  "issued_at": "2026-07-06T04:10:21.064Z",
-  "expires_at": "2026-07-13T04:10:21.064Z",
+  "issued_at": "2026-07-06T05:40:08.618Z",
+  "expires_at": "2026-07-13T05:40:08.618Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59434cc5e33ff36305ebb192947becedf9bbac5401418f2fece1a8dea5da5eff",
+  "signature": "f810380d3d95fb95abb9e2d3359843ec3de631b95c04b7423deb856a9fa2d038",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aivisibilitymcp"
 }

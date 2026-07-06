@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1050795",
+  "certificate_id": "MN-SC-2026-6442845",
   "skill_id": "mn-real-opnsensemcp",
   "skill_name": "OPNSenseMCP",
-  "issued_at": "2026-07-06T04:10:50.795Z",
-  "expires_at": "2026-07-13T04:10:50.795Z",
+  "issued_at": "2026-07-06T05:40:42.845Z",
+  "expires_at": "2026-07-13T05:40:42.845Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b17bd55524680878b14bebabc9b98e7999dbecfcc63fa322d555d92e8dcf8a69",
+  "signature": "e2506098b924c2fc052fe8cf2bdb2187db02397f43afcd04e2eea351926721c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opnsensemcp"
 }

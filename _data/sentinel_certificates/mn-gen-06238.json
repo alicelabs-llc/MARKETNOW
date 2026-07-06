@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0262409",
+  "certificate_id": "MN-SC-2026-5536597",
   "skill_id": "mn-gen-06238",
   "skill_name": "Mcp-apple-store",
-  "issued_at": "2026-07-06T03:57:42.409Z",
-  "expires_at": "2026-07-13T03:57:42.409Z",
+  "issued_at": "2026-07-06T05:25:36.597Z",
+  "expires_at": "2026-07-13T05:25:36.597Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bdaa6c413bc4828f50d1da34912d88e6c9644637300bb4257afb94705703f01",
+  "signature": "e0cb969124ef93a151225f9c268e42a84f831eafc130bf21339908dd68278feb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06238"
 }

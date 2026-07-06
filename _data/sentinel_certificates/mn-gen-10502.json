@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0420305",
+  "certificate_id": "MN-SC-2026-5713825",
   "skill_id": "mn-gen-10502",
   "skill_name": "Pluggedin/pluggedin-mcp-proxy",
-  "issued_at": "2026-07-06T04:00:20.305Z",
-  "expires_at": "2026-07-13T04:00:20.305Z",
+  "issued_at": "2026-07-06T05:28:33.825Z",
+  "expires_at": "2026-07-13T05:28:33.825Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25f0ae21cc095733326e59f1f311e1768c4ed0624f2b0465fa5844ddf4556f39",
+  "signature": "bdeef46b56f5990d80992e066bdd857e7ad02efe8b5cdd544bd945e5e25ce90a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10502"
 }

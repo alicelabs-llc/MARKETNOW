@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0712656",
+  "certificate_id": "MN-SC-2026-6041033",
   "skill_id": "mn-prompt-292738fe",
   "skill_name": "Data warehouse query optimization",
-  "issued_at": "2026-07-06T04:05:12.656Z",
-  "expires_at": "2026-07-13T04:05:12.656Z",
+  "issued_at": "2026-07-06T05:34:01.033Z",
+  "expires_at": "2026-07-13T05:34:01.033Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc1327ffbd29bf6eb810c99184600d8112879203449e52a27377ca1fb16e5ebb",
+  "signature": "762d8ae54a835f8ea5dc11ccbf4678915e7cd2bb37d2dca2ba901e3bff0d6952",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-292738fe"
 }

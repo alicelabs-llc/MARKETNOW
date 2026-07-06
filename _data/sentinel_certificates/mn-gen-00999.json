@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9585331",
+  "certificate_id": "MN-SC-2026-5317591",
   "skill_id": "mn-gen-00999",
   "skill_name": "Ashlr-stack-monorepo",
-  "issued_at": "2026-07-06T03:46:25.331Z",
-  "expires_at": "2026-07-13T03:46:25.331Z",
+  "issued_at": "2026-07-06T05:21:57.591Z",
+  "expires_at": "2026-07-13T05:21:57.591Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31cfb1082b9d394556117531045ebe325543cd6dd6e1e5ce1bb834e8591cc0a6",
+  "signature": "c55ecea6d0575403688ca30501013e3a5c869af54d5f35f4840ea72f21ba1d8b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00999"
 }

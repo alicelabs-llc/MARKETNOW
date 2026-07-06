@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9618436",
+  "certificate_id": "MN-SC-2026-5342016",
   "skill_id": "mn-gen-01622",
   "skill_name": "Bun-doc-mcp",
-  "issued_at": "2026-07-06T03:46:58.436Z",
-  "expires_at": "2026-07-13T03:46:58.436Z",
+  "issued_at": "2026-07-06T05:22:22.016Z",
+  "expires_at": "2026-07-13T05:22:22.016Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "601fe5196acabce3e65cbd0b11bb3aefc5871e5bafac46a3feac5e0d35acce81",
+  "signature": "6e37d21ec6016ef54d0c2e4d675e261c65457dae6b54a5ad415f0ebee787e1d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01622"
 }

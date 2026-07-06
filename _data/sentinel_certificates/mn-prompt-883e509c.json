@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0670006",
+  "certificate_id": "MN-SC-2026-5993594",
   "skill_id": "mn-prompt-883e509c",
   "skill_name": "Profitability analysis by segment",
-  "issued_at": "2026-07-06T04:04:30.006Z",
-  "expires_at": "2026-07-13T04:04:30.006Z",
+  "issued_at": "2026-07-06T05:33:13.594Z",
+  "expires_at": "2026-07-13T05:33:13.594Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7e82f6b4e4bf2c9f0abc925a3032ed01e35f30841adae0f3517e096c475c0da5",
+  "signature": "cf6bec23d1830fcbcec891d07edc6b037fe5decfa723011f734b3f69062091e9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-883e509c"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9587734",
+  "certificate_id": "MN-SC-2026-5319171",
   "skill_id": "mn-gen-01045",
   "skill_name": "Atelier",
-  "issued_at": "2026-07-06T03:46:27.734Z",
-  "expires_at": "2026-07-13T03:46:27.734Z",
+  "issued_at": "2026-07-06T05:21:59.171Z",
+  "expires_at": "2026-07-13T05:21:59.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30e916ddabe3f1c44bb8ea211bcfc0555752290587d875716cdb2a86f93bfcf2",
+  "signature": "f9cabffdbbada0e3907cc7a3ab7581c140d473432329ad76df45e9ca66bf7c20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01045"
 }

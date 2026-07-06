@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0340556",
+  "certificate_id": "MN-SC-2026-5630393",
   "skill_id": "mn-gen-08265",
   "skill_name": "N8n-nodes-mcp-server-trigger",
-  "issued_at": "2026-07-06T03:59:00.556Z",
-  "expires_at": "2026-07-13T03:59:00.556Z",
+  "issued_at": "2026-07-06T05:27:10.393Z",
+  "expires_at": "2026-07-13T05:27:10.393Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8fd7aeb3490cbaa439255cebaa55ed22f7673e5a5f8e8dbbd21eb6c76b85a1b2",
+  "signature": "8a03e40b46299eda645d662ed61b4c72280af1c227d4174f208d4765636aa688",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08265"
 }

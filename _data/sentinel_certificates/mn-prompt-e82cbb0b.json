@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0725341",
+  "certificate_id": "MN-SC-2026-6055868",
   "skill_id": "mn-prompt-e82cbb0b",
   "skill_name": "Farmers market vendor operations",
-  "issued_at": "2026-07-06T04:05:25.341Z",
-  "expires_at": "2026-07-13T04:05:25.341Z",
+  "issued_at": "2026-07-06T05:34:15.868Z",
+  "expires_at": "2026-07-13T05:34:15.868Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "80381f7d1f80d60cbfafd5cba0e653149bee1e4f5987c68d5d108cace942225d",
+  "signature": "c81e1f615b3a45808eb56dba4dc6f42eed4b205360f70046dba92078f1620d27",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e82cbb0b"
 }

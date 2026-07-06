@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0368025",
+  "certificate_id": "MN-SC-2026-5662574",
   "skill_id": "mn-gen-09334",
   "skill_name": "Personal-claude-mcp",
-  "issued_at": "2026-07-06T03:59:28.025Z",
-  "expires_at": "2026-07-13T03:59:28.025Z",
+  "issued_at": "2026-07-06T05:27:42.574Z",
+  "expires_at": "2026-07-13T05:27:42.574Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aacfc32b7ecfe142f970f74b94af75d868c9a0bd5526f9fb85a1e32a73f7de72",
+  "signature": "520c9283a9f14af5ad1c2174f9c870fbdcddc4d80fcb0712a647d4e941f78f7a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09334"
 }

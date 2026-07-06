@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0835259",
+  "certificate_id": "MN-SC-2026-6185774",
   "skill_id": "mn-prod-023",
   "skill_name": "Document Collaboration",
-  "issued_at": "2026-07-06T04:07:15.259Z",
-  "expires_at": "2026-07-13T04:07:15.259Z",
+  "issued_at": "2026-07-06T05:36:25.774Z",
+  "expires_at": "2026-07-13T05:36:25.774Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "397c0cd09dc08e9ed4343b3d769fbc8fdcc316486d0c650555f8c6390601920b",
+  "signature": "de631a119d655a60f5e43bfbffc7d6320de4d657ea49ac4d420a38dc5529e8b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-023"
 }

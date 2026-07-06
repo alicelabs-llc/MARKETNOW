@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9637323",
+  "certificate_id": "MN-SC-2026-5354313",
   "skill_id": "mn-gen-01899",
   "skill_name": "Chrome-context-mcp",
-  "issued_at": "2026-07-06T03:47:17.323Z",
-  "expires_at": "2026-07-13T03:47:17.323Z",
+  "issued_at": "2026-07-06T05:22:34.313Z",
+  "expires_at": "2026-07-13T05:22:34.313Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7d304e0d237ae63636747f5c89a1bafd8d9d34aa312e38ba4ac5d345c0edec7a",
+  "signature": "3b71435b4c63e3c4e7d19c8016026eef627f1a074e714414b844d810080c83c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01899"
 }

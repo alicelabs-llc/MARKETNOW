@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9607916",
+  "certificate_id": "MN-SC-2026-5334726",
   "skill_id": "mn-gen-01483",
   "skill_name": "Boardroom-mcp",
-  "issued_at": "2026-07-06T03:46:47.916Z",
-  "expires_at": "2026-07-13T03:46:47.916Z",
+  "issued_at": "2026-07-06T05:22:14.726Z",
+  "expires_at": "2026-07-13T05:22:14.726Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6f9caf6f22b5b2f43af0556789209d283c90cbd02e3391002e432860bf2f51f",
+  "signature": "288c9056ac453db05771d6ee109b45b6a036a025524581b8662bc4fe7dc9b605",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01483"
 }

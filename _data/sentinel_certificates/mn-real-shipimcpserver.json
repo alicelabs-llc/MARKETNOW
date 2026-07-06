@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0968657",
+  "certificate_id": "MN-SC-2026-6343059",
   "skill_id": "mn-real-shipimcpserver",
   "skill_name": "shipi-mcp-server",
-  "issued_at": "2026-07-06T04:09:28.657Z",
-  "expires_at": "2026-07-13T04:09:28.657Z",
+  "issued_at": "2026-07-06T05:39:03.059Z",
+  "expires_at": "2026-07-13T05:39:03.059Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4bd655edef49e9088a7a55896e2770b6538fe52d7d370d1a3bb26ccaccb981f8",
+  "signature": "e75a89fbd85ed36bc3bb305182ab273a64cdc758b5fac4430385a33ad08972a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-shipimcpserver"
 }

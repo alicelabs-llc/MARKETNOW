@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9698443",
+  "certificate_id": "MN-SC-2026-5395238",
   "skill_id": "mn-gen-02798",
   "skill_name": "Copilot-agent-teams",
-  "issued_at": "2026-07-06T03:48:18.443Z",
-  "expires_at": "2026-07-13T03:48:18.443Z",
+  "issued_at": "2026-07-06T05:23:15.238Z",
+  "expires_at": "2026-07-13T05:23:15.238Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b79fdc8500b5f1914e6e4942adc36b613dc6e39d03a0b0ab7ca8863dfb78d6a",
+  "signature": "ce699c7d6bf59de943841b105adbf0d1d757bc4b829299dee1ddabf502661dca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02798"
 }

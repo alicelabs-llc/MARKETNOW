@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1017138",
+  "certificate_id": "MN-SC-2026-6402989",
   "skill_id": "mn-real-apogeoapimcp",
   "skill_name": "apogeoapi-mcp",
-  "issued_at": "2026-07-06T04:10:17.138Z",
-  "expires_at": "2026-07-13T04:10:17.138Z",
+  "issued_at": "2026-07-06T05:40:02.989Z",
+  "expires_at": "2026-07-13T05:40:02.989Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2fa580e2f0cf2bc6329e8a6dd728bd14a04146d6dd9500a8e6a942f6ac928632",
+  "signature": "50071d83f1c2d82a12ad9afca55b5e76f93741060e72ee81702677bba77d783e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apogeoapimcp"
 }

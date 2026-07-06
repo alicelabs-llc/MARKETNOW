@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0896310",
+  "certificate_id": "MN-SC-2026-6257289",
   "skill_id": "mn-awmcp-flowzapmcp",
   "skill_name": "flowzap-mcp",
-  "issued_at": "2026-07-06T04:08:16.310Z",
-  "expires_at": "2026-07-13T04:08:16.310Z",
+  "issued_at": "2026-07-06T05:37:37.289Z",
+  "expires_at": "2026-07-13T05:37:37.289Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "5865439f65c131020c1bb189612c2d516940b1085fd34e0987fcf14ded30806d",
+  "signature": "3e9fd893bd565160cb5c8d5d9a159697e666b7982c8e72959c4f4b4fe6830709",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-flowzapmcp"
 }

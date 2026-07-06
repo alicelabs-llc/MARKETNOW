@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0354067",
+  "certificate_id": "MN-SC-2026-5644755",
   "skill_id": "mn-gen-08865",
   "skill_name": "Melchizedek",
-  "issued_at": "2026-07-06T03:59:14.067Z",
-  "expires_at": "2026-07-13T03:59:14.067Z",
+  "issued_at": "2026-07-06T05:27:24.755Z",
+  "expires_at": "2026-07-13T05:27:24.755Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "56f0432c0d153e9f1f3f8e78b57b1b04132a75a339de9d6b27e94ac0671936dc",
+  "signature": "1aeab65db5f264fb2227afcf8d02708f08824bb579784f3755468e2d9b218ddd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08865"
 }

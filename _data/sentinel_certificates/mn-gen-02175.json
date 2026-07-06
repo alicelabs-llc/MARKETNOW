@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9654536",
+  "certificate_id": "MN-SC-2026-5364865",
   "skill_id": "mn-gen-02175",
   "skill_name": "Claude-etsi-connector",
-  "issued_at": "2026-07-06T03:47:34.536Z",
-  "expires_at": "2026-07-13T03:47:34.536Z",
+  "issued_at": "2026-07-06T05:22:44.865Z",
+  "expires_at": "2026-07-13T05:22:44.865Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0163d1032f7ce99f5f348c8fdb846df335514a5355d8d82091c1a2adefb2225c",
+  "signature": "bab267e4ab238486e871098127aa125ac77d91c71d877c14a7fae76c2d9802b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02175"
 }

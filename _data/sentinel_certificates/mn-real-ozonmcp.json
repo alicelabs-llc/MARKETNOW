@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0973391",
+  "certificate_id": "MN-SC-2026-6348746",
   "skill_id": "mn-real-ozonmcp",
   "skill_name": "ozon-mcp",
-  "issued_at": "2026-07-06T04:09:33.391Z",
-  "expires_at": "2026-07-13T04:09:33.391Z",
+  "issued_at": "2026-07-06T05:39:08.746Z",
+  "expires_at": "2026-07-13T05:39:08.746Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13e51dcca9cb6ecb32118d41d4b7a59c127e97b74a744d4d0a7b80991ae0f928",
+  "signature": "c346292a85825c88e6eaa3d50e429ddb881dbad221c3d6e55a773cd1e7335465",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ozonmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1108400",
+  "certificate_id": "MN-SC-2026-6508562",
   "skill_id": "mn-real-mcp",
   "skill_name": "mcp",
-  "issued_at": "2026-07-06T04:11:48.400Z",
-  "expires_at": "2026-07-13T04:11:48.400Z",
+  "issued_at": "2026-07-06T05:41:48.562Z",
+  "expires_at": "2026-07-13T05:41:48.562Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb2d6688b076a78247d783d5a5361770a0822c14717785430f249f061d9ab0b9",
+  "signature": "fd8867d0468e349537ad072f60cf6fe189e578f7bafce408bce832b4c0bccefe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcp"
 }

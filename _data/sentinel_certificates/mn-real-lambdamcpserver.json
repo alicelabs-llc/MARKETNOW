@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1097389",
+  "certificate_id": "MN-SC-2026-6495998",
   "skill_id": "mn-real-lambdamcpserver",
   "skill_name": "Lambda-MCP-Server",
-  "issued_at": "2026-07-06T04:11:37.389Z",
-  "expires_at": "2026-07-13T04:11:37.389Z",
+  "issued_at": "2026-07-06T05:41:35.998Z",
+  "expires_at": "2026-07-13T05:41:35.998Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65e55630f0ad64a60150ff4cd250b1b52aff4cfecb705b24bbd17f0c106115bd",
+  "signature": "3334fa75277122f371d421208933d4d58d14219245cb340e1e7e91c741f2b791",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lambdamcpserver"
 }

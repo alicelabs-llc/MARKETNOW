@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1060826",
+  "certificate_id": "MN-SC-2026-6453328",
   "skill_id": "mn-real-ossautopilot",
   "skill_name": "oss-autopilot",
-  "issued_at": "2026-07-06T04:11:00.826Z",
-  "expires_at": "2026-07-13T04:11:00.826Z",
+  "issued_at": "2026-07-06T05:40:53.328Z",
+  "expires_at": "2026-07-13T05:40:53.328Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "517257c08de297e7504135180b301d05bfcdf6598f904798971ba94b6ca982b2",
+  "signature": "0e6a750c2a5fcf1b34116626f4c0b94545a0841390ec5a89157f23bf27c9025f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ossautopilot"
 }

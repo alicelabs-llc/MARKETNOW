@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0940694",
+  "certificate_id": "MN-SC-2026-6312309",
   "skill_id": "mn-real-apiverketmcp",
   "skill_name": "apiverket-mcp",
-  "issued_at": "2026-07-06T04:09:00.694Z",
-  "expires_at": "2026-07-13T04:09:00.694Z",
+  "issued_at": "2026-07-06T05:38:32.309Z",
+  "expires_at": "2026-07-13T05:38:32.309Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3da3eb9ec02fe772e8c3d8b58968065d6bf962999fdaccdd9bc4e98f16e2cc40",
+  "signature": "44e081851280db033482236f9aaa377b191df3db486781ca298b4da492711a79",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apiverketmcp"
 }

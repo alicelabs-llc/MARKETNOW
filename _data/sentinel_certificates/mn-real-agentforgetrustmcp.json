@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1042248",
+  "certificate_id": "MN-SC-2026-6432838",
   "skill_id": "mn-real-agentforgetrustmcp",
   "skill_name": "agentforge-trust-mcp",
-  "issued_at": "2026-07-06T04:10:42.248Z",
-  "expires_at": "2026-07-13T04:10:42.248Z",
+  "issued_at": "2026-07-06T05:40:32.838Z",
+  "expires_at": "2026-07-13T05:40:32.838Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a68f39b81b3f20f8d46df2f3552f182c4068d484b5f41a9d69ba2ba12aa3c78",
+  "signature": "14e32d4a6de2c894179b2d356d3280294b18bf54818ac2310f39fcca28b195b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentforgetrustmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1088678",
+  "certificate_id": "MN-SC-2026-6486057",
   "skill_id": "mn-real-fluxoperator",
   "skill_name": "flux-operator",
-  "issued_at": "2026-07-06T04:11:28.678Z",
-  "expires_at": "2026-07-13T04:11:28.678Z",
+  "issued_at": "2026-07-06T05:41:26.057Z",
+  "expires_at": "2026-07-13T05:41:26.057Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee051d4b9ce5848c8dac46dc18c6994d369321c15555d7cc0649f77691bcc821",
+  "signature": "f2b301ba85191a74fc23095a898638903abdaf8a0f2c72e063e3ecb080656f3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fluxoperator"
 }

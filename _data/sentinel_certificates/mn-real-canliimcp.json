@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1016697",
+  "certificate_id": "MN-SC-2026-6402528",
   "skill_id": "mn-real-canliimcp",
   "skill_name": "canlii-mcp",
-  "issued_at": "2026-07-06T04:10:16.697Z",
-  "expires_at": "2026-07-13T04:10:16.697Z",
+  "issued_at": "2026-07-06T05:40:02.528Z",
+  "expires_at": "2026-07-13T05:40:02.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f75df38635a6ee1f01f4198c0781cef1451bea99f6b2e937118d7e42d773ed4",
+  "signature": "28d75e96e08ef115c9b282968de0c2a6c22a7e623bc4ee90f9a6e71b68395875",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-canliimcp"
 }

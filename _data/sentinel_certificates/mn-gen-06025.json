@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0254631",
+  "certificate_id": "MN-SC-2026-5528278",
   "skill_id": "mn-gen-06025",
   "skill_name": "Magicpod-mcp-server",
-  "issued_at": "2026-07-06T03:57:34.631Z",
-  "expires_at": "2026-07-13T03:57:34.631Z",
+  "issued_at": "2026-07-06T05:25:28.278Z",
+  "expires_at": "2026-07-13T05:25:28.278Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05fbeb9053ea52c86693401dea9695516c229dc5409f72f335f3c131e7449e45",
+  "signature": "481d4e8c13abb7c5931b41186a49d3874d788dd902c170c63f587f79869b3930",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06025"
 }

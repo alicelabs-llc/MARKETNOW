@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9756656",
+  "certificate_id": "MN-SC-2026-5438757",
   "skill_id": "mn-gen-03809",
   "skill_name": "Expense-log-mcp",
-  "issued_at": "2026-07-06T03:49:16.656Z",
-  "expires_at": "2026-07-13T03:49:16.656Z",
+  "issued_at": "2026-07-06T05:23:58.757Z",
+  "expires_at": "2026-07-13T05:23:58.757Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ec7169356c7b10cde0171a0b91a865d80a19451e8ae83aa976c0c7db5f81cb9",
+  "signature": "35d2aeb5fe0a9debbb8ce9225492c2a74d74862fde073c161bde2a98096fc6f6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03809"
 }

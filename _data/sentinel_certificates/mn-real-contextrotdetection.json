@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0950845",
+  "certificate_id": "MN-SC-2026-6321819",
   "skill_id": "mn-real-contextrotdetection",
   "skill_name": "context-rot-detection",
-  "issued_at": "2026-07-06T04:09:10.845Z",
-  "expires_at": "2026-07-13T04:09:10.845Z",
+  "issued_at": "2026-07-06T05:38:41.819Z",
+  "expires_at": "2026-07-13T05:38:41.819Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85dbd0d6a116a956bf99b807c9d0c59ca21606efc170b9c7d6a490a6036f12d7",
+  "signature": "61b152fc5fe104777e9a722139864e033f66ae67ed231a497d1d7a0ef6170622",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-contextrotdetection"
 }

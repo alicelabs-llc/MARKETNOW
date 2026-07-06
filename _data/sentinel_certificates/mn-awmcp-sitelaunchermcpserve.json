@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0912153",
+  "certificate_id": "MN-SC-2026-6275850",
   "skill_id": "mn-awmcp-sitelaunchermcpserve",
   "skill_name": "sitelauncher-mcp-server",
-  "issued_at": "2026-07-06T04:08:32.153Z",
-  "expires_at": "2026-07-13T04:08:32.153Z",
+  "issued_at": "2026-07-06T05:37:55.850Z",
+  "expires_at": "2026-07-13T05:37:55.850Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3fcd914f70c7efb9639bdb2056b08d298e5f53f985a52d9e0d2d6ac393764ba1",
+  "signature": "a2611c0a0845037c355e1f0a224c5df5c808008239995d38b558dc64d83fd8bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-sitelaunchermcpserve"
 }

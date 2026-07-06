@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0767783",
+  "certificate_id": "MN-SC-2026-6106616",
   "skill_id": "mn-sal-00010",
   "skill_name": "Gong Conversation Intel",
-  "issued_at": "2026-07-06T04:06:07.783Z",
-  "expires_at": "2026-07-13T04:06:07.783Z",
+  "issued_at": "2026-07-06T05:35:06.616Z",
+  "expires_at": "2026-07-13T05:35:06.616Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e98543f1d75566fb657ab395846d31eeb7557b027ada7881524d41345ad82bc0",
+  "signature": "59795c382d82988b3abaf1d494f6ee12a4993b13225bbdad0f4e15bc76a04bba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00010"
 }

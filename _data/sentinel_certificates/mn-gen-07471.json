@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0309443",
+  "certificate_id": "MN-SC-2026-5592302",
   "skill_id": "mn-gen-07471",
   "skill_name": "mcp-code-sanitizer",
-  "issued_at": "2026-07-06T03:58:29.443Z",
-  "expires_at": "2026-07-13T03:58:29.443Z",
+  "issued_at": "2026-07-06T05:26:32.302Z",
+  "expires_at": "2026-07-13T05:26:32.302Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9997b5da5cbb8c8f0b564af76bc06593d00da09f8c270039ad78fe78ec5d4916",
+  "signature": "1c257eeec081ca3cd7a8818cd8dfda2f0e5da4c6d3848133e289ba26fbe4fe14",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07471"
 }

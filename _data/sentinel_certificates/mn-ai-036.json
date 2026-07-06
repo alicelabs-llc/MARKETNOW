@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0815059",
+  "certificate_id": "MN-SC-2026-6160273",
   "skill_id": "mn-ai-036",
   "skill_name": "Code Explainer",
-  "issued_at": "2026-07-06T04:06:55.059Z",
-  "expires_at": "2026-07-13T04:06:55.059Z",
+  "issued_at": "2026-07-06T05:36:00.273Z",
+  "expires_at": "2026-07-13T05:36:00.273Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7936831424f4701d527093f219854258569c1a11a281e0a56c3bf5261ac2d855",
+  "signature": "9ec7bcdfe31985733f33e8d1d40c348b830669b95ce6ae98f32deee54087093c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-036"
 }

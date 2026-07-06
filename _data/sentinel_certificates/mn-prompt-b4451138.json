@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0704604",
+  "certificate_id": "MN-SC-2026-6030585",
   "skill_id": "mn-prompt-b4451138",
   "skill_name": "Copywriting for customer onboarding completion email",
-  "issued_at": "2026-07-06T04:05:04.604Z",
-  "expires_at": "2026-07-13T04:05:04.604Z",
+  "issued_at": "2026-07-06T05:33:50.585Z",
+  "expires_at": "2026-07-13T05:33:50.585Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6de2f2c642681caa097ca3c49097ca26199d45b69b6e07af4b427bea91281bf1",
+  "signature": "28e80fc82f6c6595aa5f7f9d2d974ddbf005ff542e5261c9dc25a8ba98c72f52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b4451138"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1075595",
+  "certificate_id": "MN-SC-2026-6471043",
   "skill_id": "mn-real-planningcopilot",
   "skill_name": "PlanningCopilot",
-  "issued_at": "2026-07-06T04:11:15.595Z",
-  "expires_at": "2026-07-13T04:11:15.595Z",
+  "issued_at": "2026-07-06T05:41:11.043Z",
+  "expires_at": "2026-07-13T05:41:11.043Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a14c827756d4211c9daad4b658d082491fb7ae5df6a552fe4b3ebf816e61ad85",
+  "signature": "a9aea949ffcfe746d383425c725fe39e18eba1e93639ca5d5aa31bc1905dc7c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-planningcopilot"
 }

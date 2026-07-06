@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0676896",
+  "certificate_id": "MN-SC-2026-5999587",
   "skill_id": "mn-prompt-edcde050",
   "skill_name": "Pay equity audit",
-  "issued_at": "2026-07-06T04:04:36.896Z",
-  "expires_at": "2026-07-13T04:04:36.896Z",
+  "issued_at": "2026-07-06T05:33:19.587Z",
+  "expires_at": "2026-07-13T05:33:19.587Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f3c2c50698c1194ba3a25b1a69c19c9d9fbed41238a829b7d39c93862ebe4db",
+  "signature": "023fb2eb89af9157e1eeea428c691b50726b6e1a279e028f3fa27e8a196b3dd5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-edcde050"
 }

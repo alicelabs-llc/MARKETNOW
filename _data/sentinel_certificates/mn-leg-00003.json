@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0762048",
+  "certificate_id": "MN-SC-2026-6099656",
   "skill_id": "mn-leg-00003",
   "skill_name": "CCPA Right-to-Erasure",
-  "issued_at": "2026-07-06T04:06:02.048Z",
-  "expires_at": "2026-07-13T04:06:02.048Z",
+  "issued_at": "2026-07-06T05:34:59.656Z",
+  "expires_at": "2026-07-13T05:34:59.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ce24bfa27e2cae00e7bdd74d892fb9c9e3bbf53184fe7bcacf721e3f84776dc",
+  "signature": "508d0aab709a1d936e7c5cea524abb7bbcbac5eb49f1dd27cb1b355e7392ec35",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00003"
 }

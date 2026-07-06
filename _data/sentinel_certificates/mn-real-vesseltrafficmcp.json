@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1018720",
+  "certificate_id": "MN-SC-2026-6405028",
   "skill_id": "mn-real-vesseltrafficmcp",
   "skill_name": "vessel-traffic-mcp",
-  "issued_at": "2026-07-06T04:10:18.720Z",
-  "expires_at": "2026-07-13T04:10:18.720Z",
+  "issued_at": "2026-07-06T05:40:05.028Z",
+  "expires_at": "2026-07-13T05:40:05.028Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b528a179050e1dd01cb3ab2f1362c4d7a33febdc224c7506eb58b41a6a89a4f9",
+  "signature": "4e5a18e95f685ef3ea8d69e9689944cae340547268a30e643072b00a8d88396f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vesseltrafficmcp"
 }

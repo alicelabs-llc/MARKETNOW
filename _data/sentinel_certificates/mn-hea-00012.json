@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0759531",
+  "certificate_id": "MN-SC-2026-6096700",
   "skill_id": "mn-hea-00012",
   "skill_name": "SNOMED CT Browser",
-  "issued_at": "2026-07-06T04:05:59.531Z",
-  "expires_at": "2026-07-13T04:05:59.531Z",
+  "issued_at": "2026-07-06T05:34:56.700Z",
+  "expires_at": "2026-07-13T05:34:56.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93d16a7ccaa4b051a23da665291596fb038ae5a2ba518c6e2df3eb68b6f22c03",
+  "signature": "2e4bf69f66b4907a15d004c4292fc4159804a4d6af244ab457f3965611f8b6e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00012"
 }

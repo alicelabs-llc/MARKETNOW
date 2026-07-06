@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0508840",
+  "certificate_id": "MN-SC-2026-5802008",
   "skill_id": "mn-gen-12719",
   "skill_name": "Tool-disco",
-  "issued_at": "2026-07-06T04:01:48.840Z",
-  "expires_at": "2026-07-13T04:01:48.840Z",
+  "issued_at": "2026-07-06T05:30:02.008Z",
+  "expires_at": "2026-07-13T05:30:02.008Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b898a1dfcce6c9a114a53d239d8298b9a65de2139de21370b6d66358461b74d3",
+  "signature": "2a6f8d3d327dc102dee7327fa6af103943dc191b0a1afbbd2d3e2cb871e8407f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12719"
 }

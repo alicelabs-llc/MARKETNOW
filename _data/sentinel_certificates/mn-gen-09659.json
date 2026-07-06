@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0380372",
+  "certificate_id": "MN-SC-2026-5675385",
   "skill_id": "mn-gen-09659",
   "skill_name": "npm-package-docs-mcp",
-  "issued_at": "2026-07-06T03:59:40.372Z",
-  "expires_at": "2026-07-13T03:59:40.372Z",
+  "issued_at": "2026-07-06T05:27:55.385Z",
+  "expires_at": "2026-07-13T05:27:55.385Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cea37354a66579c09c0acf9dac4d5b2be5f10877224b3f861ff22bdabc9a3225",
+  "signature": "a048fb5c23b2b1d66982c7c93aeb421669fdbb4fe53ca8a2a09d29cee697aed9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09659"
 }

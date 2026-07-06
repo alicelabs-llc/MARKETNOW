@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0269681",
+  "certificate_id": "MN-SC-2026-5544836",
   "skill_id": "mn-gen-06419",
   "skill_name": "Valtik-mcp-client-inspector",
-  "issued_at": "2026-07-06T03:57:49.681Z",
-  "expires_at": "2026-07-13T03:57:49.681Z",
+  "issued_at": "2026-07-06T05:25:44.836Z",
+  "expires_at": "2026-07-13T05:25:44.836Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6c1e422933da494c548f43d1564bbac846da79ee6cabe78d627e9c7533aee172",
+  "signature": "f764d55714fd9cbf1f8a375f4bffb69698a3179b3926b219d0806043e4d2ff76",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06419"
 }

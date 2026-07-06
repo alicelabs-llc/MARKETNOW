@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0855873",
+  "certificate_id": "MN-SC-2026-6210480",
   "skill_id": "mn-fint-040",
   "skill_name": "Settlement Engine",
-  "issued_at": "2026-07-06T04:07:35.873Z",
-  "expires_at": "2026-07-13T04:07:35.873Z",
+  "issued_at": "2026-07-06T05:36:50.480Z",
+  "expires_at": "2026-07-13T05:36:50.480Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c7651a0f48e7cb803ea8e661f53a3e24477059487faf1b7f8966a83eee122b77",
+  "signature": "74fd1fde208e892e21c1fc7380db4ccbd6f9e1d92492a341b7023b6098beff88",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-040"
 }

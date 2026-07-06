@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1042527",
+  "certificate_id": "MN-SC-2026-6433147",
   "skill_id": "mn-real-agentward",
   "skill_name": "agentward",
-  "issued_at": "2026-07-06T04:10:42.527Z",
-  "expires_at": "2026-07-13T04:10:42.527Z",
+  "issued_at": "2026-07-06T05:40:33.147Z",
+  "expires_at": "2026-07-13T05:40:33.147Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09a7286d74c3afa24c7372f538e6ef07fec01d5004475684f450ba4c787fcd56",
+  "signature": "720534a879817ffacbfb8b3e1db26c6dda4cf4288a2a250871ffee6329ebe197",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentward"
 }

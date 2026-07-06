@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0902295",
+  "certificate_id": "MN-SC-2026-6264086",
   "skill_id": "mn-awmcp-ashramcp",
   "skill_name": "ashra-mcp",
-  "issued_at": "2026-07-06T04:08:22.295Z",
-  "expires_at": "2026-07-13T04:08:22.295Z",
+  "issued_at": "2026-07-06T05:37:44.086Z",
+  "expires_at": "2026-07-13T05:37:44.086Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65ce61cea38253b817b612167dd921f7d77cc344ff686bbc3a0aa81965bc3675",
+  "signature": "a94cdd28d6e458bd9ae10f4b045c43b3e8c07d99cd9eca133b95f5bca5f0f2ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ashramcp"
 }

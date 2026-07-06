@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0498576",
+  "certificate_id": "MN-SC-2026-5790997",
   "skill_id": "mn-gen-12437",
   "skill_name": "Talkhuman-mcp",
-  "issued_at": "2026-07-06T04:01:38.576Z",
-  "expires_at": "2026-07-13T04:01:38.576Z",
+  "issued_at": "2026-07-06T05:29:50.997Z",
+  "expires_at": "2026-07-13T05:29:50.997Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fee60a8bec9f7e96c398701f87ea9867afb5a3519cf6b05ec8a21a90967d68f1",
+  "signature": "150f219b1fd2ff59e8ba94d504389876f6063c54ef5929d101fafd49ca118931",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12437"
 }

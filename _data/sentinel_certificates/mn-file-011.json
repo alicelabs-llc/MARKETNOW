@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0830362",
+  "certificate_id": "MN-SC-2026-6179997",
   "skill_id": "mn-file-011",
   "skill_name": "YAML Processor",
-  "issued_at": "2026-07-06T04:07:10.362Z",
-  "expires_at": "2026-07-13T04:07:10.362Z",
+  "issued_at": "2026-07-06T05:36:19.997Z",
+  "expires_at": "2026-07-13T05:36:19.997Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59dde5321da65209593267afe81367394549d27d9abe9c1cfddd23d1b1acc476",
+  "signature": "de430422715a5f793b0485b42392f299803764281762c2c4223251fdc3501da2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-file-011"
 }

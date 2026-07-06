@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9738316",
+  "certificate_id": "MN-SC-2026-5425841",
   "skill_id": "mn-gen-03496",
   "skill_name": "Doxify",
-  "issued_at": "2026-07-06T03:48:58.316Z",
-  "expires_at": "2026-07-13T03:48:58.316Z",
+  "issued_at": "2026-07-06T05:23:45.841Z",
+  "expires_at": "2026-07-13T05:23:45.841Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c631d382495133d886f434e5322b570e27122faa85ac74fca155f17d8bbb12de",
+  "signature": "d4b8c000b1a2ba326982454a4c63574a70b9bc2c26665a34e8c89f7db3258157",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03496"
 }

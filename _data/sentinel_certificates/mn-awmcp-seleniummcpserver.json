@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0904922",
+  "certificate_id": "MN-SC-2026-6266565",
   "skill_id": "mn-awmcp-seleniummcpserver",
   "skill_name": "selenium-mcp-server",
-  "issued_at": "2026-07-06T04:08:24.922Z",
-  "expires_at": "2026-07-13T04:08:24.922Z",
+  "issued_at": "2026-07-06T05:37:46.565Z",
+  "expires_at": "2026-07-13T05:37:46.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "92162830c7fad3af674f036de9dce859265fdf1bf10ff3de6ac68b1a8ea6f363",
+  "signature": "976085cee3e2d6d409f74a32a19cd539da3c4225d776064967a657f1076ca821",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-seleniummcpserver"
 }

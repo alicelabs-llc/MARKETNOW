@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0785501",
+  "certificate_id": "MN-SC-2026-6124989",
   "skill_id": "mn-pro-debc2363",
   "skill_name": "Data Loss Prevention",
-  "issued_at": "2026-07-06T04:06:25.501Z",
-  "expires_at": "2026-07-13T04:06:25.501Z",
+  "issued_at": "2026-07-06T05:35:24.989Z",
+  "expires_at": "2026-07-13T05:35:24.989Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "013620b156d72e6fd0d30c6986a94d7e3895fc92e2dd04b00758d0e8c02af5e4",
+  "signature": "67426a95a5b0e714026ad6e75796b37134ee17c82eb8461ddc8c1af2861c5b79",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-debc2363"
 }

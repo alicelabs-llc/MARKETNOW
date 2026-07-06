@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1035375",
+  "certificate_id": "MN-SC-2026-6425356",
   "skill_id": "mn-real-domainsuitemcp",
   "skill_name": "domain-suite-mcp",
-  "issued_at": "2026-07-06T04:10:35.375Z",
-  "expires_at": "2026-07-13T04:10:35.375Z",
+  "issued_at": "2026-07-06T05:40:25.356Z",
+  "expires_at": "2026-07-13T05:40:25.356Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de3f19af39001ce33d5ad7c9eac9ec64b6b207922dbeea5adc414c940747a218",
+  "signature": "b688c5f8f5a41555226856ac090c478a50c341c6200840fb37bbd6b1343f2652",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-domainsuitemcp"
 }

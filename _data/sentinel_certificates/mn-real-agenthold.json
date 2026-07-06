@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1007312",
+  "certificate_id": "MN-SC-2026-6390560",
   "skill_id": "mn-real-agenthold",
   "skill_name": "agenthold",
-  "issued_at": "2026-07-06T04:10:07.312Z",
-  "expires_at": "2026-07-13T04:10:07.312Z",
+  "issued_at": "2026-07-06T05:39:50.560Z",
+  "expires_at": "2026-07-13T05:39:50.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "67cff2bd46c366d2ca3917bbf194c0cee4d057a1761c543a3f64a0863a8e8492",
+  "signature": "ca1b1f1581089af99301a4d76f6a3e20e977797e476cd1f7b3439c023c5a84b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agenthold"
 }

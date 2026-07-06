@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0717203",
+  "certificate_id": "MN-SC-2026-6046130",
   "skill_id": "mn-prompt-5fea209c",
   "skill_name": "Fintech regulatory compliance",
-  "issued_at": "2026-07-06T04:05:17.203Z",
-  "expires_at": "2026-07-13T04:05:17.203Z",
+  "issued_at": "2026-07-06T05:34:06.130Z",
+  "expires_at": "2026-07-13T05:34:06.130Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b18ad2d56afac018b0471b087cd69ebc4274c9f766bf6f43bfa27d2beea9b8f",
+  "signature": "09bd1d3ad630ca6e6741bac5c1096d3b35457b0dd8f5cd18c0433207626b93c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5fea209c"
 }

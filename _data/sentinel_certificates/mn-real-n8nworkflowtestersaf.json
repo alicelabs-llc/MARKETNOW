@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0959203",
+  "certificate_id": "MN-SC-2026-6331547",
   "skill_id": "mn-real-n8nworkflowtestersaf",
   "skill_name": "n8n-workflow-tester-safe",
-  "issued_at": "2026-07-06T04:09:19.203Z",
-  "expires_at": "2026-07-13T04:09:19.203Z",
+  "issued_at": "2026-07-06T05:38:51.547Z",
+  "expires_at": "2026-07-13T05:38:51.547Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "48797a81ca933f9dd748673105dd173b4ff10450d93623d62cda1b68d3fc5546",
+  "signature": "b02a5fa9e830a597e4b5dfdcb0ab5bcc5644f5e8a362cd452fd00db6f74bd9b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-n8nworkflowtestersaf"
 }

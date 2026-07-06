@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0890140",
+  "certificate_id": "MN-SC-2026-6250287",
   "skill_id": "mn-awmcp-fluxmcp",
   "skill_name": "FluxMCP",
-  "issued_at": "2026-07-06T04:08:10.140Z",
-  "expires_at": "2026-07-13T04:08:10.140Z",
+  "issued_at": "2026-07-06T05:37:30.287Z",
+  "expires_at": "2026-07-13T05:37:30.287Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 2,
     "l2_execution_status": "ran"
   },
-  "signature": "18d23935bc0a915982e341414e90f9d959b7be85be66d0e3f9048a31986981fb",
+  "signature": "666b68544bc57b6813aba0a2c3658aad4d905bd3e6dd7ad04bc7bd8555834ac7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-fluxmcp"
 }

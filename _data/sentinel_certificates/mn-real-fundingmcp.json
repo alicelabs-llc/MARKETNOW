@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0998632",
+  "certificate_id": "MN-SC-2026-6380715",
   "skill_id": "mn-real-fundingmcp",
   "skill_name": "funding-mcp",
-  "issued_at": "2026-07-06T04:09:58.632Z",
-  "expires_at": "2026-07-13T04:09:58.632Z",
+  "issued_at": "2026-07-06T05:39:40.715Z",
+  "expires_at": "2026-07-13T05:39:40.715Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b3be93e0ef1dac48510f12625521cfbaea89e5edb76a87546d26cc4965ee6afe",
+  "signature": "84175d1e0d13adaf7184fbe6c16e859681707db3e4d8463cd9e5260f490314ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fundingmcp"
 }

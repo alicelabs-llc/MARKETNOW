@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1036149",
+  "certificate_id": "MN-SC-2026-6426174",
   "skill_id": "mn-real-giskardsearch",
   "skill_name": "giskard-search",
-  "issued_at": "2026-07-06T04:10:36.149Z",
-  "expires_at": "2026-07-13T04:10:36.149Z",
+  "issued_at": "2026-07-06T05:40:26.174Z",
+  "expires_at": "2026-07-13T05:40:26.174Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ae39a0f202c354725a3f4d00db42fadd8dbc0df603de05dc00f12e9d5cf5f32",
+  "signature": "a7e334c91415954f2580e436554ef05b7f7f0ee288b145a7489d562819d334c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-giskardsearch"
 }

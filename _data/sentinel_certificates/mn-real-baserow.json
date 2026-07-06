@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0935662",
+  "certificate_id": "MN-SC-2026-6306651",
   "skill_id": "mn-real-baserow",
   "skill_name": "baserow",
-  "issued_at": "2026-07-06T04:08:55.662Z",
-  "expires_at": "2026-07-13T04:08:55.662Z",
+  "issued_at": "2026-07-06T05:38:26.651Z",
+  "expires_at": "2026-07-13T05:38:26.651Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab6f1c9797ee4244b949688a54e52f4601ab3cc58e2ff7c33ed42f745881b644",
+  "signature": "256dce14d83f4f7260b1cdd67feabf444c5a64c5cf772553acbf15f4ee55324f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-baserow"
 }

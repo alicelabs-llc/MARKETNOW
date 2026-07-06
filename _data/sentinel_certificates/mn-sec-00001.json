@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9681109",
+  "certificate_id": "MN-SC-2026-5282154",
   "skill_id": "mn-sec-00001",
   "skill_name": "Agentic Red Team",
-  "issued_at": "2026-07-06T03:48:01.109Z",
-  "expires_at": "2026-07-13T03:48:01.109Z",
+  "issued_at": "2026-07-06T05:21:22.154Z",
+  "expires_at": "2026-07-13T05:21:22.154Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0a118424b12b1a748a5e623929a8123d249f1d47262b1c9b448710b09fff76d",
+  "signature": "97861096fc9fd48c27fc279815b2aaa41ea97007b403a54b8fc9f8d384d61971",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-00001"
 }

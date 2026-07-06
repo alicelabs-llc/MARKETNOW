@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1025669",
+  "certificate_id": "MN-SC-2026-6413778",
   "skill_id": "mn-real-grafanalokimcp",
   "skill_name": "grafana-loki-mcp",
-  "issued_at": "2026-07-06T04:10:25.669Z",
-  "expires_at": "2026-07-13T04:10:25.669Z",
+  "issued_at": "2026-07-06T05:40:13.778Z",
+  "expires_at": "2026-07-13T05:40:13.778Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab4aefd6c27150930368d3dc1e18348ad7ce839b33d4fe4f71382c3dea7437f4",
+  "signature": "7834994293f302611019cf79fcc0cb95f2883ebc119f4f2c4c357f029a240749",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-grafanalokimcp"
 }

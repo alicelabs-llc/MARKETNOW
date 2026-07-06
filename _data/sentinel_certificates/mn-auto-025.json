@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0817631",
+  "certificate_id": "MN-SC-2026-6163452",
   "skill_id": "mn-auto-025",
   "skill_name": "HTTP Request Node",
-  "issued_at": "2026-07-06T04:06:57.631Z",
-  "expires_at": "2026-07-13T04:06:57.631Z",
+  "issued_at": "2026-07-06T05:36:03.452Z",
+  "expires_at": "2026-07-13T05:36:03.452Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3bbaf64516d036ccc7c7acb526ba62b098409e3d1518e8878aa4950b67328a14",
+  "signature": "8fbf05eee743179dffdf445bf3044653a4744405dff2a55ad8faa2e5dd882391",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-025"
 }

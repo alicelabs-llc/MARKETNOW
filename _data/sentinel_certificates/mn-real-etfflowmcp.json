@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0988453",
+  "certificate_id": "MN-SC-2026-6369881",
   "skill_id": "mn-real-etfflowmcp",
   "skill_name": "etf-flow-mcp",
-  "issued_at": "2026-07-06T04:09:48.453Z",
-  "expires_at": "2026-07-13T04:09:48.453Z",
+  "issued_at": "2026-07-06T05:39:29.881Z",
+  "expires_at": "2026-07-13T05:39:29.881Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17bc6b02f6b780a97300dbc63b23fb76798f71308705e02c108d8e2b2c1b9ce5",
+  "signature": "42d2086d0ce8f2cc75da3587cb623fa7fe50cb800fb73e83d6b21acfe596defd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-etfflowmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0973523",
+  "certificate_id": "MN-SC-2026-6348883",
   "skill_id": "mn-real-patchistrymcpserver",
   "skill_name": "patchistry-mcp-server",
-  "issued_at": "2026-07-06T04:09:33.523Z",
-  "expires_at": "2026-07-13T04:09:33.523Z",
+  "issued_at": "2026-07-06T05:39:08.883Z",
+  "expires_at": "2026-07-13T05:39:08.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bec310d7bbed3faa57102376fd045991e59e30e991eaed7423a8fc7fe0f0eb87",
+  "signature": "29525354eea5d58436d06ff89f6e9c72567125ac03e4e072dc90c80159125c6e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-patchistrymcpserver"
 }

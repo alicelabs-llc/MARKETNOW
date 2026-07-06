@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1085250",
+  "certificate_id": "MN-SC-2026-6481848",
   "skill_id": "mn-real-openops",
   "skill_name": "openops",
-  "issued_at": "2026-07-06T04:11:25.250Z",
-  "expires_at": "2026-07-13T04:11:25.250Z",
+  "issued_at": "2026-07-06T05:41:21.848Z",
+  "expires_at": "2026-07-13T05:41:21.848Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fed4ebb47d05aedf734e175d7c6b7d3443ab6825dac439da7fb9cc9709f61c07",
+  "signature": "cf53098e6ccf3b8fea2e12339f20666c63a44257e0b1186c0d93f5d3957634cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openops"
 }

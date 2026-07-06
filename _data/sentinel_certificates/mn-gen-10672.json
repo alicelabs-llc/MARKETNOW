@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0427085",
+  "certificate_id": "MN-SC-2026-5719933",
   "skill_id": "mn-gen-10672",
   "skill_name": "Prism-relay",
-  "issued_at": "2026-07-06T04:00:27.085Z",
-  "expires_at": "2026-07-13T04:00:27.085Z",
+  "issued_at": "2026-07-06T05:28:39.933Z",
+  "expires_at": "2026-07-13T05:28:39.933Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b12d55386b6daf9babf9282565dfed073a8710914108924ce3b202cb774ef0f8",
+  "signature": "78974662ab6cde8a94212b5f4f901d25a5e2b0b2c7bca16fd975151acafb6f05",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10672"
 }

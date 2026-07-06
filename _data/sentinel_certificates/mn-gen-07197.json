@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0299560",
+  "certificate_id": "MN-SC-2026-5580131",
   "skill_id": "mn-gen-07197",
   "skill_name": "modelcontextprotocol",
-  "issued_at": "2026-07-06T03:58:19.560Z",
-  "expires_at": "2026-07-13T03:58:19.560Z",
+  "issued_at": "2026-07-06T05:26:20.131Z",
+  "expires_at": "2026-07-13T05:26:20.131Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f844505ec001a574a18f33cc222645cfc83ceec4802527710760ea14f5b46705",
+  "signature": "6f03c246e5a9acbf1d9e16a12498316774def2fbf67fd9464ecdb411516f789a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07197"
 }

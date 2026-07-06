@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0759940",
+  "certificate_id": "MN-SC-2026-6097168",
   "skill_id": "mn-hea-00014",
   "skill_name": "RxNorm Drug Database",
-  "issued_at": "2026-07-06T04:05:59.940Z",
-  "expires_at": "2026-07-13T04:05:59.940Z",
+  "issued_at": "2026-07-06T05:34:57.168Z",
+  "expires_at": "2026-07-13T05:34:57.168Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "724218917c6a682d85e6811ac67220b306150d97e28941e5b9ff874b85052a9b",
+  "signature": "8a01dc5dd6f17320ac720b8db80cef973ac5ab233021c0ca35acf049e410701f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00014"
 }

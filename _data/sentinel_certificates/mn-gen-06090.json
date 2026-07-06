@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0257378",
+  "certificate_id": "MN-SC-2026-5531318",
   "skill_id": "mn-gen-06090",
   "skill_name": "Bullrundata/market-intelligence",
-  "issued_at": "2026-07-06T03:57:37.378Z",
-  "expires_at": "2026-07-13T03:57:37.378Z",
+  "issued_at": "2026-07-06T05:25:31.318Z",
+  "expires_at": "2026-07-13T05:25:31.318Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca29d01d9ef21a50f6bd0ae7044bdd9d503ed3dd624ddc9d4773f4f45d2485c4",
+  "signature": "7783ca1b61b671fbce43344fe1b8757d31edc1d52e6821db62a9d9b4b5df5c83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06090"
 }

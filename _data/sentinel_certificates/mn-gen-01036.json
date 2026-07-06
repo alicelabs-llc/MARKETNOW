@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9587706",
+  "certificate_id": "MN-SC-2026-5319168",
   "skill_id": "mn-gen-01036",
   "skill_name": "Astronomy-oracle",
-  "issued_at": "2026-07-06T03:46:27.706Z",
-  "expires_at": "2026-07-13T03:46:27.706Z",
+  "issued_at": "2026-07-06T05:21:59.168Z",
+  "expires_at": "2026-07-13T05:21:59.168Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5478b8c324f693eccc06c0a155ec05ecb7d609ba1ffadccf7527ad9f77da409",
+  "signature": "d28dafef2053001bbfd5be54ed8d8338c33bff437890ebf6966317394645133a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01036"
 }

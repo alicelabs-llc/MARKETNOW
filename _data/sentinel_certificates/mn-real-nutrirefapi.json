@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0943131",
+  "certificate_id": "MN-SC-2026-6314513",
   "skill_id": "mn-real-nutrirefapi",
   "skill_name": "nutriref-api",
-  "issued_at": "2026-07-06T04:09:03.131Z",
-  "expires_at": "2026-07-13T04:09:03.131Z",
+  "issued_at": "2026-07-06T05:38:34.513Z",
+  "expires_at": "2026-07-13T05:38:34.513Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59b0b66443c32e085b21c0ad3bef31fd545daa1c9186845541b60a0133ad67cd",
+  "signature": "559ee3cb449209119620e96a0e541addd893c001dfe7a64efce2d6e97db7b35f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nutrirefapi"
 }

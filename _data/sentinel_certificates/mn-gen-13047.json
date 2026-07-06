@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0521460",
+  "certificate_id": "MN-SC-2026-5815169",
   "skill_id": "mn-gen-13047",
   "skill_name": "Up-banking-mcp-server",
-  "issued_at": "2026-07-06T04:02:01.460Z",
-  "expires_at": "2026-07-13T04:02:01.460Z",
+  "issued_at": "2026-07-06T05:30:15.169Z",
+  "expires_at": "2026-07-13T05:30:15.169Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ece7686e23bcbabc8e0171b103d770955d78410fe5abf637f42d7b4babede8e7",
+  "signature": "784f20c3545648739e993ab77bfb2ed4edfc3c38a9b3dd0512e2c5bc452b5e5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13047"
 }

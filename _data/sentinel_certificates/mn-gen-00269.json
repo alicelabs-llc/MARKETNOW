@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9686902",
+  "certificate_id": "MN-SC-2026-5287280",
   "skill_id": "mn-gen-00269",
   "skill_name": "Agent-nero",
-  "issued_at": "2026-07-06T03:48:06.902Z",
-  "expires_at": "2026-07-13T03:48:06.902Z",
+  "issued_at": "2026-07-06T05:21:27.280Z",
+  "expires_at": "2026-07-13T05:21:27.280Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70aab64aad110068dcc225007d9ec6d94a76c9babaa76f770185cc8d96bb93f8",
+  "signature": "f70c65111c1898d51c994840bcd45497c6439b7164e3af62598dd5e2a43600b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00269"
 }

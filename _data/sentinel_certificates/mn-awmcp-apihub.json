@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0887729",
+  "certificate_id": "MN-SC-2026-6247768",
   "skill_id": "mn-awmcp-apihub",
   "skill_name": "api-hub",
-  "issued_at": "2026-07-06T04:08:07.729Z",
-  "expires_at": "2026-07-13T04:08:07.729Z",
+  "issued_at": "2026-07-06T05:37:27.768Z",
+  "expires_at": "2026-07-13T05:37:27.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 7,
     "l2_execution_status": "ran"
   },
-  "signature": "7ed40bb1fe1656a673f0352ac3944af32f9baf6c1f2760f0758d247f92272f48",
+  "signature": "048137bc76e3d90a83c0d9090783397bc763e2370adf2d2cfcc7d81dfae30a62",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-apihub"
 }

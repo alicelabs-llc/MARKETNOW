@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1042940",
+  "certificate_id": "MN-SC-2026-6433614",
   "skill_id": "mn-real-airblackboxmcp",
   "skill_name": "air-blackbox-mcp",
-  "issued_at": "2026-07-06T04:10:42.940Z",
-  "expires_at": "2026-07-13T04:10:42.940Z",
+  "issued_at": "2026-07-06T05:40:33.614Z",
+  "expires_at": "2026-07-13T05:40:33.614Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "faa0997a618bfc027eb299f80ed51666e1a066fe7ebc8664aec18030ac9c72b0",
+  "signature": "0bff49aacf8108ae5e4da4878a99e6597414d8bdb7071cc4e070bed2500f93f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-airblackboxmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0997031",
+  "certificate_id": "MN-SC-2026-6378799",
   "skill_id": "mn-real-headlesstracker",
   "skill_name": "HeadlessTracker",
-  "issued_at": "2026-07-06T04:09:57.031Z",
-  "expires_at": "2026-07-13T04:09:57.031Z",
+  "issued_at": "2026-07-06T05:39:38.799Z",
+  "expires_at": "2026-07-13T05:39:38.799Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a69a39bb094a4773faad2b250bddbd53d8f9fd79fc736a230f791c29a58587b",
+  "signature": "ab6b8496625a02ca3c6371325876e3fe4ada3f4eb51a22f78e2af06a88d9c064",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-headlesstracker"
 }

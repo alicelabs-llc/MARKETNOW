@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0710838",
+  "certificate_id": "MN-SC-2026-6038866",
   "skill_id": "mn-prompt-0bca8f38",
   "skill_name": "Data warehouse on Snowflake",
-  "issued_at": "2026-07-06T04:05:10.838Z",
-  "expires_at": "2026-07-13T04:05:10.838Z",
+  "issued_at": "2026-07-06T05:33:58.866Z",
+  "expires_at": "2026-07-13T05:33:58.866Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3f86b58629d1a4974e679d17e971bf5e842b2032061f1971ea587ce55c123ea7",
+  "signature": "fc950a7dad17a0da99ae5913dc9aa34f06bd61edcc5e0b261e818e2e93ffe348",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0bca8f38"
 }

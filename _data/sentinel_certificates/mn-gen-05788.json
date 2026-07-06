@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0246153",
+  "certificate_id": "MN-SC-2026-5519314",
   "skill_id": "mn-gen-05788",
   "skill_name": "Litellm-mcp-server",
-  "issued_at": "2026-07-06T03:57:26.153Z",
-  "expires_at": "2026-07-13T03:57:26.153Z",
+  "issued_at": "2026-07-06T05:25:19.314Z",
+  "expires_at": "2026-07-13T05:25:19.314Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40688b76e8be368c89f8acd1ab9fcf7388088fcceb997bf2b1042f9e3b5b9afa",
+  "signature": "225fe8450780584dbc012358616a2284acb0ba79ae614bb49d243e148d98e230",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05788"
 }

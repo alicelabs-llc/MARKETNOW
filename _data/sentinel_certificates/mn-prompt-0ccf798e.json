@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0710465",
+  "certificate_id": "MN-SC-2026-6038315",
   "skill_id": "mn-prompt-0ccf798e",
   "skill_name": "MLOps end-to-end",
-  "issued_at": "2026-07-06T04:05:10.465Z",
-  "expires_at": "2026-07-13T04:05:10.465Z",
+  "issued_at": "2026-07-06T05:33:58.315Z",
+  "expires_at": "2026-07-13T05:33:58.315Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ef0af555ed84031c4023331b933656d2462b6cba43a0225fd79449db7decb1c",
+  "signature": "c35491a38240df86fbc43182b67750cb786efbe69692f850bf37fad878ccf9a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0ccf798e"
 }

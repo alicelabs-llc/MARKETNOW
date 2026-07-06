@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0390473",
+  "certificate_id": "MN-SC-2026-5688403",
   "skill_id": "mn-res-09912",
   "skill_name": "Open-search-mcp",
-  "issued_at": "2026-07-06T03:59:50.473Z",
-  "expires_at": "2026-07-13T03:59:50.473Z",
+  "issued_at": "2026-07-06T05:28:08.403Z",
+  "expires_at": "2026-07-13T05:28:08.403Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "91c842b2c380714b7de1ecc9ae34ec358d7fbcc86e3e5485901667f6d1923df3",
+  "signature": "f56c91d1e22eb38f48adc5c9d930bd4e81015e9df63a6e39109911db35624dce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-09912"
 }

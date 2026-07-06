@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1020696",
+  "certificate_id": "MN-SC-2026-6408095",
   "skill_id": "mn-real-callrailmcp",
   "skill_name": "callrail-mcp",
-  "issued_at": "2026-07-06T04:10:20.696Z",
-  "expires_at": "2026-07-13T04:10:20.696Z",
+  "issued_at": "2026-07-06T05:40:08.095Z",
+  "expires_at": "2026-07-13T05:40:08.096Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "84e796652776c4a63cb9ecb2e301ebcbe71fa515a5fb75b2ddffeae8937b8c1e",
+  "signature": "c344e1cfee0887b18afb398d13634d3463c1e44f86ce1e875dfd6855a9a73db1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-callrailmcp"
 }

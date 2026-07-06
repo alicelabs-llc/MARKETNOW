@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1102266",
+  "certificate_id": "MN-SC-2026-6502304",
   "skill_id": "mn-real-awesomeclaudeplugins",
   "skill_name": "awesome-claude-plugins",
-  "issued_at": "2026-07-06T04:11:42.266Z",
-  "expires_at": "2026-07-13T04:11:42.266Z",
+  "issued_at": "2026-07-06T05:41:42.304Z",
+  "expires_at": "2026-07-13T05:41:42.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c830c073c33466baa038d65f5b09992baac61da57b376cf899066c35582552a",
+  "signature": "f35be0ff613a2f254e91ad38ea002fe21fe3413e57e007398aa0db55efd43bc1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-awesomeclaudeplugins"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1072498",
+  "certificate_id": "MN-SC-2026-6466896",
   "skill_id": "mn-real-screenpipe",
   "skill_name": "screenpipe",
-  "issued_at": "2026-07-06T04:11:12.498Z",
-  "expires_at": "2026-07-13T04:11:12.498Z",
+  "issued_at": "2026-07-06T05:41:06.896Z",
+  "expires_at": "2026-07-13T05:41:06.896Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2579bb7fd4691f647fffc27a4fd77494143aaaf266419792b7bc7c5ae4c19e1a",
+  "signature": "30b002dc024558650f4adde5d8c18551e30005561fa25c14069331137eed8f0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-screenpipe"
 }

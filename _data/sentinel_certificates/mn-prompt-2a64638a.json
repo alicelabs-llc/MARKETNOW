@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0662639",
+  "certificate_id": "MN-SC-2026-5985500",
   "skill_id": "mn-prompt-2a64638a",
   "skill_name": "Sales CRM hygiene rules",
-  "issued_at": "2026-07-06T04:04:22.639Z",
-  "expires_at": "2026-07-13T04:04:22.639Z",
+  "issued_at": "2026-07-06T05:33:05.500Z",
+  "expires_at": "2026-07-13T05:33:05.500Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ffbb13c45a1cb6085b603c2792af2448784f70d33940a31cba19c0d20290193",
+  "signature": "db0da065860d64b13b8c7e124e8f63b570474828be7de81451e8eb5e06d5b3cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2a64638a"
 }

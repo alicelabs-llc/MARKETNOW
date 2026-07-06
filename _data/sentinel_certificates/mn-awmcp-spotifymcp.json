@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0893447",
+  "certificate_id": "MN-SC-2026-6253505",
   "skill_id": "mn-awmcp-spotifymcp",
   "skill_name": "spotify-mcp",
-  "issued_at": "2026-07-06T04:08:13.447Z",
-  "expires_at": "2026-07-13T04:08:13.447Z",
+  "issued_at": "2026-07-06T05:37:33.505Z",
+  "expires_at": "2026-07-13T05:37:33.505Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "71d2264d873e5f8e9cf45fcf7a890e72580422f6c48b0379312a0797dc4d9a03",
+  "signature": "9ee89b493c5d8c9ee259e22f18e05bd1c5fdff12d22d11b3d682638b5be5fb3e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-spotifymcp"
 }

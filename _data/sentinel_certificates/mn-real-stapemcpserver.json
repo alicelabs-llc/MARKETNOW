@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1021597",
+  "certificate_id": "MN-SC-2026-6409287",
   "skill_id": "mn-real-stapemcpserver",
   "skill_name": "stape-mcp-server",
-  "issued_at": "2026-07-06T04:10:21.597Z",
-  "expires_at": "2026-07-13T04:10:21.597Z",
+  "issued_at": "2026-07-06T05:40:09.287Z",
+  "expires_at": "2026-07-13T05:40:09.287Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39bef930e27e58f4da374d6f4b04346fd1a60920119b8b5973500e5da0e02302",
+  "signature": "18be670cc8d8ebc6618edc8e88dd1c95f3ba2c0eede1238185bb83f4bd9fb8de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stapemcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0880286",
+  "certificate_id": "MN-SC-2026-6239398",
   "skill_id": "mn-amcp-agent",
   "skill_name": "agent",
-  "issued_at": "2026-07-06T04:08:00.286Z",
-  "expires_at": "2026-07-13T04:08:00.286Z",
+  "issued_at": "2026-07-06T05:37:19.398Z",
+  "expires_at": "2026-07-13T05:37:19.398Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "2d01f674c609ebca7ce91ff42388dfebd033841b92416106341cf7e7af4cde35",
+  "signature": "c80432000f2a25492e51d237c545c8b7fb8801dead4fe75cd86f9eeba35a8dbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-agent"
 }

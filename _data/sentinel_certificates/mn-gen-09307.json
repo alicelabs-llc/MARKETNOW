@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0367599",
+  "certificate_id": "MN-SC-2026-5662053",
   "skill_id": "mn-gen-09307",
   "skill_name": "Munin-memory",
-  "issued_at": "2026-07-06T03:59:27.599Z",
-  "expires_at": "2026-07-13T03:59:27.599Z",
+  "issued_at": "2026-07-06T05:27:42.053Z",
+  "expires_at": "2026-07-13T05:27:42.053Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "573f5fb2991ad8334a723b23b0fb8150dbe51b992fcd07fe0f3253a61ea1038d",
+  "signature": "f363c1df36fbc94e47f51429b1c310375ff03ed7d0ee20d196ba471da8b92003",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09307"
 }

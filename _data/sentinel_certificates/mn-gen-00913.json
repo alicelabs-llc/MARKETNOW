@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9581570",
+  "certificate_id": "MN-SC-2026-5315103",
   "skill_id": "mn-gen-00913",
   "skill_name": "Arango-mcp-server",
-  "issued_at": "2026-07-06T03:46:21.570Z",
-  "expires_at": "2026-07-13T03:46:21.570Z",
+  "issued_at": "2026-07-06T05:21:55.103Z",
+  "expires_at": "2026-07-13T05:21:55.103Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ce82ac1cb06b6cc4c00f0eb079fac2dd353ff4af40e9994762bd939a9cc12d5",
+  "signature": "02e218cd2856c0a4d794f08e2df257c217976f8d982f0d8d87cb466a3482e768",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00913"
 }

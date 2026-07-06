@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1077467",
+  "certificate_id": "MN-SC-2026-6473171",
   "skill_id": "mn-real-funasr",
   "skill_name": "FunASR",
-  "issued_at": "2026-07-06T04:11:17.467Z",
-  "expires_at": "2026-07-13T04:11:17.467Z",
+  "issued_at": "2026-07-06T05:41:13.171Z",
+  "expires_at": "2026-07-13T05:41:13.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c7ef96fbd4ed24b29227a31f678b78245dca91afee2cbc713e979402101e140",
+  "signature": "aa80ab2ba55bae3915e2ac35a2b07449ec09475e74fada030bf000281a79b1ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-funasr"
 }

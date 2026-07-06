@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0531999",
+  "certificate_id": "MN-SC-2026-5825466",
   "skill_id": "mn-gen-13269",
   "skill_name": "Vuln-mcp-worker",
-  "issued_at": "2026-07-06T04:02:11.999Z",
-  "expires_at": "2026-07-13T04:02:11.999Z",
+  "issued_at": "2026-07-06T05:30:25.466Z",
+  "expires_at": "2026-07-13T05:30:25.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79d97b06d465d25472e0ae7e68854894c810de051c852e006992b43d35f903c5",
+  "signature": "532f73514467c38f00016b66c0901d34da0ce3b66f7a353c89055b51ce440a4e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13269"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0685348",
+  "certificate_id": "MN-SC-2026-6008868",
   "skill_id": "mn-prompt-bf31115e",
   "skill_name": "Case study customer success story",
-  "issued_at": "2026-07-06T04:04:45.348Z",
-  "expires_at": "2026-07-13T04:04:45.348Z",
+  "issued_at": "2026-07-06T05:33:28.868Z",
+  "expires_at": "2026-07-13T05:33:28.868Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "db400fa033c116565c6b65561358924468c05a02869e884e94f1a4caa606cb9d",
+  "signature": "14c83c79b050a872e64c59cd391f3fc60732f3cfd9c5dc80fa767de69bc5a84e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bf31115e"
 }

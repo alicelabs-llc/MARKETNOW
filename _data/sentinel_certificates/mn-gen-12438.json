@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0497913",
+  "certificate_id": "MN-SC-2026-5790971",
   "skill_id": "mn-gen-12438",
   "skill_name": "Tally-mcp-server",
-  "issued_at": "2026-07-06T04:01:37.913Z",
-  "expires_at": "2026-07-13T04:01:37.913Z",
+  "issued_at": "2026-07-06T05:29:50.971Z",
+  "expires_at": "2026-07-13T05:29:50.971Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "025f09436bde9b326a54109d092c70409e58d77c37ad61d765833890c55be5c9",
+  "signature": "9fefea95375e4eb9747ddbe55a5852365df6af818add08417c65b1533936e81a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12438"
 }

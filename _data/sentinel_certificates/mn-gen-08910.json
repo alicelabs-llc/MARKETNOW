@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0355477",
+  "certificate_id": "MN-SC-2026-5646282",
   "skill_id": "mn-gen-08910",
   "skill_name": "memory-bank-mcp",
-  "issued_at": "2026-07-06T03:59:15.477Z",
-  "expires_at": "2026-07-13T03:59:15.477Z",
+  "issued_at": "2026-07-06T05:27:26.282Z",
+  "expires_at": "2026-07-13T05:27:26.282Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59297d761b7cdb6397a519b868080db714e68beae1d04bb06b734ff43a49976c",
+  "signature": "0df8bdd4095ad29a737cda01cb1d0c9980df09681e0a657e2bcdfbc197e6de6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08910"
 }

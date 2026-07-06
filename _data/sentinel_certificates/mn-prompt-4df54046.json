@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0715007",
+  "certificate_id": "MN-SC-2026-6043651",
   "skill_id": "mn-prompt-4df54046",
   "skill_name": "Data warehouse compliance",
-  "issued_at": "2026-07-06T04:05:15.007Z",
-  "expires_at": "2026-07-13T04:05:15.007Z",
+  "issued_at": "2026-07-06T05:34:03.651Z",
+  "expires_at": "2026-07-13T05:34:03.651Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de3514bbc606ce48994651b9e808dfbd56834c07ae8eb1f1f0b274706329d9d3",
+  "signature": "84b1eff795fcc2120fe88726317f942a090aa47f9f9897a476e150d77b91f37f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4df54046"
 }

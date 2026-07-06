@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0998239",
+  "certificate_id": "MN-SC-2026-6380193",
   "skill_id": "mn-real-yolfiagent",
   "skill_name": "yolfi-agent",
-  "issued_at": "2026-07-06T04:09:58.239Z",
-  "expires_at": "2026-07-13T04:09:58.239Z",
+  "issued_at": "2026-07-06T05:39:40.193Z",
+  "expires_at": "2026-07-13T05:39:40.193Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8a42031127f7531b7ccb579e5cdb8caca8e0ad9a73a66911e86a18ea70028d0",
+  "signature": "055055ff5e885506823938f57d491e9437ee67444e61d16500e708e919eb9626",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-yolfiagent"
 }

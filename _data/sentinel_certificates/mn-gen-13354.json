@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0535157",
+  "certificate_id": "MN-SC-2026-5829164",
   "skill_id": "mn-gen-13354",
   "skill_name": "Webhook-relay-mcp",
-  "issued_at": "2026-07-06T04:02:15.157Z",
-  "expires_at": "2026-07-13T04:02:15.157Z",
+  "issued_at": "2026-07-06T05:30:29.164Z",
+  "expires_at": "2026-07-13T05:30:29.164Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b917458d5f84d63b75953dfc44ce74aec7ca0a4dc2f3971edfd86d4b6acbbb90",
+  "signature": "1bda0d5ace715800e87da20af3634afd7ebfb8726a2215e7a211dee820ca7274",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13354"
 }

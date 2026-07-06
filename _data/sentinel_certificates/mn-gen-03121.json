@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9716547",
+  "certificate_id": "MN-SC-2026-5410832",
   "skill_id": "mn-gen-03121",
   "skill_name": "Dav-mcp",
-  "issued_at": "2026-07-06T03:48:36.547Z",
-  "expires_at": "2026-07-13T03:48:36.547Z",
+  "issued_at": "2026-07-06T05:23:30.832Z",
+  "expires_at": "2026-07-13T05:23:30.832Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9530d5a9a41e127af401ce37b469fb8de1596c008479adcc3a3d6d9434cbdeba",
+  "signature": "0f2a6608c890f0780ebea848eb29050b582d517926a043d81b8fbd1086711820",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03121"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0820171",
+  "certificate_id": "MN-SC-2026-6167080",
   "skill_id": "mn-code-021",
   "skill_name": "Type Checker",
-  "issued_at": "2026-07-06T04:07:00.171Z",
-  "expires_at": "2026-07-13T04:07:00.171Z",
+  "issued_at": "2026-07-06T05:36:07.080Z",
+  "expires_at": "2026-07-13T05:36:07.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5989087e2d31a4461f6065313540e558782402447e428605209080e108377016",
+  "signature": "06de50ccb3bcd695b5f1aa9522a2d873b5340b23201c4c0a53e4bfc9e6c272a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-021"
 }

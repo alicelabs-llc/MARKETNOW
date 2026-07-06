@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0644201",
+  "certificate_id": "MN-SC-2026-5959083",
   "skill_id": "mn-prompt-79156e31",
   "skill_name": "Implementador de Webhooks con HMAC y retry exponencial real",
-  "issued_at": "2026-07-06T04:04:04.201Z",
-  "expires_at": "2026-07-13T04:04:04.201Z",
+  "issued_at": "2026-07-06T05:32:39.083Z",
+  "expires_at": "2026-07-13T05:32:39.083Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d2f718002b107441435e5c5b4eaeda0e4017ea17c54996d22731d5cc88f2c6b3",
+  "signature": "793976e7d726267559950b355708d806aaaef1f0a78d2ef6f618a86059024752",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-79156e31"
 }

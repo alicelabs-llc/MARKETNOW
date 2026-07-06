@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0774365",
+  "certificate_id": "MN-SC-2026-6113185",
   "skill_id": "mn-voi-00021",
   "skill_name": "Picovoice Voice",
-  "issued_at": "2026-07-06T04:06:14.365Z",
-  "expires_at": "2026-07-13T04:06:14.365Z",
+  "issued_at": "2026-07-06T05:35:13.185Z",
+  "expires_at": "2026-07-13T05:35:13.185Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa631347f5c0499c68c369e6fc0e1865535bdf35da3350b3637a11defc09518a",
+  "signature": "8b21747dad6f6ea670c6950d38a0a69be3a4d6e7a822aef5398595d8e7054c89",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00021"
 }

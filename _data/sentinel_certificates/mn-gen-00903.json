@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9580808",
+  "certificate_id": "MN-SC-2026-5314588",
   "skill_id": "mn-gen-00903",
   "skill_name": "Trialanderror-ai/appstore-connect-mcp",
-  "issued_at": "2026-07-06T03:46:20.808Z",
-  "expires_at": "2026-07-13T03:46:20.808Z",
+  "issued_at": "2026-07-06T05:21:54.588Z",
+  "expires_at": "2026-07-13T05:21:54.588Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "985a5b4b9d363f0554cc18b477150bbba7408fa051d926588c0f89c2e729d129",
+  "signature": "f1d92460b44700056fe222cabdebf29438208505d609132e0d89e1a7c0b2c837",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00903"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0677313",
+  "certificate_id": "MN-SC-2026-6000084",
   "skill_id": "mn-prompt-20f2b87d",
   "skill_name": "Workplace emergency response",
-  "issued_at": "2026-07-06T04:04:37.313Z",
-  "expires_at": "2026-07-13T04:04:37.313Z",
+  "issued_at": "2026-07-06T05:33:20.084Z",
+  "expires_at": "2026-07-13T05:33:20.084Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b20ce9dd0a5262b18f650289013c99b9be42e41a53c1a7c994defa870cbba68d",
+  "signature": "6bad19a156c620e3d32555959cb775ce9dc51f46f303196f6f11555cd546ca74",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-20f2b87d"
 }

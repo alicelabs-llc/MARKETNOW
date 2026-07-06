@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1028657",
+  "certificate_id": "MN-SC-2026-6417428",
   "skill_id": "mn-real-gnomedesktopmcp",
   "skill_name": "gnome-desktop-mcp",
-  "issued_at": "2026-07-06T04:10:28.657Z",
-  "expires_at": "2026-07-13T04:10:28.657Z",
+  "issued_at": "2026-07-06T05:40:17.428Z",
+  "expires_at": "2026-07-13T05:40:17.428Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "df06926cf0f501b0c4a1c92da4776647bf151f3fea97aa534fc86b8f81d9b183",
+  "signature": "ba22b4e56a35694a5a2c2bd4e76efed18f018be9b58c461a8f1bd01ed505a607",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gnomedesktopmcp"
 }

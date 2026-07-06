@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0502404",
+  "certificate_id": "MN-SC-2026-5794959",
   "skill_id": "mn-gen-12551",
   "skill_name": "Terraform-mcp-server",
-  "issued_at": "2026-07-06T04:01:42.404Z",
-  "expires_at": "2026-07-13T04:01:42.404Z",
+  "issued_at": "2026-07-06T05:29:54.959Z",
+  "expires_at": "2026-07-13T05:29:54.959Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25dc5580ccf2f5cd2fe829f3b7e84f0dec07671ea0ab512e80c4a2793f165c20",
+  "signature": "38eea8adfb342626e04683aa764faba6eb6abceb02aeed6b1e4bc5d874967f99",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12551"
 }

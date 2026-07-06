@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9742106",
+  "certificate_id": "MN-SC-2026-5428543",
   "skill_id": "mn-gen-03549",
   "skill_name": "Duo-dev/mcp-server",
-  "issued_at": "2026-07-06T03:49:02.106Z",
-  "expires_at": "2026-07-13T03:49:02.106Z",
+  "issued_at": "2026-07-06T05:23:48.543Z",
+  "expires_at": "2026-07-13T05:23:48.543Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38658e214b09ed807597237a1d5c5dc60a61927f0cd8a7072203cadb741a2cb8",
+  "signature": "0f59b4fa499c5e150847a26aa511302cb29672370f7cedf8f4852121e72eb0f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03549"
 }

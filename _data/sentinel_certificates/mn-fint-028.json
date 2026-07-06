@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0854857",
+  "certificate_id": "MN-SC-2026-6209362",
   "skill_id": "mn-fint-028",
   "skill_name": "Trading Signal Generator",
-  "issued_at": "2026-07-06T04:07:34.857Z",
-  "expires_at": "2026-07-13T04:07:34.857Z",
+  "issued_at": "2026-07-06T05:36:49.362Z",
+  "expires_at": "2026-07-13T05:36:49.362Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a9f8a0e5be8bdd752dd61e0439f9831005cb44cebe318b69427d65ee1ce3140",
+  "signature": "843a655264fa2f4683f386aebe14373751607f25955f62ea209173522e3846b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-028"
 }

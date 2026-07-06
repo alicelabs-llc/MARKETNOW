@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0970023",
+  "certificate_id": "MN-SC-2026-6344826",
   "skill_id": "mn-real-vizro",
   "skill_name": "vizro",
-  "issued_at": "2026-07-06T04:09:30.023Z",
-  "expires_at": "2026-07-13T04:09:30.023Z",
+  "issued_at": "2026-07-06T05:39:04.826Z",
+  "expires_at": "2026-07-13T05:39:04.826Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d1767276475e7ab852726887ced444cb625e96b890f9aebeaeb337be835d406c",
+  "signature": "9c07598cd56d0e038daf215991839fd446f06b17e6c763b4c1310d698ad174fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vizro"
 }

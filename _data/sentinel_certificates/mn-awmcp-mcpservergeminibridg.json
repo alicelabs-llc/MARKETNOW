@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0884873",
+  "certificate_id": "MN-SC-2026-6244944",
   "skill_id": "mn-awmcp-mcpservergeminibridg",
   "skill_name": "mcp-server-gemini-bridge",
-  "issued_at": "2026-07-06T04:08:04.873Z",
-  "expires_at": "2026-07-13T04:08:04.873Z",
+  "issued_at": "2026-07-06T05:37:24.944Z",
+  "expires_at": "2026-07-13T05:37:24.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "3fe2f232fc31dc94387ff1ad0cfcfd5d6da46e2823042b76a20028f29a9576d5",
+  "signature": "aa05290180c6f4de91b13d8e7a66e0ba308f1ada2ceb66da55966cb7f9a6b830",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpservergeminibridg"
 }

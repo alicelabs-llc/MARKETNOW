@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0459485",
+  "certificate_id": "MN-SC-2026-5750788",
   "skill_id": "mn-gen-11467",
   "skill_name": "Scan-mcp",
-  "issued_at": "2026-07-06T04:00:59.485Z",
-  "expires_at": "2026-07-13T04:00:59.485Z",
+  "issued_at": "2026-07-06T05:29:10.788Z",
+  "expires_at": "2026-07-13T05:29:10.788Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9511590f1fb3d05c799b00d46363be4e625ee3febfb6bfbf733a6af0a2a36fc1",
+  "signature": "32f28b8f4d0538bbe0c3650e0819b9670af9d87ed55d680bea3b3435e331b48c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11467"
 }

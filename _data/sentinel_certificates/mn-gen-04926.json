@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9824434",
+  "certificate_id": "MN-SC-2026-5484666",
   "skill_id": "mn-gen-04926",
   "skill_name": "hn-server",
-  "issued_at": "2026-07-06T03:50:24.434Z",
-  "expires_at": "2026-07-13T03:50:24.434Z",
+  "issued_at": "2026-07-06T05:24:44.666Z",
+  "expires_at": "2026-07-13T05:24:44.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee6fb4b00eabe9ea7a72ed88172e2c7abc1e4fbdfe941ba904b90ed14a6a5d4a",
+  "signature": "2fead2c1f3a2de03acb6c37a6d2c613e8a3695322582e087d183ac14bec90f14",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04926"
 }

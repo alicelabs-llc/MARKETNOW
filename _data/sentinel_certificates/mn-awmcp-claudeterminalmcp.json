@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0924432",
+  "certificate_id": "MN-SC-2026-6293739",
   "skill_id": "mn-awmcp-claudeterminalmcp",
   "skill_name": "claude-terminal-mcp",
-  "issued_at": "2026-07-06T04:08:44.432Z",
-  "expires_at": "2026-07-13T04:08:44.432Z",
+  "issued_at": "2026-07-06T05:38:13.739Z",
+  "expires_at": "2026-07-13T05:38:13.739Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "519829e8c49886fd1739432d72f87cfeba63f58c48f7ec68b2d7c7d3a18eae4b",
+  "signature": "67d61546639757fab7634255ae4e3c83b930eea0843774faab34a800d780ece8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-claudeterminalmcp"
 }

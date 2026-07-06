@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0901873",
+  "certificate_id": "MN-SC-2026-6263474",
   "skill_id": "mn-awmcp-feedthrough",
   "skill_name": "feedthrough",
-  "issued_at": "2026-07-06T04:08:21.873Z",
-  "expires_at": "2026-07-13T04:08:21.873Z",
+  "issued_at": "2026-07-06T05:37:43.474Z",
+  "expires_at": "2026-07-13T05:37:43.474Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "372e4bd6b7857b42d7209eaa95cf397441de7e5983a95f220757c6fa308e21fb",
+  "signature": "b60da4a933789c839d15ee7f122fb7ddcfd6a16afe8660990efe6585274e5f32",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-feedthrough"
 }

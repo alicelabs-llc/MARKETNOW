@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0517615",
+  "certificate_id": "MN-SC-2026-5810416",
   "skill_id": "mn-ai-12941",
   "skill_name": "Umain-mcp-showcase",
-  "issued_at": "2026-07-06T04:01:57.615Z",
-  "expires_at": "2026-07-13T04:01:57.615Z",
+  "issued_at": "2026-07-06T05:30:10.416Z",
+  "expires_at": "2026-07-13T05:30:10.416Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68d727f0b3e346e44e812e64378fd9de3e2027def731488dbdc90abd4beb3f8e",
+  "signature": "f765e50e49dae826266283216a8d7a631f80c6889da25d4f1e59e674884fefe4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-12941"
 }

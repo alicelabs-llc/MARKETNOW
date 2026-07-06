@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0407000",
+  "certificate_id": "MN-SC-2026-5703594",
   "skill_id": "mn-gen-10247",
   "skill_name": "Paypal-mcp-server",
-  "issued_at": "2026-07-06T04:00:07.000Z",
-  "expires_at": "2026-07-13T04:00:07.000Z",
+  "issued_at": "2026-07-06T05:28:23.594Z",
+  "expires_at": "2026-07-13T05:28:23.594Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "56c121de0274784251a934709ff3db14d1c3eea764200a03c56b564b8e4506db",
+  "signature": "7a188dc78fcf3db6e7b9440529b9edbc7ac2dec69c353864daafe7606598988e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10247"
 }

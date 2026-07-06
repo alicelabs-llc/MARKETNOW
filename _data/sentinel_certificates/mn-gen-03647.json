@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9746507",
+  "certificate_id": "MN-SC-2026-5431685",
   "skill_id": "mn-gen-03647",
   "skill_name": "Elysia-mcp",
-  "issued_at": "2026-07-06T03:49:06.507Z",
-  "expires_at": "2026-07-13T03:49:06.507Z",
+  "issued_at": "2026-07-06T05:23:51.685Z",
+  "expires_at": "2026-07-13T05:23:51.685Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17d59f1369b16dce078ab84d899a4a1363121b7f4bc9daf1db1c67233a7a31e5",
+  "signature": "c74570c7cc6767dc00c19efc5df9682ed44670f6cee60d865e31ce2ab7429bf6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03647"
 }

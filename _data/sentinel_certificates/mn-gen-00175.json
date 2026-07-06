@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9680318",
+  "certificate_id": "MN-SC-2026-5281516",
   "skill_id": "mn-gen-00175",
   "skill_name": "Ado-mcp",
-  "issued_at": "2026-07-06T03:48:00.318Z",
-  "expires_at": "2026-07-13T03:48:00.318Z",
+  "issued_at": "2026-07-06T05:21:21.516Z",
+  "expires_at": "2026-07-13T05:21:21.516Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e80d791e941ec88ea6e9ef9a036f2ba7c8449c98189941594bbbe2f1af7a48cc",
+  "signature": "c186c530be4640269f4fd937901da229aeb784b2cbcc4eda26fab5fb3741b32a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00175"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0750652",
+  "certificate_id": "MN-SC-2026-6084771",
   "skill_id": "mn-asf-046",
   "skill_name": "Trusted Execution Environment",
-  "issued_at": "2026-07-06T04:05:50.652Z",
-  "expires_at": "2026-07-13T04:05:50.652Z",
+  "issued_at": "2026-07-06T05:34:44.771Z",
+  "expires_at": "2026-07-13T05:34:44.771Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "724eb46d8b53c4847d73d0c517752092a5b03a25ceb63fb0bae3a385e0273067",
+  "signature": "9b9ed2c42cc8668890ee0fccab7873fb385b9583a7228db990e758e7ca00eb22",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-046"
 }

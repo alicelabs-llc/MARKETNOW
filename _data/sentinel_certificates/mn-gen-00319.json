@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9549483",
+  "certificate_id": "MN-SC-2026-5290440",
   "skill_id": "mn-gen-00319",
   "skill_name": "Agentbill-api",
-  "issued_at": "2026-07-06T03:45:49.483Z",
-  "expires_at": "2026-07-13T03:45:49.483Z",
+  "issued_at": "2026-07-06T05:21:30.440Z",
+  "expires_at": "2026-07-13T05:21:30.440Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "940e7e1b3d0497e8c07620d50dbff7b329e306a2b5bcaa6dcc83803c251e7f4b",
+  "signature": "58f23ffdd31357bfcc5effd893047991cf2bf29ad40d7664e0239a6c506ec14b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00319"
 }

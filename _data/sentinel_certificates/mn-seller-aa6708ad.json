@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0877636",
+  "certificate_id": "MN-SC-2026-6236631",
   "skill_id": "mn-seller-aa6708ad",
   "skill_name": "Tool Use Orchestrator",
-  "issued_at": "2026-07-06T04:07:57.636Z",
-  "expires_at": "2026-07-13T04:07:57.636Z",
+  "issued_at": "2026-07-06T05:37:16.631Z",
+  "expires_at": "2026-07-13T05:37:16.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6894cf1b3d355afe99ffdf4e5a601fd1ebd176ee1d36578a4e75b267c7c0af8b",
+  "signature": "40ca70f6897894dfa0690351164c075319e1149041506340af57856a03662284",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-seller-aa6708ad"
 }

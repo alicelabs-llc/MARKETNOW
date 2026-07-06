@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1024130",
+  "certificate_id": "MN-SC-2026-6412065",
   "skill_id": "mn-real-statuscraft",
   "skill_name": "statuscraft",
-  "issued_at": "2026-07-06T04:10:24.130Z",
-  "expires_at": "2026-07-13T04:10:24.130Z",
+  "issued_at": "2026-07-06T05:40:12.065Z",
+  "expires_at": "2026-07-13T05:40:12.065Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66f25bfd6280faea1e939fc19f32521cc07631f84edbf6d90303119d81c0dafb",
+  "signature": "602d81ec4421e1791435a15d908e268c098cb2d1db4f5ce254d08a6605b4f9b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-statuscraft"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1071605",
+  "certificate_id": "MN-SC-2026-6465859",
   "skill_id": "mn-real-mcpserverrabbitmq",
   "skill_name": "mcp-server-rabbitmq",
-  "issued_at": "2026-07-06T04:11:11.605Z",
-  "expires_at": "2026-07-13T04:11:11.605Z",
+  "issued_at": "2026-07-06T05:41:05.859Z",
+  "expires_at": "2026-07-13T05:41:05.859Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4228a4dad89466533e7aaba9d2d1dbf8b5c50bbb8a2ca5e06303515d93914ccf",
+  "signature": "b914135d4af111e354acfec8d6821782ae85612964c3ac1a8045cfa30818bd74",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserverrabbitmq"
 }

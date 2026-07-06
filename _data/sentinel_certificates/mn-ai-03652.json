@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9747267",
+  "certificate_id": "MN-SC-2026-5432166",
   "skill_id": "mn-ai-03652",
   "skill_name": "Email-design-mcp",
-  "issued_at": "2026-07-06T03:49:07.267Z",
-  "expires_at": "2026-07-13T03:49:07.267Z",
+  "issued_at": "2026-07-06T05:23:52.166Z",
+  "expires_at": "2026-07-13T05:23:52.166Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa10736a00b3a78d10d40c652e66a7e915e40cdf7b32f24fa5340c8617fec29d",
+  "signature": "c546471cde6d6fea4a3341577a86c7812637b6bbd4877dd9cfb07edb63feef7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03652"
 }

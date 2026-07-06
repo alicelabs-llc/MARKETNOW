@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1037887",
+  "certificate_id": "MN-SC-2026-6428206",
   "skill_id": "mn-real-scribefymcp",
   "skill_name": "scribefy-mcp",
-  "issued_at": "2026-07-06T04:10:37.887Z",
-  "expires_at": "2026-07-13T04:10:37.887Z",
+  "issued_at": "2026-07-06T05:40:28.206Z",
+  "expires_at": "2026-07-13T05:40:28.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a23c8ccb2898a3545a6264fcb7ec7255855b78c39af80fdb475b021bf9d0f8b",
+  "signature": "118f4dd471994e46982d9bdfc5ba512de5c13305860889d547b052995b1e821a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scribefymcp"
 }

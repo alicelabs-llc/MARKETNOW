@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0777515",
+  "certificate_id": "MN-SC-2026-6116819",
   "skill_id": "mn-pro-1ce4158b",
   "skill_name": "Data Quality Firewall",
-  "issued_at": "2026-07-06T04:06:17.515Z",
-  "expires_at": "2026-07-13T04:06:17.515Z",
+  "issued_at": "2026-07-06T05:35:16.819Z",
+  "expires_at": "2026-07-13T05:35:16.819Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6cb51f9c20f054b767398dcef63b52a51726f4871cf89bfab56205333524b8ef",
+  "signature": "8ee0865b82023f251bdf8930a15ec202a313348a7982f9c8727057c517a35d7a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1ce4158b"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9742807",
+  "certificate_id": "MN-SC-2026-5429028",
   "skill_id": "mn-gen-03562",
   "skill_name": "Dynamo-readonly-mcp",
-  "issued_at": "2026-07-06T03:49:02.807Z",
-  "expires_at": "2026-07-13T03:49:02.807Z",
+  "issued_at": "2026-07-06T05:23:49.028Z",
+  "expires_at": "2026-07-13T05:23:49.028Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "80b076af10bd9ee8737422d1a16cf0b6df4444a1f1cad7882cd80dcafe5724ce",
+  "signature": "6fd9fe46ec3af959574914136f3370e37d295a5c3065d78cb33a231af2065618",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03562"
 }

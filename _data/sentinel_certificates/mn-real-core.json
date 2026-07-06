@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1100882",
+  "certificate_id": "MN-SC-2026-6500771",
   "skill_id": "mn-real-core",
   "skill_name": "core",
-  "issued_at": "2026-07-06T04:11:40.882Z",
-  "expires_at": "2026-07-13T04:11:40.882Z",
+  "issued_at": "2026-07-06T05:41:40.771Z",
+  "expires_at": "2026-07-13T05:41:40.771Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "171c3ee788a8685bd59f067a4f0fd4659297495cd43a57fbc6bf816439abaa86",
+  "signature": "0a303d2a8cacc824cd8fe9ff47f34585e4ddfe6109bfd48f9d8e9e72fe78fda5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-core"
 }

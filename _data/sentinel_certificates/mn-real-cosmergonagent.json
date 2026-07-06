@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1001927",
+  "certificate_id": "MN-SC-2026-6384770",
   "skill_id": "mn-real-cosmergonagent",
   "skill_name": "cosmergon-agent",
-  "issued_at": "2026-07-06T04:10:01.927Z",
-  "expires_at": "2026-07-13T04:10:01.927Z",
+  "issued_at": "2026-07-06T05:39:44.770Z",
+  "expires_at": "2026-07-13T05:39:44.770Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d9ce8882aa6c7b74ac1551405ad166f868af725d71eefd6eda96cec76fb5bd93",
+  "signature": "0df465caa24f2affe9b6d6d201b0966d7afc676906a4cb6bac16cb977e80adaa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cosmergonagent"
 }

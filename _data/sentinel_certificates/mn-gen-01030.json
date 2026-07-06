@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9586973",
+  "certificate_id": "MN-SC-2026-5318687",
   "skill_id": "mn-gen-01030",
   "skill_name": "Xunxiing/astrbot-mcp",
-  "issued_at": "2026-07-06T03:46:26.973Z",
-  "expires_at": "2026-07-13T03:46:26.973Z",
+  "issued_at": "2026-07-06T05:21:58.687Z",
+  "expires_at": "2026-07-13T05:21:58.687Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93efdd95cff68da5204c4bc10dc112a5ac6b76d9af6c5abe75c37be52e7344b1",
+  "signature": "1beb7eec63fbfc310e606247bcfea564ff5dd09f0917b0a304fbf90f7aa2c25b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01030"
 }

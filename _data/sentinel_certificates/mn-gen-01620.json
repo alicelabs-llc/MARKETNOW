@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9618458",
+  "certificate_id": "MN-SC-2026-5342045",
   "skill_id": "mn-gen-01620",
   "skill_name": "Bullet-mcp",
-  "issued_at": "2026-07-06T03:46:58.458Z",
-  "expires_at": "2026-07-13T03:46:58.458Z",
+  "issued_at": "2026-07-06T05:22:22.045Z",
+  "expires_at": "2026-07-13T05:22:22.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75da4edf0bc06567dcb401cd7d64b3ae1f5fb96181d6b4692e3f54109be5e553",
+  "signature": "88c3d5728a1d1c18476eb78c82fde9e585ca6fd79091b47e2233c2fa7a3b5aeb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01620"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1059419",
+  "certificate_id": "MN-SC-2026-6452796",
   "skill_id": "mn-real-tripgomcpserver",
   "skill_name": "tripgo-mcp-server",
-  "issued_at": "2026-07-06T04:10:59.419Z",
-  "expires_at": "2026-07-13T04:10:59.419Z",
+  "issued_at": "2026-07-06T05:40:52.796Z",
+  "expires_at": "2026-07-13T05:40:52.796Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dcbab0c3bdc8b4e21739a8b64c417e8db4c5f5ac74db7525f50223f8f7f0045f",
+  "signature": "fb64c04fba301099c038204369f4ec42e765f49b8f42e667cb516d1062047779",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tripgomcpserver"
 }

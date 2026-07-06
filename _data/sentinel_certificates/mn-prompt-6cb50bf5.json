@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0707565",
+  "certificate_id": "MN-SC-2026-6035427",
   "skill_id": "mn-prompt-6cb50bf5",
   "skill_name": "Predictive churn model",
-  "issued_at": "2026-07-06T04:05:07.565Z",
-  "expires_at": "2026-07-13T04:05:07.565Z",
+  "issued_at": "2026-07-06T05:33:55.427Z",
+  "expires_at": "2026-07-13T05:33:55.427Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aff440bfdef42b23a04b4973868758ec682bd02d7c3abc7a56714c3c7958f7db",
+  "signature": "e102c1a95aeb4a1c080292785d62c7a53405e4b76a4bab869b578fb6a682d4e7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-6cb50bf5"
 }

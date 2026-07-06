@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1099469",
+  "certificate_id": "MN-SC-2026-6499275",
   "skill_id": "mn-real-rustmcpsdk",
   "skill_name": "rust-mcp-sdk",
-  "issued_at": "2026-07-06T04:11:39.469Z",
-  "expires_at": "2026-07-13T04:11:39.469Z",
+  "issued_at": "2026-07-06T05:41:39.275Z",
+  "expires_at": "2026-07-13T05:41:39.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "76d9dca2b3ee3835e4f24332a8ae381c5cbbce99140bf85f5fecbcc98ca0005c",
+  "signature": "9b9df9ccfbc5caad97bd2fbfe2c39df6e37485209a45fab77c05e5724bf9486a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rustmcpsdk"
 }

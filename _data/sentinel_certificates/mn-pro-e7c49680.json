@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0785454",
+  "certificate_id": "MN-SC-2026-6125043",
   "skill_id": "mn-pro-e7c49680",
   "skill_name": "Security Questionnaire Automator",
-  "issued_at": "2026-07-06T04:06:25.454Z",
-  "expires_at": "2026-07-13T04:06:25.454Z",
+  "issued_at": "2026-07-06T05:35:25.043Z",
+  "expires_at": "2026-07-13T05:35:25.043Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2cf7587fbfc3904f7d64eaa17ae5851a75c07c95d57aa51a0578faa86541aea1",
+  "signature": "e720a5eb3d9e357d74fa6e8eca2fce3a557a23694764f713ab3756ddc1cda998",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-e7c49680"
 }

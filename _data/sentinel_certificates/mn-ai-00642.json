@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9564685",
+  "certificate_id": "MN-SC-2026-5303572",
   "skill_id": "mn-ai-00642",
   "skill_name": "Aisearchapi-mcp",
-  "issued_at": "2026-07-06T03:46:04.685Z",
-  "expires_at": "2026-07-13T03:46:04.685Z",
+  "issued_at": "2026-07-06T05:21:43.572Z",
+  "expires_at": "2026-07-13T05:21:43.572Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2905cc6fb634a14326d49758a5dde77a5adb3a2f0f0fa0c26a10f9f93edff059",
+  "signature": "b325e322d979711f3f46332118540e502db04da0766269e15c504c2710411ec5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00642"
 }

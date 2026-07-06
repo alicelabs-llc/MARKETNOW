@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0281206",
+  "certificate_id": "MN-SC-2026-5556815",
   "skill_id": "mn-gen-06716",
   "skill_name": "File-context-server",
-  "issued_at": "2026-07-06T03:58:01.206Z",
-  "expires_at": "2026-07-13T03:58:01.206Z",
+  "issued_at": "2026-07-06T05:25:56.815Z",
+  "expires_at": "2026-07-13T05:25:56.815Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e110af195071105f906592b321187644e843979e3ff0a5090b4890d422669dcc",
+  "signature": "e572f4bbf7b67287e0f65343f7920033428e7a2083b8a03de282d2866cc941ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06716"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0784527",
+  "certificate_id": "MN-SC-2026-6124026",
   "skill_id": "mn-pro-2aaeafa4",
   "skill_name": "Security Posture Manager",
-  "issued_at": "2026-07-06T04:06:24.527Z",
-  "expires_at": "2026-07-13T04:06:24.527Z",
+  "issued_at": "2026-07-06T05:35:24.026Z",
+  "expires_at": "2026-07-13T05:35:24.026Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd90ed290b62ae387c388b2b2a52c4ff7fcfa92bd725f0eb93d7261f9901d080",
+  "signature": "d53c35662ff0c5a56f315f688fbf455a5d88eb7d229ce10721c08efdd31aa301",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-2aaeafa4"
 }

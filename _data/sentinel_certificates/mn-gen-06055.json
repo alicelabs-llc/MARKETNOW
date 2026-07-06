@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0256006",
+  "certificate_id": "MN-SC-2026-5529802",
   "skill_id": "mn-gen-06055",
   "skill_name": "Trentapps/manager-protocol",
-  "issued_at": "2026-07-06T03:57:36.006Z",
-  "expires_at": "2026-07-13T03:57:36.006Z",
+  "issued_at": "2026-07-06T05:25:29.802Z",
+  "expires_at": "2026-07-13T05:25:29.802Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e117914d479413c0838b0479fe878913204d54da5d6f66d7f8391da94c6b3e8e",
+  "signature": "60240ec5838f616cd54788ebf18120a57e80a3458574e7a609e8060615815ba8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06055"
 }

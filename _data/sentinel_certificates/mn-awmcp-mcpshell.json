@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0922695",
+  "certificate_id": "MN-SC-2026-6290127",
   "skill_id": "mn-awmcp-mcpshell",
   "skill_name": "mcp-shell",
-  "issued_at": "2026-07-06T04:08:42.695Z",
-  "expires_at": "2026-07-13T04:08:42.695Z",
+  "issued_at": "2026-07-06T05:38:10.127Z",
+  "expires_at": "2026-07-13T05:38:10.127Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aaa26f3d841f08c658ba9dee4f3df71b6893c0e088d1b80dc2caa3b42798653d",
+  "signature": "a924f3b9dd2e95b4dae242b995af963f653a26ca15c074ce92aff97c29558027",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpshell"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0943114",
+  "certificate_id": "MN-SC-2026-6314527",
   "skill_id": "mn-real-databricksgeniemcp",
   "skill_name": "databricks-genie-MCP",
-  "issued_at": "2026-07-06T04:09:03.114Z",
-  "expires_at": "2026-07-13T04:09:03.114Z",
+  "issued_at": "2026-07-06T05:38:34.527Z",
+  "expires_at": "2026-07-13T05:38:34.527Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4425e8c5925d4feccabf7b303a1bc319785fe390e91a76879ae41253d64d63c7",
+  "signature": "9cd9f1844d519e9cbc11287f807f30788e1376b1ff77d1182d725ea870a7945c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-databricksgeniemcp"
 }

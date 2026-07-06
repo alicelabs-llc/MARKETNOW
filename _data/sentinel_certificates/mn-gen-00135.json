@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9678893",
+  "certificate_id": "MN-SC-2026-5280433",
   "skill_id": "mn-gen-00135",
   "skill_name": "Activitywatch-mcp-server",
-  "issued_at": "2026-07-06T03:47:58.893Z",
-  "expires_at": "2026-07-13T03:47:58.893Z",
+  "issued_at": "2026-07-06T05:21:20.433Z",
+  "expires_at": "2026-07-13T05:21:20.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7cf2f1e5b96690afd30be7139958345b72ec9927efd5ee882fb356a9406e95b5",
+  "signature": "4dc1d68d1a3c40f8e83e4e23de5f0f7489fb74d5d98ae216faa1f07e117c0268",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00135"
 }

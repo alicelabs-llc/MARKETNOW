@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9754898",
+  "certificate_id": "MN-SC-2026-5437729",
   "skill_id": "mn-gen-03787",
   "skill_name": "Mcp-server-example-remote",
-  "issued_at": "2026-07-06T03:49:14.898Z",
-  "expires_at": "2026-07-13T03:49:14.898Z",
+  "issued_at": "2026-07-06T05:23:57.729Z",
+  "expires_at": "2026-07-13T05:23:57.729Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63302a36e6ee60a2e59dc143a86d11477f42fa2324a2de40c3d008e397226301",
+  "signature": "1614ea6c28940bb394cc498b60faaf5ffdec52c9199bb13bb152630f045317ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03787"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1042936",
+  "certificate_id": "MN-SC-2026-6433626",
   "skill_id": "mn-real-aynops",
   "skill_name": "AynOps",
-  "issued_at": "2026-07-06T04:10:42.936Z",
-  "expires_at": "2026-07-13T04:10:42.936Z",
+  "issued_at": "2026-07-06T05:40:33.626Z",
+  "expires_at": "2026-07-13T05:40:33.626Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d39e68d1cdbede7073a26749a7ce47066d408bb74166ddd46421f20bd55e16f",
+  "signature": "74caf3ef63a19771186c574f276f36a0e0cfb403f062541e94f278c923ae6eae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aynops"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1047798",
+  "certificate_id": "MN-SC-2026-6438377",
   "skill_id": "mn-real-mcpvms",
   "skill_name": "mcp_vms",
-  "issued_at": "2026-07-06T04:10:47.798Z",
-  "expires_at": "2026-07-13T04:10:47.798Z",
+  "issued_at": "2026-07-06T05:40:38.377Z",
+  "expires_at": "2026-07-13T05:40:38.377Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e64f5c6f85859a876b818d40f6d570d17a82d88e28a14b81aa2832645b8014a",
+  "signature": "83a48102c6c4dd145f3224d11a09112913dbd9c52e06847c4f7961c437daad5d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpvms"
 }

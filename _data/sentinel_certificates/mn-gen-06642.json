@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0277252",
+  "certificate_id": "MN-SC-2026-5553693",
   "skill_id": "mn-gen-06642",
   "skill_name": "Mcp-drop",
-  "issued_at": "2026-07-06T03:57:57.252Z",
-  "expires_at": "2026-07-13T03:57:57.252Z",
+  "issued_at": "2026-07-06T05:25:53.693Z",
+  "expires_at": "2026-07-13T05:25:53.693Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e14f9637c0a2112ea4401ffe51f4fd6b01692ec9c9f376fca337137f392c32f1",
+  "signature": "ffbe383ca9cc120405cb50e3eed989fbf9f8be7e620e8b2ff31dffedcb8c546d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06642"
 }

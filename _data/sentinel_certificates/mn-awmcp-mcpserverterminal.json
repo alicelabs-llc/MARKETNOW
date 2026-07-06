@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0916386",
+  "certificate_id": "MN-SC-2026-6281729",
   "skill_id": "mn-awmcp-mcpserverterminal",
   "skill_name": "mcp-server-terminal",
-  "issued_at": "2026-07-06T04:08:36.386Z",
-  "expires_at": "2026-07-13T04:08:36.386Z",
+  "issued_at": "2026-07-06T05:38:01.729Z",
+  "expires_at": "2026-07-13T05:38:01.729Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f814275817d0e8c74d0bff3774c39852320ac322e83cdf44975d704dab4ec57d",
+  "signature": "e53312a44e5f946eecac74f7b33f8bcd2498a9db274b46bcb7f50470aabb705a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpserverterminal"
 }

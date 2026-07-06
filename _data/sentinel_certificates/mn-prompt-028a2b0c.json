@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0577076",
+  "certificate_id": "MN-SC-2026-5875639",
   "skill_id": "mn-prompt-028a2b0c",
   "skill_name": "Especialista Identity Provider + Keycloak",
-  "issued_at": "2026-07-06T04:02:57.076Z",
-  "expires_at": "2026-07-13T04:02:57.076Z",
+  "issued_at": "2026-07-06T05:31:15.639Z",
+  "expires_at": "2026-07-13T05:31:15.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ff82033ea8c1696ef94ffff0cce0ea9ec6d76baca4d110bab7b40c456cda983",
+  "signature": "753df2756009d54060ac59a286935223cafab4e2a3100717d2f610bcdd550e8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-028a2b0c"
 }

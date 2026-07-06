@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0894833",
+  "certificate_id": "MN-SC-2026-6255777",
   "skill_id": "mn-awmcp-rijksmuseummcp",
   "skill_name": "rijksmuseum-mcp",
-  "issued_at": "2026-07-06T04:08:14.833Z",
-  "expires_at": "2026-07-13T04:08:14.833Z",
+  "issued_at": "2026-07-06T05:37:35.777Z",
+  "expires_at": "2026-07-13T05:37:35.777Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "6af9525ea5d9e03a762dc0f90700e6ad10c60e2bc9fce8e61c8ab57f50d3ad1f",
+  "signature": "51cfec9a586571047466a35618afe92255388e6844043f7eaba94864b92260ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-rijksmuseummcp"
 }

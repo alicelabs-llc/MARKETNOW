@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0325403",
+  "certificate_id": "MN-SC-2026-5610298",
   "skill_id": "mn-gen-07821",
   "skill_name": "mcp-server-taskwarrior",
-  "issued_at": "2026-07-06T03:58:45.403Z",
-  "expires_at": "2026-07-13T03:58:45.403Z",
+  "issued_at": "2026-07-06T05:26:50.298Z",
+  "expires_at": "2026-07-13T05:26:50.298Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "a313e03c16507e316e390a6066f7e84878cc1444b1d7dfe427eb1e1e3d76e7ba",
+  "signature": "3644ed848afcadba3fc4d428d2811c4768c4dd9c654905f2c10b2089bcdbf9e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07821"
 }

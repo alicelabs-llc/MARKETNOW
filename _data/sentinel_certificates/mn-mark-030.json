@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0869636",
+  "certificate_id": "MN-SC-2026-6224244",
   "skill_id": "mn-mark-030",
   "skill_name": "Marketing Compliance Checker",
-  "issued_at": "2026-07-06T04:07:49.636Z",
-  "expires_at": "2026-07-13T04:07:49.636Z",
+  "issued_at": "2026-07-06T05:37:04.244Z",
+  "expires_at": "2026-07-13T05:37:04.244Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a023be4d70eab9da1910852caaf1f9ab8ecabb907ca2dd0ad47248bf22e663c",
+  "signature": "99fcad6011961d4b2cc93d40cc634ecd2974960341b95abdcd1421f5759b5b60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mark-030"
 }

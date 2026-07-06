@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1097127",
+  "certificate_id": "MN-SC-2026-6495662",
   "skill_id": "mn-real-qverisagenttoolkit",
   "skill_name": "qveris-agent-toolkit",
-  "issued_at": "2026-07-06T04:11:37.127Z",
-  "expires_at": "2026-07-13T04:11:37.127Z",
+  "issued_at": "2026-07-06T05:41:35.662Z",
+  "expires_at": "2026-07-13T05:41:35.662Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "296f7b85487ac8ad47d3963d3d6f5fe6f9e6705a87f8fe9d8feb9f6d4937c1be",
+  "signature": "fcbb7bc616d53d1d6e038b617826e483f966df24033f6ebb68f65c7eb18e22db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-qverisagenttoolkit"
 }

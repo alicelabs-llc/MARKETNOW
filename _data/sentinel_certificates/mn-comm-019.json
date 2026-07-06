@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0823834",
+  "certificate_id": "MN-SC-2026-6171507",
   "skill_id": "mn-comm-019",
   "skill_name": "Recommendation Engine",
-  "issued_at": "2026-07-06T04:07:03.834Z",
-  "expires_at": "2026-07-13T04:07:03.834Z",
+  "issued_at": "2026-07-06T05:36:11.507Z",
+  "expires_at": "2026-07-13T05:36:11.507Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc7c323c4cc3685d9406fd9eb6b10e11a08cfe79338218172902e169e47b8220",
+  "signature": "82305c20e82310df22e3ce9971d196fba81d5618e0e4cbe4dce221dc4863a78c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-019"
 }

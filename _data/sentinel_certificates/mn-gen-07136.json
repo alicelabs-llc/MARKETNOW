@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0296325",
+  "certificate_id": "MN-SC-2026-5576921",
   "skill_id": "mn-gen-07136",
   "skill_name": "mcp-neovim-server",
-  "issued_at": "2026-07-06T03:58:16.325Z",
-  "expires_at": "2026-07-13T03:58:16.325Z",
+  "issued_at": "2026-07-06T05:26:16.921Z",
+  "expires_at": "2026-07-13T05:26:16.921Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15c13e706dcb59c2495a67af245937012f5a9999bfb1a1582e683dfab34fa9f1",
+  "signature": "d2a9615b3e128cf1ef9bee95d72459642239b71554fa838b9911d44e717b7c87",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07136"
 }

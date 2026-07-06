@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9741345",
+  "certificate_id": "MN-SC-2026-5428032",
   "skill_id": "mn-gen-03537",
   "skill_name": "Dual-model-mcp-server",
-  "issued_at": "2026-07-06T03:49:01.345Z",
-  "expires_at": "2026-07-13T03:49:01.345Z",
+  "issued_at": "2026-07-06T05:23:48.032Z",
+  "expires_at": "2026-07-13T05:23:48.032Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b2caa8146865a5a7249f43d69d63c5791a6eacb7c29ff27ba41a7be71ec4b29",
+  "signature": "dc6f715b74a611c1a82c97f62cfa94ca2b69a8a0c5388a0d5b15b64541a965eb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03537"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1086743",
+  "certificate_id": "MN-SC-2026-6483616",
   "skill_id": "mn-real-alpacamcpserver",
   "skill_name": "alpaca-mcp-server",
-  "issued_at": "2026-07-06T04:11:26.743Z",
-  "expires_at": "2026-07-13T04:11:26.743Z",
+  "issued_at": "2026-07-06T05:41:23.616Z",
+  "expires_at": "2026-07-13T05:41:23.616Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d4d27978ca8782c828a72c0e14804eab467963288139241453c532e95522627",
+  "signature": "d2a0287a9c0889f5d7a4bb17fce20debe067db80d1b5dada09363d41a52b1dfc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alpacamcpserver"
 }

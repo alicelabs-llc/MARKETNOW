@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0231267",
+  "certificate_id": "MN-SC-2026-5501923",
   "skill_id": "mn-gen-05305",
   "skill_name": "Jiraxmcp",
-  "issued_at": "2026-07-06T03:57:11.267Z",
-  "expires_at": "2026-07-13T03:57:11.267Z",
+  "issued_at": "2026-07-06T05:25:01.923Z",
+  "expires_at": "2026-07-13T05:25:01.923Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d17a1b24ba8b6f80fd604405325da7ed3aa5244f21ccac4596e2552a278df948",
+  "signature": "d1da0eb19bf2c470b8793a764be54ad146803a803eafa48ab262f79f391e2fe3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05305"
 }

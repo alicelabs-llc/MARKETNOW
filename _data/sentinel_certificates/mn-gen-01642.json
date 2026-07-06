@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9619914",
+  "certificate_id": "MN-SC-2026-5343103",
   "skill_id": "mn-gen-01642",
   "skill_name": "byok-observability-mcp",
-  "issued_at": "2026-07-06T03:46:59.914Z",
-  "expires_at": "2026-07-13T03:46:59.914Z",
+  "issued_at": "2026-07-06T05:22:23.103Z",
+  "expires_at": "2026-07-13T05:22:23.103Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8fa1dadb90d5d2c62bc7716fe3fac9b46777133cf520bab6a9a628b36466a9f",
+  "signature": "939021e8f321c2db77a6a08930d47deb8371d4f2a3b6ff1127d32274c59ea441",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01642"
 }

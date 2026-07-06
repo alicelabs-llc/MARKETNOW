@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0648574",
+  "certificate_id": "MN-SC-2026-5965988",
   "skill_id": "mn-prompt-f5d1886e",
   "skill_name": "Especialista en webhook receiving con verification",
-  "issued_at": "2026-07-06T04:04:08.574Z",
-  "expires_at": "2026-07-13T04:04:08.574Z",
+  "issued_at": "2026-07-06T05:32:45.988Z",
+  "expires_at": "2026-07-13T05:32:45.988Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a202bfd198e1bc8fae5d1d435ee4d5ace7b96bbb90b02e4ce79a9a1caf96073b",
+  "signature": "d85a054d951cce4133f90da0095173289eef4bca48eb1e0f7f6b14beeb281bec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f5d1886e"
 }

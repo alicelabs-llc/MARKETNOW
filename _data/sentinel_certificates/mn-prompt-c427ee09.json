@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0711434",
+  "certificate_id": "MN-SC-2026-6039355",
   "skill_id": "mn-prompt-c427ee09",
   "skill_name": "Data warehouse testing",
-  "issued_at": "2026-07-06T04:05:11.434Z",
-  "expires_at": "2026-07-13T04:05:11.434Z",
+  "issued_at": "2026-07-06T05:33:59.355Z",
+  "expires_at": "2026-07-13T05:33:59.355Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a7b9df69004948f434f51015d89836998705a504fbdcbd4978eedac51dac21bf",
+  "signature": "31081243fea58ea19ae0ebc4e673f1fdffdef7daa5836adc161e230e1e914c31",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c427ee09"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0502889",
+  "certificate_id": "MN-SC-2026-5795439",
   "skill_id": "mn-gen-12564",
   "skill_name": "testdino-mcp",
-  "issued_at": "2026-07-06T04:01:42.889Z",
-  "expires_at": "2026-07-13T04:01:42.889Z",
+  "issued_at": "2026-07-06T05:29:55.439Z",
+  "expires_at": "2026-07-13T05:29:55.439Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb99a8084f6554b29267c6db79cc270859d2c9b342302b1b7d98416704340d3c",
+  "signature": "e2c1b0d486fa8996a52ff70ca584b3f221cc619b280538a76a66afce74580601",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12564"
 }

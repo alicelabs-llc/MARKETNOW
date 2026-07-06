@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1056525",
+  "certificate_id": "MN-SC-2026-6449203",
   "skill_id": "mn-real-rundidamcp",
   "skill_name": "rundida-mcp",
-  "issued_at": "2026-07-06T04:10:56.525Z",
-  "expires_at": "2026-07-13T04:10:56.525Z",
+  "issued_at": "2026-07-06T05:40:49.203Z",
+  "expires_at": "2026-07-13T05:40:49.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc4ba1137e825f5288f6d0fa4f5c7c8e2539dab77bf0a936a72bdf3746be69fe",
+  "signature": "380bfe24d944541d87db6da89699a3a26353ccda439282a0653bd197ccab8991",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rundidamcp"
 }

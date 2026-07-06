@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9616169",
+  "certificate_id": "MN-SC-2026-5340053",
   "skill_id": "mn-ai-01585",
   "skill_name": "Browzy",
-  "issued_at": "2026-07-06T03:46:56.169Z",
-  "expires_at": "2026-07-13T03:46:56.169Z",
+  "issued_at": "2026-07-06T05:22:20.053Z",
+  "expires_at": "2026-07-13T05:22:20.053Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa381c762d9d67bacda608a12cdc526c9dbb6e051b239a2d2ec321b23a0801d7",
+  "signature": "48e62dd011d977584b5ccdbb57a27ae6194badcf4600968a0b04a96e3a397e7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01585"
 }

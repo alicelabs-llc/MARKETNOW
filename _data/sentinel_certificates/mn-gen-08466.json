@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0345138",
+  "certificate_id": "MN-SC-2026-5635078",
   "skill_id": "mn-gen-08466",
   "skill_name": "Mcpews",
-  "issued_at": "2026-07-06T03:59:05.138Z",
-  "expires_at": "2026-07-13T03:59:05.138Z",
+  "issued_at": "2026-07-06T05:27:15.078Z",
+  "expires_at": "2026-07-13T05:27:15.078Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70b8e23d7dc725c3d5fac14e93f90c7704ef09ab16bce5ddd242d8939fc7e1d1",
+  "signature": "0879f31d00fcd508494b0b4ecf86a1adfd865669db3c36e3def789457f41caf9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08466"
 }

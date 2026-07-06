@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9712170",
+  "certificate_id": "MN-SC-2026-5407836",
   "skill_id": "mn-gen-03046",
   "skill_name": "Dakboard-mcp-server",
-  "issued_at": "2026-07-06T03:48:32.170Z",
-  "expires_at": "2026-07-13T03:48:32.170Z",
+  "issued_at": "2026-07-06T05:23:27.836Z",
+  "expires_at": "2026-07-13T05:23:27.836Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85b2d90f3d7842a3cd4573aadf5cffa2ec185ad6cae22333c096f7281e2d0619",
+  "signature": "753af3ea84bad5f6a91028781cc6a882ee075d83ba73ada37a2f1c581ba2be2e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03046"
 }

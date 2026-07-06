@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9808165",
+  "certificate_id": "MN-SC-2026-5473994",
   "skill_id": "mn-res-04643",
   "skill_name": "Enhanced-google-search-mcp",
-  "issued_at": "2026-07-06T03:50:08.165Z",
-  "expires_at": "2026-07-13T03:50:08.165Z",
+  "issued_at": "2026-07-06T05:24:33.994Z",
+  "expires_at": "2026-07-13T05:24:33.994Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "840f16a257ab43dff0942b93d4e7d0481aaa353bc470d65b7c6f8feebe910b75",
+  "signature": "47afe50b5fcdb68653d48bd23e653dad3b212ed27da35f962de92dd4b3465986",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-04643"
 }

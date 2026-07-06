@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9673541",
+  "certificate_id": "MN-SC-2026-5277616",
   "skill_id": "mn-gen-00052",
   "skill_name": "a11ymcp",
-  "issued_at": "2026-07-06T03:47:53.541Z",
-  "expires_at": "2026-07-13T03:47:53.541Z",
+  "issued_at": "2026-07-06T05:21:17.616Z",
+  "expires_at": "2026-07-13T05:21:17.616Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ee0d552e0511bba08769a33ca12720f391c0952e2e283a087f4078569e8d10c",
+  "signature": "456b7b7a486e7da63e059beec00782c16a30f4a1f2d33f20c633d55681b1baea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00052"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0256940",
+  "certificate_id": "MN-SC-2026-5530758",
   "skill_id": "mn-dat-06077",
   "skill_name": "Mariadb-mcp-server",
-  "issued_at": "2026-07-06T03:57:36.940Z",
-  "expires_at": "2026-07-13T03:57:36.940Z",
+  "issued_at": "2026-07-06T05:25:30.758Z",
+  "expires_at": "2026-07-13T05:25:30.758Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "80dcfe85a2481fff3ad6412afb1318588e615194edb219d0c7e0542fa1e3e12d",
+  "signature": "16396f06ed6a28bc9862227cabbc549e5cd90c0cf6a6ce0926baa2e652450f54",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-06077"
 }

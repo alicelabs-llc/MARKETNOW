@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0963117",
+  "certificate_id": "MN-SC-2026-6335707",
   "skill_id": "mn-real-sourcerermcp",
   "skill_name": "sourcerer-mcp",
-  "issued_at": "2026-07-06T04:09:23.117Z",
-  "expires_at": "2026-07-13T04:09:23.117Z",
+  "issued_at": "2026-07-06T05:38:55.707Z",
+  "expires_at": "2026-07-13T05:38:55.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb809738f1a9818a73be7393daedcf26c0e87fd9a89fedc17f2982cffb6e65b0",
+  "signature": "02e86978de6f1b994a17bcc3d581107d64309455ac86ac7a5a50cefb754acc71",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sourcerermcp"
 }

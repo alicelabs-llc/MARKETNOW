@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1023759",
+  "certificate_id": "MN-SC-2026-6411451",
   "skill_id": "mn-real-mcpinternetspeedtest",
   "skill_name": "mcp-internet-speed-test",
-  "issued_at": "2026-07-06T04:10:23.759Z",
-  "expires_at": "2026-07-13T04:10:23.759Z",
+  "issued_at": "2026-07-06T05:40:11.451Z",
+  "expires_at": "2026-07-13T05:40:11.451Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f3ed1ff0bcfecb72bcda93e4f8dd3381ab09ecce23bc4ae738d6dbc91a70ca38",
+  "signature": "988eb4e9aaf7fa2b13c1279be947ed7946d5409a52c5ecec9f8a24db6f593e38",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpinternetspeedtest"
 }

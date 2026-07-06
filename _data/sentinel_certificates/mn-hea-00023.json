@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0760345",
+  "certificate_id": "MN-SC-2026-6097696",
   "skill_id": "mn-hea-00023",
   "skill_name": "EHR Sync MCP",
-  "issued_at": "2026-07-06T04:06:00.345Z",
-  "expires_at": "2026-07-13T04:06:00.345Z",
+  "issued_at": "2026-07-06T05:34:57.696Z",
+  "expires_at": "2026-07-13T05:34:57.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ab7469275149e6c0ca097ec4a5fc604546c2891b25222bdb62296e58bcac016",
+  "signature": "38c0d8cf88909722ea10a835107402f22ab9fd7d29283936159293c6eefac9b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00023"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0785897",
+  "certificate_id": "MN-SC-2026-6125508",
   "skill_id": "mn-pro-47d2f1d8",
   "skill_name": "SIEM Integration Layer",
-  "issued_at": "2026-07-06T04:06:25.897Z",
-  "expires_at": "2026-07-13T04:06:25.897Z",
+  "issued_at": "2026-07-06T05:35:25.508Z",
+  "expires_at": "2026-07-13T05:35:25.508Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "948b9938277fa5dd8445ac7d6fc363c3c8bf93ed38e77db396c1344662a83a94",
+  "signature": "10ed3eda12ad5cd9ad64aa3229bc87ffd8d9e387056532989ff1e277e5e344d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-47d2f1d8"
 }

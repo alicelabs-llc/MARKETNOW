@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0787548",
+  "certificate_id": "MN-SC-2026-6127512",
   "skill_id": "mn-pro-1baa4017",
   "skill_name": "API Security Scanner",
-  "issued_at": "2026-07-06T04:06:27.548Z",
-  "expires_at": "2026-07-13T04:06:27.548Z",
+  "issued_at": "2026-07-06T05:35:27.512Z",
+  "expires_at": "2026-07-13T05:35:27.512Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b345b70d05eb74a16f4d152a466b892c36420df633c148591ce1935d4435511c",
+  "signature": "00bed0065e028d02d15d29cf47c8fd69d3e8a20a7d9510595aac185e9af31192",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1baa4017"
 }

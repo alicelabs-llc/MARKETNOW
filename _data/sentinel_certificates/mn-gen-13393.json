@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0536503",
+  "certificate_id": "MN-SC-2026-5830664",
   "skill_id": "mn-gen-13393",
   "skill_name": "Chatlog-mcp",
-  "issued_at": "2026-07-06T04:02:16.503Z",
-  "expires_at": "2026-07-13T04:02:16.503Z",
+  "issued_at": "2026-07-06T05:30:30.664Z",
+  "expires_at": "2026-07-13T05:30:30.664Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8af58de427ea3ebbb08939054e02919b88aa75639e26ae400dd62c57f1bf00e4",
+  "signature": "6406e5fa02fc3a2215f37f4733f5cd8fa511e269c92f7991c1bb2668a3bd1f13",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13393"
 }

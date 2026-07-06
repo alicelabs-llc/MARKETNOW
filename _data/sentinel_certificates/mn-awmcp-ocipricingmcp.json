@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0909229",
+  "certificate_id": "MN-SC-2026-6272420",
   "skill_id": "mn-awmcp-ocipricingmcp",
   "skill_name": "oci-pricing-mcp",
-  "issued_at": "2026-07-06T04:08:29.229Z",
-  "expires_at": "2026-07-13T04:08:29.229Z",
+  "issued_at": "2026-07-06T05:37:52.420Z",
+  "expires_at": "2026-07-13T05:37:52.420Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7418abad95b054f3924968fabfda4d7ee4f751ed640258be52a3e98465902ecb",
+  "signature": "b33ccff7ed18d490ee425fddf5e447288265727bb9f88b719faacd28776cd333",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ocipricingmcp"
 }

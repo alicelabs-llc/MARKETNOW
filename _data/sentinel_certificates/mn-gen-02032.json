@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9645518",
+  "certificate_id": "MN-SC-2026-5359604",
   "skill_id": "mn-gen-02032",
   "skill_name": "Kunihiros/claude-code-mcp",
-  "issued_at": "2026-07-06T03:47:25.518Z",
-  "expires_at": "2026-07-13T03:47:25.518Z",
+  "issued_at": "2026-07-06T05:22:39.604Z",
+  "expires_at": "2026-07-13T05:22:39.604Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2651f772b185ebb3ffd5e37733a195eaed117948bbc006b1f61b89bbad69f67",
+  "signature": "34de48d206240a74d18226977699095f918e114dd5abf6e6ca48e58a34dc652b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02032"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9729504",
+  "certificate_id": "MN-SC-2026-5420892",
   "skill_id": "mn-gen-03349",
   "skill_name": "Directus-extension-mcp-presets",
-  "issued_at": "2026-07-06T03:48:49.504Z",
-  "expires_at": "2026-07-13T03:48:49.504Z",
+  "issued_at": "2026-07-06T05:23:40.892Z",
+  "expires_at": "2026-07-13T05:23:40.892Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b3af33ad2762ac40ef875ec28c8a0b87767384408e0151e5c571e863079bdfa",
+  "signature": "170b685440ae746025999ea1158755c65260489d30e6c1bd264b33334bc899ed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03349"
 }

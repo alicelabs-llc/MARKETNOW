@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9577222",
+  "certificate_id": "MN-SC-2026-5312446",
   "skill_id": "mn-gen-00866",
   "skill_name": "Apostrophe-code-generator",
-  "issued_at": "2026-07-06T03:46:17.222Z",
-  "expires_at": "2026-07-13T03:46:17.222Z",
+  "issued_at": "2026-07-06T05:21:52.446Z",
+  "expires_at": "2026-07-13T05:21:52.446Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "18f0970afb838a4f3467b3c235e8fd61f442214781f6001e34b8901152c127c5",
+  "signature": "65641917b986e55f1db662fc1b3f7aad7e7736cebff22b6ca891f28baf8d0ac6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00866"
 }

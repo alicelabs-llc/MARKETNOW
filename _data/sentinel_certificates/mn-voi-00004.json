@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0772091",
+  "certificate_id": "MN-SC-2026-6111200",
   "skill_id": "mn-voi-00004",
   "skill_name": "Amazon Polly TTS",
-  "issued_at": "2026-07-06T04:06:12.091Z",
-  "expires_at": "2026-07-13T04:06:12.091Z",
+  "issued_at": "2026-07-06T05:35:11.200Z",
+  "expires_at": "2026-07-13T05:35:11.200Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4272dc865ff35b2745a37ef34f21044b088c65559ba5745db3313462bb70eaf9",
+  "signature": "395d81183f0a3eb5f05e4149056cd644af3ef39a95863df1977e83118490d0ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00004"
 }

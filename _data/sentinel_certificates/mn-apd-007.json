@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0742807",
+  "certificate_id": "MN-SC-2026-6076250",
   "skill_id": "mn-apd-007",
   "skill_name": "Agent CI/CD Pipeline",
-  "issued_at": "2026-07-06T04:05:42.807Z",
-  "expires_at": "2026-07-13T04:05:42.807Z",
+  "issued_at": "2026-07-06T05:34:36.250Z",
+  "expires_at": "2026-07-13T05:34:36.250Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "112d233e30f52e80de66c5cf3857968080147401be3822d1650196d79da095a6",
+  "signature": "a685073f83162ee0101a6fc438f52462fcdc6bbdfec3c230215ff541a507e74b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-007"
 }

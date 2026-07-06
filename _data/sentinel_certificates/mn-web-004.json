@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0839555",
+  "certificate_id": "MN-SC-2026-6190927",
   "skill_id": "mn-web-004",
   "skill_name": "Webpage Content Extractor",
-  "issued_at": "2026-07-06T04:07:19.555Z",
-  "expires_at": "2026-07-13T04:07:19.555Z",
+  "issued_at": "2026-07-06T05:36:30.927Z",
+  "expires_at": "2026-07-13T05:36:30.927Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fc5deff757c022506806163d2805a92c1c18bb083009ea2ee0ec24fc2c6a85c",
+  "signature": "f62407dcf30928978b857debd61bbbbea842d6833409713931138cd921829cf1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-004"
 }

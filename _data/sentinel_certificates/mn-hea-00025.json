@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0760727",
+  "certificate_id": "MN-SC-2026-6098192",
   "skill_id": "mn-hea-00025",
   "skill_name": "Patient Portal MCP",
-  "issued_at": "2026-07-06T04:06:00.727Z",
-  "expires_at": "2026-07-13T04:06:00.727Z",
+  "issued_at": "2026-07-06T05:34:58.192Z",
+  "expires_at": "2026-07-13T05:34:58.192Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50814f0f7137dcaefc61813b530f855ec598769294169c3fad46069d55042a2b",
+  "signature": "ef2a878ec614aee5e9c7093d6e00db6fa4f2e5307f2e70d4f56e66b843626d5f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00025"
 }

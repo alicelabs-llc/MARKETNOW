@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0709235",
+  "certificate_id": "MN-SC-2026-6036867",
   "skill_id": "mn-prompt-30a40750",
   "skill_name": "Anomaly detection for metrics",
-  "issued_at": "2026-07-06T04:05:09.235Z",
-  "expires_at": "2026-07-13T04:05:09.235Z",
+  "issued_at": "2026-07-06T05:33:56.867Z",
+  "expires_at": "2026-07-13T05:33:56.867Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1224926a1349f53893c17fabf97a8860513d71396bf1adb6f5b7e0cd4e73a1d4",
+  "signature": "af4217390dd880d6599358c4873165cc2639252f47ec12c61d36ad3eee16eee3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-30a40750"
 }

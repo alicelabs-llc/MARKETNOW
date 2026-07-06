@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0244913",
+  "certificate_id": "MN-SC-2026-5517771",
   "skill_id": "mn-gen-05751",
   "skill_name": "line-bot-mcp-server",
-  "issued_at": "2026-07-06T03:57:24.913Z",
-  "expires_at": "2026-07-13T03:57:24.913Z",
+  "issued_at": "2026-07-06T05:25:17.771Z",
+  "expires_at": "2026-07-13T05:25:17.771Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e1b17f25c6d7abb128d4722de12f4799bcdddcebb3b4650386e3d6b45352ebd",
+  "signature": "0079c21e677270c41901b0d6594924a7812fda309aff3eae98217e4c6b8a1d4e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05751"
 }

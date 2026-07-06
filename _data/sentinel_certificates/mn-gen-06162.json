@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0259945",
+  "certificate_id": "MN-SC-2026-5534107",
   "skill_id": "mn-gen-06162",
   "skill_name": "Mcp-accessibility-scanner",
-  "issued_at": "2026-07-06T03:57:39.945Z",
-  "expires_at": "2026-07-13T03:57:39.945Z",
+  "issued_at": "2026-07-06T05:25:34.107Z",
+  "expires_at": "2026-07-13T05:25:34.107Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "506c0785ad942e27d08db5178186609ea535249ab3e726892225479e57aa67d2",
+  "signature": "10b4b85e95be5e0cab46d1018d722d3e2bc50cad8295c496d2db7df92ea041d2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06162"
 }

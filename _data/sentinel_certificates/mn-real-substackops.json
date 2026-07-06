@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1052867",
+  "certificate_id": "MN-SC-2026-6445208",
   "skill_id": "mn-real-substackops",
   "skill_name": "substack-ops",
-  "issued_at": "2026-07-06T04:10:52.867Z",
-  "expires_at": "2026-07-13T04:10:52.867Z",
+  "issued_at": "2026-07-06T05:40:45.208Z",
+  "expires_at": "2026-07-13T05:40:45.208Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ddf3ca507b0ae98c7fbaabba0e53c57c02205e0bb88cda2b5f44ce3a7dfd0c29",
+  "signature": "dc0299baa1f3049df9845d0c0241e8ac4d57d02141d6081eb45304152f4128aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-substackops"
 }

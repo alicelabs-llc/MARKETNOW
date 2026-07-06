@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1066213",
+  "certificate_id": "MN-SC-2026-6458689",
   "skill_id": "mn-real-todoistv1mcpserver",
   "skill_name": "todoist-v1-mcp-server",
-  "issued_at": "2026-07-06T04:11:06.213Z",
-  "expires_at": "2026-07-13T04:11:06.213Z",
+  "issued_at": "2026-07-06T05:40:58.689Z",
+  "expires_at": "2026-07-13T05:40:58.689Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ca7070df32f5bf66ff14169874dc5c5e01bcccffc1945ddd8edd2cd4ecc3e4b",
+  "signature": "3a3f95f04374056bb3247864c30a93cca12a79b85dde6771e17d75b2ecc1f8ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-todoistv1mcpserver"
 }

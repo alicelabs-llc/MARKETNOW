@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9607913",
+  "certificate_id": "MN-SC-2026-5334712",
   "skill_id": "mn-net-01479",
   "skill_name": "Bmkg-api",
-  "issued_at": "2026-07-06T03:46:47.913Z",
-  "expires_at": "2026-07-13T03:46:47.913Z",
+  "issued_at": "2026-07-06T05:22:14.712Z",
+  "expires_at": "2026-07-13T05:22:14.712Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32bb187350892e4b52bb4fb23c8de5c414d0efc54aca3f858baa95f689a3ec39",
+  "signature": "6fe10051075e8438bc694184075538e4321b787c97bc70c8b668756192c681f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-01479"
 }

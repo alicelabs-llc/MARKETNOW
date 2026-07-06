@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0234183",
+  "certificate_id": "MN-SC-2026-5504961",
   "skill_id": "mn-ai-05391",
   "skill_name": "Kaiten-mcp",
-  "issued_at": "2026-07-06T03:57:14.183Z",
-  "expires_at": "2026-07-13T03:57:14.183Z",
+  "issued_at": "2026-07-06T05:25:04.961Z",
+  "expires_at": "2026-07-13T05:25:04.961Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc738af35026e3ec954e2e4071526c4bdc34184ab0328b610ca375204a84369d",
+  "signature": "1f3b7d2a85f16bcdf3e37e5775b0b69a051c0d486318d0adf34feb4db3525b4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-05391"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0998677",
+  "certificate_id": "MN-SC-2026-6380661",
   "skill_id": "mn-real-secfinapimcp",
   "skill_name": "secfinapi-mcp",
-  "issued_at": "2026-07-06T04:09:58.677Z",
-  "expires_at": "2026-07-13T04:09:58.677Z",
+  "issued_at": "2026-07-06T05:39:40.661Z",
+  "expires_at": "2026-07-13T05:39:40.661Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65fab244427f7344efadc6c39b2b32353a803df42df7b9b10a115bd174039032",
+  "signature": "916b4d1b5303a6c4d79a230e0a669b662da02b610e339da271c25e1f7fa1450e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-secfinapimcp"
 }

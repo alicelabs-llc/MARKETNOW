@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1075687",
+  "certificate_id": "MN-SC-2026-6471189",
   "skill_id": "mn-real-kibitz",
   "skill_name": "kibitz",
-  "issued_at": "2026-07-06T04:11:15.687Z",
-  "expires_at": "2026-07-13T04:11:15.687Z",
+  "issued_at": "2026-07-06T05:41:11.189Z",
+  "expires_at": "2026-07-13T05:41:11.189Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d16b60ee44471746e377f61d68545628788ba67dd3216e6c8ed780b3669e015b",
+  "signature": "4c5c63f8cca226bb9be06eeee65c028bfcd5161ad93092a904c4d58cb4473ca2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kibitz"
 }

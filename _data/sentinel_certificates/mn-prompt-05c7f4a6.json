@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0710482",
+  "certificate_id": "MN-SC-2026-6038320",
   "skill_id": "mn-prompt-05c7f4a6",
   "skill_name": "Recommendation system",
-  "issued_at": "2026-07-06T04:05:10.482Z",
-  "expires_at": "2026-07-13T04:05:10.482Z",
+  "issued_at": "2026-07-06T05:33:58.320Z",
+  "expires_at": "2026-07-13T05:33:58.320Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59e9ff0155441588fcb1732d1286ea1ceaaf9d3143fcf823f7625fe3aeae2591",
+  "signature": "51500baaa3c4095a35b7df63cfbc348d2374c2c39397c6f6df80fd1071c82657",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-05c7f4a6"
 }

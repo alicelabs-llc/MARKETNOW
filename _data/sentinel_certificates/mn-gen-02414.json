@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9670391",
+  "certificate_id": "MN-SC-2026-5376532",
   "skill_id": "mn-gen-02414",
   "skill_name": "Cli2mcp",
-  "issued_at": "2026-07-06T03:47:50.391Z",
-  "expires_at": "2026-07-13T03:47:50.391Z",
+  "issued_at": "2026-07-06T05:22:56.532Z",
+  "expires_at": "2026-07-13T05:22:56.532Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8e46df50be09e0fcbde7f9d9a34da1f8ba823740c4dc22f8ce46698974a957a",
+  "signature": "6f63b87d8cfdd57fc7d09e14be1b986e0ccc33252d96741e824497b4e2968c25",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02414"
 }

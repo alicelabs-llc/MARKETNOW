@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0997067",
+  "certificate_id": "MN-SC-2026-6378770",
   "skill_id": "mn-real-traydmcp",
   "skill_name": "trayd-mcp",
-  "issued_at": "2026-07-06T04:09:57.067Z",
-  "expires_at": "2026-07-13T04:09:57.067Z",
+  "issued_at": "2026-07-06T05:39:38.770Z",
+  "expires_at": "2026-07-13T05:39:38.770Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "799fe8d17a2e089411c2161f721836e59b8d043d3ffda514f8523fbface829c7",
+  "signature": "5c8948e631064670474f8405371fa3793af639af8ac66d6bac8b7c1255722fec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-traydmcp"
 }

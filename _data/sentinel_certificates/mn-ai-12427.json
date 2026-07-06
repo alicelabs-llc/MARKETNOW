@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0497474",
+  "certificate_id": "MN-SC-2026-5790467",
   "skill_id": "mn-ai-12427",
   "skill_name": "Hexsleeves/tailscale-mcp-server",
-  "issued_at": "2026-07-06T04:01:37.474Z",
-  "expires_at": "2026-07-13T04:01:37.474Z",
+  "issued_at": "2026-07-06T05:29:50.467Z",
+  "expires_at": "2026-07-13T05:29:50.467Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b73c97f20e47cba46e5a77f270bebb60b3c7e6a258bee19fe3ecbf1be708485",
+  "signature": "800eac4e7d4e91384fa6e0a53cc43c73d10a4b4004d7c9215cc733292afcef04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-12427"
 }

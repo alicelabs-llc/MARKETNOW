@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0771622",
+  "certificate_id": "MN-SC-2026-6110686",
   "skill_id": "mn-voi-00002",
   "skill_name": "OpenAI TTS",
-  "issued_at": "2026-07-06T04:06:11.622Z",
-  "expires_at": "2026-07-13T04:06:11.622Z",
+  "issued_at": "2026-07-06T05:35:10.686Z",
+  "expires_at": "2026-07-13T05:35:10.686Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d40d9e0d4dbea72426d7e046e0c8a8d660f4eed99d8e463f003ac8d62c6fb9c",
+  "signature": "c2442a0a1981aa431cefaaca88f9f447ec7942497ab1e0760f4e69877da42de4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00002"
 }

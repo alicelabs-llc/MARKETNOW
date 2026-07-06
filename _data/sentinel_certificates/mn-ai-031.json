@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0814614",
+  "certificate_id": "MN-SC-2026-6159827",
   "skill_id": "mn-ai-031",
   "skill_name": "Language Detector",
-  "issued_at": "2026-07-06T04:06:54.614Z",
-  "expires_at": "2026-07-13T04:06:54.614Z",
+  "issued_at": "2026-07-06T05:35:59.827Z",
+  "expires_at": "2026-07-13T05:35:59.827Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "079fa018e5f84cf0bf799e9bf2cab73c97f406c48fb9d5234230ff35c74c90b4",
+  "signature": "73d31350535bc4cb6aeee261e925a470b2b7a85aed975c76b525a148dee1bddf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-031"
 }

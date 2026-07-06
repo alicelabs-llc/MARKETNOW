@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9777740",
+  "certificate_id": "MN-SC-2026-5450686",
   "skill_id": "mn-gen-04116",
   "skill_name": "flowbite-mcp",
-  "issued_at": "2026-07-06T03:49:37.740Z",
-  "expires_at": "2026-07-13T03:49:37.740Z",
+  "issued_at": "2026-07-06T05:24:10.686Z",
+  "expires_at": "2026-07-13T05:24:10.686Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ef5de2a78854b366cd0680d9b1792c58af1c07594ae7e2895fd233b66e15ae4",
+  "signature": "d22deba6a67333c34c20589098727064f576cb6c7608d792cd67108806b5809e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04116"
 }

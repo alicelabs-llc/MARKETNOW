@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9605733",
+  "certificate_id": "MN-SC-2026-5333256",
   "skill_id": "mn-gen-01421",
   "skill_name": "Bitrefill-mcp-server",
-  "issued_at": "2026-07-06T03:46:45.733Z",
-  "expires_at": "2026-07-13T03:46:45.733Z",
+  "issued_at": "2026-07-06T05:22:13.256Z",
+  "expires_at": "2026-07-13T05:22:13.256Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ccad79ac387b17f9e6f67763da3ce0bb7b3b12460f17decb51b72534d31dcf06",
+  "signature": "188989a4dbf1436b09d86e902aa525bbd6a0405c693759d04f192982e70dae87",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01421"
 }

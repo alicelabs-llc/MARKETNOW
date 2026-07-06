@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1030611",
+  "certificate_id": "MN-SC-2026-6420390",
   "skill_id": "mn-real-viznoir",
   "skill_name": "viznoir",
-  "issued_at": "2026-07-06T04:10:30.611Z",
-  "expires_at": "2026-07-13T04:10:30.611Z",
+  "issued_at": "2026-07-06T05:40:20.390Z",
+  "expires_at": "2026-07-13T05:40:20.390Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "092986542d93a4771cbdb161a99159064e09ed85be28578deb8bcceaa2c16b0c",
+  "signature": "e1e25f4af1af0a5aa5fc386de41df2a12e9e62cd1539252928547d27d09f40c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-viznoir"
 }

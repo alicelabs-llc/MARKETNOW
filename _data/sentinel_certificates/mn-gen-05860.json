@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0247858",
+  "certificate_id": "MN-SC-2026-5521434",
   "skill_id": "mn-gen-05860",
   "skill_name": "Lobsterkit/vault",
-  "issued_at": "2026-07-06T03:57:27.858Z",
-  "expires_at": "2026-07-13T03:57:27.858Z",
+  "issued_at": "2026-07-06T05:25:21.434Z",
+  "expires_at": "2026-07-13T05:25:21.434Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b0b03fed8f2cd37fc699ba88747548c17fdb6e341d1e1b33fbdedb3b07a8937",
+  "signature": "cff6a0ded661827783c2eca99076ef37988da6c95fdf56da3c666a9a3138ac60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05860"
 }

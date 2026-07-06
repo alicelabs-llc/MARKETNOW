@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0916007",
+  "certificate_id": "MN-SC-2026-6281218",
   "skill_id": "mn-awmcp-owlex",
   "skill_name": "owlex",
-  "issued_at": "2026-07-06T04:08:36.007Z",
-  "expires_at": "2026-07-13T04:08:36.007Z",
+  "issued_at": "2026-07-06T05:38:01.218Z",
+  "expires_at": "2026-07-13T05:38:01.218Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d39708001f20d4aa98783a5b9371a01428a5cab105da57dceffa4efb89ec033",
+  "signature": "70083d904f19263b2ec2c90feaaa5f959bef414683f66ece7496a86308987e98",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-owlex"
 }

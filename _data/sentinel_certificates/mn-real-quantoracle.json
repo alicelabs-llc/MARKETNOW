@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0993584",
+  "certificate_id": "MN-SC-2026-6375733",
   "skill_id": "mn-real-quantoracle",
   "skill_name": "quantoracle",
-  "issued_at": "2026-07-06T04:09:53.584Z",
-  "expires_at": "2026-07-13T04:09:53.584Z",
+  "issued_at": "2026-07-06T05:39:35.733Z",
+  "expires_at": "2026-07-13T05:39:35.733Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9f74fa7e45a095e39dfdfa80398a55cfaa9564991595892d0b9dda6155dfa46",
+  "signature": "60b7e3d21907df08810a488a9ccf1d42d76c0a568b5177b2382b984b4690f12b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-quantoracle"
 }

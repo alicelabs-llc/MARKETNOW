@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0777117",
+  "certificate_id": "MN-SC-2026-6116287",
   "skill_id": "mn-ai-027",
   "skill_name": "Model Serving Latency Optimizer",
-  "issued_at": "2026-07-06T04:06:17.117Z",
-  "expires_at": "2026-07-13T04:06:17.117Z",
+  "issued_at": "2026-07-06T05:35:16.287Z",
+  "expires_at": "2026-07-13T05:35:16.287Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "21e9b1d1ca95107e7885bf1ab614672e85dddf4612ab33638bf0bd3175e3ea0b",
+  "signature": "bccae4d3fe6e3f1b99b1b4a15511ca3442b60afd59937091e7636b6cb537121a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-027"
 }

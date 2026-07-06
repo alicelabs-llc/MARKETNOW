@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0356433",
+  "certificate_id": "MN-SC-2026-5647386",
   "skill_id": "mn-gen-08935",
   "skill_name": "Memvid-agent-mcp",
-  "issued_at": "2026-07-06T03:59:16.433Z",
-  "expires_at": "2026-07-13T03:59:16.433Z",
+  "issued_at": "2026-07-06T05:27:27.386Z",
+  "expires_at": "2026-07-13T05:27:27.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2abf3d1e0dd2059043b5e825fe0b7ee7cee421b0f4d2f800e2c8f40d8efcff0a",
+  "signature": "3d5705aaa4d791b8dabac651575ce3d3aea8853929295aa4ad739a0805f03f26",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08935"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0953896",
+  "certificate_id": "MN-SC-2026-6325983",
   "skill_id": "mn-real-cubelife",
   "skill_name": "cubelife",
-  "issued_at": "2026-07-06T04:09:13.896Z",
-  "expires_at": "2026-07-13T04:09:13.896Z",
+  "issued_at": "2026-07-06T05:38:45.983Z",
+  "expires_at": "2026-07-13T05:38:45.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ce2349495fbb28304921c2d94c0725b5bb8ff8124c7a7ce0a24714d2d31661a8",
+  "signature": "1c1e425aa0744540accb47b8d39ee904b5e34e28ead005f0e36eb25ff2be3c8c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cubelife"
 }

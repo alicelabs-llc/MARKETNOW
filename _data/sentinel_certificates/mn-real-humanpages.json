@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1064165",
+  "certificate_id": "MN-SC-2026-6456523",
   "skill_id": "mn-real-humanpages",
   "skill_name": "humanpages",
-  "issued_at": "2026-07-06T04:11:04.165Z",
-  "expires_at": "2026-07-13T04:11:04.165Z",
+  "issued_at": "2026-07-06T05:40:56.523Z",
+  "expires_at": "2026-07-13T05:40:56.523Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d27b93c06c62e4222f69b45e175e0694969a2047f669fc774cb54c85b546126",
+  "signature": "bbe8f7f5c2be0c268578b861cea8f1043ae251fd03e2584244ca8fbd4c8ce142",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-humanpages"
 }

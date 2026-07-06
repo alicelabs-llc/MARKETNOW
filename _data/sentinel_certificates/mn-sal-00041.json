@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0770722",
+  "certificate_id": "MN-SC-2026-6109604",
   "skill_id": "mn-sal-00041",
   "skill_name": "Avoma Meeting Assistant",
-  "issued_at": "2026-07-06T04:06:10.722Z",
-  "expires_at": "2026-07-13T04:06:10.722Z",
+  "issued_at": "2026-07-06T05:35:09.604Z",
+  "expires_at": "2026-07-13T05:35:09.604Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11a789abba17e08a56df57ebcbd571faba195aef5ed3ac3d6f31ac4978875581",
+  "signature": "21a022d989e543f6cdf105f7a7583a479fc5ae7b062fa902852407f749d04a68",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00041"
 }

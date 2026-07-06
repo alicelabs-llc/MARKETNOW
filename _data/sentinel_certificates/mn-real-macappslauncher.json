@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1071675",
+  "certificate_id": "MN-SC-2026-6465999",
   "skill_id": "mn-real-macappslauncher",
   "skill_name": "mac-apps-launcher",
-  "issued_at": "2026-07-06T04:11:11.675Z",
-  "expires_at": "2026-07-13T04:11:11.675Z",
+  "issued_at": "2026-07-06T05:41:05.999Z",
+  "expires_at": "2026-07-13T05:41:05.999Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ffc7799e6c80ccf42a1eb5ea6ec9a33aa3561047aa0ebfbe99d81f2d577d98c6",
+  "signature": "bb3e392582148971050cf636581c833cbc36e9c6ffa6a1069648d35c0d25ee30",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-macappslauncher"
 }

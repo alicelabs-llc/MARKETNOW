@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0365692",
+  "certificate_id": "MN-SC-2026-5660019",
   "skill_id": "mn-ai-09232",
   "skill_name": "Mosaicat",
-  "issued_at": "2026-07-06T03:59:25.692Z",
-  "expires_at": "2026-07-13T03:59:25.692Z",
+  "issued_at": "2026-07-06T05:27:40.019Z",
+  "expires_at": "2026-07-13T05:27:40.019Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33f7aab305c47ec7ebc9deb0226d9406782ed992ec9d7b1961627e10da88b460",
+  "signature": "14d97b62eddb398bdedffc7b46d41b29d76a1e96b019e6676d369ab63125d3ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-09232"
 }

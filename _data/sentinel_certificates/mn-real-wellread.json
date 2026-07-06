@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1010976",
+  "certificate_id": "MN-SC-2026-6395256",
   "skill_id": "mn-real-wellread",
   "skill_name": "wellread",
-  "issued_at": "2026-07-06T04:10:10.976Z",
-  "expires_at": "2026-07-13T04:10:10.976Z",
+  "issued_at": "2026-07-06T05:39:55.256Z",
+  "expires_at": "2026-07-13T05:39:55.256Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb1fb3995a6dc978de938f1559a1e52d1478c33d1e7dc17de9d94b79ca230d9e",
+  "signature": "c9270f314e3fa629b0fd98a383ebdf4c70606db00ad3e4bbe46ef7a59e6dc726",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wellread"
 }

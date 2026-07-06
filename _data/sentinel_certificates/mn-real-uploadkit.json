@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0967099",
+  "certificate_id": "MN-SC-2026-6341222",
   "skill_id": "mn-real-uploadkit",
   "skill_name": "uploadkit",
-  "issued_at": "2026-07-06T04:09:27.099Z",
-  "expires_at": "2026-07-13T04:09:27.099Z",
+  "issued_at": "2026-07-06T05:39:01.222Z",
+  "expires_at": "2026-07-13T05:39:01.222Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9028008300f8c1d826a022ad52f44783d087876852bcd0a2f8b343c9ee5f7df4",
+  "signature": "28cd3cb1e7a31914f708fdf99986b87ea7c08079dcd8d088916f497db699e43f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-uploadkit"
 }

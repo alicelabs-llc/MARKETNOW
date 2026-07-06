@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0741132",
+  "certificate_id": "MN-SC-2026-6073103",
   "skill_id": "mn-acm-030",
   "skill_name": "Context Quality Scorer",
-  "issued_at": "2026-07-06T04:05:41.132Z",
-  "expires_at": "2026-07-13T04:05:41.132Z",
+  "issued_at": "2026-07-06T05:34:33.103Z",
+  "expires_at": "2026-07-13T05:34:33.103Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5108b26a6431c4bd78e92c137eabe932a4bbc26594d7638993a43df2db907f1",
+  "signature": "8b61637c10f48b41d6ec3780cb4711a3ed4ef8feacf553d67aeaa31adbad9569",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-030"
 }

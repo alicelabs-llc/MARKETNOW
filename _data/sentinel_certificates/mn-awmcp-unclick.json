@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0885311",
+  "certificate_id": "MN-SC-2026-6245570",
   "skill_id": "mn-awmcp-unclick",
   "skill_name": "unclick",
-  "issued_at": "2026-07-06T04:08:05.311Z",
-  "expires_at": "2026-07-13T04:08:05.311Z",
+  "issued_at": "2026-07-06T05:37:25.570Z",
+  "expires_at": "2026-07-13T05:37:25.570Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f27ecba2282cff22afd677b9b569e1d15aa2f2c8ffb28a31292cdad798c0e330",
+  "signature": "e2ed21715cf4fd54c198f525469d0597be5923541986c4ded66a4176bbc03e72",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-unclick"
 }

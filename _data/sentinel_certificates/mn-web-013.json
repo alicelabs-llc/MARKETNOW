@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0840443",
+  "certificate_id": "MN-SC-2026-6191926",
   "skill_id": "mn-web-013",
   "skill_name": "SSL Certificate Checker",
-  "issued_at": "2026-07-06T04:07:20.443Z",
-  "expires_at": "2026-07-13T04:07:20.443Z",
+  "issued_at": "2026-07-06T05:36:31.926Z",
+  "expires_at": "2026-07-13T05:36:31.926Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6146214b9f0b0586044d08dda9587b0c7d51d7987cf50a6858ef9f9a72fdc2bc",
+  "signature": "2d682cd331c9ec4c53b1f08552a58fe5395a34ac88260c0aaefdee634f2900af",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-013"
 }

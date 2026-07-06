@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9688562",
+  "certificate_id": "MN-SC-2026-5288854",
   "skill_id": "mn-gen-00282",
   "skill_name": "Agent-rules-mcp",
-  "issued_at": "2026-07-06T03:48:08.562Z",
-  "expires_at": "2026-07-13T03:48:08.562Z",
+  "issued_at": "2026-07-06T05:21:28.854Z",
+  "expires_at": "2026-07-13T05:21:28.854Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b162a7b45f8d39dca76c116800de8b5ad5b5cf5a382bf1ac9a42fb6f0b2b9a7a",
+  "signature": "c8cd8819901dd56680dd24c777dfd073ae8f57360ba53c79d5113e80783502cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00282"
 }

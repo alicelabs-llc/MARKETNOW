@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9591471",
+  "certificate_id": "MN-SC-2026-5321836",
   "skill_id": "mn-gen-01113",
   "skill_name": "Autonomous-docs-mcp",
-  "issued_at": "2026-07-06T03:46:31.471Z",
-  "expires_at": "2026-07-13T03:46:31.471Z",
+  "issued_at": "2026-07-06T05:22:01.836Z",
+  "expires_at": "2026-07-13T05:22:01.836Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa693776b585214624d7f4503224d70ceaa3d3ca6cf7c88941610821a85d418e",
+  "signature": "c441d0171761283412a3832e2c0d8ae70b325e364a53995009d05388412818e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01113"
 }

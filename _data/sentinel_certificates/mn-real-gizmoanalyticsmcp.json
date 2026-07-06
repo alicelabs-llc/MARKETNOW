@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1025387",
+  "certificate_id": "MN-SC-2026-6413453",
   "skill_id": "mn-real-gizmoanalyticsmcp",
   "skill_name": "gizmoanalytics-mcp",
-  "issued_at": "2026-07-06T04:10:25.387Z",
-  "expires_at": "2026-07-13T04:10:25.387Z",
+  "issued_at": "2026-07-06T05:40:13.453Z",
+  "expires_at": "2026-07-13T05:40:13.453Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30a31e4c7fedc446f057708d7b2006850c4da2d1b604aaaba02a987448f2912e",
+  "signature": "e7b4091e15e0b333f5a8903a26c7825b82b73612e149290bea571fd7bfad394f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gizmoanalyticsmcp"
 }

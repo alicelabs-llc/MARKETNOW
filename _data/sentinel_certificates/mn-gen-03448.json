@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9736870",
+  "certificate_id": "MN-SC-2026-5424869",
   "skill_id": "mn-gen-03448",
   "skill_name": "Ahdev/dokploy-mcp",
-  "issued_at": "2026-07-06T03:48:56.870Z",
-  "expires_at": "2026-07-13T03:48:56.870Z",
+  "issued_at": "2026-07-06T05:23:44.869Z",
+  "expires_at": "2026-07-13T05:23:44.869Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8c3832e04def6febfd3f1c399e7708328e4fc9fea6c049a678ee68b2a5423dc",
+  "signature": "c53bb662db5b5871b51439ab45dc67f537c8d4c5d3754138bfbfc907039720b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03448"
 }

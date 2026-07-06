@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1071203",
+  "certificate_id": "MN-SC-2026-6465378",
   "skill_id": "mn-real-typstmcp",
   "skill_name": "typst-mcp",
-  "issued_at": "2026-07-06T04:11:11.203Z",
-  "expires_at": "2026-07-13T04:11:11.203Z",
+  "issued_at": "2026-07-06T05:41:05.378Z",
+  "expires_at": "2026-07-13T05:41:05.378Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4a2176faefc87e1e8734cff848fcdc47a505fb2863e3f2e7524ee92dd0cc04ab",
+  "signature": "2c04a92f30d2a9cbbb7480b7e5a88bee09a10497b4786831fcdb93315a9c154d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-typstmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0781361",
+  "certificate_id": "MN-SC-2026-6120379",
   "skill_id": "mn-pro-1a32f303",
   "skill_name": "Data Pipeline Output Validator",
-  "issued_at": "2026-07-06T04:06:21.361Z",
-  "expires_at": "2026-07-13T04:06:21.361Z",
+  "issued_at": "2026-07-06T05:35:20.379Z",
+  "expires_at": "2026-07-13T05:35:20.379Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abd8c098986c50e75a8910f93af9736a1e3a60603498e02bb7de9eeca4f66364",
+  "signature": "0c9047eab7be922463ccfae9da72f8be844d079743c9410fc5153852967c1a4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1a32f303"
 }

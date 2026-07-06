@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1039584",
+  "certificate_id": "MN-SC-2026-6429965",
   "skill_id": "mn-real-opengraphiomcp",
   "skill_name": "opengraph-io-mcp",
-  "issued_at": "2026-07-06T04:10:39.584Z",
-  "expires_at": "2026-07-13T04:10:39.584Z",
+  "issued_at": "2026-07-06T05:40:29.965Z",
+  "expires_at": "2026-07-13T05:40:29.965Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00c55f80a80d29347410273f65e200916352b33d21c9821a6df3196d0a2a71cf",
+  "signature": "1e6c96e2434e23b216e5d0d45b09b5cabbf817595fa52482dfbc47a9513bdeae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opengraphiomcp"
 }

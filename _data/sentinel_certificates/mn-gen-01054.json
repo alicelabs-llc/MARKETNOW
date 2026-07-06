@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9588488",
+  "certificate_id": "MN-SC-2026-5319811",
   "skill_id": "mn-gen-01054",
   "skill_name": "Atlas-g-protocol",
-  "issued_at": "2026-07-06T03:46:28.488Z",
-  "expires_at": "2026-07-13T03:46:28.488Z",
+  "issued_at": "2026-07-06T05:21:59.811Z",
+  "expires_at": "2026-07-13T05:21:59.811Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "690842dcf757720fa54ca71b95f8d5f780ada44431ecafdd56a514b2516d71bc",
+  "signature": "ffdb234c389f65f48e4b04b3a367eb08ea0b2b4a858ad69d27d2f31c340c1ade",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01054"
 }

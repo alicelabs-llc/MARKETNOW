@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9661381",
+  "certificate_id": "MN-SC-2026-5369489",
   "skill_id": "mn-gen-02267",
   "skill_name": "Claude-rocm-mcp",
-  "issued_at": "2026-07-06T03:47:41.381Z",
-  "expires_at": "2026-07-13T03:47:41.381Z",
+  "issued_at": "2026-07-06T05:22:49.489Z",
+  "expires_at": "2026-07-13T05:22:49.489Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f699383075cab52a0a7fc332ab2078a4f58b08380835558e589aa3630076fdb",
+  "signature": "7089bbeb81727f099d02a0470a48e8376a1979f8d6c3fd867826414038e7f639",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02267"
 }

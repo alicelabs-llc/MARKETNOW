@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1047380",
+  "certificate_id": "MN-SC-2026-6437905",
   "skill_id": "mn-real-modelsafetymcp",
   "skill_name": "ModelSafetyMCP",
-  "issued_at": "2026-07-06T04:10:47.380Z",
-  "expires_at": "2026-07-13T04:10:47.380Z",
+  "issued_at": "2026-07-06T05:40:37.905Z",
+  "expires_at": "2026-07-13T05:40:37.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "372a2affb4ace290fa1a226da7176ab9f490bc5404e0c46f39532a65069fe46b",
+  "signature": "a16072f749b5d06519aecad5448fe806292bd7687deff39388ffc30057b77d59",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-modelsafetymcp"
 }

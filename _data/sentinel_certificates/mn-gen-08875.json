@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0354578",
+  "certificate_id": "MN-SC-2026-5645268",
   "skill_id": "mn-gen-08875",
   "skill_name": "Membot",
-  "issued_at": "2026-07-06T03:59:14.578Z",
-  "expires_at": "2026-07-13T03:59:14.578Z",
+  "issued_at": "2026-07-06T05:27:25.268Z",
+  "expires_at": "2026-07-13T05:27:25.268Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a13b1759a22d37b6120a86d7d576e18269ecc78a56115f4f2956a12d2babf2d7",
+  "signature": "bd7278e470a007bd113dd1496182a333b8d61ffaffa4fe3bf185eeedf7fc9746",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08875"
 }

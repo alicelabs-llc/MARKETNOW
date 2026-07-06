@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1052472",
+  "certificate_id": "MN-SC-2026-6444707",
   "skill_id": "mn-real-pcidssmcp",
   "skill_name": "pci-dss-mcp",
-  "issued_at": "2026-07-06T04:10:52.472Z",
-  "expires_at": "2026-07-13T04:10:52.472Z",
+  "issued_at": "2026-07-06T05:40:44.707Z",
+  "expires_at": "2026-07-13T05:40:44.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "771ba6939c414aac51039ecafea7d622fca6fbfc72aa74221def7060990fec4d",
+  "signature": "80d0989aa83c37122e9b06713fd8803f1bbd9ac76b296e472eb833c24b0873c1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pcidssmcp"
 }

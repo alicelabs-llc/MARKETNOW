@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0406494",
+  "certificate_id": "MN-SC-2026-5703124",
   "skill_id": "mn-gen-10241",
   "skill_name": "Payload-plugin-mcp",
-  "issued_at": "2026-07-06T04:00:06.494Z",
-  "expires_at": "2026-07-13T04:00:06.494Z",
+  "issued_at": "2026-07-06T05:28:23.124Z",
+  "expires_at": "2026-07-13T05:28:23.124Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52fd4b67940f6ffe26c363fff231686ec3404a27a4bef464b20bb46cf77cd519",
+  "signature": "939582a68c9129692eb29cf33af668f21695aed46ca48f69b0368b69a98c9105",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10241"
 }

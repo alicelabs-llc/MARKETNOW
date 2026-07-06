@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0907055",
+  "certificate_id": "MN-SC-2026-6269292",
   "skill_id": "mn-awmcp-mcpserverspotinst",
   "skill_name": "mcp-server-spotinst",
-  "issued_at": "2026-07-06T04:08:27.055Z",
-  "expires_at": "2026-07-13T04:08:27.055Z",
+  "issued_at": "2026-07-06T05:37:49.292Z",
+  "expires_at": "2026-07-13T05:37:49.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c532f6ed0e1bf7c7ef1b66d6e7c8f1edbce081d410389e6f1ccdb4ae5f50fb7",
+  "signature": "7c7357b92665f1439b8a3ce5c33610c309b6e5c0e4dd37c3a8a6477793c09e5f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpserverspotinst"
 }

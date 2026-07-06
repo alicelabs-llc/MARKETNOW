@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0250633",
+  "certificate_id": "MN-SC-2026-5523475",
   "skill_id": "mn-gen-05900",
   "skill_name": "Local-content-mcp-server",
-  "issued_at": "2026-07-06T03:57:30.633Z",
-  "expires_at": "2026-07-13T03:57:30.633Z",
+  "issued_at": "2026-07-06T05:25:23.475Z",
+  "expires_at": "2026-07-13T05:25:23.475Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "84d8fc53c7f6286bdc231e0fe0697c35d1c6f707c2ee06ec33b88946d91a05ac",
+  "signature": "33ea9b6247b01c7f3a1e8f6112f03ed8108ffd9ee72a9f9abb1063bb439b7ce4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05900"
 }

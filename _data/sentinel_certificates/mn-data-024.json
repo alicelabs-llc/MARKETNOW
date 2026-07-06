@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0827754",
+  "certificate_id": "MN-SC-2026-6177019",
   "skill_id": "mn-data-024",
   "skill_name": "Data Enrichment",
-  "issued_at": "2026-07-06T04:07:07.754Z",
-  "expires_at": "2026-07-13T04:07:07.754Z",
+  "issued_at": "2026-07-06T05:36:17.019Z",
+  "expires_at": "2026-07-13T05:36:17.019Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "adb4d0153cfd9bf2e55479714b8808560a7126e4124f8a46f9d34c33c9fac067",
+  "signature": "da3ba8b2f4583318068eca394436dbaff4e2b1dd77200f15dea274b5e375d9e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-024"
 }

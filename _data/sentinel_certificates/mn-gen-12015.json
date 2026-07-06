@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0481992",
+  "certificate_id": "MN-SC-2026-5773700",
   "skill_id": "mn-gen-12015",
   "skill_name": "Sonicwall-mcp-server",
-  "issued_at": "2026-07-06T04:01:21.992Z",
-  "expires_at": "2026-07-13T04:01:21.992Z",
+  "issued_at": "2026-07-06T05:29:33.700Z",
+  "expires_at": "2026-07-13T05:29:33.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b2be73ea45e0e32407b8248685c83cf3841df1c8893035dd75f3a5123349b871",
+  "signature": "eff113333f23195fb6343cf50eab3f41d99d0fe59d407b46140cb788ee43fc35",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12015"
 }

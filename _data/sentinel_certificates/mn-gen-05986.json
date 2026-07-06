@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0253631",
+  "certificate_id": "MN-SC-2026-5527240",
   "skill_id": "mn-gen-05986",
   "skill_name": "M365-copilot-mcp",
-  "issued_at": "2026-07-06T03:57:33.631Z",
-  "expires_at": "2026-07-13T03:57:33.631Z",
+  "issued_at": "2026-07-06T05:25:27.240Z",
+  "expires_at": "2026-07-13T05:25:27.240Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "889613eb80b7ad92d9b0fbe92d78d781833bc3cbff3fd0e6817afaa838b506b5",
+  "signature": "85be4ee281ce52d49f1d46dec7e2c577451d226f522ece1a8b1f7e5252102c3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05986"
 }

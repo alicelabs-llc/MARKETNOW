@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0267698",
+  "certificate_id": "MN-SC-2026-5543273",
   "skill_id": "mn-gen-06380",
   "skill_name": "Mcp-claude-hooks",
-  "issued_at": "2026-07-06T03:57:47.698Z",
-  "expires_at": "2026-07-13T03:57:47.698Z",
+  "issued_at": "2026-07-06T05:25:43.273Z",
+  "expires_at": "2026-07-13T05:25:43.273Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ac93d4b1083a271f2a458e61aef3a2c6f2761e0be75d8b1e6a117669ce0a42d",
+  "signature": "21b3f0a11e47b9200998d9878d928f93b2e6733ba395116ef28b8b553a0d7419",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06380"
 }

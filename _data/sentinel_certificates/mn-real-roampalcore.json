@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1012938",
+  "certificate_id": "MN-SC-2026-6397385",
   "skill_id": "mn-real-roampalcore",
   "skill_name": "roampal-core",
-  "issued_at": "2026-07-06T04:10:12.938Z",
-  "expires_at": "2026-07-13T04:10:12.938Z",
+  "issued_at": "2026-07-06T05:39:57.385Z",
+  "expires_at": "2026-07-13T05:39:57.385Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9413088f87b161df3d373e3a42781e643b1de7667101f62433d777442225d73b",
+  "signature": "bb5266d9731c8438c84c92cda70a51d07af2ac36b6bb67e633603f0a5713ce50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-roampalcore"
 }

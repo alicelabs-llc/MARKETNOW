@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0420243",
+  "certificate_id": "MN-SC-2026-5713783",
   "skill_id": "mn-gen-10512",
   "skill_name": "Plume-hub",
-  "issued_at": "2026-07-06T04:00:20.243Z",
-  "expires_at": "2026-07-13T04:00:20.243Z",
+  "issued_at": "2026-07-06T05:28:33.783Z",
+  "expires_at": "2026-07-13T05:28:33.783Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8dd9b740ce2023e8417ac1d92e462b58758c5c54d3911d630d54673716ff65e1",
+  "signature": "6102c3e8679751bda5ebd8f03923f055bb752f2efc979c10a7fcfecf21fe0a4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10512"
 }

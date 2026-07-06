@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0490271",
+  "certificate_id": "MN-SC-2026-5782679",
   "skill_id": "mn-gen-12273",
   "skill_name": "Subagent-reuse",
-  "issued_at": "2026-07-06T04:01:30.271Z",
-  "expires_at": "2026-07-13T04:01:30.271Z",
+  "issued_at": "2026-07-06T05:29:42.679Z",
+  "expires_at": "2026-07-13T05:29:42.679Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "efce4aded54280d14968a8298d242839132bc07dd86e0fe53e71145ccb3a7080",
+  "signature": "6ee623a14d3bab87c8dd52fa9750b0c431997c6a2c4dbea6ab7c28ff85b5b248",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12273"
 }

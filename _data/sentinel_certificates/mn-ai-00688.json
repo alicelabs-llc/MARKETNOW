@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9567636",
+  "certificate_id": "MN-SC-2026-5305635",
   "skill_id": "mn-ai-00688",
   "skill_name": "Algorithmaide-mcp",
-  "issued_at": "2026-07-06T03:46:07.636Z",
-  "expires_at": "2026-07-13T03:46:07.636Z",
+  "issued_at": "2026-07-06T05:21:45.635Z",
+  "expires_at": "2026-07-13T05:21:45.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33ce6ad935822932c082a9b7e8c02d468b5b33011676092ffb474abccfa2a78e",
+  "signature": "4482ff3a8f6cb79d0be40109a3e94e48ef0394be8c4e1e3d7de9c97cfd8fc7c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00688"
 }

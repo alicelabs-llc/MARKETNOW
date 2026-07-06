@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0485608",
+  "certificate_id": "MN-SC-2026-5778324",
   "skill_id": "mn-gen-12153",
   "skill_name": "Square-mcp-server",
-  "issued_at": "2026-07-06T04:01:25.608Z",
-  "expires_at": "2026-07-13T04:01:25.608Z",
+  "issued_at": "2026-07-06T05:29:38.324Z",
+  "expires_at": "2026-07-13T05:29:38.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93a0a9ab6ad1ada438a4d0ebf1f7779853c4284fdf117bb7b5c391d4a639c737",
+  "signature": "b76a0e70577faf674b3927bef7fc405f02ed285c268e4937e351c5d2b70a8adf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12153"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0431546",
+  "certificate_id": "MN-SC-2026-5725964",
   "skill_id": "mn-gen-10770",
   "skill_name": "Ptxprint-mcp",
-  "issued_at": "2026-07-06T04:00:31.546Z",
-  "expires_at": "2026-07-13T04:00:31.546Z",
+  "issued_at": "2026-07-06T05:28:45.964Z",
+  "expires_at": "2026-07-13T05:28:45.964Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff93d80b8d04de10b25fa900e49376fe12bbb6fb195f9f982b0fd952f7aaad89",
+  "signature": "f9afc88c6c161cffe01a6757fba4a6cc43139688245a5482cf989bf2aa97a419",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10770"
 }

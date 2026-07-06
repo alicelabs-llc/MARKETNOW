@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0687965",
+  "certificate_id": "MN-SC-2026-6012618",
   "skill_id": "mn-prompt-61c69354",
   "skill_name": "Microcopy for SaaS UI",
-  "issued_at": "2026-07-06T04:04:47.965Z",
-  "expires_at": "2026-07-13T04:04:47.965Z",
+  "issued_at": "2026-07-06T05:33:32.618Z",
+  "expires_at": "2026-07-13T05:33:32.618Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49d296b164aaaafe91620f7fe4017e5d8a854d9440c073712158e886aa9ea549",
+  "signature": "dabf7035e89b1d8d2808cf1c4983a3a9833e9db6897e6dda73092f17528526e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-61c69354"
 }

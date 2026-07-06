@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0248345",
+  "certificate_id": "MN-SC-2026-5521925",
   "skill_id": "mn-gen-05870",
   "skill_name": "Local-history-mcp",
-  "issued_at": "2026-07-06T03:57:28.345Z",
-  "expires_at": "2026-07-13T03:57:28.345Z",
+  "issued_at": "2026-07-06T05:25:21.925Z",
+  "expires_at": "2026-07-13T05:25:21.925Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "040f7760f9983e6a9c8cdc19f2ae5d20607a274feff438d5f9a66927ccdad5cc",
+  "signature": "20f248566a1924acb4eafa0e80b15094fdeccc83842cb30948494f4514e8a2fb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05870"
 }

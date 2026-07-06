@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1036584",
+  "certificate_id": "MN-SC-2026-6426602",
   "skill_id": "mn-real-mcpip2whois",
   "skill_name": "mcp-ip2whois",
-  "issued_at": "2026-07-06T04:10:36.584Z",
-  "expires_at": "2026-07-13T04:10:36.584Z",
+  "issued_at": "2026-07-06T05:40:26.602Z",
+  "expires_at": "2026-07-13T05:40:26.602Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d8b5929115018091ae614b6a11d064ecd4467d270879f3c771d95f949a1922ee",
+  "signature": "ad99089738c81c5f3e6b7bfef86a98c24ed4d2c9fa8962e192ab584d7fbdb205",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpip2whois"
 }

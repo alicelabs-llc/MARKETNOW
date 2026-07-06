@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0795847",
+  "certificate_id": "MN-SC-2026-6139117",
   "skill_id": "mn-pro-1036c429",
   "skill_name": "Mobile Performance Monitor",
-  "issued_at": "2026-07-06T04:06:35.847Z",
-  "expires_at": "2026-07-13T04:06:35.847Z",
+  "issued_at": "2026-07-06T05:35:39.117Z",
+  "expires_at": "2026-07-13T05:35:39.117Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a18b858923bb23cf42f7cd53de8f902e29b18ecc05c89545db8734e363c33fd",
+  "signature": "2dbb69f78c69688f31e6f9ac0a71dc746253889b85390cc224a653875959362c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1036c429"
 }

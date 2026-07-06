@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9695050",
+  "certificate_id": "MN-SC-2026-5393214",
   "skill_id": "mn-gen-02756",
   "skill_name": "Upstash/context7",
-  "issued_at": "2026-07-06T03:48:15.050Z",
-  "expires_at": "2026-07-13T03:48:15.050Z",
+  "issued_at": "2026-07-06T05:23:13.214Z",
+  "expires_at": "2026-07-13T05:23:13.214Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1b7940175808125961594c63ee9cd33297f247f5c1e77e7db553e2e03d18ebf1",
+  "signature": "7e3aa5813d4affa381a2737964d351572abbe7c3403fe0890d71e3149a373ca0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02756"
 }

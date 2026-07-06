@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0859012",
+  "certificate_id": "MN-SC-2026-6212724",
   "skill_id": "mn-heal-028",
   "skill_name": "EHR Data Extractor",
-  "issued_at": "2026-07-06T04:07:39.012Z",
-  "expires_at": "2026-07-13T04:07:39.012Z",
+  "issued_at": "2026-07-06T05:36:52.724Z",
+  "expires_at": "2026-07-13T05:36:52.724Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bb79f8ac9bda1389db6b49f4bfa4c313206178f460d483c21898592e087b51b",
+  "signature": "a6ad5fd78ea30831454b3395f944c780afe7711c42a042d9b0700941232fd697",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-heal-028"
 }

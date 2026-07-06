@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0413085",
+  "certificate_id": "MN-SC-2026-5707367",
   "skill_id": "mn-gen-10350",
   "skill_name": "Peta-Desk",
-  "issued_at": "2026-07-06T04:00:13.085Z",
-  "expires_at": "2026-07-13T04:00:13.085Z",
+  "issued_at": "2026-07-06T05:28:27.367Z",
+  "expires_at": "2026-07-13T05:28:27.367Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6341f59f2a287e523dc040ba8590c841691c43f9e5726699c1868a05494aefbf",
+  "signature": "ea853ba46d887d7c593c75a7d7e14fff73658490ef4a4154125f5ed1bb858807",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10350"
 }

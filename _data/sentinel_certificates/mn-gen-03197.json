@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9720355",
+  "certificate_id": "MN-SC-2026-5413298",
   "skill_id": "mn-gen-03197",
   "skill_name": "Deerflow-agent-framework",
-  "issued_at": "2026-07-06T03:48:40.355Z",
-  "expires_at": "2026-07-13T03:48:40.355Z",
+  "issued_at": "2026-07-06T05:23:33.298Z",
+  "expires_at": "2026-07-13T05:23:33.298Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bbd864430e418a0289173313b65018213a8f987973edef629f0b3fa6d8cc0036",
+  "signature": "b9ea5fd9482f5dcddcbd9c1bca766114e615883280844a9022b8df973e17b25b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03197"
 }

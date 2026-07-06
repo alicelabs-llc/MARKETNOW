@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1036692",
+  "certificate_id": "MN-SC-2026-6426731",
   "skill_id": "mn-real-naversearchmcp",
   "skill_name": "naver-search-mcp",
-  "issued_at": "2026-07-06T04:10:36.692Z",
-  "expires_at": "2026-07-13T04:10:36.692Z",
+  "issued_at": "2026-07-06T05:40:26.731Z",
+  "expires_at": "2026-07-13T05:40:26.731Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06781ed19b024bbd1b6066354f305740264025c1be36500c43e2cbcc7c889f47",
+  "signature": "926944e467b96a6697df88949e516a16e175f5102a07228950022af1a63fd63a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-naversearchmcp"
 }

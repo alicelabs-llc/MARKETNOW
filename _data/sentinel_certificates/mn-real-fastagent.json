@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1079706",
+  "certificate_id": "MN-SC-2026-6475696",
   "skill_id": "mn-real-fastagent",
   "skill_name": "fast-agent",
-  "issued_at": "2026-07-06T04:11:19.706Z",
-  "expires_at": "2026-07-13T04:11:19.706Z",
+  "issued_at": "2026-07-06T05:41:15.696Z",
+  "expires_at": "2026-07-13T05:41:15.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d26d6805c57c0fedb3771e2c0746c68359c5092288cdc50b24abe99efc7c9535",
+  "signature": "9f9ab47f7b16e20d46b5b24a75def4fee99e58f7c31041389a148b2115baba03",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fastagent"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0926636",
+  "certificate_id": "MN-SC-2026-6296280",
   "skill_id": "mn-awmcp-mattermostmcp",
   "skill_name": "mattermost-mcp",
-  "issued_at": "2026-07-06T04:08:46.636Z",
-  "expires_at": "2026-07-13T04:08:46.636Z",
+  "issued_at": "2026-07-06T05:38:16.280Z",
+  "expires_at": "2026-07-13T05:38:16.280Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "45aaae3ec6e700319669c1d2a148d44dbb24c989c7a5628a248f7d88b9736ba7",
+  "signature": "cf8a65a99ab15f36b525238e9f596693b3065774edfcd5b5c93854e937a756c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mattermostmcp"
 }

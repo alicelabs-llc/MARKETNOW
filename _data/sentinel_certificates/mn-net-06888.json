@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0286853",
+  "certificate_id": "MN-SC-2026-5564569",
   "skill_id": "mn-net-06888",
   "skill_name": "Mcp-http-client-server",
-  "issued_at": "2026-07-06T03:58:06.853Z",
-  "expires_at": "2026-07-13T03:58:06.853Z",
+  "issued_at": "2026-07-06T05:26:04.569Z",
+  "expires_at": "2026-07-13T05:26:04.569Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d29e3c80e9db905f63b2259dd0d91de7cabdbaec931298d1e671012d8f9ac197",
+  "signature": "b6a5785028003128f7a251d67d304482d51bc497ddef12900e2746cd558a517a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-06888"
 }

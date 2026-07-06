@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9661370",
+  "certificate_id": "MN-SC-2026-5369526",
   "skill_id": "mn-gen-02271",
   "skill_name": "Claude-screen-mcp",
-  "issued_at": "2026-07-06T03:47:41.370Z",
-  "expires_at": "2026-07-13T03:47:41.370Z",
+  "issued_at": "2026-07-06T05:22:49.526Z",
+  "expires_at": "2026-07-13T05:22:49.526Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28c764703bd81aab3dbc84c21312ef84db7a717292792529ab407f1ae6988e9c",
+  "signature": "daa6033cea707b6da76dd0edb0f9103a2f35572cd6df266b8a09162fdfc1d89d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02271"
 }

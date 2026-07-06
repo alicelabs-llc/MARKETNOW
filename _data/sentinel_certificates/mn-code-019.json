@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0820135",
+  "certificate_id": "MN-SC-2026-6167096",
   "skill_id": "mn-code-019",
   "skill_name": "Dead Code Detector",
-  "issued_at": "2026-07-06T04:07:00.135Z",
-  "expires_at": "2026-07-13T04:07:00.135Z",
+  "issued_at": "2026-07-06T05:36:07.096Z",
+  "expires_at": "2026-07-13T05:36:07.096Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acb1231a28c42c3b138a001c742f0be7eb96daae11028583605a6f9a38be27c6",
+  "signature": "8040575ca89fdcc351f07cd8c0c823e4b2c49b0842d8e9f8f5cc6f63beeffbec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-019"
 }

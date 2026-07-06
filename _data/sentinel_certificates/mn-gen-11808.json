@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0473725",
+  "certificate_id": "MN-SC-2026-5765442",
   "skill_id": "mn-gen-11808",
   "skill_name": "Automattic/simplenote-mcp",
-  "issued_at": "2026-07-06T04:01:13.725Z",
-  "expires_at": "2026-07-13T04:01:13.725Z",
+  "issued_at": "2026-07-06T05:29:25.442Z",
+  "expires_at": "2026-07-13T05:29:25.442Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "963dc4617612291f97645a3426b2fa9f1bb3888a1ea523970b289080eada5a5a",
+  "signature": "55a9ffa913e4839119d7244d6436c111b60cd5d8fdebd844be613654073c0c13",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11808"
 }

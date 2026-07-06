@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9628463",
+  "certificate_id": "MN-SC-2026-5349052",
   "skill_id": "mn-gen-01772",
   "skill_name": "Cdp-tools-mcp",
-  "issued_at": "2026-07-06T03:47:08.463Z",
-  "expires_at": "2026-07-13T03:47:08.463Z",
+  "issued_at": "2026-07-06T05:22:29.052Z",
+  "expires_at": "2026-07-13T05:22:29.052Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "46b1e6cca2b104dd9b4061673ac39aa52c515c0eee799a5aa5a2246e587dc4b6",
+  "signature": "9e00ae27f521796059dfebca2cefd2eaf7064e11bda97d5d4c777fbb03acbd19",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01772"
 }

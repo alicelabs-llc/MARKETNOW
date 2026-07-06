@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0815055",
+  "certificate_id": "MN-SC-2026-6160277",
   "skill_id": "mn-ai-035",
   "skill_name": "Code Generator",
-  "issued_at": "2026-07-06T04:06:55.055Z",
-  "expires_at": "2026-07-13T04:06:55.055Z",
+  "issued_at": "2026-07-06T05:36:00.277Z",
+  "expires_at": "2026-07-13T05:36:00.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c022b64bcf71467a0d2aef18b8e58a173c16bf2d8179a186fb380c69d87dfb4a",
+  "signature": "b7d7f440f2957402b60ceb67f241cb6ed0160806141078a96198a28c0c42f83e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-035"
 }

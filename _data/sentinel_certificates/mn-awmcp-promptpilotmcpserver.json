@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0894779",
+  "certificate_id": "MN-SC-2026-6255705",
   "skill_id": "mn-awmcp-promptpilotmcpserver",
   "skill_name": "promptpilot-mcp-server",
-  "issued_at": "2026-07-06T04:08:14.779Z",
-  "expires_at": "2026-07-13T04:08:14.779Z",
+  "issued_at": "2026-07-06T05:37:35.705Z",
+  "expires_at": "2026-07-13T05:37:35.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d2a5278b0fcc11d085c86a81043d0a73a068c75f428bcffe3e47d35bd49d66e",
+  "signature": "5fd075e62e7d05b22f96c3e49ea2a2de71378a5f41b102d1d097d1a64cf4bfe6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-promptpilotmcpserver"
 }

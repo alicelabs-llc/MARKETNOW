@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0271756",
+  "certificate_id": "MN-SC-2026-5547377",
   "skill_id": "mn-gen-06498",
   "skill_name": "Mcp-compression-proxy",
-  "issued_at": "2026-07-06T03:57:51.756Z",
-  "expires_at": "2026-07-13T03:57:51.756Z",
+  "issued_at": "2026-07-06T05:25:47.377Z",
+  "expires_at": "2026-07-13T05:25:47.377Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e10d9f793eb4c3cce97f3b2722a6d6ca8bf7e248648768d765d544a8df27fd19",
+  "signature": "9944a1d6729aa57e9aa38fe000b8245c60663157f5c30d20fa39178b87090dd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06498"
 }

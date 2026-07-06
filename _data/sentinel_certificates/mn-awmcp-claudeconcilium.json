@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0916850",
+  "certificate_id": "MN-SC-2026-6282282",
   "skill_id": "mn-awmcp-claudeconcilium",
   "skill_name": "claude-concilium",
-  "issued_at": "2026-07-06T04:08:36.850Z",
-  "expires_at": "2026-07-13T04:08:36.850Z",
+  "issued_at": "2026-07-06T05:38:02.282Z",
+  "expires_at": "2026-07-13T05:38:02.282Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "669256b994435296a02807686bed593899937ded313a2b941dea7c6f52c68509",
+  "signature": "7fab57e07544ce32ae0e3852fd0bac27206fb499696889cde74d2c4d20565900",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-claudeconcilium"
 }

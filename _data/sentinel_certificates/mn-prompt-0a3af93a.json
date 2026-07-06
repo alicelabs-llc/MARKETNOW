@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0664516",
+  "certificate_id": "MN-SC-2026-5987603",
   "skill_id": "mn-prompt-0a3af93a",
   "skill_name": "Sales metrics leading vs lagging",
-  "issued_at": "2026-07-06T04:04:24.516Z",
-  "expires_at": "2026-07-13T04:04:24.516Z",
+  "issued_at": "2026-07-06T05:33:07.603Z",
+  "expires_at": "2026-07-13T05:33:07.603Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6738203b3a441d944661d1a62f25863a27247501af919ff949e3b3b108167d86",
+  "signature": "b279f64206a0b66a52b016e524b38032a2b378438d409be4cbc02bf90cfdd4ed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0a3af93a"
 }

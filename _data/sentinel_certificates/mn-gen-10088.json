@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0398452",
+  "certificate_id": "MN-SC-2026-5695644",
   "skill_id": "mn-gen-10088",
   "skill_name": "Ordercloud-mcp",
-  "issued_at": "2026-07-06T03:59:58.452Z",
-  "expires_at": "2026-07-13T03:59:58.452Z",
+  "issued_at": "2026-07-06T05:28:15.644Z",
+  "expires_at": "2026-07-13T05:28:15.644Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "df7b0885450f0c442f2f97642125fdd29b26c8c9757a35d41a2052a71a65b2a5",
+  "signature": "74bfcd636c965b94da13b17203731381b632b959322581ce940b95501d6805ab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10088"
 }

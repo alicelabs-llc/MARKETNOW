@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1083565",
+  "certificate_id": "MN-SC-2026-6479886",
   "skill_id": "mn-real-agentteamsai",
   "skill_name": "agent-teams-ai",
-  "issued_at": "2026-07-06T04:11:23.565Z",
-  "expires_at": "2026-07-13T04:11:23.565Z",
+  "issued_at": "2026-07-06T05:41:19.886Z",
+  "expires_at": "2026-07-13T05:41:19.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "761012035e50f062813affb7d0fccf08ae742002311fddfa9f2545f8799be28d",
+  "signature": "cda8685b6471b5d5cf17acb6742998a214d58abf5815751601799106f9c933b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentteamsai"
 }

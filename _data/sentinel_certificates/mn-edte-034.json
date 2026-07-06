@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0851790",
+  "certificate_id": "MN-SC-2026-6205910",
   "skill_id": "mn-edte-034",
   "skill_name": "Education Accessibility Checker",
-  "issued_at": "2026-07-06T04:07:31.790Z",
-  "expires_at": "2026-07-13T04:07:31.790Z",
+  "issued_at": "2026-07-06T05:36:45.910Z",
+  "expires_at": "2026-07-13T05:36:45.910Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a821f1c1b08f13909920846609bd8b0e1556daca367f4aa4fc177f44ec169805",
+  "signature": "729121091c864333ff2f1ed6b865b0c83e8ba81f9815b9073adc38350f86a677",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edte-034"
 }

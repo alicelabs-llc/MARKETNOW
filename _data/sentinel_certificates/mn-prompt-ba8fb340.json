@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0652738",
+  "certificate_id": "MN-SC-2026-5972708",
   "skill_id": "mn-prompt-ba8fb340",
   "skill_name": "Data breach notification policy",
-  "issued_at": "2026-07-06T04:04:12.738Z",
-  "expires_at": "2026-07-13T04:04:12.738Z",
+  "issued_at": "2026-07-06T05:32:52.708Z",
+  "expires_at": "2026-07-13T05:32:52.708Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d090ee5a53632bd34adf3657e226e5f03ec3b8943f17bbc4bb0afa51d9443515",
+  "signature": "df1a278d01776e27aad1377328d31df9a38939b196b91bbf76c044e061c380b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ba8fb340"
 }

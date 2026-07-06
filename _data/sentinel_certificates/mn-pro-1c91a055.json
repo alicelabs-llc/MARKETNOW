@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0787991",
+  "certificate_id": "MN-SC-2026-6128012",
   "skill_id": "mn-pro-1c91a055",
   "skill_name": "API Breaking Change Detector",
-  "issued_at": "2026-07-06T04:06:27.991Z",
-  "expires_at": "2026-07-13T04:06:27.991Z",
+  "issued_at": "2026-07-06T05:35:28.012Z",
+  "expires_at": "2026-07-13T05:35:28.012Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f059d812d37bc06ce4100754f94de2b0ebd3eb42433614f7ee49d05414cf6ab0",
+  "signature": "d4fa5f37ff8a93446ef06342e6ed530a9b8ab52abce90419e5a8aa991ede0d1d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1c91a055"
 }

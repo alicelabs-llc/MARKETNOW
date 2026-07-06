@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0612640",
+  "certificate_id": "MN-SC-2026-5918543",
   "skill_id": "mn-prompt-44f6903d",
   "skill_name": "Especialista Medical Imaging + DICOM",
-  "issued_at": "2026-07-06T04:03:32.640Z",
-  "expires_at": "2026-07-13T04:03:32.640Z",
+  "issued_at": "2026-07-06T05:31:58.543Z",
+  "expires_at": "2026-07-13T05:31:58.543Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf0621e1087632736055171953c8f03e51fa17e1a98147952e47bce3e5466d0e",
+  "signature": "abdf0fe4a87fc9da39423b2ae6c19448d08d124f32c7c025ffce372bdcd423c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-44f6903d"
 }

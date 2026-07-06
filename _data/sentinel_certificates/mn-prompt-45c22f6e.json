@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0712260",
+  "certificate_id": "MN-SC-2026-6040526",
   "skill_id": "mn-prompt-45c22f6e",
   "skill_name": "Data warehouse observability",
-  "issued_at": "2026-07-06T04:05:12.260Z",
-  "expires_at": "2026-07-13T04:05:12.260Z",
+  "issued_at": "2026-07-06T05:34:00.526Z",
+  "expires_at": "2026-07-13T05:34:00.526Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d32e30a8e850ae8a4d5f471cf4909d1f9b0bc90f15d377cd14ddd23c4d281f7",
+  "signature": "964a97115d8532edb5885d8e6fd8397afff04e8a73c4f7a64a74e21164527aa3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-45c22f6e"
 }

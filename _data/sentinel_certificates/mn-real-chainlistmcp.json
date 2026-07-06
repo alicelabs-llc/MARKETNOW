@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0986673",
+  "certificate_id": "MN-SC-2026-6365915",
   "skill_id": "mn-real-chainlistmcp",
   "skill_name": "chainlist-mcp",
-  "issued_at": "2026-07-06T04:09:46.673Z",
-  "expires_at": "2026-07-13T04:09:46.673Z",
+  "issued_at": "2026-07-06T05:39:25.915Z",
+  "expires_at": "2026-07-13T05:39:25.915Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b04c5e570e55e495d3e7683794f4c32daccd8e2aba27f55b6b3ff5057803d25b",
+  "signature": "168887e41db20d2849f463654d36df06c2321cf735ee0afb4014104e82d3f007",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chainlistmcp"
 }

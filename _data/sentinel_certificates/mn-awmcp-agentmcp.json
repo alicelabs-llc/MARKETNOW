@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0922708",
+  "certificate_id": "MN-SC-2026-6290137",
   "skill_id": "mn-awmcp-agentmcp",
   "skill_name": "Agent-MCP",
-  "issued_at": "2026-07-06T04:08:42.708Z",
-  "expires_at": "2026-07-13T04:08:42.708Z",
+  "issued_at": "2026-07-06T05:38:10.137Z",
+  "expires_at": "2026-07-13T05:38:10.137Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b23a5709fb596d609067d62b204fed12766dcd9182427b8b629b3960776bb41d",
+  "signature": "05755f5bfa12c6271656be471f64a3b8c2b5bb6ee7dc273182248884a8f3101f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agentmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9666654",
+  "certificate_id": "MN-SC-2026-5373882",
   "skill_id": "mn-gen-02347",
   "skill_name": "Claudelink",
-  "issued_at": "2026-07-06T03:47:46.654Z",
-  "expires_at": "2026-07-13T03:47:46.654Z",
+  "issued_at": "2026-07-06T05:22:53.882Z",
+  "expires_at": "2026-07-13T05:22:53.882Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ead2a62fb61fab76d2e5370d40089d95cd2bb86f2089f5bf79e05021bd8750a",
+  "signature": "50f7f8f4e4f75886d1a52f80594f2ff1201abd41aecc1146d68a209b7a6394d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02347"
 }

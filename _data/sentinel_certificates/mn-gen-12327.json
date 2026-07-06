@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0493743",
+  "certificate_id": "MN-SC-2026-5785217",
   "skill_id": "mn-gen-12327",
   "skill_name": "Support-ops-mcp",
-  "issued_at": "2026-07-06T04:01:33.743Z",
-  "expires_at": "2026-07-13T04:01:33.743Z",
+  "issued_at": "2026-07-06T05:29:45.217Z",
+  "expires_at": "2026-07-13T05:29:45.217Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c2b5466998002f4c358c5ba611847f22786771f4062e592c77206941fecda80",
+  "signature": "39ba9817d90170869e4f872224361cf8a3b24ac50f7211ebd724fa76aa40018b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12327"
 }

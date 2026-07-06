@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0751471",
+  "certificate_id": "MN-SC-2026-6085820",
   "skill_id": "mn-apf-005",
   "skill_name": "Connection Pool Manager",
-  "issued_at": "2026-07-06T04:05:51.471Z",
-  "expires_at": "2026-07-13T04:05:51.471Z",
+  "issued_at": "2026-07-06T05:34:45.820Z",
+  "expires_at": "2026-07-13T05:34:45.820Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c1124764cc6c4286046014f0ba9ff7eac672e2f4f36b93621e3561641b9ea67b",
+  "signature": "53ab299c8d1401c19ff799f4cb440b2d30d7149a25aff3076984d56908698caf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-005"
 }

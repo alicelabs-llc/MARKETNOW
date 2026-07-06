@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0440660",
+  "certificate_id": "MN-SC-2026-5737322",
   "skill_id": "mn-gen-11097",
   "skill_name": "Reddit-intel-agent-mcp",
-  "issued_at": "2026-07-06T04:00:40.660Z",
-  "expires_at": "2026-07-13T04:00:40.660Z",
+  "issued_at": "2026-07-06T05:28:57.322Z",
+  "expires_at": "2026-07-13T05:28:57.322Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b261f39a124497a2b36ac9a9edd1057affa486dc8e81fb24cddae02b41e1514",
+  "signature": "63ea84c14f4a5805e8f4d8f14cc02a6be54683bcf78f8afa6664d3bbd5d03d39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11097"
 }

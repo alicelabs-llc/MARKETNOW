@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1006494",
+  "certificate_id": "MN-SC-2026-6389715",
   "skill_id": "mn-real-contextfirstmcp",
   "skill_name": "Context-First-MCP",
-  "issued_at": "2026-07-06T04:10:06.494Z",
-  "expires_at": "2026-07-13T04:10:06.494Z",
+  "issued_at": "2026-07-06T05:39:49.715Z",
+  "expires_at": "2026-07-13T05:39:49.715Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac008f4ee6b60c10df7fd671c2ec623862fbef87e2cc6752dde6911ab62b06ed",
+  "signature": "56b3f15eeea4a1b6e09f62fbc0a280a34af0c3e00db1435e67c15b150d511e8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-contextfirstmcp"
 }

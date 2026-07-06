@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1030308",
+  "certificate_id": "MN-SC-2026-6420031",
   "skill_id": "mn-real-browseaidev",
   "skill_name": "BrowseAI-Dev",
-  "issued_at": "2026-07-06T04:10:30.308Z",
-  "expires_at": "2026-07-13T04:10:30.308Z",
+  "issued_at": "2026-07-06T05:40:20.031Z",
+  "expires_at": "2026-07-13T05:40:20.031Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de92ea6737e0edcbe76abb42770afd89eb987019e9e1264291468c5ae8a9dd1b",
+  "signature": "cb72d4d6f3ce383dbe5ada6028c638069948aae6529b221957994f5ec40671ab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-browseaidev"
 }

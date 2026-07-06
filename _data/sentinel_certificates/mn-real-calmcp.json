@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1073692",
+  "certificate_id": "MN-SC-2026-6468586",
   "skill_id": "mn-real-calmcp",
   "skill_name": "cal-mcp",
-  "issued_at": "2026-07-06T04:11:13.692Z",
-  "expires_at": "2026-07-13T04:11:13.692Z",
+  "issued_at": "2026-07-06T05:41:08.586Z",
+  "expires_at": "2026-07-13T05:41:08.586Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c88e34395993eb8f6e5be1f993df54042c614cbd2b27eca32fe35a45e78504c9",
+  "signature": "eecad1d59b39382c8790d759e9c7d18ddbd7ead46930a9fa3e011a942e794348",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-calmcp"
 }

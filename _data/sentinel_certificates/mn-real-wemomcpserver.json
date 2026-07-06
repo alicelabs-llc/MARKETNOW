@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1002741",
+  "certificate_id": "MN-SC-2026-6385768",
   "skill_id": "mn-real-wemomcpserver",
   "skill_name": "wemo-mcp-server",
-  "issued_at": "2026-07-06T04:10:02.741Z",
-  "expires_at": "2026-07-13T04:10:02.741Z",
+  "issued_at": "2026-07-06T05:39:45.768Z",
+  "expires_at": "2026-07-13T05:39:45.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d9795e146d128245ab3f23865ff2a1544ed0c6ed9cbd0a8a0cff3f1eae316fc2",
+  "signature": "3dd53571d0ef130d9c25d0b6dd4986e644558e72f658a77db867c2bd1357f4fb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wemomcpserver"
 }

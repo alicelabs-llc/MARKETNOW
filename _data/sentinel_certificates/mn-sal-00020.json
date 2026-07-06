@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0768779",
+  "certificate_id": "MN-SC-2026-6107635",
   "skill_id": "mn-sal-00020",
   "skill_name": "Salesloft Conversation",
-  "issued_at": "2026-07-06T04:06:08.779Z",
-  "expires_at": "2026-07-13T04:06:08.779Z",
+  "issued_at": "2026-07-06T05:35:07.635Z",
+  "expires_at": "2026-07-13T05:35:07.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9634f748612cd9072f43aba646bc878861a3231870ea05aac8a73cb2bb2f4218",
+  "signature": "00fbd22b4cb8fb4a5494e2f7c9130d9ede41500bfd01c213686fa97ec1b89c60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00020"
 }

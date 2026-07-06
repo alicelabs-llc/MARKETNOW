@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0268840",
+  "certificate_id": "MN-SC-2026-5543768",
   "skill_id": "mn-gen-06397",
   "skill_name": "Mcp-client-auth",
-  "issued_at": "2026-07-06T03:57:48.840Z",
-  "expires_at": "2026-07-13T03:57:48.840Z",
+  "issued_at": "2026-07-06T05:25:43.768Z",
+  "expires_at": "2026-07-13T05:25:43.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0347f89c22bebca3e3f5f1df9dd06afcdd2e5ebd89e1c734c0fe1971a0d611b0",
+  "signature": "e960919d9be73162856ac388223fa4c7d283cd37e0c8f1077d079fbd2729d780",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06397"
 }

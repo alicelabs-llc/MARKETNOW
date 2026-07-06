@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9582281",
+  "certificate_id": "MN-SC-2026-5315576",
   "skill_id": "mn-gen-00931",
   "skill_name": "Archimate-mcp-server",
-  "issued_at": "2026-07-06T03:46:22.281Z",
-  "expires_at": "2026-07-13T03:46:22.281Z",
+  "issued_at": "2026-07-06T05:21:55.576Z",
+  "expires_at": "2026-07-13T05:21:55.576Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bcfa8aed659d5c737e563684d7b16ebb02dc376820803659b755186bc764c617",
+  "signature": "606d2a475c887688b3ade86ef35d08b1df1999e85177359affcea4335014693d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00931"
 }

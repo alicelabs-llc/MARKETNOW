@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0940965",
+  "certificate_id": "MN-SC-2026-6312640",
   "skill_id": "mn-real-kafkaschemaregmcp",
   "skill_name": "kafka-schema-reg-mcp",
-  "issued_at": "2026-07-06T04:09:00.965Z",
-  "expires_at": "2026-07-13T04:09:00.965Z",
+  "issued_at": "2026-07-06T05:38:32.640Z",
+  "expires_at": "2026-07-13T05:38:32.640Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "99b33c19431074da76229a80e66921e4a11acf77f09f33df8bec5df2f9ee3b03",
+  "signature": "47358cbd51a6b29f3ef61427868e52ae9d257abd31cbf75510b0b3452e680805",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kafkaschemaregmcp"
 }

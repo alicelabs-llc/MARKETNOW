@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1022022",
+  "certificate_id": "MN-SC-2026-6409728",
   "skill_id": "mn-real-aapladsmcp",
   "skill_name": "aapl-ads-mcp",
-  "issued_at": "2026-07-06T04:10:22.022Z",
-  "expires_at": "2026-07-13T04:10:22.022Z",
+  "issued_at": "2026-07-06T05:40:09.728Z",
+  "expires_at": "2026-07-13T05:40:09.728Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a2979f5bce60e45420ad2396e3c019781047e54301580c92e50b8ca457116bb",
+  "signature": "471fa1586d52d740366746729d78209b0c889f9497405801f0c00805ec9745d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aapladsmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0683659",
+  "certificate_id": "MN-SC-2026-6006859",
   "skill_id": "mn-prompt-aa1656ae",
   "skill_name": "Product analytics alerts anomalies",
-  "issued_at": "2026-07-06T04:04:43.659Z",
-  "expires_at": "2026-07-13T04:04:43.659Z",
+  "issued_at": "2026-07-06T05:33:26.859Z",
+  "expires_at": "2026-07-13T05:33:26.859Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8162b094e40509263a33b150ff284993b1dad79978b47b2061d316d41ec04850",
+  "signature": "d1825d5e8f828fa4a870135365044fa3de19f3d4efcd840f130ef2bd4eb7f563",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-aa1656ae"
 }

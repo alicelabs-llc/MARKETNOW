@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0681362",
+  "certificate_id": "MN-SC-2026-6004286",
   "skill_id": "mn-prompt-18dfb078",
   "skill_name": "Product metrics dashboard Looker",
-  "issued_at": "2026-07-06T04:04:41.362Z",
-  "expires_at": "2026-07-13T04:04:41.362Z",
+  "issued_at": "2026-07-06T05:33:24.286Z",
+  "expires_at": "2026-07-13T05:33:24.286Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b89d7d9ff0ccd6e6021103386b663aaae682912e1792d6638f1aa13d6fdfcb19",
+  "signature": "5f31ca3911ce9acf183a6057c0703bf7b21c7f905bdb11ec8a6a443dd7496db8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-18dfb078"
 }

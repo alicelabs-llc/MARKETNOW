@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9708543",
+  "certificate_id": "MN-SC-2026-5403234",
   "skill_id": "mn-gen-02978",
   "skill_name": "Cursor-bridge-mcp",
-  "issued_at": "2026-07-06T03:48:28.543Z",
-  "expires_at": "2026-07-13T03:48:28.543Z",
+  "issued_at": "2026-07-06T05:23:23.234Z",
+  "expires_at": "2026-07-13T05:23:23.234Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e80a80f00f32721405e50cdaf20fd02825a87057ff9cd2ceac1f0af63697b657",
+  "signature": "74ea2f3b427999ef795ec7f510bfc2b8491c7d56dc171efd1e4eacbc852570f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02978"
 }

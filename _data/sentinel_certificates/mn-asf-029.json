@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0749239",
+  "certificate_id": "MN-SC-2026-6083216",
   "skill_id": "mn-asf-029",
   "skill_name": "Incident Response Playbook",
-  "issued_at": "2026-07-06T04:05:49.239Z",
-  "expires_at": "2026-07-13T04:05:49.239Z",
+  "issued_at": "2026-07-06T05:34:43.216Z",
+  "expires_at": "2026-07-13T05:34:43.216Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "955842cb5f362cab4bc7f050947913712e07958c0e5f84b92aad3d1fe7e1dbc1",
+  "signature": "afd248c48d9520792d959b0b4f837995e2189ee184e5da60813bfd120bf79438",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-029"
 }

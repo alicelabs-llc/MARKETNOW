@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0990918",
+  "certificate_id": "MN-SC-2026-6372808",
   "skill_id": "mn-real-macalcmcp",
   "skill_name": "macalc-mcp",
-  "issued_at": "2026-07-06T04:09:50.918Z",
-  "expires_at": "2026-07-13T04:09:50.918Z",
+  "issued_at": "2026-07-06T05:39:32.808Z",
+  "expires_at": "2026-07-13T05:39:32.808Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f82a56b4388e096c7f664c9a74fdaae6c1c7271bbe3d78d34dc83a627f03af30",
+  "signature": "9bd920c8804c7a6b036d8a7c538a649565975eb0d44b931a16e33269ef43cf09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-macalcmcp"
 }

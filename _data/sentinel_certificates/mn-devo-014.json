@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0846581",
+  "certificate_id": "MN-SC-2026-6199624",
   "skill_id": "mn-devo-014",
   "skill_name": "Failure Domain Mapper",
-  "issued_at": "2026-07-06T04:07:26.581Z",
-  "expires_at": "2026-07-13T04:07:26.581Z",
+  "issued_at": "2026-07-06T05:36:39.624Z",
+  "expires_at": "2026-07-13T05:36:39.624Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fdadfeee89f9fe5c05b58f9b47c06cfc173f8157b75cec52ddd9b4af18528aef",
+  "signature": "f88bbaf25c99a2b90ad009db8a77279f5be654030fbf31a59b894a231b8402de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-devo-014"
 }

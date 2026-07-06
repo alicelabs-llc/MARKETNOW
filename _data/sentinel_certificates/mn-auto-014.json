@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0816358",
+  "certificate_id": "MN-SC-2026-6161922",
   "skill_id": "mn-auto-014",
   "skill_name": "mcp-rss-aggregator",
-  "issued_at": "2026-07-06T04:06:56.358Z",
-  "expires_at": "2026-07-13T04:06:56.358Z",
+  "issued_at": "2026-07-06T05:36:01.922Z",
+  "expires_at": "2026-07-13T05:36:01.922Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e45baccdf57c0b337d0f70c5779719b8eea43488d7e16e2d13527390f9383ecb",
+  "signature": "d7c89f23485212bbf4ac05dffe52e8fb0a0824443fb23710c2c7690d8f9d6640",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-014"
 }

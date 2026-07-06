@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0905277",
+  "certificate_id": "MN-SC-2026-6267143",
   "skill_id": "mn-awmcp-mcpdoctor",
   "skill_name": "mcp-doctor",
-  "issued_at": "2026-07-06T04:08:25.277Z",
-  "expires_at": "2026-07-13T04:08:25.277Z",
+  "issued_at": "2026-07-06T05:37:47.143Z",
+  "expires_at": "2026-07-13T05:37:47.143Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f70ce8eb76ccd840cf3a0eff4a6c3153288af0c9f227ab3411842652542b98a",
+  "signature": "140ec8f58a8a06557dcafc2465dbbdc637ac13764e76828364f0992d79db0048",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpdoctor"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0333495",
+  "certificate_id": "MN-SC-2026-5621360",
   "skill_id": "mn-gen-08028",
   "skill_name": "Mcp-tattty",
-  "issued_at": "2026-07-06T03:58:53.495Z",
-  "expires_at": "2026-07-13T03:58:53.495Z",
+  "issued_at": "2026-07-06T05:27:01.360Z",
+  "expires_at": "2026-07-13T05:27:01.360Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "768c8b34b6c92f44ce6be3e517c6f38bfa495c3499fa0060fcd2aec24fc2f18f",
+  "signature": "ab84612dc2283d937f176879d26b701bd343683847da31e94c6cbef7817ac35b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08028"
 }

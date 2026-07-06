@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0906589",
+  "certificate_id": "MN-SC-2026-6268812",
   "skill_id": "mn-awmcp-edsmcpserver",
   "skill_name": "eds-mcp-server",
-  "issued_at": "2026-07-06T04:08:26.589Z",
-  "expires_at": "2026-07-13T04:08:26.589Z",
+  "issued_at": "2026-07-06T05:37:48.812Z",
+  "expires_at": "2026-07-13T05:37:48.812Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d85db16fb09510a39f73a9dbd5fc7d20733c2ee93af875ecd7719aee42afb92",
+  "signature": "512bfbb87164190c4e3c113499c0a7caa081e22be4d2aefd61a8d40edd991e96",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-edsmcpserver"
 }

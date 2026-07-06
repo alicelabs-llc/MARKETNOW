@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0968222",
+  "certificate_id": "MN-SC-2026-6342548",
   "skill_id": "mn-real-vstokensafer",
   "skill_name": "vs-token-safer",
-  "issued_at": "2026-07-06T04:09:28.222Z",
-  "expires_at": "2026-07-13T04:09:28.222Z",
+  "issued_at": "2026-07-06T05:39:02.548Z",
+  "expires_at": "2026-07-13T05:39:02.548Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbae274d0d34db1cab4ba326c55bd72978187c1aff4baab2e18f8faa7e6e37af",
+  "signature": "a5230c134ac42b566e32a8c4572c9b618d4f7908cbc525f028d4818abe903be4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vstokensafer"
 }

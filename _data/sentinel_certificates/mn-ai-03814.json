@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9757365",
+  "certificate_id": "MN-SC-2026-5439382",
   "skill_id": "mn-ai-03814",
   "skill_name": "Explain-changes",
-  "issued_at": "2026-07-06T03:49:17.365Z",
-  "expires_at": "2026-07-13T03:49:17.365Z",
+  "issued_at": "2026-07-06T05:23:59.382Z",
+  "expires_at": "2026-07-13T05:23:59.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d529e189430b34faf2f65ef3dbeb3e4e76c96032c8aa5938374029ab7a11a7e7",
+  "signature": "0f6b9da4914ff23a0265a391c21dc5a1eeb867fa9d17654b93c91369f333b687",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03814"
 }

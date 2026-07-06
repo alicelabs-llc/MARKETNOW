@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0502936",
+  "certificate_id": "MN-SC-2026-5795466",
   "skill_id": "mn-gen-12565",
   "skill_name": "Testit-mcp-server",
-  "issued_at": "2026-07-06T04:01:42.936Z",
-  "expires_at": "2026-07-13T04:01:42.936Z",
+  "issued_at": "2026-07-06T05:29:55.466Z",
+  "expires_at": "2026-07-13T05:29:55.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1557d67ea5f3233d6365215216de7831359cb26c6593874a102ba2752d89fe83",
+  "signature": "1f0861ad442e7f49e99cf08f1ce80595895fa1fa8abdf4010a772ff6ac231820",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12565"
 }

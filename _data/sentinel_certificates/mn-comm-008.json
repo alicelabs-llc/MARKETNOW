@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0823007",
+  "certificate_id": "MN-SC-2026-6170513",
   "skill_id": "mn-comm-008",
   "skill_name": "Price Calculator",
-  "issued_at": "2026-07-06T04:07:03.007Z",
-  "expires_at": "2026-07-13T04:07:03.007Z",
+  "issued_at": "2026-07-06T05:36:10.513Z",
+  "expires_at": "2026-07-13T05:36:10.513Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e01a4dba1def05858fb504f1e01841e3f00f14b62a528807eae5e86621ef337c",
+  "signature": "65c55603f5e911cb1726df7049225939190797c0b7028b504b8e96c59c8cc48a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-008"
 }

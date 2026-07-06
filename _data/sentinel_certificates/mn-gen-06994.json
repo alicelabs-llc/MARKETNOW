@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0290850",
+  "certificate_id": "MN-SC-2026-5569383",
   "skill_id": "mn-gen-06994",
   "skill_name": "Markvp/mcp-lambda-sam",
-  "issued_at": "2026-07-06T03:58:10.850Z",
-  "expires_at": "2026-07-13T03:58:10.850Z",
+  "issued_at": "2026-07-06T05:26:09.383Z",
+  "expires_at": "2026-07-13T05:26:09.383Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89d8f36cc7819e0ada68d25868d949e55dbef09baf2514ec6ad6da08332da881",
+  "signature": "8132ee4626c096ca54f0afb5e2a4e7b53bab19f8c353601721b2aed790846236",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06994"
 }

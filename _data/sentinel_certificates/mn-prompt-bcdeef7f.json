@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0704186",
+  "certificate_id": "MN-SC-2026-6030111",
   "skill_id": "mn-prompt-bcdeef7f",
   "skill_name": "Copywriting for customer onboarding empty state",
-  "issued_at": "2026-07-06T04:05:04.186Z",
-  "expires_at": "2026-07-13T04:05:04.186Z",
+  "issued_at": "2026-07-06T05:33:50.111Z",
+  "expires_at": "2026-07-13T05:33:50.111Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d36fd1402351b767f23cc386ece1b66bec1202bb92b0c70ebcea4d1868e1d68e",
+  "signature": "9d3be861f510d710e4170b17188380f19cb064169e93e70d31335085b0014b39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bcdeef7f"
 }

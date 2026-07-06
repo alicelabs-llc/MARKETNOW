@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0914821",
+  "certificate_id": "MN-SC-2026-6279687",
   "skill_id": "mn-awmcp-containeruse",
   "skill_name": "container-use",
-  "issued_at": "2026-07-06T04:08:34.821Z",
-  "expires_at": "2026-07-13T04:08:34.821Z",
+  "issued_at": "2026-07-06T05:37:59.687Z",
+  "expires_at": "2026-07-13T05:37:59.687Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be4406b868002549fc3be7be5aeb10857417ed8420dcce5c768637d15f8f61ed",
+  "signature": "895720e3ad757f76464a3d4d1a11e2aa6d18e2b9029cf486b6571fa32fccb048",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-containeruse"
 }

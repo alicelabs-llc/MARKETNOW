@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0933466",
+  "certificate_id": "MN-SC-2026-6304326",
   "skill_id": "mn-real-couriermcp",
   "skill_name": "courier-mcp",
-  "issued_at": "2026-07-06T04:08:53.466Z",
-  "expires_at": "2026-07-13T04:08:53.466Z",
+  "issued_at": "2026-07-06T05:38:24.326Z",
+  "expires_at": "2026-07-13T05:38:24.326Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0dfed99b153ba0a432bbaab3931b25576d71f7a626b5ef9bc42fd4095b91f1cd",
+  "signature": "cfd0819e12eb6ac7107557351847ab237057ddcdd7753f42c09ed72e478af76b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-couriermcp"
 }

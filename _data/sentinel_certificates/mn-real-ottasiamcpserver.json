@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1032220",
+  "certificate_id": "MN-SC-2026-6422465",
   "skill_id": "mn-real-ottasiamcpserver",
   "skill_name": "ottasia-mcp-server",
-  "issued_at": "2026-07-06T04:10:32.220Z",
-  "expires_at": "2026-07-13T04:10:32.220Z",
+  "issued_at": "2026-07-06T05:40:22.465Z",
+  "expires_at": "2026-07-13T05:40:22.465Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04cdf3489472ce15964b265c0e4e709e468805b0e802657385c4ba76b830f218",
+  "signature": "2ce8e3e096036e58cf163c11b0a44a20975c387d8d28204941063c0f3223db1c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ottasiamcpserver"
 }

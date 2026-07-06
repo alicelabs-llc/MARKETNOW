@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1046602",
+  "certificate_id": "MN-SC-2026-6436488",
   "skill_id": "mn-real-hejdarmcp",
   "skill_name": "hejdar-mcp",
-  "issued_at": "2026-07-06T04:10:46.602Z",
-  "expires_at": "2026-07-13T04:10:46.602Z",
+  "issued_at": "2026-07-06T05:40:36.488Z",
+  "expires_at": "2026-07-13T05:40:36.488Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ed7548a5c04873b542095974b05467931a8241fc59e3964b9b666f65f358685b",
+  "signature": "601959ca6c3890eba02584f3c8b7ac0601c8c0dbe072fb5ab08c7802361ab4ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hejdarmcp"
 }

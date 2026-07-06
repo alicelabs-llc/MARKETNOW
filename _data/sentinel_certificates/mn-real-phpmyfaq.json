@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1089216",
+  "certificate_id": "MN-SC-2026-6486712",
   "skill_id": "mn-real-phpmyfaq",
   "skill_name": "phpMyFAQ",
-  "issued_at": "2026-07-06T04:11:29.216Z",
-  "expires_at": "2026-07-13T04:11:29.216Z",
+  "issued_at": "2026-07-06T05:41:26.712Z",
+  "expires_at": "2026-07-13T05:41:26.712Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a40dda0e5189039f406486654bc585023117d144b6cf101179829690a160e93",
+  "signature": "ef312920ffad618e3c94c06712e6ff4ddf09cd480c182f0928b638cefecb1a4e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-phpmyfaq"
 }

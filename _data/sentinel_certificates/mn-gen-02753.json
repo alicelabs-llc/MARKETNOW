@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9693365",
+  "certificate_id": "MN-SC-2026-5392700",
   "skill_id": "mn-gen-02753",
   "skill_name": "Context-signals-mcp",
-  "issued_at": "2026-07-06T03:48:13.365Z",
-  "expires_at": "2026-07-13T03:48:13.365Z",
+  "issued_at": "2026-07-06T05:23:12.700Z",
+  "expires_at": "2026-07-13T05:23:12.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ecb57595eed6dfcf3b7dbd52235057b7f3a81c4b7f8ebf0cfd71e809b2cc139",
+  "signature": "b3fce7943bfdc6f906213be0c554232f0a880885631b791569845c1c5651a2ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02753"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0807671",
+  "certificate_id": "MN-SC-2026-6152174",
   "skill_id": "mn-pro-b14912d3",
   "skill_name": "Live Stream Health Monitor",
-  "issued_at": "2026-07-06T04:06:47.671Z",
-  "expires_at": "2026-07-13T04:06:47.671Z",
+  "issued_at": "2026-07-06T05:35:52.174Z",
+  "expires_at": "2026-07-13T05:35:52.174Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e4d2adc0e7f15cd454d4cdc51d18812478ec2f485a710f24bd0eb7002b63008",
+  "signature": "6d1f786ed6882294b1f8ad5334a61e6faa709928c756973196f15d6f5032830e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-b14912d3"
 }

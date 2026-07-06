@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0896181",
+  "certificate_id": "MN-SC-2026-6257265",
   "skill_id": "mn-awmcp-mockitmcp",
   "skill_name": "mockit-mcp",
-  "issued_at": "2026-07-06T04:08:16.181Z",
-  "expires_at": "2026-07-13T04:08:16.181Z",
+  "issued_at": "2026-07-06T05:37:37.265Z",
+  "expires_at": "2026-07-13T05:37:37.265Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 5,
     "l2_execution_status": "ran"
   },
-  "signature": "2bdabff6f791f821c9a973c18a2693799623f2830437bd309d44e227933152d5",
+  "signature": "9c7c4cbf74b8ee26bd1f891ac07b0a69f306c1f18e38c3f907d2f83d2b13e45e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mockitmcp"
 }

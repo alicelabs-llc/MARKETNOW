@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0365262",
+  "certificate_id": "MN-SC-2026-5659478",
   "skill_id": "mn-gen-09210",
   "skill_name": "Mono-pilot",
-  "issued_at": "2026-07-06T03:59:25.262Z",
-  "expires_at": "2026-07-13T03:59:25.262Z",
+  "issued_at": "2026-07-06T05:27:39.478Z",
+  "expires_at": "2026-07-13T05:27:39.478Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e35bcfe44759a5242cbbe94fa5296863529becab12e3ab060c912a64a1fa5603",
+  "signature": "4ca10d1deecdf4620cc4fb68af4c95a32e0fa9088cd800381049ccf055a98854",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09210"
 }

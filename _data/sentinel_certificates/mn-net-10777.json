@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0431972",
+  "certificate_id": "MN-SC-2026-5726584",
   "skill_id": "mn-net-10777",
   "skill_name": "Public-api-toolkit",
-  "issued_at": "2026-07-06T04:00:31.972Z",
-  "expires_at": "2026-07-13T04:00:31.972Z",
+  "issued_at": "2026-07-06T05:28:46.584Z",
+  "expires_at": "2026-07-13T05:28:46.584Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ecf600536f45cd9c9d712fdde8fefb557fda70189f3ae5c2752b98b79e65828",
+  "signature": "e03dc030ec3ee8e7b09469f5ab633c0a009b3a28b4469b5e2265b44a27ad8958",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-10777"
 }

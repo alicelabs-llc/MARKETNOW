@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9631633",
+  "certificate_id": "MN-SC-2026-5351118",
   "skill_id": "mn-gen-01810",
   "skill_name": "Chargebee/agentkit-repo",
-  "issued_at": "2026-07-06T03:47:11.633Z",
-  "expires_at": "2026-07-13T03:47:11.633Z",
+  "issued_at": "2026-07-06T05:22:31.118Z",
+  "expires_at": "2026-07-13T05:22:31.118Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc6f806a827441f7bfb77e61a6f548ac0c604c97b846299d27ea76c7aa92e6ab",
+  "signature": "8493ed2f4aa45a244d251bf948f02cd26d8f888e8063f35f064fa0a5189c26cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01810"
 }

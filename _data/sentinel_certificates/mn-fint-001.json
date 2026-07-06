@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0852625",
+  "certificate_id": "MN-SC-2026-6206990",
   "skill_id": "mn-fint-001",
   "skill_name": "Stripe Payment Orchestrator",
-  "issued_at": "2026-07-06T04:07:32.625Z",
-  "expires_at": "2026-07-13T04:07:32.625Z",
+  "issued_at": "2026-07-06T05:36:46.990Z",
+  "expires_at": "2026-07-13T05:36:46.990Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "16058682be1d40d4b0879638e3da0a9ba943a0ea4cabc8006db12622c8c19e8c",
+  "signature": "93a6fd2c97516e5e93f04f365fb4553c6f39f651bf6b958b78dd2cd0a8d66bb8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-001"
 }

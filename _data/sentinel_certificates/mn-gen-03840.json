@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9759059",
+  "certificate_id": "MN-SC-2026-5440365",
   "skill_id": "mn-gen-03840",
   "skill_name": "Fabric-mcp",
-  "issued_at": "2026-07-06T03:49:19.059Z",
-  "expires_at": "2026-07-13T03:49:19.059Z",
+  "issued_at": "2026-07-06T05:24:00.365Z",
+  "expires_at": "2026-07-13T05:24:00.365Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc2b40639c9a79db0ed2c1612fd987c4b1480f3fddd572a946561e76bd5a218e",
+  "signature": "f13bcedeb7ddf1aeaeb97c4d15d6d2fc2e5dd39999ced171495755ba10b267d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03840"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1017099",
+  "certificate_id": "MN-SC-2026-6403022",
   "skill_id": "mn-real-bamwormcpserver",
   "skill_name": "bamwor-mcp-server",
-  "issued_at": "2026-07-06T04:10:17.099Z",
-  "expires_at": "2026-07-13T04:10:17.099Z",
+  "issued_at": "2026-07-06T05:40:03.022Z",
+  "expires_at": "2026-07-13T05:40:03.022Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d5e63d8b16676e1553c3772c44406b06ebd419c8399606b8261fe9f3ea869680",
+  "signature": "ef720ced28d6daa40ba4c4a733436ed776334a2fa6a20a67628048b0285ff8fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bamwormcpserver"
 }

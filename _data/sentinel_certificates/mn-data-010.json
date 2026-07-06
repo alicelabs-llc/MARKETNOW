@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0826438",
+  "certificate_id": "MN-SC-2026-6175357",
   "skill_id": "mn-data-010",
   "skill_name": "anonymize-mcp",
-  "issued_at": "2026-07-06T04:07:06.438Z",
-  "expires_at": "2026-07-13T04:07:06.438Z",
+  "issued_at": "2026-07-06T05:36:15.357Z",
+  "expires_at": "2026-07-13T05:36:15.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f72886baf906b70bb0a511ddfcea3d3e8446f1f9cb0351949166ef59f850502c",
+  "signature": "7c59eca8638930bab4b9345b117b3ecdae406579373ee834931ddce6600dc923",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-010"
 }

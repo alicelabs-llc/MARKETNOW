@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9708549",
+  "certificate_id": "MN-SC-2026-5403238",
   "skill_id": "mn-gen-02980",
   "skill_name": "Cursor-cloud-agent-mcp",
-  "issued_at": "2026-07-06T03:48:28.549Z",
-  "expires_at": "2026-07-13T03:48:28.549Z",
+  "issued_at": "2026-07-06T05:23:23.238Z",
+  "expires_at": "2026-07-13T05:23:23.238Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a53b829500582f8deb5a64520e12b0f20ef71453dce85974f7fc67589bb7badc",
+  "signature": "8f3dfff1e3649ea06479ddb389cecdec800295b83e20967c523a9b0ac65b0dd9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02980"
 }

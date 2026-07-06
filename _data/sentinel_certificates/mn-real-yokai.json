@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1086750",
+  "certificate_id": "MN-SC-2026-6483631",
   "skill_id": "mn-real-yokai",
   "skill_name": "yokai",
-  "issued_at": "2026-07-06T04:11:26.750Z",
-  "expires_at": "2026-07-13T04:11:26.750Z",
+  "issued_at": "2026-07-06T05:41:23.631Z",
+  "expires_at": "2026-07-13T05:41:23.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2299afe687227e7d1f308473ffbdd153ce4d29dd99911699a1eac97545c3c404",
+  "signature": "9754ca6b4156471a42da643f9facd13e83ea37714dd65f081647d347f47c5a50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-yokai"
 }

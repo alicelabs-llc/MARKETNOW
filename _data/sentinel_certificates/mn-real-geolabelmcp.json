@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1018608",
+  "certificate_id": "MN-SC-2026-6404893",
   "skill_id": "mn-real-geolabelmcp",
   "skill_name": "geolabel-mcp",
-  "issued_at": "2026-07-06T04:10:18.608Z",
-  "expires_at": "2026-07-13T04:10:18.608Z",
+  "issued_at": "2026-07-06T05:40:04.893Z",
+  "expires_at": "2026-07-13T05:40:04.893Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2eee9656f9b3d02e1a4b43211909a2941194ea1551752c13f6ab324c44d03092",
+  "signature": "0c9c7ebcb4ab74240d29b6d93ef880b7f62f43d48c8efcab2a0c7cf9821c1458",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geolabelmcp"
 }

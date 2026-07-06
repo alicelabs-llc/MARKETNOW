@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1033036",
+  "certificate_id": "MN-SC-2026-6423304",
   "skill_id": "mn-real-mcpsimplepubmed",
   "skill_name": "mcp-simple-pubmed",
-  "issued_at": "2026-07-06T04:10:33.036Z",
-  "expires_at": "2026-07-13T04:10:33.036Z",
+  "issued_at": "2026-07-06T05:40:23.304Z",
+  "expires_at": "2026-07-13T05:40:23.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ae06a75c5f702194f163f86235ce049ed50486a74849e9964dd67d096fab8ab",
+  "signature": "a69a67966e7ffe4e990544ec5d2bcbd1005698987a75b92f2ab410bf9b51f193",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsimplepubmed"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0876800",
+  "certificate_id": "MN-SC-2026-6235567",
   "skill_id": "mn-seller-238747cc",
   "skill_name": "API Schema Validator",
-  "issued_at": "2026-07-06T04:07:56.800Z",
-  "expires_at": "2026-07-13T04:07:56.800Z",
+  "issued_at": "2026-07-06T05:37:15.567Z",
+  "expires_at": "2026-07-13T05:37:15.567Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d9af9a83b66b5fe7706dfbd40f064cba300e708b6abdc5bb450d2d631f202048",
+  "signature": "e0f26fafce7e5e0fa54956383817fa4378c1e07fab9cba29cdf9b1cd4312a94d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-seller-238747cc"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0921066",
+  "certificate_id": "MN-SC-2026-6288066",
   "skill_id": "mn-awmcp-veto",
   "skill_name": "veto",
-  "issued_at": "2026-07-06T04:08:41.066Z",
-  "expires_at": "2026-07-13T04:08:41.066Z",
+  "issued_at": "2026-07-06T05:38:08.066Z",
+  "expires_at": "2026-07-13T05:38:08.066Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f233d8c0d0aad491ac48f7cc18884ce3b015c78c7edab01cd07523923f75a1ed",
+  "signature": "d3b48c37116670886c4a93f8893b132e606dcd9273bd2751d137b9d3c9c1b46c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-veto"
 }

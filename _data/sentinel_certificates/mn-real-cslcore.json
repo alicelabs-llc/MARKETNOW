@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1045408",
+  "certificate_id": "MN-SC-2026-6435044",
   "skill_id": "mn-real-cslcore",
   "skill_name": "csl-core",
-  "issued_at": "2026-07-06T04:10:45.408Z",
-  "expires_at": "2026-07-13T04:10:45.408Z",
+  "issued_at": "2026-07-06T05:40:35.044Z",
+  "expires_at": "2026-07-13T05:40:35.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa594e386fe2f8f41c5dcfee5b54beebfbc7208debae5a3885226a586f604bf5",
+  "signature": "50ae72d88ce2e2181630e77b14c17b56e02353da56f9cfdce60b0f9a5972a777",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cslcore"
 }

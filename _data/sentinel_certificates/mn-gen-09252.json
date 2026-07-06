@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0366544",
+  "certificate_id": "MN-SC-2026-5661001",
   "skill_id": "mn-gen-09252",
   "skill_name": "Ms2-mcp-bridge",
-  "issued_at": "2026-07-06T03:59:26.544Z",
-  "expires_at": "2026-07-13T03:59:26.544Z",
+  "issued_at": "2026-07-06T05:27:41.001Z",
+  "expires_at": "2026-07-13T05:27:41.001Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "07dd1f51db54a6df1a096c3d91998b3995e33e700a186e5d960b1df1237af0ac",
+  "signature": "e5d4fae0d725df0b567d064c21c360329ac4d540aeb145e4f8a6a6f9f957de24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09252"
 }

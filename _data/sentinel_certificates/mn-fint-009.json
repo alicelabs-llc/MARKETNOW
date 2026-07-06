@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0853096",
+  "certificate_id": "MN-SC-2026-6207452",
   "skill_id": "mn-fint-009",
   "skill_name": "Subscription Billing Engine",
-  "issued_at": "2026-07-06T04:07:33.096Z",
-  "expires_at": "2026-07-13T04:07:33.096Z",
+  "issued_at": "2026-07-06T05:36:47.452Z",
+  "expires_at": "2026-07-13T05:36:47.452Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50906873bc0db2afe2bc958b8c084e90af7c5e2466f0e317576829b0300f8296",
+  "signature": "aed424447967f1ee1734ea409f20783c401e7bb2acddd21a436864305749e92c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-009"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1030587",
+  "certificate_id": "MN-SC-2026-6420412",
   "skill_id": "mn-real-touchbrowser",
   "skill_name": "touch-browser",
-  "issued_at": "2026-07-06T04:10:30.587Z",
-  "expires_at": "2026-07-13T04:10:30.587Z",
+  "issued_at": "2026-07-06T05:40:20.412Z",
+  "expires_at": "2026-07-13T05:40:20.412Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6c63e86747d870814051ca14aba65fe951db3a601e1cf90502e025d8baa4773a",
+  "signature": "8cf774d5078cb22fa10a0823762cd6d247dfc047785db1e41e8ef5a48e13035e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-touchbrowser"
 }

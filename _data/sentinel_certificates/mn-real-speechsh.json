@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-1071287",
+  "certificate_id": "MN-SC-2026-6465551",
   "skill_id": "mn-real-speechsh",
   "skill_name": "speech.sh",
-  "issued_at": "2026-07-06T04:11:11.287Z",
-  "expires_at": "2026-07-13T04:11:11.287Z",
+  "issued_at": "2026-07-06T05:41:05.551Z",
+  "expires_at": "2026-07-13T05:41:05.551Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b1f2447973f38e225364d038fa67a21d9fca450cf1af208dffe48ba383d2757",
+  "signature": "2ffdc4c37ba66cb3111c8459e665279d33699897a6d59d0d2c0ca029406684ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-speechsh"
 }

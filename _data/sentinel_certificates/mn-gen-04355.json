@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9791219",
+  "certificate_id": "MN-SC-2026-5461489",
   "skill_id": "mn-gen-04355",
   "skill_name": "Gemini-os",
-  "issued_at": "2026-07-06T03:49:51.219Z",
-  "expires_at": "2026-07-13T03:49:51.219Z",
+  "issued_at": "2026-07-06T05:24:21.489Z",
+  "expires_at": "2026-07-13T05:24:21.489Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6dbe096ce137b723215fcc31da1e3596017e9bc36f991edf7cbbaf65285230f7",
+  "signature": "3cc70502b2fa412afcdf574c86bc5e78d19c902d42d21b72be9752a32dd2e37c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04355"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9636478",
+  "certificate_id": "MN-SC-2026-5353709",
   "skill_id": "mn-gen-01893",
   "skill_name": "Chrome-debugger-mcp",
-  "issued_at": "2026-07-06T03:47:16.478Z",
-  "expires_at": "2026-07-13T03:47:16.478Z",
+  "issued_at": "2026-07-06T05:22:33.709Z",
+  "expires_at": "2026-07-13T05:22:33.709Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13afae2c5f360c622378a0b3a476aeff74cec508d5ccaf76c4d0a7ae61672cc9",
+  "signature": "1b6d1ce9afb453f7f32bca92cc382fba672d27c13d67c0786e9f9195771a1d1e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01893"
 }

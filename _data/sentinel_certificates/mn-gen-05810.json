@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0247052",
+  "certificate_id": "MN-SC-2026-5520389",
   "skill_id": "mn-gen-05810",
   "skill_name": "Llm-cli-gateway",
-  "issued_at": "2026-07-06T03:57:27.052Z",
-  "expires_at": "2026-07-13T03:57:27.052Z",
+  "issued_at": "2026-07-06T05:25:20.389Z",
+  "expires_at": "2026-07-13T05:25:20.389Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c4d14206cbffbac059c0be178818f4bf788b3e67893f03c8d978c1690226a71",
+  "signature": "33e3d5ad26504ccf8bcebeb8b7d3184aab20726085162f7280477b319b47bae7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05810"
 }

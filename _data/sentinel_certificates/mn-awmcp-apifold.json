@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0882538",
+  "certificate_id": "MN-SC-2026-6242101",
   "skill_id": "mn-awmcp-apifold",
   "skill_name": "APIFold",
-  "issued_at": "2026-07-06T04:08:02.538Z",
-  "expires_at": "2026-07-13T04:08:02.538Z",
+  "issued_at": "2026-07-06T05:37:22.101Z",
+  "expires_at": "2026-07-13T05:37:22.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "ede148c19712f214db1f7a049285332f7fb819aee7299e2a1afc92b37f072506",
+  "signature": "48b60e23423cc85b9ac0bff20fcc032d491443af013b9c3ad8049b004ae45cf2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-apifold"
 }

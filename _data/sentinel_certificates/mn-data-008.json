@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0826547",
+  "certificate_id": "MN-SC-2026-6175471",
   "skill_id": "mn-data-008",
   "skill_name": "Hypothesis Tester",
-  "issued_at": "2026-07-06T04:07:06.547Z",
-  "expires_at": "2026-07-13T04:07:06.547Z",
+  "issued_at": "2026-07-06T05:36:15.471Z",
+  "expires_at": "2026-07-13T05:36:15.471Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65ccee87ff388c2528ef57ba9019e5c22dde945cdee27ae9be2ed20b4a0985ec",
+  "signature": "c8a1468297e41b0e32ccf47dbebe88278dc70eee9b96fb35e4750248ae6ed428",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-008"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0994482",
+  "certificate_id": "MN-SC-2026-6376534",
   "skill_id": "mn-real-undesirablesmcpserve",
   "skill_name": "undesirables-mcp-server",
-  "issued_at": "2026-07-06T04:09:54.482Z",
-  "expires_at": "2026-07-13T04:09:54.482Z",
+  "issued_at": "2026-07-06T05:39:36.534Z",
+  "expires_at": "2026-07-13T05:39:36.534Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61ce52c28d47b34769b2d2e09dedf965feaae18e768088a40c9624ad92b34116",
+  "signature": "906b1b3cb386ac893776e5a6ea75333d5689f44fa7dea48dfc65da14ff8ed24a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-undesirablesmcpserve"
 }

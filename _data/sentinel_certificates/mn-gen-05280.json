@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-0230017",
+  "certificate_id": "MN-SC-2026-5500184",
   "skill_id": "mn-gen-05280",
   "skill_name": "Jgrants-mcp",
-  "issued_at": "2026-07-06T03:57:10.017Z",
-  "expires_at": "2026-07-13T03:57:10.017Z",
+  "issued_at": "2026-07-06T05:25:00.184Z",
+  "expires_at": "2026-07-13T05:25:00.184Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "73c4a434dc8975346601c724f7e80c4a70633a9a7239b4103c6334b903ded94d",
+  "signature": "91969ebf3cce2d4bab5e9427f629f5b30febb8a68a00fb4c803708c898f73eb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05280"
 }

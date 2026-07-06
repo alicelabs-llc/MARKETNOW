@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-0903720",
+  "certificate_id": "MN-SC-2026-6266034",
   "skill_id": "mn-awmcp-serversarchived",
   "skill_name": "servers-archived",
-  "issued_at": "2026-07-06T04:08:23.720Z",
-  "expires_at": "2026-07-13T04:08:23.720Z",
+  "issued_at": "2026-07-06T05:37:46.034Z",
+  "expires_at": "2026-07-13T05:37:46.034Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "a292b2498e965943e5a348ed6df59c4b1a3049a6a37db499584d9166a67cb6af",
+  "signature": "74f203120db23ab4d2aa3058b0ad3397c5d3dbd771e3f5310bd78717227ebc30",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-serversarchived"
 }

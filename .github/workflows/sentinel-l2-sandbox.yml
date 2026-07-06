@@ -27,6 +27,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sentinel-l2-sandbox-${{ github.event.client_payload.skill_id }}
+  cancel-in-progress: false
+
 jobs:
   sandbox:
     runs-on: ubuntu-latest

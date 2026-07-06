@@ -156,6 +156,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sentinel-l2-reaudit-${{ github.run_id }}
-          path: |
+          /path: /tmp/reaudit.log
+          retention-days: 7|
             /tmp/reaudit.log
           retention-days: 7

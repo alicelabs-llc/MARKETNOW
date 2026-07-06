@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408587",
+  "certificate_id": "MN-SC-2026-6878996",
   "skill_id": "mn-gen-01997",
   "skill_name": "Claude-chrome-mcp",
-  "issued_at": "2026-07-05T23:16:48.587Z",
-  "expires_at": "2026-07-12T23:16:48.587Z",
+  "issued_at": "2026-07-06T00:14:38.996Z",
+  "expires_at": "2026-07-13T00:14:38.996Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ea5b240408f4d42e333523b9b08f62999946153cc3d021d3a84d31f7d6815e6",
+  "signature": "22cc1d259786ca2a6d9648dbb57782099679403e5216704485f19df9d00127d2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01997"
 }

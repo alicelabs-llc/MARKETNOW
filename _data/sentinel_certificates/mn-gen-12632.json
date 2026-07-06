@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410690",
+  "certificate_id": "MN-SC-2026-7356474",
   "skill_id": "mn-gen-12632",
   "skill_name": "Thunderbird-cli",
-  "issued_at": "2026-07-05T23:16:50.690Z",
-  "expires_at": "2026-07-12T23:16:50.690Z",
+  "issued_at": "2026-07-06T00:22:36.474Z",
+  "expires_at": "2026-07-13T00:22:36.474Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e60ca73c88306dde9ae305129ad5504faf348ae681235d241c419a5452df02a",
+  "signature": "4c7fd622dac03f74f30c906144db0e0885fcde7fcfb7ab0738c7450a8f7f5e0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12632"
 }

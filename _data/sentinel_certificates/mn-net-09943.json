@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410310",
+  "certificate_id": "MN-SC-2026-7237501",
   "skill_id": "mn-net-09943",
   "skill_name": "Openapi-mcp-converter",
-  "issued_at": "2026-07-05T23:16:50.310Z",
-  "expires_at": "2026-07-12T23:16:50.310Z",
+  "issued_at": "2026-07-06T00:20:37.501Z",
+  "expires_at": "2026-07-13T00:20:37.501Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2d2924aa49d65d8a23784f3798858d7ab898e40dc818a5a5238fc017acdc75f5",
+  "signature": "ac0388feb3e91fee1f7865dff9ff401e47b6308f734f986d933b05185b2d4aa2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-09943"
 }

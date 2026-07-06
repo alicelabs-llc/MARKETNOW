@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410250",
+  "certificate_id": "MN-SC-2026-7217723",
   "skill_id": "mn-net-09513",
   "skill_name": "Newsapi-mcp",
-  "issued_at": "2026-07-05T23:16:50.250Z",
-  "expires_at": "2026-07-12T23:16:50.250Z",
+  "issued_at": "2026-07-06T00:20:17.723Z",
+  "expires_at": "2026-07-13T00:20:17.723Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8504c3971468d67bb61abdac9ee7bb28ce29c33dcbb57cac706ae544e1f73fee",
+  "signature": "bf715e50c4c85f2cd0cf4ece7c6b0c7e00dd27075a7258a734d623e62fa21ddc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-09513"
 }

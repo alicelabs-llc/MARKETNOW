@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410019",
+  "certificate_id": "MN-SC-2026-7148805",
   "skill_id": "mn-gen-07732",
   "skill_name": "Mcp-server-meraki-donottrust",
-  "issued_at": "2026-07-05T23:16:50.019Z",
-  "expires_at": "2026-07-12T23:16:50.019Z",
+  "issued_at": "2026-07-06T00:19:08.805Z",
+  "expires_at": "2026-07-13T00:19:08.805Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1b8d1d93aeecafc508cadc9299f535066118f9c240e983c8e27b0a41a5618c0f",
+  "signature": "7ee645a26b437165291d83b63953ef250cff6b8a9fbd62c3336fd281b6317f59",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07732"
 }

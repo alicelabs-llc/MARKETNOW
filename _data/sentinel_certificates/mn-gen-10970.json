@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410464",
+  "certificate_id": "MN-SC-2026-7285386",
   "skill_id": "mn-gen-10970",
   "skill_name": "Qwikvault-mcp",
-  "issued_at": "2026-07-05T23:16:50.464Z",
-  "expires_at": "2026-07-12T23:16:50.464Z",
+  "issued_at": "2026-07-06T00:21:25.386Z",
+  "expires_at": "2026-07-13T00:21:25.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f0495c93b25be940bd58aa281b31264c7fbcfab1e3138e87d55d01bf137719c0",
+  "signature": "0ff9c4b952326c170731e3f96b9fac0a8c235d07dce60b663a01d88d86262668",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10970"
 }

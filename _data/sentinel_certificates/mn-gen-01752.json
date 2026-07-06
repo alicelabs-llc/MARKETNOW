@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3236530",
+  "certificate_id": "MN-SC-2026-6865601",
   "skill_id": "mn-gen-01752",
   "skill_name": "Claude-cci",
-  "issued_at": "2026-07-05T23:13:56.530Z",
-  "expires_at": "2026-07-12T23:13:56.530Z",
+  "issued_at": "2026-07-06T00:14:25.601Z",
+  "expires_at": "2026-07-13T00:14:25.601Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b45956510232b25e05e444f09aab7f44800e0211df6fd47ab8e9d0f44ec8e38",
+  "signature": "5594bcac5340461722696834c62af2f8da55a0e308539fb7a440e6161ec80f1f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01752"
 }

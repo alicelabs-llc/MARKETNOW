@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409849",
+  "certificate_id": "MN-SC-2026-7087192",
   "skill_id": "mn-gen-06463",
   "skill_name": "Mcp-cmd",
-  "issued_at": "2026-07-05T23:16:49.849Z",
-  "expires_at": "2026-07-12T23:16:49.849Z",
+  "issued_at": "2026-07-06T00:18:07.192Z",
+  "expires_at": "2026-07-13T00:18:07.192Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b4b7951e91c0a45fedb9398ab30a17287b87d4e27565ffb485263dd301afe4a",
+  "signature": "b420f83619636da88df30ee515b945046c9ff8c1ab588f40261af70130724f09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06463"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408662",
+  "certificate_id": "MN-SC-2026-6903420",
   "skill_id": "mn-gen-02458",
   "skill_name": "Google-cloud/cloud-run-mcp",
-  "issued_at": "2026-07-05T23:16:48.662Z",
-  "expires_at": "2026-07-12T23:16:48.662Z",
+  "issued_at": "2026-07-06T00:15:03.420Z",
+  "expires_at": "2026-07-13T00:15:03.420Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a63a3fa9cf916257b502ebecce41118c40598fc8b85dbc5133ba833476aaf1ec",
+  "signature": "7784a1e18a39acdca2e63a2ddde88a8c17bd2f9b2ce41c64386a488834e3888b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02458"
 }

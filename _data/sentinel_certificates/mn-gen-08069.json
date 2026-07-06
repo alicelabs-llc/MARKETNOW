@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410084",
+  "certificate_id": "MN-SC-2026-7167556",
   "skill_id": "mn-gen-08069",
   "skill_name": "Theo.foobar/mcp-time",
-  "issued_at": "2026-07-05T23:16:50.084Z",
-  "expires_at": "2026-07-12T23:16:50.084Z",
+  "issued_at": "2026-07-06T00:19:27.556Z",
+  "expires_at": "2026-07-13T00:19:27.556Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70b5888055ed72e1603f3df92ec770949383a06fd1b76367bc6a376fa3544ae4",
+  "signature": "410d24be6c1aa26ecf65141aaf17f1b6683986ce9e2870d14208b97ab6f86c88",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08069"
 }

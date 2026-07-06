@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411861",
+  "certificate_id": "MN-SC-2026-7675391",
   "skill_id": "mn-prompt-9a272fc9",
   "skill_name": "Ecommerce marketplace final",
-  "issued_at": "2026-07-05T23:16:51.861Z",
-  "expires_at": "2026-07-12T23:16:51.861Z",
+  "issued_at": "2026-07-06T00:27:55.391Z",
+  "expires_at": "2026-07-13T00:27:55.391Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d14cdf7b55d36ad8ee837d0c4623e84c57ea72329b69fccf4f33131c12cb063e",
+  "signature": "3c995411c4f97aaeb9cf0d6370618439dff289ad891429b217fe74f9b1527aad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9a272fc9"
 }

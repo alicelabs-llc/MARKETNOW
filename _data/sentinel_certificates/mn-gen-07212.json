@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409958",
+  "certificate_id": "MN-SC-2026-7123656",
   "skill_id": "mn-gen-07212",
   "skill_name": "Mcp-open-library",
-  "issued_at": "2026-07-05T23:16:49.958Z",
-  "expires_at": "2026-07-12T23:16:49.958Z",
+  "issued_at": "2026-07-06T00:18:43.656Z",
+  "expires_at": "2026-07-13T00:18:43.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "caf10ffc6585ffc221e61b7b857652da586a57047cfb971b2edcac71032c7756",
+  "signature": "95d59091c5b3b6810551f4a211f6f566fc0157417103a5d93711549387aed42c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07212"
 }

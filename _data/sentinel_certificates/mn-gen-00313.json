@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2490654",
+  "certificate_id": "MN-SC-2026-6798903",
   "skill_id": "mn-gen-00313",
   "skill_name": "Agent-workflow-mcp-tool",
-  "issued_at": "2026-07-05T23:01:30.654Z",
-  "expires_at": "2026-07-12T23:01:30.654Z",
+  "issued_at": "2026-07-06T00:13:18.903Z",
+  "expires_at": "2026-07-13T00:13:18.903Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9ea7cf602b027234cf539acf6d8f720c98e86424a9dfc35c3f9b444a6c06b36",
+  "signature": "175befcc82c9879a725ad2abee792546512b62d9168430b544ec500057ba1743",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00313"
 }

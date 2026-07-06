@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2492179",
+  "certificate_id": "MN-SC-2026-6799957",
   "skill_id": "mn-gen-00324",
   "skill_name": "Agentchatme/mcp",
-  "issued_at": "2026-07-05T23:01:32.179Z",
-  "expires_at": "2026-07-12T23:01:32.179Z",
+  "issued_at": "2026-07-06T00:13:19.957Z",
+  "expires_at": "2026-07-13T00:13:19.957Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72c518bd679e79a07f8f2f58047e0f8560b6698e579d252c60b70b6a92a8e77a",
+  "signature": "4693f82576990310e03f5bdb502b4dac5c00b77b370ae4bf8418012e35070353",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00324"
 }

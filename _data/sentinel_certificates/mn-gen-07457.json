@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409988",
+  "certificate_id": "MN-SC-2026-7134699",
   "skill_id": "mn-gen-07457",
   "skill_name": "Mcp-s-oauth",
-  "issued_at": "2026-07-05T23:16:49.988Z",
-  "expires_at": "2026-07-12T23:16:49.988Z",
+  "issued_at": "2026-07-06T00:18:54.699Z",
+  "expires_at": "2026-07-13T00:18:54.699Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "22ece9ad36543a328915dbf0da2a73dd5eb13edafa9b0516a217cf82e016540d",
+  "signature": "ddec4f00e8649d2b93b02a2e1bdfeefa01b2d546dd4ef3ffedee0903ec67ad80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07457"
 }

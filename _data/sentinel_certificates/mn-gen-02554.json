@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409291",
+  "certificate_id": "MN-SC-2026-6908482",
   "skill_id": "mn-gen-02554",
   "skill_name": "Skhaall-codeguard",
-  "issued_at": "2026-07-05T23:16:49.291Z",
-  "expires_at": "2026-07-12T23:16:49.291Z",
+  "issued_at": "2026-07-06T00:15:08.482Z",
+  "expires_at": "2026-07-13T00:15:08.482Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0de4fdfa3c96a67baab63283ccef70f62e8f34916ac471606f43412ed19bdfea",
+  "signature": "aa09b006364ee73a471c74bcb4c45677db229ccb53b676d379c86c10ef21d22d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02554"
 }

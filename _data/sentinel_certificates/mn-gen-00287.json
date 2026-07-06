@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2489232",
+  "certificate_id": "MN-SC-2026-6797154",
   "skill_id": "mn-gen-00287",
   "skill_name": "Agent-service-sdk",
-  "issued_at": "2026-07-05T23:01:29.232Z",
-  "expires_at": "2026-07-12T23:01:29.232Z",
+  "issued_at": "2026-07-06T00:13:17.154Z",
+  "expires_at": "2026-07-13T00:13:17.154Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5dd0352590de155c7c76afe467e13d81f3781b94d38fefac5941a6c7856551ae",
+  "signature": "ba14612bb4c3880837d0ff765476c7f50d6eaee20c1329402120f461d9c983a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00287"
 }

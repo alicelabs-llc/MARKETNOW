@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409289",
+  "certificate_id": "MN-SC-2026-6906738",
   "skill_id": "mn-gen-02523",
   "skill_name": "Mettamatt/code-reasoning",
-  "issued_at": "2026-07-05T23:16:49.289Z",
-  "expires_at": "2026-07-12T23:16:49.289Z",
+  "issued_at": "2026-07-06T00:15:06.738Z",
+  "expires_at": "2026-07-13T00:15:06.738Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "290003574c53e8db37b065c4f570c569102e277283500da9e80b41c52a30f984",
+  "signature": "9ba0acd27d35d1e385f2709f1ebc2a44226e4de85fde90f4528df571fe7bd689",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02523"
 }

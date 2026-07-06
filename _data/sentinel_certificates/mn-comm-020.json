@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412383",
+  "certificate_id": "MN-SC-2026-7800445",
   "skill_id": "mn-comm-020",
   "skill_name": "Abandoned Cart Recovery",
-  "issued_at": "2026-07-05T23:16:52.383Z",
-  "expires_at": "2026-07-12T23:16:52.383Z",
+  "issued_at": "2026-07-06T00:30:00.445Z",
+  "expires_at": "2026-07-13T00:30:00.445Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b2cb31a24b7c802edf03a8e97f6c3d55f90a9df856d186506bc2de71170e82ec",
+  "signature": "d708df6c64790caca360d66c2c90ee00660beeda0c6e7bb009028716f561419f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-020"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409614",
+  "certificate_id": "MN-SC-2026-7020768",
   "skill_id": "mn-gen-04890",
   "skill_name": "Vreippainen/hevy-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.614Z",
-  "expires_at": "2026-07-12T23:16:49.614Z",
+  "issued_at": "2026-07-06T00:17:00.768Z",
+  "expires_at": "2026-07-13T00:17:00.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00639083e9e5ae1ef43f3e9e580184da475b875d8816e69f37eb30c11f56b89d",
+  "signature": "21b1f8e3b99619b452b85591933af3700363f62a04c5a857a6f26ea354faa7c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04890"
 }

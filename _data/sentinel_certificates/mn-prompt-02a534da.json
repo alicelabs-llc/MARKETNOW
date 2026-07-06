@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411455",
+  "certificate_id": "MN-SC-2026-7566915",
   "skill_id": "mn-prompt-02a534da",
   "skill_name": "Sales forecast accuracy 90%+",
-  "issued_at": "2026-07-05T23:16:51.455Z",
-  "expires_at": "2026-07-12T23:16:51.455Z",
+  "issued_at": "2026-07-06T00:26:06.915Z",
+  "expires_at": "2026-07-13T00:26:06.915Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "524f89c87131718ab087c172750e665e95d45a333f446aed2661374e33932118",
+  "signature": "cda844a8f2a4824be1db2de98f604920a26832ae972cdd1155201848ef74c7f1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-02a534da"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410118",
+  "certificate_id": "MN-SC-2026-7180198",
   "skill_id": "mn-gen-08482",
   "skill_name": "Mcp-generator",
-  "issued_at": "2026-07-05T23:16:50.118Z",
-  "expires_at": "2026-07-12T23:16:50.118Z",
+  "issued_at": "2026-07-06T00:19:40.198Z",
+  "expires_at": "2026-07-13T00:19:40.198Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9d383f3d1cc2681c8daa5e66ac2f4ab093220e745e390ecbb1e9ffe6c9a4ad3",
+  "signature": "4dbe60ce2c741238a2364529129a855e3a768b323e6addf7843693541ee7b32d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08482"
 }

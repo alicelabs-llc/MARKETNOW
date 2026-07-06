@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410846",
+  "certificate_id": "MN-SC-2026-7396566",
   "skill_id": "mn-gen-13452",
   "skill_name": "Win32-mcp-inspector",
-  "issued_at": "2026-07-05T23:16:50.846Z",
-  "expires_at": "2026-07-12T23:16:50.846Z",
+  "issued_at": "2026-07-06T00:23:16.566Z",
+  "expires_at": "2026-07-13T00:23:16.566Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72047e4b4486c53241d4aff64f54799ecddfd2e2ac7c3ac114f47a538dd6b89b",
+  "signature": "548f02eda35de10d3ce716a4d9bcc408c3675657c4ed12865d793b3114e61064",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13452"
 }

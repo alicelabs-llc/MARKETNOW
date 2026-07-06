@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2979426",
+  "certificate_id": "MN-SC-2026-6828552",
   "skill_id": "mn-sec-00005",
   "skill_name": "LLMCostWatch",
-  "issued_at": "2026-07-05T23:09:39.426Z",
-  "expires_at": "2026-07-12T23:09:39.426Z",
+  "issued_at": "2026-07-06T00:13:48.552Z",
+  "expires_at": "2026-07-13T00:13:48.552Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "48c8fff975204010fb215745a7806f2e4440633ce21afea19a2d2f941479df5a",
+  "signature": "2243cca465ecae5d57ea942ba7599d0bcc1634492951b923362e9261e8e34697",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-00005"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409502",
+  "certificate_id": "MN-SC-2026-6986211",
   "skill_id": "mn-gen-04096",
   "skill_name": "Flight-monorepo",
-  "issued_at": "2026-07-05T23:16:49.502Z",
-  "expires_at": "2026-07-12T23:16:49.502Z",
+  "issued_at": "2026-07-06T00:16:26.211Z",
+  "expires_at": "2026-07-13T00:16:26.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6177c9af85435d5177d6efb544f586cceecb44ae3f81dd46a26267882b9f4871",
+  "signature": "668444d344a9f60d021f3e67c954ea457278c754fb14e2e9a115a4712e0831cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04096"
 }

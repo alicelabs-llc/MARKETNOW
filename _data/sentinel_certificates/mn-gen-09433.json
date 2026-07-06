@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410247",
+  "certificate_id": "MN-SC-2026-7215469",
   "skill_id": "mn-gen-09433",
   "skill_name": "Nashville-charts-app",
-  "issued_at": "2026-07-05T23:16:50.247Z",
-  "expires_at": "2026-07-12T23:16:50.247Z",
+  "issued_at": "2026-07-06T00:20:15.469Z",
+  "expires_at": "2026-07-13T00:20:15.469Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6230baa80ab986b2301209c46310eca509203fd3107c1deddd4238a5f1980a08",
+  "signature": "d53a31bd0deda5d8336f81ee8b2a40e10304c9b238f9e289ed88ce00fbf17c19",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09433"
 }

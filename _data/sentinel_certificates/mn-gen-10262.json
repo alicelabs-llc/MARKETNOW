@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410358",
+  "certificate_id": "MN-SC-2026-7252947",
   "skill_id": "mn-gen-10262",
   "skill_name": "Kud/pcloud-sdk",
-  "issued_at": "2026-07-05T23:16:50.358Z",
-  "expires_at": "2026-07-12T23:16:50.358Z",
+  "issued_at": "2026-07-06T00:20:52.947Z",
+  "expires_at": "2026-07-13T00:20:52.947Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40a1fb911c1624f07f4c4acfd2777d2140aa2054aa054b904cb96117873f8429",
+  "signature": "b23be092dad2ee0f543ad46920607da76b3dbb20b5a21e5afe0208f1aa454be8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10262"
 }

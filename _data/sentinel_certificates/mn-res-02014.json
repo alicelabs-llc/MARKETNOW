@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408590",
+  "certificate_id": "MN-SC-2026-6879565",
   "skill_id": "mn-res-02014",
   "skill_name": "Claude-code-conversation-search-mcp",
-  "issued_at": "2026-07-05T23:16:48.590Z",
-  "expires_at": "2026-07-12T23:16:48.590Z",
+  "issued_at": "2026-07-06T00:14:39.565Z",
+  "expires_at": "2026-07-13T00:14:39.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bf066d85a2c2b53b6290f71548a338237baf04ae4d5e78b7366c4ab69ab52198",
+  "signature": "7bf4a398b436c63e40d04e3899fa4dd87aa8e7e877fae82a185c53fe601b8c6a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-02014"
 }

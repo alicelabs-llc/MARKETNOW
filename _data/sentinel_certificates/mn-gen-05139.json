@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409658",
+  "certificate_id": "MN-SC-2026-7031200",
   "skill_id": "mn-gen-05139",
   "skill_name": "Infura-mcp",
-  "issued_at": "2026-07-05T23:16:49.658Z",
-  "expires_at": "2026-07-12T23:16:49.658Z",
+  "issued_at": "2026-07-06T00:17:11.201Z",
+  "expires_at": "2026-07-13T00:17:11.201Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "229d975caf1b2e448204cfeec2faa963afdff59550db72036058240d9eee938c",
+  "signature": "fca5e699becb1752c28bbb3b94968839d26a8db32ed4e9f761b17d07a361c433",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05139"
 }

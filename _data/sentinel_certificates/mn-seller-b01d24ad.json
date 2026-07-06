@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412608",
+  "certificate_id": "MN-SC-2026-7886144",
   "skill_id": "mn-seller-b01d24ad",
   "skill_name": "Refactoring Assistant",
-  "issued_at": "2026-07-05T23:16:52.608Z",
-  "expires_at": "2026-07-12T23:16:52.608Z",
+  "issued_at": "2026-07-06T00:31:26.144Z",
+  "expires_at": "2026-07-13T00:31:26.144Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c6a52ef6647f379acaaf6cd2f831801dd53f6b3de862826470d6681162c73fdc",
+  "signature": "4d9f71d7dacc2d2acda8c99803861c39e6cd1fefdcfd537bada3957d273f7589",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-seller-b01d24ad"
 }

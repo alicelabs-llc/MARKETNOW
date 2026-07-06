@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411954",
+  "certificate_id": "MN-SC-2026-7695231",
   "skill_id": "mn-acm-025",
   "skill_name": "Memory Recall Optimizer",
-  "issued_at": "2026-07-05T23:16:51.954Z",
-  "expires_at": "2026-07-12T23:16:51.954Z",
+  "issued_at": "2026-07-06T00:28:15.231Z",
+  "expires_at": "2026-07-13T00:28:15.231Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "756e5dc16a96fa78bac6e0c00497a0659034695a30d23f1522bb3e101067e2dd",
+  "signature": "13719c28e4ae8ed9e6237342837169a9938bb85feae945d448a79b93f9f59d87",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-025"
 }

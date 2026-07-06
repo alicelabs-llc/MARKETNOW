@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411809",
+  "certificate_id": "MN-SC-2026-7659003",
   "skill_id": "mn-prompt-882cbbce",
   "skill_name": "Healthcare HIPAA compliance",
-  "issued_at": "2026-07-05T23:16:51.809Z",
-  "expires_at": "2026-07-12T23:16:51.809Z",
+  "issued_at": "2026-07-06T00:27:39.003Z",
+  "expires_at": "2026-07-13T00:27:39.003Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3177dd6b5a1d02974ca51f7b8978e26e02caab80d9d47f581d6c299ef883aea2",
+  "signature": "9e79297e507ecfa38f7af6a103820af2ab2259a149397f2686f2790820499819",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-882cbbce"
 }

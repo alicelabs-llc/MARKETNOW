@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410469",
+  "certificate_id": "MN-SC-2026-7290304",
   "skill_id": "mn-gen-11095",
   "skill_name": "Redash-mcp",
-  "issued_at": "2026-07-05T23:16:50.469Z",
-  "expires_at": "2026-07-12T23:16:50.469Z",
+  "issued_at": "2026-07-06T00:21:30.304Z",
+  "expires_at": "2026-07-13T00:21:30.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9aa9933daf57559257e54bc2efe53c06662382ccadae43da8345d06319956fa7",
+  "signature": "3e19c434ed9d1d7c77be3c0ae927a222fb82c623eb853eff6806fa8901f111e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11095"
 }

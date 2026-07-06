@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409551",
+  "certificate_id": "MN-SC-2026-6996988",
   "skill_id": "mn-gen-04332",
   "skill_name": "Gemini-cli-orchestrator",
-  "issued_at": "2026-07-05T23:16:49.551Z",
-  "expires_at": "2026-07-12T23:16:49.551Z",
+  "issued_at": "2026-07-06T00:16:36.988Z",
+  "expires_at": "2026-07-13T00:16:36.988Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c73bc2ef443196a69c7329578a234ee00347d496ea74d90ec0f24b5349547ae5",
+  "signature": "2ccc9e8cabd2f5b43fc2608ab9e1c8eec33343a59075e0d94a07eb54a35014a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04332"
 }

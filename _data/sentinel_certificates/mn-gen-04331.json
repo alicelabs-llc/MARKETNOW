@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409551",
+  "certificate_id": "MN-SC-2026-6996506",
   "skill_id": "mn-gen-04331",
   "skill_name": "Cainmaila/gemini-cli-mcp",
-  "issued_at": "2026-07-05T23:16:49.551Z",
-  "expires_at": "2026-07-12T23:16:49.551Z",
+  "issued_at": "2026-07-06T00:16:36.506Z",
+  "expires_at": "2026-07-13T00:16:36.506Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7f76ea2402cb434ca7776ccf0c2a5a168416f008df64443f035de1fb5b191616",
+  "signature": "90511f1c4b4d4a43087d7429144d132cf59da12eee4baf221f753a1524c6253c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04331"
 }

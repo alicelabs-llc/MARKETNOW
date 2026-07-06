@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3223801",
+  "certificate_id": "MN-SC-2026-6847994",
   "skill_id": "mn-ai-01472",
   "skill_name": "Bluesky-daily-mcp",
-  "issued_at": "2026-07-05T23:13:43.801Z",
-  "expires_at": "2026-07-12T23:13:43.801Z",
+  "issued_at": "2026-07-06T00:14:07.994Z",
+  "expires_at": "2026-07-13T00:14:07.994Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31741acf724be073b69d415addaa8fed60060add33fea256ca499718faa06ced",
+  "signature": "c23362b3a2c3fbb1c60efec0156ca270285cc625090ddfeacfc268f71b444a0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01472"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3225006",
+  "certificate_id": "MN-SC-2026-6849548",
   "skill_id": "mn-gen-01498",
   "skill_name": "Bookstack-mcp",
-  "issued_at": "2026-07-05T23:13:45.006Z",
-  "expires_at": "2026-07-12T23:13:45.006Z",
+  "issued_at": "2026-07-06T00:14:09.548Z",
+  "expires_at": "2026-07-13T00:14:09.548Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d831c88bca2f5d6164f1c9f586df902eb04eb98ed9378202fa9a00632bb836f6",
+  "signature": "8bc75b1553ca9285e04ca47c067e9a6baa86bd0a70c3be8172c3fbae91dad7a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01498"
 }

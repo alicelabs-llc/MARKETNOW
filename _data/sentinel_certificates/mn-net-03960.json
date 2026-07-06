@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409495",
+  "certificate_id": "MN-SC-2026-6980221",
   "skill_id": "mn-net-03960",
   "skill_name": "Feriados-api/mcp-server",
-  "issued_at": "2026-07-05T23:16:49.495Z",
-  "expires_at": "2026-07-12T23:16:49.495Z",
+  "issued_at": "2026-07-06T00:16:20.221Z",
+  "expires_at": "2026-07-13T00:16:20.221Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "640219f5fd852f9b83a4c8191a6a13241903782c09dbde043284174bb76ec6ca",
+  "signature": "e29f55e81e3dba2b37593ee0be97f440298264d45308dbb1d959f1fa9ad6b6af",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-03960"
 }

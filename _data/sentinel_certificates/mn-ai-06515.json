@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409852",
+  "certificate_id": "MN-SC-2026-7089904",
   "skill_id": "mn-ai-06515",
   "skill_name": "Mcp-constraint-monitor",
-  "issued_at": "2026-07-05T23:16:49.852Z",
-  "expires_at": "2026-07-12T23:16:49.852Z",
+  "issued_at": "2026-07-06T00:18:09.904Z",
+  "expires_at": "2026-07-13T00:18:09.904Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72164a90e3135c1a400afbf6fc72bd2fbaca32730765b87cc45b3c65fcbb86e2",
+  "signature": "388d8317adc64c4624a489ed75a9235372cf820aa077a1f1fd1dd4b819300313",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06515"
 }

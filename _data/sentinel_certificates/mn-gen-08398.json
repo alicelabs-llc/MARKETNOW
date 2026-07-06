@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410116",
+  "certificate_id": "MN-SC-2026-7177503",
   "skill_id": "mn-gen-08398",
   "skill_name": "Josephgec/mcpaudit",
-  "issued_at": "2026-07-05T23:16:50.116Z",
-  "expires_at": "2026-07-12T23:16:50.116Z",
+  "issued_at": "2026-07-06T00:19:37.503Z",
+  "expires_at": "2026-07-13T00:19:37.503Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7a91e6745b596f557f12df1173bcd77ef4abe07e15a2e66f5cb2a3bc0b76e3ca",
+  "signature": "81e72431591d0001363c874f8d9e3352203308ee1bed3bb31237752676c6176f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08398"
 }

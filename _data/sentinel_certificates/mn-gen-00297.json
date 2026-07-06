@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2489943",
+  "certificate_id": "MN-SC-2026-6797755",
   "skill_id": "mn-gen-00297",
   "skill_name": "Agent-spotlight-app",
-  "issued_at": "2026-07-05T23:01:29.943Z",
-  "expires_at": "2026-07-12T23:01:29.943Z",
+  "issued_at": "2026-07-06T00:13:17.755Z",
+  "expires_at": "2026-07-13T00:13:17.755Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "145fb380da0070a4d6a776e09a1f50fbc0fdcf7a0b9e088f03a4bd7589d0b6fa",
+  "signature": "910b23f5f395fcc2e97dd751152a0a0e902af30ce88d28a6d7ac8fcf9530a2d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00297"
 }

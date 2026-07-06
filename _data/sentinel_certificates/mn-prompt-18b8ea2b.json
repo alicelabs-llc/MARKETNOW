@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411553",
+  "certificate_id": "MN-SC-2026-7586125",
   "skill_id": "mn-prompt-18b8ea2b",
   "skill_name": "HR risk management",
-  "issued_at": "2026-07-05T23:16:51.553Z",
-  "expires_at": "2026-07-12T23:16:51.553Z",
+  "issued_at": "2026-07-06T00:26:26.125Z",
+  "expires_at": "2026-07-13T00:26:26.125Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b2149c0f089123cb64f45db0cd6ff260e3c9134a0aa444ed7300e96a7551ec5f",
+  "signature": "ceb7e14ffdafa264895c91ec2c03e36ea2f87071c75d4d0e75b473836ded62c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-18b8ea2b"
 }

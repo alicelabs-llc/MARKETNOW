@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409996",
+  "certificate_id": "MN-SC-2026-7143211",
   "skill_id": "mn-gen-07650",
   "skill_name": "Modelcontextprotocol/mcp-server-firecrawl",
-  "issued_at": "2026-07-05T23:16:49.996Z",
-  "expires_at": "2026-07-12T23:16:49.996Z",
+  "issued_at": "2026-07-06T00:19:03.211Z",
+  "expires_at": "2026-07-13T00:19:03.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f04c9ddfb9eca21f6a04fdeda1dcfa8ed95a5843b0f52d0cd92af7a8b0cf3767",
+  "signature": "2fb7494ae4c621f39a71db82e544d9049f08bcd0337c90feaf27a941f2220d24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07650"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409683",
+  "certificate_id": "MN-SC-2026-7038742",
   "skill_id": "mn-gen-05325",
   "skill_name": "Jobjourney-claude-plugin",
-  "issued_at": "2026-07-05T23:16:49.683Z",
-  "expires_at": "2026-07-12T23:16:49.683Z",
+  "issued_at": "2026-07-06T00:17:18.742Z",
+  "expires_at": "2026-07-13T00:17:18.742Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b0b86d0a88a04f1159e9bb2097e40604bb419ed7bc31579a1a762191a217d81",
+  "signature": "e2e225868ea5d4577ef0b1903d374061e7472a74abab2cb3a67dc53181f8829c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05325"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410760",
+  "certificate_id": "MN-SC-2026-7379259",
   "skill_id": "mn-gen-13128",
   "skill_name": "Venice-mcp",
-  "issued_at": "2026-07-05T23:16:50.760Z",
-  "expires_at": "2026-07-12T23:16:50.760Z",
+  "issued_at": "2026-07-06T00:22:59.259Z",
+  "expires_at": "2026-07-13T00:22:59.259Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b45da21a06a600b5eae79c3a9dd09964d6837deec52a1699de3c6f9dd2c2d58",
+  "signature": "e0e18572727f5c81fb7ebd242f834a45ed7de45b271d578d3fb235704cc0d987",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13128"
 }

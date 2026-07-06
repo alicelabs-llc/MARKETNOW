@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2670733",
+  "certificate_id": "MN-SC-2026-6807973",
   "skill_id": "mn-ai-00600",
   "skill_name": "Crowdstrike/aidr-mcp-server",
-  "issued_at": "2026-07-05T23:04:30.733Z",
-  "expires_at": "2026-07-12T23:04:30.733Z",
+  "issued_at": "2026-07-06T00:13:27.973Z",
+  "expires_at": "2026-07-13T00:13:27.973Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6772eb10b9ea4cf159ea261fc75a47d3d9f8c8b25785b7dbfc3d4e885e4fb321",
+  "signature": "162ee1cff5dbcb194afa4e064ead34d6146c806a3e2d905a7923a176ffb1b0e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00600"
 }

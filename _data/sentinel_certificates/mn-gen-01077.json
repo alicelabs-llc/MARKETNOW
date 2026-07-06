@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2985781",
+  "certificate_id": "MN-SC-2026-6833049",
   "skill_id": "mn-gen-01077",
   "skill_name": "Attom-mcp-server",
-  "issued_at": "2026-07-05T23:09:45.781Z",
-  "expires_at": "2026-07-12T23:09:45.781Z",
+  "issued_at": "2026-07-06T00:13:53.049Z",
+  "expires_at": "2026-07-13T00:13:53.049Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00211ced8b7e504f5fe69b79e49e458830d078803f58066f2dceed6c93d9cfad",
+  "signature": "f95b3b0624f9774de3deca3c4252b280c213b7932b476e92ac324932e72004a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01077"
 }

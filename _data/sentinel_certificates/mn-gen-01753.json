@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3236831",
+  "certificate_id": "MN-SC-2026-6865707",
   "skill_id": "mn-gen-01753",
   "skill_name": "Ccinspect",
-  "issued_at": "2026-07-05T23:13:56.831Z",
-  "expires_at": "2026-07-12T23:13:56.831Z",
+  "issued_at": "2026-07-06T00:14:25.707Z",
+  "expires_at": "2026-07-13T00:14:25.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b8d6f410855425eb894d199523d98b8220441c3b469bd4f2ef9814211227b7e",
+  "signature": "aacd3a80eefa4c00704d996ca404d0c1f30a4c5e8c35bee5f3ffd92b68616a5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01753"
 }

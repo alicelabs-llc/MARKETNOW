@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412106",
+  "certificate_id": "MN-SC-2026-7738212",
   "skill_id": "mn-voi-00017",
   "skill_name": "Voicegain STT",
-  "issued_at": "2026-07-05T23:16:52.106Z",
-  "expires_at": "2026-07-12T23:16:52.106Z",
+  "issued_at": "2026-07-06T00:28:58.212Z",
+  "expires_at": "2026-07-13T00:28:58.212Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49d44ac25f44818a3d3e213c743b3c2b49c7a229835f92a0403bfd74300bdb5c",
+  "signature": "522e12c86423046b5c1fa6ff915b61f2a42c7b3ccea4da1658f9f0091ca3cef4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00017"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410852",
+  "certificate_id": "MN-SC-2026-7402932",
   "skill_id": "mn-gen-13586",
   "skill_name": "X402-mcp-proxy",
-  "issued_at": "2026-07-05T23:16:50.852Z",
-  "expires_at": "2026-07-12T23:16:50.852Z",
+  "issued_at": "2026-07-06T00:23:22.932Z",
+  "expires_at": "2026-07-13T00:23:22.932Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dda699a4307e91222bd9ae89904b3787ba03fd1adb8e160cb2f59fd04e86bcea",
+  "signature": "35da7f29f3d2c2dc5232b03c1b51937c88be69aa0c5ef29d914797af1612ee50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13586"
 }

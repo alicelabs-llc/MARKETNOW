@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410162",
+  "certificate_id": "MN-SC-2026-7189420",
   "skill_id": "mn-res-08863",
   "skill_name": "Meilisearch-ts-mcp",
-  "issued_at": "2026-07-05T23:16:50.162Z",
-  "expires_at": "2026-07-12T23:16:50.162Z",
+  "issued_at": "2026-07-06T00:19:49.420Z",
+  "expires_at": "2026-07-13T00:19:49.420Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83eec08ee0038830d6de77bf67dd02ea1c463b3a266ea8f8d95761a2c4c27421",
+  "signature": "70d7c685d78c3544611d0f43bd7446aeabbbc898031ac78d4803cc967042fc2b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-08863"
 }

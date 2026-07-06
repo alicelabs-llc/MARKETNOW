@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409467",
+  "certificate_id": "MN-SC-2026-6971139",
   "skill_id": "mn-blo-03747",
   "skill_name": "Etherscan-mcp",
-  "issued_at": "2026-07-05T23:16:49.467Z",
-  "expires_at": "2026-07-12T23:16:49.467Z",
+  "issued_at": "2026-07-06T00:16:11.139Z",
+  "expires_at": "2026-07-13T00:16:11.139Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b39385e4460a573f248b804b307c8b44d8a716b4e2263e6eb1fd547115e6120",
+  "signature": "4c73a5f4801d91adfb14a708244ed9e9f99700efed1a00d94723dec22574919c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-03747"
 }

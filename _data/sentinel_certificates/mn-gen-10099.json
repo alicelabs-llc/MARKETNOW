@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410349",
+  "certificate_id": "MN-SC-2026-7244981",
   "skill_id": "mn-gen-10099",
   "skill_name": "Orkajs-monorepo",
-  "issued_at": "2026-07-05T23:16:50.349Z",
-  "expires_at": "2026-07-12T23:16:50.349Z",
+  "issued_at": "2026-07-06T00:20:44.981Z",
+  "expires_at": "2026-07-13T00:20:44.981Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2987187692715c3cf53df29a14e17b31a1c39544d0a14ef6ed4ebbc46f0f5ab3",
+  "signature": "531b553461cce02d380255bdce2c584cf195bf65aca12f53e4568711e0cdcd86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10099"
 }

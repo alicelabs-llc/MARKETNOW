@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412345",
+  "certificate_id": "MN-SC-2026-7791993",
   "skill_id": "mn-auto-019",
   "skill_name": "Approval Workflow",
-  "issued_at": "2026-07-05T23:16:52.345Z",
-  "expires_at": "2026-07-12T23:16:52.345Z",
+  "issued_at": "2026-07-06T00:29:51.993Z",
+  "expires_at": "2026-07-13T00:29:51.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff049faffa0a32dd75de28d98bb217617c243c88a545ca7c83eb7fd721d95b00",
+  "signature": "5d8fa7f20c3e94b93d8366f390b7c2f1b68bfa0ac7157f811d3fa77615cd35e7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-019"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409556",
+  "certificate_id": "MN-SC-2026-7002590",
   "skill_id": "mn-gen-04445",
   "skill_name": "Gitea-mcp",
-  "issued_at": "2026-07-05T23:16:49.556Z",
-  "expires_at": "2026-07-12T23:16:49.556Z",
+  "issued_at": "2026-07-06T00:16:42.590Z",
+  "expires_at": "2026-07-13T00:16:42.590Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "967b460e93598eb0136e30bc6418fdedf49e84f19f118033ac37c89db1e4f093",
+  "signature": "19b6e481a87dc536ae5c3493655d03bff20d9edf466d5bfa0cc8d88a0ccbaebf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04445"
 }

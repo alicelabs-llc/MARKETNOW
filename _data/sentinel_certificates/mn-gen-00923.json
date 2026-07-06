@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2975963",
+  "certificate_id": "MN-SC-2026-6826323",
   "skill_id": "mn-gen-00923",
   "skill_name": "Mcp/arcas-onlineeda-server",
-  "issued_at": "2026-07-05T23:09:35.963Z",
-  "expires_at": "2026-07-12T23:09:35.963Z",
+  "issued_at": "2026-07-06T00:13:46.323Z",
+  "expires_at": "2026-07-13T00:13:46.323Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95b900f195340afd8558b059e205f69c349a542b862dfec3d3a88c78defa1c29",
+  "signature": "f57c4e9515677c1ed1c4b541794bd2ca3f02c1812db0e89941016613b75bc094",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00923"
 }

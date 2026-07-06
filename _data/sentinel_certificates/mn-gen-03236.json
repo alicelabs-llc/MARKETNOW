@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409388",
+  "certificate_id": "MN-SC-2026-6949398",
   "skill_id": "mn-gen-03236",
   "skill_name": "Deployhq-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.388Z",
-  "expires_at": "2026-07-12T23:16:49.388Z",
+  "issued_at": "2026-07-06T00:15:49.398Z",
+  "expires_at": "2026-07-13T00:15:49.398Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a0056fcd15f757ceadc4785c6262fa56356d9d8c10ce0aa20cb42aaf404c7c12",
+  "signature": "9a7bcc8221d295edcca584220b22efa4be7b4db1640598b50f57f573cc4f1c49",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03236"
 }

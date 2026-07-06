@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2672296",
+  "certificate_id": "MN-SC-2026-6808493",
   "skill_id": "mn-ai-00609",
   "skill_name": "Aigroup-market-mcp",
-  "issued_at": "2026-07-05T23:04:32.296Z",
-  "expires_at": "2026-07-12T23:04:32.296Z",
+  "issued_at": "2026-07-06T00:13:28.493Z",
+  "expires_at": "2026-07-13T00:13:28.493Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b0415645572285bf830702d310e66f0c99139258ebea8eeea08c0dcca1983bd2",
+  "signature": "a5a67b358f29368289307a370bd91941a1707ec94573418f5770e259ba6f54ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00609"
 }

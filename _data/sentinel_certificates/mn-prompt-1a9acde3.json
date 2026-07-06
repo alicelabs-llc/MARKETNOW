@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411755",
+  "certificate_id": "MN-SC-2026-7644786",
   "skill_id": "mn-prompt-1a9acde3",
   "skill_name": "Real-time alerting system",
-  "issued_at": "2026-07-05T23:16:51.755Z",
-  "expires_at": "2026-07-12T23:16:51.755Z",
+  "issued_at": "2026-07-06T00:27:24.786Z",
+  "expires_at": "2026-07-13T00:27:24.786Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b871deb52d1aa61452019c07ada280f30d1d6f6e6dac89c4b572d93cb6a5bf2f",
+  "signature": "dcbadd92c4f13bd2569471c69d48b340aa573c2803db1c77222f61200b200fbe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1a9acde3"
 }

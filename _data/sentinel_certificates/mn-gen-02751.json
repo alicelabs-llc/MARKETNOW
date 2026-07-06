@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409325",
+  "certificate_id": "MN-SC-2026-6921371",
   "skill_id": "mn-gen-02751",
   "skill_name": "Context-repo-mcp",
-  "issued_at": "2026-07-05T23:16:49.325Z",
-  "expires_at": "2026-07-12T23:16:49.325Z",
+  "issued_at": "2026-07-06T00:15:21.371Z",
+  "expires_at": "2026-07-13T00:15:21.371Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b10a734e5914cc63f39553999db354c32ca97a942463a2f874aaee0f5484192",
+  "signature": "914406f616f2e9b454555894a5e20795f6003e3936ec48918932922f5dec18fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02751"
 }

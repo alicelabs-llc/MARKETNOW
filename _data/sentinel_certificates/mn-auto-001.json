@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412343",
+  "certificate_id": "MN-SC-2026-7790409",
   "skill_id": "mn-auto-001",
   "skill_name": "Zapier Integration",
-  "issued_at": "2026-07-05T23:16:52.343Z",
-  "expires_at": "2026-07-12T23:16:52.343Z",
+  "issued_at": "2026-07-06T00:29:50.409Z",
+  "expires_at": "2026-07-13T00:29:50.409Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7a6ebb0f251f769b9c4505bd1c377f11887892e223c58c66f32a6bd7859b5320",
+  "signature": "818ad36af5172a7581b14a41f3fecfed5fc13a162866346e0b840fc01e837e50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-001"
 }

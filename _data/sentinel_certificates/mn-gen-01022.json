@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2981545",
+  "certificate_id": "MN-SC-2026-6830446",
   "skill_id": "mn-gen-01022",
   "skill_name": "Asset-price-mcp",
-  "issued_at": "2026-07-05T23:09:41.545Z",
-  "expires_at": "2026-07-12T23:09:41.545Z",
+  "issued_at": "2026-07-06T00:13:50.446Z",
+  "expires_at": "2026-07-13T00:13:50.446Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be807c65dd5f2a63d0e5bc4720bdc753dfb5fc4f38cfa7805f0fae0aabe0f0d7",
+  "signature": "b7f846d6068efe30d7afcafb73cdbc704ace68eabb40754fd183ca88bbf710d2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01022"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411957",
+  "certificate_id": "MN-SC-2026-7697850",
   "skill_id": "mn-apd-004",
   "skill_name": "Agent Cost Monitor",
-  "issued_at": "2026-07-05T23:16:51.957Z",
-  "expires_at": "2026-07-12T23:16:51.957Z",
+  "issued_at": "2026-07-06T00:28:17.850Z",
+  "expires_at": "2026-07-13T00:28:17.850Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "834016d9f8c7d1640825c9a693337d3d735ab97f3853a0526b46be5beea65275",
+  "signature": "a3dec3372a8f950c8396e328ddd0cf5e472c490eb506547e5fe9e6ba0192becb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-004"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412208",
+  "certificate_id": "MN-SC-2026-7762271",
   "skill_id": "mn-pro-93a1db54",
   "skill_name": "Cloud Tagging Enforcer",
-  "issued_at": "2026-07-05T23:16:52.208Z",
-  "expires_at": "2026-07-12T23:16:52.208Z",
+  "issued_at": "2026-07-06T00:29:22.271Z",
+  "expires_at": "2026-07-13T00:29:22.271Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a37ba11d7a3f363e1b4c78680311d6991b67af2eac970315730a4a3ee11d4bfd",
+  "signature": "c5c641a65147db350136b3eac9daac79e15b6f27503b893d3e2f61d4edae224e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-93a1db54"
 }

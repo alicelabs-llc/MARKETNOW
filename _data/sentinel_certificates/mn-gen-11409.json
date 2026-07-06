@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410502",
+  "certificate_id": "MN-SC-2026-7303429",
   "skill_id": "mn-gen-11409",
   "skill_name": "Safer",
-  "issued_at": "2026-07-05T23:16:50.502Z",
-  "expires_at": "2026-07-12T23:16:50.502Z",
+  "issued_at": "2026-07-06T00:21:43.429Z",
+  "expires_at": "2026-07-13T00:21:43.429Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c1c3496d03366594b7b059f52cb166c90f6976380a1f2f7cacd050afe444203",
+  "signature": "1bc84d86f348e9ee0027c4e55dbeb43bc4175f47f662954eb5758947f22f745a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11409"
 }

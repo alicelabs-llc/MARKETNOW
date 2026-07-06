@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412167",
+  "certificate_id": "MN-SC-2026-7749514",
   "skill_id": "mn-pro-403e9936",
   "skill_name": "GitOps Sync Monitor",
-  "issued_at": "2026-07-05T23:16:52.167Z",
-  "expires_at": "2026-07-12T23:16:52.167Z",
+  "issued_at": "2026-07-06T00:29:09.514Z",
+  "expires_at": "2026-07-13T00:29:09.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "404fd3a351af75350a823677c49d15a2b165646f017f1c00f17bd5302bc595b3",
+  "signature": "3eeeabba738fb9bf469595420206aeb9590eab36abeb96fe84047ff5c94fa742",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-403e9936"
 }

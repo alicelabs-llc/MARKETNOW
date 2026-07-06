@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410195",
+  "certificate_id": "MN-SC-2026-7204630",
   "skill_id": "mn-res-09241",
   "skill_name": "Acwink/movies-search-mcp",
-  "issued_at": "2026-07-05T23:16:50.195Z",
-  "expires_at": "2026-07-12T23:16:50.195Z",
+  "issued_at": "2026-07-06T00:20:04.630Z",
+  "expires_at": "2026-07-13T00:20:04.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8fb17b6662de054ab95bbd47d53fc6ffd2a70963dd9276f32c276552a3a5b5b7",
+  "signature": "c12f484af5c4895745b90dadd6e2bac757e11f0ac024fefbbe6ebffa4b75709d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-09241"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409473",
+  "certificate_id": "MN-SC-2026-6975466",
   "skill_id": "mn-gen-03817",
   "skill_name": "Exposnap",
-  "issued_at": "2026-07-05T23:16:49.473Z",
-  "expires_at": "2026-07-12T23:16:49.473Z",
+  "issued_at": "2026-07-06T00:16:15.466Z",
+  "expires_at": "2026-07-13T00:16:15.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de9a803e80d20073c68819bb01112b7e8faf832073223de0b082efea2b3bf339",
+  "signature": "ef74bbb15b749cdb7a8bbba7ae4a5d3bfcfd8f77ce252eedfd8a76fda551694f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03817"
 }

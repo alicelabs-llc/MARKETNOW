@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410409",
+  "certificate_id": "MN-SC-2026-7268609",
   "skill_id": "mn-gen-10640",
   "skill_name": "Prd-creator-mcp",
-  "issued_at": "2026-07-05T23:16:50.409Z",
-  "expires_at": "2026-07-12T23:16:50.409Z",
+  "issued_at": "2026-07-06T00:21:08.609Z",
+  "expires_at": "2026-07-13T00:21:08.609Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c0cf047aada6e972c82f7186c9af7baa8c9ac99593a4a0647bf01ed8ffa86f4",
+  "signature": "c2366e751a7322b2fbfebb6f21444f2d6b098ffaa92b3010e985563b7492739c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10640"
 }

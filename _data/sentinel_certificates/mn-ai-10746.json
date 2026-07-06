@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410414",
+  "certificate_id": "MN-SC-2026-7274079",
   "skill_id": "mn-ai-10746",
   "skill_name": "Protonmail-mcp",
-  "issued_at": "2026-07-05T23:16:50.414Z",
-  "expires_at": "2026-07-12T23:16:50.414Z",
+  "issued_at": "2026-07-06T00:21:14.079Z",
+  "expires_at": "2026-07-13T00:21:14.079Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0bdea450a3be2c376928e8f1c696e9a3a00069233c2281f0f80a25740501e09b",
+  "signature": "e12d44eeccf3975ccb261e1a784415821834922c97dde3cf361c3da7dff19368",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-10746"
 }

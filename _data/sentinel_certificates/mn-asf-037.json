@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411997",
+  "certificate_id": "MN-SC-2026-7709808",
   "skill_id": "mn-asf-037",
   "skill_name": "Financial Data Protector",
-  "issued_at": "2026-07-05T23:16:51.997Z",
-  "expires_at": "2026-07-12T23:16:51.997Z",
+  "issued_at": "2026-07-06T00:28:29.808Z",
+  "expires_at": "2026-07-13T00:28:29.808Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "699b1032071730d42afdafe76fef235d332d8de2b3366ed6dba0db337bd8c1a0",
+  "signature": "0cab96b56a402b9fe199cd136fb097c6427560cecdbf35bf22ba4588950b5791",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-037"
 }

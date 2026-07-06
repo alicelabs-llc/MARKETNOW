@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2482939",
+  "certificate_id": "MN-SC-2026-6792288",
   "skill_id": "mn-blo-00208",
   "skill_name": "Aethis-mcp",
-  "issued_at": "2026-07-05T23:01:22.939Z",
-  "expires_at": "2026-07-12T23:01:22.939Z",
+  "issued_at": "2026-07-06T00:13:12.288Z",
+  "expires_at": "2026-07-13T00:13:12.288Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17a43b59415a88278c7d7d0268cf003c093b4fbdc1c3ee5d25a7cccd554c0761",
+  "signature": "05e0ab5cf0bcf9d406f4e8d3e92e21b1517ea3b8183e084cc6971fc667165c09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-00208"
 }

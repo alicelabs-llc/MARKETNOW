@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410690",
+  "certificate_id": "MN-SC-2026-7356960",
   "skill_id": "mn-gen-12640",
   "skill_name": "Tickle",
-  "issued_at": "2026-07-05T23:16:50.690Z",
-  "expires_at": "2026-07-12T23:16:50.690Z",
+  "issued_at": "2026-07-06T00:22:36.960Z",
+  "expires_at": "2026-07-13T00:22:36.960Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb613661f11570eb3e9914be11fcbb3f617ab9f1798d4b7c6441cbc0624b719b",
+  "signature": "d293021bbbef608d7045162ab74b0287f527b87ff846a2a7ae8793461d4b555f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12640"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412169",
+  "certificate_id": "MN-SC-2026-7751924",
   "skill_id": "mn-pro-fef03419",
   "skill_name": "Secret Scanner Pro",
-  "issued_at": "2026-07-05T23:16:52.169Z",
-  "expires_at": "2026-07-12T23:16:52.169Z",
+  "issued_at": "2026-07-06T00:29:11.924Z",
+  "expires_at": "2026-07-13T00:29:11.924Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "503ba0a3bda56c3992a22e929925de6b4b6ed5b96ec3ce98f6e2965146c7c893",
+  "signature": "9631ee87d9a06e6a8f452827e69e8b3f126bb01938e009e9174441b1267b53bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-fef03419"
 }

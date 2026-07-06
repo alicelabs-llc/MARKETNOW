@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409794",
+  "certificate_id": "MN-SC-2026-7076884",
   "skill_id": "mn-ai-06207",
   "skill_name": "Mcp-aiven",
-  "issued_at": "2026-07-05T23:16:49.794Z",
-  "expires_at": "2026-07-12T23:16:49.794Z",
+  "issued_at": "2026-07-06T00:17:56.884Z",
+  "expires_at": "2026-07-13T00:17:56.884Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e7f515a4fe8cf48157307b86952488bcd320db15870235cb054108497d10d1a1",
+  "signature": "46ca7571e03a2082588e2fca26b59625d78f5a745802b7fa173d4a4541ca6328",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06207"
 }

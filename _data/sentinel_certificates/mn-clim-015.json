@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412480",
+  "certificate_id": "MN-SC-2026-7834073",
   "skill_id": "mn-clim-015",
   "skill_name": "Climate Disclosure Automator",
-  "issued_at": "2026-07-05T23:16:52.480Z",
-  "expires_at": "2026-07-12T23:16:52.480Z",
+  "issued_at": "2026-07-06T00:30:34.073Z",
+  "expires_at": "2026-07-13T00:30:34.073Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "137c3d816ae2d8601a53dfaf8575c24b7cddf0029512479fa45eb656eaae7406",
+  "signature": "882bb1a2d0d2aa0f907c32d262a7d05768f9fbbfa3657dd0b916a72f81e13512",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-clim-015"
 }

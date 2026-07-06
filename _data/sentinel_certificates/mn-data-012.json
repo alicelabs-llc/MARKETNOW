@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412386",
+  "certificate_id": "MN-SC-2026-7805087",
   "skill_id": "mn-data-012",
   "skill_name": "Data Importer",
-  "issued_at": "2026-07-05T23:16:52.386Z",
-  "expires_at": "2026-07-12T23:16:52.386Z",
+  "issued_at": "2026-07-06T00:30:05.087Z",
+  "expires_at": "2026-07-13T00:30:05.087Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41254b149d1905ba1899db57480d09af3325a2892b1d3a8d5e0328a38adaff79",
+  "signature": "a1ac050d3e2c7719509042f120eddd6e1cf38f1f57ef1fd1e9f5931ee65e577a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-012"
 }

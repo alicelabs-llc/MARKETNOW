@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412165",
+  "certificate_id": "MN-SC-2026-7747003",
   "skill_id": "mn-pro-0fdaf2dd",
   "skill_name": "Data Pipeline Dependency Checker",
-  "issued_at": "2026-07-05T23:16:52.165Z",
-  "expires_at": "2026-07-12T23:16:52.165Z",
+  "issued_at": "2026-07-06T00:29:07.003Z",
+  "expires_at": "2026-07-13T00:29:07.003Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "27b6b0d6ea8fb0e6d28687f764f41b31677b1bce7772c59c3ff60775a37b9f7a",
+  "signature": "e0f66b7571eb748c38794a229a27052249bd9e1c47e677c13ab38bd8f2ac55eb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-0fdaf2dd"
 }

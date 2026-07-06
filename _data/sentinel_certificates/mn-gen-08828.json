@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410161",
+  "certificate_id": "MN-SC-2026-7187591",
   "skill_id": "mn-gen-08828",
   "skill_name": "Mdsel-mcp",
-  "issued_at": "2026-07-05T23:16:50.161Z",
-  "expires_at": "2026-07-12T23:16:50.161Z",
+  "issued_at": "2026-07-06T00:19:47.591Z",
+  "expires_at": "2026-07-13T00:19:47.591Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33f246c76c75fe9900cd5b28537925a16f227e7f90a9ef724841f34890d46ac0",
+  "signature": "ba9e96f95227ce83528bdc0122f78f6eaa26fb6b7a15878ed86b1e688d2bc4fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08828"
 }

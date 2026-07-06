@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411963",
+  "certificate_id": "MN-SC-2026-7704695",
   "skill_id": "mn-asf-006",
   "skill_name": "Bias Detector",
-  "issued_at": "2026-07-05T23:16:51.963Z",
-  "expires_at": "2026-07-12T23:16:51.963Z",
+  "issued_at": "2026-07-06T00:28:24.695Z",
+  "expires_at": "2026-07-13T00:28:24.695Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c1e237c6132c8193e654e53199685a7cf8e1a97294c82c4fbef293505126183",
+  "signature": "d869d393c2e857194e4becc9db4cd7fe818292c4c76bdc5b6262938c4800e861",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-006"
 }

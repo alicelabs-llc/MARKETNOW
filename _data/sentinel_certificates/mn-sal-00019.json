@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412100",
+  "certificate_id": "MN-SC-2026-7733073",
   "skill_id": "mn-sal-00019",
   "skill_name": "InsightSquared Analytics",
-  "issued_at": "2026-07-05T23:16:52.100Z",
-  "expires_at": "2026-07-12T23:16:52.100Z",
+  "issued_at": "2026-07-06T00:28:53.073Z",
+  "expires_at": "2026-07-13T00:28:53.073Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "35516654813f85335262af0b2efc6919ebc8849cbb0f46a9689726de9c57413c",
+  "signature": "9f4ab0ad4264a49c52f74c62c7defc02274117593115c08bf5b6035f517d27b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00019"
 }

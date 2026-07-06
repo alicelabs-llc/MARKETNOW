@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412346",
+  "certificate_id": "MN-SC-2026-7793123",
   "skill_id": "mn-auto-029",
   "skill_name": "Log Node",
-  "issued_at": "2026-07-05T23:16:52.346Z",
-  "expires_at": "2026-07-12T23:16:52.346Z",
+  "issued_at": "2026-07-06T00:29:53.123Z",
+  "expires_at": "2026-07-13T00:29:53.123Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e590c5e3a07ef3d0bd0cc41f4e5abc58e1e56d67cf5553595bd5b4d5ae5958c8",
+  "signature": "2004f446676c15e7f4e1351aad3fae23f1830e4ff7ff26c8aa9fc4f3f7cdb5c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-029"
 }

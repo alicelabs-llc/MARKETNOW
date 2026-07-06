@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410692",
+  "certificate_id": "MN-SC-2026-7358950",
   "skill_id": "mn-gen-12670",
   "skill_name": "Tlog-monorepo",
-  "issued_at": "2026-07-05T23:16:50.692Z",
-  "expires_at": "2026-07-12T23:16:50.692Z",
+  "issued_at": "2026-07-06T00:22:38.950Z",
+  "expires_at": "2026-07-13T00:22:38.950Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc8b29b752bcccd1e2684d2dd7c994277f4cbfb591e0858218fc7b421c8a8da9",
+  "signature": "c184fc9ac09e93c615842dbf55c634e26ecdd4be36963ad6907e35898b009cdd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12670"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2964687",
+  "certificate_id": "MN-SC-2026-6818066",
   "skill_id": "mn-gen-00782",
   "skill_name": "Anilist-mcp",
-  "issued_at": "2026-07-05T23:09:24.687Z",
-  "expires_at": "2026-07-12T23:09:24.687Z",
+  "issued_at": "2026-07-06T00:13:38.066Z",
+  "expires_at": "2026-07-13T00:13:38.066Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c49b6d0a78b78ad99a4963798264d42df9127dfbf21cc14b4ea54b6d3559f99",
+  "signature": "dcd4d18657be1b486f946e4669b20e539e08acf211627b87914a4dc3951186f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00782"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410187",
+  "certificate_id": "MN-SC-2026-7196646",
   "skill_id": "mn-ai-09056",
   "skill_name": "Mindpainting",
-  "issued_at": "2026-07-05T23:16:50.187Z",
-  "expires_at": "2026-07-12T23:16:50.187Z",
+  "issued_at": "2026-07-06T00:19:56.646Z",
+  "expires_at": "2026-07-13T00:19:56.646Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a5de932c2cb272aa940dc5430c887e24f83431dab36c9691d24357270e9e0a1",
+  "signature": "faf2a724c0e686f1e154be2fa198a0b628840c85039631e2b65247fa544a2801",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-09056"
 }

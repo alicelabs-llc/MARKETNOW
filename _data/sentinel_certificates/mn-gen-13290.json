@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410794",
+  "certificate_id": "MN-SC-2026-7388587",
   "skill_id": "mn-gen-13290",
   "skill_name": "Icoretech/warden-mcp",
-  "issued_at": "2026-07-05T23:16:50.794Z",
-  "expires_at": "2026-07-12T23:16:50.794Z",
+  "issued_at": "2026-07-06T00:23:08.587Z",
+  "expires_at": "2026-07-13T00:23:08.587Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "98ac48a42ed6ac327d3ade99e6845894b25389765c0e314c6ddafd5abd744c4f",
+  "signature": "5f1d8689843245fdc6c21ba600c2b3066e6385a66f6642e1b2b0c404bc77cb82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13290"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412481",
+  "certificate_id": "MN-SC-2026-7835960",
   "skill_id": "mn-clim-030",
   "skill_name": "Climate Investment Screener",
-  "issued_at": "2026-07-05T23:16:52.481Z",
-  "expires_at": "2026-07-12T23:16:52.481Z",
+  "issued_at": "2026-07-06T00:30:35.960Z",
+  "expires_at": "2026-07-13T00:30:35.960Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0799ab8f6482513fb0547d1431d81f25fbc783d8828465ba355278d85cec3855",
+  "signature": "9462a346c5df8b89d911fb77c1b1bb7014a18299a11f0c899f2f0be16003ae93",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-clim-030"
 }

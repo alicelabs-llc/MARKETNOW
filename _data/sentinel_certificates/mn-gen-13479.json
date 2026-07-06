@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410847",
+  "certificate_id": "MN-SC-2026-7398741",
   "skill_id": "mn-gen-13479",
   "skill_name": "Wiro-ai/wiro-mcp",
-  "issued_at": "2026-07-05T23:16:50.847Z",
-  "expires_at": "2026-07-12T23:16:50.847Z",
+  "issued_at": "2026-07-06T00:23:18.741Z",
+  "expires_at": "2026-07-13T00:23:18.741Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "916fa8f51ceed41183139e88830bce08584aa24113e98bb9c9f8e6d5728a653a",
+  "signature": "1fb5cd6fe555fb5a11605b3fe659b3a50666b7a327dfdef98ac88c92e58bffdd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13479"
 }

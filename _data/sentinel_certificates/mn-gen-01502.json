@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3225308",
+  "certificate_id": "MN-SC-2026-6850154",
   "skill_id": "mn-gen-01502",
   "skill_name": "Boond-mcp",
-  "issued_at": "2026-07-05T23:13:45.308Z",
-  "expires_at": "2026-07-12T23:13:45.308Z",
+  "issued_at": "2026-07-06T00:14:10.154Z",
+  "expires_at": "2026-07-13T00:14:10.154Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a23b4e4afd361e5e2b2518d02b093b836b4849000b1e1291f61a0242fbe38552",
+  "signature": "48ba207af230c86b9bec247864788a15a56eff3a33cd15a7ade38b99c9c9b569",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01502"
 }

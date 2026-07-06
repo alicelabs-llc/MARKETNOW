@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410473",
+  "certificate_id": "MN-SC-2026-7294555",
   "skill_id": "mn-res-11205",
   "skill_name": "Research-engine-mcp",
-  "issued_at": "2026-07-05T23:16:50.473Z",
-  "expires_at": "2026-07-12T23:16:50.473Z",
+  "issued_at": "2026-07-06T00:21:34.555Z",
+  "expires_at": "2026-07-13T00:21:34.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc20085771c8bb68553927f6e45423c5281e07e17ac5fb734f5a5309545c2c27",
+  "signature": "d603eb95c04b188f36edca42c04351886f14a50c0a1324279a6aeeecf7a76a7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-11205"
 }

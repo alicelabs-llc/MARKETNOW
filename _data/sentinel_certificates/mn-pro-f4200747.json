@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412259",
+  "certificate_id": "MN-SC-2026-7776953",
   "skill_id": "mn-pro-f4200747",
   "skill_name": "Game Telemetry Collector",
-  "issued_at": "2026-07-05T23:16:52.259Z",
-  "expires_at": "2026-07-12T23:16:52.259Z",
+  "issued_at": "2026-07-06T00:29:36.953Z",
+  "expires_at": "2026-07-13T00:29:36.953Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a297081b3c939088aaf09caca7f4ca30791e803d766371bbe2fb662ad638c23",
+  "signature": "0f54f3f8b95e63df790d977619cf8d1b4655816e023b3cd6fdc3e1b41454fc02",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-f4200747"
 }

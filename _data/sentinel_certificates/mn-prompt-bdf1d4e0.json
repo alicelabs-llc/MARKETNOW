@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411489",
+  "certificate_id": "MN-SC-2026-7577587",
   "skill_id": "mn-prompt-bdf1d4e0",
   "skill_name": "Bank reconciliation automation",
-  "issued_at": "2026-07-05T23:16:51.489Z",
-  "expires_at": "2026-07-12T23:16:51.489Z",
+  "issued_at": "2026-07-06T00:26:17.587Z",
+  "expires_at": "2026-07-13T00:26:17.587Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5443f24a4d72d5f9493b18b3d48d9e35f28c9a227f92d2a8ef9b9298311a6803",
+  "signature": "99a2642e36bccf51909c07c32730f0dedb2a2545b26c2c8d07d75fd366ce69b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bdf1d4e0"
 }

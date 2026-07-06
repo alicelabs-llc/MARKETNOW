@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411998",
+  "certificate_id": "MN-SC-2026-7710843",
   "skill_id": "mn-asf-047",
   "skill_name": "Security Keys Manager",
-  "issued_at": "2026-07-05T23:16:51.998Z",
-  "expires_at": "2026-07-12T23:16:51.998Z",
+  "issued_at": "2026-07-06T00:28:30.843Z",
+  "expires_at": "2026-07-13T00:28:30.843Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ec5dbed6ef2364792d949927ac004a172adffd502273bde4542ff48f11f011e",
+  "signature": "16d47dc8a006440a6cc968ca9bad3df0e35bc5c243e69c5225fe9f99a8d5bdca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-047"
 }

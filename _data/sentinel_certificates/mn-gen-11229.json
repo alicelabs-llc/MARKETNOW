@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410474",
+  "certificate_id": "MN-SC-2026-7295122",
   "skill_id": "mn-gen-11229",
   "skill_name": "Restura",
-  "issued_at": "2026-07-05T23:16:50.474Z",
-  "expires_at": "2026-07-12T23:16:50.474Z",
+  "issued_at": "2026-07-06T00:21:35.122Z",
+  "expires_at": "2026-07-13T00:21:35.122Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c56503245e04b27d1fd72f44b9b107211bf858195fb650fa36d062acb83fcf3",
+  "signature": "78f4922737196492b58cb6004f14f1fd6ccd12f6f1562db599ebdd3cea47caa1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11229"
 }

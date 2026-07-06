@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412072",
+  "certificate_id": "MN-SC-2026-7725692",
   "skill_id": "mn-leg-00007",
   "skill_name": "Terms of Service Generator",
-  "issued_at": "2026-07-05T23:16:52.072Z",
-  "expires_at": "2026-07-12T23:16:52.072Z",
+  "issued_at": "2026-07-06T00:28:45.692Z",
+  "expires_at": "2026-07-13T00:28:45.692Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a67c434155d935b4c77115ec6f4db2b13a15a60492388aa54deba686c700925",
+  "signature": "b8965a812a7ae35a0fc7d1c86c9d688cd6208129361331470cb8982e617b830a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00007"
 }

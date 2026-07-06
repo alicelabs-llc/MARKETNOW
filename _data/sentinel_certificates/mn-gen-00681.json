@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2681197",
+  "certificate_id": "MN-SC-2026-6812935",
   "skill_id": "mn-gen-00681",
   "skill_name": "Alexandria",
-  "issued_at": "2026-07-05T23:04:41.197Z",
-  "expires_at": "2026-07-12T23:04:41.197Z",
+  "issued_at": "2026-07-06T00:13:32.935Z",
+  "expires_at": "2026-07-13T00:13:32.935Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9185351f99ace4e572627d5baedca075530eaf0acdf2b2bce4da8242808a0015",
+  "signature": "b7a82cbdc17d32d884dc648d6f804abf02abdf203cbde0a9a7800461c658f700",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00681"
 }

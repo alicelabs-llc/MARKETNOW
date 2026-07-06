@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410354",
+  "certificate_id": "MN-SC-2026-7250168",
   "skill_id": "mn-gen-10198",
   "skill_name": "Papercortex",
-  "issued_at": "2026-07-05T23:16:50.354Z",
-  "expires_at": "2026-07-12T23:16:50.354Z",
+  "issued_at": "2026-07-06T00:20:50.168Z",
+  "expires_at": "2026-07-13T00:20:50.168Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "633caf7f77d3e4da4021b73cf2378ddd1482240a2c3f352e74fa35c624e42976",
+  "signature": "4d47830bf22d101488ff4d329f67be0b646f0bd8f6d52bd63d6970dc54f3af3a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10198"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410383",
+  "certificate_id": "MN-SC-2026-7261987",
   "skill_id": "mn-gen-10481",
   "skill_name": "Playlist-matcher",
-  "issued_at": "2026-07-05T23:16:50.383Z",
-  "expires_at": "2026-07-12T23:16:50.383Z",
+  "issued_at": "2026-07-06T00:21:01.987Z",
+  "expires_at": "2026-07-13T00:21:01.987Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c03eb2b05957d6a9572fbf9d921b54bc434d11fd73e23743b2eaf6f743e56097",
+  "signature": "b7be81bb7f205e6c1cf39e9927c6cf3e3f0028b7d455e8849306ee2ae2e1ecd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10481"
 }

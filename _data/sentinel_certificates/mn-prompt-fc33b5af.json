@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411395",
+  "certificate_id": "MN-SC-2026-7552098",
   "skill_id": "mn-prompt-fc33b5af",
   "skill_name": "Terms of Service para marketplace",
-  "issued_at": "2026-07-05T23:16:51.395Z",
-  "expires_at": "2026-07-12T23:16:51.395Z",
+  "issued_at": "2026-07-06T00:25:52.098Z",
+  "expires_at": "2026-07-13T00:25:52.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9514e4d11386f0697869d0b785ede3d2728bd06fd166577f067460561410fcf",
+  "signature": "a08a3056cef5568114f17d78ac8f53e7ba36dc795e9ab04cb6740ba681731936",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fc33b5af"
 }

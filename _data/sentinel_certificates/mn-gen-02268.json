@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408632",
+  "certificate_id": "MN-SC-2026-6893223",
   "skill_id": "mn-gen-02268",
   "skill_name": "Claude-rules-mcp",
-  "issued_at": "2026-07-05T23:16:48.632Z",
-  "expires_at": "2026-07-12T23:16:48.633Z",
+  "issued_at": "2026-07-06T00:14:53.223Z",
+  "expires_at": "2026-07-13T00:14:53.223Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a65276c24292a3a281d802f963f5528b987684520bc609c3a1c116ae0fab43e4",
+  "signature": "1decd99d5ba81424177a0f65c79443ed589f873f89f77c0b3d7b60d4e8dced7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02268"
 }

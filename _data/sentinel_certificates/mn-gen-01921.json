@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408577",
+  "certificate_id": "MN-SC-2026-6875202",
   "skill_id": "mn-gen-01921",
   "skill_name": "Ciphertrust-manager-mcp-server-testing",
-  "issued_at": "2026-07-05T23:16:48.577Z",
-  "expires_at": "2026-07-12T23:16:48.577Z",
+  "issued_at": "2026-07-06T00:14:35.202Z",
+  "expires_at": "2026-07-13T00:14:35.202Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9d7bbedcb025b0f95e3446f0ce036b37d4f96354064a8a3e4909a816537a1e5",
+  "signature": "04e298d38f1084b348a084f9502dc695705a59e9251915af27692bfac9bea2aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01921"
 }

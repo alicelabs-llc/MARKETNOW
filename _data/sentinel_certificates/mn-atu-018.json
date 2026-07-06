@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411897",
+  "certificate_id": "MN-SC-2026-7687919",
   "skill_id": "mn-atu-018",
   "skill_name": "Tool Latency Optimizer",
-  "issued_at": "2026-07-05T23:16:51.897Z",
-  "expires_at": "2026-07-12T23:16:51.897Z",
+  "issued_at": "2026-07-06T00:28:07.919Z",
+  "expires_at": "2026-07-13T00:28:07.919Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc46ce3ac053ecacf488223d8fea1e272d79190225a74e5eef689fa48301c427",
+  "signature": "f26ec242042cf4792fa4b9ba984e1f12bcf5b286497e94a67ee19276d2c6b063",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-018"
 }

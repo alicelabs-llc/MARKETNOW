@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410186",
+  "certificate_id": "MN-SC-2026-7195625",
   "skill_id": "mn-gen-09021",
   "skill_name": "Middy-mcp",
-  "issued_at": "2026-07-05T23:16:50.186Z",
-  "expires_at": "2026-07-12T23:16:50.186Z",
+  "issued_at": "2026-07-06T00:19:55.625Z",
+  "expires_at": "2026-07-13T00:19:55.625Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e396dc3f684d9a225dfc9460c1979d2472150f50c8ef9539e4f70e86093e3662",
+  "signature": "267a1be1f46abc011855b7750676ddcddb97afcdde5cff86c880fb09f6c49169",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09021"
 }

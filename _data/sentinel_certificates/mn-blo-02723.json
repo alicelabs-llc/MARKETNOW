@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409322",
+  "certificate_id": "MN-SC-2026-6919514",
   "skill_id": "mn-blo-02723",
   "skill_name": "Console-to-cursor-mcp",
-  "issued_at": "2026-07-05T23:16:49.322Z",
-  "expires_at": "2026-07-12T23:16:49.322Z",
+  "issued_at": "2026-07-06T00:15:19.514Z",
+  "expires_at": "2026-07-13T00:15:19.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d59b3d15c0c7c83444f319a1e1129478368f541a0c5047ea38ae4a800870c2f5",
+  "signature": "870cf1de0aa2e28fe84f0cfa329df50723a702cc86afccb68d0256416a89735b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-02723"
 }

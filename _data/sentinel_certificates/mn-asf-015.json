@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411964",
+  "certificate_id": "MN-SC-2026-7707277",
   "skill_id": "mn-asf-015",
   "skill_name": "Hate Speech Filter",
-  "issued_at": "2026-07-05T23:16:51.964Z",
-  "expires_at": "2026-07-12T23:16:51.964Z",
+  "issued_at": "2026-07-06T00:28:27.277Z",
+  "expires_at": "2026-07-13T00:28:27.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9316f77695183fc1a004ab5511b88354185995d0cd2f7fd452c9ebd94ec105ed",
+  "signature": "b1bceb3cf230b6886d9f0281ea8d2a743b2fd727d73b49fb093e8bdf40085770",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-015"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409712",
+  "certificate_id": "MN-SC-2026-7053014",
   "skill_id": "mn-gen-05604",
   "skill_name": "Langflow-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.712Z",
-  "expires_at": "2026-07-12T23:16:49.712Z",
+  "issued_at": "2026-07-06T00:17:33.014Z",
+  "expires_at": "2026-07-13T00:17:33.014Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39aec110f17d216fcac64f397edfd8a63b1f7562fd4410f38315d2e978575d2f",
+  "signature": "224b30d50d4df2f8646a4c518f0f9be1b276c977ed8f922a22c279bc2fb0c4e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05604"
 }

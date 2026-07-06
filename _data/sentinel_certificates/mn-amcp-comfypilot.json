@@ -1,31 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-3417076",
+  "certificate_id": "MN-SC-2026-7888832",
   "skill_id": "mn-amcp-comfypilot",
   "skill_name": "comfy-pilot",
-  "issued_at": "2026-07-05T23:16:57.076Z",
-  "expires_at": "2026-07-12T23:16:57.076Z",
+  "issued_at": "2026-07-06T00:31:28.832Z",
+  "expires_at": "2026-07-13T00:31:28.832Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
     "l15_l16": "medium",
-    "l2": "not_available",
+    "l2": "unknown",
     "final": "medium"
   },
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l2": true
   },
   "layer_details": {
     "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
-    "l2_execution_status": null
+    "l2_score": 0,
+    "l2_execution_status": "failed_to_start"
   },
-  "signature": "4462a88479fe2eba36d7ca35046c15b0b221feb52afe0a499ce9afb32f2f379c",
+  "signature": "9351bc05e87322854b1f4bde4d21e5860cb4ea769c0fcf186bf2f7878687ad45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-comfypilot"
 }

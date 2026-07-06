@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410110",
+  "certificate_id": "MN-SC-2026-7174745",
   "skill_id": "mn-gen-08263",
   "skill_name": "Mcp-wisdom",
-  "issued_at": "2026-07-05T23:16:50.110Z",
-  "expires_at": "2026-07-12T23:16:50.110Z",
+  "issued_at": "2026-07-06T00:19:34.745Z",
+  "expires_at": "2026-07-13T00:19:34.745Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4bc0e3ff64abfcf51a666b2cc46b7448e9927001d06432abd48c7a8bd23c49a3",
+  "signature": "b9c121140e6b886a4790974727b9da128f52ed0e4f21aaae25a0afe43cbe08bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08263"
 }

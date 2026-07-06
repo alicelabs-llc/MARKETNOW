@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411488",
+  "certificate_id": "MN-SC-2026-7576270",
   "skill_id": "mn-prompt-2ec23bc0",
   "skill_name": "Financial close checklist monthly",
-  "issued_at": "2026-07-05T23:16:51.488Z",
-  "expires_at": "2026-07-12T23:16:51.488Z",
+  "issued_at": "2026-07-06T00:26:16.270Z",
+  "expires_at": "2026-07-13T00:26:16.270Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69b61c28ee878e72db48c3eff99cdee052e43a4ea3813a7b940ca8c96a49d459",
+  "signature": "672ac681b45b490ef311a4b16220f108536b99b3072eb740ad0a05d712eb6336",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2ec23bc0"
 }

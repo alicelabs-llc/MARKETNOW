@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410581",
+  "certificate_id": "MN-SC-2026-7325949",
   "skill_id": "mn-gen-11897",
   "skill_name": "Slack-browser-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.581Z",
-  "expires_at": "2026-07-12T23:16:50.581Z",
+  "issued_at": "2026-07-06T00:22:05.949Z",
+  "expires_at": "2026-07-13T00:22:05.949Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51c8828b26ee2e3b8595b9d95299e391e11970b93072ed5e9372222fb7660082",
+  "signature": "03e7906e4912b5057b89b4bbfa2cb37be0741c2003401d7bf00f80802d40fa65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11897"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2677882",
+  "certificate_id": "MN-SC-2026-6811726",
   "skill_id": "mn-ai-00652",
   "skill_name": "Claude-code-ai-collab-mcp",
-  "issued_at": "2026-07-05T23:04:37.882Z",
-  "expires_at": "2026-07-12T23:04:37.882Z",
+  "issued_at": "2026-07-06T00:13:31.726Z",
+  "expires_at": "2026-07-13T00:13:31.726Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9af4a8a67dd0db7bfcd5379168936be8757626e80da1efb2c0f7e51d44e17355",
+  "signature": "44b03a46d0497192da6c01b68de5d7395382bcbd9109d205131b63f92db45411",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00652"
 }

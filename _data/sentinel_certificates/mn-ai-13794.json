@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410886",
+  "certificate_id": "MN-SC-2026-7410736",
   "skill_id": "mn-ai-13794",
   "skill_name": "Zerion-cli",
-  "issued_at": "2026-07-05T23:16:50.886Z",
-  "expires_at": "2026-07-12T23:16:50.886Z",
+  "issued_at": "2026-07-06T00:23:30.736Z",
+  "expires_at": "2026-07-13T00:23:30.736Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f7610175588a6afc6d799976d5d9ae5539e6105f71efa41751a717f7b541be3",
+  "signature": "36ea360649ea22cf7f728bdcb274d77b8208a05131712476a3d2164178e89345",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-13794"
 }

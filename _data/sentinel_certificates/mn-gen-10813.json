@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410418",
+  "certificate_id": "MN-SC-2026-7279561",
   "skill_id": "mn-gen-10813",
   "skill_name": "Pushover-mcp",
-  "issued_at": "2026-07-05T23:16:50.418Z",
-  "expires_at": "2026-07-12T23:16:50.418Z",
+  "issued_at": "2026-07-06T00:21:19.561Z",
+  "expires_at": "2026-07-13T00:21:19.561Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e680d5a3828840c1da0a7ea4fa3f220df28eb4f72e5c33c220423cab4816d3b9",
+  "signature": "77a8f42cc48e18b9ac19ce1933832aff9729b2bc4029dee36bdb26d1d36ad5be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10813"
 }

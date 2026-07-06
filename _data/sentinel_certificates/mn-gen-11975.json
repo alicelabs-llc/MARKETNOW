@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410584",
+  "certificate_id": "MN-SC-2026-7328561",
   "skill_id": "mn-gen-11975",
   "skill_name": "Snyk-mcp-rest",
-  "issued_at": "2026-07-05T23:16:50.584Z",
-  "expires_at": "2026-07-12T23:16:50.584Z",
+  "issued_at": "2026-07-06T00:22:08.561Z",
+  "expires_at": "2026-07-13T00:22:08.561Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0bdf81f6a10d6fcdaa7322dc69f9e846f654fa9a4b39ee20665f8f26bf125fbd",
+  "signature": "56324cdd606efc629075b1b8f659803ccd5a2c488749f1aefe81fa5aa79f91a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11975"
 }

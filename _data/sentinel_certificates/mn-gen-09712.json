@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410280",
+  "certificate_id": "MN-SC-2026-7226595",
   "skill_id": "mn-gen-09712",
   "skill_name": "Obsidian-cli-rest",
-  "issued_at": "2026-07-05T23:16:50.280Z",
-  "expires_at": "2026-07-12T23:16:50.280Z",
+  "issued_at": "2026-07-06T00:20:26.595Z",
+  "expires_at": "2026-07-13T00:20:26.595Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d81bf3ad3d99cd20ef19a317aaf3bd0be644900b20e0ccccf11d9f3e5d41bf23",
+  "signature": "a2557e509da7a5095fa4b59cb848801805c233387df9dcd7a55bd64a045ae01b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09712"
 }

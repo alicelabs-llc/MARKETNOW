@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410189",
+  "certificate_id": "MN-SC-2026-7199031",
   "skill_id": "mn-gen-09105",
   "skill_name": "Mixpost-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.189Z",
-  "expires_at": "2026-07-12T23:16:50.189Z",
+  "issued_at": "2026-07-06T00:19:59.031Z",
+  "expires_at": "2026-07-13T00:19:59.031Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "725d1817392a70df813d2b26ffebc6890ee01aa760b884fcfe547b0d521d6a5b",
+  "signature": "b33f2c5bcbf32a47978237e24bb29e96a8e66fb7f8866ec2c8cb0d11778b4df3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09105"
 }

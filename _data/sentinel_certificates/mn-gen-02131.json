@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408600",
+  "certificate_id": "MN-SC-2026-6884842",
   "skill_id": "mn-gen-02131",
   "skill_name": "Iamrichardd/claude-gemini-mcp-server",
-  "issued_at": "2026-07-05T23:16:48.600Z",
-  "expires_at": "2026-07-12T23:16:48.600Z",
+  "issued_at": "2026-07-06T00:14:44.842Z",
+  "expires_at": "2026-07-13T00:14:44.842Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe19c9271d5de4352b9a5e9f23f8e2ae8e561060383f1675751731bb991cb57d",
+  "signature": "76dc3a45e62f7dd6337eb7a6f55b97fba573a1bc501d7b28c53709cac0831488",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02131"
 }

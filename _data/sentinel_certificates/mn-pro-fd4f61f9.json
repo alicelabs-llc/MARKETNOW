@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412171",
+  "certificate_id": "MN-SC-2026-7754725",
   "skill_id": "mn-pro-fd4f61f9",
   "skill_name": "Security Risk Register",
-  "issued_at": "2026-07-05T23:16:52.171Z",
-  "expires_at": "2026-07-12T23:16:52.171Z",
+  "issued_at": "2026-07-06T00:29:14.725Z",
+  "expires_at": "2026-07-13T00:29:14.725Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7cedd345e2d8fe7548b4cdd6369c079835b6cb1f2f83055ab45497d62a84f348",
+  "signature": "1ea0f4d8ac42577326a1d37f4cfb1d5a075fb73e965c45f9d06ab63117c96694",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-fd4f61f9"
 }

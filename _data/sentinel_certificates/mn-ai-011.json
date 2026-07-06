@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412108",
+  "certificate_id": "MN-SC-2026-7740313",
   "skill_id": "mn-ai-011",
   "skill_name": "Model Deployment Automator",
-  "issued_at": "2026-07-05T23:16:52.108Z",
-  "expires_at": "2026-07-12T23:16:52.108Z",
+  "issued_at": "2026-07-06T00:29:00.313Z",
+  "expires_at": "2026-07-13T00:29:00.313Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9a64680b016d82e1c676a2d65d75298789909e392316468213ff9eebdff22caa",
+  "signature": "142c161eaefaeced56e8fe411a2bcc032fb984193aafc15bad172c4b2b02f60c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-011"
 }

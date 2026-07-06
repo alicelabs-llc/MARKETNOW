@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2501232",
+  "certificate_id": "MN-SC-2026-6806877",
   "skill_id": "mn-ai-00554",
   "skill_name": "Sylphx/ai-sdk-provider-claude-code",
-  "issued_at": "2026-07-05T23:01:41.232Z",
-  "expires_at": "2026-07-12T23:01:41.232Z",
+  "issued_at": "2026-07-06T00:13:26.877Z",
+  "expires_at": "2026-07-13T00:13:26.877Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ca9bb0212aeded260349c5ede4eab4eb44cca005acfb752ebb4c00695f47332",
+  "signature": "dfca80955bcce9717a2a50509f22f9f718e7a4cdcf482155e31ca7190bdd740a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00554"
 }

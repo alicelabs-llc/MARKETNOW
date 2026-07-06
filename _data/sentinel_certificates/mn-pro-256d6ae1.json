@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412166",
+  "certificate_id": "MN-SC-2026-7746949",
   "skill_id": "mn-pro-256d6ae1",
   "skill_name": "Kubernetes Operator Generator",
-  "issued_at": "2026-07-05T23:16:52.166Z",
-  "expires_at": "2026-07-12T23:16:52.166Z",
+  "issued_at": "2026-07-06T00:29:06.949Z",
+  "expires_at": "2026-07-13T00:29:06.949Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02ddf6937fa211537a33d846a26db8d8acef24ead978dfcc6055e8ec62ab9571",
+  "signature": "49b1c9fc5b8515266bc3146c922b820bce7419cee24eb7bd14f4e05685444d22",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-256d6ae1"
 }

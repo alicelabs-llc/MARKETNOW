@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412109",
+  "certificate_id": "MN-SC-2026-7741343",
   "skill_id": "mn-ai-021",
   "skill_name": "Model Retraining Trigger",
-  "issued_at": "2026-07-05T23:16:52.109Z",
-  "expires_at": "2026-07-12T23:16:52.109Z",
+  "issued_at": "2026-07-06T00:29:01.343Z",
+  "expires_at": "2026-07-13T00:29:01.343Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57211e04f318cc382a871b9b161c92ac621516df597f989b0b035536e7751794",
+  "signature": "864089a505d959a80db5c06b3f6cc15188d7cc460496ad529cf0b224626f1f2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-021"
 }

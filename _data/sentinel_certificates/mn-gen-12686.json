@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410693",
+  "certificate_id": "MN-SC-2026-7360109",
   "skill_id": "mn-gen-12686",
   "skill_name": "Todoist-mcp-server-cf",
-  "issued_at": "2026-07-05T23:16:50.693Z",
-  "expires_at": "2026-07-12T23:16:50.693Z",
+  "issued_at": "2026-07-06T00:22:40.109Z",
+  "expires_at": "2026-07-13T00:22:40.109Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "73e2d6da7df26926c12528647050159cd5a2c79e5fe87f8bb99e4193a676afd2",
+  "signature": "7cc3e906bf05848bcf8c0f7561abef7899cf6605fdfd39130e0075585fe9c2da",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12686"
 }

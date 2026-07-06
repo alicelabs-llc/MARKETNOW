@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409360",
+  "certificate_id": "MN-SC-2026-6939465",
   "skill_id": "mn-gen-03022",
   "skill_name": "Cycles-mcp",
-  "issued_at": "2026-07-05T23:16:49.360Z",
-  "expires_at": "2026-07-12T23:16:49.360Z",
+  "issued_at": "2026-07-06T00:15:39.465Z",
+  "expires_at": "2026-07-13T00:15:39.465Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd35cc167804cbf510e47b2a05728cbcc6b0f111761d032bb378559c865eabb5",
+  "signature": "42a9b691263c646e0e0a1358094ab16cbaa667cc26d7dd4275a0b831ed63fa6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03022"
 }

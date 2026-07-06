@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408630",
+  "certificate_id": "MN-SC-2026-6890849",
   "skill_id": "mn-gen-02235",
   "skill_name": "Claude-orchestrator",
-  "issued_at": "2026-07-05T23:16:48.630Z",
-  "expires_at": "2026-07-12T23:16:48.630Z",
+  "issued_at": "2026-07-06T00:14:50.849Z",
+  "expires_at": "2026-07-13T00:14:50.849Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "713144dbc6169ceacf12163b271e2a9b175f5ee62894d4f17cd81d27dc5d9f4a",
+  "signature": "9f6dee235307d73b20f66c24339830b046f11a5b067fd632e44605c809388260",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02235"
 }

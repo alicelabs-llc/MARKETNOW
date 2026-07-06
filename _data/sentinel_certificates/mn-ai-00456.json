@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2496697",
+  "certificate_id": "MN-SC-2026-6803344",
   "skill_id": "mn-ai-00456",
   "skill_name": "Ai-agent-hub",
-  "issued_at": "2026-07-05T23:01:36.697Z",
-  "expires_at": "2026-07-12T23:01:36.697Z",
+  "issued_at": "2026-07-06T00:13:23.344Z",
+  "expires_at": "2026-07-13T00:13:23.344Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01344610f176beb78931cbfdaea089ee5c032b135f1ce23a7dd0b589584881b3",
+  "signature": "6bd2a2511bfa52d9b527dd1059276e01524cb16f81ae8782fbdf73729f2c3e50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00456"
 }

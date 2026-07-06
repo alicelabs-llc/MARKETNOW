@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412481",
+  "certificate_id": "MN-SC-2026-7838621",
   "skill_id": "mn-devo-003",
   "skill_name": "Chaos Engineering Platform",
-  "issued_at": "2026-07-05T23:16:52.481Z",
-  "expires_at": "2026-07-12T23:16:52.481Z",
+  "issued_at": "2026-07-06T00:30:38.621Z",
+  "expires_at": "2026-07-13T00:30:38.621Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a236b15b1d15e8a3ab565a13e2f8fbbd601deddbb7a1e9707d6beaa0bb232ac0",
+  "signature": "82bf8595ff4e375e559802c8e7209fc28895ee92648f915d641a70835640a03a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-devo-003"
 }

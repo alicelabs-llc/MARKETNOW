@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2495102",
+  "certificate_id": "MN-SC-2026-6802152",
   "skill_id": "mn-blo-00409",
   "skill_name": "Agentpay-wallet-starter",
-  "issued_at": "2026-07-05T23:01:35.102Z",
-  "expires_at": "2026-07-12T23:01:35.102Z",
+  "issued_at": "2026-07-06T00:13:22.152Z",
+  "expires_at": "2026-07-13T00:13:22.152Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "405ed6b8d12b65ce2d6d1808858a4f489bef0b3cb932e2bd206632ea410dac0e",
+  "signature": "83e4a525ecdaa5b0a1d9c5dc780d32e2dbc1a31f314e3cf00637017a500d1102",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-00409"
 }

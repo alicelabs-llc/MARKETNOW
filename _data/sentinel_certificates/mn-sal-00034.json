@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412102",
+  "certificate_id": "MN-SC-2026-7734707",
   "skill_id": "mn-sal-00034",
   "skill_name": "Aircall Telephony",
-  "issued_at": "2026-07-05T23:16:52.102Z",
-  "expires_at": "2026-07-12T23:16:52.102Z",
+  "issued_at": "2026-07-06T00:28:54.707Z",
+  "expires_at": "2026-07-13T00:28:54.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa011947f6eb673323be9c4e9e7fa5b047b715c8138ec8172a611992e12645bb",
+  "signature": "e7d5bfcd6efabcb9cc5c9264f6909b6084d95c95227ba38386a519cd4a6f073b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00034"
 }

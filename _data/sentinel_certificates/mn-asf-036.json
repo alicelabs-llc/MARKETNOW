@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411997",
+  "certificate_id": "MN-SC-2026-7709302",
   "skill_id": "mn-asf-036",
   "skill_name": "Health Data Protector",
-  "issued_at": "2026-07-05T23:16:51.997Z",
-  "expires_at": "2026-07-12T23:16:51.997Z",
+  "issued_at": "2026-07-06T00:28:29.302Z",
+  "expires_at": "2026-07-13T00:28:29.302Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d2037d5b76052eb7ddeffd6e6f2625c2ed4b527058587fe38b97551a30e8ac9",
+  "signature": "8ac11437a962412056bb5e22a528c1afbc691a55eaa008249c02f4b204ff2fc6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-036"
 }

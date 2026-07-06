@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411959",
+  "certificate_id": "MN-SC-2026-7700354",
   "skill_id": "mn-apd-025",
   "skill_name": "Agent API Gateway",
-  "issued_at": "2026-07-05T23:16:51.959Z",
-  "expires_at": "2026-07-12T23:16:51.959Z",
+  "issued_at": "2026-07-06T00:28:20.354Z",
+  "expires_at": "2026-07-13T00:28:20.354Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "df653c8696d5c3b459c4ddaaa338d4831cbf6a0bb2ae0a36c141d7a73df3c312",
+  "signature": "5a04ba55e62f0682f6231e57b5894e6afe2ebb1765ac45108132fdbfab14af7f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-025"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410782",
+  "certificate_id": "MN-SC-2026-7380327",
   "skill_id": "mn-gen-13154",
   "skill_name": "Vibealive",
-  "issued_at": "2026-07-05T23:16:50.782Z",
-  "expires_at": "2026-07-12T23:16:50.782Z",
+  "issued_at": "2026-07-06T00:23:00.327Z",
+  "expires_at": "2026-07-13T00:23:00.327Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f4619c4b4cac31097b98919decec52d41b8077991788f98f8da433b60524e0d4",
+  "signature": "8ae1bf8ae179282cbf685576ee1e8dd9486b86d5177a423a14a82daadc2de0e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13154"
 }

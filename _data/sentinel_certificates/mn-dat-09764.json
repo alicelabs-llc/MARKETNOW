@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410284",
+  "certificate_id": "MN-SC-2026-7230318",
   "skill_id": "mn-dat-09764",
   "skill_name": "Odata-mcp-proxy",
-  "issued_at": "2026-07-05T23:16:50.284Z",
-  "expires_at": "2026-07-12T23:16:50.284Z",
+  "issued_at": "2026-07-06T00:20:30.318Z",
+  "expires_at": "2026-07-13T00:20:30.318Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b17aa3e0643a9323cedbfb3571a585d4cf864ac5e05eb948ca2fb974006a8a1",
+  "signature": "c2b60121cb191ec8a96ce4b7f4c106d7a3c2479c0ad8a229c2c56aa27e7be17c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-09764"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410891",
+  "certificate_id": "MN-SC-2026-7414397",
   "skill_id": "mn-prompt-4533b2ae",
   "skill_name": "Planificador de Viajes con Presupuesto",
-  "issued_at": "2026-07-05T23:16:50.891Z",
-  "expires_at": "2026-07-12T23:16:50.891Z",
+  "issued_at": "2026-07-06T00:23:34.397Z",
+  "expires_at": "2026-07-13T00:23:34.397Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eefd12210b2068b40f9ecc828788869b896537475c5693374ca2329d2630da0f",
+  "signature": "0c38e185f026b1ecefcfe989d22c75141181d7b2211a5913f7ea6ed9fec7932c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4533b2ae"
 }

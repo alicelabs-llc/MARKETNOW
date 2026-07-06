@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411862",
+  "certificate_id": "MN-SC-2026-7676701",
   "skill_id": "mn-arl-007",
   "skill_name": "Reasoning Trace Logger MCP",
-  "issued_at": "2026-07-05T23:16:51.862Z",
-  "expires_at": "2026-07-12T23:16:51.862Z",
+  "issued_at": "2026-07-06T00:27:56.701Z",
+  "expires_at": "2026-07-13T00:27:56.701Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c6229a22954e683ecec4d43b299e4f53be1cdf49b0036197efe93b47520d878",
+  "signature": "545e17fca22dd71a9f0ab6711eccebe24c835345851bb642c86375e87253ac04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-007"
 }

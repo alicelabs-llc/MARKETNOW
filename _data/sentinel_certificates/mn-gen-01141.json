@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3213824",
+  "certificate_id": "MN-SC-2026-6835555",
   "skill_id": "mn-gen-01141",
   "skill_name": "Awesome-copilot-mcp",
-  "issued_at": "2026-07-05T23:13:33.824Z",
-  "expires_at": "2026-07-12T23:13:33.824Z",
+  "issued_at": "2026-07-06T00:13:55.555Z",
+  "expires_at": "2026-07-13T00:13:55.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b09ec953133284fc906372c75b3e5549c75c7d197156c3501806a44ec4530161",
+  "signature": "4da222bcd7b9af6d44019929711bcd6e5d9b19439fa7aff2cf50086d90a62cee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01141"
 }

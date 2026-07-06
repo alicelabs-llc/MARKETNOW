@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412389",
+  "certificate_id": "MN-SC-2026-7809044",
   "skill_id": "mn-data-039",
   "skill_name": "Data Masking Tool",
-  "issued_at": "2026-07-05T23:16:52.389Z",
-  "expires_at": "2026-07-12T23:16:52.389Z",
+  "issued_at": "2026-07-06T00:30:09.044Z",
+  "expires_at": "2026-07-13T00:30:09.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5d0daac216616a668e08937274052692e993b1b084aacc80315656e177fd321",
+  "signature": "b211c618afa5d8d7a68df39492263d0d14bfce8bdd78381509f4c2492406a28e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-039"
 }

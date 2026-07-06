@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410468",
+  "certificate_id": "MN-SC-2026-7289774",
   "skill_id": "mn-net-11085",
   "skill_name": "Recharge-storefront-api-mcp",
-  "issued_at": "2026-07-05T23:16:50.468Z",
-  "expires_at": "2026-07-12T23:16:50.468Z",
+  "issued_at": "2026-07-06T00:21:29.774Z",
+  "expires_at": "2026-07-13T00:21:29.774Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6cde79d1706490c6c7737be3ad51ee19cc1d45b2b136c1c3714779a364a37b76",
+  "signature": "52a9c44c5cfe47bc7bc8be97e057db11ec2d77907f85daba40346a33494295d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-11085"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409472",
+  "certificate_id": "MN-SC-2026-6974325",
   "skill_id": "mn-ai-03792",
   "skill_name": "Excalimaid",
-  "issued_at": "2026-07-05T23:16:49.472Z",
-  "expires_at": "2026-07-12T23:16:49.472Z",
+  "issued_at": "2026-07-06T00:16:14.325Z",
+  "expires_at": "2026-07-13T00:16:14.325Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57adc68ac1d6741f3e47101e93827083fff9e6f0a7a7b4883f17ed742f7c732b",
+  "signature": "8cc8117ca8ead998a9833f9fc02ee51b666321ce05a5edd204072fb1fd512698",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03792"
 }

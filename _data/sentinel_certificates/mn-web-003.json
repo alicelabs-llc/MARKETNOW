@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412446",
+  "certificate_id": "MN-SC-2026-7827174",
   "skill_id": "mn-web-003",
   "skill_name": "Bing Search API",
-  "issued_at": "2026-07-05T23:16:52.446Z",
-  "expires_at": "2026-07-12T23:16:52.446Z",
+  "issued_at": "2026-07-06T00:30:27.174Z",
+  "expires_at": "2026-07-13T00:30:27.174Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "202b27b540501713aee6fd44c7a389033f8a25ef82dc33143700939f4cd07180",
+  "signature": "75a8458dae9b118b5ee0c2977d14c23509a6da9f08fcda71f84621267055872d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-003"
 }

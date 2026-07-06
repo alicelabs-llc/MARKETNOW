@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410055",
+  "certificate_id": "MN-SC-2026-7158101",
   "skill_id": "mn-gen-07926",
   "skill_name": "Mcp-smart-crawler",
-  "issued_at": "2026-07-05T23:16:50.055Z",
-  "expires_at": "2026-07-12T23:16:50.055Z",
+  "issued_at": "2026-07-06T00:19:18.101Z",
+  "expires_at": "2026-07-13T00:19:18.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7010fc2817dd63f9f4351290e6a2efa2c6ae5232a09146b655bf3a98181b54e",
+  "signature": "dd6bb78d7ef49836cdc492d01f67fe105242bb90903f793115bbc2b7314c0af5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07926"
 }

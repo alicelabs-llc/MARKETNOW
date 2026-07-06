@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410080",
+  "certificate_id": "MN-SC-2026-7165842",
   "skill_id": "mn-gen-08035",
   "skill_name": "Twilio-alpha/mcp-te-benchmark",
-  "issued_at": "2026-07-05T23:16:50.080Z",
-  "expires_at": "2026-07-12T23:16:50.080Z",
+  "issued_at": "2026-07-06T00:19:25.842Z",
+  "expires_at": "2026-07-13T00:19:25.842Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a9fcb0e6c3a48140282b5ed864564b4a1042a0c5d1536a9f55ebd74a848d620",
+  "signature": "a144c5b53848310a2bd0a28c6814266f47e47635f0a6a90ecc3e245b1333195d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08035"
 }

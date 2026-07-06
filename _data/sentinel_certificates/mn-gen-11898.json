@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410581",
+  "certificate_id": "MN-SC-2026-7325905",
   "skill_id": "mn-gen-11898",
   "skill_name": "Slack-claude-code-integration",
-  "issued_at": "2026-07-05T23:16:50.581Z",
-  "expires_at": "2026-07-12T23:16:50.581Z",
+  "issued_at": "2026-07-06T00:22:05.905Z",
+  "expires_at": "2026-07-13T00:22:05.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14209aea3cb20c0766ff694a9eaaa69c5e097c46a80e2015f009f305b70eb361",
+  "signature": "5bb11b58542008137a6cca1f3f6f656d496541a4a74c91416cbb1951eb93fd65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11898"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410189",
+  "certificate_id": "MN-SC-2026-7199003",
   "skill_id": "mn-gen-09099",
   "skill_name": "Misunderstood-mcp",
-  "issued_at": "2026-07-05T23:16:50.189Z",
-  "expires_at": "2026-07-12T23:16:50.189Z",
+  "issued_at": "2026-07-06T00:19:59.003Z",
+  "expires_at": "2026-07-13T00:19:59.003Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6da018ae7404f7cdd4ecce979c3e9b80aa5f625a97d573969000b42c0b2d1107",
+  "signature": "35e12df90f860f82836cb1422257a0206fb911da006a7c5666158b67c3c058d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09099"
 }

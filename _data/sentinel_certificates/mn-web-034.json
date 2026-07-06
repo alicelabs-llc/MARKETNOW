@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412471",
+  "certificate_id": "MN-SC-2026-7831286",
   "skill_id": "mn-web-034",
   "skill_name": "Time Zone Converter",
-  "issued_at": "2026-07-05T23:16:52.471Z",
-  "expires_at": "2026-07-12T23:16:52.471Z",
+  "issued_at": "2026-07-06T00:30:31.286Z",
+  "expires_at": "2026-07-13T00:30:31.286Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77e07306626e41640f8e3fd09768d7b9bc050574ab5e86017d2ba5c9fe99ce12",
+  "signature": "fc0fce89c2946901a5f1af721bba1ed2a9914b60e9765660d90e8e55f53c0c70",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-034"
 }

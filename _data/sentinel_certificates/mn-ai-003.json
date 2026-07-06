@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412107",
+  "certificate_id": "MN-SC-2026-7739262",
   "skill_id": "mn-ai-003",
   "skill_name": "Model Serving Optimizer",
-  "issued_at": "2026-07-05T23:16:52.107Z",
-  "expires_at": "2026-07-12T23:16:52.107Z",
+  "issued_at": "2026-07-06T00:28:59.262Z",
+  "expires_at": "2026-07-13T00:28:59.262Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6664773525c0bc3d14ad69294fb6aabc1a45ee06242cd1b89a6c91222d549550",
+  "signature": "adcffd8c23cc86d6013ebac303f23cd623172caf070ba27ed07760990e386890",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-003"
 }

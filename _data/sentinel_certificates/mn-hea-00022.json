@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412069",
+  "certificate_id": "MN-SC-2026-7723089",
   "skill_id": "mn-hea-00022",
   "skill_name": "BAA Manager",
-  "issued_at": "2026-07-05T23:16:52.069Z",
-  "expires_at": "2026-07-12T23:16:52.069Z",
+  "issued_at": "2026-07-06T00:28:43.089Z",
+  "expires_at": "2026-07-13T00:28:43.089Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d86d9302feb5ff258ea3d278825a9503c43a8a9b9665956eefc2200252800fd9",
+  "signature": "ce0d21d9f13673b95d353e0241020dedf31bebc249a00cdbf8d192653be2d634",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00022"
 }

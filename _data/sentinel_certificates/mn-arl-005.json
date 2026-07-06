@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411862",
+  "certificate_id": "MN-SC-2026-7676210",
   "skill_id": "mn-arl-005",
   "skill_name": "Memory Consolidation MCP",
-  "issued_at": "2026-07-05T23:16:51.862Z",
-  "expires_at": "2026-07-12T23:16:51.862Z",
+  "issued_at": "2026-07-06T00:27:56.210Z",
+  "expires_at": "2026-07-13T00:27:56.210Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af0cbbac81e8b6ca522c0c738c6c1adf3090dc788d4ef684a4792b8fc132a8d6",
+  "signature": "985cdddb71b57c3df7477e8ff81fa4fc2de22ae55942e0c3834235c94ed092c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-005"
 }

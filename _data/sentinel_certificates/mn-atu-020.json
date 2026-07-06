@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411897",
+  "certificate_id": "MN-SC-2026-7687963",
   "skill_id": "mn-atu-020",
   "skill_name": "Tool Argument Builder",
-  "issued_at": "2026-07-05T23:16:51.897Z",
-  "expires_at": "2026-07-12T23:16:51.897Z",
+  "issued_at": "2026-07-06T00:28:07.963Z",
+  "expires_at": "2026-07-13T00:28:07.963Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d6daf4cf96fac7d45525b438f7ec730e5e16630923a63845f78348025863af22",
+  "signature": "07b38448f457b2d09a8c2006f559f9268ba673ba70afbea2b443a177b18db28b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-020"
 }

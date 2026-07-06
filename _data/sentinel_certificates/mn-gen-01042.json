@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2983132",
+  "certificate_id": "MN-SC-2026-6831206",
   "skill_id": "mn-gen-01042",
   "skill_name": "Aryaminus/at",
-  "issued_at": "2026-07-05T23:09:43.132Z",
-  "expires_at": "2026-07-12T23:09:43.132Z",
+  "issued_at": "2026-07-06T00:13:51.206Z",
+  "expires_at": "2026-07-13T00:13:51.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d0bcd0dfcf14a6589e9e92de95d7343e693920c97b180a2de40be9f1b963c18f",
+  "signature": "ffd779733a2ec3e0522d389b21e269c49375dda3c4b8438141e9c277acd40e7a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01042"
 }

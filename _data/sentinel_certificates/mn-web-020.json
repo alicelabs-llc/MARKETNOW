@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412447",
+  "certificate_id": "MN-SC-2026-7829397",
   "skill_id": "mn-web-020",
   "skill_name": "HTTP Request Builder",
-  "issued_at": "2026-07-05T23:16:52.447Z",
-  "expires_at": "2026-07-12T23:16:52.447Z",
+  "issued_at": "2026-07-06T00:30:29.397Z",
+  "expires_at": "2026-07-13T00:30:29.397Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31045ee08fb2e2a00698ac6a3738134aef62fff596d671ad55808087311f8fed",
+  "signature": "f210facb912ab30e5ce01545ac787e7e0178615130e741d9e14c3b7f24d0ccb1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-020"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409387",
+  "certificate_id": "MN-SC-2026-6948156",
   "skill_id": "mn-gen-03212",
   "skill_name": "Deliberate-reasoning-engine",
-  "issued_at": "2026-07-05T23:16:49.387Z",
-  "expires_at": "2026-07-12T23:16:49.387Z",
+  "issued_at": "2026-07-06T00:15:48.156Z",
+  "expires_at": "2026-07-13T00:15:48.156Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57b190c46022811458c1a9d0d54ea127b664e5981125663e9cfde1e7af695079",
+  "signature": "5f624d6f07565def9a2d572df43a4f3218b2c48b4290b1639c01a80438e12c89",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03212"
 }

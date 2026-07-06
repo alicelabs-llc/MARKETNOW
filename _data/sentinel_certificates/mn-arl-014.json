@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411863",
+  "certificate_id": "MN-SC-2026-7677382",
   "skill_id": "mn-arl-014",
   "skill_name": "Ambiguity Resolver MCP",
-  "issued_at": "2026-07-05T23:16:51.863Z",
-  "expires_at": "2026-07-12T23:16:51.863Z",
+  "issued_at": "2026-07-06T00:27:57.382Z",
+  "expires_at": "2026-07-13T00:27:57.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1efc512741217c8de312601d6f8ac2db3754375f87b2d62259e48f469efed173",
+  "signature": "a4b7984089731763ee5509e37f585535342015c6f62e4144c5e009601bbe4fa6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-014"
 }

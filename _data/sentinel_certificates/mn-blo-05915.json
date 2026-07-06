@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409764",
+  "certificate_id": "MN-SC-2026-7064712",
   "skill_id": "mn-blo-05915",
   "skill_name": "Loglm/mcp-server-prometheus",
-  "issued_at": "2026-07-05T23:16:49.764Z",
-  "expires_at": "2026-07-12T23:16:49.764Z",
+  "issued_at": "2026-07-06T00:17:44.712Z",
+  "expires_at": "2026-07-13T00:17:44.712Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "12a1b8b856275d2eda30f21a45592a1eeeaa100ebbfefddedc58a064839d6908",
+  "signature": "8b24eab3f87535b1ff9d37467a848310a8748f9cc8045e8cc65ddfb2ff6ccdac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-05915"
 }

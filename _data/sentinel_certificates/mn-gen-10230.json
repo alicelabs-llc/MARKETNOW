@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410356",
+  "certificate_id": "MN-SC-2026-7251228",
   "skill_id": "mn-gen-10230",
   "skill_name": "Patternfly/patternfly-mcp",
-  "issued_at": "2026-07-05T23:16:50.356Z",
-  "expires_at": "2026-07-12T23:16:50.356Z",
+  "issued_at": "2026-07-06T00:20:51.228Z",
+  "expires_at": "2026-07-13T00:20:51.228Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c55b251093737bce7fcf4f58b358c61d91e46f03d2cd3f40666bbf3824763c6",
+  "signature": "864dbce28bb23b5360752782066758d13703b0a41e39e49076f4ee94a101a088",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10230"
 }

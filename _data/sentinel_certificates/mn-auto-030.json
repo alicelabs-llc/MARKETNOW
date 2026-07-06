@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412346",
+  "certificate_id": "MN-SC-2026-7793613",
   "skill_id": "mn-auto-030",
   "skill_name": "Switch Router",
-  "issued_at": "2026-07-05T23:16:52.346Z",
-  "expires_at": "2026-07-12T23:16:52.346Z",
+  "issued_at": "2026-07-06T00:29:53.613Z",
+  "expires_at": "2026-07-13T00:29:53.613Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "488207de5a671e630818d8287796e0d3058468fe72adc15cc0a48beebb27841e",
+  "signature": "60f080f78f0087e3d5baec31e972e032804275a5e2861bfaa2b17ffb800cc34b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-030"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412005",
+  "certificate_id": "MN-SC-2026-7716688",
   "skill_id": "mn-edu-00006",
   "skill_name": "Khan Academy MCP",
-  "issued_at": "2026-07-05T23:16:52.005Z",
-  "expires_at": "2026-07-12T23:16:52.005Z",
+  "issued_at": "2026-07-06T00:28:36.688Z",
+  "expires_at": "2026-07-13T00:28:36.688Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b7be3bd12541286ca774824d6fdc2e557559e192182c823e9de7dfdc79c0cff",
+  "signature": "1d5b373d1f1137171585cfc860e53017ec15fb680acc5a6c9f79ca122fc9cb18",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edu-00006"
 }

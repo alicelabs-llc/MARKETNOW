@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412105",
+  "certificate_id": "MN-SC-2026-7736839",
   "skill_id": "mn-voi-00008",
   "skill_name": "Speechify Voice",
-  "issued_at": "2026-07-05T23:16:52.105Z",
-  "expires_at": "2026-07-12T23:16:52.105Z",
+  "issued_at": "2026-07-06T00:28:56.839Z",
+  "expires_at": "2026-07-13T00:28:56.839Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bb14442812c2e5311aec4c594ab3e8adea7f596cca69e92e32df2db3269d382",
+  "signature": "cfd7d1068833282313835c7240465d470e357a9556b9607874c1273d751816f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00008"
 }

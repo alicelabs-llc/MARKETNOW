@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410756",
+  "certificate_id": "MN-SC-2026-7375075",
   "skill_id": "mn-gen-13028",
   "skill_name": "Unpaywall-mcp",
-  "issued_at": "2026-07-05T23:16:50.756Z",
-  "expires_at": "2026-07-12T23:16:50.756Z",
+  "issued_at": "2026-07-06T00:22:55.075Z",
+  "expires_at": "2026-07-13T00:22:55.075Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7117a395584eb46f18b524dd3fac34d0a46f729c8d25c03cee8aeedb3078a67d",
+  "signature": "db6744e39006c7d71e1602a84a721248cd440dd49af536ed7c56f45135b9093c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13028"
 }

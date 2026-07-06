@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412515",
+  "certificate_id": "MN-SC-2026-7854726",
   "skill_id": "mn-heal-010",
   "skill_name": "Telemedicine Platform",
-  "issued_at": "2026-07-05T23:16:52.515Z",
-  "expires_at": "2026-07-12T23:16:52.515Z",
+  "issued_at": "2026-07-06T00:30:54.726Z",
+  "expires_at": "2026-07-13T00:30:54.726Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39d070a559e6dd76144f4a577bba93021cd7ef4bd55eca491bb89a7e54a484ad",
+  "signature": "7a904ab732b239060939a99e5a3db9405569d32e4e9a1c48432bacb3d4412ea9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-heal-010"
 }

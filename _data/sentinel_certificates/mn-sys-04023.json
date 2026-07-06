@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409499",
+  "certificate_id": "MN-SC-2026-6983443",
   "skill_id": "mn-sys-04023",
   "skill_name": "Sylphx/filesystem-mcp",
-  "issued_at": "2026-07-05T23:16:49.499Z",
-  "expires_at": "2026-07-12T23:16:49.499Z",
+  "issued_at": "2026-07-06T00:16:23.443Z",
+  "expires_at": "2026-07-13T00:16:23.443Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11c64765d51e5bdb358ada0956c2ad29ecde9f3ac6f62fa957f6eb225efcb441",
+  "signature": "056d515a76577b957214554a4618c2f04a6539d73ae72eef7aa3ebd91593ad42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sys-04023"
 }

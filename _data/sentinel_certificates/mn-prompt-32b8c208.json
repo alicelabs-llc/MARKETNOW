@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411389",
+  "certificate_id": "MN-SC-2026-7546553",
   "skill_id": "mn-prompt-32b8c208",
   "skill_name": "Implementador de observability con OpenTelemetry",
-  "issued_at": "2026-07-05T23:16:51.389Z",
-  "expires_at": "2026-07-12T23:16:51.389Z",
+  "issued_at": "2026-07-06T00:25:46.553Z",
+  "expires_at": "2026-07-13T00:25:46.553Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "44d68623b870ccc1273a77b976dc5ad8f61c13878d35aa93128320b40cb9ce30",
+  "signature": "1ffdc20ac050b2cd970c04f4e1a181fc912694b546407ca624957ee1b8c6aa91",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-32b8c208"
 }

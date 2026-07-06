@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410796",
+  "certificate_id": "MN-SC-2026-7391111",
   "skill_id": "mn-net-13327",
   "skill_name": "Web-fetch-mcp",
-  "issued_at": "2026-07-05T23:16:50.796Z",
-  "expires_at": "2026-07-12T23:16:50.796Z",
+  "issued_at": "2026-07-06T00:23:11.111Z",
+  "expires_at": "2026-07-13T00:23:11.111Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cfaa26b60818c81d2330b01650ab847f5315172a6c7c5d9befe3d1a10a314487",
+  "signature": "dd4ea6ade28eb55c89746662de39eb4b5b4dcb94392eddcfc57560a3ca52afca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-13327"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409501",
+  "certificate_id": "MN-SC-2026-6985206",
   "skill_id": "mn-blo-04071",
   "skill_name": "Tethernet",
-  "issued_at": "2026-07-05T23:16:49.501Z",
-  "expires_at": "2026-07-12T23:16:49.501Z",
+  "issued_at": "2026-07-06T00:16:25.206Z",
+  "expires_at": "2026-07-13T00:16:25.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8bb34a69941f975a2ac59e2de116032375964500071dfb6e916dc0942293225",
+  "signature": "97ae62af02da0a29409fc8bd93db42bfbbbd35aa53fc2d5c6af8e9964768deb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-04071"
 }

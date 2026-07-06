@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410617",
+  "certificate_id": "MN-SC-2026-7344035",
   "skill_id": "mn-gen-12345",
   "skill_name": "Swagger-navigator-mcp",
-  "issued_at": "2026-07-05T23:16:50.617Z",
-  "expires_at": "2026-07-12T23:16:50.617Z",
+  "issued_at": "2026-07-06T00:22:24.035Z",
+  "expires_at": "2026-07-13T00:22:24.035Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "334f742d2dd4eefeec64f9e6a2db0e26c4d2fd3b94011a23c0a62b894e393e6a",
+  "signature": "e6eac5813377b2a3f147dc2547bc65893adb5e6356b2f42e24ef3b8f8e889ba7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12345"
 }

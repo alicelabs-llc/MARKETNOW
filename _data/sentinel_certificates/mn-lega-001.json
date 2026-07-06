@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412563",
+  "certificate_id": "MN-SC-2026-7863643",
   "skill_id": "mn-lega-001",
   "skill_name": "Contract Analyzer AI",
-  "issued_at": "2026-07-05T23:16:52.563Z",
-  "expires_at": "2026-07-12T23:16:52.563Z",
+  "issued_at": "2026-07-06T00:31:03.643Z",
+  "expires_at": "2026-07-13T00:31:03.643Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc080f7995f3390b4a036e63f558adeec3c590fd89271939885d2b550dbd40d9",
+  "signature": "ed92e56c6667c4d332afda484b394f5a4578f5644408f49ba1a7748af7a3490a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-lega-001"
 }

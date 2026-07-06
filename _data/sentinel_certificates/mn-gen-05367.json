@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409685",
+  "certificate_id": "MN-SC-2026-7040547",
   "skill_id": "mn-gen-05367",
   "skill_name": "Justpen-browser-mcp",
-  "issued_at": "2026-07-05T23:16:49.685Z",
-  "expires_at": "2026-07-12T23:16:49.685Z",
+  "issued_at": "2026-07-06T00:17:20.547Z",
+  "expires_at": "2026-07-13T00:17:20.547Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d9cb0940f564afcb50e6f4bc377d2fab63998cbdcb93e6806f8c2e9ad521750",
+  "signature": "75a17be9ed5a100627b4c082e2a38f84840b4421198607770811f2f350314218",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05367"
 }

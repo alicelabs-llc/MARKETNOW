@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410505",
+  "certificate_id": "MN-SC-2026-7305573",
   "skill_id": "mn-gen-11468",
   "skill_name": "Scanwarp",
-  "issued_at": "2026-07-05T23:16:50.505Z",
-  "expires_at": "2026-07-12T23:16:50.505Z",
+  "issued_at": "2026-07-06T00:21:45.573Z",
+  "expires_at": "2026-07-13T00:21:45.573Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "71946b587fd6a499858c458ae7fe83b958b6d7e440ab9d0eae8c0edca1411443",
+  "signature": "2e131b580d2aaadab0b39ec9a50277f63082f801b493059fec662ef39bf70c6b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11468"
 }

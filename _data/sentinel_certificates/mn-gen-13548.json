@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410850",
+  "certificate_id": "MN-SC-2026-7401296",
   "skill_id": "mn-gen-13548",
   "skill_name": "Wp-blockmarkup-mcp",
-  "issued_at": "2026-07-05T23:16:50.850Z",
-  "expires_at": "2026-07-12T23:16:50.850Z",
+  "issued_at": "2026-07-06T00:23:21.296Z",
+  "expires_at": "2026-07-13T00:23:21.296Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ebfa99077d656effa067c701ee474ef6b4f0ecf86804bd566b262dbec791b047",
+  "signature": "16a479f7d1ccb9f2e0135de7480fcec9ac94c05ec12345c3c2a1de691f4674a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13548"
 }

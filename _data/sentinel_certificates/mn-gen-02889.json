@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409354",
+  "certificate_id": "MN-SC-2026-6929641",
   "skill_id": "mn-gen-02889",
   "skill_name": "Create-commands-mcp",
-  "issued_at": "2026-07-05T23:16:49.354Z",
-  "expires_at": "2026-07-12T23:16:49.354Z",
+  "issued_at": "2026-07-06T00:15:29.641Z",
+  "expires_at": "2026-07-13T00:15:29.641Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab7f0c77f82fc2c5cb02c44ee93e8ca2869c4c756b1454267926da57ac4b54d4",
+  "signature": "ab703c17b0d97867cdbb1edf06544885b1762c679018fbd794b668b73f858eb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02889"
 }

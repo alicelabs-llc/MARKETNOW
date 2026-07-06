@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409964",
+  "certificate_id": "MN-SC-2026-7129200",
   "skill_id": "mn-gen-07305",
   "skill_name": "Iqai/mcp-polymarket",
-  "issued_at": "2026-07-05T23:16:49.964Z",
-  "expires_at": "2026-07-12T23:16:49.964Z",
+  "issued_at": "2026-07-06T00:18:49.200Z",
+  "expires_at": "2026-07-13T00:18:49.200Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bc801eeff3975e16e01b6c8794a7cdce05ddbfb972c47d753ecfc6b0cdbd1c7",
+  "signature": "ec3fa8c1720897bf33ee2bcd56b8fa7c47b59c38368d5017a2304557f3fb018d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07305"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410506",
+  "certificate_id": "MN-SC-2026-7306136",
   "skill_id": "mn-gen-11488",
   "skill_name": "Scopediff",
-  "issued_at": "2026-07-05T23:16:50.506Z",
-  "expires_at": "2026-07-12T23:16:50.506Z",
+  "issued_at": "2026-07-06T00:21:46.136Z",
+  "expires_at": "2026-07-13T00:21:46.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "234c4480e68babbe5616f3ed209c12009f742b5dfaf8db0df484f1252161c9f7",
+  "signature": "0fb916650c9c576ee29c05f1c786465deda12115ee4cf62dcf7a170013d1402c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11488"
 }

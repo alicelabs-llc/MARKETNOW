@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410052",
+  "certificate_id": "MN-SC-2026-7155311",
   "skill_id": "mn-gen-07864",
   "skill_name": "Mcp-server-webscan",
-  "issued_at": "2026-07-05T23:16:50.052Z",
-  "expires_at": "2026-07-12T23:16:50.052Z",
+  "issued_at": "2026-07-06T00:19:15.311Z",
+  "expires_at": "2026-07-13T00:19:15.311Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85fefb00e295971282062d79d6bbe92e1dc17d96364e4460d7d0858f86cd7077",
+  "signature": "df023c177c31736faf13c60d0278759f6f2c8cd8af63ba54ee73b55d432ac577",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07864"
 }

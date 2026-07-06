@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409315",
+  "certificate_id": "MN-SC-2026-6914800",
   "skill_id": "mn-gen-02681",
   "skill_name": "Compress-on-input",
-  "issued_at": "2026-07-05T23:16:49.315Z",
-  "expires_at": "2026-07-12T23:16:49.315Z",
+  "issued_at": "2026-07-06T00:15:14.800Z",
+  "expires_at": "2026-07-13T00:15:14.800Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e814d96edb9da1e62de68bfe2bc0d0b33e4e7651a8f5fb0deb62003321bece3",
+  "signature": "e16850d9a9bc6f209b3c427f0b6634de6b1b7af428581d944b3e088dbcd0433b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02681"
 }

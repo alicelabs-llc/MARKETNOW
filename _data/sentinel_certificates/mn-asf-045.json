@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411998",
+  "certificate_id": "MN-SC-2026-7710304",
   "skill_id": "mn-asf-045",
   "skill_name": "Zero-Knowledge Proof Verifier",
-  "issued_at": "2026-07-05T23:16:51.998Z",
-  "expires_at": "2026-07-12T23:16:51.998Z",
+  "issued_at": "2026-07-06T00:28:30.304Z",
+  "expires_at": "2026-07-13T00:28:30.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4cdd688d72f0e90b74ff13a45b281a02ca431e2eb996717de4d85b610249431e",
+  "signature": "7a8177e05573623ac41503db6fd198d1b1bda3105d9ac7b7ef029268d1da7362",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-045"
 }

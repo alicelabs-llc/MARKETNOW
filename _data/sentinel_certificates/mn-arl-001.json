@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411861",
+  "certificate_id": "MN-SC-2026-7675406",
   "skill_id": "mn-arl-001",
   "skill_name": "Hallucination Detector MCP",
-  "issued_at": "2026-07-05T23:16:51.861Z",
-  "expires_at": "2026-07-12T23:16:51.861Z",
+  "issued_at": "2026-07-06T00:27:55.406Z",
+  "expires_at": "2026-07-13T00:27:55.406Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "287d442d3a6b52310b7e338c29a67b1e14b636eaabe96bbdfb554c5da2f459c7",
+  "signature": "5963c43022dda07b74b26d98580329aaf041a4f5939c70b6e58145d8d04167a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-001"
 }

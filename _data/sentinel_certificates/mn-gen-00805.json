@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2966280",
+  "certificate_id": "MN-SC-2026-6819155",
   "skill_id": "mn-gen-00805",
   "skill_name": "Anti-bullshit-mcp-server",
-  "issued_at": "2026-07-05T23:09:26.280Z",
-  "expires_at": "2026-07-12T23:09:26.280Z",
+  "issued_at": "2026-07-06T00:13:39.155Z",
+  "expires_at": "2026-07-13T00:13:39.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a81ab09f1912f58e1ef4db4c6664de2f399dafbb0cb08d3f26cd451912e41dd",
+  "signature": "433bbae32eddfcafbd6a10ca990066b0203ee4095ea134f40473818c05c8cefd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00805"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411452",
+  "certificate_id": "MN-SC-2026-7562383",
   "skill_id": "mn-prompt-8f7f6e67",
   "skill_name": "Marketing campaign post-mortem template",
-  "issued_at": "2026-07-05T23:16:51.452Z",
-  "expires_at": "2026-07-12T23:16:51.452Z",
+  "issued_at": "2026-07-06T00:26:02.383Z",
+  "expires_at": "2026-07-13T00:26:02.383Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a118661b142861d80e350ad6cf5cd6b698d3744f39d68299e16974f05f80121",
+  "signature": "1ed39b20220ce75fb9eab374d7ebdb5dd3da820246dc4098ac317a7ec58428f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8f7f6e67"
 }

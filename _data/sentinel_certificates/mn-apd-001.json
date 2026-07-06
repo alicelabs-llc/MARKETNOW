@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411956",
+  "certificate_id": "MN-SC-2026-7697333",
   "skill_id": "mn-apd-001",
   "skill_name": "Agent Deployment Orchestrator",
-  "issued_at": "2026-07-05T23:16:51.956Z",
-  "expires_at": "2026-07-12T23:16:51.956Z",
+  "issued_at": "2026-07-06T00:28:17.333Z",
+  "expires_at": "2026-07-13T00:28:17.333Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ddc6b5f2d022c445d0378de40144fb1d65fc4a36899fa50db14d38fb6aaf0abc",
+  "signature": "643c9d0ec70ec5a05c8a0ece73bd8c991ab4ba187f6ef9c25284a988b191652f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-001"
 }

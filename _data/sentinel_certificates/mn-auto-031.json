@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412346",
+  "certificate_id": "MN-SC-2026-7793625",
   "skill_id": "mn-auto-031",
   "skill_name": "Queue Manager",
-  "issued_at": "2026-07-05T23:16:52.346Z",
-  "expires_at": "2026-07-12T23:16:52.346Z",
+  "issued_at": "2026-07-06T00:29:53.625Z",
+  "expires_at": "2026-07-13T00:29:53.625Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d2922d2c9d2a640b3f616c06f2852e6faeb223829a7149181dfda19eab33d1b7",
+  "signature": "77e83172042b5b0146c33f8c779ac7998da58b1e8bcaa65d0b3c9d1ff60ee514",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-031"
 }

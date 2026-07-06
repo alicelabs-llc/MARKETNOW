@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409656",
+  "certificate_id": "MN-SC-2026-7029575",
   "skill_id": "mn-gen-05112",
   "skill_name": "Immanence",
-  "issued_at": "2026-07-05T23:16:49.656Z",
-  "expires_at": "2026-07-12T23:16:49.656Z",
+  "issued_at": "2026-07-06T00:17:09.575Z",
+  "expires_at": "2026-07-13T00:17:09.575Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13db29b3d7002800670f62b902e29fd8c521e5f6def1d11b4361c02797288cd9",
+  "signature": "6d7b58ecca0cd627bd8b68859bfa491d9f01d0fbb7ecdec8af9120449602c2dd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05112"
 }

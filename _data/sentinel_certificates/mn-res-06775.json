@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409882",
+  "certificate_id": "MN-SC-2026-7101403",
   "skill_id": "mn-res-06775",
   "skill_name": "Mcp-gemini-filesearch",
-  "issued_at": "2026-07-05T23:16:49.882Z",
-  "expires_at": "2026-07-12T23:16:49.882Z",
+  "issued_at": "2026-07-06T00:18:21.403Z",
+  "expires_at": "2026-07-13T00:18:21.403Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "10adc0dfab78ef6e0847868bcf30a90271f98ca914c2b4dbd1c0df5f6e2567ef",
+  "signature": "e120377d22cee4f07c94caa38ce36c5976a07821782be689fce175183b9c3d88",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-06775"
 }

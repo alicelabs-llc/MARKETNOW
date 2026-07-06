@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412100",
+  "certificate_id": "MN-SC-2026-7733096",
   "skill_id": "mn-sal-00022",
   "skill_name": "Seismic Content MCP",
-  "issued_at": "2026-07-05T23:16:52.100Z",
-  "expires_at": "2026-07-12T23:16:52.100Z",
+  "issued_at": "2026-07-06T00:28:53.096Z",
+  "expires_at": "2026-07-13T00:28:53.096Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f053ba070ca96d5f3230a1d5682ff58a21341ee4abe014eca9983c70c10996df",
+  "signature": "be7ca27e18fc70f3cca985be2e5754a1bd04c1012af0ab4e9d85490c09b61a5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00022"
 }

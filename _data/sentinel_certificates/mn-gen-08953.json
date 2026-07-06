@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410166",
+  "certificate_id": "MN-SC-2026-7193222",
   "skill_id": "mn-gen-08953",
   "skill_name": "Mero-mcp",
-  "issued_at": "2026-07-05T23:16:50.166Z",
-  "expires_at": "2026-07-12T23:16:50.166Z",
+  "issued_at": "2026-07-06T00:19:53.222Z",
+  "expires_at": "2026-07-13T00:19:53.222Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ebd7f5028629df2181400d3e9074b0a97deaff6b2d827b915b33a7ba8c74543",
+  "signature": "f64edbd4d17fd46eb8001697354f41f73cab32b96cbbf6974c497d9edd89b7c4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08953"
 }

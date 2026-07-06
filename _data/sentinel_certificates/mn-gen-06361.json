@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409801",
+  "certificate_id": "MN-SC-2026-7083437",
   "skill_id": "mn-gen-06361",
   "skill_name": "Mcp-chat-human",
-  "issued_at": "2026-07-05T23:16:49.801Z",
-  "expires_at": "2026-07-12T23:16:49.801Z",
+  "issued_at": "2026-07-06T00:18:03.437Z",
+  "expires_at": "2026-07-13T00:18:03.437Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b1fd6a3796d17956682a37dac96504547529c3c46f802c5efdc41d36e450334",
+  "signature": "f0ae60727afb64b733b555a5f1d732931a4db8ff5134cc72d3e105e43c57ebae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06361"
 }

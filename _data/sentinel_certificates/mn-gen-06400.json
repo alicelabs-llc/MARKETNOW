@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409803",
+  "certificate_id": "MN-SC-2026-7085596",
   "skill_id": "mn-gen-06400",
   "skill_name": "Mcp-browser-client",
-  "issued_at": "2026-07-05T23:16:49.803Z",
-  "expires_at": "2026-07-12T23:16:49.803Z",
+  "issued_at": "2026-07-06T00:18:05.596Z",
+  "expires_at": "2026-07-13T00:18:05.596Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89e97110af5347a634bc3931a5db527bd81a368a66a894fc21224c4263d9bc55",
+  "signature": "fbd44fae6e2ac3f7acef7a0a44a438fa22eface0749c8aa357b967eddc35dd41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06400"
 }

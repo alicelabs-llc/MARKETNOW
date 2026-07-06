@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410469",
+  "certificate_id": "MN-SC-2026-7290829",
   "skill_id": "mn-gen-11112",
   "skill_name": "Reepl-mcp-client",
-  "issued_at": "2026-07-05T23:16:50.469Z",
-  "expires_at": "2026-07-12T23:16:50.469Z",
+  "issued_at": "2026-07-06T00:21:30.829Z",
+  "expires_at": "2026-07-13T00:21:30.829Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "866e222d4d3d2d0066e4969300ed788a3f438255b7c500ea894b14a7238c777d",
+  "signature": "655cc11e910e5a3792723fed71b3c1c8485f970ca98ce76d975e409e42e0796b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11112"
 }

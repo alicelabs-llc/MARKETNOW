@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412260",
+  "certificate_id": "MN-SC-2026-7776944",
   "skill_id": "mn-pro-bc73d3dc",
   "skill_name": "Real-Time Player Position",
-  "issued_at": "2026-07-05T23:16:52.260Z",
-  "expires_at": "2026-07-12T23:16:52.260Z",
+  "issued_at": "2026-07-06T00:29:36.944Z",
+  "expires_at": "2026-07-13T00:29:36.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e6a3cf5e4dc0df4a1b5ca4aafe3989f9af25b76d8a4eddf82e5c1dc95964d74f",
+  "signature": "35027b3aa43594a7302ba3a864de4ae7e8189ece2a00bc2b9848179077113394",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-bc73d3dc"
 }

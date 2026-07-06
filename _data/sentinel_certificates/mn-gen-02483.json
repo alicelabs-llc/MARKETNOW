@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408961",
+  "certificate_id": "MN-SC-2026-6904830",
   "skill_id": "mn-gen-02483",
   "skill_name": "Cms-mcp-hub",
-  "issued_at": "2026-07-05T23:16:48.961Z",
-  "expires_at": "2026-07-12T23:16:48.961Z",
+  "issued_at": "2026-07-06T00:15:04.830Z",
+  "expires_at": "2026-07-13T00:15:04.830Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef181ab0caeaf7d5a303ae350070b0b7085fad8a5c94bd8b83bca00edac7cc1a",
+  "signature": "2b18f6e8c8a05dbe0c7bb5d7d818a033cb116c43fc8c7fd808632984b32aad8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02483"
 }

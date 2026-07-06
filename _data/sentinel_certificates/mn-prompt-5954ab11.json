@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411181",
+  "certificate_id": "MN-SC-2026-7491102",
   "skill_id": "mn-prompt-5954ab11",
   "skill_name": "Especialista Clinical Decision Support + CDS",
-  "issued_at": "2026-07-05T23:16:51.181Z",
-  "expires_at": "2026-07-12T23:16:51.181Z",
+  "issued_at": "2026-07-06T00:24:51.102Z",
+  "expires_at": "2026-07-13T00:24:51.102Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc96d89095323beddbe09a01cfd278b65660984af0cfcf21fbf792ec3dfbd0c0",
+  "signature": "f7d5355138417f4c34a1fc67b3c5dbfed8a4904f38c03455d359ab946dd1aad9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5954ab11"
 }

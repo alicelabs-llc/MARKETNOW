@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409693",
+  "certificate_id": "MN-SC-2026-7049465",
   "skill_id": "mn-gen-05545",
   "skill_name": "Kotobank-mcp",
-  "issued_at": "2026-07-05T23:16:49.693Z",
-  "expires_at": "2026-07-12T23:16:49.693Z",
+  "issued_at": "2026-07-06T00:17:29.465Z",
+  "expires_at": "2026-07-13T00:17:29.465Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8779320fc49955c2c0f9e55171fe6ea574b597432c9b70a3367606e74d2b278e",
+  "signature": "ca7848bd5016d24c7161110ad13b0bb1146a6973385dda1bb2ffc7e64b590182",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05545"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412348",
+  "certificate_id": "MN-SC-2026-7795333",
   "skill_id": "mn-code-007",
   "skill_name": "Code Review Automator",
-  "issued_at": "2026-07-05T23:16:52.348Z",
-  "expires_at": "2026-07-12T23:16:52.348Z",
+  "issued_at": "2026-07-06T00:29:55.333Z",
+  "expires_at": "2026-07-13T00:29:55.333Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a1f6ede07526d880f4a2eeea5ebefa4b0dc5652f7dea9fff47137fa7d8f2c18",
+  "signature": "34a356a6d37d8b25d33698620cde3e1ecc7e39ea546a2363860a4f1db3be9b0f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-007"
 }

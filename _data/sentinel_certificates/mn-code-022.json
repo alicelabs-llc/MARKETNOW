@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412349",
+  "certificate_id": "MN-SC-2026-7796855",
   "skill_id": "mn-code-022",
   "skill_name": "Security Vulnerability Scanner",
-  "issued_at": "2026-07-05T23:16:52.349Z",
-  "expires_at": "2026-07-12T23:16:52.349Z",
+  "issued_at": "2026-07-06T00:29:56.855Z",
+  "expires_at": "2026-07-13T00:29:56.855Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e5f0445ea291886ef38694431017807c8696b91534eafd2aba5f3c41a326672",
+  "signature": "4f39c7508aa53d0060eb3542f92662279dd9b8ad324eeba42f6735a219eb83e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-022"
 }

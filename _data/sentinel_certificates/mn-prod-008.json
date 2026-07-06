@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412419",
+  "certificate_id": "MN-SC-2026-7818226",
   "skill_id": "mn-prod-008",
   "skill_name": "Kanban Board",
-  "issued_at": "2026-07-05T23:16:52.419Z",
-  "expires_at": "2026-07-12T23:16:52.419Z",
+  "issued_at": "2026-07-06T00:30:18.226Z",
+  "expires_at": "2026-07-13T00:30:18.226Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b3d202e1d2570b906bc280fb0f46d096ea5a709b9e83e57deaf1df71ade935d",
+  "signature": "70d4cdfcca0b5671a6b2f563ea3a6d894a04e18bc196b3d92d7ae6cc6b2e7d9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-008"
 }

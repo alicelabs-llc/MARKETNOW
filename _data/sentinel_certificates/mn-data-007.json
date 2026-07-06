@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412386",
+  "certificate_id": "MN-SC-2026-7804552",
   "skill_id": "mn-data-007",
   "skill_name": "Regression Analyzer",
-  "issued_at": "2026-07-05T23:16:52.386Z",
-  "expires_at": "2026-07-12T23:16:52.386Z",
+  "issued_at": "2026-07-06T00:30:04.552Z",
+  "expires_at": "2026-07-13T00:30:04.552Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9d036fd5264fda4a2153e7180eb94f26eddc466f0dbce71e673fa3cea1d13a1",
+  "signature": "458048deb2c72417b133b08eddcd97498223784c4f9427353e982ca94e3d957f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-007"
 }

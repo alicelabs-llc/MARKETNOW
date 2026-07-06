@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409361",
+  "certificate_id": "MN-SC-2026-6940969",
   "skill_id": "mn-gen-03037",
   "skill_name": "Daco-mcp",
-  "issued_at": "2026-07-05T23:16:49.361Z",
-  "expires_at": "2026-07-12T23:16:49.361Z",
+  "issued_at": "2026-07-06T00:15:40.969Z",
+  "expires_at": "2026-07-13T00:15:40.969Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f3339d300edeb06cc7254342e9106007ebadced0e63ef4ea95ef60304992e42f",
+  "signature": "281dc94b8794f3fdf937061ef0971017369d40c567d967049cf640bcc2ec2826",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03037"
 }

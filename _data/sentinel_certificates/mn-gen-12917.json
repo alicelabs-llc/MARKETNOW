@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410750",
+  "certificate_id": "MN-SC-2026-7369421",
   "skill_id": "mn-gen-12917",
   "skill_name": "Ugccopilot/mcp",
-  "issued_at": "2026-07-05T23:16:50.750Z",
-  "expires_at": "2026-07-12T23:16:50.750Z",
+  "issued_at": "2026-07-06T00:22:49.421Z",
+  "expires_at": "2026-07-13T00:22:49.421Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c24df3fe68922e304946e2c98d3bdfc2033b902cf573e91d54f1949ea73d26e1",
+  "signature": "1d790c72b18666ec6c952259b3da4e61e3e8e013ef694e961eb332054b8eec38",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12917"
 }

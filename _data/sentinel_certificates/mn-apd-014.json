@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411958",
+  "certificate_id": "MN-SC-2026-7698853",
   "skill_id": "mn-apd-014",
   "skill_name": "Agent Secret Manager",
-  "issued_at": "2026-07-05T23:16:51.958Z",
-  "expires_at": "2026-07-12T23:16:51.958Z",
+  "issued_at": "2026-07-06T00:28:18.853Z",
+  "expires_at": "2026-07-13T00:28:18.853Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d746920ff1a1f89a1344772e897aaa5d30915c6757fd797313b5f76502552ba",
+  "signature": "3c193a08959cffbab310afe08dc4e50ecb403aec963f5591fdd83102c0521edb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-014"
 }

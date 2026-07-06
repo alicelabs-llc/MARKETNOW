@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411862",
+  "certificate_id": "MN-SC-2026-7676052",
   "skill_id": "mn-arl-006",
   "skill_name": "Plan Validator MCP",
-  "issued_at": "2026-07-05T23:16:51.862Z",
-  "expires_at": "2026-07-12T23:16:51.862Z",
+  "issued_at": "2026-07-06T00:27:56.052Z",
+  "expires_at": "2026-07-13T00:27:56.052Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68b82035326d97446200764df7ea0fbbadaf9539be52214137c3fb2b9f9ad14b",
+  "signature": "b894d5b77fa4e6b21b47116ad9fce493445019e49adaa079a128d28401252b0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-006"
 }

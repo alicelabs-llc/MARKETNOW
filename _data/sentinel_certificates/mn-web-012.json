@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412446",
+  "certificate_id": "MN-SC-2026-7828272",
   "skill_id": "mn-web-012",
   "skill_name": "DNS Lookup Tool",
-  "issued_at": "2026-07-05T23:16:52.446Z",
-  "expires_at": "2026-07-12T23:16:52.446Z",
+  "issued_at": "2026-07-06T00:30:28.272Z",
+  "expires_at": "2026-07-13T00:30:28.272Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cadf86a7ace2546320882e50e8cb5a940ec649558b541b47526226198b7b37f8",
+  "signature": "9867cf155a8188af0ff07925f8fa264df4eaeade9456e4961f638ceb7268ca40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-012"
 }

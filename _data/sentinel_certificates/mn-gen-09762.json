@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410284",
+  "certificate_id": "MN-SC-2026-7230332",
   "skill_id": "mn-gen-09762",
   "skill_name": "Octomind/octomind-mcp",
-  "issued_at": "2026-07-05T23:16:50.284Z",
-  "expires_at": "2026-07-12T23:16:50.284Z",
+  "issued_at": "2026-07-06T00:20:30.332Z",
+  "expires_at": "2026-07-13T00:20:30.332Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "43b0de3390b7d95f0a3dda68b82d84b99b0487f85b2c1be36c20b3d8cab066e4",
+  "signature": "287c636ac5004d1056c943a1d43ca6acf23a77fea2a87d4c380fb17d801ac039",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09762"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409918",
+  "certificate_id": "MN-SC-2026-7114275",
   "skill_id": "mn-ai-07043",
   "skill_name": "Mcp-maigret",
-  "issued_at": "2026-07-05T23:16:49.918Z",
-  "expires_at": "2026-07-12T23:16:49.918Z",
+  "issued_at": "2026-07-06T00:18:34.275Z",
+  "expires_at": "2026-07-13T00:18:34.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cbf242af71460b4d73d0c14f56dc35b9112481239889397298b80a854de30996",
+  "signature": "c0a88930df5c353102e79f444e3a16944a4eb73269c4a67d498c7f0cc208a38d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07043"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409551",
+  "certificate_id": "MN-SC-2026-6996994",
   "skill_id": "mn-gen-04339",
   "skill_name": "Gemini-image-mcp",
-  "issued_at": "2026-07-05T23:16:49.551Z",
-  "expires_at": "2026-07-12T23:16:49.551Z",
+  "issued_at": "2026-07-06T00:16:36.994Z",
+  "expires_at": "2026-07-13T00:16:36.994Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e38ed99893f20a131c52b3d80a7f5ae30e3e2857595f2693fc6818f49a94cda",
+  "signature": "82d81982b47a53e830701dbf4883e16016d5f8dcf88e1965dd965136122ae57c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04339"
 }

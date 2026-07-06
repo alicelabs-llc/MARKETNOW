@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410756",
+  "certificate_id": "MN-SC-2026-7375043",
   "skill_id": "mn-ai-13043",
   "skill_name": "Unsorted-ai/mcp",
-  "issued_at": "2026-07-05T23:16:50.756Z",
-  "expires_at": "2026-07-12T23:16:50.756Z",
+  "issued_at": "2026-07-06T00:22:55.043Z",
+  "expires_at": "2026-07-13T00:22:55.043Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3139a03ba5ba4886010e6648365b522601d3a26a78860ca9281cd13c750feb74",
+  "signature": "cdec0b399a8e741e0e496c8f8df0ea4052b008223a7a4593759dd8eb8a56addf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-13043"
 }

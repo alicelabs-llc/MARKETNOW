@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410415",
+  "certificate_id": "MN-SC-2026-7274779",
   "skill_id": "mn-gen-10759",
   "skill_name": "Proxypi",
-  "issued_at": "2026-07-05T23:16:50.415Z",
-  "expires_at": "2026-07-12T23:16:50.415Z",
+  "issued_at": "2026-07-06T00:21:14.779Z",
+  "expires_at": "2026-07-13T00:21:14.779Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53989b28532c83186929dcf6310e4da8bf137e99ca9a4c65c69ca1daccba0514",
+  "signature": "878795ef8920c6d302005a542a8104860edecefcffbb390be5bd1403618b9291",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10759"
 }

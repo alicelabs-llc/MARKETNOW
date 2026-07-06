@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410502",
+  "certificate_id": "MN-SC-2026-7301881",
   "skill_id": "mn-gen-11405",
   "skill_name": "Safari-devtools-mcp",
-  "issued_at": "2026-07-05T23:16:50.502Z",
-  "expires_at": "2026-07-12T23:16:50.502Z",
+  "issued_at": "2026-07-06T00:21:41.881Z",
+  "expires_at": "2026-07-13T00:21:41.881Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa77c649049f7b16e2c903271c4a356b027ab4616d68c42d6c92391aed199d83",
+  "signature": "37058cac1a9df011528daed1f3b460ec8d8b8ca84f5f1cf60c8341938bbdcb60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11405"
 }

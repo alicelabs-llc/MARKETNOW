@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410053",
+  "certificate_id": "MN-SC-2026-7155823",
   "skill_id": "mn-gen-07883",
   "skill_name": "Kagi-server",
-  "issued_at": "2026-07-05T23:16:50.053Z",
-  "expires_at": "2026-07-12T23:16:50.053Z",
+  "issued_at": "2026-07-06T00:19:15.823Z",
+  "expires_at": "2026-07-13T00:19:15.823Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2030bf6a1cbde9cf8504bf89262ce436cf5c2992199cc0ee91af390913cbb8fe",
+  "signature": "0a77d9575f440d32fb78a49cf363b1c46baa1478be7d57f708a1b6eae0cb4b6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07883"
 }

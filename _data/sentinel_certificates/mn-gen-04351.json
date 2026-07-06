@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409552",
+  "certificate_id": "MN-SC-2026-6998318",
   "skill_id": "mn-gen-04351",
   "skill_name": "Gemini-toolbox-mcp",
-  "issued_at": "2026-07-05T23:16:49.552Z",
-  "expires_at": "2026-07-12T23:16:49.552Z",
+  "issued_at": "2026-07-06T00:16:38.318Z",
+  "expires_at": "2026-07-13T00:16:38.318Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "43e0f9aa88c9fa7939eeac760af36be42f9ebe413722e833e8d177e91ced6471",
+  "signature": "0bb6ef49640acdfc8ff8a77fcf5392849367e7775a41ee11d1ff5e2e0ea9b05f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04351"
 }

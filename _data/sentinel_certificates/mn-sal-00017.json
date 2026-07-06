@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412100",
+  "certificate_id": "MN-SC-2026-7732598",
   "skill_id": "mn-sal-00017",
   "skill_name": "Chargebee Subscription",
-  "issued_at": "2026-07-05T23:16:52.100Z",
-  "expires_at": "2026-07-12T23:16:52.100Z",
+  "issued_at": "2026-07-06T00:28:52.598Z",
+  "expires_at": "2026-07-13T00:28:52.598Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "177c3c99be893308def9795f1bb22a091fc04d9a6e38db9b6609cd027a559a2d",
+  "signature": "31e4cddf41c83a1a89ddc99cb604cbbd0e26ad746accb9ff9365ae93f12aa2b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00017"
 }

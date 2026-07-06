@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411899",
+  "certificate_id": "MN-SC-2026-7690558",
   "skill_id": "mn-atu-034",
   "skill_name": "Tool Permission Escalation",
-  "issued_at": "2026-07-05T23:16:51.899Z",
-  "expires_at": "2026-07-12T23:16:51.899Z",
+  "issued_at": "2026-07-06T00:28:10.558Z",
+  "expires_at": "2026-07-13T00:28:10.558Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e1c9c997efeb29bc03e3f64707aafc6025914bb2f2d05315ddcb9ff5cd228f03",
+  "signature": "3831d8c0acf7ea4660c7fd06a7dea327a013d4c9291fa79d7f2ae22899df782f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-034"
 }

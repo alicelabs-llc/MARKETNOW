@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410852",
+  "certificate_id": "MN-SC-2026-7402931",
   "skill_id": "mn-gen-13581",
   "skill_name": "X402-gateway",
-  "issued_at": "2026-07-05T23:16:50.852Z",
-  "expires_at": "2026-07-12T23:16:50.852Z",
+  "issued_at": "2026-07-06T00:23:22.931Z",
+  "expires_at": "2026-07-13T00:23:22.931Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb1bec36306c0199ace08c07fb198cab4743ba94667e30f43da3f75eecc84f51",
+  "signature": "4b5dc37d2d34e4b51fdc68b4d4449546b64d0121e4e7a8b72d18eb7c0ad8fefe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13581"
 }

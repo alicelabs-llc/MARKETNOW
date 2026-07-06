@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410121",
+  "certificate_id": "MN-SC-2026-7183012",
   "skill_id": "mn-gen-08571",
   "skill_name": "Mcpscript",
-  "issued_at": "2026-07-05T23:16:50.121Z",
-  "expires_at": "2026-07-12T23:16:50.121Z",
+  "issued_at": "2026-07-06T00:19:43.012Z",
+  "expires_at": "2026-07-13T00:19:43.012Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "395240b4f3fddcfc4e1a03c662ab6e9fa6c5d4098d8b0704dc0db308fd81dd91",
+  "signature": "cf28e21b1f018bfa0bf8e14ab702984914be40f7961039c89d75ce14416adb76",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08571"
 }

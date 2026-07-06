@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410285",
+  "certificate_id": "MN-SC-2026-7232092",
   "skill_id": "mn-gen-09802",
   "skill_name": "Oktyv",
-  "issued_at": "2026-07-05T23:16:50.285Z",
-  "expires_at": "2026-07-12T23:16:50.285Z",
+  "issued_at": "2026-07-06T00:20:32.092Z",
+  "expires_at": "2026-07-13T00:20:32.092Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "835e78a666389dc53f2848eef8b9f3290adb2b901c321f389016e8d67f1c17f1",
+  "signature": "02dff3a7baf5334b867139a9edff37805a350924935cb90a5f40655ca5a07f6a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09802"
 }

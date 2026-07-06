@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409710",
+  "certificate_id": "MN-SC-2026-7050564",
   "skill_id": "mn-gen-05568",
   "skill_name": "Mcp-server-kubernetes",
-  "issued_at": "2026-07-05T23:16:49.710Z",
-  "expires_at": "2026-07-12T23:16:49.710Z",
+  "issued_at": "2026-07-06T00:17:30.564Z",
+  "expires_at": "2026-07-13T00:17:30.564Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "da0eecd471e76a7274166687811507fdc3039965f939a3815aed5a00e49b849b",
+  "signature": "f9deb7a1f549248425f23943212ddbdbed2aeaa38e6af9d886a94ddc38403626",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05568"
 }

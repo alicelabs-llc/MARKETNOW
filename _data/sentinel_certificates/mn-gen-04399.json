@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409554",
+  "certificate_id": "MN-SC-2026-7000432",
   "skill_id": "mn-gen-04399",
   "skill_name": "Getnote/mcp",
-  "issued_at": "2026-07-05T23:16:49.554Z",
-  "expires_at": "2026-07-12T23:16:49.554Z",
+  "issued_at": "2026-07-06T00:16:40.432Z",
+  "expires_at": "2026-07-13T00:16:40.432Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "91103da643ff0e1d978c300a529d74150de567b5a5527678226d966da0597a2b",
+  "signature": "4da64e6708572a8197a8a1890930fde5fb20deebe83524f77ad4f7529b103754",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04399"
 }

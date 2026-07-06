@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410273",
+  "certificate_id": "MN-SC-2026-7223155",
   "skill_id": "mn-gen-09635",
   "skill_name": "Sakasegawa/ncli",
-  "issued_at": "2026-07-05T23:16:50.273Z",
-  "expires_at": "2026-07-12T23:16:50.273Z",
+  "issued_at": "2026-07-06T00:20:23.155Z",
+  "expires_at": "2026-07-13T00:20:23.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a89dd50aba8bec96100ebda7a8bbf2f9114760a3ca58d106813ad0ad94c9ea26",
+  "signature": "e696979dc857a2cefca18a6dd1783f9a29fee8295157924a339f7d227489e6b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09635"
 }

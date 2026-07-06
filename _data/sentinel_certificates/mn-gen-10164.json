@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410353",
+  "certificate_id": "MN-SC-2026-7247788",
   "skill_id": "mn-gen-10164",
   "skill_name": "Package-registry-mcp",
-  "issued_at": "2026-07-05T23:16:50.353Z",
-  "expires_at": "2026-07-12T23:16:50.353Z",
+  "issued_at": "2026-07-06T00:20:47.788Z",
+  "expires_at": "2026-07-13T00:20:47.788Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8e4d518b22330a6000ce2510c518a10975bcd8c535a1410713ee7cb0e33f417f",
+  "signature": "d610b3987fc45a052e80aeef28326a647ec5d4a04bb8d8214da677dc6d73a7d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10164"
 }

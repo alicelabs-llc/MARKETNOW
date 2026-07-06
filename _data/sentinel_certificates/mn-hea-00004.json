@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412067",
+  "certificate_id": "MN-SC-2026-7721426",
   "skill_id": "mn-hea-00004",
   "skill_name": "athenahealth API",
-  "issued_at": "2026-07-05T23:16:52.067Z",
-  "expires_at": "2026-07-12T23:16:52.067Z",
+  "issued_at": "2026-07-06T00:28:41.426Z",
+  "expires_at": "2026-07-13T00:28:41.426Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13b534443db25465d26fb4214fdd06803bff5b749ac1bfa022bb4a2c4ddfdb39",
+  "signature": "853da81a654da9fff57a2a8f0461dba73f4c43752503bb3520a04cf9c0244c6d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00004"
 }

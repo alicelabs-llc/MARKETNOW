@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409552",
+  "certificate_id": "MN-SC-2026-6998306",
   "skill_id": "mn-gen-04359",
   "skill_name": "Gemsuite-mcp",
-  "issued_at": "2026-07-05T23:16:49.552Z",
-  "expires_at": "2026-07-12T23:16:49.552Z",
+  "issued_at": "2026-07-06T00:16:38.306Z",
+  "expires_at": "2026-07-13T00:16:38.306Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc6fbe103a0b4edd2cfb59e712fd75d93a931dae97d2144bb58c69be6617a2be",
+  "signature": "64cd9d3c1ae0d45d4b17d6a1e914cc93606d75829db2e625d64429bc280ff7e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04359"
 }

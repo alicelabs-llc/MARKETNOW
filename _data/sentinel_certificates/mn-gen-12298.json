@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410614",
+  "certificate_id": "MN-SC-2026-7341413",
   "skill_id": "mn-gen-12298",
   "skill_name": "Supabase-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.614Z",
-  "expires_at": "2026-07-12T23:16:50.614Z",
+  "issued_at": "2026-07-06T00:22:21.413Z",
+  "expires_at": "2026-07-13T00:22:21.413Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8002aa53a340433d95fddbf865d7182846378ab9b821799fcefdecd39247a768",
+  "signature": "33f8b53833a3ce71034624911477f0a285f277b267a6bffe5aabfeb6647f1108",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12298"
 }

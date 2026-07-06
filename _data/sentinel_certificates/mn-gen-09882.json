@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410308",
+  "certificate_id": "MN-SC-2026-7235372",
   "skill_id": "mn-gen-09882",
   "skill_name": "Onyx-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.308Z",
-  "expires_at": "2026-07-12T23:16:50.308Z",
+  "issued_at": "2026-07-06T00:20:35.372Z",
+  "expires_at": "2026-07-13T00:20:35.372Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23c01d18dced90d96348a5b7afd4599a02f61a39f78795f883f431ac7661d64c",
+  "signature": "b535090582e22cb0d55977ca72f204a908dabafd4b5be096df24b76427caffdb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09882"
 }

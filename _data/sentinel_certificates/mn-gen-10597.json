@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410389",
+  "certificate_id": "MN-SC-2026-7267323",
   "skill_id": "mn-gen-10597",
   "skill_name": "Postmancer",
-  "issued_at": "2026-07-05T23:16:50.389Z",
-  "expires_at": "2026-07-12T23:16:50.389Z",
+  "issued_at": "2026-07-06T00:21:07.323Z",
+  "expires_at": "2026-07-13T00:21:07.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc8395e5a30712c4744d50c255d3d8093853230220bde682a2f6de6ded57142b",
+  "signature": "5c5395acc42e6446fa24f043ed5337d9c6cc830986b23398da6951dc8dec8d24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10597"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412606",
+  "certificate_id": "MN-SC-2026-7884873",
   "skill_id": "mn-seller-4b36e5ef",
   "skill_name": "Amazon Product Tracker",
-  "issued_at": "2026-07-05T23:16:52.606Z",
-  "expires_at": "2026-07-12T23:16:52.606Z",
+  "issued_at": "2026-07-06T00:31:24.873Z",
+  "expires_at": "2026-07-13T00:31:24.873Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d4b7a4bc971285b5f1964c36b491530ddcd33bc48f2547156399011288b9f22f",
+  "signature": "a388d495c0604ad94d8e727d7f70dde736e28a4116ef47c435350764d9eda400",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-seller-4b36e5ef"
 }

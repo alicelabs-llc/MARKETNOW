@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410416",
+  "certificate_id": "MN-SC-2026-7275933",
   "skill_id": "mn-gen-10784",
   "skill_name": "Pubmed-mcp-server-remote",
-  "issued_at": "2026-07-05T23:16:50.416Z",
-  "expires_at": "2026-07-12T23:16:50.416Z",
+  "issued_at": "2026-07-06T00:21:15.933Z",
+  "expires_at": "2026-07-13T00:21:15.933Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0e4fa98f9d198f22dafb6775ddbf7a39dbae0c0ff3753c5cc0a4d130a921272f",
+  "signature": "a8ba248592b1d550084af85cc27064e2a7d4d9637be3c202daf1353c6525ecc0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10784"
 }

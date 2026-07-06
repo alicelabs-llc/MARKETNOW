@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412518",
+  "certificate_id": "MN-SC-2026-7857228",
   "skill_id": "mn-heal-040",
   "skill_name": "Medical Record Summarizer",
-  "issued_at": "2026-07-05T23:16:52.518Z",
-  "expires_at": "2026-07-12T23:16:52.518Z",
+  "issued_at": "2026-07-06T00:30:57.228Z",
+  "expires_at": "2026-07-13T00:30:57.228Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d9f109067fe0f5aa729d4b4872461971d8112fc3449b0ebbd15cb3a690407ed",
+  "signature": "541d35c0538c507ad10871e1826ea28ca40dad24f2503e428e45c2d68ce86952",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-heal-040"
 }

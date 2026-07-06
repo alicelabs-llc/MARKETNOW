@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410960",
+  "certificate_id": "MN-SC-2026-7432366",
   "skill_id": "mn-prompt-169ab92a",
   "skill_name": "Especialista Infrastructure as Code Review",
-  "issued_at": "2026-07-05T23:16:50.960Z",
-  "expires_at": "2026-07-12T23:16:50.960Z",
+  "issued_at": "2026-07-06T00:23:52.366Z",
+  "expires_at": "2026-07-13T00:23:52.366Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2f8b7caa9766423e1091c70d55177f95cf904d21cb12f8b0013c11e69339dbee",
+  "signature": "4267f32ba2080487196c5505fa205f685c519cdfbed65ca35759ddca23ac2880",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-169ab92a"
 }

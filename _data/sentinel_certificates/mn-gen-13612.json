@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410853",
+  "certificate_id": "MN-SC-2026-7404023",
   "skill_id": "mn-gen-13612",
   "skill_name": "Xdebug-mcp",
-  "issued_at": "2026-07-05T23:16:50.853Z",
-  "expires_at": "2026-07-12T23:16:50.853Z",
+  "issued_at": "2026-07-06T00:23:24.023Z",
+  "expires_at": "2026-07-13T00:23:24.023Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b348af893feeac034595471fe2b359cbf1ba8e617af181ae8c93df1661e85615",
+  "signature": "5242c281b2f810e95753ba6aa000d8a66645efa3dc85d81a97a65661425cb5e7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13612"
 }

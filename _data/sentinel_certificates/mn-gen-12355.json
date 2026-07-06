@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410660",
+  "certificate_id": "MN-SC-2026-7344538",
   "skill_id": "mn-gen-12355",
   "skill_name": "Sweagent",
-  "issued_at": "2026-07-05T23:16:50.660Z",
-  "expires_at": "2026-07-12T23:16:50.660Z",
+  "issued_at": "2026-07-06T00:22:24.538Z",
+  "expires_at": "2026-07-13T00:22:24.538Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65a36a9e6470c4fbb0bb9ae381d227c98d109fec179013c9836ccaf9ce4be8d8",
+  "signature": "d7f998d74dc75739309244753a77194ec8d0539b73aafb135c231b0ad36fb3b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12355"
 }

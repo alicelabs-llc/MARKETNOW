@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412076",
+  "certificate_id": "MN-SC-2026-7729944",
   "skill_id": "mn-leg-00043",
   "skill_name": "Vendor Risk Assessor",
-  "issued_at": "2026-07-05T23:16:52.076Z",
-  "expires_at": "2026-07-12T23:16:52.076Z",
+  "issued_at": "2026-07-06T00:28:49.944Z",
+  "expires_at": "2026-07-13T00:28:49.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cbf8a83766565ce389a24a6440205da81518134d63ae3a72437141b02d64331f",
+  "signature": "a1de58f14c31c38403536fc4ee2cf4cc793df7d0cc50f4252e40816ec4974298",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00043"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3238656",
+  "certificate_id": "MN-SC-2026-6868045",
   "skill_id": "mn-gen-01797",
   "skill_name": "Cfx-sync-mcp",
-  "issued_at": "2026-07-05T23:13:58.656Z",
-  "expires_at": "2026-07-12T23:13:58.656Z",
+  "issued_at": "2026-07-06T00:14:28.045Z",
+  "expires_at": "2026-07-13T00:14:28.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d92c6c5b08363a89203111bd209acab7501b2ca35826999ee0e82cb6045e25c",
+  "signature": "3cb6a6c5d8255bf1174c25cb72ba44025c7638bc0463f1f4370eab2faefbbc62",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01797"
 }

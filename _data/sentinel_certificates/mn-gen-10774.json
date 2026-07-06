@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410416",
+  "certificate_id": "MN-SC-2026-7275343",
   "skill_id": "mn-gen-10774",
   "skill_name": "Publer-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.416Z",
-  "expires_at": "2026-07-12T23:16:50.416Z",
+  "issued_at": "2026-07-06T00:21:15.343Z",
+  "expires_at": "2026-07-13T00:21:15.343Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a57c431c813836f84c322cf5d41b73fde94350488301d16094ef2c56be5c742e",
+  "signature": "30b866d211f90c0f1e82da641874b44f199834eb74de599cce8a2ceeba5cf148",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10774"
 }

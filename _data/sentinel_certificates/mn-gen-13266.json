@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410792",
+  "certificate_id": "MN-SC-2026-7387541",
   "skill_id": "mn-gen-13266",
   "skill_name": "Vue-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.792Z",
-  "expires_at": "2026-07-12T23:16:50.792Z",
+  "issued_at": "2026-07-06T00:23:07.541Z",
+  "expires_at": "2026-07-13T00:23:07.541Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50da1492e4fb1895332edb695755eb2b9ea81096da00b26448b03169d16ec572",
+  "signature": "17a1c30233866618c11bd42018ee93377cc168799b7d2224ea091c365188583b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13266"
 }

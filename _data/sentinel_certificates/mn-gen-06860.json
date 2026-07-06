@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409886",
+  "certificate_id": "MN-SC-2026-7105679",
   "skill_id": "mn-gen-06860",
   "skill_name": "Mcp-health-monitor",
-  "issued_at": "2026-07-05T23:16:49.886Z",
-  "expires_at": "2026-07-12T23:16:49.886Z",
+  "issued_at": "2026-07-06T00:18:25.679Z",
+  "expires_at": "2026-07-13T00:18:25.679Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "21ed58ec66098ae9ca4ba08d7ed067409020eb5cb3382b752ae4b2ffa86cfa28",
+  "signature": "5c0382aade4945168f91a29e8bad879b3b1cf09602e7ad68c931de3b55617739",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06860"
 }

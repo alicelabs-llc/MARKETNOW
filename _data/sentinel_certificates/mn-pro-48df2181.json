@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412207",
+  "certificate_id": "MN-SC-2026-7760700",
   "skill_id": "mn-pro-48df2181",
   "skill_name": "Database Query Governor",
-  "issued_at": "2026-07-05T23:16:52.207Z",
-  "expires_at": "2026-07-12T23:16:52.207Z",
+  "issued_at": "2026-07-06T00:29:20.700Z",
+  "expires_at": "2026-07-13T00:29:20.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8bed7fe77aa96f5c625d71214d3bed44ba92260677fcb1f9530f830ec94a949",
+  "signature": "847d63aa571f17a52eb03b9cd50dfa4ea6188202f7e04528ba8da6c3e058c8cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-48df2181"
 }

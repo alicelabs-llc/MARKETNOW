@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409660",
+  "certificate_id": "MN-SC-2026-7032846",
   "skill_id": "mn-gen-05180",
   "skill_name": "Intlayer-monorepo",
-  "issued_at": "2026-07-05T23:16:49.660Z",
-  "expires_at": "2026-07-12T23:16:49.660Z",
+  "issued_at": "2026-07-06T00:17:12.846Z",
+  "expires_at": "2026-07-13T00:17:12.846Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de6400caf80ebfe1537171533574ef46861cde6c132e276c206f56bc2d64a1f7",
+  "signature": "7829546cf7975406f0b766afab53b927e37ada3ea39efc349feafbd8fad4a6db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05180"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410546",
+  "certificate_id": "MN-SC-2026-7309360",
   "skill_id": "mn-sec-11572",
   "skill_name": "Security-mcp",
-  "issued_at": "2026-07-05T23:16:50.546Z",
-  "expires_at": "2026-07-12T23:16:50.546Z",
+  "issued_at": "2026-07-06T00:21:49.360Z",
+  "expires_at": "2026-07-13T00:21:49.360Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e78e439d2993b48a8cec142fbc84df9b7bbf21275638973efd1c97f8df604f54",
+  "signature": "7760daba636b6e06b4e958396cb7efd8b9d8b1c7b4cdfdd37152e3109514244b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-11572"
 }

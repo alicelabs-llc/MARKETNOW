@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410579",
+  "certificate_id": "MN-SC-2026-7324307",
   "skill_id": "mn-gen-11859",
   "skill_name": "Agent-skill-forge",
-  "issued_at": "2026-07-05T23:16:50.579Z",
-  "expires_at": "2026-07-12T23:16:50.579Z",
+  "issued_at": "2026-07-06T00:22:04.307Z",
+  "expires_at": "2026-07-13T00:22:04.307Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e4578afcb44045c3f7bcf17f653c1e67401ac230ae31eebda85cee5c933ec761",
+  "signature": "3ea8aea4c6d1889f3a0cfe2a84b78d9ab999d0bb68e7dd71f71c960794c20956",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11859"
 }

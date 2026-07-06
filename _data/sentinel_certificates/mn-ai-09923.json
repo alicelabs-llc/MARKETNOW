@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410309",
+  "certificate_id": "MN-SC-2026-7236910",
   "skill_id": "mn-ai-09923",
   "skill_name": "Gto1seoul/openai-mcp",
-  "issued_at": "2026-07-05T23:16:50.309Z",
-  "expires_at": "2026-07-12T23:16:50.309Z",
+  "issued_at": "2026-07-06T00:20:36.910Z",
+  "expires_at": "2026-07-13T00:20:36.910Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f030a17f0652bd31a4cdf044144f65fe8d98678df740fa428485ddefab956626",
+  "signature": "b06616a1517209383b4734df1e32ed986ea8014111eca2015c5ba9087fad909e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-09923"
 }

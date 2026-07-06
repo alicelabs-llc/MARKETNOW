@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3226227",
+  "certificate_id": "MN-SC-2026-6851284",
   "skill_id": "mn-ai-01523",
   "skill_name": "Brainloop-mcp-server",
-  "issued_at": "2026-07-05T23:13:46.227Z",
-  "expires_at": "2026-07-12T23:13:46.227Z",
+  "issued_at": "2026-07-06T00:14:11.284Z",
+  "expires_at": "2026-07-13T00:14:11.284Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b9b31f3710dbaafcf2d1b7eb2c4063d897b8a9c7ed966684480e539cc82a948",
+  "signature": "fc22ea9f6fd9eec74951e502cf823888efdb756e8115b570324d8cbc52f02590",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01523"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412347",
+  "certificate_id": "MN-SC-2026-7794211",
   "skill_id": "mn-auto-038",
   "skill_name": "Workflow Logger",
-  "issued_at": "2026-07-05T23:16:52.347Z",
-  "expires_at": "2026-07-12T23:16:52.347Z",
+  "issued_at": "2026-07-06T00:29:54.211Z",
+  "expires_at": "2026-07-13T00:29:54.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "445f90010b4e08b8633bb4bd3dd8ba79625f63ffb84c11615331244d8685155c",
+  "signature": "a56f86664999740c2d632664328918b0b81a72977d94e7b4022e3468dbc273aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-038"
 }

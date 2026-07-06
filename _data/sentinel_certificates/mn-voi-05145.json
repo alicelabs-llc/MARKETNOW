@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409659",
+  "certificate_id": "MN-SC-2026-7031731",
   "skill_id": "mn-voi-05145",
   "skill_name": "Innervoice",
-  "issued_at": "2026-07-05T23:16:49.659Z",
-  "expires_at": "2026-07-12T23:16:49.659Z",
+  "issued_at": "2026-07-06T00:17:11.731Z",
+  "expires_at": "2026-07-13T00:17:11.731Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9f7fc0b15ba19636baf760cac38a0e2fedc6e670e9c73044dbeaf27e4a0d774",
+  "signature": "f8cca4d32ebcc9625e599688bbc038ac921569e06de490e39a321e4cac7a2a2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-05145"
 }

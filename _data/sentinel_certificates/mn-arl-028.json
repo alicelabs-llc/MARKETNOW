@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411891",
+  "certificate_id": "MN-SC-2026-7680939",
   "skill_id": "mn-arl-028",
   "skill_name": "Response Time Optimizer",
-  "issued_at": "2026-07-05T23:16:51.891Z",
-  "expires_at": "2026-07-12T23:16:51.891Z",
+  "issued_at": "2026-07-06T00:28:00.939Z",
+  "expires_at": "2026-07-13T00:28:00.939Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fd4e1e97b75289a41d5ae960f2c5ec6243b9a4eb09538588a2a23c879474836",
+  "signature": "43d57fe4ef6e5dca25a720ea307f5d0469908fb1037889cc62dda19695ba6769",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-028"
 }

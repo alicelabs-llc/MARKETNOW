@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412512",
+  "certificate_id": "MN-SC-2026-7848234",
   "skill_id": "mn-fint-002",
   "skill_name": "Plaid Bank Connector",
-  "issued_at": "2026-07-05T23:16:52.512Z",
-  "expires_at": "2026-07-12T23:16:52.512Z",
+  "issued_at": "2026-07-06T00:30:48.234Z",
+  "expires_at": "2026-07-13T00:30:48.234Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0e8b536fe393e3cdb5a02a47ccb9d9a788bafc1f286a12fdd56697a519451962",
+  "signature": "0872985aa8ada60c925fce55f1815edddaa5f5b00cc08b83f6ec84bda2391059",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-002"
 }

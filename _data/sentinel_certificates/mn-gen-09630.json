@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410273",
+  "certificate_id": "MN-SC-2026-7223179",
   "skill_id": "mn-gen-09630",
   "skill_name": "Notice-mcp",
-  "issued_at": "2026-07-05T23:16:50.273Z",
-  "expires_at": "2026-07-12T23:16:50.273Z",
+  "issued_at": "2026-07-06T00:20:23.179Z",
+  "expires_at": "2026-07-13T00:20:23.179Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b0efeb357aa80c7c1cdfc6776fc4cca9165ecbd6aaa632fdaeebf9eac820231",
+  "signature": "f7efd71464cca1b0be172c8588959f9780cc79966968769278ec10f1b3db8847",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09630"
 }

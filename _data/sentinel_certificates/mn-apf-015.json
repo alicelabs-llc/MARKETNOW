@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412000",
+  "certificate_id": "MN-SC-2026-7712382",
   "skill_id": "mn-apf-015",
   "skill_name": "Tool Call Parallelizer",
-  "issued_at": "2026-07-05T23:16:52.000Z",
-  "expires_at": "2026-07-12T23:16:52.000Z",
+  "issued_at": "2026-07-06T00:28:32.382Z",
+  "expires_at": "2026-07-13T00:28:32.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2bcf71bd7cfe0a6b5a680612a448f79aca109e6cdd2a595723414b737db06e3e",
+  "signature": "bae34a530481f61296e32d7711f596af61b914b32b5839b9b04b3ebf58247b9d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-015"
 }

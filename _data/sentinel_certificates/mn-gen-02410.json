@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408659",
+  "certificate_id": "MN-SC-2026-6900964",
   "skill_id": "mn-gen-02410",
   "skill_name": "Cli-orchestrator-mcp",
-  "issued_at": "2026-07-05T23:16:48.659Z",
-  "expires_at": "2026-07-12T23:16:48.659Z",
+  "issued_at": "2026-07-06T00:15:00.964Z",
+  "expires_at": "2026-07-13T00:15:00.964Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de40105b1e45ae0b9edcc29a0e4bcac183fe720dad03eeb3a641060b5779e166",
+  "signature": "688e6c99f4461b2df9b9f258ff2e0b07e186064d38fec0251c7225bed590e165",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02410"
 }

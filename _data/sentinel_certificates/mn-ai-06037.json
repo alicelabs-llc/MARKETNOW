@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409770",
+  "certificate_id": "MN-SC-2026-7070264",
   "skill_id": "mn-ai-06037",
   "skill_name": "Mailgun/mcp-server",
-  "issued_at": "2026-07-05T23:16:49.770Z",
-  "expires_at": "2026-07-12T23:16:49.770Z",
+  "issued_at": "2026-07-06T00:17:50.264Z",
+  "expires_at": "2026-07-13T00:17:50.264Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "edb8afe669711d1ede962f7edd5ead3a2aa5c4c6cfe68cb04edfe64b915e44f6",
+  "signature": "64397f5ccf3a16aeb80c9c702e0e4dbe7ac2285d4678393b0c382ce13ae224d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06037"
 }

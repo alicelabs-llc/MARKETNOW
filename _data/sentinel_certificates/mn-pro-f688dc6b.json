@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412165",
+  "certificate_id": "MN-SC-2026-7746460",
   "skill_id": "mn-pro-f688dc6b",
   "skill_name": "Data Pipeline Failure Analyzer",
-  "issued_at": "2026-07-05T23:16:52.165Z",
-  "expires_at": "2026-07-12T23:16:52.165Z",
+  "issued_at": "2026-07-06T00:29:06.460Z",
+  "expires_at": "2026-07-13T00:29:06.460Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "289ded48396668e0e51311459a71ea5909cdcfee3844bc122f0cb7e09dd4acc5",
+  "signature": "3b52a7c8783b3be98ce3fe86361a67f011bb1693e8db5a052af1fff5890ee2e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-f688dc6b"
 }

@@ -1,31 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-3415976",
+  "certificate_id": "MN-SC-2026-7888168",
   "skill_id": "mn-amcp-opentabs",
   "skill_name": "opentabs",
-  "issued_at": "2026-07-05T23:16:55.976Z",
-  "expires_at": "2026-07-12T23:16:55.976Z",
+  "issued_at": "2026-07-06T00:31:28.168Z",
+  "expires_at": "2026-07-13T00:31:28.168Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
     "l15_l16": "medium",
-    "l2": "not_available",
+    "l2": "low",
     "final": "medium"
   },
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l2": true
   },
   "layer_details": {
     "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
-    "l2_execution_status": null
+    "l2_score": 10,
+    "l2_execution_status": "ran"
   },
-  "signature": "3fddadd3cf7d2402310202839720f6a2907672e153ccc02f6a2909864e8db338",
+  "signature": "4568bb6fd266612c4a8337f42e763cc7ce29613b7df219c6d57aaec027c9b25a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-opentabs"
 }

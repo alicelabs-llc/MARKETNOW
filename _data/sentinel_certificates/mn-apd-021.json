@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411959",
+  "certificate_id": "MN-SC-2026-7699850",
   "skill_id": "mn-apd-021",
   "skill_name": "Agent Disaster Recovery Plan",
-  "issued_at": "2026-07-05T23:16:51.959Z",
-  "expires_at": "2026-07-12T23:16:51.959Z",
+  "issued_at": "2026-07-06T00:28:19.850Z",
+  "expires_at": "2026-07-13T00:28:19.850Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7f9b288a4041a23d100ec8fb4448730ab1755094f7134cc0df76795ef50d171c",
+  "signature": "68d40bdd0de129e306ad276a01b561c974126588cc31217b8329b7b6ac062dd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-021"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410913",
+  "certificate_id": "MN-SC-2026-7417550",
   "skill_id": "mn-prompt-ce0d34ec",
   "skill_name": "Especialista Authorization + RBAC/ABAC",
-  "issued_at": "2026-07-05T23:16:50.913Z",
-  "expires_at": "2026-07-12T23:16:50.913Z",
+  "issued_at": "2026-07-06T00:23:37.550Z",
+  "expires_at": "2026-07-13T00:23:37.550Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "977a52eb547bae342189544f56fefbc39de5b09a3d4a24e6d9e199626acb091a",
+  "signature": "00b595401a80c77503cfd28868ecc589f82a9de878bf2da724abf458d5320e8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ce0d34ec"
 }

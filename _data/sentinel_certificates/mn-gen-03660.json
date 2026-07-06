@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409447",
+  "certificate_id": "MN-SC-2026-6967504",
   "skill_id": "mn-gen-03660",
   "skill_name": "Ember-mcp",
-  "issued_at": "2026-07-05T23:16:49.447Z",
-  "expires_at": "2026-07-12T23:16:49.447Z",
+  "issued_at": "2026-07-06T00:16:07.504Z",
+  "expires_at": "2026-07-13T00:16:07.504Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fd300cd2d9a2b4055d46f4ef6ccaa245cc819ffc5ca70a9a21afd068e544eb6a",
+  "signature": "5418642e5d1b2f4dc65ad569c75649fda7035a5180f0b83ba592fba22b25fe58",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03660"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411954",
+  "certificate_id": "MN-SC-2026-7695264",
   "skill_id": "mn-acm-026",
   "skill_name": "Multi-Document RAG",
-  "issued_at": "2026-07-05T23:16:51.954Z",
-  "expires_at": "2026-07-12T23:16:51.954Z",
+  "issued_at": "2026-07-06T00:28:15.264Z",
+  "expires_at": "2026-07-13T00:28:15.264Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97781ddfe267199ddf7677ebeb4d891e87c8f7bda5e7e6f9d610436a0ad69903",
+  "signature": "64ddfdf45b9d19038974eb93ea6407c69203227252597680887c8360edc70914",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-026"
 }

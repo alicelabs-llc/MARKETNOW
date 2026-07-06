@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408632",
+  "certificate_id": "MN-SC-2026-6892621",
   "skill_id": "mn-gen-02266",
   "skill_name": "Claude-remote-plus",
-  "issued_at": "2026-07-05T23:16:48.632Z",
-  "expires_at": "2026-07-12T23:16:48.632Z",
+  "issued_at": "2026-07-06T00:14:52.621Z",
+  "expires_at": "2026-07-13T00:14:52.621Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6cb53cc9ec53d11ded16372b732c372a544d793ca5037b212d25ba47bb086157",
+  "signature": "fd5630eb6cf5055bee9c1dcd9a7fba2be1dbc6eb5fb33a63c8bb3f12619231c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02266"
 }

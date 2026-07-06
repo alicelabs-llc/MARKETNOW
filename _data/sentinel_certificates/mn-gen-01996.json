@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408587",
+  "certificate_id": "MN-SC-2026-6878333",
   "skill_id": "mn-gen-01996",
   "skill_name": "Claude-cheatsheet-mcp",
-  "issued_at": "2026-07-05T23:16:48.587Z",
-  "expires_at": "2026-07-12T23:16:48.587Z",
+  "issued_at": "2026-07-06T00:14:38.333Z",
+  "expires_at": "2026-07-13T00:14:38.333Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1df4862764701cfc48c00834cf271df80e578a672d008930ebddcb69e5c86b10",
+  "signature": "87c702ffd02182548c1226a8654a1cb04002d95451f3147c88658669e122caea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01996"
 }

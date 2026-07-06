@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410884",
+  "certificate_id": "MN-SC-2026-7408756",
   "skill_id": "mn-gen-13726",
   "skill_name": "Youtube-transcript-mcp",
-  "issued_at": "2026-07-05T23:16:50.884Z",
-  "expires_at": "2026-07-12T23:16:50.884Z",
+  "issued_at": "2026-07-06T00:23:28.756Z",
+  "expires_at": "2026-07-13T00:23:28.756Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac5b78132a501df36bdf7e51ed5911b110adfb33446104c38e743b87414e2cb5",
+  "signature": "8a951642990813d7feb1f0df72a4e5571adc710fe3bac3ab8cccddaded634ba8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13726"
 }

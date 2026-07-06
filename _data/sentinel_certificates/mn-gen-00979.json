@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2979133",
+  "certificate_id": "MN-SC-2026-6828533",
   "skill_id": "mn-gen-00979",
   "skill_name": "Arvore/mcp-servers",
-  "issued_at": "2026-07-05T23:09:39.133Z",
-  "expires_at": "2026-07-12T23:09:39.133Z",
+  "issued_at": "2026-07-06T00:13:48.533Z",
+  "expires_at": "2026-07-13T00:13:48.533Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14456c2033cd55e48c9acbf445e7c499e016ed431f11860772c741096718814b",
+  "signature": "c2c2f93d09dc49a10e54db8e62d3fc428d5579031bb2a6c006db0d0382b07d29",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00979"
 }

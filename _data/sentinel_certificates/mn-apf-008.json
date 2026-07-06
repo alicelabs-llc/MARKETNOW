@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411999",
+  "certificate_id": "MN-SC-2026-7711921",
   "skill_id": "mn-apf-008",
   "skill_name": "GPU Optimizer",
-  "issued_at": "2026-07-05T23:16:51.999Z",
-  "expires_at": "2026-07-12T23:16:51.999Z",
+  "issued_at": "2026-07-06T00:28:31.921Z",
+  "expires_at": "2026-07-13T00:28:31.921Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7c9a4828328c1ea2f8f79f31380160c0ab16891a4f87398f7c9ada99ba333db",
+  "signature": "737bf8912e03a7f2e7320c2ad045fecd55182a480ada06d47319f51520a9341e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-008"
 }

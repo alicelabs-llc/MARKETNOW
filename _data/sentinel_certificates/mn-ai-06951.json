@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409914",
+  "certificate_id": "MN-SC-2026-7110530",
   "skill_id": "mn-ai-06951",
   "skill_name": "Mcp-jinaai-reader",
-  "issued_at": "2026-07-05T23:16:49.914Z",
-  "expires_at": "2026-07-12T23:16:49.914Z",
+  "issued_at": "2026-07-06T00:18:30.530Z",
+  "expires_at": "2026-07-13T00:18:30.530Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d3078df6adb88ac8d8fa05b7fcca418f3a1a0f938564ed89ffa5280da9a5ee4e",
+  "signature": "caccf74ccc4c4843a47d11551af07d1e1b3206b195dff1347ee472d1519da814",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06951"
 }

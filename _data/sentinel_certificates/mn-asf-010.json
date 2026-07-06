@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411964",
+  "certificate_id": "MN-SC-2026-7705412",
   "skill_id": "mn-asf-010",
   "skill_name": "Geographic Compliance Filter",
-  "issued_at": "2026-07-05T23:16:51.964Z",
-  "expires_at": "2026-07-12T23:16:51.964Z",
+  "issued_at": "2026-07-06T00:28:25.412Z",
+  "expires_at": "2026-07-13T00:28:25.412Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "07d3e83ebadbcd272699e3badebb57faa202f782019d39db476878e4308c4d50",
+  "signature": "f309ea4c6a1ecf05a75a5435044bb6d710c134f2ae629cda5a2703fb2bcdad49",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-010"
 }

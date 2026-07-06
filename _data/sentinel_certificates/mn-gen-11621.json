@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410548",
+  "certificate_id": "MN-SC-2026-7314592",
   "skill_id": "mn-gen-11621",
   "skill_name": "Sentinel-mcp",
-  "issued_at": "2026-07-05T23:16:50.548Z",
-  "expires_at": "2026-07-12T23:16:50.548Z",
+  "issued_at": "2026-07-06T00:21:54.592Z",
+  "expires_at": "2026-07-13T00:21:54.592Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5d06a031b294d8c6d3eb431e9cb525e5fbe69105e57e2704e855109a65f1310",
+  "signature": "faf978fab10fb377513e631c250c336ab58a19592ec4e25b8288c30c106bb4b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11621"
 }

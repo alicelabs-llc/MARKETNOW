@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412209",
+  "certificate_id": "MN-SC-2026-7762769",
   "skill_id": "mn-pro-10f2ac6e",
   "skill_name": "Cloud Vendor Lock-in Analyzer",
-  "issued_at": "2026-07-05T23:16:52.209Z",
-  "expires_at": "2026-07-12T23:16:52.209Z",
+  "issued_at": "2026-07-06T00:29:22.769Z",
+  "expires_at": "2026-07-13T00:29:22.769Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "36cc2da37007af1007524bdaf27c4a99d0354d78b04665b3109690bd3f601fd5",
+  "signature": "2b366e4466d126ca486e77a9fca6f3441ce44d9588f1d8653ecfb9e5710db4aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-10f2ac6e"
 }

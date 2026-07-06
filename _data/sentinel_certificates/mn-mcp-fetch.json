@@ -1,31 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-3413538",
+  "certificate_id": "MN-SC-2026-7886910",
   "skill_id": "mn-mcp-fetch",
   "skill_name": "MCP Fetch Server (Official)",
-  "issued_at": "2026-07-05T23:16:53.538Z",
-  "expires_at": "2026-07-12T23:16:53.538Z",
+  "issued_at": "2026-07-06T00:31:26.910Z",
+  "expires_at": "2026-07-13T00:31:26.910Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
     "l15_l16": "medium",
-    "l2": "not_available",
+    "l2": "low",
     "final": "medium"
   },
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l2": true
   },
   "layer_details": {
     "l15_findings": 4,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
-    "l2_execution_status": null
+    "l2_score": 10,
+    "l2_execution_status": "ran_idle"
   },
-  "signature": "e0b43d7ad6ab478caf40b2252e46a8f642004900c8b541c251344ce7303972e2",
+  "signature": "4a5cb87a844954d3fa73bacac9960406aacd5f0e38f84b0546db7403e2386b04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-fetch"
 }

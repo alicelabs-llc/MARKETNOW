@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3239837",
+  "certificate_id": "MN-SC-2026-6869334",
   "skill_id": "mn-sec-00008",
   "skill_name": "promptgit",
-  "issued_at": "2026-07-05T23:13:59.837Z",
-  "expires_at": "2026-07-12T23:13:59.837Z",
+  "issued_at": "2026-07-06T00:14:29.334Z",
+  "expires_at": "2026-07-13T00:14:29.334Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cba5e9330778e25f0672ff2c66376927c0f212da36a702db6af00000d0df8c29",
+  "signature": "a2f0750c92f1decb57d46a41a3fd9ada0d4287982f6abdff74abe49457dec7b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-00008"
 }

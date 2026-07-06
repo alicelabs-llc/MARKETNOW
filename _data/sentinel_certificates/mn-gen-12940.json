@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410752",
+  "certificate_id": "MN-SC-2026-7371018",
   "skill_id": "mn-gen-12940",
   "skill_name": "Ulysses-mcp",
-  "issued_at": "2026-07-05T23:16:50.752Z",
-  "expires_at": "2026-07-12T23:16:50.752Z",
+  "issued_at": "2026-07-06T00:22:51.018Z",
+  "expires_at": "2026-07-13T00:22:51.018Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "beeb300ae1cafa0de2cabcda5d6d1c2fcf283f850408b85b1b9166d383085e68",
+  "signature": "29777da9be181a1cf6338454145fce0dd631b229f0bcc8c3ebf217fce056e936",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12940"
 }

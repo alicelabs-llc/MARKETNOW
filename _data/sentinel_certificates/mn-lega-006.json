@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412564",
+  "certificate_id": "MN-SC-2026-7864396",
   "skill_id": "mn-lega-006",
   "skill_name": "Legal Document Automator",
-  "issued_at": "2026-07-05T23:16:52.564Z",
-  "expires_at": "2026-07-12T23:16:52.564Z",
+  "issued_at": "2026-07-06T00:31:04.396Z",
+  "expires_at": "2026-07-13T00:31:04.396Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "078f05695881fd47388ec43939b1652145c36c468ad036b3f77f3832dd7bd83f",
+  "signature": "5c1f588310b1c6403ff85fa593220c981da9c64f760bd434df29cbc2995701ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-lega-006"
 }

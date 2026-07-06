@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411616",
+  "certificate_id": "MN-SC-2026-7603081",
   "skill_id": "mn-prompt-a55ce5f9",
   "skill_name": "Video script explainer 60-90 seconds",
-  "issued_at": "2026-07-05T23:16:51.616Z",
-  "expires_at": "2026-07-12T23:16:51.616Z",
+  "issued_at": "2026-07-06T00:26:43.081Z",
+  "expires_at": "2026-07-13T00:26:43.081Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6136ad6709a3199b3384ab9f214081c774538424c0d9a18bf1c897814530a299",
+  "signature": "5a011d2434ad3144c70cf8b1cdee1d230778f261313cd38e4e8f1531e982d548",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a55ce5f9"
 }

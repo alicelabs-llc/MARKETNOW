@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412389",
+  "certificate_id": "MN-SC-2026-7809056",
   "skill_id": "mn-data-037",
   "skill_name": "Entity Extractor",
-  "issued_at": "2026-07-05T23:16:52.389Z",
-  "expires_at": "2026-07-12T23:16:52.389Z",
+  "issued_at": "2026-07-06T00:30:09.056Z",
+  "expires_at": "2026-07-13T00:30:09.056Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "92e838e984f88c4c6e76f2a812a19e8ece973e85fb41b505580d0ba9f51fc6dc",
+  "signature": "fa539e43e88294dbc0ec95c69a6f6cf263b46b312e6397147ee1c27e619c8c40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-037"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2501214",
+  "certificate_id": "MN-SC-2026-6806891",
   "skill_id": "mn-ai-00543",
   "skill_name": "Project-docs-mcp",
-  "issued_at": "2026-07-05T23:01:41.214Z",
-  "expires_at": "2026-07-12T23:01:41.214Z",
+  "issued_at": "2026-07-06T00:13:26.891Z",
+  "expires_at": "2026-07-13T00:13:26.891Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33eb731fe2bf3897990059546d5301998721e8f96376f21212f945251f9edbda",
+  "signature": "53cf1dad0827c1520fa601dcaf87b886ce5b3f89b8b75b08fbc7150591d71f1a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00543"
 }

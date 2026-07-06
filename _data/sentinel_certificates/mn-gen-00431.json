@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2495923",
+  "certificate_id": "MN-SC-2026-6802745",
   "skill_id": "mn-gen-00431",
   "skill_name": "Agentvet/cli",
-  "issued_at": "2026-07-05T23:01:35.923Z",
-  "expires_at": "2026-07-12T23:01:35.923Z",
+  "issued_at": "2026-07-06T00:13:22.745Z",
+  "expires_at": "2026-07-13T00:13:22.745Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "131385b314f43f9856275c8adaf26f50a03c6f066686c59d1676aeddf331a352",
+  "signature": "f926497653ec9d947d163844e1a5d2f8e5f1db8078b9896a69da78a27dd157fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00431"
 }

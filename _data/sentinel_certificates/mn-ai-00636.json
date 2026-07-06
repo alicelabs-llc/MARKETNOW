@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2675025",
+  "certificate_id": "MN-SC-2026-6810033",
   "skill_id": "mn-ai-00636",
   "skill_name": "Airmail-mcp",
-  "issued_at": "2026-07-05T23:04:35.025Z",
-  "expires_at": "2026-07-12T23:04:35.025Z",
+  "issued_at": "2026-07-06T00:13:30.033Z",
+  "expires_at": "2026-07-13T00:13:30.033Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "47f07bd5057feb636a10c37e7e8748f849478aad6ed713b0cf65f70d46a6f5b9",
+  "signature": "1c008c68fdfa4cb67120acc0bb4ac35b9e976d67c9a3ce987d8afaa9db5b8a16",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00636"
 }

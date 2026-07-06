@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410283",
+  "certificate_id": "MN-SC-2026-7229816",
   "skill_id": "mn-gen-09759",
   "skill_name": "Octagon-mcp",
-  "issued_at": "2026-07-05T23:16:50.283Z",
-  "expires_at": "2026-07-12T23:16:50.283Z",
+  "issued_at": "2026-07-06T00:20:29.816Z",
+  "expires_at": "2026-07-13T00:20:29.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4503040af09a068178e7bf7ab8b725a298d56561e5680a5444d195220e8e9fa2",
+  "signature": "df9e8385f38497c649efce6b5edf3f95bfac4b3ca55fd19e2dc1310ab3129180",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09759"
 }

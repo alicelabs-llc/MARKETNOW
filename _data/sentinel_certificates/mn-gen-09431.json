@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410247",
+  "certificate_id": "MN-SC-2026-7215482",
   "skill_id": "mn-gen-09431",
   "skill_name": "Kaitoy/nasa-images-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.247Z",
-  "expires_at": "2026-07-12T23:16:50.247Z",
+  "issued_at": "2026-07-06T00:20:15.482Z",
+  "expires_at": "2026-07-13T00:20:15.482Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0df8180019908c9cc6ea1a1eb0c50ac7a1871ec90fc0ac8b77781f41bc5706d5",
+  "signature": "6c5c9cae7babce989f20e2044c941c25ff2d9e6a30e7d402757e6f79ca68ed4d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09431"
 }

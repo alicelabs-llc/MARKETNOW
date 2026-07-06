@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409763",
+  "certificate_id": "MN-SC-2026-7063631",
   "skill_id": "mn-gen-05892",
   "skill_name": "Texttospeech-mcp",
-  "issued_at": "2026-07-05T23:16:49.763Z",
-  "expires_at": "2026-07-12T23:16:49.763Z",
+  "issued_at": "2026-07-06T00:17:43.631Z",
+  "expires_at": "2026-07-13T00:17:43.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de17ed416df9862df93f3dcec05aff5321962203cc200adfe9e8ab137c611764",
+  "signature": "7a5451b6e69239aa82f822696963ecc16280fa37182214891cad3d8fa08cb0cb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05892"
 }

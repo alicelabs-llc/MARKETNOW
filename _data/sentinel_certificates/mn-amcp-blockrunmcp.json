@@ -1,31 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-3416254",
+  "certificate_id": "MN-SC-2026-7888129",
   "skill_id": "mn-amcp-blockrunmcp",
   "skill_name": "blockrun-mcp",
-  "issued_at": "2026-07-05T23:16:56.254Z",
-  "expires_at": "2026-07-12T23:16:56.254Z",
+  "issued_at": "2026-07-06T00:31:28.129Z",
+  "expires_at": "2026-07-13T00:31:28.129Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
     "l15_l16": "medium",
-    "l2": "not_available",
+    "l2": "unknown",
     "final": "medium"
   },
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l2": true
   },
   "layer_details": {
     "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
-    "l2_execution_status": null
+    "l2_score": 0,
+    "l2_execution_status": "failed_to_start"
   },
-  "signature": "c338c76fd296ec78ed6aa8ba6065ab476f8ab45b9a02c5739debf3e3180e0764",
+  "signature": "7520732ec2c3db671546dcc2082e96bd743f5eee5c8ba2c0d42737cfa6797c0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-blockrunmcp"
 }

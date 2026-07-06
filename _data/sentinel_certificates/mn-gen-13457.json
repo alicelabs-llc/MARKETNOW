@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410846",
+  "certificate_id": "MN-SC-2026-7396543",
   "skill_id": "mn-gen-13457",
   "skill_name": "Windows-command-line-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.846Z",
-  "expires_at": "2026-07-12T23:16:50.846Z",
+  "issued_at": "2026-07-06T00:23:16.543Z",
+  "expires_at": "2026-07-13T00:23:16.543Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8f7ac0a273854ba4eca9b7a6f465551d71a091f5871fa924cf8415148600f59",
+  "signature": "188c13d9f27c87336e424d9bcba6b25fdf320a308b4e20d7b2e0e1c5e1a643ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13457"
 }

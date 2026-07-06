@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410252",
+  "certificate_id": "MN-SC-2026-7219965",
   "skill_id": "mn-gen-09573",
   "skill_name": "No-as-service",
-  "issued_at": "2026-07-05T23:16:50.252Z",
-  "expires_at": "2026-07-12T23:16:50.252Z",
+  "issued_at": "2026-07-06T00:20:19.965Z",
+  "expires_at": "2026-07-13T00:20:19.965Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9925689f251ff292335ae3e8bd412e47f0b28181277ce08af0401466ae932ff5",
+  "signature": "ea4c5038a23eac9669da329a6564f959167657eb43c8029259a42cba72d6e91b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09573"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411894",
+  "certificate_id": "MN-SC-2026-7682965",
   "skill_id": "mn-arl-043",
   "skill_name": "Agent Goal Tracker",
-  "issued_at": "2026-07-05T23:16:51.894Z",
-  "expires_at": "2026-07-12T23:16:51.894Z",
+  "issued_at": "2026-07-06T00:28:02.965Z",
+  "expires_at": "2026-07-13T00:28:02.965Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "880d6351e9ad3018db59e277924c396843037ae462ba8f9ce16ec49079739500",
+  "signature": "326aa0673e27d64c865c39c3df768cb19ad49b2ba4ec4a4e9d8c4710314660d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-043"
 }

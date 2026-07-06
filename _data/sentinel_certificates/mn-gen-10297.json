@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410359",
+  "certificate_id": "MN-SC-2026-7254478",
   "skill_id": "mn-gen-10297",
   "skill_name": "Peercortex",
-  "issued_at": "2026-07-05T23:16:50.359Z",
-  "expires_at": "2026-07-12T23:16:50.359Z",
+  "issued_at": "2026-07-06T00:20:54.478Z",
+  "expires_at": "2026-07-13T00:20:54.478Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a83a5a8f93597110c3584da946be30c47df0c31206c33bd459b53097dd48039",
+  "signature": "43be8fa142766eecfa6826aaa42d42c5b16c1e1e936c8094b566d80b5fdd894c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10297"
 }

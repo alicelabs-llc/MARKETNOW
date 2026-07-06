@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411893",
+  "certificate_id": "MN-SC-2026-7681702",
   "skill_id": "mn-arl-035",
   "skill_name": "Conversation Summarizer Pro",
-  "issued_at": "2026-07-05T23:16:51.893Z",
-  "expires_at": "2026-07-12T23:16:51.893Z",
+  "issued_at": "2026-07-06T00:28:01.702Z",
+  "expires_at": "2026-07-13T00:28:01.702Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fff914cddf9be0cd9b8c8383b1ed37465f1d13a1f85cbd4a8385ff2fa21d08a1",
+  "signature": "7026e33fe09ce4f95c06f642fe2efbcbb0309cb99c5eccfc00f55fbd06c1bee1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-035"
 }

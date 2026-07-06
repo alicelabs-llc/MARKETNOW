@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412419",
+  "certificate_id": "MN-SC-2026-7818275",
   "skill_id": "mn-prod-007",
   "skill_name": "To-Do List Manager",
-  "issued_at": "2026-07-05T23:16:52.419Z",
-  "expires_at": "2026-07-12T23:16:52.419Z",
+  "issued_at": "2026-07-06T00:30:18.275Z",
+  "expires_at": "2026-07-13T00:30:18.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9c74929e349885d7e67ba1dc003ec2890d83f6c29429d3b45137a16b2a4179b",
+  "signature": "e5c710324d9afcf551d4e7da2a8e2af07693703f8571e9a385a18c17fa1ef5d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-007"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412068",
+  "certificate_id": "MN-SC-2026-7722612",
   "skill_id": "mn-hea-00016",
   "skill_name": "Drug Interaction Checker",
-  "issued_at": "2026-07-05T23:16:52.068Z",
-  "expires_at": "2026-07-12T23:16:52.068Z",
+  "issued_at": "2026-07-06T00:28:42.612Z",
+  "expires_at": "2026-07-13T00:28:42.612Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68b0228039e97c543c32e84a23950ed75cf2890e3e5cd249dc49bde217afe87e",
+  "signature": "9b10b2552be5e5880f1d32ccd224a47e5d4c3210bbfbf1b99ef070e92a2dce2f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00016"
 }

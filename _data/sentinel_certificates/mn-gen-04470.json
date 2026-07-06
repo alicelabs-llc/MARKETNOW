@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409574",
+  "certificate_id": "MN-SC-2026-7004080",
   "skill_id": "mn-gen-04470",
   "skill_name": "Simple-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.574Z",
-  "expires_at": "2026-07-12T23:16:49.574Z",
+  "issued_at": "2026-07-06T00:16:44.080Z",
+  "expires_at": "2026-07-13T00:16:44.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c4800ff466de507cd2ee8c3e1ed0daa01f07a32dc850a66993800ce2f42e9e7",
+  "signature": "724154f62ead1a7e57f70e9b1e2c4f4db61b25b831f813d33769d34a88fd2aa5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04470"
 }

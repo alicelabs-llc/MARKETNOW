@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411858",
+  "certificate_id": "MN-SC-2026-7672155",
   "skill_id": "mn-prompt-59b50f63",
   "skill_name": "CSA farm operations",
-  "issued_at": "2026-07-05T23:16:51.858Z",
-  "expires_at": "2026-07-12T23:16:51.858Z",
+  "issued_at": "2026-07-06T00:27:52.155Z",
+  "expires_at": "2026-07-13T00:27:52.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2f04e5d76fc7100556d14e0431cc8de9c9f31060d1570175ec85cda9ea6f5f28",
+  "signature": "a4d40016b0f713c5f083391632453e496076aacaa6c2e757d7199f2859fa690b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-59b50f63"
 }

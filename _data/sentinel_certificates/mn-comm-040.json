@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412385",
+  "certificate_id": "MN-SC-2026-7803422",
   "skill_id": "mn-comm-040",
   "skill_name": "Conversation Analytics",
-  "issued_at": "2026-07-05T23:16:52.385Z",
-  "expires_at": "2026-07-12T23:16:52.385Z",
+  "issued_at": "2026-07-06T00:30:03.422Z",
+  "expires_at": "2026-07-13T00:30:03.422Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b32d4a68bf17605aafd438de47f1f1a65cf3c5d20469a21367a7276de72ecf10",
+  "signature": "866d001a89c0b8ed93e9bd52a8a72a7e25451fc1f127ec828f4c9c38b72c50be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-040"
 }

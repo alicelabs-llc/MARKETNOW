@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409388",
+  "certificate_id": "MN-SC-2026-6949394",
   "skill_id": "mn-gen-03234",
   "skill_name": "Djodjonx/dependency-checker-mcp",
-  "issued_at": "2026-07-05T23:16:49.388Z",
-  "expires_at": "2026-07-12T23:16:49.388Z",
+  "issued_at": "2026-07-06T00:15:49.394Z",
+  "expires_at": "2026-07-13T00:15:49.394Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b251cc1f6d7e485ba43cf5d4e1aecbc7053096378e5ff22363281f8f0edbe92a",
+  "signature": "08db960048d39fb9b813cebe3044c082b2bac67e9a252a56c491586bba536ac6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03234"
 }

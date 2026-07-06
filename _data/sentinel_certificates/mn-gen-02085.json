@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408595",
+  "certificate_id": "MN-SC-2026-6882101",
   "skill_id": "mn-gen-02085",
   "skill_name": "Claude-connectors-hub",
-  "issued_at": "2026-07-05T23:16:48.595Z",
-  "expires_at": "2026-07-12T23:16:48.595Z",
+  "issued_at": "2026-07-06T00:14:42.101Z",
+  "expires_at": "2026-07-13T00:14:42.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65265e9a1ee77613b2364800d810150460b119ef8f3f16df2235c9db4a7a0f94",
+  "signature": "40b88d35856354de9dffd3e2f46625c5e90df325d8bf2fed8229200d23d49d38",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02085"
 }

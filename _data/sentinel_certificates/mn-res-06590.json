@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409856",
+  "certificate_id": "MN-SC-2026-7093305",
   "skill_id": "mn-res-06590",
   "skill_name": "Mcp-deepwebresearch",
-  "issued_at": "2026-07-05T23:16:49.856Z",
-  "expires_at": "2026-07-12T23:16:49.856Z",
+  "issued_at": "2026-07-06T00:18:13.305Z",
+  "expires_at": "2026-07-13T00:18:13.305Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53d53fb35879e094ac210faf3f6af8d3cd3ffa87974f9c20b2bda3dfcca3175b",
+  "signature": "695eb5a4f774f6226c102cc32f3174af78c572a90de8bac8b993b2911add8459",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-06590"
 }

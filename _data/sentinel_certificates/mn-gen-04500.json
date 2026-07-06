@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409577",
+  "certificate_id": "MN-SC-2026-7005715",
   "skill_id": "mn-gen-04500",
   "skill_name": "GlassEnterprise",
-  "issued_at": "2026-07-05T23:16:49.577Z",
-  "expires_at": "2026-07-12T23:16:49.577Z",
+  "issued_at": "2026-07-06T00:16:45.715Z",
+  "expires_at": "2026-07-13T00:16:45.715Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d24dc8821fe326bb01624b11d6cba04f6065fa3e15fd58491a4d36bef128437e",
+  "signature": "cd9a75f1e1cbb917e3d5408ce39e2db9ceda45c36721e7e888804a14e9cf4105",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04500"
 }

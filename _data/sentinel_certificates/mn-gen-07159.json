@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409924",
+  "certificate_id": "MN-SC-2026-7120897",
   "skill_id": "mn-gen-07159",
   "skill_name": "Gentoro/mcp-nodejs-server",
-  "issued_at": "2026-07-05T23:16:49.924Z",
-  "expires_at": "2026-07-12T23:16:49.924Z",
+  "issued_at": "2026-07-06T00:18:40.897Z",
+  "expires_at": "2026-07-13T00:18:40.897Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9e3ab1ec2072405a3c1bd8b25394a3da92008b70db450c8f7f5fb9ccccc46a7",
+  "signature": "85d34e8721f8e7a05d0fcdb483df8ab950df1d2e38263d3bf851a55884696ca8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07159"
 }

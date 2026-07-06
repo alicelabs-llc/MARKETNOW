@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3235314",
+  "certificate_id": "MN-SC-2026-6864235",
   "skill_id": "mn-gen-01733",
   "skill_name": "Cc-memory",
-  "issued_at": "2026-07-05T23:13:55.314Z",
-  "expires_at": "2026-07-12T23:13:55.314Z",
+  "issued_at": "2026-07-06T00:14:24.235Z",
+  "expires_at": "2026-07-13T00:14:24.235Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "677437bd222e7141e77619199e663f24548871a273e410ffe83497be5433d439",
+  "signature": "3d9a104c02cc6087f7488773a44e586935c8e0cff7709100153bb3ccf97ac9a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01733"
 }

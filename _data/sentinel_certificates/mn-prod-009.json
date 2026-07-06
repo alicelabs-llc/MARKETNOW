@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412419",
+  "certificate_id": "MN-SC-2026-7818366",
   "skill_id": "mn-prod-009",
   "skill_name": "Gantt Chart Generator",
-  "issued_at": "2026-07-05T23:16:52.419Z",
-  "expires_at": "2026-07-12T23:16:52.419Z",
+  "issued_at": "2026-07-06T00:30:18.366Z",
+  "expires_at": "2026-07-13T00:30:18.366Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec31c78781a2149893b82ea54117be99a167e57bd778b2fbbc3dd8bbb0607774",
+  "signature": "924ebf534bbb5b9c3350018f67d623428c41649f712a650d03468553bb9877db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-009"
 }

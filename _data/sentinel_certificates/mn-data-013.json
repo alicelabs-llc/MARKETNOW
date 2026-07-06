@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412386",
+  "certificate_id": "MN-SC-2026-7805101",
   "skill_id": "mn-data-013",
   "skill_name": "Data Validator",
-  "issued_at": "2026-07-05T23:16:52.386Z",
-  "expires_at": "2026-07-12T23:16:52.386Z",
+  "issued_at": "2026-07-06T00:30:05.101Z",
+  "expires_at": "2026-07-13T00:30:05.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7935176cd7066d4619a0054f53d90cc99be33f4e127882d6f3f17e91036da476",
+  "signature": "abf4448b0ac8f0cf22ea8f905daef320c3a39a69371beeb5c4dc13de1838841a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-013"
 }

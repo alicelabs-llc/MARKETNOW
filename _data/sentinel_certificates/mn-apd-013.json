@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411958",
+  "certificate_id": "MN-SC-2026-7699369",
   "skill_id": "mn-apd-013",
   "skill_name": "Agent Multi-Region Deploy",
-  "issued_at": "2026-07-05T23:16:51.958Z",
-  "expires_at": "2026-07-12T23:16:51.958Z",
+  "issued_at": "2026-07-06T00:28:19.369Z",
+  "expires_at": "2026-07-13T00:28:19.369Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51863016dfca1a494d59b1f258d0520c8e29c06c0ec233aa59fb5212ade79925",
+  "signature": "9110a379eb0032ebd1aad39a81eaeb2974fe14ada5ba178f1d1fee1ef7dcb503",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-013"
 }

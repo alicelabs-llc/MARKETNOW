@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412076",
+  "certificate_id": "MN-SC-2026-7729854",
   "skill_id": "mn-leg-00044",
   "skill_name": "Data Breach Response",
-  "issued_at": "2026-07-05T23:16:52.076Z",
-  "expires_at": "2026-07-12T23:16:52.076Z",
+  "issued_at": "2026-07-06T00:28:49.854Z",
+  "expires_at": "2026-07-13T00:28:49.854Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "90112cba61ab1223b76ca44e75f15485d4075f8d35a9caa7f8ccde83edf49c3a",
+  "signature": "5c276cb19e9bfd41efe03f280b708712317905cdec39c9846a47e08e90238e9f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00044"
 }

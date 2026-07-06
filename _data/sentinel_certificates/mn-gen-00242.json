@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2485841",
+  "certificate_id": "MN-SC-2026-6794681",
   "skill_id": "mn-gen-00242",
   "skill_name": "Agent-discover",
-  "issued_at": "2026-07-05T23:01:25.841Z",
-  "expires_at": "2026-07-12T23:01:25.841Z",
+  "issued_at": "2026-07-06T00:13:14.681Z",
+  "expires_at": "2026-07-13T00:13:14.681Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40ad71774e4c87fcd093f26e1c4ff052e1fab1a44fbc0a9973b5147eac2b98d6",
+  "signature": "fa97161136ba2c16b8a703dbf1af4d0685c3c15b0c5234cd6e6542f1b9c211c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00242"
 }

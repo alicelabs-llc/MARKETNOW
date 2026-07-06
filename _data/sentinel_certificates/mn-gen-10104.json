@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410350",
+  "certificate_id": "MN-SC-2026-7244980",
   "skill_id": "mn-gen-10104",
   "skill_name": "Orthanc-mcp-app",
-  "issued_at": "2026-07-05T23:16:50.350Z",
-  "expires_at": "2026-07-12T23:16:50.350Z",
+  "issued_at": "2026-07-06T00:20:44.980Z",
+  "expires_at": "2026-07-13T00:20:44.980Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "19b9e51c07c8a8ce2996b7bfadf4d93527ba59654fa965586871a0e59dc7c4b1",
+  "signature": "9e01f62fad7c2dd216d3def3ea3b80bd80eba312c50b044d1e1e13c2dbea2199",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10104"
 }

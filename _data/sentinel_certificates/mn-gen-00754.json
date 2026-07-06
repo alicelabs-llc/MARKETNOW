@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2963571",
+  "certificate_id": "MN-SC-2026-6816813",
   "skill_id": "mn-gen-00754",
   "skill_name": "Amplitude-mcp-server",
-  "issued_at": "2026-07-05T23:09:23.571Z",
-  "expires_at": "2026-07-12T23:09:23.571Z",
+  "issued_at": "2026-07-06T00:13:36.813Z",
+  "expires_at": "2026-07-13T00:13:36.813Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0fa8d38cd672751417c8fe15fc03fab84883725e52ea178e55e281e97db24f75",
+  "signature": "18c04a7760ef447801f70e1064e7a8c265ac5362982fc95c37a3469831a257a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00754"
 }

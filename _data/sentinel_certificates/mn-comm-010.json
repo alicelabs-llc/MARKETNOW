@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412352",
+  "certificate_id": "MN-SC-2026-7799357",
   "skill_id": "mn-comm-010",
   "skill_name": "Tax Calculator",
-  "issued_at": "2026-07-05T23:16:52.352Z",
-  "expires_at": "2026-07-12T23:16:52.352Z",
+  "issued_at": "2026-07-06T00:29:59.357Z",
+  "expires_at": "2026-07-13T00:29:59.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b5444d653e93cc536f5e1aa88084b86c2f3379e0ef548262c0db176f86d4bea",
+  "signature": "ef218262c206f4dba54faf95ec4aed265d041a04fe7fb58cfa3fca39f6a11138",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-010"
 }

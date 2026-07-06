@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409767",
+  "certificate_id": "MN-SC-2026-7067289",
   "skill_id": "mn-gen-05970",
   "skill_name": "Akutishevsky/lunchmoney-mcp",
-  "issued_at": "2026-07-05T23:16:49.767Z",
-  "expires_at": "2026-07-12T23:16:49.767Z",
+  "issued_at": "2026-07-06T00:17:47.289Z",
+  "expires_at": "2026-07-13T00:17:47.289Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30f7aad0b2b5feee062fc773be6f1e4dd71caea52581d5061d0d52289906e6a1",
+  "signature": "af867c2e48c0fa66f7d8c458b07cbca51ba16266381100faaf6517ba3ddf4d23",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05970"
 }

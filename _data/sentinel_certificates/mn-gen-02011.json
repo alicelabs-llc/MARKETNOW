@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408590",
+  "certificate_id": "MN-SC-2026-6879618",
   "skill_id": "mn-gen-02011",
   "skill_name": "Claude-code-browser",
-  "issued_at": "2026-07-05T23:16:48.590Z",
-  "expires_at": "2026-07-12T23:16:48.590Z",
+  "issued_at": "2026-07-06T00:14:39.618Z",
+  "expires_at": "2026-07-13T00:14:39.618Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6c253a27c74db27f427642e7ff5436ed66e33f54ee008573886c3b2375382234",
+  "signature": "75d85ff0da2d96ac71fb88db5f03936123f47298284bef50102cad8df8a4949e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02011"
 }

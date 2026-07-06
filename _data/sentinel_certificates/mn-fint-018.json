@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412513",
+  "certificate_id": "MN-SC-2026-7850090",
   "skill_id": "mn-fint-018",
   "skill_name": "BNPL Risk Assessor",
-  "issued_at": "2026-07-05T23:16:52.513Z",
-  "expires_at": "2026-07-12T23:16:52.513Z",
+  "issued_at": "2026-07-06T00:30:50.090Z",
+  "expires_at": "2026-07-13T00:30:50.090Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "285530312ed0b6038594a825aeb1bf7d67b88882899ea27acb2fd6b05f48658e",
+  "signature": "86a411b774068137b4aed303c2e3d84ae183ec27db4d3ddd2f5b14456d7ce6b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-018"
 }

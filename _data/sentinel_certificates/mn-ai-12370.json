@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410660",
+  "certificate_id": "MN-SC-2026-7344514",
   "skill_id": "mn-ai-12370",
   "skill_name": "Swiss-ai-call-agent",
-  "issued_at": "2026-07-05T23:16:50.660Z",
-  "expires_at": "2026-07-12T23:16:50.660Z",
+  "issued_at": "2026-07-06T00:22:24.514Z",
+  "expires_at": "2026-07-13T00:22:24.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc0bfe5a35fdf981a5261691bb0c2f1bb9347b7678737c4f1d2a7996a052b11f",
+  "signature": "d384403ed97b755b63fc3f4d81c65498a13aa846ba75d9dd93cec688f56c7644",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-12370"
 }

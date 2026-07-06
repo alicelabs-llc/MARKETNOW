@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3236831",
+  "certificate_id": "MN-SC-2026-6865641",
   "skill_id": "mn-gen-01754",
   "skill_name": "Ccinv",
-  "issued_at": "2026-07-05T23:13:56.831Z",
-  "expires_at": "2026-07-12T23:13:56.831Z",
+  "issued_at": "2026-07-06T00:14:25.641Z",
+  "expires_at": "2026-07-13T00:14:25.641Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3647482117e846621860b21e737053fb8ff83ed447b0fa72e31fc7675aab6ab0",
+  "signature": "bd1372cf5c0b5a9a9c8d49a9fd06aca0d652bc697eede7dfd8d547ba54eb8b42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01754"
 }

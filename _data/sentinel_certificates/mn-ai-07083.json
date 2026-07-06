@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409920",
+  "certificate_id": "MN-SC-2026-7116973",
   "skill_id": "mn-ai-07083",
   "skill_name": "Rtuin/mcp-mermaid-validator",
-  "issued_at": "2026-07-05T23:16:49.920Z",
-  "expires_at": "2026-07-12T23:16:49.920Z",
+  "issued_at": "2026-07-06T00:18:36.973Z",
+  "expires_at": "2026-07-13T00:18:36.973Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09d2907925ea59a603cee036e01ac8ace2bb41ca8125129e48bbdd1e4d257159",
+  "signature": "b089c07fa8de5cde9c4343b45a45ea588e47b0683f8611b91dacbc681b69f5be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07083"
 }

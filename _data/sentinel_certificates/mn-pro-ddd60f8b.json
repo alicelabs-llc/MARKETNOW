@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412168",
+  "certificate_id": "MN-SC-2026-7751440",
   "skill_id": "mn-pro-ddd60f8b",
   "skill_name": "K8s RBAC Auditor",
-  "issued_at": "2026-07-05T23:16:52.168Z",
-  "expires_at": "2026-07-12T23:16:52.168Z",
+  "issued_at": "2026-07-06T00:29:11.440Z",
+  "expires_at": "2026-07-13T00:29:11.440Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7fc5d79f4066d45fc740e804eaa18c6da7378f58f5e12bc14601752be2092087",
+  "signature": "cf8ad15057b67de33d1c1a99b9ec304373e32791f611419f001e19cbcd768ce4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-ddd60f8b"
 }

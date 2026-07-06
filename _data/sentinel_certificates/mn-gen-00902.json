@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2974367",
+  "certificate_id": "MN-SC-2026-6825193",
   "skill_id": "mn-gen-00902",
   "skill_name": "Appsignal/mcp",
-  "issued_at": "2026-07-05T23:09:34.367Z",
-  "expires_at": "2026-07-12T23:09:34.367Z",
+  "issued_at": "2026-07-06T00:13:45.193Z",
+  "expires_at": "2026-07-13T00:13:45.193Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa5a5937d47eee0118f5905ec1e0ad844b4a1669e92643f743d18809875c47e9",
+  "signature": "e7e9aa5af2dd45b814485311df57ed3820f5bec86241e6e240db4a234e9a2eaf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00902"
 }

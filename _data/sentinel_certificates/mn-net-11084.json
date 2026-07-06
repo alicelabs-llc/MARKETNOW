@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410468",
+  "certificate_id": "MN-SC-2026-7289224",
   "skill_id": "mn-net-11084",
   "skill_name": "Recharge-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.468Z",
-  "expires_at": "2026-07-12T23:16:50.468Z",
+  "issued_at": "2026-07-06T00:21:29.224Z",
+  "expires_at": "2026-07-13T00:21:29.224Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2f56ae742f5ad8cbed0537cd4b3edc417e06b3c87e85380b40dbd52954e00e8f",
+  "signature": "99ad19f7cbe1626abe169869c7d6c8f972e21c46f3f3c92dcdbbcab1a42ec54e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-11084"
 }

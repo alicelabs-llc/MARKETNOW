@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409619",
+  "certificate_id": "MN-SC-2026-7025823",
   "skill_id": "mn-ai-05009",
   "skill_name": "Hypat.ai",
-  "issued_at": "2026-07-05T23:16:49.619Z",
-  "expires_at": "2026-07-12T23:16:49.619Z",
+  "issued_at": "2026-07-06T00:17:05.823Z",
+  "expires_at": "2026-07-13T00:17:05.823Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8f90111b0cf650f3a8ea9de910ee0b38a4455bd0b1ce3ad11c537550a84de36",
+  "signature": "1bc0365a9d99eafee240515c6b188791289d9e3424b305bc0b8d549905de60dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-05009"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411959",
+  "certificate_id": "MN-SC-2026-7700465",
   "skill_id": "mn-apd-023",
   "skill_name": "Agent Compliance Monitor",
-  "issued_at": "2026-07-05T23:16:51.959Z",
-  "expires_at": "2026-07-12T23:16:51.959Z",
+  "issued_at": "2026-07-06T00:28:20.465Z",
+  "expires_at": "2026-07-13T00:28:20.465Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7ea340e5eaaf259c1a046ab20cca4088c15e5b6635b1ca11586c06ed83dc2cc",
+  "signature": "fcbf3e0b646502343b0649d5956f7d2fcab650491837eecc6376cbc26e638263",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-023"
 }

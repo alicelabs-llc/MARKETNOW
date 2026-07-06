@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409858",
+  "certificate_id": "MN-SC-2026-7095565",
   "skill_id": "mn-res-06648",
   "skill_name": "Mcp-duckduckgo-search",
-  "issued_at": "2026-07-05T23:16:49.858Z",
-  "expires_at": "2026-07-12T23:16:49.858Z",
+  "issued_at": "2026-07-06T00:18:15.565Z",
+  "expires_at": "2026-07-13T00:18:15.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f6f65667692efe55857f72b415b12cfc2c986a77a6e0ed1bb2078df35f03eaa9",
+  "signature": "e235d1d280f1bca2787fb1c3d24263f949e4841cd4b0422dae78cc4bdc173687",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-06648"
 }

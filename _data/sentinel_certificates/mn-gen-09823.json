@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410305",
+  "certificate_id": "MN-SC-2026-7233297",
   "skill_id": "mn-gen-09823",
   "skill_name": "Ollama-mcp-server-bridge",
-  "issued_at": "2026-07-05T23:16:50.305Z",
-  "expires_at": "2026-07-12T23:16:50.305Z",
+  "issued_at": "2026-07-06T00:20:33.297Z",
+  "expires_at": "2026-07-13T00:20:33.297Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "018fca23f05772b3f19c825ade1587a2d9f952ebf881881b8f4bcb594b0eda7d",
+  "signature": "2d3b1ebb553d11d01f142440aed984b33f605809f5a7d2c5880ca897da2131ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09823"
 }

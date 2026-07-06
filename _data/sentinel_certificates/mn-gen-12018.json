@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410586",
+  "certificate_id": "MN-SC-2026-7330835",
   "skill_id": "mn-gen-12018",
   "skill_name": "Sopr/mcp-server",
-  "issued_at": "2026-07-05T23:16:50.586Z",
-  "expires_at": "2026-07-12T23:16:50.586Z",
+  "issued_at": "2026-07-06T00:22:10.835Z",
+  "expires_at": "2026-07-13T00:22:10.835Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40fa416274c9cff3e39b68be095816a4ef54fafde9160a5271f12700e64ae33f",
+  "signature": "57c4e24f6d60eae2ed01b35030c942ff4ee47e709522f014c0aaa7b4684bd321",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12018"
 }

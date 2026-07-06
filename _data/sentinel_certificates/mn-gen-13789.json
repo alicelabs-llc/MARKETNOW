@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410886",
+  "certificate_id": "MN-SC-2026-7410276",
   "skill_id": "mn-gen-13789",
   "skill_name": "Zentao-cli",
-  "issued_at": "2026-07-05T23:16:50.886Z",
-  "expires_at": "2026-07-12T23:16:50.886Z",
+  "issued_at": "2026-07-06T00:23:30.276Z",
+  "expires_at": "2026-07-13T00:23:30.276Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ee9610a2300bc56f97898a17efba992aa21ed2587e600b0c7418c721f8ab419",
+  "signature": "f0aebd4168fe8ea43c4e7685f063d291ac509964932d6ff21938678f18883db6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13789"
 }

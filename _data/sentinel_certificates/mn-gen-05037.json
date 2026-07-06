@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409653",
+  "certificate_id": "MN-SC-2026-7026953",
   "skill_id": "mn-gen-05037",
   "skill_name": "Ibmi-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.653Z",
-  "expires_at": "2026-07-12T23:16:49.653Z",
+  "issued_at": "2026-07-06T00:17:06.953Z",
+  "expires_at": "2026-07-13T00:17:06.953Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb10d4066c931be5be9bc7bc903277e546d80918799705e8b210a6ea90b7367c",
+  "signature": "088daa3d03c48d19f7dd1e1dba72f3804c605d004d55936e4a8ce402615c399f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05037"
 }

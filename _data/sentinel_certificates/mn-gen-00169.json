@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2480523",
+  "certificate_id": "MN-SC-2026-6790715",
   "skill_id": "mn-gen-00169",
   "skill_name": "Adkui-nextjs",
-  "issued_at": "2026-07-05T23:01:20.523Z",
-  "expires_at": "2026-07-12T23:01:20.523Z",
+  "issued_at": "2026-07-06T00:13:10.715Z",
+  "expires_at": "2026-07-13T00:13:10.715Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be67956ad0e818a9bfbb63c363d13be7241e12444c7dd47a0f0a8ad5e29eef20",
+  "signature": "df71f7bd1589e9ced1f40168dc1ba23a1a16e7775391bb29bb62c975ce3de691",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00169"
 }

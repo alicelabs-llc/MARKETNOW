@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411896",
+  "certificate_id": "MN-SC-2026-7685980",
   "skill_id": "mn-atu-004",
   "skill_name": "Multi-Step Tool Planner",
-  "issued_at": "2026-07-05T23:16:51.896Z",
-  "expires_at": "2026-07-12T23:16:51.896Z",
+  "issued_at": "2026-07-06T00:28:05.980Z",
+  "expires_at": "2026-07-13T00:28:05.980Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5922dec8660ca6d82a8cd4eb52b3062c43adcf674dfeb6e1e38bf7601bf5a4b3",
+  "signature": "e050c77b2ccd33877e1979cc83e7a1086c3c9c40296aa25c31792e21154b1e8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-004"
 }

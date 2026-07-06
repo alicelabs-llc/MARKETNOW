@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409859",
+  "certificate_id": "MN-SC-2026-7096649",
   "skill_id": "mn-gen-06673",
   "skill_name": "Mcp-epub-reader",
-  "issued_at": "2026-07-05T23:16:49.859Z",
-  "expires_at": "2026-07-12T23:16:49.859Z",
+  "issued_at": "2026-07-06T00:18:16.649Z",
+  "expires_at": "2026-07-13T00:18:16.649Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70ea3b5f42f113b4406d53b00f275b9486e89ebcfcafae65bf126139ff8dad50",
+  "signature": "b256ecccfa5797b4d33abc9b93d6ab81f966b63034c839015e4020776832892f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06673"
 }

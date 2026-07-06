@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2981008",
+  "certificate_id": "MN-SC-2026-6829765",
   "skill_id": "mn-gen-01009",
   "skill_name": "Askgrokmcp",
-  "issued_at": "2026-07-05T23:09:41.008Z",
-  "expires_at": "2026-07-12T23:09:41.008Z",
+  "issued_at": "2026-07-06T00:13:49.765Z",
+  "expires_at": "2026-07-13T00:13:49.765Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb6b80376330f6582cbef87bb8cf28be252991a11452d870fb87f4cabff3564a",
+  "signature": "0fe5495af3dcb818fec353f703b46d0dc34e797f47cf601e1e9df428871a9e56",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01009"
 }

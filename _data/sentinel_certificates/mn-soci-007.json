@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412422",
+  "certificate_id": "MN-SC-2026-7823239",
   "skill_id": "mn-soci-007",
   "skill_name": "Reddit API",
-  "issued_at": "2026-07-05T23:16:52.422Z",
-  "expires_at": "2026-07-12T23:16:52.422Z",
+  "issued_at": "2026-07-06T00:30:23.239Z",
+  "expires_at": "2026-07-13T00:30:23.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc78e3adb7014569a829deedc670d7e7a5cf690d903e1d18cdcde6f9711d6c0d",
+  "signature": "1e36a6b036cacc829d3e59f11d9e7809cf6565b8f22d0661f2012a04023a3b8e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-soci-007"
 }

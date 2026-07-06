@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408960",
+  "certificate_id": "MN-SC-2026-6904668",
   "skill_id": "mn-gen-02474",
   "skill_name": "Openclueo/mcp",
-  "issued_at": "2026-07-05T23:16:48.960Z",
-  "expires_at": "2026-07-12T23:16:48.960Z",
+  "issued_at": "2026-07-06T00:15:04.668Z",
+  "expires_at": "2026-07-13T00:15:04.668Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b9d39da7f06f42de556817688355f04f82deaf93f6837ad39f0c24babf83abca",
+  "signature": "00545685a9dab5458d3ae4cd758264f5594c6c8214823bd9be4fd6fd8aeb9fe5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02474"
 }

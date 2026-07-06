@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411955",
+  "certificate_id": "MN-SC-2026-7696331",
   "skill_id": "mn-acm-035",
   "skill_name": "Multi-Agent Context Sharing",
-  "issued_at": "2026-07-05T23:16:51.955Z",
-  "expires_at": "2026-07-12T23:16:51.955Z",
+  "issued_at": "2026-07-06T00:28:16.331Z",
+  "expires_at": "2026-07-13T00:28:16.331Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d960ca96a8c334cbade777d32b2f4a9bd6203086785159710bc00cbfa1db913b",
+  "signature": "651062eb7c89586cff93f88682e43c76037082cc3bbcf429f0d341f2c897cba5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-035"
 }

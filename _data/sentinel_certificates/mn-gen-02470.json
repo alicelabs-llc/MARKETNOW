@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408959",
+  "certificate_id": "MN-SC-2026-6904115",
   "skill_id": "mn-gen-02470",
   "skill_name": "Cloudscope-mcp",
-  "issued_at": "2026-07-05T23:16:48.959Z",
-  "expires_at": "2026-07-12T23:16:48.959Z",
+  "issued_at": "2026-07-06T00:15:04.115Z",
+  "expires_at": "2026-07-13T00:15:04.115Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b27f715052b1a6603fb20c6a0c53690ec06b7f3a5b5bb725389b82f7eb9ec1fe",
+  "signature": "996f348153a301231eb3f131ce8bf37585d8070d155111f9f8d837ee7cc0c13f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02470"
 }

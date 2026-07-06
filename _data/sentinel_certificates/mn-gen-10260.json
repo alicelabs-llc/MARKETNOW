@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410357",
+  "certificate_id": "MN-SC-2026-7252859",
   "skill_id": "mn-gen-10260",
   "skill_name": "Pcl-mcp",
-  "issued_at": "2026-07-05T23:16:50.357Z",
-  "expires_at": "2026-07-12T23:16:50.357Z",
+  "issued_at": "2026-07-06T00:20:52.859Z",
+  "expires_at": "2026-07-13T00:20:52.859Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9baf58e5c72ca2f6def2134c4442d71cbdb95d077aff7575f8452313fd90175",
+  "signature": "6ab5ec0ebe2a5673c9e4d6770ad9d04f8910fbae517069595722bf5531d374fb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10260"
 }

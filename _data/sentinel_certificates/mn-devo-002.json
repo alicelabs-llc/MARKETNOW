@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412481",
+  "certificate_id": "MN-SC-2026-7836622",
   "skill_id": "mn-devo-002",
   "skill_name": "SLO/SLI Manager",
-  "issued_at": "2026-07-05T23:16:52.481Z",
-  "expires_at": "2026-07-12T23:16:52.481Z",
+  "issued_at": "2026-07-06T00:30:36.622Z",
+  "expires_at": "2026-07-13T00:30:36.622Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24791371a85078c3f505c3ccd93cf81fe840239c2dc78f299565ba27dc03bc7d",
+  "signature": "247e3e56c9f2e1f265be266ab57ccb8313bcd27acc1d8efe3d82955af88ec17d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-devo-002"
 }

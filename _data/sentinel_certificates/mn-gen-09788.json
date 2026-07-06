@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410285",
+  "certificate_id": "MN-SC-2026-7231625",
   "skill_id": "mn-gen-09788",
   "skill_name": "Ofocus-monorepo",
-  "issued_at": "2026-07-05T23:16:50.285Z",
-  "expires_at": "2026-07-12T23:16:50.285Z",
+  "issued_at": "2026-07-06T00:20:31.625Z",
+  "expires_at": "2026-07-13T00:20:31.625Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a384a1c75a482f73b3a091e426ed2cac4a2b7d112fc8ec273ed49998ad8e20d6",
+  "signature": "8465875c57a3df16db90131f6cee9b0f2950e243d008de27e68ee6c13a124a76",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09788"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409385",
+  "certificate_id": "MN-SC-2026-6947041",
   "skill_id": "mn-gen-03173",
   "skill_name": "Decoy-tripwire",
-  "issued_at": "2026-07-05T23:16:49.385Z",
-  "expires_at": "2026-07-12T23:16:49.385Z",
+  "issued_at": "2026-07-06T00:15:47.041Z",
+  "expires_at": "2026-07-13T00:15:47.041Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8cf253a72670f66d9d3d87256c2aac507d34740a825481fc646063e82c39d49e",
+  "signature": "b1e9e8ce4c899c5ee65f1b06ccf88d03efb39d7738c38979d234d0533609e9b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03173"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410193",
+  "certificate_id": "MN-SC-2026-7202708",
   "skill_id": "mn-gen-09199",
   "skill_name": "Moneymoney-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.193Z",
-  "expires_at": "2026-07-12T23:16:50.193Z",
+  "issued_at": "2026-07-06T00:20:02.708Z",
+  "expires_at": "2026-07-13T00:20:02.708Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b1e43acf278fe5d5b9dd7ee58ae71f52a9b8af05cf36b57a9119e697076231e9",
+  "signature": "630098b12f7960ff43b5ea83137e1391f99e315ebdf635cf3e0945c87f0ffd73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09199"
 }

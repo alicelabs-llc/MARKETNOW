@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410109",
+  "certificate_id": "MN-SC-2026-7173692",
   "skill_id": "mn-gen-08244",
   "skill_name": "Kevinwatt/mcp-webhook",
-  "issued_at": "2026-07-05T23:16:50.109Z",
-  "expires_at": "2026-07-12T23:16:50.109Z",
+  "issued_at": "2026-07-06T00:19:33.692Z",
+  "expires_at": "2026-07-13T00:19:33.692Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15a84296567113d5564d9aebeb867db7ed5102149c67a14ac110c26705619ec9",
+  "signature": "492a4043ee0c0c471c8ebeaf529c64a8337418bb86cdb0500fde5d3cad0923c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08244"
 }

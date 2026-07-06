@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409614",
+  "certificate_id": "MN-SC-2026-7021333",
   "skill_id": "mn-blo-04913",
   "skill_name": "Hive-intelligence",
-  "issued_at": "2026-07-05T23:16:49.614Z",
-  "expires_at": "2026-07-12T23:16:49.614Z",
+  "issued_at": "2026-07-06T00:17:01.333Z",
+  "expires_at": "2026-07-13T00:17:01.333Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a380d18097b985023b622618127bfa02a085ceef5e935bdc469376e722e43c2",
+  "signature": "4824fcdaa9454aa0acf0e005801b5d609d4bec981273105446ac629bbedc2d0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-04913"
 }

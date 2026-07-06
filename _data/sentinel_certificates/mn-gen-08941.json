@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410165",
+  "certificate_id": "MN-SC-2026-7192133",
   "skill_id": "mn-gen-08941",
   "skill_name": "Mensa-cli",
-  "issued_at": "2026-07-05T23:16:50.165Z",
-  "expires_at": "2026-07-12T23:16:50.165Z",
+  "issued_at": "2026-07-06T00:19:52.133Z",
+  "expires_at": "2026-07-13T00:19:52.133Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe1a1840600b27c8c600bc56e6f311e36b4097c89db40461bb65ef4eb7371f72",
+  "signature": "ead062a34057a0a25bce7813e5c3a50a57c213d8496d3921130b1050cc2f9f03",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08941"
 }

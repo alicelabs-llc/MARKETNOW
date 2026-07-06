@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410822",
+  "certificate_id": "MN-SC-2026-7394360",
   "skill_id": "mn-gen-13401",
   "skill_name": "Weixin-claude-code",
-  "issued_at": "2026-07-05T23:16:50.822Z",
-  "expires_at": "2026-07-12T23:16:50.822Z",
+  "issued_at": "2026-07-06T00:23:14.360Z",
+  "expires_at": "2026-07-13T00:23:14.360Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89cf86114e66a8da23b1291329b6bc8b8a6e0e8569a7eb5833454b0505e3fbf0",
+  "signature": "388882b588b6be5fb1682c46a195329755edf2f78d341b2752aa4dba7eae7036",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13401"
 }

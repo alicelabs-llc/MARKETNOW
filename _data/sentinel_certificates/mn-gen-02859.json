@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409351",
+  "certificate_id": "MN-SC-2026-6928401",
   "skill_id": "mn-gen-02859",
   "skill_name": "Mjucius/cozi-mcp",
-  "issued_at": "2026-07-05T23:16:49.351Z",
-  "expires_at": "2026-07-12T23:16:49.351Z",
+  "issued_at": "2026-07-06T00:15:28.401Z",
+  "expires_at": "2026-07-13T00:15:28.401Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "64f0f3b6895b171807a11a326d26e34495eea292792851be6b1d04eeaa7576a3",
+  "signature": "e3bfd752fea299cda29159cb2b25fb8d37cae0af342c856f800d1833607c1faf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02859"
 }

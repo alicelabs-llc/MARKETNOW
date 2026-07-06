@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410997",
+  "certificate_id": "MN-SC-2026-7443153",
   "skill_id": "mn-prompt-81f082a3",
   "skill_name": "Especialista DAST + OWASP ZAP",
-  "issued_at": "2026-07-05T23:16:50.997Z",
-  "expires_at": "2026-07-12T23:16:50.997Z",
+  "issued_at": "2026-07-06T00:24:03.153Z",
+  "expires_at": "2026-07-13T00:24:03.153Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ea192e28aa16cbfea63ee9fbc55f62f69bb68792616f7c7e27f841318161c529",
+  "signature": "6eec94e67d49401dcf8565456c0238d44aa8ba5a30b72e07a9fdeee8000fc0e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-81f082a3"
 }

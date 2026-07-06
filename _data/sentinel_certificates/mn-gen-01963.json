@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408584",
+  "certificate_id": "MN-SC-2026-6877697",
   "skill_id": "mn-gen-01963",
   "skill_name": "Claude-agent-mcp",
-  "issued_at": "2026-07-05T23:16:48.584Z",
-  "expires_at": "2026-07-12T23:16:48.584Z",
+  "issued_at": "2026-07-06T00:14:37.697Z",
+  "expires_at": "2026-07-13T00:14:37.697Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "235f4e72b507f5f1bcd8cc0b4617d7e94051ba33ff3767795c95eaf82748cfd5",
+  "signature": "24a32e91ff70bdb1f295778487891fddafa23a33fe07625104d2dd1bd4180430",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01963"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411953",
+  "certificate_id": "MN-SC-2026-7694703",
   "skill_id": "mn-acm-023",
   "skill_name": "Document Versioning for RAG",
-  "issued_at": "2026-07-05T23:16:51.953Z",
-  "expires_at": "2026-07-12T23:16:51.953Z",
+  "issued_at": "2026-07-06T00:28:14.703Z",
+  "expires_at": "2026-07-13T00:28:14.703Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38b56647c358c9cf14de08035fa32cafcb77d23318caefbe98ae015b4db12d46",
+  "signature": "908b275f984b790381a06386721beb7be6f6f1131fc70cd919365687ba36e178",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-023"
 }

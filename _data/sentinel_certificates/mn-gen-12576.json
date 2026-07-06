@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410669",
+  "certificate_id": "MN-SC-2026-7354222",
   "skill_id": "mn-gen-12576",
   "skill_name": "Text-to-typo3",
-  "issued_at": "2026-07-05T23:16:50.669Z",
-  "expires_at": "2026-07-12T23:16:50.669Z",
+  "issued_at": "2026-07-06T00:22:34.222Z",
+  "expires_at": "2026-07-13T00:22:34.222Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cdbd3cf2905164b60aad27ee0eae45c79cbd19a85ff2bb7800fb523f81b1aea5",
+  "signature": "f2ee0249815451a203e387327801b2413663ec3cb68cfa904a4cf4adde90b115",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12576"
 }

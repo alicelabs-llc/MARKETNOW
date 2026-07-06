@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410253",
+  "certificate_id": "MN-SC-2026-7220981",
   "skill_id": "mn-gen-09587",
   "skill_name": "Node-red-mcp",
-  "issued_at": "2026-07-05T23:16:50.253Z",
-  "expires_at": "2026-07-12T23:16:50.253Z",
+  "issued_at": "2026-07-06T00:20:20.981Z",
+  "expires_at": "2026-07-13T00:20:20.981Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b3b85eff2d2aacbf2848d900b3d44491028281a3b56dfea2b3f120d643962a75",
+  "signature": "3addcd51210fc87700334959ba47ba0046072b99b673ddcf78f6991d23517ce0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09587"
 }

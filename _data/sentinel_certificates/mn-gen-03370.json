@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409396",
+  "certificate_id": "MN-SC-2026-6955747",
   "skill_id": "mn-gen-03370",
   "skill_name": "Ditto-mcp-servers",
-  "issued_at": "2026-07-05T23:16:49.396Z",
-  "expires_at": "2026-07-12T23:16:49.396Z",
+  "issued_at": "2026-07-06T00:15:55.747Z",
+  "expires_at": "2026-07-13T00:15:55.747Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb937765694707b53d59f27a41974c193990117ed33a1d3329e3ba090b733fee",
+  "signature": "7d8acaae33e1fb43fb22f788c34391258974d121cd566f4f153aa09ef31f7d2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03370"
 }

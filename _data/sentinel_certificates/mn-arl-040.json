@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411893",
+  "certificate_id": "MN-SC-2026-7682326",
   "skill_id": "mn-arl-040",
   "skill_name": "Multi-Turn Coherence Checker",
-  "issued_at": "2026-07-05T23:16:51.893Z",
-  "expires_at": "2026-07-12T23:16:51.893Z",
+  "issued_at": "2026-07-06T00:28:02.326Z",
+  "expires_at": "2026-07-13T00:28:02.326Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1329cfe157bf7a95a724674590913763c5f43ba29e4216a9e5935043c08895d3",
+  "signature": "7b0efcccb746a271a1244c73ce76952a20de82049b68d94b094185e25e965794",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-040"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412484",
+  "certificate_id": "MN-SC-2026-7842466",
   "skill_id": "mn-edte-002",
   "skill_name": "Adaptive Learning Engine",
-  "issued_at": "2026-07-05T23:16:52.484Z",
-  "expires_at": "2026-07-12T23:16:52.484Z",
+  "issued_at": "2026-07-06T00:30:42.466Z",
+  "expires_at": "2026-07-13T00:30:42.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a81f036ee0d2d9e67a89800e9612e2e76f0f475db3e7e3f754e2d6388cc1f18",
+  "signature": "58edf00ad44b3d8489ad4f6a0a96576c8c829a061c0d4f74fd3119bc8107b7d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edte-002"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412510",
+  "certificate_id": "MN-SC-2026-7845940",
   "skill_id": "mn-edte-026",
   "skill_name": "Scholarship Matcher",
-  "issued_at": "2026-07-05T23:16:52.510Z",
-  "expires_at": "2026-07-12T23:16:52.510Z",
+  "issued_at": "2026-07-06T00:30:45.940Z",
+  "expires_at": "2026-07-13T00:30:45.940Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d175aac6903d7295aeecb4f0238cf8ca7a4c330d89e0d5105efa5cd537372a6",
+  "signature": "046f9eea085269816fcf224e93b867ac12a11e3ed9b332225ea78ad2636de997",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edte-026"
 }

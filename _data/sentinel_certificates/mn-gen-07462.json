@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409988",
+  "certificate_id": "MN-SC-2026-7135251",
   "skill_id": "mn-gen-07462",
   "skill_name": "Mcp-safety-scan",
-  "issued_at": "2026-07-05T23:16:49.988Z",
-  "expires_at": "2026-07-12T23:16:49.988Z",
+  "issued_at": "2026-07-06T00:18:55.251Z",
+  "expires_at": "2026-07-13T00:18:55.251Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c53b18911c4c2d4b6ebd10daf9ba367d85e9ae7ecf4e5f9e6495b5baeec488e9",
+  "signature": "f09d4ef7449797de289d21bcd1a8b9c681e76be19d4e64f2a01ee2284336280f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07462"
 }

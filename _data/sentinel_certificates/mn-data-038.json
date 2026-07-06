@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412389",
+  "certificate_id": "MN-SC-2026-7809636",
   "skill_id": "mn-data-038",
   "skill_name": "Keyword Extractor",
-  "issued_at": "2026-07-05T23:16:52.389Z",
-  "expires_at": "2026-07-12T23:16:52.389Z",
+  "issued_at": "2026-07-06T00:30:09.636Z",
+  "expires_at": "2026-07-13T00:30:09.636Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d85c03d71794b7a07870d0711d05926092b3067d8b92a94cc5f877e9f1e0721",
+  "signature": "3ee309ac74c6d57320ac57efead4c24b1aa45d4b9d2d69554ac1b970d1799e12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-038"
 }

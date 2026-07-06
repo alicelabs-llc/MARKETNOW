@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410162",
+  "certificate_id": "MN-SC-2026-7188582",
   "skill_id": "mn-gen-08852",
   "skill_name": "Medusa-next",
-  "issued_at": "2026-07-05T23:16:50.162Z",
-  "expires_at": "2026-07-12T23:16:50.162Z",
+  "issued_at": "2026-07-06T00:19:48.582Z",
+  "expires_at": "2026-07-13T00:19:48.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69c57246350665e3f7256a60fa2d2b58f6e32923cd71af6c1a90a23ac4c3bb4e",
+  "signature": "53fda7b5622f604e6f471bc2fa3d0469de6a6c7acc58689b8048e3b0a2ad225d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08852"
 }

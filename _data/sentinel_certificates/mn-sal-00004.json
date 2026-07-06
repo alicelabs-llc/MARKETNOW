@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412098",
+  "certificate_id": "MN-SC-2026-7731503",
   "skill_id": "mn-sal-00004",
   "skill_name": "Apollo Lead Enrichment",
-  "issued_at": "2026-07-05T23:16:52.098Z",
-  "expires_at": "2026-07-12T23:16:52.098Z",
+  "issued_at": "2026-07-06T00:28:51.503Z",
+  "expires_at": "2026-07-13T00:28:51.503Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7003e468f0f6bcd5a222750bae704ad1e2c7815f75f3af88a8da1fe7e8572b78",
+  "signature": "23b6461303213bc8317a0361bb9db7e193e2a0792cbe458a5a43fee10b2b473e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00004"
 }

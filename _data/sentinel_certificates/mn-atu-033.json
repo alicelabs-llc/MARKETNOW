@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411899",
+  "certificate_id": "MN-SC-2026-7690555",
   "skill_id": "mn-atu-033",
   "skill_name": "Tool Result Streaming",
-  "issued_at": "2026-07-05T23:16:51.899Z",
-  "expires_at": "2026-07-12T23:16:51.899Z",
+  "issued_at": "2026-07-06T00:28:10.555Z",
+  "expires_at": "2026-07-13T00:28:10.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "320c43bfe723e57e3ceb33e5780f2eda2e260b020eee1b22aa512b6c24ae1122",
+  "signature": "ebd11efb1fe2b6298a02990e0383f244b4db04d8b984819fa10c2689b6fa79bb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-033"
 }

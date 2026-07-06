@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412472",
+  "certificate_id": "MN-SC-2026-7832036",
   "skill_id": "mn-web-040",
   "skill_name": "Link Preview Generator",
-  "issued_at": "2026-07-05T23:16:52.472Z",
-  "expires_at": "2026-07-12T23:16:52.472Z",
+  "issued_at": "2026-07-06T00:30:32.036Z",
+  "expires_at": "2026-07-13T00:30:32.036Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23243a4b974da16560566dd716a4fc0f3d81352fb19b554213b60899ab88c83c",
+  "signature": "c2465dbcbf3a00f08016b38ffe00b2c76d05bd7edb212384c0059ae6f7a89b0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-040"
 }

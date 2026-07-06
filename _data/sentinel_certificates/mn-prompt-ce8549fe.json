@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410890",
+  "certificate_id": "MN-SC-2026-7413918",
   "skill_id": "mn-prompt-ce8549fe",
   "skill_name": "Traductor Técnico Inglés ⇄ Español",
-  "issued_at": "2026-07-05T23:16:50.890Z",
-  "expires_at": "2026-07-12T23:16:50.890Z",
+  "issued_at": "2026-07-06T00:23:33.918Z",
+  "expires_at": "2026-07-13T00:23:33.918Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f759f4090c27d035f8dc5b7b4a28c36b84b19197e806f043fbc43d3efb7de18",
+  "signature": "c80b81bc5a6018ed9aeda02bdd86e90cedafe56793731fcb00ef62a80ca5c884",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ce8549fe"
 }

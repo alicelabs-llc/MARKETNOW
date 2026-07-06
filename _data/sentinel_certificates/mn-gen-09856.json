@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410307",
+  "certificate_id": "MN-SC-2026-7234307",
   "skill_id": "mn-gen-09856",
   "skill_name": "Omophub/omophub-mcp",
-  "issued_at": "2026-07-05T23:16:50.307Z",
-  "expires_at": "2026-07-12T23:16:50.307Z",
+  "issued_at": "2026-07-06T00:20:34.307Z",
+  "expires_at": "2026-07-13T00:20:34.307Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "adc98dcfb09f2426b10076d38ddb60bffbb1b5577bbc16142789a323fdcaa6d7",
+  "signature": "2e81def324cde6a5148e3472e7891cab635a8f404f86f2caad289a66d4c9fe2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09856"
 }

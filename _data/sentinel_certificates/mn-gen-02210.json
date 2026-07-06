@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408629",
+  "certificate_id": "MN-SC-2026-6889427",
   "skill_id": "mn-gen-02210",
   "skill_name": "Claude-mcp-tunnel",
-  "issued_at": "2026-07-05T23:16:48.629Z",
-  "expires_at": "2026-07-12T23:16:48.629Z",
+  "issued_at": "2026-07-06T00:14:49.427Z",
+  "expires_at": "2026-07-13T00:14:49.427Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ae8e2b006425a3199ce47bfd759c81503a14b307f5434bbb2e19ad1fc6b543c4",
+  "signature": "daea755f7c4259351375cd83b43ff8b468758493d200aec8f59cf2efc9d6d7c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02210"
 }

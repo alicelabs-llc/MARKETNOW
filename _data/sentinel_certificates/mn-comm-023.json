@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412384",
+  "certificate_id": "MN-SC-2026-7801024",
   "skill_id": "mn-comm-023",
   "skill_name": "Multi-Currency Converter",
-  "issued_at": "2026-07-05T23:16:52.384Z",
-  "expires_at": "2026-07-12T23:16:52.384Z",
+  "issued_at": "2026-07-06T00:30:01.024Z",
+  "expires_at": "2026-07-13T00:30:01.024Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ca337287dbbedf94219759ab8c09e66b4c7a6bf47a8b465350f53386e3ddb4a",
+  "signature": "444cbdda88de62c158014706a0a7d295bd50d52d70f504dfb481191ac9d478fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-023"
 }

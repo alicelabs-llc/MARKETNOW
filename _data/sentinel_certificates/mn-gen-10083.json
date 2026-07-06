@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410316",
+  "certificate_id": "MN-SC-2026-7243508",
   "skill_id": "mn-gen-10083",
   "skill_name": "Orca-mcp-tools",
-  "issued_at": "2026-07-05T23:16:50.316Z",
-  "expires_at": "2026-07-12T23:16:50.316Z",
+  "issued_at": "2026-07-06T00:20:43.508Z",
+  "expires_at": "2026-07-13T00:20:43.508Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61616b144e9be4b413b982293e8cb241f5e3fdbeb7260dc790e883e623e9abab",
+  "signature": "7ad1c3cb6b63b427f1952ae1b6c3046964c65079ce8a07cefb112cfd4f770461",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10083"
 }

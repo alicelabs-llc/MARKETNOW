@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408661",
+  "certificate_id": "MN-SC-2026-6902786",
   "skill_id": "mn-gen-02448",
   "skill_name": "Clockify-mcp-server",
-  "issued_at": "2026-07-05T23:16:48.661Z",
-  "expires_at": "2026-07-12T23:16:48.661Z",
+  "issued_at": "2026-07-06T00:15:02.786Z",
+  "expires_at": "2026-07-13T00:15:02.786Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38fc090c6f5cf2c105ff7aa7ef0e731080de111e061d62aa90238cfc9579ae49",
+  "signature": "f825f5a4cd6b947b927cf78be1e04f893cdc2ec1f82984c385e41edf1482508e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02448"
 }

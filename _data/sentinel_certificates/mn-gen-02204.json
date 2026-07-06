@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408628",
+  "certificate_id": "MN-SC-2026-6888832",
   "skill_id": "mn-gen-02204",
   "skill_name": "Claude-mcp-switch",
-  "issued_at": "2026-07-05T23:16:48.628Z",
-  "expires_at": "2026-07-12T23:16:48.628Z",
+  "issued_at": "2026-07-06T00:14:48.832Z",
+  "expires_at": "2026-07-13T00:14:48.832Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6bb674b20acce9ce4ca90618bbb17d02ed3e3ff0860ed876532bd5e3228c5d3",
+  "signature": "689806f683222083dfa7ee9df5ee86045124f0c3fccd3f805bb65205b01bc35c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02204"
 }

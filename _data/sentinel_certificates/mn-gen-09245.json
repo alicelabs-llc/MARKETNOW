@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410195",
+  "certificate_id": "MN-SC-2026-7204680",
   "skill_id": "mn-gen-09245",
   "skill_name": "Okapi-ca/ms-365-admin-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.195Z",
-  "expires_at": "2026-07-12T23:16:50.195Z",
+  "issued_at": "2026-07-06T00:20:04.680Z",
+  "expires_at": "2026-07-13T00:20:04.680Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "201e40199a2d95843f230e81487338fe79f15867e17c09b4bd8301502ed9c46f",
+  "signature": "f673624b7f7aa72387d6c3698a7ca2f19f237ad3514098465daae044be24cb20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09245"
 }

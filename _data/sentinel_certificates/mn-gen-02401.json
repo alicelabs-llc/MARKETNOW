@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408658",
+  "certificate_id": "MN-SC-2026-6900283",
   "skill_id": "mn-gen-02401",
   "skill_name": "Cleanroom-mcp",
-  "issued_at": "2026-07-05T23:16:48.658Z",
-  "expires_at": "2026-07-12T23:16:48.658Z",
+  "issued_at": "2026-07-06T00:15:00.283Z",
+  "expires_at": "2026-07-13T00:15:00.283Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a26e1834e444892c391ebfa7e4d96b24146f9d6d13492e959dc1846cc7ffff9",
+  "signature": "23bc874483f81f85ba56c0337008c136abc43eb3646b19fe5d117c02ad64d736",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02401"
 }

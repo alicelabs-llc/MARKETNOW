@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409383",
+  "certificate_id": "MN-SC-2026-6945361",
   "skill_id": "mn-dat-03148",
   "skill_name": "Dbx-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.383Z",
-  "expires_at": "2026-07-12T23:16:49.383Z",
+  "issued_at": "2026-07-06T00:15:45.361Z",
+  "expires_at": "2026-07-13T00:15:45.361Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "edf0569db47a41ef2eec2830d449407a6a26a8d31e31eaf91201ccfed9f9b23c",
+  "signature": "1e9f527bbbb593f39a05d5f8d1f81ae813bc44d332cb84cf3d9cfd674260205f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-03148"
 }

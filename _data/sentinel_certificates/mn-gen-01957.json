@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408583",
+  "certificate_id": "MN-SC-2026-6877084",
   "skill_id": "mn-gen-01957",
   "skill_name": "Aiai-go/claude",
-  "issued_at": "2026-07-05T23:16:48.583Z",
-  "expires_at": "2026-07-12T23:16:48.583Z",
+  "issued_at": "2026-07-06T00:14:37.084Z",
+  "expires_at": "2026-07-13T00:14:37.084Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7dd3f392f1f10e2a0b1f15b5b5bf82e3877112472bc0dc5dad344918dd12c1e2",
+  "signature": "9a2072917eb919ce76490a1293342c19886a1b309982707f01fa42eb207b9e82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01957"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3238958",
+  "certificate_id": "MN-SC-2026-6868064",
   "skill_id": "mn-ai-01801",
   "skill_name": "Chainq",
-  "issued_at": "2026-07-05T23:13:58.958Z",
-  "expires_at": "2026-07-12T23:13:58.958Z",
+  "issued_at": "2026-07-06T00:14:28.064Z",
+  "expires_at": "2026-07-13T00:14:28.064Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5fc926b4cf4725d348b9ddd163913c62b50f3d149830cda192093de44980e98b",
+  "signature": "db1d1ca512a2233da107faa764dbf22dd64575b7f3f07997459e964f318ee51a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01801"
 }

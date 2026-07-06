@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410191",
+  "certificate_id": "MN-SC-2026-7200645",
   "skill_id": "mn-gen-09147",
   "skill_name": "Dwmkerr/mock-llm",
-  "issued_at": "2026-07-05T23:16:50.191Z",
-  "expires_at": "2026-07-12T23:16:50.191Z",
+  "issued_at": "2026-07-06T00:20:00.645Z",
+  "expires_at": "2026-07-13T00:20:00.645Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fdd24d5198ca2b583ec26b9b6a7c4261931e187335aa7d85b188141106e5522b",
+  "signature": "1967db800aafd56a6d79a06359ff63ae847965156fad53fc7829d01d5d45901a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09147"
 }

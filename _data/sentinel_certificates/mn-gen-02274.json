@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408633",
+  "certificate_id": "MN-SC-2026-6893861",
   "skill_id": "mn-gen-02274",
   "skill_name": "Claude-session-sync",
-  "issued_at": "2026-07-05T23:16:48.633Z",
-  "expires_at": "2026-07-12T23:16:48.633Z",
+  "issued_at": "2026-07-06T00:14:53.861Z",
+  "expires_at": "2026-07-13T00:14:53.861Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a06ba40aa3819035df9b682bd1fa9e6d4e5a4368be114dcd1d8eade3d6c8d9b",
+  "signature": "5bbbf1f5a3677b2f7ce463d6c1a7706031d56e33234ae26ea6ad66333a978315",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02274"
 }

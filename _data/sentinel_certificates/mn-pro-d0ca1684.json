@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412171",
+  "certificate_id": "MN-SC-2026-7754085",
   "skill_id": "mn-pro-d0ca1684",
   "skill_name": "Security Awareness Training",
-  "issued_at": "2026-07-05T23:16:52.171Z",
-  "expires_at": "2026-07-12T23:16:52.171Z",
+  "issued_at": "2026-07-06T00:29:14.085Z",
+  "expires_at": "2026-07-13T00:29:14.085Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "527a39550d8610392b3041bbd1edefdd741084c650ebb5e0779e8fbfbbe66162",
+  "signature": "14f8d2d41c375694742d00bd4301b609051ea89d9b05d295f8c64e83c859f220",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-d0ca1684"
 }

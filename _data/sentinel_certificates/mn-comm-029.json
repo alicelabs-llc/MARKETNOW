@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412384",
+  "certificate_id": "MN-SC-2026-7801506",
   "skill_id": "mn-comm-029",
   "skill_name": "Subscription Manager",
-  "issued_at": "2026-07-05T23:16:52.384Z",
-  "expires_at": "2026-07-12T23:16:52.384Z",
+  "issued_at": "2026-07-06T00:30:01.506Z",
+  "expires_at": "2026-07-13T00:30:01.506Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38d2c43e277387d89d2de469c3191b2d2fc78e8e6fe00558a61468c914e82b46",
+  "signature": "7031f66045af6633fbc7cd55dda9dcbb08df9551be74b8159ee7d15339ff14df",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-029"
 }

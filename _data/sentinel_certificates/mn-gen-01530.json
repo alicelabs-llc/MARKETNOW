@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3226528",
+  "certificate_id": "MN-SC-2026-6851311",
   "skill_id": "mn-gen-01530",
   "skill_name": "Brandkit-mcp",
-  "issued_at": "2026-07-05T23:13:46.528Z",
-  "expires_at": "2026-07-12T23:13:46.528Z",
+  "issued_at": "2026-07-06T00:14:11.311Z",
+  "expires_at": "2026-07-13T00:14:11.311Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "352a5e803463efa350077b9bc088e5b2ba5d69d0c3f1f2df8bc4cbb65c8eb7e9",
+  "signature": "ca87c834485a55f6bd6b0556080c326582c4c8671892c66729fee837690743ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01530"
 }

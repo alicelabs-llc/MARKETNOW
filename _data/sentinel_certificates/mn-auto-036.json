@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412347",
+  "certificate_id": "MN-SC-2026-7794203",
   "skill_id": "mn-auto-036",
   "skill_name": "Workflow Scheduler",
-  "issued_at": "2026-07-05T23:16:52.347Z",
-  "expires_at": "2026-07-12T23:16:52.347Z",
+  "issued_at": "2026-07-06T00:29:54.203Z",
+  "expires_at": "2026-07-13T00:29:54.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9000c6d990503f96b1d2de5015793351c6a712247c81130dd3f55f27ff6790fb",
+  "signature": "52f9efcf39eb3d4b6110c095d5c40800b49b83188a420103145eb22e0e052027",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-036"
 }

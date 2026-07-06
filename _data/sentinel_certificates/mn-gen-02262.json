@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408632",
+  "certificate_id": "MN-SC-2026-6892583",
   "skill_id": "mn-gen-02262",
   "skill_name": "Claude-redmine-mcp",
-  "issued_at": "2026-07-05T23:16:48.632Z",
-  "expires_at": "2026-07-12T23:16:48.632Z",
+  "issued_at": "2026-07-06T00:14:52.583Z",
+  "expires_at": "2026-07-13T00:14:52.583Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e057889224bc27f9909073f16f7052064e885f1602d4b6d3cc05fa895fa4336d",
+  "signature": "350b421a0dba00e5b3f7d76a78e8d6e58bd146f01f01fc6c6bdce2f0afde46a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02262"
 }

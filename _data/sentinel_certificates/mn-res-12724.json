@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410695",
+  "certificate_id": "MN-SC-2026-7362446",
   "skill_id": "mn-res-12724",
   "skill_name": "Tool-search-oss",
-  "issued_at": "2026-07-05T23:16:50.695Z",
-  "expires_at": "2026-07-12T23:16:50.695Z",
+  "issued_at": "2026-07-06T00:22:42.446Z",
+  "expires_at": "2026-07-13T00:22:42.446Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c32491e312246f25e803fc58ef095fa7167e664226bb6b35a1c91f36c9e37111",
+  "signature": "fe2af1b7e61a73a57dc23db60471876a154409cb547457f7af7c021b62ba7e80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-12724"
 }

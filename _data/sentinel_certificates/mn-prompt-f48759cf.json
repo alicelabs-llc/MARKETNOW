@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411187",
+  "certificate_id": "MN-SC-2026-7500080",
   "skill_id": "mn-prompt-f48759cf",
   "skill_name": "Especialista Ecommerce Fraud Prevention",
-  "issued_at": "2026-07-05T23:16:51.187Z",
-  "expires_at": "2026-07-12T23:16:51.187Z",
+  "issued_at": "2026-07-06T00:25:00.080Z",
+  "expires_at": "2026-07-13T00:25:00.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30da4d33005319f6aebcbc10d64212e7a4e25187ddf2aabe077745f66d432484",
+  "signature": "fa3b0627f63721a6efda2ce0c705bb541146c74951f50d64c56f5b4fa42fa208",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f48759cf"
 }

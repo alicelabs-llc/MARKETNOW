@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412391",
+  "certificate_id": "MN-SC-2026-7812915",
   "skill_id": "mn-file-021",
   "skill_name": "Image Resizer",
-  "issued_at": "2026-07-05T23:16:52.391Z",
-  "expires_at": "2026-07-12T23:16:52.391Z",
+  "issued_at": "2026-07-06T00:30:12.915Z",
+  "expires_at": "2026-07-13T00:30:12.915Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e06a162dddaa082ce75b7658cd3854fc5124d0e55d9b4ca8e7053e2b145c6ec",
+  "signature": "48442c791534703a6a393c964285b48945e50d041caf3624f476b119a29a08b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-file-021"
 }

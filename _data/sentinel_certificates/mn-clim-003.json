@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412472",
+  "certificate_id": "MN-SC-2026-7832595",
   "skill_id": "mn-clim-003",
   "skill_name": "Energy Consumption Monitor",
-  "issued_at": "2026-07-05T23:16:52.472Z",
-  "expires_at": "2026-07-12T23:16:52.472Z",
+  "issued_at": "2026-07-06T00:30:32.595Z",
+  "expires_at": "2026-07-13T00:30:32.595Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "edda7dc4abbfe81d8ec4d87c7483a3892a91ae5a99313fd1058a34d49e1021fa",
+  "signature": "d7e9832e22e360f0e6f190a08972156b918e152b01bd42e5b8f6850beaa4881c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-clim-003"
 }

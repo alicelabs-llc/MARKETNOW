@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412512",
+  "certificate_id": "MN-SC-2026-7848706",
   "skill_id": "mn-fint-007",
   "skill_name": "Ledger Service",
-  "issued_at": "2026-07-05T23:16:52.512Z",
-  "expires_at": "2026-07-12T23:16:52.512Z",
+  "issued_at": "2026-07-06T00:30:48.706Z",
+  "expires_at": "2026-07-13T00:30:48.706Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bd3e1550bbc3d44567e24ae866c3162528f83922f2eb0070700211bf845656c0",
+  "signature": "641712a4bfb30e3799bb35513af3759f2e5bd32a17a398750ab4ea5f108e1ab0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-007"
 }

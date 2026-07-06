@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411428",
+  "certificate_id": "MN-SC-2026-7557714",
   "skill_id": "mn-prompt-0d29e824",
   "skill_name": "Service level agreement (SLA) detailed",
-  "issued_at": "2026-07-05T23:16:51.428Z",
-  "expires_at": "2026-07-12T23:16:51.428Z",
+  "issued_at": "2026-07-06T00:25:57.714Z",
+  "expires_at": "2026-07-13T00:25:57.714Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29579a6474e8253693d1d2b945f749e9d00f960d0f5b4900e54e6d6e05cd9555",
+  "signature": "8fc5bf2ccd09b90b1e25dc2d9d26111ed09878036cd5c27c89f500ad393bbdfc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0d29e824"
 }

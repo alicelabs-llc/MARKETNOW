@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412106",
+  "certificate_id": "MN-SC-2026-7738703",
   "skill_id": "mn-voi-00022",
   "skill_name": "Porcupine Wake Word",
-  "issued_at": "2026-07-05T23:16:52.106Z",
-  "expires_at": "2026-07-12T23:16:52.106Z",
+  "issued_at": "2026-07-06T00:28:58.703Z",
+  "expires_at": "2026-07-13T00:28:58.703Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "46195186f24b7dcee75c411f45cf017625ef9458fc0e687e714c7d9fe00999b8",
+  "signature": "0416dea051f242c04dc06081cca35162c7be87d8d3ad69f7e6d9ed946a9068f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00022"
 }

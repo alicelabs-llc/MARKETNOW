@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3215030",
+  "certificate_id": "MN-SC-2026-6837036",
   "skill_id": "mn-dev-01224",
   "skill_name": "Azure-devops/mcp",
-  "issued_at": "2026-07-05T23:13:35.030Z",
-  "expires_at": "2026-07-12T23:13:35.030Z",
+  "issued_at": "2026-07-06T00:13:57.036Z",
+  "expires_at": "2026-07-13T00:13:57.036Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7cb2b581ae202ba39ca4130ceae3f9ba7fe1877d28ac825a03c2eee615c55dda",
+  "signature": "b89fac82fe0f495405836985e1956ee1357c423ecd21ad982068d91f880b6c07",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dev-01224"
 }

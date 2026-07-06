@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412388",
+  "certificate_id": "MN-SC-2026-7807321",
   "skill_id": "mn-data-031",
   "skill_name": "Funnel Analysis",
-  "issued_at": "2026-07-05T23:16:52.388Z",
-  "expires_at": "2026-07-12T23:16:52.388Z",
+  "issued_at": "2026-07-06T00:30:07.321Z",
+  "expires_at": "2026-07-13T00:30:07.321Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca23215c1dfd0cfe0722c2904a4b00e4c06637cb52498d13e41d2c25fec535a8",
+  "signature": "8773a03e23b5b88cc07097a8e697547fb7838c7bb3ccbf57b869b7dcf19e22e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-031"
 }

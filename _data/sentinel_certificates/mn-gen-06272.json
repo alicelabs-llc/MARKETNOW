@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409797",
+  "certificate_id": "MN-SC-2026-7079692",
   "skill_id": "mn-gen-06272",
   "skill_name": "Mcp-auto-install",
-  "issued_at": "2026-07-05T23:16:49.797Z",
-  "expires_at": "2026-07-12T23:16:49.797Z",
+  "issued_at": "2026-07-06T00:17:59.692Z",
+  "expires_at": "2026-07-13T00:17:59.692Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4c29bf4bd941cf031fd52ce4354fe80ca64dc92868bb6664a270305c69d2438",
+  "signature": "a6c5363f287bfeafe06ff58df00adfa0c6ee8220fdcdee74bff691d7a592f3e7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06272"
 }

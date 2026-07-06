@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409554",
+  "certificate_id": "MN-SC-2026-7000440",
   "skill_id": "mn-gen-04400",
   "skill_name": "Gettranscribe-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.554Z",
-  "expires_at": "2026-07-12T23:16:49.554Z",
+  "issued_at": "2026-07-06T00:16:40.440Z",
+  "expires_at": "2026-07-13T00:16:40.440Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe1b58ad952ccea9435ea921de39454f426302ca3e534cfbe02cc47a62fee8a7",
+  "signature": "abaca7c4d5348e7a2122700b7b48bdbdf15306188c855d3fdb219bee6c81d028",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04400"
 }

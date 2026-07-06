@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410693",
+  "certificate_id": "MN-SC-2026-7360201",
   "skill_id": "mn-gen-12690",
   "skill_name": "Todo-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.693Z",
-  "expires_at": "2026-07-12T23:16:50.693Z",
+  "issued_at": "2026-07-06T00:22:40.201Z",
+  "expires_at": "2026-07-13T00:22:40.201Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f0186395682f92ec2d039df02119441e61261944d3d009616ae4a08510818f38",
+  "signature": "5715b734e48ce5364f23f4cd685c5556b0916931fee470cce69e0fb3e1557cda",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12690"
 }

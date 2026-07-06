@@ -1,31 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-3417352",
+  "certificate_id": "MN-SC-2026-7889362",
   "skill_id": "mn-amcp-anythingmcp",
   "skill_name": "anythingmcp",
-  "issued_at": "2026-07-05T23:16:57.352Z",
-  "expires_at": "2026-07-12T23:16:57.352Z",
+  "issued_at": "2026-07-06T00:31:29.362Z",
+  "expires_at": "2026-07-13T00:31:29.362Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 1,
   "max_score": 10,
-  "risk_level": "medium",
+  "risk_level": "high",
   "risk_breakdown": {
     "l15_l16": "medium",
-    "l2": "not_available",
-    "final": "medium"
+    "l2": "high",
+    "final": "high"
   },
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l2": true
   },
   "layer_details": {
     "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
-    "l2_execution_status": null
+    "l2_score": 2,
+    "l2_execution_status": "ran"
   },
-  "signature": "5f5bf6c2015249eef27aa3eb9abf98f416fabf1119582982f6a871f0b64df1ea",
+  "signature": "8feb5f776a52a24d0c29aee8e1d4882a485e49c7f84dc4df73db83062d86df71",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-anythingmcp"
 }

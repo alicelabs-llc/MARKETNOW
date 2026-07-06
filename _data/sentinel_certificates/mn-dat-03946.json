@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409478",
+  "certificate_id": "MN-SC-2026-6979707",
   "skill_id": "mn-dat-03946",
   "skill_name": "Feedback-loop-mcp",
-  "issued_at": "2026-07-05T23:16:49.478Z",
-  "expires_at": "2026-07-12T23:16:49.478Z",
+  "issued_at": "2026-07-06T00:16:19.707Z",
+  "expires_at": "2026-07-13T00:16:19.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85a89c51cb0f59aff4b73b9c305de395245afb4d64deb7af36be4f01dfd09b66",
+  "signature": "aa3c933f5f09befb8d9c426d3ced0750069ac6211ea36992a66f265d8d39a523",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-03946"
 }

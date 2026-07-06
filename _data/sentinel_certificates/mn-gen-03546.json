@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409442",
+  "certificate_id": "MN-SC-2026-6962893",
   "skill_id": "mn-gen-03546",
   "skill_name": "My-mcp-weather-server",
-  "issued_at": "2026-07-05T23:16:49.442Z",
-  "expires_at": "2026-07-12T23:16:49.442Z",
+  "issued_at": "2026-07-06T00:16:02.893Z",
+  "expires_at": "2026-07-13T00:16:02.893Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97fe38159871eb37f5115a567d193881464b4501d45a8d4e231bd15a31811d5c",
+  "signature": "8fabb202de3192d2feed8599a745ed84d2a5b0fceb9be0a605f178011db6adf0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03546"
 }

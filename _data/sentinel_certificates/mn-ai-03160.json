@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409384",
+  "certificate_id": "MN-SC-2026-6945939",
   "skill_id": "mn-ai-03160",
   "skill_name": "Debugg-ai/debugg-ai-mcp",
-  "issued_at": "2026-07-05T23:16:49.384Z",
-  "expires_at": "2026-07-12T23:16:49.384Z",
+  "issued_at": "2026-07-06T00:15:45.939Z",
+  "expires_at": "2026-07-13T00:15:45.939Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72a4b7c4ce32e837e36b129d951115ac3bd0317f85231c6d655e0df937a708b3",
+  "signature": "3efee68a8f9f7f212381b4c95b04681e3eb43516f9bf63c52f64757235706c52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03160"
 }

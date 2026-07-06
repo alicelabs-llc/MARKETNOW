@@ -1,31 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-3416808",
+  "certificate_id": "MN-SC-2026-7888847",
   "skill_id": "mn-amcp-bazimcp",
   "skill_name": "bazi-mcp",
-  "issued_at": "2026-07-05T23:16:56.808Z",
-  "expires_at": "2026-07-12T23:16:56.808Z",
+  "issued_at": "2026-07-06T00:31:28.847Z",
+  "expires_at": "2026-07-13T00:31:28.847Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
     "l15_l16": "medium",
-    "l2": "not_available",
+    "l2": "low",
     "final": "medium"
   },
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l2": true
   },
   "layer_details": {
     "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
-    "l2_execution_status": null
+    "l2_score": 10,
+    "l2_execution_status": "ran"
   },
-  "signature": "03596a436bb36cec957e637b0ccb9b258691acac22d3d1dc8bc47e95cbaa9bbc",
+  "signature": "76da979b6ea56644c68a653038ec1e75117c6812c62688c084570fffdf5153ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-bazimcp"
 }

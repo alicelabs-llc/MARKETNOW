@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2500514",
+  "certificate_id": "MN-SC-2026-6806366",
   "skill_id": "mn-ai-00533",
   "skill_name": "Ai-newsroom",
-  "issued_at": "2026-07-05T23:01:40.514Z",
-  "expires_at": "2026-07-12T23:01:40.514Z",
+  "issued_at": "2026-07-06T00:13:26.366Z",
+  "expires_at": "2026-07-13T00:13:26.366Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6f443b72c9ce08a3bdf9c698b5b374e9ecd46cd980b4ef9f7bfabd98a2fb0ff",
+  "signature": "59fbb5f69a319a13b1162886720992f78b316b3cbd39ae69e9e44bdc3d193587",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00533"
 }

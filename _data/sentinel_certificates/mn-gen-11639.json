@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410549",
+  "certificate_id": "MN-SC-2026-7315078",
   "skill_id": "mn-gen-11639",
   "skill_name": "Sequa-ai/sequa-mcp",
-  "issued_at": "2026-07-05T23:16:50.549Z",
-  "expires_at": "2026-07-12T23:16:50.549Z",
+  "issued_at": "2026-07-06T00:21:55.078Z",
+  "expires_at": "2026-07-13T00:21:55.078Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d4c677d02098103ee62d26b50c01d4084b683bbee949286521114d2b7b37cc5c",
+  "signature": "860b5a5d8df18c3bda4ff2006440cbe7c3a0cc9eccaca96cda65f777d2754df2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11639"
 }

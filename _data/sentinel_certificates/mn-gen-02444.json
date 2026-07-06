@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408661",
+  "certificate_id": "MN-SC-2026-6902171",
   "skill_id": "mn-gen-02444",
   "skill_name": "Clipsnap-mcp",
-  "issued_at": "2026-07-05T23:16:48.661Z",
-  "expires_at": "2026-07-12T23:16:48.661Z",
+  "issued_at": "2026-07-06T00:15:02.171Z",
+  "expires_at": "2026-07-13T00:15:02.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8283dc32fbe364f5df5bc3cd0501265a47bcf01c3fcf07568b3ddb37e2b73f56",
+  "signature": "ef584c91afbb0df4064b0b1a9ed6eb54df772c2f67d51befc82a3eaccdaf0502",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02444"
 }

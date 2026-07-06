@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412001",
+  "certificate_id": "MN-SC-2026-7713452",
   "skill_id": "mn-apf-024",
   "skill_name": "Load Shedder",
-  "issued_at": "2026-07-05T23:16:52.001Z",
-  "expires_at": "2026-07-12T23:16:52.001Z",
+  "issued_at": "2026-07-06T00:28:33.452Z",
+  "expires_at": "2026-07-13T00:28:33.452Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8205dd8dcde4248a2bfee1366f4376ab38ef78971fa904d05cef285baa6941ce",
+  "signature": "021e4f408d2b0fc5dced1edd1e9e59399a5dd80cb4e9cc2b3771e07cc25ce258",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-024"
 }

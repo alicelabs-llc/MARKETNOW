@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3215934",
+  "certificate_id": "MN-SC-2026-6838333",
   "skill_id": "mn-gen-01255",
   "skill_name": "Backblaze-mcp",
-  "issued_at": "2026-07-05T23:13:35.934Z",
-  "expires_at": "2026-07-12T23:13:35.934Z",
+  "issued_at": "2026-07-06T00:13:58.333Z",
+  "expires_at": "2026-07-13T00:13:58.333Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5e63c3bc43c056dafa45529bf8c769c5fdbe6f5b14cfa021de635c49c595703b",
+  "signature": "2b7290ec52e0b3b9153f0f9f7bf324f6dad39e2c87fcfa1726b0bf77dff88054",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01255"
 }

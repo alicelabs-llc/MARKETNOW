@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411956",
+  "certificate_id": "MN-SC-2026-7696835",
   "skill_id": "mn-acm-040",
   "skill_name": "Context Source Prioritizer",
-  "issued_at": "2026-07-05T23:16:51.956Z",
-  "expires_at": "2026-07-12T23:16:51.956Z",
+  "issued_at": "2026-07-06T00:28:16.835Z",
+  "expires_at": "2026-07-13T00:28:16.835Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a917047bdaa7f6d1cded6d19a49e01a4c26d2ac206bc61937fc62bcd3ef758e1",
+  "signature": "9c2a7011b73c8ba11369a87efb0948f69651de228a56e5f04e2973a010db89ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-040"
 }

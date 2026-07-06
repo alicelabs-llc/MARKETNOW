@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410788",
+  "certificate_id": "MN-SC-2026-7385142",
   "skill_id": "mn-gen-13236",
   "skill_name": "Volunteer-search-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.788Z",
-  "expires_at": "2026-07-12T23:16:50.788Z",
+  "issued_at": "2026-07-06T00:23:05.142Z",
+  "expires_at": "2026-07-13T00:23:05.142Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04744080826ae7f9d27519821f721bf6d703f9db5b375734b5d88b09888450ba",
+  "signature": "f1208d2c9d04d96754b304d7493f85e611b589a82e08a81df5c51e38bafc1e12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13236"
 }

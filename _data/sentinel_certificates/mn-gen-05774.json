@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409719",
+  "certificate_id": "MN-SC-2026-7058518",
   "skill_id": "mn-gen-05774",
   "skill_name": "Takashito/linode-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.719Z",
-  "expires_at": "2026-07-12T23:16:49.719Z",
+  "issued_at": "2026-07-06T00:17:38.518Z",
+  "expires_at": "2026-07-13T00:17:38.518Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b5d42245c2972ae46f491107ea753f15213bb8bc6097e6f122c31f8152c6f9ef",
+  "signature": "f95abfe95b8288c60529b4620f27a388efed896ddd70d62e2a5c2dedfed03723",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05774"
 }

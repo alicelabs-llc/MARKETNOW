@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408586",
+  "certificate_id": "MN-SC-2026-6877746",
   "skill_id": "mn-gen-01980",
   "skill_name": "Claude-artifact-saver-mcp",
-  "issued_at": "2026-07-05T23:16:48.586Z",
-  "expires_at": "2026-07-12T23:16:48.586Z",
+  "issued_at": "2026-07-06T00:14:37.746Z",
+  "expires_at": "2026-07-13T00:14:37.746Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa52e0d821d92c3928e815070e6980d82cacc60ef62643ced4dfc920b6da7322",
+  "signature": "f9b7abd2fca27f6e168cd43dbd0ae7f808374aaf28b26532f75f75af70880055",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01980"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410888",
+  "certificate_id": "MN-SC-2026-7412853",
   "skill_id": "mn-gen-13852",
   "skill_name": "Zrag",
-  "issued_at": "2026-07-05T23:16:50.888Z",
-  "expires_at": "2026-07-12T23:16:50.888Z",
+  "issued_at": "2026-07-06T00:23:32.853Z",
+  "expires_at": "2026-07-13T00:23:32.853Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1446f5851f8f0c0e7761f45cf9e113878d305b6f06e68d0ffe7c840043a9ce6d",
+  "signature": "c273d79509298bbcde1c95c9ab01e08e8f35c471236f6e6b3c06a436e5dfa7a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13852"
 }

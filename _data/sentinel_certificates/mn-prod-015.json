@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412420",
+  "certificate_id": "MN-SC-2026-7819327",
   "skill_id": "mn-prod-015",
   "skill_name": "Pomodoro Timer",
-  "issued_at": "2026-07-05T23:16:52.420Z",
-  "expires_at": "2026-07-12T23:16:52.420Z",
+  "issued_at": "2026-07-06T00:30:19.327Z",
+  "expires_at": "2026-07-13T00:30:19.327Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fef8d1683700f1a85deaab899b00533d10d9765702430e3c16d7a612dd176272",
+  "signature": "6980a2f71d5a36ba5f8de6d2ef4c699312d64607ef290414de61091a23e78487",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-015"
 }

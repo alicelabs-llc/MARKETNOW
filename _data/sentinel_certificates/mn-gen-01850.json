@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3240740",
+  "certificate_id": "MN-SC-2026-6870582",
   "skill_id": "mn-gen-01850",
   "skill_name": "Chatwork/mcp-server",
-  "issued_at": "2026-07-05T23:14:00.740Z",
-  "expires_at": "2026-07-12T23:14:00.740Z",
+  "issued_at": "2026-07-06T00:14:30.582Z",
+  "expires_at": "2026-07-13T00:14:30.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c1ef6f3fdbe93cf165502bdc05fcce0f607f81e5c200019c54e44a5944cbee1",
+  "signature": "80fb94eb4d0c17689cade3a1683305ddb91ff94ab0c725795f3cbc3b57ca28cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01850"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410890",
+  "certificate_id": "MN-SC-2026-7413897",
   "skill_id": "mn-prompt-bb6ec74b",
   "skill_name": "Guion de Video Retención Máxima",
-  "issued_at": "2026-07-05T23:16:50.890Z",
-  "expires_at": "2026-07-12T23:16:50.890Z",
+  "issued_at": "2026-07-06T00:23:33.897Z",
+  "expires_at": "2026-07-13T00:23:33.897Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ba6dbe96f1f5e8e9f6a0edf66a6df9b66c6b7eeea0f6e034a7f7c7d0aafb0a5",
+  "signature": "db8bffba81255b00b97a77ba3b91195163f447bc4d86f71e76f072759a88c877",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bb6ec74b"
 }

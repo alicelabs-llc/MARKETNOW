@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408637",
+  "certificate_id": "MN-SC-2026-6897067",
   "skill_id": "mn-ai-02321",
   "skill_name": "Claude-writers-aid-mcp",
-  "issued_at": "2026-07-05T23:16:48.637Z",
-  "expires_at": "2026-07-12T23:16:48.637Z",
+  "issued_at": "2026-07-06T00:14:57.067Z",
+  "expires_at": "2026-07-13T00:14:57.067Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7cdfcce3a6c041eda2f2a9e6c85411cc37b229b335555263609121197e58328d",
+  "signature": "b1ccd534ae804ba754af3056a328e7479aff2cc6f44b2dc7607db6504136fcf6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-02321"
 }

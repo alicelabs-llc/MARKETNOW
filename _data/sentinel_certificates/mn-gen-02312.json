@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408635",
+  "certificate_id": "MN-SC-2026-6895900",
   "skill_id": "mn-gen-02312",
   "skill_name": "Claude-wants-you",
-  "issued_at": "2026-07-05T23:16:48.635Z",
-  "expires_at": "2026-07-12T23:16:48.635Z",
+  "issued_at": "2026-07-06T00:14:55.900Z",
+  "expires_at": "2026-07-13T00:14:55.900Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d309e31542448145b6dfa847d6e0f27af585d4df9f59aa684f9132c55fa8be48",
+  "signature": "55442937dc1b2e802da795339cb54902a77dc6e8a3af42cb5326b2efdfab29ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02312"
 }

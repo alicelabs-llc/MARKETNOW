@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408627",
+  "certificate_id": "MN-SC-2026-6888053",
   "skill_id": "mn-gen-02185",
   "skill_name": "Claude-mcp-quickstart",
-  "issued_at": "2026-07-05T23:16:48.627Z",
-  "expires_at": "2026-07-12T23:16:48.627Z",
+  "issued_at": "2026-07-06T00:14:48.053Z",
+  "expires_at": "2026-07-13T00:14:48.053Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68e31bc061d171eef3c98ed469a38e05957b8d7a330d04bd8b60899b9821de5e",
+  "signature": "cc92141d2a63a874e8613d97e1dde001d984a13c5d01f87987051c5cc445ce01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02185"
 }

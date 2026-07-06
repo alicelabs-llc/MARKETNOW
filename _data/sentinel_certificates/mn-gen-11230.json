@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410474",
+  "certificate_id": "MN-SC-2026-7295115",
   "skill_id": "mn-gen-11230",
   "skill_name": "Mcp-resume-generator",
-  "issued_at": "2026-07-05T23:16:50.474Z",
-  "expires_at": "2026-07-12T23:16:50.474Z",
+  "issued_at": "2026-07-06T00:21:35.115Z",
+  "expires_at": "2026-07-13T00:21:35.115Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef32eadf81d3f8796229e6b0dc1d0bf41b5024d6860cc0149be83efc6b3bcf9a",
+  "signature": "21aac008aeff2272b96b63b622f927129a505be33a77d88ff34f23ffea7c3999",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11230"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409475",
+  "certificate_id": "MN-SC-2026-6977100",
   "skill_id": "mn-gen-03865",
   "skill_name": "Fake-store-mcp",
-  "issued_at": "2026-07-05T23:16:49.475Z",
-  "expires_at": "2026-07-12T23:16:49.475Z",
+  "issued_at": "2026-07-06T00:16:17.100Z",
+  "expires_at": "2026-07-13T00:16:17.100Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6972c73b218c4cdf82efc488d543bd299f01f9a44eb563d3551a74d9edb7f089",
+  "signature": "1090d7d1750b2e11672389c7b3f677948e400e3b137838894b501ad57ff4f1da",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03865"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2499034",
+  "certificate_id": "MN-SC-2026-6805283",
   "skill_id": "mn-ai-00505",
   "skill_name": "Ai-governance-mcp",
-  "issued_at": "2026-07-05T23:01:39.034Z",
-  "expires_at": "2026-07-12T23:01:39.034Z",
+  "issued_at": "2026-07-06T00:13:25.283Z",
+  "expires_at": "2026-07-13T00:13:25.283Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f4df78bf8d546c8ecf5150e2d53322c33e33ce2f41708f23b802000334638d56",
+  "signature": "4bac4aa4006cd665794bad88e5d62bb135eeed5c61dad0f25686ddff5b6c4750",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00505"
 }

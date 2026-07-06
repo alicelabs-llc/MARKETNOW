@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410413",
+  "certificate_id": "MN-SC-2026-7272261",
   "skill_id": "mn-gen-10722",
   "skill_name": "Promptpit",
-  "issued_at": "2026-07-05T23:16:50.413Z",
-  "expires_at": "2026-07-12T23:16:50.413Z",
+  "issued_at": "2026-07-06T00:21:12.261Z",
+  "expires_at": "2026-07-13T00:21:12.261Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f33027b1135a89117ace1641344488f3833592da4aa4daa054379ffef2ac1151",
+  "signature": "04624e3d8a788bf84693f7d76262d3e529d8283d642792f924c36231da136396",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10722"
 }

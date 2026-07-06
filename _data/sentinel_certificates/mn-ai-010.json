@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412108",
+  "certificate_id": "MN-SC-2026-7740271",
   "skill_id": "mn-ai-010",
   "skill_name": "ML Experiment Tracker",
-  "issued_at": "2026-07-05T23:16:52.108Z",
-  "expires_at": "2026-07-12T23:16:52.108Z",
+  "issued_at": "2026-07-06T00:29:00.271Z",
+  "expires_at": "2026-07-13T00:29:00.271Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1cc1b252fc7ba190832828b65279ca3f4eb0bea17b388a4e5a6dc5eb4bc8d311",
+  "signature": "b7a4b869dee43c9b31e94270d4c272a3f82b6fc91dfa6a923693b115294467ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-010"
 }

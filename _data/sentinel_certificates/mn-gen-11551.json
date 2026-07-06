@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410545",
+  "certificate_id": "MN-SC-2026-7308881",
   "skill_id": "mn-gen-11551",
   "skill_name": "Netexec-mcp",
-  "issued_at": "2026-07-05T23:16:50.545Z",
-  "expires_at": "2026-07-12T23:16:50.545Z",
+  "issued_at": "2026-07-06T00:21:48.881Z",
+  "expires_at": "2026-07-13T00:21:48.881Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a1f356a7492965e553f8d7256a6bf54618650bad2dbeaf7f73ee5f68829e63e",
+  "signature": "736709f13c292a36f391b6dbbf2b06e81264582e72218a7c1366de455fc23fd7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11551"
 }

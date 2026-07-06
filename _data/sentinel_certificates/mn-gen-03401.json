@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409414",
+  "certificate_id": "MN-SC-2026-6956773",
   "skill_id": "mn-gen-03401",
   "skill_name": "Arabold/docs-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.414Z",
-  "expires_at": "2026-07-12T23:16:49.414Z",
+  "issued_at": "2026-07-06T00:15:56.773Z",
+  "expires_at": "2026-07-13T00:15:56.773Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "006211b87cd79585abcbbfe18cbcb86483ca73e41ab108c450a96be1b7bf7840",
+  "signature": "4b848941f4320675da565e4c45a269473a4934abf61b521003a120421eade1ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03401"
 }

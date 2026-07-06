@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410555",
+  "certificate_id": "MN-SC-2026-7320008",
   "skill_id": "mn-gen-11750",
   "skill_name": "Shortcut-mcp",
-  "issued_at": "2026-07-05T23:16:50.555Z",
-  "expires_at": "2026-07-12T23:16:50.555Z",
+  "issued_at": "2026-07-06T00:22:00.008Z",
+  "expires_at": "2026-07-13T00:22:00.008Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5dc9a07b2732f698457ec187bfa9ec26b713d2974ab056c9b47d9685b5ebd50f",
+  "signature": "f6cda0d79e8b403a90a172b755497ed90e407cddf719775ee9000f26cc9877e9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11750"
 }

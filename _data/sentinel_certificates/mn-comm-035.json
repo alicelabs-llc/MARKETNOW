@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412385",
+  "certificate_id": "MN-SC-2026-7802907",
   "skill_id": "mn-comm-035",
   "skill_name": "Price Comparison Engine",
-  "issued_at": "2026-07-05T23:16:52.385Z",
-  "expires_at": "2026-07-12T23:16:52.385Z",
+  "issued_at": "2026-07-06T00:30:02.907Z",
+  "expires_at": "2026-07-13T00:30:02.907Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81c1b39dff37c8ff9232ef8dd09bf52fcfef255b9a1b337c35b84f730a5d0350",
+  "signature": "fc825680f9347f445a08d330bad5848739359fd888c4d082800987e9b7234abf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-035"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409330",
+  "certificate_id": "MN-SC-2026-6927124",
   "skill_id": "mn-gen-02836",
   "skill_name": "Cortex-ai-memory",
-  "issued_at": "2026-07-05T23:16:49.330Z",
-  "expires_at": "2026-07-12T23:16:49.330Z",
+  "issued_at": "2026-07-06T00:15:27.124Z",
+  "expires_at": "2026-07-13T00:15:27.124Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66c7dbfa35d11fd0328cd483ba99b42c5da0289b7a56f074c88ff3408b533692",
+  "signature": "5d05f2b8c51f7caaa89100a0f85a250f8552531659283ef3ca8b49ebabd9d139",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02836"
 }

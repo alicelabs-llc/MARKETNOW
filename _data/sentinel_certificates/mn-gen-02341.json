@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408638",
+  "certificate_id": "MN-SC-2026-6897011",
   "skill_id": "mn-gen-02341",
   "skill_name": "Claude-history-mcp",
-  "issued_at": "2026-07-05T23:16:48.638Z",
-  "expires_at": "2026-07-12T23:16:48.638Z",
+  "issued_at": "2026-07-06T00:14:57.011Z",
+  "expires_at": "2026-07-13T00:14:57.011Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a36e27371f756c07379f58e75822cf1f0dcc849581e0a91ebb25f613ffe485aa",
+  "signature": "f57ea352691da59b4c4429d2b40f850a8a5999ae849753df1505a1a60ca016c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02341"
 }

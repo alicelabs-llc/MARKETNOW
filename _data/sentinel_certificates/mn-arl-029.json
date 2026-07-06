@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411892",
+  "certificate_id": "MN-SC-2026-7680284",
   "skill_id": "mn-arl-029",
   "skill_name": "Multi-Model Ensemble MCP",
-  "issued_at": "2026-07-05T23:16:51.892Z",
-  "expires_at": "2026-07-12T23:16:51.892Z",
+  "issued_at": "2026-07-06T00:28:00.284Z",
+  "expires_at": "2026-07-13T00:28:00.284Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "984afa8562617e4011bb927aa23408059e772f2d4d16fcd7b7b5ee108a91a00b",
+  "signature": "294a8e54febfb799c2eb21954fcc5fb537aa646d0933c9be485342a5dd34b3c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-029"
 }

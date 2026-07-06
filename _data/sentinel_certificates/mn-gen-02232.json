@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408630",
+  "certificate_id": "MN-SC-2026-6890742",
   "skill_id": "mn-gen-02232",
   "skill_name": "Claude-ops-mcp",
-  "issued_at": "2026-07-05T23:16:48.630Z",
-  "expires_at": "2026-07-12T23:16:48.630Z",
+  "issued_at": "2026-07-06T00:14:50.742Z",
+  "expires_at": "2026-07-13T00:14:50.742Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fbedb376181db04892461dd86d5cece356a47490311e3b2ba232352114fdbf16",
+  "signature": "f23f5afae8e626eef2143d608e94929cfe5214b05ad185085a414e4548e7db64",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02232"
 }

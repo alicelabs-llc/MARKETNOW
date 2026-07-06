@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410355",
+  "certificate_id": "MN-SC-2026-7250113",
   "skill_id": "mn-blo-10206",
   "skill_name": "Mcp-reown-para-migration",
-  "issued_at": "2026-07-05T23:16:50.355Z",
-  "expires_at": "2026-07-12T23:16:50.355Z",
+  "issued_at": "2026-07-06T00:20:50.113Z",
+  "expires_at": "2026-07-13T00:20:50.113Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03ec2e0cbaaadb5be75cd8713254a68f8e9329def5fd5472646384593fe4ef4b",
+  "signature": "f49bea9e9c8e098f95235b80c5f35ce2e27f4c1b5bc55b1642e8b5a657463aed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-10206"
 }

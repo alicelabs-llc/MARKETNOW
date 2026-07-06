@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410271",
+  "certificate_id": "MN-SC-2026-7222119",
   "skill_id": "mn-gen-09609",
   "skill_name": "Nostr-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.271Z",
-  "expires_at": "2026-07-12T23:16:50.271Z",
+  "issued_at": "2026-07-06T00:20:22.119Z",
+  "expires_at": "2026-07-13T00:20:22.119Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b1f35c82103f6d89d3adc9da7a3d9de48b7739303df2d83c955f07eaf8109d34",
+  "signature": "e8bd1078a7269e03422e5d178ea15ef0ce4d23f91d15b0e04d0fb10bedd3ba4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09609"
 }

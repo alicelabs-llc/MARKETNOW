@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409990",
+  "certificate_id": "MN-SC-2026-7136803",
   "skill_id": "mn-gen-07532",
   "skill_name": "Mcp-semantic-recall",
-  "issued_at": "2026-07-05T23:16:49.990Z",
-  "expires_at": "2026-07-12T23:16:49.990Z",
+  "issued_at": "2026-07-06T00:18:56.803Z",
+  "expires_at": "2026-07-13T00:18:56.803Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c7bb86acae50a7594369ae3043787e81165952213be79ec630ee054962009da1",
+  "signature": "2a96b0ad02435b03cf7259dd618ceed997036e1cf5270bd48df846541d937d64",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07532"
 }

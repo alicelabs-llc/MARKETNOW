@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412005",
+  "certificate_id": "MN-SC-2026-7716190",
   "skill_id": "mn-apf-050",
   "skill_name": "Performance Budget Enforcer",
-  "issued_at": "2026-07-05T23:16:52.005Z",
-  "expires_at": "2026-07-12T23:16:52.005Z",
+  "issued_at": "2026-07-06T00:28:36.190Z",
+  "expires_at": "2026-07-13T00:28:36.190Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7adb6ed21d8e49ed214b7a55bdf62b65955df0f9bf72ddee8f17c0ee6b5c0fef",
+  "signature": "0793f3793aadb48e3f4dad5df424b04326c2b84702d665345f78f241e1a8537c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-050"
 }

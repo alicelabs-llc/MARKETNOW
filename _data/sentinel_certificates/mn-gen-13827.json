@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410888",
+  "certificate_id": "MN-SC-2026-7411839",
   "skill_id": "mn-gen-13827",
   "skill_name": "Zitadel-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.888Z",
-  "expires_at": "2026-07-12T23:16:50.888Z",
+  "issued_at": "2026-07-06T00:23:31.839Z",
+  "expires_at": "2026-07-13T00:23:31.839Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "029c59558a15693d28c25138495ca86b3dcffc9c23a0df47a1f34936e59f626a",
+  "signature": "d09c1f247a062520d8b704f99da058bd10b61ceedc40ae9349f7036cb74e102d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13827"
 }

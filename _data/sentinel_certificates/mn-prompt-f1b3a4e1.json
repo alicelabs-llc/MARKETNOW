@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410889",
+  "certificate_id": "MN-SC-2026-7413382",
   "skill_id": "mn-prompt-f1b3a4e1",
   "skill_name": "Soporte de Cliente Nivel 3",
-  "issued_at": "2026-07-05T23:16:50.889Z",
-  "expires_at": "2026-07-12T23:16:50.889Z",
+  "issued_at": "2026-07-06T00:23:33.382Z",
+  "expires_at": "2026-07-13T00:23:33.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f8686bfee38f086784adcba981d2c4a72c942651c1fd023fd722c3f4fdc9a29",
+  "signature": "61aff6200a002d142246a23b4ac4c7269c58fe872f3642072fd66a8b83d898cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f1b3a4e1"
 }

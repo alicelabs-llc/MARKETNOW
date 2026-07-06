@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410586",
+  "certificate_id": "MN-SC-2026-7330883",
   "skill_id": "mn-gen-12017",
   "skill_name": "Sophos-central-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.586Z",
-  "expires_at": "2026-07-12T23:16:50.586Z",
+  "issued_at": "2026-07-06T00:22:10.883Z",
+  "expires_at": "2026-07-13T00:22:10.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0326f3a0ffee1ff8eeb61ee4588f0fad157fbd70fc3cd7d2b24a070f0300f6c",
+  "signature": "e7e5e57e5bc04d80ee0c1604702f0e89ca0a3f258db34bfc7007d667a462bce1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12017"
 }

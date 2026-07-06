@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410306",
+  "certificate_id": "MN-SC-2026-7233773",
   "skill_id": "mn-gen-09832",
   "skill_name": "Omicall-mcp",
-  "issued_at": "2026-07-05T23:16:50.306Z",
-  "expires_at": "2026-07-12T23:16:50.306Z",
+  "issued_at": "2026-07-06T00:20:33.773Z",
+  "expires_at": "2026-07-13T00:20:33.773Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58b629f69b8df6e8f98df32e315328fde228689c9a03da7caae2a2ab4108acae",
+  "signature": "2fbbb984373627ed94a20af0d3b001f3600cecb0196eb80a61c2c3a82a731e71",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09832"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409468",
+  "certificate_id": "MN-SC-2026-6972816",
   "skill_id": "mn-gen-03772",
   "skill_name": "Promptfoo/evil-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.468Z",
-  "expires_at": "2026-07-12T23:16:49.468Z",
+  "issued_at": "2026-07-06T00:16:12.816Z",
+  "expires_at": "2026-07-13T00:16:12.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc7d19bafc3da9211c22c072a66e3e3d1af52d151e7bd57137d5b6ee70a21dea",
+  "signature": "69800cd71d03ee38cfeb6eab93150c558bba86112dc63e22534d414e54d848e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03772"
 }

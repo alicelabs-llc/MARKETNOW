@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2484404",
+  "certificate_id": "MN-SC-2026-6793438",
   "skill_id": "mn-gen-00226",
   "skill_name": "Agent-board",
-  "issued_at": "2026-07-05T23:01:24.404Z",
-  "expires_at": "2026-07-12T23:01:24.404Z",
+  "issued_at": "2026-07-06T00:13:13.438Z",
+  "expires_at": "2026-07-13T00:13:13.438Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd54a314751ea7bd56823870ee170bbfcc81a536aca43fd56048d585021c6d2c",
+  "signature": "a06245db904d2c4f08a0e34e24fc12c1e6cf6b04c692bf21b77ecd6b026e6c1a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00226"
 }

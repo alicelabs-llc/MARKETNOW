@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410311",
+  "certificate_id": "MN-SC-2026-7238507",
   "skill_id": "mn-gen-09962",
   "skill_name": "Openclaw-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.311Z",
-  "expires_at": "2026-07-12T23:16:50.311Z",
+  "issued_at": "2026-07-06T00:20:38.507Z",
+  "expires_at": "2026-07-13T00:20:38.507Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9ba447adc9cfacecd83fe41114c67fddee86dd924ee26418d38241a9a6d5d347",
+  "signature": "2ff87f76dcc74934f61802aec8f91b76681878ef752ea90eb3c71907ac158ef2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09962"
 }

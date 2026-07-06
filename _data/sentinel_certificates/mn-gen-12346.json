@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410617",
+  "certificate_id": "MN-SC-2026-7344024",
   "skill_id": "mn-gen-12346",
   "skill_name": "Swagger-mcp",
-  "issued_at": "2026-07-05T23:16:50.617Z",
-  "expires_at": "2026-07-12T23:16:50.617Z",
+  "issued_at": "2026-07-06T00:22:24.024Z",
+  "expires_at": "2026-07-13T00:22:24.024Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7dec51a8f47e1c0fc5906e15fcde911c7c204032579f6bfec746bc8c91d48ab2",
+  "signature": "68ea2e15fb5a69c3d6e93ffecd0344662b35360e3b66d4e05ffb8aef01261990",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12346"
 }

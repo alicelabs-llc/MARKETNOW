@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409395",
+  "certificate_id": "MN-SC-2026-6954614",
   "skill_id": "mn-gen-03351",
   "skill_name": "Cle-does-things/dirgrep",
-  "issued_at": "2026-07-05T23:16:49.395Z",
-  "expires_at": "2026-07-12T23:16:49.395Z",
+  "issued_at": "2026-07-06T00:15:54.614Z",
+  "expires_at": "2026-07-13T00:15:54.614Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d30ec22808e1b7f1c6d3201eafa7a4dbc90bfcb69427fd950e9e04819999c20",
+  "signature": "bd601e5c51465a5e64d607c8898bbacd05a6b59f3909ef97cbaf5801a5ced144",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03351"
 }

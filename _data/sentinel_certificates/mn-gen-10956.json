@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410462",
+  "certificate_id": "MN-SC-2026-7284338",
   "skill_id": "mn-gen-10956",
   "skill_name": "Quiet-shell-workspace",
-  "issued_at": "2026-07-05T23:16:50.462Z",
-  "expires_at": "2026-07-12T23:16:50.462Z",
+  "issued_at": "2026-07-06T00:21:24.338Z",
+  "expires_at": "2026-07-13T00:21:24.338Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6e5ac2b29ff75d491863c2c873a0c81462ee75d9e4f24dc6d36b17adbfc2c7c",
+  "signature": "4d21e1e6ead33478637e090b4ecc3d975ebfeed95e85e480107feb1326c44c1e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10956"
 }

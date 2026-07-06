@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411486",
+  "certificate_id": "MN-SC-2026-7574043",
   "skill_id": "mn-prompt-4f95a158",
   "skill_name": "Audit preparation SOC 2",
-  "issued_at": "2026-07-05T23:16:51.486Z",
-  "expires_at": "2026-07-12T23:16:51.486Z",
+  "issued_at": "2026-07-06T00:26:14.043Z",
+  "expires_at": "2026-07-13T00:26:14.043Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b55cbca2a36f50ea87a3743e230c4df29567d52e3227be56ebc84b3442544493",
+  "signature": "8a967cff5dd28f69c6c748ba073c5f1598c5b9dac1f886c94266b059f5e87d94",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4f95a158"
 }

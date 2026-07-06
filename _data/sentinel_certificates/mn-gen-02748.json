@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409324",
+  "certificate_id": "MN-SC-2026-6921510",
   "skill_id": "mn-gen-02748",
   "skill_name": "Context-memory",
-  "issued_at": "2026-07-05T23:16:49.324Z",
-  "expires_at": "2026-07-12T23:16:49.324Z",
+  "issued_at": "2026-07-06T00:15:21.510Z",
+  "expires_at": "2026-07-13T00:15:21.510Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2155f1f9df40905c07b50d45c2d0cd7fe1cd5443a58d03131cf22f36b58c6ced",
+  "signature": "77721c9c7245a1561e406430c5dfe8bc100b8bb14e0e0d0e41c565da7b4e862d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02748"
 }

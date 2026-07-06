@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409504",
+  "certificate_id": "MN-SC-2026-6987969",
   "skill_id": "mn-gen-04123",
   "skill_name": "Fluentui-mcp",
-  "issued_at": "2026-07-05T23:16:49.504Z",
-  "expires_at": "2026-07-12T23:16:49.504Z",
+  "issued_at": "2026-07-06T00:16:27.969Z",
+  "expires_at": "2026-07-13T00:16:27.969Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a591d5adfde189026506a344e3cdd92a02917c1ed46c18e4b20980d3a438337",
+  "signature": "2dea052283dfce9ca03c08b3ee29432e51f137e096654f8b7a2d53cedce13528",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04123"
 }

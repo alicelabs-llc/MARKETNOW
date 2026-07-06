@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410313",
+  "certificate_id": "MN-SC-2026-7240102",
   "skill_id": "mn-gen-09981",
   "skill_name": "Opencode-mmcp-1file",
-  "issued_at": "2026-07-05T23:16:50.313Z",
-  "expires_at": "2026-07-12T23:16:50.313Z",
+  "issued_at": "2026-07-06T00:20:40.102Z",
+  "expires_at": "2026-07-13T00:20:40.102Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e2d89812d2cbef27469f5bae79bff38cb5ba983113d1f6a0059446060bec8a24",
+  "signature": "815d82b22f439c49e2135e81222d95c64a63152d54712358ccef9465933332ba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09981"
 }

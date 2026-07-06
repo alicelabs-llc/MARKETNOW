@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411959",
+  "certificate_id": "MN-SC-2026-7699838",
   "skill_id": "mn-apd-019",
   "skill_name": "Agent User Feedback Collector",
-  "issued_at": "2026-07-05T23:16:51.959Z",
-  "expires_at": "2026-07-12T23:16:51.959Z",
+  "issued_at": "2026-07-06T00:28:19.838Z",
+  "expires_at": "2026-07-13T00:28:19.838Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad42c0fef68a508b4fda52245b87249b47f3f7e625273066a6d17884071bbd08",
+  "signature": "49ba509d51c5cbeda7c321dd35d402c51bf4e0e595ee1db835b47d63bde09da0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-019"
 }

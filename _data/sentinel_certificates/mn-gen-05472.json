@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409689",
+  "certificate_id": "MN-SC-2026-7045931",
   "skill_id": "mn-gen-05472",
   "skill_name": "Kimi-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.689Z",
-  "expires_at": "2026-07-12T23:16:49.689Z",
+  "issued_at": "2026-07-06T00:17:25.931Z",
+  "expires_at": "2026-07-13T00:17:25.931Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "143f851cee1ffda8e558103896866426799c590c645035b87c9efbbae9ebfe54",
+  "signature": "6c20c95f35d3fe7cfb91619b7a70ca4c2634631e118756d73049a5a0c5de6cc7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05472"
 }

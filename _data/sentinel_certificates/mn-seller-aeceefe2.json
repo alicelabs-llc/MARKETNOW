@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412608",
+  "certificate_id": "MN-SC-2026-7886294",
   "skill_id": "mn-seller-aeceefe2",
   "skill_name": "Log Aggregator",
-  "issued_at": "2026-07-05T23:16:52.608Z",
-  "expires_at": "2026-07-12T23:16:52.608Z",
+  "issued_at": "2026-07-06T00:31:26.294Z",
+  "expires_at": "2026-07-13T00:31:26.294Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c2a50711fc2b20e41bc7ee4445fd62be8cabc81af239cb92504dc0cca1c3c0de",
+  "signature": "0dff67dfeceee7255fea578131753611cc7a0a8666c97de34df4ee4de6468f09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-seller-aeceefe2"
 }

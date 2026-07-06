@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410112",
+  "certificate_id": "MN-SC-2026-7177025",
   "skill_id": "mn-net-08345",
   "skill_name": "Mcp2http",
-  "issued_at": "2026-07-05T23:16:50.112Z",
-  "expires_at": "2026-07-12T23:16:50.112Z",
+  "issued_at": "2026-07-06T00:19:37.025Z",
+  "expires_at": "2026-07-13T00:19:37.025Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "709112acb862d909c69405379605d6581cee28ed4b6c8352ae6b1bd2884f5177",
+  "signature": "1cdbe3321243ea3107b0981f5f7747365d0dc812386b7f92f20053c4cd4bb8f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-08345"
 }

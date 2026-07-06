@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409548",
+  "certificate_id": "MN-SC-2026-6994166",
   "skill_id": "mn-gen-04270",
   "skill_name": "Ga4-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.548Z",
-  "expires_at": "2026-07-12T23:16:49.548Z",
+  "issued_at": "2026-07-06T00:16:34.166Z",
+  "expires_at": "2026-07-13T00:16:34.166Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be5377400a6ae52e52056e699e8f2889f3dae381c987b8f1643a515fd5d843a5",
+  "signature": "120a091d9631fef9ee4340118bd8dc73d07c69a9a9c7549caf0f9af4bfb0ec43",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04270"
 }

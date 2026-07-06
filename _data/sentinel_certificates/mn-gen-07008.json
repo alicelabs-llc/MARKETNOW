@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409916",
+  "certificate_id": "MN-SC-2026-7112696",
   "skill_id": "mn-gen-07008",
   "skill_name": "Limitless-mcp-cloudflare",
-  "issued_at": "2026-07-05T23:16:49.916Z",
-  "expires_at": "2026-07-12T23:16:49.916Z",
+  "issued_at": "2026-07-06T00:18:32.696Z",
+  "expires_at": "2026-07-13T00:18:32.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d82883a0091f29fb7e1e27aaf291605f4425bc0345982340d74ec2f780cd560",
+  "signature": "c06d13747ef74a42052c1df8caa088acd364f8e0b04d38fb7ee359f87e43ed0c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07008"
 }

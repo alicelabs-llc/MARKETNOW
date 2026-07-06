@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410852",
+  "certificate_id": "MN-SC-2026-7402358",
   "skill_id": "mn-gen-13574",
   "skill_name": "X-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.852Z",
-  "expires_at": "2026-07-12T23:16:50.852Z",
+  "issued_at": "2026-07-06T00:23:22.358Z",
+  "expires_at": "2026-07-13T00:23:22.358Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf3ec8f840ae55b16c7626acc021d33727b1fb73dccf859335c3ff6ef870d98e",
+  "signature": "3f69dfbbad3f665c6923621f65ec8417110c04d6cff1569816a3615dea62e653",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13574"
 }

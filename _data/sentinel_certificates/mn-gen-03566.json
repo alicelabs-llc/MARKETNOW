@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409443",
+  "certificate_id": "MN-SC-2026-6963527",
   "skill_id": "mn-gen-03566",
   "skill_name": "Dynatrace-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.443Z",
-  "expires_at": "2026-07-12T23:16:49.443Z",
+  "issued_at": "2026-07-06T00:16:03.527Z",
+  "expires_at": "2026-07-13T00:16:03.527Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9dea531422e91e4da8cacbb6097c619605abc04abbadbeeebcd3b25d29750925",
+  "signature": "8fa0a605a9ae39cd70346dcc23502c166f819df3267578d696de89ea8a871cd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03566"
 }

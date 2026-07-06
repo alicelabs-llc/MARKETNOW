@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412247",
+  "certificate_id": "MN-SC-2026-7767232",
   "skill_id": "mn-pro-b14ae751",
   "skill_name": "Mobile App Security Scanner",
-  "issued_at": "2026-07-05T23:16:52.247Z",
-  "expires_at": "2026-07-12T23:16:52.247Z",
+  "issued_at": "2026-07-06T00:29:27.232Z",
+  "expires_at": "2026-07-13T00:29:27.232Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f0b390744392d34c81210f204d50eddeb2d23d55e39bb6cb6dbdc219ec5561e8",
+  "signature": "033b83077df4554d21a179b71075ded7012bd90a209b6e45eb75f990b688f052",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-b14ae751"
 }

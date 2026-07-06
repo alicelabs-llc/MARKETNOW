@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411999",
+  "certificate_id": "MN-SC-2026-7710875",
   "skill_id": "mn-apf-002",
   "skill_name": "Streaming Response Generator",
-  "issued_at": "2026-07-05T23:16:51.999Z",
-  "expires_at": "2026-07-12T23:16:51.999Z",
+  "issued_at": "2026-07-06T00:28:30.875Z",
+  "expires_at": "2026-07-13T00:28:30.875Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b0f07c05440056ecc1cbf1ac00c58ed58dccc28366ae3cabc7beb8d95c16039e",
+  "signature": "7d9a97823b2167398d4a33a5aae8f76b503731b6171cd023ada586e8507d4a44",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-002"
 }

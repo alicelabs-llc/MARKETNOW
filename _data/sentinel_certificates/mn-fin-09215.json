@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410194",
+  "certificate_id": "MN-SC-2026-7203607",
   "skill_id": "mn-fin-09215",
   "skill_name": "Montra-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.194Z",
-  "expires_at": "2026-07-12T23:16:50.194Z",
+  "issued_at": "2026-07-06T00:20:03.607Z",
+  "expires_at": "2026-07-13T00:20:03.607Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5530c2e59a319d6c995c9296f3110d5a8c99efadded4e2a766b80e9caf4fca7",
+  "signature": "938e755387a145b1793285912c7c1eb009681a6270e382389aac970b80225a69",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fin-09215"
 }

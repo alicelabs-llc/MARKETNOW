@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409855",
+  "certificate_id": "MN-SC-2026-7092131",
   "skill_id": "mn-gen-06583",
   "skill_name": "Mcp-debug-server",
-  "issued_at": "2026-07-05T23:16:49.855Z",
-  "expires_at": "2026-07-12T23:16:49.855Z",
+  "issued_at": "2026-07-06T00:18:12.131Z",
+  "expires_at": "2026-07-13T00:18:12.131Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75e1859341de5a0d30a59c255c58d701890464acd0d29e6a5d6661fe4fdc6730",
+  "signature": "cdde4648bc15a6e3da7b686395b88b3e8dd2b61bbafd37bd7c5a9dcfb880bd55",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06583"
 }

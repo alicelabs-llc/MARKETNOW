@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409887",
+  "certificate_id": "MN-SC-2026-7106714",
   "skill_id": "mn-net-06885",
   "skill_name": "Mcp-http-agent-md",
-  "issued_at": "2026-07-05T23:16:49.887Z",
-  "expires_at": "2026-07-12T23:16:49.887Z",
+  "issued_at": "2026-07-06T00:18:26.714Z",
+  "expires_at": "2026-07-13T00:18:26.714Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15e959858cc9a72cd62d5a434558eeae4736172cf025efc593f985dd37eb42b0",
+  "signature": "08f1cf6f952c1750ca91cc3e7a72a77560138a9c141b87f3fcc4a1b62a5e9a54",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-06885"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410161",
+  "certificate_id": "MN-SC-2026-7188066",
   "skill_id": "mn-gen-08843",
   "skill_name": "Medical-mcp",
-  "issued_at": "2026-07-05T23:16:50.161Z",
-  "expires_at": "2026-07-12T23:16:50.161Z",
+  "issued_at": "2026-07-06T00:19:48.066Z",
+  "expires_at": "2026-07-13T00:19:48.066Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "20bee00e058fb6c5d1842d4b3da501f287d9f45b7dfbc707ff57602fc8d25beb",
+  "signature": "199701f3030532354c2ca99ac0b3adde892529b280817abb91d6caaaa7351c2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08843"
 }

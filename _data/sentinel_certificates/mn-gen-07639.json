@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409996",
+  "certificate_id": "MN-SC-2026-7142695",
   "skill_id": "mn-gen-07639",
   "skill_name": "Eol-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.996Z",
-  "expires_at": "2026-07-12T23:16:49.996Z",
+  "issued_at": "2026-07-06T00:19:02.695Z",
+  "expires_at": "2026-07-13T00:19:02.695Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc09aaf4ef5b086f97baef2691dd8b064fb6604ab0286ee79560c7945daec00a",
+  "signature": "bb69ad59b95d4a5d1b9be1e2f3aae3a9253bbd9335b13d9eadf63eb89ccf46f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07639"
 }

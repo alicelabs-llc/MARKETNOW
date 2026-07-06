@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409465",
+  "certificate_id": "MN-SC-2026-6968606",
   "skill_id": "mn-ai-03686",
   "skill_name": "Enkai-mcp",
-  "issued_at": "2026-07-05T23:16:49.465Z",
-  "expires_at": "2026-07-12T23:16:49.465Z",
+  "issued_at": "2026-07-06T00:16:08.606Z",
+  "expires_at": "2026-07-13T00:16:08.606Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0358e71ba65ebeebe3da69e51ed36667c3431bf25d40aad3542e7927b488f00b",
+  "signature": "38040fb5e60b9e66956b5562fd4e0d26a64f6fd0810d44f82930b78c6077ee53",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03686"
 }

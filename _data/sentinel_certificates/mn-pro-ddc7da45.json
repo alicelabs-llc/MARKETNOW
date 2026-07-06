@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412209",
+  "certificate_id": "MN-SC-2026-7762246",
   "skill_id": "mn-pro-ddc7da45",
   "skill_name": "Cloud Anomaly Detector",
-  "issued_at": "2026-07-05T23:16:52.209Z",
-  "expires_at": "2026-07-12T23:16:52.209Z",
+  "issued_at": "2026-07-06T00:29:22.246Z",
+  "expires_at": "2026-07-13T00:29:22.246Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25a00286d6bc594c133a652a00125ea4c5d124fe960be1437fbb1b9a8212f1ff",
+  "signature": "78b3eaf0c2ae21ce820328bcba09949f6b4ed22e20743a9f0073200feb6c352d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-ddc7da45"
 }

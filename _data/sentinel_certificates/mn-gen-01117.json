@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2987908",
+  "certificate_id": "MN-SC-2026-6834342",
   "skill_id": "mn-gen-01117",
   "skill_name": "Autoworks-ai/autovault",
-  "issued_at": "2026-07-05T23:09:47.908Z",
-  "expires_at": "2026-07-12T23:09:47.908Z",
+  "issued_at": "2026-07-06T00:13:54.342Z",
+  "expires_at": "2026-07-13T00:13:54.342Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fdff737ea2508eacf4948605239d13c2a7da9d4842bf3772149281428fd4d6a",
+  "signature": "cbb62a3a9e48cc74533edcb1f00d87500c0877140a0a96775beead10fee04729",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01117"
 }

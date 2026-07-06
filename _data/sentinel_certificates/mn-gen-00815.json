@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2967336",
+  "certificate_id": "MN-SC-2026-6819641",
   "skill_id": "mn-gen-00815",
   "skill_name": "Anybrowse",
-  "issued_at": "2026-07-05T23:09:27.336Z",
-  "expires_at": "2026-07-12T23:09:27.336Z",
+  "issued_at": "2026-07-06T00:13:39.641Z",
+  "expires_at": "2026-07-13T00:13:39.641Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f3f82adfa099b3b06d47708424c5c9ba8252f3819eb0248730127f508e8054b3",
+  "signature": "4b12725e9bc4523cbfb6ab85515da8c4072324979239398e85493fb2b9ab72d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00815"
 }

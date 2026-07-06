@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409967",
+  "certificate_id": "MN-SC-2026-7132002",
   "skill_id": "mn-gen-07386",
   "skill_name": "Gorizond/mcp-rancher-multi",
-  "issued_at": "2026-07-05T23:16:49.967Z",
-  "expires_at": "2026-07-12T23:16:49.967Z",
+  "issued_at": "2026-07-06T00:18:52.002Z",
+  "expires_at": "2026-07-13T00:18:52.002Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c920418c43c6410bade598df81393b015f51599e0786bff8a5bf15e87b15b9c",
+  "signature": "4830c010c8300eaf3f131dffd2462dc095eaeec71be514875dd59baf34e13551",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07386"
 }

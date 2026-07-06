@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409966",
+  "certificate_id": "MN-SC-2026-7131489",
   "skill_id": "mn-gen-07354",
   "skill_name": "Mcp-pyodide",
-  "issued_at": "2026-07-05T23:16:49.966Z",
-  "expires_at": "2026-07-12T23:16:49.966Z",
+  "issued_at": "2026-07-06T00:18:51.489Z",
+  "expires_at": "2026-07-13T00:18:51.489Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a1d2958a3fbf9f6f67b2dbbf60b1c7935645ea008d6c265fdfabf2a5c2d164cd",
+  "signature": "a9bbec40a906d757aaef88a0562566e5be5f66742415ee800c74cde221bde017",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07354"
 }

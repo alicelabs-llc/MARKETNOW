@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410503",
+  "certificate_id": "MN-SC-2026-7304540",
   "skill_id": "mn-gen-11427",
   "skill_name": "Samathi101-mcp-claude",
-  "issued_at": "2026-07-05T23:16:50.503Z",
-  "expires_at": "2026-07-12T23:16:50.503Z",
+  "issued_at": "2026-07-06T00:21:44.540Z",
+  "expires_at": "2026-07-13T00:21:44.540Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f0488eb38a6a23c786ff94b88dacabd25edb33587d00e7666e949ea6fc236540",
+  "signature": "626a432a607db7328fb73e820ff3d92dac9605ea8a3666ff35291f2f135f19f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11427"
 }

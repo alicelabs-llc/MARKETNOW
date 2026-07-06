@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410547",
+  "certificate_id": "MN-SC-2026-7312711",
   "skill_id": "mn-gen-11596",
   "skill_name": "Selfhub-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.547Z",
-  "expires_at": "2026-07-12T23:16:50.547Z",
+  "issued_at": "2026-07-06T00:21:52.711Z",
+  "expires_at": "2026-07-13T00:21:52.711Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "251457746b42b8b982cb87236dae795faa4c6ab72b88514be38a7d807b8c98d4",
+  "signature": "65616a0cb834c656f0d2bff8e549945526c408117fd95afd2bd1ea99226c1ac7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11596"
 }

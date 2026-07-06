@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411895",
+  "certificate_id": "MN-SC-2026-7684395",
   "skill_id": "mn-arl-054",
   "skill_name": "Agent Specialization Trainer",
-  "issued_at": "2026-07-05T23:16:51.895Z",
-  "expires_at": "2026-07-12T23:16:51.895Z",
+  "issued_at": "2026-07-06T00:28:04.395Z",
+  "expires_at": "2026-07-13T00:28:04.395Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "08dbe6195713114e50012d745ab94c584e45a2dd0dad661484f3e80b2056454d",
+  "signature": "6f53bb2a128282785881e96fcb79404f944598d572f96ddcb210d029cb41792b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-054"
 }

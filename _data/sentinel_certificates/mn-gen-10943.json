@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410420",
+  "certificate_id": "MN-SC-2026-7283793",
   "skill_id": "mn-gen-10943",
   "skill_name": "Querysharp-mcp",
-  "issued_at": "2026-07-05T23:16:50.420Z",
-  "expires_at": "2026-07-12T23:16:50.420Z",
+  "issued_at": "2026-07-06T00:21:23.793Z",
+  "expires_at": "2026-07-13T00:21:23.793Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0c6f43ab2fc34642060c214520fceed9236b067d9433d8ceb4ce9f2f62d9e3d6",
+  "signature": "b6265e89e911b443983ccfe58aa046a570e13309522eb115b7afddacac15181b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10943"
 }

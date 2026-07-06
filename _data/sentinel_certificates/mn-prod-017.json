@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412420",
+  "certificate_id": "MN-SC-2026-7819804",
   "skill_id": "mn-prod-017",
   "skill_name": "Daily Planner",
-  "issued_at": "2026-07-05T23:16:52.420Z",
-  "expires_at": "2026-07-12T23:16:52.420Z",
+  "issued_at": "2026-07-06T00:30:19.804Z",
+  "expires_at": "2026-07-13T00:30:19.804Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec7fa6922b559dee208ad4e4dbe3afb153afa84c822dfcf46af2d671eb64facd",
+  "signature": "b9ab4f9f225f5c4ef93ab4864ea82d828fcd7b42db3dc09723cd9114cc74a891",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-017"
 }

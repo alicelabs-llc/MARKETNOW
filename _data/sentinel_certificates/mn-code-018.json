@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412349",
+  "certificate_id": "MN-SC-2026-7796316",
   "skill_id": "mn-code-018",
   "skill_name": "Code Refactoring Tool",
-  "issued_at": "2026-07-05T23:16:52.349Z",
-  "expires_at": "2026-07-12T23:16:52.349Z",
+  "issued_at": "2026-07-06T00:29:56.316Z",
+  "expires_at": "2026-07-13T00:29:56.316Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "12eb10808e634a6ca526659398f33f49c3a5540f3da65a3ac756a96e11a7bb91",
+  "signature": "4687f56acd364699cb2caa2fe1a261db0d3d820113db4e6953b88b1e22485fd2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-018"
 }

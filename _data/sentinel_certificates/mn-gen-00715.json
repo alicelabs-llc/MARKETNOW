@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2960915",
+  "certificate_id": "MN-SC-2026-6814857",
   "skill_id": "mn-gen-00715",
   "skill_name": "Aqualia/alph-cli",
-  "issued_at": "2026-07-05T23:09:20.915Z",
-  "expires_at": "2026-07-12T23:09:20.915Z",
+  "issued_at": "2026-07-06T00:13:34.857Z",
+  "expires_at": "2026-07-13T00:13:34.857Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1cbc80655ab2359af2721d17b544082313da1a0cd64a9cbe4064cfdc5088e4c5",
+  "signature": "5263e32e49c9249f944a9a774485f60d1a72aa2edd5cff53c38230022fad741b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00715"
 }

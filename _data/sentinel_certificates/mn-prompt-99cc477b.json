@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411394",
+  "certificate_id": "MN-SC-2026-7551018",
   "skill_id": "mn-prompt-99cc477b",
   "skill_name": "Implementador de secrets rotation automated",
-  "issued_at": "2026-07-05T23:16:51.394Z",
-  "expires_at": "2026-07-12T23:16:51.394Z",
+  "issued_at": "2026-07-06T00:25:51.018Z",
+  "expires_at": "2026-07-13T00:25:51.018Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f7027e8b7b25ae531b57740a0ae2edd38e47104705792ee76a8b1014e9299162",
+  "signature": "a33654bb1d0d6e48b451aa102fac929dd3b21c67e01402d235c15f32d26bc828",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-99cc477b"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2964682",
+  "certificate_id": "MN-SC-2026-6817425",
   "skill_id": "mn-gen-00780",
   "skill_name": "Ani-mcp",
-  "issued_at": "2026-07-05T23:09:24.682Z",
-  "expires_at": "2026-07-12T23:09:24.682Z",
+  "issued_at": "2026-07-06T00:13:37.425Z",
+  "expires_at": "2026-07-13T00:13:37.425Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97ca16a906f6c71710ab271eaa6a65118d321e60b4d1b1eabc80a78a695649b4",
+  "signature": "46fdd3fba1941f72c4e20b063232354c86ac7b3bc57b812259e5c20c1dc20e44",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00780"
 }

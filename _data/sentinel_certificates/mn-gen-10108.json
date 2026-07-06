@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410350",
+  "certificate_id": "MN-SC-2026-7245030",
   "skill_id": "mn-gen-10108",
   "skill_name": "Osc-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.350Z",
-  "expires_at": "2026-07-12T23:16:50.350Z",
+  "issued_at": "2026-07-06T00:20:45.030Z",
+  "expires_at": "2026-07-13T00:20:45.030Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "82f08722b78aea5c668b94ce5fde38c0a081f412a58e66f085c9f8717f83f368",
+  "signature": "845533c318e2fb4322af9e49a3b790350a1d2016131082ff0dd8b85cf4c683bb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10108"
 }

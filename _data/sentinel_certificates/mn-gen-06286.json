@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409797",
+  "certificate_id": "MN-SC-2026-7080181",
   "skill_id": "mn-gen-06286",
   "skill_name": "Modelcontextprotocol/server-backup",
-  "issued_at": "2026-07-05T23:16:49.797Z",
-  "expires_at": "2026-07-12T23:16:49.797Z",
+  "issued_at": "2026-07-06T00:18:00.181Z",
+  "expires_at": "2026-07-13T00:18:00.181Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b77d5af91b218ff89711326025e240ff8ea8b77f3b05a9b4d23949e1e4647aa9",
+  "signature": "695341fc301a9e7e25fe657dacc5861339de51359b1dfd36cbe835865340284d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06286"
 }

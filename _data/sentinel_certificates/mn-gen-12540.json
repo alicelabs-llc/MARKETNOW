@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410667",
+  "certificate_id": "MN-SC-2026-7352600",
   "skill_id": "mn-gen-12540",
   "skill_name": "Termhub",
-  "issued_at": "2026-07-05T23:16:50.667Z",
-  "expires_at": "2026-07-12T23:16:50.667Z",
+  "issued_at": "2026-07-06T00:22:32.600Z",
+  "expires_at": "2026-07-13T00:22:32.600Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d5fd3d4f8c6af423fd122341ce60ee9d13fe923579e31e68973e259ddfb82ab",
+  "signature": "16463cf73879aee8ec9bbf08007242f614dec9c4e22a81aa6f8dd23fce5df157",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12540"
 }

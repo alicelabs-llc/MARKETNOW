@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410411",
+  "certificate_id": "MN-SC-2026-7270205",
   "skill_id": "mn-gen-10666",
   "skill_name": "Printavo-mcp-server-claude",
-  "issued_at": "2026-07-05T23:16:50.411Z",
-  "expires_at": "2026-07-12T23:16:50.411Z",
+  "issued_at": "2026-07-06T00:21:10.205Z",
+  "expires_at": "2026-07-13T00:21:10.205Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "62d3d0b73a6841972ed0554c9d09362bf8af4c1dbc6d9293dc7389b8d86e3ada",
+  "signature": "4892ff1cf4de775ea4f935b9d5c6a5169e2186196047481878b85e8d47129aea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10666"
 }

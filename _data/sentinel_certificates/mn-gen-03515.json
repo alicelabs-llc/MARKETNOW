@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409424",
+  "certificate_id": "MN-SC-2026-6961316",
   "skill_id": "mn-gen-03515",
   "skill_name": "Driflyte/mcp-server",
-  "issued_at": "2026-07-05T23:16:49.424Z",
-  "expires_at": "2026-07-12T23:16:49.424Z",
+  "issued_at": "2026-07-06T00:16:01.316Z",
+  "expires_at": "2026-07-13T00:16:01.316Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7f4630758dbcdc90a8dee80e07d5e8fa018f463897c67f99f0b63dd9a4360261",
+  "signature": "deea22d5976966b4b0da148004767104704a7a89daaea705cb1680b80de682d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03515"
 }

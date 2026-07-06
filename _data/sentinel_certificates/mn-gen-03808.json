@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409473",
+  "certificate_id": "MN-SC-2026-6974944",
   "skill_id": "mn-gen-03808",
   "skill_name": "Expect-mcp",
-  "issued_at": "2026-07-05T23:16:49.473Z",
-  "expires_at": "2026-07-12T23:16:49.473Z",
+  "issued_at": "2026-07-06T00:16:14.944Z",
+  "expires_at": "2026-07-13T00:16:14.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c0e47d56483dcbe7c464c0fa6937e423af7bcc01d65ae0dbc9431b63101c41c",
+  "signature": "495b9d72a6a92a44e9940d2da1760f6de719bc175f0094f3cc5abf764bf75ff3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03808"
 }

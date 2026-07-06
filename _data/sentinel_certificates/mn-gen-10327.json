@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410360",
+  "certificate_id": "MN-SC-2026-7255212",
   "skill_id": "mn-gen-10327",
   "skill_name": "Perplexity-web-mcp-bridge",
-  "issued_at": "2026-07-05T23:16:50.360Z",
-  "expires_at": "2026-07-12T23:16:50.360Z",
+  "issued_at": "2026-07-06T00:20:55.212Z",
+  "expires_at": "2026-07-13T00:20:55.212Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "da26db72f54e5733d05fbd2c74b08c57b8a9bc7437d68afca00392ced5df459e",
+  "signature": "eab07a6a4c651cea96b869975aea0172c92ce0dc97cd50607f84f7778c52b7b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10327"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412107",
+  "certificate_id": "MN-SC-2026-7739730",
   "skill_id": "mn-ai-005",
   "skill_name": "Model Monitoring Pro",
-  "issued_at": "2026-07-05T23:16:52.107Z",
-  "expires_at": "2026-07-12T23:16:52.107Z",
+  "issued_at": "2026-07-06T00:28:59.730Z",
+  "expires_at": "2026-07-13T00:28:59.730Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "62b8e2daa6dcee33816641d61fa051bb3d33c2ee2d7327e3d2c12ff50efb30aa",
+  "signature": "2475648124b864198b0f65ce2bf57fc16bee69962adac314dbfc215032636ced",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-005"
 }

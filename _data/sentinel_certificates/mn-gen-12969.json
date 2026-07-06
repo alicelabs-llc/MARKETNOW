@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410753",
+  "certificate_id": "MN-SC-2026-7373006",
   "skill_id": "mn-gen-12969",
   "skill_name": "Unified-mcp-manager",
-  "issued_at": "2026-07-05T23:16:50.753Z",
-  "expires_at": "2026-07-12T23:16:50.753Z",
+  "issued_at": "2026-07-06T00:22:53.006Z",
+  "expires_at": "2026-07-13T00:22:53.006Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79f394de7b2a745d7b40d0f3c8bd052f861a8aede3601ca2359cf889a533835a",
+  "signature": "565c6dcbc8945de79d96750d2787072795f5000dd4e8497ad99efb02fc07508c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12969"
 }

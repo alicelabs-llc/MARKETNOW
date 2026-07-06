@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2969757",
+  "certificate_id": "MN-SC-2026-6821545",
   "skill_id": "mn-net-00850",
   "skill_name": "Apifable",
-  "issued_at": "2026-07-05T23:09:29.757Z",
-  "expires_at": "2026-07-12T23:09:29.757Z",
+  "issued_at": "2026-07-06T00:13:41.545Z",
+  "expires_at": "2026-07-13T00:13:41.545Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e16ed4eedd941bed281c0d30b326bd3ad9de8da0d41c84b8fb0d2bb8acb5c0d6",
+  "signature": "c75ff008a8c95e8f820949487bf43ed38104488b0aceda8c8860a0bdce807002",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-00850"
 }

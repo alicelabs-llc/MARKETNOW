@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410313",
+  "certificate_id": "MN-SC-2026-7240055",
   "skill_id": "mn-gen-09997",
   "skill_name": "Openfunction",
-  "issued_at": "2026-07-05T23:16:50.313Z",
-  "expires_at": "2026-07-12T23:16:50.313Z",
+  "issued_at": "2026-07-06T00:20:40.055Z",
+  "expires_at": "2026-07-13T00:20:40.055Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "761044772693a7e121fc08db7a58eb52f5de06a9eb33769e2c1065c115adef6e",
+  "signature": "62eb40954f77248d8e568ac765945424692d054912c3292fcb8880409c188ca0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09997"
 }

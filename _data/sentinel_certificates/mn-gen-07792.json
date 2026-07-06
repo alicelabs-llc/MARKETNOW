@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410045",
+  "certificate_id": "MN-SC-2026-7151349",
   "skill_id": "mn-gen-07792",
   "skill_name": "Mcp-server-runner",
-  "issued_at": "2026-07-05T23:16:50.045Z",
-  "expires_at": "2026-07-12T23:16:50.045Z",
+  "issued_at": "2026-07-06T00:19:11.349Z",
+  "expires_at": "2026-07-13T00:19:11.349Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28bd10ce75ff00457278a644ebe9efb5db0178ec50765331bcd7437b89d18ab4",
+  "signature": "5b33e9f62a2a376be6e9e2382b10e2a8a73f488919965e9bb0a1db6682d1d48e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07792"
 }

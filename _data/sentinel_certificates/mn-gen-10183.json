@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410354",
+  "certificate_id": "MN-SC-2026-7249631",
   "skill_id": "mn-gen-10183",
   "skill_name": "Panel-mcp-server",
-  "issued_at": "2026-07-05T23:16:50.354Z",
-  "expires_at": "2026-07-12T23:16:50.354Z",
+  "issued_at": "2026-07-06T00:20:49.631Z",
+  "expires_at": "2026-07-13T00:20:49.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "387da39c479f284f63d2af8b2025a6adef4a640f0477bf26e7ee7230d2b4bd3a",
+  "signature": "4f07d53db36b697409b783c084742395a93bb94b42afa62d7726bd4f9dfe9d06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10183"
 }

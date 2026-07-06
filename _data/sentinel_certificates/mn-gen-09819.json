@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410305",
+  "certificate_id": "MN-SC-2026-7232656",
   "skill_id": "mn-gen-09819",
   "skill_name": "Vscode-ollama",
-  "issued_at": "2026-07-05T23:16:50.305Z",
-  "expires_at": "2026-07-12T23:16:50.305Z",
+  "issued_at": "2026-07-06T00:20:32.656Z",
+  "expires_at": "2026-07-13T00:20:32.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca19670ae75aa53750a71a44d87917af2c4fd72fbce65497f0102c9cdfae474b",
+  "signature": "13490a60cd16e2d42af6c31c667213146d9a0bd9e5a87492387a39b1424d00c1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09819"
 }

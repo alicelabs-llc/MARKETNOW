@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408632",
+  "certificate_id": "MN-SC-2026-6892635",
   "skill_id": "mn-gen-02265",
   "skill_name": "Claude-remind-mcp",
-  "issued_at": "2026-07-05T23:16:48.632Z",
-  "expires_at": "2026-07-12T23:16:48.632Z",
+  "issued_at": "2026-07-06T00:14:52.635Z",
+  "expires_at": "2026-07-13T00:14:52.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e1b116763b306bc1f68c7cad3aa0f890d6580b83abae3acc446b4ba28599a172",
+  "signature": "d5128e6bd8644bc70b81435da9559f95afaf86387615de4b3bce57dd34de7619",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02265"
 }

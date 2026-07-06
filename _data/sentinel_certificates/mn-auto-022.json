@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412346",
+  "certificate_id": "MN-SC-2026-7792573",
   "skill_id": "mn-auto-022",
   "skill_name": "State Manager",
-  "issued_at": "2026-07-05T23:16:52.346Z",
-  "expires_at": "2026-07-12T23:16:52.346Z",
+  "issued_at": "2026-07-06T00:29:52.573Z",
+  "expires_at": "2026-07-13T00:29:52.573Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e1322d7925791a9cd541968a8fe4bf51f3f0ade7d953f4df65df78bffc3bc95f",
+  "signature": "62e5c7d0397896b41925d7b9501214264440e532b9be6dd0b83057eb199d906c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-022"
 }

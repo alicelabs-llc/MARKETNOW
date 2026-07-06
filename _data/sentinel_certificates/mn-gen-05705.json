@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409715",
+  "certificate_id": "MN-SC-2026-7055635",
   "skill_id": "mn-gen-05705",
   "skill_name": "Lemonade-Stand-MCP-Server",
-  "issued_at": "2026-07-05T23:16:49.715Z",
-  "expires_at": "2026-07-12T23:16:49.715Z",
+  "issued_at": "2026-07-06T00:17:35.635Z",
+  "expires_at": "2026-07-13T00:17:35.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32b2f2de4e9e8957367bfca441edd2ec6b6af73fc9bea4dd3f769a25a35ad596",
+  "signature": "20cbe89a7168190f4f8091bdc777745bc2442a62b8da53c1c901d626b42560a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05705"
 }

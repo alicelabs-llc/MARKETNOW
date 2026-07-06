@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410889",
+  "certificate_id": "MN-SC-2026-7412828",
   "skill_id": "mn-ai-13858",
   "skill_name": "Z-ai-image-mcp",
-  "issued_at": "2026-07-05T23:16:50.889Z",
-  "expires_at": "2026-07-12T23:16:50.889Z",
+  "issued_at": "2026-07-06T00:23:32.828Z",
+  "expires_at": "2026-07-13T00:23:32.828Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b240347f9fe349f0100801428d720b0dca4b9353e828e4cdb836b7541834d17",
+  "signature": "b07247e69e0bac68da2478ddc08f6b53a5955802ec1ed947ec3171ef22779564",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-13858"
 }

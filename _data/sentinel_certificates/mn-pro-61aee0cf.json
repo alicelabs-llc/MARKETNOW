@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412170",
+  "certificate_id": "MN-SC-2026-7753469",
   "skill_id": "mn-pro-61aee0cf",
   "skill_name": "Endpoint Detection Response",
-  "issued_at": "2026-07-05T23:16:52.170Z",
-  "expires_at": "2026-07-12T23:16:52.170Z",
+  "issued_at": "2026-07-06T00:29:13.469Z",
+  "expires_at": "2026-07-13T00:29:13.469Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e25045f19285599cb3fb2b5746bf2a84abfed98c3a61a7ecbb503c99148ca482",
+  "signature": "6eecd0f713225f25c5549cc2f2a8bba4528bda9c9a6daabf9b14e0ee58a583c0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-61aee0cf"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410019",
+  "certificate_id": "MN-SC-2026-7148275",
   "skill_id": "mn-gen-07727",
   "skill_name": "Mathematica-server",
-  "issued_at": "2026-07-05T23:16:50.019Z",
-  "expires_at": "2026-07-12T23:16:50.019Z",
+  "issued_at": "2026-07-06T00:19:08.275Z",
+  "expires_at": "2026-07-13T00:19:08.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "125b4ea37534795cd4a0cc48c7256710e66a0fce0ff6c50f983e638490705ca7",
+  "signature": "9721a6d0aebc98ead09769aaa720b0b7465f61eeb93081aaeff9212f200ee6c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07727"
 }

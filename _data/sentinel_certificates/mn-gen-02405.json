@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408658",
+  "certificate_id": "MN-SC-2026-6900321",
   "skill_id": "mn-gen-02405",
   "skill_name": "Clelp-mcp-server",
-  "issued_at": "2026-07-05T23:16:48.658Z",
-  "expires_at": "2026-07-12T23:16:48.658Z",
+  "issued_at": "2026-07-06T00:15:00.321Z",
+  "expires_at": "2026-07-13T00:15:00.321Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ddcd182ac2f21b3efd1d863ed252546e3bb2ffec35def7c5842d46a67ea8dea",
+  "signature": "7c73e4c202fee300d011392a4b9fe2a7a73500670d03b8ce050e5c106d2b527e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02405"
 }

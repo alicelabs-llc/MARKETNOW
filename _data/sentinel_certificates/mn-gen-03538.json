@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409442",
+  "certificate_id": "MN-SC-2026-6962368",
   "skill_id": "mn-gen-03538",
   "skill_name": "Dubco-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.442Z",
-  "expires_at": "2026-07-12T23:16:49.442Z",
+  "issued_at": "2026-07-06T00:16:02.368Z",
+  "expires_at": "2026-07-13T00:16:02.368Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ace651fc6ff751e3cedfc3a470bb09c171bed1432f8753fea84fcc813121c912",
+  "signature": "d2bfc8bdefddc7593d4162159fdd131cb105d7d3d6b4906264c9875c67a0ece9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03538"
 }

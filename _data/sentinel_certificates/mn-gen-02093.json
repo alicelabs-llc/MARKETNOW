@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408597",
+  "certificate_id": "MN-SC-2026-6882745",
   "skill_id": "mn-gen-02093",
   "skill_name": "Claude-crew",
-  "issued_at": "2026-07-05T23:16:48.597Z",
-  "expires_at": "2026-07-12T23:16:48.597Z",
+  "issued_at": "2026-07-06T00:14:42.745Z",
+  "expires_at": "2026-07-13T00:14:42.745Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d6e91da6d822767fc64f7c238ecb86ac2165912f4f09923b25a73bab37c1743",
+  "signature": "e0e8e0b8ef190e3f3ef27cdb5e1c18dc4068d4eb19d0923f3a488d22db6115ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02093"
 }

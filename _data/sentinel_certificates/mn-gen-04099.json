@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409503",
+  "certificate_id": "MN-SC-2026-6986734",
   "skill_id": "mn-gen-04099",
   "skill_name": "Flightradar24-mcp-server",
-  "issued_at": "2026-07-05T23:16:49.503Z",
-  "expires_at": "2026-07-12T23:16:49.503Z",
+  "issued_at": "2026-07-06T00:16:26.734Z",
+  "expires_at": "2026-07-13T00:16:26.734Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "87e05c514011005669b08e5f5ace6dffcf2b3ddfe1096263f6e01890629ded7d",
+  "signature": "1cbc354ed011266e5b22ec684b09372ac64668a22ac3c9f6c49d0420bc839944",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04099"
 }

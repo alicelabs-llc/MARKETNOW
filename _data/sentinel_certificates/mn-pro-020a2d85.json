@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3412165",
+  "certificate_id": "MN-SC-2026-7745894",
   "skill_id": "mn-pro-020a2d85",
   "skill_name": "Data Pipeline Security Scanner",
-  "issued_at": "2026-07-05T23:16:52.165Z",
-  "expires_at": "2026-07-12T23:16:52.165Z",
+  "issued_at": "2026-07-06T00:29:05.894Z",
+  "expires_at": "2026-07-13T00:29:05.894Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4728d6c25f345e27d2745948b438ded68a31cb0b03308c8fc7635916746fbea2",
+  "signature": "1ec63d1259fe74d98c9959bed1391024acdc8a30a97ee5bd6887d855ddac81ed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-020a2d85"
 }

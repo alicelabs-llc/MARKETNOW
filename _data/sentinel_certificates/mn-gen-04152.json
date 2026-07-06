@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3409505",
+  "certificate_id": "MN-SC-2026-6989177",
   "skill_id": "mn-gen-04152",
   "skill_name": "Foobar-dj",
-  "issued_at": "2026-07-05T23:16:49.505Z",
-  "expires_at": "2026-07-12T23:16:49.505Z",
+  "issued_at": "2026-07-06T00:16:29.177Z",
+  "expires_at": "2026-07-13T00:16:29.177Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "639a3b5c8a575e69238f9f8d5afe82ede9ed43af08a45dae751b769783ddfa0d",
+  "signature": "9bd91134c760e9159db5c61e7f78286a4e58f7634c1238d22d3bd106f6027d71",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04152"
 }

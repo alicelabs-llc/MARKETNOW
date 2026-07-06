@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3410380",
+  "certificate_id": "MN-SC-2026-7258583",
   "skill_id": "mn-gen-10403",
   "skill_name": "Pi-mcporter",
-  "issued_at": "2026-07-05T23:16:50.380Z",
-  "expires_at": "2026-07-12T23:16:50.380Z",
+  "issued_at": "2026-07-06T00:20:58.583Z",
+  "expires_at": "2026-07-13T00:20:58.583Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4366930d9e498e7eded92c2f22dc2d46a927aa410661f937f735d3424e74baab",
+  "signature": "5d071ccfb2552d6c5ce8bc25ca7e418e2afdc1149fed9b564c779d17ddbf2e88",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10403"
 }

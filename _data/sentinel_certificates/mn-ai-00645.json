@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-2677091",
+  "certificate_id": "MN-SC-2026-6811109",
   "skill_id": "mn-ai-00645",
   "skill_name": "Blackms/aistack",
-  "issued_at": "2026-07-05T23:04:37.091Z",
-  "expires_at": "2026-07-12T23:04:37.091Z",
+  "issued_at": "2026-07-06T00:13:31.109Z",
+  "expires_at": "2026-07-13T00:13:31.109Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89e2f24a181698bee98a0530afbe165b2bf23461b467aa9ed0ede11d2cad38db",
+  "signature": "d67274213434304f255fbf3940b9f9425ce9ada60335d4174a400f1118e643a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00645"
 }

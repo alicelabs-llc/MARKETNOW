@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408627",
+  "certificate_id": "MN-SC-2026-6888095",
   "skill_id": "mn-gen-02187",
   "skill_name": "Claude-mcp-remote",
-  "issued_at": "2026-07-05T23:16:48.627Z",
-  "expires_at": "2026-07-12T23:16:48.627Z",
+  "issued_at": "2026-07-06T00:14:48.095Z",
+  "expires_at": "2026-07-13T00:14:48.095Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb653a95c9a0240f21229392457751bdeae8e0c3f5a62a70fa5165048e9e4d3c",
+  "signature": "b44e279aabb3addc894b4a2839afc447fa82fe3e3ccad7c93ad5eb47b979520c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02187"
 }

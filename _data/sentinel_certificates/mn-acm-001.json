@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3411901",
+  "certificate_id": "MN-SC-2026-7692332",
   "skill_id": "mn-acm-001",
   "skill_name": "Long Context Manager",
-  "issued_at": "2026-07-05T23:16:51.901Z",
-  "expires_at": "2026-07-12T23:16:51.901Z",
+  "issued_at": "2026-07-06T00:28:12.332Z",
+  "expires_at": "2026-07-13T00:28:12.332Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97818ec7452524797b9bcd88285bac1ca9125972d16a02cf5f109cc1b581737f",
+  "signature": "6a89921a3415f5cabc147e0c2b5397da81a1fa066b874e7a411714fa2f467fa5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-001"
 }

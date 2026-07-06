@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-3408585",
+  "certificate_id": "MN-SC-2026-6877720",
   "skill_id": "mn-gen-01979",
   "skill_name": "Claude-appsscript-pro",
-  "issued_at": "2026-07-05T23:16:48.585Z",
-  "expires_at": "2026-07-12T23:16:48.585Z",
+  "issued_at": "2026-07-06T00:14:37.720Z",
+  "expires_at": "2026-07-13T00:14:37.720Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65187d853f38f86775233a3471517fe69a23e48747378c7b1cd15e626cad0260",
+  "signature": "70c8e1a627a10314a0584ebd407b06c7302280e00908803b511648cd8ed2f26b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01979"
 }

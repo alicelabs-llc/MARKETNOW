@@ -37,7 +37,7 @@ if (onlySkillId) {
 }
 
 // ─── Load catalog ────────────────────────────────────────────────────────
-const skillsPath = path.join(__dirname, '..', 'marketnow', 'aep-marketplace', 'public', 'api', 'skills_index.json');
+const skillsPath = path.join(__dirname, '..', 'aep-marketplace', 'public', 'api', 'skills_index.json');
 const skills = JSON.parse(fs.readFileSync(skillsPath, 'utf8'));
 
 // Filter to skills with source.url containing github.com

@@ -35,7 +35,7 @@ if (!GITHUB_TOKEN) {
 }
 
 const REPO = 'edgarfloresguerra2011-a11y/marketnow';
-const SKILLS_PATH = path.join(__dirname, '..', 'marketnow', 'aep-marketplace', 'public', 'api', 'skills_index.json');
+const SKILLS_PATH = path.join(__dirname, '..', 'aep-marketplace', 'public', 'api', 'skills_index.json');
 
 // CLI args
 const args = process.argv.slice(2);

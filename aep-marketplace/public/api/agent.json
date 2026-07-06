@@ -64,7 +64,7 @@
     "currency": "USD",
     "min": 0,
     "max": 9.99,
-    "average": 3.8,
+    "average": 3.6,
     "tiers": [
       {
         "price": 0.99,
@@ -226,7 +226,11 @@
           "overall_score": "0-10",
           "risk_level": "low | medium | high | critical",
           "risk_breakdown": "object",
-          "layers_run": { "l15": "boolean", "l16": "boolean", "l2": "boolean" },
+          "layers_run": {
+            "l15": "boolean",
+            "l16": "boolean",
+            "l2": "boolean"
+          },
           "layer_details": "object with findings per layer",
           "signature": "SHA-256 hex string",
           "signature_algorithm": "SHA-256",
@@ -377,7 +381,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-05T22:11:00.934Z",
+  "generated_at": "2026-07-06T02:29:58.287Z",
   "trust": {
     "license": "MNNC-1.0 (Non-Commercial — source available, not for commercial use)",
     "open_source": false,

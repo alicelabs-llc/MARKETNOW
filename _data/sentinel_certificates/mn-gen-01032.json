@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6830411",
+  "certificate_id": "MN-SC-2026-0074996",
   "skill_id": "mn-gen-01032",
-  "skill_name": "Astro-mcp-server",
-  "issued_at": "2026-07-06T00:13:50.411Z",
-  "expires_at": "2026-07-13T00:13:50.411Z",
+  "skill_name": "astroway-mcp",
+  "issued_at": "2026-07-06T03:54:34.996Z",
+  "expires_at": "2026-07-13T03:54:34.996Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 2,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33b98d5efb8a58eb0bfa22a0ce7a6dbfe47d05a38ebc3cae27456dadd26a6cd6",
+  "signature": "2360064ae20b696038c76fe50a4078430d5e41350f0cd31aed6fe4ffe70c6e1c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01032"
 }

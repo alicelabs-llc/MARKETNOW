@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6805859",
+  "certificate_id": "MN-SC-2026-0058277",
   "skill_id": "mn-ai-00519",
   "skill_name": "Aimax",
-  "issued_at": "2026-07-06T00:13:25.859Z",
-  "expires_at": "2026-07-13T00:13:25.859Z",
+  "issued_at": "2026-07-06T03:54:18.277Z",
+  "expires_at": "2026-07-13T03:54:18.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0e2f355b222c46174032c27cd30ebb58f6c9a566cea4ce604c10542ab7a58254",
+  "signature": "eb8d76a2bc09cae6d397a80d34af701a74c66e864bc2f2e2fd8878c476d9580a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00519"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7356376",
+  "certificate_id": "MN-SC-2026-0505187",
   "skill_id": "mn-gen-12635",
   "skill_name": "Tiangong-lca/mcp-server",
-  "issued_at": "2026-07-06T00:22:36.376Z",
-  "expires_at": "2026-07-13T00:22:36.377Z",
+  "issued_at": "2026-07-06T04:01:45.187Z",
+  "expires_at": "2026-07-13T04:01:45.187Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "08ce102514c94e7dc905f8c15345bcc35d8b0323ad15e461ef55c03d43f956c1",
+  "signature": "d5e11d3b52e6d18f9a48695a618a7303312292a3f8c0a5692233d5adf0e8021c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12635"
 }

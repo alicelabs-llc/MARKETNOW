@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7031799",
+  "certificate_id": "MN-SC-2026-0225934",
   "skill_id": "mn-gen-05146",
   "skill_name": "Insite-mcp",
-  "issued_at": "2026-07-06T00:17:11.799Z",
-  "expires_at": "2026-07-13T00:17:11.799Z",
+  "issued_at": "2026-07-06T03:57:05.934Z",
+  "expires_at": "2026-07-13T03:57:05.934Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb730ff759824eb6a9fca4e080dee6d0a90adcb9005ba3b36a0b2ad4d8632177",
+  "signature": "93f65ba56b55bf5d69797392df3d1dcccdd7ffcd68250227b7839609947fbc46",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05146"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7818676",
+  "certificate_id": "MN-SC-2026-0833802",
   "skill_id": "mn-prod-011",
   "skill_name": "Action Item Tracker",
-  "issued_at": "2026-07-06T00:30:18.676Z",
-  "expires_at": "2026-07-13T00:30:18.676Z",
+  "issued_at": "2026-07-06T04:07:13.802Z",
+  "expires_at": "2026-07-13T04:07:13.802Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d76889b813a7281a2e427027e809f06ef9c079c6c14601faa0a2767bc79de79e",
+  "signature": "de5eab001607ee3ef0770b170d044811b9131cad8de643e08dbfff5a1d140cf1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-011"
 }

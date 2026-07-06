@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7842456",
+  "certificate_id": "MN-SC-2026-0848216",
   "skill_id": "mn-edte-001",
   "skill_name": "LMS Integration Hub",
-  "issued_at": "2026-07-06T00:30:42.457Z",
-  "expires_at": "2026-07-13T00:30:42.457Z",
+  "issued_at": "2026-07-06T04:07:28.216Z",
+  "expires_at": "2026-07-13T04:07:28.216Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ede7cc7f372458996ab3a97fa0254c7ed1b9be15201b752f80399d579d584de",
+  "signature": "bc38017277ee2f1f1d68286d50c0536ef5828668864628365071d51d54a372dd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edte-001"
 }

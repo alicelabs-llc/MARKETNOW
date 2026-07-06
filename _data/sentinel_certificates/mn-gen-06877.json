@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7106228",
+  "certificate_id": "MN-SC-2026-0286351",
   "skill_id": "mn-gen-06877",
   "skill_name": "Mcp-hook-conformance",
-  "issued_at": "2026-07-06T00:18:26.228Z",
-  "expires_at": "2026-07-13T00:18:26.228Z",
+  "issued_at": "2026-07-06T03:58:06.351Z",
+  "expires_at": "2026-07-13T03:58:06.351Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "904b5162fa8855d3585166f9cca17c15b568717bf986c065df6b7d06d9815c33",
+  "signature": "e362312e59df26a87385eeb9808d195f1effcf477be1d9f1c80f2ba7c5da4433",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06877"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7246068",
+  "certificate_id": "MN-SC-2026-0399728",
   "skill_id": "mn-gen-10119",
   "skill_name": "Nexera-debugger-mcp",
-  "issued_at": "2026-07-06T00:20:46.068Z",
-  "expires_at": "2026-07-13T00:20:46.068Z",
+  "issued_at": "2026-07-06T03:59:59.728Z",
+  "expires_at": "2026-07-13T03:59:59.728Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75261ad475d5a91180affdeb35fb6d82104980f451d497b09a8a929416d54d6d",
+  "signature": "27b3e031297456b47db2c8875514224c353871b634fa815bd21e840c4234b8f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10119"
 }

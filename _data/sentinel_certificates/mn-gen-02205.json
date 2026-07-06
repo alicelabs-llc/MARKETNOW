@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6889433",
+  "certificate_id": "MN-SC-2026-0116340",
   "skill_id": "mn-gen-02205",
   "skill_name": "Cgize/mcp-think-tool",
-  "issued_at": "2026-07-06T00:14:49.433Z",
-  "expires_at": "2026-07-13T00:14:49.433Z",
+  "issued_at": "2026-07-06T03:55:16.340Z",
+  "expires_at": "2026-07-13T03:55:16.340Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "99a11e2d67c017267e82268fa7111f800919e85de01f5106f5f988ff2b0a7045",
+  "signature": "71c961dce680187a52a1b746608400885a535e7fd925638615c5ce7fd19ed942",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02205"
 }

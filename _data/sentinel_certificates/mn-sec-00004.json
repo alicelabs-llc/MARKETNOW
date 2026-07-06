@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6824462",
+  "certificate_id": "MN-SC-2026-0070954",
   "skill_id": "mn-sec-00004",
   "skill_name": "aicomply",
-  "issued_at": "2026-07-06T00:13:44.462Z",
-  "expires_at": "2026-07-13T00:13:44.462Z",
+  "issued_at": "2026-07-06T03:54:30.954Z",
+  "expires_at": "2026-07-13T03:54:30.954Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "443fd4c179e8aeeb53fd6f5334a198f84485e451aded34be9bab2889a8eac185",
+  "signature": "333b626b5999bb9713178d2e5bc899caca4460fc3e5d67afbd35c35ec793f34b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-00004"
 }

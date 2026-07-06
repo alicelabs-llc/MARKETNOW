@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7807800",
+  "certificate_id": "MN-SC-2026-0828767",
   "skill_id": "mn-data-032",
   "skill_name": "AB Test Calculator",
-  "issued_at": "2026-07-06T00:30:07.800Z",
-  "expires_at": "2026-07-13T00:30:07.800Z",
+  "issued_at": "2026-07-06T04:07:08.767Z",
+  "expires_at": "2026-07-13T04:07:08.767Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6c23cb66f9a3207b0e3221215b684cb252ec14dca2ba8295b3204dd591cfd1a3",
+  "signature": "458fe32000caf4fc7f3e4376ed0904cd96fa3c11fbac6c376f52216b2fab7edb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-032"
 }

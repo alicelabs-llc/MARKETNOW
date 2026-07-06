@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7818223",
+  "certificate_id": "MN-SC-2026-0833748",
   "skill_id": "mn-prod-010",
   "skill_name": "Meeting Notes Manager",
-  "issued_at": "2026-07-06T00:30:18.223Z",
-  "expires_at": "2026-07-13T00:30:18.223Z",
+  "issued_at": "2026-07-06T04:07:13.748Z",
+  "expires_at": "2026-07-13T04:07:13.748Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4abe34c75257c4b4ed3c1d16894118f5ee99034244fbb71d2bd7a8f6e170a08f",
+  "signature": "c9f810b42a0320273df42114944c9061c7d29c4d510930caf3e487b6e6bf4a73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-010"
 }

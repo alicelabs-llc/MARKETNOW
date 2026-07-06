@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7074473",
+  "certificate_id": "MN-SC-2026-0258869",
   "skill_id": "mn-gen-06154",
   "skill_name": "Mcp-aas",
-  "issued_at": "2026-07-06T00:17:54.473Z",
-  "expires_at": "2026-07-13T00:17:54.473Z",
+  "issued_at": "2026-07-06T03:57:38.869Z",
+  "expires_at": "2026-07-13T03:57:38.869Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04c58bbfd8df458d445844025f4ee583cce167ed58eb8e3412776ffd87f060c8",
+  "signature": "4bef74f3cb14db0b2d23fc4b167df2513753aaa353a5b83142b372c1cc32125d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06154"
 }

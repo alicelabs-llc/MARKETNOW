@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6844892",
+  "certificate_id": "MN-SC-2026-0085098",
   "skill_id": "mn-gen-01377",
   "skill_name": "Bimp-mcp",
-  "issued_at": "2026-07-06T00:14:04.892Z",
-  "expires_at": "2026-07-13T00:14:04.892Z",
+  "issued_at": "2026-07-06T03:54:45.098Z",
+  "expires_at": "2026-07-13T03:54:45.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c15c88dfe90508570e554d353a226487098d2bc4b557ee30d4bf3768679b1a3",
+  "signature": "303f050a6709052580051317efb605b4f021e27c7d0ea8386b0c195b1e941ba3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01377"
 }

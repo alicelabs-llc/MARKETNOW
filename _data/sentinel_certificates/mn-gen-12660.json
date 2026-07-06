@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7358944",
+  "certificate_id": "MN-SC-2026-0506667",
   "skill_id": "mn-gen-12660",
   "skill_name": "Timetree-mcp",
-  "issued_at": "2026-07-06T00:22:38.944Z",
-  "expires_at": "2026-07-13T00:22:38.944Z",
+  "issued_at": "2026-07-06T04:01:46.667Z",
+  "expires_at": "2026-07-13T04:01:46.667Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "88c6ae59d6a7d6d3f5b5f31d3683d36fb47defdfa719abc65ebc2a72131108bd",
+  "signature": "6fc7e88d8dbc707e958f2ac72aaac5817fc0a9dd1c457b64aeded7a5598afbaa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12660"
 }

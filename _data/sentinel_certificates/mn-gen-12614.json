@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7355300",
+  "certificate_id": "MN-SC-2026-0504292",
   "skill_id": "mn-gen-12614",
   "skill_name": "Things3-mcp",
-  "issued_at": "2026-07-06T00:22:35.300Z",
-  "expires_at": "2026-07-13T00:22:35.300Z",
+  "issued_at": "2026-07-06T04:01:44.292Z",
+  "expires_at": "2026-07-13T04:01:44.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7ec1080f7e3644639930a61270921e2ca4e4ebf6df5c02ee1076aeeb93c86d0c",
+  "signature": "68e2e16a5d0ac1e80ddfbe3e87a2aff619bf132a9d83ad5dd1250804a628a8d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12614"
 }

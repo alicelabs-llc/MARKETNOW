@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7230373",
+  "certificate_id": "MN-SC-2026-0384923",
   "skill_id": "mn-gen-09766",
-  "skill_name": "Odoo-mcp",
-  "issued_at": "2026-07-06T00:20:30.373Z",
-  "expires_at": "2026-07-13T00:20:30.373Z",
+  "skill_name": "mcp-server-odoo",
+  "issued_at": "2026-07-06T03:59:44.923Z",
+  "expires_at": "2026-07-13T03:59:44.923Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8402c06426ee919b662f0079d3d017d2fcad10b989520f436844d5d822808634",
+  "signature": "ab837795f3a2c273492f17a26336b6c0a911c767c80910f9294253dcbada8622",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09766"
 }

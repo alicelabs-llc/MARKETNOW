@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7817736",
+  "certificate_id": "MN-SC-2026-0833331",
   "skill_id": "mn-prod-004",
   "skill_name": "Calendar Manager",
-  "issued_at": "2026-07-06T00:30:17.736Z",
-  "expires_at": "2026-07-13T00:30:17.736Z",
+  "issued_at": "2026-07-06T04:07:13.331Z",
+  "expires_at": "2026-07-13T04:07:13.331Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fba15248ee218ae6b26ae55b86f6498e185a3629ff505273b7bf7803a82e350",
+  "signature": "184570831b07e052aca220a7912a282512395032a03108cd0b302b58062b082f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-004"
 }

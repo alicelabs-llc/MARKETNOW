@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1022487",
+  "skill_id": "mn-real-alogmcp",
+  "skill_name": "alog-mcp",
+  "issued_at": "2026-07-06T04:10:22.487Z",
+  "expires_at": "2026-07-13T04:10:22.487Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "1e78f8b03944713ff60665bf59b4da5f2154270f52664b9a168bc1db82511259",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alogmcp"
+}

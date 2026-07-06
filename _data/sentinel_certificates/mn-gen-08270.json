@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7174783",
+  "certificate_id": "MN-SC-2026-0340570",
   "skill_id": "mn-gen-08270",
   "skill_name": "Mcp-wordpress",
-  "issued_at": "2026-07-06T00:19:34.783Z",
-  "expires_at": "2026-07-13T00:19:34.783Z",
+  "issued_at": "2026-07-06T03:59:00.570Z",
+  "expires_at": "2026-07-13T03:59:00.570Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aedc54c040259c48abb4867f4f2ab396f22c5ab47111a1d02f65f51315813bfc",
+  "signature": "b894fad91a30e5bc0986a7af4e03b823579efaeffcfc21485ca9ae8b01f1a050",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08270"
 }

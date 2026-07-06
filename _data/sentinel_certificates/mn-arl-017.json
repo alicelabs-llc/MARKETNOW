@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7678009",
+  "certificate_id": "MN-SC-2026-0729534",
   "skill_id": "mn-arl-017",
   "skill_name": "Hallucination Benchmark Runner",
-  "issued_at": "2026-07-06T00:27:58.009Z",
-  "expires_at": "2026-07-13T00:27:58.009Z",
+  "issued_at": "2026-07-06T04:05:29.534Z",
+  "expires_at": "2026-07-13T04:05:29.534Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "788ce6f15c54a5388adb419706792253c60ad91cbb6fe6ddc4c0c052ee60a10e",
+  "signature": "655a23eff7db1d8f46f196fc15532de57ad0d1a2cc39e424eb4828cb6f277af6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-017"
 }

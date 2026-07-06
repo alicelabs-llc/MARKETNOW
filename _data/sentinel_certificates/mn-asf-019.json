@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7707741",
+  "certificate_id": "MN-SC-2026-0748429",
   "skill_id": "mn-asf-019",
   "skill_name": "Privacy Protector",
-  "issued_at": "2026-07-06T00:28:27.741Z",
-  "expires_at": "2026-07-13T00:28:27.741Z",
+  "issued_at": "2026-07-06T04:05:48.429Z",
+  "expires_at": "2026-07-13T04:05:48.429Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31698af361acfcf386a2c1dc0f31319da5ff6390b09095c502a02b4a51b720e6",
+  "signature": "3aaf029c76317be72d26e3c92fec361e7cf09cff785b65461d3f4485721cfd61",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-019"
 }

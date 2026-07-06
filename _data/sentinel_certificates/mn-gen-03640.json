@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6966892",
+  "certificate_id": "MN-SC-2026-0173702",
   "skill_id": "mn-gen-03640",
-  "skill_name": "Elevenlabs-mcp-tts",
-  "issued_at": "2026-07-06T00:16:06.892Z",
-  "expires_at": "2026-07-13T00:16:06.892Z",
+  "skill_name": "elevenlabs-mcp",
+  "issued_at": "2026-07-06T03:56:13.702Z",
+  "expires_at": "2026-07-13T03:56:13.702Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5e8d4361f8bae87ed8728de569e455b21a8f946293538caada98c15d32a2255f",
+  "signature": "b303b4d239d72dedd74d36e2deaceb58bfbd7298ab5562ea43c1d50e1dfc08e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03640"
 }

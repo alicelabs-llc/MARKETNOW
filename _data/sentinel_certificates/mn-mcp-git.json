@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7886771",
+  "certificate_id": "MN-SC-2026-0879347",
   "skill_id": "mn-mcp-git",
   "skill_name": "MCP Git Server (Official)",
-  "issued_at": "2026-07-06T00:31:26.771Z",
-  "expires_at": "2026-07-13T00:31:26.771Z",
+  "issued_at": "2026-07-06T04:07:59.347Z",
+  "expires_at": "2026-07-13T04:07:59.347Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "156af797be4d8f045f2030247ea803c60f1f3c6f1734c6450400fb6e2e102a24",
+  "signature": "465fa05bec9efd68b72d450d7175118bd6def47a2bf49d731e9c02f792f5fa32",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-git"
 }

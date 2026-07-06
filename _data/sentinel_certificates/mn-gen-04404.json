@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7001007",
+  "certificate_id": "MN-SC-2026-0201046",
   "skill_id": "mn-gen-04404",
   "skill_name": "Gg-mcp-for-vscode",
-  "issued_at": "2026-07-06T00:16:41.007Z",
-  "expires_at": "2026-07-13T00:16:41.007Z",
+  "issued_at": "2026-07-06T03:56:41.046Z",
+  "expires_at": "2026-07-13T03:56:41.046Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d67b44978a15b9b487900b85b224fe1352a1500f56218e9d891b48a6db39001d",
+  "signature": "d9f465b0b340c33f7e2521bb3992342450cecdd09f69f5dfc45c2e193e93c1d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04404"
 }

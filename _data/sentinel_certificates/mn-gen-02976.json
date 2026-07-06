@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6932822",
+  "certificate_id": "MN-SC-2026-0149136",
   "skill_id": "mn-gen-02976",
   "skill_name": "Cursor-agent-mcp",
-  "issued_at": "2026-07-06T00:15:32.822Z",
-  "expires_at": "2026-07-13T00:15:32.822Z",
+  "issued_at": "2026-07-06T03:55:49.136Z",
+  "expires_at": "2026-07-13T03:55:49.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8898755ba83bb289045f3da68d7f4bc957197c0c092f22aa0887d2a9e5eddf48",
+  "signature": "23895eb10f4db59bf54683c1aacd088684cd7fa494e0649df7bc53b3fd34df2a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02976"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6868185",
+  "certificate_id": "MN-SC-2026-0100591",
   "skill_id": "mn-ai-01798",
   "skill_name": "Chaining-mcp-server",
-  "issued_at": "2026-07-06T00:14:28.185Z",
-  "expires_at": "2026-07-13T00:14:28.185Z",
+  "issued_at": "2026-07-06T03:55:00.591Z",
+  "expires_at": "2026-07-13T03:55:00.591Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0c149388198429103172c7851315045016b4e79c7bb7bd96004e08c8735db6a",
+  "signature": "37e49331da8f724c15992c144af56a835eb1d0a8aafe7ee0b15d2a99670affd1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01798"
 }

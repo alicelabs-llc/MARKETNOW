@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7140267",
+  "certificate_id": "MN-SC-2026-0314191",
   "skill_id": "mn-gen-07601",
-  "skill_name": "Mcp-server-code-runner",
-  "issued_at": "2026-07-06T00:19:00.267Z",
-  "expires_at": "2026-07-13T00:19:00.267Z",
+  "skill_name": "mcp-code-runner",
+  "issued_at": "2026-07-06T03:58:34.191Z",
+  "expires_at": "2026-07-13T03:58:34.191Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d551447a9e4411a300b686c621ffc59d24dfd84b255062dd914de0315d21e026",
+  "signature": "09843dbf889117aad7102135c5078fd623c47cbc33fc9a14e454aee4823a20a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07601"
 }

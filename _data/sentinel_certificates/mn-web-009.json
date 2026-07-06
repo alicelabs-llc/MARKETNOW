@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7827811",
+  "certificate_id": "MN-SC-2026-0840013",
   "skill_id": "mn-web-009",
   "skill_name": "RSS Feed Parser",
-  "issued_at": "2026-07-06T00:30:27.811Z",
-  "expires_at": "2026-07-13T00:30:27.811Z",
+  "issued_at": "2026-07-06T04:07:20.013Z",
+  "expires_at": "2026-07-13T04:07:20.013Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5efdff61b6d8e4de1e3eacdac3ce1ca53ca38c2f9792ee69a722dfdff3bf42df",
+  "signature": "00cd2270f364a946c0a888e722bc8d38a3617c9ad5fe6eadfef94795df5411cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-009"
 }

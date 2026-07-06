@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7245592",
+  "certificate_id": "MN-SC-2026-0399290",
   "skill_id": "mn-gen-10115",
   "skill_name": "Osmosys/portal-generator",
-  "issued_at": "2026-07-06T00:20:45.592Z",
-  "expires_at": "2026-07-13T00:20:45.592Z",
+  "issued_at": "2026-07-06T03:59:59.290Z",
+  "expires_at": "2026-07-13T03:59:59.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d57d66f8c694fb1ece8579b00c031fec9a852ead157260338218529bb51396c",
+  "signature": "15380f040910d7f3d53e048e679971354b3847dd215f631260b21dad2968b057",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10115"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6816838",
+  "certificate_id": "MN-SC-2026-0065959",
   "skill_id": "mn-gen-00759",
   "skill_name": "Analytical-mcp-server",
-  "issued_at": "2026-07-06T00:13:36.838Z",
-  "expires_at": "2026-07-13T00:13:36.838Z",
+  "issued_at": "2026-07-06T03:54:25.959Z",
+  "expires_at": "2026-07-13T03:54:25.959Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b2f13e4459e8d50950fa0c29b0f9a315b5d273aef3f9b5eb2b0d3f51ba21ccf",
+  "signature": "9207428ed83ba16b889007f18559324af0464634914a22a977d9674cb1ca999c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00759"
 }

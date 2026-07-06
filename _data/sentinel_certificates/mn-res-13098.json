@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7377708",
+  "certificate_id": "MN-SC-2026-0523372",
   "skill_id": "mn-res-13098",
   "skill_name": "Vault-search",
-  "issued_at": "2026-07-06T00:22:57.708Z",
-  "expires_at": "2026-07-13T00:22:57.708Z",
+  "issued_at": "2026-07-06T04:02:03.372Z",
+  "expires_at": "2026-07-13T04:02:03.372Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "df0b7ff8756c3d506151616c0d12d60a771419d7546435f9ce27c5d0296e97cf",
+  "signature": "d964c590013ee42deecd15f6d557cd6a0da491f27db74ce46f59ff46de313ef9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-13098"
 }

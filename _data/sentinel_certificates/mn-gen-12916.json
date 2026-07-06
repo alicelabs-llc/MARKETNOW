@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7369429",
+  "certificate_id": "MN-SC-2026-0516000",
   "skill_id": "mn-gen-12916",
   "skill_name": "Uemcp-dev",
-  "issued_at": "2026-07-06T00:22:49.429Z",
-  "expires_at": "2026-07-13T00:22:49.429Z",
+  "issued_at": "2026-07-06T04:01:56.000Z",
+  "expires_at": "2026-07-13T04:01:56.000Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bd8fb2e80aa5f1899130380b3057a8f07ebaf0c04e091eb7bc7b272baa2b8761",
+  "signature": "447b4f0e5fe17a4bfa4eeaedac6b1002de8d97dbcb483287a1d11aa220510d32",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12916"
 }

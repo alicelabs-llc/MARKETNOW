@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7683598",
+  "certificate_id": "MN-SC-2026-0732120",
   "skill_id": "mn-arl-049",
   "skill_name": "Knowledge Graph Builder",
-  "issued_at": "2026-07-06T00:28:03.598Z",
-  "expires_at": "2026-07-13T00:28:03.598Z",
+  "issued_at": "2026-07-06T04:05:32.120Z",
+  "expires_at": "2026-07-13T04:05:32.120Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0525e97e331248504941b0f318e50664650259fa97ef70c2076e7afaa93b575",
+  "signature": "e2f86f4c16cbe01a65e9ab314c7cf15eb84398714b1ebf134b52270e5fb9f23b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-049"
 }

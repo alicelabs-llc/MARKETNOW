@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7213795",
+  "certificate_id": "MN-SC-2026-0370506",
   "skill_id": "mn-gen-09403",
   "skill_name": "N8nac-tools",
-  "issued_at": "2026-07-06T00:20:13.795Z",
-  "expires_at": "2026-07-13T00:20:13.795Z",
+  "issued_at": "2026-07-06T03:59:30.506Z",
+  "expires_at": "2026-07-13T03:59:30.506Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95980ad8f31d81e0e3eafa223b8a6dc1ccfd8620faf20e6ab62955dd6b5704ca",
+  "signature": "6c9d03280468cac9653f7cc9b979b9f172e6321bc837c707c638e136870ae789",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09403"
 }

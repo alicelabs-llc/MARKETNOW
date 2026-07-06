@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7366744",
+  "certificate_id": "MN-SC-2026-0512392",
   "skill_id": "mn-gen-12832",
   "skill_name": "Tripletex-mcp",
-  "issued_at": "2026-07-06T00:22:46.744Z",
-  "expires_at": "2026-07-13T00:22:46.744Z",
+  "issued_at": "2026-07-06T04:01:52.392Z",
+  "expires_at": "2026-07-13T04:01:52.392Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e020713f7a408b7f9b83148723092f00dbb4d76354c378240d38f908cf4d5c6d",
+  "signature": "cb7e1bef22f2f768fddb8ca0aecbb9b36cd38f8752bc53c94e88e89c97fa0bf0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12832"
 }

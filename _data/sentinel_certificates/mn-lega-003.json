@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7863749",
+  "certificate_id": "MN-SC-2026-0864409",
   "skill_id": "mn-lega-003",
   "skill_name": "Compliance Monitoring Pro",
-  "issued_at": "2026-07-06T00:31:03.749Z",
-  "expires_at": "2026-07-13T00:31:03.749Z",
+  "issued_at": "2026-07-06T04:07:44.409Z",
+  "expires_at": "2026-07-13T04:07:44.409Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29356da3692adf91291363668b3d49d150a6233eac7feb271e5110a86cf808ce",
+  "signature": "7f8242f1c8352e7c6912568fc91e43276014992785107a5beae926686d41def5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-lega-003"
 }

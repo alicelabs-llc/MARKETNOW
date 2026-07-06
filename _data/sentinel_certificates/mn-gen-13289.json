@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7388611",
+  "certificate_id": "MN-SC-2026-0532433",
   "skill_id": "mn-gen-13289",
   "skill_name": "Wappmcp",
-  "issued_at": "2026-07-06T00:23:08.611Z",
-  "expires_at": "2026-07-13T00:23:08.611Z",
+  "issued_at": "2026-07-06T04:02:12.433Z",
+  "expires_at": "2026-07-13T04:02:12.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b7c890cd2337505893291f5f5db3305f0bbc396d3057583572d0a12994461528",
+  "signature": "2ff9ca2a2cab126ae8574fcf06e9d59b10002c261c314d28ce1f8cd2ab606101",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13289"
 }

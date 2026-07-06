@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7317736",
+  "certificate_id": "MN-SC-2026-0469321",
   "skill_id": "mn-gen-11709",
   "skill_name": "Sharp-advisor-mcp",
-  "issued_at": "2026-07-06T00:21:57.736Z",
-  "expires_at": "2026-07-13T00:21:57.736Z",
+  "issued_at": "2026-07-06T04:01:09.321Z",
+  "expires_at": "2026-07-13T04:01:09.321Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4a8562341cc0a6695050e948aef67659acd407fb5cdcf2447062f46c916821b4",
+  "signature": "295ee08e83350fcff401b475b7ec0f9d1a275e05cb590a43ffe894c8aca35143",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11709"
 }

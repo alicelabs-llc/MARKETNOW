@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6916090",
+  "certificate_id": "MN-SC-2026-0136951",
   "skill_id": "mn-gen-02702",
   "skill_name": "Confluencemcpserver",
-  "issued_at": "2026-07-06T00:15:16.090Z",
-  "expires_at": "2026-07-13T00:15:16.090Z",
+  "issued_at": "2026-07-06T03:55:36.951Z",
+  "expires_at": "2026-07-13T03:55:36.951Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8fae275e944619b4d61ee241688185412ed0f85182d0be8a263526449fb3e46",
+  "signature": "2a192e4dd60ea64f8f17439d69fd6cdebb968ee26a1d493e2df348d7cecf5103",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02702"
 }

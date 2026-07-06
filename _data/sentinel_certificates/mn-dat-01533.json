@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6851935",
+  "certificate_id": "MN-SC-2026-0089844",
   "skill_id": "mn-dat-01533",
-  "skill_name": "Brasil-data-mcp",
-  "issued_at": "2026-07-06T00:14:11.935Z",
-  "expires_at": "2026-07-13T00:14:11.935Z",
+  "skill_name": "brasil-data-mcp",
+  "issued_at": "2026-07-06T03:54:49.844Z",
+  "expires_at": "2026-07-13T03:54:49.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9f147b831e3c5caadc479c11f9066db528071d4a5d67be9488fb93f7d7f2533",
+  "signature": "27c2fe55a6900a3a11efe1ae3b018b08f72084c70c6f396ace84fe63d08bee9c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-01533"
 }

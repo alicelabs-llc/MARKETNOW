@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7102625",
+  "certificate_id": "MN-SC-2026-0283843",
   "skill_id": "mn-gen-06802",
-  "skill_name": "Mcp-gitlab-jira",
-  "issued_at": "2026-07-06T00:18:22.625Z",
-  "expires_at": "2026-07-13T00:18:22.625Z",
+  "skill_name": "mcp-gitlab-jira",
+  "issued_at": "2026-07-06T03:58:03.843Z",
+  "expires_at": "2026-07-13T03:58:03.843Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c256e502be12b4c6268f387108f91fe48a08125bf0a40fdc11cd15b2f624d87",
+  "signature": "5caa62e4d4e7c9e88be678f012d81d47bb9fcdf51bb78a147917bc69eedca4d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06802"
 }

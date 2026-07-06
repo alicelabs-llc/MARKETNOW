@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7452454",
+  "certificate_id": "MN-SC-2026-0581969",
   "skill_id": "mn-prompt-d82a2386",
   "skill_name": "Especialista Negative Testing + Boundary",
-  "issued_at": "2026-07-06T00:24:12.454Z",
-  "expires_at": "2026-07-13T00:24:12.454Z",
+  "issued_at": "2026-07-06T04:03:01.969Z",
+  "expires_at": "2026-07-13T04:03:01.969Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b30e40265abb21a91679801fbff93297f85f0aa58c1652bfc06805912dc74328",
+  "signature": "8bd6ec9c31fd7d910ed5476176b20bc6b32970a9fdda52a4dc4a6146b1e1094f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d82a2386"
 }

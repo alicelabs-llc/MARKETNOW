@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7589481",
+  "certificate_id": "MN-SC-2026-0677344",
   "skill_id": "mn-prompt-9c4774b2",
   "skill_name": "Employee resource group ERG support",
-  "issued_at": "2026-07-06T00:26:29.481Z",
-  "expires_at": "2026-07-13T00:26:29.481Z",
+  "issued_at": "2026-07-06T04:04:37.344Z",
+  "expires_at": "2026-07-13T04:04:37.344Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d61837cce9952ae72cdc47d3c504b831ca1eb56765648c8660dcd2fe70ed95d",
+  "signature": "2f64d033930b79bb8f91cc7d95f4bc911e009194161e6f50836a23392e283fa4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9c4774b2"
 }

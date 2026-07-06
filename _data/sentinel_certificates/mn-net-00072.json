@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6787301",
+  "certificate_id": "MN-SC-2026-0043495",
   "skill_id": "mn-net-00072",
   "skill_name": "Asphere/aapi-mcp-server",
-  "issued_at": "2026-07-06T00:13:07.301Z",
-  "expires_at": "2026-07-13T00:13:07.301Z",
+  "issued_at": "2026-07-06T03:54:03.495Z",
+  "expires_at": "2026-07-13T03:54:03.495Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb501e612fb29616e1ed047215acbcb26863f69b0955351c8668f22876bb1686",
+  "signature": "3e8a4de9899bcf50cbfa25316fb258771db9261e6bf37203f223b752c58a2a4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-00072"
 }

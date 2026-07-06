@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6792958",
+  "certificate_id": "MN-SC-2026-0047878",
   "skill_id": "mn-gen-00209",
-  "skill_name": "Affine-mcp-server",
-  "issued_at": "2026-07-06T00:13:12.958Z",
-  "expires_at": "2026-07-13T00:13:12.958Z",
+  "skill_name": "affine-mcp-server",
+  "issued_at": "2026-07-06T03:54:07.878Z",
+  "expires_at": "2026-07-13T03:54:07.878Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d9a09010de5d5b0e56b80ba03e9b2cc46966c4bdec6e8acd900c5f6cec85dc7",
+  "signature": "5fc8fbd85d990c39cf28a6d89d5a1b11aa5b2a2d236b2681f9cfee6bd7b7c3a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00209"
 }

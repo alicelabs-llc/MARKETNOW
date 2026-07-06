@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6837623",
+  "certificate_id": "MN-SC-2026-0079784",
   "skill_id": "mn-gen-01242",
   "skill_name": "Azure-updates-mcp-server",
-  "issued_at": "2026-07-06T00:13:57.623Z",
-  "expires_at": "2026-07-13T00:13:57.623Z",
+  "issued_at": "2026-07-06T03:54:39.784Z",
+  "expires_at": "2026-07-13T03:54:39.784Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c462a41b23f1fd5c7aadb721a6662e3ecbf0b9094e6bdddbf36e34488de3a3f",
+  "signature": "289c25e080c732e9b7b90fb59afc1cc93c970ec08b7bb1e1295e1a00376035c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01242"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7276476",
+  "certificate_id": "MN-SC-2026-0432562",
   "skill_id": "mn-gen-10794",
   "skill_name": "Pulse-tm",
-  "issued_at": "2026-07-06T00:21:16.476Z",
-  "expires_at": "2026-07-13T00:21:16.476Z",
+  "issued_at": "2026-07-06T04:00:32.562Z",
+  "expires_at": "2026-07-13T04:00:32.562Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "226d7cd2b0addf4b932ddbbda747d5e7becfe2c8acbbda1b73e29630f036c0e0",
+  "signature": "fa06b6105320ad3af980d814e64f4ec0c428b78478008a1801da630135415cd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10794"
 }

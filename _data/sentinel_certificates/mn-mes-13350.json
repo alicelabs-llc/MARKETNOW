@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7392090",
+  "certificate_id": "MN-SC-2026-0534741",
   "skill_id": "mn-mes-13350",
   "skill_name": "Webex-messaging-mcp-server",
-  "issued_at": "2026-07-06T00:23:12.090Z",
-  "expires_at": "2026-07-13T00:23:12.090Z",
+  "issued_at": "2026-07-06T04:02:14.741Z",
+  "expires_at": "2026-07-13T04:02:14.741Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c684a3a730a651e668fef057f1a83eac857f3fd81395bdba3575041b710e9f18",
+  "signature": "31b628e86a475e8910fb28cd1f44530ee6df2cfd97424d77a923980e8aa473bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mes-13350"
 }

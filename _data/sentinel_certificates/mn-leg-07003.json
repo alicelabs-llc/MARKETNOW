@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7112156",
+  "certificate_id": "MN-SC-2026-0290870",
   "skill_id": "mn-leg-07003",
   "skill_name": "Mcp-legal-doc-analyzer",
-  "issued_at": "2026-07-06T00:18:32.156Z",
-  "expires_at": "2026-07-13T00:18:32.156Z",
+  "issued_at": "2026-07-06T03:58:10.870Z",
+  "expires_at": "2026-07-13T03:58:10.870Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc8a2fb7769cd6a27739e674003c4a22b29bb9d03f1b2df45ade06099b65e076",
+  "signature": "cdbd7b53510c1af0a3a6ffe6fc16ac798cd011bdf4a62cd0d2aa27f240eb373d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-07003"
 }

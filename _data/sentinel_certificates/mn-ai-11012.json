@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7287016",
+  "certificate_id": "MN-SC-2026-0438044",
   "skill_id": "mn-ai-11012",
   "skill_name": "Railway/mcp-server",
-  "issued_at": "2026-07-06T00:21:27.016Z",
-  "expires_at": "2026-07-13T00:21:27.016Z",
+  "issued_at": "2026-07-06T04:00:38.044Z",
+  "expires_at": "2026-07-13T04:00:38.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca2be81214f9966c2e47d048077c152e6333e6448aaef74049e13331ac9af0c4",
+  "signature": "ee34b67688b14585d78dcc3368d7d4e740190174d5bf58c431726f8912ad55a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-11012"
 }

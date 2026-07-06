@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6882133",
+  "certificate_id": "MN-SC-2026-0111434",
   "skill_id": "mn-gen-02086",
-  "skill_name": "Claude-context-cli",
-  "issued_at": "2026-07-06T00:14:42.133Z",
-  "expires_at": "2026-07-13T00:14:42.133Z",
+  "skill_name": "context-cli",
+  "issued_at": "2026-07-06T03:55:11.434Z",
+  "expires_at": "2026-07-13T03:55:11.434Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cde12ad2932736d56bec34ad35f5c831f1e1ba7f5622a70e4063a8fd47c67a56",
+  "signature": "986dd5f04b15c08dd67e66ced724832a245097db4bd62ce4fc5a547e183e8e17",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02086"
 }

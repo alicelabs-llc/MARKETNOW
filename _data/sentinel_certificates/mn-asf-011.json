@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7705405",
+  "certificate_id": "MN-SC-2026-0747398",
   "skill_id": "mn-asf-011",
   "skill_name": "Sensitive Topic Handler",
-  "issued_at": "2026-07-06T00:28:25.405Z",
-  "expires_at": "2026-07-13T00:28:25.405Z",
+  "issued_at": "2026-07-06T04:05:47.398Z",
+  "expires_at": "2026-07-13T04:05:47.398Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac326b021149cf3bf37fc06e87baadc88a93eed20cbce6752b11690cca1e63f6",
+  "signature": "80d5602c2a5377b330b6d3a6afa66451a689f0992b1b436269e288158f66c4cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-011"
 }

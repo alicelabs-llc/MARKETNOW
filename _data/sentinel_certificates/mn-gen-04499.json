@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7005722",
+  "certificate_id": "MN-SC-2026-0204683",
   "skill_id": "mn-gen-04499",
   "skill_name": "Glance-mcp",
-  "issued_at": "2026-07-06T00:16:45.722Z",
-  "expires_at": "2026-07-13T00:16:45.722Z",
+  "issued_at": "2026-07-06T03:56:44.683Z",
+  "expires_at": "2026-07-13T03:56:44.683Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "46668be7ee77675fe765479148beeb31cb49a5145ef823d6bbfeef47e167f772",
+  "signature": "df432f0bb497ac982199874d608c6919148e7455666d631a7e6d459f5b20fd73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04499"
 }

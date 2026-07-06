@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7519972",
+  "certificate_id": "MN-SC-2026-0629439",
   "skill_id": "mn-prompt-8618cda9",
   "skill_name": "Especialista Healthcare Fraud + Abuse",
-  "issued_at": "2026-07-06T00:25:19.972Z",
-  "expires_at": "2026-07-13T00:25:19.972Z",
+  "issued_at": "2026-07-06T04:03:49.439Z",
+  "expires_at": "2026-07-13T04:03:49.439Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6e7de6750a69f114c731465936b02482a7a4a5533dfdd81db215e0bff3e4e14",
+  "signature": "2db4be68ef0a389e70e19bdd43cba7ea67952a2fd0ef34dc34499adb5e3bd928",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8618cda9"
 }

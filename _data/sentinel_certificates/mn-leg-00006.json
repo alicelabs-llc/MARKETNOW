@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7725748",
+  "certificate_id": "MN-SC-2026-0762466",
   "skill_id": "mn-leg-00006",
   "skill_name": "SOX Controls Monitor",
-  "issued_at": "2026-07-06T00:28:45.748Z",
-  "expires_at": "2026-07-13T00:28:45.748Z",
+  "issued_at": "2026-07-06T04:06:02.466Z",
+  "expires_at": "2026-07-13T04:06:02.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24cbf78dc203cd427b63f0e447322157243f07808124b7cace8feeb87b54ddf3",
+  "signature": "8a921a1d7f8e6216b891c898953b3726fb56e17c0938b2ee1ac0c66b58bc9248",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00006"
 }

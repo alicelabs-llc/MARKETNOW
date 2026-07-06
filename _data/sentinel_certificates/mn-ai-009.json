@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7740282",
+  "certificate_id": "MN-SC-2026-0775816",
   "skill_id": "mn-ai-009",
   "skill_name": "Model Versioning System",
-  "issued_at": "2026-07-06T00:29:00.282Z",
-  "expires_at": "2026-07-13T00:29:00.282Z",
+  "issued_at": "2026-07-06T04:06:15.816Z",
+  "expires_at": "2026-07-13T04:06:15.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1564829b735d6d7b6f9c6f3df13b91f5544302b5d2266dfe9c15036106d45ebb",
+  "signature": "6631d872a18766e5b373d9eb16d05c0346afc811f88054627fdf68e640e79fdb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-009"
 }

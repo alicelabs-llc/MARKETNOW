@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7042179",
+  "certificate_id": "MN-SC-2026-0234242",
   "skill_id": "mn-gen-05377",
   "skill_name": "Smadappa/k8s-log-browser-mcp",
-  "issued_at": "2026-07-06T00:17:22.179Z",
-  "expires_at": "2026-07-13T00:17:22.179Z",
+  "issued_at": "2026-07-06T03:57:14.242Z",
+  "expires_at": "2026-07-13T03:57:14.242Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42cf847648620102479cb916dc7b593062037e93db3ac5f87238c19c42fe42af",
+  "signature": "4c5d25aa07e2d8cecc6d1087506ddbe7809c9002ce46acf36164b9bc418f1061",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05377"
 }

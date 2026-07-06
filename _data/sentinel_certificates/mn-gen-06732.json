@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7099299",
+  "certificate_id": "MN-SC-2026-0281595",
   "skill_id": "mn-gen-06732",
   "skill_name": "Kajdep/mcp-fixer",
-  "issued_at": "2026-07-06T00:18:19.299Z",
-  "expires_at": "2026-07-13T00:18:19.299Z",
+  "issued_at": "2026-07-06T03:58:01.595Z",
+  "expires_at": "2026-07-13T03:58:01.595Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ba24a09a7472f1e5e0a24f58d5f611a06127e1420c121fe772a71078d6d63fd",
+  "signature": "64b2ef27248a8817630b9b4a9c889188879f03667e628a14818e6f5582ca0f2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06732"
 }

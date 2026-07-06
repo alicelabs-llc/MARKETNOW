@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7552661",
+  "certificate_id": "MN-SC-2026-0650619",
   "skill_id": "mn-prompt-e085f58e",
   "skill_name": "Política de retención de documentos",
-  "issued_at": "2026-07-06T00:25:52.661Z",
-  "expires_at": "2026-07-13T00:25:52.661Z",
+  "issued_at": "2026-07-06T04:04:10.619Z",
+  "expires_at": "2026-07-13T04:04:10.619Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b32d6899845c88f4ea74d27c44018f7a334822a19573263130e8d26da14cbb5",
+  "signature": "f457ecd3f1e1583a770098ff878457a363205b60c43259b72245b2be4ea41106",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e085f58e"
 }

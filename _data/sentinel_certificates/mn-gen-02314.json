@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6896392",
+  "certificate_id": "MN-SC-2026-0121317",
   "skill_id": "mn-gen-02314",
   "skill_name": "Claude-weeek",
-  "issued_at": "2026-07-06T00:14:56.392Z",
-  "expires_at": "2026-07-13T00:14:56.392Z",
+  "issued_at": "2026-07-06T03:55:21.317Z",
+  "expires_at": "2026-07-13T03:55:21.317Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61475e8562ce882db17610b0b34fbf3b23ba1d7aba4eed322eaa154732450412",
+  "signature": "3f4b40a724c9f0ebbb9516163d772a06106cb372381cbd2a3cd238e65c7507c4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02314"
 }

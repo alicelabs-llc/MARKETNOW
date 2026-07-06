@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7385667",
+  "certificate_id": "MN-SC-2026-0530259",
   "skill_id": "mn-gen-13243",
   "skill_name": "Vs-mcp",
-  "issued_at": "2026-07-06T00:23:05.667Z",
-  "expires_at": "2026-07-13T00:23:05.667Z",
+  "issued_at": "2026-07-06T04:02:10.259Z",
+  "expires_at": "2026-07-13T04:02:10.259Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb807031e91d4ce16afcfcd4fb319a70ecf4dc2f53acc18acdf9af3b4f90fb7e",
+  "signature": "99b0ee3e979eaf50c1e53615e8bd9ccb3b519ca48602978f763caab41aacb047",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13243"
 }

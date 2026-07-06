@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7243021",
+  "certificate_id": "MN-SC-2026-0397654",
   "skill_id": "mn-ai-10069",
   "skill_name": "Options-chain-mcp",
-  "issued_at": "2026-07-06T00:20:43.021Z",
-  "expires_at": "2026-07-13T00:20:43.021Z",
+  "issued_at": "2026-07-06T03:59:57.654Z",
+  "expires_at": "2026-07-13T03:59:57.654Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39af85dbc17131a49870465f0091cd893e3439f34b085303dda30699d1c3833d",
+  "signature": "a13e0851f22a868b0455ff5cc807dea1b4734a59d032f214f84526496b52fc91",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-10069"
 }

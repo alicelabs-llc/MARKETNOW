@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7372094",
+  "certificate_id": "MN-SC-2026-0518645",
   "skill_id": "mn-gen-12965",
   "skill_name": "Unifi-mcp-server",
-  "issued_at": "2026-07-06T00:22:52.094Z",
-  "expires_at": "2026-07-13T00:22:52.094Z",
+  "issued_at": "2026-07-06T04:01:58.645Z",
+  "expires_at": "2026-07-13T04:01:58.645Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "91c166e9279cc15a4cc3cb0eb8d2d05ae6557b6e5d9983bb2963af836d6400d6",
+  "signature": "49aa083a2f4bec7ace8b53d94f87cd24b243eb36a6f1f37e7ee34bf70f2698ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12965"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7279566",
+  "certificate_id": "MN-SC-2026-0434063",
   "skill_id": "mn-gen-10811",
   "skill_name": "Microsoft/purview-dlm-mcp",
-  "issued_at": "2026-07-06T00:21:19.566Z",
-  "expires_at": "2026-07-13T00:21:19.566Z",
+  "issued_at": "2026-07-06T04:00:34.063Z",
+  "expires_at": "2026-07-13T04:00:34.063Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3513ff359ced75552cb80957ad00d9b98f2c9a755cb3bf43d983bd3d7d9c92f5",
+  "signature": "3516495937420a211d0ac58510de10c3c6e7e6ac90dbee4afd250e0f123ddd19",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10811"
 }

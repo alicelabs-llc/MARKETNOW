@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7046452",
+  "certificate_id": "MN-SC-2026-0237060",
   "skill_id": "mn-gen-05488",
-  "skill_name": "Kite-mcp-server",
-  "issued_at": "2026-07-06T00:17:26.452Z",
-  "expires_at": "2026-07-13T00:17:26.452Z",
+  "skill_name": "kite-mcp",
+  "issued_at": "2026-07-06T03:57:17.060Z",
+  "expires_at": "2026-07-13T03:57:17.060Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e63857b96d0931c66d359b463f9b5c136bcaf651315ad0964a8275ef51378b2",
+  "signature": "9850fd071e280b646d3720a83d92b264d5141359e9275c3f4be01ec85ad372ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05488"
 }

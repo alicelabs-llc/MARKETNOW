@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6915566",
+  "certificate_id": "MN-SC-2026-0136481",
   "skill_id": "mn-gen-02687",
-  "skill_name": "Computer-use-mcp",
-  "issued_at": "2026-07-06T00:15:15.566Z",
-  "expires_at": "2026-07-13T00:15:15.566Z",
+  "skill_name": "computer-use-mcp",
+  "issued_at": "2026-07-06T03:55:36.481Z",
+  "expires_at": "2026-07-13T03:55:36.481Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a95a3ba0d3c0fb156b56e9ff3a3cbd3766d96a47cbed5f40acaa9a3910be482",
+  "signature": "fa05d258e4c672bdea8accb6cfdd6858cdb92fb49c2577e8fa2960afaac6f330",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02687"
 }

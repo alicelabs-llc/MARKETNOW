@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7672665",
+  "certificate_id": "MN-SC-2026-0726137",
   "skill_id": "mn-prompt-f3b9f3dd",
   "skill_name": "Distillery operations",
-  "issued_at": "2026-07-06T00:27:52.665Z",
-  "expires_at": "2026-07-13T00:27:52.665Z",
+  "issued_at": "2026-07-06T04:05:26.137Z",
+  "expires_at": "2026-07-13T04:05:26.137Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ede58f09f20c51b8ad92287749c9d62ccd5dd2c15b8eafc6c8db816c3764e89c",
+  "signature": "3ab0cfa97a38ead952414983105d9ad4dbaabf0087fea313a100bcf7c3d8a905",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f3b9f3dd"
 }

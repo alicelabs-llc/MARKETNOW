@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7329665",
+  "certificate_id": "MN-SC-2026-0481070",
   "skill_id": "mn-blo-12001",
   "skill_name": "Solidtime-mcp-server",
-  "issued_at": "2026-07-06T00:22:09.665Z",
-  "expires_at": "2026-07-13T00:22:09.665Z",
+  "issued_at": "2026-07-06T04:01:21.070Z",
+  "expires_at": "2026-07-13T04:01:21.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b1a16e8025027741c325555f68ddf9ce84b677d3695d091e05b7150b09c618c",
+  "signature": "5859d2e28eb78b67ffe2c434e7a9b84602a088ce171289fff2863528370eee98",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-12001"
 }

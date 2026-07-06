@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7090475",
+  "certificate_id": "MN-SC-2026-0273223",
   "skill_id": "mn-gen-06527",
   "skill_name": "Mcp-coordinator",
-  "issued_at": "2026-07-06T00:18:10.475Z",
-  "expires_at": "2026-07-13T00:18:10.475Z",
+  "issued_at": "2026-07-06T03:57:53.223Z",
+  "expires_at": "2026-07-13T03:57:53.223Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1da395aabc1f0dcd9bb100b48b500b6db6616d8b5a9bb0ab1fa3b373d664d341",
+  "signature": "f1d274a54db19b90d621b7bc1964144b9b2a657cea63da3a4ea8ae3da0310e04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06527"
 }

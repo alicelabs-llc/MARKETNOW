@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7679138",
+  "certificate_id": "MN-SC-2026-0729960",
   "skill_id": "mn-arl-022",
   "skill_name": "Knowledge Boundary Enforcer",
-  "issued_at": "2026-07-06T00:27:59.138Z",
-  "expires_at": "2026-07-13T00:27:59.138Z",
+  "issued_at": "2026-07-06T04:05:29.960Z",
+  "expires_at": "2026-07-13T04:05:29.960Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee019481e1dc97228e3594310af096d0eb407911f36361190d57ddc6008a0528",
+  "signature": "194a72137b0aa2bceaa9829bda057e60a044d0477005196dfea35022a16fd15c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-022"
 }

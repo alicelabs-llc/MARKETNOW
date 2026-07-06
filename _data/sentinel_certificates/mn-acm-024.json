@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7695219",
+  "certificate_id": "MN-SC-2026-0740690",
   "skill_id": "mn-acm-024",
   "skill_name": "Context Routing Engine",
-  "issued_at": "2026-07-06T00:28:15.219Z",
-  "expires_at": "2026-07-13T00:28:15.219Z",
+  "issued_at": "2026-07-06T04:05:40.690Z",
+  "expires_at": "2026-07-13T04:05:40.690Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "586b6a669d776a5cb7bab61366b468dedf63f867bea1b96212bb09ad0c33c298",
+  "signature": "5f42898dfc5a12288b1f4fc94900ef1965435d8cbe573c759146cfd24b0fba23",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-024"
 }

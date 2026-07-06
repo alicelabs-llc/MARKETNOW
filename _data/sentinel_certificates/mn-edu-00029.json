@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7719706",
+  "certificate_id": "MN-SC-2026-0758204",
   "skill_id": "mn-edu-00029",
-  "skill_name": "Nearpod Interactive",
-  "issued_at": "2026-07-06T00:28:39.706Z",
-  "expires_at": "2026-07-13T00:28:39.706Z",
+  "skill_name": "interactive-mcp",
+  "issued_at": "2026-07-06T04:05:58.204Z",
+  "expires_at": "2026-07-13T04:05:58.204Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e944582178363a143a181cb58c439a261a76ea6d84693126b3b25c99e13820da",
+  "signature": "4dc17807b0957983e9ebdd0616010f196115a67bcf953de46ae845de8c8ec3fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edu-00029"
 }

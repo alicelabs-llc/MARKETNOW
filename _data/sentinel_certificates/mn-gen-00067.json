@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6786692",
+  "certificate_id": "MN-SC-2026-0042978",
   "skill_id": "mn-gen-00067",
   "skill_name": "A2hmarket/a2h-mcp",
-  "issued_at": "2026-07-06T00:13:06.692Z",
-  "expires_at": "2026-07-13T00:13:06.692Z",
+  "issued_at": "2026-07-06T03:54:02.978Z",
+  "expires_at": "2026-07-13T03:54:02.978Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "578403a532a3cd190236343fc97281f6288e76898aa2416d64f86d8954927275",
+  "signature": "8795c38d2c5a961e120544269d54fea93a5870c353f29b4c80658e319c492560",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00067"
 }

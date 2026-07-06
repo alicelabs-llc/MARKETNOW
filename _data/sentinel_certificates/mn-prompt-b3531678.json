@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7672952",
+  "certificate_id": "MN-SC-2026-0726156",
   "skill_id": "mn-prompt-b3531678",
   "skill_name": "Coffee roaster operations final",
-  "issued_at": "2026-07-06T00:27:52.952Z",
-  "expires_at": "2026-07-13T00:27:52.952Z",
+  "issued_at": "2026-07-06T04:05:26.156Z",
+  "expires_at": "2026-07-13T04:05:26.156Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1264f26fbd648d627e882d1c309cb48b44f51a8cfc862537e4937df80e91c572",
+  "signature": "2d27be3a6ce59cce39d65f5f48c7a04e8792104c2fba446c4cc739296d1a3e5d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b3531678"
 }

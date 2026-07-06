@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7163285",
+  "certificate_id": "MN-SC-2026-0332455",
   "skill_id": "mn-ai-08018",
   "skill_name": "Mcp-tailwind-gemini",
-  "issued_at": "2026-07-06T00:19:23.285Z",
-  "expires_at": "2026-07-13T00:19:23.285Z",
+  "issued_at": "2026-07-06T03:58:52.455Z",
+  "expires_at": "2026-07-13T03:58:52.455Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "160fc3b1e2ab1a50f80894fd6c09b8786b951edfadc4e2da31011726a63a928a",
+  "signature": "8b49001a5796ded90020859047d968c69a483a583f05e2cdca901a556c76fa40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-08018"
 }

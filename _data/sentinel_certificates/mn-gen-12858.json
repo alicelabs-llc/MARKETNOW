@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7367261",
+  "certificate_id": "MN-SC-2026-0512816",
   "skill_id": "mn-gen-12858",
   "skill_name": "Tubemind-secure-mcp",
-  "issued_at": "2026-07-06T00:22:47.261Z",
-  "expires_at": "2026-07-13T00:22:47.261Z",
+  "issued_at": "2026-07-06T04:01:52.816Z",
+  "expires_at": "2026-07-13T04:01:52.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b721e0d55b14faf6e17af1222652cf7171eef8fc9877ce2fd500ad4e21aba16",
+  "signature": "1a93b4e6a18f06b0f13e95307ac0d7477d6ce42d2979cd7fc596ce47ebc03a9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12858"
 }

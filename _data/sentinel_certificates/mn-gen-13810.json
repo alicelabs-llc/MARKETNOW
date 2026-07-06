@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7411296",
+  "certificate_id": "MN-SC-2026-0549215",
   "skill_id": "mn-gen-13810",
   "skill_name": "Zettagrid/vmware-mcp",
-  "issued_at": "2026-07-06T00:23:31.296Z",
-  "expires_at": "2026-07-13T00:23:31.296Z",
+  "issued_at": "2026-07-06T04:02:29.215Z",
+  "expires_at": "2026-07-13T04:02:29.215Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1248a643f4eb4db7f0d2d4ab9525816952f9f82b00a130d9d52fba5feb71e9d6",
+  "signature": "76a2e21e44486bdb2c9f97559017840832dd074148d8e36c103d102c4d782e33",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13810"
 }

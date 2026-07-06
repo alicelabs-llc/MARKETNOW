@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7681230",
+  "certificate_id": "MN-SC-2026-0730403",
   "skill_id": "mn-arl-030",
   "skill_name": "Context Window Optimizer",
-  "issued_at": "2026-07-06T00:28:01.230Z",
-  "expires_at": "2026-07-13T00:28:01.230Z",
+  "issued_at": "2026-07-06T04:05:30.403Z",
+  "expires_at": "2026-07-13T04:05:30.403Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63d05a13cd0dacd5172204ebfdec7edeece53bc85981d4889a52548fafadd0c2",
+  "signature": "79ef9dc44c560fc9cc0423f604890430452c181fe3f7ff38cc5f4712d36eedd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-030"
 }

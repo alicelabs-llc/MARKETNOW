@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7801001",
+  "certificate_id": "MN-SC-2026-0824273",
   "skill_id": "mn-comm-021",
   "skill_name": "Checkout Optimizer",
-  "issued_at": "2026-07-06T00:30:01.001Z",
-  "expires_at": "2026-07-13T00:30:01.001Z",
+  "issued_at": "2026-07-06T04:07:04.273Z",
+  "expires_at": "2026-07-13T04:07:04.273Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "62d10d4b7b07c0150853b500a12731fd9903e19fc0c0fd22001c445168227a46",
+  "signature": "22262b2e9feb17836c58c95f582d048f06649f69d1bc38a9ac25765ca46ae6e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-021"
 }

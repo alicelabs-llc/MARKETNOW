@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7112187",
+  "certificate_id": "MN-SC-2026-0290903",
   "skill_id": "mn-gen-07001",
   "skill_name": "Mcp-lazy",
-  "issued_at": "2026-07-06T00:18:32.187Z",
-  "expires_at": "2026-07-13T00:18:32.187Z",
+  "issued_at": "2026-07-06T03:58:10.903Z",
+  "expires_at": "2026-07-13T03:58:10.903Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d5138bc99cfea72c17483516012f393ec64d182ea6a14601184711390e40d1d",
+  "signature": "693b7055ac21aa647d5bba886ca35c074d112439b37ae7185acb3767256ce71d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07001"
 }

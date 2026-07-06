@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7071817",
+  "certificate_id": "MN-SC-2026-0256536",
   "skill_id": "mn-gen-06072",
   "skill_name": "Mapbox-mcp-server",
-  "issued_at": "2026-07-06T00:17:51.817Z",
-  "expires_at": "2026-07-13T00:17:51.817Z",
+  "issued_at": "2026-07-06T03:57:36.536Z",
+  "expires_at": "2026-07-13T03:57:36.536Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c27c0efd074cab49e95adb3dd9c4d1d1c186f6b051f6a23883215de2845e454c",
+  "signature": "836db7c112ee3d9d7a6b448a5eb8419d718690917bafdc131ca7c87a840e5e01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06072"
 }

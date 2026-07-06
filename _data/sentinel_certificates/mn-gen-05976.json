@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7067271",
+  "certificate_id": "MN-SC-2026-0253144",
   "skill_id": "mn-gen-05976",
-  "skill_name": "Lyra-registry",
-  "issued_at": "2026-07-06T00:17:47.271Z",
-  "expires_at": "2026-07-13T00:17:47.271Z",
+  "skill_name": "registry",
+  "issued_at": "2026-07-06T03:57:33.144Z",
+  "expires_at": "2026-07-13T03:57:33.144Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "291a647a1d6a3472a21bd4e3102b375e726a6105b5bb9852fdecf42e31bdd0ac",
+  "signature": "9cec43b6a2402a51797347aeb4fbc7d805ec32a2db4ba6d8ce9a01eb0562623f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05976"
 }

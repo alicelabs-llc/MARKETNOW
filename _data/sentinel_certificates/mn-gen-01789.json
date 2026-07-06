@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6867440",
+  "certificate_id": "MN-SC-2026-0100177",
   "skill_id": "mn-gen-01789",
   "skill_name": "Monarch-money-mcp",
-  "issued_at": "2026-07-06T00:14:27.440Z",
-  "expires_at": "2026-07-13T00:14:27.440Z",
+  "issued_at": "2026-07-06T03:55:00.177Z",
+  "expires_at": "2026-07-13T03:55:00.177Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ba62d5cf528bcb0e67d347dd29e0b18073ff1906ad9c19a275f1008fff89c91",
+  "signature": "507d416570078c3b1017bfda7f37279a3d7ceb11fa6691ad9ccba4d2b807c021",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01789"
 }

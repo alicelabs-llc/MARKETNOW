@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7160148",
+  "certificate_id": "MN-SC-2026-0331195",
   "skill_id": "mn-net-07982",
   "skill_name": "Pyroprompts/mcp-stdio-to-streamable-http-adapter",
-  "issued_at": "2026-07-06T00:19:20.148Z",
-  "expires_at": "2026-07-13T00:19:20.148Z",
+  "issued_at": "2026-07-06T03:58:51.195Z",
+  "expires_at": "2026-07-13T03:58:51.195Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d4a726575b5ff0c3a03a04c57e1b059a8226fee63e3287c807336238148ba187",
+  "signature": "33c70f6e38dba4270e43e0edd0a33c3044812c0b36cfb03080a4d8380a021293",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-07982"
 }

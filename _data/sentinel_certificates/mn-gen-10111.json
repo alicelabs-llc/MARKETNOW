@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7245527",
+  "certificate_id": "MN-SC-2026-0399306",
   "skill_id": "mn-gen-10111",
   "skill_name": "Osint-tools-mcp-server",
-  "issued_at": "2026-07-06T00:20:45.527Z",
-  "expires_at": "2026-07-13T00:20:45.527Z",
+  "issued_at": "2026-07-06T03:59:59.306Z",
+  "expires_at": "2026-07-13T03:59:59.306Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc2fbfe7c20343bfc3a3645474102526e4c5758538f7b022648a34514c38899d",
+  "signature": "d4f8c4eb421f6ccf763bf33b4ed1270046d409bc46a3ba8385a7ae271487cfe4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10111"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7236885",
+  "certificate_id": "MN-SC-2026-0391014",
   "skill_id": "mn-gen-09930",
   "skill_name": "Openalex-mcp",
-  "issued_at": "2026-07-06T00:20:36.885Z",
-  "expires_at": "2026-07-13T00:20:36.885Z",
+  "issued_at": "2026-07-06T03:59:51.014Z",
+  "expires_at": "2026-07-13T03:59:51.014Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57cb51dd3d4192b6ea996d32dc4f2be739c455c777ff1fdad5a5b4527c37334a",
+  "signature": "61b997d0b7c18fccbd58f8ac913a4e0a5a843cf596bbec25145788714dd39df9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09930"
 }

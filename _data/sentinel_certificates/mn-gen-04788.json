@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7016666",
+  "certificate_id": "MN-SC-2026-0213721",
   "skill_id": "mn-gen-04788",
-  "skill_name": "Gws-mcp-server",
-  "issued_at": "2026-07-06T00:16:56.666Z",
-  "expires_at": "2026-07-13T00:16:56.666Z",
+  "skill_name": "gws-mcp-server",
+  "issued_at": "2026-07-06T03:56:53.721Z",
+  "expires_at": "2026-07-13T03:56:53.721Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42e631d4df41ac8b1941cc84bca24887e56f3a62c2dfbd9e9d184b7ad6082a6b",
+  "signature": "349939c2c9397655b3da1092b0cec9d3263751a14c0a404435214f2f570d7077",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04788"
 }

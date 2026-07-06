@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7888299",
+  "certificate_id": "MN-SC-2026-0880300",
   "skill_id": "mn-amcp-meigenaidesignmcp",
   "skill_name": "MeiGen-AI-Design-MCP",
-  "issued_at": "2026-07-06T00:31:28.299Z",
-  "expires_at": "2026-07-13T00:31:28.299Z",
+  "issued_at": "2026-07-06T04:08:00.300Z",
+  "expires_at": "2026-07-13T04:08:00.300Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "25e649824d9cdc926c967cdcb7839fc5edeab69112e9f4d4917ad7f6a46fb1e2",
+  "signature": "534d28784c3997ff45310c39bbba0e1dd926adf06786ed055ba54ad7d5702b0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-meigenaidesignmcp"
 }

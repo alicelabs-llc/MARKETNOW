@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6811731",
+  "certificate_id": "MN-SC-2026-0062102",
   "skill_id": "mn-gen-00663",
   "skill_name": "Akiflow-toolkit",
-  "issued_at": "2026-07-06T00:13:31.731Z",
-  "expires_at": "2026-07-13T00:13:31.731Z",
+  "issued_at": "2026-07-06T03:54:22.102Z",
+  "expires_at": "2026-07-13T03:54:22.102Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b73b6091ba3b1c06f03050f2111666ab0b885566dfc1db93f7b7c827dd4b0c08",
+  "signature": "368df5bd035c8f0ea7972a619188ce8eadf4c57fed0d5c3ae085ab37e87c6655",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00663"
 }

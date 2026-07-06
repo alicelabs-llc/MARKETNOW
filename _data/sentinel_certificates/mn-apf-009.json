@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7711878",
+  "certificate_id": "MN-SC-2026-0751849",
   "skill_id": "mn-apf-009",
   "skill_name": "Model Quantizer",
-  "issued_at": "2026-07-06T00:28:31.878Z",
-  "expires_at": "2026-07-13T00:28:31.878Z",
+  "issued_at": "2026-07-06T04:05:51.849Z",
+  "expires_at": "2026-07-13T04:05:51.849Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c2e5bcd3be8b50315dd5a95517957930c7d99931ff74524bd91d9cfac26f274a",
+  "signature": "a057986d7f64b09ae23215933f1789b33f38c7f4c3612f574e4cbbd8aa9673f6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-009"
 }

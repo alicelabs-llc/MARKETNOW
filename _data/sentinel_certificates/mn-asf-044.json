@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7710321",
+  "certificate_id": "MN-SC-2026-0750619",
   "skill_id": "mn-asf-044",
   "skill_name": "Secure Multi-Party Computation",
-  "issued_at": "2026-07-06T00:28:30.321Z",
-  "expires_at": "2026-07-13T00:28:30.321Z",
+  "issued_at": "2026-07-06T04:05:50.619Z",
+  "expires_at": "2026-07-13T04:05:50.619Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4acbe7907bdaf5924396a72c590133ee73742300fd1b5b7b7e3dfe76931e5a47",
+  "signature": "954832d9a308bc77688fe3df7f13fa96d38f5ae9c83cc9e7663911869893b2de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-044"
 }

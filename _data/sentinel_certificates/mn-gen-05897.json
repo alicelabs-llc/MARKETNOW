@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7063659",
+  "certificate_id": "MN-SC-2026-0250247",
   "skill_id": "mn-gen-05897",
   "skill_name": "LocalMCPManus",
-  "issued_at": "2026-07-06T00:17:43.659Z",
-  "expires_at": "2026-07-13T00:17:43.659Z",
+  "issued_at": "2026-07-06T03:57:30.247Z",
+  "expires_at": "2026-07-13T03:57:30.247Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14a843a87c6a1ae373caf18b79f37425d25e3b698e795f2e4a277f9cb1ec9f21",
+  "signature": "ac4ab8ffbfe9f487871da6043c4a7e077f897e097ddadb904427798618466f81",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05897"
 }

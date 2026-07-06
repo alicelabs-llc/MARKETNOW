@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7271212",
+  "certificate_id": "MN-SC-2026-0427397",
   "skill_id": "mn-blo-10708",
-  "skill_name": "Prometheus-mcp/server",
-  "issued_at": "2026-07-06T00:21:11.212Z",
-  "expires_at": "2026-07-13T00:21:11.212Z",
+  "skill_name": "prometheus-mcp-server",
+  "issued_at": "2026-07-06T04:00:27.397Z",
+  "expires_at": "2026-07-13T04:00:27.397Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f07c3fbd50e80c8d344288b350a6ba1cc3992da576cef0166f75b978feaa115e",
+  "signature": "3502f98a91438b2864a3fabcd193217c00effc1c0fab756154f466794f3058f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-10708"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7676702",
+  "certificate_id": "MN-SC-2026-0728733",
   "skill_id": "mn-arl-009",
   "skill_name": "Fact Checker MCP",
-  "issued_at": "2026-07-06T00:27:56.702Z",
-  "expires_at": "2026-07-13T00:27:56.702Z",
+  "issued_at": "2026-07-06T04:05:28.733Z",
+  "expires_at": "2026-07-13T04:05:28.733Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c476975c4404e0007acead0163b7296115639e95f198752e572ab0753c98518",
+  "signature": "265d60107dfc6b4eed0d27b349b3cd29d757594bb1661f21f9570d94d7b6a043",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-009"
 }

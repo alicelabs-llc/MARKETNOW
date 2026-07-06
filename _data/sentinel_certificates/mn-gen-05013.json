@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7025797",
+  "certificate_id": "MN-SC-2026-0220740",
   "skill_id": "mn-gen-05013",
   "skill_name": "Hyperbrowser-mcp",
-  "issued_at": "2026-07-06T00:17:05.797Z",
-  "expires_at": "2026-07-13T00:17:05.797Z",
+  "issued_at": "2026-07-06T03:57:00.740Z",
+  "expires_at": "2026-07-13T03:57:00.740Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb7ac26ff3fd2a54082baf1e6b4fa063e90f4bd7129ca396260a2c2f4b600d39",
+  "signature": "0073e6881be6199352c5970e70984a00251e056e596db91a8450c6907fce4516",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05013"
 }

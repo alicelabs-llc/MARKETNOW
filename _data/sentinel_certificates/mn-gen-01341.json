@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6843015",
+  "certificate_id": "MN-SC-2026-0083294",
   "skill_id": "mn-gen-01341",
-  "skill_name": "Better-icons",
-  "issued_at": "2026-07-06T00:14:03.015Z",
-  "expires_at": "2026-07-13T00:14:03.015Z",
+  "skill_name": "better-icons",
+  "issued_at": "2026-07-06T03:54:43.294Z",
+  "expires_at": "2026-07-13T03:54:43.294Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02db4c0e7b17b4f418f6f09e17dd4ad8ab3a47a0793ba6b5926e7d607f94f307",
+  "signature": "429834379376e7552b0b908b39749053c2ae8e2fbea415b7b7629c102a324a8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01341"
 }

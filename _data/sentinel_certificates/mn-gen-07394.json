@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7132487",
+  "certificate_id": "MN-SC-2026-0306275",
   "skill_id": "mn-gen-07394",
-  "skill_name": "Just-every/mcp-read-website-fast",
-  "issued_at": "2026-07-06T00:18:52.487Z",
-  "expires_at": "2026-07-13T00:18:52.487Z",
+  "skill_name": "mcp-read-website-fast",
+  "issued_at": "2026-07-06T03:58:26.275Z",
+  "expires_at": "2026-07-13T03:58:26.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "492403296e34676a424a1cf5597f717eab88bae8ced4856141c0af770e0e90a3",
+  "signature": "13a272eb1acd5b93b56ac5ac61f0fe3d7cbe38dbc1552aa46bac9bb277e589ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07394"
 }

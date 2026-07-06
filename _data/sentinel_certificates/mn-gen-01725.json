@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6863553",
+  "certificate_id": "MN-SC-2026-0097616",
   "skill_id": "mn-gen-01725",
   "skill_name": "Cbrowse",
-  "issued_at": "2026-07-06T00:14:23.553Z",
-  "expires_at": "2026-07-13T00:14:23.553Z",
+  "issued_at": "2026-07-06T03:54:57.616Z",
+  "expires_at": "2026-07-13T03:54:57.616Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7a7300efee77c2cbadd18d982e4d530c34447d23b10e0954585affbd7c8e6b19",
+  "signature": "318b35bfd5d92cbca413067f0a352bac4a6aad39a31804d0218b475bd4b2b3a5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01725"
 }

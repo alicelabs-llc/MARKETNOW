@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7110502",
+  "certificate_id": "MN-SC-2026-0289599",
   "skill_id": "mn-gen-06950",
   "skill_name": "Mcp-jina-reader",
-  "issued_at": "2026-07-06T00:18:30.502Z",
-  "expires_at": "2026-07-13T00:18:30.502Z",
+  "issued_at": "2026-07-06T03:58:09.599Z",
+  "expires_at": "2026-07-13T03:58:09.599Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c1c642269d47b68c234008398f35e76533a5a70a4a43e4cc32d81c6a40d3a9df",
+  "signature": "e0ea0451461f08468542c89f20a481020f458c094d6fc413a6b31872c6174e1a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06950"
 }

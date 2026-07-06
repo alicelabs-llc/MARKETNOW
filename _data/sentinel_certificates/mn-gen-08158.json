@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7169765",
+  "certificate_id": "MN-SC-2026-0336579",
   "skill_id": "mn-gen-08158",
-  "skill_name": "Mcp-typescribe",
-  "issued_at": "2026-07-06T00:19:29.765Z",
-  "expires_at": "2026-07-13T00:19:29.765Z",
+  "skill_name": "mcp-typescribe",
+  "issued_at": "2026-07-06T03:58:56.579Z",
+  "expires_at": "2026-07-13T03:58:56.579Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ccd6e02d3458fc28bd1e03ea88bedfe1697e0bb90a63b121d860254b148651b",
+  "signature": "196f998a146d74f2ca7aa9d61bc9eb3cb8c9d0b28baa4b0514cf8429fcb1c92d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08158"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6918222",
+  "certificate_id": "MN-SC-2026-0137617",
   "skill_id": "mn-gen-02713",
   "skill_name": "Opticlm/connector",
-  "issued_at": "2026-07-06T00:15:18.222Z",
-  "expires_at": "2026-07-13T00:15:18.222Z",
+  "issued_at": "2026-07-06T03:55:37.617Z",
+  "expires_at": "2026-07-13T03:55:37.617Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1b44945eff0e49951030e659700bbe2bcd9ec8f18c2b7ab574f5a5041bdf885c",
+  "signature": "fdfeb08b17654f09eeb6252ba8fdad897779d65e150328a989b8a4012e2dd771",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02713"
 }

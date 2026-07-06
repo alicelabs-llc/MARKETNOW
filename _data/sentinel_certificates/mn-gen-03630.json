@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6965849",
+  "certificate_id": "MN-SC-2026-0172984",
   "skill_id": "mn-gen-03630",
   "skill_name": "Automate-eds",
-  "issued_at": "2026-07-06T00:16:05.849Z",
-  "expires_at": "2026-07-13T00:16:05.849Z",
+  "issued_at": "2026-07-06T03:56:12.984Z",
+  "expires_at": "2026-07-13T03:56:12.984Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "520cabbd20d6240ed48215660ccdd1ea9708e43a91f6b0f2cb29ebbdd9679054",
+  "signature": "b86e6cf8796e466be78632b3821f89b58ce0fb75151d6d45aa701ac15f0cd2ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03630"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7285415",
+  "certificate_id": "MN-SC-2026-0437026",
   "skill_id": "mn-gen-10966",
   "skill_name": "Layervai/qurl-mcp",
-  "issued_at": "2026-07-06T00:21:25.415Z",
-  "expires_at": "2026-07-13T00:21:25.415Z",
+  "issued_at": "2026-07-06T04:00:37.026Z",
+  "expires_at": "2026-07-13T04:00:37.026Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4334ca3f58fb356278b471e901d3fa2c21baf63d1ac61c50a6a5c05a0da19fa1",
+  "signature": "ccb40afd3d1c6961f096eac968ffe80f28ac9873d81ca298688f4503f0a26d46",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10966"
 }

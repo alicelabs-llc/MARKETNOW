@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7401328",
+  "certificate_id": "MN-SC-2026-0541372",
   "skill_id": "mn-gen-13534",
-  "skill_name": "Workopia-mcp",
-  "issued_at": "2026-07-06T00:23:21.328Z",
-  "expires_at": "2026-07-13T00:23:21.328Z",
+  "skill_name": "workopia-mcp",
+  "issued_at": "2026-07-06T04:02:21.372Z",
+  "expires_at": "2026-07-13T04:02:21.372Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00973da5ca3afd234060fae2fc718cdd0812d3a99e025aa02eb7b978f4d39cb0",
+  "signature": "ac7a810e56d08cae053a47fd5e0fe51fffdcd361b3c2b615a33fe6f55755aea8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13534"
 }

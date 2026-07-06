@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7195587",
+  "certificate_id": "MN-SC-2026-0359053",
   "skill_id": "mn-ai-09020",
   "skill_name": "Outlook-mcp-extension",
-  "issued_at": "2026-07-06T00:19:55.587Z",
-  "expires_at": "2026-07-13T00:19:55.587Z",
+  "issued_at": "2026-07-06T03:59:19.053Z",
+  "expires_at": "2026-07-13T03:59:19.053Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5e699c94662e80cc40666fcda4a64da924f4006749da0cd2ddec21a6b63541da",
+  "signature": "ac831df94e7b25b3c8c9d1d350b785cee79e6f5a99423160bfb2ce5e5b323a7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-09020"
 }

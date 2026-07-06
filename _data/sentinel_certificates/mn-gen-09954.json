@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7238017",
+  "certificate_id": "MN-SC-2026-0391899",
   "skill_id": "mn-gen-09954",
   "skill_name": "Opencage/mcp-opencage-server",
-  "issued_at": "2026-07-06T00:20:38.017Z",
-  "expires_at": "2026-07-13T00:20:38.017Z",
+  "issued_at": "2026-07-06T03:59:51.899Z",
+  "expires_at": "2026-07-13T03:59:51.899Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6592066994183792eb455502817e0e1f4218dcc506f24a089bc475261852813c",
+  "signature": "d789ace5bc017dd013a03fb554450061a09bc88b3482de5454d2c44dc368b5f8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09954"
 }

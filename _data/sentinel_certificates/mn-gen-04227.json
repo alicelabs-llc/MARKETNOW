@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6992604",
+  "certificate_id": "MN-SC-2026-0194533",
   "skill_id": "mn-gen-04227",
-  "skill_name": "Frihet/mcp-server",
-  "issued_at": "2026-07-06T00:16:32.604Z",
-  "expires_at": "2026-07-13T00:16:32.604Z",
+  "skill_name": "frihet-mcp",
+  "issued_at": "2026-07-06T03:56:34.533Z",
+  "expires_at": "2026-07-13T03:56:34.533Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "032a616249a4de5b235abdc293af7cbcbab1854500fa42e6bf6d586c62451f9c",
+  "signature": "e3bfd9e6e07bd0a200e9f31b4aa89c1d19203b1dd2ccf1197edf3336e57a74b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04227"
 }

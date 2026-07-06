@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7781404",
+  "certificate_id": "MN-SC-2026-0808936",
   "skill_id": "mn-pro-97306883",
   "skill_name": "Reproducible Research Engine",
-  "issued_at": "2026-07-06T00:29:41.404Z",
-  "expires_at": "2026-07-13T00:29:41.404Z",
+  "issued_at": "2026-07-06T04:06:48.936Z",
+  "expires_at": "2026-07-13T04:06:48.936Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ec6b971a5ac7a01f04fc89e704e403132c18e1147c1a7fcc3befb5cb6e589ac",
+  "signature": "4b852a7c4956e505df8956134c525574132cc5978f7edc7919fe961980958f11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-97306883"
 }

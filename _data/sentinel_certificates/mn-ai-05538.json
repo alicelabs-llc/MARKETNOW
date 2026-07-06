@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7049426",
+  "certificate_id": "MN-SC-2026-0238898",
   "skill_id": "mn-ai-05538",
   "skill_name": "Korean-capital-gains-tax-mcp",
-  "issued_at": "2026-07-06T00:17:29.426Z",
-  "expires_at": "2026-07-13T00:17:29.426Z",
+  "issued_at": "2026-07-06T03:57:18.898Z",
+  "expires_at": "2026-07-13T03:57:18.898Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1564634f83395774bf68fc106b0da493284d82f43ce0899d06df30e2da40b7b1",
+  "signature": "9e4964d831a0e95dc6ad8e0796068fcbd535fbc7ec9a5eb3b01065738d91a5a7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-05538"
 }

@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7143697",
+  "certificate_id": "MN-SC-2026-0316866",
   "skill_id": "mn-res-07667",
-  "skill_name": "Mcp-server-google-analytics",
-  "issued_at": "2026-07-06T00:19:03.697Z",
-  "expires_at": "2026-07-13T00:19:03.697Z",
+  "skill_name": "google-analytics-mcp",
+  "issued_at": "2026-07-06T03:58:36.866Z",
+  "expires_at": "2026-07-13T03:58:36.866Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94345826d0316040c2fcb1d572a008d6a0391a79e3d124f669aa5b863256f179",
+  "signature": "13cd28dc8154dc97560ffe99d4c2cc767d8a35a7c51c0d009494dd801cee1b60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-07667"
 }

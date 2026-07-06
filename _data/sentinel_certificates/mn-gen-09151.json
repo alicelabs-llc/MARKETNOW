@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7200591",
+  "certificate_id": "MN-SC-2026-0362984",
   "skill_id": "mn-gen-09151",
   "skill_name": "Mockzilla/mcp",
-  "issued_at": "2026-07-06T00:20:00.591Z",
-  "expires_at": "2026-07-13T00:20:00.591Z",
+  "issued_at": "2026-07-06T03:59:22.984Z",
+  "expires_at": "2026-07-13T03:59:22.984Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6fd6766c826300c8eb056c2c0a361ccc2dc08a669a76d72c312a1fd7aba7530",
+  "signature": "28c384acbe7195c6ed1bea5066b12e6e360d484ae3550c2c41b8c5e0b933727a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09151"
 }

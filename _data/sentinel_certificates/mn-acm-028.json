@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7695244",
+  "certificate_id": "MN-SC-2026-0740670",
   "skill_id": "mn-acm-028",
   "skill_name": "Conversation State Tracker",
-  "issued_at": "2026-07-06T00:28:15.244Z",
-  "expires_at": "2026-07-13T00:28:15.244Z",
+  "issued_at": "2026-07-06T04:05:40.670Z",
+  "expires_at": "2026-07-13T04:05:40.670Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d41683e9b2fee9f3ff22a1c950997afbc6d71a4729b451387cf7b01b5d61cb2e",
+  "signature": "c86687216ef423cc0311f3daaa2736caabbefd6aba8d99f5994c49cea7e7c1cd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-028"
 }

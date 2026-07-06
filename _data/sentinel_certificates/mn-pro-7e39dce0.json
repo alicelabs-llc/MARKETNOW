@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7754105",
+  "certificate_id": "MN-SC-2026-0786292",
   "skill_id": "mn-pro-7e39dce0",
   "skill_name": "Security Metrics Dashboard",
-  "issued_at": "2026-07-06T00:29:14.105Z",
-  "expires_at": "2026-07-13T00:29:14.105Z",
+  "issued_at": "2026-07-06T04:06:26.292Z",
+  "expires_at": "2026-07-13T04:06:26.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52e7bcd38bc58876a931e27d628cb30cc5da50c0bc24d4e6444beda822eaea0d",
+  "signature": "920753b1f4865e449f2c9cb47445a5e0945b2ea79d1ac33d68eaf96034e5daff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-7e39dce0"
 }

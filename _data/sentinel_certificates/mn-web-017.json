@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7829545",
+  "certificate_id": "MN-SC-2026-0840818",
   "skill_id": "mn-web-017",
   "skill_name": "Robots.txt Parser",
-  "issued_at": "2026-07-06T00:30:29.545Z",
-  "expires_at": "2026-07-13T00:30:29.545Z",
+  "issued_at": "2026-07-06T04:07:20.818Z",
+  "expires_at": "2026-07-13T04:07:20.818Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94f068b7e5d2f26f80846cf60a0a3ba86351f2c340904b63fdb6eb344c41e380",
+  "signature": "40fca0e24a037e6e0bb3a9c2f9e18bc468ff55ac79c014c4224d75741ebac67a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-017"
 }

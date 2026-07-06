@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6802258",
+  "certificate_id": "MN-SC-2026-0055592",
   "skill_id": "mn-gen-00408",
-  "skill_name": "Agentpay-mcp",
-  "issued_at": "2026-07-06T00:13:22.258Z",
-  "expires_at": "2026-07-13T00:13:22.258Z",
+  "skill_name": "agentpay-vn",
+  "issued_at": "2026-07-06T03:54:15.592Z",
+  "expires_at": "2026-07-13T03:54:15.592Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d1b76af303c869e85c324f827e0bbd8f3e49113c8e1ef5f54b7f2be74e5eaeca",
+  "signature": "7c0b38fca97aad05a65baa183b6f1f4567bbc6acddc1304c3990955e87bc374e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00408"
 }

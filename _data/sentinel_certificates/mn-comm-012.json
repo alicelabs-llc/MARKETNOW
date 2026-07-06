@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7799881",
+  "certificate_id": "MN-SC-2026-0823418",
   "skill_id": "mn-comm-012",
   "skill_name": "Refund Processor",
-  "issued_at": "2026-07-06T00:29:59.881Z",
-  "expires_at": "2026-07-13T00:29:59.881Z",
+  "issued_at": "2026-07-06T04:07:03.418Z",
+  "expires_at": "2026-07-13T04:07:03.418Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b49039366137ab01aae7e9c164b3d4a7982e729871a9d2297a074f7c1a3ee26e",
+  "signature": "1795d62f42c911a289345bfca693b92b166b0c0cc521389173d919c870b61d7e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-012"
 }

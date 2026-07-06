@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7290807",
+  "certificate_id": "MN-SC-2026-0441094",
   "skill_id": "mn-gen-11101",
   "skill_name": "Redis.do",
-  "issued_at": "2026-07-06T00:21:30.807Z",
-  "expires_at": "2026-07-13T00:21:30.807Z",
+  "issued_at": "2026-07-06T04:00:41.094Z",
+  "expires_at": "2026-07-13T04:00:41.094Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7859fbcc10389adbb89b0ccc77ee896f88d67432a31de6e7c17406dc81dcefb2",
+  "signature": "1390c2f4f66a09c54290395387b2bbcd5cea09909342a664454d9aed1a5e8a36",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11101"
 }

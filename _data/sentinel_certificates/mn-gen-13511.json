@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7400239",
+  "certificate_id": "MN-SC-2026-0540458",
   "skill_id": "mn-gen-13511",
   "skill_name": "Cavort-it-systems/wordpress-mcp",
-  "issued_at": "2026-07-06T00:23:20.239Z",
-  "expires_at": "2026-07-13T00:23:20.239Z",
+  "issued_at": "2026-07-06T04:02:20.458Z",
+  "expires_at": "2026-07-13T04:02:20.458Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3f0ec0c195e8c865c14388c34fb7049520c96ce55389b0fafaa5a9ea63614958",
+  "signature": "d3595fd9802919420946144308f86f54ef0bc4284ba1fbe7b618fd146c88169e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13511"
 }

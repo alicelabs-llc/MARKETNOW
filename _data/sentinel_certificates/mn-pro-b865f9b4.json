@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7748186",
+  "certificate_id": "MN-SC-2026-0782226",
   "skill_id": "mn-pro-b865f9b4",
   "skill_name": "Service Mesh Config Validator",
-  "issued_at": "2026-07-06T00:29:08.186Z",
-  "expires_at": "2026-07-13T00:29:08.186Z",
+  "issued_at": "2026-07-06T04:06:22.226Z",
+  "expires_at": "2026-07-13T04:06:22.226Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41de5aa15e51945f12ae4da9625d381585b8eecb784eefd1d4ab71f6d3c94e25",
+  "signature": "8c648056c91a488fcc4dc9fb1d97aea45b3ba76fcc5c09a7173ca542e28eb724",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-b865f9b4"
 }

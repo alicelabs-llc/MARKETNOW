@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7762756",
+  "certificate_id": "MN-SC-2026-0793098",
   "skill_id": "mn-pro-4be19664",
   "skill_name": "Cloud Multi-Region Failover",
-  "issued_at": "2026-07-06T00:29:22.756Z",
-  "expires_at": "2026-07-13T00:29:22.756Z",
+  "issued_at": "2026-07-06T04:06:33.098Z",
+  "expires_at": "2026-07-13T04:06:33.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0330373bc81ec364a1c893d324f41ea3a659381ad6883767de1c7f36faf53fc0",
+  "signature": "1485b44d902fbb29476e14a236e2dab1cc8c60cf66b218877bcd5d744be7226d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-4be19664"
 }

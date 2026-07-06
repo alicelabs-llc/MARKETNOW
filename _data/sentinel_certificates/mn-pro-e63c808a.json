@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7749050",
+  "certificate_id": "MN-SC-2026-0782730",
   "skill_id": "mn-pro-e63c808a",
   "skill_name": "K8s Network Policy Generator",
-  "issued_at": "2026-07-06T00:29:09.050Z",
-  "expires_at": "2026-07-13T00:29:09.050Z",
+  "issued_at": "2026-07-06T04:06:22.730Z",
+  "expires_at": "2026-07-13T04:06:22.730Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa76852f340a8c628aa5ca695f4673e33fc2301c3b232ff3af849631d6886340",
+  "signature": "ae4e68828fb99e43716e266c1eb7d4b14a9008c90952a2375bf52267f8cadd00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-e63c808a"
 }

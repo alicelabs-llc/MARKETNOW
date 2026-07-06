@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6792954",
+  "certificate_id": "MN-SC-2026-0047895",
   "skill_id": "mn-gen-00213",
-  "skill_name": "After-effect-mcp",
-  "issued_at": "2026-07-06T00:13:12.954Z",
-  "expires_at": "2026-07-13T00:13:12.954Z",
+  "skill_name": "after-effects-mcp",
+  "issued_at": "2026-07-06T03:54:07.895Z",
+  "expires_at": "2026-07-13T03:54:07.895Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b83a8805079e0d4c31d57a4c263f799e6fc53c8fdd0c083215f763aee74d1d44",
+  "signature": "2fd94e67f7c7cc376622007e01c6348ab0e6f34bf7483fcad2b61c2e868a7de0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00213"
 }

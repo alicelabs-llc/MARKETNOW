@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7328008",
+  "certificate_id": "MN-SC-2026-0479078",
   "skill_id": "mn-gen-11962",
   "skill_name": "Smyth-docker-mcp",
-  "issued_at": "2026-07-06T00:22:08.008Z",
-  "expires_at": "2026-07-13T00:22:08.008Z",
+  "issued_at": "2026-07-06T04:01:19.078Z",
+  "expires_at": "2026-07-13T04:01:19.078Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aca9c836ff5fda312176ce67f82c13296ae748e99b7f9f6e6cc2e6f2ba45e521",
+  "signature": "6c24e24213fca983fac04373f8a93933114d4d024cc04e395617be5becc2aa57",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11962"
 }

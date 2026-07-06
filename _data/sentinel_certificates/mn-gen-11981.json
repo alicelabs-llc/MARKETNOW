@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7329125",
+  "certificate_id": "MN-SC-2026-0479990",
   "skill_id": "mn-gen-11981",
   "skill_name": "Sociona-mcp-server",
-  "issued_at": "2026-07-06T00:22:09.125Z",
-  "expires_at": "2026-07-13T00:22:09.125Z",
+  "issued_at": "2026-07-06T04:01:19.990Z",
+  "expires_at": "2026-07-13T04:01:19.990Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "777cdc7ea908c97b6b10d99418f73313340046499eeccec6756ad1bb94f6da4f",
+  "signature": "c7552169a378c62a0eba246c9ab422efe7575eae4bcc5b9c1ef6103c8c0f847c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11981"
 }

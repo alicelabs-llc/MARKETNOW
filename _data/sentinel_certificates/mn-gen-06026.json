@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7070256",
+  "certificate_id": "MN-SC-2026-0255179",
   "skill_id": "mn-gen-06026",
   "skill_name": "Mags",
-  "issued_at": "2026-07-06T00:17:50.256Z",
-  "expires_at": "2026-07-13T00:17:50.256Z",
+  "issued_at": "2026-07-06T03:57:35.179Z",
+  "expires_at": "2026-07-13T03:57:35.179Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ebf61a6d739724af9fcc8b9dc9dd1709d701d385bcd72fa4e48e71ef2768e84",
+  "signature": "68808f6676874b8cf949444228e387931be19106f5fcd3da5495619364748a50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06026"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7397082",
+  "certificate_id": "MN-SC-2026-0538679",
   "skill_id": "mn-ai-13472",
   "skill_name": "Winston-ai-mcp",
-  "issued_at": "2026-07-06T00:23:17.082Z",
-  "expires_at": "2026-07-13T00:23:17.082Z",
+  "issued_at": "2026-07-06T04:02:18.679Z",
+  "expires_at": "2026-07-13T04:02:18.679Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "18a7976de81313058a642112a89d1a31ce23557e78bd2a6f093ce72e9b0ec0b2",
+  "signature": "762e0faf999faedf5054af12b8b38d6b28eec29ec6d830e7a9fb07717e3dad20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-13472"
 }

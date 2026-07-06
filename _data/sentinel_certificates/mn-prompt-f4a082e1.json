@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7417610",
+  "certificate_id": "MN-SC-2026-0554687",
   "skill_id": "mn-prompt-f4a082e1",
   "skill_name": "Especialista Webhooks + Signing",
-  "issued_at": "2026-07-06T00:23:37.610Z",
-  "expires_at": "2026-07-13T00:23:37.610Z",
+  "issued_at": "2026-07-06T04:02:34.687Z",
+  "expires_at": "2026-07-13T04:02:34.687Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06e6edc1174fec5149a01278427a8d82dce3f7f786de61d5a8d7108732e9f72f",
+  "signature": "666a0c627826d14497b95e03278be9ab628c754c43ca46fe49674b7ba3c99cc1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f4a082e1"
 }

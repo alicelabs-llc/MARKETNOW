@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1101424",
+  "skill_id": "mn-real-supergateway",
+  "skill_name": "supergateway",
+  "issued_at": "2026-07-06T04:11:41.424Z",
+  "expires_at": "2026-07-13T04:11:41.424Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "98639fa05f6f50962b3ccf1dabffa56afec5a0bc400170a38ece5e472fa071e4",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-supergateway"
+}

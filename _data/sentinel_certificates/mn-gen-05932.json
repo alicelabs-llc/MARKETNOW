@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7065238",
+  "certificate_id": "MN-SC-2026-0251472",
   "skill_id": "mn-gen-05932",
   "skill_name": "Loopback4-mcp",
-  "issued_at": "2026-07-06T00:17:45.238Z",
-  "expires_at": "2026-07-13T00:17:45.238Z",
+  "issued_at": "2026-07-06T03:57:31.472Z",
+  "expires_at": "2026-07-13T03:57:31.472Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2e163897f3cf11b44ea4447f07140a11e4fc2e24ac654c49fa0a88e85e736c0",
+  "signature": "1e42f38493614a68aa438e3d80832efb6a3f46fa87c652cf9048a9987de5be5a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05932"
 }

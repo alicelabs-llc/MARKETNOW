@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7362440",
+  "certificate_id": "MN-SC-2026-0509268",
   "skill_id": "mn-gen-12739",
   "skill_name": "Toolradar-mcp",
-  "issued_at": "2026-07-06T00:22:42.440Z",
-  "expires_at": "2026-07-13T00:22:42.440Z",
+  "issued_at": "2026-07-06T04:01:49.268Z",
+  "expires_at": "2026-07-13T04:01:49.268Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b2efce746f58bde1f6b2440165de8ae9c28fbb3aab85ef156d256ebb27a4567",
+  "signature": "215e873b51e71ce530be13c3364cdb35d0fedc199ccb5f9eb43f77bc33939a24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12739"
 }

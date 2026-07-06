@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7712471",
+  "certificate_id": "MN-SC-2026-0752325",
   "skill_id": "mn-apf-017",
   "skill_name": "Semantic Cache",
-  "issued_at": "2026-07-06T00:28:32.471Z",
-  "expires_at": "2026-07-13T00:28:32.471Z",
+  "issued_at": "2026-07-06T04:05:52.325Z",
+  "expires_at": "2026-07-13T04:05:52.325Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5363a11af0595715ceae5299e4fabca8182bd1868dd73469452bb57587f8b8eb",
+  "signature": "ae61a0893a8e014bb5684d0925f8e4895863fce5428e96e40a7b64a261874cb3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-017"
 }

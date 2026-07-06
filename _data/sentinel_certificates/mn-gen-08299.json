@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7175981",
+  "certificate_id": "MN-SC-2026-0341469",
   "skill_id": "mn-gen-08299",
-  "skill_name": "Mcp-yt-dlp",
-  "issued_at": "2026-07-06T00:19:35.981Z",
-  "expires_at": "2026-07-13T00:19:35.981Z",
+  "skill_name": "yt-dlp-mcp",
+  "issued_at": "2026-07-06T03:59:01.469Z",
+  "expires_at": "2026-07-13T03:59:01.469Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "160525e53ca21bea87000e9d0051f4a226f34a43ca97ef4558d4263108bad8fc",
+  "signature": "105bcf2da7dafabbb665e4a5e05d726d0f464e868414954ab2033becaa7e1dd9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08299"
 }

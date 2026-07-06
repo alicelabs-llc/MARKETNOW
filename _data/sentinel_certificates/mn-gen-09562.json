@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7219980",
+  "certificate_id": "MN-SC-2026-0375494",
   "skill_id": "mn-gen-09562",
   "skill_name": "Nix-playwright-server",
-  "issued_at": "2026-07-06T00:20:19.980Z",
-  "expires_at": "2026-07-13T00:20:19.980Z",
+  "issued_at": "2026-07-06T03:59:35.494Z",
+  "expires_at": "2026-07-13T03:59:35.494Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96d1987f27d465b767f1413276b85da82cc1bcadc2fb1b067c0847481d8c2875",
+  "signature": "bc94f664ddc79f855e435d7c03c81d063a77a7f6e1c96e96415dd83424d907a1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09562"
 }

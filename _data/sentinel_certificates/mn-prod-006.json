@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7817713",
+  "certificate_id": "MN-SC-2026-0833355",
   "skill_id": "mn-prod-006",
   "skill_name": "Reminder Service",
-  "issued_at": "2026-07-06T00:30:17.713Z",
-  "expires_at": "2026-07-13T00:30:17.713Z",
+  "issued_at": "2026-07-06T04:07:13.355Z",
+  "expires_at": "2026-07-13T04:07:13.355Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb8598755abb5c4e9ede94cd2ca15e37f164eb2a8309dac8c1fde722d8570a56",
+  "signature": "e5edbfa073e7b58848435394c11bc4d4df2c2a7e7e74d53aaf112da8e7d552fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-006"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7154799",
+  "certificate_id": "MN-SC-2026-0326227",
   "skill_id": "mn-gen-07855",
   "skill_name": "Mcp-server-v2ex",
-  "issued_at": "2026-07-06T00:19:14.799Z",
-  "expires_at": "2026-07-13T00:19:14.799Z",
+  "issued_at": "2026-07-06T03:58:46.227Z",
+  "expires_at": "2026-07-13T03:58:46.227Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0893657b3eadf29688e3ba975dd5f7d7959de73cf2f55e0b9173712326adfc63",
+  "signature": "68de321682e7b7af3d02872ff4ff16536990ac35914434cc726e221b502435b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07855"
 }

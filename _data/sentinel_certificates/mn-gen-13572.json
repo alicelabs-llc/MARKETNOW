@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7402408",
+  "certificate_id": "MN-SC-2026-0542237",
   "skill_id": "mn-gen-13572",
   "skill_name": "Ext-mcp",
-  "issued_at": "2026-07-06T00:23:22.408Z",
-  "expires_at": "2026-07-13T00:23:22.408Z",
+  "issued_at": "2026-07-06T04:02:22.237Z",
+  "expires_at": "2026-07-13T04:02:22.237Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8f4d04158eb8db8e9c00833a8340464fd68c68257dda4e0950dd185542c98d5d",
+  "signature": "a9f1d253d542bba05c671ff70603457686475135df50df21693b4a0be4db9e21",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13572"
 }

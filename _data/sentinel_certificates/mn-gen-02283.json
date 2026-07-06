@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6893880",
+  "certificate_id": "MN-SC-2026-0119598",
   "skill_id": "mn-gen-02283",
   "skill_name": "Claude-slack",
-  "issued_at": "2026-07-06T00:14:53.880Z",
-  "expires_at": "2026-07-13T00:14:53.880Z",
+  "issued_at": "2026-07-06T03:55:19.598Z",
+  "expires_at": "2026-07-13T03:55:19.598Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "37a772c5d6846fd0ca6e154c2280a9e9b1a65f07a934a7f4630cf5aaf7d0b695",
+  "signature": "b63e55120051e22f4474d407e0c4d05c14ab3c50a10aa29b36e1ceea1322ed3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02283"
 }

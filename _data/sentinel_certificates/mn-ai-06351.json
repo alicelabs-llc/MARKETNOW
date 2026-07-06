@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7082892",
+  "certificate_id": "MN-SC-2026-0266405",
   "skill_id": "mn-ai-06351",
   "skill_name": "Mcp-chain-of-draft-server",
-  "issued_at": "2026-07-06T00:18:02.892Z",
-  "expires_at": "2026-07-13T00:18:02.892Z",
+  "issued_at": "2026-07-06T03:57:46.405Z",
+  "expires_at": "2026-07-13T03:57:46.405Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec5092b38e4f2be56b554b8824e57ac1c4f0a3687974e707c5dd47af3560a46a",
+  "signature": "a555bdf30e9c485c033f45c12b64d475872a444107873ebd3bc3ec913f82a02a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06351"
 }

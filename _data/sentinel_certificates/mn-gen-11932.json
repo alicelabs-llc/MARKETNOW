@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7327000",
+  "certificate_id": "MN-SC-2026-0478229",
   "skill_id": "mn-gen-11932",
-  "skill_name": "Smart-coding-mcp",
-  "issued_at": "2026-07-06T00:22:07.000Z",
-  "expires_at": "2026-07-13T00:22:07.000Z",
+  "skill_name": "smart-coding-mcp",
+  "issued_at": "2026-07-06T04:01:18.229Z",
+  "expires_at": "2026-07-13T04:01:18.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0fade568d7ac72259ee4212823b9f222067e35d1ccd8d07e3c184f4695374bf7",
+  "signature": "60869ea016dc54b6abbe2814d6722ff0b6a220bc56689462514b4b10e0384bd8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11932"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7322719",
+  "certificate_id": "MN-SC-2026-0474229",
   "skill_id": "mn-gen-11822",
   "skill_name": "Site-to-mcp-monorepo",
-  "issued_at": "2026-07-06T00:22:02.719Z",
-  "expires_at": "2026-07-13T00:22:02.719Z",
+  "issued_at": "2026-07-06T04:01:14.229Z",
+  "expires_at": "2026-07-13T04:01:14.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69bb7cf28bd9991c071fc26767a731b741982ffda9bc9ea7f680511bb20b0bd0",
+  "signature": "d5e323dc53ba6256768e9c62e18414e1887aaac9f4d7ebd904b131293975f417",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11822"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6837008",
+  "certificate_id": "MN-SC-2026-0079356",
   "skill_id": "mn-gen-01210",
   "skill_name": "Ay-claude/cli",
-  "issued_at": "2026-07-06T00:13:57.008Z",
-  "expires_at": "2026-07-13T00:13:57.008Z",
+  "issued_at": "2026-07-06T03:54:39.356Z",
+  "expires_at": "2026-07-13T03:54:39.356Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e54e6e1c8dc209c4aba94f4dcf19f1af4c225a03c4d8fec0f92dac75d9f193f0",
+  "signature": "a280a797ab1c67237c79c270cfc8764edeb68bd80458411004b07e60dc5b19f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01210"
 }

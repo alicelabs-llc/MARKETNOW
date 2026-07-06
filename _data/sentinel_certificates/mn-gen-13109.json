@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7378202",
+  "certificate_id": "MN-SC-2026-0523770",
   "skill_id": "mn-gen-13109",
   "skill_name": "Vdt-mcp",
-  "issued_at": "2026-07-06T00:22:58.202Z",
-  "expires_at": "2026-07-13T00:22:58.202Z",
+  "issued_at": "2026-07-06T04:02:03.770Z",
+  "expires_at": "2026-07-13T04:02:03.770Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c8327db73afa5d17992ca52eae850916325265ccbce2d77ea602826f95b06d4",
+  "signature": "8a42c6cc19f72ac9d8fc8f5840d57f651c13cd15748cf01e518ecc440bcf49c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13109"
 }

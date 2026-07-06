@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7739254",
+  "certificate_id": "MN-SC-2026-0774755",
   "skill_id": "mn-voi-00024",
   "skill_name": "Retell AI Voice",
-  "issued_at": "2026-07-06T00:28:59.254Z",
-  "expires_at": "2026-07-13T00:28:59.254Z",
+  "issued_at": "2026-07-06T04:06:14.755Z",
+  "expires_at": "2026-07-13T04:06:14.755Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49b66ae705df6bbf7110d8fb9dae8a540510f9450200842ef065ebc63a13127c",
+  "signature": "6d3c85262511d9ac9c8953fcfe3f85bdc72362a8d2fdf4db1f6120b246b80c12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00024"
 }

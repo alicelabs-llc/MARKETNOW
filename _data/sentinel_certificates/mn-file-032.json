@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7816437",
+  "certificate_id": "MN-SC-2026-0832536",
   "skill_id": "mn-file-032",
   "skill_name": "File Extractor",
-  "issued_at": "2026-07-06T00:30:16.437Z",
-  "expires_at": "2026-07-13T00:30:16.437Z",
+  "issued_at": "2026-07-06T04:07:12.536Z",
+  "expires_at": "2026-07-13T04:07:12.536Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2843c3232aa7d4fec33fb35e8ca5a48ac042ba168c692e2b70e45f519ff94c09",
+  "signature": "59483b0e1e1b011e9397ddcde360e37b9e9def33c55c29da2b9ee4eb78f51ddb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-file-032"
 }

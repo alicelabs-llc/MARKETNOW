@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7563469",
+  "certificate_id": "MN-SC-2026-0659254",
   "skill_id": "mn-prompt-7b2478ab",
   "skill_name": "Marketing compliance review process",
-  "issued_at": "2026-07-06T00:26:03.469Z",
-  "expires_at": "2026-07-13T00:26:03.469Z",
+  "issued_at": "2026-07-06T04:04:19.254Z",
+  "expires_at": "2026-07-13T04:04:19.254Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0182f96de5b3136f6de972555e24216724ec8cf88199ae0074c1787468a8009f",
+  "signature": "5d6170dd8e4042cbba9e9745def99e9a8c0bf7fcffa00ce68fd3039da9088bb8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7b2478ab"
 }

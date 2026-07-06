@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7349752",
+  "certificate_id": "MN-SC-2026-0500660",
   "skill_id": "mn-gen-12480",
   "skill_name": "Tcping-mcp-server",
-  "issued_at": "2026-07-06T00:22:29.752Z",
-  "expires_at": "2026-07-13T00:22:29.752Z",
+  "issued_at": "2026-07-06T04:01:40.660Z",
+  "expires_at": "2026-07-13T04:01:40.660Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8262977bcc2638461ff59645a0d540fd3a31e96ed3c297360685d0615621c9eb",
+  "signature": "629e89bf3b7e391c2df416de0cf0083bf42eec9235343b27d262efcc6d883da6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12480"
 }

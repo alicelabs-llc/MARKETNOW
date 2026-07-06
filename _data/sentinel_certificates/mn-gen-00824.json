@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6820258",
+  "certificate_id": "MN-SC-2026-0068155",
   "skill_id": "mn-gen-00824",
   "skill_name": "Anythingui-template",
-  "issued_at": "2026-07-06T00:13:40.258Z",
-  "expires_at": "2026-07-13T00:13:40.258Z",
+  "issued_at": "2026-07-06T03:54:28.155Z",
+  "expires_at": "2026-07-13T03:54:28.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b9cb91c64455fe9d0b4e2023b01a65851672d07ef30c5d054c597cb084a4ec61",
+  "signature": "befddedc1e2c2981ca7c3b0a3f286ad18278d318f94c64ad9203bc912bbe414e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00824"
 }

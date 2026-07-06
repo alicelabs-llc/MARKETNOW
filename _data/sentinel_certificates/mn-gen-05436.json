@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7043792",
+  "certificate_id": "MN-SC-2026-0235390",
   "skill_id": "mn-gen-05436",
-  "skill_name": "Keepa-mcp-server",
-  "issued_at": "2026-07-06T00:17:23.792Z",
-  "expires_at": "2026-07-13T00:17:23.792Z",
+  "skill_name": "keep-mcp",
+  "issued_at": "2026-07-06T03:57:15.390Z",
+  "expires_at": "2026-07-13T03:57:15.390Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fbb5944a6816fbb0b3650bf17eb924065c01c2b94188dc11faf578b71cc2509",
+  "signature": "9b1cfaa598561079bc178f4cfcc4fca51f8ddc4c79d1d4b2291992dfd4bb2253",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05436"
 }

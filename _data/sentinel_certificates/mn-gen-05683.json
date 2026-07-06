@@ -1,17 +1,17 @@
 {
-  "certificate_id": "MN-SC-2026-7054571",
+  "certificate_id": "MN-SC-2026-0241882",
   "skill_id": "mn-gen-05683",
-  "skill_name": "Leanmcp",
-  "issued_at": "2026-07-06T00:17:34.571Z",
-  "expires_at": "2026-07-13T00:17:34.571Z",
+  "skill_name": "glean",
+  "issued_at": "2026-07-06T03:57:21.882Z",
+  "expires_at": "2026-07-13T03:57:21.882Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 4,
+  "overall_score": 8,
   "max_score": 10,
-  "risk_level": "high",
+  "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16": "medium",
     "l2": "not_available",
-    "final": "high"
+    "final": "medium"
   },
   "layers_run": {
     "l15": true,
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28a7addf2e749fb6f17bb6837a2876a84139626985e62f733b126f098e10a8ca",
+  "signature": "e5ce065d03af001697cdeb8421435d77e694006eb9b1a61517a5bb9d265a9dce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05683"
 }

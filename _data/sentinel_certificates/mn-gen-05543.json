@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7049492",
+  "certificate_id": "MN-SC-2026-0238962",
   "skill_id": "mn-gen-05543",
   "skill_name": "Kotauth/mcp",
-  "issued_at": "2026-07-06T00:17:29.492Z",
-  "expires_at": "2026-07-13T00:17:29.492Z",
+  "issued_at": "2026-07-06T03:57:18.962Z",
+  "expires_at": "2026-07-13T03:57:18.962Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d974feb6962b938d16cebcede90337d75837cd142142aa0a9baf8b50a78c555",
+  "signature": "b50caccecb620cb1d63db2f020581e5ab8aa4f6378f8635aad4b0a51bea748b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05543"
 }

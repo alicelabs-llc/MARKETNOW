@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7198481",
+  "certificate_id": "MN-SC-2026-0361167",
   "skill_id": "mn-gen-09088",
-  "skill_name": "Miroex",
-  "issued_at": "2026-07-06T00:19:58.481Z",
-  "expires_at": "2026-07-13T00:19:58.481Z",
+  "skill_name": "mcp-miro",
+  "issued_at": "2026-07-06T03:59:21.167Z",
+  "expires_at": "2026-07-13T03:59:21.167Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f339659fc9f06a5a225e284209e245a72e3de3a7fa2c327cd7b2624c43b548be",
+  "signature": "d3ca68ff1b05a65b4eb45e32b24674d01551016ed0468a6d0ca6f07dbcd9f5bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09088"
 }

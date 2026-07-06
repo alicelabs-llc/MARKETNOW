@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6932832",
+  "certificate_id": "MN-SC-2026-0149099",
   "skill_id": "mn-gen-02979",
   "skill_name": "Cursor-chat-history-mcp",
-  "issued_at": "2026-07-06T00:15:32.832Z",
-  "expires_at": "2026-07-13T00:15:32.832Z",
+  "issued_at": "2026-07-06T03:55:49.099Z",
+  "expires_at": "2026-07-13T03:55:49.099Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f612a79a9b63bced88725365ad192f0f3e589c7efa011c6050a07b43c2dc5a96",
+  "signature": "3c32a829a32b2dedc327547c8abfa536cadfbaa9e2785f8999bb8d4dd1341c0e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02979"
 }

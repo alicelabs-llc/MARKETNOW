@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7218200",
+  "certificate_id": "MN-SC-2026-0374136",
   "skill_id": "mn-gen-09527",
   "skill_name": "Nextmcp-client-auth",
-  "issued_at": "2026-07-06T00:20:18.200Z",
-  "expires_at": "2026-07-13T00:20:18.200Z",
+  "issued_at": "2026-07-06T03:59:34.136Z",
+  "expires_at": "2026-07-13T03:59:34.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "452a8c99ef29d69a589038b10ab382b3eff24f35b3eec54ae52ecf8243489dae",
+  "signature": "bdaefa1be4a8eb12b004e9079023c61d1e44ed863f95c604b7c15a8081a5a718",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09527"
 }

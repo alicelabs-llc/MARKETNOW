@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7349750",
+  "certificate_id": "MN-SC-2026-0500429",
   "skill_id": "mn-gen-12484",
   "skill_name": "Teable-mcp-server",
-  "issued_at": "2026-07-06T00:22:29.750Z",
-  "expires_at": "2026-07-13T00:22:29.750Z",
+  "issued_at": "2026-07-06T04:01:40.429Z",
+  "expires_at": "2026-07-13T04:01:40.429Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b8c015314d433622db989ef107c97bd7774531989348d62a1f6d6c29a2908ba3",
+  "signature": "5366e03aff58a9c9de2bda7193a20302d8a728400bb82ef456723fd3bcc58486",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12484"
 }

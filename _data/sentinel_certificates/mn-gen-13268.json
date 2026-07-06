@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7388034",
+  "certificate_id": "MN-SC-2026-0531960",
   "skill_id": "mn-gen-13268",
   "skill_name": "Vulk-mcp-server",
-  "issued_at": "2026-07-06T00:23:08.034Z",
-  "expires_at": "2026-07-13T00:23:08.034Z",
+  "issued_at": "2026-07-06T04:02:11.960Z",
+  "expires_at": "2026-07-13T04:02:11.960Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57b4c87905726980ab3d308069ee86c184958ed740baae76a9b3b531e42c30fa",
+  "signature": "5f9d926f5497a08d12cae6a87c37b20e1ad2c9efe488b11b8415c81fdc7bad15",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13268"
 }

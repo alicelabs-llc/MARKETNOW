@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6883614",
+  "certificate_id": "MN-SC-2026-0112553",
   "skill_id": "mn-gen-02104",
   "skill_name": "Ownid/claude-desktop-installer",
-  "issued_at": "2026-07-06T00:14:43.614Z",
-  "expires_at": "2026-07-13T00:14:43.614Z",
+  "issued_at": "2026-07-06T03:55:12.553Z",
+  "expires_at": "2026-07-13T03:55:12.553Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05e707ac4549d7b57f53891cfe8439d68b75d582cb809e2968f253a0c4a6988e",
+  "signature": "8e76c23a04c9b3fe29ba534209d7cf0af05a0f9232a6943b511b78178847246d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02104"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7336549",
+  "certificate_id": "MN-SC-2026-0486032",
   "skill_id": "mn-gen-12169",
   "skill_name": "St-memory-gateway",
-  "issued_at": "2026-07-06T00:22:16.549Z",
-  "expires_at": "2026-07-13T00:22:16.549Z",
+  "issued_at": "2026-07-06T04:01:26.032Z",
+  "expires_at": "2026-07-13T04:01:26.032Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1349d5f599d65fbbc3acac4c5d120909c523d6ed37236e793a8fd3a4fde09de8",
+  "signature": "d9a67e19c79fe0178f985568c7794330a18d1bb2fbc245d6ef5ff95a0f88a110",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12169"
 }

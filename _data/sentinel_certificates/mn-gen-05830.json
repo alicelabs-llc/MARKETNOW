@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7061518",
+  "certificate_id": "MN-SC-2026-0247334",
   "skill_id": "mn-gen-05830",
-  "skill_name": "Llm-wiki-mcp",
-  "issued_at": "2026-07-06T00:17:41.518Z",
-  "expires_at": "2026-07-13T00:17:41.518Z",
+  "skill_name": "llmwiki",
+  "issued_at": "2026-07-06T03:57:27.334Z",
+  "expires_at": "2026-07-13T03:57:27.334Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c05f63fb6cf51918cd6d8381649b84d84ad064a75c3f677e36adf6afd354b273",
+  "signature": "bc1c7b44d2f2c8256951ac8977f3d412dc5703c45b83a5cbc7ec07fb743296b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05830"
 }

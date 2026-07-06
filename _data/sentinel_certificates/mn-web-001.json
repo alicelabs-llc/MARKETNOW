@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7826314",
+  "certificate_id": "MN-SC-2026-0839162",
   "skill_id": "mn-web-001",
   "skill_name": "Web Scraper Pro",
-  "issued_at": "2026-07-06T00:30:26.314Z",
-  "expires_at": "2026-07-13T00:30:26.314Z",
+  "issued_at": "2026-07-06T04:07:19.162Z",
+  "expires_at": "2026-07-13T04:07:19.162Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e60c561125e7f7257912925a6242ca63ef177d28a4e9a92d403d9d9620f47bd5",
+  "signature": "b3847fdbcd1fee7ef7072b10a6540e70984329aed31202334e1b0928bd204a51",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-001"
 }

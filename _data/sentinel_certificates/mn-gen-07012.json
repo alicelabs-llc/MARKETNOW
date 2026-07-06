@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7112682",
+  "certificate_id": "MN-SC-2026-0291294",
   "skill_id": "mn-gen-07012",
   "skill_name": "Mcp-lint",
-  "issued_at": "2026-07-06T00:18:32.682Z",
-  "expires_at": "2026-07-13T00:18:32.682Z",
+  "issued_at": "2026-07-06T03:58:11.294Z",
+  "expires_at": "2026-07-13T03:58:11.294Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9a8bed37f6de22ce129c7e4bf57a8a8ded07e39a4fba6e73aeceaf84eefdb202",
+  "signature": "2340f5a6b02dff7fec523034cdf8a36e522095c5d5d19ab78ed9a3924225a856",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07012"
 }

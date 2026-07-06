@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7411824",
+  "certificate_id": "MN-SC-2026-0549649",
   "skill_id": "mn-gen-13832",
   "skill_name": "Zoho-bookkeeper-mcp",
-  "issued_at": "2026-07-06T00:23:31.824Z",
-  "expires_at": "2026-07-13T00:23:31.824Z",
+  "issued_at": "2026-07-06T04:02:29.649Z",
+  "expires_at": "2026-07-13T04:02:29.649Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aac944d0201703252be7adec044c4d498f538d85dbdc41bfc892125dff842522",
+  "signature": "2c48d997c56e58dcda19cf280d2dc48b5c4e61ca56ff76b5852b143fe662c545",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13832"
 }

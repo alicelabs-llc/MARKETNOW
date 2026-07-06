@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7642676",
+  "certificate_id": "MN-SC-2026-0707070",
   "skill_id": "mn-prompt-1c8746f3",
   "skill_name": "ETL pipeline with Airflow",
-  "issued_at": "2026-07-06T00:27:22.676Z",
-  "expires_at": "2026-07-13T00:27:22.676Z",
+  "issued_at": "2026-07-06T04:05:07.070Z",
+  "expires_at": "2026-07-13T04:05:07.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e3e56247bb2a62e069ec3ce220b4152ebf1188abb787ac3f43c1c696753f59d",
+  "signature": "45fcf8932109da0081dd0ad2a243556366a1d804144f03a7c25d6eaf387d96a7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1c8746f3"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6791787",
+  "certificate_id": "MN-SC-2026-0046911",
   "skill_id": "mn-gen-00193",
   "skill_name": "Advocu-mcp-server",
-  "issued_at": "2026-07-06T00:13:11.787Z",
-  "expires_at": "2026-07-13T00:13:11.787Z",
+  "issued_at": "2026-07-06T03:54:06.911Z",
+  "expires_at": "2026-07-13T03:54:06.911Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "21566da23ca83c7b163512e67be411e6aec916bcee6f2ea194fa9d89dc4eca28",
+  "signature": "329d5f3017d6577777510e547b77917f6539ac31fd4fd47afd4f587ce59235e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00193"
 }

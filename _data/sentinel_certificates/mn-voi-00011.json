@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7737423",
+  "certificate_id": "MN-SC-2026-0773400",
   "skill_id": "mn-voi-00011",
   "skill_name": "OpenAI Whisper STT",
-  "issued_at": "2026-07-06T00:28:57.423Z",
-  "expires_at": "2026-07-13T00:28:57.423Z",
+  "issued_at": "2026-07-06T04:06:13.400Z",
+  "expires_at": "2026-07-13T04:06:13.400Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a51271ebd8d956ada5b1b5f9f98f9d34858da52f4bf70391d75060d54867c922",
+  "signature": "9d0b8871592ccee564ec0b58c44ad6987695f32a41c60a82f0223b10977cf863",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00011"
 }

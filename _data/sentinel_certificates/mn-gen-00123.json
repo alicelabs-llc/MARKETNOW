@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6789679",
+  "certificate_id": "MN-SC-2026-0044802",
   "skill_id": "mn-gen-00123",
   "skill_name": "Acp-inspector",
-  "issued_at": "2026-07-06T00:13:09.679Z",
-  "expires_at": "2026-07-13T00:13:09.679Z",
+  "issued_at": "2026-07-06T03:54:04.802Z",
+  "expires_at": "2026-07-13T03:54:04.802Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e2ebda67db01c118d9423a640d2bed61bee6e0f26b58d49cf661a2781913c66f",
+  "signature": "ff64fe92e3757554007b938f41b371973dc4d63f3528996b1b66e10426a8081a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00123"
 }

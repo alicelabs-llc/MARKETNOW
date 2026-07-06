@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7330868",
+  "certificate_id": "MN-SC-2026-0481938",
   "skill_id": "mn-gen-12020",
   "skill_name": "Soracom-labs/soracom-mcp-server",
-  "issued_at": "2026-07-06T00:22:10.868Z",
-  "expires_at": "2026-07-13T00:22:10.868Z",
+  "issued_at": "2026-07-06T04:01:21.938Z",
+  "expires_at": "2026-07-13T04:01:21.938Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d5f0c3ae065a99ec01ea800d27643b961594389cf80e2118fd8635ea2009ed4",
+  "signature": "d88604c89250246803b86751b615711be08dcf915764e3ff594d511a69df5e2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12020"
 }

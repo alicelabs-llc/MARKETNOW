@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7402374",
+  "certificate_id": "MN-SC-2026-0542272",
   "skill_id": "mn-gen-13570",
   "skill_name": "Wx-cli",
-  "issued_at": "2026-07-06T00:23:22.374Z",
-  "expires_at": "2026-07-13T00:23:22.374Z",
+  "issued_at": "2026-07-06T04:02:22.272Z",
+  "expires_at": "2026-07-13T04:02:22.272Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e6f1064bdb9f541b4a67f4dbc8d0c7aaa40d6df6fcf44a4112809b379795f222",
+  "signature": "0c37473cf47b53557645a45ef92a0c12d05273d28e01533f79af4ac295acdd50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13570"
 }

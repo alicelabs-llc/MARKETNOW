@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7695767",
+  "certificate_id": "MN-SC-2026-0741090",
   "skill_id": "mn-acm-032",
   "skill_name": "Context Pruning Engine",
-  "issued_at": "2026-07-06T00:28:15.767Z",
-  "expires_at": "2026-07-13T00:28:15.767Z",
+  "issued_at": "2026-07-06T04:05:41.090Z",
+  "expires_at": "2026-07-13T04:05:41.090Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d20684d0e5cb9d43be562ef9a22b5bb482ddb64f96804c1c24c96dd96e472f77",
+  "signature": "9bc39e0b146521fb70c1808666f61175071cea6edcdd7b92353addc1da11fe01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-032"
 }

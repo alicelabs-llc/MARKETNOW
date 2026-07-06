@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0957371",
+  "skill_id": "mn-real-memorylensmcp",
+  "skill_name": "memorylens-mcp",
+  "issued_at": "2026-07-06T04:09:17.371Z",
+  "expires_at": "2026-07-13T04:09:17.371Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "b4a4f359a4759627a57f9df80fbd76192f7dcab7310b75472e0d452754bf9e13",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-memorylensmcp"
+}

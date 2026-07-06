@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7046971",
+  "certificate_id": "MN-SC-2026-0237642",
   "skill_id": "mn-gen-05506",
   "skill_name": "Knowledge-base-server",
-  "issued_at": "2026-07-06T00:17:26.971Z",
-  "expires_at": "2026-07-13T00:17:26.971Z",
+  "issued_at": "2026-07-06T03:57:17.642Z",
+  "expires_at": "2026-07-13T03:57:17.642Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a1f26e97c07d45b2acd0c379325a0871986e44b82c7137fda5394b393dae378b",
+  "signature": "60c44ab0a50ffc087929650d99901cf891dee9ca7fa6c44568ed86ae74289975",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05506"
 }

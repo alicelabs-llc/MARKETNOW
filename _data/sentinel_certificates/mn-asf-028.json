@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7708774",
+  "certificate_id": "MN-SC-2026-0749312",
   "skill_id": "mn-asf-028",
   "skill_name": "Threat Intelligence Feed",
-  "issued_at": "2026-07-06T00:28:28.774Z",
-  "expires_at": "2026-07-13T00:28:28.774Z",
+  "issued_at": "2026-07-06T04:05:49.312Z",
+  "expires_at": "2026-07-13T04:05:49.312Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d62dec70078a8023bd3c0fd099e4611fed64303f179f38c3c5c9f3bbe18c2a7",
+  "signature": "024da2273fb5012c18b1de9915e820d18d675a4aeebad44d7996d6d5a289d796",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-028"
 }

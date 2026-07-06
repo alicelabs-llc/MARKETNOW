@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6868855",
+  "certificate_id": "MN-SC-2026-0101074",
   "skill_id": "mn-gen-01807",
   "skill_name": "Channex-mcp",
-  "issued_at": "2026-07-06T00:14:28.855Z",
-  "expires_at": "2026-07-13T00:14:28.855Z",
+  "issued_at": "2026-07-06T03:55:01.074Z",
+  "expires_at": "2026-07-13T03:55:01.074Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "16b947deb95f42a06756d94d9bb836a9b8d824fe485e66f76b121cc59b58b0da",
+  "signature": "64687e0ade5127b516f839c5df67653f358b71470a4c8d1e9ab67935477eedc8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01807"
 }

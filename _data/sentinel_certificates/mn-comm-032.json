@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7802939",
+  "certificate_id": "MN-SC-2026-0825258",
   "skill_id": "mn-comm-032",
   "skill_name": "Event Ticketing",
-  "issued_at": "2026-07-06T00:30:02.939Z",
-  "expires_at": "2026-07-13T00:30:02.939Z",
+  "issued_at": "2026-07-06T04:07:05.258Z",
+  "expires_at": "2026-07-13T04:07:05.258Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "606b26f475829d3c2fee0073b3886d8a0fcb929df15f3a6f4a59b43c7d7c521b",
+  "signature": "0c77dc37bc880c891ae807da894f20a529f5f0e5085f55eb8825214c85cdd795",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-032"
 }

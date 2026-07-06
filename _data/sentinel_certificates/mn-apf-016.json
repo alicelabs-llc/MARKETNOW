@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7712407",
+  "certificate_id": "MN-SC-2026-0752332",
   "skill_id": "mn-apf-016",
   "skill_name": "Response Cache Layer",
-  "issued_at": "2026-07-06T00:28:32.407Z",
-  "expires_at": "2026-07-13T00:28:32.407Z",
+  "issued_at": "2026-07-06T04:05:52.332Z",
+  "expires_at": "2026-07-13T04:05:52.332Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc07c91f3b98560302862d86d04aa6055f2e6331410b9c3b368238e79f4598e1",
+  "signature": "c204a1440bd84f0a42e8d2b6b5b1948e6f1485583092ce495eb8d74ae1f31052",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-016"
 }

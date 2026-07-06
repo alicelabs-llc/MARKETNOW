@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6940456",
+  "certificate_id": "MN-SC-2026-0150846",
   "skill_id": "mn-gen-03024",
   "skill_name": "Cynco/mcp",
-  "issued_at": "2026-07-06T00:15:40.456Z",
-  "expires_at": "2026-07-13T00:15:40.456Z",
+  "issued_at": "2026-07-06T03:55:50.846Z",
+  "expires_at": "2026-07-13T03:55:50.846Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d1e5fc01ca76510ad830ad9179d09429e0541c173e3d83af867f7644c9b75924",
+  "signature": "b161b3e8dc1529ac0b4130d6fb828f5ab06298705585aff6d37f3a3e6ec7a368",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03024"
 }

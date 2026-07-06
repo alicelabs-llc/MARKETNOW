@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7738689",
+  "certificate_id": "MN-SC-2026-0774368",
   "skill_id": "mn-voi-00020",
   "skill_name": "Soniox STT",
-  "issued_at": "2026-07-06T00:28:58.689Z",
-  "expires_at": "2026-07-13T00:28:58.689Z",
+  "issued_at": "2026-07-06T04:06:14.368Z",
+  "expires_at": "2026-07-13T04:06:14.368Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fcc6d03fc1c63816a17eccbb9952c9e5d63bcaf8c3d4fb13bb1fb74dae0bf7b",
+  "signature": "b4450ce2d4fbd46393e6a28477ebfabea04d7be08235f4bc789a29dadb529804",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00020"
 }

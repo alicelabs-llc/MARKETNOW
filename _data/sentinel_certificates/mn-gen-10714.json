@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7271764",
+  "certificate_id": "MN-SC-2026-0428003",
   "skill_id": "mn-gen-10714",
   "skill_name": "Prompt-version-control",
-  "issued_at": "2026-07-06T00:21:11.764Z",
-  "expires_at": "2026-07-13T00:21:11.764Z",
+  "issued_at": "2026-07-06T04:00:28.003Z",
+  "expires_at": "2026-07-13T04:00:28.003Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24048c68973e2e962f1ca2ae17e68884f1481999cc5808f4c877946519dc266e",
+  "signature": "20648f347a4a5acde75050b252e239ef8f0032acc4588360678567a43dc61246",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10714"
 }

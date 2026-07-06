@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6907890",
+  "certificate_id": "MN-SC-2026-0130115",
   "skill_id": "mn-gen-02543",
-  "skill_name": "Codebridge-mcp",
-  "issued_at": "2026-07-06T00:15:07.890Z",
-  "expires_at": "2026-07-13T00:15:07.890Z",
+  "skill_name": "debridge-mcp",
+  "issued_at": "2026-07-06T03:55:30.115Z",
+  "expires_at": "2026-07-13T03:55:30.115Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "47b8eee9e0cf88125c60469121c1fed38830d28e749c973df4b2b20dca35464e",
+  "signature": "42898f90b1884a97659732a25014082eb9371e407530483ec9041d96e94081e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02543"
 }

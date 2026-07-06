@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7401309",
+  "certificate_id": "MN-SC-2026-0541348",
   "skill_id": "mn-gen-13538",
   "skill_name": "Workspace-bridge-mcp",
-  "issued_at": "2026-07-06T00:23:21.309Z",
-  "expires_at": "2026-07-13T00:23:21.309Z",
+  "issued_at": "2026-07-06T04:02:21.348Z",
+  "expires_at": "2026-07-13T04:02:21.348Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93082c98db5cc3560927236eb36b3f1a750886dce62f93814a25875f73136b81",
+  "signature": "185b841a3c565a4037e121e5d9d4eefc29c3fc671359272dc6ca7adc11e0071e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13538"
 }

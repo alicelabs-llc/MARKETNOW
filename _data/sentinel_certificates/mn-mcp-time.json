@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7886785",
+  "certificate_id": "MN-SC-2026-0879386",
   "skill_id": "mn-mcp-time",
   "skill_name": "MCP Time Server (Official)",
-  "issued_at": "2026-07-06T00:31:26.785Z",
-  "expires_at": "2026-07-13T00:31:26.785Z",
+  "issued_at": "2026-07-06T04:07:59.386Z",
+  "expires_at": "2026-07-13T04:07:59.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "1750ab0f4a76cb95a8eb4d11b71cd060e6640ba984c29a4259ba2d1e7c7f9832",
+  "signature": "de49e55eb8af3cd79db50a03cb272d34c0e3236c4009515b8bdc8181af632aff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-time"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7365963",
+  "certificate_id": "MN-SC-2026-0511919",
   "skill_id": "mn-gen-12824",
   "skill_name": "Tri-protocol",
-  "issued_at": "2026-07-06T00:22:45.963Z",
-  "expires_at": "2026-07-13T00:22:45.963Z",
+  "issued_at": "2026-07-06T04:01:51.919Z",
+  "expires_at": "2026-07-13T04:01:51.919Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "34317462c94f15ce0b2e820c1c7b557d1aeb48bac9327dadd6d6553ee484f545",
+  "signature": "8b798a8dde16d558be71a2136eb4c92ec8d900a88cac14e53ab8a25bb7b5bd71",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12824"
 }

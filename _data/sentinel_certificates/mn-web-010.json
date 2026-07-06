@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7827784",
+  "certificate_id": "MN-SC-2026-0840014",
   "skill_id": "mn-web-010",
   "skill_name": "Website Monitor",
-  "issued_at": "2026-07-06T00:30:27.784Z",
-  "expires_at": "2026-07-13T00:30:27.784Z",
+  "issued_at": "2026-07-06T04:07:20.014Z",
+  "expires_at": "2026-07-13T04:07:20.014Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8163b09ac2c875236cbaf25d630586ee28a8de6af431bf29502f535e5767e960",
+  "signature": "93af50cb51a5ca6e4d5fd4ca4753e9d05c351c73cefe8554bdcb42c43391fcc1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-010"
 }

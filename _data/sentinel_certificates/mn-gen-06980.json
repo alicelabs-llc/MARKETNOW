@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7111600",
+  "certificate_id": "MN-SC-2026-0290476",
   "skill_id": "mn-gen-06980",
-  "skill_name": "Klever/mcp-server",
-  "issued_at": "2026-07-06T00:18:31.600Z",
-  "expires_at": "2026-07-13T00:18:31.600Z",
+  "skill_name": "mcp-klever-vm",
+  "issued_at": "2026-07-06T03:58:10.476Z",
+  "expires_at": "2026-07-13T03:58:10.476Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f749848bc0342cfae73ecde3d316f9fa43714d33a1f3e81f3a5e318c2e8116f9",
+  "signature": "0658684a4299b74c64f9a4bfea9ed109bd5771656083cadb154477375e397293",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06980"
 }

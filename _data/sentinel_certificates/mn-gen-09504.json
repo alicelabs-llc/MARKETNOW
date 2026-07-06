@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7217707",
+  "certificate_id": "MN-SC-2026-0373656",
   "skill_id": "mn-gen-09504",
   "skill_name": "Neuralscraper",
-  "issued_at": "2026-07-06T00:20:17.707Z",
-  "expires_at": "2026-07-13T00:20:17.707Z",
+  "issued_at": "2026-07-06T03:59:33.656Z",
+  "expires_at": "2026-07-13T03:59:33.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59f13568e769a238f9084c7e169911fc175446b6f021283b7bbc796985bfeba9",
+  "signature": "7c91c21d08c121b08e42db944e17b24288ba22570636ed52ac3b5d1529cb374f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09504"
 }

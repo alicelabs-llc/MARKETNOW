@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7308857",
+  "certificate_id": "MN-SC-2026-0462101",
   "skill_id": "mn-gen-11548",
   "skill_name": "Seatgeek-mcp",
-  "issued_at": "2026-07-06T00:21:48.857Z",
-  "expires_at": "2026-07-13T00:21:48.857Z",
+  "issued_at": "2026-07-06T04:01:02.101Z",
+  "expires_at": "2026-07-13T04:01:02.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09246713a435c6ef8ee904971ceddd042b19e4a7f3b20054b7ffa547f3fea71b",
+  "signature": "d04ac42f7a54a15c72c9cca712b75a433d45518713c64b1470e7f31fa339c94b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11548"
 }

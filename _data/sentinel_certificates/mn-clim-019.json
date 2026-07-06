@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7834585",
+  "certificate_id": "MN-SC-2026-0844399",
   "skill_id": "mn-clim-019",
   "skill_name": "Climate Scenario Analyzer",
-  "issued_at": "2026-07-06T00:30:34.585Z",
-  "expires_at": "2026-07-13T00:30:34.585Z",
+  "issued_at": "2026-07-06T04:07:24.399Z",
+  "expires_at": "2026-07-13T04:07:24.399Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a378a86b120c422163a93a4dd06a2360be7143d94e2a765190c183ba1b22e465",
+  "signature": "cb0f3eeb60edad5e33320ba8bfedf6a96fa95e5bfaa02af0a57e077831b5a09b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-clim-019"
 }

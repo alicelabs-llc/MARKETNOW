@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7119272",
+  "certificate_id": "MN-SC-2026-0295849",
   "skill_id": "mn-gen-07124",
   "skill_name": "Kernel.salacoste/n8n-workflow-builder",
-  "issued_at": "2026-07-06T00:18:39.272Z",
-  "expires_at": "2026-07-13T00:18:39.272Z",
+  "issued_at": "2026-07-06T03:58:15.849Z",
+  "expires_at": "2026-07-13T03:58:15.849Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a007a610c0555ed0a7aac908f0265fd00ade00f1ca08316bd7d85e376374b98",
+  "signature": "d57f6be9b3fbe2cc407896234229cb15e49d4240c80af47ad05c77aecbbf5a45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07124"
 }

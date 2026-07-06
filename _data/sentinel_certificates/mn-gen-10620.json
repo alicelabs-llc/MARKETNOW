@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7268128",
+  "certificate_id": "MN-SC-2026-0425335",
   "skill_id": "mn-gen-10620",
   "skill_name": "Powershell-mcp-server",
-  "issued_at": "2026-07-06T00:21:08.128Z",
-  "expires_at": "2026-07-13T00:21:08.128Z",
+  "issued_at": "2026-07-06T04:00:25.335Z",
+  "expires_at": "2026-07-13T04:00:25.335Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af88829441baefb90c9e74213b6f821c7b81fae7f998e20a0c45c211e0023dd1",
+  "signature": "28d0049d959a0b1d5f16f472c676e91c54a64c10e6e818ef5888ac8dd87f0ca3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10620"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6908530",
+  "certificate_id": "MN-SC-2026-0130559",
   "skill_id": "mn-gen-02547",
   "skill_name": "Code-config-hub",
-  "issued_at": "2026-07-06T00:15:08.530Z",
-  "expires_at": "2026-07-13T00:15:08.530Z",
+  "issued_at": "2026-07-06T03:55:30.559Z",
+  "expires_at": "2026-07-13T03:55:30.559Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c196e7ffa837cf00bc63667d5d04d34b5676732b81d72d15aafa79fc3c4e33b",
+  "signature": "34d7c8a9651b6e2182ae8b1538aa319699a3d7d16ef26781d4025c33816a8895",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02547"
 }

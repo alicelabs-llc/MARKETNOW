@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7760174",
+  "certificate_id": "MN-SC-2026-0790976",
   "skill_id": "mn-pro-f002d053",
   "skill_name": "Database Query Rewriter",
-  "issued_at": "2026-07-06T00:29:20.174Z",
-  "expires_at": "2026-07-13T00:29:20.174Z",
+  "issued_at": "2026-07-06T04:06:30.976Z",
+  "expires_at": "2026-07-13T04:06:30.976Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3e06cb4ed0e00c49a8d4c1476a2194a0c1e704ab2e0386946b941a6e97ea591",
+  "signature": "db03b39615bd8b9cd6fde320cd0b5b36d024e15d4809318809f11228fa44ac69",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-f002d053"
 }

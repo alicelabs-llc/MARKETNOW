@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7694718",
+  "certificate_id": "MN-SC-2026-0740255",
   "skill_id": "mn-acm-020",
   "skill_name": "Context-Aware Prompt Builder",
-  "issued_at": "2026-07-06T00:28:14.718Z",
-  "expires_at": "2026-07-13T00:28:14.718Z",
+  "issued_at": "2026-07-06T04:05:40.255Z",
+  "expires_at": "2026-07-13T04:05:40.255Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81556f6419e24dec24996f3ba38f5676e1b605d2b62e0ec3cb0c394236ad3cb1",
+  "signature": "5ac43224921070ce8f6a0e82508bcf2058c265ee6906abb090a6ceaa840aaed7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-020"
 }

@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7333885",
+  "certificate_id": "MN-SC-2026-0483769",
   "skill_id": "mn-gen-12063",
-  "skill_name": "Spectrawl",
-  "issued_at": "2026-07-06T00:22:13.885Z",
-  "expires_at": "2026-07-13T00:22:13.885Z",
+  "skill_name": "spectrawl",
+  "issued_at": "2026-07-06T04:01:23.769Z",
+  "expires_at": "2026-07-13T04:01:23.769Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 0,
+  "overall_score": 2,
   "max_score": 10,
   "risk_level": "critical",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 5,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4de17960440f7843156807a6cb7fe4f79bf359ee20540915482765a5feed5de0",
+  "signature": "638a790629f711c4cfaf93a1b76cee4e262deb6fc83c1e8d5295c565f4356ecb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12063"
 }

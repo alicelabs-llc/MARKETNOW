@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7443143",
+  "certificate_id": "MN-SC-2026-0575692",
   "skill_id": "mn-prompt-9013b054",
   "skill_name": "Especialista SAST + Code Review",
-  "issued_at": "2026-07-06T00:24:03.143Z",
-  "expires_at": "2026-07-13T00:24:03.143Z",
+  "issued_at": "2026-07-06T04:02:55.692Z",
+  "expires_at": "2026-07-13T04:02:55.692Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "156793aab9c32742d19fa135da8d6073150a916a66c4eb56f9d0056f5387616f",
+  "signature": "d470d7aba8fcfb7996b996c043cb5485ae9277d80c637d9426b2037bdc9a7acd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9013b054"
 }

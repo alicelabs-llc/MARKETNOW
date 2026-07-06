@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7877145",
+  "certificate_id": "MN-SC-2026-0873068",
   "skill_id": "mn-prop-040",
   "skill_name": "Real Estate Market Forecast",
-  "issued_at": "2026-07-06T00:31:17.145Z",
-  "expires_at": "2026-07-13T00:31:17.145Z",
+  "issued_at": "2026-07-06T04:07:53.068Z",
+  "expires_at": "2026-07-13T04:07:53.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e96c67aca8029f7b1fe894f5984af552f8e47573536d4cd0019760216b0fc385",
+  "signature": "1d7f1b34901fda800bc671b2b18bfe292526464210ea6307a5d626b48499431d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prop-040"
 }

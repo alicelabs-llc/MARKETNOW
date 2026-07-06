@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6944236",
+  "certificate_id": "MN-SC-2026-0153585",
   "skill_id": "mn-gen-03118",
   "skill_name": "Datto-rmm",
-  "issued_at": "2026-07-06T00:15:44.236Z",
-  "expires_at": "2026-07-13T00:15:44.236Z",
+  "issued_at": "2026-07-06T03:55:53.585Z",
+  "expires_at": "2026-07-13T03:55:53.585Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d41df506e4a68ed9a41ed04e85d4d68e85ebb781736aad1fe1336ce0864bae31",
+  "signature": "1e3508980620f1a11ea87ee4b2475dd168364f0ea9e98d0c1f6133f043b3f775",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03118"
 }

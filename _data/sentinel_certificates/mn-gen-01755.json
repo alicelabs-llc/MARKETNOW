@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6865640",
+  "certificate_id": "MN-SC-2026-0098866",
   "skill_id": "mn-gen-01755",
   "skill_name": "Ccl-monorepo",
-  "issued_at": "2026-07-06T00:14:25.640Z",
-  "expires_at": "2026-07-13T00:14:25.640Z",
+  "issued_at": "2026-07-06T03:54:58.866Z",
+  "expires_at": "2026-07-13T03:54:58.866Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "018f9cafe55b7d9c288db4a1298f8482e5325b2afc35119f86ecb697437b4464",
+  "signature": "b113497d7751e00ff83c416b04f8855424ee84c207faaf4fd53e4fab43ea60f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01755"
 }

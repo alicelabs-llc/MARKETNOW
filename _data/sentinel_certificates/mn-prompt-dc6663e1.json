@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7554213",
+  "certificate_id": "MN-SC-2026-0651879",
   "skill_id": "mn-prompt-dc6663e1",
   "skill_name": "Open source license compliance",
-  "issued_at": "2026-07-06T00:25:54.213Z",
-  "expires_at": "2026-07-13T00:25:54.213Z",
+  "issued_at": "2026-07-06T04:04:11.879Z",
+  "expires_at": "2026-07-13T04:04:11.879Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "88b1b7c9e52fd2c8f37f1e0ced0a9c62c7d385b9da92f45ab42bd41a11bfa3d6",
+  "signature": "9438cb110461263e7234069125587d264cb60f642ca610c3c035e746e892f720",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-dc6663e1"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7071313",
+  "certificate_id": "MN-SC-2026-0255996",
   "skill_id": "mn-gen-06064",
   "skill_name": "Manifold-mcp-server",
-  "issued_at": "2026-07-06T00:17:51.313Z",
-  "expires_at": "2026-07-13T00:17:51.313Z",
+  "issued_at": "2026-07-06T03:57:35.996Z",
+  "expires_at": "2026-07-13T03:57:35.996Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8e3dfe03add4e366528fc04b4c2d3fcd0583f16ec4dd3a8849b8e15e7415590c",
+  "signature": "7fb502d4d76b4a61a348fb25983c1a69cdee6f0f1930844827dccf80ad868be4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06064"
 }

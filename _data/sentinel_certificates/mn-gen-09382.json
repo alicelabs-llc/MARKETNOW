@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7211275",
+  "certificate_id": "MN-SC-2026-0369290",
   "skill_id": "mn-gen-09382",
   "skill_name": "Anatolykoptev/n8n-mcp-agent",
-  "issued_at": "2026-07-06T00:20:11.275Z",
-  "expires_at": "2026-07-13T00:20:11.275Z",
+  "issued_at": "2026-07-06T03:59:29.290Z",
+  "expires_at": "2026-07-13T03:59:29.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "df135202e8167f8e8390e218567656134e26e41dda677227c2d7165e2154700d",
+  "signature": "3cc093a6e4ef0e048271dfaa6134551f482f70a1f04c9464647c9a39ec749298",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09382"
 }

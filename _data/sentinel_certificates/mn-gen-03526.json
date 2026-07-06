@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6961859",
+  "certificate_id": "MN-SC-2026-0170382",
   "skill_id": "mn-gen-03526",
   "skill_name": "Drum-machine-mcp-app",
-  "issued_at": "2026-07-06T00:16:01.859Z",
-  "expires_at": "2026-07-13T00:16:01.859Z",
+  "issued_at": "2026-07-06T03:56:10.382Z",
+  "expires_at": "2026-07-13T03:56:10.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c000e8901cf895192f0367a0a34b6f0af7fc33e91e97c38dc8576041873f7d28",
+  "signature": "b965abd64914de0de5745f3b9d9b977683dd36f1ef9d385027f231f92622c3d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03526"
 }

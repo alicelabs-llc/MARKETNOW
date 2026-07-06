@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7414395",
+  "certificate_id": "MN-SC-2026-0551886",
   "skill_id": "mn-prompt-83b38ca6",
   "skill_name": "Generador de Tests Unitarios desde Código",
-  "issued_at": "2026-07-06T00:23:34.395Z",
-  "expires_at": "2026-07-13T00:23:34.395Z",
+  "issued_at": "2026-07-06T04:02:31.886Z",
+  "expires_at": "2026-07-13T04:02:31.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f1643a1cf2c93bb959be06296868d0eada1b4f4c6d502e94f8c609348711ca48",
+  "signature": "e2f405eb3d6597e1317705904c5dce9fab64164aba92c06482675840f28f1c1d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-83b38ca6"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7609893",
+  "certificate_id": "MN-SC-2026-0689707",
   "skill_id": "mn-prompt-f991b2e0",
   "skill_name": "Editing for tone consistency",
-  "issued_at": "2026-07-06T00:26:49.893Z",
-  "expires_at": "2026-07-13T00:26:49.893Z",
+  "issued_at": "2026-07-06T04:04:49.707Z",
+  "expires_at": "2026-07-13T04:04:49.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2df0a005a95a3bc0aa62096e640111108b21a8adeeb9d320596610ff2b8d837b",
+  "signature": "181a9698379c0dfcf032eb0e85f6bf4d77b192a4e881159214109eb5880e67df",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f991b2e0"
 }

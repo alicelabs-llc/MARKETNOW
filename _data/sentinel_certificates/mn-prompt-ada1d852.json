@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7427603",
+  "certificate_id": "MN-SC-2026-0562194",
   "skill_id": "mn-prompt-ada1d852",
   "skill_name": "Especialista Mobile Payments + Stripe",
-  "issued_at": "2026-07-06T00:23:47.603Z",
-  "expires_at": "2026-07-13T00:23:47.603Z",
+  "issued_at": "2026-07-06T04:02:42.194Z",
+  "expires_at": "2026-07-13T04:02:42.194Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2d61e2c40f51597dc5214452205974a888156455995cb19e88891cb11d8104e8",
+  "signature": "c24ab6204d8162723e3ed52928008d67946b7ab571c91c30ac4ce98205c10297",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ada1d852"
 }

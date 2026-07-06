@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7040604",
+  "certificate_id": "MN-SC-2026-0233783",
   "skill_id": "mn-gen-05360",
   "skill_name": "Jupyter-agent-bridge",
-  "issued_at": "2026-07-06T00:17:20.604Z",
-  "expires_at": "2026-07-13T00:17:20.604Z",
+  "issued_at": "2026-07-06T03:57:13.783Z",
+  "expires_at": "2026-07-13T03:57:13.783Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6fe83b25111ccf7e9c88f2682a9928cd669f33077346c4a820abcbaf8e0a9333",
+  "signature": "eafa6697a45ae0a2525a6802b0e307d43a22488ab0c5ca710b86f5cc151aec8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05360"
 }

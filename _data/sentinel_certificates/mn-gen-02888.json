@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6929775",
+  "certificate_id": "MN-SC-2026-0146816",
   "skill_id": "mn-gen-02888",
   "skill_name": "Create-agent-config",
-  "issued_at": "2026-07-06T00:15:29.775Z",
-  "expires_at": "2026-07-13T00:15:29.775Z",
+  "issued_at": "2026-07-06T03:55:46.816Z",
+  "expires_at": "2026-07-13T03:55:46.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5eadabc5d4abd9a638cd67979ab681780131648da88457ec70de87b461b36b2",
+  "signature": "9744711f3cb27e03c46f37672b61472b3564fda50ca1d611187d88b13c7e822b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02888"
 }

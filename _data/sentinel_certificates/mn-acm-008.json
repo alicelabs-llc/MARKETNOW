@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7693233",
+  "certificate_id": "MN-SC-2026-0739068",
   "skill_id": "mn-acm-008",
   "skill_name": "Conversation Context Selector",
-  "issued_at": "2026-07-06T00:28:13.233Z",
-  "expires_at": "2026-07-13T00:28:13.233Z",
+  "issued_at": "2026-07-06T04:05:39.068Z",
+  "expires_at": "2026-07-13T04:05:39.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f84bb02586f9f9a49ec958b6950569273acc4915223945a674274890435909cb",
+  "signature": "465608bee660ef97ef89e4bc1501181a5b115d2e1608eea9ac52344d8c0e1467",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-008"
 }

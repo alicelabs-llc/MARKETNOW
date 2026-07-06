@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7011584",
+  "certificate_id": "MN-SC-2026-0209330",
   "skill_id": "mn-res-04651",
   "skill_name": "Google-tools-mcp",
-  "issued_at": "2026-07-06T00:16:51.584Z",
-  "expires_at": "2026-07-13T00:16:51.584Z",
+  "issued_at": "2026-07-06T03:56:49.330Z",
+  "expires_at": "2026-07-13T03:56:49.330Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9757a21b5abce7a593d2a1a103aaadf065ba71b60f74dcb60e493dba7d19ba9",
+  "signature": "79dbca6780944de986189a55f163f599b20d5a81d66d10414328f3934ee10078",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-04651"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6808482",
+  "certificate_id": "MN-SC-2026-0060433",
   "skill_id": "mn-ai-00608",
   "skill_name": "Aigroup-fmp-mcp",
-  "issued_at": "2026-07-06T00:13:28.482Z",
-  "expires_at": "2026-07-13T00:13:28.482Z",
+  "issued_at": "2026-07-06T03:54:20.433Z",
+  "expires_at": "2026-07-13T03:54:20.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7d845f17c0f4f6f339f399a45cb24fee8031b640ff9cca92d0f8b6b09567388b",
+  "signature": "d8c29feac807934b53b61f366bc635e4701ff5635a5a7030febfdb452f9411df",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00608"
 }

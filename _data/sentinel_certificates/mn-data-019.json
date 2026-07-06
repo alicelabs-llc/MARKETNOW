@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7836705",
+  "certificate_id": "MN-SC-2026-0845700",
   "skill_id": "mn-data-019",
   "skill_name": "Data Quality Profiler",
-  "issued_at": "2026-07-06T00:30:36.705Z",
-  "expires_at": "2026-07-13T00:30:36.705Z",
+  "issued_at": "2026-07-06T04:07:25.700Z",
+  "expires_at": "2026-07-13T04:07:25.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa1e86d643a0332d92bc20a3abe9789edb9e495639902c3f5e1ef1d6a447f011",
+  "signature": "d54fb8cab1c9555d2be2c8893d07ee86392fabe043e60a717290802a8f8845ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-019"
 }

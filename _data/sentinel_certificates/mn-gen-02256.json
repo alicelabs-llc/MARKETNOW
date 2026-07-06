@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6891965",
+  "certificate_id": "MN-SC-2026-0118249",
   "skill_id": "mn-gen-02256",
   "skill_name": "Claude-qdrant-mcp",
-  "issued_at": "2026-07-06T00:14:51.965Z",
-  "expires_at": "2026-07-13T00:14:51.965Z",
+  "issued_at": "2026-07-06T03:55:18.249Z",
+  "expires_at": "2026-07-13T03:55:18.249Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4986e84edad50bddc8c77ab3624789565b4a82f705a0f890ad9db96f35593be4",
+  "signature": "23a5f6835f8e52a920fa21473e3b1a0242c8bee1dd01fa95ba90fa69c86a0ac2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02256"
 }

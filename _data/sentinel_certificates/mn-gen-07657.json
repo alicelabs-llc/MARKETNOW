@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7143188",
+  "certificate_id": "MN-SC-2026-0316335",
   "skill_id": "mn-gen-07657",
   "skill_name": "Mcp-server-gemini",
-  "issued_at": "2026-07-06T00:19:03.188Z",
-  "expires_at": "2026-07-13T00:19:03.188Z",
+  "issued_at": "2026-07-06T03:58:36.335Z",
+  "expires_at": "2026-07-13T03:58:36.335Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abf72f327f04349cd66524e6dc4f1cab2f3d19cc1c2cf867e1bd84e78207e28d",
+  "signature": "17c170eb2dfcfb7aa99829e0a632859d15943dc1b1344ebe9abfe3cfb4ed1fec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07657"
 }

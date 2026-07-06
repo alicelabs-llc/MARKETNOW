@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6900292",
+  "certificate_id": "MN-SC-2026-0124140",
   "skill_id": "mn-gen-02403",
   "skill_name": "Waldzellai/clear-thought-onepointfive",
-  "issued_at": "2026-07-06T00:15:00.292Z",
-  "expires_at": "2026-07-13T00:15:00.292Z",
+  "issued_at": "2026-07-06T03:55:24.140Z",
+  "expires_at": "2026-07-13T03:55:24.140Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00173d0d5e3fa232ea08d142dd22e2b259dd83f8d5aa75765fa15a9b1f5e01e3",
+  "signature": "2eec726c377ab312f6c553790ef9f8fb0aad6c81eb465ce8a73d51f333f35836",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02403"
 }

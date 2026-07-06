@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7394367",
+  "certificate_id": "MN-SC-2026-0536444",
   "skill_id": "mn-gen-13387",
   "skill_name": "Wechat-dev-mcp",
-  "issued_at": "2026-07-06T00:23:14.367Z",
-  "expires_at": "2026-07-13T00:23:14.367Z",
+  "issued_at": "2026-07-06T04:02:16.444Z",
+  "expires_at": "2026-07-13T04:02:16.444Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c248b8cce8a56764b8dfc48a9f096a43b607030c1067be8aaa030740d6b4247",
+  "signature": "7d70961526fc2e29665c614e813d5c83f032ff91953d645badcc11932561f4fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13387"
 }

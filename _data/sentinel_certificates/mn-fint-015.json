@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7849366",
+  "certificate_id": "MN-SC-2026-0853534",
   "skill_id": "mn-fint-015",
   "skill_name": "Buy Now Pay Later",
-  "issued_at": "2026-07-06T00:30:49.366Z",
-  "expires_at": "2026-07-13T00:30:49.366Z",
+  "issued_at": "2026-07-06T04:07:33.534Z",
+  "expires_at": "2026-07-13T04:07:33.534Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bd8013ebf1ab5003b0ecc406b95569a29553362b0042754e120a0e5ad9114502",
+  "signature": "11d8d9df74a5e037c6bc0d2da2dcc9f38c91a3f3e79d8b8a2ed1bf3b42c1b8f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-015"
 }

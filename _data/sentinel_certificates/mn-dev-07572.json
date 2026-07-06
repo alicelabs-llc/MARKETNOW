@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7139220",
+  "certificate_id": "MN-SC-2026-0313203",
   "skill_id": "mn-dev-07572",
   "skill_name": "Tiberriver256/mcp-server-azure-devops",
-  "issued_at": "2026-07-06T00:18:59.220Z",
-  "expires_at": "2026-07-13T00:18:59.220Z",
+  "issued_at": "2026-07-06T03:58:33.203Z",
+  "expires_at": "2026-07-13T03:58:33.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83fe48a411ad70d787e0ed18f2b9a19650efd647f5ec7cbd446c4dbd282c5862",
+  "signature": "ce04ca283ac4808b30bde17bfd626f4287a58d1d3a9ec217350270ff01e28a05",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dev-07572"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7292497",
+  "certificate_id": "MN-SC-2026-0442586",
   "skill_id": "mn-gen-11141",
   "skill_name": "Reminder-mcp",
-  "issued_at": "2026-07-06T00:21:32.497Z",
-  "expires_at": "2026-07-13T00:21:32.497Z",
+  "issued_at": "2026-07-06T04:00:42.586Z",
+  "expires_at": "2026-07-13T04:00:42.586Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2349f1c80c20548f02f5aafe94990b44271cb18e7ca30fa08cd16243f71db9d1",
+  "signature": "5326818f243eceeb92799c74e7d507c36ee0211e4810c136e8bf086c7196dabd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11141"
 }

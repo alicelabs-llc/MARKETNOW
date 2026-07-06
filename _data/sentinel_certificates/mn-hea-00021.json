@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7723137",
+  "certificate_id": "MN-SC-2026-0760346",
   "skill_id": "mn-hea-00021",
   "skill_name": "HIPAA Audit Logger",
-  "issued_at": "2026-07-06T00:28:43.137Z",
-  "expires_at": "2026-07-13T00:28:43.137Z",
+  "issued_at": "2026-07-06T04:06:00.346Z",
+  "expires_at": "2026-07-13T04:06:00.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "26bbb3261e400898f58dacf3c81be6b44e7b315ea7d6c6e9ab936f5305d5db55",
+  "signature": "aac89e6e0009c0403dad98e809ce4b57f16e38162a07aac8f12aa7253f8d4bb5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00021"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7130292",
+  "certificate_id": "MN-SC-2026-0304495",
   "skill_id": "mn-gen-07321",
   "skill_name": "Kinginsun/mcp-probot-hdi",
-  "issued_at": "2026-07-06T00:18:50.292Z",
-  "expires_at": "2026-07-13T00:18:50.292Z",
+  "issued_at": "2026-07-06T03:58:24.495Z",
+  "expires_at": "2026-07-13T03:58:24.495Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "54799c604958d94d9919162edf1fedaa60239b8d6bfaa68c9e8e8535063239e1",
+  "signature": "f4aee5e9544fea75d3d3f146c6bbda003c10b7d903e6139c2f889e2ec967bdce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07321"
 }

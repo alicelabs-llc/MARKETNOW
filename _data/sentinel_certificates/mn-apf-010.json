@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7711917",
+  "certificate_id": "MN-SC-2026-0751875",
   "skill_id": "mn-apf-010",
   "skill_name": "Model Distiller",
-  "issued_at": "2026-07-06T00:28:31.917Z",
-  "expires_at": "2026-07-13T00:28:31.917Z",
+  "issued_at": "2026-07-06T04:05:51.875Z",
+  "expires_at": "2026-07-13T04:05:51.875Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3e2284f104ec1312ab96442ca776974475fa246159bc5550caee3213605e696",
+  "signature": "2b2edea1f918f065b1474bc7991bdd0fffa7794bb6128c73c70e02e1caae53a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-010"
 }

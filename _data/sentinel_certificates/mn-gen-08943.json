@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7192662",
+  "certificate_id": "MN-SC-2026-0356844",
   "skill_id": "mn-gen-08943",
-  "skill_name": "Mercado-pago-mcp",
-  "issued_at": "2026-07-06T00:19:52.662Z",
-  "expires_at": "2026-07-13T00:19:52.662Z",
+  "skill_name": "mercadopago-tool",
+  "issued_at": "2026-07-06T03:59:16.844Z",
+  "expires_at": "2026-07-13T03:59:16.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "caf5d42a79a594c8467a25814663256cc2e353785380127122b31c55b3d138c7",
+  "signature": "d65ba52da4f71a542a19878c1b78c33fe7143d3e4a64db7cbcb3c232ec9bdf05",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08943"
 }

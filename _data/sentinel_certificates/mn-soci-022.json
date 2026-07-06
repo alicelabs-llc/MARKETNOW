@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7825156",
+  "certificate_id": "MN-SC-2026-0838246",
   "skill_id": "mn-soci-022",
   "skill_name": "Brand Voice Checker",
-  "issued_at": "2026-07-06T00:30:25.156Z",
-  "expires_at": "2026-07-13T00:30:25.156Z",
+  "issued_at": "2026-07-06T04:07:18.246Z",
+  "expires_at": "2026-07-13T04:07:18.246Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bf8c3d33526b7508632ca630c3f8957ce7a75982392e596e7b7bf6fffd799ee0",
+  "signature": "46c91a6c64644c0b2c5d7eef2d05cca1e86522a88f6d9a21b86788fd2d132304",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-soci-022"
 }

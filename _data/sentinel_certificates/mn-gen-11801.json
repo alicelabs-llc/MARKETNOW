@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7321512",
+  "certificate_id": "MN-SC-2026-0473308",
   "skill_id": "mn-gen-11801",
   "skill_name": "Simple-memory-extension-mcp-server",
-  "issued_at": "2026-07-06T00:22:01.512Z",
-  "expires_at": "2026-07-13T00:22:01.512Z",
+  "issued_at": "2026-07-06T04:01:13.308Z",
+  "expires_at": "2026-07-13T04:01:13.308Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ec3f4328f04af46372bf61bc28c850a33a94efcf9dd8704b017d47f91353dd9",
+  "signature": "e27151fa65ddcb9d7bdb634accc603bdab6845abb4ed69ff0ed801e0869148a7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11801"
 }

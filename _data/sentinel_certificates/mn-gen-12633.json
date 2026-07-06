@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7356351",
+  "certificate_id": "MN-SC-2026-0505152",
   "skill_id": "mn-gen-12633",
   "skill_name": "Thunderclient-mcp",
-  "issued_at": "2026-07-06T00:22:36.351Z",
-  "expires_at": "2026-07-13T00:22:36.351Z",
+  "issued_at": "2026-07-06T04:01:45.152Z",
+  "expires_at": "2026-07-13T04:01:45.152Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f959e31258c3339ebcecf0487f3d0d50aa63c8553f89c8b89616bb70524b3d9a",
+  "signature": "930c8099002e70a0077ec0e640f8ec7582e41b558eb4a071a3eb3eab8356813e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12633"
 }

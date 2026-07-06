@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7852338",
+  "certificate_id": "MN-SC-2026-0855504",
   "skill_id": "mn-fint-031",
   "skill_name": "Card Issuing Platform",
-  "issued_at": "2026-07-06T00:30:52.338Z",
-  "expires_at": "2026-07-13T00:30:52.338Z",
+  "issued_at": "2026-07-06T04:07:35.504Z",
+  "expires_at": "2026-07-13T04:07:35.504Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "07b87a935cd38d59bb5278ed60994085379508ff2d6fa80a2ef6aaf446ae0ed4",
+  "signature": "18a7d2e98067e5fc059e3abb287ef733b9b9d745b5e08ae7f661828190763e1f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-031"
 }

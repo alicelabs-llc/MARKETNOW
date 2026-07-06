@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7062535",
+  "certificate_id": "MN-SC-2026-0248370",
   "skill_id": "mn-gen-05867",
   "skill_name": "Local-dev-bridge-mcp",
-  "issued_at": "2026-07-06T00:17:42.535Z",
-  "expires_at": "2026-07-13T00:17:42.536Z",
+  "issued_at": "2026-07-06T03:57:28.370Z",
+  "expires_at": "2026-07-13T03:57:28.370Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2af222f0963820f78ffad8429d55bc328665ceace0ad883f7584526aa7b7a3d4",
+  "signature": "8769e0b572c0e53eb312b4165db15348ee58233d7b2ab9512e09abf552ed810f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05867"
 }

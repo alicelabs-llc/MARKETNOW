@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7677999",
+  "certificate_id": "MN-SC-2026-0729538",
   "skill_id": "mn-arl-020",
   "skill_name": "Deterministic Output Generator",
-  "issued_at": "2026-07-06T00:27:57.999Z",
-  "expires_at": "2026-07-13T00:27:57.999Z",
+  "issued_at": "2026-07-06T04:05:29.538Z",
+  "expires_at": "2026-07-13T04:05:29.538Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe58f04ebe35d9e7ef2945a88e9e094a1d36ee60e12d904bbfbebc885ef93269",
+  "signature": "a512080e940a5480e3914ed904f954bbca9b4edc6dba6a63bbbe91b5e2914ba6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-020"
 }

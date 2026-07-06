@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7156376",
+  "certificate_id": "MN-SC-2026-0327629",
   "skill_id": "mn-ai-07887",
   "skill_name": "Openai-todo-assistant",
-  "issued_at": "2026-07-06T00:19:16.376Z",
-  "expires_at": "2026-07-13T00:19:16.376Z",
+  "issued_at": "2026-07-06T03:58:47.629Z",
+  "expires_at": "2026-07-13T03:58:47.629Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a190063e2d772097504be38344aa08062202b6fa6bf7e0277bfc75e1adb7c4e6",
+  "signature": "32f796f06004047cf4b2c9741dcedb366fdfe24b79ee98734628ec3e5277ca7f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07887"
 }

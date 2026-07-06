@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6871175",
+  "certificate_id": "MN-SC-2026-0102898",
   "skill_id": "mn-gen-01875",
   "skill_name": "Chimera",
-  "issued_at": "2026-07-06T00:14:31.175Z",
-  "expires_at": "2026-07-13T00:14:31.175Z",
+  "issued_at": "2026-07-06T03:55:02.898Z",
+  "expires_at": "2026-07-13T03:55:02.898Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ceeaa3a9873596930bfa6d988d1148bda1673ac470a1a119451023fe2622dd1",
+  "signature": "b40e584fd9bed618a6910803ff57d73120fda5052b7f0c12eaee127ccb995cc3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01875"
 }

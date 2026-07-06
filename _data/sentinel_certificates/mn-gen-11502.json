@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7306776",
+  "certificate_id": "MN-SC-2026-0460367",
   "skill_id": "mn-gen-11502",
   "skill_name": "Screen-capture-mcp",
-  "issued_at": "2026-07-06T00:21:46.776Z",
-  "expires_at": "2026-07-13T00:21:46.776Z",
+  "issued_at": "2026-07-06T04:01:00.367Z",
+  "expires_at": "2026-07-13T04:01:00.367Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e822044dc7cf3c4751825fc13c9e4e1fa594dc578dfe787a278a463fdab0e854",
+  "signature": "3aec920286fe5b92cb1eb84b6e48e9d2006e852327f5ad3867d84c07b452b880",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11502"
 }

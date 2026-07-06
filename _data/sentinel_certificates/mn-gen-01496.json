@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6849371",
+  "certificate_id": "MN-SC-2026-0088171",
   "skill_id": "mn-gen-01496",
   "skill_name": "Books-for-agents",
-  "issued_at": "2026-07-06T00:14:09.371Z",
-  "expires_at": "2026-07-13T00:14:09.371Z",
+  "issued_at": "2026-07-06T03:54:48.171Z",
+  "expires_at": "2026-07-13T03:54:48.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2441fd6ec162bc243aec2814e8d7579ff644b6e0601044aab3a774690532a7bd",
+  "signature": "3168e17c4bc7c57e524cf4038a7a05cfe85c09a7ee7fb4feabe7d8f47e25c1e5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01496"
 }

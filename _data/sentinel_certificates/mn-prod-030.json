@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7821187",
+  "certificate_id": "MN-SC-2026-0835688",
   "skill_id": "mn-prod-030",
   "skill_name": "Automation Builder",
-  "issued_at": "2026-07-06T00:30:21.187Z",
-  "expires_at": "2026-07-13T00:30:21.187Z",
+  "issued_at": "2026-07-06T04:07:15.688Z",
+  "expires_at": "2026-07-13T04:07:15.688Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b10874d7168f9bb3c442a5662c2c60f02870a3c9ab7089d210d5e0157cb03ca",
+  "signature": "e616e682b318e6a6760c6cfe1cc66220cade06419dc3d4daf62fd0ec89e6f959",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-030"
 }

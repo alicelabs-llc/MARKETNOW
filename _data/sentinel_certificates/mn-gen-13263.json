@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7387497",
+  "certificate_id": "MN-SC-2026-0531520",
   "skill_id": "mn-gen-13263",
   "skill_name": "Vsz-mcp",
-  "issued_at": "2026-07-06T00:23:07.497Z",
-  "expires_at": "2026-07-13T00:23:07.497Z",
+  "issued_at": "2026-07-06T04:02:11.520Z",
+  "expires_at": "2026-07-13T04:02:11.520Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4523ea17da06d879c0d25139d836ad1e2f6d3570266ec66bf4ddf869a8b3b25a",
+  "signature": "3a25dea8390d770c389481dc3f3cb4397c8af631182d97c6805ae536a95399d2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13263"
 }

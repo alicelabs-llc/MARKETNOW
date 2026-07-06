@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7801492",
+  "certificate_id": "MN-SC-2026-0824738",
   "skill_id": "mn-comm-030",
-  "skill_name": "Marketplace Manager",
-  "issued_at": "2026-07-06T00:30:01.492Z",
-  "expires_at": "2026-07-13T00:30:01.492Z",
+  "skill_name": "mcp-marketplace",
+  "issued_at": "2026-07-06T04:07:04.738Z",
+  "expires_at": "2026-07-13T04:07:04.738Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75d7d6f1bb9d0daf141e180a07befec360ee63989589be7d094bf57f5d33b413",
+  "signature": "dbb81e8e43ea1425d4948a08584df63b8e4d4ab1cecc5e55e21ef92d618f2bbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-030"
 }

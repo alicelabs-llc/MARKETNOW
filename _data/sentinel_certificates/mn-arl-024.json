@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7679788",
+  "certificate_id": "MN-SC-2026-0729995",
   "skill_id": "mn-arl-024",
   "skill_name": "Conversational Repair MCP",
-  "issued_at": "2026-07-06T00:27:59.788Z",
-  "expires_at": "2026-07-13T00:27:59.788Z",
+  "issued_at": "2026-07-06T04:05:29.995Z",
+  "expires_at": "2026-07-13T04:05:29.995Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f7f82d19aadaaf249531bd1ae1b3a9e0a9600fdc85dc16152dd4ab98509909a",
+  "signature": "340f1caeaba82079843f67a5667241c118c42a920bf472f48fd8d225f1c2c414",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-024"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6842923",
+  "certificate_id": "MN-SC-2026-0083312",
   "skill_id": "mn-gen-01328",
   "skill_name": "Thesammykins/beep-boop-mcp-server",
-  "issued_at": "2026-07-06T00:14:02.923Z",
-  "expires_at": "2026-07-13T00:14:02.923Z",
+  "issued_at": "2026-07-06T03:54:43.312Z",
+  "expires_at": "2026-07-13T03:54:43.312Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "397442592f055830c208b69914531ba0e7a23532fa623ef37c172e009a92e3bf",
+  "signature": "8e36d121bcb0296d3d5fcb4667fa7b691931388cc6e64e6361f063ce13fda819",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01328"
 }

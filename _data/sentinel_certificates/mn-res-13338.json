@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7391615",
+  "certificate_id": "MN-SC-2026-0534119",
   "skill_id": "mn-res-13338",
-  "skill_name": "Web-search-plus",
-  "issued_at": "2026-07-06T00:23:11.615Z",
-  "expires_at": "2026-07-13T00:23:11.615Z",
+  "skill_name": "web-search-plus-mcp",
+  "issued_at": "2026-07-06T04:02:14.119Z",
+  "expires_at": "2026-07-13T04:02:14.119Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8e9f54629a9faf4b448e142e729d53348d61d881836faf9136d2b9cb0f9adb37",
+  "signature": "49709db3ab8aa4a60b67a281e388a1aa8b0e356c092462da16dbd8712ea26c6a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-13338"
 }

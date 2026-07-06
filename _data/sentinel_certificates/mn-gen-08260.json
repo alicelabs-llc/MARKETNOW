@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7174239",
+  "certificate_id": "MN-SC-2026-0340155",
   "skill_id": "mn-gen-08260",
   "skill_name": "Mcp-windows-notify",
-  "issued_at": "2026-07-06T00:19:34.239Z",
-  "expires_at": "2026-07-13T00:19:34.239Z",
+  "issued_at": "2026-07-06T03:59:00.155Z",
+  "expires_at": "2026-07-13T03:59:00.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f88b04b9664f016dc10dc72561d665c4d99368c361599430cd3d088faec8712d",
+  "signature": "4845cc76fe9cff694441e8d4c34a7abac1e880cc325b7ac55ad17db1e6658844",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08260"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7358398",
+  "certificate_id": "MN-SC-2026-0505925",
   "skill_id": "mn-gen-12655",
-  "skill_name": "Time-mcp",
-  "issued_at": "2026-07-06T00:22:38.398Z",
-  "expires_at": "2026-07-13T00:22:38.398Z",
+  "skill_name": "mcp-time",
+  "issued_at": "2026-07-06T04:01:45.925Z",
+  "expires_at": "2026-07-13T04:01:45.925Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aecc4b5124d8a02c483e7e74516f34ff6af8f96dbf45ea17015a34dd962d4d6b",
+  "signature": "2755c70c4b27cf68a09c7a95d8c6712e7932600a5fa6deda2da0640aeb03650b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12655"
 }

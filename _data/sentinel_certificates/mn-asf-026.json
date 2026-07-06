@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7708279",
+  "certificate_id": "MN-SC-2026-0748818",
   "skill_id": "mn-asf-026",
   "skill_name": "Security Audit Trail",
-  "issued_at": "2026-07-06T00:28:28.279Z",
-  "expires_at": "2026-07-13T00:28:28.279Z",
+  "issued_at": "2026-07-06T04:05:48.818Z",
+  "expires_at": "2026-07-13T04:05:48.818Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ddcb00f53af9a3a4e498571d5fb2b994b431f4ec28d21e375bc2d1ed339921b8",
+  "signature": "bc968d2480acdc42d8bfb3d0c2772ce9d7d50aa2997ae7f2acc9e68fb20e36e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-026"
 }

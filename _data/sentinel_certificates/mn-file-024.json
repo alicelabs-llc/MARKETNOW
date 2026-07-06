@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7814256",
+  "certificate_id": "MN-SC-2026-0831641",
   "skill_id": "mn-file-024",
   "skill_name": "Image Cropper",
-  "issued_at": "2026-07-06T00:30:14.256Z",
-  "expires_at": "2026-07-13T00:30:14.256Z",
+  "issued_at": "2026-07-06T04:07:11.641Z",
+  "expires_at": "2026-07-13T04:07:11.641Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5aca03303f1b520dbfa1ace60d4cb33e7aeef53e1621f9c8ce063033e8f752c",
+  "signature": "8ccd38d2a7114c595da5be85562a6aa1df140e20306df1009ca018b80161056b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-file-024"
 }

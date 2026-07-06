@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7793088",
+  "certificate_id": "MN-SC-2026-0817666",
   "skill_id": "mn-auto-028",
   "skill_name": "Notification Node",
-  "issued_at": "2026-07-06T00:29:53.088Z",
-  "expires_at": "2026-07-13T00:29:53.088Z",
+  "issued_at": "2026-07-06T04:06:57.666Z",
+  "expires_at": "2026-07-13T04:06:57.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81f651661ea8c2ae4ac7a9e83a813191a1ac650f42e99f9518ff89d410f44f7f",
+  "signature": "9e4d7462d58f34636c4163a700749e7fa5aad27fc289d5d8b4a2a5d4f926ac29",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-028"
 }

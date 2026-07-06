@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7306690",
+  "certificate_id": "MN-SC-2026-0460410",
   "skill_id": "mn-gen-11499",
   "skill_name": "Scratchpad-mcp-v2",
-  "issued_at": "2026-07-06T00:21:46.690Z",
-  "expires_at": "2026-07-13T00:21:46.690Z",
+  "issued_at": "2026-07-06T04:01:00.410Z",
+  "expires_at": "2026-07-13T04:01:00.410Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b68e12dfd9e4a8d02185dea543573a877f3e45c9efbfb41e754119a746c3b085",
+  "signature": "6045a2ccdd4c6b285e31dd02d6634f1cc24abb4ca3fe2a5adca16aab826bcd6c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11499"
 }

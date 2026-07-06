@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7184026",
+  "certificate_id": "MN-SC-2026-0350104",
   "skill_id": "mn-gen-08602",
   "skill_name": "Mcpsync-cli",
-  "issued_at": "2026-07-06T00:19:44.026Z",
-  "expires_at": "2026-07-13T00:19:44.026Z",
+  "issued_at": "2026-07-06T03:59:10.104Z",
+  "expires_at": "2026-07-13T03:59:10.104Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9e4013ac6e3801b7e020e320ad46c0a3a618e18d2e19cc3d5f0f01f85d92596a",
+  "signature": "55b652014e9d64495b59f7063109184c57ebf98ccf3d4169b36cdfa68ce52872",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08602"
 }

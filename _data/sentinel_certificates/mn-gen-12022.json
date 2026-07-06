@@ -1,17 +1,17 @@
 {
-  "certificate_id": "MN-SC-2026-7331369",
+  "certificate_id": "MN-SC-2026-0482401",
   "skill_id": "mn-gen-12022",
-  "skill_name": "Soul-ai",
-  "issued_at": "2026-07-06T00:22:11.369Z",
-  "expires_at": "2026-07-13T00:22:11.369Z",
+  "skill_name": "soul-mcp-server",
+  "issued_at": "2026-07-06T04:01:22.401Z",
+  "expires_at": "2026-07-13T04:01:22.401Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 5,
+  "overall_score": 8,
   "max_score": 10,
-  "risk_level": "high",
+  "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16": "medium",
     "l2": "not_available",
-    "final": "high"
+    "final": "medium"
   },
   "layers_run": {
     "l15": true,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c08a60d9bac20e036b5b025a6bcd1917e090667ef2ccfe9366c1b1fa750377b",
+  "signature": "04d8db7016299910b284d4a1a0bbdfa15355dd4416b8c4b26a9900290d9b1c5f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12022"
 }

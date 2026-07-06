@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7854579",
+  "certificate_id": "MN-SC-2026-0857941",
   "skill_id": "mn-heal-014",
   "skill_name": "Prior Auth Automator",
-  "issued_at": "2026-07-06T00:30:54.579Z",
-  "expires_at": "2026-07-13T00:30:54.579Z",
+  "issued_at": "2026-07-06T04:07:37.941Z",
+  "expires_at": "2026-07-13T04:07:37.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8d4b3131dbf577262f6e8cdd20612a3e0d14c2d2680695bb83da97b88b20a65",
+  "signature": "611bdb542dd0dc4e99c28cc443c270728b798f06cf1e478b91a5bf9e2bc84e47",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-heal-014"
 }

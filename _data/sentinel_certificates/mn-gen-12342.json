@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7343463",
+  "certificate_id": "MN-SC-2026-0494295",
   "skill_id": "mn-gen-12342",
   "skill_name": "Swagger-mcp-adapter",
-  "issued_at": "2026-07-06T00:22:23.463Z",
-  "expires_at": "2026-07-13T00:22:23.463Z",
+  "issued_at": "2026-07-06T04:01:34.295Z",
+  "expires_at": "2026-07-13T04:01:34.295Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a008d2105957293c84d3fbb288ab213abfa7776bd783c7aff859637c535b2cea",
+  "signature": "045b6f6a7b7aa2f6bc350b7af7e63580dafea798f0977b19c382b7821bdd85eb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12342"
 }

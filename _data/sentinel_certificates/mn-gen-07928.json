@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7158619",
+  "certificate_id": "MN-SC-2026-0329878",
   "skill_id": "mn-gen-07928",
   "skill_name": "Mcp-snapshot-server",
-  "issued_at": "2026-07-06T00:19:18.619Z",
-  "expires_at": "2026-07-13T00:19:18.619Z",
+  "issued_at": "2026-07-06T03:58:49.878Z",
+  "expires_at": "2026-07-13T03:58:49.878Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5047c776909d4afa997edb543042e6eb38149575aac6d88dca72f9f2a096a65",
+  "signature": "07fe1d7574b0efc9083df4184e12cdb0c120917fa788740c98397285194c5399",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07928"
 }

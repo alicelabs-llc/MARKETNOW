@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7723097",
+  "certificate_id": "MN-SC-2026-0760366",
   "skill_id": "mn-hea-00020",
   "skill_name": "HIPAA Compliant Storage",
-  "issued_at": "2026-07-06T00:28:43.097Z",
-  "expires_at": "2026-07-13T00:28:43.097Z",
+  "issued_at": "2026-07-06T04:06:00.366Z",
+  "expires_at": "2026-07-13T04:06:00.366Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32ad34a61e7486487579957f37fd211e218498974fb8f883bc70a01d98be2270",
+  "signature": "afedc47334c58600e7c5f149ce9951e66a755d6178996aecb1edfd910978a800",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00020"
 }

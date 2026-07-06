@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7756840",
+  "certificate_id": "MN-SC-2026-0788436",
   "skill_id": "mn-pro-f0235407",
   "skill_name": "API Response Validator",
-  "issued_at": "2026-07-06T00:29:16.840Z",
-  "expires_at": "2026-07-13T00:29:16.840Z",
+  "issued_at": "2026-07-06T04:06:28.436Z",
+  "expires_at": "2026-07-13T04:06:28.436Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "92bcbae32713dfb3494f5d925fd85669557141be9ec0c5e490a8e8253e801700",
+  "signature": "0de6fd8953744c1834cf9f965eabc4b4bbdc2578fd799def776b9fd78c7e69d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-f0235407"
 }

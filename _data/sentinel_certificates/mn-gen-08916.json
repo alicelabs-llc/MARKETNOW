@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7191632",
+  "certificate_id": "MN-SC-2026-0355903",
   "skill_id": "mn-gen-08916",
   "skill_name": "Memoryvault",
-  "issued_at": "2026-07-06T00:19:51.632Z",
-  "expires_at": "2026-07-13T00:19:51.632Z",
+  "issued_at": "2026-07-06T03:59:15.903Z",
+  "expires_at": "2026-07-13T03:59:15.903Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c101703e7881d1698794940025cf95b6b0b24ee8fdf234917d9201a99066d687",
+  "signature": "a998c4944101267b2e18b9e0fbc860cfb71e4491e170a6e3f6e07de2862d993f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08916"
 }

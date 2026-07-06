@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7113237",
+  "certificate_id": "MN-SC-2026-0291768",
   "skill_id": "mn-gen-07026",
   "skill_name": "Mcp-local-llm",
-  "issued_at": "2026-07-06T00:18:33.237Z",
-  "expires_at": "2026-07-13T00:18:33.237Z",
+  "issued_at": "2026-07-06T03:58:11.768Z",
+  "expires_at": "2026-07-13T03:58:11.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79ff915903a8afe80675b52290c7ade88a425b5b257ff306959adb83a81557c2",
+  "signature": "507e881a9df0f6ff46d10b6d1b5e03f208219d5a5229cc8d9416352e3b069122",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07026"
 }

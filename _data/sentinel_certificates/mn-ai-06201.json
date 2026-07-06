@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7076376",
+  "certificate_id": "MN-SC-2026-0260213",
   "skill_id": "mn-ai-06201",
-  "skill_name": "Mcp-ai-memory",
-  "issued_at": "2026-07-06T00:17:56.376Z",
-  "expires_at": "2026-07-13T00:17:56.376Z",
+  "skill_name": "aimemo",
+  "issued_at": "2026-07-06T03:57:40.213Z",
+  "expires_at": "2026-07-13T03:57:40.213Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "103fcfb65f58dc377908531a93032ce63cb9943da1bdbedc86cbe35c802f799c",
+  "signature": "6276c5383ab13eeb5d1ccdfd82ac89ec3ba327cf4300f94a9b01804785b053db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06201"
 }

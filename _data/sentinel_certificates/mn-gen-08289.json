@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7175936",
+  "certificate_id": "MN-SC-2026-0341495",
   "skill_id": "mn-gen-08289",
   "skill_name": "Korfu/xray-mcp",
-  "issued_at": "2026-07-06T00:19:35.936Z",
-  "expires_at": "2026-07-13T00:19:35.936Z",
+  "issued_at": "2026-07-06T03:59:01.495Z",
+  "expires_at": "2026-07-13T03:59:01.495Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2cf34d52ed12ab02da7440bfa16f231176938bfd80fa90f1e919c8b0e79cdc70",
+  "signature": "618b5360134066a2f40a4be7567e8936dc37f8a8bd95048797377fc6ab3fd65d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08289"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6950499",
+  "certificate_id": "MN-SC-2026-0158823",
   "skill_id": "mn-aut-03275",
   "skill_name": "Developer-automation-agent-visualizer",
-  "issued_at": "2026-07-06T00:15:50.499Z",
-  "expires_at": "2026-07-13T00:15:50.499Z",
+  "issued_at": "2026-07-06T03:55:58.823Z",
+  "expires_at": "2026-07-13T03:55:58.823Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7637b74c1ed42e92159c3e84bfb4adc3ee0daa8426dd4d210459be3c522bcf46",
+  "signature": "bc772683c297428b615636b5538d08d760474cd63f7018e5df99ec20576ffc4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-aut-03275"
 }

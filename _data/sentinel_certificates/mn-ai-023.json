@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7741326",
+  "certificate_id": "MN-SC-2026-0776659",
   "skill_id": "mn-ai-023",
   "skill_name": "Model Serving Cost Calculator",
-  "issued_at": "2026-07-06T00:29:01.326Z",
-  "expires_at": "2026-07-13T00:29:01.326Z",
+  "issued_at": "2026-07-06T04:06:16.659Z",
+  "expires_at": "2026-07-13T04:06:16.659Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4fda25832d99ca2c4863739acbccced60bb86437521c13c2534380810ccd339e",
+  "signature": "c628af67576f8930eda34f3e4d6c98439e1dc861423ce91db919a861f098c252",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-023"
 }

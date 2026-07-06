@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7221005",
+  "certificate_id": "MN-SC-2026-0376320",
   "skill_id": "mn-ai-09591",
   "skill_name": "Nodusai-mcp-server",
-  "issued_at": "2026-07-06T00:20:21.005Z",
-  "expires_at": "2026-07-13T00:20:21.005Z",
+  "issued_at": "2026-07-06T03:59:36.320Z",
+  "expires_at": "2026-07-13T03:59:36.320Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7d189b220790ae24023525ad474ea1b1c419e1b5669e034dfcde5abb4c280683",
+  "signature": "dae116330d257bd1941026203ae4037ef626692eda3d61476027a140b0ca9f4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-09591"
 }

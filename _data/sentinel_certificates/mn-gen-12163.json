@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7336526",
+  "certificate_id": "MN-SC-2026-0486017",
   "skill_id": "mn-gen-12163",
   "skill_name": "Ssh-mcp-sessions",
-  "issued_at": "2026-07-06T00:22:16.526Z",
-  "expires_at": "2026-07-13T00:22:16.526Z",
+  "issued_at": "2026-07-06T04:01:26.017Z",
+  "expires_at": "2026-07-13T04:01:26.017Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "143a8bf70a982917f43b6f11e7db6c126589122415582062fb09aaa63b777da0",
+  "signature": "304fd13e2d2cb5789376312b5a13fc827c5b75ebcaa7ad1354cf6e7b2e7dfe59",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12163"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7008933",
+  "certificate_id": "MN-SC-2026-0207324",
   "skill_id": "mn-res-04607",
   "skill_name": "Google-admin-mcp",
-  "issued_at": "2026-07-06T00:16:48.933Z",
-  "expires_at": "2026-07-13T00:16:48.933Z",
+  "issued_at": "2026-07-06T03:56:47.324Z",
+  "expires_at": "2026-07-13T03:56:47.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "60d5b1e4156fca9ccdecfcdef4c44f62cdd352131b5c4b7369dda8aa71411a0e",
+  "signature": "ad714e62997b85ff20a04903b89bb5de1f140139d2dff258b4132b3718c41bed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-04607"
 }

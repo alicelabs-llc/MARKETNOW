@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6881595",
+  "certificate_id": "MN-SC-2026-0111040",
   "skill_id": "mn-gen-02075",
   "skill_name": "Claude-codex-dialog",
-  "issued_at": "2026-07-06T00:14:41.595Z",
-  "expires_at": "2026-07-13T00:14:41.595Z",
+  "issued_at": "2026-07-06T03:55:11.040Z",
+  "expires_at": "2026-07-13T03:55:11.040Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4eba4ae943270b081e82324d2ffb04ec2f7db2310a4129ba7e1fb49e5998a6c9",
+  "signature": "c1d70e5adba6addbb60bbeebf08e87647659b5854015504e9ffe46a4486cf6e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02075"
 }

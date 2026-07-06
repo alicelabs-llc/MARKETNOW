@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6942257",
+  "certificate_id": "MN-SC-2026-0152173",
   "skill_id": "mn-dat-03087",
   "skill_name": "Databutton",
-  "issued_at": "2026-07-06T00:15:42.257Z",
-  "expires_at": "2026-07-13T00:15:42.257Z",
+  "issued_at": "2026-07-06T03:55:52.173Z",
+  "expires_at": "2026-07-13T03:55:52.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc68fd35f380578c1996dea373e093259c44032d3821f6c2f57c41d76101cd53",
+  "signature": "b2416b555e33df8038a77367aa274129e9af73264a4203f7ec9fbe718041d4d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-03087"
 }

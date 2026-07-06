@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6870533",
+  "certificate_id": "MN-SC-2026-0102509",
   "skill_id": "mn-gen-01864",
   "skill_name": "Sura_ai/chemotion",
-  "issued_at": "2026-07-06T00:14:30.533Z",
-  "expires_at": "2026-07-13T00:14:30.533Z",
+  "issued_at": "2026-07-06T03:55:02.509Z",
+  "expires_at": "2026-07-13T03:55:02.509Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be8ef56e183eac93116c5633430a222b5637cc310186fb20e11574e470fb8b27",
+  "signature": "c7580825a11f690a4f2393b48cc760d60ad9cf12dc0812167a5a0a15e67bb0a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01864"
 }

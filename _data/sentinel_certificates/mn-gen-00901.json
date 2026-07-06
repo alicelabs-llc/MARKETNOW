@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6824563",
+  "certificate_id": "MN-SC-2026-0071003",
   "skill_id": "mn-gen-00901",
   "skill_name": "Axite-mcp-template",
-  "issued_at": "2026-07-06T00:13:44.563Z",
-  "expires_at": "2026-07-13T00:13:44.563Z",
+  "issued_at": "2026-07-06T03:54:31.003Z",
+  "expires_at": "2026-07-13T03:54:31.003Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63788ba4795d5a31b2647fb4af58edfdbb36d88faefda53f9f97d52ad3699a42",
+  "signature": "4234bc02cc6472039757f968c73badb7ac8c29dedd28a68b42fa2ecfe0a8213c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00901"
 }

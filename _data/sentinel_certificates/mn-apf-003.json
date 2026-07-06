@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7711334",
+  "certificate_id": "MN-SC-2026-0751462",
   "skill_id": "mn-apf-003",
-  "skill_name": "Token Optimizer",
-  "issued_at": "2026-07-06T00:28:31.334Z",
-  "expires_at": "2026-07-13T00:28:31.334Z",
+  "skill_name": "token-optimizer-mcp",
+  "issued_at": "2026-07-06T04:05:51.462Z",
+  "expires_at": "2026-07-13T04:05:51.462Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e17576e163eda125b738ce24d922b8ae91895b714957cfe488218032fdea6da2",
+  "signature": "aa413e93a2d8292e4a5b30799898676e30808ef7800593f8bf7f8b8796708344",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-003"
 }

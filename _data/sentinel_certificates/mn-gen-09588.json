@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7220968",
+  "certificate_id": "MN-SC-2026-0376606",
   "skill_id": "mn-gen-09588",
   "skill_name": "Node-red-mcp-server",
-  "issued_at": "2026-07-06T00:20:20.968Z",
-  "expires_at": "2026-07-13T00:20:20.968Z",
+  "issued_at": "2026-07-06T03:59:36.606Z",
+  "expires_at": "2026-07-13T03:59:36.606Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25ed5e5f3ef08885a5c9bce115ae0a4add1766bdceb720e3f77cc046f33911bc",
+  "signature": "d3a6a1638eba3fe66bccdb7d4246a8fdc73d0fa293460e9ddea64b5490ac6f21",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09588"
 }

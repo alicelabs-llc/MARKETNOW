@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7844721",
+  "certificate_id": "MN-SC-2026-0850030",
   "skill_id": "mn-edte-016",
   "skill_name": "Education Chatbot",
-  "issued_at": "2026-07-06T00:30:44.721Z",
-  "expires_at": "2026-07-13T00:30:44.721Z",
+  "issued_at": "2026-07-06T04:07:30.030Z",
+  "expires_at": "2026-07-13T04:07:30.030Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1710898229e5af0e88f825bed6cdaf3d25eda6e93f7b1e20800bb6419acf662b",
+  "signature": "8887f031eb674d569a239128c1120f0f6315043366f89707071f9811060dd68a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edte-016"
 }

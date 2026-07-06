@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7828409",
+  "certificate_id": "MN-SC-2026-0840420",
   "skill_id": "mn-web-015",
   "skill_name": "Broken Link Checker",
-  "issued_at": "2026-07-06T00:30:28.409Z",
-  "expires_at": "2026-07-13T00:30:28.409Z",
+  "issued_at": "2026-07-06T04:07:20.420Z",
+  "expires_at": "2026-07-13T04:07:20.420Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4a8eccf337d0bf55f64f018d1759fca47ca004496c050f4bdf31a95a5bf6971a",
+  "signature": "53bc22952090e8e89eb3fce9ac1434d5ae1ac16b95f619ecd5aca4d732b4c1e5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-015"
 }

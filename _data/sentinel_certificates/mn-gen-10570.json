@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7266286",
+  "certificate_id": "MN-SC-2026-0424035",
   "skill_id": "mn-gen-10570",
   "skill_name": "Popcorn-mcp",
-  "issued_at": "2026-07-06T00:21:06.286Z",
-  "expires_at": "2026-07-13T00:21:06.286Z",
+  "issued_at": "2026-07-06T04:00:24.035Z",
+  "expires_at": "2026-07-13T04:00:24.035Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9e8f94e7d893d98ed29a2ff2cba2ac468c4aa59f92b19978dfe269f81f2a40dd",
+  "signature": "c9632d074af8844ec5879672618d9dd40169a0e524ca758b9409bb3a35c835db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10570"
 }

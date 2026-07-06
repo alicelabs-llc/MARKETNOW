@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7129744",
+  "certificate_id": "MN-SC-2026-0303822",
   "skill_id": "mn-dat-07310",
-  "skill_name": "Mcp-postgres-server",
-  "issued_at": "2026-07-06T00:18:49.744Z",
-  "expires_at": "2026-07-13T00:18:49.744Z",
+  "skill_name": "postgres_mcp",
+  "issued_at": "2026-07-06T03:58:23.822Z",
+  "expires_at": "2026-07-13T03:58:23.822Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0cc8b6a6ee236da285c798a11c81e82cda8b640d6e933e2f8e37bc9d750f8e7c",
+  "signature": "eb3944884b78fd5c3e51271563a427e9d9d9163bef0bf016a0d26fef3a4f53fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-07310"
 }

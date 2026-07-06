@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7340376",
+  "certificate_id": "MN-SC-2026-0490243",
   "skill_id": "mn-gen-12261",
   "skill_name": "Structured-memory-engine",
-  "issued_at": "2026-07-06T00:22:20.376Z",
-  "expires_at": "2026-07-13T00:22:20.376Z",
+  "issued_at": "2026-07-06T04:01:30.243Z",
+  "expires_at": "2026-07-13T04:01:30.243Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f49cb18db6d14d730312ea5b7bd2d1e55f5263ce110f34ca9f5eae87a31978ef",
+  "signature": "727f1cc56cd89b26d497256f84fe99d0677bf042e5a10c49a1c2bf2d63b75d62",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12261"
 }

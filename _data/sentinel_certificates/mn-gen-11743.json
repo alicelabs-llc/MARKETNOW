@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7319431",
+  "certificate_id": "MN-SC-2026-0470816",
   "skill_id": "mn-gen-11743",
   "skill_name": "Shopify-mcp",
-  "issued_at": "2026-07-06T00:21:59.431Z",
-  "expires_at": "2026-07-13T00:21:59.431Z",
+  "issued_at": "2026-07-06T04:01:10.816Z",
+  "expires_at": "2026-07-13T04:01:10.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "449e923757ec7d8342d7a3950bcc71c7eb5b380e1b87e51e3fd2b1c4555ff290",
+  "signature": "1ed6b492e3270099202166e4b9a4505cb4389b0ef4dcfc9d2e5c98ad907ef4bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11743"
 }

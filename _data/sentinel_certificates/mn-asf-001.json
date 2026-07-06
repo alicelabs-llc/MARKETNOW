@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7704198",
+  "certificate_id": "MN-SC-2026-0746522",
   "skill_id": "mn-asf-001",
   "skill_name": "Content Safety Filter",
-  "issued_at": "2026-07-06T00:28:24.198Z",
-  "expires_at": "2026-07-13T00:28:24.198Z",
+  "issued_at": "2026-07-06T04:05:46.522Z",
+  "expires_at": "2026-07-13T04:05:46.522Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e227858ff1ad920d8c73573b133efe59673a05133beceab20d8bc293e8840b9e",
+  "signature": "e9b3c05ed29cd47bfee2af10c6d1673e5fc34f0f4c919e8fa281ce1c9b6d99ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-001"
 }

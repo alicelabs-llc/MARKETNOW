@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7339838",
+  "certificate_id": "MN-SC-2026-0489847",
   "skill_id": "mn-gen-12258",
   "skill_name": "Stripe-test-mcp",
-  "issued_at": "2026-07-06T00:22:19.838Z",
-  "expires_at": "2026-07-13T00:22:19.838Z",
+  "issued_at": "2026-07-06T04:01:29.847Z",
+  "expires_at": "2026-07-13T04:01:29.847Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09a70b3fa755455e28b36c2b7a85df185e24f3d989cf7b1c7b7824c8cb093360",
+  "signature": "9e8bd71153481fa039ad5005e470d63b475e1ab124b0098faf351a1bf85a1961",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12258"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7561398",
+  "certificate_id": "MN-SC-2026-0657339",
   "skill_id": "mn-prompt-65d60af6",
   "skill_name": "Repurposing pipeline 1 contenido a 20 piezas",
-  "issued_at": "2026-07-06T00:26:01.398Z",
-  "expires_at": "2026-07-13T00:26:01.398Z",
+  "issued_at": "2026-07-06T04:04:17.339Z",
+  "expires_at": "2026-07-13T04:04:17.339Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b9e056d24f96d499202cf47bae417708be6ec553021450688376f99a044ac3cb",
+  "signature": "7fa13d376ad6548689382cee575a0bbef33f03c7a4322bca9c2a21178fd99869",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-65d60af6"
 }

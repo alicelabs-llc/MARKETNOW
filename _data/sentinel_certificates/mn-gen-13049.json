@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7375606",
+  "certificate_id": "MN-SC-2026-0521482",
   "skill_id": "mn-gen-13049",
   "skill_name": "Upguard-cyberrisk-mcp-server",
-  "issued_at": "2026-07-06T00:22:55.606Z",
-  "expires_at": "2026-07-13T00:22:55.606Z",
+  "issued_at": "2026-07-06T04:02:01.482Z",
+  "expires_at": "2026-07-13T04:02:01.482Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d908c1b8e85be61f55620a3686394535cd9c9989df3cf0f6f0dd9fe3fe5061e",
+  "signature": "f246a7e0ecec40cca8d35688cdf33eb5ba07addee6b8715e1208ec554cd0d44a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13049"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6829806",
+  "certificate_id": "MN-SC-2026-0074392",
   "skill_id": "mn-gen-01008",
   "skill_name": "Askahuman-mcp",
-  "issued_at": "2026-07-06T00:13:49.806Z",
-  "expires_at": "2026-07-13T00:13:49.806Z",
+  "issued_at": "2026-07-06T03:54:34.392Z",
+  "expires_at": "2026-07-13T03:54:34.392Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01bb5533376e3dd157ab292cb805e93348e731058f8a530e62b418fec77d3d92",
+  "signature": "0305e08560333e69b7d3871a2c2c0830f95519bf63ab6a3ec51ee9624e5aa0b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01008"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7034417",
+  "certificate_id": "MN-SC-2026-0228494",
   "skill_id": "mn-gen-05232",
   "skill_name": "Iterm-mcp",
-  "issued_at": "2026-07-06T00:17:14.417Z",
-  "expires_at": "2026-07-13T00:17:14.417Z",
+  "issued_at": "2026-07-06T03:57:08.494Z",
+  "expires_at": "2026-07-13T03:57:08.494Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff473d63273cc3683b5ed91957c1d74ac7f262bc456234e4fe0ba3ddd61ab7ba",
+  "signature": "c72f56c615efb6db48dae1b1885a3df012fd97cd0cd2e3ff74a7cb484f283337",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05232"
 }

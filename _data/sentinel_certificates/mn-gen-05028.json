@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7026340",
+  "certificate_id": "MN-SC-2026-0221391",
   "skill_id": "mn-gen-05028",
   "skill_name": "I18next-mcp-server",
-  "issued_at": "2026-07-06T00:17:06.340Z",
-  "expires_at": "2026-07-13T00:17:06.340Z",
+  "issued_at": "2026-07-06T03:57:01.391Z",
+  "expires_at": "2026-07-13T03:57:01.391Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe4bbc7b09332c447d4d3dca21f63348c36f082c3162bf47b70b4f477c4574d6",
+  "signature": "e401dec1b99f00644db39b205c1aa56e6c2254dd6fdb5876c51c4bbdd3f96891",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05028"
 }

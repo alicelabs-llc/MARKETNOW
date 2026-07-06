@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6786843",
+  "certificate_id": "MN-SC-2026-0042957",
   "skill_id": "mn-gen-00054",
   "skill_name": "A11y-mcp-server",
-  "issued_at": "2026-07-06T00:13:06.843Z",
-  "expires_at": "2026-07-13T00:13:06.843Z",
+  "issued_at": "2026-07-06T03:54:02.957Z",
+  "expires_at": "2026-07-13T03:54:02.957Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e7dfcf4afd181ec69dce5182a7fe05aee4229b0a125629c46efe560e259d6f2",
+  "signature": "90b5e5718c354681a0f0f15ef1d29780dff49aaa0e02ff01536d2a49f916bcf9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00054"
 }

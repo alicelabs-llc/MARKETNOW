@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7270214",
+  "certificate_id": "MN-SC-2026-0426705",
   "skill_id": "mn-gen-10659",
   "skill_name": "Pricepilot-mcpb",
-  "issued_at": "2026-07-06T00:21:10.214Z",
-  "expires_at": "2026-07-13T00:21:10.214Z",
+  "issued_at": "2026-07-06T04:00:26.705Z",
+  "expires_at": "2026-07-13T04:00:26.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "648c47aeaee6fa0ab22dbac16c09558cf52b7c94214fb40cb5e3dfd2d49d9183",
+  "signature": "116bdbcd33ac00cc72d978d0ab46dd5aa68fdc82a92b42980261e0de6b8c7d6b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10659"
 }

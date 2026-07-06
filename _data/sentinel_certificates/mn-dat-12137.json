@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7335387",
+  "certificate_id": "MN-SC-2026-0485098",
   "skill_id": "mn-dat-12137",
   "skill_name": "Sqlguard-mcp",
-  "issued_at": "2026-07-06T00:22:15.387Z",
-  "expires_at": "2026-07-13T00:22:15.387Z",
+  "issued_at": "2026-07-06T04:01:25.098Z",
+  "expires_at": "2026-07-13T04:01:25.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1508ff671cf794a02b7b69ce6e2ced164f6ea8e1d66cc8769c7acac28e51374a",
+  "signature": "749f4a5320af57a69afb0f5cca70c89f2773859c4de345899a9d5d45b4b5592e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-12137"
 }

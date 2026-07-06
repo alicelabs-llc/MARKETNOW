@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7022934",
+  "certificate_id": "MN-SC-2026-0218603",
   "skill_id": "mn-gen-04953",
   "skill_name": "Honeybadger-mcp",
-  "issued_at": "2026-07-06T00:17:02.934Z",
-  "expires_at": "2026-07-13T00:17:02.934Z",
+  "issued_at": "2026-07-06T03:56:58.603Z",
+  "expires_at": "2026-07-13T03:56:58.603Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ece516e2ff84db6fc31ba062a817bdc0538d396a24002f14e517974a4aadecf",
+  "signature": "d0c23d18982a6b637c637a6a501351714a27aec65cc78faae9bf2c21718c2295",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04953"
 }

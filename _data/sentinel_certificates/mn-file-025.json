@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7814145",
+  "certificate_id": "MN-SC-2026-0831651",
   "skill_id": "mn-file-025",
   "skill_name": "Image Watermarker",
-  "issued_at": "2026-07-06T00:30:14.145Z",
-  "expires_at": "2026-07-13T00:30:14.145Z",
+  "issued_at": "2026-07-06T04:07:11.651Z",
+  "expires_at": "2026-07-13T04:07:11.651Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40cdb40c0ad15c02b5af2074295a3b28250f790dfe592073f60643c7bb8d8810",
+  "signature": "3279065be40f99e349920bc9ccc521973697cff883deb4a1c34adb2ce4c3748a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-file-025"
 }

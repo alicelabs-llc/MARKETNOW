@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7228163",
+  "certificate_id": "MN-SC-2026-0383656",
   "skill_id": "mn-gen-09735",
   "skill_name": "Obsidian-semantic-mcp",
-  "issued_at": "2026-07-06T00:20:28.163Z",
-  "expires_at": "2026-07-13T00:20:28.163Z",
+  "issued_at": "2026-07-06T03:59:43.656Z",
+  "expires_at": "2026-07-13T03:59:43.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57d76546ce78fdc4a59fdaf8af957958604f31df1f9c8c3bad397d937f8177d5",
+  "signature": "f67cd2c0f6370c16e3b395666f8539b3bc99014fdf5edfba70abd9e9a86c0f60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09735"
 }

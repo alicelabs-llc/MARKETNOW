@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7086690",
+  "certificate_id": "MN-SC-2026-0270062",
   "skill_id": "mn-gen-06430",
   "skill_name": "Globodai-mcp-client-portal",
-  "issued_at": "2026-07-06T00:18:06.690Z",
-  "expires_at": "2026-07-13T00:18:06.690Z",
+  "issued_at": "2026-07-06T03:57:50.062Z",
+  "expires_at": "2026-07-13T03:57:50.062Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3cc25461c076b96233f871555df2bd736ca2dc4f43465109a7313cf68cef6945",
+  "signature": "3760a98623bd526d53f37ef50c0100a17b526dd8ff7f25b73ba03a05681ee955",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06430"
 }

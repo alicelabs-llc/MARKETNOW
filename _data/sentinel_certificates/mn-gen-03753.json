@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6971086",
+  "certificate_id": "MN-SC-2026-0177550",
   "skill_id": "mn-gen-03753",
   "skill_name": "Eurlex-mcp-server",
-  "issued_at": "2026-07-06T00:16:11.086Z",
-  "expires_at": "2026-07-13T00:16:11.086Z",
+  "issued_at": "2026-07-06T03:56:17.550Z",
+  "expires_at": "2026-07-13T03:56:17.550Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7ad77d905a65b86fa01b0353d46458fa3855061cb02ce80a4385a83b6c687965",
+  "signature": "e1de3bc68c2644bf28aaf97a34b2d8223bb83ede6cd23b7e8a3ec535e10bcc09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03753"
 }

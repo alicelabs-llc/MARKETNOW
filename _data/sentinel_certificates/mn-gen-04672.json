@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7012105",
+  "certificate_id": "MN-SC-2026-0209854",
   "skill_id": "mn-gen-04672",
   "skill_name": "Gotohuman/mcp-server",
-  "issued_at": "2026-07-06T00:16:52.105Z",
-  "expires_at": "2026-07-13T00:16:52.105Z",
+  "issued_at": "2026-07-06T03:56:49.854Z",
+  "expires_at": "2026-07-13T03:56:49.854Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "21cb8d7328da4b1af1f621ba408b7f1efa223e7de9cc76ea9cd97404267413af",
+  "signature": "ab5372c8f383d8f833ed87b88d9784698603d4eede1e72cbdd3725e2954c5430",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04672"
 }

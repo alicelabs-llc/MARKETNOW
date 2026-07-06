@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7057329",
+  "certificate_id": "MN-SC-2026-0244829",
   "skill_id": "mn-gen-05754",
   "skill_name": "Linear-cache-mcp-workspace",
-  "issued_at": "2026-07-06T00:17:37.329Z",
-  "expires_at": "2026-07-13T00:17:37.329Z",
+  "issued_at": "2026-07-06T03:57:24.829Z",
+  "expires_at": "2026-07-13T03:57:24.829Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b133704dc0ea1cde1737cb1f9e9bc048000904c4120835d37a22e330dc76cfb",
+  "signature": "286e03c4989df2fb5b9ffcefa0b73f3cb090ea30aba3bd478df2c405c6116fed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05754"
 }

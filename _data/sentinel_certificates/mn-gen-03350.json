@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6954620",
+  "certificate_id": "MN-SC-2026-0162141",
   "skill_id": "mn-gen-03350",
   "skill_name": "Rijk/directus-mcp-server",
-  "issued_at": "2026-07-06T00:15:54.620Z",
-  "expires_at": "2026-07-13T00:15:54.620Z",
+  "issued_at": "2026-07-06T03:56:02.141Z",
+  "expires_at": "2026-07-13T03:56:02.141Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc28b6289bb2493b62a469c6f5625b2f4f52b084b6857fa313c0f54f510ec4bb",
+  "signature": "327a69b879f9a6e051b23b492eda2928406e8ae704f19df8be473482d21655d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03350"
 }

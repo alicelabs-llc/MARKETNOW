@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7073476",
+  "certificate_id": "MN-SC-2026-0257842",
   "skill_id": "mn-gen-06100",
   "skill_name": "Marqeta/marqeta-mcp",
-  "issued_at": "2026-07-06T00:17:53.476Z",
-  "expires_at": "2026-07-13T00:17:53.476Z",
+  "issued_at": "2026-07-06T03:57:37.842Z",
+  "expires_at": "2026-07-13T03:57:37.842Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "857097338b6f40d56936a9f64dc3abb09e7475750a93048f92adf2425c181f87",
+  "signature": "95a5a5e012488de59eaf4dbb907d7b862a3e291fc19c33d98d3af26f05cce857",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06100"
 }

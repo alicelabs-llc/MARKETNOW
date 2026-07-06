@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7841290",
+  "certificate_id": "MN-SC-2026-0847397",
   "skill_id": "mn-devo-020",
   "skill_name": "Reliability Score Calculator",
-  "issued_at": "2026-07-06T00:30:41.290Z",
-  "expires_at": "2026-07-13T00:30:41.290Z",
+  "issued_at": "2026-07-06T04:07:27.397Z",
+  "expires_at": "2026-07-13T04:07:27.397Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06402f61f2d11bd7dd94320f8ba966893c7417700fe4ce267dd77af3aa45a9b8",
+  "signature": "8c4bc08bce08be50a31019e4f95b5a3df103f9b0b597c350721e19af105e1d92",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-devo-020"
 }

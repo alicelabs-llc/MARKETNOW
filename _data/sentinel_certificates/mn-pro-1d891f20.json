@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7751410",
+  "certificate_id": "MN-SC-2026-0784093",
   "skill_id": "mn-pro-1d891f20",
   "skill_name": "K8s Event Correlator",
-  "issued_at": "2026-07-06T00:29:11.410Z",
-  "expires_at": "2026-07-13T00:29:11.410Z",
+  "issued_at": "2026-07-06T04:06:24.093Z",
+  "expires_at": "2026-07-13T04:06:24.093Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b46027dba7706e25d032504a8b42b11790e03500847edaadbfb978f4fcf68577",
+  "signature": "cec7bf372c0c5bb27a0f294569af067904c94fe72018fec7b1afd94d6b5f4959",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1d891f20"
 }

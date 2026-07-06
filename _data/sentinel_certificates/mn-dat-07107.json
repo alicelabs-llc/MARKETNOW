@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7118085",
+  "certificate_id": "MN-SC-2026-0294919",
   "skill_id": "mn-dat-07107",
-  "skill_name": "Mcp-mssql-server",
-  "issued_at": "2026-07-06T00:18:38.085Z",
-  "expires_at": "2026-07-13T00:18:38.085Z",
+  "skill_name": "mssql_mcp_server",
+  "issued_at": "2026-07-06T03:58:14.919Z",
+  "expires_at": "2026-07-13T03:58:14.919Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad747b85627b4085c0eadc28c1f2920e6e367896fe1a4f15aa3ab6acfbdaa2fb",
+  "signature": "a4f1eedea287a350499041a0e1c38c54d906684e9a1d7055166e4beb6fc8010d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-07107"
 }

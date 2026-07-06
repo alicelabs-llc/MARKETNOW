@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7154244",
+  "certificate_id": "MN-SC-2026-0325790",
   "skill_id": "mn-net-07828",
   "skill_name": "Mcp-server-tester-sse-http-stdio",
-  "issued_at": "2026-07-06T00:19:14.244Z",
-  "expires_at": "2026-07-13T00:19:14.244Z",
+  "issued_at": "2026-07-06T03:58:45.790Z",
+  "expires_at": "2026-07-13T03:58:45.790Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "616b52b681b06c98a4e969e0374d98478a2caed75ccd31f4ccae1be70a30aadc",
+  "signature": "a01262c7deea710f59409d162199736039da51d661ed9f5bea0f1fd4a58ea287",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-07828"
 }

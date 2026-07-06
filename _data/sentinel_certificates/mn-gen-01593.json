@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6856940",
+  "certificate_id": "MN-SC-2026-0093209",
   "skill_id": "mn-gen-01593",
   "skill_name": "Btcpayserver-mcp",
-  "issued_at": "2026-07-06T00:14:16.940Z",
-  "expires_at": "2026-07-13T00:14:16.940Z",
+  "issued_at": "2026-07-06T03:54:53.209Z",
+  "expires_at": "2026-07-13T03:54:53.209Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1f2781f918c2515dee8f53996484a10f6bc0a589bfdf88d3458a2e791a630c2e",
+  "signature": "82633967cffd82b93319ab2c737059cc9ee80967c9864dbc004e118cfea69a2b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01593"
 }

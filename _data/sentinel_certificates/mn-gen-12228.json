@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7339345",
+  "certificate_id": "MN-SC-2026-0489266",
   "skill_id": "mn-gen-12228",
   "skill_name": "Stock-scanner-mcp",
-  "issued_at": "2026-07-06T00:22:19.345Z",
-  "expires_at": "2026-07-13T00:22:19.345Z",
+  "issued_at": "2026-07-06T04:01:29.266Z",
+  "expires_at": "2026-07-13T04:01:29.266Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "785dab6eefbf54b66aa6a9a639f2c88093436c817c9ce8ec702a368566eee470",
+  "signature": "cd67583c304cf8986c69bf17076cca6955c70458ff8e6f8cd2ec0eb4a36a5635",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12228"
 }

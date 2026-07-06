@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7656189",
+  "certificate_id": "MN-SC-2026-0715460",
   "skill_id": "mn-prompt-2eace4c1",
   "skill_name": "Data warehouse retention",
-  "issued_at": "2026-07-06T00:27:36.189Z",
-  "expires_at": "2026-07-13T00:27:36.189Z",
+  "issued_at": "2026-07-06T04:05:15.460Z",
+  "expires_at": "2026-07-13T04:05:15.460Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31fb6322af66c729baf5200205b59e355db96edceba4d9c6447cf929ed7a4043",
+  "signature": "9b7748558a04952f2997d54746a4a848e1b9da2dcad0bb6c0b324283cf759105",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2eace4c1"
 }

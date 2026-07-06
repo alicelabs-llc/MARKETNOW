@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7817567",
+  "certificate_id": "MN-SC-2026-0833382",
   "skill_id": "mn-prod-003",
   "skill_name": "Time Tracker",
-  "issued_at": "2026-07-06T00:30:17.567Z",
-  "expires_at": "2026-07-13T00:30:17.567Z",
+  "issued_at": "2026-07-06T04:07:13.382Z",
+  "expires_at": "2026-07-13T04:07:13.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e71838e410f197eb97e91de513742ad2695ebd64f110d689cc273e9495077994",
+  "signature": "48caf3f364541f415b9027082767c3f0b9986ccf4c58a646aae49813936ca32b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-003"
 }

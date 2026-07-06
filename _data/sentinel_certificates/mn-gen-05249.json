@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7035556",
+  "certificate_id": "MN-SC-2026-0229413",
   "skill_id": "mn-gen-05249",
-  "skill_name": "Jaeger-mcp-server",
-  "issued_at": "2026-07-06T00:17:15.556Z",
-  "expires_at": "2026-07-13T00:17:15.556Z",
+  "skill_name": "jaeger-mcp",
+  "issued_at": "2026-07-06T03:57:09.413Z",
+  "expires_at": "2026-07-13T03:57:09.413Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abd76170f3b331db426a4ef38acd23c86a386fb0c1ae90cb5b8a3c510c670e05",
+  "signature": "af3f500f14d90f8b7bb105b4d14b6b47dd4df9950ccbf4ce5f8eb38615bdcbed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05249"
 }

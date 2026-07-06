@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7072371",
+  "certificate_id": "MN-SC-2026-0256971",
   "skill_id": "mn-gen-06076",
   "skill_name": "Marginalia-mcp-server",
-  "issued_at": "2026-07-06T00:17:52.371Z",
-  "expires_at": "2026-07-13T00:17:52.371Z",
+  "issued_at": "2026-07-06T03:57:36.971Z",
+  "expires_at": "2026-07-13T03:57:36.971Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33dfbf536ea0f86b8a97ac31019c1bd96c469801c5a5fa0c83d3085b7edcd25f",
+  "signature": "5d2fd6bec24eed01ac0bae124a1aca40e036792752d3f226e66ed3e6bdd6bdff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06076"
 }

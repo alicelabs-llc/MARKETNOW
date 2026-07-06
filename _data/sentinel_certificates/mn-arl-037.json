@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7682378",
+  "certificate_id": "MN-SC-2026-0731273",
   "skill_id": "mn-arl-037",
   "skill_name": "User Intent Classifier",
-  "issued_at": "2026-07-06T00:28:02.378Z",
-  "expires_at": "2026-07-13T00:28:02.378Z",
+  "issued_at": "2026-07-06T04:05:31.273Z",
+  "expires_at": "2026-07-13T04:05:31.273Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1829db336424f70d0d610cf96d9303ffbf7a030513a696c912a6eaa50bbe32e1",
+  "signature": "80a4634df7bb7cabcf5a96fe198f0cd574eea7e20cded85d329199ad0414ebdd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-037"
 }

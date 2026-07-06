@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7030728",
+  "certificate_id": "MN-SC-2026-0225014",
   "skill_id": "mn-gen-05130",
   "skill_name": "Inflow-mcp-server",
-  "issued_at": "2026-07-06T00:17:10.728Z",
-  "expires_at": "2026-07-13T00:17:10.728Z",
+  "issued_at": "2026-07-06T03:57:05.014Z",
+  "expires_at": "2026-07-13T03:57:05.014Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e197a74e2828c4b1a86d12be937817ae0aadef45c6dc77af86141f0427b4b99d",
+  "signature": "57003e4268a2be0529c27cb86e8a56547dd09fe07014933eecf21d7ed64bad82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05130"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7566942",
+  "certificate_id": "MN-SC-2026-0660905",
   "skill_id": "mn-prompt-2241281e",
   "skill_name": "Sales call coaching feedback",
-  "issued_at": "2026-07-06T00:26:06.942Z",
-  "expires_at": "2026-07-13T00:26:06.942Z",
+  "issued_at": "2026-07-06T04:04:20.905Z",
+  "expires_at": "2026-07-13T04:04:20.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52b3f5ed8fd4129a9cf12099790680e924c45504afab89d1a970fa6b756e777f",
+  "signature": "068f99da3ed84647860f28f97bc582e5ed3d7d86dff2fb12f03ff738cfabe38b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2241281e"
 }

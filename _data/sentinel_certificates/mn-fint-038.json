@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7852862",
+  "certificate_id": "MN-SC-2026-0855863",
   "skill_id": "mn-fint-038",
   "skill_name": "Financial Statement Analyzer",
-  "issued_at": "2026-07-06T00:30:52.862Z",
-  "expires_at": "2026-07-13T00:30:52.862Z",
+  "issued_at": "2026-07-06T04:07:35.863Z",
+  "expires_at": "2026-07-13T04:07:35.863Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4beb08a86a8ecccdccb059a7b0378e2f2d1d2dea8d8bc70256a0c42264c71842",
+  "signature": "d660542f960b8942884ce89dc7f5ef9dfb7ff353a0032ebf0c4dbf75225cba3c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-038"
 }

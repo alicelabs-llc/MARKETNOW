@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7334387",
+  "certificate_id": "MN-SC-2026-0484208",
   "skill_id": "mn-gen-12076",
   "skill_name": "Spider-mcp",
-  "issued_at": "2026-07-06T00:22:14.387Z",
-  "expires_at": "2026-07-13T00:22:14.387Z",
+  "issued_at": "2026-07-06T04:01:24.208Z",
+  "expires_at": "2026-07-13T04:01:24.208Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6935d2e0c9724ed714739aa7add153243dcf54d36ce92584591ee6be88509bc2",
+  "signature": "861c5addd782606eaad81afcff4222f487df45abb380748772ec1934c9b6da0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12076"
 }

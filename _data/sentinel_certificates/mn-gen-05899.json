@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7064221",
+  "certificate_id": "MN-SC-2026-0250654",
   "skill_id": "mn-gen-05899",
   "skill_name": "Localutils-mcp-server",
-  "issued_at": "2026-07-06T00:17:44.221Z",
-  "expires_at": "2026-07-13T00:17:44.221Z",
+  "issued_at": "2026-07-06T03:57:30.654Z",
+  "expires_at": "2026-07-13T03:57:30.654Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28762f8a1ab6331f6448bbdb50c3ad4eeb27842f3d2bbbc3afefbcfde563a7c7",
+  "signature": "f1a3efd7151cd1d2fd07525ae52c94dbfe29cf6603362e300a43557879b0331b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05899"
 }

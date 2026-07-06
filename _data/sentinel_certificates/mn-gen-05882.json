@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7063126",
+  "certificate_id": "MN-SC-2026-0249585",
   "skill_id": "mn-gen-05882",
   "skill_name": "Local-mem",
-  "issued_at": "2026-07-06T00:17:43.126Z",
-  "expires_at": "2026-07-13T00:17:43.126Z",
+  "issued_at": "2026-07-06T03:57:29.585Z",
+  "expires_at": "2026-07-13T03:57:29.585Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c115b02dceb58305cf01df7404c157f2c9842a25741328c40c47127520ecad7",
+  "signature": "1dd76f6e63df6e106afd3f9f2a3312076895824df7af030f72dd303b6d670ec0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05882"
 }

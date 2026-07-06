@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7261916",
+  "certificate_id": "MN-SC-2026-0418866",
   "skill_id": "mn-gen-10476",
   "skill_name": "Playbooks",
-  "issued_at": "2026-07-06T00:21:01.916Z",
-  "expires_at": "2026-07-13T00:21:01.916Z",
+  "issued_at": "2026-07-06T04:00:18.866Z",
+  "expires_at": "2026-07-13T04:00:18.866Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bd18fa57bb608d1da7f7d8ee3bdc05284d725dac8de1caf3ccca40d2d9f7035a",
+  "signature": "dfdd483078d3ca7e696ad9b7071271453d020424a3c4042a9130207410419e1c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10476"
 }

@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7193924",
+  "certificate_id": "MN-SC-2026-0357622",
   "skill_id": "mn-gen-08964",
-  "skill_name": "Meta-ads-mcp-server",
-  "issued_at": "2026-07-06T00:19:53.924Z",
-  "expires_at": "2026-07-13T00:19:53.924Z",
+  "skill_name": "meta-ads-mcp",
+  "issued_at": "2026-07-06T03:59:17.622Z",
+  "expires_at": "2026-07-13T03:59:17.622Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66db95908a35248b0639eef7ad02f323d40b5f31342f69f72b9a5f95ded4a71d",
+  "signature": "d87bd22c562bdf26ba13996eced3d260316842b43dee54a359b4154c6281b0ab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08964"
 }

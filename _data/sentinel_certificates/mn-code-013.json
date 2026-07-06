@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7795805",
+  "certificate_id": "MN-SC-2026-0819729",
   "skill_id": "mn-code-013",
   "skill_name": "CI/CD Pipeline Builder",
-  "issued_at": "2026-07-06T00:29:55.805Z",
-  "expires_at": "2026-07-13T00:29:55.805Z",
+  "issued_at": "2026-07-06T04:06:59.729Z",
+  "expires_at": "2026-07-13T04:06:59.729Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9e9ce87ba94b23f857f77dc1b7c3cd482576513dbe5187417ed8e716ba6c0e0b",
+  "signature": "3f35d12366b2059856cd074265db5cf18a55f909ad5ba4909263cfd24898687d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-013"
 }

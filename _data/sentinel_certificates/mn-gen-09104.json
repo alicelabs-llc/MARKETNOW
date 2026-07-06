@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7198990",
+  "certificate_id": "MN-SC-2026-0361572",
   "skill_id": "mn-gen-09104",
   "skill_name": "Mixpanel-mcp-server",
-  "issued_at": "2026-07-06T00:19:58.990Z",
-  "expires_at": "2026-07-13T00:19:58.990Z",
+  "issued_at": "2026-07-06T03:59:21.572Z",
+  "expires_at": "2026-07-13T03:59:21.572Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "938f33a5fb33d68af4f98cb60a0b4cae0e81b23a9b021cfed113771837d8aac4",
+  "signature": "ae5606e347a8f630b646413cbc95654a82f375916c010d092c11d7a571a22917",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09104"
 }

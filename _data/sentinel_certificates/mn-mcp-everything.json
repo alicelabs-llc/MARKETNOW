@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7887521",
+  "certificate_id": "MN-SC-2026-0879886",
   "skill_id": "mn-mcp-everything",
   "skill_name": "MCP Everything Server (Official Test Reference)",
-  "issued_at": "2026-07-06T00:31:27.521Z",
-  "expires_at": "2026-07-13T00:31:27.521Z",
+  "issued_at": "2026-07-06T04:07:59.886Z",
+  "expires_at": "2026-07-13T04:07:59.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "434b61c888e620ed259078b60db3c70e5957d63750c6204b262c04ee6add4379",
+  "signature": "b1fc959afa95c0b9d3c7c656179552d2f20c1fa4bcf41e9465dd8d4d980db90a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-everything"
 }

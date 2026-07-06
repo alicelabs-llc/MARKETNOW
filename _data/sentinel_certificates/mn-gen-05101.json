@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7029082",
+  "certificate_id": "MN-SC-2026-0223716",
   "skill_id": "mn-gen-05101",
   "skill_name": "Jettoblack/image_mcp",
-  "issued_at": "2026-07-06T00:17:09.082Z",
-  "expires_at": "2026-07-13T00:17:09.082Z",
+  "issued_at": "2026-07-06T03:57:03.716Z",
+  "expires_at": "2026-07-13T03:57:03.716Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ea376b6471bfedc82316081cacc99cc3dca60cc10d4c619a43cba67a4efea6f",
+  "signature": "f083b25780ba945f1495dd0e416eabb8379971c34665b65caad404b456c97a9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05101"
 }

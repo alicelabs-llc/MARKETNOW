@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7291950",
+  "certificate_id": "MN-SC-2026-0442004",
   "skill_id": "mn-gen-11138",
-  "skill_name": "Remembr",
-  "issued_at": "2026-07-06T00:21:31.950Z",
-  "expires_at": "2026-07-13T00:21:31.950Z",
+  "skill_name": "remembra",
+  "issued_at": "2026-07-06T04:00:42.004Z",
+  "expires_at": "2026-07-13T04:00:42.004Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ed69bd3f9d51ff432295199a2f7022d32e197013326a8d5e17dc8b41afa25572",
+  "signature": "50f8a4c38cb9f713a87d6ce46689e3e7c42a8d05a70169551ece9b52e8f16bba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11138"
 }

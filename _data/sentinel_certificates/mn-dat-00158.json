@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6790202",
+  "certificate_id": "MN-SC-2026-0045239",
   "skill_id": "mn-dat-00158",
   "skill_name": "Adb-mcp-tool",
-  "issued_at": "2026-07-06T00:13:10.202Z",
-  "expires_at": "2026-07-13T00:13:10.202Z",
+  "issued_at": "2026-07-06T03:54:05.239Z",
+  "expires_at": "2026-07-13T03:54:05.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b588dc79480a721a88f18c711af85fc11d264fcc78bc3579840043aeeabf476",
+  "signature": "8e7cd2bb3497051946626ba87826a4bd963478fa9410c8e1fa3fdf66efca971f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-00158"
 }

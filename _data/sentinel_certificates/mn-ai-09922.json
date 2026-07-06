@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7236894",
+  "certificate_id": "MN-SC-2026-0390996",
   "skill_id": "mn-ai-09922",
   "skill_name": "Openai-gpt-image-mcp-server",
-  "issued_at": "2026-07-06T00:20:36.894Z",
-  "expires_at": "2026-07-13T00:20:36.894Z",
+  "issued_at": "2026-07-06T03:59:50.996Z",
+  "expires_at": "2026-07-13T03:59:50.996Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "da5e32ee102fffa6dc8f853f410a678ae08fefe4ad829b4d7f6bc8e93f2c9a29",
+  "signature": "7f9ad9a26b51c9b2c90087a1d60b98628f0d416756a9f36b2922c549294d29d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-09922"
 }

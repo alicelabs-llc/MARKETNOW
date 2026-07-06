@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7698868",
+  "certificate_id": "MN-SC-2026-0743770",
   "skill_id": "mn-apd-015",
   "skill_name": "Agent Configuration Manager",
-  "issued_at": "2026-07-06T00:28:18.868Z",
-  "expires_at": "2026-07-13T00:28:18.868Z",
+  "issued_at": "2026-07-06T04:05:43.770Z",
+  "expires_at": "2026-07-13T04:05:43.770Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "954219017c2bbf1fcb5d1376c98f4518e77f2f36972e3f4bcf7107012792c664",
+  "signature": "364af30cb2cc296f1d15b426b34b47b813b023d80369d2fac6617d22b35aa37f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-015"
 }

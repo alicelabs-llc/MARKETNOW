@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7226569",
+  "certificate_id": "MN-SC-2026-0382187",
   "skill_id": "mn-gen-09706",
   "skill_name": "Obi-mcp-server",
-  "issued_at": "2026-07-06T00:20:26.569Z",
-  "expires_at": "2026-07-13T00:20:26.569Z",
+  "issued_at": "2026-07-06T03:59:42.187Z",
+  "expires_at": "2026-07-13T03:59:42.187Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b850040c12b6195a04adc45f4a2b07d0a2ba0d99e3f57fdf75aff63d1ad60d6f",
+  "signature": "f64e873d555bd3751c779b5956169988ec4d514e269860e5ef76f922c5fd1a73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09706"
 }

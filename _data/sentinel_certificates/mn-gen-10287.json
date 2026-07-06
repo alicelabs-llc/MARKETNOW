@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7253994",
+  "certificate_id": "MN-SC-2026-0410253",
   "skill_id": "mn-gen-10287",
   "skill_name": "Pdfitt",
-  "issued_at": "2026-07-06T00:20:53.994Z",
-  "expires_at": "2026-07-13T00:20:53.994Z",
+  "issued_at": "2026-07-06T04:00:10.253Z",
+  "expires_at": "2026-07-13T04:00:10.253Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "776d25b22bffe7f842c14b69eb351cc4b8ecbc15ed0c33daf2c8aa2e86f8813d",
+  "signature": "c554131a8947fa78c2404a2e7d89f2250ee7e7c4ff8ba825e34b004feb15b36c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10287"
 }

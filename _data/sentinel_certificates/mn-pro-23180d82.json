@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7766067",
+  "certificate_id": "MN-SC-2026-0796309",
   "skill_id": "mn-pro-23180d82",
   "skill_name": "Mobile Payment SDK",
-  "issued_at": "2026-07-06T00:29:26.067Z",
-  "expires_at": "2026-07-13T00:29:26.067Z",
+  "issued_at": "2026-07-06T04:06:36.309Z",
+  "expires_at": "2026-07-13T04:06:36.309Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0752fce2897d4d8ace83f655653867c1e8b0d462bbd08160c728bc0abea665bb",
+  "signature": "70c5c930fe29744b5a06d2ecd0028fd2f3aacffa72ced31a2b1ecaa527267bef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-23180d82"
 }

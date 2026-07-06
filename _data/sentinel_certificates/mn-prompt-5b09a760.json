@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7568309",
+  "certificate_id": "MN-SC-2026-0661731",
   "skill_id": "mn-prompt-5b09a760",
   "skill_name": "Sales forecast call weekly",
-  "issued_at": "2026-07-06T00:26:08.309Z",
-  "expires_at": "2026-07-13T00:26:08.309Z",
+  "issued_at": "2026-07-06T04:04:21.731Z",
+  "expires_at": "2026-07-13T04:04:21.731Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40cc4ce6f1ffc41a512e8d76c135cb4a2b4894d538d941ad05721ae7260cc8a4",
+  "signature": "80c3fd39501c8a2ff1ffaa4f0c26e43a2eea7fc37a21f65a2ad3ac6fe65a55cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5b09a760"
 }

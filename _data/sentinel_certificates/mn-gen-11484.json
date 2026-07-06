@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7306108",
+  "certificate_id": "MN-SC-2026-0459956",
   "skill_id": "mn-gen-11484",
   "skill_name": "Scix-mcp",
-  "issued_at": "2026-07-06T00:21:46.108Z",
-  "expires_at": "2026-07-13T00:21:46.108Z",
+  "issued_at": "2026-07-06T04:00:59.956Z",
+  "expires_at": "2026-07-13T04:00:59.956Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fcd361744a782a76f9794d723c3f0ca38eb75143a30b0701327a7db226e201dd",
+  "signature": "fc09f7e9f9a8353f924cc0292c263423f306a965a4d74b8d64afab90555e71d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11484"
 }

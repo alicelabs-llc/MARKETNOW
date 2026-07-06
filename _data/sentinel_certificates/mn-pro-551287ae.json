@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7754033",
+  "certificate_id": "MN-SC-2026-0786289",
   "skill_id": "mn-pro-551287ae",
   "skill_name": "Firewall Rule Optimizer",
-  "issued_at": "2026-07-06T00:29:14.033Z",
-  "expires_at": "2026-07-13T00:29:14.033Z",
+  "issued_at": "2026-07-06T04:06:26.289Z",
+  "expires_at": "2026-07-13T04:06:26.289Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6735f9b2d68c3893f85b6296eb13b496105aedb9a3c9d8b9d5f86d3e47f9e8c6",
+  "signature": "0b9715e4f4422dfc8efc388651a24829429b01e920790353015c100b180f1296",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-551287ae"
 }

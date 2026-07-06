@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7812187",
+  "certificate_id": "MN-SC-2026-0830808",
   "skill_id": "mn-file-015",
   "skill_name": "Document Summarizer",
-  "issued_at": "2026-07-06T00:30:12.187Z",
-  "expires_at": "2026-07-13T00:30:12.187Z",
+  "issued_at": "2026-07-06T04:07:10.808Z",
+  "expires_at": "2026-07-13T04:07:10.808Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a993e35cb64ee623a15402ebd014f90027e5a84b8f8c481919bd30e9a6b2ae3e",
+  "signature": "827cece28339201e81324cd0be408f97524b964b9a68ef133d3fa18a269e9f45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-file-015"
 }

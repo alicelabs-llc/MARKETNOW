@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6960718",
+  "certificate_id": "MN-SC-2026-0168983",
   "skill_id": "mn-gen-03504",
-  "skill_name": "Draw-io-mcp",
-  "issued_at": "2026-07-06T00:16:00.718Z",
-  "expires_at": "2026-07-13T00:16:00.718Z",
+  "skill_name": "drawio-mcp-server",
+  "issued_at": "2026-07-06T03:56:08.983Z",
+  "expires_at": "2026-07-13T03:56:08.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03d221fb2eee3cab02a99cb636ae82268352dc26a0763c4e5fc57a436fd8a754",
+  "signature": "7f21015119b99a9140afde50cf2c6c7fcf1f0b23e84282e3534dd7705ff141b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03504"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7128069",
+  "certificate_id": "MN-SC-2026-0302655",
   "skill_id": "mn-gen-07280",
   "skill_name": "Mcp-picnic",
-  "issued_at": "2026-07-06T00:18:48.069Z",
-  "expires_at": "2026-07-13T00:18:48.069Z",
+  "issued_at": "2026-07-06T03:58:22.655Z",
+  "expires_at": "2026-07-13T03:58:22.655Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fd2430a976a6cda47a3e8834f173bfb831ff623a29e8ce772d39f5983e3d5cd",
+  "signature": "063951b6909af976f71f59f30f8f744e1448519ec1cd232aed9337e40e0235fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07280"
 }

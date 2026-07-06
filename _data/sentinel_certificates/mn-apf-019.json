@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7712961",
+  "certificate_id": "MN-SC-2026-0752851",
   "skill_id": "mn-apf-019",
   "skill_name": "Lazy Loading",
-  "issued_at": "2026-07-06T00:28:32.961Z",
-  "expires_at": "2026-07-13T00:28:32.961Z",
+  "issued_at": "2026-07-06T04:05:52.851Z",
+  "expires_at": "2026-07-13T04:05:52.851Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca0522de65e1d4ebbbf5f4f67b26ff4c9ce8de595319e21012b6b937cd8bc841",
+  "signature": "f9ee664f7d3550437d71302a281bf90fd807d0ba0c8da42ed0e09144ea462321",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-019"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7256749",
+  "certificate_id": "MN-SC-2026-0413488",
   "skill_id": "mn-gen-10378",
   "skill_name": "Phases-mcp-server",
-  "issued_at": "2026-07-06T00:20:56.749Z",
-  "expires_at": "2026-07-13T00:20:56.749Z",
+  "issued_at": "2026-07-06T04:00:13.488Z",
+  "expires_at": "2026-07-13T04:00:13.488Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd01084b021ae35585ecfb5a0162e2bb5dc5afe24400ff13cbb70aa73f235625",
+  "signature": "d272afb6b77bb4aaa938c6f6938a4055a68a6f6bc441432b496018e7c3ff640f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10378"
 }

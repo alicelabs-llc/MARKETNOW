@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6864170",
+  "certificate_id": "MN-SC-2026-0098037",
   "skill_id": "mn-gen-01730",
   "skill_name": "Cc-manager",
-  "issued_at": "2026-07-06T00:14:24.170Z",
-  "expires_at": "2026-07-13T00:14:24.170Z",
+  "issued_at": "2026-07-06T03:54:58.037Z",
+  "expires_at": "2026-07-13T03:54:58.037Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9c941ee55648f16e146877d4eb201c1a38386ec51d5014bbcf82a03c947e234",
+  "signature": "0ff5a398be26e56a52ae40eb5ae013906603bc141c2de30757c031e9a9959731",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01730"
 }

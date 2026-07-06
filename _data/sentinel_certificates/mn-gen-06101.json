@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7073445",
+  "certificate_id": "MN-SC-2026-0257875",
   "skill_id": "mn-gen-06101",
   "skill_name": "Getmarrow/mcp",
-  "issued_at": "2026-07-06T00:17:53.445Z",
-  "expires_at": "2026-07-13T00:17:53.445Z",
+  "issued_at": "2026-07-06T03:57:37.875Z",
+  "expires_at": "2026-07-13T03:57:37.875Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5fbe4f52968fa322a266c607d87db8a236a7513a10e113693f8c5dd6a5baff4",
+  "signature": "64f2d1fff10425749288bcfc5caebde71570eede7d327b7a332909a303e61fac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06101"
 }

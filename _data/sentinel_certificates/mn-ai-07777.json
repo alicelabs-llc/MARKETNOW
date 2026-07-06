@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7150728",
+  "certificate_id": "MN-SC-2026-0322161",
   "skill_id": "mn-ai-07777",
   "skill_name": "Purelymail-mcp",
-  "issued_at": "2026-07-06T00:19:10.728Z",
-  "expires_at": "2026-07-13T00:19:10.728Z",
+  "issued_at": "2026-07-06T03:58:42.161Z",
+  "expires_at": "2026-07-13T03:58:42.161Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad49d9d23b7a4b2d2ac2a8596d6df5e8478832b697e1b4d3d0322263d5681d5d",
+  "signature": "df5b83ebb3d7e59a72547fc416ad53b3b15a3a4550c62f40cf86542774781fc4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07777"
 }

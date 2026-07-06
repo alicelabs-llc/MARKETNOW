@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7450916",
+  "certificate_id": "MN-SC-2026-0580658",
   "skill_id": "mn-prompt-dd80c907",
   "skill_name": "Especialista Code Coverage + Quality Gates",
-  "issued_at": "2026-07-06T00:24:10.916Z",
-  "expires_at": "2026-07-13T00:24:10.916Z",
+  "issued_at": "2026-07-06T04:03:00.658Z",
+  "expires_at": "2026-07-13T04:03:00.658Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf6f134d0ec82e3efdc19ceaffc7f043724b75978d8b18b223afea9b8d272dbe",
+  "signature": "fe0a2262e0fec41e22c9f8185466963f53142e85189b11ce77f40a13d473b3e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-dd80c907"
 }

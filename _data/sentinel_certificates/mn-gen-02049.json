@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6880865",
+  "certificate_id": "MN-SC-2026-0110642",
   "skill_id": "mn-gen-02049",
   "skill_name": "Claude-code-patcher",
-  "issued_at": "2026-07-06T00:14:40.865Z",
-  "expires_at": "2026-07-13T00:14:40.865Z",
+  "issued_at": "2026-07-06T03:55:10.642Z",
+  "expires_at": "2026-07-13T03:55:10.642Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9ff3b8dba97768088de618e4ddaf7b4b6845e5f3ff551535926568342714b7f",
+  "signature": "a3c3c35e43ebf6ad8a0372a152f23484016fbf7ab230a266839b2fc07ae4da1e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02049"
 }

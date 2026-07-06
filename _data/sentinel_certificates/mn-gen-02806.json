@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6925357",
+  "certificate_id": "MN-SC-2026-0143618",
   "skill_id": "mn-gen-02806",
   "skill_name": "Mcp-container-ts",
-  "issued_at": "2026-07-06T00:15:25.357Z",
-  "expires_at": "2026-07-13T00:15:25.357Z",
+  "issued_at": "2026-07-06T03:55:43.618Z",
+  "expires_at": "2026-07-13T03:55:43.618Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42596a11b1c5ed93c80450c1d8a9bacdefd632bdefe964dbff6cd866a36c46c1",
+  "signature": "b50c3c3a1b6a2b9ddd005ac9f43b57a911dbef29cf0676b97449f5352eab59e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02806"
 }

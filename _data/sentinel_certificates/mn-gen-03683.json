@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6968585",
+  "certificate_id": "MN-SC-2026-0175910",
   "skill_id": "mn-gen-03683",
   "skill_name": "Enhanced-mcp-ssh-client",
-  "issued_at": "2026-07-06T00:16:08.585Z",
-  "expires_at": "2026-07-13T00:16:08.585Z",
+  "issued_at": "2026-07-06T03:56:15.910Z",
+  "expires_at": "2026-07-13T03:56:15.910Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "621eea54e1ca05c974b5c0ee5f208cb6057ead4a5c936f2b87a547587391e931",
+  "signature": "38e45c9267fa372d679efaf688e8ee07e198d01b97fa629b81ccd481a889115f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03683"
 }

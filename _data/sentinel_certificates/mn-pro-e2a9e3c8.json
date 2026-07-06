@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7752423",
+  "certificate_id": "MN-SC-2026-0784999",
   "skill_id": "mn-pro-e2a9e3c8",
   "skill_name": "Bug Bounty Manager",
-  "issued_at": "2026-07-06T00:29:12.423Z",
-  "expires_at": "2026-07-13T00:29:12.423Z",
+  "issued_at": "2026-07-06T04:06:24.999Z",
+  "expires_at": "2026-07-13T04:06:24.999Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8c2186743c25171c37465591951ee0031e52fda077c4a02eeb7794e99f6cb76",
+  "signature": "a2f39665c345e126514a1c474d663ae9ca6c7b257bf350235050a4fbac42d276",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-e2a9e3c8"
 }

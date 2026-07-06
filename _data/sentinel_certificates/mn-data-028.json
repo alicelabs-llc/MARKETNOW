@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7807284",
+  "certificate_id": "MN-SC-2026-0828148",
   "skill_id": "mn-data-028",
   "skill_name": "Distance Calculator",
-  "issued_at": "2026-07-06T00:30:07.284Z",
-  "expires_at": "2026-07-13T00:30:07.284Z",
+  "issued_at": "2026-07-06T04:07:08.148Z",
+  "expires_at": "2026-07-13T04:07:08.148Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a08e6c12fb56afa6c1efaa1a126da0ee34910c61b5195f6818ff4895cb807b73",
+  "signature": "4574a177936fccb3f182dd79a389698157044eb3f551bef9e5a6643c269510eb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-028"
 }

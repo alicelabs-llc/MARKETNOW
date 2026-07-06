@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7798357",
+  "certificate_id": "MN-SC-2026-0821889",
   "skill_id": "mn-code-037",
   "skill_name": "Code Playground",
-  "issued_at": "2026-07-06T00:29:58.357Z",
-  "expires_at": "2026-07-13T00:29:58.357Z",
+  "issued_at": "2026-07-06T04:07:01.889Z",
+  "expires_at": "2026-07-13T04:07:01.889Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "67b008647562e29ccedf7bedc186534936728127d67218d06081d6bc375f5a6c",
+  "signature": "ce6b80911916a938e4f305287210f607db6e8f79352925225668a5c9c55d112e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-037"
 }

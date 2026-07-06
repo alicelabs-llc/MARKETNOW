@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6907833",
+  "certificate_id": "MN-SC-2026-0130120",
   "skill_id": "mn-gen-02545",
   "skill_name": "Codecks-mcp",
-  "issued_at": "2026-07-06T00:15:07.833Z",
-  "expires_at": "2026-07-13T00:15:07.833Z",
+  "issued_at": "2026-07-06T03:55:30.120Z",
+  "expires_at": "2026-07-13T03:55:30.120Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "18a054204077a81626c4ff510ffdaab021171bc095bbe8cfd44729e42d6c3491",
+  "signature": "7e0bfe70c056060ef68b4f1b4eae2659ba95b460b3fa2e63a503835df21191ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02545"
 }

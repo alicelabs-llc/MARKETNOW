@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7736287",
+  "certificate_id": "MN-SC-2026-0771654",
   "skill_id": "mn-sal-00049",
   "skill_name": "6sense ABM Platform",
-  "issued_at": "2026-07-06T00:28:56.287Z",
-  "expires_at": "2026-07-13T00:28:56.287Z",
+  "issued_at": "2026-07-06T04:06:11.654Z",
+  "expires_at": "2026-07-13T04:06:11.654Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4300df3b4d35a04e5e1a4d7e0181d5b611abdc0ab6d7dae5ee32cd30626029cd",
+  "signature": "701807bef67bdbab4f0dca390d8e9d976b62e75048753377a98f1793a1d891c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sal-00049"
 }

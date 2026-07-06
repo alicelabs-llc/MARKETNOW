@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6925244",
+  "certificate_id": "MN-SC-2026-0143739",
   "skill_id": "mn-gen-02807",
   "skill_name": "Trishchuk/copilot-mcp-server",
-  "issued_at": "2026-07-06T00:15:25.244Z",
-  "expires_at": "2026-07-13T00:15:25.244Z",
+  "issued_at": "2026-07-06T03:55:43.739Z",
+  "expires_at": "2026-07-13T03:55:43.739Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1507e8e9693c33d0e354ca15accb3e85b2b919665344a74b074adb3a7c566577",
+  "signature": "1fae809e84f66f29e172575bdc7f16f3380dcac6413382f29c825d620e546036",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02807"
 }

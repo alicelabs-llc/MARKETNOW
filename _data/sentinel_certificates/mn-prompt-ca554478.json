@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7564073",
+  "certificate_id": "MN-SC-2026-0659653",
   "skill_id": "mn-prompt-ca554478",
   "skill_name": "Marketing email deliverability optimization",
-  "issued_at": "2026-07-06T00:26:04.073Z",
-  "expires_at": "2026-07-13T00:26:04.073Z",
+  "issued_at": "2026-07-06T04:04:19.653Z",
+  "expires_at": "2026-07-13T04:04:19.653Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cedeb4ee894d892471c28d7d0659d2b95395a0d896da5eed4c4f2663300ceb25",
+  "signature": "d9a1c76ca79520ff29ff6b881b0a586b9295a460a961a7f17ddfa8d5f1190965",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ca554478"
 }

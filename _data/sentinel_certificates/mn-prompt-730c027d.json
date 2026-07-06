@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7417830",
+  "certificate_id": "MN-SC-2026-0554716",
   "skill_id": "mn-prompt-730c027d",
   "skill_name": "Especialista Authentication + OAuth2",
-  "issued_at": "2026-07-06T00:23:37.830Z",
-  "expires_at": "2026-07-13T00:23:37.830Z",
+  "issued_at": "2026-07-06T04:02:34.716Z",
+  "expires_at": "2026-07-13T04:02:34.716Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5c33ab743dd86a2e2feedc89b0322e84d660145ce9884458af95502c45bca0be",
+  "signature": "2a3f209c8d26d200ff6f375d6b54112502ffac33817aded6de2f01f6a12ec603",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-730c027d"
 }

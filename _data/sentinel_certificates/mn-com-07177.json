@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7121993",
+  "certificate_id": "MN-SC-2026-0298701",
   "skill_id": "mn-com-07177",
   "skill_name": "Mcp-oauth-compliance",
-  "issued_at": "2026-07-06T00:18:41.993Z",
-  "expires_at": "2026-07-13T00:18:41.993Z",
+  "issued_at": "2026-07-06T03:58:18.701Z",
+  "expires_at": "2026-07-13T03:58:18.701Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bdd2e1d032f627f4cb82a2539e9c1f2d271e22387caf98e84f34d521a5e0584e",
+  "signature": "0f7f62b45e71af2d2f7f14e439e8b0bad87b57321b075007648893c20dcbe118",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-com-07177"
 }

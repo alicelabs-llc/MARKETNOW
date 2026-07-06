@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7686717",
+  "certificate_id": "MN-SC-2026-0733434",
   "skill_id": "mn-atu-007",
   "skill_name": "Tool Dependency Resolver",
-  "issued_at": "2026-07-06T00:28:06.717Z",
-  "expires_at": "2026-07-13T00:28:06.717Z",
+  "issued_at": "2026-07-06T04:05:33.434Z",
+  "expires_at": "2026-07-13T04:05:33.434Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bbca05f24a37342abd6388523ed885ab3ea3c2af88645f169e364a5ccbf24c54",
+  "signature": "a40cfd253577ccf99aacc9c0c5cc7f9422b00a5122dd279ca950ed8a0ae697f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-007"
 }

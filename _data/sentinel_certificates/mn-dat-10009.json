@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7240588",
+  "certificate_id": "MN-SC-2026-0394553",
   "skill_id": "mn-dat-10009",
-  "skill_name": "Us-all/openmetadata-mcp",
-  "issued_at": "2026-07-06T00:20:40.588Z",
-  "expires_at": "2026-07-13T00:20:40.588Z",
+  "skill_name": "OpenMetadata",
+  "issued_at": "2026-07-06T03:59:54.553Z",
+  "expires_at": "2026-07-13T03:59:54.553Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8d96ea4266a1c24977563069b5baad71768fa9f092e387dd716e0f52d1a91da",
+  "signature": "1bb4661c284ef1284062a40cdd5796e8e7118a7bf69f03bd05df21498f0fb9b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-10009"
 }

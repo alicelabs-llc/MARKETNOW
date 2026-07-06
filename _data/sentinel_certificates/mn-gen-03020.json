@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6939733",
+  "certificate_id": "MN-SC-2026-0150436",
   "skill_id": "mn-gen-03020",
   "skill_name": "Cybermcp",
-  "issued_at": "2026-07-06T00:15:39.733Z",
-  "expires_at": "2026-07-13T00:15:39.733Z",
+  "issued_at": "2026-07-06T03:55:50.436Z",
+  "expires_at": "2026-07-13T03:55:50.436Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0438e4ac933c8e6aa27290bb781e8b0b4c63e56c605349949e98266b012b1eb0",
+  "signature": "f310a5b587c342463f50e67b8af2fcad87625556fd4620fd8f9908deab246363",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03020"
 }

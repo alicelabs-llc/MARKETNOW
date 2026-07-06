@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7407029",
+  "certificate_id": "MN-SC-2026-0545530",
   "skill_id": "mn-net-13681",
   "skill_name": "Yapi-auto-mcp",
-  "issued_at": "2026-07-06T00:23:27.029Z",
-  "expires_at": "2026-07-13T00:23:27.029Z",
+  "issued_at": "2026-07-06T04:02:25.530Z",
+  "expires_at": "2026-07-13T04:02:25.530Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "054d754c1ee622339c9435d44c38034b2192b723be0f8e07680da31e96a2af4e",
+  "signature": "acac836572481975d2294539aef84874ba886eee31bb07a370f97a7d202fe6be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-13681"
 }

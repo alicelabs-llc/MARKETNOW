@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7794720",
+  "certificate_id": "MN-SC-2026-0818918",
   "skill_id": "mn-code-001",
   "skill_name": "Code Executor Sandbox",
-  "issued_at": "2026-07-06T00:29:54.720Z",
-  "expires_at": "2026-07-13T00:29:54.720Z",
+  "issued_at": "2026-07-06T04:06:58.918Z",
+  "expires_at": "2026-07-13T04:06:58.918Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b93a5d92eaf0d125edb9445a5e5c40f2baa470efabb9f902f739baf077628fde",
+  "signature": "252da01f4a8cb276fb6e13b4b062ead79949c7396d381b72a2494f2428685b15",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-001"
 }

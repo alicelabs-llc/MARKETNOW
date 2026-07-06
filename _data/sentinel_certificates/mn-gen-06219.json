@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7077408",
+  "certificate_id": "MN-SC-2026-0261953",
   "skill_id": "mn-gen-06219",
   "skill_name": "Mcp-devkit",
-  "issued_at": "2026-07-06T00:17:57.408Z",
-  "expires_at": "2026-07-13T00:17:57.408Z",
+  "issued_at": "2026-07-06T03:57:41.953Z",
+  "expires_at": "2026-07-13T03:57:41.953Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "549bc4e2c65c6ed7fd51756612443f51c774872e5797b6008ac93dda449d0e96",
+  "signature": "d4d7093fabbf854b745f692a9741856aa6c49edd0dc5e26acef738e86cfb4b3a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06219"
 }

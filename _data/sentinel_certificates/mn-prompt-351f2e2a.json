@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7662102",
+  "certificate_id": "MN-SC-2026-0719146",
   "skill_id": "mn-prompt-351f2e2a",
   "skill_name": "Childcare center operations",
-  "issued_at": "2026-07-06T00:27:42.102Z",
-  "expires_at": "2026-07-13T00:27:42.102Z",
+  "issued_at": "2026-07-06T04:05:19.146Z",
+  "expires_at": "2026-07-13T04:05:19.146Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "096ce0865f9c200776ef6b5e0bd0d495990b66eb355e52392a9cbca659ca43f9",
+  "signature": "6cec3bacb8d9c529a97bd6204d77c2aeee61e8253a2c1f3cd96382b324b1d714",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-351f2e2a"
 }

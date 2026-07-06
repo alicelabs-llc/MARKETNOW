@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6781521",
+  "certificate_id": "MN-SC-2026-0039035",
   "skill_id": "mn-gen-00011",
   "skill_name": "0pi/mcp-server",
-  "issued_at": "2026-07-06T00:13:01.521Z",
-  "expires_at": "2026-07-13T00:13:01.521Z",
+  "issued_at": "2026-07-06T03:53:59.035Z",
+  "expires_at": "2026-07-13T03:53:59.035Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66a9874debf26bc5e86770f2f311f798dba12de2646862d69840bae2692cc696",
+  "signature": "3f420948a8bea012417276b99174be536c9b72c9aff9f10eb7a511833bc4d675",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00011"
 }

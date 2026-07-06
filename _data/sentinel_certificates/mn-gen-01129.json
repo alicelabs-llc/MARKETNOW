@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6835067",
+  "certificate_id": "MN-SC-2026-0078051",
   "skill_id": "mn-gen-01129",
   "skill_name": "Awaken-finance/agent-kit",
-  "issued_at": "2026-07-06T00:13:55.067Z",
-  "expires_at": "2026-07-13T00:13:55.067Z",
+  "issued_at": "2026-07-06T03:54:38.051Z",
+  "expires_at": "2026-07-13T03:54:38.051Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bbd2ce7b39e1490620df37a251d71bf07b872474573a6a36a518ffd235004d7",
+  "signature": "5db631066f65de8804135a784643240f98d32562b2ddd6e10fb381169e693fe3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01129"
 }

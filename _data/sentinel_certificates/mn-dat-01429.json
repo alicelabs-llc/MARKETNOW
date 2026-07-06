@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6847391",
+  "certificate_id": "MN-SC-2026-0086812",
   "skill_id": "mn-dat-01429",
-  "skill_name": "Bldbl/mcp",
-  "issued_at": "2026-07-06T00:14:07.391Z",
-  "expires_at": "2026-07-13T00:14:07.391Z",
+  "skill_name": "bldbl-mcp",
+  "issued_at": "2026-07-06T03:54:46.812Z",
+  "expires_at": "2026-07-13T03:54:46.812Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "54d20afa143332874259e62d993eac3cbe0b1afc7ca96e96b3509ee766fc66bc",
+  "signature": "dca5c2aab86d12f17322134faede679d3d6535a6ca84e2791ec4a464acf560f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-01429"
 }

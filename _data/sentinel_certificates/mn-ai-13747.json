@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7409212",
+  "certificate_id": "MN-SC-2026-0547470",
   "skill_id": "mn-ai-13747",
   "skill_name": "Zai-usage-monitor",
-  "issued_at": "2026-07-06T00:23:29.212Z",
-  "expires_at": "2026-07-13T00:23:29.212Z",
+  "issued_at": "2026-07-06T04:02:27.470Z",
+  "expires_at": "2026-07-13T04:02:27.470Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "195acf011a81b32454ab6cc9fb6c4da829ccb53edf5cd097772e1e599d3ca70b",
+  "signature": "0fe238db87d0f568530ef2495a45b6d473dab3fcfd47dfe86bf5365a921b856a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-13747"
 }

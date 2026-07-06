@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7013433",
+  "certificate_id": "MN-SC-2026-0210791",
   "skill_id": "mn-gen-04698",
   "skill_name": "Grammarly-mcp",
-  "issued_at": "2026-07-06T00:16:53.433Z",
-  "expires_at": "2026-07-13T00:16:53.433Z",
+  "issued_at": "2026-07-06T03:56:50.791Z",
+  "expires_at": "2026-07-13T03:56:50.791Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28420ac5f8d06adb4f3db8df532f2514f4483bfb21b7a89677f7e2f4534344d4",
+  "signature": "44f054046d87ea80481cdbe711dcb3933fcb6d2410eea453a166913518aec888",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04698"
 }

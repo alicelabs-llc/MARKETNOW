@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7055618",
+  "certificate_id": "MN-SC-2026-0242727",
   "skill_id": "mn-gen-05701",
-  "skill_name": "Legends-mcp",
-  "issued_at": "2026-07-06T00:17:35.618Z",
-  "expires_at": "2026-07-13T00:17:35.618Z",
+  "skill_name": "legends-mcp",
+  "issued_at": "2026-07-06T03:57:22.727Z",
+  "expires_at": "2026-07-13T03:57:22.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3afca0061980d876b0ec994380cb9078e79bcf89faa8ba4df92e3ff6d598023",
+  "signature": "fa3d35b644bd2b5ca61d15f8f2ce2ba16c81f11516c8ba7625ab0aa9fbc85258",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05701"
 }

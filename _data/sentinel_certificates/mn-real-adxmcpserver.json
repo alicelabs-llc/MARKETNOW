@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0938188",
+  "skill_id": "mn-real-adxmcpserver",
+  "skill_name": "adx-mcp-server",
+  "issued_at": "2026-07-06T04:08:58.188Z",
+  "expires_at": "2026-07-13T04:08:58.188Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "18297c9e0312c0cb81d5a2fff5e3f71e7daf8989c03f68bfe0a4bd9bb2b87011",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-adxmcpserver"
+}

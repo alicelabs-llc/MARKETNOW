@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6811656",
+  "certificate_id": "MN-SC-2026-0062068",
   "skill_id": "mn-ai-00646",
   "skill_name": "Apitable/aitable-mcp-server",
-  "issued_at": "2026-07-06T00:13:31.656Z",
-  "expires_at": "2026-07-13T00:13:31.656Z",
+  "issued_at": "2026-07-06T03:54:22.068Z",
+  "expires_at": "2026-07-13T03:54:22.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc15dc9668e626d17172250c4396d252609e5002e3ce86681adcb38323c25ba8",
+  "signature": "361c3fd15781c71c1978a046b13601ec0cc7e592d76265b78a68069e330a57de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00646"
 }

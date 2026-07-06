@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1091205",
+  "skill_id": "mn-real-cvemcpserver",
+  "skill_name": "cve-mcp-server",
+  "issued_at": "2026-07-06T04:11:31.205Z",
+  "expires_at": "2026-07-13T04:11:31.205Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "9ca1b4caff093899ede3f9baba1f5d8a133c9668e27f5fbce97db62118e8db0e",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cvemcpserver"
+}

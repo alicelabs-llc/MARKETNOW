@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7752410",
+  "certificate_id": "MN-SC-2026-0785064",
   "skill_id": "mn-pro-100d5324",
   "skill_name": "Threat Model Generator",
-  "issued_at": "2026-07-06T00:29:12.410Z",
-  "expires_at": "2026-07-13T00:29:12.410Z",
+  "issued_at": "2026-07-06T04:06:25.064Z",
+  "expires_at": "2026-07-13T04:06:25.064Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b69846833166e8df7b25f27af2c027d3150abb9ecc864dfa0d822218e8c4f02",
+  "signature": "7fbd57f8e2eb7e62c082657900d9c6247e464a7908c12f9caa27c05bbac0e2bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-100d5324"
 }

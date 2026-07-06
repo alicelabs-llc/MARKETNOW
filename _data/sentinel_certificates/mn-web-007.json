@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7827695",
+  "certificate_id": "MN-SC-2026-0840044",
   "skill_id": "mn-web-007",
   "skill_name": "PDF Generator from URL",
-  "issued_at": "2026-07-06T00:30:27.695Z",
-  "expires_at": "2026-07-13T00:30:27.695Z",
+  "issued_at": "2026-07-06T04:07:20.044Z",
+  "expires_at": "2026-07-13T04:07:20.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c125431094f6dc7e148ee060652d89de37e2ee8719e0ec85fe53ccf06d95333f",
+  "signature": "f206a1d4048076f172eeb3e18c69a237ccef907d79cbaee6758c87d0c81a5bdd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-007"
 }

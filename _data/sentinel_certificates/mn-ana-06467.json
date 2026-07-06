@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7087171",
+  "certificate_id": "MN-SC-2026-0270481",
   "skill_id": "mn-ana-06467",
   "skill_name": "Mcp-code-analysis-server",
-  "issued_at": "2026-07-06T00:18:07.171Z",
-  "expires_at": "2026-07-13T00:18:07.171Z",
+  "issued_at": "2026-07-06T03:57:50.481Z",
+  "expires_at": "2026-07-13T03:57:50.481Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fbfca24b4fdec140dfd72e66b7a1a387a09f87a4e3d0d784ec32b30c070bc332",
+  "signature": "8c9f5156e6d723318a0fe760fbeab89fb8d9107fc78229d52012e3d5f7ddd3a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ana-06467"
 }

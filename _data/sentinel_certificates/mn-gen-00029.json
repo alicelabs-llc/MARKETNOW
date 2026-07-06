@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6784264",
+  "certificate_id": "MN-SC-2026-0039948",
   "skill_id": "mn-gen-00029",
   "skill_name": "3cx-mcp-server",
-  "issued_at": "2026-07-06T00:13:04.264Z",
-  "expires_at": "2026-07-13T00:13:04.264Z",
+  "issued_at": "2026-07-06T03:53:59.948Z",
+  "expires_at": "2026-07-13T03:53:59.948Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "274b6771bc0587e76d7168cfdda453eb71cc6963cb2f747df4ce0379fa048e71",
+  "signature": "b2c60bd06150d3b9fa50318645aa426114f4fa04273d126c019c44f2eef6731a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00029"
 }

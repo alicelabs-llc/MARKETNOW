@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7683013",
+  "certificate_id": "MN-SC-2026-0731696",
   "skill_id": "mn-arl-044",
   "skill_name": "Reasoning Quality Scorer",
-  "issued_at": "2026-07-06T00:28:03.013Z",
-  "expires_at": "2026-07-13T00:28:03.013Z",
+  "issued_at": "2026-07-06T04:05:31.696Z",
+  "expires_at": "2026-07-13T04:05:31.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa68355fece77d176bec1fe3af92324341d030b847a3cfbc48f381869e7ea8ef",
+  "signature": "a2af9cfa49b1d382c6f3887fe1479da422e8a41e57f26f8557fd8e22663fd006",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-044"
 }

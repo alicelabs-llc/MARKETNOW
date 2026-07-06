@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7091584",
+  "certificate_id": "MN-SC-2026-0274030",
   "skill_id": "mn-dat-06564",
   "skill_name": "Mcp-data-extractor",
-  "issued_at": "2026-07-06T00:18:11.584Z",
-  "expires_at": "2026-07-13T00:18:11.584Z",
+  "issued_at": "2026-07-06T03:57:54.030Z",
+  "expires_at": "2026-07-13T03:57:54.030Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ce5121756da648da738f0628a8619f982d67e0b1924f15aaf2535069c4fa8d22",
+  "signature": "2e73efb7c0af7eb7708de5201ab61ff882dc163b5fc31704be259c810dbe492c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-06564"
 }

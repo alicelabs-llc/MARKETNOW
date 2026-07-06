@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7154757",
+  "certificate_id": "MN-SC-2026-0326212",
   "skill_id": "mn-gen-07842",
   "skill_name": "Triplewhale/mcp-server-triplewhale",
-  "issued_at": "2026-07-06T00:19:14.757Z",
-  "expires_at": "2026-07-13T00:19:14.757Z",
+  "issued_at": "2026-07-06T03:58:46.212Z",
+  "expires_at": "2026-07-13T03:58:46.212Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0af4b2f9fb26a1dbf826bbf4cdf0eff5afd6ce6c20ad4892a0f168da5d74545b",
+  "signature": "ffa101e82c85c30152efc620c683a10956df07f7d114d3e120a121af49b8f2e9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07842"
 }

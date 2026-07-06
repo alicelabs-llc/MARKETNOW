@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7103122",
+  "certificate_id": "MN-SC-2026-0284261",
   "skill_id": "mn-gen-06805",
   "skill_name": "Mcp-glitchtip",
-  "issued_at": "2026-07-06T00:18:23.122Z",
-  "expires_at": "2026-07-13T00:18:23.122Z",
+  "issued_at": "2026-07-06T03:58:04.261Z",
+  "expires_at": "2026-07-13T03:58:04.261Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e75e963a77dfd2b4e25420e2979cd994e18ede995517cc293355d3a41f16cd9",
+  "signature": "df73f1dbf5a69c88d9f98ceaf764201c848bdb3de98b56704dbae584e482f514",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06805"
 }

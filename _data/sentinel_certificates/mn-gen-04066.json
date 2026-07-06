@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6984675",
+  "certificate_id": "MN-SC-2026-0188138",
   "skill_id": "mn-gen-04066",
-  "skill_name": "Firefly-iii-mcp",
-  "issued_at": "2026-07-06T00:16:24.675Z",
-  "expires_at": "2026-07-13T00:16:24.675Z",
+  "skill_name": "firefly-mcp",
+  "issued_at": "2026-07-06T03:56:28.138Z",
+  "expires_at": "2026-07-13T03:56:28.138Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f4306d9d99ece49e5a042bf8005c4048631f6228cf4c656f05c4e7fb7221c78",
+  "signature": "23350fca81d5404e54459bd656db6884f813002e90d3985e24ac89b02c0375bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04066"
 }

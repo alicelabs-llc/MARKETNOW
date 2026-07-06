@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7409752",
+  "certificate_id": "MN-SC-2026-0547778",
   "skill_id": "mn-gen-13783",
-  "skill_name": "Zendesk-mcp-server",
-  "issued_at": "2026-07-06T00:23:29.752Z",
-  "expires_at": "2026-07-13T00:23:29.752Z",
+  "skill_name": "zendesk-mcp",
+  "issued_at": "2026-07-06T04:02:27.778Z",
+  "expires_at": "2026-07-13T04:02:27.778Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "73524dd67ff0242ac94c5b2ebcef8bbe1f105c40c76e63fd45b509e06ec5eb0d",
+  "signature": "2ef251b66e689553718c56715b819e5188a14a6a68b0e44b1634a08c158f1e1b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13783"
 }

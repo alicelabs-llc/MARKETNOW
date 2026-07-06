@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0924819",
+  "skill_id": "mn-awmcp-execkit",
+  "skill_name": "execkit",
+  "issued_at": "2026-07-06T04:08:44.819Z",
+  "expires_at": "2026-07-13T04:08:44.819Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 2,
+  "max_score": 10,
+  "risk_level": "high",
+  "risk_breakdown": {
+    "l15_l16": "high",
+    "l2": "not_available",
+    "final": "high"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 1,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "43518ad14d675e74ae9d4d6ae49c0ac731e768d5c843eea2250a495383a83aee",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-execkit"
+}

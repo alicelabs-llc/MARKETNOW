@@ -1,28 +1,27 @@
 {
-  "generated_at": "2026-07-06T02:55:56.008Z",
-  "total_certified": 8582,
+  "generated_at": "2026-07-06T04:11:51.505Z",
+  "total_certified": 10978,
+  "total_failed": 0,
   "by_risk": {
     "low": 6,
-    "medium": 8473,
-    "high": 92,
-    "critical": 11,
+    "medium": 10831,
+    "high": 125,
+    "critical": 16,
     "unknown": 0
   },
   "by_score": {
-    "0": 8,
-    "1": 3,
-    "2": 8,
-    "3": 19,
-    "4": 28,
-    "5": 30,
-    "6": 774,
-    "7": 1484,
-    "8": 3013,
-    "9": 3209,
+    "0": 11,
+    "1": 5,
+    "2": 26,
+    "3": 17,
+    "4": 39,
+    "5": 31,
+    "6": 738,
+    "7": 1726,
+    "8": 5218,
+    "9": 3161,
     "10": 6
   },
-  "with_l2": 67,
-  "l2_coverage_pct": "0.78%",
-  "l2_results_count": 67,
-  "note": "with_l2 now counts actual L2 result files, not just certificates with layers_run.l2=true (which updates on next cert regeneration)"
+  "with_l2": 206,
+  "l2_coverage_pct": "1.88%"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7763337",
+  "certificate_id": "MN-SC-2026-0793639",
   "skill_id": "mn-pro-b3e0d825",
   "skill_name": "Cloud Event Notifier",
-  "issued_at": "2026-07-06T00:29:23.337Z",
-  "expires_at": "2026-07-13T00:29:23.337Z",
+  "issued_at": "2026-07-06T04:06:33.639Z",
+  "expires_at": "2026-07-13T04:06:33.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cfff390da029684d76c0b4189521d9b01d55d261bafb390020bdade893c6c61a",
+  "signature": "4b9dee53fd1d0642718439daaadd15ea63f6d5e5e5f009ed6f238c0197a5d8ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-b3e0d825"
 }

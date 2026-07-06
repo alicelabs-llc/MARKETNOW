@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6835577",
+  "certificate_id": "MN-SC-2026-0078486",
   "skill_id": "mn-gen-01179",
   "skill_name": "Aws-lambda-mcp-server/root",
-  "issued_at": "2026-07-06T00:13:55.577Z",
-  "expires_at": "2026-07-13T00:13:55.577Z",
+  "issued_at": "2026-07-06T03:54:38.486Z",
+  "expires_at": "2026-07-13T03:54:38.486Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c18e4fdf7d6a5fe4e15f3e6801c0feedfecfa08923cbda7ed6586ccc6d36430b",
+  "signature": "27abc504833b48a6e9700cbb9f3d2436c1c0063f78d6f4f6f0903fdb80b81057",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01179"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7410281",
+  "certificate_id": "MN-SC-2026-0548323",
   "skill_id": "mn-gen-13786",
   "skill_name": "Zenmoney-mcp",
-  "issued_at": "2026-07-06T00:23:30.281Z",
-  "expires_at": "2026-07-13T00:23:30.281Z",
+  "issued_at": "2026-07-06T04:02:28.323Z",
+  "expires_at": "2026-07-13T04:02:28.323Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e75f1c8992f998fb301fd1dd1d0882ec0a905cd7f8ea1d69de8ecc76e518af3d",
+  "signature": "f95d05a218cacdb833e2b6f1afdcb5ef748eaed91bd8e6409884bf3cc094eb58",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13786"
 }

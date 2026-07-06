@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7004606",
+  "certificate_id": "MN-SC-2026-0203693",
   "skill_id": "mn-gen-04484",
-  "skill_name": "Gitinsight-mcp",
-  "issued_at": "2026-07-06T00:16:44.606Z",
-  "expires_at": "2026-07-13T00:16:44.606Z",
+  "skill_name": "git-insight-mcp",
+  "issued_at": "2026-07-06T03:56:43.693Z",
+  "expires_at": "2026-07-13T03:56:43.693Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "740a1249ff3da9edefcc3a2dbdd493ef209d35f757bd148ee65c22054c341e7c",
+  "signature": "691ff082e2358922daee801ca4056258a6b3c5ea6e2d3add9a1b4bcb93552577",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04484"
 }

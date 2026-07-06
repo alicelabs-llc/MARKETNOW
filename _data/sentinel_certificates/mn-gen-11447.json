@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7305047",
+  "certificate_id": "MN-SC-2026-0458870",
   "skill_id": "mn-gen-11447",
   "skill_name": "Mcp-sarcasm",
-  "issued_at": "2026-07-06T00:21:45.047Z",
-  "expires_at": "2026-07-13T00:21:45.047Z",
+  "issued_at": "2026-07-06T04:00:58.870Z",
+  "expires_at": "2026-07-13T04:00:58.870Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acfe89400d8921d2989df177423cd3858745728f43bebe12f389687034645c11",
+  "signature": "c583c00794be3276567987405fbc533a5e20cd6cf2f353623402a00417d37120",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11447"
 }

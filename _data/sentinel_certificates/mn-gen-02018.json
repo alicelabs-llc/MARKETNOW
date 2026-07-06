@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6880212",
+  "certificate_id": "MN-SC-2026-0110207",
   "skill_id": "mn-gen-02018",
   "skill_name": "Claude-code-discord-status",
-  "issued_at": "2026-07-06T00:14:40.212Z",
-  "expires_at": "2026-07-13T00:14:40.212Z",
+  "issued_at": "2026-07-06T03:55:10.207Z",
+  "expires_at": "2026-07-13T03:55:10.207Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e6ba7335475127c0403019fe2e4a2ef6a56c146804d577322f08197fd76f229",
+  "signature": "68c6a982f390eb74e2eb036561e9613718888853bf755253d99162196838f6af",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02018"
 }

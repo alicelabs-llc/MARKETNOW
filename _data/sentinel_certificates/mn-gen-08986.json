@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7195021",
+  "certificate_id": "MN-SC-2026-0358637",
   "skill_id": "mn-gen-08986",
   "skill_name": "Metmuseum-mcp",
-  "issued_at": "2026-07-06T00:19:55.021Z",
-  "expires_at": "2026-07-13T00:19:55.021Z",
+  "issued_at": "2026-07-06T03:59:18.637Z",
+  "expires_at": "2026-07-13T03:59:18.637Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee239184b55056d04a222324737084ae36acb9028bacba84d2e09c6252adeb43",
+  "signature": "2185c675ff70f08a51a8b921c9bd6df4dae5d46f6f9a346a18327538253cb142",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08986"
 }

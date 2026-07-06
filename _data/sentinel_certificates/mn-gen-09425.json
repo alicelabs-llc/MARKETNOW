@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7214939",
+  "certificate_id": "MN-SC-2026-0371441",
   "skill_id": "mn-gen-09425",
   "skill_name": "Nansen-nexus-mcp",
-  "issued_at": "2026-07-06T00:20:14.939Z",
-  "expires_at": "2026-07-13T00:20:14.939Z",
+  "issued_at": "2026-07-06T03:59:31.441Z",
+  "expires_at": "2026-07-13T03:59:31.441Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b4801aec7b7d59289fbc6653fb70449bf31876535f98bddcc34cd4a34905be4f",
+  "signature": "8e3cfcfacd2a4fe711357427c8c0992955d931921141cd5ab1978e3fd5b6f378",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09425"
 }

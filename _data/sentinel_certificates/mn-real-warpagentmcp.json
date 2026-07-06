@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0968642",
+  "skill_id": "mn-real-warpagentmcp",
+  "skill_name": "warp-agent-mcp",
+  "issued_at": "2026-07-06T04:09:28.642Z",
+  "expires_at": "2026-07-13T04:09:28.642Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "2551c6481f69a08777b1f3140b27b7ed079b21c3eed3938aa7a82aca7659b61c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-warpagentmcp"
+}

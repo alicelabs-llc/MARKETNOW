@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7368322",
+  "certificate_id": "MN-SC-2026-0513781",
   "skill_id": "mn-ai-12885",
   "skill_name": "Doist/twist-ai",
-  "issued_at": "2026-07-06T00:22:48.322Z",
-  "expires_at": "2026-07-13T00:22:48.322Z",
+  "issued_at": "2026-07-06T04:01:53.781Z",
+  "expires_at": "2026-07-13T04:01:53.781Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05ae95288df0170bd3853be0979c082c6615f995f5e649a13d04d13bc01b2f21",
+  "signature": "28b313b15c9509a9e88e2f582972d20d33471e6135ccda7034a069bd7946461f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-12885"
 }

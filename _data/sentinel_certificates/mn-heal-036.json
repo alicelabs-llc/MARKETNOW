@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7856501",
+  "certificate_id": "MN-SC-2026-0859514",
   "skill_id": "mn-heal-036",
   "skill_name": "Healthcare API Gateway",
-  "issued_at": "2026-07-06T00:30:56.501Z",
-  "expires_at": "2026-07-13T00:30:56.501Z",
+  "issued_at": "2026-07-06T04:07:39.514Z",
+  "expires_at": "2026-07-13T04:07:39.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b2e03d0143f0158d6a026c716935f989c2c29b5c9ff43acf4c9ea87c8e10279c",
+  "signature": "7b16b826d576f538359183157283a0c12cebcb9f7f1ad814a4e01c4042d799e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-heal-036"
 }

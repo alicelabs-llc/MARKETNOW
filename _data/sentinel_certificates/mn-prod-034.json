@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7821788",
+  "certificate_id": "MN-SC-2026-0836089",
   "skill_id": "mn-prod-034",
   "skill_name": "Knowledge Base Builder",
-  "issued_at": "2026-07-06T00:30:21.788Z",
-  "expires_at": "2026-07-13T00:30:21.788Z",
+  "issued_at": "2026-07-06T04:07:16.089Z",
+  "expires_at": "2026-07-13T04:07:16.089Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b44af51564ad9a6c48b9565f307a27023bfbbb4db291f30049da0c38aa13f671",
+  "signature": "3552ae8752e6c4b3faa20dd279742ff467b702240b7bf5264f00ca75fd15afd5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-034"
 }

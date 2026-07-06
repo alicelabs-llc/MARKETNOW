@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7647894",
+  "certificate_id": "MN-SC-2026-0710464",
   "skill_id": "mn-prompt-4b964f46",
   "skill_name": "Computer vision for product",
-  "issued_at": "2026-07-06T00:27:27.894Z",
-  "expires_at": "2026-07-13T00:27:27.894Z",
+  "issued_at": "2026-07-06T04:05:10.464Z",
+  "expires_at": "2026-07-13T04:05:10.464Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c4d9cd2518ec9afc6ff8672112340f8f168ad6ec383b8d237f59574915778b9",
+  "signature": "01bbd391424d0e0d53ba3471a621fbfb6ef9702447444a1a4768cfe2bf7aafd8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4b964f46"
 }

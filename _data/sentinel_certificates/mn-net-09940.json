@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7237487",
+  "certificate_id": "MN-SC-2026-0391489",
   "skill_id": "mn-net-09940",
-  "skill_name": "Openapi-mcp/server",
-  "issued_at": "2026-07-06T00:20:37.487Z",
-  "expires_at": "2026-07-13T00:20:37.487Z",
+  "skill_name": "mcp-openapi-server",
+  "issued_at": "2026-07-06T03:59:51.489Z",
+  "expires_at": "2026-07-13T03:59:51.489Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1487e588aa5329e1c92bce2578d88039b215bf97a1a953ad6f5ad1894ed2e692",
+  "signature": "ce6ea2ad1c75e5c26c31dd3c3fe005909af2100695751d5692e60fb48f846e47",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-09940"
 }

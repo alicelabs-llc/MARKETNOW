@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7393213",
+  "certificate_id": "MN-SC-2026-0535608",
   "skill_id": "mn-gen-13376",
   "skill_name": "Webssh-mcpb-dxt-extension",
-  "issued_at": "2026-07-06T00:23:13.213Z",
-  "expires_at": "2026-07-13T00:23:13.213Z",
+  "issued_at": "2026-07-06T04:02:15.608Z",
+  "expires_at": "2026-07-13T04:02:15.608Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9616c12b17668549189add7be9bc4e2680b94e3e6384bd77ca48d3eb56482c0d",
+  "signature": "b5ff7532155144e76d5a56c845898aace5a5ebc578c8af63129243f5f144cd1b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13376"
 }

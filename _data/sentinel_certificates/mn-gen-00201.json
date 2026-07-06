@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6792288",
+  "certificate_id": "MN-SC-2026-0047463",
   "skill_id": "mn-gen-00201",
   "skill_name": "Aegis-defi",
-  "issued_at": "2026-07-06T00:13:12.288Z",
-  "expires_at": "2026-07-13T00:13:12.288Z",
+  "issued_at": "2026-07-06T03:54:07.463Z",
+  "expires_at": "2026-07-13T03:54:07.463Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e6c8ad508fc58a15d8b0e9d28979aa781457647f9a10f756d42d5b98406cfcc5",
+  "signature": "fc4cf9d0b94f89d8a622dd84227accc649b76fc229c2ef13d709f11cf8c3117b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00201"
 }

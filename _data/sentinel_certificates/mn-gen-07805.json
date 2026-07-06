@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7152571",
+  "certificate_id": "MN-SC-2026-0323525",
   "skill_id": "mn-gen-07805",
-  "skill_name": "Mcp-server-servicenow",
-  "issued_at": "2026-07-06T00:19:12.571Z",
-  "expires_at": "2026-07-13T00:19:12.571Z",
+  "skill_name": "servicenow-mcp",
+  "issued_at": "2026-07-06T03:58:43.525Z",
+  "expires_at": "2026-07-13T03:58:43.525Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 2,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30e92c7cce18969a18cbc5f3db78f231c153a5a68496c6feb1327d690e758456",
+  "signature": "e869ccb0cbd4bdc455c23aef3c7b04847016e43b7384ab57fc7a4abce1938a9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07805"
 }

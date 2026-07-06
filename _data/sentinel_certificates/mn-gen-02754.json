@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6921998",
+  "certificate_id": "MN-SC-2026-0141376",
   "skill_id": "mn-gen-02754",
   "skill_name": "Context-steward",
-  "issued_at": "2026-07-06T00:15:21.998Z",
-  "expires_at": "2026-07-13T00:15:21.998Z",
+  "issued_at": "2026-07-06T03:55:41.376Z",
+  "expires_at": "2026-07-13T03:55:41.376Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd74964f7283a25cdfca3ed07cea5467f6d52d042187184c026d8809ce2f7a66",
+  "signature": "dfbf21a4de6f2ff73a7ee510668601d6c43638223ee487a1139cf05699ed1bfd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02754"
 }

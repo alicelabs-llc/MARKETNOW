@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7758895",
+  "certificate_id": "MN-SC-2026-0790136",
   "skill_id": "mn-pro-f0893233",
   "skill_name": "Query Cache Optimizer",
-  "issued_at": "2026-07-06T00:29:18.895Z",
-  "expires_at": "2026-07-13T00:29:18.895Z",
+  "issued_at": "2026-07-06T04:06:30.136Z",
+  "expires_at": "2026-07-13T04:06:30.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11b54044954a047d4ea99ce647f525f0367a2728d91179aac1b9ac5584ffe882",
+  "signature": "08a591e050791af9ce44772c27ef54a8aeb54ed21cd5af8eef294e3fa06ac90e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-f0893233"
 }

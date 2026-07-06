@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7277203",
+  "certificate_id": "MN-SC-2026-0433608",
   "skill_id": "mn-ai-10800",
   "skill_name": "Pumpfun-claims-bot",
-  "issued_at": "2026-07-06T00:21:17.203Z",
-  "expires_at": "2026-07-13T00:21:17.203Z",
+  "issued_at": "2026-07-06T04:00:33.608Z",
+  "expires_at": "2026-07-13T04:00:33.608Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8b417ff61ffc9d49d6ad39dc5d7c837bd727ad23bfde61d23c18766c0da6eae4",
+  "signature": "0f03ed517acd511f26b57076aafacb3c521b96b6d4acdfe26b36d33d69a4e706",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-10800"
 }

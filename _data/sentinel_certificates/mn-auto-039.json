@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7794195",
+  "certificate_id": "MN-SC-2026-0818483",
   "skill_id": "mn-auto-039",
   "skill_name": "Workflow Versioning",
-  "issued_at": "2026-07-06T00:29:54.195Z",
-  "expires_at": "2026-07-13T00:29:54.195Z",
+  "issued_at": "2026-07-06T04:06:58.483Z",
+  "expires_at": "2026-07-13T04:06:58.483Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf0d96a7acec5a244dfbbc2f59a806bb07933b3eea5f8f2a947741889605e5ed",
+  "signature": "168359ef07e420991e24ef0df91a8ece2406cb8fbba7a284cc11f139f46541be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-039"
 }

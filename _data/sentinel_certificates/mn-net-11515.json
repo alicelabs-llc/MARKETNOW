@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7307273",
+  "certificate_id": "MN-SC-2026-0460807",
   "skill_id": "mn-net-11515",
   "skill_name": "Scrt-network-mcp",
-  "issued_at": "2026-07-06T00:21:47.273Z",
-  "expires_at": "2026-07-13T00:21:47.273Z",
+  "issued_at": "2026-07-06T04:01:00.807Z",
+  "expires_at": "2026-07-13T04:01:00.807Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e62ce69c9fd776eb437200e6231ab0368245203c10ae694b1554af0e05038a7",
+  "signature": "1508f9080fef30821b885c3ad676e38f7303f9c8adb1d5b9c2cfcf418f6b7dc7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-11515"
 }

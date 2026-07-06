@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7249537",
+  "certificate_id": "MN-SC-2026-0402723",
   "skill_id": "mn-res-10193",
-  "skill_name": "Paper-search",
-  "issued_at": "2026-07-06T00:20:49.537Z",
-  "expires_at": "2026-07-13T00:20:49.537Z",
+  "skill_name": "paper-search-mcp",
+  "issued_at": "2026-07-06T04:00:02.723Z",
+  "expires_at": "2026-07-13T04:00:02.723Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ccf407ae3889934edef5dc86e3d5ebe4b9583b4c61b4efc5fca9a7971846382",
+  "signature": "f66eca8f35c02ba18be87f225066aafcf8c8a624cb5435ea2f5e062eee377308",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-10193"
 }

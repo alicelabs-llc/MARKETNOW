@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7158038",
+  "certificate_id": "MN-SC-2026-0329446",
   "skill_id": "mn-gen-07924",
   "skill_name": "Mcp-slim",
-  "issued_at": "2026-07-06T00:19:18.038Z",
-  "expires_at": "2026-07-13T00:19:18.038Z",
+  "issued_at": "2026-07-06T03:58:49.446Z",
+  "expires_at": "2026-07-13T03:58:49.446Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59c4bdffa5121fbd764103a335fed1dba78c81971df4912ee6e84b6e2d234e73",
+  "signature": "bff1246e62701bb20ed82e1c5311dada18928a80fad72b1a04c30fcd2bf8f2a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07924"
 }

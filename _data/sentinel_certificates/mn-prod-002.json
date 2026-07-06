@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7817598",
+  "certificate_id": "MN-SC-2026-0833385",
   "skill_id": "mn-prod-002",
   "skill_name": "Project Planner",
-  "issued_at": "2026-07-06T00:30:17.598Z",
-  "expires_at": "2026-07-13T00:30:17.598Z",
+  "issued_at": "2026-07-06T04:07:13.385Z",
+  "expires_at": "2026-07-13T04:07:13.385Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c9930cc9313e082248ef86b633362263dbf87ef1284ee26305cc3d82dd0fb03",
+  "signature": "deef3260e946f7cc4b76b6a238be6b6ee0432ef38b5c6376908b4beebd718a3c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-002"
 }

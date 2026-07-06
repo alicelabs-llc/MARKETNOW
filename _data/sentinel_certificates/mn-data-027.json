@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7807269",
+  "certificate_id": "MN-SC-2026-0828180",
   "skill_id": "mn-data-027",
   "skill_name": "Route Optimizer",
-  "issued_at": "2026-07-06T00:30:07.269Z",
-  "expires_at": "2026-07-13T00:30:07.269Z",
+  "issued_at": "2026-07-06T04:07:08.180Z",
+  "expires_at": "2026-07-13T04:07:08.180Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f27f13cbafb958bb88b08ffaba88572d9b9cec921925429e3a5f7398f4d0865",
+  "signature": "d3221734b8c4796a27356559e9d088ec48b0ecab93169680dff20caf737bb2d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-027"
 }

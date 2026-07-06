@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7161398",
+  "certificate_id": "MN-SC-2026-0331560",
   "skill_id": "mn-net-07991",
   "skill_name": "Streamable-mcp-server",
-  "issued_at": "2026-07-06T00:19:21.398Z",
-  "expires_at": "2026-07-13T00:19:21.398Z",
+  "issued_at": "2026-07-06T03:58:51.560Z",
+  "expires_at": "2026-07-13T03:58:51.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68017f5caabe71a00957517c749aa326bb8869b0ea3fcdce6ef61e5e2fe3ebb0",
+  "signature": "c85f7ea1af29d4a02d7247ebe13bf7a7401375b51bfa34142522159eccb9133a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-07991"
 }

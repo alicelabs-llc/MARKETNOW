@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7790916",
+  "certificate_id": "MN-SC-2026-0815878",
   "skill_id": "mn-auto-009",
   "skill_name": "Conditional Router",
-  "issued_at": "2026-07-06T00:29:50.916Z",
-  "expires_at": "2026-07-13T00:29:50.916Z",
+  "issued_at": "2026-07-06T04:06:55.878Z",
+  "expires_at": "2026-07-13T04:06:55.878Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7bd7d7923e0952fcd7e0962c27c8dca7d35fb94d4f885aa595edd10fa13fbf9",
+  "signature": "baddb9c76a6ba5e56e41a9b4f8c6ff2dae1345e7159cb6a4c80905159c72d49d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-009"
 }

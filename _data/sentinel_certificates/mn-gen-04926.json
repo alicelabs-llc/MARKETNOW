@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7022411",
+  "certificate_id": "MN-SC-2026-0218107",
   "skill_id": "mn-gen-04926",
-  "skill_name": "Hn-mcp-server",
-  "issued_at": "2026-07-06T00:17:02.411Z",
-  "expires_at": "2026-07-13T00:17:02.411Z",
+  "skill_name": "hn-server",
+  "issued_at": "2026-07-06T03:56:58.107Z",
+  "expires_at": "2026-07-13T03:56:58.107Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "542ce1f6457683e622a065cd4d463638a2edcf2595350b376b74baa8fad6a536",
+  "signature": "c6d755b78240f56f493ca5de096b99812732f2593e272be23399717085333036",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04926"
 }

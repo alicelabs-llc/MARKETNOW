@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7726753",
+  "certificate_id": "MN-SC-2026-0763914",
   "skill_id": "mn-leg-00019",
   "skill_name": "KYC Verification MCP",
-  "issued_at": "2026-07-06T00:28:46.753Z",
-  "expires_at": "2026-07-13T00:28:46.753Z",
+  "issued_at": "2026-07-06T04:06:03.914Z",
+  "expires_at": "2026-07-13T04:06:03.914Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "067a666099cd8dbc0ae96765c997e5c257552207500be7ec3efc636e9836d3d0",
+  "signature": "97df6fb4a665dd4704ba67882ee2edaed039e5a40fc3f5fc5d0d599b10ea32bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00019"
 }

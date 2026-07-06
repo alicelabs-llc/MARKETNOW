@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6881445",
+  "certificate_id": "MN-SC-2026-0111155",
   "skill_id": "mn-gen-02071",
   "skill_name": "Claude-code-vault",
-  "issued_at": "2026-07-06T00:14:41.445Z",
-  "expires_at": "2026-07-13T00:14:41.445Z",
+  "issued_at": "2026-07-06T03:55:11.155Z",
+  "expires_at": "2026-07-13T03:55:11.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7a4ea77572e681b21f79b623a136784a94baa35a22022289f3cc02ce60e29d7e",
+  "signature": "9261cae12d604245637247e74c7548962969c24e0d78b1134c9704a5b50cef79",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02071"
 }

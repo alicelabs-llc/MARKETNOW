@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7780791",
+  "certificate_id": "MN-SC-2026-0808497",
   "skill_id": "mn-pro-b5fbaa6a",
   "skill_name": "Media Content Moderator",
-  "issued_at": "2026-07-06T00:29:40.791Z",
-  "expires_at": "2026-07-13T00:29:40.791Z",
+  "issued_at": "2026-07-06T04:06:48.497Z",
+  "expires_at": "2026-07-13T04:06:48.497Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9ce56c4b3b37338bc607e0e57526fccd22f42c6017476c4fe1857467b51d2612",
+  "signature": "7a20bd55de5181d0b61dd8f9cd5a84deef0efee71490b1ed18aa74f0d374e68c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-b5fbaa6a"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7246695",
+  "certificate_id": "MN-SC-2026-0400182",
   "skill_id": "mn-gen-10135",
   "skill_name": "Outline-sync",
-  "issued_at": "2026-07-06T00:20:46.695Z",
-  "expires_at": "2026-07-13T00:20:46.695Z",
+  "issued_at": "2026-07-06T04:00:00.182Z",
+  "expires_at": "2026-07-13T04:00:00.182Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "425d1bcc31e1ee3b82aa59d9fa14fecd67dc81f6c1971016eb9172b1a74a720f",
+  "signature": "f0d8ba396edfadf7b59d0fb0bfc420e0869ea4050063291c8ef75e618f1c7500",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10135"
 }

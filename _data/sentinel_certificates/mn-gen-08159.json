@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7169772",
+  "certificate_id": "MN-SC-2026-0336580",
   "skill_id": "mn-gen-08159",
-  "skill_name": "Mcp-typescript-server",
-  "issued_at": "2026-07-06T00:19:29.772Z",
-  "expires_at": "2026-07-13T00:19:29.772Z",
+  "skill_name": "typescript-sdk",
+  "issued_at": "2026-07-06T03:58:56.580Z",
+  "expires_at": "2026-07-13T03:58:56.580Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0bdb0cc9ffe45773d91798935906d44cd6ca46130e69609dec4a55cd80544ef5",
+  "signature": "d9e905b844a5e227846b134ed8ac04ec61a772d6cd52e55f44d83df7fe1fc904",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08159"
 }

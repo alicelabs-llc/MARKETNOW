@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7346108",
+  "certificate_id": "MN-SC-2026-0496631",
   "skill_id": "mn-gen-12400",
   "skill_name": "Synthlab-mcp-server",
-  "issued_at": "2026-07-06T00:22:26.108Z",
-  "expires_at": "2026-07-13T00:22:26.108Z",
+  "issued_at": "2026-07-06T04:01:36.631Z",
+  "expires_at": "2026-07-13T04:01:36.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41c74f275c240ee562ce7188ea516654e12c5873db4687f6d5640f582295eab3",
+  "signature": "54d011b564377724a48b0a727bfcd1c3ee38aba71e8aeb65d9e48c8f1c128521",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12400"
 }

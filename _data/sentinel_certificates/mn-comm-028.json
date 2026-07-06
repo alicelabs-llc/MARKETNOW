@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7801540",
+  "certificate_id": "MN-SC-2026-0824777",
   "skill_id": "mn-comm-028",
   "skill_name": "Return Manager",
-  "issued_at": "2026-07-06T00:30:01.540Z",
-  "expires_at": "2026-07-13T00:30:01.540Z",
+  "issued_at": "2026-07-06T04:07:04.777Z",
+  "expires_at": "2026-07-13T04:07:04.777Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51ae8d036e92e1f0921579490572ebd7147be0b8890d9e84210e876a69bcf991",
+  "signature": "fa5ded59ca49dee604006c8b3e8ae86b676a4059be70dda272e5602a2e5facf0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-028"
 }

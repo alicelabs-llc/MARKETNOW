@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7819812",
+  "certificate_id": "MN-SC-2026-0834667",
   "skill_id": "mn-prod-020",
   "skill_name": "Bookmark Manager",
-  "issued_at": "2026-07-06T00:30:19.812Z",
-  "expires_at": "2026-07-13T00:30:19.812Z",
+  "issued_at": "2026-07-06T04:07:14.667Z",
+  "expires_at": "2026-07-13T04:07:14.667Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dcecc8596f0ccce0547d062f6049883874eadb00c11666a5b3ee8617d182924e",
+  "signature": "b2e1ecbc4201ba06a12874d3a59a025fcd272d062ae67c1e6f6b82c3dc61f65c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-020"
 }

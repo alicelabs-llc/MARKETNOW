@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7203327",
+  "certificate_id": "MN-SC-2026-0365274",
   "skill_id": "mn-gen-09211",
   "skill_name": "Monobank-mcp-server",
-  "issued_at": "2026-07-06T00:20:03.327Z",
-  "expires_at": "2026-07-13T00:20:03.327Z",
+  "issued_at": "2026-07-06T03:59:25.274Z",
+  "expires_at": "2026-07-13T03:59:25.274Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04a0d6e0273554641b09822867610b55dbef76c5f840782f94c6299142e4660d",
+  "signature": "f6a890cd7c9c040a471e9a2c184009fcec523d8304075545c60a105706f5c698",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09211"
 }

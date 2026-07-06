@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7289772",
+  "certificate_id": "MN-SC-2026-0440247",
   "skill_id": "mn-gen-11086",
   "skill_name": "Reckon-mcp-server",
-  "issued_at": "2026-07-06T00:21:29.772Z",
-  "expires_at": "2026-07-13T00:21:29.772Z",
+  "issued_at": "2026-07-06T04:00:40.247Z",
+  "expires_at": "2026-07-13T04:00:40.247Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a7b0c0f9565bc206fc1371e5a25703d20508456959ca1fa40cdeb50b450ba0ff",
+  "signature": "8a4818a0660dd06be4208e4c2754a939f88864d98ea09b3d342b77b2c920d890",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11086"
 }

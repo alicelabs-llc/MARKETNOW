@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6954633",
+  "certificate_id": "MN-SC-2026-0162205",
   "skill_id": "mn-gen-03353",
   "skill_name": "Discogs-mcp-server",
-  "issued_at": "2026-07-06T00:15:54.633Z",
-  "expires_at": "2026-07-13T00:15:54.633Z",
+  "issued_at": "2026-07-06T03:56:02.205Z",
+  "expires_at": "2026-07-13T03:56:02.205Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb6c9ee46cac9bf3311752faae172d24ac195df5da0c379ad8a2cbf83d76f553",
+  "signature": "7b412079238ca571048927b197edfd9fc36ad384d83009918c96af8cfa5a9c6d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03353"
 }

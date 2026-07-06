@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7819142",
+  "certificate_id": "MN-SC-2026-0834203",
   "skill_id": "mn-prod-013",
   "skill_name": "Goal Tracker",
-  "issued_at": "2026-07-06T00:30:19.142Z",
-  "expires_at": "2026-07-13T00:30:19.142Z",
+  "issued_at": "2026-07-06T04:07:14.203Z",
+  "expires_at": "2026-07-13T04:07:14.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad982c1e3026caf0d9197af944fa8a33be219723394b18d4531da5317b6d290f",
+  "signature": "6e4d297681e976e137b7d1aed2d50059d6b4cb095221595cd574cf4bf0e38ee3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prod-013"
 }

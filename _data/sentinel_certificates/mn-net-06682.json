@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7097160",
+  "certificate_id": "MN-SC-2026-0278622",
   "skill_id": "mn-net-06682",
   "skill_name": "Mcp-starter",
-  "issued_at": "2026-07-06T00:18:17.160Z",
-  "expires_at": "2026-07-13T00:18:17.160Z",
+  "issued_at": "2026-07-06T03:57:58.622Z",
+  "expires_at": "2026-07-13T03:57:58.622Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00027d4bd39b46c12380366acc62560f3f626c9b6d75c4a67a75da2096d8248d",
+  "signature": "f74541b9e40d553aed2e8e4147bf362063f2f6a229bd5e90feb573249b4f78cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-06682"
 }

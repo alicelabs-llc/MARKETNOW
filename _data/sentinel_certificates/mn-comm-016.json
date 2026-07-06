@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7800509",
+  "certificate_id": "MN-SC-2026-0823840",
   "skill_id": "mn-comm-016",
   "skill_name": "Wishlist Manager",
-  "issued_at": "2026-07-06T00:30:00.509Z",
-  "expires_at": "2026-07-13T00:30:00.509Z",
+  "issued_at": "2026-07-06T04:07:03.840Z",
+  "expires_at": "2026-07-13T04:07:03.840Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63d36d7a2f615c61f397233cba8be6427691129fb883a46b865063e5351ce77b",
+  "signature": "a38d648c41454ed518c5739b08b0499142fe4e7e1c134762b518d89d691f58b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-016"
 }

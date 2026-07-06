@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6875353",
+  "certificate_id": "MN-SC-2026-0105398",
   "skill_id": "mn-gen-01929",
   "skill_name": "Citadel-mcp",
-  "issued_at": "2026-07-06T00:14:35.353Z",
-  "expires_at": "2026-07-13T00:14:35.353Z",
+  "issued_at": "2026-07-06T03:55:05.398Z",
+  "expires_at": "2026-07-13T03:55:05.398Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d4d3360b04e44cdd35f024530eccced4c1b179ff7b00ae3a2458dc2ad5fd4b35",
+  "signature": "ab95cefb03605756dbe0358e205221a6cf395e0c56eee820a1ca4e87fbfdeaf8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01929"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7694747",
+  "certificate_id": "MN-SC-2026-0740269",
   "skill_id": "mn-acm-021",
   "skill_name": "Knowledge Graph RAG",
-  "issued_at": "2026-07-06T00:28:14.747Z",
-  "expires_at": "2026-07-13T00:28:14.747Z",
+  "issued_at": "2026-07-06T04:05:40.269Z",
+  "expires_at": "2026-07-13T04:05:40.269Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c1c76ac7828473007fe36e33c2ec6fd0488ca24099e901ae3cb02cf564e300c",
+  "signature": "4884ace0cf6571f4146fb21f287f9c229656812d2ba9711038c9cc939b6c77bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-021"
 }

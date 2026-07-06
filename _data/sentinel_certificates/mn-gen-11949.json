@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7327500",
+  "certificate_id": "MN-SC-2026-0478655",
   "skill_id": "mn-gen-11949",
   "skill_name": "Smarts",
-  "issued_at": "2026-07-06T00:22:07.500Z",
-  "expires_at": "2026-07-13T00:22:07.500Z",
+  "issued_at": "2026-07-06T04:01:18.655Z",
+  "expires_at": "2026-07-13T04:01:18.655Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "21c3ee41384c079614c6ffe6384d2215df8d5c01a24d6c9cbaeda003ce2dcfb1",
+  "signature": "a38edb5eda474afa49ddfe852d21dc01f60c6f2ebb8576342ac4f6c285bbfed1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11949"
 }

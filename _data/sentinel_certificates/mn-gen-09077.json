@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7197967",
+  "certificate_id": "MN-SC-2026-0360775",
   "skill_id": "mn-gen-09077",
   "skill_name": "Minimax-integration",
-  "issued_at": "2026-07-06T00:19:57.967Z",
-  "expires_at": "2026-07-13T00:19:57.967Z",
+  "issued_at": "2026-07-06T03:59:20.775Z",
+  "expires_at": "2026-07-13T03:59:20.775Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d87f4ad659ee927dd60ffe4399059204e5e40a594867144d3114024ac667c8b7",
+  "signature": "8f5fbda9afe8927ac84dae22aa628f400907af7ad816e8a6a065f49ef871faca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09077"
 }

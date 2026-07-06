@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6791808",
+  "certificate_id": "MN-SC-2026-0046940",
   "skill_id": "mn-gen-00200",
   "skill_name": "Pallattu/aeg-intent-gate",
-  "issued_at": "2026-07-06T00:13:11.808Z",
-  "expires_at": "2026-07-13T00:13:11.808Z",
+  "issued_at": "2026-07-06T03:54:06.940Z",
+  "expires_at": "2026-07-13T03:54:06.940Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3dd99185da74201750509fa19de0466d7f3f1ec5ffc1c5eb16411c5a30829157",
+  "signature": "70f49608c5b1f41df987e8814efe953b76bcec48ec1095434c5d6e91bda874b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00200"
 }

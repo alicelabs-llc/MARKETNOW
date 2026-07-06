@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7790905",
+  "certificate_id": "MN-SC-2026-0815918",
   "skill_id": "mn-auto-005",
   "skill_name": "Schedule Trigger",
-  "issued_at": "2026-07-06T00:29:50.905Z",
-  "expires_at": "2026-07-13T00:29:50.905Z",
+  "issued_at": "2026-07-06T04:06:55.918Z",
+  "expires_at": "2026-07-13T04:06:55.918Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc133fb52283b2907f7f99cf9cc8e4fa3caf94f567601765b4d40a5c7f67e64a",
+  "signature": "411b418e5b438bc346ba2cd0079ed2a28981aa1224a046b3343d0b3f541475c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-005"
 }

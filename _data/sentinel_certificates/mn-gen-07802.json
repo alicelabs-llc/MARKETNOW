@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7152553",
+  "certificate_id": "MN-SC-2026-0323644",
   "skill_id": "mn-gen-07802",
   "skill_name": "Mcp-server-semgrep",
-  "issued_at": "2026-07-06T00:19:12.553Z",
-  "expires_at": "2026-07-13T00:19:12.553Z",
+  "issued_at": "2026-07-06T03:58:43.644Z",
+  "expires_at": "2026-07-13T03:58:43.644Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fbeeb21bacd908ca1d7d46d877baf68ff2fa48aa2cb5f63b0036baded12b556",
+  "signature": "a7216228e16661c0e88144b3541f7b06b0ec177add2632f8934b13241d7246c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07802"
 }

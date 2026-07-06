@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7642156",
+  "certificate_id": "MN-SC-2026-0706705",
   "skill_id": "mn-prompt-13af9d9f",
   "skill_name": "Funnel analysis con SQL y visualización",
-  "issued_at": "2026-07-06T00:27:22.156Z",
-  "expires_at": "2026-07-13T00:27:22.156Z",
+  "issued_at": "2026-07-06T04:05:06.705Z",
+  "expires_at": "2026-07-13T04:05:06.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e13dcfe270fd607cc600a38c087fb1bc8f8b5bb1fcc9fc11445e9b98e3be8f6",
+  "signature": "75c2cdbf7b7a469ea193ec14e3e5eb04bdf7a8bf14d902aff86da801a790d021",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-13af9d9f"
 }

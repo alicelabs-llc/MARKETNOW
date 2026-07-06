@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7775243",
+  "certificate_id": "MN-SC-2026-0803727",
   "skill_id": "mn-pro-9583e83d",
   "skill_name": "Real-Time Notification Service",
-  "issued_at": "2026-07-06T00:29:35.243Z",
-  "expires_at": "2026-07-13T00:29:35.243Z",
+  "issued_at": "2026-07-06T04:06:43.727Z",
+  "expires_at": "2026-07-13T04:06:43.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f6ab87b49c4f196ec9c427b7109eaaed3e41a32f10e1b87e1428f42b2110e850",
+  "signature": "065368b3c51670ff667b48992f0455ecb35ffb2b206e29115c1487e203c9d622",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-9583e83d"
 }

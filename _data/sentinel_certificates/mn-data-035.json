@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7807802",
+  "certificate_id": "MN-SC-2026-0828828",
   "skill_id": "mn-data-035",
   "skill_name": "Sentiment Analyzer",
-  "issued_at": "2026-07-06T00:30:07.802Z",
-  "expires_at": "2026-07-13T00:30:07.802Z",
+  "issued_at": "2026-07-06T04:07:08.828Z",
+  "expires_at": "2026-07-13T04:07:08.828Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "48669af54df982f9ea44eafaab5ea0734d507ebfe67e2414812ffa44bf691c9e",
+  "signature": "ae13b7fd126cc6395efc4728f413d27128ea4759226fffbc91780094509bce5f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-035"
 }

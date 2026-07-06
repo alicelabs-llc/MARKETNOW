@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7017875",
+  "certificate_id": "MN-SC-2026-0214725",
   "skill_id": "mn-gen-04815",
   "skill_name": "Hacktricks-mcp-server",
-  "issued_at": "2026-07-06T00:16:57.875Z",
-  "expires_at": "2026-07-13T00:16:57.875Z",
+  "issued_at": "2026-07-06T03:56:54.725Z",
+  "expires_at": "2026-07-13T03:56:54.725Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b11c94aebb302b5112999504f98ee23083512356ee98f0293b8b9d7820c6c549",
+  "signature": "598007b6a89428afb4facff3e68406b452cea126bb22e22560ff959ef7fb8a0c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04815"
 }

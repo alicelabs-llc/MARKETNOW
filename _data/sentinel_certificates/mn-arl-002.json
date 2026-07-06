@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7676046",
+  "certificate_id": "MN-SC-2026-0728339",
   "skill_id": "mn-arl-002",
   "skill_name": "Self-Correction Loop MCP",
-  "issued_at": "2026-07-06T00:27:56.046Z",
-  "expires_at": "2026-07-13T00:27:56.046Z",
+  "issued_at": "2026-07-06T04:05:28.339Z",
+  "expires_at": "2026-07-13T04:05:28.339Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe82a02beb4b56183fb866bf4cda8fd07a23c0f6762a9e50b1b27ec7c03a1dcd",
+  "signature": "ad849157789f6e15eb2bf7c49768bcf22c43a3965d3ecd0d6e3366cfb07d0491",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-002"
 }

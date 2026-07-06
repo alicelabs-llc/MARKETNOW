@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7370972",
+  "certificate_id": "MN-SC-2026-0517658",
   "skill_id": "mn-gen-12947",
   "skill_name": "Meta-dynamic-server",
-  "issued_at": "2026-07-06T00:22:50.972Z",
-  "expires_at": "2026-07-13T00:22:50.972Z",
+  "issued_at": "2026-07-06T04:01:57.658Z",
+  "expires_at": "2026-07-13T04:01:57.658Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "27a209cb9ecf8e6ca4fc69e9fe00490101eb450579de05a0ce8740265f11cb5d",
+  "signature": "626f30a69a0f05cb2cfb02a4b7dd39cb6207fe62e7dba42d1d9927f9c29724cd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12947"
 }

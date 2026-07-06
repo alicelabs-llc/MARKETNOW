@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7364100",
+  "certificate_id": "MN-SC-2026-0510621",
   "skill_id": "mn-gen-12776",
   "skill_name": "Traderouter/trade-router-mcp",
-  "issued_at": "2026-07-06T00:22:44.100Z",
-  "expires_at": "2026-07-13T00:22:44.100Z",
+  "issued_at": "2026-07-06T04:01:50.621Z",
+  "expires_at": "2026-07-13T04:01:50.621Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05321bd3d2aa9a81ef938d5a792a2577b815f5237b4cbc790c530932c38b5dce",
+  "signature": "65c0509070d451aaa1bf25b7432f9fdc5ac261758735955e7eb3d305e71592d2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12776"
 }

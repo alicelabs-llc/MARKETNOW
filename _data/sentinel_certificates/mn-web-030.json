@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7830663",
+  "certificate_id": "MN-SC-2026-0841714",
   "skill_id": "mn-web-030",
   "skill_name": "Stock Price API",
-  "issued_at": "2026-07-06T00:30:30.663Z",
-  "expires_at": "2026-07-13T00:30:30.663Z",
+  "issued_at": "2026-07-06T04:07:21.714Z",
+  "expires_at": "2026-07-13T04:07:21.714Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "459717d3a22589396ebbb740921b503db986ccee01ac0633d4efa02948bb11e7",
+  "signature": "b25edac3617d9c626084142c0d59776208db65cbc471d6ca08f6878938c10c65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-030"
 }

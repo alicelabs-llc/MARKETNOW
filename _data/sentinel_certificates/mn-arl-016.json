@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7677357",
+  "certificate_id": "MN-SC-2026-0729118",
   "skill_id": "mn-arl-016",
   "skill_name": "Long-Running Task Checkpointer",
-  "issued_at": "2026-07-06T00:27:57.357Z",
-  "expires_at": "2026-07-13T00:27:57.357Z",
+  "issued_at": "2026-07-06T04:05:29.118Z",
+  "expires_at": "2026-07-13T04:05:29.118Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "642da1f33ee197d3f290ae73e168066cdcc278cb96e7a2f528eef77b9c0128d8",
+  "signature": "4ff4c42cadbcf16f421d7d8458987a4f4927c34920f79c4fe7e3d41271d404de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-016"
 }

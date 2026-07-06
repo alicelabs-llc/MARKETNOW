@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7665857",
+  "certificate_id": "MN-SC-2026-0721566",
   "skill_id": "mn-prompt-524359fd",
   "skill_name": "Daycare operations",
-  "issued_at": "2026-07-06T00:27:45.857Z",
-  "expires_at": "2026-07-13T00:27:45.857Z",
+  "issued_at": "2026-07-06T04:05:21.566Z",
+  "expires_at": "2026-07-13T04:05:21.566Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "431a51c97c8b642211057291f0dfd215c6e5881e40c520184296242083179c07",
+  "signature": "38fb1256dac5e88a0787392e553304f930c3cd206326770217d0dd53221d3db8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-524359fd"
 }

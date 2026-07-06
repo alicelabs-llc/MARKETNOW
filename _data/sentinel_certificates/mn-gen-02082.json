@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6882078",
+  "certificate_id": "MN-SC-2026-0111526",
   "skill_id": "mn-gen-02082",
   "skill_name": "Claude-conductor",
-  "issued_at": "2026-07-06T00:14:42.078Z",
-  "expires_at": "2026-07-13T00:14:42.078Z",
+  "issued_at": "2026-07-06T03:55:11.526Z",
+  "expires_at": "2026-07-13T03:55:11.526Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b3682cdf23eda3519f27127e50a55ab9b34d253f282118e0c9f1ada990642c7",
+  "signature": "d84c9854e26e6f8adf734d4d17309e1fa85b0dbc06db379261d39582faf68b4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02082"
 }

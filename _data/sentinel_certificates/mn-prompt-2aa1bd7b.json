@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7583528",
+  "certificate_id": "MN-SC-2026-0672241",
   "skill_id": "mn-prompt-2aa1bd7b",
   "skill_name": "Vendor management process",
-  "issued_at": "2026-07-06T00:26:23.528Z",
-  "expires_at": "2026-07-13T00:26:23.528Z",
+  "issued_at": "2026-07-06T04:04:32.241Z",
+  "expires_at": "2026-07-13T04:04:32.241Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a5ca879ed45f4c2929539bfb192c581b39ca867a5fa8711449f9b612143b75c",
+  "signature": "26ff601d985775892a4de0505d7c51e934681e0e16517af998807dafebc523ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2aa1bd7b"
 }

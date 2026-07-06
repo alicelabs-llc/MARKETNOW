@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7032276",
+  "certificate_id": "MN-SC-2026-0226484",
   "skill_id": "mn-gen-05157",
   "skill_name": "Integrated-browser-mcp",
-  "issued_at": "2026-07-06T00:17:12.276Z",
-  "expires_at": "2026-07-13T00:17:12.276Z",
+  "issued_at": "2026-07-06T03:57:06.484Z",
+  "expires_at": "2026-07-13T03:57:06.484Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2f2a8285da2f0585fc17dae69516e135ee36e5206643a22f9283608cc1d29309",
+  "signature": "e1760d69b6e95c0fae8ec0239349d44ee3444607b395b92c518810babf7249f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05157"
 }

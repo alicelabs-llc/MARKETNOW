@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7264636",
+  "certificate_id": "MN-SC-2026-0421861",
   "skill_id": "mn-gen-10535",
   "skill_name": "Pohoda-mcp",
-  "issued_at": "2026-07-06T00:21:04.636Z",
-  "expires_at": "2026-07-13T00:21:04.636Z",
+  "issued_at": "2026-07-06T04:00:21.861Z",
+  "expires_at": "2026-07-13T04:00:21.861Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "385727ae8752d96059c43b61141b1790d14f24421258e90b2fb6d2199421ada7",
+  "signature": "d66093470d2d4375ab7e77553d0666707df72737a33e1fe7412d6ba73a08253c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10535"
 }

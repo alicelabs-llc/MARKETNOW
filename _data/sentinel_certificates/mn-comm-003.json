@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7798851",
+  "certificate_id": "MN-SC-2026-0822288",
   "skill_id": "mn-comm-003",
   "skill_name": "Square Payment API",
-  "issued_at": "2026-07-06T00:29:58.851Z",
-  "expires_at": "2026-07-13T00:29:58.851Z",
+  "issued_at": "2026-07-06T04:07:02.288Z",
+  "expires_at": "2026-07-13T04:07:02.288Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a46c876076ecb4a838bcd5ddab2278a0a92a871e746723993253632d6e5795d1",
+  "signature": "2b0dec3253a70cad2ae29d58934b36b0e13448c2248db016a5cc12bdccca5e64",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-003"
 }

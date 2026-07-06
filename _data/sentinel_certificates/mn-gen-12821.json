@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7365967",
+  "certificate_id": "MN-SC-2026-0511986",
   "skill_id": "mn-gen-12821",
   "skill_name": "Trello-mcp-complete",
-  "issued_at": "2026-07-06T00:22:45.967Z",
-  "expires_at": "2026-07-13T00:22:45.967Z",
+  "issued_at": "2026-07-06T04:01:51.986Z",
+  "expires_at": "2026-07-13T04:01:51.986Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2cbb83ba41da026871485751f9f920262de23001f87eaf41516d8ca9e91c08dd",
+  "signature": "2085ec81798a680f7e74fffda0b185589d9414ee51220ec3666dc301a785ccbd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12821"
 }

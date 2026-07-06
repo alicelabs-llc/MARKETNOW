@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6900900",
+  "certificate_id": "MN-SC-2026-0124602",
   "skill_id": "mn-gen-02413",
   "skill_name": "Cli2agent",
-  "issued_at": "2026-07-06T00:15:00.900Z",
-  "expires_at": "2026-07-13T00:15:00.900Z",
+  "issued_at": "2026-07-06T03:55:24.602Z",
+  "expires_at": "2026-07-13T03:55:24.602Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "60a79fc33c15dca4222efac017d56de6f1d06bde2acbba285f250b92bff3b5f8",
+  "signature": "5a5245b082c54187dfd0be3be6d6db894cd1a1a14d48aedf65109670a6a717d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02413"
 }

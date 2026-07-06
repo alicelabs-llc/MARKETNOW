@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7139185",
+  "certificate_id": "MN-SC-2026-0313193",
   "skill_id": "mn-ai-07578",
   "skill_name": "Blastengine-mailer",
-  "issued_at": "2026-07-06T00:18:59.185Z",
-  "expires_at": "2026-07-13T00:18:59.185Z",
+  "issued_at": "2026-07-06T03:58:33.193Z",
+  "expires_at": "2026-07-13T03:58:33.193Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95f011fc931e8fe6e6958726dccefadcdbb038beefd9562214bf15850916c9a5",
+  "signature": "0e56400e142717223a03d6c83c81f8f5572667a4268ca4db5d7e3e1d2ffdfa16",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07578"
 }

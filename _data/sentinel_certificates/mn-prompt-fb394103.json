@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7578228",
+  "certificate_id": "MN-SC-2026-0668705",
   "skill_id": "mn-prompt-fb394103",
   "skill_name": "Financial statement analysis",
-  "issued_at": "2026-07-06T00:26:18.228Z",
-  "expires_at": "2026-07-13T00:26:18.228Z",
+  "issued_at": "2026-07-06T04:04:28.705Z",
+  "expires_at": "2026-07-13T04:04:28.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "99db1ff1636fdeb74b0bc3ea97f0e55635a2e50216d7ae3a3e5cff752a8ad288",
+  "signature": "ad02ec46cea8cbf20691971b9602b87dd9a0713b6de238bf48965bf80388f71a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fb394103"
 }

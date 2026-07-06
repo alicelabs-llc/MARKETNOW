@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0915205",
+  "skill_id": "mn-awmcp-openapitomcp",
+  "skill_name": "openapi-to-mcp",
+  "issued_at": "2026-07-06T04:08:35.205Z",
+  "expires_at": "2026-07-13T04:08:35.205Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "c6d8f8f69de9d4a5365716c64455fb33dcc669b4731fb7e8d3e1a6bb93eb573f",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-openapitomcp"
+}

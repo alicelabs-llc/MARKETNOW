@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7725727",
+  "certificate_id": "MN-SC-2026-0762476",
   "skill_id": "mn-leg-00005",
   "skill_name": "SOC 2 Evidence Collector",
-  "issued_at": "2026-07-06T00:28:45.727Z",
-  "expires_at": "2026-07-13T00:28:45.727Z",
+  "issued_at": "2026-07-06T04:06:02.476Z",
+  "expires_at": "2026-07-13T04:06:02.476Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8571fb33db5c7118b814b242c074eca2b7dfb3124f7a73481729c5320926ab9",
+  "signature": "badd07699f70b9c599a57470dcae701f10937c3e869091a2d1d6b84b7bd5fb8e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00005"
 }

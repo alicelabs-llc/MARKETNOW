@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7081354",
+  "certificate_id": "MN-SC-2026-0264891",
   "skill_id": "mn-gen-06307",
-  "skill_name": "Mcp-brave-search",
-  "issued_at": "2026-07-06T00:18:01.354Z",
-  "expires_at": "2026-07-13T00:18:01.354Z",
+  "skill_name": "brave-search-mcp",
+  "issued_at": "2026-07-06T03:57:44.891Z",
+  "expires_at": "2026-07-13T03:57:44.891Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d69deafd6c8239bbc727fc8574b13aa32ae3fa943a35bd9994153f0cdd4af56",
+  "signature": "efa46b6329fa6d87b0907d0ed307d26e9ae25e3a71b1ec2108e59dd09af1ab0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06307"
 }

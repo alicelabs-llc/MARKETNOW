@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7603819",
+  "certificate_id": "MN-SC-2026-0686286",
   "skill_id": "mn-prompt-6bcafacd",
   "skill_name": "Tweet thread viral mechanics",
-  "issued_at": "2026-07-06T00:26:43.819Z",
-  "expires_at": "2026-07-13T00:26:43.819Z",
+  "issued_at": "2026-07-06T04:04:46.286Z",
+  "expires_at": "2026-07-13T04:04:46.286Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d950af430ebc676e88ce7fd5f5ec65ce9f122057192efc4b15a3a12ba6834f32",
+  "signature": "437e1a2af4ac759b503e8bfbc68de9fce232682478274dbc0614a2edb4dedb49",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-6bcafacd"
 }

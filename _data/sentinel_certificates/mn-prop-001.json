@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7871494",
+  "certificate_id": "MN-SC-2026-0869630",
   "skill_id": "mn-prop-001",
   "skill_name": "MLS Data Sync",
-  "issued_at": "2026-07-06T00:31:11.494Z",
-  "expires_at": "2026-07-13T00:31:11.494Z",
+  "issued_at": "2026-07-06T04:07:49.630Z",
+  "expires_at": "2026-07-13T04:07:49.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5c9a5c98bfa0be9679c40300d07558d25e5c7cc138de1cc625913242bb6ce0fb",
+  "signature": "99034dae24dc6bf9efb0c37e7c53fb44cb97c1159025f15be8cd37595a3c9ecb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prop-001"
 }

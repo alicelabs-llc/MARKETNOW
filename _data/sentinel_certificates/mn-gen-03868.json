@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6977652",
+  "certificate_id": "MN-SC-2026-0182277",
   "skill_id": "mn-gen-03868",
   "skill_name": "Fakturoid-mcp-server",
-  "issued_at": "2026-07-06T00:16:17.652Z",
-  "expires_at": "2026-07-13T00:16:17.652Z",
+  "issued_at": "2026-07-06T03:56:22.277Z",
+  "expires_at": "2026-07-13T03:56:22.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3952a66665e4e8fdb01c65f03f400d602c7d9c29152e36835f63ac8782da29bb",
+  "signature": "68f4f31dd14f4acc450e1ee77437733d13953e1ada56f252b86f7e40bbcced22",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03868"
 }

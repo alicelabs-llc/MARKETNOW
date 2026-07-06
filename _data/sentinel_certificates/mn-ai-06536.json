@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7090450",
+  "certificate_id": "MN-SC-2026-0273215",
   "skill_id": "mn-ai-06536",
   "skill_name": "Mcp-crawl4ai-ts",
-  "issued_at": "2026-07-06T00:18:10.450Z",
-  "expires_at": "2026-07-13T00:18:10.450Z",
+  "issued_at": "2026-07-06T03:57:53.215Z",
+  "expires_at": "2026-07-13T03:57:53.215Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7938693d69920942948e8f4c12aaedae671a5d596fe789987b040e0c76c5f32c",
+  "signature": "c461e5e3c495a07eb91f066d2b169535f29de5cb5f6285786dd0f7454caa3072",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06536"
 }

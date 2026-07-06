@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7267312",
+  "certificate_id": "MN-SC-2026-0424888",
   "skill_id": "mn-gen-10602",
   "skill_name": "Povio-worklog-mcp",
-  "issued_at": "2026-07-06T00:21:07.312Z",
-  "expires_at": "2026-07-13T00:21:07.312Z",
+  "issued_at": "2026-07-06T04:00:24.888Z",
+  "expires_at": "2026-07-13T04:00:24.888Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6588e1cd0643d8fdeab9c7c1ffbdd688659e25fc6adbb78ecd8d361c52148016",
+  "signature": "fbee9d85c51113c678aaf29fbe199affc8672a4d5f72ab5160fba46f274b83f1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10602"
 }

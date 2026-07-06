@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7065766",
+  "certificate_id": "MN-SC-2026-0251867",
   "skill_id": "mn-gen-05938",
   "skill_name": "Lottery-mcp-server",
-  "issued_at": "2026-07-06T00:17:45.766Z",
-  "expires_at": "2026-07-13T00:17:45.766Z",
+  "issued_at": "2026-07-06T03:57:31.867Z",
+  "expires_at": "2026-07-13T03:57:31.867Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "678e721f69858f588318de422fec327e4691ca874d14fb6bc7323bc78076bc75",
+  "signature": "7ce18afaaa3e05e948f109f65c772f6664350415caa37f967cf706fc55dbed42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05938"
 }

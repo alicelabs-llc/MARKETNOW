@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6914875",
+  "certificate_id": "MN-SC-2026-0135965",
   "skill_id": "mn-gen-02680",
   "skill_name": "Groq-compound-mcp-server",
-  "issued_at": "2026-07-06T00:15:14.875Z",
-  "expires_at": "2026-07-13T00:15:14.875Z",
+  "issued_at": "2026-07-06T03:55:35.965Z",
+  "expires_at": "2026-07-13T03:55:35.965Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1adee589467abe0b4b86f835ee310b833fceeb0f2545e2fdefe88b8f532b5126",
+  "signature": "42dc05aaf242301d18ffb9eb0833fbf56b039a8805776c755869440233303cc6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02680"
 }

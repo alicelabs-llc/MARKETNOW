@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7661459",
+  "certificate_id": "MN-SC-2026-0718714",
   "skill_id": "mn-prompt-11b590a2",
   "skill_name": "Brewery operations",
-  "issued_at": "2026-07-06T00:27:41.459Z",
-  "expires_at": "2026-07-13T00:27:41.459Z",
+  "issued_at": "2026-07-06T04:05:18.714Z",
+  "expires_at": "2026-07-13T04:05:18.714Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c556e74de84b56ea65d3496c15a2e5bea2d4658d3d22caa7b77ef535bd5f3c5c",
+  "signature": "8ccac0719af5fcd5ed129312be39e1d430bf12bca535e5c3a1c41c85ce6da5e5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-11b590a2"
 }

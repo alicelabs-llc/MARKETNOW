@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7058537",
+  "certificate_id": "MN-SC-2026-0245721",
   "skill_id": "mn-gen-05771",
   "skill_name": "Linkinator-mcp",
-  "issued_at": "2026-07-06T00:17:38.537Z",
-  "expires_at": "2026-07-13T00:17:38.537Z",
+  "issued_at": "2026-07-06T03:57:25.721Z",
+  "expires_at": "2026-07-13T03:57:25.721Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9eb0a942e09edb77c95336cd7a9183dc3a39f6c7e730bb254e5ecd6afd49107c",
+  "signature": "ae86e988271b35cd1c9e92fb1772419fa2470ec92571002db0e381623579401f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05771"
 }

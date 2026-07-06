@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7721977",
+  "certificate_id": "MN-SC-2026-0759535",
   "skill_id": "mn-hea-00010",
   "skill_name": "ICD-10 Code Lookup",
-  "issued_at": "2026-07-06T00:28:41.977Z",
-  "expires_at": "2026-07-13T00:28:41.977Z",
+  "issued_at": "2026-07-06T04:05:59.535Z",
+  "expires_at": "2026-07-13T04:05:59.535Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d048f99389dd6b2a5a5798c36a2ddebbf32737e102278c4fb260e9334b5b785",
+  "signature": "23a517822e298790d6d64188469df37be17ab74cbadaf6f1745a6e8fa8df6661",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00010"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7267335",
+  "certificate_id": "MN-SC-2026-0424915",
   "skill_id": "mn-gen-10598",
   "skill_name": "Activecampaign/postmark-mcp",
-  "issued_at": "2026-07-06T00:21:07.335Z",
-  "expires_at": "2026-07-13T00:21:07.335Z",
+  "issued_at": "2026-07-06T04:00:24.915Z",
+  "expires_at": "2026-07-13T04:00:24.915Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5de2c796b542f6cc6f1a69194af2c1ac78436f307877269cb8386f09f79f714f",
+  "signature": "f88dd39bc9e345b403deddaada8a1b54dbc8930e198818e3b95d6adbcb63291d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10598"
 }

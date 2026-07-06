@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7648684",
+  "certificate_id": "MN-SC-2026-0710864",
   "skill_id": "mn-prompt-ccb700f6",
   "skill_name": "BigQuery optimization",
-  "issued_at": "2026-07-06T00:27:28.684Z",
-  "expires_at": "2026-07-13T00:27:28.684Z",
+  "issued_at": "2026-07-06T04:05:10.864Z",
+  "expires_at": "2026-07-13T04:05:10.864Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "320f9214382ab29c74016bc740396032a03c47895688409a0cd18f02d25f47fb",
+  "signature": "56d0e7b262afaeeb22d457e6f56f733e0d9d7770ef18c9d2c3b11c0f1a7f32fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ccb700f6"
 }

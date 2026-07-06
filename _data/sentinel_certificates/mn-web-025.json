@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7830031",
+  "certificate_id": "MN-SC-2026-0841320",
   "skill_id": "mn-web-025",
   "skill_name": "Availability Checker",
-  "issued_at": "2026-07-06T00:30:30.031Z",
-  "expires_at": "2026-07-13T00:30:30.031Z",
+  "issued_at": "2026-07-06T04:07:21.320Z",
+  "expires_at": "2026-07-13T04:07:21.320Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cad8272df0f7734aac561ec2daa505baa111ef9786f474a943e71c4bf80c89dc",
+  "signature": "6d72cf8b5bf7e7aa81d3330fbcab4975e0d09a2e842a740268a9401176fb4119",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-025"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7703707",
+  "certificate_id": "MN-SC-2026-0746068",
   "skill_id": "mn-apd-038",
   "skill_name": "Agent Multi-Model Router",
-  "issued_at": "2026-07-06T00:28:23.707Z",
-  "expires_at": "2026-07-13T00:28:23.707Z",
+  "issued_at": "2026-07-06T04:05:46.068Z",
+  "expires_at": "2026-07-13T04:05:46.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79fce5ef9999a89d089c319710fd5f9dab42abcb587d0327f8e875252a7279f1",
+  "signature": "5b8572f4a374bdb788d46a4905c17790db359655b5bfc42a18b933876640a63d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apd-038"
 }

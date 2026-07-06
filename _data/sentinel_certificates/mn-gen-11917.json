@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7326958",
+  "certificate_id": "MN-SC-2026-0478156",
   "skill_id": "mn-gen-11917",
   "skill_name": "Slima-mcp",
-  "issued_at": "2026-07-06T00:22:06.958Z",
-  "expires_at": "2026-07-13T00:22:06.958Z",
+  "issued_at": "2026-07-06T04:01:18.156Z",
+  "expires_at": "2026-07-13T04:01:18.156Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2dd51ff1d86b715201f73619e53c7195e0d2298474271e0079a08fe5a96a5753",
+  "signature": "c75f02efffaa2cc2cf8c60ac594b7c41d9514e81dc8c0bf9f4fbe776966ad234",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11917"
 }

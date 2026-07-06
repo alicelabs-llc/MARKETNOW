@@ -1,17 +1,17 @@
 {
-  "certificate_id": "MN-SC-2026-7174239",
+  "certificate_id": "MN-SC-2026-0339993",
   "skill_id": "mn-gen-08251",
-  "skill_name": "Mcp-whatsapp",
-  "issued_at": "2026-07-06T00:19:34.239Z",
-  "expires_at": "2026-07-13T00:19:34.239Z",
+  "skill_name": "whatsapp-mcp",
+  "issued_at": "2026-07-06T03:58:59.993Z",
+  "expires_at": "2026-07-13T03:58:59.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 3,
   "max_score": 10,
-  "risk_level": "medium",
+  "risk_level": "critical",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16": "critical",
     "l2": "not_available",
-    "final": "medium"
+    "final": "critical"
   },
   "layers_run": {
     "l15": true,
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 2,
-    "l16_semgrep_findings": 0,
+    "l15_findings": 3,
+    "l16_semgrep_findings": 1,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f4607d7d11e2d77f025396a4402d2dc3fc64bf9d9510e08ef203c68fae7a39c7",
+  "signature": "0288225194b6a95fef1c879cee3569b6f5b5218161ad159c6813900d266fedc3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08251"
 }

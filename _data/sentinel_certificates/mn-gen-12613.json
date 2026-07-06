@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7355304",
+  "certificate_id": "MN-SC-2026-0504283",
   "skill_id": "mn-gen-12613",
-  "skill_name": "Things-mcpb",
-  "issued_at": "2026-07-06T00:22:35.304Z",
-  "expires_at": "2026-07-13T00:22:35.304Z",
+  "skill_name": "thingsboard-mcp",
+  "issued_at": "2026-07-06T04:01:44.283Z",
+  "expires_at": "2026-07-13T04:01:44.283Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ee77e0d590fd81347c9c72fd898e0f727d2207eb3843994be7909b4ebd5e58b",
+  "signature": "ff57d444b066eeccc871b66823c222f96a64964d3675d96a8ecedfcc182e333d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12613"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6951913",
+  "certificate_id": "MN-SC-2026-0159820",
   "skill_id": "mn-gen-03297",
-  "skill_name": "Devsigner",
-  "issued_at": "2026-07-06T00:15:51.913Z",
-  "expires_at": "2026-07-13T00:15:51.913Z",
+  "skill_name": "signer-mcp",
+  "issued_at": "2026-07-06T03:55:59.820Z",
+  "expires_at": "2026-07-13T03:55:59.820Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b60d972d5c4d83baf7fd16f31613e873212539be72c0923dceab4bf02438dfa3",
+  "signature": "01a703ac3a97b224147e6452e4401a1ba382b59476d315a6a20f8be3cf04478a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03297"
 }

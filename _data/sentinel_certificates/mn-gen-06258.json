@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7079041",
+  "certificate_id": "MN-SC-2026-0263213",
   "skill_id": "mn-gen-06258",
   "skill_name": "Mcp-audiense-insights",
-  "issued_at": "2026-07-06T00:17:59.041Z",
-  "expires_at": "2026-07-13T00:17:59.041Z",
+  "issued_at": "2026-07-06T03:57:43.213Z",
+  "expires_at": "2026-07-13T03:57:43.213Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a350d1c0ff4698d04b4dca725034df3f5e62d9fcb16b36f1aa8a51e784e3cc6d",
+  "signature": "663ff99b5040265964323e276a36e50cc6dbb094e52d68134639a4f83abe5962",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06258"
 }

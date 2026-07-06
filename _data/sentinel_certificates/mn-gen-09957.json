@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7237987",
+  "certificate_id": "MN-SC-2026-0392011",
   "skill_id": "mn-gen-09957",
   "skill_name": "Secr/openclaw",
-  "issued_at": "2026-07-06T00:20:37.987Z",
-  "expires_at": "2026-07-13T00:20:37.987Z",
+  "issued_at": "2026-07-06T03:59:52.011Z",
+  "expires_at": "2026-07-13T03:59:52.011Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "716daa73fe9ec211aa2d830ce5cbe2591bca1e27ce87d2f7b88e0d251d495fdf",
+  "signature": "dadc1a3551a0c6cbfb1d3e392c4216227a976bb434ee24e582ed9625f10ec786",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09957"
 }

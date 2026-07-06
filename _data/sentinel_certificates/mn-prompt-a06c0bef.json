@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7413382",
+  "certificate_id": "MN-SC-2026-0551013",
   "skill_id": "mn-prompt-a06c0bef",
   "skill_name": "Repurposer Multi-Plataforma",
-  "issued_at": "2026-07-06T00:23:33.382Z",
-  "expires_at": "2026-07-13T00:23:33.382Z",
+  "issued_at": "2026-07-06T04:02:31.013Z",
+  "expires_at": "2026-07-13T04:02:31.013Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f66b7b1ecc1e50100ce7e2250419421d132a62c0382e8c09ae234cf362943e9",
+  "signature": "b076e24a976ad2a3cf2f37e9c97facfd2ce38b892a5cee38c76729825ca41217",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a06c0bef"
 }

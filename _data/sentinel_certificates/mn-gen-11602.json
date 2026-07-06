@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7312729",
+  "certificate_id": "MN-SC-2026-0464847",
   "skill_id": "mn-gen-11602",
   "skill_name": "Semanticintent/semantic-perch-intelligence-mcp",
-  "issued_at": "2026-07-06T00:21:52.729Z",
-  "expires_at": "2026-07-13T00:21:52.729Z",
+  "issued_at": "2026-07-06T04:01:04.847Z",
+  "expires_at": "2026-07-13T04:01:04.847Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d688a09c76ca0f85b73ba5dc3e9a27506d9fcb9e82ee27881ed0e9e2000e1540",
+  "signature": "a2530d0e3e9b005c008ed95f3cc9daaec889d82b7a85259acdfc1314b875619b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11602"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7074803",
+  "certificate_id": "MN-SC-2026-0258877",
   "skill_id": "mn-gen-06132",
   "skill_name": "Maya-mcp-server",
-  "issued_at": "2026-07-06T00:17:54.803Z",
-  "expires_at": "2026-07-13T00:17:54.803Z",
+  "issued_at": "2026-07-06T03:57:38.877Z",
+  "expires_at": "2026-07-13T03:57:38.877Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d407cfbefdeb425be32db8b9ed13a40b70bc6d2da477b6c77136a9364621557",
+  "signature": "71f5db5f989f0fcfafe7e5c19636222e11fa001348505e185231514d6501cd61",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06132"
 }

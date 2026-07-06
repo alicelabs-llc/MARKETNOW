@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7874952",
+  "certificate_id": "MN-SC-2026-0871666",
   "skill_id": "mn-prop-026",
   "skill_name": "Rental Comparison Tool",
-  "issued_at": "2026-07-06T00:31:14.952Z",
-  "expires_at": "2026-07-13T00:31:14.952Z",
+  "issued_at": "2026-07-06T04:07:51.666Z",
+  "expires_at": "2026-07-13T04:07:51.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c165bee7ea05714747283aa77673d565c7616f7bcf3ca7519878379cbc7755bb",
+  "signature": "6125bdd07f004e4dead010909c7e6be80e7081e9099790061af91919fd2e57a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prop-026"
 }

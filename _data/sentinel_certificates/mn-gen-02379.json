@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6899085",
+  "certificate_id": "MN-SC-2026-0123112",
   "skill_id": "mn-gen-02379",
   "skill_name": "Claude_project_mcp",
-  "issued_at": "2026-07-06T00:14:59.085Z",
-  "expires_at": "2026-07-13T00:14:59.085Z",
+  "issued_at": "2026-07-06T03:55:23.112Z",
+  "expires_at": "2026-07-13T03:55:23.112Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70e67ea0af150991e6ecc36c68350adbe9c17e368073092fcbd1a73a93fbb009",
+  "signature": "a9f87afabddecf1aa036209233569bea10d935ba25d7c6346813f091289a9613",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02379"
 }

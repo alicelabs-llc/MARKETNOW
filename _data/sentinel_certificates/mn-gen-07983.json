@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7160154",
+  "certificate_id": "MN-SC-2026-0331201",
   "skill_id": "mn-gen-07983",
   "skill_name": "Mcp-stdio-wrapper",
-  "issued_at": "2026-07-06T00:19:20.154Z",
-  "expires_at": "2026-07-13T00:19:20.154Z",
+  "issued_at": "2026-07-06T03:58:51.201Z",
+  "expires_at": "2026-07-13T03:58:51.201Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5635fd1ae1667370ad893ee70bdef8d3211ca4bd49a71af3ca661d331cf81d25",
+  "signature": "46452494ee8111fe16bf140a195d788dc65b42845f5a3871ffab20b4110f7ee0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07983"
 }

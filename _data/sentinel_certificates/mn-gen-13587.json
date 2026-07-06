@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7402992",
+  "certificate_id": "MN-SC-2026-0542706",
   "skill_id": "mn-gen-13587",
-  "skill_name": "X402-mcp-server",
-  "issued_at": "2026-07-06T00:23:22.992Z",
-  "expires_at": "2026-07-13T00:23:22.992Z",
+  "skill_name": "x402-mcp",
+  "issued_at": "2026-07-06T04:02:22.706Z",
+  "expires_at": "2026-07-13T04:02:22.706Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "36d7b130ba0d8714854492428af0d09427e6d2dd384387d81ba9e1066c411d77",
+  "signature": "611d83f3f03e577c40d722f5982c06c5a8f6eac7fbf8dc8c4245e1193e91e447",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13587"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6810039",
+  "certificate_id": "MN-SC-2026-0061262",
   "skill_id": "mn-ai-00630",
   "skill_name": "Airbrake-mcp-server",
-  "issued_at": "2026-07-06T00:13:30.039Z",
-  "expires_at": "2026-07-13T00:13:30.039Z",
+  "issued_at": "2026-07-06T03:54:21.262Z",
+  "expires_at": "2026-07-13T03:54:21.262Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "592401b5c7eef5be69c4d3c456c5151d2f8d9a706e76969e17b1fa6bf8016850",
+  "signature": "3856b3753cc42d2355da10ff4540725a569e5a8ae8c26f9b29f9bbf0fe19d196",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00630"
 }

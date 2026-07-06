@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7283820",
+  "certificate_id": "MN-SC-2026-0435729",
   "skill_id": "mn-gen-10947",
   "skill_name": "Questrade-mcp-server",
-  "issued_at": "2026-07-06T00:21:23.820Z",
-  "expires_at": "2026-07-13T00:21:23.820Z",
+  "issued_at": "2026-07-06T04:00:35.729Z",
+  "expires_at": "2026-07-13T04:00:35.729Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bfc36137556e4feacaa37c2282005ebe755e849895e532966cfe557161350b2f",
+  "signature": "f765c5224a5a30d8a609d5514ad5f933d45a121cd8d68a167f6d64f16f1588e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10947"
 }

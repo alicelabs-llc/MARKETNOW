@@ -1,17 +1,17 @@
 {
-  "certificate_id": "MN-SC-2026-7361793",
+  "certificate_id": "MN-SC-2026-0508711",
   "skill_id": "mn-dat-12722",
-  "skill_name": "Tool-sandbox-mcp",
-  "issued_at": "2026-07-06T00:22:41.793Z",
-  "expires_at": "2026-07-13T00:22:41.793Z",
+  "skill_name": "sandbox",
+  "issued_at": "2026-07-06T04:01:48.711Z",
+  "expires_at": "2026-07-13T04:01:48.711Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 3,
+  "overall_score": 8,
   "max_score": 10,
-  "risk_level": "high",
+  "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16": "medium",
     "l2": "not_available",
-    "final": "high"
+    "final": "medium"
   },
   "layers_run": {
     "l15": true,
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ad572b62bcb3d9b8b7472b99c377e7aad819a4e88df00df0d1e1748acdecb9f",
+  "signature": "c6f2fad1082827edc27b099d9455ab80933b6eac3a41d011c44f4739fa1903ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-12722"
 }

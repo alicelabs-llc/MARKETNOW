@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7789327",
+  "certificate_id": "MN-SC-2026-0814592",
   "skill_id": "mn-ai-034",
   "skill_name": "Question Answerer",
-  "issued_at": "2026-07-06T00:29:49.327Z",
-  "expires_at": "2026-07-13T00:29:49.327Z",
+  "issued_at": "2026-07-06T04:06:54.592Z",
+  "expires_at": "2026-07-13T04:06:54.592Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c550fbd794e3473c6da855d0d17b00720489403efe105e46b847c582d4656d09",
+  "signature": "de13e11b804f6a30d826c2279787530f72f00c6c53b5305f3c25b98bd2bcdeee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-034"
 }

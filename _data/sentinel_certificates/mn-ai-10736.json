@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7273511",
+  "certificate_id": "MN-SC-2026-0430258",
   "skill_id": "mn-ai-10736",
   "skill_name": "Prospector-mcp",
-  "issued_at": "2026-07-06T00:21:13.511Z",
-  "expires_at": "2026-07-13T00:21:13.511Z",
+  "issued_at": "2026-07-06T04:00:30.258Z",
+  "expires_at": "2026-07-13T04:00:30.258Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "73a1f6bcd4bb008bd945dcad42639676d9803742a3dd76655eaf6ecfbbf0250f",
+  "signature": "7903d3461caff05fd3b67168e9b8d060ad8d6219983d5c980f2996284e8915ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-10736"
 }

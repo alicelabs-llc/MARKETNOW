@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7021285",
+  "certificate_id": "MN-SC-2026-0217229",
   "skill_id": "mn-gen-04908",
   "skill_name": "Hirejack/mcp",
-  "issued_at": "2026-07-06T00:17:01.285Z",
-  "expires_at": "2026-07-13T00:17:01.285Z",
+  "issued_at": "2026-07-06T03:56:57.229Z",
+  "expires_at": "2026-07-13T03:56:57.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e186fd56b28a4ecfefe2b66f66335bd837b942a808f1966260ea6bb3167da9a2",
+  "signature": "2a85d07e58bbbd7a2f6fa178657bb8a657aa7333af93a97f4dfed6c2fc70b1ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04908"
 }

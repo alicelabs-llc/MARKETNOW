@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7350771",
+  "certificate_id": "MN-SC-2026-0501531",
   "skill_id": "mn-gen-12509",
   "skill_name": "Tehuti-guard",
-  "issued_at": "2026-07-06T00:22:30.771Z",
-  "expires_at": "2026-07-13T00:22:30.771Z",
+  "issued_at": "2026-07-06T04:01:41.531Z",
+  "expires_at": "2026-07-13T04:01:41.531Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3750cc9451ebab6b8ab728251d2b030b60b37063f60e4c58ae246fe5fbf993f6",
+  "signature": "256989e68b24ce221e68c99f34f0c466a3cd0f491eac170c34b50ae878b6d74f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12509"
 }

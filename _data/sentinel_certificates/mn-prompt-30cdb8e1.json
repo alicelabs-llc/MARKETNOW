@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7652648",
+  "certificate_id": "MN-SC-2026-0713268",
   "skill_id": "mn-prompt-30cdb8e1",
   "skill_name": "Data warehouse indexing strategy",
-  "issued_at": "2026-07-06T00:27:32.648Z",
-  "expires_at": "2026-07-13T00:27:32.648Z",
+  "issued_at": "2026-07-06T04:05:13.268Z",
+  "expires_at": "2026-07-13T04:05:13.268Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42e7c8b020db5d70d82c343a5204b43c2ff3b9a0906bed4a3aa6fb151bc70cf6",
+  "signature": "bfe371c03c41faf912db29cde5a5bd8a6fe69090413cf7a10d1663405c33f51b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-30cdb8e1"
 }

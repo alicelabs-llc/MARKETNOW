@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7407581",
+  "certificate_id": "MN-SC-2026-0545813",
   "skill_id": "mn-gen-13695",
-  "skill_name": "Yggdrasil-mcp",
-  "issued_at": "2026-07-06T00:23:27.581Z",
-  "expires_at": "2026-07-13T00:23:27.581Z",
+  "skill_name": "Yggdrasil",
+  "issued_at": "2026-07-06T04:02:25.813Z",
+  "expires_at": "2026-07-13T04:02:25.813Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e68ca2cedaf72e91fb5dc869850da406afd6f32108102f4ea40d96e7300b6ea7",
+  "signature": "c5c3d33cb482e3c0e776b01322466248c51573531617427bb304152462f83a77",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13695"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7364267",
+  "certificate_id": "MN-SC-2026-0510615",
   "skill_id": "mn-gen-12782",
   "skill_name": "Bybit-official-trading-server",
-  "issued_at": "2026-07-06T00:22:44.267Z",
-  "expires_at": "2026-07-13T00:22:44.267Z",
+  "issued_at": "2026-07-06T04:01:50.615Z",
+  "expires_at": "2026-07-13T04:01:50.615Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2c3be323bce5b40ea08d3bcf0caae4e5a088ea7078de730e4a7b6310c58175d",
+  "signature": "fe49205eb2ce7aa66f1807ef501f8ee88f3d4def6fe0162d19cddc5a97d442bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12782"
 }

@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1015902",
+  "skill_id": "mn-real-weightedcompact",
+  "skill_name": "weighted-compact",
+  "issued_at": "2026-07-06T04:10:15.902Z",
+  "expires_at": "2026-07-13T04:10:15.902Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "fd176d36fe2637cda75ef44def7c99b9000556193ae3bf355eb6f95e54862e3f",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-weightedcompact"
+}

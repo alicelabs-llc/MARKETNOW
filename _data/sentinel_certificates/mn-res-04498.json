@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7005692",
+  "certificate_id": "MN-SC-2026-0204663",
   "skill_id": "mn-res-04498",
   "skill_name": "Glama-mcp-server-search",
-  "issued_at": "2026-07-06T00:16:45.692Z",
-  "expires_at": "2026-07-13T00:16:45.692Z",
+  "issued_at": "2026-07-06T03:56:44.663Z",
+  "expires_at": "2026-07-13T03:56:44.663Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b927e14535a262717b7e5c7f750502722798bc38032322367f5bc899d99acd6a",
+  "signature": "7ff8649e9bc982c0912056ecb406ec85153c412b72e275c969bc4a57cc9245f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-04498"
 }

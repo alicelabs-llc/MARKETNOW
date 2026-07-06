@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7096640",
+  "certificate_id": "MN-SC-2026-0278203",
   "skill_id": "mn-blo-06677",
   "skill_name": "Mcp-etherscan-server",
-  "issued_at": "2026-07-06T00:18:16.640Z",
-  "expires_at": "2026-07-13T00:18:16.640Z",
+  "issued_at": "2026-07-06T03:57:58.203Z",
+  "expires_at": "2026-07-13T03:57:58.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "caf7d1b697570b8084626e444ee4257031de31baeb567d622aa4a83a51addaf1",
+  "signature": "ed1d8c8ac319fff637abf4f1de6b76698a530f6505bdd97a641bd0f1f03b6976",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-06677"
 }

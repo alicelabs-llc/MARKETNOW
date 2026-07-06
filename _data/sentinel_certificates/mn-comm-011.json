@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7799952",
+  "certificate_id": "MN-SC-2026-0823464",
   "skill_id": "mn-comm-011",
   "skill_name": "Shipping Calculator",
-  "issued_at": "2026-07-06T00:29:59.952Z",
-  "expires_at": "2026-07-13T00:29:59.952Z",
+  "issued_at": "2026-07-06T04:07:03.464Z",
+  "expires_at": "2026-07-13T04:07:03.464Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fdc9568b6c048fb35afefd364b9b3d9f8ca50598517a877aed5d24f338e3fc9e",
+  "signature": "73d920111690286cf61a4afd3a0daa5a7d18394f9fd2d1d1b0fa2f61ccb29af7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-011"
 }

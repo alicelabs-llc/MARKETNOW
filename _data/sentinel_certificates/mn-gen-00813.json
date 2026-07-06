@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6819631",
+  "certificate_id": "MN-SC-2026-0067747",
   "skill_id": "mn-gen-00813",
   "skill_name": "Any-cli-mcp-server",
-  "issued_at": "2026-07-06T00:13:39.631Z",
-  "expires_at": "2026-07-13T00:13:39.631Z",
+  "issued_at": "2026-07-06T03:54:27.747Z",
+  "expires_at": "2026-07-13T03:54:27.747Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8634bc99ca4dcc059bd74c8ee92d7b0a52b9d89a69a4cc99d087cac34ab5d568",
+  "signature": "9f25076cf654bc863dec78ab1216b5c67593917d8ca45f6ff0003c26fae41f20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00813"
 }

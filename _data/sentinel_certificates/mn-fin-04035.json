@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6984146",
+  "certificate_id": "MN-SC-2026-0187739",
   "skill_id": "mn-fin-04035",
-  "skill_name": "Finance-os",
-  "issued_at": "2026-07-06T00:16:24.146Z",
-  "expires_at": "2026-07-13T00:16:24.146Z",
+  "skill_name": "FinanceMCP",
+  "issued_at": "2026-07-06T03:56:27.739Z",
+  "expires_at": "2026-07-13T03:56:27.739Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "777802a2aaadc4a9490679c6b28e1d696504c5653620eee70ba3d8ba47c06120",
+  "signature": "1c2fa330863541bc0750c8e56740312c664677b96f6c5a9219428a70d6b343b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fin-04035"
 }

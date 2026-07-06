@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6806359",
+  "certificate_id": "MN-SC-2026-0058699",
   "skill_id": "mn-ai-00535",
   "skill_name": "Openai-responses-mcp",
-  "issued_at": "2026-07-06T00:13:26.359Z",
-  "expires_at": "2026-07-13T00:13:26.359Z",
+  "issued_at": "2026-07-06T03:54:18.699Z",
+  "expires_at": "2026-07-13T03:54:18.699Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "faea76113888e4724bef66b20e7d513f399bb5141dcee477eb1d8b06dc99df1b",
+  "signature": "f5d4a4a73530c6f5dac42287bbb056e01c3f5fd8dbdde0cffee2f6c7364e50a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00535"
 }

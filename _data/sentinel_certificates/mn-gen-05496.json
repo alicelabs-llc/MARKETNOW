@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7046438",
+  "certificate_id": "MN-SC-2026-0237247",
   "skill_id": "mn-gen-05496",
   "skill_name": "Knip-mcp-server",
-  "issued_at": "2026-07-06T00:17:26.438Z",
-  "expires_at": "2026-07-13T00:17:26.438Z",
+  "issued_at": "2026-07-06T03:57:17.247Z",
+  "expires_at": "2026-07-13T03:57:17.247Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b72cb04937a2ba5ef3fa78cf19d278fbadee9d668aa65a64ad46f7bae30b9f1",
+  "signature": "c35fe3edfa72735c4268ea0af6178a8ee216a9b752e26c9136c782dd35ef0dd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05496"
 }

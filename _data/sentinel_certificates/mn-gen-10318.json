@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7255208",
+  "certificate_id": "MN-SC-2026-0412197",
   "skill_id": "mn-gen-10318",
   "skill_name": "Server-perplexity-ask",
-  "issued_at": "2026-07-06T00:20:55.208Z",
-  "expires_at": "2026-07-13T00:20:55.208Z",
+  "issued_at": "2026-07-06T04:00:12.197Z",
+  "expires_at": "2026-07-13T04:00:12.197Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "05145c0ab37eeeb598dac3becb7bc46ba7c380b29f68cad1fc5917c474a46296",
+  "signature": "0478c3ad7e26cd86632adbaed86e430748c46586f4fcd90a2522ad57adf463f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10318"
 }

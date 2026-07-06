@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7025782",
+  "certificate_id": "MN-SC-2026-0220714",
   "skill_id": "mn-gen-05015",
   "skill_name": "Hyperfabric-mcp-server",
-  "issued_at": "2026-07-06T00:17:05.782Z",
-  "expires_at": "2026-07-13T00:17:05.782Z",
+  "issued_at": "2026-07-06T03:57:00.714Z",
+  "expires_at": "2026-07-13T03:57:00.714Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b173074c28f7d0b0303309d0aa8f6205d6db6b3cb505aa885cbc8f8c7c65f8e8",
+  "signature": "c2043e55bb22374a277878066bfb330223874209d45693c4b34e3217a031869f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05015"
 }

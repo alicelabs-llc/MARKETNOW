@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6838851",
+  "certificate_id": "MN-SC-2026-0080639",
   "skill_id": "mn-gen-01268",
   "skill_name": "Balm-shared-mcp",
-  "issued_at": "2026-07-06T00:13:58.851Z",
-  "expires_at": "2026-07-13T00:13:58.851Z",
+  "issued_at": "2026-07-06T03:54:40.639Z",
+  "expires_at": "2026-07-13T03:54:40.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e4372fa7eb9486f0affdc619a4fd9fe1c7294e848b0ec1f44ce8ae9226a9514e",
+  "signature": "ef4f85ed356634150d19d1d6ec6c0d9df0babe6d7e401e52bc141b6df3bbf776",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01268"
 }

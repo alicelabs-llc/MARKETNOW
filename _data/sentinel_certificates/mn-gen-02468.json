@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6904096",
+  "certificate_id": "MN-SC-2026-0127540",
   "skill_id": "mn-gen-02468",
   "skill_name": "Felores/cloudinary-mcp-server",
-  "issued_at": "2026-07-06T00:15:04.096Z",
-  "expires_at": "2026-07-13T00:15:04.096Z",
+  "issued_at": "2026-07-06T03:55:27.540Z",
+  "expires_at": "2026-07-13T03:55:27.540Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9c9ce4149aa4c58c46cf5bc06c5c55629dad6a3804e7406cc6d741c43b0cfc5",
+  "signature": "533b1d34337b45824673fa5e69fe0488735f87d8e10dac9655a363e990da47a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02468"
 }

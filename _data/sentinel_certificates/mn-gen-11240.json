@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7295628",
+  "certificate_id": "MN-SC-2026-0445330",
   "skill_id": "mn-gen-11240",
-  "skill_name": "Revibe-mcp",
-  "issued_at": "2026-07-06T00:21:35.628Z",
-  "expires_at": "2026-07-13T00:21:35.628Z",
+  "skill_name": "vibe",
+  "issued_at": "2026-07-06T04:00:45.330Z",
+  "expires_at": "2026-07-13T04:00:45.330Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5886a038af290a7ff5c0ea6dc69b4f78d7772ce984cc974e3e807dc82d644b63",
+  "signature": "dc0bf5e24c68395562e49d578384e7416f5d5218e0ac44d7abbe325ea6717f01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11240"
 }

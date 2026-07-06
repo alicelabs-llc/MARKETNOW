@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7806679",
+  "certificate_id": "MN-SC-2026-0827747",
   "skill_id": "mn-data-026",
   "skill_name": "Reverse Geocoding",
-  "issued_at": "2026-07-06T00:30:06.679Z",
-  "expires_at": "2026-07-13T00:30:06.679Z",
+  "issued_at": "2026-07-06T04:07:07.747Z",
+  "expires_at": "2026-07-13T04:07:07.747Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dfdac326af0d094df40c7a6310652c71b91d0d93394bbcd41df401b5e9d3eee5",
+  "signature": "d9cd0dd535b891a943abc90919f0ad5192bc67664558086e89489f6ddf8b2231",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-026"
 }

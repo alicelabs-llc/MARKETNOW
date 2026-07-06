@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6823857",
+  "certificate_id": "MN-SC-2026-0070516",
   "skill_id": "mn-gen-00880",
-  "skill_name": "Apple-docs-mcp-server",
-  "issued_at": "2026-07-06T00:13:43.857Z",
-  "expires_at": "2026-07-13T00:13:43.857Z",
+  "skill_name": "apple-docs-mcp",
+  "issued_at": "2026-07-06T03:54:30.516Z",
+  "expires_at": "2026-07-13T03:54:30.516Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70844fbd6012ab5d0689665128eb172d4ee236640c0891130bc2d519a0a1ff3e",
+  "signature": "4fc7256fdbbd9172dc52da86d316dceaea21e06b87921764c40c1e2f8c558ae3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00880"
 }

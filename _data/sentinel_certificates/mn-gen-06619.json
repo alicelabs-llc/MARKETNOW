@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7094520",
+  "certificate_id": "MN-SC-2026-0276393",
   "skill_id": "mn-gen-06619",
-  "skill_name": "Mcp-discovery",
-  "issued_at": "2026-07-06T00:18:14.520Z",
-  "expires_at": "2026-07-13T00:18:14.520Z",
+  "skill_name": "NoteDiscovery",
+  "issued_at": "2026-07-06T03:57:56.393Z",
+  "expires_at": "2026-07-13T03:57:56.393Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6ef94f9eaee93d7aebf4a0f416fbd663b18430777f6e184ea55ea43a6be2d35",
+  "signature": "2aef89cb37a8f71771bcda5822e9eb6183d21c115d15b7d8b14419fc374f8482",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06619"
 }

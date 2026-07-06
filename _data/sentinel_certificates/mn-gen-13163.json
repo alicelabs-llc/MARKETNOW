@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7380894",
+  "certificate_id": "MN-SC-2026-0526286",
   "skill_id": "mn-gen-13163",
   "skill_name": "Vibrissa",
-  "issued_at": "2026-07-06T00:23:00.894Z",
-  "expires_at": "2026-07-13T00:23:00.894Z",
+  "issued_at": "2026-07-06T04:02:06.286Z",
+  "expires_at": "2026-07-13T04:02:06.286Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2eab60f19f7159d5497d5679c26748aa888214440ed006d874c2544b3db19f4a",
+  "signature": "6f5ad6fd2e396c99ae59c4e31c626c8c3efaab1ca3764719737fff3c991f7e6a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13163"
 }

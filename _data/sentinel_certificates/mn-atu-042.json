@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7691639",
+  "certificate_id": "MN-SC-2026-0738225",
   "skill_id": "mn-atu-042",
   "skill_name": "Tool Output Schema Generator",
-  "issued_at": "2026-07-06T00:28:11.639Z",
-  "expires_at": "2026-07-13T00:28:11.639Z",
+  "issued_at": "2026-07-06T04:05:38.225Z",
+  "expires_at": "2026-07-13T04:05:38.225Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85b7536498beab0da4ce97fdaaa9ff2c4285ea10810384d035675d3a293af6b3",
+  "signature": "0f79b1a25c3f8c4af77d6fcfc4423b62dda18e71be323630aa2ab3ec05d15f65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-042"
 }

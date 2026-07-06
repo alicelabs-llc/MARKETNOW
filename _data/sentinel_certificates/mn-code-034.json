@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7797829",
+  "certificate_id": "MN-SC-2026-0821458",
   "skill_id": "mn-code-034",
   "skill_name": "Code Ownership Tracker",
-  "issued_at": "2026-07-06T00:29:57.829Z",
-  "expires_at": "2026-07-13T00:29:57.829Z",
+  "issued_at": "2026-07-06T04:07:01.458Z",
+  "expires_at": "2026-07-13T04:07:01.458Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "624f68446eb4820a19446b086e349f87765394b2c508d174bd8af17a579c9e44",
+  "signature": "69ca627a83367493cba1a52bee7489e4ff703d596b19790dd1ec28d68abaa361",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-034"
 }

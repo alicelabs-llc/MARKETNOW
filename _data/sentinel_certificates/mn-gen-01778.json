@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6867483",
+  "certificate_id": "MN-SC-2026-0100183",
   "skill_id": "mn-gen-01778",
   "skill_name": "Cellium-mcp-client",
-  "issued_at": "2026-07-06T00:14:27.483Z",
-  "expires_at": "2026-07-13T00:14:27.483Z",
+  "issued_at": "2026-07-06T03:55:00.183Z",
+  "expires_at": "2026-07-13T03:55:00.183Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "863b5722a49a161b7c56df2e138dd05eb8fed547087b40d7e01fca3f459623d1",
+  "signature": "b053cf132f6daafdf743eaba22b76b10afea203f3c655f2ec3b34f24183654ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01778"
 }

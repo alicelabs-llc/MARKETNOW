@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7377171",
+  "certificate_id": "MN-SC-2026-0522873",
   "skill_id": "mn-gen-13087",
   "skill_name": "Validator",
-  "issued_at": "2026-07-06T00:22:57.171Z",
-  "expires_at": "2026-07-13T00:22:57.171Z",
+  "issued_at": "2026-07-06T04:02:02.873Z",
+  "expires_at": "2026-07-13T04:02:02.873Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01c68ac9fc9ec95eda935c4d12bae58d6dda72def57b6394688a5499cfe1742b",
+  "signature": "4ed63dfacadcb2bcf62fcea67d48ade02904c6b88ec76243270572578e30a652",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13087"
 }

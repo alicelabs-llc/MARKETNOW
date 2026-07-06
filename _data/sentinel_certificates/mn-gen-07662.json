@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7143700",
+  "certificate_id": "MN-SC-2026-0316984",
   "skill_id": "mn-gen-07662",
-  "skill_name": "Mcp-server-giphy",
-  "issued_at": "2026-07-06T00:19:03.700Z",
-  "expires_at": "2026-07-13T00:19:03.700Z",
+  "skill_name": "mcp-server-giphy",
+  "issued_at": "2026-07-06T03:58:36.984Z",
+  "expires_at": "2026-07-13T03:58:36.984Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9a50d425cd3542ad9ee9ec94804b3b3876ef5089d15f802461fa864006f1add8",
+  "signature": "1c52f84e8e8eb1b02255501374872855d7b01347b29d590dcb1d5a3b2ae63e31",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07662"
 }

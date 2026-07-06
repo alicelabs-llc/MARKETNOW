@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6805881",
+  "certificate_id": "MN-SC-2026-0058273",
   "skill_id": "mn-ai-00517",
   "skill_name": "Mcptoolshop/ai-loadout",
-  "issued_at": "2026-07-06T00:13:25.881Z",
-  "expires_at": "2026-07-13T00:13:25.881Z",
+  "issued_at": "2026-07-06T03:54:18.273Z",
+  "expires_at": "2026-07-13T03:54:18.273Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6674bc30d6f346292934c69cb708d600fa03d25eef175378fd598dc7d9693579",
+  "signature": "d42d261c385a8fad4fc7ebd9f50a6209bb0373dd914d6419bc187343e1328fa0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00517"
 }

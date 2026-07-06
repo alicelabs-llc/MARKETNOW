@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7708243",
+  "certificate_id": "MN-SC-2026-0748794",
   "skill_id": "mn-asf-023",
   "skill_name": "Input Sanitizer",
-  "issued_at": "2026-07-06T00:28:28.243Z",
-  "expires_at": "2026-07-13T00:28:28.243Z",
+  "issued_at": "2026-07-06T04:05:48.794Z",
+  "expires_at": "2026-07-13T04:05:48.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4f20a608f2c32ce3ce83481ffedf312b15788a15dd44b803e1474aba2eb70e21",
+  "signature": "deb4d7f4c1e465e656a8aa42b89ad4ae8b6ddca80e68fcbda746451c844773cb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-023"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7448358",
+  "certificate_id": "MN-SC-2026-0579763",
   "skill_id": "mn-prompt-85eeccd2",
   "skill_name": "Especialista Shift-Left Testing",
-  "issued_at": "2026-07-06T00:24:08.358Z",
-  "expires_at": "2026-07-13T00:24:08.358Z",
+  "issued_at": "2026-07-06T04:02:59.763Z",
+  "expires_at": "2026-07-13T04:02:59.763Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50e4e3a7a0147f85a0359784e8f9153f975e462c7fb31632df2a2d0db2155eaa",
+  "signature": "11048e42273bee23c43a6372bb04745ab9546a3c47f2fa0e56ac7696b25ae235",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-85eeccd2"
 }

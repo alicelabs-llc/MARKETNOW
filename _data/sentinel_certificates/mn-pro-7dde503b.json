@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7750929",
+  "certificate_id": "MN-SC-2026-0783671",
   "skill_id": "mn-pro-7dde503b",
   "skill_name": "Cluster Health Monitor",
-  "issued_at": "2026-07-06T00:29:10.929Z",
-  "expires_at": "2026-07-13T00:29:10.929Z",
+  "issued_at": "2026-07-06T04:06:23.671Z",
+  "expires_at": "2026-07-13T04:06:23.671Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "628cee40b15026753a3ddfb9fc70c8293d39454364867cd1d0a35b2762e9dfe1",
+  "signature": "ff43949b652f7d74bb34b5df6bd50f9d5340210ef365455a1083127cf14765a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-7dde503b"
 }

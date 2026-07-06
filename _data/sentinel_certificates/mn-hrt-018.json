@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7861783",
+  "certificate_id": "MN-SC-2026-0863120",
   "skill_id": "mn-hrt-018",
   "skill_name": "DEI Tracker",
-  "issued_at": "2026-07-06T00:31:01.783Z",
-  "expires_at": "2026-07-13T00:31:01.783Z",
+  "issued_at": "2026-07-06T04:07:43.120Z",
+  "expires_at": "2026-07-13T04:07:43.120Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca9b03f95e664073409106bedec37d09164c637d28d818845819b57e9da496d7",
+  "signature": "052677534b142f3b19d4047a584b926f64a69c270d96b0e495aeed528db4d518",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hrt-018"
 }

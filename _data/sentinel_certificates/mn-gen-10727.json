@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7272253",
+  "certificate_id": "MN-SC-2026-0428405",
   "skill_id": "mn-gen-10727",
   "skill_name": "Promptvault",
-  "issued_at": "2026-07-06T00:21:12.253Z",
-  "expires_at": "2026-07-13T00:21:12.253Z",
+  "issued_at": "2026-07-06T04:00:28.405Z",
+  "expires_at": "2026-07-13T04:00:28.405Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f8ec3707c5e963f59d9658de63e2025021aa9b55762e037636ecb9a9efd9224",
+  "signature": "89c72539b933073a52d8ada45d04c4c958364fd695504ba3bce7bd8d6ea2e72d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10727"
 }

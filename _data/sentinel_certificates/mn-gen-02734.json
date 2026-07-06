@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6920267",
+  "certificate_id": "MN-SC-2026-0139116",
   "skill_id": "mn-gen-02734",
   "skill_name": "Ivotoby/contentful-management-mcp-server",
-  "issued_at": "2026-07-06T00:15:20.267Z",
-  "expires_at": "2026-07-13T00:15:20.267Z",
+  "issued_at": "2026-07-06T03:55:39.116Z",
+  "expires_at": "2026-07-13T03:55:39.116Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51053a2c1e683f9fc61892d100ceec1d9566bb96601bf8816912330d820793a2",
+  "signature": "fd2fc247519994dca1ed48169985550d293694ab153c0ba1ce0b283df493400e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02734"
 }

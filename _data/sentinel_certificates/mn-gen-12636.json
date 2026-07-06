@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7356355",
+  "certificate_id": "MN-SC-2026-0505175",
   "skill_id": "mn-gen-12636",
   "skill_name": "Tiburcio",
-  "issued_at": "2026-07-06T00:22:36.355Z",
-  "expires_at": "2026-07-13T00:22:36.355Z",
+  "issued_at": "2026-07-06T04:01:45.175Z",
+  "expires_at": "2026-07-13T04:01:45.175Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d17e3baf6cb05b1aac6895352420ca1a425f2e754c085f1a5650488119f7434d",
+  "signature": "597c121ffc6571189b7485ac2f919a1742d96735d94c5c25c3c2a133bd7002b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12636"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7738177",
+  "certificate_id": "MN-SC-2026-0773856",
   "skill_id": "mn-voi-00016",
   "skill_name": "Azure Speech STT",
-  "issued_at": "2026-07-06T00:28:58.178Z",
-  "expires_at": "2026-07-13T00:28:58.178Z",
+  "issued_at": "2026-07-06T04:06:13.856Z",
+  "expires_at": "2026-07-13T04:06:13.856Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec68f38febe615cb0a73d01506dab7cd634c48dd1bc35586668963beec59d072",
+  "signature": "acf44326d76e0e76275d582426f7caf425f2192471bd1cfb41bf3853a19e74d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00016"
 }

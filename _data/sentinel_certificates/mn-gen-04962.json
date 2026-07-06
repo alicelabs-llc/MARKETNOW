@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7023464",
+  "certificate_id": "MN-SC-2026-0219039",
   "skill_id": "mn-gen-04962",
   "skill_name": "Mcp-transport-bridge",
-  "issued_at": "2026-07-06T00:17:03.464Z",
-  "expires_at": "2026-07-13T00:17:03.464Z",
+  "issued_at": "2026-07-06T03:56:59.039Z",
+  "expires_at": "2026-07-13T03:56:59.039Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dac4c206cf8befc5657ca44db84d884d6d4978e050576ecf7b7b2ddf805f8aff",
+  "signature": "d21df664f71f60e05dbcadc39b5099129d859a180972d110d612b9e63724e99c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04962"
 }

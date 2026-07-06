@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6975953",
+  "certificate_id": "MN-SC-2026-0180993",
   "skill_id": "mn-gen-03828",
   "skill_name": "Osaas/mcp-server",
-  "issued_at": "2026-07-06T00:16:15.953Z",
-  "expires_at": "2026-07-13T00:16:15.953Z",
+  "issued_at": "2026-07-06T03:56:20.993Z",
+  "expires_at": "2026-07-13T03:56:20.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13c279b70177cf3227a2db397ac8ec3ef9c64be3fb32530e245d0ff2e2e1ea26",
+  "signature": "1704807ac0fa369c18c88ae0ca14df8f8ca69dd9fbf79720ddbacea6140743cd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03828"
 }

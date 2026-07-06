@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6964009",
+  "certificate_id": "MN-SC-2026-0172127",
   "skill_id": "mn-gen-03593",
-  "skill_name": "Echonet-mcp",
-  "issued_at": "2026-07-06T00:16:04.009Z",
-  "expires_at": "2026-07-13T00:16:04.009Z",
+  "skill_name": "dechonet-mcp",
+  "issued_at": "2026-07-06T03:56:12.127Z",
+  "expires_at": "2026-07-13T03:56:12.127Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 2,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd882e91b9b43c3e6d3809201272a837052fd5d8dbec272563ff211c639c0aef",
+  "signature": "2667d123fedc0f565337d6ddb3fd641ae2733abd7c9fc5a470695dc47be96af5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03593"
 }

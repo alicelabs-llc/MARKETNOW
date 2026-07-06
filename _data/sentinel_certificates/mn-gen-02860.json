@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6928494",
+  "certificate_id": "MN-SC-2026-0145958",
   "skill_id": "mn-gen-02860",
   "skill_name": "Cpanel-mcp",
-  "issued_at": "2026-07-06T00:15:28.494Z",
-  "expires_at": "2026-07-13T00:15:28.494Z",
+  "issued_at": "2026-07-06T03:55:45.958Z",
+  "expires_at": "2026-07-13T03:55:45.958Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "86605af4c2cfd57244cbf52dfe2e4470a3f2e0f0e572dbfb0567847616436e52",
+  "signature": "9afb0445cf2d3b10512053083a57b1d54fb38fbb2513505ff2c9c80143e9afe5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02860"
 }

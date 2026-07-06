@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1031838",
+  "skill_id": "mn-real-scienceaimcpserver",
+  "skill_name": "science-ai-mcp-server",
+  "issued_at": "2026-07-06T04:10:31.838Z",
+  "expires_at": "2026-07-13T04:10:31.838Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "33eb6d95ef6047291c727b6bc66b4171fd13350af65ada1dd60d797b00497cab",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scienceaimcpserver"
+}

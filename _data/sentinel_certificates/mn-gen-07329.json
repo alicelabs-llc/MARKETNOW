@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7130861",
+  "certificate_id": "MN-SC-2026-0304905",
   "skill_id": "mn-gen-07329",
   "skill_name": "Mcp-prompt-manager",
-  "issued_at": "2026-07-06T00:18:50.861Z",
-  "expires_at": "2026-07-13T00:18:50.861Z",
+  "issued_at": "2026-07-06T03:58:24.905Z",
+  "expires_at": "2026-07-13T03:58:24.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "edeb94af8b1bcb31718ae7339837bdffce8906541ecb34482305d4f91cdf68ac",
+  "signature": "d20c90c13607f254896dcbfd33274fdf40861e2a5754fe45c9ac30500eff456a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07329"
 }

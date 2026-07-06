@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7112151",
+  "certificate_id": "MN-SC-2026-0290896",
   "skill_id": "mn-gen-06995",
   "skill_name": "Landiwetter-mcp",
-  "issued_at": "2026-07-06T00:18:32.151Z",
-  "expires_at": "2026-07-13T00:18:32.151Z",
+  "issued_at": "2026-07-06T03:58:10.896Z",
+  "expires_at": "2026-07-13T03:58:10.896Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "003ac2bdcc0a9c24398f8504c9772cdc2dc961bbc29ee0a35b8ddcd38dadf350",
+  "signature": "c699bed66d21e6823cac45b2f60bcdcc6153968e9c5dd29a6f90838e49bbd723",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06995"
 }

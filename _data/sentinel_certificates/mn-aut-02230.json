@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6890092",
+  "certificate_id": "MN-SC-2026-0116791",
   "skill_id": "mn-aut-02230",
-  "skill_name": "Obsidian-mcp-server",
-  "issued_at": "2026-07-06T00:14:50.092Z",
-  "expires_at": "2026-07-13T00:14:50.092Z",
+  "skill_name": "obsidian-mcp",
+  "issued_at": "2026-07-06T03:55:16.791Z",
+  "expires_at": "2026-07-13T03:55:16.791Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "976cc706c5c2f80c7fb28a2dfd8b1d4451043d3ba47350d808ef20524f4ef3de",
+  "signature": "87ac4e9c7ea0ab17b5202aa95b19daad2f506ee11f59b9f3fb23a2fb98b4e314",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-aut-02230"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6886754",
+  "certificate_id": "MN-SC-2026-0114527",
   "skill_id": "mn-gen-02164",
-  "skill_name": "Claude-mcp",
-  "issued_at": "2026-07-06T00:14:46.754Z",
-  "expires_at": "2026-07-13T00:14:46.754Z",
+  "skill_name": "claudemap",
+  "issued_at": "2026-07-06T03:55:14.527Z",
+  "expires_at": "2026-07-13T03:55:14.527Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3456d69addb088d6d86eb6f43f70861d149b71252bd86637c0d8527241574d3c",
+  "signature": "6edfc8343e1a0c9d6f00f793f69ac8500d2dba105dbec02f3caaace00b3e9df1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02164"
 }

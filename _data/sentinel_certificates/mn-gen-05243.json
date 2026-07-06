@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7034952",
+  "certificate_id": "MN-SC-2026-0228999",
   "skill_id": "mn-gen-05243",
-  "skill_name": "Iz-tolk-mcp",
-  "issued_at": "2026-07-06T00:17:14.952Z",
-  "expires_at": "2026-07-13T00:17:14.952Z",
+  "skill_name": "izTolkMcp",
+  "issued_at": "2026-07-06T03:57:08.999Z",
+  "expires_at": "2026-07-13T03:57:08.999Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d5578fb2e0403b89242a75b92e58bd4fb368f123d11302732f3fc7081b222a6e",
+  "signature": "c1a237b6897492895ffd4e329f60f33d772eedbbdad0193035ae1b70e65ccf30",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05243"
 }

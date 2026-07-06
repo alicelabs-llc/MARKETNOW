@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7295633",
+  "certificate_id": "MN-SC-2026-0445452",
   "skill_id": "mn-gen-11236",
   "skill_name": "Mcp-server-rat-node",
-  "issued_at": "2026-07-06T00:21:35.633Z",
-  "expires_at": "2026-07-13T00:21:35.633Z",
+  "issued_at": "2026-07-06T04:00:45.452Z",
+  "expires_at": "2026-07-13T04:00:45.452Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aaf9cf0801f295b459f0b539ebec42626b46aab9e63f4f85e787c775a418fc68",
+  "signature": "fe3aa82f72e854d425cc303ca0937439d01ba3403ade82e21ffcaa12343f7c8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11236"
 }

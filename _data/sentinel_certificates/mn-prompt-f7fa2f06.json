@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7659703",
+  "certificate_id": "MN-SC-2026-0717346",
   "skill_id": "mn-prompt-f7fa2f06",
   "skill_name": "Hotel revenue management",
-  "issued_at": "2026-07-06T00:27:39.703Z",
-  "expires_at": "2026-07-13T00:27:39.703Z",
+  "issued_at": "2026-07-06T04:05:17.346Z",
+  "expires_at": "2026-07-13T04:05:17.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d659c558cfdf47b3dbceab92b94d9ef88bee2cf21b9a7ed24c0525f5193c431",
+  "signature": "ddf1bf4079b4bf58da70a55039994e0f3b5fcc9d43c77138aa857ac0b9468d9b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f7fa2f06"
 }

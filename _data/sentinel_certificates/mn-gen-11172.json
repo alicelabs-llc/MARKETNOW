@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7292993",
+  "certificate_id": "MN-SC-2026-0443166",
   "skill_id": "mn-gen-11172",
   "skill_name": "Remotion-video-mcp",
-  "issued_at": "2026-07-06T00:21:32.993Z",
-  "expires_at": "2026-07-13T00:21:32.993Z",
+  "issued_at": "2026-07-06T04:00:43.166Z",
+  "expires_at": "2026-07-13T04:00:43.166Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1dbabd2d04bae3290207140d3751d163d0c02e3c96a1c6f732ee739c50c0dd57",
+  "signature": "619f339f67c9acf60bb1432d09615d1cb9f1e971e8b55e1101979e9ab687adfa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11172"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6842864",
+  "certificate_id": "MN-SC-2026-0083313",
   "skill_id": "mn-gen-01334",
   "skill_name": "Bentonow/bento-mcp",
-  "issued_at": "2026-07-06T00:14:02.864Z",
-  "expires_at": "2026-07-13T00:14:02.864Z",
+  "issued_at": "2026-07-06T03:54:43.313Z",
+  "expires_at": "2026-07-13T03:54:43.313Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2085b5a9b733e06da34624dffe6d441f0e52622e2125232749b39d9286236ae0",
+  "signature": "ea762b946c823de47322b5054a123a3fd8bc93c7a899542a2920089c24b317e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01334"
 }

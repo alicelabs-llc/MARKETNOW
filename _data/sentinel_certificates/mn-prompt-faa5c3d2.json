@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7642224",
+  "certificate_id": "MN-SC-2026-0706648",
   "skill_id": "mn-prompt-faa5c3d2",
   "skill_name": "Customer lifetime value LTV calculation",
-  "issued_at": "2026-07-06T00:27:22.224Z",
-  "expires_at": "2026-07-13T00:27:22.224Z",
+  "issued_at": "2026-07-06T04:05:06.648Z",
+  "expires_at": "2026-07-13T04:05:06.648Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "37d5fa4ed9fe9bd04aa8fcca60d3db03bed0530c8b62f6c7b14562776e609741",
+  "signature": "d6e358dd560f6eb0aeafac49e33bb339954467d649ba246fa4a2cb46142daf0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-faa5c3d2"
 }

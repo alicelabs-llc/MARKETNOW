@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7736862",
+  "certificate_id": "MN-SC-2026-0772040",
   "skill_id": "mn-voi-00005",
   "skill_name": "Azure Speech TTS",
-  "issued_at": "2026-07-06T00:28:56.862Z",
-  "expires_at": "2026-07-13T00:28:56.862Z",
+  "issued_at": "2026-07-06T04:06:12.040Z",
+  "expires_at": "2026-07-13T04:06:12.040Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "183a554fbb45d0fbdf23dc1472c25fc38434a769136db88853d404feac9bf562",
+  "signature": "d6fb8cf8b38941cdf73d52997b2d72f548e16fd3d459c1eb9a1243e6d536014b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00005"
 }

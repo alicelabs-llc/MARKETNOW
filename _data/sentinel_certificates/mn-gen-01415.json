@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6846725",
+  "certificate_id": "MN-SC-2026-0086438",
   "skill_id": "mn-gen-01415",
-  "skill_name": "Bitcoin-mcp",
-  "issued_at": "2026-07-06T00:14:06.725Z",
-  "expires_at": "2026-07-13T00:14:06.725Z",
+  "skill_name": "bitcoin-mcp",
+  "issued_at": "2026-07-06T03:54:46.438Z",
+  "expires_at": "2026-07-13T03:54:46.438Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "08d561d3cbbeace50888b9d5394f7f543b4633754adb01381c9a1c13462af32e",
+  "signature": "ccf040e1f099692ab8a06cb9e1ab4db4514c3f56c1db44c7dcdc12893954dbe1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01415"
 }

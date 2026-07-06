@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7715672",
+  "certificate_id": "MN-SC-2026-0755125",
   "skill_id": "mn-apf-044",
   "skill_name": "Slow Query Logger",
-  "issued_at": "2026-07-06T00:28:35.672Z",
-  "expires_at": "2026-07-13T00:28:35.672Z",
+  "issued_at": "2026-07-06T04:05:55.125Z",
+  "expires_at": "2026-07-13T04:05:55.125Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d973d2d327309f8fed28fedfe7ecf7052e9cba41899704bc0690ef25ab708771",
+  "signature": "9ba9d040262c74bb2d50c1568340a68db893db78cff9a0dea9b49c6f2be5e382",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-044"
 }

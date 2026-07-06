@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7053500",
+  "certificate_id": "MN-SC-2026-0240983",
   "skill_id": "mn-gen-05622",
   "skill_name": "Lsp-mcp-bridge",
-  "issued_at": "2026-07-06T00:17:33.500Z",
-  "expires_at": "2026-07-13T00:17:33.500Z",
+  "issued_at": "2026-07-06T03:57:20.983Z",
+  "expires_at": "2026-07-13T03:57:20.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4beb2cae3866a5fa342f8b3ad87945ca8f0fb59b567c9595b6bc4509604cd3c6",
+  "signature": "f5575604c455a47e97357243626a3e4c80f479d6272adc40b2e52bf639d74ce1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05622"
 }

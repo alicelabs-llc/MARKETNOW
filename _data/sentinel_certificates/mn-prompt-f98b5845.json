@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7451972",
+  "certificate_id": "MN-SC-2026-0581512",
   "skill_id": "mn-prompt-f98b5845",
   "skill_name": "Especialista Payment Gateway Testing",
-  "issued_at": "2026-07-06T00:24:11.972Z",
-  "expires_at": "2026-07-13T00:24:11.972Z",
+  "issued_at": "2026-07-06T04:03:01.512Z",
+  "expires_at": "2026-07-13T04:03:01.512Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7eb676e1fe8de7045f167cba306b59c29441ec7efb341de0554970fcf017c4cd",
+  "signature": "9ccec12d045171c71f6d49b165dfa52ca4f0879303cce772134e4541316f65f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f98b5845"
 }

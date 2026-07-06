@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6876508",
+  "certificate_id": "MN-SC-2026-0106253",
   "skill_id": "mn-gen-01952",
   "skill_name": "Microsoft/clarity-mcp-server",
-  "issued_at": "2026-07-06T00:14:36.508Z",
-  "expires_at": "2026-07-13T00:14:36.508Z",
+  "issued_at": "2026-07-06T03:55:06.253Z",
+  "expires_at": "2026-07-13T03:55:06.253Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "031924603e2d2e583ba61cabc9cee7ebc49972dbd086e4ecd1049577aa687cdf",
+  "signature": "0ee4b908f5552e2e896622f8bb00cb37da2d8e1118e94cf31a91903468795cb3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01952"
 }

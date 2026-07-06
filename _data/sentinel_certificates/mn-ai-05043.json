@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7026903",
+  "certificate_id": "MN-SC-2026-0221783",
   "skill_id": "mn-ai-05043",
   "skill_name": "Icloud-mail-mcp",
-  "issued_at": "2026-07-06T00:17:06.903Z",
-  "expires_at": "2026-07-13T00:17:06.903Z",
+  "issued_at": "2026-07-06T03:57:01.783Z",
+  "expires_at": "2026-07-13T03:57:01.783Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ba8c487c3fc28d18a5759304181386d859835f372e201836d4866d0c3beb37fd",
+  "signature": "47db090bf609c6ecd3445caa5e66c9ea86a68a11fbc239012a3c65ebc95b571c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-05043"
 }

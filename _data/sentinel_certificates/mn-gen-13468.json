@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7397069",
+  "certificate_id": "MN-SC-2026-0538719",
   "skill_id": "mn-gen-13468",
   "skill_name": "Winlog-mcp",
-  "issued_at": "2026-07-06T00:23:17.069Z",
-  "expires_at": "2026-07-13T00:23:17.069Z",
+  "issued_at": "2026-07-06T04:02:18.719Z",
+  "expires_at": "2026-07-13T04:02:18.719Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ce8ad72031fce70912f11a393516644d19cd9abdce9760c8e062d420be6a776",
+  "signature": "9cf3f74699d7dd962a4715386ca0422b3e5f354d316904cbaca3a570dc2a1d22",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13468"
 }

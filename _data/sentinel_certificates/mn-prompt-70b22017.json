@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7573570",
+  "certificate_id": "MN-SC-2026-0665317",
   "skill_id": "mn-prompt-70b22017",
   "skill_name": "Budget vs actual variance analysis",
-  "issued_at": "2026-07-06T00:26:13.570Z",
-  "expires_at": "2026-07-13T00:26:13.570Z",
+  "issued_at": "2026-07-06T04:04:25.317Z",
+  "expires_at": "2026-07-13T04:04:25.317Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "84fb5a3b0840cec06394a8044b39e086f4feaf4fb216697e2d64a92881c9771a",
+  "signature": "7a181341a02e6911b48bbe68e618d1a4774492c1f59283a0a1291bbdd21da9ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-70b22017"
 }

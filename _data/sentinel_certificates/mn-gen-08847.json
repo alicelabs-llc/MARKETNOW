@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7188945",
+  "certificate_id": "MN-SC-2026-0353664",
   "skill_id": "mn-gen-08847",
   "skill_name": "Mediguard-mcp",
-  "issued_at": "2026-07-06T00:19:48.945Z",
-  "expires_at": "2026-07-13T00:19:48.945Z",
+  "issued_at": "2026-07-06T03:59:13.664Z",
+  "expires_at": "2026-07-13T03:59:13.664Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a32d2039ea74846df8dd90dccb22fed28092e5fdc72be910dc953368f624f4f2",
+  "signature": "9544fb9c285553161425409be922fd4656d68bb690cf7f458ab6586a4d646dab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08847"
 }

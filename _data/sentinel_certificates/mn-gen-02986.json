@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6933462",
+  "certificate_id": "MN-SC-2026-0149593",
   "skill_id": "mn-gen-02986",
   "skill_name": "Cursor-n8n-mcp",
-  "issued_at": "2026-07-06T00:15:33.462Z",
-  "expires_at": "2026-07-13T00:15:33.462Z",
+  "issued_at": "2026-07-06T03:55:49.593Z",
+  "expires_at": "2026-07-13T03:55:49.593Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77e945cfed9750d6144cab6a16cd8536ec3a3e853b57b3b3d8f4ba4773c2709b",
+  "signature": "892398dfd99b60bf010ff7b44feb80872a9a0ae6a85756cf98e017fdb27d75d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02986"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7739787",
+  "certificate_id": "MN-SC-2026-0775252",
   "skill_id": "mn-ai-004",
   "skill_name": "ML Pipeline Orchestrator",
-  "issued_at": "2026-07-06T00:28:59.787Z",
-  "expires_at": "2026-07-13T00:28:59.787Z",
+  "issued_at": "2026-07-06T04:06:15.252Z",
+  "expires_at": "2026-07-13T04:06:15.252Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dfd4d923ac32387c77425783b75b155ca9f45e104677925cb8908bf7038ff719",
+  "signature": "016f50a4683ca1dbe2378a74ca6d4ac47ab180fb1136eff895bb9c35e918ef3a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-004"
 }

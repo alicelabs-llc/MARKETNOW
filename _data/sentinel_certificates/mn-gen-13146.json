@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7379820",
+  "certificate_id": "MN-SC-2026-0525171",
   "skill_id": "mn-gen-13146",
-  "skill_name": "Mcp-vibe-check",
-  "issued_at": "2026-07-06T00:22:59.820Z",
-  "expires_at": "2026-07-13T00:22:59.820Z",
+  "skill_name": "vibe-check-mcp-server",
+  "issued_at": "2026-07-06T04:02:05.171Z",
+  "expires_at": "2026-07-13T04:02:05.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8aee2d82cb93d283680237400ecb60c6d2aa8654a167a04581aff2a09836f330",
+  "signature": "800e1c8d7f17953938f58a63b2cb059e0e7a99bfad6dae7f01b315f63720cf34",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13146"
 }

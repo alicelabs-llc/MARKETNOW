@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7232679",
+  "certificate_id": "MN-SC-2026-0387292",
   "skill_id": "mn-gen-09818",
   "skill_name": "Ollama-spotify-tools",
-  "issued_at": "2026-07-06T00:20:32.679Z",
-  "expires_at": "2026-07-13T00:20:32.679Z",
+  "issued_at": "2026-07-06T03:59:47.292Z",
+  "expires_at": "2026-07-13T03:59:47.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "955308f916f3a348ac6edc7973071d38d5e180dc0bcd791dbeaf402cc25c7983",
+  "signature": "bcae680908df43c9ca713f609fc9130ec8f036ead2589a47d9917e7090135178",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09818"
 }

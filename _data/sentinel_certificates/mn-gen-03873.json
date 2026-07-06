@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6977580",
+  "certificate_id": "MN-SC-2026-0182277",
   "skill_id": "mn-gen-03873",
-  "skill_name": "Fal-ai-mcp-server",
-  "issued_at": "2026-07-06T00:16:17.580Z",
-  "expires_at": "2026-07-13T00:16:17.580Z",
+  "skill_name": "alai-mcp-server",
+  "issued_at": "2026-07-06T03:56:22.277Z",
+  "expires_at": "2026-07-13T03:56:22.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2753e459a18b54c94406a479f0e623226c567741f4a9163418b75368941a2a51",
+  "signature": "df2a56820bad650f21020b9775ebe6d2a9fe9ed21f2759ed6fa41bdbdf86bf4f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03873"
 }

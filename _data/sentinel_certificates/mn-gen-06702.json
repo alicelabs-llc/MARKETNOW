@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7098189",
+  "certificate_id": "MN-SC-2026-0280764",
   "skill_id": "mn-gen-06702",
   "skill_name": "Petesena/mcp-fathom-server",
-  "issued_at": "2026-07-06T00:18:18.189Z",
-  "expires_at": "2026-07-13T00:18:18.189Z",
+  "issued_at": "2026-07-06T03:58:00.764Z",
+  "expires_at": "2026-07-13T03:58:00.764Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f76ea9c2756fa8a90df883eb98adfe040d90dcae4b1667061fb6384a5af6591",
+  "signature": "0a56b78abec1be1d71a4d469a4ab76a186ea16d3614ea30deb74ac23218a3509",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06702"
 }

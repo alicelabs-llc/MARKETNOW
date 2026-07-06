@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6834445",
+  "certificate_id": "MN-SC-2026-0077630",
   "skill_id": "mn-aut-01108",
   "skill_name": "Automation-mcp",
-  "issued_at": "2026-07-06T00:13:54.445Z",
-  "expires_at": "2026-07-13T00:13:54.445Z",
+  "issued_at": "2026-07-06T03:54:37.630Z",
+  "expires_at": "2026-07-13T03:54:37.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1dc810a3b982feb6755dcf368258f0b1015f081821586fbbf30cefb8f3acce52",
+  "signature": "69d9de80b16447a19145ccb47c9010b7589b80977c954931f3f080409f7254d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-aut-01108"
 }

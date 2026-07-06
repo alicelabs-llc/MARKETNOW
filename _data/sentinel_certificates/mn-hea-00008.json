@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7721452",
+  "certificate_id": "MN-SC-2026-0759108",
   "skill_id": "mn-hea-00008",
   "skill_name": "DICOM Image Server",
-  "issued_at": "2026-07-06T00:28:41.452Z",
-  "expires_at": "2026-07-13T00:28:41.452Z",
+  "issued_at": "2026-07-06T04:05:59.108Z",
+  "expires_at": "2026-07-13T04:05:59.108Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b0eed6e2e5635e4a83981bdc0c8aac6cbc5e68a6a2d0c64fe8addb1303287911",
+  "signature": "a333be8e698450730e1f8287fd72dbbbfe7b5171ef225a06e11d18d2655e6610",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-hea-00008"
 }

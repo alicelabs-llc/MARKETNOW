@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6817441",
+  "certificate_id": "MN-SC-2026-0066374",
   "skill_id": "mn-gen-00766",
   "skill_name": "Android-debug-bridge-mcp",
-  "issued_at": "2026-07-06T00:13:37.441Z",
-  "expires_at": "2026-07-13T00:13:37.441Z",
+  "issued_at": "2026-07-06T03:54:26.374Z",
+  "expires_at": "2026-07-13T03:54:26.374Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5e65edadf767135c0c764c5880ed52313c19b41aedd0049145a69e673398f69f",
+  "signature": "d469b13eac66f886c372181d309d070862a88fa64c3d52d7a8e0290567973e97",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00766"
 }

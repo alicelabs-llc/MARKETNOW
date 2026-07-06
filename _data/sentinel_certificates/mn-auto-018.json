@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7791982",
+  "certificate_id": "MN-SC-2026-0816749",
   "skill_id": "mn-auto-018",
   "skill_name": "Retry Mechanism",
-  "issued_at": "2026-07-06T00:29:51.982Z",
-  "expires_at": "2026-07-13T00:29:51.982Z",
+  "issued_at": "2026-07-06T04:06:56.749Z",
+  "expires_at": "2026-07-13T04:06:56.749Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53e73a7e3090a848621cd8eb8439848a55d3d2eeb50c632c2c7d9169973f31fb",
+  "signature": "274a66e7113c3961d3f939d88bf36cb48d43819fd776384306d6a879ba73e4ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-018"
 }

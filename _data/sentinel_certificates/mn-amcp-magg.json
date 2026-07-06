@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7889196",
+  "certificate_id": "MN-SC-2026-0881063",
   "skill_id": "mn-amcp-magg",
   "skill_name": "magg",
-  "issued_at": "2026-07-06T00:31:29.196Z",
-  "expires_at": "2026-07-13T00:31:29.196Z",
+  "issued_at": "2026-07-06T04:08:01.063Z",
+  "expires_at": "2026-07-13T04:08:01.063Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "1a3f2f1475d005ddf4aaa408c21fd6b4e995745e4293ad01878f82039141ef2a",
+  "signature": "fb7426db88694c7b7726eb68206aedbee7d370713364fb285d203bb2badc455f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-magg"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6958108",
+  "certificate_id": "MN-SC-2026-0166002",
   "skill_id": "mn-gen-03427",
   "skill_name": "Docs-navigator-mcp-suse",
-  "issued_at": "2026-07-06T00:15:58.108Z",
-  "expires_at": "2026-07-13T00:15:58.108Z",
+  "issued_at": "2026-07-06T03:56:06.002Z",
+  "expires_at": "2026-07-13T03:56:06.002Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69e48a4ce49f0d44ecc1cf711df8111721f58707541b43086764c8f81fae2741",
+  "signature": "e3a97d775073e84c75aeb4973688af267110424ca84241ff9535857391c1cdc9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03427"
 }

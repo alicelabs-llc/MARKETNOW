@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7031250",
+  "certificate_id": "MN-SC-2026-0225392",
   "skill_id": "mn-gen-05142",
   "skill_name": "Inkpot",
-  "issued_at": "2026-07-06T00:17:11.250Z",
-  "expires_at": "2026-07-13T00:17:11.250Z",
+  "issued_at": "2026-07-06T03:57:05.392Z",
+  "expires_at": "2026-07-13T03:57:05.392Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c5e3b77ec0732802271093532d388545bbcb7aad97857e6127b4b11f68a2593",
+  "signature": "00a24f78433240bd88f7f9ad15d888083577b3bf2843df3d9127758ddf70f5fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05142"
 }

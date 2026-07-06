@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6850070",
+  "certificate_id": "MN-SC-2026-0088596",
   "skill_id": "mn-gen-01510",
   "skill_name": "Bostrom-mcp",
-  "issued_at": "2026-07-06T00:14:10.070Z",
-  "expires_at": "2026-07-13T00:14:10.070Z",
+  "issued_at": "2026-07-06T03:54:48.596Z",
+  "expires_at": "2026-07-13T03:54:48.596Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94dea92906e2ded23a86561ef4ce71d74fe7a53cfb2d2d7cd02a8130c83d6695",
+  "signature": "010d073e72b9be019034860f90c1b2360592fb6c54461b581923088bc38492fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01510"
 }

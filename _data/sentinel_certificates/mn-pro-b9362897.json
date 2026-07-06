@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7757874",
+  "certificate_id": "MN-SC-2026-0789245",
   "skill_id": "mn-pro-b9362897",
   "skill_name": "API Idempotency Enforcer",
-  "issued_at": "2026-07-06T00:29:17.874Z",
-  "expires_at": "2026-07-13T00:29:17.874Z",
+  "issued_at": "2026-07-06T04:06:29.245Z",
+  "expires_at": "2026-07-13T04:06:29.245Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d0003882296a3b1b90dd232f26ece0305f70c9a901d96316a5f5fa3bf2f3b8b3",
+  "signature": "e30565e99dbf25f39f0ca4878371ce0d80b9db709002010e7185a9c180b4fd3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-b9362897"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7748656",
+  "certificate_id": "MN-SC-2026-0782738",
   "skill_id": "mn-pro-fe00d838",
   "skill_name": "K8s Manifest Linter",
-  "issued_at": "2026-07-06T00:29:08.656Z",
-  "expires_at": "2026-07-13T00:29:08.656Z",
+  "issued_at": "2026-07-06T04:06:22.738Z",
+  "expires_at": "2026-07-13T04:06:22.738Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b13434e835fcd1a0bc4887ff1479fad3ab56bef6e6bf9e1f866a7f08568ceb0",
+  "signature": "98bc06d491db45ce9f9bb75cfb06b8f19ada18ad3d762d214269528c9472b077",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-fe00d838"
 }

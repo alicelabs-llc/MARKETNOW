@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7827660",
+  "certificate_id": "MN-SC-2026-0840005",
   "skill_id": "mn-web-011",
   "skill_name": "Domain WHOIS Lookup",
-  "issued_at": "2026-07-06T00:30:27.660Z",
-  "expires_at": "2026-07-13T00:30:27.660Z",
+  "issued_at": "2026-07-06T04:07:20.005Z",
+  "expires_at": "2026-07-13T04:07:20.005Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95d3b5d3da16812677c019b0c2a955c1b6b972eaa5d50369556e682dea190fac",
+  "signature": "b0954d8eb3002af05c311d090949a79605b52de3d48f45abe4a215edc30096f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-011"
 }

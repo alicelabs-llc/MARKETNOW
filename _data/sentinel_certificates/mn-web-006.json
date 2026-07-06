@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7826964",
+  "certificate_id": "MN-SC-2026-0839586",
   "skill_id": "mn-web-006",
   "skill_name": "Screenshot API",
-  "issued_at": "2026-07-06T00:30:26.964Z",
-  "expires_at": "2026-07-13T00:30:26.964Z",
+  "issued_at": "2026-07-06T04:07:19.586Z",
+  "expires_at": "2026-07-13T04:07:19.586Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b069bce6229f2478665c439841a750bcdc342cd82f534a39591802eff24c3d3",
+  "signature": "6bc888de59cca458661cc7acfe1c6bba7b8456186e288b6d9334df8003f3095e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-006"
 }

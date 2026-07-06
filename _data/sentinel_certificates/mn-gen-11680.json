@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7316196",
+  "certificate_id": "MN-SC-2026-0467768",
   "skill_id": "mn-gen-11680",
   "skill_name": "Tideshift/sextant",
-  "issued_at": "2026-07-06T00:21:56.196Z",
-  "expires_at": "2026-07-13T00:21:56.196Z",
+  "issued_at": "2026-07-06T04:01:07.768Z",
+  "expires_at": "2026-07-13T04:01:07.768Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4bcdf5926285f5fb948946e298a59fb95e05bd13490ef13154a78bb45b36064",
+  "signature": "b7cafe6f24be97bb4cdb4d428ec77da5cea3cb7a0c3107b301ea342b51533438",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11680"
 }

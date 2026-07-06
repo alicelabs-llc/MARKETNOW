@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7006196",
+  "certificate_id": "MN-SC-2026-0205105",
   "skill_id": "mn-ai-04515",
   "skill_name": "Gmail-drive-mcp-server",
-  "issued_at": "2026-07-06T00:16:46.196Z",
-  "expires_at": "2026-07-13T00:16:46.196Z",
+  "issued_at": "2026-07-06T03:56:45.105Z",
+  "expires_at": "2026-07-13T03:56:45.105Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de0d1a118ac91e2f1e96569670413ae1410773057332dda11caafa28ed041d36",
+  "signature": "ab011f25c9d0a260ad96e9b1fe7a2775597fbc6507aae34a9ec0e76383c75a7f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-04515"
 }

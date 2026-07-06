@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7110425",
+  "certificate_id": "MN-SC-2026-0289635",
   "skill_id": "mn-ai-06948",
-  "skill_name": "Jetbrains/mcp-proxy",
-  "issued_at": "2026-07-06T00:18:30.425Z",
-  "expires_at": "2026-07-13T00:18:30.425Z",
+  "skill_name": "mcp-jetbrains",
+  "issued_at": "2026-07-06T03:58:09.635Z",
+  "expires_at": "2026-07-13T03:58:09.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1091744ed2693a22fb4390891e05213371ae63794e7d16ac3ea41750303758fb",
+  "signature": "d6603f505a3d333e90011ccdd86e57875cdbde46cbfc155428f47e1fe1fd8e39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06948"
 }

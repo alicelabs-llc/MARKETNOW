@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7780083",
+  "certificate_id": "MN-SC-2026-0808054",
   "skill_id": "mn-pro-1787181d",
   "skill_name": "Media Metadata Extractor",
-  "issued_at": "2026-07-06T00:29:40.083Z",
-  "expires_at": "2026-07-13T00:29:40.083Z",
+  "issued_at": "2026-07-06T04:06:48.054Z",
+  "expires_at": "2026-07-13T04:06:48.054Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b7e190c05abd2f771916d79f8c1d18d43c3b4b62f5fee4dac201cb837e7d952c",
+  "signature": "1030b2aff5ef798d316e81da5d6b880ada610306fb3e8af310356ed8fe9c91d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-1787181d"
 }

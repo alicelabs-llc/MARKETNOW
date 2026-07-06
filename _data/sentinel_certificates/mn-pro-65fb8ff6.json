@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7754611",
+  "certificate_id": "MN-SC-2026-0786704",
   "skill_id": "mn-pro-65fb8ff6",
   "skill_name": "Threat Intelligence Platform",
-  "issued_at": "2026-07-06T00:29:14.611Z",
-  "expires_at": "2026-07-13T00:29:14.611Z",
+  "issued_at": "2026-07-06T04:06:26.704Z",
+  "expires_at": "2026-07-13T04:06:26.704Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "528db16e4b9d1d3caacac5aea6852d2cfaeae5b8d588794a0c3039acaa312cf1",
+  "signature": "1cfd5d8a2100813b4478339df7352a5fb55c0de2051ff32414a99b5464e0cd3d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-65fb8ff6"
 }

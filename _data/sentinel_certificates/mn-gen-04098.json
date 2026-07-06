@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6986186",
+  "certificate_id": "MN-SC-2026-0189483",
   "skill_id": "mn-gen-04098",
   "skill_name": "Flightplan-mcp",
-  "issued_at": "2026-07-06T00:16:26.186Z",
-  "expires_at": "2026-07-13T00:16:26.186Z",
+  "issued_at": "2026-07-06T03:56:29.483Z",
+  "expires_at": "2026-07-13T03:56:29.483Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33f744d74dfb6000d36ce8b2d4267c69fb15adfacff79b6b90f5afa889aa27b1",
+  "signature": "dc84ed53d8d631a31e47eb47d369730f2ee97cde7ce14f3b5e79fbec76bd9f70",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04098"
 }

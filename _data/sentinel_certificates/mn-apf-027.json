@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7713518",
+  "certificate_id": "MN-SC-2026-0753292",
   "skill_id": "mn-apf-027",
   "skill_name": "Rate Limiter Pro",
-  "issued_at": "2026-07-06T00:28:33.518Z",
-  "expires_at": "2026-07-13T00:28:33.518Z",
+  "issued_at": "2026-07-06T04:05:53.292Z",
+  "expires_at": "2026-07-13T04:05:53.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f65c41a98d689139b0b1d42b83b2fa5342ede561515a3a7c5ef5e34844f3c555",
+  "signature": "3395758a0f4f314623f010ca321c766bb2e5bd049539bdc3aa88de86f72630f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-027"
 }

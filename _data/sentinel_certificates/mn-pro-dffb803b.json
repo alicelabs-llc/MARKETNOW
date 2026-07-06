@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7772561",
+  "certificate_id": "MN-SC-2026-0801955",
   "skill_id": "mn-pro-dffb803b",
   "skill_name": "Smart Contract Fuzzer",
-  "issued_at": "2026-07-06T00:29:32.561Z",
-  "expires_at": "2026-07-13T00:29:32.561Z",
+  "issued_at": "2026-07-06T04:06:41.955Z",
+  "expires_at": "2026-07-13T04:06:41.955Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3a59d12a195c23f99a7d6f981585a3ddfe60748bdfa89f2cca1dbdf664fdeb18",
+  "signature": "e5fa3adff5def358a1961900d1dacbd266275e593fd5a6f6702e16558062c7bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-dffb803b"
 }

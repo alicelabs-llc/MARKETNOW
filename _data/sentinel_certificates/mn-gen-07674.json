@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7144282",
+  "certificate_id": "MN-SC-2026-0317388",
   "skill_id": "mn-gen-07674",
   "skill_name": "Mcp-server-health-monitor",
-  "issued_at": "2026-07-06T00:19:04.282Z",
-  "expires_at": "2026-07-13T00:19:04.282Z",
+  "issued_at": "2026-07-06T03:58:37.388Z",
+  "expires_at": "2026-07-13T03:58:37.388Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0fa41de32356ac63f6e1863212a74dfd903b7efb03829ee93c781ea0a90524ff",
+  "signature": "970e0d7cd7468c4669848f053ce29f1db3310846319f98338dbd67b75712cf41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07674"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6895162",
+  "certificate_id": "MN-SC-2026-0120438",
   "skill_id": "mn-gen-02298",
   "skill_name": "Luke-terminal",
-  "issued_at": "2026-07-06T00:14:55.162Z",
-  "expires_at": "2026-07-13T00:14:55.162Z",
+  "issued_at": "2026-07-06T03:55:20.438Z",
+  "expires_at": "2026-07-13T03:55:20.438Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23b187340d24fda5a9239d1bfe3af661bf10c7b96d1043bf275b2c3a4f5faac6",
+  "signature": "460958d7391b27bd66942585825c3ecbdb3b060da4b7eef932bbd7f10ddbb383",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02298"
 }

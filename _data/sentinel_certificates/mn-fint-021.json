@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7850880",
+  "certificate_id": "MN-SC-2026-0854433",
   "skill_id": "mn-fint-021",
   "skill_name": "Multi-Currency Manager",
-  "issued_at": "2026-07-06T00:30:50.880Z",
-  "expires_at": "2026-07-13T00:30:50.880Z",
+  "issued_at": "2026-07-06T04:07:34.433Z",
+  "expires_at": "2026-07-13T04:07:34.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d93539614b0183c32e431c3edc77e0e4ca9023a44cbbf59ce980e2aefa20de51",
+  "signature": "72cb84793e20d16cedbf3c28f6041e62f6e4b1c7d2f58a3cc1e4fd840d824a00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-021"
 }

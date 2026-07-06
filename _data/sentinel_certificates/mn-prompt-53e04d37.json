@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7646753",
+  "certificate_id": "MN-SC-2026-0709623",
   "skill_id": "mn-prompt-53e04d37",
   "skill_name": "Streaming SQL with Materialize",
-  "issued_at": "2026-07-06T00:27:26.753Z",
-  "expires_at": "2026-07-13T00:27:26.753Z",
+  "issued_at": "2026-07-06T04:05:09.623Z",
+  "expires_at": "2026-07-13T04:05:09.623Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0dd15e52b7ddf0eee2667aab4594d3a9e9c717e88ebd3801669f6df34bbca40a",
+  "signature": "31a9ea300102e98e94a4f887969029b79fa6b0425ed1f865ab963cf1a67b82c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-53e04d37"
 }

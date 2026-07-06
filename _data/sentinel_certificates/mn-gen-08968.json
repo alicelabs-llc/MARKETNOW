@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7194530",
+  "certificate_id": "MN-SC-2026-0358172",
   "skill_id": "mn-gen-08968",
-  "skill_name": "Meta-mcp-server",
-  "issued_at": "2026-07-06T00:19:54.530Z",
-  "expires_at": "2026-07-13T00:19:54.530Z",
+  "skill_name": "meta-mcp",
+  "issued_at": "2026-07-06T03:59:18.172Z",
+  "expires_at": "2026-07-13T03:59:18.172Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 2,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5858068810e5d2e7931473cbdb96c86c5150edfa56e60d1a9a0495287e009f4b",
+  "signature": "5f7396d5302bc40ca4b0fefc6dc333181ad9156b20e8d16e727fa2579d56bf3a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08968"
 }

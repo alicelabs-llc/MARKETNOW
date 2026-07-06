@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6959202",
+  "certificate_id": "MN-SC-2026-0167628",
   "skill_id": "mn-ai-03455",
   "skill_name": "Domain-mcp-monorepo",
-  "issued_at": "2026-07-06T00:15:59.202Z",
-  "expires_at": "2026-07-13T00:15:59.202Z",
+  "issued_at": "2026-07-06T03:56:07.628Z",
+  "expires_at": "2026-07-13T03:56:07.628Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41aa1d30808ca9ec142f67cd8cb291d914bd2c15c3f292e08f0a1ef79cb9da92",
+  "signature": "4fc2f6ab0d45caefdc54ee953738e9d192293605e3f17969c3768574effd47d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03455"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7309350",
+  "certificate_id": "MN-SC-2026-0462612",
   "skill_id": "mn-gen-11566",
   "skill_name": "Secure-mcp-gateway",
-  "issued_at": "2026-07-06T00:21:49.350Z",
-  "expires_at": "2026-07-13T00:21:49.350Z",
+  "issued_at": "2026-07-06T04:01:02.612Z",
+  "expires_at": "2026-07-13T04:01:02.612Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8537e444012a02e0c3a9531fd3443abeec89c6b001876be9aea0220135e5a6e6",
+  "signature": "6fbe53b9a6351a9021f2fd01ad3729ff9f321d7efecfc4413775aeb959f8f800",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11566"
 }

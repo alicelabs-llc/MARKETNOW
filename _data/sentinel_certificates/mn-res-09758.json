@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7229784",
+  "certificate_id": "MN-SC-2026-0384500",
   "skill_id": "mn-res-09758",
-  "skill_name": "Octagon-deep-research-mcp",
-  "issued_at": "2026-07-06T00:20:29.784Z",
-  "expires_at": "2026-07-13T00:20:29.784Z",
+  "skill_name": "octagon-deep-research-mcp",
+  "issued_at": "2026-07-06T03:59:44.500Z",
+  "expires_at": "2026-07-13T03:59:44.500Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "44b4a8def6337914f79900a0888cb290a9533f8ccc06e7d6b7408ae43610fc73",
+  "signature": "954e5da84ce761786884e31b4a8aa917afaee01c86913b486459816c69dba2a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-09758"
 }

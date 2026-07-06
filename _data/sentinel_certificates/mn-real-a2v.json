@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1084811",
+  "skill_id": "mn-real-a2v",
+  "skill_name": "A2V",
+  "issued_at": "2026-07-06T04:11:24.811Z",
+  "expires_at": "2026-07-13T04:11:24.811Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "a2c38971909603c1cea9b27fa988c798c2ca6b1d3dfef08427fdb8db68bb60c9",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-a2v"
+}

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6991016",
+  "certificate_id": "MN-SC-2026-0193295",
   "skill_id": "mn-gen-04182",
   "skill_name": "Foxmcp",
-  "issued_at": "2026-07-06T00:16:31.016Z",
-  "expires_at": "2026-07-13T00:16:31.016Z",
+  "issued_at": "2026-07-06T03:56:33.295Z",
+  "expires_at": "2026-07-13T03:56:33.295Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ec04187704caa5d81ab1280054aca42ea1e26a4255b33798886d49b1520b2ab",
+  "signature": "130cb58a73cb5692e4acce8f249123a4fa76ca311a44f27d716d7eff422e4928",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04182"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6995459",
+  "certificate_id": "MN-SC-2026-0196765",
   "skill_id": "mn-gen-04301",
   "skill_name": "Gate-mcp",
-  "issued_at": "2026-07-06T00:16:35.459Z",
-  "expires_at": "2026-07-13T00:16:35.459Z",
+  "issued_at": "2026-07-06T03:56:36.765Z",
+  "expires_at": "2026-07-13T03:56:36.765Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ce1303befae8e88962da9ffa70a98b8a4eef2186d6c6cf914ec97a7f3fb0c91d",
+  "signature": "f2b3dd15aa3e37b604f0c6219bb6e95c16ee18c31b0fb632598067c54dfd6f0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04301"
 }

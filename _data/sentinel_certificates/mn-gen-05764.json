@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7057933",
+  "certificate_id": "MN-SC-2026-0245305",
   "skill_id": "mn-gen-05764",
   "skill_name": "Linkedin-mcp-runner",
-  "issued_at": "2026-07-06T00:17:37.933Z",
-  "expires_at": "2026-07-13T00:17:37.933Z",
+  "issued_at": "2026-07-06T03:57:25.305Z",
+  "expires_at": "2026-07-13T03:57:25.305Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d046321582926b966ed9a570c7eff6316b5c16973d9d8325daae122711ec0ce",
+  "signature": "221ea65c4145c61f1d15b9931687c6c77d4f5af4830c94c360354060c6fa3add",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05764"
 }

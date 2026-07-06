@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7260319",
+  "certificate_id": "MN-SC-2026-0417582",
   "skill_id": "mn-gen-10450",
   "skill_name": "Pje-mcp-server",
-  "issued_at": "2026-07-06T00:21:00.319Z",
-  "expires_at": "2026-07-13T00:21:00.319Z",
+  "issued_at": "2026-07-06T04:00:17.582Z",
+  "expires_at": "2026-07-13T04:00:17.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "263fa78e1c0164d84e2a28bfee8e89dc7548188bbd934c345c4ad8fbbf33f389",
+  "signature": "d56dec15c7df8fe037a160c53eec86e904c95988a8baaa990431a9a34e571938",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10450"
 }

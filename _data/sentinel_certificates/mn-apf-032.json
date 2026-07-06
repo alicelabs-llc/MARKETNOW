@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7713999",
+  "certificate_id": "MN-SC-2026-0753738",
   "skill_id": "mn-apf-032",
   "skill_name": "Warm Pool Manager",
-  "issued_at": "2026-07-06T00:28:33.999Z",
-  "expires_at": "2026-07-13T00:28:33.999Z",
+  "issued_at": "2026-07-06T04:05:53.738Z",
+  "expires_at": "2026-07-13T04:05:53.738Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2fc5ca8c51fb8f3dcda9c02125586f596ebf254b35663a71025a7e30552572b5",
+  "signature": "6e8f941d0b28033d81894da3d3d2dcba0eb57c91e54a4520ac6d666761ebee52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-032"
 }

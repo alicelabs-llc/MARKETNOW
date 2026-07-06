@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7073981",
+  "certificate_id": "MN-SC-2026-0258340",
   "skill_id": "mn-gen-06124",
   "skill_name": "Matrix-mcp-server",
-  "issued_at": "2026-07-06T00:17:53.981Z",
-  "expires_at": "2026-07-13T00:17:53.981Z",
+  "issued_at": "2026-07-06T03:57:38.340Z",
+  "expires_at": "2026-07-13T03:57:38.340Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f98c7d85b4a83d17662a1b61508a1434fa1497f3b5f459ed0cbb2454f8797375",
+  "signature": "37e196b32a0a8ea3ae104fc0c499f0b26899963d727746b5e40234c55098f5a1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06124"
 }

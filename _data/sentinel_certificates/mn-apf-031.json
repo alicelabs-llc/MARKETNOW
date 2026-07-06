@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7713982",
+  "certificate_id": "MN-SC-2026-0753794",
   "skill_id": "mn-apf-031",
   "skill_name": "Cold Start Optimizer",
-  "issued_at": "2026-07-06T00:28:33.982Z",
-  "expires_at": "2026-07-13T00:28:33.982Z",
+  "issued_at": "2026-07-06T04:05:53.794Z",
+  "expires_at": "2026-07-13T04:05:53.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d85e65d3051faaaa9f07421d9bd35c8072d8cb7efb4b8d204817b8878a4e5b66",
+  "signature": "f00c0c84c8f8f05467915838f562fe1c9646fb43081791f7af59f2804bcfd715",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-031"
 }

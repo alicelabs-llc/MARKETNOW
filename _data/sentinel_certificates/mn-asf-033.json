@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7709279",
+  "certificate_id": "MN-SC-2026-0749734",
   "skill_id": "mn-asf-033",
   "skill_name": "Consent Manager",
-  "issued_at": "2026-07-06T00:28:29.279Z",
-  "expires_at": "2026-07-13T00:28:29.280Z",
+  "issued_at": "2026-07-06T04:05:49.734Z",
+  "expires_at": "2026-07-13T04:05:49.734Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f24c8a2b28475217035c5143b8a8ed9099106274525fce55824568b767f3b971",
+  "signature": "120f64bab2c8b7b68d3131d879ed3c92e7f540c045660ddfd2d62a1a989b957b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-asf-033"
 }

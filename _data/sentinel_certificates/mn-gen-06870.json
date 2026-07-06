@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7106181",
+  "certificate_id": "MN-SC-2026-0286348",
   "skill_id": "mn-gen-06870",
   "skill_name": "Llmindset/mcp-hfspace",
-  "issued_at": "2026-07-06T00:18:26.181Z",
-  "expires_at": "2026-07-13T00:18:26.181Z",
+  "issued_at": "2026-07-06T03:58:06.348Z",
+  "expires_at": "2026-07-13T03:58:06.348Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d62ad73af81f0bd9b67b5479a2718f5bb164be886ae3ffec4ca8735a91ea7718",
+  "signature": "0c29a4abd9dd8d176dcc404aacc3afdd4d54c589518743506d297166f1bcf915",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06870"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6894514",
+  "certificate_id": "MN-SC-2026-0120038",
   "skill_id": "mn-gen-02288",
   "skill_name": "Claude-ssh-server",
-  "issued_at": "2026-07-06T00:14:54.514Z",
-  "expires_at": "2026-07-13T00:14:54.514Z",
+  "issued_at": "2026-07-06T03:55:20.038Z",
+  "expires_at": "2026-07-13T03:55:20.038Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c6bf249397622320fa4952c50d14b859bb138777f002cc95eaf66fd92b3f9bd3",
+  "signature": "001ce421273f5c7ca825a5cb3f049752f59e68c6f909496723de7c0fbe4335e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02288"
 }

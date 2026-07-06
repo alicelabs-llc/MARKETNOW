@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6881498",
+  "certificate_id": "MN-SC-2026-0111118",
   "skill_id": "mn-gen-02072",
   "skill_name": "Paean-ai/claude-code-wechat",
-  "issued_at": "2026-07-06T00:14:41.498Z",
-  "expires_at": "2026-07-13T00:14:41.498Z",
+  "issued_at": "2026-07-06T03:55:11.118Z",
+  "expires_at": "2026-07-13T03:55:11.118Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e6ff773518bfbc03745cc8f787a32e5597f561d543c889b37e5a3d0cd5740ddb",
+  "signature": "84d68d520fc110efe45171f8cdd762949de3d2f6d94196b000468f80a9326a7f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02072"
 }

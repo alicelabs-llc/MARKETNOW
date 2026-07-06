@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7568913",
+  "certificate_id": "MN-SC-2026-0662140",
   "skill_id": "mn-prompt-195d59fb",
   "skill_name": "Sales demo environment sandbox",
-  "issued_at": "2026-07-06T00:26:08.913Z",
-  "expires_at": "2026-07-13T00:26:08.913Z",
+  "issued_at": "2026-07-06T04:04:22.140Z",
+  "expires_at": "2026-07-13T04:04:22.140Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "84ac4fa36f34dc5e7905fc2a89bb834b964bdf322fb6fca9d49f5ce0a8ebf651",
+  "signature": "6c285931b9ac1de9c1582ee47ab600aa029e011cc5b86e91d1555cc126341721",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-195d59fb"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7044492",
+  "certificate_id": "MN-SC-2026-0235941",
   "skill_id": "mn-gen-05460",
-  "skill_name": "Kibela-mcp-server",
-  "issued_at": "2026-07-06T00:17:24.492Z",
-  "expires_at": "2026-07-13T00:17:24.492Z",
+  "skill_name": "mcp-kibela",
+  "issued_at": "2026-07-06T03:57:15.941Z",
+  "expires_at": "2026-07-13T03:57:15.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e36cebd0b228dfad193c4ec9e46e35c2c5f4823f11a1d2be7f01307d51413fc",
+  "signature": "344054138978bd9ac34e0692009baa968b2c3a69a9b8290ba1b8834e9b26696e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05460"
 }

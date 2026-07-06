@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7116969",
+  "certificate_id": "MN-SC-2026-0294138",
   "skill_id": "mn-ai-07082",
-  "skill_name": "Mcp-mermaid",
-  "issued_at": "2026-07-06T00:18:36.969Z",
-  "expires_at": "2026-07-13T00:18:36.969Z",
+  "skill_name": "mermaid-mcp-server",
+  "issued_at": "2026-07-06T03:58:14.138Z",
+  "expires_at": "2026-07-13T03:58:14.138Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7f3a3fc8a4a7c3a810f59a16232f6c32de12cc59030f9914429de5950d5dbd1",
+  "signature": "5c4da677398a29b240648984eaa9c9f74141a99663ac29df5fe155660b0191ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07082"
 }

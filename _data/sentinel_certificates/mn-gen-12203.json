@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7338268",
+  "certificate_id": "MN-SC-2026-0487883",
   "skill_id": "mn-gen-12203",
-  "skill_name": "Steam-mcp",
-  "issued_at": "2026-07-06T00:22:18.268Z",
-  "expires_at": "2026-07-13T00:22:18.268Z",
+  "skill_name": "steam-mcp",
+  "issued_at": "2026-07-06T04:01:27.883Z",
+  "expires_at": "2026-07-13T04:01:27.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9fb76243e3eb6d48d49ed0ae8c6eabd577b73f0db05a46f86c0e7d90577f8b94",
+  "signature": "e1a6ad2d171b2ee1fbc41c3a07bf6d2c0aa99a8e608c36c37444de4139d80e09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12203"
 }

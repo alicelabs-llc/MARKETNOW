@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7759629",
+  "certificate_id": "MN-SC-2026-0790552",
   "skill_id": "mn-pro-cf28cc09",
   "skill_name": "Database Failover Automator",
-  "issued_at": "2026-07-06T00:29:19.629Z",
-  "expires_at": "2026-07-13T00:29:19.629Z",
+  "issued_at": "2026-07-06T04:06:30.552Z",
+  "expires_at": "2026-07-13T04:06:30.552Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8238a5e0a131da055134370ed83aa4cc2c205ad900f24e67528c0c4099c44235",
+  "signature": "368cc1ac73812f67f59dc13b000ee2080253ada2be57e3a4a84ec0773d4463c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-pro-cf28cc09"
 }

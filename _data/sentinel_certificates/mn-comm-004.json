@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7798900",
+  "certificate_id": "MN-SC-2026-0822267",
   "skill_id": "mn-comm-004",
   "skill_name": "Shopping Cart Manager",
-  "issued_at": "2026-07-06T00:29:58.900Z",
-  "expires_at": "2026-07-13T00:29:58.900Z",
+  "issued_at": "2026-07-06T04:07:02.267Z",
+  "expires_at": "2026-07-13T04:07:02.267Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4dac239613e4d765f4baf85eede49c10fbf4d7f90bb4f640388e5efe3f03a789",
+  "signature": "ba8304e95b291b243d02385d3dd94234c37279906f3246ce8b0c1f67835ebd79",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-004"
 }

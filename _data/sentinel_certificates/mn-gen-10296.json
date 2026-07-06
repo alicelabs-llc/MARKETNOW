@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7254533",
+  "certificate_id": "MN-SC-2026-0411748",
   "skill_id": "mn-gen-10296",
   "skill_name": "Steipete/peekaboo",
-  "issued_at": "2026-07-06T00:20:54.533Z",
-  "expires_at": "2026-07-13T00:20:54.533Z",
+  "issued_at": "2026-07-06T04:00:11.748Z",
+  "expires_at": "2026-07-13T04:00:11.748Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc41d9d3b61303ad2030fc40b231973cb4ee9017efaa7d4e018c46564cddeabe",
+  "signature": "55acadde325409199edea41b55d8be67de70c2b2480aef876f537f068fd0383a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10296"
 }

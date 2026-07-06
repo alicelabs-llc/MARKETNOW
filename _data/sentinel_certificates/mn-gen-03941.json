@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6979747",
+  "certificate_id": "MN-SC-2026-0184215",
   "skill_id": "mn-gen-03941",
-  "skill_name": "Fec-mcp-server",
-  "issued_at": "2026-07-06T00:16:19.747Z",
-  "expires_at": "2026-07-13T00:16:19.747Z",
+  "skill_name": "fec-mcp-server",
+  "issued_at": "2026-07-06T03:56:24.215Z",
+  "expires_at": "2026-07-13T03:56:24.215Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f34b752576fbd60bcdd05e2d10c884962c985833ecbc1c532f89d0bfb0bdce1a",
+  "signature": "d82540838a6df254ca74c0bb5193436f0aec9336b3ad10b0a2b574677efe1b45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03941"
 }

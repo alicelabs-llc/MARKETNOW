@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7051154",
+  "certificate_id": "MN-SC-2026-0240168",
   "skill_id": "mn-gen-05577",
   "skill_name": "Labellerr-mcp-server",
-  "issued_at": "2026-07-06T00:17:31.154Z",
-  "expires_at": "2026-07-13T00:17:31.154Z",
+  "issued_at": "2026-07-06T03:57:20.168Z",
+  "expires_at": "2026-07-13T03:57:20.168Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c867298de6c8120a69b1bb57c533bd489f14f6435a101c440df9668afa6371f",
+  "signature": "14c353a6fe32c93b1ae6a02960de0f0da29a00fc1de0364fbb47d7c740a54ba2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05577"
 }

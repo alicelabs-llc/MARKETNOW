@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7217168",
+  "certificate_id": "MN-SC-2026-0373204",
   "skill_id": "mn-gen-09486",
-  "skill_name": "Nestr/mcp",
-  "issued_at": "2026-07-06T00:20:17.168Z",
-  "expires_at": "2026-07-13T00:20:17.168Z",
+  "skill_name": "MCP-Nest",
+  "issued_at": "2026-07-06T03:59:33.204Z",
+  "expires_at": "2026-07-13T03:59:33.204Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c35ac75ff1beb04a832959986eaf826782337a05e415422a1de1b2a67fbde90",
+  "signature": "52fbf91bef616786b8f15a099fba95dd6be741c12391fa109d1ac724c74c3ff1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09486"
 }

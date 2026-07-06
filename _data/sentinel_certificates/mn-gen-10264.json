@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7252842",
+  "certificate_id": "MN-SC-2026-0409303",
   "skill_id": "mn-gen-10264",
   "skill_name": "Pcm-mcp-server",
-  "issued_at": "2026-07-06T00:20:52.842Z",
-  "expires_at": "2026-07-13T00:20:52.842Z",
+  "issued_at": "2026-07-06T04:00:09.303Z",
+  "expires_at": "2026-07-13T04:00:09.303Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61de767bbaa86088472d6bd4cac7f2d94ff2270c1757016be2ce99fb437e7bff",
+  "signature": "e2665003b50305a9aa85804f548afce9479db0d822af082a81f28b6f6ad5583b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10264"
 }

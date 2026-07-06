@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7259076",
+  "certificate_id": "MN-SC-2026-0415976",
   "skill_id": "mn-ai-10405",
   "skill_name": "Pi-zai-tools",
-  "issued_at": "2026-07-06T00:20:59.076Z",
-  "expires_at": "2026-07-13T00:20:59.076Z",
+  "issued_at": "2026-07-06T04:00:15.976Z",
+  "expires_at": "2026-07-13T04:00:15.976Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5055084246878df7162474d0dceb431b9b92cba6ca3f9318db33ffaf01e9a839",
+  "signature": "7fcc31ad794141b7ca5bf72e0a508448e60fd6ceab285088df0f11611d7b880c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-10405"
 }

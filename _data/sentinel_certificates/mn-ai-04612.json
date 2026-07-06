@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7008946",
+  "certificate_id": "MN-SC-2026-0207333",
   "skill_id": "mn-ai-04612",
   "skill_name": "Google-ai-mode-mcp",
-  "issued_at": "2026-07-06T00:16:48.946Z",
-  "expires_at": "2026-07-13T00:16:48.946Z",
+  "issued_at": "2026-07-06T03:56:47.333Z",
+  "expires_at": "2026-07-13T03:56:47.333Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "43063f0a63712d86167f0a1cd01b570db514406f49376494629d8f9aae2f1887",
+  "signature": "5a926e909b8afa8211c7987f30a66951ec19a3fea0b7a68864bbb1179af8a634",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-04612"
 }

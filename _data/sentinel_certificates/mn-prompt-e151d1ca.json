@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7553130",
+  "certificate_id": "MN-SC-2026-0651066",
   "skill_id": "mn-prompt-e151d1ca",
   "skill_name": "Acuerdo de no competencia y no solitación",
-  "issued_at": "2026-07-06T00:25:53.130Z",
-  "expires_at": "2026-07-13T00:25:53.130Z",
+  "issued_at": "2026-07-06T04:04:11.066Z",
+  "expires_at": "2026-07-13T04:04:11.066Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bcf13408814b2e1b1c8cedacf71f7e903e39680edec3f6be8aa1f5d189c09177",
+  "signature": "c8420b5befeb9dbf8631be8059096fa97d4bc6d3fe98f5d5cf3419edc7fcdad4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e151d1ca"
 }

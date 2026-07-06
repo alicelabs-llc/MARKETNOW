@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7034466",
+  "certificate_id": "MN-SC-2026-0228622",
   "skill_id": "mn-gen-05220",
   "skill_name": "Isa-mcp-server",
-  "issued_at": "2026-07-06T00:17:14.466Z",
-  "expires_at": "2026-07-13T00:17:14.466Z",
+  "issued_at": "2026-07-06T03:57:08.622Z",
+  "expires_at": "2026-07-13T03:57:08.622Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe2221cfe1579685434149d51dacc4083d4e62c42f9a98054cd107459876ed5a",
+  "signature": "82f7eabec86eb38b4d96e6bff70ffbceb3d49448e93c9a6ef1a20af64765a6b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05220"
 }

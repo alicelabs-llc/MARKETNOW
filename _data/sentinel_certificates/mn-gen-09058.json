@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7197396",
+  "certificate_id": "MN-SC-2026-0360330",
   "skill_id": "mn-gen-09058",
   "skill_name": "Mindthread-mcp",
-  "issued_at": "2026-07-06T00:19:57.396Z",
-  "expires_at": "2026-07-13T00:19:57.396Z",
+  "issued_at": "2026-07-06T03:59:20.330Z",
+  "expires_at": "2026-07-13T03:59:20.330Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3014b2d1f2b1d13f2f4173de7766a24c398d42fd1c74491346ece1dd5f7ccd14",
+  "signature": "9e13ca237e66ae4628767e8626c09c0b07e126a6421a8a34253eb9355d2c4394",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09058"
 }

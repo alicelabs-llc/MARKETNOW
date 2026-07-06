@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6861249",
+  "certificate_id": "MN-SC-2026-0095836",
   "skill_id": "mn-gen-01669",
   "skill_name": "Gongrzhe/server-calendar-autoauth-mcp",
-  "issued_at": "2026-07-06T00:14:21.249Z",
-  "expires_at": "2026-07-13T00:14:21.249Z",
+  "issued_at": "2026-07-06T03:54:55.836Z",
+  "expires_at": "2026-07-13T03:54:55.836Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de181004a397b6d07e0becf6011af0b3af0a5533f7ece93805ee9bc92f607605",
+  "signature": "8207c5374da3d43c1d14731136b029254341f7038c91204f69be726df7bf9c6c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01669"
 }

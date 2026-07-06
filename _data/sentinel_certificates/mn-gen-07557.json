@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7138064",
+  "certificate_id": "MN-SC-2026-0312325",
   "skill_id": "mn-gen-07557",
   "skill_name": "Mcp-server-andru-intelligence",
-  "issued_at": "2026-07-06T00:18:58.064Z",
-  "expires_at": "2026-07-13T00:18:58.064Z",
+  "issued_at": "2026-07-06T03:58:32.325Z",
+  "expires_at": "2026-07-13T03:58:32.325Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef4f34ea30009706bdee3fda01ad4884b398535f2cbba36fabcfb54538a8c8af",
+  "signature": "501c3e21207664498a1722a4de16704f7541c2aa2032e9acee94bc546a296d9f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07557"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6925216",
+  "certificate_id": "MN-SC-2026-0143631",
   "skill_id": "mn-gen-02808",
   "skill_name": "Aykahshi/copilot-mcp-server",
-  "issued_at": "2026-07-06T00:15:25.216Z",
-  "expires_at": "2026-07-13T00:15:25.216Z",
+  "issued_at": "2026-07-06T03:55:43.631Z",
+  "expires_at": "2026-07-13T03:55:43.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b86016618cd229e847d5c3707649978f8617beb2b75bfe7c11177d170c7e3058",
+  "signature": "fd92ab3804d04386ad8bcde41854ebe162f942a82388a34735a439f8c4292eb3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02808"
 }

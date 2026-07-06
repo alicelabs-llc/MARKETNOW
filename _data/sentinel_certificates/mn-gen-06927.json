@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7109286",
+  "certificate_id": "MN-SC-2026-0288445",
   "skill_id": "mn-gen-06927",
-  "skill_name": "Mcp-instagram",
-  "issued_at": "2026-07-06T00:18:29.286Z",
-  "expires_at": "2026-07-13T00:18:29.286Z",
+  "skill_name": "instagram-mcp",
+  "issued_at": "2026-07-06T03:58:08.445Z",
+  "expires_at": "2026-07-13T03:58:08.445Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab77f2d9ea6af146192ee3d5d3f90ef8c51c2a512d22a627e87c5aa999b8ea22",
+  "signature": "e462f8b12d7b409f8b3af1f4cab3273bd630b9f8ee0e2cbe694a06343e5edcf9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06927"
 }

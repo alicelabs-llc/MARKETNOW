@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7155874",
+  "certificate_id": "MN-SC-2026-0327111",
   "skill_id": "mn-ai-07876",
   "skill_name": "Wuye-ai/mcp-server-wuye-ai",
-  "issued_at": "2026-07-06T00:19:15.874Z",
-  "expires_at": "2026-07-13T00:19:15.874Z",
+  "issued_at": "2026-07-06T03:58:47.111Z",
+  "expires_at": "2026-07-13T03:58:47.111Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52ff97f22dd96b0d8558d4267ce9d582c0405927a7c3236b41ae712bc9ee2591",
+  "signature": "cadd1ef6d8ace08054df8f1bf557c2746dc35c9e7d54465f9c4fd09a01bab00a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07876"
 }

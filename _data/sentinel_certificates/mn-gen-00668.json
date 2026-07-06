@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6812331",
+  "certificate_id": "MN-SC-2026-0062929",
   "skill_id": "mn-gen-00668",
   "skill_name": "Akyn-ai",
-  "issued_at": "2026-07-06T00:13:32.331Z",
-  "expires_at": "2026-07-13T00:13:32.331Z",
+  "issued_at": "2026-07-06T03:54:22.929Z",
+  "expires_at": "2026-07-13T03:54:22.929Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "157ea3565cff5dfa411ae3d3b72ff244e0e9f8331ecb58e44af14db2ac01a43b",
+  "signature": "01f9c2a35af19563ec3f6efe285ae949b971c9cca7bb5b341fb865d2b9095705",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00668"
 }

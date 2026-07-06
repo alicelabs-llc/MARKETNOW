@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7378226",
+  "certificate_id": "MN-SC-2026-0523801",
   "skill_id": "mn-gen-13107",
   "skill_name": "Visactor/vchart-mcp-server",
-  "issued_at": "2026-07-06T00:22:58.226Z",
-  "expires_at": "2026-07-13T00:22:58.226Z",
+  "issued_at": "2026-07-06T04:02:03.801Z",
+  "expires_at": "2026-07-13T04:02:03.801Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c114793bfd441908426dcd832e94137a1638c44ff3ae5811598f9d7d2fdc2f7",
+  "signature": "bc80895b43f867966563b8e2425d27bf70344a543d2b9827460a65c22b86466f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13107"
 }

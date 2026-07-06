@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6887351",
+  "certificate_id": "MN-SC-2026-0114833",
   "skill_id": "mn-gen-02180",
-  "skill_name": "Claude-mcp-integrations",
-  "issued_at": "2026-07-06T00:14:47.351Z",
-  "expires_at": "2026-07-13T00:14:47.351Z",
+  "skill_name": "integrations",
+  "issued_at": "2026-07-06T03:55:14.833Z",
+  "expires_at": "2026-07-13T03:55:14.833Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8e46bbeb5bb1e273b1d05848411fed3ea19f0e7094cdb6ea38eda278496f68ae",
+  "signature": "d735b1ac92602a938ee815232a5b91621e835a4222df9aa65acae2c3c044461a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02180"
 }

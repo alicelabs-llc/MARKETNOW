@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7653154",
+  "certificate_id": "MN-SC-2026-0713652",
   "skill_id": "mn-prompt-bcb13bd6",
   "skill_name": "Data warehouse data lineage",
-  "issued_at": "2026-07-06T00:27:33.154Z",
-  "expires_at": "2026-07-13T00:27:33.154Z",
+  "issued_at": "2026-07-06T04:05:13.652Z",
+  "expires_at": "2026-07-13T04:05:13.652Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "64d355b9ef21f4a26385f6522be0fae8c114842349dffd8de5ccad939bf09c15",
+  "signature": "b20eccaf8437fa3352d0ccc9b52ef966912b97c62c8d67ec569634a862f957e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bcb13bd6"
 }

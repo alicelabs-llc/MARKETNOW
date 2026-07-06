@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7192664",
+  "certificate_id": "MN-SC-2026-0356881",
   "skill_id": "mn-gen-08946",
   "skill_name": "Mercury-invoicing-mcp",
-  "issued_at": "2026-07-06T00:19:52.664Z",
-  "expires_at": "2026-07-13T00:19:52.664Z",
+  "issued_at": "2026-07-06T03:59:16.881Z",
+  "expires_at": "2026-07-13T03:59:16.881Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7fc3cc3c0c9f8a3cfceff5d5b22caaa2b7270e496fc07009cdda6946966eb7ed",
+  "signature": "8cd16b29fd44948edec7e6c48887d058d4c7a34b61d23d154b103bd009c1b8c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08946"
 }

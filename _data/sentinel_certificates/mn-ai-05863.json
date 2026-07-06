@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7062541",
+  "certificate_id": "MN-SC-2026-0248346",
   "skill_id": "mn-ai-05863",
   "skill_name": "Claude-analyst",
-  "issued_at": "2026-07-06T00:17:42.541Z",
-  "expires_at": "2026-07-13T00:17:42.541Z",
+  "issued_at": "2026-07-06T03:57:28.346Z",
+  "expires_at": "2026-07-13T03:57:28.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "762475f4dc459c9a48c99375650124fa6c940f99b2c9c23d64e49134c6635490",
+  "signature": "b5ade907b3cbc5e240d1b977b30e59d1ead0d24b62ea289d304576ea6ba55546",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-05863"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7225497",
+  "certificate_id": "MN-SC-2026-0381236",
   "skill_id": "mn-gen-09674",
-  "skill_name": "Ntfy-me-mcp",
-  "issued_at": "2026-07-06T00:20:25.497Z",
-  "expires_at": "2026-07-13T00:20:25.497Z",
+  "skill_name": "ntfy-mcp",
+  "issued_at": "2026-07-06T03:59:41.236Z",
+  "expires_at": "2026-07-13T03:59:41.236Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8635b1f7d1e9e5fae936f3e707b251ea63b1c0a749d26ee9038e1eedb31618e5",
+  "signature": "02ac0ffa97dcfbe3f9ec0085548ac6cbf4b903c63d88c5e082654ef3c3a3fcdc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09674"
 }

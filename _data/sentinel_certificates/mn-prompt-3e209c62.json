@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7549731",
+  "certificate_id": "MN-SC-2026-0648556",
   "skill_id": "mn-prompt-3e209c62",
   "skill_name": "Implementador de file upload con resumable y S3",
-  "issued_at": "2026-07-06T00:25:49.731Z",
-  "expires_at": "2026-07-13T00:25:49.731Z",
+  "issued_at": "2026-07-06T04:04:08.556Z",
+  "expires_at": "2026-07-13T04:04:08.556Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b753f0ac98e3afb3d088fbda0e9fc7a83e36cdbe811f1c709442eeeb7a4d5ca",
+  "signature": "c308b07a81381d9baa2d143db3902d96a9a35bd0f0cb90ecfd70ddada55e1d9c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-3e209c62"
 }

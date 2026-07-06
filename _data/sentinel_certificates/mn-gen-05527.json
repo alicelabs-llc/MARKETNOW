@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7047462",
+  "certificate_id": "MN-SC-2026-0238100",
   "skill_id": "mn-gen-05527",
   "skill_name": "Syncraengine/kommo-mcp",
-  "issued_at": "2026-07-06T00:17:27.462Z",
-  "expires_at": "2026-07-13T00:17:27.462Z",
+  "issued_at": "2026-07-06T03:57:18.100Z",
+  "expires_at": "2026-07-13T03:57:18.100Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b1ff87550b4527ae211862f41f717f284bc1ef8c59016ef81f858f42469721b8",
+  "signature": "ef52241a1218463aae7f1ad7607ddad90c8f00e0b093c8cfb6c4d05f0bddc0fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05527"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6794665",
+  "certificate_id": "MN-SC-2026-0049388",
   "skill_id": "mn-gen-00241",
   "skill_name": "Vk0/agent-cost-mcp",
-  "issued_at": "2026-07-06T00:13:14.665Z",
-  "expires_at": "2026-07-13T00:13:14.665Z",
+  "issued_at": "2026-07-06T03:54:09.388Z",
+  "expires_at": "2026-07-13T03:54:09.388Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fd3943768f820b0ee33ea7180041dc9773b7d66b1e52db87883dae44f5fada3a",
+  "signature": "1dc4cc56bd65f252a3c02b585f7ab695f16f8753bbc45b8b583474d7b0518218",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00241"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7888676",
+  "certificate_id": "MN-SC-2026-0880629",
   "skill_id": "mn-amcp-videoeditingmcp",
   "skill_name": "video-editing-mcp",
-  "issued_at": "2026-07-06T00:31:28.676Z",
-  "expires_at": "2026-07-13T00:31:28.676Z",
+  "issued_at": "2026-07-06T04:08:00.629Z",
+  "expires_at": "2026-07-13T04:08:00.629Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "94d0b1133d38bc1a3c66ab719897ba3a8556e0744132a9356f2d57513d6f21b3",
+  "signature": "eed7fa97a5b983be1895018ed0a5923293daaa244bd344bac8e0830b4a7a0ee9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-videoeditingmcp"
 }

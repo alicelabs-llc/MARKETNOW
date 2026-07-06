@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6922666",
+  "certificate_id": "MN-SC-2026-0141932",
   "skill_id": "mn-gen-02779",
   "skill_name": "Mcp-conversation-inspector",
-  "issued_at": "2026-07-06T00:15:22.666Z",
-  "expires_at": "2026-07-13T00:15:22.666Z",
+  "issued_at": "2026-07-06T03:55:41.932Z",
+  "expires_at": "2026-07-13T03:55:41.932Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a66144c67edee6eb7b10d98925606c459bc9b0714c3a89d7b22d47756b134d4b",
+  "signature": "e15bec93b0dbc8bc72083d936ac213ce5019aa81392c1c011a042f5b01daafe5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02779"
 }

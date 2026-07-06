@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7674269",
+  "certificate_id": "MN-SC-2026-0727076",
   "skill_id": "mn-prompt-af3be9b3",
   "skill_name": "Marketplace operations final",
-  "issued_at": "2026-07-06T00:27:54.269Z",
-  "expires_at": "2026-07-13T00:27:54.269Z",
+  "issued_at": "2026-07-06T04:05:27.076Z",
+  "expires_at": "2026-07-13T04:05:27.076Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fca64ae48634e19a2d28ed424f0079c6996288ea9a9e9faef23bcbb1fa593e6d",
+  "signature": "65bbb6da0c6ab33e4a253da8c48c59b503eb0e87fc0be571fd065d76c7174eb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-af3be9b3"
 }

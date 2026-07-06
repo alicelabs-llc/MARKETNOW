@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7054095",
+  "certificate_id": "MN-SC-2026-0241451",
   "skill_id": "mn-gen-05645",
   "skill_name": "Lark-mcp-bot",
-  "issued_at": "2026-07-06T00:17:34.095Z",
-  "expires_at": "2026-07-13T00:17:34.095Z",
+  "issued_at": "2026-07-06T03:57:21.451Z",
+  "expires_at": "2026-07-13T03:57:21.451Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77d10c38fbfa51fa0f46346f95825e4cf4fbea2c51bfe5c7fa94947cc695fad0",
+  "signature": "7675bd404152a32338dcb7a456b5846753034e426c8dbe0ebea2dbdd335fa094",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05645"
 }

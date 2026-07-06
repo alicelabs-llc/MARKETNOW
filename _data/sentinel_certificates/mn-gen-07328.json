@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7130290",
+  "certificate_id": "MN-SC-2026-0304525",
   "skill_id": "mn-gen-07328",
   "skill_name": "Mcp-prompt-loader",
-  "issued_at": "2026-07-06T00:18:50.290Z",
-  "expires_at": "2026-07-13T00:18:50.290Z",
+  "issued_at": "2026-07-06T03:58:24.525Z",
+  "expires_at": "2026-07-13T03:58:24.525Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6345b2252b83824a46c8e4d59dd3b7351eebb05c572dfb1bbdbc3146f22ee105",
+  "signature": "bee84698fcd3182aa002538f7b4a5fb7505565900894df34b453bfa0d5e4fcc5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07328"
 }

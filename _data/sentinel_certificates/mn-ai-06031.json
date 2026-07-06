@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7070258",
+  "certificate_id": "MN-SC-2026-0255141",
   "skill_id": "mn-ai-06031",
   "skill_name": "Mail-agent-workspace",
-  "issued_at": "2026-07-06T00:17:50.258Z",
-  "expires_at": "2026-07-13T00:17:50.258Z",
+  "issued_at": "2026-07-06T03:57:35.141Z",
+  "expires_at": "2026-07-13T03:57:35.141Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "838502bb725604851c0d09e8d413c18e0f58e729341c1de7c7543bed53bf2198",
+  "signature": "b00e9ee9feb0db5124d893cf7403d3c831e4d2670295674680f5c3608d39c965",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-06031"
 }

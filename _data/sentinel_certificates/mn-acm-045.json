@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7697364",
+  "certificate_id": "MN-SC-2026-0742384",
   "skill_id": "mn-acm-045",
   "skill_name": "Context-Aware Tool Routing",
-  "issued_at": "2026-07-06T00:28:17.364Z",
-  "expires_at": "2026-07-13T00:28:17.364Z",
+  "issued_at": "2026-07-06T04:05:42.384Z",
+  "expires_at": "2026-07-13T04:05:42.384Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "827bcee1efda5f09ae78037343a989b63ed3e2dfd27c618e465bcbb54bbd9619",
+  "signature": "3e0ca222cbe9a2a4ce178dbd6d95a441d00126d1d9f7a85acf0d18d70305ada9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-acm-045"
 }

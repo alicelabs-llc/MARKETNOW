@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7334901",
+  "certificate_id": "MN-SC-2026-0484681",
   "skill_id": "mn-gen-12124",
   "skill_name": "Spruthub-mcp-server",
-  "issued_at": "2026-07-06T00:22:14.901Z",
-  "expires_at": "2026-07-13T00:22:14.901Z",
+  "issued_at": "2026-07-06T04:01:24.681Z",
+  "expires_at": "2026-07-13T04:01:24.681Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a4948f8cd493aa20268163d5f2b6686791f629d902b56a62d889e7934d90c964",
+  "signature": "08112a1513ef4e6cc55c11ea3e4c89ead6044ddfb8e44b265bdb9a610110b928",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12124"
 }

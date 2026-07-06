@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7075860",
+  "certificate_id": "MN-SC-2026-0259941",
   "skill_id": "mn-gen-06180",
   "skill_name": "Mcp-agent-memory",
-  "issued_at": "2026-07-06T00:17:55.860Z",
-  "expires_at": "2026-07-13T00:17:55.860Z",
+  "issued_at": "2026-07-06T03:57:39.941Z",
+  "expires_at": "2026-07-13T03:57:39.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70d23e98e478d37714f98f799ab76a59f29c191b8508dcd8ced71f4c53817606",
+  "signature": "214d298b11739213ce87fe42b02f6bac64429c364e4a475f6e4de070776c54ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06180"
 }

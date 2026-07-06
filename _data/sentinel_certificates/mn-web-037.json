@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7831943",
+  "certificate_id": "MN-SC-2026-0842643",
   "skill_id": "mn-web-037",
   "skill_name": "User Agent Parser",
-  "issued_at": "2026-07-06T00:30:31.943Z",
-  "expires_at": "2026-07-13T00:30:31.943Z",
+  "issued_at": "2026-07-06T04:07:22.643Z",
+  "expires_at": "2026-07-13T04:07:22.643Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af8304f5cbebfa2c66c0d2a78c734c887e5de6c29199894dcbf7d330e381ef5f",
+  "signature": "1bfa31bc7c3b038146c3c1a6c5693818edf8faa76bddd463127a489e584a8b28",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-037"
 }

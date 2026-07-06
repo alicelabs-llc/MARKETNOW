@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7852816",
+  "certificate_id": "MN-SC-2026-0855879",
   "skill_id": "mn-fint-039",
   "skill_name": "Payment Fraud Scoring",
-  "issued_at": "2026-07-06T00:30:52.816Z",
-  "expires_at": "2026-07-13T00:30:52.816Z",
+  "issued_at": "2026-07-06T04:07:35.879Z",
+  "expires_at": "2026-07-13T04:07:35.879Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25b32f3fcfdd2fbbfbb917f52b0986f11e280cafbdd64234bf09e84004993ecf",
+  "signature": "e017f48cc0ed76481db05faf04c4686dceed3c8b7192ae594817d833317b945d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-039"
 }

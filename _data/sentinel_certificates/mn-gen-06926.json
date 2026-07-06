@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7108746",
+  "certificate_id": "MN-SC-2026-0288133",
   "skill_id": "mn-gen-06926",
-  "skill_name": "Mcp-inspector",
-  "issued_at": "2026-07-06T00:18:28.746Z",
-  "expires_at": "2026-07-13T00:18:28.746Z",
+  "skill_name": "inspector",
+  "issued_at": "2026-07-06T03:58:08.133Z",
+  "expires_at": "2026-07-13T03:58:08.133Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ca446f470a35273c3504e644e4f26862b1020ed11018d4025e03da3b27d4d3d",
+  "signature": "88ee3114985ce4735bf9b717c504bfc2a82bb0a3790b25c8b022195c2bf9b9df",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06926"
 }

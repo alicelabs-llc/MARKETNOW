@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7717975",
+  "certificate_id": "MN-SC-2026-0756857",
   "skill_id": "mn-edu-00017",
   "skill_name": "Turnitin Plagiarism",
-  "issued_at": "2026-07-06T00:28:37.975Z",
-  "expires_at": "2026-07-13T00:28:37.975Z",
+  "issued_at": "2026-07-06T04:05:56.857Z",
+  "expires_at": "2026-07-13T04:05:56.857Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0656e61c4cafa9bb5179a0a2c77d456e83e9b001955122915454f19567ad0cc0",
+  "signature": "d93fbfd68d0f6fbe3f97affa51a6dda2b7dae1cd6664f16b18bb68b91f411ff4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edu-00017"
 }

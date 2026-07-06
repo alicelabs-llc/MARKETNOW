@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7158586",
+  "certificate_id": "MN-SC-2026-0329851",
   "skill_id": "mn-med-07934",
   "skill_name": "Mcp-agent-social",
-  "issued_at": "2026-07-06T00:19:18.586Z",
-  "expires_at": "2026-07-13T00:19:18.586Z",
+  "issued_at": "2026-07-06T03:58:49.851Z",
+  "expires_at": "2026-07-13T03:58:49.851Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "20fcb7aa7af550138a99f9b15a9820fe74c31035d73bbd6acdc301d6d14749c9",
+  "signature": "47b9338cf7ebc12a8ee6fe3cdaef58d767556ee9c62cad8b7f915ac92ab4ba6e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-med-07934"
 }

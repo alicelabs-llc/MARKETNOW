@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7384156",
+  "certificate_id": "MN-SC-2026-0527593",
   "skill_id": "mn-gen-13192",
   "skill_name": "Visionagent",
-  "issued_at": "2026-07-06T00:23:04.156Z",
-  "expires_at": "2026-07-13T00:23:04.156Z",
+  "issued_at": "2026-07-06T04:02:07.593Z",
+  "expires_at": "2026-07-13T04:02:07.593Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "082bce2f6615a42a516005d69cca07dc1e14ae89eb61b1471f2a16a5398b2ada",
+  "signature": "f39246c247462c998c13c836821f62e4468ade0ece4864901715b89384fed010",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13192"
 }

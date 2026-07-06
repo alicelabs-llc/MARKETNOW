@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7394906",
+  "certificate_id": "MN-SC-2026-0536955",
   "skill_id": "mn-gen-13407",
   "skill_name": "Wezterm-mcp",
-  "issued_at": "2026-07-06T00:23:14.906Z",
-  "expires_at": "2026-07-13T00:23:14.906Z",
+  "issued_at": "2026-07-06T04:02:16.955Z",
+  "expires_at": "2026-07-13T04:02:16.955Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e549c09616ff3e57d757835c3389379ea9d9de706628e416ca0e89ecfe205b8",
+  "signature": "eec4109ec6e6d5930b58011126014788d4dab4107a8eca2749a6cde6d604032b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13407"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7658855",
+  "certificate_id": "MN-SC-2026-0716770",
   "skill_id": "mn-prompt-646a6614",
   "skill_name": "SaaS metrics board reporting",
-  "issued_at": "2026-07-06T00:27:38.855Z",
-  "expires_at": "2026-07-13T00:27:38.855Z",
+  "issued_at": "2026-07-06T04:05:16.770Z",
+  "expires_at": "2026-07-13T04:05:16.770Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14a5cf64f7fe5bee80e5966ccf99d69437bbea0bf4695c3f11bc95a80c2e1310",
+  "signature": "bcadbdf47ec21498b7cf5f8e52117f8f30fb691d9db9b6ef2a782e1ef951babf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-646a6614"
 }

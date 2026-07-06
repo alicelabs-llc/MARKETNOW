@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7347127",
+  "certificate_id": "MN-SC-2026-0497480",
   "skill_id": "mn-ai-12432",
   "skill_name": "Bachstudio/taiwan-holiday-mcp",
-  "issued_at": "2026-07-06T00:22:27.127Z",
-  "expires_at": "2026-07-13T00:22:27.127Z",
+  "issued_at": "2026-07-06T04:01:37.480Z",
+  "expires_at": "2026-07-13T04:01:37.480Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d962e107e3cd0204ddae139d0ee9f23b241db42139d0272d680d5fd568a95b73",
+  "signature": "5939a768f0d0bbb3d98f73ec67d8f986c1d923d0a63d71cc2cc60adbf56a56fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-12432"
 }

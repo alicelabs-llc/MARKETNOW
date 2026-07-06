@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7344024",
+  "certificate_id": "MN-SC-2026-0494707",
   "skill_id": "mn-gen-12346",
-  "skill_name": "Swagger-mcp",
-  "issued_at": "2026-07-06T00:22:24.024Z",
-  "expires_at": "2026-07-13T00:22:24.024Z",
+  "skill_name": "mcp-swagger-server",
+  "issued_at": "2026-07-06T04:01:34.707Z",
+  "expires_at": "2026-07-13T04:01:34.707Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68ea2e15fb5a69c3d6e93ffecd0344662b35360e3b66d4e05ffb8aef01261990",
+  "signature": "ce6aba657cabc4e74c223846b16e584e4efeb3ebc6a96ada4af29bf87ae3ef87",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12346"
 }

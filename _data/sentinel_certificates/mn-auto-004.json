@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7790355",
+  "certificate_id": "MN-SC-2026-0815429",
   "skill_id": "mn-auto-004",
   "skill_name": "Webhook Trigger",
-  "issued_at": "2026-07-06T00:29:50.355Z",
-  "expires_at": "2026-07-13T00:29:50.355Z",
+  "issued_at": "2026-07-06T04:06:55.429Z",
+  "expires_at": "2026-07-13T04:06:55.429Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e619ecd03845f5fee0ef5e9e2285d26403a52c75ffc92be448e5e6c9e41771af",
+  "signature": "007f023b56715a5d98851f270f933fec11b583974b444715091ada4bd1b6e289",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-auto-004"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7852799",
+  "certificate_id": "MN-SC-2026-0855934",
   "skill_id": "mn-fint-037",
   "skill_name": "Banking API Aggregator",
-  "issued_at": "2026-07-06T00:30:52.799Z",
-  "expires_at": "2026-07-13T00:30:52.799Z",
+  "issued_at": "2026-07-06T04:07:35.934Z",
+  "expires_at": "2026-07-13T04:07:35.934Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9abb2dc25df73fcb38d19208de944b5011edbdffd573b4f5e8ccf5fb8300f4a",
+  "signature": "7a71a776930224c05b27dbdc326c645490d7f7f5678b63baa41ca8e730c77917",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-037"
 }

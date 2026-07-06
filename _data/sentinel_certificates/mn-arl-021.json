@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7678496",
+  "certificate_id": "MN-SC-2026-0729572",
   "skill_id": "mn-arl-021",
   "skill_name": "ReAct Pattern Enforcer",
-  "issued_at": "2026-07-06T00:27:58.496Z",
-  "expires_at": "2026-07-13T00:27:58.496Z",
+  "issued_at": "2026-07-06T04:05:29.572Z",
+  "expires_at": "2026-07-13T04:05:29.572Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e30e45373310d319ba9f12b2c8cbe456c83eb2d0e7ef65cc793c460f01f9e74",
+  "signature": "0ac8b2940cdb7984cdf02924188d0d81e2cd82ee64428a2bd72c8af0a4a2771a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-arl-021"
 }

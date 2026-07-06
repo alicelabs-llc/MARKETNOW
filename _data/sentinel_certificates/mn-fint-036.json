@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7852157",
+  "certificate_id": "MN-SC-2026-0855331",
   "skill_id": "mn-fint-036",
   "skill_name": "FX Rate Optimizer",
-  "issued_at": "2026-07-06T00:30:52.157Z",
-  "expires_at": "2026-07-13T00:30:52.157Z",
+  "issued_at": "2026-07-06T04:07:35.331Z",
+  "expires_at": "2026-07-13T04:07:35.331Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dea99160f0f554dba072e717c16d49c8d3fa10c745abc74505ba631a7a817396",
+  "signature": "d99161c242e95754923ae34d9245992e98957c2ce9af94696d79bf903cfcc61e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-fint-036"
 }

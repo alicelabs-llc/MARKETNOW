@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7369958",
+  "certificate_id": "MN-SC-2026-0516786",
   "skill_id": "mn-gen-12923",
   "skill_name": "Uiquarter",
-  "issued_at": "2026-07-06T00:22:49.958Z",
-  "expires_at": "2026-07-13T00:22:49.958Z",
+  "issued_at": "2026-07-06T04:01:56.786Z",
+  "expires_at": "2026-07-13T04:01:56.786Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42e5ff74b5f055459706c65eaaca07490b3b24eaa8db1d1145aaa66caefc4c82",
+  "signature": "e6bc18d3b1085ca03c5b48d6d186c5f0f327a05ccd81dc0189550bdb19fd9802",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12923"
 }

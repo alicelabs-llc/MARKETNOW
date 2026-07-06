@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7444136",
+  "certificate_id": "MN-SC-2026-0576153",
   "skill_id": "mn-prompt-a67b8096",
   "skill_name": "Especialista SIEM + Splunk/Datadog",
-  "issued_at": "2026-07-06T00:24:04.136Z",
-  "expires_at": "2026-07-13T00:24:04.136Z",
+  "issued_at": "2026-07-06T04:02:56.153Z",
+  "expires_at": "2026-07-13T04:02:56.153Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aad0ac86cc5b703f14a478b76a9ce2adf7a4c312366de7015d84d805d4072e3d",
+  "signature": "fb514fda582821db43e39a999d5d53f7f8fad345e09cacf3b0639d8dbb67a895",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a67b8096"
 }

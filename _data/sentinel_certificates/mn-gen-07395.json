@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7132521",
+  "certificate_id": "MN-SC-2026-0306278",
   "skill_id": "mn-gen-07395",
   "skill_name": "Recraft-ai/mcp-recraft-server",
-  "issued_at": "2026-07-06T00:18:52.521Z",
-  "expires_at": "2026-07-13T00:18:52.521Z",
+  "issued_at": "2026-07-06T03:58:26.278Z",
+  "expires_at": "2026-07-13T03:58:26.278Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a35e98ed69362c07fbb5f339b95467549bd38697cf48123929a2b0c74a0c9bc9",
+  "signature": "2babd2ac047a94d5ff36bb57207765e0c6c024f1399c322f2ce35006bf4fd96c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07395"
 }

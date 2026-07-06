@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7024698",
+  "certificate_id": "MN-SC-2026-0219878",
   "skill_id": "mn-gen-04989",
   "skill_name": "Huckleberry-ts",
-  "issued_at": "2026-07-06T00:17:04.698Z",
-  "expires_at": "2026-07-13T00:17:04.698Z",
+  "issued_at": "2026-07-06T03:56:59.878Z",
+  "expires_at": "2026-07-13T03:56:59.878Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97e8339fb3bffb9444ea7b76b8976dcbda2c3cd96d417c3a195c2ca1fda97e31",
+  "signature": "42b7cf0ccc787655980c608624e5369b70db11574c30498c4bc012355a0a8b07",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04989"
 }

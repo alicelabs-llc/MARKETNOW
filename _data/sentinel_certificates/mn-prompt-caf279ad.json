@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7495161",
+  "certificate_id": "MN-SC-2026-0615257",
   "skill_id": "mn-prompt-caf279ad",
   "skill_name": "Especialista Chronic Disease Management",
-  "issued_at": "2026-07-06T00:24:55.161Z",
-  "expires_at": "2026-07-13T00:24:55.161Z",
+  "issued_at": "2026-07-06T04:03:35.257Z",
+  "expires_at": "2026-07-13T04:03:35.257Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbc3bab168cf0a258177d98e90eb057ad389999ed37e70a400ce8ca974973a47",
+  "signature": "82e27162273af547b37ae20b8341335634392a69996d2038d3e4e45b1af9773e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-caf279ad"
 }

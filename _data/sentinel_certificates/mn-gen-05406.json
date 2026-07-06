@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7042669",
+  "certificate_id": "MN-SC-2026-0234657",
   "skill_id": "mn-gen-05406",
   "skill_name": "Newyorkcompute/kalshi",
-  "issued_at": "2026-07-06T00:17:22.669Z",
-  "expires_at": "2026-07-13T00:17:22.669Z",
+  "issued_at": "2026-07-06T03:57:14.657Z",
+  "expires_at": "2026-07-13T03:57:14.657Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3a001c6854480eae7a9a20d28d1b8a56ea33974d163b23cb0d11a42d5e13f93",
+  "signature": "c7dfa571964057539aedb6814d5242cda68f6ca8626d701c55b075577b7a10e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05406"
 }

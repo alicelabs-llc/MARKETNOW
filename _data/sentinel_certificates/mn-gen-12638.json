@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7356970",
+  "certificate_id": "MN-SC-2026-0505626",
   "skill_id": "mn-gen-12638",
-  "skill_name": "Tickadoo/mcp-server",
-  "issued_at": "2026-07-06T00:22:36.970Z",
-  "expires_at": "2026-07-13T00:22:36.970Z",
+  "skill_name": "tickadoo-mcp",
+  "issued_at": "2026-07-06T04:01:45.626Z",
+  "expires_at": "2026-07-13T04:01:45.626Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "82269206af85cd3430da991c81760401fba35f47bed02af759846bf7f91264ee",
+  "signature": "7b4926f70c7d3295c095b305793225c5224df36df46ad232d9256da199949701",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12638"
 }

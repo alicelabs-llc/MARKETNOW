@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6842369",
+  "certificate_id": "MN-SC-2026-0082903",
   "skill_id": "mn-dat-01323",
   "skill_name": "Bedbook",
-  "issued_at": "2026-07-06T00:14:02.369Z",
-  "expires_at": "2026-07-13T00:14:02.369Z",
+  "issued_at": "2026-07-06T03:54:42.903Z",
+  "expires_at": "2026-07-13T03:54:42.903Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d9dd4ea57039de711108403beff157c531a1c88fc65ad5f9d986fd4d8a8f2032",
+  "signature": "687697aa4c3a0d6f397b9a26dcd8eef4a44a98d2bb96e93f7298c16d584698ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-01323"
 }

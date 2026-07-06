@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6888804",
+  "certificate_id": "MN-SC-2026-0115877",
   "skill_id": "mn-gen-02196",
-  "skill_name": "Claude-mcp-servers",
-  "issued_at": "2026-07-06T00:14:48.804Z",
-  "expires_at": "2026-07-13T00:14:48.804Z",
+  "skill_name": "claude-soul",
+  "issued_at": "2026-07-06T03:55:15.877Z",
+  "expires_at": "2026-07-13T03:55:15.877Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 7,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 3,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14b42a5b9545cc4a43d51903dafef155afd09c4cc1a9033fbc7e23b2a80d8aff",
+  "signature": "0e51c66ed0533fe71e62c4005224f164fbe333cd0f543c6506997fb0135f63ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02196"
 }

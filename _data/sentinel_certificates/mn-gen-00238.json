@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6794643",
+  "certificate_id": "MN-SC-2026-0049415",
   "skill_id": "mn-gen-00238",
   "skill_name": "Agent-communication-mcp",
-  "issued_at": "2026-07-06T00:13:14.643Z",
-  "expires_at": "2026-07-13T00:13:14.643Z",
+  "issued_at": "2026-07-06T03:54:09.415Z",
+  "expires_at": "2026-07-13T03:54:09.415Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d44b7800b5f49067c3f262f88ddf1d3bd678314b48bc23dac58ee6907f1beca4",
+  "signature": "f09fb1bddd06c4146647e4f19a38f3e591d8aada8cca552f29708233e3efef85",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00238"
 }

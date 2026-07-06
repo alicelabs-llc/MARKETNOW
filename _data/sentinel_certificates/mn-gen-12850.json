@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7367235",
+  "certificate_id": "MN-SC-2026-0512881",
   "skill_id": "mn-gen-12850",
   "skill_name": "Tsgram-mcp",
-  "issued_at": "2026-07-06T00:22:47.235Z",
-  "expires_at": "2026-07-13T00:22:47.235Z",
+  "issued_at": "2026-07-06T04:01:52.881Z",
+  "expires_at": "2026-07-13T04:01:52.881Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68803862ba93551aec7a14dc11471e1bfcfedc1b3af9331097cf27b29989c58c",
+  "signature": "8313f981092b591ac81bbc73e41793c6bdc64e3999b6467be5980be2cd1f7a10",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12850"
 }

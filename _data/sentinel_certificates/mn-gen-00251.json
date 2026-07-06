@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6795200",
+  "certificate_id": "MN-SC-2026-0050706",
   "skill_id": "mn-gen-00251",
   "skill_name": "Agntk/agent-harness",
-  "issued_at": "2026-07-06T00:13:15.200Z",
-  "expires_at": "2026-07-13T00:13:15.200Z",
+  "issued_at": "2026-07-06T03:54:10.706Z",
+  "expires_at": "2026-07-13T03:54:10.706Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85353ccb91cf50d71f340a524f78335f018eb5e333010f6cf249316c7710f7d1",
+  "signature": "b57af44432bc0b174dcea42c153dd1c1b74123c7223d6f8198f4a773ecb5b5b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00251"
 }

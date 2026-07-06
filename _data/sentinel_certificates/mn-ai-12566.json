@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7354218",
+  "certificate_id": "MN-SC-2026-0503386",
   "skill_id": "mn-ai-12566",
   "skill_name": "Mcp-testrail",
-  "issued_at": "2026-07-06T00:22:34.218Z",
-  "expires_at": "2026-07-13T00:22:34.218Z",
+  "issued_at": "2026-07-06T04:01:43.386Z",
+  "expires_at": "2026-07-13T04:01:43.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81cad2a328a4f5d22abb9c3948d50c71021429b7d122b8d6c9a1a826e37297d8",
+  "signature": "becff87ec20803dd450e8f6130020f8db49d5615effebb5c62791dbcb8ad8765",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-12566"
 }

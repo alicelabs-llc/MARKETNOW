@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6998853",
+  "certificate_id": "MN-SC-2026-0199652",
   "skill_id": "mn-gen-04373",
   "skill_name": "Ts-mcp-server",
-  "issued_at": "2026-07-06T00:16:38.853Z",
-  "expires_at": "2026-07-13T00:16:38.853Z",
+  "issued_at": "2026-07-06T03:56:39.652Z",
+  "expires_at": "2026-07-13T03:56:39.652Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e1573fdf157b221bdcf5d80602a75bc0b3e031179b0c1fe3e4dafd5b8f8fd475",
+  "signature": "39bcdbb348bb61e1429ef0cee83f740b65f40165c600f091cce7cd4ed65ef9f1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04373"
 }

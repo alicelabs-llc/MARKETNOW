@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6850037",
+  "certificate_id": "MN-SC-2026-0088577",
   "skill_id": "mn-gen-01512",
-  "skill_name": "Box-mcp-server",
-  "issued_at": "2026-07-06T00:14:10.037Z",
-  "expires_at": "2026-07-13T00:14:10.037Z",
+  "skill_name": "Box",
+  "issued_at": "2026-07-06T03:54:48.577Z",
+  "expires_at": "2026-07-13T03:54:48.577Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5572a4be7d515fc67a7edcdf1a07990fd62a889306ce480c5a65dc3f18611b57",
+  "signature": "6faa845029e329da436f612d15edbc8302d436e9f5ba82f714e469aff60988e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01512"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7797834",
+  "certificate_id": "MN-SC-2026-0821411",
   "skill_id": "mn-code-035",
   "skill_name": "Code Quality Gate",
-  "issued_at": "2026-07-06T00:29:57.834Z",
-  "expires_at": "2026-07-13T00:29:57.834Z",
+  "issued_at": "2026-07-06T04:07:01.411Z",
+  "expires_at": "2026-07-13T04:07:01.411Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "34226f1deb4edebee7d57aead002bfd85d8e0f86467e7e7c16a5f8aa2598268e",
+  "signature": "d0201476c569be428004fa26e93e5083a8b6f2cc1820054a477984220fa150e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-035"
 }

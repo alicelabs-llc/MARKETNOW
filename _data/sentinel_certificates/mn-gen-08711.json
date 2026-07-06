@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7185872",
+  "certificate_id": "MN-SC-2026-0351353",
   "skill_id": "mn-gen-08711",
   "skill_name": "Mcp-servers-hub",
-  "issued_at": "2026-07-06T00:19:45.872Z",
-  "expires_at": "2026-07-13T00:19:45.872Z",
+  "issued_at": "2026-07-06T03:59:11.353Z",
+  "expires_at": "2026-07-13T03:59:11.353Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ed1eed8665edfbe754729a86b7499a1c4288fe54d5810f849ce442af156f903",
+  "signature": "b7ae52cf927d4ca934fca170502db33ef78d98abdbd3238e4cea45cde8dda8f0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08711"
 }

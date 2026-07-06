@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7094486",
+  "certificate_id": "MN-SC-2026-0276376",
   "skill_id": "mn-gen-06609",
   "skill_name": "Mcp-diagnostics",
-  "issued_at": "2026-07-06T00:18:14.486Z",
-  "expires_at": "2026-07-13T00:18:14.486Z",
+  "issued_at": "2026-07-06T03:57:56.376Z",
+  "expires_at": "2026-07-13T03:57:56.376Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "452fd14eb8a9f88ec7d4d932d934021441305b97a603e5b359170005f32668c9",
+  "signature": "9bad64202929584929270bf8824c88b90f2c6f5901b80fa27ac7d0a6abbf5d5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06609"
 }

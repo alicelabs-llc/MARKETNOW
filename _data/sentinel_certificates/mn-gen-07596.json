@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7139719",
+  "certificate_id": "MN-SC-2026-0313699",
   "skill_id": "mn-gen-07596",
   "skill_name": "Staminna/directus-mcp-server",
-  "issued_at": "2026-07-06T00:18:59.719Z",
-  "expires_at": "2026-07-13T00:18:59.719Z",
+  "issued_at": "2026-07-06T03:58:33.699Z",
+  "expires_at": "2026-07-13T03:58:33.699Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "197e2714f4f32ce82ac54e8f592570bc84a8edde4151d70c266229c403e219cd",
+  "signature": "8c06ed04387d6c1d9987bd0501958e5a99ec10f90e0afb79f2146bf52270ffa6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07596"
 }

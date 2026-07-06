@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7012586",
+  "certificate_id": "MN-SC-2026-0210321",
   "skill_id": "mn-gen-04675",
   "skill_name": "Govee-mcp-server",
-  "issued_at": "2026-07-06T00:16:52.586Z",
-  "expires_at": "2026-07-13T00:16:52.586Z",
+  "issued_at": "2026-07-06T03:56:50.321Z",
+  "expires_at": "2026-07-13T03:56:50.321Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d32163e252a6767ea252e50cd3752e6067219f8cea7be57359ddfdca107d6168",
+  "signature": "0012403da0d93bb4406be033a94c2afca8ad8948799631890ebccfcaf1508c5a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04675"
 }

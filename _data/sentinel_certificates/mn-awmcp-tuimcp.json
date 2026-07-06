@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0924367",
+  "skill_id": "mn-awmcp-tuimcp",
+  "skill_name": "tui-mcp",
+  "issued_at": "2026-07-06T04:08:44.367Z",
+  "expires_at": "2026-07-13T04:08:44.367Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "2e93589af7f70849e6886ab53fb329e69d29dca2b525c6d72ead6ef405a88bba",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tuimcp"
+}

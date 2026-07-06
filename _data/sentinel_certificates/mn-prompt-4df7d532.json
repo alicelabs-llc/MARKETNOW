@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7598185",
+  "certificate_id": "MN-SC-2026-0683635",
   "skill_id": "mn-prompt-4df7d532",
   "skill_name": "Product feature flagging gradual",
-  "issued_at": "2026-07-06T00:26:38.185Z",
-  "expires_at": "2026-07-13T00:26:38.185Z",
+  "issued_at": "2026-07-06T04:04:43.635Z",
+  "expires_at": "2026-07-13T04:04:43.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b3002ecd54fc933880b0b62ca48dd24899a041c26921897f82158cf34430dcf",
+  "signature": "7a2c391e70db16ac11da25ae9caf82158324d796218eab0f0b19a99ded463cfd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4df7d532"
 }

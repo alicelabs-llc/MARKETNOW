@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7550476",
+  "certificate_id": "MN-SC-2026-0648990",
   "skill_id": "mn-prompt-439b5d6f",
   "skill_name": "Implementador de full-text search con typesense/meilisearch",
-  "issued_at": "2026-07-06T00:25:50.476Z",
-  "expires_at": "2026-07-13T00:25:50.476Z",
+  "issued_at": "2026-07-06T04:04:08.990Z",
+  "expires_at": "2026-07-13T04:04:08.990Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb3f29f5536a62da0c83840ffddbafbdd5ac841e1f68613eb1938bd858ead7f0",
+  "signature": "61a5b014aec95769bad8cc9a11dc80552fa2ad0751dd440d17605e7e92154124",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-439b5d6f"
 }

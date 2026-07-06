@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6968586",
+  "certificate_id": "MN-SC-2026-0175794",
   "skill_id": "mn-gen-03685",
   "skill_name": "Claude-versatile-root",
-  "issued_at": "2026-07-06T00:16:08.586Z",
-  "expires_at": "2026-07-13T00:16:08.586Z",
+  "issued_at": "2026-07-06T03:56:15.794Z",
+  "expires_at": "2026-07-13T03:56:15.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d5e07ca323b3a370e95ac9cca513b5e462014de46ffa504e32868d56b61f0b21",
+  "signature": "71003afddf2cf8bc1a2e1a9ab67f1c13a17796b3807ac7156f50379f253da607",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03685"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7269207",
+  "certificate_id": "MN-SC-2026-0426230",
   "skill_id": "mn-gen-10646",
   "skill_name": "Premiere-ai-agent-workspace",
-  "issued_at": "2026-07-06T00:21:09.207Z",
-  "expires_at": "2026-07-13T00:21:09.207Z",
+  "issued_at": "2026-07-06T04:00:26.230Z",
+  "expires_at": "2026-07-13T04:00:26.230Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a0b2156d6e53c17b4e85d15250ed0d6e2cfbba738cfd8f9e7952a70300113cc",
+  "signature": "c474a0adaf14d9bae81098467f787a1018455b3a51ffa8255f60f3ef63696955",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10646"
 }

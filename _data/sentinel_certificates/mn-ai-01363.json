@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6844125",
+  "certificate_id": "MN-SC-2026-0084632",
   "skill_id": "mn-ai-01363",
   "skill_name": "Probelabs/big-brain",
-  "issued_at": "2026-07-06T00:14:04.125Z",
-  "expires_at": "2026-07-13T00:14:04.125Z",
+  "issued_at": "2026-07-06T03:54:44.632Z",
+  "expires_at": "2026-07-13T03:54:44.632Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7fe87150e5289a80e582690c1dbc7dd269bda508a0d174c1d36d961273219f13",
+  "signature": "0e8cfc794d6dd348f6be9cce843184032e788fce7950a728e1f860aa4fecc669",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01363"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7441621",
+  "certificate_id": "MN-SC-2026-0574658",
   "skill_id": "mn-prompt-b60c83c2",
   "skill_name": "Especialista OWASP Top 10 Audit",
-  "issued_at": "2026-07-06T00:24:01.621Z",
-  "expires_at": "2026-07-13T00:24:01.621Z",
+  "issued_at": "2026-07-06T04:02:54.658Z",
+  "expires_at": "2026-07-13T04:02:54.658Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f325cc9fc508df2dae4ce43b07221acc4bfae2d965be1947c3e16ff04802660a",
+  "signature": "c74b799f30f987695068678f168da010cdb734ac2b50f46e65f82181791a3a5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b60c83c2"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7798843",
+  "certificate_id": "MN-SC-2026-0822497",
   "skill_id": "mn-comm-001",
   "skill_name": "Stripe Payment Processor",
-  "issued_at": "2026-07-06T00:29:58.843Z",
-  "expires_at": "2026-07-13T00:29:58.843Z",
+  "issued_at": "2026-07-06T04:07:02.497Z",
+  "expires_at": "2026-07-13T04:07:02.497Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb89914441d42c7d953a015f3643569135f90494e569c6222a4dc4c21ac48220",
+  "signature": "bbc27dc7b0d112ccca30218fe4ec4cf2e31f9855f363a486de7dbb1c144f7b28",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-001"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7287516",
+  "certificate_id": "MN-SC-2026-0438535",
   "skill_id": "mn-gen-11037",
   "skill_name": "Anthropic-ai/dxt",
-  "issued_at": "2026-07-06T00:21:27.516Z",
-  "expires_at": "2026-07-13T00:21:27.516Z",
+  "issued_at": "2026-07-06T04:00:38.535Z",
+  "expires_at": "2026-07-13T04:00:38.535Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "426b06ccd849e3696500159db57e5c925af9e03a0de66fe2cebdbd2886f0ee43",
+  "signature": "0ca3eed768b47a22d30b5a124b8d4aad69a005406a2b776e51e712a6b6a928d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11037"
 }

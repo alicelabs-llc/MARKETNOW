@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7118571",
+  "certificate_id": "MN-SC-2026-0295469",
   "skill_id": "mn-gen-07109",
   "skill_name": "Rethunk/mcp-multi-root-git",
-  "issued_at": "2026-07-06T00:18:38.571Z",
-  "expires_at": "2026-07-13T00:18:38.571Z",
+  "issued_at": "2026-07-06T03:58:15.469Z",
+  "expires_at": "2026-07-13T03:58:15.469Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1479825dc678888665ebddf7bf1a8e76277dad4336b3473119699bb31fc8d140",
+  "signature": "f7dbed7592b41b88924889c45541b490e96cc5030a6e174009afa365788ad3dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07109"
 }

@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-7018907",
+  "certificate_id": "MN-SC-2026-0215590",
   "skill_id": "mn-gen-04832",
-  "skill_name": "Harvest-mcp",
-  "issued_at": "2026-07-06T00:16:58.907Z",
-  "expires_at": "2026-07-13T00:16:58.907Z",
+  "skill_name": "harvest-mcp-server",
+  "issued_at": "2026-07-06T03:56:55.590Z",
+  "expires_at": "2026-07-13T03:56:55.590Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 6,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 4,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3a791ac7de8d8fb57359716def5984d9574a50a44f396ce6bb3a00462214f0b1",
+  "signature": "1f45c38deff3d153359eaa38bb05dfcf90f79a843f4e5f23fe9b13b83109eaab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04832"
 }

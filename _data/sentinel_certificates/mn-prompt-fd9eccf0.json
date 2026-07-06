@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7414386",
+  "certificate_id": "MN-SC-2026-0551913",
   "skill_id": "mn-prompt-fd9eccf0",
   "skill_name": "Generador de Preguntas de Entrevista Técnica",
-  "issued_at": "2026-07-06T00:23:34.386Z",
-  "expires_at": "2026-07-13T00:23:34.386Z",
+  "issued_at": "2026-07-06T04:02:31.913Z",
+  "expires_at": "2026-07-13T04:02:31.913Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b5a53a8a1dfc7e4b13f3b89bbb70c81a9a11acc4063048248df261e8509ee511",
+  "signature": "b7d0ed5be82d6755c2f896b5eeae0c9bfd0289c48d2371583eed5f290b41db84",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fd9eccf0"
 }

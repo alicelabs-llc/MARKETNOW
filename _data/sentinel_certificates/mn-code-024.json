@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7796829",
+  "certificate_id": "MN-SC-2026-0820549",
   "skill_id": "mn-code-024",
   "skill_name": "Code Diff Generator",
-  "issued_at": "2026-07-06T00:29:56.829Z",
-  "expires_at": "2026-07-13T00:29:56.829Z",
+  "issued_at": "2026-07-06T04:07:00.549Z",
+  "expires_at": "2026-07-13T04:07:00.549Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69cd8bf9e449e45d3bec06159f291ca0e289b4a5775898f952e725182ebd6b8d",
+  "signature": "89b28267bcacd457c020e724440cfd982d8c89494cd41901cd1a2c9daf219d95",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-code-024"
 }

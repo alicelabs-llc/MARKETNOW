@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6825827",
+  "certificate_id": "MN-SC-2026-0071848",
   "skill_id": "mn-gen-00908",
   "skill_name": "TargetProcessMCP",
-  "issued_at": "2026-07-06T00:13:45.827Z",
-  "expires_at": "2026-07-13T00:13:45.827Z",
+  "issued_at": "2026-07-06T03:54:31.848Z",
+  "expires_at": "2026-07-13T03:54:31.848Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29d63ca00dc7807791a77b2e8726aa4e4760dcad8651f1e41c284103e1074da8",
+  "signature": "fbaf2032fa1ebbac22024a34e969e4a50afe419bbe1901e782b3fbb24b41ca46",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00908"
 }

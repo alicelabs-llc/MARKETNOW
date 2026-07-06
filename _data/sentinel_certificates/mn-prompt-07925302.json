@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7647385",
+  "certificate_id": "MN-SC-2026-0710081",
   "skill_id": "mn-prompt-07925302",
   "skill_name": "NLP for customer feedback",
-  "issued_at": "2026-07-06T00:27:27.385Z",
-  "expires_at": "2026-07-13T00:27:27.385Z",
+  "issued_at": "2026-07-06T04:05:10.081Z",
+  "expires_at": "2026-07-13T04:05:10.081Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13007480af35e324b575dd92389e72bf6187140e4e8cb28a95b247af0889df84",
+  "signature": "64d6980f5cda2acdf6083e7a9d447fc8d03237672cc0bf3e7f84a5965d417022",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-07925302"
 }

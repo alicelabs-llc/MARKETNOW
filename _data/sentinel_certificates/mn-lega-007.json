@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7864337",
+  "certificate_id": "MN-SC-2026-0864851",
   "skill_id": "mn-lega-007",
   "skill_name": "Regulatory Change Tracker",
-  "issued_at": "2026-07-06T00:31:04.337Z",
-  "expires_at": "2026-07-13T00:31:04.337Z",
+  "issued_at": "2026-07-06T04:07:44.851Z",
+  "expires_at": "2026-07-13T04:07:44.851Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a39fc6c1ba583bd93a06cbd346492435d56dfbb1925396996e28e44e5fcf7704",
+  "signature": "35c3f44c6530524c23fdd2b6d6b7b6ad4737aa59e966db06783d6182908ea39f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-lega-007"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7173713",
+  "certificate_id": "MN-SC-2026-0339637",
   "skill_id": "mn-gen-08248",
   "skill_name": "Mcp-websocket",
-  "issued_at": "2026-07-06T00:19:33.713Z",
-  "expires_at": "2026-07-13T00:19:33.713Z",
+  "issued_at": "2026-07-06T03:58:59.637Z",
+  "expires_at": "2026-07-13T03:58:59.637Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "230a717d1d513af3032d3c3912b5a644d4765c451292273cab383f7718362848",
+  "signature": "8cf354547983475f6f63a7528ebf6c74687bc95915a4f820da186691cb5dd72b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08248"
 }

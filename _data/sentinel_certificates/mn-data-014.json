@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7805080",
+  "certificate_id": "MN-SC-2026-0826944",
   "skill_id": "mn-data-014",
   "skill_name": "Data Profiler",
-  "issued_at": "2026-07-06T00:30:05.080Z",
-  "expires_at": "2026-07-13T00:30:05.080Z",
+  "issued_at": "2026-07-06T04:07:06.944Z",
+  "expires_at": "2026-07-13T04:07:06.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee6e027fd6b2540633d5be5ff467eafbb3ac4f29a7885e7a9f62777dc28d000a",
+  "signature": "0b994a8150a903c976a55a78fe3ca0fb676459936931aeeba17211bd02aefe99",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-data-014"
 }

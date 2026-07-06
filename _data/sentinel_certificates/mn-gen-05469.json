@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7045930",
+  "certificate_id": "MN-SC-2026-0236787",
   "skill_id": "mn-gen-05469",
   "skill_name": "Kilo-dev-mcp-server",
-  "issued_at": "2026-07-06T00:17:25.930Z",
-  "expires_at": "2026-07-13T00:17:25.930Z",
+  "issued_at": "2026-07-06T03:57:16.787Z",
+  "expires_at": "2026-07-13T03:57:16.787Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a3e5dd8f6ef6563980322673374957bd8841641630af1179d14025aa13b20e88",
+  "signature": "d156686a15732fe9c1aaf4b1e4d4a020289ee69f723f23b25d25055595576ed7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05469"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7128014",
+  "certificate_id": "MN-SC-2026-0302665",
   "skill_id": "mn-gen-07283",
   "skill_name": "Mcp-ping",
-  "issued_at": "2026-07-06T00:18:48.014Z",
-  "expires_at": "2026-07-13T00:18:48.014Z",
+  "issued_at": "2026-07-06T03:58:22.665Z",
+  "expires_at": "2026-07-13T03:58:22.665Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96b9ab98303bb927d3abf8144c9579d768208d9584bc3edbbc7c6a8e709fac1e",
+  "signature": "04fb45fa2642421db9256c96b98ad3fda41e439eb6dc99f7f7969a8e76eda305",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07283"
 }

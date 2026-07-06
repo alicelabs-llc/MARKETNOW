@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7249519",
+  "certificate_id": "MN-SC-2026-0402868",
   "skill_id": "mn-gen-10186",
-  "skill_name": "Pantheon-mcp",
-  "issued_at": "2026-07-06T00:20:49.519Z",
-  "expires_at": "2026-07-13T00:20:49.519Z",
+  "skill_name": "pantheon-mcp",
+  "issued_at": "2026-07-06T04:00:02.868Z",
+  "expires_at": "2026-07-13T04:00:02.868Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0827da39c4025e56afc1c4522d641007a9f28611f5f4d6d930c5efd5b0789a30",
+  "signature": "68dc1727435136abdb9094bf18caba496977dc100d1eadbc578d4ea0de200fb0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10186"
 }

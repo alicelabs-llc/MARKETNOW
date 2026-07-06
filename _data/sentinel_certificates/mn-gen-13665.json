@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7406553",
+  "certificate_id": "MN-SC-2026-0545101",
   "skill_id": "mn-gen-13665",
   "skill_name": "Yahoohoo",
-  "issued_at": "2026-07-06T00:23:26.553Z",
-  "expires_at": "2026-07-13T00:23:26.553Z",
+  "issued_at": "2026-07-06T04:02:25.101Z",
+  "expires_at": "2026-07-13T04:02:25.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "88d248c87bccbbb8cdea58e055ae865c584dc0ef0e0d757b77a0b8330519d0ee",
+  "signature": "9ba917145f814177795a98e306a46bf1ae181ca58e5664579ee8f9d7dbe61603",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13665"
 }

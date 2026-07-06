@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7230883",
+  "certificate_id": "MN-SC-2026-0385474",
   "skill_id": "mn-gen-09784",
   "skill_name": "Offload-mcp",
-  "issued_at": "2026-07-06T00:20:30.883Z",
-  "expires_at": "2026-07-13T00:20:30.883Z",
+  "issued_at": "2026-07-06T03:59:45.474Z",
+  "expires_at": "2026-07-13T03:59:45.474Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a535d05697a0233d823229f78a4245ae53b1b9208e31921f81559ecbc97342d",
+  "signature": "ef2568cb3ccb704e4a2d8ebed73f495260f85b515b1a25a4a4835c872436fd00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09784"
 }

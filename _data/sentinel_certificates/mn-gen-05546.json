@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7049960",
+  "certificate_id": "MN-SC-2026-0239361",
   "skill_id": "mn-gen-05546",
   "skill_name": "Opensource03/kp-mcp",
-  "issued_at": "2026-07-06T00:17:29.960Z",
-  "expires_at": "2026-07-13T00:17:29.960Z",
+  "issued_at": "2026-07-06T03:57:19.361Z",
+  "expires_at": "2026-07-13T03:57:19.361Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53594fe945d0f0dda1694a06eec600d0ac7e0e59bb612bb66414a1555cf45cee",
+  "signature": "aeb67d68797a7436e50da35cf3a840d0c7cd289ad9122f6b356422de4eaa60e5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05546"
 }

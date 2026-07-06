@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6827864",
+  "certificate_id": "MN-SC-2026-0073136",
   "skill_id": "mn-gen-00960",
   "skill_name": "Arguslog-sdks",
-  "issued_at": "2026-07-06T00:13:47.864Z",
-  "expires_at": "2026-07-13T00:13:47.864Z",
+  "issued_at": "2026-07-06T03:54:33.136Z",
+  "expires_at": "2026-07-13T03:54:33.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5288295408ff8ad69878fb872845fd38f2521ed525a8d57597937240b42e95b6",
+  "signature": "5581f61c2a33524bac6212b7cb2a27bdb9c94457d53f5cf2f494197727321dbf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00960"
 }

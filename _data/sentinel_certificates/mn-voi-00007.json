@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7736863",
+  "certificate_id": "MN-SC-2026-0772052",
   "skill_id": "mn-voi-00007",
   "skill_name": "Murf AI Voiceover",
-  "issued_at": "2026-07-06T00:28:56.863Z",
-  "expires_at": "2026-07-13T00:28:56.863Z",
+  "issued_at": "2026-07-06T04:06:12.052Z",
+  "expires_at": "2026-07-13T04:06:12.052Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "faa60871b0e19e5ccbd845318eb71adaeff5234520ebf310e8307e488e61bdda",
+  "signature": "c3e199c8b09a743327745ce8e173bd1680c81d7a9d2ee98b0f77ca3eb765ee83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-voi-00007"
 }

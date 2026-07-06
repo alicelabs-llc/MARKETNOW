@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6834933",
+  "certificate_id": "MN-SC-2026-0078087",
   "skill_id": "mn-gen-01132",
-  "skill_name": "Awesome-agent-skills-mcp",
-  "issued_at": "2026-07-06T00:13:54.933Z",
-  "expires_at": "2026-07-13T00:13:54.933Z",
+  "skill_name": "Agent-skills",
+  "issued_at": "2026-07-06T03:54:38.087Z",
+  "expires_at": "2026-07-13T03:54:38.087Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a7fa292a478231944e7cbcd1d9a1840ba9ffd0d5e63f7330c0056ccc58413616",
+  "signature": "e2f15449a8f2b57e6ce270a310bd347a395e9a20a392830a6e593acb1a2d3b8c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01132"
 }

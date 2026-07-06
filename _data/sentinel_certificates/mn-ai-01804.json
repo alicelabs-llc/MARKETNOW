@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6868699",
+  "certificate_id": "MN-SC-2026-0101023",
   "skill_id": "mn-ai-01804",
   "skill_name": "Chaitin-ip-intelligence-search-tool",
-  "issued_at": "2026-07-06T00:14:28.699Z",
-  "expires_at": "2026-07-13T00:14:28.699Z",
+  "issued_at": "2026-07-06T03:55:01.023Z",
+  "expires_at": "2026-07-13T03:55:01.023Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "040e439e64fcb0936ca637d5d8ba4d9ad8aaac53db9e55f85cb2298e7727fca9",
+  "signature": "4bfc278d747b6c02fa2b02f94af7358cea4ac8cfeea9a0d8d2a84a82411d9ace",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01804"
 }

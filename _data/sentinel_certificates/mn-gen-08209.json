@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7172103",
+  "certificate_id": "MN-SC-2026-0338352",
   "skill_id": "mn-gen-08209",
   "skill_name": "Mcp-vscode-commands",
-  "issued_at": "2026-07-06T00:19:32.103Z",
-  "expires_at": "2026-07-13T00:19:32.103Z",
+  "issued_at": "2026-07-06T03:58:58.352Z",
+  "expires_at": "2026-07-13T03:58:58.352Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24d661200bc7b0c7d401aeaafe066f322ab131db77d71b23c43782c83e0019e5",
+  "signature": "47dce7d44486dcbdcf3c841a59f10cefa6fe91de4c41bcb199c45b6c16daba06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08209"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7322725",
+  "certificate_id": "MN-SC-2026-0474206",
   "skill_id": "mn-gen-11826",
   "skill_name": "Sitefire/sitefire-gsc-mcp",
-  "issued_at": "2026-07-06T00:22:02.725Z",
-  "expires_at": "2026-07-13T00:22:02.725Z",
+  "issued_at": "2026-07-06T04:01:14.206Z",
+  "expires_at": "2026-07-13T04:01:14.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b801e8cc9b9b751462748005f9e20e046910dc655ef9e9aa72dec3dab22439f",
+  "signature": "d13e2d9b2626e6843fd645c9d3925d9ae893c05c089bb7282be2434d3d678a42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11826"
 }

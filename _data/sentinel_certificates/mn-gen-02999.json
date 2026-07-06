@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6933593",
+  "certificate_id": "MN-SC-2026-0149423",
   "skill_id": "mn-gen-02999",
-  "skill_name": "Custom-mcp-server",
-  "issued_at": "2026-07-06T00:15:33.593Z",
-  "expires_at": "2026-07-13T00:15:33.593Z",
+  "skill_name": "customgpt-mcp",
+  "issued_at": "2026-07-06T03:55:49.423Z",
+  "expires_at": "2026-07-13T03:55:49.423Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "803197e7169127075f389240c2fa7df13d0bc1e7b09643d16720564289bf8237",
+  "signature": "bc772ed45d362ab784f4b100cf5f236f52b9c490517c397281f2c5f97f63f6bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02999"
 }

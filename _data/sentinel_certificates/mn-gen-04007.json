@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6982384",
+  "certificate_id": "MN-SC-2026-0186285",
   "skill_id": "mn-gen-04007",
-  "skill_name": "Figmamcp",
-  "issued_at": "2026-07-06T00:16:22.384Z",
-  "expires_at": "2026-07-13T00:16:22.384Z",
+  "skill_name": "figma-mcp-go",
+  "issued_at": "2026-07-06T03:56:26.285Z",
+  "expires_at": "2026-07-13T03:56:26.285Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 9,
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 1,
+    "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d75843596be87a2c5dee5c0a001e1f80e3b2ee61d9b63cdc88a962c4cd6ea8f",
+  "signature": "483150166ac38ae807ece38819b0fdf2977ea846a962fa6b8d16c816d3cd5e90",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04007"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7378736",
+  "certificate_id": "MN-SC-2026-0524281",
   "skill_id": "mn-gen-13123",
   "skill_name": "Vela-union",
-  "issued_at": "2026-07-06T00:22:58.736Z",
-  "expires_at": "2026-07-13T00:22:58.736Z",
+  "issued_at": "2026-07-06T04:02:04.281Z",
+  "expires_at": "2026-07-13T04:02:04.281Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02229e27de377513c592afbbbc584ae9c3e99aa01b63a63a859806fb9a9429c6",
+  "signature": "4bfa4f95ff598e8d3c574398c020a7b4cac969b9a13709bd6ee10a10bf9e31dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13123"
 }

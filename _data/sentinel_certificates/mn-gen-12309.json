@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7342439",
+  "certificate_id": "MN-SC-2026-0493346",
   "skill_id": "mn-gen-12309",
   "skill_name": "Superclaude-gemini-integration-mcp",
-  "issued_at": "2026-07-06T00:22:22.439Z",
-  "expires_at": "2026-07-13T00:22:22.439Z",
+  "issued_at": "2026-07-06T04:01:33.346Z",
+  "expires_at": "2026-07-13T04:01:33.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "21b560f965a6745a79014ed26e6dcb99f9284911079d4240e7b279667a3a8be9",
+  "signature": "853ca20f207a5d861a2c57666c846ef374982d892ce94a2ba1106f4995771678",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12309"
 }

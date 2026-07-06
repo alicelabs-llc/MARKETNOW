@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7715124",
+  "certificate_id": "MN-SC-2026-0754732",
   "skill_id": "mn-apf-042",
   "skill_name": "Index Advisor",
-  "issued_at": "2026-07-06T00:28:35.124Z",
-  "expires_at": "2026-07-13T00:28:35.124Z",
+  "issued_at": "2026-07-06T04:05:54.732Z",
+  "expires_at": "2026-07-13T04:05:54.732Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6d10605c24dc197f2425330d8e03c75a65691ccbe4430f0b3e4b9bd62573992",
+  "signature": "0d809d9e5b64973e31d32db42795da4f81f3e0a853e392a04386374f000f075e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-042"
 }

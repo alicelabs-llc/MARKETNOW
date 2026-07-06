@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7135250",
+  "certificate_id": "MN-SC-2026-0309542",
   "skill_id": "mn-gen-07474",
   "skill_name": "Agentdefenders/mcp-scan",
-  "issued_at": "2026-07-06T00:18:55.250Z",
-  "expires_at": "2026-07-13T00:18:55.250Z",
+  "issued_at": "2026-07-06T03:58:29.542Z",
+  "expires_at": "2026-07-13T03:58:29.542Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7347cf78e9cc9ca2f27bc2446949e8ddee29d52347e60045a38bb0c2812ebbdc",
+  "signature": "0537c9f63f5ca2cd8eb2561daa45a83734f625e070212304ac952df03382e734",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07474"
 }

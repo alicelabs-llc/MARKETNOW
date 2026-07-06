@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7690006",
+  "certificate_id": "MN-SC-2026-0735161",
   "skill_id": "mn-atu-027",
   "skill_name": "Tool Fallback Chain",
-  "issued_at": "2026-07-06T00:28:10.006Z",
-  "expires_at": "2026-07-13T00:28:10.006Z",
+  "issued_at": "2026-07-06T04:05:35.161Z",
+  "expires_at": "2026-07-13T04:05:35.161Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3414005ad0ccb07607333f2aa372c5c297367747cfaad33775d0fd947e5d6408",
+  "signature": "8a5570cb1edab4014aa4f14617a68425c56b0f7d34312c7d85a879c3b025d450",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-atu-027"
 }

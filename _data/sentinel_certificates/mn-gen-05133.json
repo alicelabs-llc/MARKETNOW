@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7030688",
+  "certificate_id": "MN-SC-2026-0224999",
   "skill_id": "mn-gen-05133",
   "skill_name": "Infomaniak-mcp-agent",
-  "issued_at": "2026-07-06T00:17:10.688Z",
-  "expires_at": "2026-07-13T00:17:10.688Z",
+  "issued_at": "2026-07-06T03:57:04.999Z",
+  "expires_at": "2026-07-13T03:57:04.999Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a41ec482d05e0d54c95e1e0e5fe2ef9ed3725b77c25b4f537741682090a0f8a",
+  "signature": "db891e4df57ff4cf976304045a57ba281ddb24ac2474240696ad02118fe100e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05133"
 }

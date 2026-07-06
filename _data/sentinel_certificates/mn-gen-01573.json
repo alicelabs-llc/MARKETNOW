@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6855742",
+  "certificate_id": "MN-SC-2026-0091574",
   "skill_id": "mn-gen-01573",
   "skill_name": "Nextjs-cloudflare-pages",
-  "issued_at": "2026-07-06T00:14:15.742Z",
-  "expires_at": "2026-07-13T00:14:15.742Z",
+  "issued_at": "2026-07-06T03:54:51.574Z",
+  "expires_at": "2026-07-13T03:54:51.574Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "692f1c205dc1e9763f593e8bf7cb58fd6b5e7bf817f26a3e0bdcb224212b8dda",
+  "signature": "27accc4328d2dbbeb89995ff95ad20bd8e06f5667d459b709707661c05f24d25",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01573"
 }

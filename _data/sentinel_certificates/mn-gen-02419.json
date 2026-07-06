@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6900936",
+  "certificate_id": "MN-SC-2026-0124491",
   "skill_id": "mn-gen-02419",
-  "skill_name": "Clickhouse-mcp-server",
-  "issued_at": "2026-07-06T00:15:00.936Z",
-  "expires_at": "2026-07-13T00:15:00.936Z",
+  "skill_name": "mcp-clickhouse",
+  "issued_at": "2026-07-06T03:55:24.491Z",
+  "expires_at": "2026-07-13T03:55:24.491Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2521ec9845d6d2a2616e8bf3a7a58f8274ec486266f6c1a0802f52b486f55843",
+  "signature": "9f99b46ec3a19ae40f4c241adc4dcf387fc60ea4d040d83da5a2037ab9108464",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02419"
 }

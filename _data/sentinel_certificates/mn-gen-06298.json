@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7080752",
+  "certificate_id": "MN-SC-2026-0264519",
   "skill_id": "mn-gen-06298",
   "skill_name": "Bitnovopay/mcp-bitnovo-pay",
-  "issued_at": "2026-07-06T00:18:00.752Z",
-  "expires_at": "2026-07-13T00:18:00.752Z",
+  "issued_at": "2026-07-06T03:57:44.519Z",
+  "expires_at": "2026-07-13T03:57:44.519Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d4425a6a0c52408b96eb7e01b5fa9c885e3c9e6628ee83a619d2d0b7767cb20",
+  "signature": "9da95a7b60403995eb8221e3eec8446bd670569fc3938260c3eda21d5ba09617",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06298"
 }

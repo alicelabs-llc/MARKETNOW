@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6853198",
+  "certificate_id": "MN-SC-2026-0090668",
   "skill_id": "mn-ai-01557",
   "skill_name": "Qckfx/browser-ai",
-  "issued_at": "2026-07-06T00:14:13.198Z",
-  "expires_at": "2026-07-13T00:14:13.198Z",
+  "issued_at": "2026-07-06T03:54:50.668Z",
+  "expires_at": "2026-07-13T03:54:50.668Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5eb027ac128cc1ed7ef5fd21c96f699a632c91ef7e08dbea0fe6ec488aab39e0",
+  "signature": "be9076a23bed50d22cdf18cdb17b01a1ce180aa0c19d1ef181b977d71f16b6f8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-01557"
 }

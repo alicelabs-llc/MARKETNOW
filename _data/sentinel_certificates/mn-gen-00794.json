@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6819016",
+  "certificate_id": "MN-SC-2026-0067300",
   "skill_id": "mn-gen-00794",
   "skill_name": "Anode177/mcp-client",
-  "issued_at": "2026-07-06T00:13:39.016Z",
-  "expires_at": "2026-07-13T00:13:39.016Z",
+  "issued_at": "2026-07-06T03:54:27.300Z",
+  "expires_at": "2026-07-13T03:54:27.300Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2199a712a278202ea90998058dcdf8daa2ffcc91405cf10450a0714771e0c3ca",
+  "signature": "be949f7c9195a51778929cf1a0c57eabe23960a9684d6104d34d7200d911743d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00794"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6803380",
+  "certificate_id": "MN-SC-2026-0056531",
   "skill_id": "mn-ai-00459",
   "skill_name": "Gac/gac",
-  "issued_at": "2026-07-06T00:13:23.380Z",
-  "expires_at": "2026-07-13T00:13:23.380Z",
+  "issued_at": "2026-07-06T03:54:16.531Z",
+  "expires_at": "2026-07-13T03:54:16.531Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5f36dd9a95977f256878eeb26f49f33be66f6e51ae19e59618919670804eda0",
+  "signature": "ffe6fb1bc3eaf56e06d4ea6209b32f7d9d5333137ec4dbafa8952ecfc2b59f8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00459"
 }

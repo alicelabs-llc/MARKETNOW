@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7316164",
+  "certificate_id": "MN-SC-2026-0467731",
   "skill_id": "mn-gen-11676",
   "skill_name": "Servusai",
-  "issued_at": "2026-07-06T00:21:56.164Z",
-  "expires_at": "2026-07-13T00:21:56.164Z",
+  "issued_at": "2026-07-06T04:01:07.731Z",
+  "expires_at": "2026-07-13T04:01:07.731Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09965cea1e97294e735c116a75aa32c880c505a7b40bd9ba508c6664e93314dd",
+  "signature": "bccb6bab74fe246364bccb216e4fe60b3cd2ceec1792bf9e62e1e0342f7946ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11676"
 }

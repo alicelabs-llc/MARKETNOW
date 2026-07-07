@@ -1,18 +1,19 @@
 {
   "$schema": "https://marketnow.site/.well-known/mcp.schema.json",
   "name": "marketnow",
-  "description": "MarketNow — Trust layer for agent commerce. 8,764 MCP-compatible skills with Sentinel L2.5 gVisor sandbox security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. AliceLabs LLC Proprietary. Maintained by AliceLabs LLC (Wyoming, USA, 2025).",
-  "version": "1.3.0",
+  "description": "MarketNow \u2014 Trust layer for agent commerce. 8,764 MCP-compatible skills with Sentinel L2.5 gVisor sandbox security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. AliceLabs LLC Proprietary. Maintained by AliceLabs LLC (Wyoming, USA, 2025).",
+  "version": "1.4.0",
   "homepage": "https://marketnow.site",
   "repository": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
   "npm_package": "marketnow-mcp",
   "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
   "install": "npx -y marketnow-mcp",
   "transport": {
-    "type": "stdio",
+    "type": "http+sse",
+    "http_url": "https://marketnow.site/api/mcp",
     "stdio_command": "npx -y marketnow-mcp",
-    "http_url": null,
-    "note": "Currently stdio only. HTTP transport (SSE/WebSocket) is on the roadmap."
+    "sse_url": "https://marketnow.site/api/mcp",
+    "note": "Supports both HTTP (SSE + JSON-RPC) and stdio transport."
   },
   "tools": [
     {

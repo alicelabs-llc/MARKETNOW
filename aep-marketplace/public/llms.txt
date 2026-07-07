@@ -1,10 +1,10 @@
 # MarketNow
 
-> MarketNow is the trust layer for agent commerce. It is an open marketplace of 8,560 MCP (Model Context Protocol) servers, each security-audited by the Sentinel engine. Agents discover, evaluate, purchase, and install MCP skills programmatically. Founded 2024 by Edison Flores (AliceLabs LLC, Wyoming, USA).
+> MarketNow is the trust layer for agent commerce. It is an open marketplace of 8,764 MCP (Model Context Protocol) servers, each security-audited by the Sentinel L2.5 gVisor sandbox engine. Agents discover, evaluate, purchase, and install MCP skills programmatically. Founded 2024 by Edison Flores (AliceLabs LLC, Wyoming, USA).
 
 MarketNow.site solves a specific problem: the MCP ecosystem has a discovery problem (thousands of servers, no quality signal) and a trust problem (no security audit, no payment escrow, no dispute resolution). MarketNow addresses both:
 
-- **Discovery**: A searchable registry of 8,560 real MCP servers, indexed from GitHub, npm, and Smithery. No synthetic entries. Each skill has a stable ID (mn-xxx-00001), metadata, install command, and system prompt.
+- **Discovery**: A searchable registry of 8,764 real MCP servers, indexed from GitHub, npm, and Smithery. No synthetic entries. Each skill has a stable ID (mn-xxx-00001), metadata, install command, and system prompt.
 - **Trust**: The Sentinel security audit engine runs a multi-layer audit on every skill:
   - L1.5: Static analysis (dependency scan, license check, manifest validation)
   - L1.6: Pattern-based behavioral analysis
@@ -37,7 +37,7 @@ npx -y marketnow-mcp
 ## Key URLs
 
 - [Website](https://marketnow.site)
-- [Registry (8,560 skills)](https://marketnow.site/registry)
+- [Registry (8,764 skills)](https://marketnow.site/registry)
 - [Trust Roadmap](https://marketnow.site/trust)
 - [Pricing](https://marketnow.site/pricing)
 - [API Docs](https://marketnow.site/handshake)

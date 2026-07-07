@@ -17,7 +17,7 @@
 
 name: dev.to Comment Monitor
 
-on:
+"on":
   schedule:
     # Run every hour at minute 0
     - cron: '0 * * * *'
@@ -66,10 +66,7 @@ jobs:
             if git diff --cached --quiet; then
               echo "No state changes to commit"
             else
-              git commit -m "chore: dev.to monitor state update [skip ci]
-
-Updated by dev.to-monitor.yml workflow.
-Tracks seen comments to avoid duplicate email notifications." || true
+              git commit -m "chore: dev.to monitor state update [skip ci]" || true
               git push || echo "Push failed (will retry next hour)"
             fi
           fi

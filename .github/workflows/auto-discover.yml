@@ -130,13 +130,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: discovery-report-${{ github.run_id }}
-<<<<<<< HEAD
-          retention-days: 7
-=======
           path: |
             scripts/discovery-report.json
             scripts/import-log.json
             _data/
           retention-days: 7
           if-no-files-found: ignore
->>>>>>> bde860cf (fix: repair everything — title consistency, workflows, README stars banner)

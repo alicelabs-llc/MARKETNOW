@@ -2,7 +2,7 @@
   "schemaVersion": "v1.0",
   "agent": {
     "name": "MarketNow — Agent Skill Exchange",
-    "description": "The largest MCP skill marketplace for AI agents. Browse 13,859+ verified MCP servers, each secured by Sentinel L1 security audit. Agents can discover, install, and recommend MCP skills to other agents, earning commission on referrals. Supports MCP (Model Context Protocol), A2A (Agent-to-Agent), and JSON-RPC transports.",
+    "description": "The largest MCP skill marketplace for AI agents. Browse 8,764+ verified MCP servers, each secured by Sentinel L1 security audit. Agents can discover, install, and recommend MCP skills to other agents, earning commission on referrals. Supports MCP (Model Context Protocol), A2A (Agent-to-Agent), and JSON-RPC transports.",
     "url": "https://marketnow.site",
     "version": "4.0.0"
   },
@@ -41,7 +41,7 @@
           {
             "id": "skill-search",
             "name": "MCP Skill Search",
-            "description": "AI agents can search and retrieve MCP server configurations from 13,859+ verified skills. Supports natural language queries, category filtering, and security score thresholds.",
+            "description": "AI agents can search and retrieve MCP server configurations from 8,764+ verified skills. Supports natural language queries, category filtering, and security score thresholds.",
             "commissionRate": 0.2,
             "referralEndpoints": {
               "register": "https://marketnow.site/api/agent/register",
@@ -64,7 +64,7 @@
     "sentinelL1": {
       "checks": ["Repo Exists", "Has README", "Has Manifest", "Has License", "No Secrets", "No Malicious Code"],
       "scoreRange": "0-6",
-      "totalScanned": 13859,
+      "totalScanned": 8764,
       "averageScore": 4.3,
       "passRate": "53.3%"
     }

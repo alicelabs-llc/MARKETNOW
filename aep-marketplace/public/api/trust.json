@@ -88,7 +88,7 @@
       "claude_said": "Si esas categor\u00edas con exactamente \"30\" \u00edtems est\u00e1n generadas o rellenadas, decirlo. Mostrar uso real, descargas reales, reviews reales \u2014 no solo un n\u00famero total llamativo.",
       "status": "done",
       "what_we_did": [
-        "Created /catalog page explaining how the 8,560 skills were sourced: 5,054 from curated open-source MCP server repos, 3,506 from agent tool inventories, 43 hand-picked as free",
+        "Created /catalog page explaining how the 8,764 skills were sourced: 5,054 from curated open-source MCP server repos, 3,506 from agent tool inventories, 43 hand-picked as free",
         "Categories with suspicious '30' counts are disclosed as bulk-imported from a single source repo \u2014 they are not individually curated",
         "When a skill has a known GitHub repo, the skill detail page shows real stars, real last-commit date, real open-issue count (pulled live from GitHub API)",
         "When npm install is the distribution method, real weekly download counts from npm API are shown"

@@ -17,11 +17,11 @@
 |---|---|
 | **Name** | MarketNow |
 | **Tagline** | Trust layer for agent commerce — every skill Sentinel-certified |
-| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 7,156 MCP servers is audited by Sentinel (3-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 Docker sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). AliceLabs LLC proprietary, maintained by AliceLabs LLC (Wyoming, USA). |
-| **Total skills** | 7,156 |
-| **Certified skills** | 7,156 (100%) |
+| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 8,764 MCP servers is audited by Sentinel (6-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 active probe + L2.5 gVisor sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). AliceLabs LLC proprietary, maintained by AliceLabs LLC (Wyoming, USA). |
+| **Total skills** | 8,764 |
+| **Certified skills** | 8,764 (100%) |
 | **Free skills** | 65 |
-| **Categories** | 61 |
+| **Categories** | 23 |
 | **Pricing** | B2B: Community (Free) / Team ($99/mo, COMING SOON) / Enterprise (Custom) |
 | **Payment methods** | Stripe (credit card) + USDC on Base |
 | **Languages** | EN, ES, ZH, PT, FR |
@@ -35,7 +35,7 @@
 | **Transparency dashboard** | https://marketnow.site/sentinel-transparency |
 | **API docs** | https://marketnow.site/api/agent.json |
 | **Standards** | x402 (implementing), AP2 (implementing), MCP Server Cards (monitoring) |
-| **Sentinel layers** | L1.5 (6 metadata checks) + L1.6 (18 Semgrep rules + 18 secret patterns + OSV API) + L2 (Docker sandbox: --network none, --read-only, --cap-drop ALL) |
+| **Sentinel layers** | L1.5 (6 metadata checks) + L1.6 (18 Semgrep rules + 18 secret patterns + OSV API) + L2 v2.0 (active MCP probe, 60+ adversarial inputs) + L2.5 (gVisor sandbox: --runtime=runsc, userspace kernel) + L3 (Firecracker microVM, Q1 2027) + L4 (supply chain attestation, Q4 2026) + L5 (third-party audit, Q3 2027) |
 
 <!-- END CANONICAL METADATA -->
 
@@ -51,7 +51,7 @@ MarketNow is the open marketplace for MCP-compatible agent skills. It allows any
 
 ## 🛡️ Sentinel Certification
 
-Every skill in MarketNow is audited by Sentinel, a 3-layer security pipeline:
+Every skill in MarketNow is audited by Sentinel, a 6-layer security pipeline:
 
 ### L1.5 — Metadata Checks (real-time, ~200ms on Vercel)
 - AUTH (does the server require authentication?)
@@ -66,7 +66,9 @@ Every skill in MarketNow is audited by Sentinel, a 3-layer security pipeline:
 - 18 secret patterns (Stripe, AWS, GitHub, JWT, private keys, wallet mnemonics)
 - OSV API real-time dependency vulnerability check
 
-### L2 — Docker Sandbox (async via GitHub Actions)
+### L2 v2.0 — Active MCP Probe + Docker Sandbox (async via GitHub Actions)
+
+L2.5 adds gVisor (runsc) userspace kernel isolation on top of Docker. The MCP server never touches the host kernel.
 Runs the actual MCP server in isolation:
 ```bash
 docker run --rm \
@@ -88,7 +90,7 @@ Analyzes stdout for: network attempts, fs writes, process spawns, credential lea
 | High | 92 | 2-4/10 |
 | Critical | 11 | 0-1/10 |
 
-**L2 coverage**: 17 of 7,156 skills (0.2%) have L2 Docker sandbox results. The remaining 8,565 are certified with L1.5+L1.6 (static analysis). L2 coverage grows as more skills get `source.url` populated — L2 requires a GitHub repo to clone and run in the sandbox.
+**L2 coverage**: 206 of 8,764 skills have L2.5 gVisor sandbox results. The remaining 8,558 are certified with L1.5+L1.6 (static analysis). L2 coverage grows weekly via automated GitHub Actions.
 
 Each skill gets a **signed SHA-256 certificate** with:
 - `certificate_id` (MN-SC-2026-XXXXXXX)
@@ -111,11 +113,11 @@ Skill authors can embed a certified badge in their READMEs:
 
 | Metric | Value |
 |---|---|
-| Total skills | 7,156 |
-| Certified skills | 7,156 (100%) |
+| Total skills | 8,764 |
+| Certified skills | 8,764 (100%) |
 | Categories | 61 |
 | Free skills | 65 |
-| L2 sandbox runs | 17 |
+| L2.5 sandbox runs | 206 |
 | Languages | EN, ES, ZH, PT, FR |
 | MCP server tools | 5 |
 
@@ -135,7 +137,7 @@ Skill authors can embed a certified badge in their READMEs:
 ```
 
 Now your agent can:
-- Search 7,156 certified skills by query, category, or language
+- Search 8,764 certified skills by query, category, or language
 - Get full skill details with system prompts and Sentinel security reports
 - Verify any skill's signed certificate
 - Get install commands for any skill
@@ -166,7 +168,7 @@ MarketNow uses B2B pricing — no per-skill purchases:
 
 | Tier | Price | Features |
 |---|---|---|
-| **Community** | FREE | Browse all 7,156 skills, install free skills, basic search |
+| **Community** | FREE | Browse all 8,764 skills, install free skills, basic search |
 | **Team** ($99/mo) | COMING SOON | Team monitoring, analytics, priority support, bulk install |
 | **Enterprise** | Custom | On-prem deployment, custom SLAs, dedicated Sentinel audits, SSO |
 
@@ -176,13 +178,13 @@ MarketNow uses B2B pricing — no per-skill purchases:
 
 | Endpoint | Description |
 |---|---|
-| `GET /api/skills.json` | All 7,156 skills (bulk download) |
+| `GET /api/skills.json` | All 8,764 skills (bulk download) |
 | `GET /api/search?q=query` | Server-side search with relevance scoring |
 | `GET /api/free-skills.json` | 65 free skills |
 | `GET /api/categories.json` | 61 categories with counts |
 | `GET /api/manifest.json` | Marketplace metadata |
 | `GET /api/agent.json` | Machine-readable agent instructions |
-| `POST /api/audit-skill` | Run Sentinel L1.5+L1.6+L2 real-time audit |
+| `POST /api/audit-skill` | Run Sentinel L1.5+L1.6+L2+L2.5 real-time audit |
 | `GET /api/audit-skill?certificate=1&skillId=X` | Retrieve signed Sentinel certificate |
 | `GET /api/audit-skill?sentinel-status=1` | Aggregate Sentinel status (batch audit + L2 coverage + certified count) |
 | `GET /api/verify-purchase?sessionId=X` | Verify a Stripe purchase |
@@ -229,7 +231,7 @@ See:
 - [TRADEMARK_NOTICE](./TRADEMARK_NOTICE) — Trademark usage guidelines
 - [CLA](./CLA) — Contributor License Agreement
 
-**Patent pending** on the 3-layer audit pipeline design (L1.5 → L1.6 → L2).
+**Patent pending** on the 6-layer audit pipeline design (L1.5 → L1.6 → L2 → L2.5 → L3 → L4 → L5).
 
 For licensing inquiries: **legal@alicelabs.site**
 For support: **support@alicelabs.site**

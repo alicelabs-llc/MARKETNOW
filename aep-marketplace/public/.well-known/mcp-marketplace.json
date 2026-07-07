@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "MarketNow",
   "tagline": "Trust layer for agent commerce",
-  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payments, and human-in-the-loop-by-default agent spending. 8,560 MCP servers, $0.99-$9.99 one-time, 43 free. Source-available, MNNC-1.0 (non-commercial), maintained by AliceLabs LLC.",
+  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payments, and human-in-the-loop-by-default agent spending. 8,764 MCP servers, $0.99-$9.99 one-time, 65 free. AliceLabs LLC Proprietary, maintained by AliceLabs LLC.",
   "url": "https://marketnow.site",
   "api_base": "https://marketnow.site/api",
   "version": "2.0.0",
   "last_updated": "2026-07-02T00:00:00.000Z",
   "stats": {
-    "total_skills": 8560,
+    "total_skills": 8764,
     "free_skills": 43,
     "categories": 58,
     "languages": [
@@ -84,7 +84,7 @@
     "largest MCP marketplace (we are the trust layer, not the largest)",
     "no humans needed (human-in-loop is default; silent requires opt-in)",
     "ETH/BSC/SOL/BTC payments (USDC on Base only)",
-    "13859 skills (current count is 8560)",
+    "8764 skills (current count is 8764)",
     "open registry with no manual approval (mandates default to notify mode)"
   ],
   "canonical_sources": {

@@ -1,6 +1,6 @@
 # MarketNow — 代理商业的信任层
 
-> 8,560个MCP技能，Sentinel L2安全审计，x402支付（HTTP 402 + Base上的USDC），AP2委托授权。
+> 8,764个MCP技能，Sentinel L2.5 gVisor沙盒安全审计，x402支付（HTTP 402 + Base上的USDC），AP2委托授权。
 
 ## 什么是 MarketNow？
 
@@ -10,7 +10,7 @@ npm 包在偷钱包。PyPI 包在窃取代理对话。安装错误 MCP 服务器
 
 ## 功能
 
-- 🔒 8,560个MCP技能，每个都有Sentinel L2安全审计
+- 🔒 8,764个MCP技能，每个都有Sentinel L2.5 gVisor沙盒安全审计
 - 💳 x402支付（HTTP 402 + Base上的USDC）或Stripe
 - 🛡️ AP2委托授权 — 默认人类在环
 - 🌍 5种语言：EN, ES, PT, 中文, FR

@@ -9,7 +9,7 @@
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL || 'https://marketnow.site');
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
 

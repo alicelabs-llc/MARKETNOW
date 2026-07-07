@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
   res.setHeader('Pragma', 'no-cache');
   res.setHeader('Expires', '0');
-  res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL || 'https://marketnow.site');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('X-Robots-Tag', 'index, follow');
 
   if (req.method === 'OPTIONS') return res.status(200).end();

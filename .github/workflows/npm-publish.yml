@@ -22,14 +22,43 @@ jobs:
       - name: Install dependencies
         run: cd aep-marketplace/mcp-server && npm install
       
+<<<<<<< HEAD
       - name: Publish with provenance (code signing via Sigstore)
+=======
+      - name: Check NPM_TOKEN
+        id: check_token
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "$NPM_TOKEN" ]; then
+            echo "⚠ NPM_TOKEN secret is not set."
+            echo "  To publish to npm:"
+            echo "  1. Create an access token at https://www.npmjs.com/settings/eddyflores100/tokens"
+            echo "  2. Set it as GitHub secret NPM_TOKEN"
+            echo "  3. Make sure 'Access type' is 'Read and write'"
+            echo "  4. Enable 2FA on npm"
+            echo "  Skipping publish."
+            echo "has_token=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_token=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Publish with provenance (code signing via Sigstore)
+        if: steps.check_token.outputs.has_token == 'true'
+>>>>>>> bde860cf (fix: repair everything — title consistency, workflows, README stars banner)
         run: |
           cd aep-marketplace/mcp-server
           npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+<<<<<<< HEAD
       
       - name: Verify provenance
+=======
+
+      - name: Verify provenance
+        if: steps.check_token.outputs.has_token == 'true'
+>>>>>>> bde860cf (fix: repair everything — title consistency, workflows, README stars banner)
         run: |
           echo "Package published with Sigstore provenance attestation"
           echo "Verify at: https://www.npmjs.com/package/marketnow-mcp"

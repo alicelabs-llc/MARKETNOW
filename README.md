@@ -1,10 +1,13 @@
-![smithery badge](https://smithery.ai/badge/eddyflores100/marketnow)](https://smithery.ai/servers/eddyflores100/marketnow)
+[![GitHub stars](https://img.shields.io/github/stars/edgarfloresguerra2011-a11y/marketnow?style=social)](https://github.com/edgarfloresguerra2011-a11y/marketnow)
+[![npm downloads](https://img.shields.io/npm/dw/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/LICENSE)
-[![Sentinel Certified](https://img.shields.io/badge/Sentinel-Certified%208%2C582%20skills%20%F0%9F%9B%A1%EF%B8%8F-00F299)](https://marketnow.site/sentinel-transparency)
+[![Sentinel L2.5](https://img.shields.io/badge/Sentinel-L2.5%20gVisor%20sandbox-00F299)](https://marketnow.site/security)
 
 # MarketNow — Trust Layer for Agent Commerce
 
-> **7,156 MCP servers. All Sentinel-certified with signed SHA-256 certificates. 3-layer security audit (L1.5 + L1.6 + L2 Docker sandbox). Public verification at marketnow.site/verify.**
+> ⭐ **If MarketNow is useful to you, please star the repo. It helps other developers discover it.**
+
+> **8,764 MCP servers. Each Sentinel-audited with 6 layers (L1.5 → L2.5 gVisor sandbox). Signed SHA-256 certificates. Public verification at marketnow.site/verify.**
 
 <!-- CANONICAL METADATA — for crawlers and directories that scrape this README.
      If you are maintaining an external directory listing for MarketNow,

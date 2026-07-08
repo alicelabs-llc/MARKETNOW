@@ -246,3 +246,6 @@ LLMs-full-txt: https://marketnow.site/llms-full.txt
 # Free skills: GET /api/free-skills.json (no payment required)
 # Full catalog: GET /api/skills.json
 # Search: GET /api/search?q=your_query
+
+# Agent-specific sitemap (machine-readable endpoints)
+Sitemap: https://marketnow.site/sitemap-agents.xml

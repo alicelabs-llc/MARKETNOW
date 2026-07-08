@@ -28,6 +28,10 @@
   ],
   "rewrites": [
     {
+      "source": "/for-agents",
+      "destination": "/for-agents.html"
+    },
+    {
       "source": "/((?!api/|for-agents|landing-pages/).*)",
       "destination": "/index.html"
     }
@@ -230,5 +234,6 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true
 }

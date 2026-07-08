@@ -10,8 +10,52 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CANONICAL — Google needs this -->
+    <!-- CANONICAL — Google needs this. Default to homepage; JS updates per-route -->
     <link rel="canonical" href="https://marketnow.site/" />
+    <script>
+      // Update canonical URL and title based on current route (SPA fix for SEO)
+      (function() {
+        var path = window.location.pathname;
+        if (path !== '/' && path !== '') {
+          var canonical = document.querySelector('link[rel="canonical"]');
+          if (canonical) {
+            canonical.href = 'https://marketnow.site' + path;
+          }
+          var ogUrl = document.querySelector('meta[property="og:url"]');
+          if (ogUrl) {
+            ogUrl.content = 'https://marketnow.site' + path;
+          }
+        }
+
+        // Dynamic page titles for SEO (prevents duplicate title penalty)
+        var pageTitle = document.title;
+        var routeTitles = {
+          '/registry': 'Browse 8,764 MCP Servers — MarketNow Registry',
+          '/trust': 'Trust Roadmap — Sentinel L2.5 Audit Pipeline — MarketNow',
+          '/security': 'Sentinel L2.5 Security Audit Methodology — MarketNow',
+          '/pricing': 'Pricing — $0.99-$9.99 One-Time, 65 Free — MarketNow',
+          '/about': 'About AliceLabs LLC — MarketNow',
+          '/handshake': 'API Documentation — MarketNow',
+          '/verify': 'Verify Sentinel Certificate — MarketNow',
+          '/catalog': 'Catalog Transparency — Where 8,764 MCP Servers Come From — MarketNow',
+          '/policies': 'Terms, Refund, Privacy Policies — MarketNow',
+          '/mandates': 'AP2 Mandates — Human-in-Loop Agent Spending — MarketNow',
+          '/standards': 'Open Standards — MCP, AP2, x402 — MarketNow',
+          '/embed': 'Embed Badges — Powered by MarketNow',
+          '/submit': 'Submit Your MCP Server — MarketNow',
+          '/dashboard': 'Dashboard — MarketNow',
+          '/governance': 'Governance — MarketNow',
+          '/vault': 'Vault — MarketNow',
+          '/compare': 'Compare MCP Marketplaces — MarketNow',
+          '/buyers-guide': 'MCP Server Buyer\'s Guide — MarketNow',
+          '/onboarding': 'Onboarding — MarketNow',
+          '/blog': 'Blog — MarketNow',
+        };
+        if (routeTitles[path]) {
+          document.title = routeTitles[path];
+        }
+      })();
+    </script>
 
     <!-- BRANDING -->
     <title>MarketNow — Trust Layer for Agent Commerce (8,764 MCP Skills, Sentinel L2.5)</title>

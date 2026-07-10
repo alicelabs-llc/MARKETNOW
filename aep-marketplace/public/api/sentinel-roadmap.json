@@ -1,16 +1,16 @@
 {
   "service": "MarketNow",
-  "page": "Sentinel Roadmap — From L1.5 to Next-Gen Security",
+  "page": "Sentinel Roadmap \u2014 From L1.5 to Next-Gen Security",
   "version": "2.0.0",
   "effective_date": "2026-07-06",
   "url": "https://marketnow.site/sentinel-roadmap",
   "current_state": {
-    "version": "L1.5 + L1.6 + L2 v2.0",
+    "version": "L1.5 + L1.6 + L2 v2.0 + L2.5 gVisor",
     "type": "Multi-layer security audit (SAST + DAST + Active probing)",
     "layers_implemented": [
-      "L1.5 — 6 metadata checks (real-time on Vercel, ~200ms)",
-      "L1.6 — 18 Semgrep rules + 18 secret patterns + OSV API (real-time + weekly batch)",
-      "L2 v2.0 — Docker sandbox + active MCP probe with adversarial inputs (async via GitHub Actions)"
+      "L1.5 \u2014 6 metadata checks (real-time on Vercel, ~200ms)",
+      "L1.6 \u2014 18 Semgrep rules + 18 secret patterns + OSV API (real-time + weekly batch)",
+      "L2 v2.0 \u2014 Docker sandbox + active MCP probe with adversarial inputs (async via GitHub Actions)"
     ],
     "stats": {
       "total_skills": 8764,
@@ -25,9 +25,16 @@
       "level": "L1.5",
       "name": "Metadata Security Checks",
       "status": "live",
-      "type": "SAST — Static Analysis (metadata-based)",
+      "type": "SAST \u2014 Static Analysis (metadata-based)",
       "checks": 6,
-      "checks_list": ["AUTH", "Prompt injection detection", "Input validation", "CORS", "OAuth scopes", "Rate limiting + error leakage"],
+      "checks_list": [
+        "AUTH",
+        "Prompt injection detection",
+        "Input validation",
+        "CORS",
+        "OAuth scopes",
+        "Rate limiting + error leakage"
+      ],
       "runtime": "~200ms on Vercel",
       "implemented_date": "2026-06-30"
     },
@@ -35,8 +42,13 @@
       "level": "L1.6",
       "name": "Enhanced Static Analysis (Semgrep + Secrets + OSV)",
       "status": "live",
-      "type": "SAST — Source code analysis",
-      "checks": ["18 Semgrep rules (prompt injection, command injection, SSRF, path traversal, tool forgery)", "18 secret patterns (Stripe, AWS, GitHub, JWT, private keys, wallet mnemonics)", "OSV API real-time dependency vulnerability check", "Gitleaks secret scanning (weekly batch)"],
+      "type": "SAST \u2014 Source code analysis",
+      "checks": [
+        "18 Semgrep rules (prompt injection, command injection, SSRF, path traversal, tool forgery)",
+        "18 secret patterns (Stripe, AWS, GitHub, JWT, private keys, wallet mnemonics)",
+        "OSV API real-time dependency vulnerability check",
+        "Gitleaks secret scanning (weekly batch)"
+      ],
       "runtime": "~500ms on Vercel (real-time) + weekly batch on GitHub Actions",
       "implemented_date": "2026-07-02"
     },
@@ -44,13 +56,13 @@
       "level": "L2 v2.0",
       "name": "Docker Sandbox + Active MCP Probe (DAST)",
       "status": "live",
-      "type": "DAST — Dynamic Analysis with adversarial testing",
+      "type": "DAST \u2014 Dynamic Analysis with adversarial testing",
       "phases": [
-        "Phase 1: Docker sandbox run (--network none, --read-only, --cap-drop ALL) — passive stdout analysis",
-        "Phase 2: Active MCP probe — sends initialize, tools/list, tools/call with 60 adversarial inputs (path traversal, SSRF, SQL injection, command injection, prompt injection, credential fishing)",
-        "Phase 3: Filesystem diff — detects suspicious file changes",
-        "Phase 4: strace syscall monitoring — open, connect, execve, fork, chmod",
-        "Phase 5: Multi-layer scoring — combines stdout + strace + probe + filesystem"
+        "Phase 1: Docker sandbox run (--network none, --read-only, --cap-drop ALL) \u2014 passive stdout analysis",
+        "Phase 2: Active MCP probe \u2014 sends initialize, tools/list, tools/call with 60 adversarial inputs (path traversal, SSRF, SQL injection, command injection, prompt injection, credential fishing)",
+        "Phase 3: Filesystem diff \u2014 detects suspicious file changes",
+        "Phase 4: strace syscall monitoring \u2014 open, connect, execve, fork, chmod",
+        "Phase 5: Multi-layer scoring \u2014 combines stdout + strace + probe + filesystem"
       ],
       "runtime": "2-5 min per skill via GitHub Actions",
       "implemented_date": "2026-07-06",
@@ -60,12 +72,20 @@
     {
       "level": "L2.5",
       "name": "gVisor Sandbox Isolation",
-      "status": "planned",
-      "type": "Enhanced sandbox isolation",
+      "status": "live",
+      "type": "Userspace kernel isolation (gVisor/runsc)",
       "problem": "Docker --cap-drop ALL + seccomp provides good isolation, but kernel-level attacks (container escapes) are still possible.",
-      "solution": "Replace Docker runtime with gVisor — a userspace kernel that intercepts syscalls. Stronger isolation than seccomp alone.",
+      "solution": "Replaced Docker runtime with gVisor (runsc). Every syscall goes through a userspace kernel. The MCP server never touches the host kernel. Catches ptrace, bpf, mount, kexec, clone3, unshare attempts. Enhanced seccomp fallback when gVisor unavailable.",
       "estimated_date": "2026 Q4",
-      "cost": "Free (open source, self-hosted runner required)"
+      "cost": "Free (open source, self-hosted runner required)",
+      "implemented_date": "2026-07-07",
+      "coverage": "206 skills with L2.5 gVisor sandbox results",
+      "stats": {
+        "gvisor_active": true,
+        "seccomp_fallback": true,
+        "suspicious_files_detected": 0,
+        "seccomp_violations": 0
+      }
     },
     {
       "level": "L3",
@@ -73,7 +93,7 @@
       "status": "planned",
       "type": "Hardware-level isolation (KVM)",
       "problem": "Even gVisor shares the host kernel. Sophisticated exploits (dirty pipe, eBPF) can escape.",
-      "solution": "Firecracker microVM — each MCP server runs in its own lightweight VM with KVM hardware isolation. Same technology AWS uses for Lambda.",
+      "solution": "Firecracker microVM \u2014 each MCP server runs in its own lightweight VM with KVM hardware isolation. Same technology AWS uses for Lambda.",
       "estimated_date": "2027 Q1",
       "cost": "Paid (requires KVM-enabled bare metal runner, ~$50/month)"
     },
@@ -94,7 +114,7 @@
       "type": "Dependency monitoring + SBOM",
       "problem": "A skill can be safe today but become malicious tomorrow when a dependency is updated (supply chain attack).",
       "solution": "1. Generate SBOM (Software Bill of Materials) for each skill. 2. Monitor dependencies for new CVEs daily via OSV. 3. Alert when a dependency changes. 4. Re-audit automatically when dependencies update.",
-      "estimated_date": "2026 Q4",
+      "estimated_date": "2026 Q4 (priority \u2014 after L2.5 stabilization)",
       "cost": "Free (OSV API + GitHub Dependency Graph)"
     },
     {
@@ -126,8 +146,8 @@
     "Weekly automation: no manual intervention required"
   ],
   "automated_cron": {
-    "sunday_0030_utc": "auto-discover.yml — discover + import new MCP servers from GitHub",
-    "sunday_0100_utc": "sentinel-certify-all.yml — audit + certify ALL skills (L1.5 + L1.6 + L2 fetch)",
-    "sunday_0200_utc": "sentinel-l2-reaudit.yml — re-run L2 Docker sandbox for all eligible skills"
+    "sunday_0030_utc": "auto-discover.yml \u2014 discover + import new MCP servers from GitHub",
+    "sunday_0100_utc": "sentinel-certify-all.yml \u2014 audit + certify ALL skills (L1.5 + L1.6 + L2 fetch)",
+    "sunday_0200_utc": "sentinel-l2-reaudit.yml \u2014 re-run L2 Docker sandbox for all eligible skills"
   }
 }

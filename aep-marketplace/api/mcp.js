@@ -16,7 +16,7 @@
 
 const BASE_URL = "https://marketnow.site";
 const SKILLS_API = `${BASE_URL}/api/skills.json`;
-const CATEGORIES_API = `${BASE_URL}//api/categories.json`;
+const CATEGORIES_API = `${BASE_URL}/categories.json`;
 
 // Cache skills in memory (5 min TTL)
 let skillsCache = null;

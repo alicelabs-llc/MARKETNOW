@@ -187,6 +187,18 @@ async function handleCertificate(req, res) {
 
       return res.status(200).json({
         status: 'certified',
+        // Flat fields for agent compatibility (agents expect top-level fields)
+        certificate_id: cert.certificate_id || cert.id || null,
+        skill_id: cert.skill_id || skillId,
+        overall_score: cert.overall_score || cert.score || null,
+        max_score: cert.max_score || 10,
+        risk_level: cert.risk_level || cert.risk || null,
+        signature: cert.signature || null,
+        signature_algorithm: cert.signature_algorithm || 'SHA-256',
+        layers_run: cert.layers_run || {},
+        expires_at: cert.expires_at || null,
+        verification_url: `https://marketnow.site/verify?skillId=${skillId}`,
+        // Nested structure (for human-readable verification)
         certificate: cert,
         verification: {
           valid: signatureValid,

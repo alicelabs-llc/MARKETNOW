@@ -32,7 +32,7 @@
       "destination": "/for-agents.html"
     },
     {
-      "source": "/((?!api/|for-agents|landing-pages/).*)",
+      "source": "/((?!api/|for-agents|landing-pages/|tools/).*)",
       "destination": "/index.html"
     }
   ],

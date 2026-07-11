@@ -88,6 +88,17 @@
       }
     },
     {
+      "level": "L2.6",
+      "name": "Egress Proxy with Allowlist",
+      "status": "planned",
+      "type": "Network-level isolation for outbound calls",
+      "problem": "Some MCP servers legitimately need outbound network access (API calls, webhooks). --network none blocks ALL traffic, which breaks these servers.",
+      "solution": "Pinned egress proxy with domain allowlist. Servers can only call pre-approved domains. All other traffic is blocked. Agent confirms allowlist before install.",
+      "estimated_date": "2026 Q4",
+      "cost": "Free (self-hosted proxy)",
+      "suggested_by": "@custralis on dev.to"
+    },
+    {
       "level": "L3",
       "name": "Firecracker microVM",
       "status": "planned",

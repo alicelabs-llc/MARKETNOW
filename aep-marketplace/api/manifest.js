@@ -82,6 +82,13 @@ export default async function handler(req, res) {
         description: 'Trigger a security audit for a new MCP server',
         auth: 'github',
       },
+      failure_taxonomy: {
+        method: 'GET',
+        path: '/failure-taxonomy.json',
+        description: 'Structured failure codes for agent self-diagnosis (15 categories)',
+        auth: 'none',
+        returns: ['failure_categories', 'agent_decision_tree'],
+      },
       mcp_protocol: {
         method: 'POST',
         path: '/api/mcp',

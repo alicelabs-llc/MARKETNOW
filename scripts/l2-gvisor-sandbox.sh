@@ -68,6 +68,7 @@ if [ "$RUNSC_AVAILABLE" = "true" ]; then
     --cpus 0.5 \
     --pids-limit 64 \
     --tmpfs /tmp:rw,size=64m \
+    --user 1000:1000 \
     --env SKILL_ID="$SKILL_ID" \
     --env SENTINEL_L2_MODE=gvisor \
     "$IMAGE" > "$OUTPUT_DIR/stdout.log" 2>&1 || true
@@ -134,6 +135,7 @@ SECCOMP
     --cpus 0.5 \
     --pids-limit 64 \
     --tmpfs /tmp:rw,size=64m \
+    --user 1000:1000 \
     --env SKILL_ID="$SKILL_ID" \
     --env SENTINEL_L2_MODE=enhanced-docker \
     "$IMAGE" > "$OUTPUT_DIR/stdout.log" 2>&1 || true

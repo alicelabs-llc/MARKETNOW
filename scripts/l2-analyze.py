@@ -294,6 +294,52 @@ except FileNotFoundError:
     pass
 
 # ═══════════════════════════════════════════════════════════════════════════
+# 6.5 L2.6 EGRESS PROXY ANALYSIS (NEW — domain allowlist enforcement)
+# ═══════════════════════════════════════════════════════════════════════════
+
+egress_findings = {
+    'total_requests': 0,
+    'allowed_requests': 0,
+    'blocked_requests': 0,
+    'blocked_domains': [],
+    'allowed_domains': [],
+    'metadata_endpoint_access': False,
+    'localhost_access': False,
+    'private_range_access': False,
+}
+
+egress_log_path = '/tmp/l2_output/egress_log.json'
+try:
+    with open(egress_log_path, 'r') as f:
+        egress_entries = json.load(f)
+    for entry in egress_entries:
+        action = entry.get('action', '')
+        hostname = entry.get('hostname', '')
+        
+        if action in ('ALLOWED', 'BLOCKED'):
+            egress_findings['total_requests'] += 1
+        
+        if action == 'ALLOWED':
+            egress_findings['allowed_requests'] += 1
+            if hostname not in egress_findings['allowed_domains']:
+                egress_findings['allowed_domains'].append(hostname)
+        
+        if action == 'BLOCKED':
+            egress_findings['blocked_requests'] += 1
+            if hostname not in egress_findings['blocked_domains']:
+                egress_findings['blocked_domains'].append(hostname)
+        
+        # Check for dangerous endpoints
+        if '169.254.169.254' in hostname:
+            egress_findings['metadata_endpoint_access'] = True
+        if hostname in ('127.0.0.1', 'localhost', '0.0.0.0', '::1'):
+            egress_findings['localhost_access'] = True
+        if any(hostname.startswith(p) for p in ['10.', '172.16.', '172.17.', '172.18.', '172.19.', '172.20.', '172.21.', '172.22.', '172.23.', '172.24.', '172.25.', '172.26.', '172.27.', '172.28.', '172.29.', '172.30.', '172.31.', '192.168.']):
+            egress_findings['private_range_access'] = True
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
+
+# ═══════════════════════════════════════════════════════════════════════════
 # 7. COMBINED SCORING (v2.5 — 6 analysis layers)
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -335,6 +381,7 @@ result = {
         'filesystem_diff': fs_findings,
         'l25_seccomp_violations': seccomp_findings,
         'l25_suspicious_files': suspicious_file_findings,
+        'l26_egress_proxy': egress_findings,
     },
     'stdout_size_bytes': len(raw),
     'stdout_sample': sample,
@@ -378,6 +425,13 @@ else:
     if seccomp_findings['unshare_attempted']: score -= 3
     if seccomp_findings['total_violations'] > 0: score -= 2
 
+    # L2.6 EGRESS PROXY penalties — blocked requests = attempted unauthorized access
+    if egress_findings['metadata_endpoint_access']: score -= 5  # Critical: tried to access cloud metadata
+    if egress_findings['localhost_access']: score -= 4         # High: tried to access local services
+    if egress_findings['private_range_access']: score -= 4     # High: tried to access internal network
+    if egress_findings['blocked_requests'] > 0: score -= 2     # Medium: tried to contact non-allowlisted domains
+    if egress_findings['total_requests'] > 10: score -= 1      # Low: excessive outbound requests
+
     # L2.5 SUSPICIOUS FILES penalties
     if suspicious_file_findings['ssh_files']: score -= 5
     if suspicious_file_findings['env_files']: score -= 4
@@ -412,6 +466,8 @@ result['findings_summary'] = {
     'sensitive_paths_accessed': strace_findings['sensitive_paths_accessed'],
     'leaked_data': probe_findings['leaked_data'],
     'suspicious_fs_changes': fs_findings['suspicious_changes'],
+        'egress_blocked_domains': egress_findings['blocked_domains'],
+        'egress_metadata_access': egress_findings['metadata_endpoint_access'],
 }
 
 with open(result_path, 'w') as f:

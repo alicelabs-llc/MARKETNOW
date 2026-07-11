@@ -5,7 +5,7 @@
   "effective_date": "2026-07-06",
   "url": "https://marketnow.site/sentinel-roadmap",
   "current_state": {
-    "version": "L1.5 + L1.6 + L2 v2.0 + L2.5 gVisor",
+    "version": "L1.5 + L1.6 + L2 v2.0 + L2.5 gVisor + L2.6 Egress Proxy",
     "type": "Multi-layer security audit (SAST + DAST + Active probing)",
     "layers_implemented": [
       "L1.5 \u2014 6 metadata checks (real-time on Vercel, ~200ms)",
@@ -90,13 +90,15 @@
     {
       "level": "L2.6",
       "name": "Egress Proxy with Allowlist",
-      "status": "planned",
-      "type": "Network-level isolation for outbound calls",
+      "status": "in_progress",
+      "type": "Network-level isolation with domain allowlist (HTTP/HTTPS proxy)",
       "problem": "Some MCP servers legitimately need outbound network access (API calls, webhooks). --network none blocks ALL traffic, which breaks these servers.",
       "solution": "Pinned egress proxy with domain allowlist. Servers can only call pre-approved domains. All other traffic is blocked. Agent confirms allowlist before install.",
       "estimated_date": "2026 Q4",
       "cost": "Free (self-hosted proxy)",
-      "suggested_by": "@custralis on dev.to"
+      "suggested_by": "@custralis on dev.to",
+      "implemented_date": "2026-07-11",
+      "coverage": "Egress proxy + allowlist implemented. 30 domains + 9 wildcards allowed. All other traffic blocked and logged."
     },
     {
       "level": "L3",

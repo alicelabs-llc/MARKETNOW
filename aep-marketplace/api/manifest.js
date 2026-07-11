@@ -82,6 +82,12 @@ export default async function handler(req, res) {
         description: 'Trigger a security audit for a new MCP server',
         auth: 'github',
       },
+      egress_allowlist: {
+        method: 'GET',
+        path: '/egress-allowlist.json',
+        description: 'L2.6 egress proxy allowlist — domains that MCP servers can contact during sandbox testing',
+        auth: 'none',
+      },
       failure_taxonomy: {
         method: 'GET',
         path: '/failure-taxonomy.json',

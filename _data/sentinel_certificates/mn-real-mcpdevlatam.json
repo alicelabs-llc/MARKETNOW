@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6495693",
+  "certificate_id": "MN-SC-2026-0609147",
   "skill_id": "mn-real-mcpdevlatam",
   "skill_name": "mcp-dev-latam",
-  "issued_at": "2026-07-06T05:41:35.693Z",
-  "expires_at": "2026-07-13T05:41:35.693Z",
+  "issued_at": "2026-07-12T04:30:09.147Z",
+  "expires_at": "2026-07-19T04:30:09.147Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "158250fdd1b9b6f07b04614a07438b4f83245b2f8ce37c958ad632c90b446112",
+  "signature": "f2512ef1f5e5379c4972ce4c42b48811cbfae9fa2af9355c0cc6a4e808c1f8e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdevlatam"
 }

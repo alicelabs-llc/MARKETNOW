@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6045111",
+  "certificate_id": "MN-SC-2026-0300758",
   "skill_id": "mn-prompt-f84d9a8d",
   "skill_name": "Data warehouse maturity assessment",
-  "issued_at": "2026-07-06T05:34:05.111Z",
-  "expires_at": "2026-07-13T05:34:05.111Z",
+  "issued_at": "2026-07-12T04:25:00.758Z",
+  "expires_at": "2026-07-19T04:25:00.758Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5bd93b794bdac74789da90501d0b74cef9c3aaeec72e32f3ed265bf38ab991fe",
+  "signature": "fb4d27e2b4c8aaa3b6ee3399c4486bc60fd3971837f8c674d4845d3d7145b8b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f84d9a8d"
 }

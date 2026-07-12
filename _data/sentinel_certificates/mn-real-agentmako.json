@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6316140",
+  "certificate_id": "MN-SC-2026-0413268",
   "skill_id": "mn-real-agentmako",
   "skill_name": "agentmako",
-  "issued_at": "2026-07-06T05:38:36.140Z",
-  "expires_at": "2026-07-13T05:38:36.140Z",
+  "issued_at": "2026-07-12T04:26:53.268Z",
+  "expires_at": "2026-07-19T04:26:53.268Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "92b29028cb42383fce8dc7421edd3d1af9a6a77a0de1c931738057fc4f9559a2",
+  "signature": "ec44408c6d7a0405606a28916756825c96f3098fd82c158a326cdaaddd438143",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentmako"
 }

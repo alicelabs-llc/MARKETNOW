@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5529296",
+  "certificate_id": "MN-SC-2026-0014202",
   "skill_id": "mn-gen-06044",
   "skill_name": "make-mcp-server",
-  "issued_at": "2026-07-06T05:25:29.296Z",
-  "expires_at": "2026-07-13T05:25:29.296Z",
+  "issued_at": "2026-07-12T04:20:14.202Z",
+  "expires_at": "2026-07-19T04:20:14.202Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23f6c0da72f69fc8776f74c8414c8525ee7c8e0d657f6a69c5edb169615932e7",
+  "signature": "ab0f10a3da6c273992dd3a031f204bc5faa7849b7fc8e04fc0089d7d1cfec008",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06044"
 }

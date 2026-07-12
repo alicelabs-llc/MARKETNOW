@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6486588",
+  "certificate_id": "MN-SC-2026-0600072",
   "skill_id": "mn-real-maverickmcp",
   "skill_name": "maverick-mcp",
-  "issued_at": "2026-07-06T05:41:26.588Z",
-  "expires_at": "2026-07-13T05:41:26.588Z",
+  "issued_at": "2026-07-12T04:30:00.072Z",
+  "expires_at": "2026-07-19T04:30:00.072Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc588a20ad7557b949ad7023d5e81a35fafb86775132b2bbbda5113ab3ea0b84",
+  "signature": "7a1c6c9df5e147d15544e07766a27e8066b00f06cae3159a16e458470e8280b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-maverickmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6297476",
+  "certificate_id": "MN-SC-2026-0391873",
   "skill_id": "mn-awmcp-telegramarchivemcp",
   "skill_name": "telegram-archive-mcp",
-  "issued_at": "2026-07-06T05:38:17.476Z",
-  "expires_at": "2026-07-13T05:38:17.476Z",
+  "issued_at": "2026-07-12T04:26:31.873Z",
+  "expires_at": "2026-07-19T04:26:31.873Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5046d8cbda716d98e6aa9cdbbe49e82160bdfda06380bd8a9312f26fdf4c863b",
+  "signature": "d9bc0bdb92a40246b181e6647fa3ea968d615e1bc37e048ae52518a0c9a60ac4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-telegramarchivemcp"
 }

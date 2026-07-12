@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6350516",
+  "certificate_id": "MN-SC-2026-0450096",
   "skill_id": "mn-real-smarttree",
   "skill_name": "smart-tree",
-  "issued_at": "2026-07-06T05:39:10.516Z",
-  "expires_at": "2026-07-13T05:39:10.516Z",
+  "issued_at": "2026-07-12T04:27:30.096Z",
+  "expires_at": "2026-07-19T04:27:30.096Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c68a319ab590d2835dc661e6d96c09faeb409d30b6082b4988482f05e45f427",
+  "signature": "1fcafa59b67577716063e87b2d262aae38270819fc393db78e7353831db45ec2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-smarttree"
 }

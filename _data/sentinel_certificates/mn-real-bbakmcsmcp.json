@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0890003",
+  "skill_id": "mn-real-bbakmcsmcp",
+  "skill_name": "mcs-mcp",
+  "issued_at": "2026-07-12T04:34:50.003Z",
+  "expires_at": "2026-07-19T04:34:50.003Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "5778cc63e0fe6e6f27332e6096a2e51708bffafa27f5007ba31dda274a4b7b98",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bbakmcsmcp"
+}

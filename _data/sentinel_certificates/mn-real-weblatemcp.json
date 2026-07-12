@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6449661",
+  "certificate_id": "MN-SC-2026-0560501",
   "skill_id": "mn-real-weblatemcp",
   "skill_name": "weblate-mcp",
-  "issued_at": "2026-07-06T05:40:49.661Z",
-  "expires_at": "2026-07-13T05:40:49.661Z",
+  "issued_at": "2026-07-12T04:29:20.501Z",
+  "expires_at": "2026-07-19T04:29:20.501Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "603c93a0f54c4ff76144f3a4262457e26e6ef3dc69f629e1a0c4e386df813bfd",
+  "signature": "2b599d7475594714c6b51095c1bfa94cd27479f36d38dab8ee8d51482a5b76fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-weblatemcp"
 }

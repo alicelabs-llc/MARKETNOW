@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5971760",
+  "certificate_id": "MN-SC-2026-0203960",
   "skill_id": "mn-prompt-8f1a92f2",
   "skill_name": "Terms of service para app móvil",
-  "issued_at": "2026-07-06T05:32:51.760Z",
-  "expires_at": "2026-07-13T05:32:51.760Z",
+  "issued_at": "2026-07-12T04:23:23.960Z",
+  "expires_at": "2026-07-19T04:23:23.960Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d570898a3250777d9ba80be125f7ef6f4a1e09e1b5396577d8146928b939546",
+  "signature": "c00968e0c334b70b22d4299da07d431f61b0cd69bd172a8bf7d88602d4b6d12e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8f1a92f2"
 }

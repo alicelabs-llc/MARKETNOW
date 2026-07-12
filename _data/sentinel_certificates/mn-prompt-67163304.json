@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6005335",
+  "certificate_id": "MN-SC-2026-0252072",
   "skill_id": "mn-prompt-67163304",
   "skill_name": "Product customer interview script",
-  "issued_at": "2026-07-06T05:33:25.335Z",
-  "expires_at": "2026-07-13T05:33:25.335Z",
+  "issued_at": "2026-07-12T04:24:12.072Z",
+  "expires_at": "2026-07-19T04:24:12.072Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53e9d8a6f87e7ce73aa5a22a202d8e45230f11303a00bc30a8660d81523b42fb",
+  "signature": "8e97bbf672b811b421fef59476f43b690ea04302fe02c0c22c09250b7a407688",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-67163304"
 }

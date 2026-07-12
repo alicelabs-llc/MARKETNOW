@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6310249",
+  "certificate_id": "MN-SC-2026-0406373",
   "skill_id": "mn-real-pgmcp",
   "skill_name": "pgmcp",
-  "issued_at": "2026-07-06T05:38:30.249Z",
-  "expires_at": "2026-07-13T05:38:30.249Z",
+  "issued_at": "2026-07-12T04:26:46.373Z",
+  "expires_at": "2026-07-19T04:26:46.373Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa342205bc9c1e252b2f69f71df9adaf08dbbee64728e2c02014d0e02f90cc3d",
+  "signature": "f59c70761bb5d9ddac3c79a707e7f1b4d643b95e0b3047b1dca1a2b3c0a03ca4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pgmcp"
 }

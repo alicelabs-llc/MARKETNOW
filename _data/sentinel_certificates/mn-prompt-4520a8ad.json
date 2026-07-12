@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6006352",
+  "certificate_id": "MN-SC-2026-0252567",
   "skill_id": "mn-prompt-4520a8ad",
   "skill_name": "Product analytics session recording",
-  "issued_at": "2026-07-06T05:33:26.352Z",
-  "expires_at": "2026-07-13T05:33:26.352Z",
+  "issued_at": "2026-07-12T04:24:12.567Z",
+  "expires_at": "2026-07-19T04:24:12.567Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b372c8593178926e7e769a1359d45053f4939075c735f5ba0c5e14215206a134",
+  "signature": "8618edb70a8ea5f0d470c89cb884be681e9ca599685b210f4b16e86669b6ad41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4520a8ad"
 }

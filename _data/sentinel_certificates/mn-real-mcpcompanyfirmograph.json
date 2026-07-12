@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6427712",
+  "certificate_id": "MN-SC-2026-0536870",
   "skill_id": "mn-real-mcpcompanyfirmograph",
   "skill_name": "mcp-company-firmographic-enricher",
-  "issued_at": "2026-07-06T05:40:27.712Z",
-  "expires_at": "2026-07-13T05:40:27.712Z",
+  "issued_at": "2026-07-12T04:28:56.870Z",
+  "expires_at": "2026-07-19T04:28:56.870Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "876faaf8dd79d3782b085a93c2ba180faa6922a0abaf25eab1952676df1e742b",
+  "signature": "cecd38e912ef93da79d96c46f537b29a5f44412f3ec7c1ad882ff5f95cb70c2a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcompanyfirmograph"
 }

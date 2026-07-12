@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6015700",
+  "certificate_id": "MN-SC-2026-0265846",
   "skill_id": "mn-prompt-8c2044bc",
   "skill_name": "Copywriting for chatbots",
-  "issued_at": "2026-07-06T05:33:35.700Z",
-  "expires_at": "2026-07-13T05:33:35.700Z",
+  "issued_at": "2026-07-12T04:24:25.846Z",
+  "expires_at": "2026-07-19T04:24:25.846Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d828cc1285fcd5090212868869c2cdc6b9cc1bd9746a0d4c69f9fcf28ee403e2",
+  "signature": "3d81feda0d3cd49dbee66696c6b0f0121b5939aa94ac081e842a103ff46be4f1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8c2044bc"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5825366",
+  "certificate_id": "MN-SC-2026-0047604",
   "skill_id": "mn-gen-13273",
   "skill_name": "damn-vulnerable-MCP-server",
-  "issued_at": "2026-07-06T05:30:25.366Z",
-  "expires_at": "2026-07-13T05:30:25.366Z",
+  "issued_at": "2026-07-12T04:20:47.604Z",
+  "expires_at": "2026-07-19T04:20:47.604Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cce088e7cbdbaf41bf8f363494b31864ffbc1c12b918900922afa4b4ab6fad5d",
+  "signature": "e0a8c80f6157c13b7734ba48e30d2e75727b0f2dfa39ec2ea10c313ccd84a9c0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13273"
 }

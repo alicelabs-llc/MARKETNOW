@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6455558",
+  "certificate_id": "MN-SC-2026-0566312",
   "skill_id": "mn-real-delegamcp",
   "skill_name": "delega-mcp",
-  "issued_at": "2026-07-06T05:40:55.558Z",
-  "expires_at": "2026-07-13T05:40:55.558Z",
+  "issued_at": "2026-07-12T04:29:26.312Z",
+  "expires_at": "2026-07-19T04:29:26.312Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef775dfd9b55921a128af2f0d59d2cebbd908a52270340ad1e55de76c0742fec",
+  "signature": "7a166820aa0c4b06fcef29eedcc51317cda38b91fa92b7e44483470c80d5c763",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-delegamcp"
 }

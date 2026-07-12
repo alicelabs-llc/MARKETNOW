@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6041031",
+  "certificate_id": "MN-SC-2026-0294807",
   "skill_id": "mn-prompt-cb74c04f",
   "skill_name": "Data warehouse monitoring dashboard",
-  "issued_at": "2026-07-06T05:34:01.031Z",
-  "expires_at": "2026-07-13T05:34:01.031Z",
+  "issued_at": "2026-07-12T04:24:54.807Z",
+  "expires_at": "2026-07-19T04:24:54.807Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6426d18b0cbaf69b7df8b9b7530cec8173be9dbc38588e2b3dc8fe0e60814341",
+  "signature": "3ab32a0c095d0742b8a2979e33d4487359af96f6201908d34e790fb82d4e3c6e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-cb74c04f"
 }

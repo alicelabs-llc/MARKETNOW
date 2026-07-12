@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6451083",
+  "certificate_id": "MN-SC-2026-0561862",
   "skill_id": "mn-real-triplyfymcp",
   "skill_name": "triplyfy-mcp",
-  "issued_at": "2026-07-06T05:40:51.083Z",
-  "expires_at": "2026-07-13T05:40:51.083Z",
+  "issued_at": "2026-07-12T04:29:21.862Z",
+  "expires_at": "2026-07-19T04:29:21.862Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c3af5229fec37b48825257a3b8e64ed2cccabd22e3e4f5e210e79659aec8c8c",
+  "signature": "3d4a87e2a08e302ad2270541578bca126d221af8c47ffe3ff85bd2da49e95ee2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-triplyfymcp"
 }

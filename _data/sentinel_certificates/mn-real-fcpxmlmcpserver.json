@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6414653",
+  "certificate_id": "MN-SC-2026-0522749",
   "skill_id": "mn-real-fcpxmlmcpserver",
   "skill_name": "fcpxml-mcp-server",
-  "issued_at": "2026-07-06T05:40:14.653Z",
-  "expires_at": "2026-07-13T05:40:14.653Z",
+  "issued_at": "2026-07-12T04:28:42.749Z",
+  "expires_at": "2026-07-19T04:28:42.749Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "772443970b43c55691c0c0767677d559af3cd253f42bea348957cbd526921d49",
+  "signature": "37b97868a51b3e0f7a59d2958d335e0012f4c58b9e5147a461e3cc48817aeff0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fcpxmlmcpserver"
 }

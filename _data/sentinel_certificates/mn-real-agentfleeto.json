@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6471722",
+  "certificate_id": "MN-SC-2026-0583016",
   "skill_id": "mn-real-agentfleeto",
   "skill_name": "agent-fleet-o",
-  "issued_at": "2026-07-06T05:41:11.722Z",
-  "expires_at": "2026-07-13T05:41:11.722Z",
+  "issued_at": "2026-07-12T04:29:43.016Z",
+  "expires_at": "2026-07-19T04:29:43.016Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5d89f8d47feee1d2466775e586d9cc42c56bd756814e92f9537796aee1dc954",
+  "signature": "78dd772482ea86a34b977fe894bbd811c9212a35ce3d26da45b21017b1a8539e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentfleeto"
 }

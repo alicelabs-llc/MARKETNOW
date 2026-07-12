@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6394204",
+  "certificate_id": "MN-SC-2026-0497698",
   "skill_id": "mn-real-claudesessioncontinu",
   "skill_name": "claude-session-continuity-mcp",
-  "issued_at": "2026-07-06T05:39:54.204Z",
-  "expires_at": "2026-07-13T05:39:54.204Z",
+  "issued_at": "2026-07-12T04:28:17.698Z",
+  "expires_at": "2026-07-19T04:28:17.698Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0680603e519508d96adb5d1aa98f27161b6cee21c395a7aea3a9071c00313600",
+  "signature": "3e0850740790ca30bff83c45c176662a793aa5250bb34db5a02ffacf35ecdeb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudesessioncontinu"
 }

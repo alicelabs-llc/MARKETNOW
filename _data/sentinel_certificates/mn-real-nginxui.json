@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6474137",
+  "certificate_id": "MN-SC-2026-0586442",
   "skill_id": "mn-real-nginxui",
   "skill_name": "nginx-ui",
-  "issued_at": "2026-07-06T05:41:14.137Z",
-  "expires_at": "2026-07-13T05:41:14.137Z",
+  "issued_at": "2026-07-12T04:29:46.442Z",
+  "expires_at": "2026-07-19T04:29:46.442Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e80035a6686530c848ef14a31d235f3bfcaabe525286477626760aab3a0d6d4",
+  "signature": "2a9e1899c18df06370f84fa536418e9e3d1344a69c8c3cadfb456dda720737cd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nginxui"
 }

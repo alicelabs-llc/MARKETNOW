@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6311329",
+  "certificate_id": "MN-SC-2026-0407614",
   "skill_id": "mn-real-wode",
   "skill_name": "wode",
-  "issued_at": "2026-07-06T05:38:31.329Z",
-  "expires_at": "2026-07-13T05:38:31.329Z",
+  "issued_at": "2026-07-12T04:26:47.614Z",
+  "expires_at": "2026-07-19T04:26:47.614Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aab19e5f9f9e1e5410d1172423f4b6c714d6320e23d2b597e8c026401b7fa2a3",
+  "signature": "2c9b5e3b677ff751ca810636f4bdd223e9e769a10aa57e4a1324679d588b4850",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wode"
 }

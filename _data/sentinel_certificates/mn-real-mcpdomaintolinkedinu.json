@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6428228",
+  "certificate_id": "MN-SC-2026-0536856",
   "skill_id": "mn-real-mcpdomaintolinkedinu",
   "skill_name": "mcp-domain-to-linkedin-url-resolver",
-  "issued_at": "2026-07-06T05:40:28.228Z",
-  "expires_at": "2026-07-13T05:40:28.228Z",
+  "issued_at": "2026-07-12T04:28:56.856Z",
+  "expires_at": "2026-07-19T04:28:56.856Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e46a3bec348b0bdbb3aed4c520dca700d6902e820df01a349b8389c24004865a",
+  "signature": "9ac0646f5904bee8bb444fc60607bdc2275ccd059c8c4fc421e131bda3498176",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdomaintolinkedinu"
 }

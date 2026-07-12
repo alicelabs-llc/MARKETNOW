@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5960178",
+  "certificate_id": "MN-SC-2026-0192838",
   "skill_id": "mn-prompt-b59f357b",
   "skill_name": "Implementador de full-text search con PostgreSQL tsvector",
-  "issued_at": "2026-07-06T05:32:40.178Z",
-  "expires_at": "2026-07-13T05:32:40.178Z",
+  "issued_at": "2026-07-12T04:23:12.838Z",
+  "expires_at": "2026-07-19T04:23:12.838Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "73646e5ad3ddcb63d425d1b4e0e9db87aee77338ba7a2b0e380d5a079bc33724",
+  "signature": "669a348d088f17529468d9fdb34fece6cd7b06be07c9d3c31fb3af14af177dca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b59f357b"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5536460",
+  "certificate_id": "MN-SC-2026-0015173",
   "skill_id": "mn-gen-06233",
   "skill_name": "mcp-trino",
-  "issued_at": "2026-07-06T05:25:36.460Z",
-  "expires_at": "2026-07-13T05:25:36.460Z",
+  "issued_at": "2026-07-12T04:20:15.173Z",
+  "expires_at": "2026-07-19T04:20:15.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9531a38c6f9641b1bb3b4fe14f39201090def594b959b81dfd96f6d519c81035",
+  "signature": "b3cf2fd1dc0c19e47fccdd7d403fd7b2aed2d34ff654e1996621ee26c7d9a8f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06233"
 }

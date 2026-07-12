@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6260573",
+  "certificate_id": "MN-SC-2026-0348682",
   "skill_id": "mn-awmcp-decoder3ammcp",
   "skill_name": "decoder-3am-mcp",
-  "issued_at": "2026-07-06T05:37:40.573Z",
-  "expires_at": "2026-07-13T05:37:40.573Z",
+  "issued_at": "2026-07-12T04:25:48.682Z",
+  "expires_at": "2026-07-19T04:25:48.682Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "858eeb225b31235386f1bc2187a71d08400a025f45d1aeb02a50458f629ffb23",
+  "signature": "d10f3adefb7cd55604bb8d38dfb864d7f02e2f2c2e0d93b1017e20181dc3c444",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-decoder3ammcp"
 }

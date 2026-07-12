@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6293233",
+  "certificate_id": "MN-SC-2026-0385973",
   "skill_id": "mn-awmcp-copilotmcpserver",
   "skill_name": "copilot-mcp-server",
-  "issued_at": "2026-07-06T05:38:13.233Z",
-  "expires_at": "2026-07-13T05:38:13.233Z",
+  "issued_at": "2026-07-12T04:26:25.973Z",
+  "expires_at": "2026-07-19T04:26:25.973Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d1d633470519168a80c755fecfd67301d943aa1a82d755988617461f99d75a7",
+  "signature": "da1f00bededbea9b3321ee5d10642550cda4de95959d3055a4ee4254c653f5c4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-copilotmcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5967425",
+  "certificate_id": "MN-SC-2026-0200632",
   "skill_id": "mn-prompt-8fd588d0",
   "skill_name": "Implementador de CQRS sin event sourcing",
-  "issued_at": "2026-07-06T05:32:47.425Z",
-  "expires_at": "2026-07-13T05:32:47.425Z",
+  "issued_at": "2026-07-12T04:23:20.632Z",
+  "expires_at": "2026-07-19T04:23:20.632Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a897b387b107dc53245d002f98ff13b175de925fc68f914b8bc6a4a501176cb",
+  "signature": "3c496199b63bb46398d9c8642e01d82c7ed86f7153009252e11119e24502afe7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8fd588d0"
 }

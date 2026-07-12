@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6392973",
+  "certificate_id": "MN-SC-2026-1081436",
   "skill_id": "mn-real-thumbgate",
   "skill_name": "ThumbGate",
-  "issued_at": "2026-07-06T05:39:52.973Z",
-  "expires_at": "2026-07-13T05:39:52.973Z",
+  "issued_at": "2026-07-12T04:38:01.436Z",
+  "expires_at": "2026-07-19T04:38:01.436Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "105f50e46aa7af9086e5ef05f932767582bf76d600652ad8cd9278266d6c64a4",
+  "signature": "4736d2132f411efe46325c6bb3822d5b18b9daf92b6ab7321bc8d2fcc40bc33a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-thumbgate"
 }

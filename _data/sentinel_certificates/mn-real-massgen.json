@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6489224",
+  "certificate_id": "MN-SC-2026-0602477",
   "skill_id": "mn-real-massgen",
   "skill_name": "MassGen",
-  "issued_at": "2026-07-06T05:41:29.224Z",
-  "expires_at": "2026-07-13T05:41:29.224Z",
+  "issued_at": "2026-07-12T04:30:02.477Z",
+  "expires_at": "2026-07-19T04:30:02.477Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab6960f50013f0179d5bf60f4f7d8a05341496bfa92b6a13836d1621c81b83fe",
+  "signature": "1210aa56c5684ada87a1d26bf910ed1eae5dfb8be193a8dee28edcba8b25ae45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-massgen"
 }

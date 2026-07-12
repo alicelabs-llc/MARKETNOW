@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6433296",
+  "certificate_id": "MN-SC-2026-0542318",
   "skill_id": "mn-real-nobulex",
   "skill_name": "nobulex",
-  "issued_at": "2026-07-06T05:40:33.296Z",
-  "expires_at": "2026-07-13T05:40:33.296Z",
+  "issued_at": "2026-07-12T04:29:02.318Z",
+  "expires_at": "2026-07-19T04:29:02.318Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f6a1ece62fc5050b84e9c853566dfdd6407d6dbb98f16ad084197b41c3f8c8ce",
+  "signature": "3fc6b72f95719b6c7a23aac0f1bf797eac634d36d55d82042b8b41d55ee4d574",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nobulex"
 }

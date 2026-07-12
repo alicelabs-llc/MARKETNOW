@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5966960",
+  "certificate_id": "MN-SC-2026-0199993",
   "skill_id": "mn-prompt-7bf95c10",
   "skill_name": "Especialista en API rate limiting diferenciado por tier",
-  "issued_at": "2026-07-06T05:32:46.960Z",
-  "expires_at": "2026-07-13T05:32:46.960Z",
+  "issued_at": "2026-07-12T04:23:19.993Z",
+  "expires_at": "2026-07-19T04:23:19.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d878412a6e175f24038cc62461e575fd0030b2300f3e925ff9336724129a6bc",
+  "signature": "6cae25a80ead0104209c55fd0d871b918ebbec5b520694dffe39888c61418bd1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7bf95c10"
 }

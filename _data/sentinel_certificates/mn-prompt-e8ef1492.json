@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5872657",
+  "certificate_id": "MN-SC-2026-0085048",
   "skill_id": "mn-prompt-e8ef1492",
   "skill_name": "Especialista LLM Safety + Guardrails",
-  "issued_at": "2026-07-06T05:31:12.657Z",
-  "expires_at": "2026-07-13T05:31:12.657Z",
+  "issued_at": "2026-07-12T04:21:25.048Z",
+  "expires_at": "2026-07-19T04:21:25.048Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d44fa8ab5087bd87c9ae75376c1b0eeb6d5a3552c378ed22e73e27b6d547de99",
+  "signature": "0354da4c6d53f20424b8ddce7b791016eda86984fb05f69a25fd78b9aa12e98b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e8ef1492"
 }

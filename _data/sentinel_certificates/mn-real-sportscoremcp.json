@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6447759",
+  "certificate_id": "MN-SC-2026-0557719",
   "skill_id": "mn-real-sportscoremcp",
   "skill_name": "sportscore-mcp",
-  "issued_at": "2026-07-06T05:40:47.759Z",
-  "expires_at": "2026-07-13T05:40:47.759Z",
+  "issued_at": "2026-07-12T04:29:17.719Z",
+  "expires_at": "2026-07-19T04:29:17.719Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95107ae5e1f4cdc4d777f06d83a05009efd00e6b841f95eb3a05d59398076654",
+  "signature": "11f419832623f41f0d9389b1a9bf1762360b04c48342d5cfa745ab4e399e4a58",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sportscoremcp"
 }

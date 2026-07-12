@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6509646",
+  "certificate_id": "MN-SC-2026-0622226",
   "skill_id": "mn-real-laravelmcpserver",
   "skill_name": "laravel-mcp-server",
-  "issued_at": "2026-07-06T05:41:49.646Z",
-  "expires_at": "2026-07-13T05:41:49.646Z",
+  "issued_at": "2026-07-12T04:30:22.226Z",
+  "expires_at": "2026-07-19T04:30:22.226Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "991107d9769cba372d3e733d60d6c4466ba4f07cfe3bec513903f19e11da47df",
+  "signature": "d25a9f64e74a118a79d924a715436301ec81b902dfe71eb7d895185302cd1491",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-laravelmcpserver"
 }

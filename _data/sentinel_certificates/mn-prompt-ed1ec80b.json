@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5861474",
+  "certificate_id": "MN-SC-2026-0069290",
   "skill_id": "mn-prompt-ed1ec80b",
   "skill_name": "Especialista Docker + Multi-stage",
-  "issued_at": "2026-07-06T05:31:01.474Z",
-  "expires_at": "2026-07-13T05:31:01.474Z",
+  "issued_at": "2026-07-12T04:21:09.290Z",
+  "expires_at": "2026-07-19T04:21:09.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d42140050f4d196fc88cbd50ec1cccface28026b9e2b4c1bd1a635e1c550a88d",
+  "signature": "49dfcc2cafa18e7f49f981bc622538985e7a9d982d0c944789d5a60dc6413e5d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ed1ec80b"
 }

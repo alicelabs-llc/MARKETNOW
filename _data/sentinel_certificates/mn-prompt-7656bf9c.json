@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6041039",
+  "certificate_id": "MN-SC-2026-0294749",
   "skill_id": "mn-prompt-7656bf9c",
   "skill_name": "Data warehouse access management",
-  "issued_at": "2026-07-06T05:34:01.039Z",
-  "expires_at": "2026-07-13T05:34:01.039Z",
+  "issued_at": "2026-07-12T04:24:54.749Z",
+  "expires_at": "2026-07-19T04:24:54.749Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03664a8a4e5570d25ed95a71c8b4985720e269f6e3e8e589115504206de7c371",
+  "signature": "9a60493ec2f7e6c869ee3ba884d922107317dcc15046cbe6a6c52ff2d2cd1584",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7656bf9c"
 }

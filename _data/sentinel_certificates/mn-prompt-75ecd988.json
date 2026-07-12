@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6003111",
+  "certificate_id": "MN-SC-2026-0247450",
   "skill_id": "mn-prompt-75ecd988",
   "skill_name": "Product spec for engineering",
-  "issued_at": "2026-07-06T05:33:23.111Z",
-  "expires_at": "2026-07-13T05:33:23.111Z",
+  "issued_at": "2026-07-12T04:24:07.450Z",
+  "expires_at": "2026-07-19T04:24:07.450Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "46fcb837aedc3fb2ae0964c08f43d8a15edb2ba50d640aa43e70d156de3d6467",
+  "signature": "e5c5083bfd56766c6d6d051fb236d5989eb41413c4b871cedce40d28456f2db5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-75ecd988"
 }

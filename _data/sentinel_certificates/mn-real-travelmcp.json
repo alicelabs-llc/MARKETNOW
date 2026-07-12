@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6451185",
+  "certificate_id": "MN-SC-2026-0561362",
   "skill_id": "mn-real-travelmcp",
   "skill_name": "travel-mcp",
-  "issued_at": "2026-07-06T05:40:51.185Z",
-  "expires_at": "2026-07-13T05:40:51.185Z",
+  "issued_at": "2026-07-12T04:29:21.362Z",
+  "expires_at": "2026-07-19T04:29:21.362Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bafe7a7c850a3ee9ef12fb01fbe1f263cd4dad4a1d973b6b1fb1b42f246d2199",
+  "signature": "2fc14ca706b72a210ef67b92f6f38029f573e4234856f3ed99f0e7d8a5d128d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-travelmcp"
 }

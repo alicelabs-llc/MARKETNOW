@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5437682",
+  "certificate_id": "MN-SC-2026-0001155",
   "skill_id": "mn-gen-03782",
   "skill_name": "exa-mcp-server",
-  "issued_at": "2026-07-06T05:23:57.682Z",
-  "expires_at": "2026-07-13T05:23:57.682Z",
+  "issued_at": "2026-07-12T04:20:01.155Z",
+  "expires_at": "2026-07-19T04:20:01.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c2b83683962a8065f5d98ef300f42a9595b8706eafb74bb8db85dde17f83104b",
+  "signature": "b54a411a58aae74bce0b35d065bd886b1b0be7e46e7a65d1cbb7eae1c1055f2b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03782"
 }

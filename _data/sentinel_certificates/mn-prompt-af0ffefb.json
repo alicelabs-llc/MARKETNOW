@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6040052",
+  "certificate_id": "MN-SC-2026-0293640",
   "skill_id": "mn-prompt-af0ffefb",
   "skill_name": "Data warehouse disaster recovery",
-  "issued_at": "2026-07-06T05:34:00.052Z",
-  "expires_at": "2026-07-13T05:34:00.052Z",
+  "issued_at": "2026-07-12T04:24:53.640Z",
+  "expires_at": "2026-07-19T04:24:53.640Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6319f92891130adaa1eea4959a6ca7541512296d163f7a28d6236d16b4be4106",
+  "signature": "63c58678b150e920632e9eac049e2e8e68568ae91994d7a322ac7069657dc7af",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-af0ffefb"
 }

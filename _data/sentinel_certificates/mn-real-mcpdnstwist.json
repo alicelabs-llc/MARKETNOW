@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6434712",
+  "certificate_id": "MN-SC-2026-1084200",
   "skill_id": "mn-real-mcpdnstwist",
   "skill_name": "mcp-dnstwist",
-  "issued_at": "2026-07-06T05:40:34.712Z",
-  "expires_at": "2026-07-13T05:40:34.712Z",
+  "issued_at": "2026-07-12T04:38:04.200Z",
+  "expires_at": "2026-07-19T04:38:04.200Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a5ea8c1c07dd86f4e47ecbf3d853f3a5091c3916a2fcf57ad241374f0c06e5ba",
+  "signature": "7963c86fbfd0f78002a11e39e5c554cb98086c6c9332a180074143a7229491e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdnstwist"
 }

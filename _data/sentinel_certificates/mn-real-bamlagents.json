@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0858592",
+  "skill_id": "mn-real-bamlagents",
+  "skill_name": "baml-agents",
+  "issued_at": "2026-07-12T04:34:18.592Z",
+  "expires_at": "2026-07-19T04:34:18.592Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "8ac0c72c758a3d1ae9fba3c812df85f797f3aadb23580cd0932a90da5e3d0e95",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bamlagents"
+}

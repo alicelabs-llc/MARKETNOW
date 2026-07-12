@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6242053",
+  "certificate_id": "MN-SC-2026-0325819",
   "skill_id": "mn-awmcp-aimarketplugins",
   "skill_name": "aimarket-plugins",
-  "issued_at": "2026-07-06T05:37:22.053Z",
-  "expires_at": "2026-07-13T05:37:22.053Z",
+  "issued_at": "2026-07-12T04:25:25.819Z",
+  "expires_at": "2026-07-19T04:25:25.819Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "493362046d48359ff226ad6d3487b00db7538413b20e606dd434fd8d3fd0d89a",
+  "signature": "2cd9713709ec22c84628ef75c42fc90da23e445b88f22cf6c98118cc7dce67e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-aimarketplugins"
 }

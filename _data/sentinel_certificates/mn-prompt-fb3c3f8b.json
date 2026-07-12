@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5996080",
+  "certificate_id": "MN-SC-2026-0238886",
   "skill_id": "mn-prompt-fb3c3f8b",
   "skill_name": "Travel and expense policy",
-  "issued_at": "2026-07-06T05:33:16.080Z",
-  "expires_at": "2026-07-13T05:33:16.080Z",
+  "issued_at": "2026-07-12T04:23:58.886Z",
+  "expires_at": "2026-07-19T04:23:58.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93c9c6f488396d6d11d6db71fbd5112bb6fb03c191babd3d14b9669abead0a85",
+  "signature": "6583e23ab7712e260194013f28bf70d1486f22d85e4bc2468252394e67a0dc2e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fb3c3f8b"
 }

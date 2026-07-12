@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5856445",
+  "certificate_id": "MN-SC-2026-0060843",
   "skill_id": "mn-prompt-f7c7b2ce",
   "skill_name": "Especialista Real-time + SSE/WebSocket",
-  "issued_at": "2026-07-06T05:30:56.445Z",
-  "expires_at": "2026-07-13T05:30:56.445Z",
+  "issued_at": "2026-07-12T04:21:00.843Z",
+  "expires_at": "2026-07-19T04:21:00.843Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "841f450433f1c1fc1eae476b0525ee2cc1f1018732213ba0bd092e1996ef13d4",
+  "signature": "d30a431545aa00da33adbd2d3cc9e04e1faf17a91031a5989d788582ee1a95ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f7c7b2ce"
 }

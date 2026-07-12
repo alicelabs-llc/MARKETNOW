@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5966459",
+  "certificate_id": "MN-SC-2026-0198530",
   "skill_id": "mn-prompt-06a85b1c",
   "skill_name": "Diseñador de rate limit algorithms (token bucket, sliding window)",
-  "issued_at": "2026-07-06T05:32:46.459Z",
-  "expires_at": "2026-07-13T05:32:46.459Z",
+  "issued_at": "2026-07-12T04:23:18.530Z",
+  "expires_at": "2026-07-19T04:23:18.530Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8001c90b6116af14613ea4a2312fb70f1c325fd7ddb668419c775695d5206291",
+  "signature": "04d810e49ac908f4667dd0359c90020442c1bf0a2c42dbf9e80d111149e46b07",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-06a85b1c"
 }

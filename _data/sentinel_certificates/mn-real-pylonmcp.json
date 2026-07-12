@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6333449",
+  "certificate_id": "MN-SC-2026-0429691",
   "skill_id": "mn-real-pylonmcp",
   "skill_name": "pylon-mcp",
-  "issued_at": "2026-07-06T05:38:53.449Z",
-  "expires_at": "2026-07-13T05:38:53.449Z",
+  "issued_at": "2026-07-12T04:27:09.691Z",
+  "expires_at": "2026-07-19T04:27:09.691Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "455192208708467f5d9037f14665bf95625838d92ec977a69ce10c66100dce4a",
+  "signature": "57b5cceb7db0ed622d1d6731bddcc5628be480c836f03abe50b03d4f8d430085",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pylonmcp"
 }

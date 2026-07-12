@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6335704",
+  "certificate_id": "MN-SC-2026-0432080",
   "skill_id": "mn-real-xray",
   "skill_name": "xray",
-  "issued_at": "2026-07-06T05:38:55.704Z",
-  "expires_at": "2026-07-13T05:38:55.704Z",
+  "issued_at": "2026-07-12T04:27:12.080Z",
+  "expires_at": "2026-07-19T04:27:12.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb0ff2660b538b7ad7e662feef22ad6d2823fc175ae2a6b1889650c54cd39814",
+  "signature": "e30d9f2c7df545553a0bdee6a4c2cc08857dc6fb3333b1821ab946394c7a9e0e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xray"
 }

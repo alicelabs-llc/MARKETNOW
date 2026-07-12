@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6424757",
+  "certificate_id": "MN-SC-2026-0533294",
   "skill_id": "mn-real-dappiermcp",
   "skill_name": "dappier-mcp",
-  "issued_at": "2026-07-06T05:40:24.757Z",
-  "expires_at": "2026-07-13T05:40:24.757Z",
+  "issued_at": "2026-07-12T04:28:53.294Z",
+  "expires_at": "2026-07-19T04:28:53.294Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "489603ed698aaf2951d3ae3ce27f186d9cef5ec7e662a2c74882c13c181f4cf3",
+  "signature": "cdd7fc97b7740b5f0ae365ba033ef8daad579ef54b442822b6f8fca8644e3cc0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dappiermcp"
 }

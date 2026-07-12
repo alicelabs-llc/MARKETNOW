@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6313080",
+  "certificate_id": "MN-SC-2026-0409427",
   "skill_id": "mn-real-permisapimcp",
   "skill_name": "permisapi-mcp",
-  "issued_at": "2026-07-06T05:38:33.080Z",
-  "expires_at": "2026-07-13T05:38:33.080Z",
+  "issued_at": "2026-07-12T04:26:49.427Z",
+  "expires_at": "2026-07-19T04:26:49.427Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abeaef2e077065a33e228db9dc27f7b38866c48e9fcf2d524a702657606d34a0",
+  "signature": "5cbe7f0ec4820e2feea357878bd03d2ac6b08c3a3587feb6026cbb91c013af2b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-permisapimcp"
 }

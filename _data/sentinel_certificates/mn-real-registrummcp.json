@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6376699",
+  "certificate_id": "MN-SC-2026-0475577",
   "skill_id": "mn-real-registrummcp",
   "skill_name": "registrum-mcp",
-  "issued_at": "2026-07-06T05:39:36.699Z",
-  "expires_at": "2026-07-13T05:39:36.699Z",
+  "issued_at": "2026-07-12T04:27:55.577Z",
+  "expires_at": "2026-07-19T04:27:55.577Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "74f5ea5c30338c33b3580edb5d537f526f5e49c8f21e896659e77b32ffce7463",
+  "signature": "143a9fa9accaec1a1831097809d4fa57d8c4620a7ccfd3ae250111ad0dc8e343",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-registrummcp"
 }

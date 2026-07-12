@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6359464",
+  "certificate_id": "MN-SC-2026-0459468",
   "skill_id": "mn-real-echolon",
   "skill_name": "echolon",
-  "issued_at": "2026-07-06T05:39:19.464Z",
-  "expires_at": "2026-07-13T05:39:19.464Z",
+  "issued_at": "2026-07-12T04:27:39.468Z",
+  "expires_at": "2026-07-19T04:27:39.468Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fd060b81b6e1712f3d725a11a36b2efbc04b773881bdef061bccbed1c6620b81",
+  "signature": "99f66b376166efdb753456437595051e3a05f3dbc333061d156c24732e41fb8b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-echolon"
 }

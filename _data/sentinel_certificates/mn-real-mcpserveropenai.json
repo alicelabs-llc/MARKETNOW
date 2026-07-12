@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0646236",
+  "skill_id": "mn-real-mcpserveropenai",
+  "skill_name": "mcp-server-openai",
+  "issued_at": "2026-07-12T04:30:46.236Z",
+  "expires_at": "2026-07-19T04:30:46.236Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "c3c10ec4c25d1a604422f5fe18e4eb73387dcbeb4a40fad1ba73ea5ed9ffb2c6",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserveropenai"
+}

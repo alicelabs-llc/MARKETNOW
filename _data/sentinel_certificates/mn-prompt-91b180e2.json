@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6000570",
+  "certificate_id": "MN-SC-2026-0245029",
   "skill_id": "mn-prompt-91b180e2",
   "skill_name": "PRD writing that ships",
-  "issued_at": "2026-07-06T05:33:20.570Z",
-  "expires_at": "2026-07-13T05:33:20.570Z",
+  "issued_at": "2026-07-12T04:24:05.029Z",
+  "expires_at": "2026-07-19T04:24:05.029Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a1ef4437497695b61c8237b3666f51bc4b6bec07da3f50ffae9b6c2ea0d07a8d",
+  "signature": "c2f53a4a885f9e87d5f56268626ade18ba1692c420973d826613f27445907607",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-91b180e2"
 }

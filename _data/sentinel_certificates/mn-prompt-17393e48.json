@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5853480",
+  "certificate_id": "MN-SC-2026-0058254",
   "skill_id": "mn-prompt-17393e48",
   "skill_name": "Especialista File Upload + S3",
-  "issued_at": "2026-07-06T05:30:53.480Z",
-  "expires_at": "2026-07-13T05:30:53.480Z",
+  "issued_at": "2026-07-12T04:20:58.254Z",
+  "expires_at": "2026-07-19T04:20:58.254Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8ab62c2d956f7b835768bad5028f7514b36a886970ef481da2885e3a143d054",
+  "signature": "e7e0d6cd03735744796c177f271a920fb235516c2df2c14f5651fc30efc60451",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-17393e48"
 }

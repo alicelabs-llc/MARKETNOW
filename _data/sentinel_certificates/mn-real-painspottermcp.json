@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6419899",
+  "certificate_id": "MN-SC-2026-0526766",
   "skill_id": "mn-real-painspottermcp",
   "skill_name": "painspotter-mcp",
-  "issued_at": "2026-07-06T05:40:19.899Z",
-  "expires_at": "2026-07-13T05:40:19.899Z",
+  "issued_at": "2026-07-12T04:28:46.766Z",
+  "expires_at": "2026-07-19T04:28:46.766Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6a703017299eda072ae2475d9741f61d8181518145ceb06f45d161168183728",
+  "signature": "b64140c032f1c3e71be4d6918d4b613cdd0b20b2528ead485c855ae0eb790db5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-painspottermcp"
 }

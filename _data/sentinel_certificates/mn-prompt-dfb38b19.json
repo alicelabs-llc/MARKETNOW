@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6034583",
+  "certificate_id": "MN-SC-2026-0287725",
   "skill_id": "mn-prompt-dfb38b19",
   "skill_name": "Streaming data with Kafka",
-  "issued_at": "2026-07-06T05:33:54.583Z",
-  "expires_at": "2026-07-13T05:33:54.583Z",
+  "issued_at": "2026-07-12T04:24:47.725Z",
+  "expires_at": "2026-07-19T04:24:47.725Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b839c858ab282d1252b6e9d9eb26dfeb371112a550bc687fcefcc8c5c4098935",
+  "signature": "a24eebab6454ec4ec7ad3b018e30f21ecaa22ff83afa2b6faff60f23eba7d9f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-dfb38b19"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6250254",
+  "certificate_id": "MN-SC-2026-0336499",
   "skill_id": "mn-awmcp-mcpnanobanana",
   "skill_name": "MCPNanoBanana",
-  "issued_at": "2026-07-06T05:37:30.254Z",
-  "expires_at": "2026-07-13T05:37:30.254Z",
+  "issued_at": "2026-07-12T04:25:36.499Z",
+  "expires_at": "2026-07-19T04:25:36.499Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 2,
     "l2_execution_status": "ran"
   },
-  "signature": "a12b4368dffee7b0760751d925f5f3fa520825cbb782ef6b1e40bd945b05522f",
+  "signature": "67e42961f0fb1b18b7fc0cc31baeb8e173859a686327bd9e69e186ebe7096e17",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpnanobanana"
 }

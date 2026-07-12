@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6505724",
+  "certificate_id": "MN-SC-2026-0619148",
   "skill_id": "mn-real-macosautomatormcp",
   "skill_name": "macos-automator-mcp",
-  "issued_at": "2026-07-06T05:41:45.724Z",
-  "expires_at": "2026-07-13T05:41:45.724Z",
+  "issued_at": "2026-07-12T04:30:19.148Z",
+  "expires_at": "2026-07-19T04:30:19.148Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "310e37955c4fa2b85cf19bf2cfe944ebba90ab4c28f043ef4d55fa93dcffaf7b",
+  "signature": "2a61619fa8b13f4e04e902957c3a1af1f8511138b147e7aa11c7e8e31476e166",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-macosautomatormcp"
 }

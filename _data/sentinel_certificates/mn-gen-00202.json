@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5283062",
+  "certificate_id": "MN-SC-2026-9978795",
   "skill_id": "mn-gen-00202",
   "skill_name": "aegis",
-  "issued_at": "2026-07-06T05:21:23.062Z",
-  "expires_at": "2026-07-13T05:21:23.062Z",
+  "issued_at": "2026-07-12T04:19:38.795Z",
+  "expires_at": "2026-07-19T04:19:38.795Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5b3b698e038c91d65b1b9bfc1a44f7700e8e4561ed64d5ee8271c21ae26b3cb6",
+  "signature": "bdfa77ce7de07d9e5ecad6783bbbeb36a08fed406df6ffaf1b25080254dc3830",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00202"
 }

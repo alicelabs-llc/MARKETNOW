@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6009404",
+  "certificate_id": "MN-SC-2026-0258010",
   "skill_id": "mn-prompt-52ffa5d0",
   "skill_name": "Speech writing for executives",
-  "issued_at": "2026-07-06T05:33:29.404Z",
-  "expires_at": "2026-07-13T05:33:29.404Z",
+  "issued_at": "2026-07-12T04:24:18.010Z",
+  "expires_at": "2026-07-19T04:24:18.010Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "255a6061bb42d096107805723c65118b83fa004659c2fa4bcc78d12fd4d829eb",
+  "signature": "b166cb0d80fb1f168e852214cfecbe6119eefa73e11b1d6e677e9784e26a1cb0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-52ffa5d0"
 }

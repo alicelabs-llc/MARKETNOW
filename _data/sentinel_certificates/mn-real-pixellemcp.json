@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6414640",
+  "certificate_id": "MN-SC-2026-1082416",
   "skill_id": "mn-real-pixellemcp",
   "skill_name": "Pixelle-MCP",
-  "issued_at": "2026-07-06T05:40:14.640Z",
-  "expires_at": "2026-07-13T05:40:14.640Z",
+  "issued_at": "2026-07-12T04:38:02.416Z",
+  "expires_at": "2026-07-19T04:38:02.416Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b550fae6cbcb6d63685c1fad73aa8e968b77ae70480fc303daab4369f694bc8",
+  "signature": "9dbc329d973d44ec87e39b1ca7621ee10368a98b60b0c39448de85edaa6b257f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pixellemcp"
 }

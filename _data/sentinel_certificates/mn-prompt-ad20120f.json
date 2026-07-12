@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5970136",
+  "certificate_id": "MN-SC-2026-0201146",
   "skill_id": "mn-prompt-ad20120f",
   "skill_name": "DPA (Data Processing Addendum) GDPR",
-  "issued_at": "2026-07-06T05:32:50.136Z",
-  "expires_at": "2026-07-13T05:32:50.136Z",
+  "issued_at": "2026-07-12T04:23:21.146Z",
+  "expires_at": "2026-07-19T04:23:21.146Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79b38db870a8691434c557e71a26cc6923e5c26d9a417c7e03f1aacadaca4475",
+  "signature": "2b3f216913dae8ded84a30eab1af51baaf734a85c6c60302b045b9e91283f28b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ad20120f"
 }

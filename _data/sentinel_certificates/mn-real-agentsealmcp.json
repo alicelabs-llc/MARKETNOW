@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6438047",
+  "certificate_id": "MN-SC-2026-0548117",
   "skill_id": "mn-real-agentsealmcp",
   "skill_name": "agentseal-mcp",
-  "issued_at": "2026-07-06T05:40:38.047Z",
-  "expires_at": "2026-07-13T05:40:38.047Z",
+  "issued_at": "2026-07-12T04:29:08.117Z",
+  "expires_at": "2026-07-19T04:29:08.117Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d125972367dad7a4bde64b29492ca1af403a9c84980ab1b443d32696d1055cd",
+  "signature": "9454579057bab3e0c9337f0f521f8fc62d9a3a81a5302847f84e5418d752836a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentsealmcp"
 }

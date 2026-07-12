@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5963936",
+  "certificate_id": "MN-SC-2026-0195419",
   "skill_id": "mn-prompt-88f1afbc",
   "skill_name": "Implementador de secrets management con Vault",
-  "issued_at": "2026-07-06T05:32:43.936Z",
-  "expires_at": "2026-07-13T05:32:43.936Z",
+  "issued_at": "2026-07-12T04:23:15.419Z",
+  "expires_at": "2026-07-19T04:23:15.419Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83eecc9180b39bf23140fd9d47ed6a46928f6b658f1876485f52341fd324cd32",
+  "signature": "827e1bb69ce646f4b0fe3e8f1f1533915aa9e5be8b4300819a35649bb246efad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-88f1afbc"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6414098",
+  "certificate_id": "MN-SC-2026-0521754",
   "skill_id": "mn-real-atsurae",
   "skill_name": "atsurae",
-  "issued_at": "2026-07-06T05:40:14.098Z",
-  "expires_at": "2026-07-13T05:40:14.098Z",
+  "issued_at": "2026-07-12T04:28:41.754Z",
+  "expires_at": "2026-07-19T04:28:41.754Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "193051bdaa929a3b170c2dfc197b479166b952562071fbc46443b1df345d0857",
+  "signature": "cd0fc709a29829beee04ccbc7219bb448e0255c554c2aa168077afbbf2785519",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-atsurae"
 }

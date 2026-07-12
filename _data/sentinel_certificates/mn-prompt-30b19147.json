@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5883293",
+  "certificate_id": "MN-SC-2026-0098204",
   "skill_id": "mn-prompt-30b19147",
   "skill_name": "Especialista Time-Series Database + InfluxDB",
-  "issued_at": "2026-07-06T05:31:23.293Z",
-  "expires_at": "2026-07-13T05:31:23.293Z",
+  "issued_at": "2026-07-12T04:21:38.204Z",
+  "expires_at": "2026-07-19T04:21:38.204Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1085eb1f942311b1ea60e341193664ac0ba9b51aae58ccc59ee4efd6d43fd09b",
+  "signature": "a12a3aab7b62b606cd020eee1bb886d8ecf636127703e8395d361424f8529592",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-30b19147"
 }

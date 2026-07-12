@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6329493",
+  "certificate_id": "MN-SC-2026-0425952",
   "skill_id": "mn-real-devdocsmcp",
   "skill_name": "DevDocs-MCP",
-  "issued_at": "2026-07-06T05:38:49.493Z",
-  "expires_at": "2026-07-13T05:38:49.493Z",
+  "issued_at": "2026-07-12T04:27:05.952Z",
+  "expires_at": "2026-07-19T04:27:05.952Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33221a4e309dcd3ccae7054173493e48fe7c59773369cc50f29dbfd31071f855",
+  "signature": "c033e09b5e93a1b2d9db3de5215552b198e6d793e761b70dbc432c04ef6fc6f8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-devdocsmcp"
 }

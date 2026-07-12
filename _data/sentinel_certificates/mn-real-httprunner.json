@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6475699",
+  "certificate_id": "MN-SC-2026-0588070",
   "skill_id": "mn-real-httprunner",
   "skill_name": "httprunner",
-  "issued_at": "2026-07-06T05:41:15.699Z",
-  "expires_at": "2026-07-13T05:41:15.699Z",
+  "issued_at": "2026-07-12T04:29:48.070Z",
+  "expires_at": "2026-07-19T04:29:48.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a293f019031d8bed83e2598b0fa3293caaaea78eded53322003d99f4f0f42f17",
+  "signature": "47908c815519d7bf440f4a0dccaa6f4501b5249624634f4eb061a1c70a153061",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-httprunner"
 }

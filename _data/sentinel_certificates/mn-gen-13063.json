@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5815548",
+  "certificate_id": "MN-SC-2026-0047060",
   "skill_id": "mn-gen-13063",
   "skill_name": "mcp-server-cortex",
-  "issued_at": "2026-07-06T05:30:15.548Z",
-  "expires_at": "2026-07-13T05:30:15.548Z",
+  "issued_at": "2026-07-12T04:20:47.060Z",
+  "expires_at": "2026-07-19T04:20:47.060Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9ce9fcb7147297071f89462ba420939ac3be22008a9feb81bb05dd18789e152",
+  "signature": "225b6f0f1884d24b8f1f47192cdaf6225e54f8610d64b98356e4f77b9287b728",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13063"
 }

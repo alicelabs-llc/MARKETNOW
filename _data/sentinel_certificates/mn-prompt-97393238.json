@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6012622",
+  "certificate_id": "MN-SC-2026-0261899",
   "skill_id": "mn-prompt-97393238",
   "skill_name": "Content repurposing pipeline",
-  "issued_at": "2026-07-06T05:33:32.622Z",
-  "expires_at": "2026-07-13T05:33:32.622Z",
+  "issued_at": "2026-07-12T04:24:21.899Z",
+  "expires_at": "2026-07-19T04:24:21.899Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49df40aa6d4c9e27b514b4df2c7a0b04fd890820958c32b08f9cfb978a5d8003",
+  "signature": "8afc3cb2b1ecf79799a7cac36a98a11bb007561c475996b7cfc0cf55b1a5c9d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-97393238"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6466905",
+  "certificate_id": "MN-SC-2026-0577375",
   "skill_id": "mn-real-screenpilot",
   "skill_name": "ScreenPilot",
-  "issued_at": "2026-07-06T05:41:06.905Z",
-  "expires_at": "2026-07-13T05:41:06.905Z",
+  "issued_at": "2026-07-12T04:29:37.375Z",
+  "expires_at": "2026-07-19T04:29:37.375Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d3cb2a4f959cc62d23660c30b1d1bc2085d35bef16de96f7ca0b4e2932b153de",
+  "signature": "fbac1ec6d634cfeb66e787ff0e82dd64066f18143c66d5d8eb318d4392197fbe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-screenpilot"
 }

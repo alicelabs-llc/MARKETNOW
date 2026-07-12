@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6035890",
+  "certificate_id": "MN-SC-2026-0288186",
   "skill_id": "mn-prompt-68039872",
   "skill_name": "Data visualization best practices",
-  "issued_at": "2026-07-06T05:33:55.890Z",
-  "expires_at": "2026-07-13T05:33:55.890Z",
+  "issued_at": "2026-07-12T04:24:48.186Z",
+  "expires_at": "2026-07-19T04:24:48.186Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5cb9a5f762b2a939ae4652f7676394aae4ef1a7b1f42be74749d34d23a46422d",
+  "signature": "ac938862267478a3705aaa4fb29710554ffe8b19a3de74bf0d411e506bec7126",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-68039872"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6280682",
+  "certificate_id": "MN-SC-2026-0370310",
   "skill_id": "mn-awmcp-mcpjs",
   "skill_name": "mcp-js",
-  "issued_at": "2026-07-06T05:38:00.682Z",
-  "expires_at": "2026-07-13T05:38:00.682Z",
+  "issued_at": "2026-07-12T04:26:10.310Z",
+  "expires_at": "2026-07-19T04:26:10.310Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bd97f6953178503dd9b7728ec9ffef269a5b4cf3b206c7a801871c183d126dc2",
+  "signature": "b08137caf9c2ec012cc334d50e19bada2afc3f35f454ff34c3e93874d714a753",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpjs"
 }

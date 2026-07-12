@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6399925",
+  "certificate_id": "MN-SC-2026-0504760",
   "skill_id": "mn-real-vestige",
   "skill_name": "vestige",
-  "issued_at": "2026-07-06T05:39:59.925Z",
-  "expires_at": "2026-07-13T05:39:59.925Z",
+  "issued_at": "2026-07-12T04:28:24.760Z",
+  "expires_at": "2026-07-19T04:28:24.760Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d812114a119ad140a89ee7f3561433ef0cda5f92396247bcdcc5ee63cb5b13d6",
+  "signature": "0ad531ac1927e95db0ecc5513f5c17b4469f34302871b4c52dd4a94b397ef179",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vestige"
 }

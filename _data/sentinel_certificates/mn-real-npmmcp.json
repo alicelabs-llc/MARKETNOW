@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6318374",
+  "certificate_id": "MN-SC-2026-0414875",
   "skill_id": "mn-real-npmmcp",
   "skill_name": "npm-mcp",
-  "issued_at": "2026-07-06T05:38:38.374Z",
-  "expires_at": "2026-07-13T05:38:38.374Z",
+  "issued_at": "2026-07-12T04:26:54.875Z",
+  "expires_at": "2026-07-19T04:26:54.875Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2d7f39f680cb26974ef118976660fcef1c64e40bb8380f02366c0993c8457482",
+  "signature": "3c6c1b92f14440ab9ab75b184997eebd93581c2cbfded5a35f50fbbe5092e052",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-npmmcp"
 }

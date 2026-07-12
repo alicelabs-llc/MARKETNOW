@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6483161",
+  "certificate_id": "MN-SC-2026-0595844",
   "skill_id": "mn-real-aitrader",
   "skill_name": "ai-trader",
-  "issued_at": "2026-07-06T05:41:23.161Z",
-  "expires_at": "2026-07-13T05:41:23.161Z",
+  "issued_at": "2026-07-12T04:29:55.844Z",
+  "expires_at": "2026-07-19T04:29:55.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89b9bbdf9c0d829dcebafc27284edebb7cef697027456dd60cc370d474147ebd",
+  "signature": "b88b11f6d007b59009270f400beeb7d4bfda4b207dfa02afad90724c295049a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aitrader"
 }

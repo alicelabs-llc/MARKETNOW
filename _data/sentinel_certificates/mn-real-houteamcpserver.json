@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6356030",
+  "certificate_id": "MN-SC-2026-0455227",
   "skill_id": "mn-real-houteamcpserver",
   "skill_name": "hou-tea-mcp-server",
-  "issued_at": "2026-07-06T05:39:16.030Z",
-  "expires_at": "2026-07-13T05:39:16.030Z",
+  "issued_at": "2026-07-12T04:27:35.227Z",
+  "expires_at": "2026-07-19T04:27:35.227Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f628e43b5dcc6865257e248ac5b28c31799514d95c6802bcf3d43492254cae7f",
+  "signature": "e76f88fc1a860f43957316bc81af502b51d7f2aa110c2066b6cc7ca120932e08",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-houteamcpserver"
 }

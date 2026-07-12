@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6275754",
+  "certificate_id": "MN-SC-2026-0365219",
   "skill_id": "mn-awmcp-tiltmcp",
   "skill_name": "tilt-mcp",
-  "issued_at": "2026-07-06T05:37:55.754Z",
-  "expires_at": "2026-07-13T05:37:55.754Z",
+  "issued_at": "2026-07-12T04:26:05.219Z",
+  "expires_at": "2026-07-19T04:26:05.219Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c368ccbd7225e67337b0694d5f292f2da98815160b22c343ecacc7f22e5bda9",
+  "signature": "26f9f94e02599712ab7221e720be2bf1d53492b65c55ebe4d78ee7d1dcdf559c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tiltmcp"
 }

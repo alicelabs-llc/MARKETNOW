@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6385257",
+  "certificate_id": "MN-SC-2026-0485613",
   "skill_id": "mn-real-mcpstockfish",
   "skill_name": "mcp-stockfish",
-  "issued_at": "2026-07-06T05:39:45.257Z",
-  "expires_at": "2026-07-13T05:39:45.257Z",
+  "issued_at": "2026-07-12T04:28:05.613Z",
+  "expires_at": "2026-07-19T04:28:05.613Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a659ed340f1b2b9d3a00627ddabae0af5d76cc8a0497d0c280fa98832103ecb4",
+  "signature": "cba852faa854daa5470cd04bea5f5ae59d2c9a39bf71e8559140e55de40c9baa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpstockfish"
 }

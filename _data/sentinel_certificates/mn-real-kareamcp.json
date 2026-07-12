@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6458684",
+  "certificate_id": "MN-SC-2026-0570481",
   "skill_id": "mn-real-kareamcp",
   "skill_name": "karea-mcp",
-  "issued_at": "2026-07-06T05:40:58.684Z",
-  "expires_at": "2026-07-13T05:40:58.684Z",
+  "issued_at": "2026-07-12T04:29:30.481Z",
+  "expires_at": "2026-07-19T04:29:30.481Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6cf3de2fd68cf5e25e33216a970f4f565d8f034842cc41c73d58bb668b757e6a",
+  "signature": "0cbe6cd28cc47bea76850227f7e0ca5824974ae8c6d8ccc4d55bfc507c571e42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kareamcp"
 }

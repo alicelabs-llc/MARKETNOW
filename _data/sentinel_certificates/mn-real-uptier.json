@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6456054",
+  "certificate_id": "MN-SC-2026-0568381",
   "skill_id": "mn-real-uptier",
   "skill_name": "UpTier",
-  "issued_at": "2026-07-06T05:40:56.054Z",
-  "expires_at": "2026-07-13T05:40:56.054Z",
+  "issued_at": "2026-07-12T04:29:28.381Z",
+  "expires_at": "2026-07-19T04:29:28.381Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "88783002a7b68a752f6627a8d2f2de642be41d4503d63a01db645f18c8ca3525",
+  "signature": "4f0e5585434bae7642660f20c235894455a53670d148ab7213a4e8a70edd899f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-uptier"
 }

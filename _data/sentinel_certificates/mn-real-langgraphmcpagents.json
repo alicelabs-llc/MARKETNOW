@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6508028",
+  "certificate_id": "MN-SC-2026-0620712",
   "skill_id": "mn-real-langgraphmcpagents",
   "skill_name": "langgraph-mcp-agents",
-  "issued_at": "2026-07-06T05:41:48.028Z",
-  "expires_at": "2026-07-13T05:41:48.028Z",
+  "issued_at": "2026-07-12T04:30:20.712Z",
+  "expires_at": "2026-07-19T04:30:20.712Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "788b2cfcd09100061659bbedd00aaec0d40ae62cd795740442bb64f747dcd472",
+  "signature": "87ab55073b0b2ccdda981aeaa9137f68170f0e3a88fcc79c4515ae172a931cf7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-langgraphmcpagents"
 }

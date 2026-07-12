@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5880979",
+  "certificate_id": "MN-SC-2026-0094916",
   "skill_id": "mn-prompt-a468ff9b",
   "skill_name": "Especialista Risk-Based Testing",
-  "issued_at": "2026-07-06T05:31:20.979Z",
-  "expires_at": "2026-07-13T05:31:20.979Z",
+  "issued_at": "2026-07-12T04:21:34.916Z",
+  "expires_at": "2026-07-19T04:21:34.916Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63427efd7556f09d116697020dea8d9f32e25d7a7d5db2ad6ddd83943139abad",
+  "signature": "6ca0eacecdd1d51639e97618125f646ca578962ba51b36835eff1cb09bdb51aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a468ff9b"
 }

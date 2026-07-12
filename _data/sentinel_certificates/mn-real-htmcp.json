@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0810746",
+  "skill_id": "mn-real-htmcp",
+  "skill_name": "ht-mcp",
+  "issued_at": "2026-07-12T04:33:30.746Z",
+  "expires_at": "2026-07-19T04:33:30.746Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "77bc7d5506dc81716dd0bc72d27455524b8a671a7732978788d89a23a91317b0",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-htmcp"
+}

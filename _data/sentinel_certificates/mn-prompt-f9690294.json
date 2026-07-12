@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5939238",
+  "certificate_id": "MN-SC-2026-0169150",
   "skill_id": "mn-prompt-f9690294",
   "skill_name": "Especialista Financial Services Regulation",
-  "issued_at": "2026-07-06T05:32:19.238Z",
-  "expires_at": "2026-07-13T05:32:19.238Z",
+  "issued_at": "2026-07-12T04:22:49.150Z",
+  "expires_at": "2026-07-19T04:22:49.150Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2eef8ba71dfa4301a0437e07148d4da3279650677514a67cb36ae74d978ac3da",
+  "signature": "8549d6e68ff9755d328e04ae656a5bbdc35668bc0f92a36a6bae8e15ccf74fb5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f9690294"
 }

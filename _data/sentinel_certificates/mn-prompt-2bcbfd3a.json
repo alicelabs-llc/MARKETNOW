@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5983557",
+  "certificate_id": "MN-SC-2026-0221216",
   "skill_id": "mn-prompt-2bcbfd3a",
   "skill_name": "Sales playbook por scenario",
-  "issued_at": "2026-07-06T05:33:03.557Z",
-  "expires_at": "2026-07-13T05:33:03.557Z",
+  "issued_at": "2026-07-12T04:23:41.216Z",
+  "expires_at": "2026-07-19T04:23:41.216Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29bd3c21a40b104b1a5c5c7c33cc479fad039abd885621cb1bb1f074e774ea4e",
+  "signature": "f5ed27dcafe35af3ab9bc5a8f4a93b85f50fe41f0ff3f7b313928c19617b5aaf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2bcbfd3a"
 }

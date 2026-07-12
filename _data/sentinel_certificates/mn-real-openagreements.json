@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6402525",
+  "certificate_id": "MN-SC-2026-0507042",
   "skill_id": "mn-real-openagreements",
   "skill_name": "open-agreements",
-  "issued_at": "2026-07-06T05:40:02.525Z",
-  "expires_at": "2026-07-13T05:40:02.525Z",
+  "issued_at": "2026-07-12T04:28:27.043Z",
+  "expires_at": "2026-07-19T04:28:27.043Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fddb89a03813621f8de119271c6cb244b8bf92101da626431e8dada9b9dde3ca",
+  "signature": "ce2dc5fc2299dc9d53cd2d81408a86105531f98595187abf2bab32017db6939e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openagreements"
 }

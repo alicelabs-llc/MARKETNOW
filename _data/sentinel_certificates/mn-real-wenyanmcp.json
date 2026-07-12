@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6463628",
+  "certificate_id": "MN-SC-2026-0574080",
   "skill_id": "mn-real-wenyanmcp",
   "skill_name": "wenyan-mcp",
-  "issued_at": "2026-07-06T05:41:03.628Z",
-  "expires_at": "2026-07-13T05:41:03.628Z",
+  "issued_at": "2026-07-12T04:29:34.080Z",
+  "expires_at": "2026-07-19T04:29:34.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d488d93036302d6a8562c0d82350aafb2760f0b110436f93c570032796c799b8",
+  "signature": "b1ad17184a01443d7b9d47fb1bbe9cec4895db9ea979bfc94253eb6099ca3552",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wenyanmcp"
 }

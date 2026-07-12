@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5988171",
+  "certificate_id": "MN-SC-2026-0228570",
   "skill_id": "mn-prompt-e9f08787",
   "skill_name": "Sales comp plan communication",
-  "issued_at": "2026-07-06T05:33:08.171Z",
-  "expires_at": "2026-07-13T05:33:08.171Z",
+  "issued_at": "2026-07-12T04:23:48.570Z",
+  "expires_at": "2026-07-19T04:23:48.570Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a0999a0b15fc9062f146ec11f86976c45522af80be6eb1e833b6988286e57eb7",
+  "signature": "e79669d11a33315afcce4b3184e8d905db141f8f546b80fac1163eab3c2e536a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e9f08787"
 }

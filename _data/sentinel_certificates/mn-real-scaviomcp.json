@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6422981",
+  "certificate_id": "MN-SC-2026-0529900",
   "skill_id": "mn-real-scaviomcp",
   "skill_name": "scavio-mcp",
-  "issued_at": "2026-07-06T05:40:22.981Z",
-  "expires_at": "2026-07-13T05:40:22.981Z",
+  "issued_at": "2026-07-12T04:28:49.900Z",
+  "expires_at": "2026-07-19T04:28:49.900Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d06f4c988262d5587b10fd1805b376ffc0b5d585195111bf9e41eb345fff409",
+  "signature": "b69ec1e1aae183a4578865a7ff38222a32d326f798cab70be83676f5c413924e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scaviomcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6301860",
+  "certificate_id": "MN-SC-2026-0397533",
   "skill_id": "mn-real-ringback",
   "skill_name": "ringback",
-  "issued_at": "2026-07-06T05:38:21.860Z",
-  "expires_at": "2026-07-13T05:38:21.860Z",
+  "issued_at": "2026-07-12T04:26:37.533Z",
+  "expires_at": "2026-07-19T04:26:37.533Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75b9ba83ffd00fbc0b23a5240a9257bde9984779c971aa7e8add81b6a27916e6",
+  "signature": "9512823b1db1184f742ede33bad20d5ceb171048088280e3f75867a92cc37cf4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ringback"
 }

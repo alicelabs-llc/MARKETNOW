@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6404565",
+  "certificate_id": "MN-SC-2026-0509015",
   "skill_id": "mn-real-stadiamapsmcpservert",
   "skill_name": "stadiamaps-mcp-server-ts",
-  "issued_at": "2026-07-06T05:40:04.565Z",
-  "expires_at": "2026-07-13T05:40:04.565Z",
+  "issued_at": "2026-07-12T04:28:29.015Z",
+  "expires_at": "2026-07-19T04:28:29.015Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "790f92bd049e80f0bfbc3bd3d9554299aa1e688b9d9ca4045fbca4245aa02825",
+  "signature": "379059a45403f348f4cd4c8eb82905e32858013f9289c190a3d16ce2c0974e46",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stadiamapsmcpservert"
 }

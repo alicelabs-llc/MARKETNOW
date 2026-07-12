@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6342566",
+  "certificate_id": "MN-SC-2026-0441298",
   "skill_id": "mn-real-hooksensemcp",
   "skill_name": "hooksense-mcp",
-  "issued_at": "2026-07-06T05:39:02.566Z",
-  "expires_at": "2026-07-13T05:39:02.566Z",
+  "issued_at": "2026-07-12T04:27:21.298Z",
+  "expires_at": "2026-07-19T04:27:21.298Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a1bcc8c3226fb7380a5ed754eb3feb19387c6f656268dadfa13be38219b3b4d",
+  "signature": "a621a472500106ff95d8022b9dc537d7419d32dfb7ef146a15ee8a799d79d64a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hooksensemcp"
 }

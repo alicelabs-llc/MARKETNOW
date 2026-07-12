@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6405557",
+  "certificate_id": "MN-SC-2026-0510032",
   "skill_id": "mn-real-mentionsapimcp",
   "skill_name": "mentionsapi-mcp",
-  "issued_at": "2026-07-06T05:40:05.557Z",
-  "expires_at": "2026-07-13T05:40:05.557Z",
+  "issued_at": "2026-07-12T04:28:30.032Z",
+  "expires_at": "2026-07-19T04:28:30.032Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c6e2f87665bca25517dbfd1a956f6d3a22f118edd200bd05d35602625571f056",
+  "signature": "6ccb7352d305b66f2f0a068f6a12ddba4fcf048a3c1f7e053b46fbaabb960819",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mentionsapimcp"
 }

@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0781382",
+  "skill_id": "mn-real-agentstudiostarter",
+  "skill_name": "agent-studio-starter",
+  "issued_at": "2026-07-12T04:33:01.382Z",
+  "expires_at": "2026-07-19T04:33:01.382Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "bfd9ec847ef09d654d8b3017b507185d4d42e19a5a48d6d2334dad31c3602a4b",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentstudiostarter"
+}

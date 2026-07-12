@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6462123",
+  "certificate_id": "MN-SC-2026-0572558",
   "skill_id": "mn-real-inkramcp",
   "skill_name": "inkra-mcp",
-  "issued_at": "2026-07-06T05:41:02.123Z",
-  "expires_at": "2026-07-13T05:41:02.123Z",
+  "issued_at": "2026-07-12T04:29:32.558Z",
+  "expires_at": "2026-07-19T04:29:32.558Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96eaf12286d6d35b2feb1cfb422d7bdb4f1a1d03e028c922b2f33d8d5d38ce94",
+  "signature": "c5bd1aaf013299fdbf82b44f37bfd8b945f0584ad28ebff2f75458f5f9a923a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-inkramcp"
 }

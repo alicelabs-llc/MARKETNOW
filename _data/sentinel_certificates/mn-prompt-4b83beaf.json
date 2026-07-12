@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5960700",
+  "certificate_id": "MN-SC-2026-0193331",
   "skill_id": "mn-prompt-4b83beaf",
   "skill_name": "Escritor de tests de integración con Testcontainers",
-  "issued_at": "2026-07-06T05:32:40.700Z",
-  "expires_at": "2026-07-13T05:32:40.700Z",
+  "issued_at": "2026-07-12T04:23:13.331Z",
+  "expires_at": "2026-07-19T04:23:13.331Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "262757f061aa1c1cc70595ab74b90f30ace1d2e13b8818407c7197f64c94b74b",
+  "signature": "b32f7571bace00ec76a2adbea75c492d6b315374b2480bd1e34add186a28593e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4b83beaf"
 }

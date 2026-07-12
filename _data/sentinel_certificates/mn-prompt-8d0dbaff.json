@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5983015",
+  "certificate_id": "MN-SC-2026-0220603",
   "skill_id": "mn-prompt-8d0dbaff",
   "skill_name": "Sales pipeline review weekly",
-  "issued_at": "2026-07-06T05:33:03.015Z",
-  "expires_at": "2026-07-13T05:33:03.015Z",
+  "issued_at": "2026-07-12T04:23:40.603Z",
+  "expires_at": "2026-07-19T04:23:40.603Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "20d9c15f1418d5e9b64e0159b242b1f6cd322ca14e19c1a88a5044f9a9d449be",
+  "signature": "16790aa3bc450904f2e39b7056736678fdf47744952c8cb6e12d82210eac9266",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8d0dbaff"
 }

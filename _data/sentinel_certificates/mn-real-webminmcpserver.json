@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6411111",
+  "certificate_id": "MN-SC-2026-0518700",
   "skill_id": "mn-real-webminmcpserver",
   "skill_name": "webmin-mcp-server",
-  "issued_at": "2026-07-06T05:40:11.111Z",
-  "expires_at": "2026-07-13T05:40:11.111Z",
+  "issued_at": "2026-07-12T04:28:38.700Z",
+  "expires_at": "2026-07-19T04:28:38.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b7855bc47c1596de98e0d7332f58c5cd2bd020ebbc232fcb175f5ff40fee17d2",
+  "signature": "c0aece914eb98a6e69b4d7761f1e0f0027d6392f413c5a64527346eafccda7d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webminmcpserver"
 }

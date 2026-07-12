@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5412752",
+  "certificate_id": "MN-SC-2026-9997918",
   "skill_id": "mn-res-03178",
   "skill_name": "deep-research",
-  "issued_at": "2026-07-06T05:23:32.752Z",
-  "expires_at": "2026-07-13T05:23:32.752Z",
+  "issued_at": "2026-07-12T04:19:57.918Z",
+  "expires_at": "2026-07-19T04:19:57.918Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17d21cd8c6a421239d2482d5a113e504ba151d4e5a316f332ee6e390394ef37e",
+  "signature": "82bf0d8d133ccf86e35563939829d3e5fc674f2b32a8e93cb73dd75bce2a7fec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-03178"
 }

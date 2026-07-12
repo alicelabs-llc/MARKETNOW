@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6248724",
+  "certificate_id": "MN-SC-2026-0334413",
   "skill_id": "mn-awmcp-pluggedinmcpproxy",
   "skill_name": "pluggedin-mcp-proxy",
-  "issued_at": "2026-07-06T05:37:28.724Z",
-  "expires_at": "2026-07-13T05:37:28.724Z",
+  "issued_at": "2026-07-12T04:25:34.413Z",
+  "expires_at": "2026-07-19T04:25:34.413Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d34eb887cdebdcb75ee7c9f83840961b2059481f134bf27c602254d5d027579",
+  "signature": "0291253ab26da638f01382c2fa3cd015e26d037d554345d9fc78a35a44632deb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-pluggedinmcpproxy"
 }

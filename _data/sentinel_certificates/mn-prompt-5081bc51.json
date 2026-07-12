@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5988124",
+  "certificate_id": "MN-SC-2026-0227141",
   "skill_id": "mn-prompt-5081bc51",
   "skill_name": "Sales RFP boilerplate library",
-  "issued_at": "2026-07-06T05:33:08.124Z",
-  "expires_at": "2026-07-13T05:33:08.124Z",
+  "issued_at": "2026-07-12T04:23:47.141Z",
+  "expires_at": "2026-07-19T04:23:47.141Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00496f777a34b52d9e472847771276043a527f0fdd79b1644ceca65466507ea5",
+  "signature": "7fb496cc7086d0bd09eee0c0d39b310b77e39a736eb78b11163308df745dba83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5081bc51"
 }

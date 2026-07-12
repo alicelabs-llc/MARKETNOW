@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6270794",
+  "certificate_id": "MN-SC-2026-0360063",
   "skill_id": "mn-awmcp-devopsmcpwebui",
   "skill_name": "devops-mcp-webui",
-  "issued_at": "2026-07-06T05:37:50.794Z",
-  "expires_at": "2026-07-13T05:37:50.794Z",
+  "issued_at": "2026-07-12T04:26:00.063Z",
+  "expires_at": "2026-07-19T04:26:00.063Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ce547c7430839b9dbb38bf0340403e787736611d709fa1dc7f92d06088e4727c",
+  "signature": "45701daa3854bbab47542b0dacf30e5ca254ea8d469c08b8522b62a5c0a24ca3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-devopsmcpwebui"
 }

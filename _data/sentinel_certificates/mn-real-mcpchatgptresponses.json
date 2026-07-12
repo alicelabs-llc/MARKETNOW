@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6462923",
+  "certificate_id": "MN-SC-2026-0573411",
   "skill_id": "mn-real-mcpchatgptresponses",
   "skill_name": "mcp-chatgpt-responses",
-  "issued_at": "2026-07-06T05:41:02.923Z",
-  "expires_at": "2026-07-13T05:41:02.923Z",
+  "issued_at": "2026-07-12T04:29:33.411Z",
+  "expires_at": "2026-07-19T04:29:33.411Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ba47427250aa46ab9839ceb97bfe9154aa6ad70d94d3d8e25c296d949b09159",
+  "signature": "6d7344f2cbfdaadbfc37e8740e76881bd4422fb84b6471e1b96af64661aa53f6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpchatgptresponses"
 }

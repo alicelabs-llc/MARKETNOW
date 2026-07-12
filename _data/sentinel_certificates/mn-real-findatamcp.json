@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6376535",
+  "certificate_id": "MN-SC-2026-0476077",
   "skill_id": "mn-real-findatamcp",
   "skill_name": "findata-mcp",
-  "issued_at": "2026-07-06T05:39:36.535Z",
-  "expires_at": "2026-07-13T05:39:36.535Z",
+  "issued_at": "2026-07-12T04:27:56.077Z",
+  "expires_at": "2026-07-19T04:27:56.077Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "443e134425474bc993a0f04db6702b6bb5c761f60f1cabef6e9a1e75eea76afb",
+  "signature": "90b40185c2fdb0fa4423324534bc41a65ca8c708a76905e2bb151162c1734b6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-findatamcp"
 }

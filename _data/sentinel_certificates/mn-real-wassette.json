@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6482706",
+  "certificate_id": "MN-SC-2026-0595353",
   "skill_id": "mn-real-wassette",
   "skill_name": "wassette",
-  "issued_at": "2026-07-06T05:41:22.706Z",
-  "expires_at": "2026-07-13T05:41:22.706Z",
+  "issued_at": "2026-07-12T04:29:55.353Z",
+  "expires_at": "2026-07-19T04:29:55.353Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "444675d8fb904742f5f31739f4ded17ead9e9057b1f3425c5f4e8157f0ce5c5d",
+  "signature": "60cdfcbfce89543cc856e29ada8856313d3f30b04428ec154c4939a7559b541f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wassette"
 }

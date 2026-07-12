@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0721708",
+  "skill_id": "mn-real-unicli",
+  "skill_name": "Uni-CLI",
+  "issued_at": "2026-07-12T04:32:01.708Z",
+  "expires_at": "2026-07-19T04:32:01.708Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "424b93fec1c0c7b19b7d7af771f3cd7a30cbe88b8832ecab1f193e9872daf186",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-unicli"
+}

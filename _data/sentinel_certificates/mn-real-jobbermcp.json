@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6457628",
+  "certificate_id": "MN-SC-2026-0569464",
   "skill_id": "mn-real-jobbermcp",
   "skill_name": "jobber-mcp",
-  "issued_at": "2026-07-06T05:40:57.628Z",
-  "expires_at": "2026-07-13T05:40:57.628Z",
+  "issued_at": "2026-07-12T04:29:29.464Z",
+  "expires_at": "2026-07-19T04:29:29.464Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15c287c43b74fd135011c557349de9f74e88d901691ca9841d5b1bbd29aaf4b7",
+  "signature": "6b19bbb49a8fc1a505f4071d87c99f2d46626d3854bcf35f43481d256484c179",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jobbermcp"
 }

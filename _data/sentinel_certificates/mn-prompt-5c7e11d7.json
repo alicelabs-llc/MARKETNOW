@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6039829",
+  "certificate_id": "MN-SC-2026-0293623",
   "skill_id": "mn-prompt-5c7e11d7",
   "skill_name": "Data warehouse security",
-  "issued_at": "2026-07-06T05:33:59.829Z",
-  "expires_at": "2026-07-13T05:33:59.829Z",
+  "issued_at": "2026-07-12T04:24:53.623Z",
+  "expires_at": "2026-07-19T04:24:53.623Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3a33cee02c0299ba02c8956b32f9bf830757a55eef9e97bd1ec59d0a9bafb754",
+  "signature": "7266e5f20fb52f7070f7ccabbd32ca6b725aae61a900834787ce19eb1b08888c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5c7e11d7"
 }

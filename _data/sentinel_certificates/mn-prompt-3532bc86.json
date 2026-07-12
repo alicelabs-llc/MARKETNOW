@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5875605",
+  "certificate_id": "MN-SC-2026-0088290",
   "skill_id": "mn-prompt-3532bc86",
   "skill_name": "Especialista Purple Team + Adversary Simulation",
-  "issued_at": "2026-07-06T05:31:15.605Z",
-  "expires_at": "2026-07-13T05:31:15.605Z",
+  "issued_at": "2026-07-12T04:21:28.290Z",
+  "expires_at": "2026-07-19T04:21:28.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "74b25d5ebffc5477a57d30f0b5e9074072b1103601a5f51504beb004639d98ea",
+  "signature": "9e10acb29784af43f3c2e076a087191d9d9c97314c186ff8d7239957d5ccd8bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-3532bc86"
 }

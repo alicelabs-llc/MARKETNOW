@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6360938",
+  "certificate_id": "MN-SC-2026-0460545",
   "skill_id": "mn-real-tastyagent",
   "skill_name": "tasty-agent",
-  "issued_at": "2026-07-06T05:39:20.938Z",
-  "expires_at": "2026-07-13T05:39:20.938Z",
+  "issued_at": "2026-07-12T04:27:40.545Z",
+  "expires_at": "2026-07-19T04:27:40.545Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "48da5660adce1519cf66db3c8a9bc394bc5542fac73e289640b1c60e0d1fb667",
+  "signature": "6fd9238dd8637826160a8a8a64b3d3c2e37e5e20f2937addfc1cc179e7202580",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tastyagent"
 }

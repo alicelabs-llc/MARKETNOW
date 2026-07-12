@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6506068",
+  "certificate_id": "MN-SC-2026-0619468",
   "skill_id": "mn-real-mcpgatewayregistry",
   "skill_name": "mcp-gateway-registry",
-  "issued_at": "2026-07-06T05:41:46.068Z",
-  "expires_at": "2026-07-13T05:41:46.068Z",
+  "issued_at": "2026-07-12T04:30:19.468Z",
+  "expires_at": "2026-07-19T04:30:19.468Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9cf07d950d54ced12b8985295c4783c1a1456e4539a80769f84f7b7de358a9a1",
+  "signature": "865e6121f11610ed30bf115776a19037e23e8c69401814cf44accdfce22a87a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgatewayregistry"
 }

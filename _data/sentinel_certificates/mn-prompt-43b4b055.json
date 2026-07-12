@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6034594",
+  "certificate_id": "MN-SC-2026-0287059",
   "skill_id": "mn-prompt-43b4b055",
   "skill_name": "Data quality monitoring",
-  "issued_at": "2026-07-06T05:33:54.594Z",
-  "expires_at": "2026-07-13T05:33:54.594Z",
+  "issued_at": "2026-07-12T04:24:47.059Z",
+  "expires_at": "2026-07-19T04:24:47.059Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de65e0692e360344cb35ba5ef1c2efb58132ebcdc2df05c7c447772eb953445e",
+  "signature": "53724c227ae24fe946ff8fef0cacfe5a543e5c1e31f125efafe37bc6b692b16c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-43b4b055"
 }

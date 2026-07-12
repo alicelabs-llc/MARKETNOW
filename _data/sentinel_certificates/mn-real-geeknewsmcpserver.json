@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6430304",
+  "certificate_id": "MN-SC-2026-0539068",
   "skill_id": "mn-real-geeknewsmcpserver",
   "skill_name": "GeekNews-MCP-Server",
-  "issued_at": "2026-07-06T05:40:30.304Z",
-  "expires_at": "2026-07-13T05:40:30.304Z",
+  "issued_at": "2026-07-12T04:28:59.068Z",
+  "expires_at": "2026-07-19T04:28:59.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b53dfbc56358444085d1fed3e630cd30a4a173e5a6d65e6ff5519ece3547bc72",
+  "signature": "fef67cc20f0766704742df37df60df820acab9aaa8039fcc45c79bfdb42f6f25",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geeknewsmcpserver"
 }

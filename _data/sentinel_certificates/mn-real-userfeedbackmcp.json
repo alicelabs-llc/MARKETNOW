@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6330860",
+  "certificate_id": "MN-SC-2026-0426807",
   "skill_id": "mn-real-userfeedbackmcp",
   "skill_name": "user-feedback-mcp",
-  "issued_at": "2026-07-06T05:38:50.860Z",
-  "expires_at": "2026-07-13T05:38:50.860Z",
+  "issued_at": "2026-07-12T04:27:06.807Z",
+  "expires_at": "2026-07-19T04:27:06.807Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e4a081aa2756292276bc298aaecc78dbcea5a1e32fd7145c792d44ddb3fc282",
+  "signature": "4c035cf23c80fedb10c159f358850cb228ddd459d508055da84cf159cca9284c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-userfeedbackmcp"
 }

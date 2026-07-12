@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6481407",
+  "certificate_id": "MN-SC-2026-0593385",
   "skill_id": "mn-real-keepersh",
   "skill_name": "keeper.sh",
-  "issued_at": "2026-07-06T05:41:21.407Z",
-  "expires_at": "2026-07-13T05:41:21.407Z",
+  "issued_at": "2026-07-12T04:29:53.385Z",
+  "expires_at": "2026-07-19T04:29:53.385Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9259e6c1c3edaf740ee4204402791c4f6a7f2be46eab521036272fc649e9efa",
+  "signature": "c76f029b2f64743483a5a07ef4887d831cb55a37ac8adb808fae3ad8ec1b9076",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keepersh"
 }

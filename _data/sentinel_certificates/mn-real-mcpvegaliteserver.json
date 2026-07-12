@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6465369",
+  "certificate_id": "MN-SC-2026-0575405",
   "skill_id": "mn-real-mcpvegaliteserver",
   "skill_name": "mcp-vegalite-server",
-  "issued_at": "2026-07-06T05:41:05.369Z",
-  "expires_at": "2026-07-13T05:41:05.369Z",
+  "issued_at": "2026-07-12T04:29:35.405Z",
+  "expires_at": "2026-07-19T04:29:35.405Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b3d0eb9a97558abd718fddb55691d5e499c2698c55d5090c69c01a4c6278e7a6",
+  "signature": "daa24055d306efd65ec276210afd5e49a7d41e163db2624bd4a96dc930fef36d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpvegaliteserver"
 }

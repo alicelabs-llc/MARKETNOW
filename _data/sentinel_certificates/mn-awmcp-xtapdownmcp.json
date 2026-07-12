@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6296831",
+  "certificate_id": "MN-SC-2026-0391853",
   "skill_id": "mn-awmcp-xtapdownmcp",
   "skill_name": "xtapdown-mcp",
-  "issued_at": "2026-07-06T05:38:16.831Z",
-  "expires_at": "2026-07-13T05:38:16.831Z",
+  "issued_at": "2026-07-12T04:26:31.853Z",
+  "expires_at": "2026-07-19T04:26:31.853Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd7ee45ce13819a321b651e9bbb06b202695e3193bbbf7c9b04a6190321a3187",
+  "signature": "c56261624a16637c3a852f13bdd12defd322ab72bee006aca041796b1a091c5a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-xtapdownmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6046069",
+  "certificate_id": "MN-SC-2026-0302007",
   "skill_id": "mn-prompt-65e3d65e",
   "skill_name": "Education course design",
-  "issued_at": "2026-07-06T05:34:06.069Z",
-  "expires_at": "2026-07-13T05:34:06.069Z",
+  "issued_at": "2026-07-12T04:25:02.007Z",
+  "expires_at": "2026-07-19T04:25:02.007Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c5f8c9e13a05efe5db4ab1549390e6175cd2ce3ddcd7d27006e6be43b82be2dc",
+  "signature": "6680b18d54a8c5ef308ccf9e4f8dca77c1112e699ff53edcded377fe27380ee9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-65e3d65e"
 }

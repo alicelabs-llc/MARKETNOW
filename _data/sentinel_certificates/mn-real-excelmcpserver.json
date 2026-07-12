@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6504672",
+  "certificate_id": "MN-SC-2026-0617505",
   "skill_id": "mn-real-excelmcpserver",
   "skill_name": "excel-mcp-server",
-  "issued_at": "2026-07-06T05:41:44.672Z",
-  "expires_at": "2026-07-13T05:41:44.672Z",
+  "issued_at": "2026-07-12T04:30:17.505Z",
+  "expires_at": "2026-07-19T04:30:17.505Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83d316737a20588d28f11dada7374d522e8a1d4dc4363cc6bc917b69618ee024",
+  "signature": "613c6d8c3fe0cba468cbd2ade9e9ec11e2594fdc60cdb628716c9fdc439c57d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-excelmcpserver"
 }

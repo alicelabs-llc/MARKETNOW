@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6258377",
+  "certificate_id": "MN-SC-2026-0345804",
   "skill_id": "mn-awmcp-ucscgenomemcp",
   "skill_name": "ucsc-genome-mcp",
-  "issued_at": "2026-07-06T05:37:38.377Z",
-  "expires_at": "2026-07-13T05:37:38.377Z",
+  "issued_at": "2026-07-12T04:25:45.804Z",
+  "expires_at": "2026-07-19T04:25:45.804Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "7a1c55ee7558462f088e7dcb00375747bc0b9427d673f45f5576d6b896da3d46",
+  "signature": "1d85860d3e67a390303a8d38f586a8d9d65053f9aef5e745898c85521c096a4e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ucscgenomemcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6447259",
+  "certificate_id": "MN-SC-2026-0556682",
   "skill_id": "mn-real-vkmcpserver",
   "skill_name": "vk-mcp-server",
-  "issued_at": "2026-07-06T05:40:47.259Z",
-  "expires_at": "2026-07-13T05:40:47.259Z",
+  "issued_at": "2026-07-12T04:29:16.682Z",
+  "expires_at": "2026-07-19T04:29:16.682Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0844d896ce6103cac2ecd2cf1885ad3f0c24944e098a8f98bdb45ccd34362e9a",
+  "signature": "1d9af7eccdcb3d3b9c4a75d7e6a446fb336c55441743258a3d9ee403c2641aa1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vkmcpserver"
 }

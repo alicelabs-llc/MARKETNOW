@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6397833",
+  "certificate_id": "MN-SC-2026-0502924",
   "skill_id": "mn-real-yourmemory",
   "skill_name": "YourMemory",
-  "issued_at": "2026-07-06T05:39:57.833Z",
-  "expires_at": "2026-07-13T05:39:57.833Z",
+  "issued_at": "2026-07-12T04:28:22.924Z",
+  "expires_at": "2026-07-19T04:28:22.924Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0acc4f2bf53021fd9ff7dc3e9b0cf3cce556a8533774922e3184920013763cf2",
+  "signature": "a51ff595549529c4f6185124adb028abd28e4ad93dbe9e52c2d762a85153d845",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-yourmemory"
 }

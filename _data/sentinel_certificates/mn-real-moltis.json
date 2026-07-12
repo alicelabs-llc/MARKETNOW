@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6501151",
+  "certificate_id": "MN-SC-2026-0614461",
   "skill_id": "mn-real-moltis",
   "skill_name": "moltis",
-  "issued_at": "2026-07-06T05:41:41.151Z",
-  "expires_at": "2026-07-13T05:41:41.151Z",
+  "issued_at": "2026-07-12T04:30:14.461Z",
+  "expires_at": "2026-07-19T04:30:14.461Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f6a4a1a2970de8432297e6550c95ae6e12cdf2d4e66d83a37811df1ad15ec4f4",
+  "signature": "5fd4b5f046d7a1f56340a6a75042a18720bdf1efda13dd0ef7eb731f29596a10",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-moltis"
 }

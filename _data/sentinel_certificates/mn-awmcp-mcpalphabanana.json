@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6256308",
+  "certificate_id": "MN-SC-2026-0343173",
   "skill_id": "mn-awmcp-mcpalphabanana",
   "skill_name": "mcp-alphabanana",
-  "issued_at": "2026-07-06T05:37:36.308Z",
-  "expires_at": "2026-07-13T05:37:36.308Z",
+  "issued_at": "2026-07-12T04:25:43.173Z",
+  "expires_at": "2026-07-19T04:25:43.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "7dad0597f11d2a28c388a3d79ee290de4fb91970c376dc0009e575a6551f4680",
+  "signature": "0bf0ca03f451c3935e168ceda924b7ac20ff67013d159b114b0a0369a5672c80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpalphabanana"
 }

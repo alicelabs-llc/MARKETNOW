@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6338095",
+  "certificate_id": "MN-SC-2026-0436949",
   "skill_id": "mn-real-ollamaomega",
   "skill_name": "Ollama-Omega",
-  "issued_at": "2026-07-06T05:38:58.095Z",
-  "expires_at": "2026-07-13T05:38:58.095Z",
+  "issued_at": "2026-07-12T04:27:16.949Z",
+  "expires_at": "2026-07-19T04:27:16.949Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1698973ca64b006a028877e960af81e410ecb504fbc1ee5b666e87b51745ba50",
+  "signature": "d95de175b746b290461482e0e7c46f6e518b9f21773c1e77667f1f32dde45509",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ollamaomega"
 }

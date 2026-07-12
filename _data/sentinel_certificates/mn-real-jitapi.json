@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6331872",
+  "certificate_id": "MN-SC-2026-0427811",
   "skill_id": "mn-real-jitapi",
   "skill_name": "jitapi",
-  "issued_at": "2026-07-06T05:38:51.872Z",
-  "expires_at": "2026-07-13T05:38:51.872Z",
+  "issued_at": "2026-07-12T04:27:07.811Z",
+  "expires_at": "2026-07-19T04:27:07.811Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04522833985461016480cd211f527f69c7fcac7ab99e81f8491dc2ebdd00732a",
+  "signature": "095e8efdd1c4a9f5d8f5928f7e23878a93734024db223afd3e6e72366c3ad15c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jitapi"
 }

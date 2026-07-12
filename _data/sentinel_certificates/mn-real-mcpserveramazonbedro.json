@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6462614",
+  "certificate_id": "MN-SC-2026-0573040",
   "skill_id": "mn-real-mcpserveramazonbedro",
   "skill_name": "mcp-server-amazon-bedrock",
-  "issued_at": "2026-07-06T05:41:02.614Z",
-  "expires_at": "2026-07-13T05:41:02.614Z",
+  "issued_at": "2026-07-12T04:29:33.040Z",
+  "expires_at": "2026-07-19T04:29:33.040Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7f38a7d7eab7afc785152c5ed28d85d11c9c2d2bbf1ff85715dc60c085a7758",
+  "signature": "56b1077eabf193c5d1c467f7bafb05b74a8717ddd7f7b5f05af546e632b3d703",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserveramazonbedro"
 }

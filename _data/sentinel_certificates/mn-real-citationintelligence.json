@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6423488",
+  "certificate_id": "MN-SC-2026-0531059",
   "skill_id": "mn-real-citationintelligence",
   "skill_name": "citation-intelligence",
-  "issued_at": "2026-07-06T05:40:23.488Z",
-  "expires_at": "2026-07-13T05:40:23.488Z",
+  "issued_at": "2026-07-12T04:28:51.059Z",
+  "expires_at": "2026-07-19T04:28:51.059Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "244baf51e49a624c26af4a454b3ff46cda913c9e44861fb4b3e5ec033922b7c5",
+  "signature": "562219f22491a43c8bd8fca759d833cade06898da4e49ba035a72ec7cb417a39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-citationintelligence"
 }

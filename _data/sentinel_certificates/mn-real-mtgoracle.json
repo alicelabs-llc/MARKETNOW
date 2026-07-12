@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6383396",
+  "certificate_id": "MN-SC-2026-0482848",
   "skill_id": "mn-real-mtgoracle",
   "skill_name": "mtg-oracle",
-  "issued_at": "2026-07-06T05:39:43.396Z",
-  "expires_at": "2026-07-13T05:39:43.397Z",
+  "issued_at": "2026-07-12T04:28:02.848Z",
+  "expires_at": "2026-07-19T04:28:02.848Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dcb77926403be2fd050bc28e6342b8ba2a37404eda3d82e1e45ded0b0554d05b",
+  "signature": "62ba1dc0ca557cebcc9d51aeb417a14e06309a3877562e796909854448933b83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mtgoracle"
 }

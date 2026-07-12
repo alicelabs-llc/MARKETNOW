@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6456985",
+  "certificate_id": "MN-SC-2026-0569293",
   "skill_id": "mn-real-didamcp",
   "skill_name": "dida-mcp",
-  "issued_at": "2026-07-06T05:40:56.985Z",
-  "expires_at": "2026-07-13T05:40:56.985Z",
+  "issued_at": "2026-07-12T04:29:29.293Z",
+  "expires_at": "2026-07-19T04:29:29.293Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8531dd67ff452738ec0db639c277c1d54784bd01923215164af3d2b86e754eb7",
+  "signature": "40d86aec2f87b2f281ae48013b0158b5a97fe311f5d98b12fef8f464ef3aebf0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-didamcp"
 }

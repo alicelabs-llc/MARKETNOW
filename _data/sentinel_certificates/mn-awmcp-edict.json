@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6280695",
+  "certificate_id": "MN-SC-2026-0372562",
   "skill_id": "mn-awmcp-edict",
   "skill_name": "Edict",
-  "issued_at": "2026-07-06T05:38:00.695Z",
-  "expires_at": "2026-07-13T05:38:00.695Z",
+  "issued_at": "2026-07-12T04:26:12.562Z",
+  "expires_at": "2026-07-19T04:26:12.562Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03a5c64f98e3fa10338367e2ddd30ba5de529fe4b8f53f9d69e9ca1e24242b1e",
+  "signature": "1c22b516d5acbd137c8ea0a8950443e78fb9779fa394857a7db287cddfd30bbd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-edict"
 }

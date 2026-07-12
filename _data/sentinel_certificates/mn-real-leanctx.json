@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6476658",
+  "certificate_id": "MN-SC-2026-0588552",
   "skill_id": "mn-real-leanctx",
   "skill_name": "lean-ctx",
-  "issued_at": "2026-07-06T05:41:16.658Z",
-  "expires_at": "2026-07-13T05:41:16.658Z",
+  "issued_at": "2026-07-12T04:29:48.552Z",
+  "expires_at": "2026-07-19T04:29:48.552Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d7474552775d568f8cf76773d0f6d289a8dec2e7e6a997f10941b23bf2a5601",
+  "signature": "f706d2ee78a690d025bddf13b2327a29da597aadeb72730f9706568a91201660",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-leanctx"
 }

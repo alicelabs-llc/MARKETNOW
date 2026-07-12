@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6282257",
+  "certificate_id": "MN-SC-2026-0374529",
   "skill_id": "mn-awmcp-llmbus",
   "skill_name": "llm-bus",
-  "issued_at": "2026-07-06T05:38:02.257Z",
-  "expires_at": "2026-07-13T05:38:02.257Z",
+  "issued_at": "2026-07-12T04:26:14.529Z",
+  "expires_at": "2026-07-19T04:26:14.529Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca50efcb5511365381d4598576afc11fc422c956b8380a0428612a5cb999d9a0",
+  "signature": "b616cd71199b0dd08c5f206672a94f413c577d4063928d8b3cb25cce61d522db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-llmbus"
 }

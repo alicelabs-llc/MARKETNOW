@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6008391",
+  "certificate_id": "MN-SC-2026-0256631",
   "skill_id": "mn-prompt-687d1e08",
   "skill_name": "Press release que se publica",
-  "issued_at": "2026-07-06T05:33:28.391Z",
-  "expires_at": "2026-07-13T05:33:28.391Z",
+  "issued_at": "2026-07-12T04:24:16.631Z",
+  "expires_at": "2026-07-19T04:24:16.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "340cc286ae13ed5cf3b716efdcbc3463388975e835c09f3e0a393318e776d772",
+  "signature": "eb0e3a6250c0a2a568d03660ebcae50c4eb99ee6a0023c22db2d359b84f6b306",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-687d1e08"
 }

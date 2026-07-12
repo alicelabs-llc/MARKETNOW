@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6374552",
+  "certificate_id": "MN-SC-2026-0472229",
   "skill_id": "mn-real-mcpmifosxselfservice",
   "skill_name": "mcp-mifosx-self-service",
-  "issued_at": "2026-07-06T05:39:34.552Z",
-  "expires_at": "2026-07-13T05:39:34.552Z",
+  "issued_at": "2026-07-12T04:27:52.229Z",
+  "expires_at": "2026-07-19T04:27:52.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6447e706912467c9d6d59b8d08d543437eadfe6c12cb8620351e302e5ed815fb",
+  "signature": "68cdeb1d9112da4ab76b57a97637a8b0062aea048bfc4c25cfa9d178ff299a36",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmifosxselfservice"
 }

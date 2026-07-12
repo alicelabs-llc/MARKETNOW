@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6085819",
+  "certificate_id": "MN-SC-2026-0319087",
   "skill_id": "mn-apf-003",
   "skill_name": "token-optimizer-mcp",
-  "issued_at": "2026-07-06T05:34:45.819Z",
-  "expires_at": "2026-07-13T05:34:45.819Z",
+  "issued_at": "2026-07-12T04:25:19.087Z",
+  "expires_at": "2026-07-19T04:25:19.087Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf9f51aba3e712c5cc7de7d698c78306b8d791d688c24e73efd80e36ecaf56cf",
+  "signature": "1d3ffa50245435bbba63a68553085807e638ac5c1b731bc30302f24f31b942a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-apf-003"
 }

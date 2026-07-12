@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6377147",
+  "certificate_id": "MN-SC-2026-0476217",
   "skill_id": "mn-real-mcpmarketdata",
   "skill_name": "mcp-market-data",
-  "issued_at": "2026-07-06T05:39:37.147Z",
-  "expires_at": "2026-07-13T05:39:37.147Z",
+  "issued_at": "2026-07-12T04:27:56.217Z",
+  "expires_at": "2026-07-19T04:27:56.217Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2dbc45a66c8a396ac41d9fd7ae271dfb4e1a272de7187d807fc6ba952177d606",
+  "signature": "08e4e7d91ecc711ab6a256446f2a4c3ec731f4e530d0dd0ff38ae0140b431d52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmarketdata"
 }

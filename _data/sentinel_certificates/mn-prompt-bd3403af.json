@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6055620",
+  "certificate_id": "MN-SC-2026-0314513",
   "skill_id": "mn-prompt-bd3403af",
   "skill_name": "Meal prep business operations",
-  "issued_at": "2026-07-06T05:34:15.620Z",
-  "expires_at": "2026-07-13T05:34:15.620Z",
+  "issued_at": "2026-07-12T04:25:14.513Z",
+  "expires_at": "2026-07-19T04:25:14.513Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69f082d8086783bc57a86585f3587244ad84aef5d0efb8730acc5fac0bdd7789",
+  "signature": "1319fdd01e656d18ff6532b30ef6f82405ce46491cb80345ccb58b997042a9c1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bd3403af"
 }

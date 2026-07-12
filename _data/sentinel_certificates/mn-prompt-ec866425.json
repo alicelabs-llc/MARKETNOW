@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5990612",
+  "certificate_id": "MN-SC-2026-0231189",
   "skill_id": "mn-prompt-ec866425",
   "skill_name": "Accounts receivable collections",
-  "issued_at": "2026-07-06T05:33:10.612Z",
-  "expires_at": "2026-07-13T05:33:10.612Z",
+  "issued_at": "2026-07-12T04:23:51.189Z",
+  "expires_at": "2026-07-19T04:23:51.189Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac86481f70f3528b4170669814ed7a1ebc3babc5ac3a234189eb806655d45088",
+  "signature": "aed579de6f8e91af5c3285ba63af7bd4fc32789b2f6ae4819810f56231d8b6c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ec866425"
 }

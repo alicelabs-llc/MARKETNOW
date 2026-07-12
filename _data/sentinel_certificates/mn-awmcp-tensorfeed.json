@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6247242",
+  "certificate_id": "MN-SC-2026-0332302",
   "skill_id": "mn-awmcp-tensorfeed",
   "skill_name": "tensorfeed",
-  "issued_at": "2026-07-06T05:37:27.242Z",
-  "expires_at": "2026-07-13T05:37:27.242Z",
+  "issued_at": "2026-07-12T04:25:32.302Z",
+  "expires_at": "2026-07-19T04:25:32.302Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "c625f70b8597b1f349cd5f8617a6ac6db1978c542abe3d2bf04eb249c664cecd",
+  "signature": "f9db2e66f9a7698a69087567cdaeccccd31a5a84aba614a2c20c27063cced120",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tensorfeed"
 }

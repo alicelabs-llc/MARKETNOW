@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6425696",
+  "certificate_id": "MN-SC-2026-0534337",
   "skill_id": "mn-real-melrosemcp",
   "skill_name": "melrose-mcp",
-  "issued_at": "2026-07-06T05:40:25.696Z",
-  "expires_at": "2026-07-13T05:40:25.696Z",
+  "issued_at": "2026-07-12T04:28:54.337Z",
+  "expires_at": "2026-07-19T04:28:54.337Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6fc2239e7a3a56b9058f49db2a87cbea8e1ce502fd74ca4df4851a1776d813a",
+  "signature": "1d249f256ab43ee5b403504243c29fa20cfdc734d716b8cdd086830edbad0842",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-melrosemcp"
 }

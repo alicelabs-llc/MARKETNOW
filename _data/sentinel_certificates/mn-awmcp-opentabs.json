@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6246672",
+  "certificate_id": "MN-SC-2026-0331814",
   "skill_id": "mn-awmcp-opentabs",
   "skill_name": "opentabs",
-  "issued_at": "2026-07-06T05:37:26.672Z",
-  "expires_at": "2026-07-13T05:37:26.672Z",
+  "issued_at": "2026-07-12T04:25:31.814Z",
+  "expires_at": "2026-07-19T04:25:31.814Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "004bd78056663b0f022bb0fe8eada499f9bc84ba35b1890d0240ef5681828bec",
+  "signature": "c54d6066abf5513d03332038f06385e75ea059ee34e19d818e9aa834e5e3faba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-opentabs"
 }

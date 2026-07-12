@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6392001",
+  "certificate_id": "MN-SC-2026-0493705",
   "skill_id": "mn-real-3dprintoracle",
   "skill_name": "3dprint-oracle",
-  "issued_at": "2026-07-06T05:39:52.001Z",
-  "expires_at": "2026-07-13T05:39:52.001Z",
+  "issued_at": "2026-07-12T04:28:13.705Z",
+  "expires_at": "2026-07-19T04:28:13.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e35b2e349b3dc407f6126a0965ce518d6e1b3188dcd09287655dc57327ca5a70",
+  "signature": "1bb6600d1bac27a074ec138e23a3acb881db6bf4b2b85d33aecb702afb2a1466",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-3dprintoracle"
 }

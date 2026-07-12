@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6005341",
+  "certificate_id": "MN-SC-2026-0251421",
   "skill_id": "mn-prompt-95d0fda7",
   "skill_name": "Product analytics customer health",
-  "issued_at": "2026-07-06T05:33:25.341Z",
-  "expires_at": "2026-07-13T05:33:25.341Z",
+  "issued_at": "2026-07-12T04:24:11.421Z",
+  "expires_at": "2026-07-19T04:24:11.421Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d8c2eba3654e11ae8e2583b0b01b679f01ba5c48e87a59610dea68910032577",
+  "signature": "33a047b3063eef4a757c637fbb8063193d83456ae3fadb37b59a655343d03aba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-95d0fda7"
 }

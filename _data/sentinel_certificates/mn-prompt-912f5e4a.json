@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6038304",
+  "certificate_id": "MN-SC-2026-0292212",
   "skill_id": "mn-prompt-912f5e4a",
   "skill_name": "Model monitoring in production",
-  "issued_at": "2026-07-06T05:33:58.304Z",
-  "expires_at": "2026-07-13T05:33:58.304Z",
+  "issued_at": "2026-07-12T04:24:52.212Z",
+  "expires_at": "2026-07-19T04:24:52.212Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cfc53099f1ec691d7725dc635890daf3c39d7a937d84310d2868c25321c2a4e9",
+  "signature": "e60589793b3e25a875d72b9046d343b166ea7b908712444d64e021d0e23f5155",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-912f5e4a"
 }

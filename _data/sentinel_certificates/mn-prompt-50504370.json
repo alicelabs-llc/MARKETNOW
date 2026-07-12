@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5972209",
+  "certificate_id": "MN-SC-2026-0203793",
   "skill_id": "mn-prompt-50504370",
   "skill_name": "Vendor SOW (Statement of Work)",
-  "issued_at": "2026-07-06T05:32:52.209Z",
-  "expires_at": "2026-07-13T05:32:52.209Z",
+  "issued_at": "2026-07-12T04:23:23.793Z",
+  "expires_at": "2026-07-19T04:23:23.793Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2218e50748ca446926b66333c79309b7f574c8e192cc43481e9277f9848a289",
+  "signature": "7fce457da702f664a32b03bd9d799d8859a22e822390a1e45d449ae1cbd50811",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-50504370"
 }

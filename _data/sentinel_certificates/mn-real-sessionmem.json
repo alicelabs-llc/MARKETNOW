@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6388729",
+  "certificate_id": "MN-SC-2026-0489628",
   "skill_id": "mn-real-sessionmem",
   "skill_name": "sessionmem",
-  "issued_at": "2026-07-06T05:39:48.729Z",
-  "expires_at": "2026-07-13T05:39:48.729Z",
+  "issued_at": "2026-07-12T04:28:09.628Z",
+  "expires_at": "2026-07-19T04:28:09.628Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8d50f6eb0b0495bac3f2e7d744abeb269b5b3a016b30f655cd9ebaedcdb6d1e",
+  "signature": "b3fa19a97c9aa39418c52000241e946dd489ab61e09071ddff29258414807b57",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sessionmem"
 }

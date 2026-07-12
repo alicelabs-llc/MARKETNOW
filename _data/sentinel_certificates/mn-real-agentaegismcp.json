@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6431875",
+  "certificate_id": "MN-SC-2026-0540905",
   "skill_id": "mn-real-agentaegismcp",
   "skill_name": "agentaegis-mcp",
-  "issued_at": "2026-07-06T05:40:31.875Z",
-  "expires_at": "2026-07-13T05:40:31.875Z",
+  "issued_at": "2026-07-12T04:29:00.905Z",
+  "expires_at": "2026-07-19T04:29:00.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "457b2a26ac5313de285d781fbee7b7273c90ad68b2673dc3007529fe3e0a93d1",
+  "signature": "03080be21854a87822e8741064cded839c336d452e533f712e9d9b5d421045f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentaegismcp"
 }

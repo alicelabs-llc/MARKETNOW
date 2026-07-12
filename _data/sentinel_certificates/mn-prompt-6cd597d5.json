@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5872109",
+  "certificate_id": "MN-SC-2026-0083571",
   "skill_id": "mn-prompt-6cd597d5",
   "skill_name": "Especialista LLM Eval + RAGAS",
-  "issued_at": "2026-07-06T05:31:12.109Z",
-  "expires_at": "2026-07-13T05:31:12.109Z",
+  "issued_at": "2026-07-12T04:21:23.571Z",
+  "expires_at": "2026-07-19T04:21:23.571Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de48383e9bfc59a59c707a0e5c2f5f0a7a6be61bf8449641e15a9071453ad1a0",
+  "signature": "7aa457cd98d802b0ead4ca30f34e367a952b6cd7519012f22c4e47e83ab0884d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-6cd597d5"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6504701",
+  "certificate_id": "MN-SC-2026-0617508",
   "skill_id": "mn-real-mcpscanner",
   "skill_name": "mcp-scanner",
-  "issued_at": "2026-07-06T05:41:44.701Z",
-  "expires_at": "2026-07-13T05:41:44.701Z",
+  "issued_at": "2026-07-12T04:30:17.508Z",
+  "expires_at": "2026-07-19T04:30:17.508Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "18bc964d0b72992a0f9275c457ede49a6bfcc79f6b0cfdb77f4d867e6fff8afa",
+  "signature": "e4c953e6fa33d37fe5ef57fa331cbef7d9adbda4eacd26805faeb2a875a49f4b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpscanner"
 }

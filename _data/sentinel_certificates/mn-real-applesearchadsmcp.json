@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6409746",
+  "certificate_id": "MN-SC-2026-0517264",
   "skill_id": "mn-real-applesearchadsmcp",
   "skill_name": "apple-search-ads-mcp",
-  "issued_at": "2026-07-06T05:40:09.746Z",
-  "expires_at": "2026-07-13T05:40:09.746Z",
+  "issued_at": "2026-07-12T04:28:37.264Z",
+  "expires_at": "2026-07-19T04:28:37.264Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3aaedc6ebe49f8c9ff59a891702e2e03ffb995fc6503f4da62b3a1594dba6a83",
+  "signature": "52fdf317ef4e5994e01efeb81853d4a7a9ebf1384c63908b8a6cbcc92824aecd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-applesearchadsmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6358438",
+  "certificate_id": "MN-SC-2026-0457919",
   "skill_id": "mn-real-wardashboarddata",
   "skill_name": "war-dashboard-data",
-  "issued_at": "2026-07-06T05:39:18.438Z",
-  "expires_at": "2026-07-13T05:39:18.438Z",
+  "issued_at": "2026-07-12T04:27:37.919Z",
+  "expires_at": "2026-07-19T04:27:37.919Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f18a4e18c712427d8a29416d9b36635f85da95a5bf9b35c12b55cfa3e3c3065",
+  "signature": "7b64328c5a7752a1445209cc26099fc0f80b16f9b6866731c03ccd5f171b30a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wardashboarddata"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6452212",
+  "certificate_id": "MN-SC-2026-0562215",
   "skill_id": "mn-real-rentalcars",
   "skill_name": "rental-cars",
-  "issued_at": "2026-07-06T05:40:52.212Z",
-  "expires_at": "2026-07-13T05:40:52.212Z",
+  "issued_at": "2026-07-12T04:29:22.215Z",
+  "expires_at": "2026-07-19T04:29:22.215Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "133e0aaf59159d019e55dc86efece59bd57ae7b3783873b06f1407458f01a78c",
+  "signature": "62befedf39bfe47859dabd13746ef5f31c8b093798e33aa114ecefc7c491b017",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rentalcars"
 }

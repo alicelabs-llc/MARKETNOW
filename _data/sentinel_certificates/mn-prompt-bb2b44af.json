@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5985970",
+  "certificate_id": "MN-SC-2026-0225279",
   "skill_id": "mn-prompt-bb2b44af",
   "skill_name": "Sales account executive (AE) ramp",
-  "issued_at": "2026-07-06T05:33:05.970Z",
-  "expires_at": "2026-07-13T05:33:05.970Z",
+  "issued_at": "2026-07-12T04:23:45.279Z",
+  "expires_at": "2026-07-19T04:23:45.279Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c6918dc0bbb034c1c265d399e2da3c322f6de15fcc1d567c965305ad9237a882",
+  "signature": "36f53f35ebc64cd9585ca882a91a67594f6db74140c5f57699ef3e6b0638c926",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bb2b44af"
 }

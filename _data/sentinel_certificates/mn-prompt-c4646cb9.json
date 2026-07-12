@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5878864",
+  "certificate_id": "MN-SC-2026-0093710",
   "skill_id": "mn-prompt-c4646cb9",
   "skill_name": "Especialista Chaos Testing + Chaos Mesh",
-  "issued_at": "2026-07-06T05:31:18.864Z",
-  "expires_at": "2026-07-13T05:31:18.864Z",
+  "issued_at": "2026-07-12T04:21:33.710Z",
+  "expires_at": "2026-07-19T04:21:33.710Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f3fac458a2689d2f7969fbfda3068c1e333314d398db130a14eab4f6f33a5bd",
+  "signature": "48cbe8b5ad7c339c1ee3ff4a75d105b6c4518044a64d8005f6e9475cce4333a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c4646cb9"
 }

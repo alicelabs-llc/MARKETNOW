@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6468606",
+  "certificate_id": "MN-SC-2026-0579158",
   "skill_id": "mn-real-ethicscheckmcp",
   "skill_name": "ethics-check-mcp",
-  "issued_at": "2026-07-06T05:41:08.606Z",
-  "expires_at": "2026-07-13T05:41:08.606Z",
+  "issued_at": "2026-07-12T04:29:39.158Z",
+  "expires_at": "2026-07-19T04:29:39.158Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb750acef6178446b58cb002dd6f73688df9d06ef671492fe7e30471c3347814",
+  "signature": "db0a3b8752b7bfd79bfe7983ee021fb02956d1b4b6a8d534eff0ac9128ac6eb3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ethicscheckmcp"
 }

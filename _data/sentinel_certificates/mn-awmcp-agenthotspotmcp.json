@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6241530",
+  "certificate_id": "MN-SC-2026-0325319",
   "skill_id": "mn-awmcp-agenthotspotmcp",
   "skill_name": "agenthotspot-mcp",
-  "issued_at": "2026-07-06T05:37:21.530Z",
-  "expires_at": "2026-07-13T05:37:21.530Z",
+  "issued_at": "2026-07-12T04:25:25.319Z",
+  "expires_at": "2026-07-19T04:25:25.319Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "09d9f192968c90614f68439e28e7269f522924adfa18aa48a34c830ff95f5a3f",
+  "signature": "39fdd98c8d6ef396f40131b26f63770aa4ef7bd980f7785b957f91236216c813",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agenthotspotmcp"
 }

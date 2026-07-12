@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6428062",
+  "certificate_id": "MN-SC-2026-0537238",
   "skill_id": "mn-real-wetmcp",
   "skill_name": "wet-mcp",
-  "issued_at": "2026-07-06T05:40:28.062Z",
-  "expires_at": "2026-07-13T05:40:28.062Z",
+  "issued_at": "2026-07-12T04:28:57.238Z",
+  "expires_at": "2026-07-19T04:28:57.238Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a94d2e0d9f36d2575b322e9766914501d7daded1e36119b05e15b4c668d534a0",
+  "signature": "648e333515493a362f446907962cb99b9cb093a98fe374d19e827083c2129e45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wetmcp"
 }

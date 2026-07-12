@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6423805",
+  "certificate_id": "MN-SC-2026-0530735",
   "skill_id": "mn-real-argus",
   "skill_name": "argus",
-  "issued_at": "2026-07-06T05:40:23.805Z",
-  "expires_at": "2026-07-13T05:40:23.805Z",
+  "issued_at": "2026-07-12T04:28:50.735Z",
+  "expires_at": "2026-07-19T04:28:50.735Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0feb90aba8d4ff58b16fa94914b5aa7aaa5cfa9adee9f1ff7ddbe1ed41e36607",
+  "signature": "cd1ae7bd9a94fd3c37ab4edb920c61aa1b997cdd783958dbd99c988cecdefd93",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-argus"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6398260",
+  "certificate_id": "MN-SC-2026-0503256",
   "skill_id": "mn-real-sage",
   "skill_name": "sage",
-  "issued_at": "2026-07-06T05:39:58.260Z",
-  "expires_at": "2026-07-13T05:39:58.260Z",
+  "issued_at": "2026-07-12T04:28:23.256Z",
+  "expires_at": "2026-07-19T04:28:23.256Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97d432263deec857d48c0d281b1265cecf5341445aa6000eafb871ee404b7139",
+  "signature": "facb89f8618106332fd1fc858611fffa2cb8e49d5c6e7921b7e6572e535fab56",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sage"
 }

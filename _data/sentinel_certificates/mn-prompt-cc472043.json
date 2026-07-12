@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5950188",
+  "certificate_id": "MN-SC-2026-0180618",
   "skill_id": "mn-prompt-cc472043",
   "skill_name": "Especialista Vacation Rental + Airbnb",
-  "issued_at": "2026-07-06T05:32:30.188Z",
-  "expires_at": "2026-07-13T05:32:30.188Z",
+  "issued_at": "2026-07-12T04:23:00.618Z",
+  "expires_at": "2026-07-19T04:23:00.618Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ff6259610547f2afb288b73e473948a932a61928415a97dc203a8f1fc257200",
+  "signature": "6cfb49a405dc0ddb2160051ba47211e20934281a284ed394415bd6406cb85ed3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-cc472043"
 }

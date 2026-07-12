@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6405031",
+  "certificate_id": "MN-SC-2026-0509047",
   "skill_id": "mn-real-thinairgeo",
   "skill_name": "thinair-geo",
-  "issued_at": "2026-07-06T05:40:05.031Z",
-  "expires_at": "2026-07-13T05:40:05.031Z",
+  "issued_at": "2026-07-12T04:28:29.047Z",
+  "expires_at": "2026-07-19T04:28:29.047Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a77b8dcff16f502b4d42c6333fa582cff94cb78ccfd57ecd5c5bad46265228bd",
+  "signature": "5ac6b829eb3df786e28a3e78f3729b523b08d7e1c2ec4d7039747b0d322cdff9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-thinairgeo"
 }

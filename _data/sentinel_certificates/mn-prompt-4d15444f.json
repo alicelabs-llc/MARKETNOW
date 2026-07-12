@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6058804",
+  "certificate_id": "MN-SC-2026-0319008",
   "skill_id": "mn-prompt-4d15444f",
   "skill_name": "Final summary all industries",
-  "issued_at": "2026-07-06T05:34:18.804Z",
-  "expires_at": "2026-07-13T05:34:18.804Z",
+  "issued_at": "2026-07-12T04:25:19.008Z",
+  "expires_at": "2026-07-19T04:25:19.008Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a10d1a29b759e1dfe7212ab3b7e84ca2be762f36fc70ee848bfe3ab0237542a",
+  "signature": "46b6497ab6a3d9c081b3b6de6fec3151abda5e6e23f1a1e548c88cb6f1750af1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4d15444f"
 }

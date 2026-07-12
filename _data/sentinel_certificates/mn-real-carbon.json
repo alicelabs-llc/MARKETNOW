@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6477355",
+  "certificate_id": "MN-SC-2026-0589643",
   "skill_id": "mn-real-carbon",
   "skill_name": "carbon",
-  "issued_at": "2026-07-06T05:41:17.355Z",
-  "expires_at": "2026-07-13T05:41:17.355Z",
+  "issued_at": "2026-07-12T04:29:49.643Z",
+  "expires_at": "2026-07-19T04:29:49.643Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "705843daf7cd47b3c5bae1eae4b7e82e95ce759aead45a304f8336a27a61fed4",
+  "signature": "421bc22f7d4845b871c8f07baafdb90f8fc2c7b2a98b37e3702af9761a34d248",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-carbon"
 }

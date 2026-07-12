@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6430887",
+  "certificate_id": "MN-SC-2026-0539765",
   "skill_id": "mn-real-unfragilemcpserver",
   "skill_name": "unfragile-mcp-server",
-  "issued_at": "2026-07-06T05:40:30.887Z",
-  "expires_at": "2026-07-13T05:40:30.887Z",
+  "issued_at": "2026-07-12T04:28:59.765Z",
+  "expires_at": "2026-07-19T04:28:59.765Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89b0e8d827f4cecbb074c29976b8cf6c80a0c7724cccf412f8c414fead08ae11",
+  "signature": "08bdfbbcc99d780ae7a0a6c12e6b7709e909835048d31885a63b0ebd9bf3201d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-unfragilemcpserver"
 }

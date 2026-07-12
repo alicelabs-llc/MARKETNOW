@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6473785",
+  "certificate_id": "MN-SC-2026-0585610",
   "skill_id": "mn-real-nuclear",
   "skill_name": "nuclear",
-  "issued_at": "2026-07-06T05:41:13.785Z",
-  "expires_at": "2026-07-13T05:41:13.785Z",
+  "issued_at": "2026-07-12T04:29:45.610Z",
+  "expires_at": "2026-07-19T04:29:45.610Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4bad259e365d7e5b80a7b725c8a674efb8ff5b517fc0f3eb13c7affee6c32c26",
+  "signature": "fac763a8f4639372ce1986aa4e62d952ba37fbab935803a2897c119b3b6c0c58",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nuclear"
 }

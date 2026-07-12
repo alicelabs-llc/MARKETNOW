@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6003617",
+  "certificate_id": "MN-SC-2026-0249272",
   "skill_id": "mn-prompt-00623bc2",
   "skill_name": "Product analytics Mixpanel implementation",
-  "issued_at": "2026-07-06T05:33:23.617Z",
-  "expires_at": "2026-07-13T05:33:23.617Z",
+  "issued_at": "2026-07-12T04:24:09.272Z",
+  "expires_at": "2026-07-19T04:24:09.272Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "122058ba9ebb5b24a7563826030bb524d989c47253db04b9224a67bd80548e90",
+  "signature": "9f2dd35d63d8bc849284787edc0eb0d1054a50afd274de174787df09429d9e5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-00623bc2"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6344734",
+  "certificate_id": "MN-SC-2026-0443686",
   "skill_id": "mn-real-discoveryengine",
   "skill_name": "discovery-engine",
-  "issued_at": "2026-07-06T05:39:04.734Z",
-  "expires_at": "2026-07-13T05:39:04.734Z",
+  "issued_at": "2026-07-12T04:27:23.686Z",
+  "expires_at": "2026-07-19T04:27:23.686Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bac1cb316c21205fcb7ae8fa0510e8be413b480b8d21d64501767774c1d22356",
+  "signature": "8fcc97657132ca16d082deb999eaaa52031e6abf2e95d92c42a59d404ed8bf73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-discoveryengine"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6329506",
+  "certificate_id": "MN-SC-2026-0425983",
   "skill_id": "mn-real-markview",
   "skill_name": "markview",
-  "issued_at": "2026-07-06T05:38:49.506Z",
-  "expires_at": "2026-07-13T05:38:49.506Z",
+  "issued_at": "2026-07-12T04:27:05.983Z",
+  "expires_at": "2026-07-19T04:27:05.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d98b8031302f79f63f2cff9ed0b875ac28f08b912d8b9f84948266c38d9267a",
+  "signature": "3de1ce547e431754b3e1b0eece9d6a34b1e175a09a7f882b30565ae6d5bb26ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-markview"
 }

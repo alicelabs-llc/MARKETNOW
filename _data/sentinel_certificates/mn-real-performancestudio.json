@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6496168",
+  "certificate_id": "MN-SC-2026-0610144",
   "skill_id": "mn-real-performancestudio",
   "skill_name": "PerformanceStudio",
-  "issued_at": "2026-07-06T05:41:36.168Z",
-  "expires_at": "2026-07-13T05:41:36.168Z",
+  "issued_at": "2026-07-12T04:30:10.144Z",
+  "expires_at": "2026-07-19T04:30:10.144Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb71c17e3cf25173970d2e4dbd18c4485ba0cef309ecae44c3614b45a5378319",
+  "signature": "b26bb9bbdd7d3580ab01653656b7de2d5866c72125ca7a6a94a3935d38c66b5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-performancestudio"
 }

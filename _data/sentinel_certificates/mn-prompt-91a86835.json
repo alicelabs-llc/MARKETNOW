@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6034120",
+  "certificate_id": "MN-SC-2026-0286863",
   "skill_id": "mn-prompt-91a86835",
   "skill_name": "Marketing attribution multi-touch",
-  "issued_at": "2026-07-06T05:33:54.120Z",
-  "expires_at": "2026-07-13T05:33:54.120Z",
+  "issued_at": "2026-07-12T04:24:46.863Z",
+  "expires_at": "2026-07-19T04:24:46.863Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d92f7911fea433457a6cb2ec2109e0c6befa9fea652104258e59cafde9094277",
+  "signature": "eba0dd4422978585c300ceaca25abe4ca31b878f2d1944c9439f6d07e4d92f20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-91a86835"
 }

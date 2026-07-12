@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6290117",
+  "certificate_id": "MN-SC-2026-0384632",
   "skill_id": "mn-awmcp-skillcortexserver",
   "skill_name": "skill-cortex-server",
-  "issued_at": "2026-07-06T05:38:10.117Z",
-  "expires_at": "2026-07-13T05:38:10.117Z",
+  "issued_at": "2026-07-12T04:26:24.632Z",
+  "expires_at": "2026-07-19T04:26:24.632Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58dad9f15d72e1423805e9664a3ecded0062fa0244023ef73ae401a0e0d2f7bc",
+  "signature": "ac2378fad58d0a31ddbef54fd9df3433c4bf472e7906bd1c84c25a49bef0b44f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-skillcortexserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5966489",
+  "certificate_id": "MN-SC-2026-0198677",
   "skill_id": "mn-prompt-fff1d4d9",
   "skill_name": "Implementador de event sourcing projection rebuilding",
-  "issued_at": "2026-07-06T05:32:46.489Z",
-  "expires_at": "2026-07-13T05:32:46.489Z",
+  "issued_at": "2026-07-12T04:23:18.677Z",
+  "expires_at": "2026-07-19T04:23:18.677Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cab6ca406ed2714de0082084158599ebe707fc4835a27b09fc9603936c598c8c",
+  "signature": "3f0d668b5a6561fe704bc765da707dc543c5645358d48ebe55ca284f650d2b21",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fff1d4d9"
 }

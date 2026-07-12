@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6275806",
+  "certificate_id": "MN-SC-2026-0365337",
   "skill_id": "mn-awmcp-vibiemcp",
   "skill_name": "vibie-mcp",
-  "issued_at": "2026-07-06T05:37:55.806Z",
-  "expires_at": "2026-07-13T05:37:55.806Z",
+  "issued_at": "2026-07-12T04:26:05.337Z",
+  "expires_at": "2026-07-19T04:26:05.337Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17b419d5a15d373370f0a5ed8f240dd9ac61b6b2eaae75ca42f781f205fb3202",
+  "signature": "beb88422030629dbf544322be654f4d584300042fdb4ff62a018a625a9d2be9f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-vibiemcp"
 }

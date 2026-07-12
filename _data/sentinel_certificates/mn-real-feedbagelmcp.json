@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6429045",
+  "certificate_id": "MN-SC-2026-0538166",
   "skill_id": "mn-real-feedbagelmcp",
   "skill_name": "feedbagel-mcp",
-  "issued_at": "2026-07-06T05:40:29.045Z",
-  "expires_at": "2026-07-13T05:40:29.045Z",
+  "issued_at": "2026-07-12T04:28:58.166Z",
+  "expires_at": "2026-07-19T04:28:58.166Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40c5406e7eb23fef4dbe055088ec8cacf6fbae7392a62c7ee0ec8a3fa09a428c",
+  "signature": "aaf4c2dcb6408170fc39dbe9ad4b33d383a5c5e886375335e2b5a2756666ae55",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-feedbagelmcp"
 }

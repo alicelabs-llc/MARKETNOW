@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6399110",
+  "certificate_id": "MN-SC-2026-0504258",
   "skill_id": "mn-real-tilde",
   "skill_name": "tilde",
-  "issued_at": "2026-07-06T05:39:59.110Z",
-  "expires_at": "2026-07-13T05:39:59.110Z",
+  "issued_at": "2026-07-12T04:28:24.258Z",
+  "expires_at": "2026-07-19T04:28:24.258Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e6ddb3276e8744ef265fc631c3e7ea569fb9986d5dd78430c43a5d2139926ad8",
+  "signature": "8f2d13843d71951194ffb78971d79845d43c05cf2d9dc63be4d4c0a52cd2d6eb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tilde"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6453302",
+  "certificate_id": "MN-SC-2026-0563376",
   "skill_id": "mn-real-timetableapinode",
   "skill_name": "timetable-api-node",
-  "issued_at": "2026-07-06T05:40:53.302Z",
-  "expires_at": "2026-07-13T05:40:53.302Z",
+  "issued_at": "2026-07-12T04:29:23.376Z",
+  "expires_at": "2026-07-19T04:29:23.376Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9ef8d47b7b40b8b05b1da72b17eb9547d58e3f2c28a9a131b8e7b17e6e243be6",
+  "signature": "5eb7821d3d46428016636420a28deb28d6fb3d495d14be07930e5ae653111d73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-timetableapinode"
 }

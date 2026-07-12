@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6037398",
+  "certificate_id": "MN-SC-2026-0290398",
   "skill_id": "mn-prompt-d7adeed3",
   "skill_name": "Data discovery and search",
-  "issued_at": "2026-07-06T05:33:57.398Z",
-  "expires_at": "2026-07-13T05:33:57.398Z",
+  "issued_at": "2026-07-12T04:24:50.398Z",
+  "expires_at": "2026-07-19T04:24:50.398Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b8884145a82128c5a4973b2baa5d6acb4b8dfbef9bba8308ef9740d7960f511",
+  "signature": "a0c3a542b07bab3e53318f8ce46ef8df0a506501a452a390cb38a54f9161ca6d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d7adeed3"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6402024",
+  "certificate_id": "MN-SC-2026-1081803",
   "skill_id": "mn-real-gibsmcp",
   "skill_name": "gibs-mcp",
-  "issued_at": "2026-07-06T05:40:02.024Z",
-  "expires_at": "2026-07-13T05:40:02.024Z",
+  "issued_at": "2026-07-12T04:38:01.803Z",
+  "expires_at": "2026-07-19T04:38:01.803Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "203114345de81d924e6b02f4d40ff9f479516527cc557f8b1d576b8ebfe773c3",
+  "signature": "42c29109e6bf147e520cf248fc9ef96f665c3969c5e333b3e0334d827edcb6a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gibsmcp"
 }

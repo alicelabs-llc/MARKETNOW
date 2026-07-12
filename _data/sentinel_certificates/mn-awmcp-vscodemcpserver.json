@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6288592",
+  "certificate_id": "MN-SC-2026-0381184",
   "skill_id": "mn-awmcp-vscodemcpserver",
   "skill_name": "vscode-mcp-server",
-  "issued_at": "2026-07-06T05:38:08.592Z",
-  "expires_at": "2026-07-13T05:38:08.592Z",
+  "issued_at": "2026-07-12T04:26:21.184Z",
+  "expires_at": "2026-07-19T04:26:21.184Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3993629bc42a6666fd8f26cfd4247903e88f5de93940b56ee722cb13c14e774c",
+  "signature": "a8dc76e41b0c4972fbde31428bcd0ba0411197a2c90e566441117b6e635fb743",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-vscodemcpserver"
 }

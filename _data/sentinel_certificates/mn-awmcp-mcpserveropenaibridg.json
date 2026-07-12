@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6245007",
+  "certificate_id": "MN-SC-2026-0329323",
   "skill_id": "mn-awmcp-mcpserveropenaibridg",
   "skill_name": "mcp-server-openai-bridge",
-  "issued_at": "2026-07-06T05:37:25.007Z",
-  "expires_at": "2026-07-13T05:37:25.007Z",
+  "issued_at": "2026-07-12T04:25:29.323Z",
+  "expires_at": "2026-07-19T04:25:29.323Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "49da2b3f1f4b7a652950bcd54f0ff970e9770fd9e9d81e4a5cd29335de1dc627",
+  "signature": "78fec5997724b10d87c739f146b1904b4983b91f8297901ab9167008a53a71a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpserveropenaibridg"
 }

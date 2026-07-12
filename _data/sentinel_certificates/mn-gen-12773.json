@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5804137",
+  "certificate_id": "MN-SC-2026-0045673",
   "skill_id": "mn-gen-12773",
   "skill_name": "trackmage-mcp-server",
-  "issued_at": "2026-07-06T05:30:04.137Z",
-  "expires_at": "2026-07-13T05:30:04.137Z",
+  "issued_at": "2026-07-12T04:20:45.673Z",
+  "expires_at": "2026-07-19T04:20:45.673Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b92229598fb242778f71eb531f1e37b11b4df2a3f058f20d25905b6f23f7690a",
+  "signature": "54b6cbf7ba8dfee507852855543106d2cfd5e4ba79d04d08411e0b0c1ff1d4d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12773"
 }

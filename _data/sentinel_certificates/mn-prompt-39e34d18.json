@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5985001",
+  "certificate_id": "MN-SC-2026-0223893",
   "skill_id": "mn-prompt-39e34d18",
   "skill_name": "Sales team hiring rubric",
-  "issued_at": "2026-07-06T05:33:05.001Z",
-  "expires_at": "2026-07-13T05:33:05.001Z",
+  "issued_at": "2026-07-12T04:23:43.893Z",
+  "expires_at": "2026-07-19T04:23:43.893Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06c38cdb2ba97b637891933032000b84659b3fd943fa879e70e30c7b0bf21e4d",
+  "signature": "dc7217c350c673e37eb885e8bb38e082358142dfcc8727f0f3fc6d931e746ae2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-39e34d18"
 }

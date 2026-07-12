@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6372365",
+  "certificate_id": "MN-SC-2026-0470327",
   "skill_id": "mn-real-lpxpolymcp",
   "skill_name": "lpxpoly-mcp",
-  "issued_at": "2026-07-06T05:39:32.365Z",
-  "expires_at": "2026-07-13T05:39:32.365Z",
+  "issued_at": "2026-07-12T04:27:50.327Z",
+  "expires_at": "2026-07-19T04:27:50.327Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "582b5e3e197489690816ace7de6ee9db9e21a574269053150fae69843c0dca41",
+  "signature": "65ae404c0a1b8b2e20eb8ec672c330d696d56f9b86eccc508a3923e3b55d9ef0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lpxpolymcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6252984",
+  "certificate_id": "MN-SC-2026-0339916",
   "skill_id": "mn-awmcp-wizzymcptmdb",
   "skill_name": "wizzy-mcp-tmdb",
-  "issued_at": "2026-07-06T05:37:32.984Z",
-  "expires_at": "2026-07-13T05:37:32.984Z",
+  "issued_at": "2026-07-12T04:25:39.916Z",
+  "expires_at": "2026-07-19T04:25:39.916Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "921e17a1083845c4a8e66c1585e51bc6a099353db19dac9903878e38ab4cf7dc",
+  "signature": "0db063a9ddd29d521b308c51ea8db26a61310eca4b18319ce53010c85f4cc006",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-wizzymcptmdb"
 }

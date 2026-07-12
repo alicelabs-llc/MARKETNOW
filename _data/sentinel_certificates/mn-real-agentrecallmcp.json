@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6387302",
+  "certificate_id": "MN-SC-2026-1080601",
   "skill_id": "mn-real-agentrecallmcp",
   "skill_name": "AgentRecall-MCP",
-  "issued_at": "2026-07-06T05:39:47.302Z",
-  "expires_at": "2026-07-13T05:39:47.302Z",
+  "issued_at": "2026-07-12T04:38:00.601Z",
+  "expires_at": "2026-07-19T04:38:00.601Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cce5eb8b1e00929cda3f2ab3aec350a7024648ce8174f61b0fb0bfe4ef26fcc2",
+  "signature": "f91b65b13168399a3a909acbe63fdd6576a8434daa31b6bb23d751817f56a43d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentrecallmcp"
 }

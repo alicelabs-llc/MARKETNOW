@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6431718",
+  "certificate_id": "MN-SC-2026-0541288",
   "skill_id": "mn-real-orihime",
   "skill_name": "orihime",
-  "issued_at": "2026-07-06T05:40:31.718Z",
-  "expires_at": "2026-07-13T05:40:31.718Z",
+  "issued_at": "2026-07-12T04:29:01.288Z",
+  "expires_at": "2026-07-19T04:29:01.288Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "177f129a8328503d6fe4fb46cb73bed14d35be1b0fd4bea478dad6e1a79a02e2",
+  "signature": "30cf9b8c3c9df5576409b82bb4ef6ec1bd8e2a6aa900197274246b4f88a0b589",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-orihime"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5745792",
+  "certificate_id": "MN-SC-2026-0039837",
   "skill_id": "mn-gen-11340",
   "skill_name": "rss-feeds-mcp",
-  "issued_at": "2026-07-06T05:29:05.792Z",
-  "expires_at": "2026-07-13T05:29:05.792Z",
+  "issued_at": "2026-07-12T04:20:39.837Z",
+  "expires_at": "2026-07-19T04:20:39.837Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "882dd7f0876ed44a0773f7ef69ac68b06ba99898ac726b8d489d2c4b14228a50",
+  "signature": "8b92d22161e690eb43c3fba9a0c1eea7238ecfb4b498c934bf0191eca61b4e08",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11340"
 }

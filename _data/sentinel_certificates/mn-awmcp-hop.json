@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6293281",
+  "certificate_id": "MN-SC-2026-0386644",
   "skill_id": "mn-awmcp-hop",
   "skill_name": "hop",
-  "issued_at": "2026-07-06T05:38:13.281Z",
-  "expires_at": "2026-07-13T05:38:13.281Z",
+  "issued_at": "2026-07-12T04:26:26.644Z",
+  "expires_at": "2026-07-19T04:26:26.644Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ac73c8f692443df983d485b943cd9cbdf827ac62e89ac7066253c5ada9ab49f",
+  "signature": "4b0cc204be6489fa8c5de8b4ad53c41be504e697a438574582a1af18f44e48f8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-hop"
 }

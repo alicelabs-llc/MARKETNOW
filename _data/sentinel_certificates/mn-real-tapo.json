@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6506083",
+  "certificate_id": "MN-SC-2026-0619470",
   "skill_id": "mn-real-tapo",
   "skill_name": "tapo",
-  "issued_at": "2026-07-06T05:41:46.083Z",
-  "expires_at": "2026-07-13T05:41:46.083Z",
+  "issued_at": "2026-07-12T04:30:19.470Z",
+  "expires_at": "2026-07-19T04:30:19.470Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61a51c6e6d854c9b5b7077e39f26a5a0e1be8fb470e95301afd58b5a70780f98",
+  "signature": "917c99460da6bc39abb45e74e0b2906b1bdaa7e1c8758fe0d862ff6b269ca205",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tapo"
 }

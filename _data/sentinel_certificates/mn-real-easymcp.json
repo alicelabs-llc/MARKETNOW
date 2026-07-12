@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6498389",
+  "certificate_id": "MN-SC-2026-0611624",
   "skill_id": "mn-real-easymcp",
   "skill_name": "easy-mcp",
-  "issued_at": "2026-07-06T05:41:38.389Z",
-  "expires_at": "2026-07-13T05:41:38.389Z",
+  "issued_at": "2026-07-12T04:30:11.624Z",
+  "expires_at": "2026-07-19T04:30:11.624Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95fcf7cf7c2dd412c0d8ee86fef26b078ecccdaba23f0ba392a8dbd2f6c536a4",
+  "signature": "2f44d1d9bee00c29627730a73936c0e156b68f44e116d2e456521535c7310f52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-easymcp"
 }

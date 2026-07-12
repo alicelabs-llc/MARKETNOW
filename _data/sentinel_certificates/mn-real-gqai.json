@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6464440",
+  "certificate_id": "MN-SC-2026-0574478",
   "skill_id": "mn-real-gqai",
   "skill_name": "gqai",
-  "issued_at": "2026-07-06T05:41:04.440Z",
-  "expires_at": "2026-07-13T05:41:04.440Z",
+  "issued_at": "2026-07-12T04:29:34.478Z",
+  "expires_at": "2026-07-19T04:29:34.478Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c8de2f12ec3e8249326932e2205a4f060f7bb3f26c9ebe7906f65de5caa48e1",
+  "signature": "ca63827c0e281d04c6780a6e0b239041fc71d54e8b8c4fe4f68f8ab42549b1dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gqai"
 }

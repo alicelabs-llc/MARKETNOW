@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6289076",
+  "certificate_id": "MN-SC-2026-0382553",
   "skill_id": "mn-awmcp-archmcp",
   "skill_name": "arch-mcp",
-  "issued_at": "2026-07-06T05:38:09.076Z",
-  "expires_at": "2026-07-13T05:38:09.076Z",
+  "issued_at": "2026-07-12T04:26:22.553Z",
+  "expires_at": "2026-07-19T04:26:22.553Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3f84eb874781b317014b5659020e65aa50a48d8b9d0746eb8ddcdf98a7eabf30",
+  "signature": "b6816fb64a33f89f42265acce0330021172693bcda92c3ceafe0e3e24fc454b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-archmcp"
 }

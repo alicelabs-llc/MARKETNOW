@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5870213",
+  "certificate_id": "MN-SC-2026-0081713",
   "skill_id": "mn-prompt-f9b66fd3",
   "skill_name": "Especialista LLM Fine-tuning + LoRA",
-  "issued_at": "2026-07-06T05:31:10.213Z",
-  "expires_at": "2026-07-13T05:31:10.213Z",
+  "issued_at": "2026-07-12T04:21:21.713Z",
+  "expires_at": "2026-07-19T04:21:21.713Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0257b9dbe0561a5bcb7de2de11ecb52f40ad93169babdf7b19906294c3ba42ae",
+  "signature": "e978e76cc55cceb84204340c7aecd7e126e1d51b09e04ea7e6daef9ae87e9502",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f9b66fd3"
 }

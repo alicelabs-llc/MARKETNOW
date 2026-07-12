@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5307573",
+  "certificate_id": "MN-SC-2026-9982886",
   "skill_id": "mn-gen-00736",
   "skill_name": "amazon-seller-mcp",
-  "issued_at": "2026-07-06T05:21:47.573Z",
-  "expires_at": "2026-07-13T05:21:47.573Z",
+  "issued_at": "2026-07-12T04:19:42.886Z",
+  "expires_at": "2026-07-19T04:19:42.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72b014dd5edc0313590c8243198d5f6d7e4c97c14ea0d4ac11aea9d2e8c3da8a",
+  "signature": "b81501c4455e060f2545c282acc79e36ea69af5655b33ef092fb3db59293d9f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00736"
 }

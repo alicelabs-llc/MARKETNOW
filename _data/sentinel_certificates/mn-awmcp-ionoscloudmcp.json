@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6272401",
+  "certificate_id": "MN-SC-2026-0361567",
   "skill_id": "mn-awmcp-ionoscloudmcp",
   "skill_name": "ionoscloud-mcp",
-  "issued_at": "2026-07-06T05:37:52.401Z",
-  "expires_at": "2026-07-13T05:37:52.401Z",
+  "issued_at": "2026-07-12T04:26:01.567Z",
+  "expires_at": "2026-07-19T04:26:01.567Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03f6ccfd442607ab11b7363a02cc0181706c1a7bbbd15b55b1125db9c02b50f8",
+  "signature": "56470a7731747b374a252a48169053a4a70860deea908b7682c9b9f930c0a697",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ionoscloudmcp"
 }

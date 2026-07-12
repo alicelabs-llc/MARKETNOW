@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6295276",
+  "certificate_id": "MN-SC-2026-0389247",
   "skill_id": "mn-awmcp-tsgrammcp",
   "skill_name": "tsgram-mcp",
-  "issued_at": "2026-07-06T05:38:15.276Z",
-  "expires_at": "2026-07-13T05:38:15.276Z",
+  "issued_at": "2026-07-12T04:26:29.247Z",
+  "expires_at": "2026-07-19T04:26:29.247Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "287bdf0f7d916c329ec21cf389df0c10212e8eb6c8283eb7c77a034af4923d02",
+  "signature": "0796313db0703dc78f9c7d7ce736f29a1016c77da0b4e9855dc7752f041ed478",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tsgrammcp"
 }

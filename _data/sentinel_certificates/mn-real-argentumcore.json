@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6362503",
+  "certificate_id": "MN-SC-2026-0461545",
   "skill_id": "mn-real-argentumcore",
   "skill_name": "argentum-core",
-  "issued_at": "2026-07-06T05:39:22.503Z",
-  "expires_at": "2026-07-13T05:39:22.503Z",
+  "issued_at": "2026-07-12T04:27:41.545Z",
+  "expires_at": "2026-07-19T04:27:41.545Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2d7b80f3948ab86dc3300f1bac8a1101d4c5fdaed8c293d23afb84d4cf46703c",
+  "signature": "bafe1e02f180d1c5c70f6b9e414a3212796651669f872300a925fe19aa99a9da",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-argentumcore"
 }

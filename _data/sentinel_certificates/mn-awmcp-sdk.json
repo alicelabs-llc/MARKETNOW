@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6240969",
+  "certificate_id": "MN-SC-2026-0323986",
   "skill_id": "mn-awmcp-sdk",
   "skill_name": "sdk",
-  "issued_at": "2026-07-06T05:37:20.969Z",
-  "expires_at": "2026-07-13T05:37:20.969Z",
+  "issued_at": "2026-07-12T04:25:23.986Z",
+  "expires_at": "2026-07-19T04:25:23.986Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 5,
     "l2_execution_status": "ran"
   },
-  "signature": "3211f7bb40079c6674c0c88f5b44c9069395e25fd486a8c3fb3e0d4c00b746e3",
+  "signature": "cdf119e7a5b04eea8d058ff9aeea5368bd091645addc37983411266c0ad6a373",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-sdk"
 }

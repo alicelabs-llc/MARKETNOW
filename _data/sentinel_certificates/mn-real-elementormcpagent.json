@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6317235",
+  "certificate_id": "MN-SC-2026-0413817",
   "skill_id": "mn-real-elementormcpagent",
   "skill_name": "elementor-mcp-agent",
-  "issued_at": "2026-07-06T05:38:37.235Z",
-  "expires_at": "2026-07-13T05:38:37.235Z",
+  "issued_at": "2026-07-12T04:26:53.817Z",
+  "expires_at": "2026-07-19T04:26:53.817Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a1b4d2b6335a0d9164727575feae4c8d16b910c72a70a80a561733480e22d13",
+  "signature": "82c2a9db085e529dcd75fb0d687ae1d6505440fc19b02cf7566ea4c298900532",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-elementormcpagent"
 }

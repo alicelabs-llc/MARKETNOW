@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6506204",
+  "certificate_id": "MN-SC-2026-0619164",
   "skill_id": "mn-real-cli",
   "skill_name": "cli",
-  "issued_at": "2026-07-06T05:41:46.204Z",
-  "expires_at": "2026-07-13T05:41:46.204Z",
+  "issued_at": "2026-07-12T04:30:19.164Z",
+  "expires_at": "2026-07-19T04:30:19.164Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "ce3de0c17217f0f2fa3e49a77c2d7f32d73864e9511e503fdc54906c8b056059",
+  "signature": "40c073ce21dc530aae91bc54a633c917b63159ef863fa0727ac7a685800e349e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cli"
 }

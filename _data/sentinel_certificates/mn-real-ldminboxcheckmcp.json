@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6407212",
+  "certificate_id": "MN-SC-2026-0514417",
   "skill_id": "mn-real-ldminboxcheckmcp",
   "skill_name": "ldm-inbox-check-mcp",
-  "issued_at": "2026-07-06T05:40:07.212Z",
-  "expires_at": "2026-07-13T05:40:07.212Z",
+  "issued_at": "2026-07-12T04:28:34.417Z",
+  "expires_at": "2026-07-19T04:28:34.417Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "406721c27bac70ff63c634f51dddc1a28650b2d475cf2abd79ab83c5c54fdb74",
+  "signature": "d78efffbfa60ba5cfdf0a7b9b754aa3c108c3159bc7f92a14aeb9bc35615164a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ldminboxcheckmcp"
 }

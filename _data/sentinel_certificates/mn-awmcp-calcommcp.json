@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6296256",
+  "certificate_id": "MN-SC-2026-0390185",
   "skill_id": "mn-awmcp-calcommcp",
   "skill_name": "calcom-mcp",
-  "issued_at": "2026-07-06T05:38:16.256Z",
-  "expires_at": "2026-07-13T05:38:16.256Z",
+  "issued_at": "2026-07-12T04:26:30.185Z",
+  "expires_at": "2026-07-19T04:26:30.185Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8323740d12302ade30de2e3103170ef130a79b9611a3d5156e8566d8c18c347d",
+  "signature": "8fa2b4d4dcde18ab0ae664b9bf11021cb5c1e8064c91f2556ad39cfa264d8959",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-calcommcp"
 }

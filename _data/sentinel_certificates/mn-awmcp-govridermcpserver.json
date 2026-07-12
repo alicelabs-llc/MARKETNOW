@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6243932",
+  "certificate_id": "MN-SC-2026-0328034",
   "skill_id": "mn-awmcp-govridermcpserver",
   "skill_name": "govrider-mcp-server",
-  "issued_at": "2026-07-06T05:37:23.932Z",
-  "expires_at": "2026-07-13T05:37:23.932Z",
+  "issued_at": "2026-07-12T04:25:28.034Z",
+  "expires_at": "2026-07-19T04:25:28.034Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "6dff5c903a9e6ce56b3f5eb03bfb00ac620ba845b9f0e81d12f873b262b1a57e",
+  "signature": "78e2b2af87b2f1af439c75576ac51fb63d452b8bff0d150e28d2e1174ac6ea44",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-govridermcpserver"
 }

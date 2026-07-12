@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6470022",
+  "certificate_id": "MN-SC-2026-0580177",
   "skill_id": "mn-real-plugwisemcp",
   "skill_name": "plugwise-mcp",
-  "issued_at": "2026-07-06T05:41:10.022Z",
-  "expires_at": "2026-07-13T05:41:10.022Z",
+  "issued_at": "2026-07-12T04:29:40.177Z",
+  "expires_at": "2026-07-19T04:29:40.177Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3036bfd980f16099083104890e11b4643335bf61cbb5f4a2534b7784105eaf72",
+  "signature": "34ec4a1d617a25a84d71d5fe710d80937dbb2fedf46344460c2c6bc31d900e00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-plugwisemcp"
 }

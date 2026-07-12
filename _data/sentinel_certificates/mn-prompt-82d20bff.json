@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6043590",
+  "certificate_id": "MN-SC-2026-0298798",
   "skill_id": "mn-prompt-82d20bff",
   "skill_name": "Data warehouse performance",
-  "issued_at": "2026-07-06T05:34:03.590Z",
-  "expires_at": "2026-07-13T05:34:03.590Z",
+  "issued_at": "2026-07-12T04:24:58.798Z",
+  "expires_at": "2026-07-19T04:24:58.798Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c3aa8182763d8fe4db58c748daf3a9aaf36f28860be12aa32cf412e26dea6550",
+  "signature": "ed45ea11155fcdf4bddfe43441ab21c56e78e9c98201db753413179118223d7c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-82d20bff"
 }

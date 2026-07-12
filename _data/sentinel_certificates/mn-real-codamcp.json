@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6468132",
+  "certificate_id": "MN-SC-2026-0578042",
   "skill_id": "mn-real-codamcp",
   "skill_name": "coda-mcp",
-  "issued_at": "2026-07-06T05:41:08.132Z",
-  "expires_at": "2026-07-13T05:41:08.132Z",
+  "issued_at": "2026-07-12T04:29:38.042Z",
+  "expires_at": "2026-07-19T04:29:38.042Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a3db9c2dffe3267a16fcc609fe3f6e4fb9d85565e997d55a9700b01b9301f950",
+  "signature": "dbf41895833c9f54ab541eb265763a18f4ae468548f9c3e9b6ebcda6871f2c53",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codamcp"
 }

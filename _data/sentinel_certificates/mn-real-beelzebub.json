@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6438385",
+  "certificate_id": "MN-SC-2026-1084883",
   "skill_id": "mn-real-beelzebub",
   "skill_name": "beelzebub",
-  "issued_at": "2026-07-06T05:40:38.385Z",
-  "expires_at": "2026-07-13T05:40:38.385Z",
+  "issued_at": "2026-07-12T04:38:04.883Z",
+  "expires_at": "2026-07-19T04:38:04.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32bf201dab5b90393ae4b19fbbb05c3c7ebfaf98d21b54928c7e934b3850231e",
+  "signature": "174585ed1754244d64d2c72545866d4355dfa9ce5f01c6ad8d507cb51903c217",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-beelzebub"
 }

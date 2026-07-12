@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6485284",
+  "certificate_id": "MN-SC-2026-0597490",
   "skill_id": "mn-real-reverseengineeringas",
   "skill_name": "reverse-engineering-assistant",
-  "issued_at": "2026-07-06T05:41:25.284Z",
-  "expires_at": "2026-07-13T05:41:25.284Z",
+  "issued_at": "2026-07-12T04:29:57.490Z",
+  "expires_at": "2026-07-19T04:29:57.490Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0e73916c80772049cc386491c1bd1b518382eeaacf33b455bf393e16bb5e44e1",
+  "signature": "565923b0d6107c3eed7e83e278b5813745616a9581aec7420dbc1d3461bb0f94",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-reverseengineeringas"
 }

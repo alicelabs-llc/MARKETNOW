@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6412925",
+  "certificate_id": "MN-SC-2026-0520769",
   "skill_id": "mn-real-lokimcpserver",
   "skill_name": "loki-mcp-server",
-  "issued_at": "2026-07-06T05:40:12.925Z",
-  "expires_at": "2026-07-13T05:40:12.925Z",
+  "issued_at": "2026-07-12T04:28:40.769Z",
+  "expires_at": "2026-07-19T04:28:40.769Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4408ac19a35f8c37b74fab92f022c244cfc0013eb4d13c386af10939e6ba52e0",
+  "signature": "59c63983f02f550238adb5df39e566d445b4621072a1a6af70df39dd43d19011",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lokimcpserver"
 }

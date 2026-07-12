@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5988620",
+  "certificate_id": "MN-SC-2026-0228633",
   "skill_id": "mn-prompt-61c8ed46",
   "skill_name": "Financial model SaaS con cohort retention",
-  "issued_at": "2026-07-06T05:33:08.620Z",
-  "expires_at": "2026-07-13T05:33:08.620Z",
+  "issued_at": "2026-07-12T04:23:48.633Z",
+  "expires_at": "2026-07-19T04:23:48.633Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "352c1ad4049d4466c2c23f8e343ceb12bcedcd08e42a7c7f0c1928f395f297e7",
+  "signature": "201fbdb0a56301b606d9a7761cc56c6aa6094fcf73822348a22be757e0f60a6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-61c8ed46"
 }

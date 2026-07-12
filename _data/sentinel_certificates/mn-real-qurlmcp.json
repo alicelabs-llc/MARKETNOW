@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6444868",
+  "certificate_id": "MN-SC-2026-0554174",
   "skill_id": "mn-real-qurlmcp",
   "skill_name": "qurl-mcp",
-  "issued_at": "2026-07-06T05:40:44.868Z",
-  "expires_at": "2026-07-13T05:40:44.868Z",
+  "issued_at": "2026-07-12T04:29:14.174Z",
+  "expires_at": "2026-07-19T04:29:14.174Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6c77dd74a47644cfe8297f47d664faa1dc68a91aa9f2386de5fc06c6cc7dc16d",
+  "signature": "a1db16370c1be9f4376d648afb097fd9d44629de832cc254bdad0ecb10c795e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-qurlmcp"
 }

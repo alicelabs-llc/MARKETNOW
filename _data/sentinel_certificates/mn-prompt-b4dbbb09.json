@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5984488",
+  "certificate_id": "MN-SC-2026-0223135",
   "skill_id": "mn-prompt-b4dbbb09",
   "skill_name": "Sales contract negotiation redlines",
-  "issued_at": "2026-07-06T05:33:04.488Z",
-  "expires_at": "2026-07-13T05:33:04.488Z",
+  "issued_at": "2026-07-12T04:23:43.135Z",
+  "expires_at": "2026-07-19T04:23:43.135Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a86ca924e5a5e44c9ad792b724811c567fda8d60caa10c183d68e6d9fd0b3df0",
+  "signature": "4df1b26ce35202f95553c9bd21b95c055521174c0d6fd1badfce2b5d3a3817e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b4dbbb09"
 }

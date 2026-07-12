@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5992654",
+  "certificate_id": "MN-SC-2026-0233776",
   "skill_id": "mn-prompt-0f77235c",
   "skill_name": "Cost center management",
-  "issued_at": "2026-07-06T05:33:12.654Z",
-  "expires_at": "2026-07-13T05:33:12.654Z",
+  "issued_at": "2026-07-12T04:23:53.776Z",
+  "expires_at": "2026-07-19T04:23:53.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9932bf359facdd0b1f0e1f2aea7ba44ba4e05aac6e6940963090ae589f5bbf52",
+  "signature": "27b7dd2bf5ec7a2fc7fac6f0f819996f9b8f6dc513512278bddb320a4c57ad77",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0f77235c"
 }

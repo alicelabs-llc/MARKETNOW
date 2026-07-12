@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6465925",
+  "certificate_id": "MN-SC-2026-0575920",
   "skill_id": "mn-real-gemot",
   "skill_name": "gemot",
-  "issued_at": "2026-07-06T05:41:05.925Z",
-  "expires_at": "2026-07-13T05:41:05.925Z",
+  "issued_at": "2026-07-12T04:29:35.920Z",
+  "expires_at": "2026-07-19T04:29:35.920Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8f8614a205b78947882b013112ab48802971ad5d65278b8b66110fc9e96a60b2",
+  "signature": "ac7fc32de8d046920a7202fb74089e7c6181265e2d294918fb4023dc4e90fbb3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gemot"
 }

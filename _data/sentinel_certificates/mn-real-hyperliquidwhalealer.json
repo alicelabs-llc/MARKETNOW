@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6369877",
+  "certificate_id": "MN-SC-2026-0467741",
   "skill_id": "mn-real-hyperliquidwhalealer",
   "skill_name": "hyperliquid-whalealert-mcp",
-  "issued_at": "2026-07-06T05:39:29.877Z",
-  "expires_at": "2026-07-13T05:39:29.877Z",
+  "issued_at": "2026-07-12T04:27:47.741Z",
+  "expires_at": "2026-07-19T04:27:47.741Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d6232793e88815e0491fb80d40cf00c9e8fd9f2be72db784505cabf79ef3128b",
+  "signature": "27ef3327d84a23237d877918d461e00924317daf4676eb79aba4723853ad8579",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hyperliquidwhalealer"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6377724",
+  "certificate_id": "MN-SC-2026-0477220",
   "skill_id": "mn-real-simplefunctionscli",
   "skill_name": "simplefunctions-cli",
-  "issued_at": "2026-07-06T05:39:37.724Z",
-  "expires_at": "2026-07-13T05:39:37.724Z",
+  "issued_at": "2026-07-12T04:27:57.220Z",
+  "expires_at": "2026-07-19T04:27:57.220Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf18bc6e55e0a39a4b1b324e220585d1eddb71fd5d777709d1cde576087916f1",
+  "signature": "3af29d238d2de78850d2a03b20dd10b46843556d01bf839425fe82a44159ad72",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-simplefunctionscli"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6418494",
+  "certificate_id": "MN-SC-2026-0525941",
   "skill_id": "mn-real-freezetextmcp",
   "skill_name": "freezetext-mcp",
-  "issued_at": "2026-07-06T05:40:18.494Z",
-  "expires_at": "2026-07-13T05:40:18.494Z",
+  "issued_at": "2026-07-12T04:28:45.941Z",
+  "expires_at": "2026-07-19T04:28:45.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3bae4d728a327f1ae33b17fb983eb17c66a2d698c4eaa7e63028713cc9e1f240",
+  "signature": "9fd86e9176e4f7bd1b5b756884289990a7c788002dfe7df29c2e09e1a089100b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-freezetextmcp"
 }

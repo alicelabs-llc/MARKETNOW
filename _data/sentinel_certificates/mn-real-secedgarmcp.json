@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6493502",
+  "certificate_id": "MN-SC-2026-0606896",
   "skill_id": "mn-real-secedgarmcp",
   "skill_name": "sec-edgar-mcp",
-  "issued_at": "2026-07-06T05:41:33.502Z",
-  "expires_at": "2026-07-13T05:41:33.502Z",
+  "issued_at": "2026-07-12T04:30:06.896Z",
+  "expires_at": "2026-07-19T04:30:06.896Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d96de64c5d4053189d5d8a5044a80140350112c9e98bb3ea27ed37a3befa5b53",
+  "signature": "1121488537b3bdecc49d52831020bcc74224260c6c1d6e59b87028d030258d98",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-secedgarmcp"
 }

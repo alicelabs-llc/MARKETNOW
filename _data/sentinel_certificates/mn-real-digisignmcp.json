@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6464127",
+  "certificate_id": "MN-SC-2026-0574080",
   "skill_id": "mn-real-digisignmcp",
   "skill_name": "digisign-mcp",
-  "issued_at": "2026-07-06T05:41:04.127Z",
-  "expires_at": "2026-07-13T05:41:04.127Z",
+  "issued_at": "2026-07-12T04:29:34.080Z",
+  "expires_at": "2026-07-19T04:29:34.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6dcfa98888200ee3b5deedfdd0ade0f9ad54cae18e467ebe55f34fbafacbeaea",
+  "signature": "7dbe1222c6f2492257955859c4e1d3a7344fefaa92b21d5fc70f122c4be13ea3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-digisignmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5704436",
+  "certificate_id": "MN-SC-2026-0035997",
   "skill_id": "mn-ai-10281",
   "skill_name": "pdf-tools-mcp",
-  "issued_at": "2026-07-06T05:28:24.436Z",
-  "expires_at": "2026-07-13T05:28:24.436Z",
+  "issued_at": "2026-07-12T04:20:35.997Z",
+  "expires_at": "2026-07-19T04:20:35.997Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94f2f57ea8038712116fa9a13d3049d41044ee25e2e031c8ebb6fa4e44a6f185",
+  "signature": "b8bb7572ee1edbb3be39ae4985beafa0a978dabb41271b42f057a7fe6d4de511",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-10281"
 }

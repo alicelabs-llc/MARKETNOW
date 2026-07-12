@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5818808",
+  "certificate_id": "MN-SC-2026-0047228",
   "skill_id": "mn-gen-13136",
   "skill_name": "veroq-mcp",
-  "issued_at": "2026-07-06T05:30:18.808Z",
-  "expires_at": "2026-07-13T05:30:18.808Z",
+  "issued_at": "2026-07-12T04:20:47.228Z",
+  "expires_at": "2026-07-19T04:20:47.228Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5c84ec8b60d26c1919474a1595525de0265ac454a099cc92ece6a4097011f54c",
+  "signature": "112e75c42bc2ceaec1fd91003b6f8cdb21e7b6360ffd6b0f6a74bdf6b3f1537e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13136"
 }

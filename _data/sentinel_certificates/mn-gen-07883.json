@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5612207",
+  "certificate_id": "MN-SC-2026-0027057",
   "skill_id": "mn-gen-07883",
   "skill_name": "kagimcp",
-  "issued_at": "2026-07-06T05:26:52.207Z",
-  "expires_at": "2026-07-13T05:26:52.207Z",
+  "issued_at": "2026-07-12T04:20:27.057Z",
+  "expires_at": "2026-07-19T04:20:27.057Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ba50b5feac92d48708f0996fef3a93a5c051f6dfe0df49e3c62e71564f16c127",
+  "signature": "889c3e593d26c6ef0011ace117b6b8c6a9d50fa9388493e11920a456bf30c3b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07883"
 }

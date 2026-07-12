@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5858485",
+  "certificate_id": "MN-SC-2026-0064171",
   "skill_id": "mn-prompt-e90d6959",
   "skill_name": "Especialista Mobile State Persistence",
-  "issued_at": "2026-07-06T05:30:58.485Z",
-  "expires_at": "2026-07-13T05:30:58.485Z",
+  "issued_at": "2026-07-12T04:21:04.171Z",
+  "expires_at": "2026-07-19T04:21:04.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17b0d0c55dc99be67dddb5fc61d28156dc6e3ae29719ee22b54e4166c3590b01",
+  "signature": "3244bee951b9739b5f8fd7bcca9f27ecdb091e560f0705318d041f2f416e17be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e90d6959"
 }

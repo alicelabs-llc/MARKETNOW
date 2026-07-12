@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6489934",
+  "certificate_id": "MN-SC-2026-0603304",
   "skill_id": "mn-real-sciramcpchat",
   "skill_name": "scira-mcp-chat",
-  "issued_at": "2026-07-06T05:41:29.934Z",
-  "expires_at": "2026-07-13T05:41:29.934Z",
+  "issued_at": "2026-07-12T04:30:03.304Z",
+  "expires_at": "2026-07-19T04:30:03.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d47a635c3b622a0e2b1a548354781758ab234e56abf599c23fd0df0a0bb810e",
+  "signature": "d46054eeb9663b97fb077be8331cc86c9811d2b1e31cbf514ee351e9998e97b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sciramcpchat"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6057340",
+  "certificate_id": "MN-SC-2026-0316366",
   "skill_id": "mn-prompt-72119825",
   "skill_name": "Hotel operations final",
-  "issued_at": "2026-07-06T05:34:17.340Z",
-  "expires_at": "2026-07-13T05:34:17.340Z",
+  "issued_at": "2026-07-12T04:25:16.366Z",
+  "expires_at": "2026-07-19T04:25:16.366Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c89867df43aa6f2c43fcfe841aed910d3b31e0e027dcb96a6db0f9cf608ad12",
+  "signature": "7133c79a98a31ca07ec034b67f7a5b1a60e393fdaba4af6879a43e3b39481e3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-72119825"
 }

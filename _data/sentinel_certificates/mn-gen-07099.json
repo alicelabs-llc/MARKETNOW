@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5575236",
+  "certificate_id": "MN-SC-2026-0021346",
   "skill_id": "mn-gen-07099",
   "skill_name": "mcp-monitor",
-  "issued_at": "2026-07-06T05:26:15.236Z",
-  "expires_at": "2026-07-13T05:26:15.236Z",
+  "issued_at": "2026-07-12T04:20:21.346Z",
+  "expires_at": "2026-07-19T04:20:21.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bfc017b8b0cb08c8432205417262edda7c49811bf7e6cb24f92f1082bcaa8b65",
+  "signature": "573ad7f0747de25dd43b8c0d8b17d9f093f9d21e1f894be0a1ebec08c973a76b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07099"
 }

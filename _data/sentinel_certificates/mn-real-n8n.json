@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0672860",
+  "skill_id": "mn-real-n8n",
+  "skill_name": "n8n",
+  "issued_at": "2026-07-12T04:31:12.860Z",
+  "expires_at": "2026-07-19T04:31:12.860Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 0,
+  "max_score": 10,
+  "risk_level": "high",
+  "risk_breakdown": {
+    "l15_l16": "high",
+    "l2": "not_available",
+    "final": "high"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 100,
+    "l2_execution_status": null
+  },
+  "signature": "79959be7a9ac773e53d95858e24c45c9216623a111861f788728c43ded0338a8",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-n8n"
+}

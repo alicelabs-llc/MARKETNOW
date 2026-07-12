@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6046663",
+  "certificate_id": "MN-SC-2026-0303448",
   "skill_id": "mn-prompt-2f4f4077",
   "skill_name": "Automotive dealership operations",
-  "issued_at": "2026-07-06T05:34:06.663Z",
-  "expires_at": "2026-07-13T05:34:06.663Z",
+  "issued_at": "2026-07-12T04:25:03.448Z",
+  "expires_at": "2026-07-19T04:25:03.448Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "45a67a9c350d52405e61d58755979afc192e56e839b13909856f478bb38b4272",
+  "signature": "0d9d29e7f28e7a82151758c2a0e9245ddbc37fed4428543b6f0c41eecaf5b048",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2f4f4077"
 }

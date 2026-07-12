@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6479147",
+  "certificate_id": "MN-SC-2026-0591173",
   "skill_id": "mn-real-rulego",
   "skill_name": "rulego",
-  "issued_at": "2026-07-06T05:41:19.147Z",
-  "expires_at": "2026-07-13T05:41:19.147Z",
+  "issued_at": "2026-07-12T04:29:51.173Z",
+  "expires_at": "2026-07-19T04:29:51.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc43dda4352872d188b8820f3891f83763602da3de2ee57f78b7735f855b63f2",
+  "signature": "18d4e83ff851d60262399ea5a5bc09692b0bf1f6ecc3b56596ebe315f3a581e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rulego"
 }

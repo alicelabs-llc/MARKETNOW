@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5876153",
+  "certificate_id": "MN-SC-2026-0088905",
   "skill_id": "mn-prompt-a6411c99",
   "skill_name": "Especialista SOC 2 + Compliance",
-  "issued_at": "2026-07-06T05:31:16.153Z",
-  "expires_at": "2026-07-13T05:31:16.153Z",
+  "issued_at": "2026-07-12T04:21:28.905Z",
+  "expires_at": "2026-07-19T04:21:28.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a1fcc229152385d1ddc48c3b0f796c1286bdf4cd11c04c488b90a5936af79c6",
+  "signature": "c0c5cbff1cea892b699d7b7518fa1ea7de04ace0f7d5ccad50ad6cf15178cb69",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a6411c99"
 }

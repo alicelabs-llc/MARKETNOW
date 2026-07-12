@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5986538",
+  "certificate_id": "MN-SC-2026-0225896",
   "skill_id": "mn-prompt-a9ceb2d4",
   "skill_name": "Sales inbound lead response",
-  "issued_at": "2026-07-06T05:33:06.538Z",
-  "expires_at": "2026-07-13T05:33:06.538Z",
+  "issued_at": "2026-07-12T04:23:45.896Z",
+  "expires_at": "2026-07-19T04:23:45.896Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5c56acb5cd5ca4761e9674cac21e049929603695d7a13d2ffb507c7b7c8c9515",
+  "signature": "b796a8cdc6174b0673aef38d747bbbf3b5222a48ebacea4d70be8bba4513546a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a9ceb2d4"
 }

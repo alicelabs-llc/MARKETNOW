@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6457051",
+  "certificate_id": "MN-SC-2026-0569289",
   "skill_id": "mn-real-mcpgsuite",
   "skill_name": "mcp-gsuite",
-  "issued_at": "2026-07-06T05:40:57.051Z",
-  "expires_at": "2026-07-13T05:40:57.051Z",
+  "issued_at": "2026-07-12T04:29:29.289Z",
+  "expires_at": "2026-07-19T04:29:29.289Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3fc73a7c15e7aa7cf2a8fdd70a91dcef2ed842f039452f6fa16f9b4af4939a0a",
+  "signature": "dbe392d86eb480a3528630823c47add8c9aa6ad08224b9ae969fef89ee15a8f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgsuite"
 }

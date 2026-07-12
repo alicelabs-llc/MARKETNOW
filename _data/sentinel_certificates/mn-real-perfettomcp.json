@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6497157",
+  "certificate_id": "MN-SC-2026-0610475",
   "skill_id": "mn-real-perfettomcp",
   "skill_name": "perfetto-mcp",
-  "issued_at": "2026-07-06T05:41:37.157Z",
-  "expires_at": "2026-07-13T05:41:37.157Z",
+  "issued_at": "2026-07-12T04:30:10.475Z",
+  "expires_at": "2026-07-19T04:30:10.475Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e2fe3f57d2aed9faf3f4875bc14d3e0a672f92dcb466119abdc60fd652a85f19",
+  "signature": "49a14fbc93c406fb26da8fdfb6c0e0f68b590df3e117dd75df92396cc48aa33f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-perfettomcp"
 }

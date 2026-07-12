@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6348342",
+  "certificate_id": "MN-SC-2026-0447805",
   "skill_id": "mn-real-tracepassmcpserver",
   "skill_name": "tracepass-mcp-server",
-  "issued_at": "2026-07-06T05:39:08.342Z",
-  "expires_at": "2026-07-13T05:39:08.342Z",
+  "issued_at": "2026-07-12T04:27:27.805Z",
+  "expires_at": "2026-07-19T04:27:27.805Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cee5144b405af81176c8ebd457cf458c472aedaea78c24d9695812857a6529d4",
+  "signature": "75cb34fcbcb3af9633112c66e4576e61db69bc7debc9eec5227a4f5c660200e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tracepassmcpserver"
 }

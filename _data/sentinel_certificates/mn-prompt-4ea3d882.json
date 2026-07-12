@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5967506",
+  "certificate_id": "MN-SC-2026-0200002",
   "skill_id": "mn-prompt-4ea3d882",
   "skill_name": "Implementador de GraphQL subscriptions con WebSocket",
-  "issued_at": "2026-07-06T05:32:47.506Z",
-  "expires_at": "2026-07-13T05:32:47.506Z",
+  "issued_at": "2026-07-12T04:23:20.002Z",
+  "expires_at": "2026-07-19T04:23:20.002Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b493dc21398a20abe45b86c420e8cf65ee309b4f5076d76752d93e72fcd7c9da",
+  "signature": "f708ac334391e820edc003e89b942bf97aff5853a246c193bf29e800202ecee3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4ea3d882"
 }

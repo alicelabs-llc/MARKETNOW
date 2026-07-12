@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5275431",
+  "certificate_id": "MN-SC-2026-9978454",
   "skill_id": "mn-gen-00003",
   "skill_name": "discord-mcp",
-  "issued_at": "2026-07-06T05:21:15.431Z",
-  "expires_at": "2026-07-13T05:21:15.431Z",
+  "issued_at": "2026-07-12T04:19:38.454Z",
+  "expires_at": "2026-07-19T04:19:38.454Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "90b92e3e92813a9b10ce644add8d0a734464f597c7afbd4e4b14801bdcd2059e",
+  "signature": "2982969294d07d738fa0472708f04a444594f61b1d2816e2dda0f058828460b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00003"
 }

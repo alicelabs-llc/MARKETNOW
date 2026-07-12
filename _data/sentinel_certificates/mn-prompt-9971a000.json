@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6015155",
+  "certificate_id": "MN-SC-2026-0265370",
   "skill_id": "mn-prompt-9971a000",
   "skill_name": "Editing for persuasion",
-  "issued_at": "2026-07-06T05:33:35.155Z",
-  "expires_at": "2026-07-13T05:33:35.155Z",
+  "issued_at": "2026-07-12T04:24:25.370Z",
+  "expires_at": "2026-07-19T04:24:25.370Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef13534af2833552cac4d9b2fb371c6e47d20de59637423fadf5517323589887",
+  "signature": "bac0cd9b6e1537febe594ad0b0893a0991b4857d5b8fcf15a037e4e0d2302e0f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9971a000"
 }

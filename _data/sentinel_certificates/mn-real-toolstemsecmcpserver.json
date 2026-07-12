@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6380206",
+  "certificate_id": "MN-SC-2026-0479985",
   "skill_id": "mn-real-toolstemsecmcpserver",
   "skill_name": "toolstem-sec-mcp-server",
-  "issued_at": "2026-07-06T05:39:40.206Z",
-  "expires_at": "2026-07-13T05:39:40.206Z",
+  "issued_at": "2026-07-12T04:27:59.985Z",
+  "expires_at": "2026-07-19T04:27:59.985Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04428490cb70d7248cbe2cbf21ab82bd71d822ac3cb8feae3cc1935d19ebd2d5",
+  "signature": "a37465ddd25e857f04d6cea749229e08d738dd8ae622d2cf1a089fc5b77dc82c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-toolstemsecmcpserver"
 }

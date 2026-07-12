@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6253992",
+  "certificate_id": "MN-SC-2026-0340588",
   "skill_id": "mn-awmcp-spotifybulkactionsmc",
   "skill_name": "spotify-bulk-actions-mcp",
-  "issued_at": "2026-07-06T05:37:33.992Z",
-  "expires_at": "2026-07-13T05:37:33.992Z",
+  "issued_at": "2026-07-12T04:25:40.588Z",
+  "expires_at": "2026-07-19T04:25:40.588Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "2f8ba9cb9fa339170987a5bbe55f8136f0b070a15e2c73c0d04b5735af513e7a",
+  "signature": "6c0886ae465b0d193f1a1c2a00abf097cc92aeb2e114731dd2c31a88648aab76",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-spotifybulkactionsmc"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6476655",
+  "certificate_id": "MN-SC-2026-0589025",
   "skill_id": "mn-real-ddgs",
   "skill_name": "ddgs",
-  "issued_at": "2026-07-06T05:41:16.655Z",
-  "expires_at": "2026-07-13T05:41:16.655Z",
+  "issued_at": "2026-07-12T04:29:49.025Z",
+  "expires_at": "2026-07-19T04:29:49.025Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf0c9450b73668da36776874b065b177f3d8160f1b5ea92ea0054a9f131d9d5d",
+  "signature": "0afa9d757ad774d661359a0d21dea8ffbff05429501da7ce1dd24dc4b9edd4ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ddgs"
 }

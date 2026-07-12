@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6496505",
+  "certificate_id": "MN-SC-2026-0609978",
   "skill_id": "mn-real-agentcrew",
   "skill_name": "AgentCrew",
-  "issued_at": "2026-07-06T05:41:36.505Z",
-  "expires_at": "2026-07-13T05:41:36.505Z",
+  "issued_at": "2026-07-12T04:30:09.978Z",
+  "expires_at": "2026-07-19T04:30:09.978Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b65e8f5c8a8a319e45bb8218a691ab169e83b977cba954b35ba22c0a68e24c8",
+  "signature": "e7e876b1170f51c4ec99036f9b5144f52bd283f1445f5bc48c6e93c2659b2e57",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentcrew"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6427089",
+  "certificate_id": "MN-SC-2026-0535811",
   "skill_id": "mn-real-stocky",
   "skill_name": "stocky",
-  "issued_at": "2026-07-06T05:40:27.089Z",
-  "expires_at": "2026-07-13T05:40:27.089Z",
+  "issued_at": "2026-07-12T04:28:55.811Z",
+  "expires_at": "2026-07-19T04:28:55.811Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2de2a9c3bb7c2567ec24eebf9a006544bf1d8a8c30554a999891772b9e231f19",
+  "signature": "2275a5285c79b73a1235f1e9ad2a9a35de8e903dcf47fe809ee38d3cdbdfe585",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stocky"
 }

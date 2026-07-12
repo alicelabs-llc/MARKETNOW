@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5991627",
+  "certificate_id": "MN-SC-2026-0232515",
   "skill_id": "mn-prompt-847dffeb",
   "skill_name": "Accounts payable fraud prevention",
-  "issued_at": "2026-07-06T05:33:11.627Z",
-  "expires_at": "2026-07-13T05:33:11.627Z",
+  "issued_at": "2026-07-12T04:23:52.515Z",
+  "expires_at": "2026-07-19T04:23:52.515Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca52e33e368dba1225da1b943e706d722286a18010f2ffbe464195f903535a7f",
+  "signature": "5e5bd86b74d8db7b06ef24cff5440604080d5cb1a82d583402aee96ef6e96cfa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-847dffeb"
 }

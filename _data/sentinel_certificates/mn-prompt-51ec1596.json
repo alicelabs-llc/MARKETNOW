@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6000070",
+  "certificate_id": "MN-SC-2026-0243672",
   "skill_id": "mn-prompt-51ec1596",
   "skill_name": "HR vendor consolidation",
-  "issued_at": "2026-07-06T05:33:20.070Z",
-  "expires_at": "2026-07-13T05:33:20.070Z",
+  "issued_at": "2026-07-12T04:24:03.672Z",
+  "expires_at": "2026-07-19T04:24:03.672Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81714f1be10015c6635d3a6563a5247d7f375c8bb95b2cb79c6e7e552e98144a",
+  "signature": "0e717621161aa4ca60df528e11d8f94be1106f849505db7cd5c826b56fdbfdf5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-51ec1596"
 }

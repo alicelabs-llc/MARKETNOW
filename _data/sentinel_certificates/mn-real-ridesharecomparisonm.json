@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6451570",
+  "certificate_id": "MN-SC-2026-0562236",
   "skill_id": "mn-real-ridesharecomparisonm",
   "skill_name": "rideshare-comparison-mcp",
-  "issued_at": "2026-07-06T05:40:51.570Z",
-  "expires_at": "2026-07-13T05:40:51.570Z",
+  "issued_at": "2026-07-12T04:29:22.236Z",
+  "expires_at": "2026-07-19T04:29:22.236Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4a6d35f9def29c5a5141a6f1c098cb94bfa58c16356588d6eb30b9d1f370f6e2",
+  "signature": "4989856e42f66be6e19a1550dd3d45571a47e6474ae11551fd8877732baa6079",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ridesharecomparisonm"
 }

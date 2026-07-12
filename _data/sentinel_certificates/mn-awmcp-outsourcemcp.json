@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6279722",
+  "certificate_id": "MN-SC-2026-0369646",
   "skill_id": "mn-awmcp-outsourcemcp",
   "skill_name": "outsource-mcp",
-  "issued_at": "2026-07-06T05:37:59.722Z",
-  "expires_at": "2026-07-13T05:37:59.722Z",
+  "issued_at": "2026-07-12T04:26:09.646Z",
+  "expires_at": "2026-07-19T04:26:09.646Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d328eecbf5efae14d1dfdcab5b2e2570ccada0e95e9a9b75bcb6b8068e07071d",
+  "signature": "5956ad5a6ac033d214bea44d1f9535522615e833f624cda44832c1c882b1be92",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-outsourcemcp"
 }

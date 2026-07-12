@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6299114",
+  "certificate_id": "MN-SC-2026-0394378",
   "skill_id": "mn-awmcp-producthuntmcpserver",
   "skill_name": "producthunt-mcp-server",
-  "issued_at": "2026-07-06T05:38:19.114Z",
-  "expires_at": "2026-07-13T05:38:19.114Z",
+  "issued_at": "2026-07-12T04:26:34.378Z",
+  "expires_at": "2026-07-19T04:26:34.378Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1aae36d11b63982db761c2c742fae09cfb2ac8df4784b676b035adfef6008e8b",
+  "signature": "69aa5e0008c3028d1bb3084ea6bf4694603092e0583231a26eb8d1f53a8d460f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-producthuntmcpserver"
 }

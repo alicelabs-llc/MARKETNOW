@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6267650",
+  "certificate_id": "MN-SC-2026-0356952",
   "skill_id": "mn-awmcp-siteshotmcp",
   "skill_name": "site-shot-mcp",
-  "issued_at": "2026-07-06T05:37:47.650Z",
-  "expires_at": "2026-07-13T05:37:47.650Z",
+  "issued_at": "2026-07-12T04:25:56.952Z",
+  "expires_at": "2026-07-19T04:25:56.952Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "56ec1acb2f23c968b7a61ab361e7ee07379549763ed3b429472976514ef6771a",
+  "signature": "1d5fa22e5489f0c222ea8af166d579770c431670164d621a7deee063a5d0072c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-siteshotmcp"
 }

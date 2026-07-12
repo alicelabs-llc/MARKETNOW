@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5710038",
+  "certificate_id": "MN-SC-2026-0036693",
   "skill_id": "mn-gen-10423",
   "skill_name": "pine",
-  "issued_at": "2026-07-06T05:28:30.038Z",
-  "expires_at": "2026-07-13T05:28:30.038Z",
+  "issued_at": "2026-07-12T04:20:36.693Z",
+  "expires_at": "2026-07-19T04:20:36.693Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c29b217b4276a0897bd134b9d703cb217cedcc52872dfc30b739eb3e510bab26",
+  "signature": "c4b62ee6fd252fca6b8e174922ff2579ff6e16c90b72fbdee169423d51185850",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10423"
 }

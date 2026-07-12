@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5817252",
+  "certificate_id": "MN-SC-2026-0047258",
   "skill_id": "mn-gen-13099",
   "skill_name": "mcpvault",
-  "issued_at": "2026-07-06T05:30:17.252Z",
-  "expires_at": "2026-07-13T05:30:17.252Z",
+  "issued_at": "2026-07-12T04:20:47.258Z",
+  "expires_at": "2026-07-19T04:20:47.258Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25d889970db1a79f8a2fe47758edd04fa1ab25b0a8cc9e493cdb6c779ef23460",
+  "signature": "2686b69deaa818207586e02c60051611188faa5152d032aa836eb960cc43cfdb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13099"
 }

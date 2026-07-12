@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5959642",
+  "certificate_id": "MN-SC-2026-0192661",
   "skill_id": "mn-prompt-fbfbd03d",
   "skill_name": "Diseñador de esquemas PostgreSQL para SaaS multi-tenant",
-  "issued_at": "2026-07-06T05:32:39.642Z",
-  "expires_at": "2026-07-13T05:32:39.642Z",
+  "issued_at": "2026-07-12T04:23:12.661Z",
+  "expires_at": "2026-07-19T04:23:12.661Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "763f2282f91c7abb352f6a742d01bbb42c6e36c233e177e6a1b38edfc781277c",
+  "signature": "40c5c1b409fd54072d8460a440ecbeb0d35c74b43c07827affffcea97f1f96e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fbfbd03d"
 }

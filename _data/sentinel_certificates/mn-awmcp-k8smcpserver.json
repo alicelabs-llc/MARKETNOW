@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6269752",
+  "certificate_id": "MN-SC-2026-0359428",
   "skill_id": "mn-awmcp-k8smcpserver",
   "skill_name": "k8s-mcp-server",
-  "issued_at": "2026-07-06T05:37:49.752Z",
-  "expires_at": "2026-07-13T05:37:49.752Z",
+  "issued_at": "2026-07-12T04:25:59.428Z",
+  "expires_at": "2026-07-19T04:25:59.428Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ccb4773f0533ef54dc1ddcadbf0d489d245ef82379f49fe12e9fa7986bdf0cb",
+  "signature": "1252d0fbc0bf9c8dc24c71a9b758d31064a783f6483655395baed46a4881f296",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-k8smcpserver"
 }

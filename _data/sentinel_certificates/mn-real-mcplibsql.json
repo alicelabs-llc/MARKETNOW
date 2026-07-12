@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6311316",
+  "certificate_id": "MN-SC-2026-0407582",
   "skill_id": "mn-real-mcplibsql",
   "skill_name": "mcp-libsql",
-  "issued_at": "2026-07-06T05:38:31.316Z",
-  "expires_at": "2026-07-13T05:38:31.316Z",
+  "issued_at": "2026-07-12T04:26:47.582Z",
+  "expires_at": "2026-07-19T04:26:47.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b44f93aa71268c1154ba7d52614363eb008828c2c839b5330aa8d46b7868dcda",
+  "signature": "a84ab855cb4b409e853fad7687ed90c2a71bf80c151528c667154e420a350b49",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcplibsql"
 }

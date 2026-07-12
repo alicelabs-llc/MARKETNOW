@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6450968",
+  "certificate_id": "MN-SC-2026-0561160",
   "skill_id": "mn-real-teslamatemcp",
   "skill_name": "teslamate-mcp",
-  "issued_at": "2026-07-06T05:40:50.968Z",
-  "expires_at": "2026-07-13T05:40:50.968Z",
+  "issued_at": "2026-07-12T04:29:21.160Z",
+  "expires_at": "2026-07-19T04:29:21.160Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "deb89802659180fcc9c69618d7bfc75e97a64a857790af056a6ed298f0164579",
+  "signature": "797b803d93fe6ee70f54f1ac29e1c026880db21a25e7907363e60bac0433e95b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-teslamatemcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5963961",
+  "certificate_id": "MN-SC-2026-0196132",
   "skill_id": "mn-prompt-3beb9088",
   "skill_name": "Especialista en container security hardening",
-  "issued_at": "2026-07-06T05:32:43.961Z",
-  "expires_at": "2026-07-13T05:32:43.961Z",
+  "issued_at": "2026-07-12T04:23:16.132Z",
+  "expires_at": "2026-07-19T04:23:16.132Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "558161a9545de731649acd29283f300208c77895760851b0148a7f9174eafb02",
+  "signature": "82405ce4e542616400323a0cd42445b0b31d9d2db4c43ed8e8eb5c599f9c3bc5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-3beb9088"
 }

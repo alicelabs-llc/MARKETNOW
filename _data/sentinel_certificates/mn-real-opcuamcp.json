@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6347188",
+  "certificate_id": "MN-SC-2026-0446045",
   "skill_id": "mn-real-opcuamcp",
   "skill_name": "opcua-mcp",
-  "issued_at": "2026-07-06T05:39:07.188Z",
-  "expires_at": "2026-07-13T05:39:07.188Z",
+  "issued_at": "2026-07-12T04:27:26.045Z",
+  "expires_at": "2026-07-19T04:27:26.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7e424360be95b708298d0726fde14121a2b624272e3caeaefbb7f4f6fba46662",
+  "signature": "04940671e5847607c73838c156736d530b523b06a4aeb1a2b4a06ebf4594fefb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opcuamcp"
 }

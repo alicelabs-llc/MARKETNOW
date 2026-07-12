@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5873678",
+  "certificate_id": "MN-SC-2026-0085530",
   "skill_id": "mn-prompt-5eb335ee",
   "skill_name": "Especialista Threat Modeling + STRIDE",
-  "issued_at": "2026-07-06T05:31:13.678Z",
-  "expires_at": "2026-07-13T05:31:13.678Z",
+  "issued_at": "2026-07-12T04:21:25.530Z",
+  "expires_at": "2026-07-19T04:21:25.530Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d0bfe4a6342e14dbd753001ad174c20f958edc2cfe7dd181810a1094fcb1cb95",
+  "signature": "7042542b3361e738e5a9b6c8d02f100c4bb5cfe326a6e6c65edc7ee8fef119b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5eb335ee"
 }

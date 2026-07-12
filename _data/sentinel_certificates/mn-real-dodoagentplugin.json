@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6359618",
+  "certificate_id": "MN-SC-2026-0459125",
   "skill_id": "mn-real-dodoagentplugin",
   "skill_name": "dodo-agent-plugin",
-  "issued_at": "2026-07-06T05:39:19.618Z",
-  "expires_at": "2026-07-13T05:39:19.618Z",
+  "issued_at": "2026-07-12T04:27:39.125Z",
+  "expires_at": "2026-07-19T04:27:39.125Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e22207e64de8a7586e1e8a48691b321f7ffacd0ca38368806894d1aeef89e785",
+  "signature": "85c8a487136e8d65f4f761d7cb37626087abe9d05630376163aa39383b61364f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dodoagentplugin"
 }

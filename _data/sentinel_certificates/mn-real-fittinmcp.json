@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6420829",
+  "certificate_id": "MN-SC-2026-0528251",
   "skill_id": "mn-real-fittinmcp",
   "skill_name": "fittin-mcp",
-  "issued_at": "2026-07-06T05:40:20.829Z",
-  "expires_at": "2026-07-13T05:40:20.829Z",
+  "issued_at": "2026-07-12T04:28:48.251Z",
+  "expires_at": "2026-07-19T04:28:48.251Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "546ab9948f9ba24fbd0ee9380ceee8ae8dfe1254dd718b47464ac22199c8919c",
+  "signature": "fc5d7c9a4190e7aab57bd68208eaa5f5039741ddeafd8288ef415159d2db3d55",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fittinmcp"
 }

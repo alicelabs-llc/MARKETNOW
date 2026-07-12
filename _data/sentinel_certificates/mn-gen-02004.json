@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5358568",
+  "certificate_id": "MN-SC-2026-9990021",
   "skill_id": "mn-gen-02004",
   "skill_name": "claude-code-skills",
-  "issued_at": "2026-07-06T05:22:38.568Z",
-  "expires_at": "2026-07-13T05:22:38.568Z",
+  "issued_at": "2026-07-12T04:19:50.021Z",
+  "expires_at": "2026-07-19T04:19:50.021Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3dd36304da9a00c45f57a9bde11c38783684bae241b1c771840d09c751f1fcbc",
+  "signature": "7c71b678954911bc0ec7c04cb41949d68f55e1314f817ea8c6c1b3912d7a9901",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02004"
 }

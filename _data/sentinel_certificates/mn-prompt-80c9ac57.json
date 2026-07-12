@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6028621",
+  "certificate_id": "MN-SC-2026-0280318",
   "skill_id": "mn-prompt-80c9ac57",
   "skill_name": "Copywriting for customer health score",
-  "issued_at": "2026-07-06T05:33:48.621Z",
-  "expires_at": "2026-07-13T05:33:48.621Z",
+  "issued_at": "2026-07-12T04:24:40.318Z",
+  "expires_at": "2026-07-19T04:24:40.318Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b352af34ef8b51b60cbcc0855770fc341133545aeb83e1a9fd933e92e1756f4",
+  "signature": "7c46c5ca673298c51430fe8d67e819215fdd99660f3503fdf04e55e8a25dccd8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-80c9ac57"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5965974",
+  "certificate_id": "MN-SC-2026-0197888",
   "skill_id": "mn-prompt-0a6fa374",
   "skill_name": "Diseñador de idempotency para APIs",
-  "issued_at": "2026-07-06T05:32:45.974Z",
-  "expires_at": "2026-07-13T05:32:45.974Z",
+  "issued_at": "2026-07-12T04:23:17.888Z",
+  "expires_at": "2026-07-19T04:23:17.888Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acf8737a2da3e24134574a2c6cc49f792f619ca313a426e531a0a6e9d0bbcfe6",
+  "signature": "2d28ae32da8c271e2a53740ef747607155d2f01370169bc79cd188cc454ce791",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0a6fa374"
 }

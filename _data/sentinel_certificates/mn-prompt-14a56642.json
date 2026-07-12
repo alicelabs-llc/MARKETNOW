@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6000568",
+  "certificate_id": "MN-SC-2026-0244196",
   "skill_id": "mn-prompt-14a56642",
   "skill_name": "User interview que descubre pain real",
-  "issued_at": "2026-07-06T05:33:20.568Z",
-  "expires_at": "2026-07-13T05:33:20.568Z",
+  "issued_at": "2026-07-12T04:24:04.196Z",
+  "expires_at": "2026-07-19T04:24:04.196Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d6209be44e2ff9566f0238128cfdd1adb05ddb7acad1d97eb989fcbee975e6f",
+  "signature": "a062852bba00f8144b07938ff48e4f38e9cec3c208841f06c049d7872954150b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-14a56642"
 }

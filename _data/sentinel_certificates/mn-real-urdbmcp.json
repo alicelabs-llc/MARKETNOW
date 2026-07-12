@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6310839",
+  "certificate_id": "MN-SC-2026-0407045",
   "skill_id": "mn-real-urdbmcp",
   "skill_name": "urdb-mcp",
-  "issued_at": "2026-07-06T05:38:30.839Z",
-  "expires_at": "2026-07-13T05:38:30.839Z",
+  "issued_at": "2026-07-12T04:26:47.045Z",
+  "expires_at": "2026-07-19T04:26:47.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ecada33fa08d4d45bcf67b83ca73fad43f2d9c95350cb62e5e597ffe50dc535",
+  "signature": "4cc653b24ed01d61751352a56b8a9f6b301d0dfdd2bfc57341d11be2a5a53690",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-urdbmcp"
 }

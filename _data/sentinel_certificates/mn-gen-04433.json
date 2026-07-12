@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5464155",
+  "certificate_id": "MN-SC-2026-0005817",
   "skill_id": "mn-gen-04433",
   "skill_name": "gistpad-mcp",
-  "issued_at": "2026-07-06T05:24:24.155Z",
-  "expires_at": "2026-07-13T05:24:24.155Z",
+  "issued_at": "2026-07-12T04:20:05.817Z",
+  "expires_at": "2026-07-19T04:20:05.817Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ca2419e2ad9bd9b4dfa3be6ad26054262ea395d312318f21737b66f1219f676",
+  "signature": "fe8970d6d27c4c26f673bf378cdbef8d49c0500d8a1a76d6b35a85212bb8d4c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04433"
 }

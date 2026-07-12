@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6396102",
+  "certificate_id": "MN-SC-2026-0499630",
   "skill_id": "mn-real-localfaissmcp",
   "skill_name": "local_faiss_mcp",
-  "issued_at": "2026-07-06T05:39:56.102Z",
-  "expires_at": "2026-07-13T05:39:56.102Z",
+  "issued_at": "2026-07-12T04:28:19.630Z",
+  "expires_at": "2026-07-19T04:28:19.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4f31e2e59aadba309e9026ac55502078ec205ee64d538c85a6d7000ff7d600dc",
+  "signature": "d9e82d26782df9d800b41e06a4513c86f06d19b6192e18f7ebf808014ad2a23f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-localfaissmcp"
 }

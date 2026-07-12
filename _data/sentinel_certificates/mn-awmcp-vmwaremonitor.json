@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6278445",
+  "certificate_id": "MN-SC-2026-0368549",
   "skill_id": "mn-awmcp-vmwaremonitor",
   "skill_name": "VMware-Monitor",
-  "issued_at": "2026-07-06T05:37:58.445Z",
-  "expires_at": "2026-07-13T05:37:58.445Z",
+  "issued_at": "2026-07-12T04:26:08.549Z",
+  "expires_at": "2026-07-19T04:26:08.549Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3fe0605c6f00470a16a993df70d3f9feba6adb48e5434ed8cbf2d51dcce660f7",
+  "signature": "605b3a7fd0d61ba72b69de53424bec07ba61bfc286e2b84b4861f0622b515b04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-vmwaremonitor"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6034956",
+  "certificate_id": "MN-SC-2026-0287648",
   "skill_id": "mn-prompt-5a1b5d22",
   "skill_name": "Real-time analytics with ClickHouse",
-  "issued_at": "2026-07-06T05:33:54.956Z",
-  "expires_at": "2026-07-13T05:33:54.956Z",
+  "issued_at": "2026-07-12T04:24:47.648Z",
+  "expires_at": "2026-07-19T04:24:47.648Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b0012bc045e7e91b91e58c675d0053582c1fbf9446b486dfcb8cdffdf0c0537",
+  "signature": "b8b8e2258b95e75d2b33007a94d017f27cfa0e3a5e70694e1baf7448c5a43ef4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5a1b5d22"
 }

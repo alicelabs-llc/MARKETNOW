@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6383474",
+  "certificate_id": "MN-SC-2026-0483314",
   "skill_id": "mn-real-tftoracle",
   "skill_name": "tft-oracle",
-  "issued_at": "2026-07-06T05:39:43.474Z",
-  "expires_at": "2026-07-13T05:39:43.474Z",
+  "issued_at": "2026-07-12T04:28:03.314Z",
+  "expires_at": "2026-07-19T04:28:03.314Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39597eacdda024381469179aac836ef6bfadd9b6eaff3b68fb16e0e9cd4e841f",
+  "signature": "af3de8f1d773acab646d2c6d0bbe5e6a90cbfa652bc58af7f722e4ace3d74de3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tftoracle"
 }

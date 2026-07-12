@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6419561",
+  "certificate_id": "MN-SC-2026-0526433",
   "skill_id": "mn-real-disruptionintelligen",
   "skill_name": "disruption-intelligence-mcp",
-  "issued_at": "2026-07-06T05:40:19.561Z",
-  "expires_at": "2026-07-13T05:40:19.561Z",
+  "issued_at": "2026-07-12T04:28:46.433Z",
+  "expires_at": "2026-07-19T04:28:46.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "91533c112e005f4fb466c3858e392e8140e819bc0748f497944bcae769247315",
+  "signature": "a540e3a5af7023e77709327089427918edc92347b5ae90af04ac7ccfaf22fed1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-disruptionintelligen"
 }

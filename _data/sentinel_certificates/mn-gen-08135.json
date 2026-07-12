@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5624002",
+  "certificate_id": "MN-SC-2026-0027744",
   "skill_id": "mn-gen-08135",
   "skill_name": "travel-agent-mcp",
-  "issued_at": "2026-07-06T05:27:04.002Z",
-  "expires_at": "2026-07-13T05:27:04.002Z",
+  "issued_at": "2026-07-12T04:20:27.744Z",
+  "expires_at": "2026-07-19T04:20:27.744Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "84d89e231f261c05c28746807741dfb5bdb1cab72504f4e057444f0c4cc12beb",
+  "signature": "7bd63c18af8393ab96d39ea7fdc7eb140953d2d3399df3dc39316ebaf663aa06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08135"
 }

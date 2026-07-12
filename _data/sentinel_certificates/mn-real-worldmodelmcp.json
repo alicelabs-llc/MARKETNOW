@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6397846",
+  "certificate_id": "MN-SC-2026-0502402",
   "skill_id": "mn-real-worldmodelmcp",
   "skill_name": "world-model-mcp",
-  "issued_at": "2026-07-06T05:39:57.846Z",
-  "expires_at": "2026-07-13T05:39:57.846Z",
+  "issued_at": "2026-07-12T04:28:22.402Z",
+  "expires_at": "2026-07-19T04:28:22.402Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a97ac5f8658cbea93fb4106b8c974309429e2c003dc627d9f918067618aedcc9",
+  "signature": "c95f8e8295ada099adeb8f5764061619bc78d3b692699c580ac8eba32e6ab44d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-worldmodelmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6478715",
+  "certificate_id": "MN-SC-2026-1085737",
   "skill_id": "mn-real-apifymcpserver",
   "skill_name": "apify-mcp-server",
-  "issued_at": "2026-07-06T05:41:18.715Z",
-  "expires_at": "2026-07-13T05:41:18.715Z",
+  "issued_at": "2026-07-12T04:38:05.737Z",
+  "expires_at": "2026-07-19T04:38:05.737Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "308f99b18b1d562e576710caae76795aca34c2715e1705e248c5e7b5838d9902",
+  "signature": "253f9a6de300c56461a64ab0b8968f2d85e12680daaeaa93fb30b85ca7024365",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apifymcpserver"
 }

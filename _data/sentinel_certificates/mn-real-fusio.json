@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6477822",
+  "certificate_id": "MN-SC-2026-0590200",
   "skill_id": "mn-real-fusio",
   "skill_name": "fusio",
-  "issued_at": "2026-07-06T05:41:17.822Z",
-  "expires_at": "2026-07-13T05:41:17.822Z",
+  "issued_at": "2026-07-12T04:29:50.200Z",
+  "expires_at": "2026-07-19T04:29:50.200Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2bc4850eec36f8d4bc3f6ef9193a8ae8a430281e1bca7fac9e525d0781cb6b4a",
+  "signature": "4aa503afe54c78fd83dc9ae0a5130658aec4a06614ed1ca20220b0440570aea6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fusio"
 }

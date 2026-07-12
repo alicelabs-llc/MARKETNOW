@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1031181",
+  "skill_id": "mn-real-mcpsshsession",
+  "skill_name": "mcp-ssh-session",
+  "issued_at": "2026-07-12T04:37:11.181Z",
+  "expires_at": "2026-07-19T04:37:11.181Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "506b2c7025e8eacedf8d81bbe6ed12408e73b8f56b6fcfc55d9b2eda0b72ef67",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsshsession"
+}

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5983003",
+  "certificate_id": "MN-SC-2026-0221130",
   "skill_id": "mn-prompt-999255e0",
   "skill_name": "Sales handoff a Customer Success",
-  "issued_at": "2026-07-06T05:33:03.003Z",
-  "expires_at": "2026-07-13T05:33:03.003Z",
+  "issued_at": "2026-07-12T04:23:41.130Z",
+  "expires_at": "2026-07-19T04:23:41.130Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3f83bfae9101a1865d60f34423577b89dd0c93ac3244ec500ce583efb7153b98",
+  "signature": "d04db4834bdd41e8694119af9f90e13edb00c37c35369e181431befc4d4dc458",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-999255e0"
 }

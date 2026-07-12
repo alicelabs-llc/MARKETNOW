@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6489393",
+  "certificate_id": "MN-SC-2026-0603143",
   "skill_id": "mn-real-awesomeopenclaw",
   "skill_name": "awesome-openclaw",
-  "issued_at": "2026-07-06T05:41:29.393Z",
-  "expires_at": "2026-07-13T05:41:29.393Z",
+  "issued_at": "2026-07-12T04:30:03.143Z",
+  "expires_at": "2026-07-19T04:30:03.143Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "811c0e186ae26cbc3d1a913388e451166d3d6738fc55dd72edc8fcb8334de299",
+  "signature": "ad8d3d3d0f84fdaa08870403a7d30b22403825b291269b3dee543bc742a6c6f6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-awesomeopenclaw"
 }

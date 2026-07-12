@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6309048",
+  "certificate_id": "MN-SC-2026-0405488",
   "skill_id": "mn-real-mcpjdbcserver",
   "skill_name": "mcp-jdbc-server",
-  "issued_at": "2026-07-06T05:38:29.048Z",
-  "expires_at": "2026-07-13T05:38:29.048Z",
+  "issued_at": "2026-07-12T04:26:45.488Z",
+  "expires_at": "2026-07-19T04:26:45.488Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7346294faa19c52b1362f3ae7f120d27d7069349be1c99588a4a3633c7d90841",
+  "signature": "b0fe0aad4b74b697e174b407d59221d094253669c1bf0473eb664cdd0f86ccec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpjdbcserver"
 }

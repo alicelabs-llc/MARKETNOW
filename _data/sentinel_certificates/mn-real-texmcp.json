@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6455882",
+  "certificate_id": "MN-SC-2026-0566135",
   "skill_id": "mn-real-texmcp",
   "skill_name": "TexMCP",
-  "issued_at": "2026-07-06T05:40:55.882Z",
-  "expires_at": "2026-07-13T05:40:55.882Z",
+  "issued_at": "2026-07-12T04:29:26.135Z",
+  "expires_at": "2026-07-19T04:29:26.135Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4bf574cb74114ba8ba9badefe5e2724fe82bd4f339dd201824d7aad20070d030",
+  "signature": "d7cc88c9c11c5fdfe009457b2721273b81c49b6b6d022b1ed7895f241ab5a11b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-texmcp"
 }

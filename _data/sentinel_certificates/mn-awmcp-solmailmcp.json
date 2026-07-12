@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6296838",
+  "certificate_id": "MN-SC-2026-0390847",
   "skill_id": "mn-awmcp-solmailmcp",
   "skill_name": "solmail-mcp",
-  "issued_at": "2026-07-06T05:38:16.838Z",
-  "expires_at": "2026-07-13T05:38:16.838Z",
+  "issued_at": "2026-07-12T04:26:30.847Z",
+  "expires_at": "2026-07-19T04:26:30.847Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "679be9f7f5877f462e8b1479e14ca5b94d3c2842f85ad8cc6c7e443909c4bebf",
+  "signature": "276e9c695a0482bd04faa07481ea5522c543b479d1fc141863b1351f953d84ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-solmailmcp"
 }

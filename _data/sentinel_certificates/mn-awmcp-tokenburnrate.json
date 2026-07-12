@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6274657",
+  "certificate_id": "MN-SC-2026-0364662",
   "skill_id": "mn-awmcp-tokenburnrate",
   "skill_name": "TokenBurnRate",
-  "issued_at": "2026-07-06T05:37:54.657Z",
-  "expires_at": "2026-07-13T05:37:54.657Z",
+  "issued_at": "2026-07-12T04:26:04.662Z",
+  "expires_at": "2026-07-19T04:26:04.662Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b34dfbe6f0fac865995f5468ab49f0c6ead03ead0e9b37cb705a1657dd85b160",
+  "signature": "0d1dc7d5122c0d9e3cf97840b1320c1ed5995d3ac719eac895a516bd61669202",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tokenburnrate"
 }

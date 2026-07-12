@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6401856",
+  "certificate_id": "MN-SC-2026-0506049",
   "skill_id": "mn-real-mcpeuaiact",
   "skill_name": "mcp-eu-ai-act",
-  "issued_at": "2026-07-06T05:40:01.856Z",
-  "expires_at": "2026-07-13T05:40:01.856Z",
+  "issued_at": "2026-07-12T04:28:26.049Z",
+  "expires_at": "2026-07-19T04:28:26.049Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53d84c1376dea06935a9d291a15760924f5e36aa6da912bef83c51c9f2d787b6",
+  "signature": "4f12cf4f5a9110d880e2e2334e1be58274a7164766eafa62f53b7bd90ea91d83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpeuaiact"
 }

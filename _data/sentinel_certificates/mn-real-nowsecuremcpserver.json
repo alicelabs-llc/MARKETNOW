@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6315595",
+  "certificate_id": "MN-SC-2026-0412275",
   "skill_id": "mn-real-nowsecuremcpserver",
   "skill_name": "nowsecure-mcp-server",
-  "issued_at": "2026-07-06T05:38:35.595Z",
-  "expires_at": "2026-07-13T05:38:35.595Z",
+  "issued_at": "2026-07-12T04:26:52.275Z",
+  "expires_at": "2026-07-19T04:26:52.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5292be00b43cff36443cb9932135c7633c6e6b55ad6395e8e1b76476d6b75a36",
+  "signature": "f894d8cf2037e02881af24379cf433dc8dbce44b9709eebc8e16fa6f623698b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nowsecuremcpserver"
 }

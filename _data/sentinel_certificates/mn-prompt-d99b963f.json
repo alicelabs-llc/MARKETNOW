@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5970128",
+  "certificate_id": "MN-SC-2026-0201317",
   "skill_id": "mn-prompt-d99b963f",
   "skill_name": "Policy de información privilegiada (insider trading)",
-  "issued_at": "2026-07-06T05:32:50.128Z",
-  "expires_at": "2026-07-13T05:32:50.128Z",
+  "issued_at": "2026-07-12T04:23:21.317Z",
+  "expires_at": "2026-07-19T04:23:21.317Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04fe14e9775caabba34849f54783f6f8e3fceb07c88fc458628c75142da0d986",
+  "signature": "583a5f5aa8a2760d3d0b533d1a92ab2034e11f4394c6a774bc766af2ec5f93a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d99b963f"
 }

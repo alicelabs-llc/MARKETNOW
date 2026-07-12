@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5849226",
+  "certificate_id": "MN-SC-2026-0054648",
   "skill_id": "mn-prompt-2c4824bc",
   "skill_name": "Especialista FastAPI + JWT",
-  "issued_at": "2026-07-06T05:30:49.226Z",
-  "expires_at": "2026-07-13T05:30:49.226Z",
+  "issued_at": "2026-07-12T04:20:54.648Z",
+  "expires_at": "2026-07-19T04:20:54.648Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6b8daa6c4e819d9b53698f14e7919dd08ce9e7ea5edfb4ae5579d53b0ca4c0c",
+  "signature": "e203b1df884ad53ef93acd4fc639eaa87a790c274264060b5c91de197963433e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2c4824bc"
 }

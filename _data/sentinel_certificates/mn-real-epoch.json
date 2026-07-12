@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6418509",
+  "certificate_id": "MN-SC-2026-0525906",
   "skill_id": "mn-real-epoch",
   "skill_name": "Epoch",
-  "issued_at": "2026-07-06T05:40:18.509Z",
-  "expires_at": "2026-07-13T05:40:18.509Z",
+  "issued_at": "2026-07-12T04:28:45.906Z",
+  "expires_at": "2026-07-19T04:28:45.906Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29884db31a25631fc6a80b0df112205776b6d28de7570828c5cc16b210a9abea",
+  "signature": "f2390231fa4a0be478db510ab723a0a930310aec01d8eee5466ee2b8eabae972",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-epoch"
 }

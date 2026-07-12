@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6315586",
+  "certificate_id": "MN-SC-2026-0412235",
   "skill_id": "mn-real-mcpcodeindexer",
   "skill_name": "mcp-code-indexer",
-  "issued_at": "2026-07-06T05:38:35.586Z",
-  "expires_at": "2026-07-13T05:38:35.586Z",
+  "issued_at": "2026-07-12T04:26:52.235Z",
+  "expires_at": "2026-07-19T04:26:52.235Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b8ed5821f71af5f70f689f671b492a5c2238fc59b117092de6cb4d5f95e23eaf",
+  "signature": "68c40f60cae91b321d23e1d9d3429a43d02153fd505a55ccc95c40bd052b7ec6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcodeindexer"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6384452",
+  "certificate_id": "MN-SC-2026-0485246",
   "skill_id": "mn-real-unrealaiconnection",
   "skill_name": "unreal-ai-connection",
-  "issued_at": "2026-07-06T05:39:44.452Z",
-  "expires_at": "2026-07-13T05:39:44.452Z",
+  "issued_at": "2026-07-12T04:28:05.246Z",
+  "expires_at": "2026-07-19T04:28:05.246Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d26e20bd1b57160de7f15bf647e026ffd328240357ba1743e7c41079f76803a5",
+  "signature": "7a7f3feb9d420cbd60a7e771f8a815415b0be40e290aaafef35cdc8e3a2dfde2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-unrealaiconnection"
 }

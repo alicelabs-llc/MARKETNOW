@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6249213",
+  "certificate_id": "MN-SC-2026-0335124",
   "skill_id": "mn-awmcp-apibase",
   "skill_name": "APIbase",
-  "issued_at": "2026-07-06T05:37:29.213Z",
-  "expires_at": "2026-07-13T05:37:29.213Z",
+  "issued_at": "2026-07-12T04:25:35.124Z",
+  "expires_at": "2026-07-19T04:25:35.124Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "3f1d638f9560277678560e18eeffd2105337341cc42884844993af1a88e13587",
+  "signature": "db3a25f8d36002ab2a207754ba0c71cb9ad1dc252675403137d40631bb54db15",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-apibase"
 }

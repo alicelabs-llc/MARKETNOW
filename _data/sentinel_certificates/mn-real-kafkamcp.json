@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6311634",
+  "certificate_id": "MN-SC-2026-0408433",
   "skill_id": "mn-real-kafkamcp",
   "skill_name": "kafka-mcp",
-  "issued_at": "2026-07-06T05:38:31.634Z",
-  "expires_at": "2026-07-13T05:38:31.634Z",
+  "issued_at": "2026-07-12T04:26:48.433Z",
+  "expires_at": "2026-07-19T04:26:48.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6cc900e49d0ff50b0eef63095e010a255c0b6709b244f54b8389628f24f5a1de",
+  "signature": "d768f01ef5c61fad98bd65f9694f262741e2a79fbf419daaddaeaee99a63c66e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kafkamcp"
 }

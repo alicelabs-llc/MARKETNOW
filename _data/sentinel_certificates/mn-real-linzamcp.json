@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6398586",
+  "certificate_id": "MN-SC-2026-0503256",
   "skill_id": "mn-real-linzamcp",
   "skill_name": "LINZA-MCP",
-  "issued_at": "2026-07-06T05:39:58.586Z",
-  "expires_at": "2026-07-13T05:39:58.586Z",
+  "issued_at": "2026-07-12T04:28:23.256Z",
+  "expires_at": "2026-07-19T04:28:23.256Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d61b9b25a9076c570338b2bc8012398cfdec497b805c0b0ddb8a7b4af827339f",
+  "signature": "75983161cd2afe51dd8da622365b064471a3cb0d8870cd5e63afb0448169b689",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-linzamcp"
 }

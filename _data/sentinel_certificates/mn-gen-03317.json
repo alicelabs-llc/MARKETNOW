@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5419897",
+  "certificate_id": "MN-SC-2026-9998666",
   "skill_id": "mn-gen-03317",
   "skill_name": "mcp-dotnet-diagnostics",
-  "issued_at": "2026-07-06T05:23:39.897Z",
-  "expires_at": "2026-07-13T05:23:39.897Z",
+  "issued_at": "2026-07-12T04:19:58.666Z",
+  "expires_at": "2026-07-19T04:19:58.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e95b1b0c7eeb549168c4ded3fd1f68aa438123338d59bdc02840dd2f13fc001",
+  "signature": "05105bc8bd13b79f0a31f8580a6478ab3966fa558e4a0b382a37b39b73ee3fa2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03317"
 }

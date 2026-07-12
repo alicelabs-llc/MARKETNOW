@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5689470",
+  "certificate_id": "MN-SC-2026-0035034",
   "skill_id": "mn-net-09940",
   "skill_name": "mcp-openapi-server",
-  "issued_at": "2026-07-06T05:28:09.470Z",
-  "expires_at": "2026-07-13T05:28:09.470Z",
+  "issued_at": "2026-07-12T04:20:35.034Z",
+  "expires_at": "2026-07-19T04:20:35.034Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d852c6c2262c14b9758a726d76cdf8b9284ea0be96b91be06f7fd7da2c28f5e",
+  "signature": "9e1812c4852e1520d2b3964e0b070901c7f10b8498a346e8cbbb7020b80dc222",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-09940"
 }

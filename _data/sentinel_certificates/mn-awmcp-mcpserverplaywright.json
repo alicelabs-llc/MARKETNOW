@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6261636",
+  "certificate_id": "MN-SC-2026-0349429",
   "skill_id": "mn-awmcp-mcpserverplaywright",
   "skill_name": "MCP-Server-Playwright",
-  "issued_at": "2026-07-06T05:37:41.636Z",
-  "expires_at": "2026-07-13T05:37:41.636Z",
+  "issued_at": "2026-07-12T04:25:49.429Z",
+  "expires_at": "2026-07-19T04:25:49.429Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "463a0ca414bbd35896ac952b4546dae45271dfb2b175a3043a310ded9a924321",
+  "signature": "fd2d8c91638c733d3a67dc88f0ee93c79398dfecf7a2427ca2dba998f007d888",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpserverplaywright"
 }

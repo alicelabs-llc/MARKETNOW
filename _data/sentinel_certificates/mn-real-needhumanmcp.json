@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6467119",
+  "certificate_id": "MN-SC-2026-0577042",
   "skill_id": "mn-real-needhumanmcp",
   "skill_name": "needhuman-mcp",
-  "issued_at": "2026-07-06T05:41:07.119Z",
-  "expires_at": "2026-07-13T05:41:07.119Z",
+  "issued_at": "2026-07-12T04:29:37.042Z",
+  "expires_at": "2026-07-19T04:29:37.042Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bc3e0c91e16fd490e53a0649ee825ceeab9bef10b7d309e019e0a055a236231f",
+  "signature": "52863bdb68364e5355827f11a01d32fdd86cd69c553a62d64815de6368596e30",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-needhumanmcp"
 }

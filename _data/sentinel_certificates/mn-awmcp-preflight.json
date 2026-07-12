@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6289561",
+  "certificate_id": "MN-SC-2026-0384001",
   "skill_id": "mn-awmcp-preflight",
   "skill_name": "preflight",
-  "issued_at": "2026-07-06T05:38:09.561Z",
-  "expires_at": "2026-07-13T05:38:09.561Z",
+  "issued_at": "2026-07-12T04:26:24.002Z",
+  "expires_at": "2026-07-19T04:26:24.002Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ece4a72f71ccb4f879fa1309370a190a6903dc850ef2b00dab526a6c6eb83904",
+  "signature": "78eeb3d9f9f42694afee982839987099431ed271321325bc14b3e67deeecc48d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-preflight"
 }

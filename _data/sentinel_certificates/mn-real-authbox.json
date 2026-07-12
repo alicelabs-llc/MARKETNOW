@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6432349",
+  "certificate_id": "MN-SC-2026-0541800",
   "skill_id": "mn-real-authbox",
   "skill_name": "authbox",
-  "issued_at": "2026-07-06T05:40:32.349Z",
-  "expires_at": "2026-07-13T05:40:32.349Z",
+  "issued_at": "2026-07-12T04:29:01.800Z",
+  "expires_at": "2026-07-19T04:29:01.800Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5bb91388877c1cf367ddf3c63f6f3d0290291546afd703a07f38320164fe5966",
+  "signature": "d37acb66ea9cf97a043fe11048e3eb1ce307c024fe1faa4bc5766cf05885a23c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-authbox"
 }

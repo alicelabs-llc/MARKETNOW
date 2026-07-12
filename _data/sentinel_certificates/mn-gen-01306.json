@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5327749",
+  "certificate_id": "MN-SC-2026-9985706",
   "skill_id": "mn-gen-01306",
   "skill_name": "bb-browser",
-  "issued_at": "2026-07-06T05:22:07.749Z",
-  "expires_at": "2026-07-13T05:22:07.749Z",
+  "issued_at": "2026-07-12T04:19:45.706Z",
+  "expires_at": "2026-07-19T04:19:45.706Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b8c8ba913567fc6e119daa0298fccd0f27a9c8aa134a45935c8ce2e76f68149b",
+  "signature": "b69522d1a6593ebf50c739079fb44260f69a22ef0daba184b63d6db07b983bff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01306"
 }

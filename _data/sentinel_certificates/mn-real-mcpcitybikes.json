@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-1041519",
+  "skill_id": "mn-real-mcpcitybikes",
+  "skill_name": "mcp-citybikes",
+  "issued_at": "2026-07-12T04:37:21.519Z",
+  "expires_at": "2026-07-19T04:37:21.519Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "b14db9381ce1f316d9c239df8c653e054d7d780d4dbe89e0a2a1f441f58aeb4d",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcitybikes"
+}

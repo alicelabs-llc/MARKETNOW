@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6331377",
+  "certificate_id": "MN-SC-2026-1077658",
   "skill_id": "mn-real-gitingest",
   "skill_name": "gitingest",
-  "issued_at": "2026-07-06T05:38:51.377Z",
-  "expires_at": "2026-07-13T05:38:51.377Z",
+  "issued_at": "2026-07-12T04:37:57.658Z",
+  "expires_at": "2026-07-19T04:37:57.658Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bbee7110b9cb830fdff65697aa7c67c8af736d0c3dcb2c820de289a69abf6e72",
+  "signature": "c6f957e6ca049ebb4ab6f0f587e675d51595a29c6f3728872fb6461f835825cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gitingest"
 }

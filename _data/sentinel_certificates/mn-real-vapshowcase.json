@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6415095",
+  "certificate_id": "MN-SC-2026-0523257",
   "skill_id": "mn-real-vapshowcase",
   "skill_name": "vap-showcase",
-  "issued_at": "2026-07-06T05:40:15.095Z",
-  "expires_at": "2026-07-13T05:40:15.095Z",
+  "issued_at": "2026-07-12T04:28:43.257Z",
+  "expires_at": "2026-07-19T04:28:43.257Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c61fe9599450f9a42efbfa07a4ffedde15b277d31acef0e5d76e36e6419362db",
+  "signature": "88bb69feca51048eade35f38de64c32f5cd1ba6fcfb64b2efe0faf1040b36794",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vapshowcase"
 }

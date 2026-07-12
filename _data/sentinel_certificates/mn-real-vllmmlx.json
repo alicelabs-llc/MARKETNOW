@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6502633",
+  "certificate_id": "MN-SC-2026-0616012",
   "skill_id": "mn-real-vllmmlx",
   "skill_name": "vllm-mlx",
-  "issued_at": "2026-07-06T05:41:42.633Z",
-  "expires_at": "2026-07-13T05:41:42.633Z",
+  "issued_at": "2026-07-12T04:30:16.012Z",
+  "expires_at": "2026-07-19T04:30:16.012Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cbf28637dc95fd077174bdce5441cf73cd97684dde7ce093d952df99401d1cbb",
+  "signature": "d623f2f968957febb4bc1631b072c170f57ad8065ad793b2fd0fe06f5febe0b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vllmmlx"
 }

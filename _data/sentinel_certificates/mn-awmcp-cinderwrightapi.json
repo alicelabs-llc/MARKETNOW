@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6242666",
+  "certificate_id": "MN-SC-2026-0326505",
   "skill_id": "mn-awmcp-cinderwrightapi",
   "skill_name": "cinderwright-api",
-  "issued_at": "2026-07-06T05:37:22.666Z",
-  "expires_at": "2026-07-13T05:37:22.666Z",
+  "issued_at": "2026-07-12T04:25:26.505Z",
+  "expires_at": "2026-07-19T04:25:26.505Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "4cff5202a4eceb98257554b2ab0c0f670c42315bf9d51d03bed0f731433ca2aa",
+  "signature": "3be9ab82db416b4f3c4b39c23e4dbdb63b866a26441a361eb0276f7a9ac77122",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-cinderwrightapi"
 }

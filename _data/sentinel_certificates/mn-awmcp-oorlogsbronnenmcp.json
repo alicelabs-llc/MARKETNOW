@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6255710",
+  "certificate_id": "MN-SC-2026-0342667",
   "skill_id": "mn-awmcp-oorlogsbronnenmcp",
   "skill_name": "oorlogsbronnen-mcp",
-  "issued_at": "2026-07-06T05:37:35.710Z",
-  "expires_at": "2026-07-13T05:37:35.710Z",
+  "issued_at": "2026-07-12T04:25:42.667Z",
+  "expires_at": "2026-07-19T04:25:42.667Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "d22b226e94990e081da9e9a653461d64e08ef2e993cd28c8a06bad02168a6555",
+  "signature": "7ba5c142f81ba3a6cbcb89aea100434b1a2c6657045a0d4d089707f1b0d0d33f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-oorlogsbronnenmcp"
 }

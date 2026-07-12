@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6418815",
+  "certificate_id": "MN-SC-2026-0525776",
   "skill_id": "mn-real-mcpserverpolarion",
   "skill_name": "mcp-server-polarion",
-  "issued_at": "2026-07-06T05:40:18.815Z",
-  "expires_at": "2026-07-13T05:40:18.815Z",
+  "issued_at": "2026-07-12T04:28:45.776Z",
+  "expires_at": "2026-07-19T04:28:45.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ae2cb10549e1184a7cd7829244f487f5cb1e532c276f13e56484c5d3fac2829",
+  "signature": "fb9e45686430f81bc6212d1b4d0a8b996d3284fc13949d635265cb9216db7bff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserverpolarion"
 }

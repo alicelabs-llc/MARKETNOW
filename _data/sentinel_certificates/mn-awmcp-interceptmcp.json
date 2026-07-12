@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6261569",
+  "certificate_id": "MN-SC-2026-0350033",
   "skill_id": "mn-awmcp-interceptmcp",
   "skill_name": "intercept-mcp",
-  "issued_at": "2026-07-06T05:37:41.569Z",
-  "expires_at": "2026-07-13T05:37:41.569Z",
+  "issued_at": "2026-07-12T04:25:50.033Z",
+  "expires_at": "2026-07-19T04:25:50.033Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "b87b211b5dcf2e66840de42e4ad33f382609e475030d3b8962cd1af408569535",
+  "signature": "7324fc67837d9828f5ecdd9b46ba9bd0f7537c0c5568303f1ec9eca7014175b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-interceptmcp"
 }

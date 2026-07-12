@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5919075",
+  "certificate_id": "MN-SC-2026-0143078",
   "skill_id": "mn-prompt-242f89e6",
   "skill_name": "Especialista Remote Patient Monitoring + RPM",
-  "issued_at": "2026-07-06T05:31:59.075Z",
-  "expires_at": "2026-07-13T05:31:59.075Z",
+  "issued_at": "2026-07-12T04:22:23.078Z",
+  "expires_at": "2026-07-19T04:22:23.078Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bebfe3540ecb63fc808919dc58d90fd79b6b123a3c55e117b1fec8f2a91d5f26",
+  "signature": "e884d1fec66979f114d27d30e0e6df72b31e32bc8aa729d3c57ae22178a9f0fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-242f89e6"
 }

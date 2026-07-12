@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5503941",
+  "certificate_id": "MN-SC-2026-0011733",
   "skill_id": "mn-gen-05359",
   "skill_name": "jupiter-mcp",
-  "issued_at": "2026-07-06T05:25:03.941Z",
-  "expires_at": "2026-07-13T05:25:03.941Z",
+  "issued_at": "2026-07-12T04:20:11.733Z",
+  "expires_at": "2026-07-19T04:20:11.733Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b01e39f2e424bbc08ac5cb364d119fd8e1a405b13723e6934b33a0d9f4396ecf",
+  "signature": "c1e1616f146fdd677b22b9e9eaf5011c602f9952fdcb51119c759fd0f5d8ef5a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05359"
 }

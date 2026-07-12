@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5855946",
+  "certificate_id": "MN-SC-2026-0060839",
   "skill_id": "mn-prompt-22c8262b",
   "skill_name": "Especialista Notifications + Toasts",
-  "issued_at": "2026-07-06T05:30:55.946Z",
-  "expires_at": "2026-07-13T05:30:55.946Z",
+  "issued_at": "2026-07-12T04:21:00.839Z",
+  "expires_at": "2026-07-19T04:21:00.839Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f70c72c001628bd400d62242020562b7b880b2600096dad1ec11003c863f089b",
+  "signature": "ed0d65be7b16288ce14fb85ce83ade2296a762ceba91359861464557fff1a221",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-22c8262b"
 }

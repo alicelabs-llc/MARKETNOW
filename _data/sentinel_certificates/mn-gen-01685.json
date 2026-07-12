@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5344397",
+  "certificate_id": "MN-SC-2026-9989186",
   "skill_id": "mn-gen-01685",
   "skill_name": "canvas-mcp",
-  "issued_at": "2026-07-06T05:22:24.397Z",
-  "expires_at": "2026-07-13T05:22:24.397Z",
+  "issued_at": "2026-07-12T04:19:49.186Z",
+  "expires_at": "2026-07-19T04:19:49.186Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "08acb6f09334db3d5cc1894bb78a98aae6461288bbd9cf2ead9f362f8461c6c4",
+  "signature": "d201b906a9d5f0c324da926adee604a444231c981050aeb7dc7dae66e3f45b6c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01685"
 }

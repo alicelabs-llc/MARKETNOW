@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6509029",
+  "certificate_id": "MN-SC-2026-0621660",
   "skill_id": "mn-real-djangomcpserver",
   "skill_name": "django-mcp-server",
-  "issued_at": "2026-07-06T05:41:49.029Z",
-  "expires_at": "2026-07-13T05:41:49.029Z",
+  "issued_at": "2026-07-12T04:30:21.660Z",
+  "expires_at": "2026-07-19T04:30:21.660Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a365d9bf5127f99c085b7e29e44bd067dfa69357201103ccd06aee9143713b46",
+  "signature": "27c72f4d086e2135cd7d587c044f78a064730519f540eb32b5543e7315a04f40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-djangomcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6475722",
+  "certificate_id": "MN-SC-2026-0587529",
   "skill_id": "mn-real-enscango",
   "skill_name": "ENScan_GO",
-  "issued_at": "2026-07-06T05:41:15.722Z",
-  "expires_at": "2026-07-13T05:41:15.722Z",
+  "issued_at": "2026-07-12T04:29:47.529Z",
+  "expires_at": "2026-07-19T04:29:47.529Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83a868855ebb46c205acdc83a103fda529279a18d82f61334414b77ad4e03ca0",
+  "signature": "06cc58585f77f13c0b2ecfe909478b138bec7e692e4f768f7bf27582f7bf748a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-enscango"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6487258",
+  "certificate_id": "MN-SC-2026-0600962",
   "skill_id": "mn-real-holaos",
   "skill_name": "holaOS",
-  "issued_at": "2026-07-06T05:41:27.258Z",
-  "expires_at": "2026-07-13T05:41:27.258Z",
+  "issued_at": "2026-07-12T04:30:00.962Z",
+  "expires_at": "2026-07-19T04:30:00.962Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02c5e2f897556d82f5b4c45a4b36ecce6f3b1ee1a771f526bf07349749e8de91",
+  "signature": "3ed67e9b330f7ad437c21407b8aa82481f87e73a9e421312fd661265868c0178",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-holaos"
 }

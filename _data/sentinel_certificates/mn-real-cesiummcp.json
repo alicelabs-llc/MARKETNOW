@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6403521",
+  "certificate_id": "MN-SC-2026-0508182",
   "skill_id": "mn-real-cesiummcp",
   "skill_name": "cesium-mcp",
-  "issued_at": "2026-07-06T05:40:03.521Z",
-  "expires_at": "2026-07-13T05:40:03.521Z",
+  "issued_at": "2026-07-12T04:28:28.182Z",
+  "expires_at": "2026-07-19T04:28:28.182Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3da7400e5a606c203c2e33a22af10b3637b1ef4a88b712661edeaec2b3e19085",
+  "signature": "4416e94b74f3185d9e183ae697f8f1e7bd1764d546b83c1328604e8a9f871dd7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cesiummcp"
 }

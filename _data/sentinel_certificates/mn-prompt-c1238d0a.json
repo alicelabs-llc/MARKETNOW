@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5976492",
+  "certificate_id": "MN-SC-2026-0209127",
   "skill_id": "mn-prompt-c1238d0a",
   "skill_name": "Children's online privacy (COPPA) compliance",
-  "issued_at": "2026-07-06T05:32:56.492Z",
-  "expires_at": "2026-07-13T05:32:56.492Z",
+  "issued_at": "2026-07-12T04:23:29.127Z",
+  "expires_at": "2026-07-19T04:23:29.127Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "64aa1a8f1f066a7f6d878a66ba972c1dcbe3b1dbb65d1dc2221a76f8083fe056",
+  "signature": "8fd68b8c75b3116f381b9acb99c8ea49bd6aa71556bfde0cce585fd0e380b74d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c1238d0a"
 }

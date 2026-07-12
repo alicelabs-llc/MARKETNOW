@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6275305",
+  "certificate_id": "MN-SC-2026-0365425",
   "skill_id": "mn-awmcp-kubectlmcpserver",
   "skill_name": "kubectl-mcp-server",
-  "issued_at": "2026-07-06T05:37:55.305Z",
-  "expires_at": "2026-07-13T05:37:55.305Z",
+  "issued_at": "2026-07-12T04:26:05.425Z",
+  "expires_at": "2026-07-19T04:26:05.425Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "4a08cf3e1d722057c0c9dc3bcb576b05e3b42e55ad97802e73e59eab9b9824be",
+  "signature": "16d4cd47bd55a8386fb9b00e82656f15a162b797f89a1aee8fb99c84c8782bbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-kubectlmcpserver"
 }

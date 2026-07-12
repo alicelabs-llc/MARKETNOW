@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5858967",
+  "certificate_id": "MN-SC-2026-0066272",
   "skill_id": "mn-prompt-05583c0d",
   "skill_name": "Especialista Mobile Crash Reporting",
-  "issued_at": "2026-07-06T05:30:58.967Z",
-  "expires_at": "2026-07-13T05:30:58.967Z",
+  "issued_at": "2026-07-12T04:21:06.272Z",
+  "expires_at": "2026-07-19T04:21:06.272Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abb6465d6f2781a182df16e4bc6eb110c7a2ee6b894c8be8fb50cbc0902aa764",
+  "signature": "146a0afd07cc15ca8ca2b797ca9c572cb083dfa23a399840e8ea8994234ae391",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-05583c0d"
 }

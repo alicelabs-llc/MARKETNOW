@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5322964",
+  "certificate_id": "MN-SC-2026-9985117",
   "skill_id": "mn-gen-01160",
   "skill_name": "awesome-mcp-list",
-  "issued_at": "2026-07-06T05:22:02.964Z",
-  "expires_at": "2026-07-13T05:22:02.964Z",
+  "issued_at": "2026-07-12T04:19:45.117Z",
+  "expires_at": "2026-07-19T04:19:45.117Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b9e1307faeac6b799ca56c9ac44e82e9e1df5e72794254ae5cfe61705511fc7",
+  "signature": "781e8d31562bd7259b128419ad615db086607ea86ab17cca78b16e050456e941",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01160"
 }

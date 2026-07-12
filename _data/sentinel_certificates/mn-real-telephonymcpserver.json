@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6301372",
+  "certificate_id": "MN-SC-2026-0396630",
   "skill_id": "mn-real-telephonymcpserver",
   "skill_name": "telephony-mcp-server",
-  "issued_at": "2026-07-06T05:38:21.372Z",
-  "expires_at": "2026-07-13T05:38:21.372Z",
+  "issued_at": "2026-07-12T04:26:36.630Z",
+  "expires_at": "2026-07-19T04:26:36.630Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9bcd0f2c1f77ea81189c6a345d2a0be3f78d521b7f8b492ca7feaf1717657cf9",
+  "signature": "432189ab604786826a11a03f184191d53eb18aaeaf0944ebb8faed5afc994bbb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-telephonymcpserver"
 }

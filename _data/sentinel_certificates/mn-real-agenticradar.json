@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6482204",
+  "certificate_id": "MN-SC-2026-0594225",
   "skill_id": "mn-real-agenticradar",
   "skill_name": "agentic-radar",
-  "issued_at": "2026-07-06T05:41:22.204Z",
-  "expires_at": "2026-07-13T05:41:22.204Z",
+  "issued_at": "2026-07-12T04:29:54.225Z",
+  "expires_at": "2026-07-19T04:29:54.225Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d7f5c12fac2afdcb9577ce339cbfe4dff14e1b5dab34f448e7687ad0200dde1",
+  "signature": "265367da782d130b1aceb21921285cb7557333bada499e7b9a0d6b11a32a1f9f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agenticradar"
 }

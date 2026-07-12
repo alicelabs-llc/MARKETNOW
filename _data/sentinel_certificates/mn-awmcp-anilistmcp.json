@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6256768",
+  "certificate_id": "MN-SC-2026-0343337",
   "skill_id": "mn-awmcp-anilistmcp",
   "skill_name": "anilist-mcp",
-  "issued_at": "2026-07-06T05:37:36.768Z",
-  "expires_at": "2026-07-13T05:37:36.768Z",
+  "issued_at": "2026-07-12T04:25:43.337Z",
+  "expires_at": "2026-07-19T04:25:43.337Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b7f806235ae9178952ee88e2fff7f1e94d563dfe0b523579f600bb2b7e58f87",
+  "signature": "1cbcc13cbc579f72dd896c677634901ad30668e0e602cba4a5adff2ba4d9128c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-anilistmcp"
 }

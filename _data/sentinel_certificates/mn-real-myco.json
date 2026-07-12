@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6388146",
+  "certificate_id": "MN-SC-2026-0488569",
   "skill_id": "mn-real-myco",
   "skill_name": "Myco",
-  "issued_at": "2026-07-06T05:39:48.146Z",
-  "expires_at": "2026-07-13T05:39:48.146Z",
+  "issued_at": "2026-07-12T04:28:08.569Z",
+  "expires_at": "2026-07-19T04:28:08.569Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "656b00e5b89478252e638c819e22f7cd823224d4da378e4eea49ee2e87aa11a7",
+  "signature": "fc8289bf64067a90bebf354a20c471b02b04b45c146559930c61298e81eb2297",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-myco"
 }

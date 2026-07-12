@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5870179",
+  "certificate_id": "MN-SC-2026-0081000",
   "skill_id": "mn-prompt-7835ebe3",
   "skill_name": "Especialista LLM + OpenAI API",
-  "issued_at": "2026-07-06T05:31:10.179Z",
-  "expires_at": "2026-07-13T05:31:10.179Z",
+  "issued_at": "2026-07-12T04:21:21.000Z",
+  "expires_at": "2026-07-19T04:21:21.000Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b4b35628b1b072e5d50dd4a5a1feb16e5b2f09433e261b08e4514ce5abc87a8",
+  "signature": "8318682b1f0410ee1af97ad1be6f9deaa607eb90fcfe5f1cc57f8250377c202c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7835ebe3"
 }

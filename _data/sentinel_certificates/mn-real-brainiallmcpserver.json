@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6449991",
+  "certificate_id": "MN-SC-2026-0560830",
   "skill_id": "mn-real-brainiallmcpserver",
   "skill_name": "brainiall-mcp-server",
-  "issued_at": "2026-07-06T05:40:49.991Z",
-  "expires_at": "2026-07-13T05:40:49.991Z",
+  "issued_at": "2026-07-12T04:29:20.830Z",
+  "expires_at": "2026-07-19T04:29:20.830Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "305c6e9e33e649f2529c64a54d8ec68b85013b7b0f1026ff5a61b491efbc2abd",
+  "signature": "6c447a0b7888d37dfcac2336bfce495d01b09f43fba6e2e0400e6f6f33ad5b11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-brainiallmcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6424896",
+  "certificate_id": "MN-SC-2026-0533496",
   "skill_id": "mn-real-kagikenmcp",
   "skill_name": "kagi-ken-mcp",
-  "issued_at": "2026-07-06T05:40:24.896Z",
-  "expires_at": "2026-07-13T05:40:24.896Z",
+  "issued_at": "2026-07-12T04:28:53.496Z",
+  "expires_at": "2026-07-19T04:28:53.496Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1357a848daffbdeae90c38ac24d0936158ce465d671620152bc45d3bc7d8fefc",
+  "signature": "c6ba38be6bc33f1258f2d8c7178ff81c47756bba14b2fef00bded619fd31f2ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kagikenmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6441056",
+  "certificate_id": "MN-SC-2026-0551355",
   "skill_id": "mn-real-scamverifymcp",
   "skill_name": "scamverify-mcp",
-  "issued_at": "2026-07-06T05:40:41.056Z",
-  "expires_at": "2026-07-13T05:40:41.056Z",
+  "issued_at": "2026-07-12T04:29:11.355Z",
+  "expires_at": "2026-07-19T04:29:11.355Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c2a31cba0699602601bb0f17443b674b3bec551123afaa891e2d889d51e6846",
+  "signature": "95cb77108a71b8f58bdef0a6530f6888d5c3aed7ae5bf44c0b5f883852c8b71c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scamverifymcp"
 }

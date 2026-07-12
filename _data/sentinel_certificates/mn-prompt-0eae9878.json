@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5984028",
+  "certificate_id": "MN-SC-2026-0221910",
   "skill_id": "mn-prompt-0eae9878",
   "skill_name": "Sales activity tracking discipline",
-  "issued_at": "2026-07-06T05:33:04.028Z",
-  "expires_at": "2026-07-13T05:33:04.028Z",
+  "issued_at": "2026-07-12T04:23:41.910Z",
+  "expires_at": "2026-07-19T04:23:41.910Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b347c20a52878939df17e906111c541461701ba4f6d52a37981a5d38b26d040b",
+  "signature": "0eb3b3c2f26bb757656b07328593685f53c98e9ad7df9e37fb2523f7abb5caf9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0eae9878"
 }

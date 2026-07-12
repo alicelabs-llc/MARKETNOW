@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0730101",
+  "skill_id": "mn-real-templaterepo",
+  "skill_name": "template-repo",
+  "issued_at": "2026-07-12T04:32:10.101Z",
+  "expires_at": "2026-07-19T04:32:10.101Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "e9e38b9af428e7efe554d2bd9b452a9094da9289fbd32a5223a4d4055de758a8",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-templaterepo"
+}

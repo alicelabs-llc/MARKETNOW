@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6035899",
+  "certificate_id": "MN-SC-2026-0289017",
   "skill_id": "mn-prompt-07b6193b",
   "skill_name": "Data warehouse migration",
-  "issued_at": "2026-07-06T05:33:55.899Z",
-  "expires_at": "2026-07-13T05:33:55.899Z",
+  "issued_at": "2026-07-12T04:24:49.017Z",
+  "expires_at": "2026-07-19T04:24:49.017Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02d740ff0025fd63d9a62d42d05894bbc2cb8a89fc6b4a360b0cd0cf1b38f388",
+  "signature": "bbd541bfbedbea42258e6e367d38ecb094b1833d9f29d8793b561d5bc1862662",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-07b6193b"
 }

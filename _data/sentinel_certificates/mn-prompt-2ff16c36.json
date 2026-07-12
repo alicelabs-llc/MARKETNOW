@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5918589",
+  "certificate_id": "MN-SC-2026-0142082",
   "skill_id": "mn-prompt-2ff16c36",
   "skill_name": "Especialista EHR + Electronic Health Records",
-  "issued_at": "2026-07-06T05:31:58.589Z",
-  "expires_at": "2026-07-13T05:31:58.589Z",
+  "issued_at": "2026-07-12T04:22:22.082Z",
+  "expires_at": "2026-07-19T04:22:22.082Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ede423cf8b657aeb91f877959ea1a3d5ec7556866d5f842ad5cb34bf06d55d1",
+  "signature": "4a4f56c94049e6233ab68cf66d9ccb30057a0f478b5c13f9e7f93867dcdf5957",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2ff16c36"
 }

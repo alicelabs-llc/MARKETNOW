@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6244421",
+  "certificate_id": "MN-SC-2026-0328531",
   "skill_id": "mn-awmcp-proposalcraft",
   "skill_name": "proposalcraft",
-  "issued_at": "2026-07-06T05:37:24.421Z",
-  "expires_at": "2026-07-13T05:37:24.421Z",
+  "issued_at": "2026-07-12T04:25:28.531Z",
+  "expires_at": "2026-07-19T04:25:28.531Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "cf3c1da6d3dec7439ad3634cbde60b8c224d247fdc2d34b1b8205d029f3d858d",
+  "signature": "de3b74e355471102ac87527fb162203d688e7d3ac7b4cf1049b49270d08d2cd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-proposalcraft"
 }

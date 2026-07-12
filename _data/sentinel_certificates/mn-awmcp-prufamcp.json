@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6267156",
+  "certificate_id": "MN-SC-2026-0356275",
   "skill_id": "mn-awmcp-prufamcp",
   "skill_name": "prufa-mcp",
-  "issued_at": "2026-07-06T05:37:47.156Z",
-  "expires_at": "2026-07-13T05:37:47.156Z",
+  "issued_at": "2026-07-12T04:25:56.275Z",
+  "expires_at": "2026-07-19T04:25:56.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "d67234b57ee0fa4b858b63592a0913a08b1f2e33e0b8bbdc4ccd75385864a80c",
+  "signature": "b79a8e987a9be8843d7e12bc55774d5c1d3b00ed838b26aa9932ce7e50144e26",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-prufamcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5998566",
+  "certificate_id": "MN-SC-2026-0241528",
   "skill_id": "mn-prompt-b2e395a4",
   "skill_name": "Employee data privacy GDPR",
-  "issued_at": "2026-07-06T05:33:18.566Z",
-  "expires_at": "2026-07-13T05:33:18.566Z",
+  "issued_at": "2026-07-12T04:24:01.528Z",
+  "expires_at": "2026-07-19T04:24:01.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e671d15523cc110cb766151d6b4ffb0824ef6c889e90f3d3e287254b7a2fbbfe",
+  "signature": "1047e41e07b58b4b0d47cc9611fc4a02dd897a68042da5bc8633b46b029d259d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b2e395a4"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6332924",
+  "certificate_id": "MN-SC-2026-0429218",
   "skill_id": "mn-real-pagecast",
   "skill_name": "pagecast",
-  "issued_at": "2026-07-06T05:38:52.924Z",
-  "expires_at": "2026-07-13T05:38:52.924Z",
+  "issued_at": "2026-07-12T04:27:09.218Z",
+  "expires_at": "2026-07-19T04:27:09.218Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9927fd66f817cd900a5b24933a21c4d8db9fda9381ee7b8020b69b72c363ede9",
+  "signature": "fa269d6c93c25a5ee35b660cce1971b370cc9dcaf3d2d196a90f390a6ad6e8fe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pagecast"
 }

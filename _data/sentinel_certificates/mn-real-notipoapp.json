@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6461308",
+  "certificate_id": "MN-SC-2026-0572029",
   "skill_id": "mn-real-notipoapp",
   "skill_name": "notipo-app",
-  "issued_at": "2026-07-06T05:41:01.308Z",
-  "expires_at": "2026-07-13T05:41:01.308Z",
+  "issued_at": "2026-07-12T04:29:32.029Z",
+  "expires_at": "2026-07-19T04:29:32.029Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3eb57b2c47832607aeed0f424487a6065975c59ebb262c3527e7ef9bc10c82cb",
+  "signature": "9e4a44b795e6c93e436308ce9321f7d6b35d029aa7bee81fc7b986e795cffcb2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-notipoapp"
 }

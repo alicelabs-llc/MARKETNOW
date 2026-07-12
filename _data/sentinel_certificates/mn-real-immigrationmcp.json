@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6420384",
+  "certificate_id": "MN-SC-2026-0527235",
   "skill_id": "mn-real-immigrationmcp",
   "skill_name": "immigration-mcp",
-  "issued_at": "2026-07-06T05:40:20.384Z",
-  "expires_at": "2026-07-13T05:40:20.384Z",
+  "issued_at": "2026-07-12T04:28:47.235Z",
+  "expires_at": "2026-07-19T04:28:47.235Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61d5c5355b4fc098fba3531433322eceacda6cae95f18430f48caa7fa75fe1c0",
+  "signature": "a385606f6b46eabe0c687b513c850978da0244b238b7166e068449429374b01a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-immigrationmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6408116",
+  "certificate_id": "MN-SC-2026-0515762",
   "skill_id": "mn-real-sentisiftsdks",
   "skill_name": "sentisift-sdks",
-  "issued_at": "2026-07-06T05:40:08.116Z",
-  "expires_at": "2026-07-13T05:40:08.116Z",
+  "issued_at": "2026-07-12T04:28:35.762Z",
+  "expires_at": "2026-07-19T04:28:35.762Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "448181185d2bd2c4c5a4347f33951b9d9c13d434874ff4534bc2bc845a70eedf",
+  "signature": "a7e3d7acbbb173e6ee7464277ee2e9f45d7090d7268c48152b0a02485409c3fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sentisiftsdks"
 }

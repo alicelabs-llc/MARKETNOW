@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6427741",
+  "certificate_id": "MN-SC-2026-0536884",
   "skill_id": "mn-real-minerumcp",
   "skill_name": "mineru-mcp",
-  "issued_at": "2026-07-06T05:40:27.741Z",
-  "expires_at": "2026-07-13T05:40:27.741Z",
+  "issued_at": "2026-07-12T04:28:56.884Z",
+  "expires_at": "2026-07-19T04:28:56.884Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "124335115b57c80fb476223ca016b6b5309b04979e756bbf6c953256b8b1c634",
+  "signature": "27d6d515f709ed011ad557dde7073fc99513bdffce628cc8675797a513e093a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-minerumcp"
 }

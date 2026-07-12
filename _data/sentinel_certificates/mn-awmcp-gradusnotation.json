@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6252920",
+  "certificate_id": "MN-SC-2026-0339262",
   "skill_id": "mn-awmcp-gradusnotation",
   "skill_name": "gradusnotation",
-  "issued_at": "2026-07-06T05:37:32.920Z",
-  "expires_at": "2026-07-13T05:37:32.920Z",
+  "issued_at": "2026-07-12T04:25:39.262Z",
+  "expires_at": "2026-07-19T04:25:39.262Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "fd6aaa0ead17fa51e80c7a33a1b3d6cc5bf0a66b9a95745be504b642b8ce3e2f",
+  "signature": "9b0ac1a69359411d623dc36af1843537affbb527de2c79bf7187831205a955d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-gradusnotation"
 }

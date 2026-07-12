@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5971607",
+  "certificate_id": "MN-SC-2026-0203160",
   "skill_id": "mn-prompt-3e486b15",
   "skill_name": "DMCA takedown notice",
-  "issued_at": "2026-07-06T05:32:51.607Z",
-  "expires_at": "2026-07-13T05:32:51.607Z",
+  "issued_at": "2026-07-12T04:23:23.160Z",
+  "expires_at": "2026-07-19T04:23:23.160Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "907e607ab672f63c0ceb2a52bfeaa44a0ffed783ac3fa50a6f3cb323e55a8e16",
+  "signature": "23f9c4119b814fa63315ba4c3babe3dd52a07800159786c8c3790e7d07ede184",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-3e486b15"
 }

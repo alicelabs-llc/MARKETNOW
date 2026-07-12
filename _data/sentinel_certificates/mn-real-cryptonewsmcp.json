@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6366409",
+  "certificate_id": "MN-SC-2026-0466100",
   "skill_id": "mn-real-cryptonewsmcp",
   "skill_name": "crypto-news-mcp",
-  "issued_at": "2026-07-06T05:39:26.409Z",
-  "expires_at": "2026-07-13T05:39:26.409Z",
+  "issued_at": "2026-07-12T04:27:46.100Z",
+  "expires_at": "2026-07-19T04:27:46.100Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ade4d418ec1e16c374d3df397709f8d750d1e572c1e7bad6b97c5254b7f1035",
+  "signature": "c024d1ae55cc5d309fc85808cf761427a5f233562126eec8265a158d018cd26d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cryptonewsmcp"
 }

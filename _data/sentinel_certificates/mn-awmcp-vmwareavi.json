@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6277822",
+  "certificate_id": "MN-SC-2026-0368563",
   "skill_id": "mn-awmcp-vmwareavi",
   "skill_name": "VMware-AVI",
-  "issued_at": "2026-07-06T05:37:57.822Z",
-  "expires_at": "2026-07-13T05:37:57.822Z",
+  "issued_at": "2026-07-12T04:26:08.563Z",
+  "expires_at": "2026-07-19T04:26:08.563Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "76f42abaa2f285d2e99a7edbf26751a332d3a76bb7a2e40edfb0f8fc1ee98921",
+  "signature": "09baa3ad21dd327dac6dea18f4864d12ea9073441dfd28a1d832f8dbe665d7ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-vmwareavi"
 }

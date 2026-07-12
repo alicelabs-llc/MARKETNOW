@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6351701",
+  "certificate_id": "MN-SC-2026-0450717",
   "skill_id": "mn-real-gurupdfmcp",
   "skill_name": "gurupdf-mcp",
-  "issued_at": "2026-07-06T05:39:11.701Z",
-  "expires_at": "2026-07-13T05:39:11.701Z",
+  "issued_at": "2026-07-12T04:27:30.717Z",
+  "expires_at": "2026-07-19T04:27:30.717Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72fc3ddce897515de6a421a254612fae7103859cf02e5956b7ee3034d8b9ce05",
+  "signature": "a142ecc925314afc34c7069b9b4c07019be31fcf17e9662b3f9f67104e0dd0fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gurupdfmcp"
 }

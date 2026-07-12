@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5874680",
+  "certificate_id": "MN-SC-2026-0086888",
   "skill_id": "mn-prompt-db77e516",
   "skill_name": "Especialista Phishing Simulation + Awareness",
-  "issued_at": "2026-07-06T05:31:14.680Z",
-  "expires_at": "2026-07-13T05:31:14.680Z",
+  "issued_at": "2026-07-12T04:21:26.888Z",
+  "expires_at": "2026-07-19T04:21:26.888Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30d13b026ad8e829a0369839fc3985e8fe7b8384a6c27418328e1fe491ac1994",
+  "signature": "88c9981e4a0580234a5f5d13c27ccee6d21cfadd80a73cecd99f9ad4c5e9ce20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-db77e516"
 }

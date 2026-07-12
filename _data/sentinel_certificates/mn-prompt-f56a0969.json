@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6004841",
+  "certificate_id": "MN-SC-2026-0251290",
   "skill_id": "mn-prompt-f56a0969",
   "skill_name": "Product launch retrospective",
-  "issued_at": "2026-07-06T05:33:24.841Z",
-  "expires_at": "2026-07-13T05:33:24.841Z",
+  "issued_at": "2026-07-12T04:24:11.290Z",
+  "expires_at": "2026-07-19T04:24:11.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d00f19080a2eb5068a2d4284cc142f1c23acbd27768d03c90fcc095aa918990c",
+  "signature": "555c22c9363e29a50ebdc4d029722ed11e748b5633b24632493568c9828dff4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f56a0969"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5877165",
+  "certificate_id": "MN-SC-2026-0090559",
   "skill_id": "mn-prompt-c721d851",
   "skill_name": "Especialista Deception Tech + Honeypots",
-  "issued_at": "2026-07-06T05:31:17.165Z",
-  "expires_at": "2026-07-13T05:31:17.165Z",
+  "issued_at": "2026-07-12T04:21:30.559Z",
+  "expires_at": "2026-07-19T04:21:30.559Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bab3679f5f19a4f4b2c116c9898f262f877dcbc1344e137b10483c352c425e9a",
+  "signature": "6a962b8050c95620bb29bab1061c78b1cdc0b930e2b8cf1d7609f33085ff6d7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c721d851"
 }

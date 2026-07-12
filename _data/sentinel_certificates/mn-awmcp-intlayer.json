@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6282309",
+  "certificate_id": "MN-SC-2026-0374044",
   "skill_id": "mn-awmcp-intlayer",
   "skill_name": "intlayer",
-  "issued_at": "2026-07-06T05:38:02.309Z",
-  "expires_at": "2026-07-13T05:38:02.309Z",
+  "issued_at": "2026-07-12T04:26:14.044Z",
+  "expires_at": "2026-07-19T04:26:14.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa14baccdc3cda0fb7fa9d7d72005645c02f69e2e57fcbed76889e2ccae98200",
+  "signature": "3bbe294f9a5087bf1488dd16ca8c2d2f1ee341f243fc391ab39ac93b2446e6e2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-intlayer"
 }

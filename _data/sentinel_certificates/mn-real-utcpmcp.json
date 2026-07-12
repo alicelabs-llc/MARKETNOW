@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6497086",
+  "certificate_id": "MN-SC-2026-0611000",
   "skill_id": "mn-real-utcpmcp",
   "skill_name": "utcp-mcp",
-  "issued_at": "2026-07-06T05:41:37.086Z",
-  "expires_at": "2026-07-13T05:41:37.086Z",
+  "issued_at": "2026-07-12T04:30:11.000Z",
+  "expires_at": "2026-07-19T04:30:11.000Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bacd4147fcab14bc2a12d56192af2bccf7e3553dbe9469b077861ec63f8a6f8e",
+  "signature": "db89e09188ef3fbdeaf3892cecbb1eb17c410fbcd326091e322cbf5e17236bbf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-utcpmcp"
 }

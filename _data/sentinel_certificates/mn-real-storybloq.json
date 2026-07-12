@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6486251",
+  "certificate_id": "MN-SC-2026-0599040",
   "skill_id": "mn-real-storybloq",
   "skill_name": "storybloq",
-  "issued_at": "2026-07-06T05:41:26.251Z",
-  "expires_at": "2026-07-13T05:41:26.251Z",
+  "issued_at": "2026-07-12T04:29:59.040Z",
+  "expires_at": "2026-07-19T04:29:59.040Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d980d8923fed2b0e0e7d5a619c79f725344fe11eedfd39a164672e6c040fea75",
+  "signature": "914da84b5b9f6f4a35a27a10707990fdd948a534614ca569ee324a08e7fc669c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-storybloq"
 }

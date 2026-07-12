@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6246081",
+  "certificate_id": "MN-SC-2026-0330670",
   "skill_id": "mn-awmcp-sylexsearch",
   "skill_name": "sylex-search",
-  "issued_at": "2026-07-06T05:37:26.081Z",
-  "expires_at": "2026-07-13T05:37:26.081Z",
+  "issued_at": "2026-07-12T04:25:30.670Z",
+  "expires_at": "2026-07-19T04:25:30.670Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "f0740902bae507ad344936383350b3481097090b7dba2c2d99836e19142c8360",
+  "signature": "b4130b2258a442f8dfc0cb959b142971c11533b0344e3f38e729df98cf076f19",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-sylexsearch"
 }

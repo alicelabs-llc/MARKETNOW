@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6383778",
+  "certificate_id": "MN-SC-2026-0483175",
   "skill_id": "mn-real-opendotamcpserver",
   "skill_name": "opendota-mcp-server",
-  "issued_at": "2026-07-06T05:39:43.778Z",
-  "expires_at": "2026-07-13T05:39:43.778Z",
+  "issued_at": "2026-07-12T04:28:03.175Z",
+  "expires_at": "2026-07-19T04:28:03.175Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ea70178187b38d852d4c4279e52c4d5259703e96e50733ad26c0eeed3f04d64",
+  "signature": "ab9039c091b91a709df6a3529fa5524b298f14e967760c57b867d8ec14962711",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opendotamcpserver"
 }

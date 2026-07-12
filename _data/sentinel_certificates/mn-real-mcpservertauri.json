@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6510959",
+  "certificate_id": "MN-SC-2026-0623600",
   "skill_id": "mn-real-mcpservertauri",
   "skill_name": "mcp-server-tauri",
-  "issued_at": "2026-07-06T05:41:50.959Z",
-  "expires_at": "2026-07-13T05:41:50.959Z",
+  "issued_at": "2026-07-12T04:30:23.600Z",
+  "expires_at": "2026-07-19T04:30:23.600Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2497256526296dade087ecc74feeb5e49c020cdd80b6d2ccbb3ff9503de2bad",
+  "signature": "bf539fb1d1a4a71a8f9051b2beaf9f3e127be8bcaf9356bf9bcd1b8ad37f2b52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpservertauri"
 }

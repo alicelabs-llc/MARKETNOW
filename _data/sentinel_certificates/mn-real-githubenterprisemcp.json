@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6453832",
+  "certificate_id": "MN-SC-2026-0563860",
   "skill_id": "mn-real-githubenterprisemcp",
   "skill_name": "github-enterprise-mcp",
-  "issued_at": "2026-07-06T05:40:53.832Z",
-  "expires_at": "2026-07-13T05:40:53.832Z",
+  "issued_at": "2026-07-12T04:29:23.860Z",
+  "expires_at": "2026-07-19T04:29:23.860Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79821805d249ee6cdf984daf4a8a7fedf387535fdc2ed843eaaa23d686347e60",
+  "signature": "bb56977190ab22cebbe26878c5b08efcc546544ebba91ffe660d81833124a575",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-githubenterprisemcp"
 }

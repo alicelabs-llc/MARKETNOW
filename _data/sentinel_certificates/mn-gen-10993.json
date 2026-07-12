@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5733488",
+  "certificate_id": "MN-SC-2026-0038209",
   "skill_id": "mn-gen-10993",
   "skill_name": "ragie-mcp-server",
-  "issued_at": "2026-07-06T05:28:53.488Z",
-  "expires_at": "2026-07-13T05:28:53.488Z",
+  "issued_at": "2026-07-12T04:20:38.209Z",
+  "expires_at": "2026-07-19T04:20:38.209Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e864fa8da6c3bf4ff4ece26e2f3b691cf537e1455cd09e2d35af92019c8bf496",
+  "signature": "f410e9301ae9446a5e424eea72fd591ef5b7aa391f3cb8d42fc8318dda680c23",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10993"
 }

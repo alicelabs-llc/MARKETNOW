@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6506525",
+  "certificate_id": "MN-SC-2026-0619466",
   "skill_id": "mn-real-contextportal",
   "skill_name": "context-portal",
-  "issued_at": "2026-07-06T05:41:46.525Z",
-  "expires_at": "2026-07-13T05:41:46.525Z",
+  "issued_at": "2026-07-12T04:30:19.466Z",
+  "expires_at": "2026-07-19T04:30:19.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65dd55901f1a021fe9cc2d78b4f0264dc0a7ab13fda2cb53d68b002f66d6ef13",
+  "signature": "4bf24f2db8584dbf40a92edee86f841b47291a8c244bd20b18f6ae7333ea4b40",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-contextportal"
 }

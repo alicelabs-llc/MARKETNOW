@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6306652",
+  "certificate_id": "MN-SC-2026-0402794",
   "skill_id": "mn-real-chromamcp",
   "skill_name": "chroma-mcp",
-  "issued_at": "2026-07-06T05:38:26.652Z",
-  "expires_at": "2026-07-13T05:38:26.652Z",
+  "issued_at": "2026-07-12T04:26:42.794Z",
+  "expires_at": "2026-07-19T04:26:42.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8358e1d1d02bf973fbb3820ed0aa7817d97b8e9bdbdb7b18c336a15deeffdd72",
+  "signature": "a431629128517b5f355107ab66ac13218fbd197cc4ff0cc4062da200b4400b6c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chromamcp"
 }

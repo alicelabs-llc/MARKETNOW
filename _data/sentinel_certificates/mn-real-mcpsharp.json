@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6492652",
+  "certificate_id": "MN-SC-2026-0606475",
   "skill_id": "mn-real-mcpsharp",
   "skill_name": "MCPSharp",
-  "issued_at": "2026-07-06T05:41:32.652Z",
-  "expires_at": "2026-07-13T05:41:32.652Z",
+  "issued_at": "2026-07-12T04:30:06.475Z",
+  "expires_at": "2026-07-19T04:30:06.475Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2447c794d54b8ace0f26ead4ebd7fc3ab842a65ba3c57b5298ff043f04897924",
+  "signature": "109ab03279d3352921e40c77e6554b34e400e773839396dee86b662ac2b371a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsharp"
 }

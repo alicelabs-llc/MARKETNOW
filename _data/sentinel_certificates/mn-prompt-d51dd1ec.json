@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5959614",
+  "certificate_id": "MN-SC-2026-0192158",
   "skill_id": "mn-prompt-d51dd1ec",
   "skill_name": "Optimizador de queries SQL lentas con EXPLAIN ANALYZE",
-  "issued_at": "2026-07-06T05:32:39.614Z",
-  "expires_at": "2026-07-13T05:32:39.614Z",
+  "issued_at": "2026-07-12T04:23:12.158Z",
+  "expires_at": "2026-07-19T04:23:12.158Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7d0daa32ce8182aa0df59dda1797651d829cf31e71384a60d238dad8030cdb76",
+  "signature": "93a6ff599633ec5451e8992dec49608f723536dc9c9fd46fe43f807ca93c295f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d51dd1ec"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6306195",
+  "certificate_id": "MN-SC-2026-0401601",
   "skill_id": "mn-real-mcpcockroachdb",
   "skill_name": "mcp-cockroachdb",
-  "issued_at": "2026-07-06T05:38:26.195Z",
-  "expires_at": "2026-07-13T05:38:26.195Z",
+  "issued_at": "2026-07-12T04:26:41.601Z",
+  "expires_at": "2026-07-19T04:26:41.601Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6fc42b63d904fc387e0e34c7bb04eedd246644405f3ca876c438a0af25d749de",
+  "signature": "9526be8045470de3a69b3dde9b41a33fa1d62eb6fc18880f2e4888011c07441e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcockroachdb"
 }

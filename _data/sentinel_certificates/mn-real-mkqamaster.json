@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6327311",
+  "certificate_id": "MN-SC-2026-0423826",
   "skill_id": "mn-real-mkqamaster",
   "skill_name": "mk-qa-master",
-  "issued_at": "2026-07-06T05:38:47.311Z",
-  "expires_at": "2026-07-13T05:38:47.311Z",
+  "issued_at": "2026-07-12T04:27:03.826Z",
+  "expires_at": "2026-07-19T04:27:03.826Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49fefce2125d71c924fa8e8c255f012177c3dd0ec7d8a5ba16073a64594f6d37",
+  "signature": "b74baa05ac18893c83fe3eb8afb21aec51ecd68a9787d3d2ee65d0fe1341fc4f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mkqamaster"
 }

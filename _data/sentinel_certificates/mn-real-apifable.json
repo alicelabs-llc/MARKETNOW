@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0631549",
+  "skill_id": "mn-real-apifable",
+  "skill_name": "apifable",
+  "issued_at": "2026-07-12T04:30:31.549Z",
+  "expires_at": "2026-07-19T04:30:31.549Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "be0d6124c7eda81ca820a5564b998318e3948f49a21be192f211fd3921bc6e0b",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apifable"
+}

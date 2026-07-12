@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6448718",
+  "certificate_id": "MN-SC-2026-0558959",
   "skill_id": "mn-real-proplinemcp",
   "skill_name": "propline-mcp",
-  "issued_at": "2026-07-06T05:40:48.718Z",
-  "expires_at": "2026-07-13T05:40:48.718Z",
+  "issued_at": "2026-07-12T04:29:18.959Z",
+  "expires_at": "2026-07-19T04:29:18.959Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "766d48b45339828dc1c68d1c1b1bf1143ea8d24a08a40a2fa10a080c50b6175b",
+  "signature": "26cfb3b246bdd1043d198053b008f309e8da086d490b90201357362c5a8c1586",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-proplinemcp"
 }

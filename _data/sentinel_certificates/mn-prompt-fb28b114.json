@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5849778",
+  "certificate_id": "MN-SC-2026-0054653",
   "skill_id": "mn-prompt-fb28b114",
   "skill_name": "Especialista Django REST Framework",
-  "issued_at": "2026-07-06T05:30:49.778Z",
-  "expires_at": "2026-07-13T05:30:49.778Z",
+  "issued_at": "2026-07-12T04:20:54.653Z",
+  "expires_at": "2026-07-19T04:20:54.653Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bd0350a620d822d2917549c9bb0a7c4f55af6d05d1f40330a0e0a2336daaffd",
+  "signature": "45cff8997c9632c9e64173ca9f150dc294635aa51881aa50666a69af811612c1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fb28b114"
 }

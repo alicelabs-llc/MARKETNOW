@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0894845",
+  "skill_id": "mn-real-0gmem",
+  "skill_name": "0gmem",
+  "issued_at": "2026-07-12T04:34:54.845Z",
+  "expires_at": "2026-07-19T04:34:54.845Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "b12b2d897a048c10b1872c00edc1ca0861102f9de51d99cbe6b3b03cc0c545db",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-0gmem"
+}

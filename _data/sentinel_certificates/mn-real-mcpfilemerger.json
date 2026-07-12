@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6351171",
+  "certificate_id": "MN-SC-2026-0450705",
   "skill_id": "mn-real-mcpfilemerger",
   "skill_name": "mcp-file-merger",
-  "issued_at": "2026-07-06T05:39:11.171Z",
-  "expires_at": "2026-07-13T05:39:11.171Z",
+  "issued_at": "2026-07-12T04:27:30.705Z",
+  "expires_at": "2026-07-19T04:27:30.705Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24f4fb3194c76afba1cdf674d4d58f31505a386041a67356be5a88c10880663a",
+  "signature": "94c7d9e0d900f055f198589a6bd36ec05ecd4c3fabb7b3ce0dc2981e9241e0b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpfilemerger"
 }

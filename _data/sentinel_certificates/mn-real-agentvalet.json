@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6433290",
+  "certificate_id": "MN-SC-2026-0542319",
   "skill_id": "mn-real-agentvalet",
   "skill_name": "AgentValet",
-  "issued_at": "2026-07-06T05:40:33.290Z",
-  "expires_at": "2026-07-13T05:40:33.290Z",
+  "issued_at": "2026-07-12T04:29:02.319Z",
+  "expires_at": "2026-07-19T04:29:02.319Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0fc089b8323ac55a1f7c9bbe06cdcdae83d619ff110d0320ecb548e0dc4c259d",
+  "signature": "0784c23b76d59c27898c0b5d0e494352b834b8fecff5b42e3600f0f355630dff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentvalet"
 }

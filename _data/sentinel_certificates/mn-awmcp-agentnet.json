@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6247208",
+  "certificate_id": "MN-SC-2026-0331777",
   "skill_id": "mn-awmcp-agentnet",
   "skill_name": "agentnet",
-  "issued_at": "2026-07-06T05:37:27.208Z",
-  "expires_at": "2026-07-13T05:37:27.208Z",
+  "issued_at": "2026-07-12T04:25:31.777Z",
+  "expires_at": "2026-07-19T04:25:31.777Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "c7949c3b74863c6d03c6a19a5e6a744959b06d3a0498a5bc3d66cf49264917c8",
+  "signature": "5e884a2d66ee670a461b26109c95c196ceb5b8681bc56e8e579cb98e034a7d67",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agentnet"
 }

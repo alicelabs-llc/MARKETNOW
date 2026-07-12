@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6339081",
+  "certificate_id": "MN-SC-2026-0438460",
   "skill_id": "mn-real-jvmmcpserver",
   "skill_name": "jvm-mcp-server",
-  "issued_at": "2026-07-06T05:38:59.081Z",
-  "expires_at": "2026-07-13T05:38:59.081Z",
+  "issued_at": "2026-07-12T04:27:18.460Z",
+  "expires_at": "2026-07-19T04:27:18.460Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b9b72b0cee8de4df67311c8b28db2637d584ca38f71492fe620ecbc9c2353ebf",
+  "signature": "d00b31fac58592be4f7a8cfc2b46023257b99cf59681120f49e804bab416ee39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jvmmcpserver"
 }

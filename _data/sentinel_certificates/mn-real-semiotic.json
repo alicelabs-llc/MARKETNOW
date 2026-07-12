@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6346876",
+  "certificate_id": "MN-SC-2026-0445328",
   "skill_id": "mn-real-semiotic",
   "skill_name": "semiotic",
-  "issued_at": "2026-07-06T05:39:06.876Z",
-  "expires_at": "2026-07-13T05:39:06.876Z",
+  "issued_at": "2026-07-12T04:27:25.328Z",
+  "expires_at": "2026-07-19T04:27:25.328Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7e6e598eea7cf58a909bc755df58eb16ee28cdb9e2bf5d15642aa7e52b58a9a",
+  "signature": "9efcede59b602b71cc6b2583e7349fcfca34b26edf784e12797a47dc2debbd60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-semiotic"
 }

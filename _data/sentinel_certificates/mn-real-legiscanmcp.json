@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6420981",
+  "certificate_id": "MN-SC-2026-0528422",
   "skill_id": "mn-real-legiscanmcp",
   "skill_name": "legiscan-mcp",
-  "issued_at": "2026-07-06T05:40:20.981Z",
-  "expires_at": "2026-07-13T05:40:20.981Z",
+  "issued_at": "2026-07-12T04:28:48.422Z",
+  "expires_at": "2026-07-19T04:28:48.422Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8df282f229597394115c867ce78fcbaf61d1dde44198492e60053f9cf09db2c4",
+  "signature": "d7f05b286423d77ea43fdc65293a8b83c906de1d2ba1f5cdffbd0f803cf998ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-legiscanmcp"
 }

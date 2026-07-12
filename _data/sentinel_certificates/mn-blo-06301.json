@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5539467",
+  "certificate_id": "MN-SC-2026-0015356",
   "skill_id": "mn-blo-06301",
   "skill_name": "blockchain-mcp",
-  "issued_at": "2026-07-06T05:25:39.467Z",
-  "expires_at": "2026-07-13T05:25:39.467Z",
+  "issued_at": "2026-07-12T04:20:15.356Z",
+  "expires_at": "2026-07-19T04:20:15.356Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7bb074c604d097c35af0f9378a446f3f3dc977141e24647517af79b5d9239e6d",
+  "signature": "a968b4cc99dc7d16cd2459241f4fc2d840ac6269022fd5aefe0214345e8e375a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-blo-06301"
 }

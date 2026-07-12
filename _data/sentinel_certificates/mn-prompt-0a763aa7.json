@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5873220",
+  "certificate_id": "MN-SC-2026-0085007",
   "skill_id": "mn-prompt-0a763aa7",
   "skill_name": "Especialista LLM Function Calling",
-  "issued_at": "2026-07-06T05:31:13.220Z",
-  "expires_at": "2026-07-13T05:31:13.220Z",
+  "issued_at": "2026-07-12T04:21:25.007Z",
+  "expires_at": "2026-07-19T04:21:25.007Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b0fecd0f5cc8f184d983c2f8659dd2a5d98aba770eb609228eeebc6b43eba10",
+  "signature": "352e4011386b9f7cfcdba829fd01de53ab0c54700a41e6174170b89bc6adea5a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0a763aa7"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6260559",
+  "certificate_id": "MN-SC-2026-0348553",
   "skill_id": "mn-awmcp-fhirmcpserver",
   "skill_name": "fhir-mcp-server",
-  "issued_at": "2026-07-06T05:37:40.559Z",
-  "expires_at": "2026-07-13T05:37:40.559Z",
+  "issued_at": "2026-07-12T04:25:48.553Z",
+  "expires_at": "2026-07-19T04:25:48.553Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "b960f9324914f6c82001d4c5beccf8c8e8e72ab77f282b8d99410f60002d3516",
+  "signature": "c40708ff52fdf0d230bbdb0c9f3f845b23fa80cffd10c2618229868429ffa286",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-fhirmcpserver"
 }

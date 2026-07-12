@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6259436",
+  "certificate_id": "MN-SC-2026-0346676",
   "skill_id": "mn-awmcp-ggetmcp",
   "skill_name": "gget-mcp",
-  "issued_at": "2026-07-06T05:37:39.436Z",
-  "expires_at": "2026-07-13T05:37:39.436Z",
+  "issued_at": "2026-07-12T04:25:46.676Z",
+  "expires_at": "2026-07-19T04:25:46.676Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "e09c6837eef1dd5d7bc571874bd14df86c33ff73dd8c05f0bf744bc305b10c05",
+  "signature": "54b3e626369a1fe23a1f1c233e0d2716e9a40beee1e63b16c362de8351c91a8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ggetmcp"
 }

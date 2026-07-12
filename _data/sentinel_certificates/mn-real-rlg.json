@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0953834",
+  "skill_id": "mn-real-rlg",
+  "skill_name": "rlg",
+  "issued_at": "2026-07-12T04:35:53.834Z",
+  "expires_at": "2026-07-19T04:35:53.834Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "542ec6916c9f6e06d177c91941ed25b4dc15ffebc177d21caca1461444e41c0e",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rlg"
+}

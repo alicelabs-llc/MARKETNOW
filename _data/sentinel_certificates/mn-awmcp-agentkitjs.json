@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6281226",
+  "certificate_id": "MN-SC-2026-0372687",
   "skill_id": "mn-awmcp-agentkitjs",
   "skill_name": "agentkit-js",
-  "issued_at": "2026-07-06T05:38:01.226Z",
-  "expires_at": "2026-07-13T05:38:01.226Z",
+  "issued_at": "2026-07-12T04:26:12.687Z",
+  "expires_at": "2026-07-19T04:26:12.687Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03e4ec91e6361b04ce7b2857059dc1a11a97fc5546f3080dc2473db99d88bba6",
+  "signature": "b4687ce1370aef7211fb3b66999a2fe1536a55caa508d6222ac539e90b582f41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agentkitjs"
 }

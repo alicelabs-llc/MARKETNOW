@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5730808",
+  "certificate_id": "MN-SC-2026-0038090",
   "skill_id": "mn-gen-10919",
   "skill_name": "qrcode_mcp",
-  "issued_at": "2026-07-06T05:28:50.808Z",
-  "expires_at": "2026-07-13T05:28:50.808Z",
+  "issued_at": "2026-07-12T04:20:38.090Z",
+  "expires_at": "2026-07-19T04:20:38.090Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51f62ec111536070b20a429416fe68a520d793785b5802e1625272da0d5816f4",
+  "signature": "2d9b25a19512112f59ebc7df51951c41faf5789d627c24f5a386a6ad06bfdac4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10919"
 }

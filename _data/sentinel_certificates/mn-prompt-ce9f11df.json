@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6005866",
+  "certificate_id": "MN-SC-2026-0252012",
   "skill_id": "mn-prompt-ce9f11df",
   "skill_name": "Product analytics retention curves",
-  "issued_at": "2026-07-06T05:33:25.866Z",
-  "expires_at": "2026-07-13T05:33:25.866Z",
+  "issued_at": "2026-07-12T04:24:12.012Z",
+  "expires_at": "2026-07-19T04:24:12.012Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a2b1046fa9d3b4db233ee0472c2afaf44039a6aae65092c955aafb1bc3fd0f1",
+  "signature": "105846dbf1f7dabd0eeb1eef2eeb766873e7acc9f270e2884777d6d0185c06be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ce9f11df"
 }

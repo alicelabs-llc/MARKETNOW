@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5808872",
+  "certificate_id": "MN-SC-2026-0046176",
   "skill_id": "mn-gen-12915",
   "skill_name": "ue-mcp",
-  "issued_at": "2026-07-06T05:30:08.872Z",
-  "expires_at": "2026-07-13T05:30:08.872Z",
+  "issued_at": "2026-07-12T04:20:46.176Z",
+  "expires_at": "2026-07-19T04:20:46.176Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68ed181234e1587c6bc32d804a79ae3b0ab01a75627ae5d3f6be0157ec65d9d0",
+  "signature": "acb773ee45883909f6fe8eb216905aa4e29df62d730ff39430308c5df8aae6a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12915"
 }

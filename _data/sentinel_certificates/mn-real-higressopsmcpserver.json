@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6324315",
+  "certificate_id": "MN-SC-2026-0421250",
   "skill_id": "mn-real-higressopsmcpserver",
   "skill_name": "higress-ops-mcp-server",
-  "issued_at": "2026-07-06T05:38:44.315Z",
-  "expires_at": "2026-07-13T05:38:44.315Z",
+  "issued_at": "2026-07-12T04:27:01.250Z",
+  "expires_at": "2026-07-19T04:27:01.250Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6ebe2ebec12baa78f4b41691b74e41c5f3a0a89de6b3d4a3a3e8926e4454b95",
+  "signature": "b3f291793795993e1a09601f46a5390beb2fe1627b72746d24b8f6f5603dcc94",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-higressopsmcpserver"
 }

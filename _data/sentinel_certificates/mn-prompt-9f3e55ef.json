@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6055581",
+  "certificate_id": "MN-SC-2026-0315143",
   "skill_id": "mn-prompt-9f3e55ef",
   "skill_name": "Seafood market operations",
-  "issued_at": "2026-07-06T05:34:15.581Z",
-  "expires_at": "2026-07-13T05:34:15.581Z",
+  "issued_at": "2026-07-12T04:25:15.143Z",
+  "expires_at": "2026-07-19T04:25:15.143Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a2014c026d2f3af5eb31ca3bebbed4804984f2bc60f8f350a0674cee870b32fe",
+  "signature": "ba2523722e9f517990b60fec6fa9b344b95b0d7c58185a81f5dddb9dfa4c833a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9f3e55ef"
 }

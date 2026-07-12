@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5990153",
+  "certificate_id": "MN-SC-2026-0230514",
   "skill_id": "mn-prompt-01e95288",
   "skill_name": "Audit committee preparation",
-  "issued_at": "2026-07-06T05:33:10.153Z",
-  "expires_at": "2026-07-13T05:33:10.153Z",
+  "issued_at": "2026-07-12T04:23:50.514Z",
+  "expires_at": "2026-07-19T04:23:50.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acbab776a7a0759ac625ffdb1493cc7988db957ae9812c1ebf6678c1c2a09741",
+  "signature": "280a804497d321c10d4c319123460c0b20f50ec8254ef7a06b385b3ed1480c13",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-01e95288"
 }

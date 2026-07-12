@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5963494",
+  "certificate_id": "MN-SC-2026-0194779",
   "skill_id": "mn-prompt-48c4e8f3",
   "skill_name": "Diseñador de SLOs con error budgets",
-  "issued_at": "2026-07-06T05:32:43.494Z",
-  "expires_at": "2026-07-13T05:32:43.494Z",
+  "issued_at": "2026-07-12T04:23:14.779Z",
+  "expires_at": "2026-07-19T04:23:14.779Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14b9272454ba47747fddead85efdac6931278bdb2fcc874cb7f589ea790f85d6",
+  "signature": "cb639a1c9065691ce66913ef40b89e7354d3b112c5e83351fe62c41008d71ed5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-48c4e8f3"
 }

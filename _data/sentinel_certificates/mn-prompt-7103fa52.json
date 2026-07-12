@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6039345",
+  "certificate_id": "MN-SC-2026-0293479",
   "skill_id": "mn-prompt-7103fa52",
   "skill_name": "Streaming analytics real-time",
-  "issued_at": "2026-07-06T05:33:59.345Z",
-  "expires_at": "2026-07-13T05:33:59.345Z",
+  "issued_at": "2026-07-12T04:24:53.479Z",
+  "expires_at": "2026-07-19T04:24:53.479Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "309dcbd1cc8278b354a79cc97e4fd7c396241ce9f536450c986a808dd3d844f1",
+  "signature": "02f0c4307864a8152d49231278e50f1048044692b4cc7b4e53368c5af2b8a3e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7103fa52"
 }

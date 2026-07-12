@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6424763",
+  "certificate_id": "MN-SC-2026-0533844",
   "skill_id": "mn-real-hyperstoremcp",
   "skill_name": "HyperStore-MCP",
-  "issued_at": "2026-07-06T05:40:24.763Z",
-  "expires_at": "2026-07-13T05:40:24.763Z",
+  "issued_at": "2026-07-12T04:28:53.844Z",
+  "expires_at": "2026-07-19T04:28:53.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f60a564916c5fa9085d30048aaf5d270d5957b6526f4e37b36e38c03fb056123",
+  "signature": "47754b47871d12afadf72f565ede56fe721f02f6529c87b352cf648100691901",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hyperstoremcp"
 }

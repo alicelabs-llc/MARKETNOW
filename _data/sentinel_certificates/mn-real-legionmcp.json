@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6310243",
+  "certificate_id": "MN-SC-2026-0406849",
   "skill_id": "mn-real-legionmcp",
   "skill_name": "legion-mcp",
-  "issued_at": "2026-07-06T05:38:30.243Z",
-  "expires_at": "2026-07-13T05:38:30.243Z",
+  "issued_at": "2026-07-12T04:26:46.849Z",
+  "expires_at": "2026-07-19T04:26:46.849Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "76092e2f155066486aeb02717d659504d7244fa1236feea07e9fedb51e506f78",
+  "signature": "3233c688a365ae5268174079dbfa1f5443ead91b8e50350a8e5effa01fde6ebe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-legionmcp"
 }

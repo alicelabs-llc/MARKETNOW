@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5659868",
+  "certificate_id": "MN-SC-2026-0031626",
   "skill_id": "mn-gen-09217",
   "skill_name": "monzo-mcp",
-  "issued_at": "2026-07-06T05:27:39.868Z",
-  "expires_at": "2026-07-13T05:27:39.868Z",
+  "issued_at": "2026-07-12T04:20:31.626Z",
+  "expires_at": "2026-07-19T04:20:31.626Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8b8450322c6d07b6982a5b1e4c2b308235ec9e05c0860efb4ed10e062438a983",
+  "signature": "8e29a8f144bdc6ed7c83b9130e8c0b06a7044983803f5c4668fe593e05016fc6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09217"
 }

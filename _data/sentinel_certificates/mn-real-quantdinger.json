@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6474714",
+  "certificate_id": "MN-SC-2026-0586455",
   "skill_id": "mn-real-quantdinger",
   "skill_name": "QuantDinger",
-  "issued_at": "2026-07-06T05:41:14.714Z",
-  "expires_at": "2026-07-13T05:41:14.714Z",
+  "issued_at": "2026-07-12T04:29:46.455Z",
+  "expires_at": "2026-07-19T04:29:46.455Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ce378079cc53a543bb026d3f2bfa26391cfc54a07ce3478014127b6fb692795a",
+  "signature": "41c7eb273ca0fb029f35c49a4d9851f3377fa228c2d88c85b73d5579f32e04ab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-quantdinger"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6401834",
+  "certificate_id": "MN-SC-2026-1081647",
   "skill_id": "mn-real-mcpsudact",
   "skill_name": "mcp-sudact",
-  "issued_at": "2026-07-06T05:40:01.834Z",
-  "expires_at": "2026-07-13T05:40:01.834Z",
+  "issued_at": "2026-07-12T04:38:01.647Z",
+  "expires_at": "2026-07-19T04:38:01.647Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d9aef596ef1497d47ed6d513c040cd70c7c90d4525042b44d5b5842f8258704",
+  "signature": "095744b05bfc79a1b8e302f4399faf6beeddcc232d9afb441a99266b509c5f50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsudact"
 }

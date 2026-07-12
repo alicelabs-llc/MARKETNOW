@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6288584",
+  "certificate_id": "MN-SC-2026-0381188",
   "skill_id": "mn-awmcp-kagan",
   "skill_name": "kagan",
-  "issued_at": "2026-07-06T05:38:08.584Z",
-  "expires_at": "2026-07-13T05:38:08.584Z",
+  "issued_at": "2026-07-12T04:26:21.188Z",
+  "expires_at": "2026-07-19T04:26:21.188Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "919be24e5bd77712fb616188b9898f778f66e5977b44ab2fd6ffdf16e208790f",
+  "signature": "84d61c87ba30a66f0dba27331664e9d302934a82b0794c4fba904e53a8f67423",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-kagan"
 }

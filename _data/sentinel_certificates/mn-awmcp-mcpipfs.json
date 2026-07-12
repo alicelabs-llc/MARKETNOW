@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6269285",
+  "certificate_id": "MN-SC-2026-0358067",
   "skill_id": "mn-awmcp-mcpipfs",
   "skill_name": "mcp-ipfs",
-  "issued_at": "2026-07-06T05:37:49.285Z",
-  "expires_at": "2026-07-13T05:37:49.285Z",
+  "issued_at": "2026-07-12T04:25:58.067Z",
+  "expires_at": "2026-07-19T04:25:58.067Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58ca5dd44e45cc0fdfa00683066833c4338479450aa1ed6a7b2f16c2ac353533",
+  "signature": "3e35da92029349847cc8405af2cdcb5fa7c11a779986d351f7865644566d9700",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpipfs"
 }

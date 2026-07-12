@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6491710",
+  "certificate_id": "MN-SC-2026-0605438",
   "skill_id": "mn-real-desktop",
   "skill_name": "desktop",
-  "issued_at": "2026-07-06T05:41:31.710Z",
-  "expires_at": "2026-07-13T05:41:31.710Z",
+  "issued_at": "2026-07-12T04:30:05.438Z",
+  "expires_at": "2026-07-19T04:30:05.438Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "573972f2bdf761a4236b8cdaeedf0456e6e57981cfce64b57f206e64007b55bf",
+  "signature": "9b1fd124722c23644c03d5a1f6b3d2b0aca566ef52d57a181a22152936763e42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-desktop"
 }

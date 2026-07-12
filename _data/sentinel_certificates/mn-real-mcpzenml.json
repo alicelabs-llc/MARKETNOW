@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6341037",
+  "certificate_id": "MN-SC-2026-0438920",
   "skill_id": "mn-real-mcpzenml",
   "skill_name": "mcp-zenml",
-  "issued_at": "2026-07-06T05:39:01.037Z",
-  "expires_at": "2026-07-13T05:39:01.037Z",
+  "issued_at": "2026-07-12T04:27:18.920Z",
+  "expires_at": "2026-07-19T04:27:18.920Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a304006c0f932de1c709c25dfe2b6a7b4dc9b32ef7d12e50fda8f195a6849aee",
+  "signature": "f0a3f04aa4388a5673e7bb2dcc7c22103246de2f35740ddb79ad898350cf2f5f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpzenml"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6442400",
+  "certificate_id": "MN-SC-2026-0551559",
   "skill_id": "mn-real-skillssafemcp",
   "skill_name": "skillssafe-mcp",
-  "issued_at": "2026-07-06T05:40:42.400Z",
-  "expires_at": "2026-07-13T05:40:42.400Z",
+  "issued_at": "2026-07-12T04:29:11.559Z",
+  "expires_at": "2026-07-19T04:29:11.559Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b7e1d65f87f5020713459f395c79cc5ba342063a5a4431a536cfcab6d1e3a69",
+  "signature": "42aeeaa597a4378ce2d77f7615cc10a94d117356a9e3aafb395a45ea9613c51a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-skillssafemcp"
 }

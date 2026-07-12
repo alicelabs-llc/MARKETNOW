@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6316536",
+  "certificate_id": "MN-SC-2026-0413106",
   "skill_id": "mn-real-ontomics",
   "skill_name": "ontomics",
-  "issued_at": "2026-07-06T05:38:36.536Z",
-  "expires_at": "2026-07-13T05:38:36.536Z",
+  "issued_at": "2026-07-12T04:26:53.106Z",
+  "expires_at": "2026-07-19T04:26:53.106Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a24ef837b04864386cfb1073a2c4e731eace1a5de24b5a886dbc91c4d01a6c5a",
+  "signature": "333bc6a0a7c880eb986bc27cc25f6478bf97734c2e9882d72692ab3826d0e81c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ontomics"
 }

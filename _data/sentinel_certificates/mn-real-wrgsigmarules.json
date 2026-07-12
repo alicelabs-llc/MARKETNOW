@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6444722",
+  "certificate_id": "MN-SC-2026-0554509",
   "skill_id": "mn-real-wrgsigmarules",
   "skill_name": "wrg-sigma-rules",
-  "issued_at": "2026-07-06T05:40:44.722Z",
-  "expires_at": "2026-07-13T05:40:44.722Z",
+  "issued_at": "2026-07-12T04:29:14.509Z",
+  "expires_at": "2026-07-19T04:29:14.509Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ea00c36a3635586a05de5a46185a34e0957f0e6f2cf7e9d6757d38e89a57ea84",
+  "signature": "e5b34103d8b9b5a000007584cba6bc103e772e76c4dda41a28dc146bb85b09c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wrgsigmarules"
 }

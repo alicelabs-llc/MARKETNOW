@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5849252",
+  "certificate_id": "MN-SC-2026-0053967",
   "skill_id": "mn-prompt-5e347b00",
   "skill_name": "Creador de Secuencias de Onboarding Email",
-  "issued_at": "2026-07-06T05:30:49.252Z",
-  "expires_at": "2026-07-13T05:30:49.252Z",
+  "issued_at": "2026-07-12T04:20:53.967Z",
+  "expires_at": "2026-07-19T04:20:53.967Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02be80534ba5c0cd81d72ba0bfb2fdb828a09b756bb7da5242be9614fd98705d",
+  "signature": "eef8129acb3d6618cfc5ffd02f4a64574e986bcdca19c6fe1eee55c11062816f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5e347b00"
 }

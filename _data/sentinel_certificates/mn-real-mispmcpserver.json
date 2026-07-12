@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6440061",
+  "certificate_id": "MN-SC-2026-0549813",
   "skill_id": "mn-real-mispmcpserver",
   "skill_name": "misp-mcp-server",
-  "issued_at": "2026-07-06T05:40:40.061Z",
-  "expires_at": "2026-07-13T05:40:40.061Z",
+  "issued_at": "2026-07-12T04:29:09.813Z",
+  "expires_at": "2026-07-19T04:29:09.813Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "410b5f9fe45004b6806e507cbcd30adb18296383259428fd77394097e42f36f6",
+  "signature": "9822b3f11c51f722e8459f0f218c7c461c60cc6aa1ae4da10143d5753549ec36",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mispmcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6311152",
+  "certificate_id": "MN-SC-2026-0407961",
   "skill_id": "mn-real-simplesnowflakemcp",
   "skill_name": "simple_snowflake_mcp",
-  "issued_at": "2026-07-06T05:38:31.152Z",
-  "expires_at": "2026-07-13T05:38:31.152Z",
+  "issued_at": "2026-07-12T04:26:47.961Z",
+  "expires_at": "2026-07-19T04:26:47.961Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a521b03f547e4988c43838b386884de81f96a72cfed631d93024992454ae5e6",
+  "signature": "f481bdd8c985fc52c5f058a14a9b8659a19e640048a0f8b8f2d2ad4600aa8bc1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-simplesnowflakemcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6440395",
+  "certificate_id": "MN-SC-2026-0550671",
   "skill_id": "mn-real-assay",
   "skill_name": "assay",
-  "issued_at": "2026-07-06T05:40:40.395Z",
-  "expires_at": "2026-07-13T05:40:40.395Z",
+  "issued_at": "2026-07-12T04:29:10.671Z",
+  "expires_at": "2026-07-19T04:29:10.671Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77943a1fbb83a1b0aaa4b180f6737b96c8b58ce4f150afaf7e640be9da827016",
+  "signature": "b220d69d2cc524d772144b6036064f553f65ac62128b67d6278f6c876bba02f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-assay"
 }

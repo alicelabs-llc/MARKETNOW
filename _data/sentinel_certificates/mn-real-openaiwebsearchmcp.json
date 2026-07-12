@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6424300",
+  "certificate_id": "MN-SC-2026-0533292",
   "skill_id": "mn-real-openaiwebsearchmcp",
   "skill_name": "openai-websearch-mcp",
-  "issued_at": "2026-07-06T05:40:24.300Z",
-  "expires_at": "2026-07-13T05:40:24.300Z",
+  "issued_at": "2026-07-12T04:28:53.292Z",
+  "expires_at": "2026-07-19T04:28:53.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6430f31884291e44b08b880afb3afd6f7d92ffb0aa5a49f8c352ce986a0976d9",
+  "signature": "ca6f7e511f85b4b1ceb3061ba0465887fa68876a39f07b57ae7f6d6693013ad9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openaiwebsearchmcp"
 }

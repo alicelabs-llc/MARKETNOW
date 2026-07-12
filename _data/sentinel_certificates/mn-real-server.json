@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6505700",
+  "certificate_id": "MN-SC-2026-0618627",
   "skill_id": "mn-real-server",
   "skill_name": "server",
-  "issued_at": "2026-07-06T05:41:45.700Z",
-  "expires_at": "2026-07-13T05:41:45.700Z",
+  "issued_at": "2026-07-12T04:30:18.627Z",
+  "expires_at": "2026-07-19T04:30:18.627Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a860f1b131fba0e62e7d5a106b9dcb107e8f67203568597bdb48a47f3c9c15a4",
+  "signature": "5b706b6c263697b44863917f72ab9aa638d2cfc9e8e32f23c932aa452b67fa92",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-server"
 }

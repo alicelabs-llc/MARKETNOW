@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5965004",
+  "certificate_id": "MN-SC-2026-0196806",
   "skill_id": "mn-prompt-c04e0e80",
   "skill_name": "Implementador de internacionalización (i18n) end-to-end",
-  "issued_at": "2026-07-06T05:32:45.004Z",
-  "expires_at": "2026-07-13T05:32:45.004Z",
+  "issued_at": "2026-07-12T04:23:16.806Z",
+  "expires_at": "2026-07-19T04:23:16.806Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8f21e00dc320715c0d9747be0062e60ed67c9a32c3be2ed93a2f2f20d3c1dc95",
+  "signature": "fb1488c45083948bc431432ff84bd201e63fc31298f2691762a10cf68d6095d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c04e0e80"
 }

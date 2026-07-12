@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6399561",
+  "certificate_id": "MN-SC-2026-1081232",
   "skill_id": "mn-real-memem",
   "skill_name": "memem",
-  "issued_at": "2026-07-06T05:39:59.561Z",
-  "expires_at": "2026-07-13T05:39:59.561Z",
+  "issued_at": "2026-07-12T04:38:01.232Z",
+  "expires_at": "2026-07-19T04:38:01.232Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "390095f6c7f94325741f7691f67b82442469344979c9b3d99bca7e62f146ef51",
+  "signature": "b3c854c034a5e30ba50ec226a50e8a78d5038de4cc4403d97babdce2a9469e27",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-memem"
 }

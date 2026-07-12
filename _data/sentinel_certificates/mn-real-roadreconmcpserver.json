@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6434069",
+  "certificate_id": "MN-SC-2026-0543732",
   "skill_id": "mn-real-roadreconmcpserver",
   "skill_name": "roadrecon_mcp_server",
-  "issued_at": "2026-07-06T05:40:34.069Z",
-  "expires_at": "2026-07-13T05:40:34.069Z",
+  "issued_at": "2026-07-12T04:29:03.732Z",
+  "expires_at": "2026-07-19T04:29:03.732Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f53dcf61ddbb485dce9fd7b00dc6fdd5ba3ffff7d642b9a2d815c0cc6b51abff",
+  "signature": "d2b170720af4e559eaecb91bd53fbf32b54603c076318e1ef726934df4057df1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-roadreconmcpserver"
 }

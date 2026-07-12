@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5873678",
+  "certificate_id": "MN-SC-2026-0085561",
   "skill_id": "mn-prompt-164b2bac",
   "skill_name": "Especialista Pentesting + Burp Suite",
-  "issued_at": "2026-07-06T05:31:13.678Z",
-  "expires_at": "2026-07-13T05:31:13.678Z",
+  "issued_at": "2026-07-12T04:21:25.561Z",
+  "expires_at": "2026-07-19T04:21:25.561Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "921bf7a626db3213afb15e5ac0f12350ab29470b8312ec0c4b01f4345d3ad3b9",
+  "signature": "887722887dfa24281d854a11189116077de20b515ba1365ff764f48575acb6dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-164b2bac"
 }

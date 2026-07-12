@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6001590",
+  "certificate_id": "MN-SC-2026-0245514",
   "skill_id": "mn-prompt-95f19930",
   "skill_name": "Product spec acceptance criteria",
-  "issued_at": "2026-07-06T05:33:21.590Z",
-  "expires_at": "2026-07-13T05:33:21.590Z",
+  "issued_at": "2026-07-12T04:24:05.514Z",
+  "expires_at": "2026-07-19T04:24:05.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd03f4d974caa792c16d86b89a3f112135b62db470f4797ba7599afe007fabfe",
+  "signature": "37c7885fd1452eff347b46307de333151fbae31b59c2822f2a9cecb3c4b68991",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-95f19930"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5764806",
+  "certificate_id": "MN-SC-2026-0041763",
   "skill_id": "mn-gen-11802",
   "skill_name": "simplemem",
-  "issued_at": "2026-07-06T05:29:24.806Z",
-  "expires_at": "2026-07-13T05:29:24.806Z",
+  "issued_at": "2026-07-12T04:20:41.763Z",
+  "expires_at": "2026-07-19T04:20:41.763Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b56bc7ea752e6a307ef0a6ad311f99369384df3e5c0a68b8b0e7a06dd66b82af",
+  "signature": "1362891db67b91c703546799cb91ec5fabdb9ddf194ebf4804837a098214a14c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11802"
 }

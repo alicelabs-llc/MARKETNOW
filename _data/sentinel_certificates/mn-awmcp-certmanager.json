@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6274745",
+  "certificate_id": "MN-SC-2026-0364076",
   "skill_id": "mn-awmcp-certmanager",
   "skill_name": "cert-manager",
-  "issued_at": "2026-07-06T05:37:54.745Z",
-  "expires_at": "2026-07-13T05:37:54.745Z",
+  "issued_at": "2026-07-12T04:26:04.076Z",
+  "expires_at": "2026-07-19T04:26:04.076Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2214aef489699afc1a33dafdcc7d5993091ae288960610167e210a5b940e63f3",
+  "signature": "daf1fd7207265296ac2647c44d3181cc0b6ea9572d0b5f6fa3ac35b937c246fe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-certmanager"
 }

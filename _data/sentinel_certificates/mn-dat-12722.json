@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5801862",
+  "certificate_id": "MN-SC-2026-0044964",
   "skill_id": "mn-dat-12722",
   "skill_name": "sandbox",
-  "issued_at": "2026-07-06T05:30:01.862Z",
-  "expires_at": "2026-07-13T05:30:01.862Z",
+  "issued_at": "2026-07-12T04:20:44.964Z",
+  "expires_at": "2026-07-19T04:20:44.964Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ada4d7a1183063abe681cfb6c5251e303e913e68c2cba1404d78a0c1051617d8",
+  "signature": "fd2136b639d8398e02a5e7f67729bb6608b283794f8e5779b04135bb8102530f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-12722"
 }

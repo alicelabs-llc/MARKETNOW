@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5879912",
+  "certificate_id": "MN-SC-2026-0094320",
   "skill_id": "mn-prompt-f3577068",
   "skill_name": "Especialista Smoke Tests + Sanity",
-  "issued_at": "2026-07-06T05:31:19.912Z",
-  "expires_at": "2026-07-13T05:31:19.912Z",
+  "issued_at": "2026-07-12T04:21:34.320Z",
+  "expires_at": "2026-07-19T04:21:34.320Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f7e2e578bb1271023c1ec099dff9ff34bd3e8dfef0d6a246fb6ff1c0fadc4d6e",
+  "signature": "483be1f53867689d1dfa2d5cfe942137e775fbca2794d2b6b2258f7ec7ff888e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f3577068"
 }

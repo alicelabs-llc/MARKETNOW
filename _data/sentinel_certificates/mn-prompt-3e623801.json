@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6019534",
+  "certificate_id": "MN-SC-2026-0270099",
   "skill_id": "mn-prompt-3e623801",
   "skill_name": "Copywriting for knowledge base",
-  "issued_at": "2026-07-06T05:33:39.534Z",
-  "expires_at": "2026-07-13T05:33:39.534Z",
+  "issued_at": "2026-07-12T04:24:30.099Z",
+  "expires_at": "2026-07-19T04:24:30.099Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ee46494733695787bc67d28471b7ef0d358e350abb1aee776cdd4ed91e3b132",
+  "signature": "331d7aaf76ff5667cae71646e180308cbfac4be04ba09c0b59487affc37a8994",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-3e623801"
 }

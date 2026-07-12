@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6274197",
+  "certificate_id": "MN-SC-2026-0364045",
   "skill_id": "mn-awmcp-volthq",
   "skill_name": "volthq",
-  "issued_at": "2026-07-06T05:37:54.197Z",
-  "expires_at": "2026-07-13T05:37:54.197Z",
+  "issued_at": "2026-07-12T04:26:04.045Z",
+  "expires_at": "2026-07-19T04:26:04.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "933eedee3c7530339dabf7a505a1669f44591c49e63b5282f959e023cc634cb9",
+  "signature": "abace4f479dd583ead6b6076a1d50ee40d8cc856e4c3d8f9f4186c0801937347",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-volthq"
 }

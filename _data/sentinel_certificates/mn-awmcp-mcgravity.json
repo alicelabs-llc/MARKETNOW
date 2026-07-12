@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6248722",
+  "certificate_id": "MN-SC-2026-0334386",
   "skill_id": "mn-awmcp-mcgravity",
   "skill_name": "mcgravity",
-  "issued_at": "2026-07-06T05:37:28.722Z",
-  "expires_at": "2026-07-13T05:37:28.722Z",
+  "issued_at": "2026-07-12T04:25:34.386Z",
+  "expires_at": "2026-07-19T04:25:34.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee488b4f90676184ec727d66740a349fc67992049b0adc41312a1b98daa28900",
+  "signature": "afb28c9de5006e81982ac53fe2f62d1a6ae074cade42f21fc2c70acd469af07a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcgravity"
 }

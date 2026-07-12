@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0878627",
+  "skill_id": "mn-local-videogeneration",
+  "skill_name": "video-generation",
+  "issued_at": "2026-07-12T04:34:38.627Z",
+  "expires_at": "2026-07-19T04:34:38.627Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 4,
+  "max_score": 10,
+  "risk_level": "high",
+  "risk_breakdown": {
+    "l15_l16": "high",
+    "l2": "not_available",
+    "final": "high"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "6092a9f031830557ca8beb2c9c086e3872899018a7fa80827f67e27846d90494",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-local-videogeneration"
+}

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6051125",
+  "certificate_id": "MN-SC-2026-0307285",
   "skill_id": "mn-prompt-a36deefe",
   "skill_name": "CrossFit gym operations",
-  "issued_at": "2026-07-06T05:34:11.125Z",
-  "expires_at": "2026-07-13T05:34:11.125Z",
+  "issued_at": "2026-07-12T04:25:07.285Z",
+  "expires_at": "2026-07-19T04:25:07.285Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b96bd765a54e9bc0c0bea128ba7ce74829549c4e86cffbf9c201567de62f05c2",
+  "signature": "a78845c8e1469d5c985afc034b7020a9fca9553707a4ae5cf8939bdb79ec95b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a36deefe"
 }

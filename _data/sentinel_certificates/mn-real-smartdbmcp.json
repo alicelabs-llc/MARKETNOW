@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6310691",
+  "certificate_id": "MN-SC-2026-0407370",
   "skill_id": "mn-real-smartdbmcp",
   "skill_name": "SmartDB_MCP",
-  "issued_at": "2026-07-06T05:38:30.691Z",
-  "expires_at": "2026-07-13T05:38:30.691Z",
+  "issued_at": "2026-07-12T04:26:47.370Z",
+  "expires_at": "2026-07-19T04:26:47.370Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b49b3ba18b388a8163777a7107073f29447e8b15103b16012c5e9fc91786bb67",
+  "signature": "4317282e88b776af3e9e5edf617a2d784769d92b0dde83b27ec101811e5fb5c9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-smartdbmcp"
 }

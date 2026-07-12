@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6307328",
+  "certificate_id": "MN-SC-2026-0403529",
   "skill_id": "mn-real-convexbackend",
   "skill_name": "convex-backend",
-  "issued_at": "2026-07-06T05:38:27.328Z",
-  "expires_at": "2026-07-13T05:38:27.328Z",
+  "issued_at": "2026-07-12T04:26:43.529Z",
+  "expires_at": "2026-07-19T04:26:43.529Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09bf3f060130f387daed84f919ca0d715553766032a7042080a569028c2f6740",
+  "signature": "596f34ae4878de2064e325a0a7a192604369e1bfbe06b3793c1482e05b7aae6b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-convexbackend"
 }

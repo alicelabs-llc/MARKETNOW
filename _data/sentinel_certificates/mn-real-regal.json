@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6439445",
+  "certificate_id": "MN-SC-2026-1084883",
   "skill_id": "mn-real-regal",
   "skill_name": "regal",
-  "issued_at": "2026-07-06T05:40:39.445Z",
-  "expires_at": "2026-07-13T05:40:39.445Z",
+  "issued_at": "2026-07-12T04:38:04.883Z",
+  "expires_at": "2026-07-19T04:38:04.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c89b0c723f9f5a7b3dc4b36b9621620e528fb7af3bef2117c8962318894f63cc",
+  "signature": "f707ab3271d7adbdab97ae82648e31b33f1e58dc055606cc846496d6fc0215b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-regal"
 }

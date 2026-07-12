@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6044620",
+  "certificate_id": "MN-SC-2026-0300094",
   "skill_id": "mn-prompt-a7c53b0d",
   "skill_name": "Data warehouse metrics",
-  "issued_at": "2026-07-06T05:34:04.620Z",
-  "expires_at": "2026-07-13T05:34:04.620Z",
+  "issued_at": "2026-07-12T04:25:00.094Z",
+  "expires_at": "2026-07-19T04:25:00.094Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8e28ec46c3b3b4597336f4c6b06f74c908fddaea1afa078de2a89d29f15d7e0",
+  "signature": "34d499e108c36fec6e9703071784db54a8f6cae863b2219b57353942838b396a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a7c53b0d"
 }

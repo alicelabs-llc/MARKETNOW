@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6258925",
+  "certificate_id": "MN-SC-2026-0346520",
   "skill_id": "mn-awmcp-mcptechtrend",
   "skill_name": "mcp-techTrend",
-  "issued_at": "2026-07-06T05:37:38.925Z",
-  "expires_at": "2026-07-13T05:37:38.925Z",
+  "issued_at": "2026-07-12T04:25:46.520Z",
+  "expires_at": "2026-07-19T04:25:46.520Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "2e607510a1083a9d3052a59297e206ca35fbb11a59ccaf0a1e3eefc208d6d95a",
+  "signature": "9cdf2c367735b33ce4b8f27923962dc210bd4f5a45e7e22232cac9d3671ca713",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcptechtrend"
 }

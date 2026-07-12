@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5853991",
+  "certificate_id": "MN-SC-2026-0058255",
   "skill_id": "mn-prompt-7234fe9f",
   "skill_name": "Especialista Email + SendGrid/AWS SES",
-  "issued_at": "2026-07-06T05:30:53.991Z",
-  "expires_at": "2026-07-13T05:30:53.991Z",
+  "issued_at": "2026-07-12T04:20:58.255Z",
+  "expires_at": "2026-07-19T04:20:58.255Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "269f78697f72429510748f4261eefd83fbc8a68928739dc315284e3edfdd3bed",
+  "signature": "d9544b1dc35255e06886b25e53adc9c8271b021fafc47f2718a3fcae7f200499",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7234fe9f"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6472703",
+  "certificate_id": "MN-SC-2026-0584263",
   "skill_id": "mn-real-scrapling",
   "skill_name": "Scrapling",
-  "issued_at": "2026-07-06T05:41:12.703Z",
-  "expires_at": "2026-07-13T05:41:12.703Z",
+  "issued_at": "2026-07-12T04:29:44.263Z",
+  "expires_at": "2026-07-19T04:29:44.263Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f9a9a9bd3c8600f4e03204e16d1f00fb253c11a34973f5328bd3104b873ddad",
+  "signature": "2695dbce3babe26db7e3cb068043ac8621873a59bb3934d63a273b5ff56fa484",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scrapling"
 }

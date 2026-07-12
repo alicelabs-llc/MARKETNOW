@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6054075",
+  "certificate_id": "MN-SC-2026-0313191",
   "skill_id": "mn-prompt-921f4c8f",
   "skill_name": "Parking garage operations",
-  "issued_at": "2026-07-06T05:34:14.075Z",
-  "expires_at": "2026-07-13T05:34:14.075Z",
+  "issued_at": "2026-07-12T04:25:13.191Z",
+  "expires_at": "2026-07-19T04:25:13.191Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "60274720e287b8dc060ccd81f8e7df8791a426e064a682243ce1c2cb7e228b5e",
+  "signature": "7abc7a59d04c243470b0d62321e92d51cbca86ef0708b174ea8de1b6944981be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-921f4c8f"
 }

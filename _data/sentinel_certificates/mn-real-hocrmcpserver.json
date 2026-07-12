@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6338615",
+  "certificate_id": "MN-SC-2026-0437934",
   "skill_id": "mn-real-hocrmcpserver",
   "skill_name": "hocr_mcp_server",
-  "issued_at": "2026-07-06T05:38:58.615Z",
-  "expires_at": "2026-07-13T05:38:58.615Z",
+  "issued_at": "2026-07-12T04:27:17.934Z",
+  "expires_at": "2026-07-19T04:27:17.934Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a2c134492f39b8c2785c108f3ee11336f83847fcf19217cc9ecf5ddd24f7a3d4",
+  "signature": "1df6cde00090f23b2b31d2e3a4ace19d775679d956f3ff225dd73c5845962208",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hocrmcpserver"
 }

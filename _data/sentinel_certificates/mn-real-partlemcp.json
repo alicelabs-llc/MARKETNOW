@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6429344",
+  "certificate_id": "MN-SC-2026-0538529",
   "skill_id": "mn-real-partlemcp",
   "skill_name": "partle-mcp",
-  "issued_at": "2026-07-06T05:40:29.344Z",
-  "expires_at": "2026-07-13T05:40:29.344Z",
+  "issued_at": "2026-07-12T04:28:58.529Z",
+  "expires_at": "2026-07-19T04:28:58.529Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7ba277824afd4c1d7e93ceac3ff5ccdbd31ac790fdce2c171a7128ea194a3749",
+  "signature": "262f0db0933458799f7ea71942b74be75eb2497ceccc49c34ea73b04fcd0a99d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-partlemcp"
 }

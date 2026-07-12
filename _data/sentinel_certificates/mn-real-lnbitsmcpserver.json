@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6372177",
+  "certificate_id": "MN-SC-2026-0470165",
   "skill_id": "mn-real-lnbitsmcpserver",
   "skill_name": "LNbits-MCP-Server",
-  "issued_at": "2026-07-06T05:39:32.177Z",
-  "expires_at": "2026-07-13T05:39:32.177Z",
+  "issued_at": "2026-07-12T04:27:50.165Z",
+  "expires_at": "2026-07-19T04:27:50.165Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d4c18ec445aa9c71c02cf4e1b64a7336aea4bccc4f1fdd56d71dac582a6f478",
+  "signature": "1fbf4fd4c70fca537b8ace68b6a0ee47fd5846769c8b86debb4f1563d45daa52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lnbitsmcpserver"
 }

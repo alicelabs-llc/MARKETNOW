@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6478695",
+  "certificate_id": "MN-SC-2026-0591157",
   "skill_id": "mn-real-mcpbrasil",
   "skill_name": "mcp-brasil",
-  "issued_at": "2026-07-06T05:41:18.695Z",
-  "expires_at": "2026-07-13T05:41:18.695Z",
+  "issued_at": "2026-07-12T04:29:51.157Z",
+  "expires_at": "2026-07-19T04:29:51.157Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4672281f49298669af2783e4fd6080877c96d6e2149bda2391e90fa1033f11d",
+  "signature": "1ed7c1d9a26d1c4ec1b31ff76a8a24cbde0d6bfc381c35fec674d6f48765dd60",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpbrasil"
 }

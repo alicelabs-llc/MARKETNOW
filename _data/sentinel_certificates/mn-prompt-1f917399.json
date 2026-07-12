@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5974896",
+  "certificate_id": "MN-SC-2026-0209099",
   "skill_id": "mn-prompt-1f917399",
   "skill_name": "Finder's fee agreement",
-  "issued_at": "2026-07-06T05:32:54.896Z",
-  "expires_at": "2026-07-13T05:32:54.896Z",
+  "issued_at": "2026-07-12T04:23:29.099Z",
+  "expires_at": "2026-07-19T04:23:29.099Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "37639c02354a09248c503e5fe7d50e6727db879cfc43d2c74b8c13abf9ab26d1",
+  "signature": "0f27ea528efc8d8a8dd89df8ff3c88bd87eaf221b27aae5322ba3cf7a1636634",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1f917399"
 }

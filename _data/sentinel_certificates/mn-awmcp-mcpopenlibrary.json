@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6250834",
+  "certificate_id": "MN-SC-2026-0336463",
   "skill_id": "mn-awmcp-mcpopenlibrary",
   "skill_name": "mcp-open-library",
-  "issued_at": "2026-07-06T05:37:30.834Z",
-  "expires_at": "2026-07-13T05:37:30.834Z",
+  "issued_at": "2026-07-12T04:25:36.463Z",
+  "expires_at": "2026-07-19T04:25:36.463Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e48a9d2f4db8a7927fe5b76885f2e1b4bc5596ba4526613a9428467c4c690307",
+  "signature": "067f00280cc65bbf937d72c9e78cae0d758667834583c99ba0ad80c8101209a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpopenlibrary"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6328516",
+  "certificate_id": "MN-SC-2026-0424524",
   "skill_id": "mn-real-mcpaiservervisualstu",
   "skill_name": "mcp-ai-server-visual-studio",
-  "issued_at": "2026-07-06T05:38:48.516Z",
-  "expires_at": "2026-07-13T05:38:48.516Z",
+  "issued_at": "2026-07-12T04:27:04.524Z",
+  "expires_at": "2026-07-19T04:27:04.524Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9aa37d11530f9502f3d7a05c37bcb84fc245e2e1a8dcd6e5382c9636065d9687",
+  "signature": "162d0f8d6b960a3de4c25b732c138ce66211bf6331c6e0cab8c602158f0cbddd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpaiservervisualstu"
 }

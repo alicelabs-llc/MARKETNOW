@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6509144",
+  "certificate_id": "MN-SC-2026-0622234",
   "skill_id": "mn-real-acemcpnode",
   "skill_name": "Ace-Mcp-Node",
-  "issued_at": "2026-07-06T05:41:49.144Z",
-  "expires_at": "2026-07-13T05:41:49.144Z",
+  "issued_at": "2026-07-12T04:30:22.234Z",
+  "expires_at": "2026-07-19T04:30:22.234Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d98587ef168b571c949975f4ec7d9e122d5706c6b2d410b712a81695dd2359a3",
+  "signature": "9c409256c86a5f56bcdc4a5b7baf2de63969e5a789433f22c58c55b562fa0b53",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-acemcpnode"
 }

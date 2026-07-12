@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6398728",
+  "certificate_id": "MN-SC-2026-0503915",
   "skill_id": "mn-real-subdownloadmcp",
   "skill_name": "subdownload-mcp",
-  "issued_at": "2026-07-06T05:39:58.728Z",
-  "expires_at": "2026-07-13T05:39:58.728Z",
+  "issued_at": "2026-07-12T04:28:23.915Z",
+  "expires_at": "2026-07-19T04:28:23.915Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9b8b812801f4bfe8515ea18258149676a28c02a2fb0d4aae8135b83097df830",
+  "signature": "e4271d48b3f374ad738f76e5194003e19c82349a2e492ffa8fc6fd7a481ebf47",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-subdownloadmcp"
 }

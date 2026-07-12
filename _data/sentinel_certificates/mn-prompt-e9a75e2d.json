@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5990667",
+  "certificate_id": "MN-SC-2026-0231178",
   "skill_id": "mn-prompt-e9a75e2d",
   "skill_name": "Payroll processing multi-state",
-  "issued_at": "2026-07-06T05:33:10.667Z",
-  "expires_at": "2026-07-13T05:33:10.667Z",
+  "issued_at": "2026-07-12T04:23:51.178Z",
+  "expires_at": "2026-07-19T04:23:51.178Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4efa5969a66b116a4d46053fef77675fc5c739fe2766bae2d23841f20e3fc4ad",
+  "signature": "fc887b1245d1f1bfbe9875f3d9446acfbbba5a1bc530ccf1b16a52cc671e7b26",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e9a75e2d"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6001623",
+  "certificate_id": "MN-SC-2026-0245611",
   "skill_id": "mn-prompt-03434532",
   "skill_name": "Product backlog grooming",
-  "issued_at": "2026-07-06T05:33:21.623Z",
-  "expires_at": "2026-07-13T05:33:21.623Z",
+  "issued_at": "2026-07-12T04:24:05.611Z",
+  "expires_at": "2026-07-19T04:24:05.611Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d0cabce0f05e1e2daadfdc00026d5aa22257477f5e9b940bf3a69bfbe4507c89",
+  "signature": "8d2609d7cccdc68ccb8dfea3a541a3bf7729de43dd606c4c5c20a46a2611ebd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-03434532"
 }

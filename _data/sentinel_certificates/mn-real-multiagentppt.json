@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6507035",
+  "certificate_id": "MN-SC-2026-0620223",
   "skill_id": "mn-real-multiagentppt",
   "skill_name": "MultiAgentPPT",
-  "issued_at": "2026-07-06T05:41:47.035Z",
-  "expires_at": "2026-07-13T05:41:47.035Z",
+  "issued_at": "2026-07-12T04:30:20.223Z",
+  "expires_at": "2026-07-19T04:30:20.223Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e283ad39d0f30d614c78aa42e89164110fc948c7dedbc9d449093d1e17d48f1",
+  "signature": "81851ec12fedfd3e6054cfdef8af8a4fa25a49529273f1cc48eab2698ffdca02",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-multiagentppt"
 }

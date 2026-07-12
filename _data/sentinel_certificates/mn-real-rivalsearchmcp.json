@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0647729",
+  "skill_id": "mn-real-rivalsearchmcp",
+  "skill_name": "RivalSearchMCP",
+  "issued_at": "2026-07-12T04:30:47.729Z",
+  "expires_at": "2026-07-19T04:30:47.729Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "4a12e6a0625fc366d0c9cf228bbeba6cf5e76f176046f5b9e7f715c51ff6ca2c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rivalsearchmcp"
+}

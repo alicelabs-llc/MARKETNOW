@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6454657",
+  "certificate_id": "MN-SC-2026-0565222",
   "skill_id": "mn-real-attendanceenginemcp",
   "skill_name": "attendance-engine-mcp",
-  "issued_at": "2026-07-06T05:40:54.657Z",
-  "expires_at": "2026-07-13T05:40:54.657Z",
+  "issued_at": "2026-07-12T04:29:25.222Z",
+  "expires_at": "2026-07-19T04:29:25.222Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a50af1bcb7417d1d0fb99c4eb75ea7eb011ae057483ecc1d78e9908f6dd9e754",
+  "signature": "40c8956a909e2dd7aac221e569f2e62a76f622c274ec76d45f1c0d4619898ac7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-attendanceenginemcp"
 }

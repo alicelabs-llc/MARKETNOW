@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6325363",
+  "certificate_id": "MN-SC-2026-1077262",
   "skill_id": "mn-real-higress",
   "skill_name": "higress",
-  "issued_at": "2026-07-06T05:38:45.363Z",
-  "expires_at": "2026-07-13T05:38:45.363Z",
+  "issued_at": "2026-07-12T04:37:57.262Z",
+  "expires_at": "2026-07-19T04:37:57.262Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03f2a1c2d80792863a09defc838c8924432a171f4269168ad182382a8402d5b6",
+  "signature": "59f544230a7996802a531905c205b2e239e90cfe0b571538dd9aa4d7e43ea9b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-higress"
 }

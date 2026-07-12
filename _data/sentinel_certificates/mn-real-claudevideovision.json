@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6483806",
+  "certificate_id": "MN-SC-2026-0595990",
   "skill_id": "mn-real-claudevideovision",
   "skill_name": "claude-video-vision",
-  "issued_at": "2026-07-06T05:41:23.806Z",
-  "expires_at": "2026-07-13T05:41:23.806Z",
+  "issued_at": "2026-07-12T04:29:55.990Z",
+  "expires_at": "2026-07-19T04:29:55.990Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b62fe1b3e55243d19e91bfa6caf44c7639879dc9a9253e06e47cd3bc45619755",
+  "signature": "c12d95543f54323b453e87269de401bc15ad0d5b503c49d163d7977b86ed4ee9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudevideovision"
 }

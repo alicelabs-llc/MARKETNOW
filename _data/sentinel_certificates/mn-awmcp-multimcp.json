@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6289566",
+  "certificate_id": "MN-SC-2026-0384160",
   "skill_id": "mn-awmcp-multimcp",
   "skill_name": "multi_mcp",
-  "issued_at": "2026-07-06T05:38:09.566Z",
-  "expires_at": "2026-07-13T05:38:09.566Z",
+  "issued_at": "2026-07-12T04:26:24.160Z",
+  "expires_at": "2026-07-19T04:26:24.160Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9dfa2a18a3e82d453b88c0c2994a1fb26473d9aa2dbe17e73f981933cbfe4690",
+  "signature": "6fdc85097ac0156246c3a9b0e31f4a4a78031edca6ce2fa9e72e2af09026adce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-multimcp"
 }

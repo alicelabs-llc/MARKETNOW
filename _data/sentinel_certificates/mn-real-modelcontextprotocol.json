@@ -1,11 +1,11 @@
 {
-  "certificate_id": "MN-SC-2026-6494651",
+  "certificate_id": "MN-SC-2026-1063928",
   "skill_id": "mn-real-modelcontextprotocol",
-  "skill_name": "model-context-protocol-resources",
-  "issued_at": "2026-07-06T05:41:34.651Z",
-  "expires_at": "2026-07-13T05:41:34.651Z",
+  "skill_name": "modelcontextprotocol",
+  "issued_at": "2026-07-12T04:37:43.928Z",
+  "expires_at": "2026-07-19T04:37:43.928Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
@@ -19,13 +19,13 @@
     "l2": false
   },
   "layer_details": {
-    "l15_findings": 2,
+    "l15_findings": 3,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d4d7f2a1a4ef6afa40fb04d5164a4eefd25ef652d1308ef57054f70237b26b5f",
+  "signature": "e6663a7fd41af8b619da06b045d26289e5e257c5d7608e212f37d2decb4c2760",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-modelcontextprotocol"
 }

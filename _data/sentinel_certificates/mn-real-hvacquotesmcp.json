@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6457001",
+  "certificate_id": "MN-SC-2026-0569275",
   "skill_id": "mn-real-hvacquotesmcp",
   "skill_name": "hvac-quotes-mcp",
-  "issued_at": "2026-07-06T05:40:57.001Z",
-  "expires_at": "2026-07-13T05:40:57.001Z",
+  "issued_at": "2026-07-12T04:29:29.275Z",
+  "expires_at": "2026-07-19T04:29:29.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b386a3019452d81552b27c8394b199b440e482f2845c7690ff920c6460c7dea",
+  "signature": "fc505c0b5308f9294cc498014a35a12f7ea2c8cf4d101f15336438733877b998",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hvacquotesmcp"
 }

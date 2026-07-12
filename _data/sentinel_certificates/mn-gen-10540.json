@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5715325",
+  "certificate_id": "MN-SC-2026-0037179",
   "skill_id": "mn-gen-10540",
   "skill_name": "spoken",
-  "issued_at": "2026-07-06T05:28:35.325Z",
-  "expires_at": "2026-07-13T05:28:35.325Z",
+  "issued_at": "2026-07-12T04:20:37.180Z",
+  "expires_at": "2026-07-19T04:20:37.180Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b98d578bd26a8353f78337f7dde185fe071ee0c0048c3192ce24f1d04c268f2",
+  "signature": "444776d6f68343a252dfc2870b5bb61a6a30b4b2642ca401304e817ba7d0b76f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10540"
 }

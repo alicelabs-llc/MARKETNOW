@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6481712",
+  "certificate_id": "MN-SC-2026-0593718",
   "skill_id": "mn-real-matlabmcpserver",
   "skill_name": "matlab-mcp-server",
-  "issued_at": "2026-07-06T05:41:21.712Z",
-  "expires_at": "2026-07-13T05:41:21.712Z",
+  "issued_at": "2026-07-12T04:29:53.718Z",
+  "expires_at": "2026-07-19T04:29:53.718Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9de2019d231fc9921ccdccb781011045455ce6e1c3183d391adc0b51e587c73c",
+  "signature": "d650eaffdf9221fb7aac100f0298ac71d7a8163ebad15856b7dbf7f3ff57bfa9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-matlabmcpserver"
 }

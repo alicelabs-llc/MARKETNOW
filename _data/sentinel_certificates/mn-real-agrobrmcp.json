@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6312641",
+  "certificate_id": "MN-SC-2026-0409448",
   "skill_id": "mn-real-agrobrmcp",
   "skill_name": "agrobr-mcp",
-  "issued_at": "2026-07-06T05:38:32.641Z",
-  "expires_at": "2026-07-13T05:38:32.641Z",
+  "issued_at": "2026-07-12T04:26:49.448Z",
+  "expires_at": "2026-07-19T04:26:49.448Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd4e78c016476744faa7d421ff0bae59818c5607e7e922fdb12ecec9f9b8b9d9",
+  "signature": "bd76504f3d5179581c272af8c50569ef3977acf24e73a82420acd81417c8c23f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agrobrmcp"
 }

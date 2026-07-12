@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6006844",
+  "certificate_id": "MN-SC-2026-0253349",
   "skill_id": "mn-prompt-14887bf0",
   "skill_name": "Product OKR scoring quarterly",
-  "issued_at": "2026-07-06T05:33:26.844Z",
-  "expires_at": "2026-07-13T05:33:26.844Z",
+  "issued_at": "2026-07-12T04:24:13.349Z",
+  "expires_at": "2026-07-19T04:24:13.349Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac0c924c99b0107a6c6aefd00d8a26d90d43f006eee2d623a1d55e5da3b4b6da",
+  "signature": "f395da5ea3382d1a682651cdbd7a2ee19bd0b65756eaa45564e46acda97e805f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-14887bf0"
 }

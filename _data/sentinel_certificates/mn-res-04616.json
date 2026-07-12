@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-5472508",
+  "certificate_id": "MN-SC-2026-0007099",
   "skill_id": "mn-res-04616",
   "skill_name": "google-calendar-mcp",
-  "issued_at": "2026-07-06T05:24:32.508Z",
-  "expires_at": "2026-07-13T05:24:32.508Z",
+  "issued_at": "2026-07-12T04:20:07.099Z",
+  "expires_at": "2026-07-19T04:20:07.099Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de3972e6020fda506117e4640d4b777ef4ea309bd2e8518fb07962512ea2e9af",
+  "signature": "22f0fba63a6186ec132e86a07b90e4d1a7b4e897d5c0502d7f5ebdd723a60b45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-04616"
 }

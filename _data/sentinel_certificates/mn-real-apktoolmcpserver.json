@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6443148",
+  "certificate_id": "MN-SC-2026-0552509",
   "skill_id": "mn-real-apktoolmcpserver",
   "skill_name": "apktool-mcp-server",
-  "issued_at": "2026-07-06T05:40:43.148Z",
-  "expires_at": "2026-07-13T05:40:43.148Z",
+  "issued_at": "2026-07-12T04:29:12.509Z",
+  "expires_at": "2026-07-19T04:29:12.509Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75fd9520d2a857ab4428bee348126cd19c8fb9f3b4c3005473435999b1ca5600",
+  "signature": "d6a7f0a74730e923d117b32d40dafaed5ede548b25d3c8a4e000e9ff1ef78b00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apktoolmcpserver"
 }

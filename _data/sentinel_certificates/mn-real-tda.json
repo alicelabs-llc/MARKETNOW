@@ -1,0 +1,31 @@
+{
+  "certificate_id": "MN-SC-2026-0675447",
+  "skill_id": "mn-real-tda",
+  "skill_name": "tda",
+  "issued_at": "2026-07-12T04:31:15.447Z",
+  "expires_at": "2026-07-19T04:31:15.447Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16": "medium",
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "b1201a553f8ffc3dcc7567e35b296d2c1fa2dc7d4ccc579d9ee43c39e4936f5a",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tda"
+}

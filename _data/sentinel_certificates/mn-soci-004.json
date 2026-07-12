@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6187080",
+  "certificate_id": "MN-SC-2026-0320010",
   "skill_id": "mn-soci-004",
   "skill_name": "facebook-mcp-server",
-  "issued_at": "2026-07-06T05:36:27.080Z",
-  "expires_at": "2026-07-13T05:36:27.080Z",
+  "issued_at": "2026-07-12T04:25:20.010Z",
+  "expires_at": "2026-07-19T04:25:20.010Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "adfc3f7382a417c2ed3a41c0794b6b3dff16ea4276dc2ed7f2b7a2121e30562b",
+  "signature": "dd0d749ccc3cb3ac16f820dca522e254b70a7b2e92c467b529eed73bf8ebc912",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-soci-004"
 }

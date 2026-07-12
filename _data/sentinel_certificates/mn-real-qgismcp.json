@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6404411",
+  "certificate_id": "MN-SC-2026-0508865",
   "skill_id": "mn-real-qgismcp",
   "skill_name": "qgis_mcp",
-  "issued_at": "2026-07-06T05:40:04.411Z",
-  "expires_at": "2026-07-13T05:40:04.411Z",
+  "issued_at": "2026-07-12T04:28:28.865Z",
+  "expires_at": "2026-07-19T04:28:28.865Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8cfb590025c74b8670aa85678c2e212d7e14980b490252ba7a822087393d65a3",
+  "signature": "566dd20cfa8e9cf6e82ff6a1a77a96702651f7ccaf8b3635dfd2c3df6ad9996d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-qgismcp"
 }

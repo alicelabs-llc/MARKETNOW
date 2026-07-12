@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6454994",
+  "certificate_id": "MN-SC-2026-0565548",
   "skill_id": "mn-real-bossagentcli",
   "skill_name": "boss-agent-cli",
-  "issued_at": "2026-07-06T05:40:54.994Z",
-  "expires_at": "2026-07-13T05:40:54.994Z",
+  "issued_at": "2026-07-12T04:29:25.548Z",
+  "expires_at": "2026-07-19T04:29:25.548Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "61141a415193f0451f1ba67d9978a4c361a0e4efa38753263fd7bb261083cda0",
+  "signature": "d92caf6c5e11b6c28fe78bab37ba84669523845c606fe19dc6cc078b5a4f2fa6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bossagentcli"
 }

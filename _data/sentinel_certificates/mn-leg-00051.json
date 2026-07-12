@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6105418",
+  "certificate_id": "MN-SC-2026-0318839",
   "skill_id": "mn-leg-00051",
   "skill_name": "sec-filings-mcp",
-  "issued_at": "2026-07-06T05:35:05.418Z",
-  "expires_at": "2026-07-13T05:35:05.418Z",
+  "issued_at": "2026-07-12T04:25:18.839Z",
+  "expires_at": "2026-07-19T04:25:18.839Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "22b06857b4d3ff452a093f21b9f7c8dac11e897b336761b42806bc65594d07bd",
+  "signature": "801d49030d8c015e89a5f0545fe1eeeae790d313505ccfee550fd026ebc06f3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-leg-00051"
 }

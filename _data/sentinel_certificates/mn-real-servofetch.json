@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6427083",
+  "certificate_id": "MN-SC-2026-0536339",
   "skill_id": "mn-real-servofetch",
   "skill_name": "servo-fetch",
-  "issued_at": "2026-07-06T05:40:27.083Z",
-  "expires_at": "2026-07-13T05:40:27.083Z",
+  "issued_at": "2026-07-12T04:28:56.339Z",
+  "expires_at": "2026-07-19T04:28:56.339Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a832eb4eece770ea243e9a97c52aad57e500752b62512de261a158004b797c8e",
+  "signature": "ab0ee8d15ed011d5e6d0d6588dbbf03dbc0fc804fcab34f29535da3831c875fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-servofetch"
 }

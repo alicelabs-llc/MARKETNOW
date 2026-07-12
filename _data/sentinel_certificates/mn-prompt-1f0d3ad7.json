@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6054585",
+  "certificate_id": "MN-SC-2026-0313239",
   "skill_id": "mn-prompt-1f0d3ad7",
   "skill_name": "Laundromat operations",
-  "issued_at": "2026-07-06T05:34:14.585Z",
-  "expires_at": "2026-07-13T05:34:14.585Z",
+  "issued_at": "2026-07-12T04:25:13.239Z",
+  "expires_at": "2026-07-19T04:25:13.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "59b2b92c567d208396ecd6764574ffafdfcf23628542c2f96fb5cf3b2063ed30",
+  "signature": "a7f473a11664b314f67ebd05e2f70bcf7f292f4dafd8ecc78fe2a22b4067b383",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1f0d3ad7"
 }

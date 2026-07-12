@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6251365",
+  "certificate_id": "MN-SC-2026-0336981",
   "skill_id": "mn-awmcp-travelartmcp",
   "skill_name": "travel-art-mcp",
-  "issued_at": "2026-07-06T05:37:31.365Z",
-  "expires_at": "2026-07-13T05:37:31.365Z",
+  "issued_at": "2026-07-12T04:25:36.981Z",
+  "expires_at": "2026-07-19T04:25:36.981Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "77128b52802f10d048bb1092aab0b1dedb7f2b4f671c03c14658ab39881c1b6c",
+  "signature": "be8e82f60cfacca5e05345122d0c14714336e312d8e7a653328aa5cd70d1d199",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-travelartmcp"
 }

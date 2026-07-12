@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6331012",
+  "certificate_id": "MN-SC-2026-0427479",
   "skill_id": "mn-real-rulesetmcp",
   "skill_name": "RulesetMCP",
-  "issued_at": "2026-07-06T05:38:51.012Z",
-  "expires_at": "2026-07-13T05:38:51.012Z",
+  "issued_at": "2026-07-12T04:27:07.479Z",
+  "expires_at": "2026-07-19T04:27:07.479Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af4bf7a9abf59513333509e4c3bd5c43eeeac794eec0968784b46f5e93949c8e",
+  "signature": "c3dadcefd5452825be06876a8c65ab5382c040c63a5983afb7e2f6664b4dcad8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rulesetmcp"
 }

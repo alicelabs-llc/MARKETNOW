@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-6283334",
+  "certificate_id": "MN-SC-2026-0375183",
   "skill_id": "mn-awmcp-openclawmcp",
   "skill_name": "openclaw-mcp",
-  "issued_at": "2026-07-06T05:38:03.334Z",
-  "expires_at": "2026-07-13T05:38:03.334Z",
+  "issued_at": "2026-07-12T04:26:15.183Z",
+  "expires_at": "2026-07-19T04:26:15.183Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -25,7 +25,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "64710da61b0ea988a4530f60d76ffed6fe1e14b11b317321297f09d361ccaea6",
+  "signature": "4d9c7a83d6e9f3133c827f19f21be288b9bcd8f3949e56f9b48daa20b29bac23",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-openclawmcp"
 }

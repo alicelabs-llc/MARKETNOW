@@ -32,11 +32,11 @@
       "destination": "/for-agents.html"
     },
     {
-      "source": "/agents",
-      "destination": "/agents.html"
+      "source": "/acp",
+      "destination": "/acp.html"
     },
     {
-      "source": "/((?!api/|for-agents|landing-pages/|tools/|agents).*)",
+      "source": "/((?!api/|for-agents|landing-pages/|tools/|acp).*)",
       "destination": "/index.html"
     }
   ],

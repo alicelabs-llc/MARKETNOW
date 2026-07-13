@@ -94,6 +94,13 @@ export default async function handler(req, res) {
         description: 'L4.5 Content fingerprint schema — SHA-256 of repo HEAD',
         auth: 'none',
       },
+      acp: {
+        method: 'ANY',
+        path: '/api/acp',
+        description: 'ACP — Agent Communication Protocol. Discover, negotiate, transact with other agents.',
+        auth: 'none',
+        spec: '/acp-spec.json',
+      },
       egress_allowlist: {
         method: 'GET',
         path: '/egress-allowlist.json',

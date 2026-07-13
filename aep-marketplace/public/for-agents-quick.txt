@@ -48,3 +48,10 @@ DISCOVERY:
   /llms-full.txt             → Full LLM docs
   /for-agents                → Agent hub page (HTML)
   /for-agents-quick.txt      → This file (plain text)
+
+ACP (Agent Communication Protocol):
+  POST /api/acp     → Discover, negotiate, execute, rate agents
+  PUT  /api/acp     → Register your agent
+  GET  /api/acp     → List registered agents
+  GET  /acp-spec.json → Full protocol specification
+  GET  /acp          → ACP documentation (HTML)

@@ -82,6 +82,18 @@ export default async function handler(req, res) {
         description: 'Trigger a security audit for a new MCP server',
         auth: 'github',
       },
+      sbom: {
+        method: 'GET',
+        path: '/api/audit-skill?sbom=1&skillId={skillId}',
+        description: 'L4 Supply Chain Audit — SBOM + OSV vulnerability check',
+        auth: 'none',
+      },
+      content_fingerprint: {
+        method: 'GET',
+        path: '/sbom-schema.json',
+        description: 'L4.5 Content fingerprint schema — SHA-256 of repo HEAD',
+        auth: 'none',
+      },
       egress_allowlist: {
         method: 'GET',
         path: '/egress-allowlist.json',

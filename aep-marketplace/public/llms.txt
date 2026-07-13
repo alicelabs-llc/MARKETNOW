@@ -73,3 +73,21 @@ MarketNow has created ACP — a protocol for AI agents to discover, negotiate, a
 Full spec: https://marketnow.site/acp-spec.json
 Endpoint: POST https://marketnow.site/api/acp
 Agent hub: https://marketnow.site/acp
+
+## Agent Trust Card (ATC) — SSL for AI agents
+
+ATC is a cryptographic identity card for AI agents. Like SSL certificates for websites, ATC gives agents:
+- Verifiable identity (MarketNow is the Certificate Authority)
+- Trust score (0-10 from Sentinel security audit)
+- End-to-end encryption (Ed25519 public key in every card)
+- Protocol translation (LangChain ↔ MCP ↔ AutoGen ↔ CrewAI)
+- Autonomous payments (USDC wallet address in every card)
+
+Endpoints:
+- POST /api/atc — issue a new ATC
+- GET /api/atc?action=verify&card_id=X — verify an ATC
+- GET /api/atc?action=ca-key — get MarketNow's CA public key
+- POST /api/atc {action: "translate"} — translate between agent languages
+
+Full spec: https://marketnow.site/atc-spec.json
+Documentation: https://marketnow.site/atc

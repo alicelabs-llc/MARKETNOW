@@ -36,11 +36,11 @@
       "destination": "/acp.html"
     },
     {
-      "source": "/agent-passport",
-      "destination": "/agent-passport.html"
+      "source": "/atc",
+      "destination": "/atc.html"
     },
     {
-      "source": "/((?!api/|for-agents|landing-pages/|tools/|acp|agent-passport).*)",
+      "source": "/((?!api/|for-agents|landing-pages/|tools/|acp|atc).*)",
       "destination": "/index.html"
     }
   ],

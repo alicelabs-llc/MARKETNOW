@@ -55,3 +55,12 @@ ACP (Agent Communication Protocol):
   GET  /api/acp     → List registered agents
   GET  /acp-spec.json → Full protocol specification
   GET  /acp          → ACP documentation (HTML)
+
+ATC (Agent Trust Card):
+  POST /api/atc              → Issue a new ATC (identity + trust + encryption + payment)
+  GET  /api/atc              → List all ATCs
+  GET  /api/atc?action=verify&card_id=X → Verify an ATC
+  GET  /api/atc?action=ca-key → Get CA public key for signature verification
+  POST /api/atc {translate}  → Translate messages between agent frameworks
+  GET  /atc-spec.json        → Full ATC specification
+  GET  /atc                  → ATC documentation (HTML)

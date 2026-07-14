@@ -80,8 +80,29 @@ console.log(`Only skill: ${ONLY_SKILL || 'none'}`);
 console.log(``);
 
 // Load catalog
-const skills = JSON.parse(fs.readFileSync(SKILLS_PATH, 'utf8'));
-console.log(`Loaded ${skills.length} skills from catalog.`);
+const allSkills = JSON.parse(fs.readFileSync(SKILLS_PATH, 'utf8'));
+console.log(`Loaded ${allSkills.length} skills from catalog.`);
+
+// FINDING S5 FIX (rushabdev): dedupe by id AND slug before auditing.
+// Previously, if the catalog had two entries with the same slug (e.g. a
+// generic + a specific variant), both got audited and both got certificates
+// — the second overwriting the first. The conflict was silent. Now we
+// dedupe explicitly and log how many duplicates we removed.
+const seenIds = new Set();
+const seenSlugs = new Set();
+const skills = [];
+let dupCount = 0;
+for (const s of allSkills) {
+  if (seenIds.has(s.id)) { dupCount++; continue; }
+  // slug dedupe only when slug exists and is non-empty
+  if (s.slug && seenSlugs.has(s.slug)) { dupCount++; continue; }
+  seenIds.add(s.id);
+  if (s.slug) seenSlugs.add(s.slug);
+  skills.push(s);
+}
+if (dupCount > 0) {
+  console.log(`Removed ${dupCount} duplicate skill(s) by id/slug. Auditing ${skills.length} unique skills.`);
+}
 
 // Filter
 let targets = skills;

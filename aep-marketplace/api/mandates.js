@@ -44,8 +44,18 @@
 import * as mandateCache from '../lib/mandate-cache.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
 import { setCorsHeaders } from '../lib/cors.mjs';
+// FINDING P5 FIX (rushabdev): hash EIP-191 signatures before storing.
+// The raw signature could be replayed in a non-EIP-191 context (e.g. as a
+// personal_sign over the same message) by anyone reading the public GitHub
+// repo. Storing only the SHA-256 hash lets us verify future signatures
+// against the same mandate without retaining the replayable artifact.
+import crypto from 'crypto';
 
 const GITHUB_API = 'https://api.github.com';
+
+function sha256hex(s) {
+  return crypto.createHash('sha256').update(s, 'utf8').digest('hex');
+}
 
 // L4 FIX: fail closed si INTERNAL_SECRET no está configurado
 const INTERNAL_SECRET = process.env.MANDATES_INTERNAL_SECRET;
@@ -545,7 +555,13 @@ export default async function handler(req, res) {
         expiresAt: expiresAt || new Date(Date.now() + MANDATE_TTL_DAYS * 86400000).toISOString(),
         createdAt: nowIso(),
         status: 'active',
-        signature: signature || null,
+        // FINDING P5 FIX (rushabdev): store SHA-256 hash, not raw signature.
+        // The raw EIP-191 signature is replayable in a different signing
+        // context (personal_sign over the same message) by anyone who reads
+        // this public GitHub file. The hash is sufficient for our use case
+        // (verify-at-create-time, then trust the mandate record itself).
+        signature_hash: signature ? sha256hex(signature) : null,
+        signature_algorithm: signature ? 'EIP-191-SHA256' : null,
         txCount: 0,
         notificationMode: notifMode,
         notificationEmail: notificationEmail || null,
@@ -554,10 +570,11 @@ export default async function handler(req, res) {
         // AP2 compatibility fields — if a mandate was issued by an AP2-compliant
         // issuer, we store the cross-platform reference so it can be verified
         // by any AP2-aware agent. See /standards.
+        // FINDING P5 FIX (rushabdev): hash AP2 signature too.
         ap2: ap2_format ? {
           format: ap2_format,
           mandate_id: ap2_mandate_id || null,
-          signature: ap2_signature || null,
+          signature_hash: ap2_signature ? sha256hex(ap2_signature) : null,
           issuer: ap2_issuer || null,
           verified: false, // we have not yet verified the AP2 signature
         } : null,

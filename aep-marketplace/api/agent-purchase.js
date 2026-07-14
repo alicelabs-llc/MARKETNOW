@@ -32,6 +32,10 @@ import { setCorsHeaders } from '../lib/cors.mjs';
 import * as mandateCache from '../lib/mandate-cache.mjs';
 import * as txCache from '../lib/tx-cache.mjs';
 import * as baseRpc from '../lib/base-rpc-pool.mjs';
+// FINDING P2 FIX (rushabdev): direct module import instead of HTTP self-fetch.
+// Eliminates the internal call over public internet, removes ~200ms latency,
+// and closes the SSRF-adjacent pattern of trusting process.env.VERCEL_URL.
+import { getMandate as getMandateDirect, recordSpend as recordSpendDirect } from '../lib/mandates-logic.mjs';
 
 const USDC_CONTRACT = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
 const PAYMENT_WALLET = '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee';
@@ -58,21 +62,14 @@ async function getMandate(req, mandateId) {
   const cached = mandateCache.get(mandateId);
   if (cached) return cached;
 
-  // 2. Fetch desde /api/mandates
-  // H1 FIX: Don't trust req.headers.host (spoofable, enables SSRF + cache poisoning)
-  const baseUrl = `https://${process.env.VERCEL_URL || 'marketnow.site'}`;
-  try {
-    const r = await fetch(`${baseUrl}/api/mandates?id=${encodeURIComponent(mandateId)}`);
-    if (!r.ok) return null;
-    const j = await r.json();
-    const mandate = j.mandate || null;
-    if (mandate) {
-      mandateCache.set(mandateId, mandate);
-    }
-    return mandate;
-  } catch {
-    return null;
+  // 2. FINDING P2 FIX: Direct module call (no HTTP fetch to /api/mandates).
+  //    Eliminates SSRF surface (process.env.VERCEL_URL no longer trusted),
+  //    removes ~200ms latency, and avoids double-counting serverless invocations.
+  const mandate = await getMandateDirect(mandateId);
+  if (mandate) {
+    mandateCache.set(mandateId, mandate);
   }
+  return mandate;
 }
 
 async function verifyUsdcTx(txHash, expectedAmountRaw, expectedFromWallet) {
@@ -207,30 +204,17 @@ async function markTxHashUsed(txHash, licenseKey, skillId, amount) {
 }
 
 async function recordMandateSpend(req, mandateId, amount, txHash, skill) {
-  const baseUrl = `https://${process.env.VERCEL_URL || 'marketnow.site'}`;
-  // C1 FIX: pasar _internal + _secret para que el spend sea aceptado
-  // Y lanzar error si falla (fail-closed) — no emitir licencia si el spend falla
+  // FINDING P2 FIX: Direct module call (no HTTP fetch to /api/mandates).
+  // The old implementation POSTed to /api/mandates with _internal/_secret,
+  // traversing the public TLS edge. Now we call the shared module directly.
+  // C1 FIX preserved: throws on failure (fail-closed) — caller MUST abort.
   try {
-    const r = await fetch(`${baseUrl}/api/mandates`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action: 'spend',
-        id: mandateId,
-        amount,
-        txHash,
-        skillId: skill?.id,
-        skillName: skill?.name,
-        _internal: true,
-        _secret: process.env.MANDATES_INTERNAL_SECRET,
-      }),
-    });
+    const result = await recordSpendDirect(mandateId, amount, txHash, skill);
     mandateCache.invalidate(mandateId);
-    if (!r.ok) {
-      const errBody = await r.json().catch(() => ({}));
-      throw new Error(`mandate spend rejected: ${errBody.error || r.status}`);
+    if (!result.ok && result.code !== 'already_recorded') {
+      throw new Error(`mandate spend rejected: ${result.code}`);
     }
-    return true;
+    return result;
   } catch (e) {
     console.error('mandate spend FAILED (fail-closed):', e);
     mandateCache.invalidate(mandateId);

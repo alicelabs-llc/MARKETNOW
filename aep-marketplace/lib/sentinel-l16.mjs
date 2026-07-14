@@ -29,6 +29,22 @@
 // ═══════════════════════════════════════════════════════════════════════════
 // 1. SEMGREP-EQUIVALENT RULES (18 MCP-specific patterns)
 // ═══════════════════════════════════════════════════════════════════════════
+//
+// FINDING S2 FIX (rushabdev, July 2026):
+// Several rules (MCP-SS-002, MCP-PT-002, MCP-SL-001/002) previously matched
+// any occurrence of `localhost`, `127.0.0.1`, `../etc`, `api_key=...` etc.
+// in the analyzed text — including:
+//   - `process.env.MY_API_KEY` (a variable reference, not a hardcoded key)
+//   - `localhost` in a README example URL
+//   - `127.0.0.1` in a comment
+//
+// We now:
+//   1. Strip `process.env.*` references BEFORE running rules (S2).
+//   2. Strip fenced code blocks (```...```) and inline `code` spans from
+//      README-style content before running secret patterns (S3).
+//   3. Cap the analyzed text at 1MB to prevent malicious DoS (S4).
+
+const MAX_ANALYZE_BYTES = 1024 * 1024; // 1 MB (was effectively unbounded)
 
 const SEMGREP_RULES = [
   { id: 'MCP-PI-001', name: 'Prompt injection: ignore previous instructions', severity: 'critical', pattern: /ignore\s+(?:all\s+)?(?:previous|prior)\s+instructions/i, fix: 'Sanitize tool descriptions before exposing to LLM context' },
@@ -101,11 +117,57 @@ async function checkOSV(packageName) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+// PREPROCESSING — strip false-positive sources before running rules
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Strip `process.env.X` references — they are variable lookups, not hardcoded
+ * secrets. Without this, a skill that documents `process.env.STRIPE_KEY` in
+ * its README triggers MCP-SL-001 (hardcoded API key) — a false positive.
+ *
+ * Also strips `process.ENV.*`, `process.env['X']`, `process.env["X"]`.
+ */
+function stripProcessEnvRefs(text) {
+  return text
+    .replace(/process\.env\[\s*['"][^'"]+['"]\s*\]/gi, 'ENV_REF')
+    .replace(/process\.env\.[A-Z_][A-Z0-9_]*/gi, 'ENV_REF');
+}
+
+/**
+ * Strip fenced code blocks and inline code spans. README examples often
+ * contain placeholder secrets like `sk_live_abc123...` which would trigger
+ * secret detection rules. We treat code blocks as documentation, not as
+ * real secrets embedded in the skill.
+ *
+ * Note: this is conservative — we only strip code blocks for the SECRET
+ * detection pass. Semgrep rules (injection patterns) still run on the full
+ * text, because an attacker could hide a prompt injection inside a code
+ * block that the LLM might still execute.
+ */
+function stripCodeBlocks(text) {
+  return text
+    .replace(/```[\s\S]*?```/g, 'CODE_BLOCK')
+    .replace(/`[^`\n]+`/g, 'INLINE_CODE');
+}
+
+/**
+ * Cap text size at MAX_ANALYZE_BYTES to prevent malicious DoS. A 5MB skill
+ * description should not pin the analyzer for seconds.
+ */
+function capTextSize(text) {
+  if (text.length <= MAX_ANALYZE_BYTES) return text;
+  // Keep the first 512KB + last 512KB — most malicious content is at the
+  // start (description, system prompt) or end (boilerplate injection).
+  const half = Math.floor(MAX_ANALYZE_BYTES / 2);
+  return text.slice(0, half) + '\n[...TRUNCATED...]\n' + text.slice(-half);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // 4. MAIN: Run L1.6 analysis
 // ═══════════════════════════════════════════════════════════════════════════
 
 export async function runL16(skill) {
-  const textToAnalyze = [
+  const rawText = [
     skill.name || '',
     skill.description || '',
     skill.doc?.system_prompt || '',
@@ -113,6 +175,15 @@ export async function runL16(skill) {
     JSON.stringify(skill.capabilities || {}),
     skill.install || '',
   ].join('\n');
+
+  // FINDING S4 FIX: cap text size to prevent DoS.
+  const cappedText = capTextSize(rawText);
+
+  // FINDING S2 FIX: strip process.env.X refs (not real secrets).
+  const textForSemgrep = stripProcessEnvRefs(cappedText);
+
+  // FINDING S3 FIX: strip code blocks before secret detection (README examples).
+  const textForSecrets = stripCodeBlocks(stripProcessEnvRefs(cappedText));
 
   const findings = {
     semgrep: [],
@@ -123,9 +194,11 @@ export async function runL16(skill) {
     total_medium: 0,
   };
 
-  // Semgrep rules
+  // Semgrep rules — run on text with process.env refs stripped (S2 fix).
+  // Code blocks are NOT stripped for semgrep — an injection inside a code
+  // block can still be executed by an LLM that copies it verbatim.
   for (const rule of SEMGREP_RULES) {
-    if (rule.pattern.test(textToAnalyze)) {
+    if (rule.pattern.test(textForSemgrep)) {
       findings.semgrep.push({ id: rule.id, name: rule.name, severity: rule.severity, fix: rule.fix });
       if (rule.severity === 'critical') findings.total_critical++;
       else if (rule.severity === 'high') findings.total_high++;
@@ -133,9 +206,11 @@ export async function runL16(skill) {
     }
   }
 
-  // Secret detection
+  // Secret detection — run on text with BOTH process.env refs and code
+  // blocks stripped (S2 + S3 fix). A secret in a code block is almost
+  // always a README example, not a real embedded credential.
   for (const pattern of SECRET_PATTERNS) {
-    if (pattern.pattern.test(textToAnalyze)) {
+    if (pattern.pattern.test(textForSecrets)) {
       findings.secrets.push({ name: pattern.name, severity: pattern.severity });
       if (pattern.severity === 'critical') findings.total_critical++;
       else if (pattern.severity === 'high') findings.total_high++;

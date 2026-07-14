@@ -34,6 +34,10 @@ import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from '../lib/sentinel-l16.mjs'
 import { triggerL2, getL2Results } from '../lib/sentinel-l2-trigger.mjs';
 import { checkRateLimit } from '../lib/rate-limit.mjs';
 import { findSkill } from '../lib/skills-cache.mjs';
+// FINDING P3 FIX (rushabdev): replace CORS * with allowlist (lib/cors.mjs).
+// Agents (no Origin header) are unaffected — they don't enforce CORS.
+// Browsers can only read responses if Origin is on the allowlist.
+import { setCorsHeaders } from '../lib/cors.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -356,7 +360,11 @@ async function handleSentinelStatus(req, res) {
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // FINDING P3 FIX (rushabdev): CORS allowlist instead of '*'.
+  // setCorsHeaders() sets Access-Control-Allow-Origin only if the request's
+  // Origin is on the allowlist (marketnow.site, *.vercel.app previews, localhost).
+  // Agents (curl, httpx, MCP clients) don't send Origin → unaffected.
+  setCorsHeaders(req, res);
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 

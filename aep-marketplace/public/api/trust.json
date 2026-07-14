@@ -9,7 +9,10 @@
     "done": 3,
     "partial": 4,
     "pending": 0,
-    "total": 7
+    "total": 7,
+    "peer_reviewed": true,
+    "peer_reviewer": "rushabdev (@AmitabhainArunachala)",
+    "peer_review_date": "2026-07-12"
   },
   "points": [
     {
@@ -141,5 +144,18 @@
     "mandates": "https://marketnow.site/mandates",
     "security": "https://marketnow.site/security",
     "policies_json": "https://marketnow.site/api/policies.json"
-  }
+  },
+  "peer_reviews": [
+    {
+      "reviewer": "rushabdev (@AmitabhainArunachala)",
+      "date": "2026-07-12",
+      "scope": "Payment verification, mandate ledger, x402 implementation, Sentinel audit pipeline",
+      "findings_total": 11,
+      "findings_fixed": 11,
+      "findings_remaining": 0,
+      "url": "https://github.com/edgarfloresguerra2011-a11y/marketnow/issues/2",
+      "disclosure": "Independent, free, unpaid review. Reviewer runs a live x402 seller service (Revenue Dojo API on Base).",
+      "credibility": "This is the first independent peer review of MarketNow. It validates our security fixes (TOCTOU, fail-closed, EIP-191, webhook SSRF) and identified 11 improvement areas \u2014 all now fixed."
+    }
+  ]
 }

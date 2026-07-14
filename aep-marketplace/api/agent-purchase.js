@@ -385,7 +385,7 @@ export default async function handler(req, res) {
               to: PAYMENT_WALLET,
               description: `MarketNow skill: ${skill.name} (${skill.id})`,
               max_amount: skill.price,
-              asset_type: 'native_token',
+              asset_type: 'erc20'  // FINDING 4 FIX: USDC is ERC-20, not native token,
             },
             retry_instructions: {
               method: 'POST',

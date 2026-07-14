@@ -3,6 +3,29 @@ import { Link } from 'react-router-dom';
 import { useLang } from '../context/LanguageContext.jsx';
 
 // ═══════════════════════════════════════════════════════════════════════════
+// COMMUNITY PEER REVIEWERS — language-neutral data
+// ═══════════════════════════════════════════════════════════════════════════
+const COMMUNITY_REVIEWERS = [
+  {
+    handle: '@rushabdev',
+    date: 'July 2026',
+    scope: 'Payment system (USDC on Base + ACP/AP2 mandates) + Sentinel pipeline (L1.5 → L2.5)',
+    findings: { high: 1, medium: 4, low: 6 },
+    note_en: 'Conducted pro bono. All 11 findings reproduced and queued for fix. The HIGH finding (README claiming 10/10 while only L1.5 results were committed) was corrected within 24h. Public reply: dev.to/@edison_flores_6d2cd381b13/thank-you-rushabdev.',
+    note_es: 'Realizado pro bono. Los 11 hallazgos fueron reproducidos y están en cola de corrección. El hallazgo HIGH (README afirmaba 10/10 cuando solo L1.5 estaba commiteado) se corrigió en 24h. Respuesta pública: dev.to/@edison_flores_6d2cd381b13/thank-you-rushabdev.',
+  },
+];
+
+// Reviewer label translations per language (data itself is language-neutral)
+const REVIEWER_LABELS = {
+  en: { title: 'COMMUNITY PEER REVIEWERS', subtitle: 'External researchers who reviewed our code pro bono. Findings are public record.', scope: 'Scope', findings: 'Findings', date: 'Date' },
+  es: { title: 'REVISORES PEER DE LA COMUNIDAD', subtitle: 'Investigadores externos que revisaron nuestro código pro bono. Los hallazgos son registro público.', scope: 'Alcance', findings: 'Hallazgos', date: 'Fecha' },
+  pt: { title: 'REVISORES PEER DA COMUNIDADE', subtitle: 'Pesquisadores externos que revisaram nosso código pro bono. Achados são registro público.', scope: 'Escopo', findings: 'Achados', date: 'Data' },
+  zh: { title: '社区同行评审者', subtitle: '免费审查我们代码的外部研究人员。发现公开记录。', scope: '范围', findings: '发现', date: '日期' },
+  fr: { title: 'EXAMINATEURS COMMUNAUTAIRES', subtitle: 'Chercheurs externes ayant revu notre code pro bono. Les trouvailles sont un registre public.', scope: 'Périmètre', findings: 'Trouvailles', date: 'Date' },
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
 // CONTENT — all 7 points in 5 languages
 // ═══════════════════════════════════════════════════════════════════════════
 const CONTENT = {
@@ -24,6 +47,11 @@ const CONTENT = {
     aboutTeam: '→ About the team',
     securityMethod: '→ Security methodology',
     manageMandates: '→ Manage mandates',
+    reviewerTitle: 'COMMUNITY PEER REVIEWERS',
+    reviewerSubtitle: 'External researchers who reviewed our code pro bono. Findings are public record.',
+    reviewerScope: 'Scope',
+    reviewerFindings: 'Findings',
+    reviewerDate: 'Date',
     points: [
       { n: 1, status: 'done', title: 'Human-in-the-loop by default, not opt-out',
         claudeSaid: 'The design sells "no humans needed" as an advantage. It should be the opposite: human in the loop by default, with low limits, notification of each purchase, and instant mandate revocation.',
@@ -615,6 +643,7 @@ const CONTENT = {
 export default function Trust() {
   const { t, lang } = useLang();
   const c = CONTENT[lang] || CONTENT.en;
+  const rl = REVIEWER_LABELS[lang] || REVIEWER_LABELS.en;
   const done = c.points.filter(p => p.status === 'done').length;
   const partial = c.points.filter(p => p.status === 'partial').length;
   const pending = c.points.filter(p => p.status === 'pending').length;
@@ -718,6 +747,39 @@ export default function Trust() {
             );
           })}
         </div>
+
+        {/* Community Peer Reviewers */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mt-10 premium-card p-6"
+        >
+          <h3 className="text-white text-sm font-mono tracking-wider mb-2 uppercase">{rl.title}</h3>
+          <p className="text-zinc-500 text-xs mb-5 leading-relaxed">{rl.subtitle}</p>
+          <div className="space-y-4">
+            {COMMUNITY_REVIEWERS.map((r, i) => (
+              <div key={r.handle} className="border border-zinc-800 rounded-lg p-4 bg-black/20">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                  <span className="text-[#00F299] font-mono text-sm">{r.handle}</span>
+                  <span className="text-zinc-500 font-mono text-[10px] tracking-wider">{rl.date}: {r.date}</span>
+                </div>
+                <div className="text-zinc-400 text-xs mb-3">
+                  <span className="text-zinc-500 font-mono text-[10px] tracking-wider uppercase">{rl.scope}: </span>
+                  {r.scope}
+                </div>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <span className="px-2 py-1 rounded bg-red-500/10 border border-red-500/30 text-red-400 text-[10px] font-mono">{r.findings.high} HIGH</span>
+                  <span className="px-2 py-1 rounded bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-[10px] font-mono">{r.findings.medium} MEDIUM</span>
+                  <span className="px-2 py-1 rounded bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-mono">{r.findings.low} LOW</span>
+                </div>
+                <p className="text-zinc-500 text-xs leading-relaxed">
+                  {(lang === 'es' ? r.note_es : r.note_en)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Honest disclaimer */}
         <motion.div

@@ -223,4 +223,4 @@ export function applySecurityHeaders(res, extra = {}) {
   }
 }
 
-export { WAF_RULES, _bannedIPs, _wafHits, isIPBanned, getClientIP };
+export { WAF_RULES, _bannedIPs, _wafHits, isIPBanned, banIP, getClientIP, recordWAFHit };

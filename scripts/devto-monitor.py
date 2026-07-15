@@ -93,13 +93,45 @@ def load_state():
         }
 
 
-def save_state(state):
-    """Save the state file."""
+def save_state(state, force=False):
+    """Save the state file.
+
+    BUG FIX (15 Jul 2026): previously this was called unconditionally at
+    the end of main(), which updated `last_check` every run, which made
+    the GitHub Actions workflow commit `chore: dev.to monitor state update`
+    every hour — 92+ noisy commits in the git log over 8 days.
+
+    Now: only save (and thus only commit) if either:
+      - `force=True` (e.g. first run, or seen_comments changed), OR
+      - the set of seen comment IDs changed since the last load.
+
+    The `last_check` field is still updated in-memory for the email body,
+    but it is NOT the trigger for a commit. The trigger is "did we see a
+    new comment?", which is the actual purpose of this monitor.
+    """
+    if not force:
+        # Compare current seen_comments to what's on disk
+        try:
+            with open(STATE_FILE, 'r') as f:
+                old_state = json.load(f)
+            old_seen = old_state.get('seen_comments', {})
+            new_seen = state.get('seen_comments', {})
+            if set(old_seen.keys()) == set(new_seen.keys()):
+                # No new comments — don't save, don't trigger a commit.
+                # We print last_check for the log, but the file on disk
+                # stays untouched.
+                print(f'  No new comments since last run — state file unchanged (no commit).')
+                return False
+        except (FileNotFoundError, json.JSONDecodeError):
+            # State file doesn't exist or is corrupt — save it.
+            pass
+
     os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
     state['last_check'] = datetime.now(timezone.utc).isoformat()
     with open(STATE_FILE, 'w') as f:
         json.dump(state, f, indent=2)
-    print(f'  State saved to {STATE_FILE}')
+    print(f'  State saved to {STATE_FILE} (will trigger commit)')
+    return True
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -355,9 +387,11 @@ def main():
     print(f'  Total comments across all articles: {total_comments}')
     print(f'  NEW comments needing attention: {len(new_comments)}')
 
-    # 5. Save state
+    # 5. Save state — only if new comments were seen (BUG FIX above).
+    # The function returns True if state was actually written to disk,
+    # which the GitHub Actions workflow uses to decide whether to commit.
     state['seen_comments'] = seen
-    save_state(state)
+    state_written = save_state(state, force=bool(new_comments))
 
     # 6. Send email if there are new comments
     if new_comments:

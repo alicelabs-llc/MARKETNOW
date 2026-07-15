@@ -100,16 +100,16 @@ MANDATES_INTERNAL_SECRET=honeypot-fake-internal-secret-do-not-use
 SENTINEL_CERT_SECRET=honeypot-fake-cert-secret-do-not-use
 `,
   '/.git/config': `[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
 [remote "origin"]
-	url = https://github.com/edgarfloresguerra2011-a11y/marketnow.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+        url = https://github.com/edgarfloresguerra2011-a11y/marketnow.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
-	remote = origin
-	merge = refs/heads/master
+        remote = origin
+        merge = refs/heads/master
 # HONEYPOT: This is a fake .git/config. Access is logged and IP is banned.
 `,
   '/.aws/credentials': `[default]
@@ -238,4 +238,4 @@ export function getHoneypotStats() {
   };
 }
 
-export { HONEYPOT_PATHS };
+export { HONEYPOT_PATHS, _honeypotLog, HONEYPOT_LOG_MAX };

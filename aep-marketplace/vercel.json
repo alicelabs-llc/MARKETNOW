@@ -40,6 +40,38 @@
       "destination": "/api/security?view=threat-intel"
     },
     {
+      "source": "/(.env|.env.local|.env.production)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(admin|admin/login|admin.php|administrator)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(wp-admin|wp-login.php|wp-config.php)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(.git/config|.git/HEAD|.git/index)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(phpmyadmin|phpMyAdmin|pma|mysql)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(server-status|server-info)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(.ssh/id_rsa|.aws/credentials|id_rsa)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
+      "source": "/(backup|backup.sql|database.sql)",
+      "destination": "/api/honeypot-redirect"
+    },
+    {
       "source": "/for-agents",
       "destination": "/for-agents.html"
     },

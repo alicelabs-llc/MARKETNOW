@@ -2,7 +2,9 @@
 // GET /api/manifest — returns all agent-discoverable endpoints in one call
 // Agents fetch this ONCE to discover everything MarketNow offers
 
-export default async function handler(req, res) {
+import { secureLight } from '../lib/secure.mjs';
+
+export default secureLight(async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=600');
 
@@ -161,4 +163,4 @@ export default async function handler(req, res) {
     
     timestamp: new Date().toISOString(),
   });
-}
+});

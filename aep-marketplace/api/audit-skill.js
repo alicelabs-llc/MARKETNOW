@@ -38,6 +38,7 @@ import { findSkill } from '../lib/skills-cache.mjs';
 // Agents (no Origin header) are unaffected — they don't enforce CORS.
 // Browsers can only read responses if Origin is on the allowlist.
 import { setCorsHeaders } from '../lib/cors.mjs';
+import { secureLight } from '../lib/secure.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -357,7 +358,7 @@ async function handleSentinelStatus(req, res) {
   }
 }
 
-export default async function handler(req, res) {
+export default secureLight(async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
   // FINDING P3 FIX (rushabdev): CORS allowlist instead of '*'.
@@ -776,4 +777,4 @@ export default async function handler(req, res) {
     console.error('Audit error:', err);
     return res.status(500).json({ error: 'Audit failed', message: err.message });
   }
-}
+});

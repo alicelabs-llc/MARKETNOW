@@ -4,6 +4,8 @@
 // Body: { "current_tools": ["filesystem", "web-search"], "agent_type": "coding" }
 // Returns: { "recommended": [...] }
 
+import { secureLight } from '../lib/secure.mjs';
+
 const SKILLS_API = 'https://marketnow.site/api/skills.json';
 
 // Cache skills (5 min TTL)
@@ -59,7 +61,7 @@ const RECOMMENDATIONS = {
   },
 };
 
-export default async function handler(req, res) {
+export default secureLight(async function handler(req, res) {
   // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -193,4 +195,4 @@ export default async function handler(req, res) {
     total: recommended.length,
     timestamp: new Date().toISOString(),
   });
-}
+});

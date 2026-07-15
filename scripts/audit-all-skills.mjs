@@ -138,27 +138,26 @@ const stats = {
   with_l2: 0,
 };
 
-// Process in batches of 5 to avoid overwhelming the OSV API
-const BATCH_SIZE = 5;
-const BATCH_DELAY_MS = 200; // delay between batches
+// Process in batches of 3 (was 5) — smaller batches = less memory per batch
+const BATCH_SIZE = 3;
+const BATCH_DELAY_MS = 100; // delay between batches
 
 async function processBatch(batch, batchNum) {
-  const promises = batch.map(async (skill) => {
+  // SEQUENTIAL processing (was Promise.all parallel) — slower but stable.
+  // Parallel batches of 5 caused memory spikes that killed the process
+  // around batch 578 (35% of 8221 skills). Sequential uses ~constant memory.
+  const results = [];
+  for (const skill of batch) {
     try {
       // Run the full audit (L1.5 + L1.6 + L1.7 + L2)
-      // L1.7 runs malware pattern detection on metadata. Package buffer
-      // scanning is optional (only if the skill has a downloadable zip).
       const report = await auditSkill(skill, { skipL2: false });
 
       // Generate certificate
       const cert = await generateCertificate(report, CERT_SECRET);
-
       stats.audited++;
 
       // L1.7 QUARANTINE: if the report recommends quarantine, move the
       // cert to _data/quarantine/ instead of _data/sentinel_certificates/.
-      // This removes it from the public catalog and lists it publicly
-      // at /api/quarantine for transparency.
       const quarantined = report.audit?.quarantine_recommended === true;
       if (quarantined) {
         cert.status = 'quarantined';
@@ -174,30 +173,25 @@ async function processBatch(batch, batchNum) {
       stats.by_score[cert.overall_score] = (stats.by_score[cert.overall_score] || 0) + 1;
       if (cert.layers_run?.l2) stats.with_l2++;
 
-      // Write certificate (to quarantine dir or normal certs dir)
+      // Write certificate
       if (!DRY_RUN) {
         const targetDir = quarantined ? QUARANTINE_DIR : CERTS_DIR;
         const certPath = path.join(targetDir, `${skill.id}.json`);
         fs.writeFileSync(certPath, JSON.stringify(cert, null, 2));
-
-        // If quarantined, also remove from the normal certs dir if it exists there
         if (quarantined) {
           const oldPath = path.join(CERTS_DIR, `${skill.id}.json`);
-          if (fs.existsSync(oldPath)) {
-            fs.unlinkSync(oldPath);
-          }
+          if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
           console.log(`  🚨 QUARANTINED: ${skill.id} (${skill.name}) — ${cert.quarantined_reason}`);
         }
       }
 
-      return { skill_id: skill.id, score: cert.overall_score, risk: cert.risk_level, quarantined, ok: true };
+      results.push({ skill_id: skill.id, score: cert.overall_score, risk: cert.risk_level, quarantined, ok: true });
     } catch (e) {
       stats.failed++;
-      return { skill_id: skill.id, error: e.message, ok: false };
+      console.error(`  ✗ ${skill.id} failed: ${e.message}`);
+      results.push({ skill_id: skill.id, error: e.message, ok: false });
     }
-  });
-
-  const results = await Promise.all(promises);
+  }
 
   // Progress log
   const ok = results.filter(r => r.ok).length;
@@ -215,10 +209,21 @@ async function processBatch(batch, batchNum) {
   for (let i = 0; i < targets.length; i += BATCH_SIZE) {
     const batch = targets.slice(i, i + BATCH_SIZE);
     const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-    await processBatch(batch, batchNum);
+    try {
+      await processBatch(batch, batchNum);
+    } catch (batchErr) {
+      // Catch batch-level crashes so one bad batch doesn't kill the whole run
+      console.error(`  Batch ${batchNum} CRASHED: ${batchErr.message}`);
+      console.error(`  Skills in this batch: ${batch.map(s => s.id).join(', ')}`);
+      stats.failed += batch.length;
+    }
     // Small delay between batches to respect OSV API rate limits
     if (i + BATCH_SIZE < targets.length) {
       await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
+    }
+    // Force GC every 100 batches to prevent memory accumulation
+    if (batchNum % 100 === 0 && global.gc) {
+      global.gc();
     }
   }
 

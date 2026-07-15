@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0632554",
+  "certificate_id": "MN-SC-2026-8755111",
   "skill_id": "mn-real-boxmcpserver",
   "skill_name": "box-mcp-server",
-  "issued_at": "2026-07-12T04:30:32.554Z",
-  "expires_at": "2026-07-19T04:30:32.554Z",
+  "issued_at": "2026-07-15T01:25:55.111Z",
+  "expires_at": "2026-07-22T01:25:55.111Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9e7748d58f7095c554d5a1b57856411b661acb98f7c989f38e64b90f582fb24e",
+  "signature": "d10dc283d0311ccdafa19b4720952398cf9013ed4bdf0f43e4951b6bbfcb84b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-boxmcpserver"
 }

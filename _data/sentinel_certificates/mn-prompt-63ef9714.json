@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0106489",
+  "certificate_id": "MN-SC-2026-8094330",
   "skill_id": "mn-prompt-63ef9714",
   "skill_name": "Especialista AWS Step Functions + Workflows",
-  "issued_at": "2026-07-12T04:21:46.489Z",
-  "expires_at": "2026-07-19T04:21:46.489Z",
+  "issued_at": "2026-07-15T01:14:54.330Z",
+  "expires_at": "2026-07-22T01:14:54.330Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c313286421f92a1d7c2ee286f3b81fcb0ec5f672cb93ff869bdc986624c92f69",
+  "signature": "7f520f1e82cd08b3fc1d3049a07e1a214565049d89476ee2c43f9e40143b0192",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-63ef9714"
 }

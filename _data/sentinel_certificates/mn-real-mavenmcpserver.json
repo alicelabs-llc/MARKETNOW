@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0664315",
+  "certificate_id": "MN-SC-2026-8789846",
   "skill_id": "mn-real-mavenmcpserver",
   "skill_name": "maven-mcp-server",
-  "issued_at": "2026-07-12T04:31:04.315Z",
-  "expires_at": "2026-07-19T04:31:04.315Z",
+  "issued_at": "2026-07-15T01:26:29.846Z",
+  "expires_at": "2026-07-22T01:26:29.846Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96a2b6789a59907d5f9772f952c14cb9d567fdd646f6c12c5dac57371c8b8827",
+  "signature": "18cdc19d4834d4ebd533f4411ab94f7ac47be3ce62c88d67ffaffa059c725b5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mavenmcpserver"
 }

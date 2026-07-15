@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1085701",
+  "certificate_id": "MN-SC-2026-8689813",
   "skill_id": "mn-real-mcphko",
   "skill_name": "mcp-hko",
-  "issued_at": "2026-07-12T04:38:05.701Z",
-  "expires_at": "2026-07-19T04:38:05.701Z",
+  "issued_at": "2026-07-15T01:24:49.813Z",
+  "expires_at": "2026-07-22T01:24:49.813Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f59227893084c245e0422979d8ee8d7dc478cf169c8d7787e25be24ae6c5367",
+  "signature": "d203fdc14a21c3eb22d37d8af82104c23fdf99e693b50a8447d35de7c52f106d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcphko"
 }

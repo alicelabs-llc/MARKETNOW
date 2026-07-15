@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0983798",
+  "certificate_id": "MN-SC-2026-9170900",
   "skill_id": "mn-real-bubbaloop",
   "skill_name": "bubbaloop",
-  "issued_at": "2026-07-12T04:36:23.798Z",
-  "expires_at": "2026-07-19T04:36:23.798Z",
+  "issued_at": "2026-07-15T01:32:50.900Z",
+  "expires_at": "2026-07-22T01:32:50.900Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1eedb4f96d2c2d6787e80b6bc4594b55851419d7a6dd8c35a791a89dede3fd85",
+  "signature": "4320a23e47b843eb67f9023804e80c77286afef036a70e6893d50e942600cf5d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bubbaloop"
 }

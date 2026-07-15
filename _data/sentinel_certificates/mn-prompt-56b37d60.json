@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0240397",
+  "certificate_id": "MN-SC-2026-8277979",
   "skill_id": "mn-prompt-56b37d60",
   "skill_name": "Internship program design",
-  "issued_at": "2026-07-12T04:24:00.397Z",
-  "expires_at": "2026-07-19T04:24:00.397Z",
+  "issued_at": "2026-07-15T01:17:57.979Z",
+  "expires_at": "2026-07-22T01:17:57.979Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "87465c9461b0e37296b6d42b8d9a350a67dc316b0d5ecc76e4335a4964a0fc99",
+  "signature": "006a5d243e8e35d3ce7344119bdaf6be1a60d93f1597362716495c9a9e628b72",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-56b37d60"
 }

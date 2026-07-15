@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0830484",
+  "certificate_id": "MN-SC-2026-8998264",
   "skill_id": "mn-real-lmstudiomcp",
   "skill_name": "LMStudio-MCP",
-  "issued_at": "2026-07-12T04:33:50.484Z",
-  "expires_at": "2026-07-19T04:33:50.484Z",
+  "issued_at": "2026-07-15T01:29:58.264Z",
+  "expires_at": "2026-07-22T01:29:58.264Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e71e4f38a7b93ee760c2d0225e11e1c20e66fc77ea0d917bb7ec95796e18121f",
+  "signature": "e2b8d55776ed2928a2d7d435ffc766fa6527ccfa8e21c939c27c432618464af9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lmstudiomcp"
 }

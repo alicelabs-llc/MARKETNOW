@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0538047",
+  "certificate_id": "MN-SC-2026-8645679",
   "skill_id": "mn-real-reflex",
   "skill_name": "reflex",
-  "issued_at": "2026-07-12T04:28:58.047Z",
-  "expires_at": "2026-07-19T04:28:58.047Z",
+  "issued_at": "2026-07-15T01:24:05.679Z",
+  "expires_at": "2026-07-22T01:24:05.679Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ba5f2558feb973649774f4d4fe21669380dff74195b53e7851a8feb69b48adf",
+  "signature": "e685801f19be720a54dd869ae3f45a687bd56b2910925b8233ebde71c368c256",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-reflex"
 }

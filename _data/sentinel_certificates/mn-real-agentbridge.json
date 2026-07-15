@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0726791",
+  "certificate_id": "MN-SC-2026-8872870",
   "skill_id": "mn-real-agentbridge",
   "skill_name": "agent-bridge",
-  "issued_at": "2026-07-12T04:32:06.791Z",
-  "expires_at": "2026-07-19T04:32:06.791Z",
+  "issued_at": "2026-07-15T01:27:52.870Z",
+  "expires_at": "2026-07-22T01:27:52.870Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6df7dee061419b52aa362f0be830a3f719f79e287e4206a0916e3ab3e5fd50d0",
+  "signature": "28ac644c4401166be3c5000b95f7b4850eaae38ce5a2808f3738368ee6482339",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentbridge"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9984516",
+  "certificate_id": "MN-SC-2026-7932233",
   "skill_id": "mn-gen-01057",
   "skill_name": "mcp-server-atlassian-bitbucket",
-  "issued_at": "2026-07-12T04:19:44.516Z",
-  "expires_at": "2026-07-19T04:19:44.516Z",
+  "issued_at": "2026-07-15T01:12:12.233Z",
+  "expires_at": "2026-07-22T01:12:12.233Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04898a7b6ee1715c79c0533c69bb3a44b82897f8e29336283b28f0fdaf6f0963",
+  "signature": "c7fbe149c986cff233db6553944c38f6b4c843333251cca3e1a410b3b5d8756b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01057"
 }

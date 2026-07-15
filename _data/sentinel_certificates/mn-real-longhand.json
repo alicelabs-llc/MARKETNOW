@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0505540",
+  "certificate_id": "MN-SC-2026-8612672",
   "skill_id": "mn-real-longhand",
   "skill_name": "longhand",
-  "issued_at": "2026-07-12T04:28:25.540Z",
-  "expires_at": "2026-07-19T04:28:25.540Z",
+  "issued_at": "2026-07-15T01:23:32.672Z",
+  "expires_at": "2026-07-22T01:23:32.672Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d18191120aad2d60dd6e25d393a50dc59e1f26233c3e1bb3a7d923059c2bd1b3",
+  "signature": "14ebe34a8324a1d20f547335aa578fe240a5adaecf6042de0120881550294bee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-longhand"
 }

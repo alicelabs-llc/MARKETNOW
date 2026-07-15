@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0493224",
+  "certificate_id": "MN-SC-2026-8601958",
   "skill_id": "mn-real-cacheoverflow",
   "skill_name": "CacheOverflow",
-  "issued_at": "2026-07-12T04:28:13.224Z",
-  "expires_at": "2026-07-19T04:28:13.224Z",
+  "issued_at": "2026-07-15T01:23:21.958Z",
+  "expires_at": "2026-07-22T01:23:21.958Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6bb77f33df17528ca34bbed63af9e6ba887dfaddbc2722e8afc40f9ac68dd4d9",
+  "signature": "972d3b7ce5be9b1049b99d1dbccf7f8f75c4d5cf2398660ec232344537adfbba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cacheoverflow"
 }

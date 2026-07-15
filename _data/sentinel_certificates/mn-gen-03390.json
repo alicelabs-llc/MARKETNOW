@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9999222",
+  "certificate_id": "MN-SC-2026-7948167",
   "skill_id": "mn-gen-03390",
   "skill_name": "dnd-oracle",
-  "issued_at": "2026-07-12T04:19:59.222Z",
-  "expires_at": "2026-07-19T04:19:59.222Z",
+  "issued_at": "2026-07-15T01:12:28.167Z",
+  "expires_at": "2026-07-22T01:12:28.167Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd37b26650be8af4d0531e6fde7c6abc2f5bc4156b1e812acdab6da649aadb34",
+  "signature": "ca512a2fbb5ffe825857f79c046de39aeae9e457191a89fb1455cc9a3bd670b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03390"
 }

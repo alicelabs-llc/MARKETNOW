@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1036592",
+  "certificate_id": "MN-SC-2026-9226294",
   "skill_id": "mn-real-geoaoi",
   "skill_name": "geoaoi",
-  "issued_at": "2026-07-12T04:37:16.592Z",
-  "expires_at": "2026-07-19T04:37:16.592Z",
+  "issued_at": "2026-07-15T01:33:46.294Z",
+  "expires_at": "2026-07-22T01:33:46.294Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "89c8c3756a1671f3003965e5e6412df59768cef194ba8268874b5c89f678b8ac",
+  "signature": "ee1e9e1e24617ecc4e9c89efaf2c2251ae670089a27f8f8be62b5a9e3c66f230",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geoaoi"
 }

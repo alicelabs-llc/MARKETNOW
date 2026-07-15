@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0884821",
+  "certificate_id": "MN-SC-2026-9057463",
   "skill_id": "mn-real-mcpterminalserver",
   "skill_name": "mcp-terminal-server",
-  "issued_at": "2026-07-12T04:34:44.821Z",
-  "expires_at": "2026-07-19T04:34:44.821Z",
+  "issued_at": "2026-07-15T01:30:57.463Z",
+  "expires_at": "2026-07-22T01:30:57.463Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "937291d527318acd1f9a0eb00f77e7d49da671256209de824a10dbc7f15159cf",
+  "signature": "7ce5df461bbddc04ca2baf91cbcfc1b7eab020af9584525f184ef9b4be435db7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpterminalserver"
 }

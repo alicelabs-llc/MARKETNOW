@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0973582",
+  "certificate_id": "MN-SC-2026-9161063",
   "skill_id": "mn-real-fplmcpserver",
   "skill_name": "fpl-mcp-server",
-  "issued_at": "2026-07-12T04:36:13.582Z",
-  "expires_at": "2026-07-19T04:36:13.582Z",
+  "issued_at": "2026-07-15T01:32:41.063Z",
+  "expires_at": "2026-07-22T01:32:41.063Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "502786febeea44ac08be881b6c0815194778ac1d66e6fa2ec596ac441328e47d",
+  "signature": "8a0a2addc567602dcbb03915483533b133651ae7824d6523cfa9758dd0810c9f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fplmcpserver"
 }

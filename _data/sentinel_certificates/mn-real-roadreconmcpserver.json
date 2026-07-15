@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0543732",
+  "certificate_id": "MN-SC-2026-8652254",
   "skill_id": "mn-real-roadreconmcpserver",
   "skill_name": "roadrecon_mcp_server",
-  "issued_at": "2026-07-12T04:29:03.732Z",
-  "expires_at": "2026-07-19T04:29:03.732Z",
+  "issued_at": "2026-07-15T01:24:12.254Z",
+  "expires_at": "2026-07-22T01:24:12.254Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d2b170720af4e559eaecb91bd53fbf32b54603c076318e1ef726934df4057df1",
+  "signature": "d070bd449282dd9f19387df0e53d072d3fab28f4505e50c66aaabc98d5df7b7a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-roadreconmcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9981794",
+  "certificate_id": "MN-SC-2026-7928843",
   "skill_id": "mn-ai-00531",
   "skill_name": "newsmcp",
-  "issued_at": "2026-07-12T04:19:41.794Z",
-  "expires_at": "2026-07-19T04:19:41.794Z",
+  "issued_at": "2026-07-15T01:12:08.843Z",
+  "expires_at": "2026-07-22T01:12:08.843Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e69f49d2ed2e9f78a346b3b7afba4ef8327d255648a589f758a4f19ad1a1fa1d",
+  "signature": "7d2c4b2689ae4c91b97bcd8a7756bf8150095bc4046426c01a3ccc3777681d39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-00531"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0579641",
+  "certificate_id": "MN-SC-2026-8693337",
   "skill_id": "mn-real-notionprivateapimcp",
   "skill_name": "notion-private-api-mcp",
-  "issued_at": "2026-07-12T04:29:39.641Z",
-  "expires_at": "2026-07-19T04:29:39.641Z",
+  "issued_at": "2026-07-15T01:24:53.337Z",
+  "expires_at": "2026-07-22T01:24:53.337Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb0e92502a029a54cc032896f853cbf183e3273afff2fbabc702bbc82885b92b",
+  "signature": "2273197abfd29a145cd56a555d615c13a4e9550c6d7561c09d87d040f2001d23",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-notionprivateapimcp"
 }

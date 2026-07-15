@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0464756",
+  "certificate_id": "MN-SC-2026-8570466",
   "skill_id": "mn-real-binancealphamcp",
   "skill_name": "binance-alpha-mcp",
-  "issued_at": "2026-07-12T04:27:44.756Z",
-  "expires_at": "2026-07-19T04:27:44.756Z",
+  "issued_at": "2026-07-15T01:22:50.466Z",
+  "expires_at": "2026-07-22T01:22:50.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee98dea7f5618504cbf84147ffb45d9a7c84aa798b65f45f24a95d4d23a34d91",
+  "signature": "111d52b1ebd5206181a3a10c0a73ae429803b98439239bbe1c49bd75a4c2add5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-binancealphamcp"
 }

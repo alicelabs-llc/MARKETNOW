@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0096813",
+  "certificate_id": "MN-SC-2026-8080847",
   "skill_id": "mn-prompt-f150c7d2",
   "skill_name": "Especialista MongoDB + Schema Design",
-  "issued_at": "2026-07-12T04:21:36.813Z",
-  "expires_at": "2026-07-19T04:21:36.813Z",
+  "issued_at": "2026-07-15T01:14:40.847Z",
+  "expires_at": "2026-07-22T01:14:40.847Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7db031d6d49a061c47aeb37f8d41faccdb9c7a178dbbbf8c161e58a545c579f5",
+  "signature": "32b496139eefac47b6d02fda30f03ec5bfbadb7f244749ecf89b8b33c457cdbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f150c7d2"
 }

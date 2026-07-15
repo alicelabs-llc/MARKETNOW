@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0132931",
+  "certificate_id": "MN-SC-2026-8129216",
   "skill_id": "mn-prompt-40786fb5",
   "skill_name": "Especialista Cost Accounting + COGS",
-  "issued_at": "2026-07-12T04:22:12.931Z",
-  "expires_at": "2026-07-19T04:22:12.931Z",
+  "issued_at": "2026-07-15T01:15:29.216Z",
+  "expires_at": "2026-07-22T01:15:29.216Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7574a1eb1ae54a677d06f6a5a78053ac01c7a67bf13a8059420993b5cd6ed0c4",
+  "signature": "accd32f9a982390be6f4fabf8f845c2f1d50d72b72910644ac960a3da045f21e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-40786fb5"
 }

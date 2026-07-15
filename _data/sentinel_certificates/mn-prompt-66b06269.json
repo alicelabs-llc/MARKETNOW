@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0114359",
+  "certificate_id": "MN-SC-2026-8106323",
   "skill_id": "mn-prompt-66b06269",
   "skill_name": "Especialista Sales Comp Plans + Design",
-  "issued_at": "2026-07-12T04:21:54.359Z",
-  "expires_at": "2026-07-19T04:21:54.359Z",
+  "issued_at": "2026-07-15T01:15:06.323Z",
+  "expires_at": "2026-07-22T01:15:06.323Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4ba1bbe219b3ff713013320a8876e2627edff6de6e784f5be6685b16fbe88be2",
+  "signature": "b0941172ac934ab82f67229d79d6b34e4a1fadb2080a7419ef8dd119da6f2f63",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-66b06269"
 }

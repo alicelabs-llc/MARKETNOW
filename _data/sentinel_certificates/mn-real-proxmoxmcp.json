@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0804572",
+  "certificate_id": "MN-SC-2026-8967472",
   "skill_id": "mn-real-proxmoxmcp",
   "skill_name": "ProxmoxMCP",
-  "issued_at": "2026-07-12T04:33:24.572Z",
-  "expires_at": "2026-07-19T04:33:24.572Z",
+  "issued_at": "2026-07-15T01:29:27.472Z",
+  "expires_at": "2026-07-22T01:29:27.472Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb5312eb33ab455c57f3abf826f6e324643994b8379386ce1509c68dc2d00958",
+  "signature": "b7ff0d86581bef177ca87be06189f8d9be4ab266208c59704ae574ef1bcc28f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-proxmoxmcp"
 }

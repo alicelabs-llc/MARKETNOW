@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0492361",
+  "certificate_id": "MN-SC-2026-8601002",
   "skill_id": "mn-real-engrammcp",
   "skill_name": "engram-mcp",
-  "issued_at": "2026-07-12T04:28:12.361Z",
-  "expires_at": "2026-07-19T04:28:12.361Z",
+  "issued_at": "2026-07-15T01:23:21.002Z",
+  "expires_at": "2026-07-22T01:23:21.002Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09bd36f29f3134e560996fdee0a13e5eb42e44435409933be846d3f3e96b011d",
+  "signature": "1d010493a95282ba17a157fb66b76427cc3aedce977813f3e6146d23cab38d07",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-engrammcp"
 }

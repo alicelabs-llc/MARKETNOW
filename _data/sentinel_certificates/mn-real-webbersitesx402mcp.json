@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0931235",
+  "certificate_id": "MN-SC-2026-9113289",
   "skill_id": "mn-real-webbersitesx402mcp",
   "skill_name": "webbersites-x402-mcp",
-  "issued_at": "2026-07-12T04:35:31.235Z",
-  "expires_at": "2026-07-19T04:35:31.235Z",
+  "issued_at": "2026-07-15T01:31:53.289Z",
+  "expires_at": "2026-07-22T01:31:53.289Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b541ab554478883416c4796039e300641c28ff748562d17b7fe79a147cf132a",
+  "signature": "e7534c428536b60edda6387475380044c69193d1fd4da3ef2a9a4c2356f4cd7f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webbersitesx402mcp"
 }

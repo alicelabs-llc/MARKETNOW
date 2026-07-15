@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0664677",
+  "certificate_id": "MN-SC-2026-8790170",
   "skill_id": "mn-real-mcpsearxngenhanced",
   "skill_name": "mcp-searxng-enhanced",
-  "issued_at": "2026-07-12T04:31:04.677Z",
-  "expires_at": "2026-07-19T04:31:04.677Z",
+  "issued_at": "2026-07-15T01:26:30.170Z",
+  "expires_at": "2026-07-22T01:26:30.170Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "efe1a96030e8bc30de48a6749378d3614e891ee5e5dc9b828bb4e04b9c410672",
+  "signature": "a2466d5cda0b2121e132fce95542600f52378fc71ba7223fdd4118db2c3d08ba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsearxngenhanced"
 }

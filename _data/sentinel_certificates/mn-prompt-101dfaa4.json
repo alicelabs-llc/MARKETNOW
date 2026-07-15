@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0284867",
+  "certificate_id": "MN-SC-2026-8342456",
   "skill_id": "mn-prompt-101dfaa4",
   "skill_name": "Copywriting for product launch retrospective",
-  "issued_at": "2026-07-12T04:24:44.867Z",
-  "expires_at": "2026-07-19T04:24:44.867Z",
+  "issued_at": "2026-07-15T01:19:02.456Z",
+  "expires_at": "2026-07-22T01:19:02.456Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ed775a2ede1a361a253e6bc43198b295048d25842cbe29cc955eb814a76c175",
+  "signature": "4cf325f0571caece08d05752f27f4ab51b4bdb00049f5c39972d91db203a2e77",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-101dfaa4"
 }

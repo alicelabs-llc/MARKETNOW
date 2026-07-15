@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0680210",
+  "certificate_id": "MN-SC-2026-8809357",
   "skill_id": "mn-real-hookdeckcli",
   "skill_name": "hookdeck-cli",
-  "issued_at": "2026-07-12T04:31:20.210Z",
-  "expires_at": "2026-07-19T04:31:20.210Z",
+  "issued_at": "2026-07-15T01:26:49.357Z",
+  "expires_at": "2026-07-22T01:26:49.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66ea7baabff09a8bab0a71ac39348a29bbeaf77cc3c589880cb216e76a431b2e",
+  "signature": "0dfc85f3784e061210c7f61d17d37a7110da17d4f2ce798fe0b9dbfa04be9fac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hookdeckcli"
 }

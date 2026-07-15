@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0348553",
+  "certificate_id": "MN-SC-2026-8433537",
   "skill_id": "mn-awmcp-fhirmcpserver",
   "skill_name": "fhir-mcp-server",
-  "issued_at": "2026-07-12T04:25:48.553Z",
-  "expires_at": "2026-07-19T04:25:48.553Z",
+  "issued_at": "2026-07-15T01:20:33.537Z",
+  "expires_at": "2026-07-22T01:20:33.537Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "c40708ff52fdf0d230bbdb0c9f3f845b23fa80cffd10c2618229868429ffa286",
+  "signature": "453e17025ecd1a197547626dc0145d40012eb55e8f03342517525ee995e13194",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-fhirmcpserver"
 }

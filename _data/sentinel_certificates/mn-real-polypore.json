@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0857068",
+  "certificate_id": "MN-SC-2026-9030886",
   "skill_id": "mn-real-polypore",
   "skill_name": "polypore",
-  "issued_at": "2026-07-12T04:34:17.068Z",
-  "expires_at": "2026-07-19T04:34:17.068Z",
+  "issued_at": "2026-07-15T01:30:30.886Z",
+  "expires_at": "2026-07-22T01:30:30.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c082c323e68de6d8320c31738d38771a7c31be19aeac87b18d34e6d150d30dee",
+  "signature": "903f6dfa45e746e26153928c48658dd96d78432f86fe5e44c507d2a11c122138",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-polypore"
 }

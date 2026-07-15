@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9981808",
+  "certificate_id": "MN-SC-2026-7928211",
   "skill_id": "mn-gen-00410",
   "skill_name": "agentql-mcp",
-  "issued_at": "2026-07-12T04:19:41.808Z",
-  "expires_at": "2026-07-19T04:19:41.808Z",
+  "issued_at": "2026-07-15T01:12:08.211Z",
+  "expires_at": "2026-07-22T01:12:08.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c53cc6f84b1731990d640ae65c1a663afe66810d5ed02274b5c2f76c181dc64d",
+  "signature": "0eae04b2ec47dc571f1564a91bd47ba73acccf579c7eed6d889d7c93de3f93c9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00410"
 }

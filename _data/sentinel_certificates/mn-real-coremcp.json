@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0402782",
+  "certificate_id": "MN-SC-2026-8499016",
   "skill_id": "mn-real-coremcp",
   "skill_name": "coremcp",
-  "issued_at": "2026-07-12T04:26:42.782Z",
-  "expires_at": "2026-07-19T04:26:42.782Z",
+  "issued_at": "2026-07-15T01:21:39.016Z",
+  "expires_at": "2026-07-22T01:21:39.016Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9188217d8dc44f699bb1c505009adb854d3a7e7752bf412dac83349bac7d5e2",
+  "signature": "52f396d244a36975ce5bc5dd3cdb7e53c33b6c3471138c6551781af41a0884a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-coremcp"
 }

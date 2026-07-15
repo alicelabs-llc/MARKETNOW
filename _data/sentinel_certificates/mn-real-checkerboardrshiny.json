@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0958456",
+  "certificate_id": "MN-SC-2026-9142810",
   "skill_id": "mn-real-checkerboardrshiny",
   "skill_name": "CheckerBoardR.shiny",
-  "issued_at": "2026-07-12T04:35:58.456Z",
-  "expires_at": "2026-07-19T04:35:58.456Z",
+  "issued_at": "2026-07-15T01:32:22.810Z",
+  "expires_at": "2026-07-22T01:32:22.810Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7821f82d172a76fb7f8f57fd718301a5a9acb4b1b93cd9578ad86f4c99b27127",
+  "signature": "218b0fc9cbf4fb7a2162132c869da685d2db8d313271af3f6b056497fa46b600",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-checkerboardrshiny"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0550314",
+  "certificate_id": "MN-SC-2026-8658936",
   "skill_id": "mn-real-misp",
   "skill_name": "MISP",
-  "issued_at": "2026-07-12T04:29:10.314Z",
-  "expires_at": "2026-07-19T04:29:10.314Z",
+  "issued_at": "2026-07-15T01:24:18.936Z",
+  "expires_at": "2026-07-22T01:24:18.936Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bc33233c761bbd90033dce26b04a5571b066344fbedf45e9cd91074bce283d9",
+  "signature": "0b1787f2656175fd8fa9393a3b3d1681b9df45828210971679e50597e2e36a8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-misp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0197282",
+  "certificate_id": "MN-SC-2026-8223790",
   "skill_id": "mn-prompt-c8b35080",
   "skill_name": "Especialista en WebSocket scaling con Redis pub/sub",
-  "issued_at": "2026-07-12T04:23:17.282Z",
-  "expires_at": "2026-07-19T04:23:17.282Z",
+  "issued_at": "2026-07-15T01:17:03.790Z",
+  "expires_at": "2026-07-22T01:17:03.790Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57c067f059d2d4af84c720a433492f06beffe0738a02830502c823f5c27db1a4",
+  "signature": "bf8fa591d7e661077ae3e392e183b0af246cf287498a0e3206b695550d9f55e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c8b35080"
 }

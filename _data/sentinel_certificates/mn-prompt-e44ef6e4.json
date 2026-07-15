@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0050389",
+  "certificate_id": "MN-SC-2026-8016611",
   "skill_id": "mn-prompt-e44ef6e4",
   "skill_name": "Secuencias de Email B2B",
-  "issued_at": "2026-07-12T04:20:50.389Z",
-  "expires_at": "2026-07-19T04:20:50.389Z",
+  "issued_at": "2026-07-15T01:13:36.611Z",
+  "expires_at": "2026-07-22T01:13:36.611Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6312b2cf6b3625af176ac58cb9c53cb7bcf9dea8b7df2bdb1d119b5925b19bb9",
+  "signature": "037f6ffebf24604ffaa437eb5d449cd259097346271e91d903932854f15fe1cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e44ef6e4"
 }

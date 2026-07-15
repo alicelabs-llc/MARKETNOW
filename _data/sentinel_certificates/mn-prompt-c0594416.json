@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0129710",
+  "certificate_id": "MN-SC-2026-8124485",
   "skill_id": "mn-prompt-c0594416",
   "skill_name": "Especialista Recruitment Marketing + Employer Brand",
-  "issued_at": "2026-07-12T04:22:09.710Z",
-  "expires_at": "2026-07-19T04:22:09.710Z",
+  "issued_at": "2026-07-15T01:15:24.485Z",
+  "expires_at": "2026-07-22T01:15:24.485Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "984649ec03990ebc7919a3aa297c809b6032224dfbfb876311263d9199491d68",
+  "signature": "c1e169fcb27f461ccf5394167a61d259e81dd9ec60167e2b031e56df483abcde",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c0594416"
 }

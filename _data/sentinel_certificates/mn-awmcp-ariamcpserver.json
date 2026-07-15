@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0347985",
+  "certificate_id": "MN-SC-2026-8432838",
   "skill_id": "mn-awmcp-ariamcpserver",
   "skill_name": "aria-mcp-server",
-  "issued_at": "2026-07-12T04:25:47.985Z",
-  "expires_at": "2026-07-19T04:25:47.985Z",
+  "issued_at": "2026-07-15T01:20:32.838Z",
+  "expires_at": "2026-07-22T01:20:32.838Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "f5c3295596ab558c78314930d65d286b21630618aec4013f562319a61c45be94",
+  "signature": "e7a0b0ec8ece1b52dd4c53bad561e163dc18680a58ce9a1dfb8195af19283173",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ariamcpserver"
 }

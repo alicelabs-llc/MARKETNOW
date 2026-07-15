@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0801631",
+  "certificate_id": "MN-SC-2026-8964241",
   "skill_id": "mn-real-mcpservermacosuse",
   "skill_name": "mcp-server-macos-use",
-  "issued_at": "2026-07-12T04:33:21.631Z",
-  "expires_at": "2026-07-19T04:33:21.631Z",
+  "issued_at": "2026-07-15T01:29:24.241Z",
+  "expires_at": "2026-07-22T01:29:24.241Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b28145372aa83c0fc105378a154ace5ad687e2dff42c8d287493f0b7db90f5ac",
+  "signature": "e385b347db37ea767fc088c423017af5a25bc6ffac31c86b732d3a68376b32c7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpservermacosuse"
 }

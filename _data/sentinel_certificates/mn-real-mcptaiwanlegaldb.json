@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0727709",
+  "certificate_id": "MN-SC-2026-8874433",
   "skill_id": "mn-real-mcptaiwanlegaldb",
   "skill_name": "mcp-taiwan-legal-db",
-  "issued_at": "2026-07-12T04:32:07.709Z",
-  "expires_at": "2026-07-19T04:32:07.709Z",
+  "issued_at": "2026-07-15T01:27:54.433Z",
+  "expires_at": "2026-07-22T01:27:54.433Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a576e6aae0bd95b97b94e9cbb7118295bbff9c663e40ab034a1c403f0a08750c",
+  "signature": "32159fca5c386728ba33f56fd55e6ecec28666afbcd30c6868c72d9563c426a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcptaiwanlegaldb"
 }

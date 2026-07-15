@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0832857",
+  "certificate_id": "MN-SC-2026-9000757",
   "skill_id": "mn-real-awesomelegaltech",
   "skill_name": "awesome-legaltech",
-  "issued_at": "2026-07-12T04:33:52.857Z",
-  "expires_at": "2026-07-19T04:33:52.857Z",
+  "issued_at": "2026-07-15T01:30:00.757Z",
+  "expires_at": "2026-07-22T01:30:00.757Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a0ea8f35abd30039e52778c4b4ce90b6da10dd007fbf081b0fe0c3a44fa24f91",
+  "signature": "7b92a384adebe86dd902a9a421461ec1b752c04a4bbc413c1c87ddb4ca575f5a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-awesomelegaltech"
 }

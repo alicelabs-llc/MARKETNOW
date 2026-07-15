@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0473909",
+  "certificate_id": "MN-SC-2026-8580731",
   "skill_id": "mn-real-openmmmcp",
   "skill_name": "openmm-mcp",
-  "issued_at": "2026-07-12T04:27:53.909Z",
-  "expires_at": "2026-07-19T04:27:53.909Z",
+  "issued_at": "2026-07-15T01:23:00.731Z",
+  "expires_at": "2026-07-22T01:23:00.731Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63a3396d915c4b92f549214d77cfe84c66bf8b4711b9a9db2bd89d4f88062b71",
+  "signature": "82ea33d261548dfd4a3b4603366b3b102b120e894025761bd76fb85c133aaf68",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openmmmcp"
 }

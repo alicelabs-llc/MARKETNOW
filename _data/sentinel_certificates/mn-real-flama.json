@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0607952",
+  "certificate_id": "MN-SC-2026-8725123",
   "skill_id": "mn-real-flama",
   "skill_name": "flama",
-  "issued_at": "2026-07-12T04:30:07.952Z",
-  "expires_at": "2026-07-19T04:30:07.952Z",
+  "issued_at": "2026-07-15T01:25:25.123Z",
+  "expires_at": "2026-07-22T01:25:25.123Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "751e191739b6a7d3c9bb349871ba3bc332639ea8c0c178c786345ba7f0e0e7c5",
+  "signature": "b82c72c593a4d1807aaa57dda12c88ccd7ee38e8a673804ef5c5f2e864c573c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-flama"
 }

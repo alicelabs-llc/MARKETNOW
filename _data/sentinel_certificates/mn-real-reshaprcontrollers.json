@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0996789",
+  "certificate_id": "MN-SC-2026-9182062",
   "skill_id": "mn-real-reshaprcontrollers",
   "skill_name": "reshapr-controllers",
-  "issued_at": "2026-07-12T04:36:36.789Z",
-  "expires_at": "2026-07-19T04:36:36.789Z",
+  "issued_at": "2026-07-15T01:33:02.062Z",
+  "expires_at": "2026-07-22T01:33:02.062Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6e6dafe93ffc6f4ae6454e49bb7b83968b51c6957413800d56be0a940d6c4e2",
+  "signature": "27928dfe3922953260ea2501c3f0a3e9656bc1b1ab876d1b437499aa345e11d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-reshaprcontrollers"
 }

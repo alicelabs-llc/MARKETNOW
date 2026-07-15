@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1030742",
+  "certificate_id": "MN-SC-2026-9218501",
   "skill_id": "mn-real-inventorymanagementa",
   "skill_name": "inventory-management-ai-mcp",
-  "issued_at": "2026-07-12T04:37:10.742Z",
-  "expires_at": "2026-07-19T04:37:10.742Z",
+  "issued_at": "2026-07-15T01:33:38.501Z",
+  "expires_at": "2026-07-22T01:33:38.501Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "71e2ee215cbcad06445b1ddf490139272642bca10557512a94f09e2a3c1e1311",
+  "signature": "b08475fcfc7f9ecd028a6ddf2614beb821682d40369c8db4d0b7ebb6ef6207e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-inventorymanagementa"
 }

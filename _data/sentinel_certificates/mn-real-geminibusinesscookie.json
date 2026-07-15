@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0913357",
+  "certificate_id": "MN-SC-2026-9091145",
   "skill_id": "mn-real-geminibusinesscookie",
   "skill_name": "GeminiBusiness_CookieExtractor",
-  "issued_at": "2026-07-12T04:35:13.357Z",
-  "expires_at": "2026-07-19T04:35:13.357Z",
+  "issued_at": "2026-07-15T01:31:31.145Z",
+  "expires_at": "2026-07-22T01:31:31.145Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e953f51ee9ef564627bc0f2ab324eb982e05c89f8e87fbaa636dffac8123338f",
+  "signature": "ed52677d7645d6d25201ad0e1e96bb03228ae2efaea97063e340e716e23ed880",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geminibusinesscookie"
 }

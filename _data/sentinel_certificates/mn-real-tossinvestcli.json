@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1086453",
+  "certificate_id": "MN-SC-2026-9241038",
   "skill_id": "mn-real-tossinvestcli",
   "skill_name": "tossinvest-cli",
-  "issued_at": "2026-07-12T04:38:06.453Z",
-  "expires_at": "2026-07-19T04:38:06.453Z",
+  "issued_at": "2026-07-15T01:34:01.038Z",
+  "expires_at": "2026-07-22T01:34:01.038Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93451635ac18b2ed7d46cbee011d47167ff1e432747285cc7267a44cbd36d06f",
+  "signature": "04ba77551c61969f9c90de0ea7d1297abf8b494bc7ade9b454767548435c0430",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tossinvestcli"
 }

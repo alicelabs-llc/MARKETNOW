@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0866894",
+  "certificate_id": "MN-SC-2026-9045196",
   "skill_id": "mn-real-perigoncli",
   "skill_name": "Perigon.CLI",
-  "issued_at": "2026-07-12T04:34:26.894Z",
-  "expires_at": "2026-07-19T04:34:26.894Z",
+  "issued_at": "2026-07-15T01:30:45.196Z",
+  "expires_at": "2026-07-22T01:30:45.196Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d98a49b2c54d7de4a9c047b816d753efb74238a7e9314158cf23f4081b2d91ed",
+  "signature": "a33fe4439e248579a036d031bb3d15c3e064b5cebf6db9b635b12e7f73a26c0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-perigoncli"
 }

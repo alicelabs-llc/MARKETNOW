@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0691484",
+  "certificate_id": "MN-SC-2026-8824547",
   "skill_id": "mn-real-exstruct",
   "skill_name": "exstruct",
-  "issued_at": "2026-07-12T04:31:31.484Z",
-  "expires_at": "2026-07-19T04:31:31.484Z",
+  "issued_at": "2026-07-15T01:27:04.547Z",
+  "expires_at": "2026-07-22T01:27:04.547Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f34606f841c4292d8833845168c1d21b4ebede5b8d0f17b5be5d1eb627d26ea",
+  "signature": "ace1ab1b9aefef0a3d9604fd7731deba8a53a9bf127247bcff6d977b8fbf31ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-exstruct"
 }

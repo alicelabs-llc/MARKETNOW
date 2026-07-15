@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0020213",
+  "certificate_id": "MN-SC-2026-7973403",
   "skill_id": "mn-gen-07053",
   "skill_name": "himarket",
-  "issued_at": "2026-07-12T04:20:20.213Z",
-  "expires_at": "2026-07-19T04:20:20.213Z",
+  "issued_at": "2026-07-15T01:12:53.403Z",
+  "expires_at": "2026-07-22T01:12:53.403Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b224d2a2bd15b7a2cd847282deb80ae9e31955aca572674cda117ea770796130",
+  "signature": "5a559d5d0d3698b312ea550441b08ded98d55db5a0cadc0e4a3a9e9b18d6911c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07053"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0667232",
+  "certificate_id": "MN-SC-2026-8793303",
   "skill_id": "mn-real-sonatypemcp",
   "skill_name": "sonatype-mcp",
-  "issued_at": "2026-07-12T04:31:07.232Z",
-  "expires_at": "2026-07-19T04:31:07.232Z",
+  "issued_at": "2026-07-15T01:26:33.304Z",
+  "expires_at": "2026-07-22T01:26:33.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "050332d54d1a295bb97e3f813f8623bdf14bd13fd837d639abb8be9e4b565a4b",
+  "signature": "7ba104a5a881818f6e051d6979e47a1316e88257339ace1557fb18d2bcb449ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sonatypemcp"
 }

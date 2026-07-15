@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0235102",
+  "certificate_id": "MN-SC-2026-8270833",
   "skill_id": "mn-prompt-cc34d32b",
   "skill_name": "Cap table post-money SAFE",
-  "issued_at": "2026-07-12T04:23:55.102Z",
-  "expires_at": "2026-07-19T04:23:55.102Z",
+  "issued_at": "2026-07-15T01:17:50.833Z",
+  "expires_at": "2026-07-22T01:17:50.833Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85ed2c9777ab0c6d7922f04630ceda1185c61242c3d0ee45efdc04155dd26e08",
+  "signature": "b0da8f5dfdf1828b194385ab7a335938e17eef98208628329ba21c4073543b94",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-cc34d32b"
 }

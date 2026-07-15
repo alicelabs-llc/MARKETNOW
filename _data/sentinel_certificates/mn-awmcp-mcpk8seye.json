@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0367778",
+  "certificate_id": "MN-SC-2026-8460292",
   "skill_id": "mn-awmcp-mcpk8seye",
   "skill_name": "mcp-k8s-eye",
-  "issued_at": "2026-07-12T04:26:07.778Z",
-  "expires_at": "2026-07-19T04:26:07.778Z",
+  "issued_at": "2026-07-15T01:21:00.292Z",
+  "expires_at": "2026-07-22T01:21:00.292Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4ab3402c13c02b5751b9eaefd70d327855c8078b1075d5ab7dd9fa32376096a",
+  "signature": "66ca2e64e4e33398dac9236ff927251daf204f9e2f3c8af472108d0548dca6fe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpk8seye"
 }

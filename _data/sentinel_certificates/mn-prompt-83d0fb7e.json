@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0261869",
+  "certificate_id": "MN-SC-2026-8307878",
   "skill_id": "mn-prompt-83d0fb7e",
   "skill_name": "Brand storytelling narrative",
-  "issued_at": "2026-07-12T04:24:21.869Z",
-  "expires_at": "2026-07-19T04:24:21.869Z",
+  "issued_at": "2026-07-15T01:18:27.878Z",
+  "expires_at": "2026-07-22T01:18:27.878Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b68600ef460900337a60eb3fa5d0f74074104c425a8f234b11b67399a0fac98",
+  "signature": "ee7583a28cb5cddd5d0fde2783db9d6267d5ba9a103b2916fff3c74bd51210b7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-83d0fb7e"
 }

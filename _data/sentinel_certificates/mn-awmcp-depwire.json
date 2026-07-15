@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0327131",
+  "certificate_id": "MN-SC-2026-8402531",
   "skill_id": "mn-awmcp-depwire",
   "skill_name": "depwire",
-  "issued_at": "2026-07-12T04:25:27.131Z",
-  "expires_at": "2026-07-19T04:25:27.131Z",
+  "issued_at": "2026-07-15T01:20:02.531Z",
+  "expires_at": "2026-07-22T01:20:02.531Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "0da7a78c64e40798efd8e544aacc07bc00650faa75b2f8ff1abf26f8d6f0e765",
+  "signature": "8ee4b2c59d9a1ea9b022874998ecc38a0c24d6f1e0f942ee92193c48d6b62595",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-depwire"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0761232",
+  "certificate_id": "MN-SC-2026-8914574",
   "skill_id": "mn-real-rlmclaude",
   "skill_name": "rlm-claude",
-  "issued_at": "2026-07-12T04:32:41.232Z",
-  "expires_at": "2026-07-19T04:32:41.232Z",
+  "issued_at": "2026-07-15T01:28:34.574Z",
+  "expires_at": "2026-07-22T01:28:34.574Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f7f6dd2676f3145316301a6773f18c70414c5c2df8f3635fad35e2c3a39e4f79",
+  "signature": "3dd9a6e6de4348bb0dffa1cb84b20a975e5e86592339065fd9d1c06094c75f63",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rlmclaude"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0070129",
+  "certificate_id": "MN-SC-2026-8042185",
   "skill_id": "mn-prompt-ac26aa4f",
   "skill_name": "Especialista Azure + Enterprise",
-  "issued_at": "2026-07-12T04:21:10.129Z",
-  "expires_at": "2026-07-19T04:21:10.129Z",
+  "issued_at": "2026-07-15T01:14:02.185Z",
+  "expires_at": "2026-07-22T01:14:02.185Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49d22c29b702bc84f35f98c9d01275570b549be5ed6e1bde7982a3d21afde40b",
+  "signature": "b2b0686a2f9798e7338c4e4e78bebc582c7c1ac30d92cebfd36c77a3399c809b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ac26aa4f"
 }

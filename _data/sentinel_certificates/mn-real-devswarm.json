@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0863579",
+  "certificate_id": "MN-SC-2026-9039965",
   "skill_id": "mn-real-devswarm",
   "skill_name": "devswarm",
-  "issued_at": "2026-07-12T04:34:23.579Z",
-  "expires_at": "2026-07-19T04:34:23.579Z",
+  "issued_at": "2026-07-15T01:30:39.965Z",
+  "expires_at": "2026-07-22T01:30:39.965Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af8935daf1f8ee485dd4555b0ad41d9b43a733a4e2317f02b4eeceeb7947facd",
+  "signature": "2fc0aeb8a85a94e573dfb293ca0b7127110c535d49c959c0d890aea45e1a8bce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-devswarm"
 }

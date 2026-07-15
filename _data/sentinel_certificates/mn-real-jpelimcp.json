@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0978554",
+  "certificate_id": "MN-SC-2026-9166359",
   "skill_id": "mn-real-jpelimcp",
   "skill_name": "jp-eli-mcp",
-  "issued_at": "2026-07-12T04:36:18.554Z",
-  "expires_at": "2026-07-19T04:36:18.554Z",
+  "issued_at": "2026-07-15T01:32:46.359Z",
+  "expires_at": "2026-07-22T01:32:46.359Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8c2726912287c65253cefac893d46d5383f681dd6b1e93ac9bc50d71e4e62f4",
+  "signature": "c88738a9c6eae5e8fb3cc182160e256ef57bb1c20e5fc6c8e355e057e5b8cf50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jpelimcp"
 }

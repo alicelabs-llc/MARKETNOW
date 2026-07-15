@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0262005",
+  "certificate_id": "MN-SC-2026-8306996",
   "skill_id": "mn-prompt-03ba9b60",
   "skill_name": "Copywriting for different industries",
-  "issued_at": "2026-07-12T04:24:22.005Z",
-  "expires_at": "2026-07-19T04:24:22.005Z",
+  "issued_at": "2026-07-15T01:18:26.996Z",
+  "expires_at": "2026-07-22T01:18:26.996Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0869edbbc657953fc796883f7a2970c59f619d8998da77c8c5ed11bbc426296b",
+  "signature": "978b9a3db8924bf0964aa6bafe8359a261a9d9ea60404d95b34c478456472adf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-03ba9b60"
 }

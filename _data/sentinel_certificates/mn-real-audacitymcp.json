@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0870371",
+  "certificate_id": "MN-SC-2026-9049161",
   "skill_id": "mn-real-audacitymcp",
   "skill_name": "Audacity-MCP",
-  "issued_at": "2026-07-12T04:34:30.371Z",
-  "expires_at": "2026-07-19T04:34:30.371Z",
+  "issued_at": "2026-07-15T01:30:49.161Z",
+  "expires_at": "2026-07-22T01:30:49.161Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bfaeea5d87b8549ef2b0e7994b3b4df3161ea32c134af0a699dd30e474fe2c84",
+  "signature": "eb416283342c82f446f87ab71469b7d6fdfc2b35f938c9da361a1d5c38d373a5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-audacitymcp"
 }

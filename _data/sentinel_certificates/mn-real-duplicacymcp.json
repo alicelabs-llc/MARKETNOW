@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0518191",
+  "certificate_id": "MN-SC-2026-8624310",
   "skill_id": "mn-real-duplicacymcp",
   "skill_name": "duplicacy-mcp",
-  "issued_at": "2026-07-12T04:28:38.191Z",
-  "expires_at": "2026-07-19T04:28:38.191Z",
+  "issued_at": "2026-07-15T01:23:44.310Z",
+  "expires_at": "2026-07-22T01:23:44.310Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8be0f2cc54ee6324e8400bef3dd0b59cd39472d4605629b14ed4f4878910f7f1",
+  "signature": "9128b4131489f4874b36fd975f92a6ff64084eefde6467e49b7b1c15c9ff2b7b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-duplicacymcp"
 }

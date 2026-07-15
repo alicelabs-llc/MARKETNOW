@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0716339",
+  "certificate_id": "MN-SC-2026-8859444",
   "skill_id": "mn-real-androidsourceexplore",
   "skill_name": "android-source-explorer-mcp",
-  "issued_at": "2026-07-12T04:31:56.339Z",
-  "expires_at": "2026-07-19T04:31:56.339Z",
+  "issued_at": "2026-07-15T01:27:39.444Z",
+  "expires_at": "2026-07-22T01:27:39.444Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "488a2f4a69ec3c520e6477674b9a72e5c3efd6bc31cfb635a2b42285db4cef32",
+  "signature": "c0c961d69e968b06485aa66af38d1310b8e9e423cca3d50b7f0c3211553b29bc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-androidsourceexplore"
 }

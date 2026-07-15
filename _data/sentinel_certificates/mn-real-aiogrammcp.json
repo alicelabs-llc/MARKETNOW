@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0398501",
+  "certificate_id": "MN-SC-2026-8494645",
   "skill_id": "mn-real-aiogrammcp",
   "skill_name": "aiogram-mcp",
-  "issued_at": "2026-07-12T04:26:38.501Z",
-  "expires_at": "2026-07-19T04:26:38.501Z",
+  "issued_at": "2026-07-15T01:21:34.646Z",
+  "expires_at": "2026-07-22T01:21:34.646Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95639b744addf2a1b0a31fbe3610c6fa718f8833bb7921a21b4cba4e2103aeb3",
+  "signature": "e36eb727191ae85546ed8a809828092f04ba235c05c8c7ac4636bca0aef9822f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aiogrammcp"
 }

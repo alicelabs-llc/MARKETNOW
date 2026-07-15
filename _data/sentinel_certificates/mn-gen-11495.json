@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0040341",
+  "certificate_id": "MN-SC-2026-8001163",
   "skill_id": "mn-gen-11495",
   "skill_name": "scrapeless-mcp-server",
-  "issued_at": "2026-07-12T04:20:40.341Z",
-  "expires_at": "2026-07-19T04:20:40.341Z",
+  "issued_at": "2026-07-15T01:13:21.163Z",
+  "expires_at": "2026-07-22T01:13:21.163Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e4d10add364cc9c076f7ba7d372e5fcdd72f0324f28d98d9580c5bff9ad1eac8",
+  "signature": "b0f3f91721711693572afb473dc1383adbf84da1bc1ee0605f20e3fe7d9f9864",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11495"
 }

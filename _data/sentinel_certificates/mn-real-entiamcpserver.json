@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0480964",
+  "certificate_id": "MN-SC-2026-8588697",
   "skill_id": "mn-real-entiamcpserver",
   "skill_name": "entia-mcp-server",
-  "issued_at": "2026-07-12T04:28:00.964Z",
-  "expires_at": "2026-07-19T04:28:00.964Z",
+  "issued_at": "2026-07-15T01:23:08.697Z",
+  "expires_at": "2026-07-22T01:23:08.697Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01ca1cfc567fb0c8b6b091cf0a526e152e7e8b4f85ce35ab8f5d20436850fac2",
+  "signature": "1010fb26206d98f896e5dd0b51329ef8e2493768e885e62d6fe5443ff61c0fea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-entiamcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0139493",
+  "certificate_id": "MN-SC-2026-8139185",
   "skill_id": "mn-prompt-ed49b625",
   "skill_name": "Especialista Digital Literacy + Citizenship",
-  "issued_at": "2026-07-12T04:22:19.493Z",
-  "expires_at": "2026-07-19T04:22:19.493Z",
+  "issued_at": "2026-07-15T01:15:39.185Z",
+  "expires_at": "2026-07-22T01:15:39.185Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9b8a108e90b691546c65539747c79c2a5b1e7248f741b69ca39a35f9211c7153",
+  "signature": "48ee603f664efd451a6e38c3d75dd235c18cc93237951d7212c44ca4028c66d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ed49b625"
 }

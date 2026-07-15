@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0446045",
+  "certificate_id": "MN-SC-2026-8549424",
   "skill_id": "mn-real-opcuamcp",
   "skill_name": "opcua-mcp",
-  "issued_at": "2026-07-12T04:27:26.045Z",
-  "expires_at": "2026-07-19T04:27:26.045Z",
+  "issued_at": "2026-07-15T01:22:29.424Z",
+  "expires_at": "2026-07-22T01:22:29.424Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04940671e5847607c73838c156736d530b523b06a4aeb1a2b4a06ebf4594fefb",
+  "signature": "9a99f1031488284626671961dd13b42713e533097479f8172495a351484ae119",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opcuamcp"
 }

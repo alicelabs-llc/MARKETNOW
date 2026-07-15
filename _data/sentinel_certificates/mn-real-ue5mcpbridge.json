@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0746323",
+  "certificate_id": "MN-SC-2026-8897234",
   "skill_id": "mn-real-ue5mcpbridge",
   "skill_name": "ue5-mcp-bridge",
-  "issued_at": "2026-07-12T04:32:26.323Z",
-  "expires_at": "2026-07-19T04:32:26.323Z",
+  "issued_at": "2026-07-15T01:28:17.234Z",
+  "expires_at": "2026-07-22T01:28:17.234Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d92fbf3982728e5f0144ccd160dfd42400075e03bb7d98dcfaba2c7df9c98681",
+  "signature": "3a1996a1368390dfb34d3d704bfd1cc554659acb9409db71241c901dbf888881",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ue5mcpbridge"
 }

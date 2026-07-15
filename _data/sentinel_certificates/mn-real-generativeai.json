@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0601584",
+  "certificate_id": "MN-SC-2026-8717260",
   "skill_id": "mn-real-generativeai",
   "skill_name": "generative-ai",
-  "issued_at": "2026-07-12T04:30:01.584Z",
-  "expires_at": "2026-07-19T04:30:01.584Z",
+  "issued_at": "2026-07-15T01:25:17.260Z",
+  "expires_at": "2026-07-22T01:25:17.260Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a1b5c6e23c6517b182d65d39cee0649959f9c3b74b39d24bc96650459807b1c4",
+  "signature": "9fab709745344eec7c06738b961762c8a847598d29e41691c75a9b6630a26244",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-generativeai"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0361372",
+  "certificate_id": "MN-SC-2026-8450913",
   "skill_id": "mn-awmcp-terraformmcpserver",
   "skill_name": "terraform-mcp-server",
-  "issued_at": "2026-07-12T04:26:01.372Z",
-  "expires_at": "2026-07-19T04:26:01.372Z",
+  "issued_at": "2026-07-15T01:20:50.913Z",
+  "expires_at": "2026-07-22T01:20:50.913Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "309b3240db5047cf925a7931f471014b8aea19ffa4d6e0c2e0ebd543e9f6b4ae",
+  "signature": "c3762bfb0a0ab22772b72cb9383a0ac981249d5832163a449c21890695c8215c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-terraformmcpserver"
 }

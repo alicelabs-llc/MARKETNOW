@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0967366",
+  "certificate_id": "MN-SC-2026-9152592",
   "skill_id": "mn-real-zapcodingagent",
   "skill_name": "zap-coding-agent",
-  "issued_at": "2026-07-12T04:36:07.366Z",
-  "expires_at": "2026-07-19T04:36:07.366Z",
+  "issued_at": "2026-07-15T01:32:32.592Z",
+  "expires_at": "2026-07-22T01:32:32.592Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "64e32ccdf15ff876b59a59c474908ba1aef62729cce6184ddbeddb5ae4552a21",
+  "signature": "6e651ede9d72d86049bfe9b39ce51824cb1ed0a9bf6425756f1ae4acbf53f980",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zapcodingagent"
 }

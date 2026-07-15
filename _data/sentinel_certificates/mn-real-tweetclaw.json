@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0722708",
+  "certificate_id": "MN-SC-2026-8868091",
   "skill_id": "mn-real-tweetclaw",
   "skill_name": "tweetclaw",
-  "issued_at": "2026-07-12T04:32:02.708Z",
-  "expires_at": "2026-07-19T04:32:02.708Z",
+  "issued_at": "2026-07-15T01:27:48.091Z",
+  "expires_at": "2026-07-22T01:27:48.091Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "74e86321b496353722d998caab98a3e2c379780b9721ced1953df03aa4d654d0",
+  "signature": "44f78a7b286ba2c689d7cd8feff63441f9285ad775ed40ba50bd328854ca3796",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tweetclaw"
 }

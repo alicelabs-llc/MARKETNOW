@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0874291",
+  "certificate_id": "MN-SC-2026-9052970",
   "skill_id": "mn-local-autotargettracker",
   "skill_name": "auto-target-tracker",
-  "issued_at": "2026-07-12T04:34:34.291Z",
-  "expires_at": "2026-07-19T04:34:34.291Z",
+  "issued_at": "2026-07-15T01:30:52.970Z",
+  "expires_at": "2026-07-22T01:30:52.970Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f1f4f54235c64b78973be2c13dfe7e44d749e7cd51df86a62086edf0ba5e266b",
+  "signature": "eb9a592f5059cd9c0f1ee9042629d51b8c4b969e38990e1a12db0a7360780cec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-local-autotargettracker"
 }

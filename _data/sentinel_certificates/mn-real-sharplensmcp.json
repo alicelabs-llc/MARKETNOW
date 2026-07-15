@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0430748",
+  "certificate_id": "MN-SC-2026-8533979",
   "skill_id": "mn-real-sharplensmcp",
   "skill_name": "sharplens-mcp",
-  "issued_at": "2026-07-12T04:27:10.748Z",
-  "expires_at": "2026-07-19T04:27:10.748Z",
+  "issued_at": "2026-07-15T01:22:13.979Z",
+  "expires_at": "2026-07-22T01:22:13.979Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7fe1591deab5943e35524e57f09e8d9d445715ce6864192e770c2f6329091104",
+  "signature": "05863ae2647b4299d9fa666a039e8712e604aa788613a4e3ab0af7e9e7ad31e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sharplensmcp"
 }

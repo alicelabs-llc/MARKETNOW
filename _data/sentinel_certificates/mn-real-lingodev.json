@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0656016",
+  "certificate_id": "MN-SC-2026-8779704",
   "skill_id": "mn-real-lingodev",
   "skill_name": "lingo.dev",
-  "issued_at": "2026-07-12T04:30:56.016Z",
-  "expires_at": "2026-07-19T04:30:56.016Z",
+  "issued_at": "2026-07-15T01:26:19.704Z",
+  "expires_at": "2026-07-22T01:26:19.704Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "086ed5909f6b4b124f78b0a3a0d8809862f8216dd7c079ac49ee7935ed70efe0",
+  "signature": "6d61f8ad7f363aeb75e98d77357d4855c4f28659ba93e3c2a9858368eac8dab7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lingodev"
 }

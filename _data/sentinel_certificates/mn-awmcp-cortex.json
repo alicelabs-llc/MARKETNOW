@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0328028",
+  "certificate_id": "MN-SC-2026-8403834",
   "skill_id": "mn-awmcp-cortex",
   "skill_name": "cortex",
-  "issued_at": "2026-07-12T04:25:28.028Z",
-  "expires_at": "2026-07-19T04:25:28.028Z",
+  "issued_at": "2026-07-15T01:20:03.834Z",
+  "expires_at": "2026-07-22T01:20:03.834Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "medium",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 5,
     "l2_execution_status": "ran"
   },
-  "signature": "b8acc914849b2c1d3dcdc2415eccaf1b0f519e80809a1b7b6314b0eb78ca6a89",
+  "signature": "76de0823d333fcdb86d2ee00c0f955bcc0c431adbc55c2f54c2a2352be5c384b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-cortex"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0840417",
+  "certificate_id": "MN-SC-2026-9010863",
   "skill_id": "mn-real-heuristagentframewor",
   "skill_name": "heurist-agent-framework",
-  "issued_at": "2026-07-12T04:34:00.417Z",
-  "expires_at": "2026-07-19T04:34:00.417Z",
+  "issued_at": "2026-07-15T01:30:10.863Z",
+  "expires_at": "2026-07-22T01:30:10.863Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94d7d497d23d328c0360e694144864214a0388a53764d0f0137450b56adfb7ce",
+  "signature": "065e817ce53032a8493fc2457d84e50942f578d9349be46f948a49794f9d57c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-heuristagentframewor"
 }

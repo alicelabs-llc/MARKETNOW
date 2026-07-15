@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0706472",
+  "certificate_id": "MN-SC-2026-8846121",
   "skill_id": "mn-real-zimagestudio",
   "skill_name": "z-image-studio",
-  "issued_at": "2026-07-12T04:31:46.472Z",
-  "expires_at": "2026-07-19T04:31:46.472Z",
+  "issued_at": "2026-07-15T01:27:26.121Z",
+  "expires_at": "2026-07-22T01:27:26.121Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ddcf59a9578667e2d1421bf0303289b6ea0d64310ca62b2188d79b9b4b7a0f2",
+  "signature": "a5a28138ce3e15b18357491a9847d57bc5e1d1cfda473515a577b95ee1aa51f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zimagestudio"
 }

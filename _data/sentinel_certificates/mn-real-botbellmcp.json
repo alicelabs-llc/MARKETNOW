@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0398641",
+  "certificate_id": "MN-SC-2026-8494776",
   "skill_id": "mn-real-botbellmcp",
   "skill_name": "botbell-mcp",
-  "issued_at": "2026-07-12T04:26:38.641Z",
-  "expires_at": "2026-07-19T04:26:38.641Z",
+  "issued_at": "2026-07-15T01:21:34.776Z",
+  "expires_at": "2026-07-22T01:21:34.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6348afaabc37b167c38138282ed985f022da7a891d1efb2cbc836aa7ff6e96cb",
+  "signature": "0b4d1ed2158f928662add7f93db6e24898880f2692987308ac7d15dbb847c80e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-botbellmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0667797",
+  "certificate_id": "MN-SC-2026-8793719",
   "skill_id": "mn-real-squadmcp",
   "skill_name": "squad-mcp",
-  "issued_at": "2026-07-12T04:31:07.797Z",
-  "expires_at": "2026-07-19T04:31:07.797Z",
+  "issued_at": "2026-07-15T01:26:33.719Z",
+  "expires_at": "2026-07-22T01:26:33.719Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa3a96352234e7e0a84b2ccc9efbf3fd194e24f830e090f736a0aeceadc74af5",
+  "signature": "ad5d0364f6139fa8aef51199c1b1783de4c4469e553f9c63198ee64a2ca0014a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-squadmcp"
 }

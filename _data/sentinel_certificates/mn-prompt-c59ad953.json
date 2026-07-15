@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0213351",
+  "certificate_id": "MN-SC-2026-8243493",
   "skill_id": "mn-prompt-c59ad953",
   "skill_name": "Pricing page optimization para SaaS",
-  "issued_at": "2026-07-12T04:23:33.351Z",
-  "expires_at": "2026-07-19T04:23:33.351Z",
+  "issued_at": "2026-07-15T01:17:23.493Z",
+  "expires_at": "2026-07-22T01:17:23.493Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c5c6631ad88a38d6d23819955861cd814fc76b3e515316c06860d734a07e1c9",
+  "signature": "fa1fbeeccab3f2b788113a74296028678583b4115f9a3550032b20e596a60e44",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c59ad953"
 }

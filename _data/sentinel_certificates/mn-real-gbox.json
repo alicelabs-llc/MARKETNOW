@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0662495",
+  "certificate_id": "MN-SC-2026-8787437",
   "skill_id": "mn-real-gbox",
   "skill_name": "gbox",
-  "issued_at": "2026-07-12T04:31:02.495Z",
-  "expires_at": "2026-07-19T04:31:02.495Z",
+  "issued_at": "2026-07-15T01:26:27.437Z",
+  "expires_at": "2026-07-22T01:26:27.437Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7055a813c6142369a877387681b333d445e62f3466c765e0fbf689b5ce3c4e6",
+  "signature": "1c0dbbe4b38934cebe50a5f396abddbf8cfba8ec0d7ef84fbfbaaf99f0a58f1a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gbox"
 }

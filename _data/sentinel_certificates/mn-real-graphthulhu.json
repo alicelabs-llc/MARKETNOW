@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0829932",
+  "certificate_id": "MN-SC-2026-8997357",
   "skill_id": "mn-real-graphthulhu",
   "skill_name": "graphthulhu",
-  "issued_at": "2026-07-12T04:33:49.932Z",
-  "expires_at": "2026-07-19T04:33:49.932Z",
+  "issued_at": "2026-07-15T01:29:57.357Z",
+  "expires_at": "2026-07-22T01:29:57.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5198e14cb17e15362165ad91aef0e2caa22a85f0963949f34342ce50e55b023c",
+  "signature": "290a64b6e1b7607c13e542d7a7cc29aeda68684d7b187dbb12cea0c4d934d69e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-graphthulhu"
 }

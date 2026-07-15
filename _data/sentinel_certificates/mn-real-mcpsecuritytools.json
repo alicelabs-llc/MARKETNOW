@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0798406",
+  "certificate_id": "MN-SC-2026-8960319",
   "skill_id": "mn-real-mcpsecuritytools",
   "skill_name": "MCP-SecurityTools",
-  "issued_at": "2026-07-12T04:33:18.406Z",
-  "expires_at": "2026-07-19T04:33:18.406Z",
+  "issued_at": "2026-07-15T01:29:20.319Z",
+  "expires_at": "2026-07-22T01:29:20.319Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d43801048cabe647416918ca9eeae3190c0a4f508d47603e9c2a801a2f4cbf3",
+  "signature": "0b91070f124e2f3c062c67a03591fc39a7b1025150c074a420673eb0cc705ad8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsecuritytools"
 }

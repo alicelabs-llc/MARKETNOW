@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0931702",
+  "certificate_id": "MN-SC-2026-9113617",
   "skill_id": "mn-real-dotnetdiagnostics",
   "skill_name": "dotnet-diagnostics",
-  "issued_at": "2026-07-12T04:35:31.702Z",
-  "expires_at": "2026-07-19T04:35:31.702Z",
+  "issued_at": "2026-07-15T01:31:53.617Z",
+  "expires_at": "2026-07-22T01:31:53.617Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d4b30daf4bbe78daa5eecf5829cfb256661080cef635d1900c20aa1d8174bb8",
+  "signature": "292fa70f10a0be299d343e4603770b2184a059e5a6ab69ca512b2167b464b309",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dotnetdiagnostics"
 }

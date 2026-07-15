@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0138781",
+  "certificate_id": "MN-SC-2026-8138597",
   "skill_id": "mn-prompt-ed26bd31",
   "skill_name": "Especialista Project-Based Learning + PBL",
-  "issued_at": "2026-07-12T04:22:18.781Z",
-  "expires_at": "2026-07-19T04:22:18.781Z",
+  "issued_at": "2026-07-15T01:15:38.597Z",
+  "expires_at": "2026-07-22T01:15:38.597Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d78a9e2f58a05547bf0c15a6167ace6efbb5ac5817060e084dacaafe2ed9a23e",
+  "signature": "7370631a9dc2d4c7476cbfa33309d403e560334b949990f711799716a1d27e82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ed26bd31"
 }

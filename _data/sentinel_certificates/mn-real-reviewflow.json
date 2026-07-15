@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0759843",
+  "certificate_id": "MN-SC-2026-8913304",
   "skill_id": "mn-real-reviewflow",
   "skill_name": "review-flow",
-  "issued_at": "2026-07-12T04:32:39.843Z",
-  "expires_at": "2026-07-19T04:32:39.843Z",
+  "issued_at": "2026-07-15T01:28:33.304Z",
+  "expires_at": "2026-07-22T01:28:33.304Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b8cc220e305099410740a85c628f6a57f8c49238356e5928e59b1ffdbac26e3",
+  "signature": "fcf65369939b0963a874be01467854f3173f3f5d5f777aa881ba6a13848598b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-reviewflow"
 }

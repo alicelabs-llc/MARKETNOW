@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0273227",
+  "certificate_id": "MN-SC-2026-8324234",
   "skill_id": "mn-prompt-71f20139",
   "skill_name": "Copywriting for sales follow-up",
-  "issued_at": "2026-07-12T04:24:33.227Z",
-  "expires_at": "2026-07-19T04:24:33.227Z",
+  "issued_at": "2026-07-15T01:18:44.234Z",
+  "expires_at": "2026-07-22T01:18:44.234Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "981c606621aa50800d9cff3c8baa15bf40a15fb91fce1d118a4dee889650c26f",
+  "signature": "de63317898edfaf327fda600caff9b0a68ffb6156724597c41044b4ba8b3b640",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-71f20139"
 }

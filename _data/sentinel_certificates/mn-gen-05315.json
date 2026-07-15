@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0011052",
+  "certificate_id": "MN-SC-2026-7962660",
   "skill_id": "mn-gen-05315",
   "skill_name": "jmap-mcp",
-  "issued_at": "2026-07-12T04:20:11.052Z",
-  "expires_at": "2026-07-19T04:20:11.052Z",
+  "issued_at": "2026-07-15T01:12:42.660Z",
+  "expires_at": "2026-07-22T01:12:42.660Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "67a76f68393146122b20ad5203b3a009979bf5e13c2bd4c7e3fb445b2217d3be",
+  "signature": "c9fc5c1196e7893ba6483d1fa90996d682ed244b505d2f02fc2404f039970922",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05315"
 }

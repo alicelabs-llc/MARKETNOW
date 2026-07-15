@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0547182",
+  "certificate_id": "MN-SC-2026-8655027",
   "skill_id": "mn-real-guardvibe",
   "skill_name": "guardvibe",
-  "issued_at": "2026-07-12T04:29:07.182Z",
-  "expires_at": "2026-07-19T04:29:07.182Z",
+  "issued_at": "2026-07-15T01:24:15.027Z",
+  "expires_at": "2026-07-22T01:24:15.027Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a23f4df20e7b210dea2d805a39d0c3d4fbee4852ec7ae9a8c7ec1772278f275",
+  "signature": "c15e46e65dd7c9685670fed77609c3993ff1a56c0487897a355b236c7f066fe8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-guardvibe"
 }

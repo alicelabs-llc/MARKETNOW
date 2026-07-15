@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0971041",
+  "certificate_id": "MN-SC-2026-9158067",
   "skill_id": "mn-real-kgraph",
   "skill_name": "KGraph",
-  "issued_at": "2026-07-12T04:36:11.041Z",
-  "expires_at": "2026-07-19T04:36:11.041Z",
+  "issued_at": "2026-07-15T01:32:38.067Z",
+  "expires_at": "2026-07-22T01:32:38.067Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de1a218e9f7bd2eba8ac09bc08f970245ca6102d68a10ccbf0e1112e1d3ef9f2",
+  "signature": "6c9898d829c0e53404439e8e77e870936aa0a92bfbe0cb41bfcc02be96c7e8e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kgraph"
 }

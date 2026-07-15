@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0536017",
+  "certificate_id": "MN-SC-2026-8643173",
   "skill_id": "mn-real-keenablemcp",
   "skill_name": "keenable-mcp",
-  "issued_at": "2026-07-12T04:28:56.017Z",
-  "expires_at": "2026-07-19T04:28:56.017Z",
+  "issued_at": "2026-07-15T01:24:03.173Z",
+  "expires_at": "2026-07-22T01:24:03.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7e53ca5c22a2abd765d25abd1206b20175125edfb869eb0c1e719ec4b16e666f",
+  "signature": "d8cbe3437a69e81df9514aadc127fa52250b2a15525a110bd8bc071784676da9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keenablemcp"
 }

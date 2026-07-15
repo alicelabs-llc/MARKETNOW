@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0560456",
+  "certificate_id": "MN-SC-2026-8670336",
   "skill_id": "mn-real-whisperwindowsmcp",
   "skill_name": "whisper-windows-mcp",
-  "issued_at": "2026-07-12T04:29:20.456Z",
-  "expires_at": "2026-07-19T04:29:20.456Z",
+  "issued_at": "2026-07-15T01:24:30.336Z",
+  "expires_at": "2026-07-22T01:24:30.336Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77e0398f53823ce1a3e41aa251809b94fa43f97e3a50f7dc4ad56d3e6c62750f",
+  "signature": "628bbdace28007300e65f9a99f32d5716aa1e583706e2ffc6ea8cd65f2a57c6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-whisperwindowsmcp"
 }

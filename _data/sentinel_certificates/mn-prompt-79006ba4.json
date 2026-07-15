@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0309432",
+  "certificate_id": "MN-SC-2026-8378865",
   "skill_id": "mn-prompt-79006ba4",
   "skill_name": "Animation studio operations",
-  "issued_at": "2026-07-12T04:25:09.432Z",
-  "expires_at": "2026-07-19T04:25:09.432Z",
+  "issued_at": "2026-07-15T01:19:38.865Z",
+  "expires_at": "2026-07-22T01:19:38.865Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a78623ae83d877065f50fdf872fdd0feb8cc2c76aff0aa004c3b01c92683c410",
+  "signature": "f67144e328f4ef82d46ec182da21b3f45cb8960cbb4e4d959c2d03533013c558",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-79006ba4"
 }

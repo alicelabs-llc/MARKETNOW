@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0122715",
+  "certificate_id": "MN-SC-2026-8117444",
   "skill_id": "mn-prompt-7794750b",
   "skill_name": "Especialista Product Lifecycle + Sunset",
-  "issued_at": "2026-07-12T04:22:02.715Z",
-  "expires_at": "2026-07-19T04:22:02.715Z",
+  "issued_at": "2026-07-15T01:15:17.444Z",
+  "expires_at": "2026-07-22T01:15:17.444Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79a06fbd273e3cb8f61300b030d7a62b552ad5d6fe7463e3e0a8791d101334b5",
+  "signature": "dc2cce96e08a963abbd1143315eb1bc57634f101b0a2291249cc57fbe6a1b625",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7794750b"
 }

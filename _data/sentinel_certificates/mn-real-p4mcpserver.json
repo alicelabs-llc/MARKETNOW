@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0715323",
+  "certificate_id": "MN-SC-2026-8857417",
   "skill_id": "mn-real-p4mcpserver",
   "skill_name": "p4mcp-server",
-  "issued_at": "2026-07-12T04:31:55.323Z",
-  "expires_at": "2026-07-19T04:31:55.323Z",
+  "issued_at": "2026-07-15T01:27:37.417Z",
+  "expires_at": "2026-07-22T01:27:37.417Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3a1786444e7a8140df362c872bda71021026ab6fd2f465f0be5f74f1fb68950b",
+  "signature": "55b75466d48d2873d83b67e70f772b5a817ac7af8f48612044b0b1e135fc3ea5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-p4mcpserver"
 }

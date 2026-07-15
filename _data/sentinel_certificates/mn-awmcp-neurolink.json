@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0329385",
+  "certificate_id": "MN-SC-2026-8405868",
   "skill_id": "mn-awmcp-neurolink",
   "skill_name": "neurolink",
-  "issued_at": "2026-07-12T04:25:29.385Z",
-  "expires_at": "2026-07-19T04:25:29.385Z",
+  "issued_at": "2026-07-15T01:20:05.868Z",
+  "expires_at": "2026-07-22T01:20:05.868Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "7e5805f10479574a0992d746327236aa4a380f930dfc1fe9df5ee96219f1c17d",
+  "signature": "125933be64e53497b7ece692904aff5cd026a4d6b9f6fc724331baf7147a6b74",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-neurolink"
 }

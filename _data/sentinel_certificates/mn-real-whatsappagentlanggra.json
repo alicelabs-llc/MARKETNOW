@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1009669",
+  "certificate_id": "MN-SC-2026-9195035",
   "skill_id": "mn-real-whatsappagentlanggra",
   "skill_name": "Whatsapp-agent-langgraph",
-  "issued_at": "2026-07-12T04:36:49.669Z",
-  "expires_at": "2026-07-19T04:36:49.669Z",
+  "issued_at": "2026-07-15T01:33:15.035Z",
+  "expires_at": "2026-07-22T01:33:15.035Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11cf86e323875bf3061b5f384871335ba848102cfb59b4c0e25f6add6af71216",
+  "signature": "44afd5cf5d21dc1fbcf1757bf237cef0f466558a0c47033cbbbfaf02aef1b5f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-whatsappagentlanggra"
 }

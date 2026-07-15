@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0895369",
+  "certificate_id": "MN-SC-2026-9065970",
   "skill_id": "mn-real-wamcp",
   "skill_name": "wamcp",
-  "issued_at": "2026-07-12T04:34:55.369Z",
-  "expires_at": "2026-07-19T04:34:55.369Z",
+  "issued_at": "2026-07-15T01:31:05.970Z",
+  "expires_at": "2026-07-22T01:31:05.970Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b48bcf2c8723b5f153c1fc88ab0b6b718c21f2839a1a91881aa68e87d4e0fa4",
+  "signature": "c008621be67ec959dad1103acdfb08acf96c5f261bcb9c1fffb164ec5b1126bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wamcp"
 }

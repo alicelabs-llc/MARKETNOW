@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0411774",
+  "certificate_id": "MN-SC-2026-8509184",
   "skill_id": "mn-real-codebasememorymcp",
   "skill_name": "codebase-memory-mcp",
-  "issued_at": "2026-07-12T04:26:51.774Z",
-  "expires_at": "2026-07-19T04:26:51.774Z",
+  "issued_at": "2026-07-15T01:21:49.184Z",
+  "expires_at": "2026-07-22T01:21:49.184Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "149f07604fa27dc02b31010023fea5c10016e92e1ea7111db89764d25a3fab76",
+  "signature": "4a42b1c6b0cae9208a8bb616c1e8e1507d80327d71ccc430bbbb063e13472df0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codebasememorymcp"
 }

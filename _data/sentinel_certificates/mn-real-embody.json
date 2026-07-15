@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0701429",
+  "certificate_id": "MN-SC-2026-8839653",
   "skill_id": "mn-real-embody",
   "skill_name": "Embody",
-  "issued_at": "2026-07-12T04:31:41.429Z",
-  "expires_at": "2026-07-19T04:31:41.429Z",
+  "issued_at": "2026-07-15T01:27:19.653Z",
+  "expires_at": "2026-07-22T01:27:19.653Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23c7b8e73b68932f4c2cdef21e85a8894bf4dd140739bbc2d179b4e46e9e24e9",
+  "signature": "9a1fe2c9e7a7d092b110697cc4ee20712d8c7fd06a5cd07c2e9aaef28f887474",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-embody"
 }

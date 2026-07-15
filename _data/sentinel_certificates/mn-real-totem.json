@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0733852",
+  "certificate_id": "MN-SC-2026-8882466",
   "skill_id": "mn-real-totem",
   "skill_name": "totem",
-  "issued_at": "2026-07-12T04:32:13.852Z",
-  "expires_at": "2026-07-19T04:32:13.852Z",
+  "issued_at": "2026-07-15T01:28:02.466Z",
+  "expires_at": "2026-07-22T01:28:02.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5fd4075a99d9a5d06fbec7269e763905d05216222f572895978f13f4656ec464",
+  "signature": "e910aaa0c414f95ff3dfaee2499c5bda65c4d86462e0297af6ffdaae0834d9d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-totem"
 }

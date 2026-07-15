@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0331640",
+  "certificate_id": "MN-SC-2026-8409514",
   "skill_id": "mn-awmcp-octodamuscore",
   "skill_name": "octodamus-core",
-  "issued_at": "2026-07-12T04:25:31.640Z",
-  "expires_at": "2026-07-19T04:25:31.640Z",
+  "issued_at": "2026-07-15T01:20:09.514Z",
+  "expires_at": "2026-07-22T01:20:09.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "6d78dec102eea67ad60d6a994701a227a3d7031c17d0cdf7aed10ed24b3bb964",
+  "signature": "e5f106f0f9147517842fad33cba4e72fcccc4da0b77105b477ded80f397c4b37",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-octodamuscore"
 }

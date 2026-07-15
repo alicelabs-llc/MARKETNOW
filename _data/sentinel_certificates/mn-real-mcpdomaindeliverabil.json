@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0441331",
+  "certificate_id": "MN-SC-2026-8544063",
   "skill_id": "mn-real-mcpdomaindeliverabil",
   "skill_name": "mcp-domain-deliverability-checker",
-  "issued_at": "2026-07-12T04:27:21.331Z",
-  "expires_at": "2026-07-19T04:27:21.331Z",
+  "issued_at": "2026-07-15T01:22:24.063Z",
+  "expires_at": "2026-07-22T01:22:24.063Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "484439bd8838b9b76a85b34a3f9b0877cb4b26b7b76279e01bb9da69b9ff28d0",
+  "signature": "02b86bca31b334656089248c531faee47936013746a41711f205c6cc780fcde6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdomaindeliverabil"
 }

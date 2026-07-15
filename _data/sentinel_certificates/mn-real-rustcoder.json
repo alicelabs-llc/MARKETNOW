@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0852135",
+  "certificate_id": "MN-SC-2026-9025657",
   "skill_id": "mn-real-rustcoder",
   "skill_name": "RustCoder",
-  "issued_at": "2026-07-12T04:34:12.135Z",
-  "expires_at": "2026-07-19T04:34:12.135Z",
+  "issued_at": "2026-07-15T01:30:25.657Z",
+  "expires_at": "2026-07-22T01:30:25.657Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1bbdcfc201e000c08b29c579166f5971951cd43ce9d052b4e9fc5fe7eb060036",
+  "signature": "7192174b0d73d76c2620ee8f815aadab2f0c53f25121580494ef2150c3bc1a75",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rustcoder"
 }

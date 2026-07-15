@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0820209",
+  "certificate_id": "MN-SC-2026-8985797",
   "skill_id": "mn-real-openmultiagentcanvas",
   "skill_name": "open-multi-agent-canvas",
-  "issued_at": "2026-07-12T04:33:40.209Z",
-  "expires_at": "2026-07-19T04:33:40.209Z",
+  "issued_at": "2026-07-15T01:29:45.797Z",
+  "expires_at": "2026-07-22T01:29:45.797Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6cc2b318cd9a1b9c15a56eff0ba4b523e4b5c857e7b9fee01291daef1b18474",
+  "signature": "69042616e71683ca912dd5ff3b8fc843018c6b9654a4895aa0fdbff88cb5aa0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openmultiagentcanvas"
 }

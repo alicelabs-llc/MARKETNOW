@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0802301",
+  "certificate_id": "MN-SC-2026-8965079",
   "skill_id": "mn-real-mcplinker",
   "skill_name": "mcp-linker",
-  "issued_at": "2026-07-12T04:33:22.301Z",
-  "expires_at": "2026-07-19T04:33:22.301Z",
+  "issued_at": "2026-07-15T01:29:25.079Z",
+  "expires_at": "2026-07-22T01:29:25.079Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af3d309fe5e0110a758fa00bdebc306f99945112e9a2ef70410947b6ed8a6ac9",
+  "signature": "18de5c9ac82b569685cf2f7c8d240ed4e8de5195f126c15ada632fe78d771372",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcplinker"
 }

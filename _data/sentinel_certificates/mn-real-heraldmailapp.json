@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0851809",
+  "certificate_id": "MN-SC-2026-9025148",
   "skill_id": "mn-real-heraldmailapp",
   "skill_name": "herald-mail-app",
-  "issued_at": "2026-07-12T04:34:11.809Z",
-  "expires_at": "2026-07-19T04:34:11.809Z",
+  "issued_at": "2026-07-15T01:30:25.148Z",
+  "expires_at": "2026-07-22T01:30:25.148Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b4b09ba1e4bcc23eab9f1fa6906f1087d1c57f3d9c50bdaab5989b86c443c467",
+  "signature": "5519a8e42ceed8509ec652e7eacb77bfe28e9e5fa0c7912680ec1f610ff381b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-heraldmailapp"
 }

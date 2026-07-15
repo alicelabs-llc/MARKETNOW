@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0580131",
+  "certificate_id": "MN-SC-2026-8693468",
   "skill_id": "mn-real-aivisionmcp",
   "skill_name": "ai-vision-mcp",
-  "issued_at": "2026-07-12T04:29:40.131Z",
-  "expires_at": "2026-07-19T04:29:40.131Z",
+  "issued_at": "2026-07-15T01:24:53.468Z",
+  "expires_at": "2026-07-22T01:24:53.468Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c53ba0ff8ebd0673171a8bd96022a98991f65525dc9be7e21d96baacae9174d4",
+  "signature": "4fb01c3945b618c7dd7d88715155cb5c759dfb892e52fcc3e6cb17bba8accc87",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aivisionmcp"
 }

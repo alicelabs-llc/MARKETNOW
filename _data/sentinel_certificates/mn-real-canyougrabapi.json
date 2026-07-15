@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0531390",
+  "certificate_id": "MN-SC-2026-8639280",
   "skill_id": "mn-real-canyougrabapi",
   "skill_name": "canyougrab-api",
-  "issued_at": "2026-07-12T04:28:51.390Z",
-  "expires_at": "2026-07-19T04:28:51.390Z",
+  "issued_at": "2026-07-15T01:23:59.280Z",
+  "expires_at": "2026-07-22T01:23:59.280Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42ad1de83923c5924d2f0f1f986cc41f2f8caf4a57c9838bc9da9c0b0acb02f9",
+  "signature": "d50942413dbb6d0faa1c8c6d5ec8fb88a601de5f3f9d8de28e8680864074a80f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-canyougrabapi"
 }

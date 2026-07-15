@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0398973",
+  "certificate_id": "MN-SC-2026-8495221",
   "skill_id": "mn-real-spixmcp",
   "skill_name": "spix-mcp",
-  "issued_at": "2026-07-12T04:26:38.973Z",
-  "expires_at": "2026-07-19T04:26:38.973Z",
+  "issued_at": "2026-07-15T01:21:35.221Z",
+  "expires_at": "2026-07-22T01:21:35.221Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5a527fe4009210bd275f40af438db3251d8ab39eeb70343ba336b310a50137a",
+  "signature": "eaa3b968a10e408e3d94b83bbbbfaaa9555ab6a64db1fb8011ed107dd4bbb21f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-spixmcp"
 }

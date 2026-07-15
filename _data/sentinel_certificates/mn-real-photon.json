@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0732323",
+  "certificate_id": "MN-SC-2026-8880534",
   "skill_id": "mn-real-photon",
   "skill_name": "photon",
-  "issued_at": "2026-07-12T04:32:12.323Z",
-  "expires_at": "2026-07-19T04:32:12.323Z",
+  "issued_at": "2026-07-15T01:28:00.534Z",
+  "expires_at": "2026-07-22T01:28:00.534Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d9c0adc5bd3ae1489caf8db7bbabaa4f56c94dec14bd7bbd353078cd418b2bf",
+  "signature": "83f3305cfec9b8fb6add7983e1948786ad02cfa245f4fa83b2bc73e12bac0a6d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-photon"
 }

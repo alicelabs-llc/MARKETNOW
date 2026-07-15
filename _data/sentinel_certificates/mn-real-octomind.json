@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0724246",
+  "certificate_id": "MN-SC-2026-8870449",
   "skill_id": "mn-real-octomind",
   "skill_name": "octomind",
-  "issued_at": "2026-07-12T04:32:04.246Z",
-  "expires_at": "2026-07-19T04:32:04.246Z",
+  "issued_at": "2026-07-15T01:27:50.449Z",
+  "expires_at": "2026-07-22T01:27:50.449Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17031b8851ece74840c4d015bb46eb379a4fbe5291c30e70795147ddc9728c5e",
+  "signature": "48224ec237fb14ce634a4b6ee01a123f72f1c7e3e46cb6647cffc44c1d15fffe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-octomind"
 }

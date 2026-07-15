@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0061356",
+  "certificate_id": "MN-SC-2026-8032780",
   "skill_id": "mn-prompt-99d3643e",
   "skill_name": "Especialista Build Tools + Vite",
-  "issued_at": "2026-07-12T04:21:01.356Z",
-  "expires_at": "2026-07-19T04:21:01.356Z",
+  "issued_at": "2026-07-15T01:13:52.780Z",
+  "expires_at": "2026-07-22T01:13:52.780Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09a59a2385a63a51e644d748a33ed939131dd0a91ed73e0f0f76948e25d55c76",
+  "signature": "fbc7a7300e4cbd60430f41eb511314da686dded404e4b43e67b07b25134bf83f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-99d3643e"
 }

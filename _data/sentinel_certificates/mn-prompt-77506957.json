@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0100708",
+  "certificate_id": "MN-SC-2026-8086855",
   "skill_id": "mn-prompt-77506957",
   "skill_name": "Especialista Database Query Plan Analysis",
-  "issued_at": "2026-07-12T04:21:40.708Z",
-  "expires_at": "2026-07-19T04:21:40.708Z",
+  "issued_at": "2026-07-15T01:14:46.855Z",
+  "expires_at": "2026-07-22T01:14:46.855Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5cf641c43b966cbcb6b39bbc42b569f964c60c5fdf91c137765683673f439bcd",
+  "signature": "0389ed0ed1031286a869dddf9a3d6f85dc13adc00adaf9ea203e4ca069f72108",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-77506957"
 }

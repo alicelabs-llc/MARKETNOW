@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0313899",
+  "certificate_id": "MN-SC-2026-8383525",
   "skill_id": "mn-prompt-1e6b98ad",
   "skill_name": "Restaurant franchise operations",
-  "issued_at": "2026-07-12T04:25:13.899Z",
-  "expires_at": "2026-07-19T04:25:13.899Z",
+  "issued_at": "2026-07-15T01:19:43.525Z",
+  "expires_at": "2026-07-22T01:19:43.525Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68e5f49520d78bcb91297de2778746285b591e1797041df8931e5275a32a0306",
+  "signature": "0ef24abfde6ce85d7fd1b125051beaa9522a1f454480a1c7e3657ce3e45a1890",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1e6b98ad"
 }

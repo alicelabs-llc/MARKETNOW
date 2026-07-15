@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0765487",
+  "certificate_id": "MN-SC-2026-8921714",
   "skill_id": "mn-real-flacmcp",
   "skill_name": "flac-mcp",
-  "issued_at": "2026-07-12T04:32:45.487Z",
-  "expires_at": "2026-07-19T04:32:45.487Z",
+  "issued_at": "2026-07-15T01:28:41.714Z",
+  "expires_at": "2026-07-22T01:28:41.714Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca884cbdffd53fb55ee45b9157dc61243e82645e0d079fce438696609a674a4a",
+  "signature": "5e822e4a412821c567f52aca1440a86654ce71911a4ecd248cb6e45f492c25fb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-flacmcp"
 }

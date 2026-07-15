@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0627057",
+  "certificate_id": "MN-SC-2026-8747006",
   "skill_id": "mn-real-mcpmongoserver",
   "skill_name": "mcp-mongo-server",
-  "issued_at": "2026-07-12T04:30:27.057Z",
-  "expires_at": "2026-07-19T04:30:27.057Z",
+  "issued_at": "2026-07-15T01:25:47.006Z",
+  "expires_at": "2026-07-22T01:25:47.006Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57ee6a992e80b2de38dace4318eb0708bcde4e2c447b8d8069feee728d165335",
+  "signature": "ee5a91715de6219816817c216fa76fbbc253eabdfe5039151b502dea014b1a27",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmongoserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0626074",
+  "certificate_id": "MN-SC-2026-8745459",
   "skill_id": "mn-real-mcpmermaid",
   "skill_name": "mcp-mermaid",
-  "issued_at": "2026-07-12T04:30:26.074Z",
-  "expires_at": "2026-07-19T04:30:26.074Z",
+  "issued_at": "2026-07-15T01:25:45.459Z",
+  "expires_at": "2026-07-22T01:25:45.459Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "c1f7613a60435e5095204e682720e10019b35a70b81f8a26c1e66875aec22f25",
+  "signature": "18254e8f51ae70650e3099fddde49acac138df24518d4671e5de36a489ff7c59",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmermaid"
 }

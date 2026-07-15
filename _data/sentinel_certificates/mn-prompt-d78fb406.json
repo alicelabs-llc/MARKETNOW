@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0172407",
+  "certificate_id": "MN-SC-2026-8188357",
   "skill_id": "mn-prompt-d78fb406",
   "skill_name": "Especialista Exhibition + Environmental Design",
-  "issued_at": "2026-07-12T04:22:52.407Z",
-  "expires_at": "2026-07-19T04:22:52.407Z",
+  "issued_at": "2026-07-15T01:16:28.357Z",
+  "expires_at": "2026-07-22T01:16:28.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7792d10a93867d0c239f25736fec698d8c6c6ce94cd2c6ee39fcf09c9c87ddee",
+  "signature": "78bd53c879703276e907d70a1e6328f462c68cda7f326e61ce3cf62668bb6c9b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d78fb406"
 }

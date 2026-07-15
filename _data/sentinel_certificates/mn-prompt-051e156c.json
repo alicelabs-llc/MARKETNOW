@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0083060",
+  "certificate_id": "MN-SC-2026-8059567",
   "skill_id": "mn-prompt-051e156c",
   "skill_name": "Especialista Speech + Whisper",
-  "issued_at": "2026-07-12T04:21:23.060Z",
-  "expires_at": "2026-07-19T04:21:23.060Z",
+  "issued_at": "2026-07-15T01:14:19.567Z",
+  "expires_at": "2026-07-22T01:14:19.567Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d6557a9cd9474166e4f9721d6b2b56f0331d95262199df2bf01b24049d28a73e",
+  "signature": "05c364345f68634ab15928fda729292e6b4a6a90cfc3678c35df1bc97fd1fd91",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-051e156c"
 }

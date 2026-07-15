@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0305373",
+  "certificate_id": "MN-SC-2026-8372259",
   "skill_id": "mn-prompt-0d4e1361",
   "skill_name": "Accounting firm practice management",
-  "issued_at": "2026-07-12T04:25:05.373Z",
-  "expires_at": "2026-07-19T04:25:05.373Z",
+  "issued_at": "2026-07-15T01:19:32.259Z",
+  "expires_at": "2026-07-22T01:19:32.259Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6fa9c32cd5b7845e1196442037bd2596bf0d8a2b33a8d9613eafc9298e047b0f",
+  "signature": "8ab00a888cc9abe387c9c1bf41920c6565094663b86451f39119719fe2e089da",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0d4e1361"
 }

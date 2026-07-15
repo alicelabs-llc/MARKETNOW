@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0843789",
+  "certificate_id": "MN-SC-2026-9015137",
   "skill_id": "mn-real-omnicoreagent",
   "skill_name": "omnicoreagent",
-  "issued_at": "2026-07-12T04:34:03.789Z",
-  "expires_at": "2026-07-19T04:34:03.789Z",
+  "issued_at": "2026-07-15T01:30:15.137Z",
+  "expires_at": "2026-07-22T01:30:15.137Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "10c8e214ace841770805b1c627e6a02d9c76984bfc74070eebce0b2a7d2a21af",
+  "signature": "8fc7e9958ef2f6fe2fd97e38ee5b6f650c1e4c11f381c603be8fb4e0a526491f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-omnicoreagent"
 }

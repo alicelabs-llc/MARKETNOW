@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0785544",
+  "certificate_id": "MN-SC-2026-8945581",
   "skill_id": "mn-real-microsoftfabricmcp",
   "skill_name": "microsoft_fabric_mcp",
-  "issued_at": "2026-07-12T04:33:05.544Z",
-  "expires_at": "2026-07-19T04:33:05.544Z",
+  "issued_at": "2026-07-15T01:29:05.581Z",
+  "expires_at": "2026-07-22T01:29:05.581Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0bd11d549aba042056f6d036cabeb9b21a8e28e5c9e922dec022c222dde20217",
+  "signature": "769119988d8298f1391e60276182900faa508f3b2a47c7f944b9d236dc79861f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-microsoftfabricmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0535014",
+  "certificate_id": "MN-SC-2026-8641952",
   "skill_id": "mn-real-agentdomainservicemc",
   "skill_name": "agent-domain-service-mcp",
-  "issued_at": "2026-07-12T04:28:55.014Z",
-  "expires_at": "2026-07-19T04:28:55.014Z",
+  "issued_at": "2026-07-15T01:24:01.952Z",
+  "expires_at": "2026-07-22T01:24:01.952Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0213d3e099c56d3579826ddfeb228d6006e23032311303f2952addccc197417a",
+  "signature": "173d0bf411502f526fc16bb96f47f5b3ed063535dd8e9889b562d279b0174327",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentdomainservicemc"
 }

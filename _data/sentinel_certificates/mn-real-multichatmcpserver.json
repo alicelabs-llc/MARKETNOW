@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0665032",
+  "certificate_id": "MN-SC-2026-8790488",
   "skill_id": "mn-real-multichatmcpserver",
   "skill_name": "multi-chat-mcp-server",
-  "issued_at": "2026-07-12T04:31:05.032Z",
-  "expires_at": "2026-07-19T04:31:05.032Z",
+  "issued_at": "2026-07-15T01:26:30.488Z",
+  "expires_at": "2026-07-22T01:26:30.488Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec0faea87ad89ed00cba2b4314aaa7e77971c7028b05b308869f5b48c7491865",
+  "signature": "2808cc0dd657ceaa73f6e89792443158f00ea7ca3627f1a8588fe9500436d427",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-multichatmcpserver"
 }

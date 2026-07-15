@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0789040",
+  "certificate_id": "MN-SC-2026-8949152",
   "skill_id": "mn-real-supermemorymcp",
   "skill_name": "supermemory-mcp",
-  "issued_at": "2026-07-12T04:33:09.040Z",
-  "expires_at": "2026-07-19T04:33:09.040Z",
+  "issued_at": "2026-07-15T01:29:09.152Z",
+  "expires_at": "2026-07-22T01:29:09.152Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d5f29fddb4adf6750331c616d329c29d362ad3b9a22c6e5bf4f51320112f7093",
+  "signature": "fe3a7fc698847a33258dd776b315b8efcf362e8eab73ec714d52d66f7ddaa901",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-supermemorymcp"
 }

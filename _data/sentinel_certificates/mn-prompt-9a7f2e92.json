@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0213841",
+  "certificate_id": "MN-SC-2026-8244270",
   "skill_id": "mn-prompt-9a7f2e92",
   "skill_name": "Community-led growth strategy",
-  "issued_at": "2026-07-12T04:23:33.841Z",
-  "expires_at": "2026-07-19T04:23:33.841Z",
+  "issued_at": "2026-07-15T01:17:24.270Z",
+  "expires_at": "2026-07-22T01:17:24.270Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6819d3b5c35a0b104f068cb21e26ef4646bb8c54ae307c9854f4162310990ef5",
+  "signature": "f9be71a64f99e5ba3eaf5e5e0a2f583dfdb69cb6c7248d08af870d7059cb1655",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9a7f2e92"
 }

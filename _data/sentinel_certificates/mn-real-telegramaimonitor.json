@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0942150",
+  "certificate_id": "MN-SC-2026-9126871",
   "skill_id": "mn-real-telegramaimonitor",
   "skill_name": "telegram-ai-monitor",
-  "issued_at": "2026-07-12T04:35:42.150Z",
-  "expires_at": "2026-07-19T04:35:42.150Z",
+  "issued_at": "2026-07-15T01:32:06.871Z",
+  "expires_at": "2026-07-22T01:32:06.871Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "033232dab255c0208f0a19e6edde4a869ddc0e0a797487c715dce3b6d405f3f6",
+  "signature": "89f34fd3166b34b4bc5f186e31b909d9ca351fba06660bea472a8c54796704bc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-telegramaimonitor"
 }

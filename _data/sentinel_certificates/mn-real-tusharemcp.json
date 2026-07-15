@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0870524",
+  "certificate_id": "MN-SC-2026-9049192",
   "skill_id": "mn-real-tusharemcp",
   "skill_name": "tushare_MCP",
-  "issued_at": "2026-07-12T04:34:30.524Z",
-  "expires_at": "2026-07-19T04:34:30.524Z",
+  "issued_at": "2026-07-15T01:30:49.192Z",
+  "expires_at": "2026-07-22T01:30:49.192Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c25466bf57368ae2872b1f306daae00ecc4be4ec25f964b54cdc4e411422f730",
+  "signature": "a3668d32024984a2f0d22c29ca4364023e50b95fb2abfad921dc1ee3edcab57b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tusharemcp"
 }

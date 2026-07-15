@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0965448",
+  "certificate_id": "MN-SC-2026-9151175",
   "skill_id": "mn-real-nodeflare",
   "skill_name": "nodeflare",
-  "issued_at": "2026-07-12T04:36:05.448Z",
-  "expires_at": "2026-07-19T04:36:05.448Z",
+  "issued_at": "2026-07-15T01:32:31.175Z",
+  "expires_at": "2026-07-22T01:32:31.175Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e377cb10bb4532af68772042fb8f64f820bbf0c8edd492152f47394e7c6f8595",
+  "signature": "1e03aa698dfe55dd155784f7af516a189f34093bbd99a686d993a0d76ddbc1cd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nodeflare"
 }

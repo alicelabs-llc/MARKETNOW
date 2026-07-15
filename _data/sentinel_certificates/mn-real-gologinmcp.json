@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0654991",
+  "certificate_id": "MN-SC-2026-8778213",
   "skill_id": "mn-real-gologinmcp",
   "skill_name": "gologin-mcp",
-  "issued_at": "2026-07-12T04:30:54.991Z",
-  "expires_at": "2026-07-19T04:30:54.991Z",
+  "issued_at": "2026-07-15T01:26:18.213Z",
+  "expires_at": "2026-07-22T01:26:18.213Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "633c3b9bb892f1304e5e710f58e4c5aff7cb9b90914e22db29e5abbbdbf921ca",
+  "signature": "24a537c5265bdaca813da162eab2a17adb6f67344c60b8542ca4c68ff2f1fc81",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gologinmcp"
 }

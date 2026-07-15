@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0854714",
+  "certificate_id": "MN-SC-2026-9028487",
   "skill_id": "mn-real-zapcode",
   "skill_name": "zapcode",
-  "issued_at": "2026-07-12T04:34:14.714Z",
-  "expires_at": "2026-07-19T04:34:14.714Z",
+  "issued_at": "2026-07-15T01:30:28.487Z",
+  "expires_at": "2026-07-22T01:30:28.487Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "463d88c617bd6761320306212cb447dfb4be55fd14d17e394b720a92770cd3aa",
+  "signature": "420a1eef797c71b79e86e98b857609b131e6ce90501dbbf1a78ebd46b4ae46c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zapcode"
 }

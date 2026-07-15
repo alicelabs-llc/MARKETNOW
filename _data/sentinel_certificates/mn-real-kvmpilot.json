@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0886465",
+  "certificate_id": "MN-SC-2026-9059186",
   "skill_id": "mn-real-kvmpilot",
   "skill_name": "kvm-pilot",
-  "issued_at": "2026-07-12T04:34:46.465Z",
-  "expires_at": "2026-07-19T04:34:46.465Z",
+  "issued_at": "2026-07-15T01:30:59.186Z",
+  "expires_at": "2026-07-22T01:30:59.186Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c8601dade672470ec89c9aeed9d11913e54df2580be03f34db4891539eb5f0c",
+  "signature": "0b980a76f1bbe93b793d654ec95f7eb40db38d40467fdec7f67f20172890b4d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kvmpilot"
 }

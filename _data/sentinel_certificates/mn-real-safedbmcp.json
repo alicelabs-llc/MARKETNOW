@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0405964",
+  "certificate_id": "MN-SC-2026-8502531",
   "skill_id": "mn-real-safedbmcp",
   "skill_name": "safedb-mcp",
-  "issued_at": "2026-07-12T04:26:45.964Z",
-  "expires_at": "2026-07-19T04:26:45.964Z",
+  "issued_at": "2026-07-15T01:21:42.531Z",
+  "expires_at": "2026-07-22T01:21:42.531Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "951a7f4a67e8c7d1e7970d17f2923b501bc35b9f9052a56a9513fc6761feab6b",
+  "signature": "16849916cc53c2d2513277c99913d578948f7794ce9dc8f02938439bbc8681b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-safedbmcp"
 }

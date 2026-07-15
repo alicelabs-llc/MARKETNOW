@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0341931",
+  "certificate_id": "MN-SC-2026-8423223",
   "skill_id": "mn-awmcp-tdmcp",
   "skill_name": "tdmcp",
-  "issued_at": "2026-07-12T04:25:41.931Z",
-  "expires_at": "2026-07-19T04:25:41.931Z",
+  "issued_at": "2026-07-15T01:20:23.223Z",
+  "expires_at": "2026-07-22T01:20:23.223Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 7,
     "l2_execution_status": "ran"
   },
-  "signature": "62220608ab9419d6e3a22c33c7c1174a92848d4681e480c220a4750ab6894ed5",
+  "signature": "efa1797fd95a0f72d8dcfbd11f5f020c949bc4d1a3cfb9b715d47f2d006a5f52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tdmcp"
 }

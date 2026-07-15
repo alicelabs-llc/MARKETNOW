@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0428474",
+  "certificate_id": "MN-SC-2026-8531417",
   "skill_id": "mn-real-mcpservergithubactio",
   "skill_name": "mcp-server-github-actions",
-  "issued_at": "2026-07-12T04:27:08.474Z",
-  "expires_at": "2026-07-19T04:27:08.474Z",
+  "issued_at": "2026-07-15T01:22:11.417Z",
+  "expires_at": "2026-07-22T01:22:11.417Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa69743b32a24d4ab56c957709817878a4c6083623900bd811e7a2f2abe8d9d7",
+  "signature": "7d558288d2194386561f662c4a2979b090b485c9dd15ce49ad03a05054c98aad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpservergithubactio"
 }

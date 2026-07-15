@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0772660",
+  "certificate_id": "MN-SC-2026-8930310",
   "skill_id": "mn-real-novyxmcp",
   "skill_name": "novyx-mcp",
-  "issued_at": "2026-07-12T04:32:52.660Z",
-  "expires_at": "2026-07-19T04:32:52.660Z",
+  "issued_at": "2026-07-15T01:28:50.310Z",
+  "expires_at": "2026-07-22T01:28:50.310Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "99ea0ff1c5cce24522a7ecbc2bca87afeffce0df0be1a47a965f69b2719c3bec",
+  "signature": "66b18f2fb13b9789d8e6d9f76b697f69782ee230c81b698444dcb213a24bf604",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-novyxmcp"
 }

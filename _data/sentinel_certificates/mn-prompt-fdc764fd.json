@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0300698",
+  "certificate_id": "MN-SC-2026-8365602",
   "skill_id": "mn-prompt-fdc764fd",
   "skill_name": "Data warehouse communication",
-  "issued_at": "2026-07-12T04:25:00.698Z",
-  "expires_at": "2026-07-19T04:25:00.698Z",
+  "issued_at": "2026-07-15T01:19:25.602Z",
+  "expires_at": "2026-07-22T01:19:25.602Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ca14b193e1ac02a056161449d1352623e183007e0f96780cc38d47651e2e1d0",
+  "signature": "8e62e02e31e0aca3587abb75577284502e1e75ce76e2f7bbaa360354bf5fb6d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fdc764fd"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0592891",
+  "certificate_id": "MN-SC-2026-8707422",
   "skill_id": "mn-real-xiaozhiesp32serverja",
   "skill_name": "xiaozhi-esp32-server-java",
-  "issued_at": "2026-07-12T04:29:52.891Z",
-  "expires_at": "2026-07-19T04:29:52.891Z",
+  "issued_at": "2026-07-15T01:25:07.422Z",
+  "expires_at": "2026-07-22T01:25:07.422Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0937267fa5e1406800794529e6cdf13ffe82bed5338bf3cbb45073a58283e53d",
+  "signature": "5766f1399d806c45600fca10b9b145fd9348ee4bf6403e9888554fda7d07df3c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xiaozhiesp32serverja"
 }

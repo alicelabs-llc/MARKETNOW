@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0947506",
+  "certificate_id": "MN-SC-2026-9132082",
   "skill_id": "mn-real-diamondblock",
   "skill_name": "DiamondBlock",
-  "issued_at": "2026-07-12T04:35:47.506Z",
-  "expires_at": "2026-07-19T04:35:47.506Z",
+  "issued_at": "2026-07-15T01:32:12.082Z",
+  "expires_at": "2026-07-22T01:32:12.082Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fab39c454ccb827c418cde6aafcd6dd30d3d809c0538d61f66604caa61cc794c",
+  "signature": "9a71c3898b9d04a4cc09aea5cda78b386b8718d92999d0fcad689befd3f0fa89",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-diamondblock"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0688907",
+  "certificate_id": "MN-SC-2026-8821672",
   "skill_id": "mn-real-akshareonemcp",
   "skill_name": "akshare-one-mcp",
-  "issued_at": "2026-07-12T04:31:28.907Z",
-  "expires_at": "2026-07-19T04:31:28.907Z",
+  "issued_at": "2026-07-15T01:27:01.672Z",
+  "expires_at": "2026-07-22T01:27:01.672Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f43d2ea29ce05f5dcf741a3c813218b6a1c7bbf31b4d8c4953c3e3d832a1e57e",
+  "signature": "f750053fc0b89172209a9fa3e1a46c745253d2e07f4bd6f2666b080fa747e1f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-akshareonemcp"
 }

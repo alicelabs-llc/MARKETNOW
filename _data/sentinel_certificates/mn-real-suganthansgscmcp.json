@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0854095",
+  "certificate_id": "MN-SC-2026-9027595",
   "skill_id": "mn-real-suganthansgscmcp",
   "skill_name": "Suganthans-GSC-MCP",
-  "issued_at": "2026-07-12T04:34:14.095Z",
-  "expires_at": "2026-07-19T04:34:14.095Z",
+  "issued_at": "2026-07-15T01:30:27.595Z",
+  "expires_at": "2026-07-22T01:30:27.595Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50d761b354ec9ce1737eb3211902aeb31f204d2c59378e7d78948f0261d28085",
+  "signature": "03fffbf91f4a8ee29f04073dc21cc068075abdc288a6764daaefc04f2d2954f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-suganthansgscmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0242374",
+  "certificate_id": "MN-SC-2026-8280382",
   "skill_id": "mn-prompt-2ddb0de9",
   "skill_name": "Change management framework",
-  "issued_at": "2026-07-12T04:24:02.374Z",
-  "expires_at": "2026-07-19T04:24:02.374Z",
+  "issued_at": "2026-07-15T01:18:00.382Z",
+  "expires_at": "2026-07-22T01:18:00.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "986a1ad2e4ce66e2bb5bd1a3e25f7101e2bc0bd5478559214758d8e5721e5e6a",
+  "signature": "970b0fa99bd295906c239ec1085da5cd1094101243f3fd4911c8eeadae4fdda3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2ddb0de9"
 }

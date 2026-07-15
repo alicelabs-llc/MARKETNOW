@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0945198",
+  "certificate_id": "MN-SC-2026-9129776",
   "skill_id": "mn-real-memforge",
   "skill_name": "mem-forge",
-  "issued_at": "2026-07-12T04:35:45.198Z",
-  "expires_at": "2026-07-19T04:35:45.198Z",
+  "issued_at": "2026-07-15T01:32:09.776Z",
+  "expires_at": "2026-07-22T01:32:09.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b90e3aa22b05ee6ac7036dbd62aa1e99544c1b6cb021a79d29674c80463a6caa",
+  "signature": "53a5e130d5749547e8d2e2a05557889c879618676bd53c663fdff20514a80dbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-memforge"
 }

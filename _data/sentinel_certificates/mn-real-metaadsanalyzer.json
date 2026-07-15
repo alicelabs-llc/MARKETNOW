@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0821602",
+  "certificate_id": "MN-SC-2026-8987622",
   "skill_id": "mn-real-metaadsanalyzer",
   "skill_name": "meta-ads-analyzer",
-  "issued_at": "2026-07-12T04:33:41.602Z",
-  "expires_at": "2026-07-19T04:33:41.602Z",
+  "issued_at": "2026-07-15T01:29:47.622Z",
+  "expires_at": "2026-07-22T01:29:47.622Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "452d11b621821ca0861712e9cc9a6f08e03f82b867f32b0e4556a06e6515309e",
+  "signature": "f520280b1aac024fd82dc95abb87e67d245dd024f242d1997d54bffb3a91cab5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-metaadsanalyzer"
 }

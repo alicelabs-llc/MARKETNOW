@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0735496",
+  "certificate_id": "MN-SC-2026-8884945",
   "skill_id": "mn-real-claudeplugins",
   "skill_name": "claude-plugins",
-  "issued_at": "2026-07-12T04:32:15.496Z",
-  "expires_at": "2026-07-19T04:32:15.496Z",
+  "issued_at": "2026-07-15T01:28:04.945Z",
+  "expires_at": "2026-07-22T01:28:04.945Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "beb90efad1d71d4fa7c2b3e423c7b037f318a5c9ee722082e8f772622416a667",
+  "signature": "b4afa36f51e61caea5455c8773db1d49b9442eba289050749eff11414684bed5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudeplugins"
 }

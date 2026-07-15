@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0564204",
+  "certificate_id": "MN-SC-2026-8674827",
   "skill_id": "mn-real-gitlabmcpserver",
   "skill_name": "gitlab-mcp-server",
-  "issued_at": "2026-07-12T04:29:24.204Z",
-  "expires_at": "2026-07-19T04:29:24.204Z",
+  "issued_at": "2026-07-15T01:24:34.827Z",
+  "expires_at": "2026-07-22T01:24:34.827Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 1,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9d14f63c046170e79c33a457e9e215f9e49bc8ccd65774cbea667ab258909e3",
+  "signature": "f070272161799103eb1a3443a03ac0b06843b3f54d20898292f26a1d9ddfcb53",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gitlabmcpserver"
 }

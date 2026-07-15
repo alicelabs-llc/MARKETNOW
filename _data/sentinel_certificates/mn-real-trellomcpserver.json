@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0668133",
+  "certificate_id": "MN-SC-2026-8795997",
   "skill_id": "mn-real-trellomcpserver",
   "skill_name": "trello-mcp-server",
-  "issued_at": "2026-07-12T04:31:08.133Z",
-  "expires_at": "2026-07-19T04:31:08.133Z",
+  "issued_at": "2026-07-15T01:26:35.997Z",
+  "expires_at": "2026-07-22T01:26:35.997Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b15156bf2f78a5a3d5e620ff1b84e3e1d2bfe2538ffc8f1857d4d8e6b0713940",
+  "signature": "e01df929fe71a8bfc13424cf1542a207fff1fc728f36da608723912d50f40cab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-trellomcpserver"
 }

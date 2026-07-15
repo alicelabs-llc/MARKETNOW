@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0720713",
+  "certificate_id": "MN-SC-2026-8865619",
   "skill_id": "mn-real-modularcontextobsidi",
   "skill_name": "modular-context-obsidian-plugin",
-  "issued_at": "2026-07-12T04:32:00.713Z",
-  "expires_at": "2026-07-19T04:32:00.713Z",
+  "issued_at": "2026-07-15T01:27:45.619Z",
+  "expires_at": "2026-07-22T01:27:45.619Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e83d090eeb887a660ce3af6b36bd5f290bb3fa553f61f8f6ea8c377579c3c3f6",
+  "signature": "4d5ee36127c885a1b2e0f5311b07e0d2769737e84319d57237e8d834be3fe510",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-modularcontextobsidi"
 }

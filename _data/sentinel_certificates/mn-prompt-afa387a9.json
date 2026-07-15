@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0222632",
+  "certificate_id": "MN-SC-2026-8252900",
   "skill_id": "mn-prompt-afa387a9",
   "skill_name": "Sales expansion playbook upsell cross-sell",
-  "issued_at": "2026-07-12T04:23:42.632Z",
-  "expires_at": "2026-07-19T04:23:42.632Z",
+  "issued_at": "2026-07-15T01:17:32.900Z",
+  "expires_at": "2026-07-22T01:17:32.900Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1cd278b0ae286603dbac13fa49bf5ac474cc338d05bf49dc4c3bc88d956c4f44",
+  "signature": "1c9d535d9b46f14e015cea8477793599d3ca30152404ea147d30c1c6646b9973",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-afa387a9"
 }

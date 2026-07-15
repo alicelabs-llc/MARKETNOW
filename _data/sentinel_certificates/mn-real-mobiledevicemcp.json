@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0426980",
+  "certificate_id": "MN-SC-2026-8529229",
   "skill_id": "mn-real-mobiledevicemcp",
   "skill_name": "mobile-device-mcp",
-  "issued_at": "2026-07-12T04:27:06.980Z",
-  "expires_at": "2026-07-19T04:27:06.980Z",
+  "issued_at": "2026-07-15T01:22:09.229Z",
+  "expires_at": "2026-07-22T01:22:09.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "45b978cf9605e96f142f850008fb6026292d01f1c199a844a61c0b788d0c0ed7",
+  "signature": "3705037a1be895db149a969dafa9351530550548272461b5102999992c56e2ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mobiledevicemcp"
 }

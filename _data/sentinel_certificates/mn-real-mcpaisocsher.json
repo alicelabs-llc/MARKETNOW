@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0415701",
+  "certificate_id": "MN-SC-2026-8514450",
   "skill_id": "mn-real-mcpaisocsher",
   "skill_name": "MCP_AI_SOC_Sher",
-  "issued_at": "2026-07-12T04:26:55.701Z",
-  "expires_at": "2026-07-19T04:26:55.701Z",
+  "issued_at": "2026-07-15T01:21:54.450Z",
+  "expires_at": "2026-07-22T01:21:54.450Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c02fc899c716fac5fe8fd15ab50ada8dd61a94e807b27396d996903bd1353e2e",
+  "signature": "6977e5eb20d1807a4336e89c5bfab84b14582bd81963c3e41ce8c9a9845f3765",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpaisocsher"
 }

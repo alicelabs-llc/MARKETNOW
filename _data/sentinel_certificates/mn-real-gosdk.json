@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0583367",
+  "certificate_id": "MN-SC-2026-8696725",
   "skill_id": "mn-real-gosdk",
   "skill_name": "go-sdk",
-  "issued_at": "2026-07-12T04:29:43.367Z",
-  "expires_at": "2026-07-19T04:29:43.367Z",
+  "issued_at": "2026-07-15T01:24:56.725Z",
+  "expires_at": "2026-07-22T01:24:56.725Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c838d92ef1132b2b4eaaa4bc8f5bfb5a91bfe3d1f142dbc728badb3a7e054eca",
+  "signature": "298b175fe96c76d9d3e55b86742dd499309d221dfb80ac46e7ce40cc093cbd8f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gosdk"
 }

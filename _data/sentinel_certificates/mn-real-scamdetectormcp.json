@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1030295",
+  "certificate_id": "MN-SC-2026-9218251",
   "skill_id": "mn-real-scamdetectormcp",
   "skill_name": "scam-detector-mcp",
-  "issued_at": "2026-07-12T04:37:10.295Z",
-  "expires_at": "2026-07-19T04:37:10.295Z",
+  "issued_at": "2026-07-15T01:33:38.251Z",
+  "expires_at": "2026-07-22T01:33:38.251Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "54692032a20599090b3191965c91ed1ba838fceb39d5ff051b327e6295df2f94",
+  "signature": "e0509ac88daa8cd7c1ec5e69220a7a9725205a32da6ef4e0a401936b19688894",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scamdetectormcp"
 }

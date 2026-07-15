@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0933117",
+  "certificate_id": "MN-SC-2026-9115852",
   "skill_id": "mn-real-bubo",
   "skill_name": "bubo",
-  "issued_at": "2026-07-12T04:35:33.117Z",
-  "expires_at": "2026-07-19T04:35:33.117Z",
+  "issued_at": "2026-07-15T01:31:55.852Z",
+  "expires_at": "2026-07-22T01:31:55.852Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5476069eb1b46f3ce45638b0112cb3f3e3ab9850442adf6dd6e9cb076519e6c",
+  "signature": "f4031b99790f6af910f90ca07cd7c09d9864bafc18e3f9d451190bdfc2debf88",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bubo"
 }

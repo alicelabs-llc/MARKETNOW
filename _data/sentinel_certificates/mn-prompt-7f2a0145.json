@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0076476",
+  "certificate_id": "MN-SC-2026-8050263",
   "skill_id": "mn-prompt-7f2a0145",
   "skill_name": "Especialista Reverse ETL + Census/Hightouch",
-  "issued_at": "2026-07-12T04:21:16.476Z",
-  "expires_at": "2026-07-19T04:21:16.476Z",
+  "issued_at": "2026-07-15T01:14:10.263Z",
+  "expires_at": "2026-07-22T01:14:10.263Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9ef265548738db3a311a33bfcabc7f037280412f605ac54a90166f24e3ccf29",
+  "signature": "d0b2d34b4dd952389a9859457186ec24993c5d49487194b1cf457de822685643",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7f2a0145"
 }

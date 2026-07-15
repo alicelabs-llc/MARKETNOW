@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1010349",
+  "certificate_id": "MN-SC-2026-9196779",
   "skill_id": "mn-real-shaderlinuxglsl",
   "skill_name": "shader_linux_glsl",
-  "issued_at": "2026-07-12T04:36:50.349Z",
-  "expires_at": "2026-07-19T04:36:50.349Z",
+  "issued_at": "2026-07-15T01:33:16.779Z",
+  "expires_at": "2026-07-22T01:33:16.779Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a4b38e2a0c5a9f9a27f14d3bf5039e7382a9ac6b8e324962738c6351ec1f6b2",
+  "signature": "b2015876b39b68a2e32d9ad732438d77ad92e0a14c4da19c87ee153eaacb7221",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-shaderlinuxglsl"
 }

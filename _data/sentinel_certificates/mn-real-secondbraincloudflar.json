@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0604943",
+  "certificate_id": "MN-SC-2026-8721327",
   "skill_id": "mn-real-secondbraincloudflar",
   "skill_name": "second-brain-cloudflare",
-  "issued_at": "2026-07-12T04:30:04.943Z",
-  "expires_at": "2026-07-19T04:30:04.943Z",
+  "issued_at": "2026-07-15T01:25:21.327Z",
+  "expires_at": "2026-07-22T01:25:21.327Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "efb0cd91b93c1c3ac9895824a9f4f77766b11fcadf03b30708a931c79121933a",
+  "signature": "35e2c9831f59ade6944b5570eec28254c7e982a07371e6c1018d06b53ffa4e75",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-secondbraincloudflar"
 }

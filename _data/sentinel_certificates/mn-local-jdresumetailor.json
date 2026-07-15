@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0876674",
+  "certificate_id": "MN-SC-2026-9054858",
   "skill_id": "mn-local-jdresumetailor",
   "skill_name": "jd-resume-tailor",
-  "issued_at": "2026-07-12T04:34:36.674Z",
-  "expires_at": "2026-07-19T04:34:36.674Z",
+  "issued_at": "2026-07-15T01:30:54.858Z",
+  "expires_at": "2026-07-22T01:30:54.858Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c344f2656720a525f6ca6672ba3fd85f008fc91a4b4d9ee7dd0741687d1fbde6",
+  "signature": "a5c86a101a04ca3ebd14c2ad1032637c137b5d7912fee6d3974f7ab9a6c8828b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-local-jdresumetailor"
 }

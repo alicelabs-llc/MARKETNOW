@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0466441",
+  "certificate_id": "MN-SC-2026-8572073",
   "skill_id": "mn-real-cryptotrendingmcp",
   "skill_name": "crypto-trending-mcp",
-  "issued_at": "2026-07-12T04:27:46.441Z",
-  "expires_at": "2026-07-19T04:27:46.441Z",
+  "issued_at": "2026-07-15T01:22:52.073Z",
+  "expires_at": "2026-07-22T01:22:52.073Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a2171d602c91c6885435a3677f8532000df4aca30445c54511e171ebb544c638",
+  "signature": "576b6b3a852906922454f5390c008f1e3e4e9afc7f7711383770ada44604e80e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cryptotrendingmcp"
 }

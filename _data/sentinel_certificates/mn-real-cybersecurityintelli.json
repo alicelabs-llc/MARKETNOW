@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1015652",
+  "certificate_id": "MN-SC-2026-9201308",
   "skill_id": "mn-real-cybersecurityintelli",
   "skill_name": "cybersecurity-intelligence-mcp",
-  "issued_at": "2026-07-12T04:36:55.652Z",
-  "expires_at": "2026-07-19T04:36:55.652Z",
+  "issued_at": "2026-07-15T01:33:21.308Z",
+  "expires_at": "2026-07-22T01:33:21.308Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5cb2c0ab734361b8d7e1b2aaef5d85cd35fca858bd10798d3f86492b15d29f1",
+  "signature": "bdd333765806720ff7a8493fd6a8552d09b22bdc47d9601efb28dd331b9a286e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cybersecurityintelli"
 }

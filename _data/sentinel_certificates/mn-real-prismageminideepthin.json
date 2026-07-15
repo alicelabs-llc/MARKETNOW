@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0895253",
+  "certificate_id": "MN-SC-2026-9066430",
   "skill_id": "mn-real-prismageminideepthin",
   "skill_name": "Prisma-Gemini-DeepThink-API",
-  "issued_at": "2026-07-12T04:34:55.253Z",
-  "expires_at": "2026-07-19T04:34:55.253Z",
+  "issued_at": "2026-07-15T01:31:06.430Z",
+  "expires_at": "2026-07-22T01:31:06.430Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1677b5fb54b6d7497340962dc47b8e83be2affa49f7d64fb8c0fa19c76200c23",
+  "signature": "54dc59cd57aaeed0681eb34d40d5d56ac8243229cf375f3526642892395fa2e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-prismageminideepthin"
 }

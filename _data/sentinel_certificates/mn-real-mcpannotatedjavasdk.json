@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0769289",
+  "certificate_id": "MN-SC-2026-8926415",
   "skill_id": "mn-real-mcpannotatedjavasdk",
   "skill_name": "mcp-annotated-java-sdk",
-  "issued_at": "2026-07-12T04:32:49.289Z",
-  "expires_at": "2026-07-19T04:32:49.289Z",
+  "issued_at": "2026-07-15T01:28:46.415Z",
+  "expires_at": "2026-07-22T01:28:46.415Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5cc983f72a86bcf8d0d508291cadc9e3e2cffb01e1710e189ce78a2b1d5fdf09",
+  "signature": "d9b60b7937e10e0f0d3aa53f21736e3de5682791d8b5785310c6a88fccbbf200",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpannotatedjavasdk"
 }

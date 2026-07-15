@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0956457",
+  "certificate_id": "MN-SC-2026-9141734",
   "skill_id": "mn-real-arsenalquantproject",
   "skill_name": "Arsenal-Quant-Project",
-  "issued_at": "2026-07-12T04:35:56.457Z",
-  "expires_at": "2026-07-19T04:35:56.457Z",
+  "issued_at": "2026-07-15T01:32:21.734Z",
+  "expires_at": "2026-07-22T01:32:21.734Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39eeab3625583ea96ef3bea4104ec7f3e441e3d9204e64f631397b3cf8f232e3",
+  "signature": "4c6f8614417d60be7a8fccd187945221d715b8b1e479908a81f5d8394f584dd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-arsenalquantproject"
 }

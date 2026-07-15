@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0594243",
+  "certificate_id": "MN-SC-2026-8708778",
   "skill_id": "mn-real-lycheemem",
   "skill_name": "LycheeMem",
-  "issued_at": "2026-07-12T04:29:54.243Z",
-  "expires_at": "2026-07-19T04:29:54.243Z",
+  "issued_at": "2026-07-15T01:25:08.778Z",
+  "expires_at": "2026-07-22T01:25:08.778Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "564763b3c19a15c82d8e81338503c187d03c742c4f7ddedda1c4dcab65ee2b80",
+  "signature": "100c5316b2562e04c04a9d229a6783772bdd7802b8151ebf022d417bd1db60f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lycheemem"
 }

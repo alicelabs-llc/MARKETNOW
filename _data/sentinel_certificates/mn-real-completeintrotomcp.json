@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0838249",
+  "certificate_id": "MN-SC-2026-9007379",
   "skill_id": "mn-real-completeintrotomcp",
   "skill_name": "complete-intro-to-mcp",
-  "issued_at": "2026-07-12T04:33:58.249Z",
-  "expires_at": "2026-07-19T04:33:58.249Z",
+  "issued_at": "2026-07-15T01:30:07.379Z",
+  "expires_at": "2026-07-22T01:30:07.379Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85e84e7e23bf417485011a1396f501c7ce15742b13455590da7a25e6e183d073",
+  "signature": "1be0e48c356a31693d5eb1e9e737c930d8c2e25249c0f61a40b7d958d971eec1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-completeintrotomcp"
 }

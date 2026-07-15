@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0039361",
+  "certificate_id": "MN-SC-2026-7999487",
   "skill_id": "mn-gen-11182",
   "skill_name": "replicate-flux-mcp",
-  "issued_at": "2026-07-12T04:20:39.361Z",
-  "expires_at": "2026-07-19T04:20:39.361Z",
+  "issued_at": "2026-07-15T01:13:19.487Z",
+  "expires_at": "2026-07-22T01:13:19.487Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd532f5a455d57b214beaa242bc09c3f4103f126561eb6671386945bc4a1ce3d",
+  "signature": "1539c1bfc97ca7d609f6d1a32c5741469e24ebd34b689c91e70be09eee2b647c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11182"
 }

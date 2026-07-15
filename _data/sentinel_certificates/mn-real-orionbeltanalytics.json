@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0760181",
+  "certificate_id": "MN-SC-2026-8913784",
   "skill_id": "mn-real-orionbeltanalytics",
   "skill_name": "orionbelt-analytics",
-  "issued_at": "2026-07-12T04:32:40.181Z",
-  "expires_at": "2026-07-19T04:32:40.181Z",
+  "issued_at": "2026-07-15T01:28:33.784Z",
+  "expires_at": "2026-07-22T01:28:33.784Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "742a19d8663ffbc435065cb0e36b27a91db358b1f06ccf270523ae39a13ace49",
+  "signature": "de7700524ffcad3e84b135be4cabe560690990a58c6db23f27c04cd333fa15d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-orionbeltanalytics"
 }

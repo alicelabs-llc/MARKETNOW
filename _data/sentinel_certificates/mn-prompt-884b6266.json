@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0229152",
+  "certificate_id": "MN-SC-2026-8262448",
   "skill_id": "mn-prompt-884b6266",
   "skill_name": "Pitch deck financials for fundraising",
-  "issued_at": "2026-07-12T04:23:49.152Z",
-  "expires_at": "2026-07-19T04:23:49.152Z",
+  "issued_at": "2026-07-15T01:17:42.448Z",
+  "expires_at": "2026-07-22T01:17:42.448Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06d115e724329455e74b544e76bdc3e829ccba806e2fa9464d67b6713b50254a",
+  "signature": "31a55a286412e8781456c4cb82a353070aa0480b8842a182c285f39c4b79e93d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-884b6266"
 }

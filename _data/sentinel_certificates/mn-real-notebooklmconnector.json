@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0932209",
+  "certificate_id": "MN-SC-2026-9114925",
   "skill_id": "mn-real-notebooklmconnector",
   "skill_name": "notebooklm-connector",
-  "issued_at": "2026-07-12T04:35:32.209Z",
-  "expires_at": "2026-07-19T04:35:32.209Z",
+  "issued_at": "2026-07-15T01:31:54.925Z",
+  "expires_at": "2026-07-22T01:31:54.925Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ad8ad7602bbd39e3a55a5c7d9dce047d81803661441bc92b7a6b818d009f75d",
+  "signature": "a8793ac310050ac68bd1d03a480fc5baa3486dbd44a18d9f3fc4a2297b601b97",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-notebooklmconnector"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0590763",
+  "certificate_id": "MN-SC-2026-8704459",
   "skill_id": "mn-real-contextplus",
   "skill_name": "contextplus",
-  "issued_at": "2026-07-12T04:29:50.763Z",
-  "expires_at": "2026-07-19T04:29:50.763Z",
+  "issued_at": "2026-07-15T01:25:04.459Z",
+  "expires_at": "2026-07-22T01:25:04.459Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "657adabe62e4f28ca5025ac3064e11215b953290333274eb29882d07adbc714f",
+  "signature": "8a344bac38c45aa8203cffd05c6785fcab912ffb7beb700811e42b733c4d0cf9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-contextplus"
 }

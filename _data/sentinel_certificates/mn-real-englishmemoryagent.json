@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0957786",
+  "certificate_id": "MN-SC-2026-9142049",
   "skill_id": "mn-real-englishmemoryagent",
   "skill_name": "english-memory-agent",
-  "issued_at": "2026-07-12T04:35:57.786Z",
-  "expires_at": "2026-07-19T04:35:57.786Z",
+  "issued_at": "2026-07-15T01:32:22.049Z",
+  "expires_at": "2026-07-22T01:32:22.049Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f6ff76d702021c3faa8e39088ceec6c7ef5c951f067175d03dfcf51efbd0b8b",
+  "signature": "2fddb82ad7552f8b7531a0fee43a5b829de8eccaa6864d3d25b641535eebbd8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-englishmemoryagent"
 }

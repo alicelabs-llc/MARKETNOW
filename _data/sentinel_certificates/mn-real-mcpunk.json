@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0864503",
+  "certificate_id": "MN-SC-2026-9042129",
   "skill_id": "mn-real-mcpunk",
   "skill_name": "mcpunk",
-  "issued_at": "2026-07-12T04:34:24.503Z",
-  "expires_at": "2026-07-19T04:34:24.503Z",
+  "issued_at": "2026-07-15T01:30:42.129Z",
+  "expires_at": "2026-07-22T01:30:42.129Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb03cbec475de04d4f54005c9b75361d9d25aa2e19c4682e89a4ec331ebc95b9",
+  "signature": "95386311a691fe95dd2e15ab266ce287f1677e340a6a8488738e5f26a2d516b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpunk"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0770207",
+  "certificate_id": "MN-SC-2026-8927623",
   "skill_id": "mn-real-zerodhamcp",
   "skill_name": "zerodha-mcp",
-  "issued_at": "2026-07-12T04:32:50.207Z",
-  "expires_at": "2026-07-19T04:32:50.207Z",
+  "issued_at": "2026-07-15T01:28:47.623Z",
+  "expires_at": "2026-07-22T01:28:47.623Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fee099448f7684d457558cd128c0a83c2101362c3cd6167d401ab0f4d6dd2226",
+  "signature": "60ce4bd0b03e1896bd9dc56d2f0d62a3cf32f64127c842ddacbcbd812834030c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zerodhamcp"
 }

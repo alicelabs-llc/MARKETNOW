@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0302640",
+  "certificate_id": "MN-SC-2026-8369028",
   "skill_id": "mn-prompt-31a1f08e",
   "skill_name": "Pharma clinical trials",
-  "issued_at": "2026-07-12T04:25:02.640Z",
-  "expires_at": "2026-07-19T04:25:02.640Z",
+  "issued_at": "2026-07-15T01:19:29.028Z",
+  "expires_at": "2026-07-22T01:19:29.028Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ea31fb75eb07a5f48174d1946f5e8aa00e1dad167b2f45a51bc6090db2d1f7da",
+  "signature": "a7454410a16a62f1275826fa2fc8fdb97ce25e7d6def9e5266e7faafea0c6215",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-31a1f08e"
 }

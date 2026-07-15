@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0509363",
+  "certificate_id": "MN-SC-2026-8617526",
   "skill_id": "mn-real-daedalmap",
   "skill_name": "daedal-map",
-  "issued_at": "2026-07-12T04:28:29.363Z",
-  "expires_at": "2026-07-19T04:28:29.363Z",
+  "issued_at": "2026-07-15T01:23:37.526Z",
+  "expires_at": "2026-07-22T01:23:37.526Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c6297a52dbd52724a879b2990b056da468ebf921a1d9e662c909853ab7ff0859",
+  "signature": "6db64176b0f8143ef639d871177e820cb919baab0f4ee0d35e369049d252499b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-daedalmap"
 }

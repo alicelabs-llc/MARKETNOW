@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0877143",
+  "certificate_id": "MN-SC-2026-9055286",
   "skill_id": "mn-local-pdf",
   "skill_name": "pdf",
-  "issued_at": "2026-07-12T04:34:37.143Z",
-  "expires_at": "2026-07-19T04:34:37.143Z",
+  "issued_at": "2026-07-15T01:30:55.286Z",
+  "expires_at": "2026-07-22T01:30:55.286Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aabff87f70830c6ab301a1f1300cb29d5b328b3b4621ca6913526dfa5f86eae2",
+  "signature": "a94e394b3299b7f49906b8912bad3c5de11a0d6ea6ac36b889185ac6c99bfb65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-local-pdf"
 }

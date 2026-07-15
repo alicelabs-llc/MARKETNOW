@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0382018",
+  "certificate_id": "MN-SC-2026-8472948",
   "skill_id": "mn-awmcp-mcpsafelocalpythonex",
   "skill_name": "mcp_safe_local_python_executor",
-  "issued_at": "2026-07-12T04:26:22.018Z",
-  "expires_at": "2026-07-19T04:26:22.018Z",
+  "issued_at": "2026-07-15T01:21:12.948Z",
+  "expires_at": "2026-07-22T01:21:12.948Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30bbca26fbe05fe717c394b2512f43298d67099fe3f0dc44e2abad72bf6dee32",
+  "signature": "35f9c454c6c0a696b1ec4548ab8d3315da6bdd4ff5a088af9530557e92e9a3ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpsafelocalpythonex"
 }

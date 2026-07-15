@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0357567",
+  "certificate_id": "MN-SC-2026-8445198",
   "skill_id": "mn-awmcp-snaprenderintegratio",
   "skill_name": "snaprender-integrations",
-  "issued_at": "2026-07-12T04:25:57.567Z",
-  "expires_at": "2026-07-19T04:25:57.567Z",
+  "issued_at": "2026-07-15T01:20:45.198Z",
+  "expires_at": "2026-07-22T01:20:45.198Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2416118a73bc5053b4f5e70ae8d01c6520ba970bef42cd7cf8daf3e13aef2dad",
+  "signature": "9c1b90d65b3923f907abc558116f2414c869cf8ef734f594362b262805cd68c0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-snaprenderintegratio"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0915084",
+  "certificate_id": "MN-SC-2026-9092237",
   "skill_id": "mn-real-mcpragwithchromadb",
   "skill_name": "MCP-rag-with-Chromadb",
-  "issued_at": "2026-07-12T04:35:15.084Z",
-  "expires_at": "2026-07-19T04:35:15.084Z",
+  "issued_at": "2026-07-15T01:31:32.237Z",
+  "expires_at": "2026-07-22T01:31:32.237Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc1587c36ee792ac2203ba5f8a61d848e18a99c1c87bd57020be4c9069721b65",
+  "signature": "4408aff9c09b1e177e022f32597410f4a25b69aa4769a6274be90dd307fdb4c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpragwithchromadb"
 }

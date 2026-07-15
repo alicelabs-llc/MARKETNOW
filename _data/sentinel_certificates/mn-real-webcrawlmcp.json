@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0530279",
+  "certificate_id": "MN-SC-2026-8638274",
   "skill_id": "mn-real-webcrawlmcp",
   "skill_name": "webcrawl-mcp",
-  "issued_at": "2026-07-12T04:28:50.279Z",
-  "expires_at": "2026-07-19T04:28:50.279Z",
+  "issued_at": "2026-07-15T01:23:58.274Z",
+  "expires_at": "2026-07-22T01:23:58.274Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d62f8c2f1adc4004fc31d093f774a8e29c9a96d5ebe02d92d42e7dfdc94d491c",
+  "signature": "550200cb397f2498163dda7c3a4005c1afec49a2e297da852f7705daf438841e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webcrawlmcp"
 }

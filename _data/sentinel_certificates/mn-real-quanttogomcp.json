@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0473750",
+  "certificate_id": "MN-SC-2026-8580997",
   "skill_id": "mn-real-quanttogomcp",
   "skill_name": "quanttogo-mcp",
-  "issued_at": "2026-07-12T04:27:53.750Z",
-  "expires_at": "2026-07-19T04:27:53.750Z",
+  "issued_at": "2026-07-15T01:23:00.997Z",
+  "expires_at": "2026-07-22T01:23:00.997Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d86da7899461973d121677dca415e8c172d1c575f993d567ced2bd9684cc4a91",
+  "signature": "ce90c2306abb3a66c030b614a4464bf7454c07b391392489295b076143c58c93",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-quanttogomcp"
 }

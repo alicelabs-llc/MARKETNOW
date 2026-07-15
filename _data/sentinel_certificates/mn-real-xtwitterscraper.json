@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0557184",
+  "certificate_id": "MN-SC-2026-8666726",
   "skill_id": "mn-real-xtwitterscraper",
   "skill_name": "x-twitter-scraper",
-  "issued_at": "2026-07-12T04:29:17.184Z",
-  "expires_at": "2026-07-19T04:29:17.184Z",
+  "issued_at": "2026-07-15T01:24:26.726Z",
+  "expires_at": "2026-07-22T01:24:26.726Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "51221dc4cce91a593ca7365fa9b98dc969ca58134cab6e23cbdfae8b270729d7",
+  "signature": "411020b5795049043afe98064ec6471c98172ab342f683941bf173c375ff6971",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xtwitterscraper"
 }

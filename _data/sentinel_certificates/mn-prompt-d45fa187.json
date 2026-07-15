@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0149059",
+  "certificate_id": "MN-SC-2026-8153189",
   "skill_id": "mn-prompt-d45fa187",
   "skill_name": "Especialista Email Marketing Ecommerce + Flows",
-  "issued_at": "2026-07-12T04:22:29.059Z",
-  "expires_at": "2026-07-19T04:22:29.059Z",
+  "issued_at": "2026-07-15T01:15:53.189Z",
+  "expires_at": "2026-07-22T01:15:53.189Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d1bf2cb9981b0eaed7877c11d4443278a1f267f98a0735d4695c2ef3e510b58",
+  "signature": "ffc3108d9346ed7d91684b8612c68413d43fe6b6e52d83802cac89918e8a0f74",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d45fa187"
 }

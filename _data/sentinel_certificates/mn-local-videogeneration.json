@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0878627",
+  "certificate_id": "MN-SC-2026-9056301",
   "skill_id": "mn-local-videogeneration",
   "skill_name": "video-generation",
-  "issued_at": "2026-07-12T04:34:38.627Z",
-  "expires_at": "2026-07-19T04:34:38.627Z",
+  "issued_at": "2026-07-15T01:30:56.301Z",
+  "expires_at": "2026-07-22T01:30:56.301Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6092a9f031830557ca8beb2c9c086e3872899018a7fa80827f67e27846d90494",
+  "signature": "68ceb4d03737bb896efa88da602949365f77015c37d9b93bd89c1a7631852f62",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-local-videogeneration"
 }

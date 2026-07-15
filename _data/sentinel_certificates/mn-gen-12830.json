@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0046148",
+  "certificate_id": "MN-SC-2026-8009731",
   "skill_id": "mn-gen-12830",
   "skill_name": "trinvmcp",
-  "issued_at": "2026-07-12T04:20:46.148Z",
-  "expires_at": "2026-07-19T04:20:46.148Z",
+  "issued_at": "2026-07-15T01:13:29.731Z",
+  "expires_at": "2026-07-22T01:13:29.731Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3fcd9366e49a71faec172f4f9099a88b49627020ba5f189e2f8405b6835c0ea",
+  "signature": "7d04525cec246ea379f430e3019ecedc376ebb8abe6e45fcffc579607da157c8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12830"
 }

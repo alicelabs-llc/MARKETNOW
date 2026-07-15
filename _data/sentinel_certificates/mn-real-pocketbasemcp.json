@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0699488",
+  "certificate_id": "MN-SC-2026-8836743",
   "skill_id": "mn-real-pocketbasemcp",
   "skill_name": "pocketbase-mcp",
-  "issued_at": "2026-07-12T04:31:39.488Z",
-  "expires_at": "2026-07-19T04:31:39.488Z",
+  "issued_at": "2026-07-15T01:27:16.743Z",
+  "expires_at": "2026-07-22T01:27:16.743Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9e6e2c626f1e986ccc992d843f6f36b29aaa84004b2cb58b182cf74a417aa36",
+  "signature": "1b4a1ac5ab66b39e9acb5ceafb1d8166f7cc5b2cdb56577efa6cbe105868758c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pocketbasemcp"
 }

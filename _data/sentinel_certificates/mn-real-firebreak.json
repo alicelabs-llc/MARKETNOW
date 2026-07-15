@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0883557",
+  "certificate_id": "MN-SC-2026-9057161",
   "skill_id": "mn-real-firebreak",
   "skill_name": "Firebreak",
-  "issued_at": "2026-07-12T04:34:43.557Z",
-  "expires_at": "2026-07-19T04:34:43.557Z",
+  "issued_at": "2026-07-15T01:30:57.161Z",
+  "expires_at": "2026-07-22T01:30:57.161Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ddc0dd4ea74c3f426fd9a7b4c06f027dfd8d8344820a4a5fbf4b6ecc2df3b9a",
+  "signature": "96deb30c11d61b1f78bcd5120df49d44e0167804481b869d0cf5d0bcf0406cfe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-firebreak"
 }

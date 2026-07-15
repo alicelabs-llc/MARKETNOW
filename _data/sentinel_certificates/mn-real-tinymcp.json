@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0697456",
+  "certificate_id": "MN-SC-2026-8833993",
   "skill_id": "mn-real-tinymcp",
   "skill_name": "tinymcp",
-  "issued_at": "2026-07-12T04:31:37.456Z",
-  "expires_at": "2026-07-19T04:31:37.456Z",
+  "issued_at": "2026-07-15T01:27:13.993Z",
+  "expires_at": "2026-07-22T01:27:13.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "247dc1b3590667b8fafad396c323a18af009a009d252f5abcb8a35035fed03c0",
+  "signature": "64c656596f13fb19cb66e28f5c9876797986396b2e6744b63a341e993352b3b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tinymcp"
 }

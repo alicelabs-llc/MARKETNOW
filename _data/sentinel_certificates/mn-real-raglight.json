@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0841142",
+  "certificate_id": "MN-SC-2026-9011633",
   "skill_id": "mn-real-raglight",
   "skill_name": "RAGLight",
-  "issued_at": "2026-07-12T04:34:01.142Z",
-  "expires_at": "2026-07-19T04:34:01.142Z",
+  "issued_at": "2026-07-15T01:30:11.633Z",
+  "expires_at": "2026-07-22T01:30:11.633Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d366c8db2885fcba2e6979faf9a90b2cb307af83d5c42ecf9e79e0fe8aa37a82",
+  "signature": "94e7b04446cb00b8f7762db6ba92da6673657aaca0f2eee3abd3dbd586f318dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-raglight"
 }

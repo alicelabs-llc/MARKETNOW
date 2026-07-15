@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0870517",
+  "certificate_id": "MN-SC-2026-9049326",
   "skill_id": "mn-real-odoomcpimproved",
   "skill_name": "odoo-mcp-improved",
-  "issued_at": "2026-07-12T04:34:30.517Z",
-  "expires_at": "2026-07-19T04:34:30.517Z",
+  "issued_at": "2026-07-15T01:30:49.326Z",
+  "expires_at": "2026-07-22T01:30:49.326Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0332887532cac8903bf8c7decff4aaa203d15f6855aa2296a3d5c6bdda090a87",
+  "signature": "5d34e57d8c9a147db5e91ed646baed45541a0e0f7fe2ce16bf96df646d1b92f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-odoomcpimproved"
 }

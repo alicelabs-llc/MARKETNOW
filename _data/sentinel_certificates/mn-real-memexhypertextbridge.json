@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0915794",
+  "certificate_id": "MN-SC-2026-9092565",
   "skill_id": "mn-real-memexhypertextbridge",
   "skill_name": "memex-hypertext-bridge",
-  "issued_at": "2026-07-12T04:35:15.794Z",
-  "expires_at": "2026-07-19T04:35:15.794Z",
+  "issued_at": "2026-07-15T01:31:32.565Z",
+  "expires_at": "2026-07-22T01:31:32.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ab29bfd037dbc7cf854a24c487336712c5ce4d0b17037cee9446786e955f631",
+  "signature": "41cbf274fc619ce7c7bfe7ca290a70db3cd657e58e36b7cdb950afd31a128e12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-memexhypertextbridge"
 }

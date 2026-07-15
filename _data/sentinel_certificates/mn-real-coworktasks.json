@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0992842",
+  "certificate_id": "MN-SC-2026-9180218",
   "skill_id": "mn-real-coworktasks",
   "skill_name": "cowork-tasks",
-  "issued_at": "2026-07-12T04:36:32.842Z",
-  "expires_at": "2026-07-19T04:36:32.842Z",
+  "issued_at": "2026-07-15T01:33:00.218Z",
+  "expires_at": "2026-07-22T01:33:00.218Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5739b9366880c06b10218bad1f79935e77f3ffed684c053e0463308a9106048a",
+  "signature": "e2e0ba5713bce368577e504dd1388b9e68820a6e0a0765eaa5f5a46ef24c802d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-coworktasks"
 }

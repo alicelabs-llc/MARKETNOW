@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0203299",
+  "certificate_id": "MN-SC-2026-8232118",
   "skill_id": "mn-prompt-9e4dddf4",
   "skill_name": "Trademark application USPTO",
-  "issued_at": "2026-07-12T04:23:23.299Z",
-  "expires_at": "2026-07-19T04:23:23.299Z",
+  "issued_at": "2026-07-15T01:17:12.118Z",
+  "expires_at": "2026-07-22T01:17:12.118Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57e87cd280efacbc9202a0e2eafbafe0af2b56602e0a459bca0593caf9628724",
+  "signature": "a53d65d29539d73dbcfc5b458d7d5d20019a95ac5ea74650cb394fe433b763ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9e4dddf4"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0974227",
+  "certificate_id": "MN-SC-2026-9161487",
   "skill_id": "mn-real-mcpcompliancelite",
   "skill_name": "mcp-compliance-lite",
-  "issued_at": "2026-07-12T04:36:14.227Z",
-  "expires_at": "2026-07-19T04:36:14.227Z",
+  "issued_at": "2026-07-15T01:32:41.487Z",
+  "expires_at": "2026-07-22T01:32:41.487Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a5ceb76b256de07800af23d6b8e8b2030b7b6457f9ec2374038cf33a6733125",
+  "signature": "9082ddbfaae91ab6abe6a864505f91c91433c4a388071078c0c0ec15a3fcf30d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcompliancelite"
 }

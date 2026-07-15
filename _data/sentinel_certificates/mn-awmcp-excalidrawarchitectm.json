@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0343997",
+  "certificate_id": "MN-SC-2026-8427504",
   "skill_id": "mn-awmcp-excalidrawarchitectm",
   "skill_name": "excalidraw-architect-mcp",
-  "issued_at": "2026-07-12T04:25:43.997Z",
-  "expires_at": "2026-07-19T04:25:43.997Z",
+  "issued_at": "2026-07-15T01:20:27.504Z",
+  "expires_at": "2026-07-22T01:20:27.504Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "76faa6e78cbf59a08826ab575dd90fd3b3a486921a36139620c92d59147330db",
+  "signature": "e13d811bfb74fcfc6fec06f20a96d1ccec16ba53a2adfe9b34b5e7089ec7c599",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-excalidrawarchitectm"
 }

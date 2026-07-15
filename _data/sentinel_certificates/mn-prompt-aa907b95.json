@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0285623",
+  "certificate_id": "MN-SC-2026-8344655",
   "skill_id": "mn-prompt-aa907b95",
   "skill_name": "Copywriting for customer onboarding year 1 anniversary",
-  "issued_at": "2026-07-12T04:24:45.623Z",
-  "expires_at": "2026-07-19T04:24:45.623Z",
+  "issued_at": "2026-07-15T01:19:04.655Z",
+  "expires_at": "2026-07-22T01:19:04.655Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01e1bf6cb13a50354e5a8c2c40980112bbf6a4df08c22d3bb799069e7b243628",
+  "signature": "f206705d4e701f50c4657d54a741c8d79636995d0ecca5496399b70b9c8233d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-aa907b95"
 }

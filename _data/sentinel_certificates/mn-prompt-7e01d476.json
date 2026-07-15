@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0196746",
+  "certificate_id": "MN-SC-2026-8222524",
   "skill_id": "mn-prompt-7e01d476",
   "skill_name": "Implementador de API versioning con backward compatibility",
-  "issued_at": "2026-07-12T04:23:16.746Z",
-  "expires_at": "2026-07-19T04:23:16.746Z",
+  "issued_at": "2026-07-15T01:17:02.524Z",
+  "expires_at": "2026-07-22T01:17:02.524Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "728c1b21c26b279d744397f87063164f67916fc35ff2074a03e503ff95d81207",
+  "signature": "dd088131e8e2b6c60098428e21ab2c2a0419b56037b37cee7c67893541f10e01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7e01d476"
 }

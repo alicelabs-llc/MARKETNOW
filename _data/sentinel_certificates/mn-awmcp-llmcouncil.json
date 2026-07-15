@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0375324",
+  "certificate_id": "MN-SC-2026-8469416",
   "skill_id": "mn-awmcp-llmcouncil",
   "skill_name": "llm-council",
-  "issued_at": "2026-07-12T04:26:15.324Z",
-  "expires_at": "2026-07-19T04:26:15.324Z",
+  "issued_at": "2026-07-15T01:21:09.416Z",
+  "expires_at": "2026-07-22T01:21:09.416Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "555cced0b3655a247567dcb6638fe162e2c9603d69394e4a9f8d3405c8a35cea",
+  "signature": "e9cdd578b9c3496ff15a1821a0de6c048579af7782f8e9e3c4cd586a4413513f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-llmcouncil"
 }

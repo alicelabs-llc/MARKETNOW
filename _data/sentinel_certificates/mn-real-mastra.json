@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0649963",
+  "certificate_id": "MN-SC-2026-8773025",
   "skill_id": "mn-real-mastra",
   "skill_name": "mastra",
-  "issued_at": "2026-07-12T04:30:49.963Z",
-  "expires_at": "2026-07-19T04:30:49.963Z",
+  "issued_at": "2026-07-15T01:26:13.025Z",
+  "expires_at": "2026-07-22T01:26:13.025Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "4c20e875751dcb8e3b64b47454f8385913248e36f00749b90fcf9faebc0f68ac",
+  "signature": "4a44ecb10c9e1c8ce68fc698688bfbbf41022da451d4dec8f5e4680e7afc0326",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mastra"
 }

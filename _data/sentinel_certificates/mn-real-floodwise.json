@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0507070",
+  "certificate_id": "MN-SC-2026-8614560",
   "skill_id": "mn-real-floodwise",
   "skill_name": "floodwise",
-  "issued_at": "2026-07-12T04:28:27.070Z",
-  "expires_at": "2026-07-19T04:28:27.070Z",
+  "issued_at": "2026-07-15T01:23:34.560Z",
+  "expires_at": "2026-07-22T01:23:34.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e13c7d423f67030e7b0115aa8b6c90d660576bf310d1ca1e04033402035d85c8",
+  "signature": "0d46947fd296caf74f10d63e6183642eeba57436bc93ae54dac8999fe22dccfe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-floodwise"
 }

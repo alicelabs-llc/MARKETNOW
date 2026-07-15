@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0958775",
+  "certificate_id": "MN-SC-2026-9143075",
   "skill_id": "mn-real-exomem",
   "skill_name": "exomem",
-  "issued_at": "2026-07-12T04:35:58.775Z",
-  "expires_at": "2026-07-19T04:35:58.775Z",
+  "issued_at": "2026-07-15T01:32:23.075Z",
+  "expires_at": "2026-07-22T01:32:23.075Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "55a75a2989a4215baf0c1061e55ed814b9df64f4491b457a18cf0b3a77594565",
+  "signature": "e8cd2d213ce38379328965a9c10546b61caa25ac0453921d4533d79474af8578",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-exomem"
 }

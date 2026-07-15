@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0522888",
+  "certificate_id": "MN-SC-2026-8628698",
   "skill_id": "mn-real-immichphotomanager",
   "skill_name": "immich-photo-manager",
-  "issued_at": "2026-07-12T04:28:42.888Z",
-  "expires_at": "2026-07-19T04:28:42.888Z",
+  "issued_at": "2026-07-15T01:23:48.698Z",
+  "expires_at": "2026-07-22T01:23:48.698Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b194ea0c48eb2707574f35648b25cfcd5c49ab1b13d79e7f0224ff22bfd94222",
+  "signature": "36206a2a099d63027b8f3b28293dd37efc5d10728ec30cb54443ecab4652297d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-immichphotomanager"
 }

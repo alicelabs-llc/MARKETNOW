@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0591828",
+  "certificate_id": "MN-SC-2026-8705565",
   "skill_id": "mn-real-paperdebugger",
   "skill_name": "paperdebugger",
-  "issued_at": "2026-07-12T04:29:51.828Z",
-  "expires_at": "2026-07-19T04:29:51.828Z",
+  "issued_at": "2026-07-15T01:25:05.565Z",
+  "expires_at": "2026-07-22T01:25:05.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef7198900f019c23fc63992c47216d87e90fe8db14f3cc1ad702d1995a8b5543",
+  "signature": "a3ed48dc6a9f7752fcf926638706fe52076e0e7b564ef25037b1ee8b4af23471",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-paperdebugger"
 }

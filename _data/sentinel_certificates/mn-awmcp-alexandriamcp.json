@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0336375",
+  "certificate_id": "MN-SC-2026-8416357",
   "skill_id": "mn-awmcp-alexandriamcp",
   "skill_name": "alexandria-mcp",
-  "issued_at": "2026-07-12T04:25:36.375Z",
-  "expires_at": "2026-07-19T04:25:36.375Z",
+  "issued_at": "2026-07-15T01:20:16.357Z",
+  "expires_at": "2026-07-22T01:20:16.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "2d5d3811543ae4b9e9f6635198f6414be64fc9323de39884194d37b7785074ac",
+  "signature": "3a16cf379abcd926dcf61dbb0b2292f8ab9ebc72af3037eb865c8a42758ce094",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-alexandriamcp"
 }

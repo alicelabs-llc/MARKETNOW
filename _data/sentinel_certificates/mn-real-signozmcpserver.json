@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0647739",
+  "certificate_id": "MN-SC-2026-8769983",
   "skill_id": "mn-real-signozmcpserver",
   "skill_name": "signoz-mcp-server",
-  "issued_at": "2026-07-12T04:30:47.739Z",
-  "expires_at": "2026-07-19T04:30:47.739Z",
+  "issued_at": "2026-07-15T01:26:09.983Z",
+  "expires_at": "2026-07-22T01:26:09.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6be826db704bd6bdf4edf2c9afc73c7e1de3bbbfaa4eac852d19ef032085aff6",
+  "signature": "088108c32c580366e2e6bd502f9094b28e5f6a540a7fd91f8645d3305ef68575",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-signozmcpserver"
 }

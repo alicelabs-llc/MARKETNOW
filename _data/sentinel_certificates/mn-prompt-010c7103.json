@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0095587",
+  "certificate_id": "MN-SC-2026-8078560",
   "skill_id": "mn-prompt-010c7103",
   "skill_name": "Especialista Localization Testing",
-  "issued_at": "2026-07-12T04:21:35.587Z",
-  "expires_at": "2026-07-19T04:21:35.587Z",
+  "issued_at": "2026-07-15T01:14:38.560Z",
+  "expires_at": "2026-07-22T01:14:38.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f0943f4d23daf8859b464d6db3d9cd216a3e82ccd45854a61f854e112beeae7",
+  "signature": "f652f94b8f00723b38b46d798ef93985e1513af4bbebe19e469e7ee03978a499",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-010c7103"
 }

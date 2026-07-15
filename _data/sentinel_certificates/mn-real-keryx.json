@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0770970",
+  "certificate_id": "MN-SC-2026-8928675",
   "skill_id": "mn-real-keryx",
   "skill_name": "keryx",
-  "issued_at": "2026-07-12T04:32:50.970Z",
-  "expires_at": "2026-07-19T04:32:50.970Z",
+  "issued_at": "2026-07-15T01:28:48.675Z",
+  "expires_at": "2026-07-22T01:28:48.675Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e1fcdcac5ffed9853b6ada4092df160bde69cbedee1577c699703acf244e2c18",
+  "signature": "75e8c1046dccae5caf568145508b5cc048da54eda86752ad0411a1c329e07902",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keryx"
 }

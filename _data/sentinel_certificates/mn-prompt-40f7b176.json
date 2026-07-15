@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0108429",
+  "certificate_id": "MN-SC-2026-8096566",
   "skill_id": "mn-prompt-40f7b176",
   "skill_name": "Especialista LinkedIn Ads + B2B",
-  "issued_at": "2026-07-12T04:21:48.429Z",
-  "expires_at": "2026-07-19T04:21:48.429Z",
+  "issued_at": "2026-07-15T01:14:56.566Z",
+  "expires_at": "2026-07-22T01:14:56.566Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0fed96ff1ba03fa5a8fd6595d646177f474e5704543ea3cbe490e0a86956db30",
+  "signature": "42490d23f7170010e7d8d507de6ed420bfa599c4e4f4f1841982c2273b67e738",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-40f7b176"
 }

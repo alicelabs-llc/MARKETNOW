@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0397995",
+  "certificate_id": "MN-SC-2026-8493595",
   "skill_id": "mn-real-xadeusqqmcp",
   "skill_name": "Xadeus-QQ-MCP",
-  "issued_at": "2026-07-12T04:26:37.995Z",
-  "expires_at": "2026-07-19T04:26:37.995Z",
+  "issued_at": "2026-07-15T01:21:33.595Z",
+  "expires_at": "2026-07-22T01:21:33.595Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e852c9323c7000c48c3b40e3fb0a2db4b2bd6f86b4f9f0cb6fc074ad1add8ee9",
+  "signature": "678fd9ce4d4f3c64505d5eeb70d26c30f117b5ca00f61ca403bf5469c52c4c9d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xadeusqqmcp"
 }

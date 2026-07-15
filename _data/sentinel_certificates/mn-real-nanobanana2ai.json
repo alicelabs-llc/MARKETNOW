@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0895435",
+  "certificate_id": "MN-SC-2026-9066617",
   "skill_id": "mn-real-nanobanana2ai",
   "skill_name": "nano-banana-2-ai",
-  "issued_at": "2026-07-12T04:34:55.435Z",
-  "expires_at": "2026-07-19T04:34:55.435Z",
+  "issued_at": "2026-07-15T01:31:06.617Z",
+  "expires_at": "2026-07-22T01:31:06.617Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5efdad372c2927a279a0cb7bad42e72175eee75e8d337c0ea8bfd2f50af20792",
+  "signature": "d3ca3c69ff6421ed37c7641484fa6af03f1dd74ea9c522d64c0b5b5c95fb9db4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nanobanana2ai"
 }

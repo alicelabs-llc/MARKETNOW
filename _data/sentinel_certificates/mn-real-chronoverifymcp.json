@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0542306",
+  "certificate_id": "MN-SC-2026-8650261",
   "skill_id": "mn-real-chronoverifymcp",
   "skill_name": "chronoverify-mcp",
-  "issued_at": "2026-07-12T04:29:02.306Z",
-  "expires_at": "2026-07-19T04:29:02.306Z",
+  "issued_at": "2026-07-15T01:24:10.261Z",
+  "expires_at": "2026-07-22T01:24:10.261Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33811084bf595478f027cdea66e03dbca9ad0500a17a4e823516294ba7ff4efb",
+  "signature": "b2f7c71ac900445f0cc0aca232fca68e22e2af7b2fb804aa96a3b5f57038db78",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chronoverifymcp"
 }

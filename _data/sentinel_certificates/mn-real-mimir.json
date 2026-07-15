@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0909255",
+  "certificate_id": "MN-SC-2026-9082382",
   "skill_id": "mn-real-mimir",
   "skill_name": "mimir",
-  "issued_at": "2026-07-12T04:35:09.255Z",
-  "expires_at": "2026-07-19T04:35:09.255Z",
+  "issued_at": "2026-07-15T01:31:22.382Z",
+  "expires_at": "2026-07-22T01:31:22.382Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b1adf167c4b9a195416efbbb2d4f88b04cebbdf179568336cd90e17946f0108",
+  "signature": "60cdbf5f53932cb471ac05739fae189bd20ceed53507ceca8d49657fae4f1fdd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mimir"
 }

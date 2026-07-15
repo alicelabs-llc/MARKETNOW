@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0865665",
+  "certificate_id": "MN-SC-2026-9043190",
   "skill_id": "mn-real-aicursorscrapingassi",
   "skill_name": "AI-Cursor-Scraping-Assistant",
-  "issued_at": "2026-07-12T04:34:25.665Z",
-  "expires_at": "2026-07-19T04:34:25.665Z",
+  "issued_at": "2026-07-15T01:30:43.190Z",
+  "expires_at": "2026-07-22T01:30:43.190Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ac47ea83093cb0384ea23c244e11f6953c157bc69cf0064ff0ea1ae0f8f770f",
+  "signature": "31a1bb2db920651fcc005bd2cb7af686b5320bd7125610604416a73b67908764",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aicursorscrapingassi"
 }

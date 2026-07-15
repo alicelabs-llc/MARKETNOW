@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0746823",
+  "certificate_id": "MN-SC-2026-8898750",
   "skill_id": "mn-real-simulatoraiplugin",
   "skill_name": "simulator-ai-plugin",
-  "issued_at": "2026-07-12T04:32:26.823Z",
-  "expires_at": "2026-07-19T04:32:26.823Z",
+  "issued_at": "2026-07-15T01:28:18.750Z",
+  "expires_at": "2026-07-22T01:28:18.750Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9766379f95d7e2dc47c1bf52a92857fbf86f675e914bfaca9797676a2453702e",
+  "signature": "e49518057a539f95268ef8d565cb62b511c92fc9481bdffec8695cb7b165df2f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-simulatoraiplugin"
 }

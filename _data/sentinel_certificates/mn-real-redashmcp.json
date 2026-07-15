@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0627551",
+  "certificate_id": "MN-SC-2026-8747597",
   "skill_id": "mn-real-redashmcp",
   "skill_name": "redash-mcp",
-  "issued_at": "2026-07-12T04:30:27.551Z",
-  "expires_at": "2026-07-19T04:30:27.551Z",
+  "issued_at": "2026-07-15T01:25:47.597Z",
+  "expires_at": "2026-07-22T01:25:47.597Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32e89dfce96889829eb318d42be87bfaa9364303887b3d0a8d80e79416f991d4",
+  "signature": "8e6c3e3189702a81e2897bb8a5b3ab91416b8b43afbbbe4fc4331dec4973717b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-redashmcp"
 }

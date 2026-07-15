@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0892152",
+  "certificate_id": "MN-SC-2026-9064961",
   "skill_id": "mn-real-gemmabygoogle",
   "skill_name": "GEMMA-by-GOOGLE",
-  "issued_at": "2026-07-12T04:34:52.152Z",
-  "expires_at": "2026-07-19T04:34:52.152Z",
+  "issued_at": "2026-07-15T01:31:04.961Z",
+  "expires_at": "2026-07-22T01:31:04.961Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d0c493c41b62701ec37ec97f9982a70ee7d6116e18dbf8b5c15143be5082fea5",
+  "signature": "58f20acbc8ce9e2ea5d9d5a30b2860bcb81a4a37b4252d4504f6a4ea74911230",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gemmabygoogle"
 }

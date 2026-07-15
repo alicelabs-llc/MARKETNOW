@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0418196",
+  "certificate_id": "MN-SC-2026-8518007",
   "skill_id": "mn-real-codelogicmcpserver",
   "skill_name": "codelogic-mcp-server",
-  "issued_at": "2026-07-12T04:26:58.196Z",
-  "expires_at": "2026-07-19T04:26:58.196Z",
+  "issued_at": "2026-07-15T01:21:58.007Z",
+  "expires_at": "2026-07-22T01:21:58.007Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d3e0b3e5acaf0d4cc79aae24c59daf2f0c906620ed977343576da6072e56bbce",
+  "signature": "8ac4e8d5506ef3ca0ba2638f490262300c8b1f89307af7cc82046c06912dce34",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codelogicmcpserver"
 }

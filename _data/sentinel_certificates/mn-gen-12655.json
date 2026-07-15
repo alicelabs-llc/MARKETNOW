@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0044519",
+  "certificate_id": "MN-SC-2026-8008069",
   "skill_id": "mn-gen-12655",
   "skill_name": "mcp-time",
-  "issued_at": "2026-07-12T04:20:44.519Z",
-  "expires_at": "2026-07-19T04:20:44.519Z",
+  "issued_at": "2026-07-15T01:13:28.069Z",
+  "expires_at": "2026-07-22T01:13:28.069Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7eb03de6097b680848da2ca1403bfb321f3c271b64841ed91c24a5d71521db79",
+  "signature": "d2724f4899b67e5d201430350c07b1c84e6652547c8ca250c8c5537dfecb5e2e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12655"
 }

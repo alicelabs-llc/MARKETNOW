@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0242852",
+  "certificate_id": "MN-SC-2026-8281462",
   "skill_id": "mn-prompt-00cbf6c2",
   "skill_name": "Employee experience journey",
-  "issued_at": "2026-07-12T04:24:02.852Z",
-  "expires_at": "2026-07-19T04:24:02.852Z",
+  "issued_at": "2026-07-15T01:18:01.462Z",
+  "expires_at": "2026-07-22T01:18:01.462Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acee7ef0bcdc9216b971cea8591871443ba0635aca8ee302039e5b120349c9f8",
+  "signature": "655ab764f0a06a95bf9a4d4b9445065e786db793866aad86d359acb19b7d7cff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-00cbf6c2"
 }

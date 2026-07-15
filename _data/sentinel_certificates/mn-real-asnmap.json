@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1036572",
+  "certificate_id": "MN-SC-2026-9226324",
   "skill_id": "mn-real-asnmap",
   "skill_name": "asnmap",
-  "issued_at": "2026-07-12T04:37:16.572Z",
-  "expires_at": "2026-07-19T04:37:16.572Z",
+  "issued_at": "2026-07-15T01:33:46.324Z",
+  "expires_at": "2026-07-22T01:33:46.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a9a83b36cb910a22c8d46b1b2f4905bbef8b22b633fde82167d9d5a496872ae",
+  "signature": "2a8a7631699d7ee8533b57f2cab12ca9da03ae9ad42dd3a035ab5ee278bef9fb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-asnmap"
 }

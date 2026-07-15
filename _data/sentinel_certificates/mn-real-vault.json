@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0846805",
+  "certificate_id": "MN-SC-2026-9017989",
   "skill_id": "mn-real-vault",
   "skill_name": "vault",
-  "issued_at": "2026-07-12T04:34:06.805Z",
-  "expires_at": "2026-07-19T04:34:06.805Z",
+  "issued_at": "2026-07-15T01:30:17.989Z",
+  "expires_at": "2026-07-22T01:30:17.989Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9dfa6d1a55e659e8724036d15b7f8c27c9e780768a656496d5fbebfc7bc9d2f",
+  "signature": "a282c39a13e34b747b53a34ad381449d8e5d76dcbfa2aa42e1359429a2680acc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vault"
 }

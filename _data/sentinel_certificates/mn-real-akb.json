@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0491714",
+  "certificate_id": "MN-SC-2026-8600703",
   "skill_id": "mn-real-akb",
   "skill_name": "akb",
-  "issued_at": "2026-07-12T04:28:11.714Z",
-  "expires_at": "2026-07-19T04:28:11.714Z",
+  "issued_at": "2026-07-15T01:23:20.703Z",
+  "expires_at": "2026-07-22T01:23:20.703Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "010ad4853f6335979a9b82b584ced0fa18cb2c1cc1d209304273692cc6227ae3",
+  "signature": "2aaced3bddcc9c211fc0e2c32e86533524a47515513779fd2a36ae1d8cf2a9d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-akb"
 }

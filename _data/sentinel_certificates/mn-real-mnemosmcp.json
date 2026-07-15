@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0906994",
+  "certificate_id": "MN-SC-2026-9080231",
   "skill_id": "mn-real-mnemosmcp",
   "skill_name": "mnemos-mcp",
-  "issued_at": "2026-07-12T04:35:06.994Z",
-  "expires_at": "2026-07-19T04:35:06.994Z",
+  "issued_at": "2026-07-15T01:31:20.231Z",
+  "expires_at": "2026-07-22T01:31:20.231Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "303d057e50957b83ad24ebf3dadd1d4a75bf11436d978c2f73f0c0341d53afc6",
+  "signature": "c8e077999cfc84a60c806866c36a830ff23514189d8f3db5d1544a123a4661a1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mnemosmcp"
 }

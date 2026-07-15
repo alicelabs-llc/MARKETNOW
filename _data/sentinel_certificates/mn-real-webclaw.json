@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0581730",
+  "certificate_id": "MN-SC-2026-8695130",
   "skill_id": "mn-real-webclaw",
   "skill_name": "webclaw",
-  "issued_at": "2026-07-12T04:29:41.730Z",
-  "expires_at": "2026-07-19T04:29:41.730Z",
+  "issued_at": "2026-07-15T01:24:55.130Z",
+  "expires_at": "2026-07-22T01:24:55.130Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66988bc8e65e5f4a96caf6adabc87ae6932a221655af590196c56cb5c65413fc",
+  "signature": "0cf35bc8675dde7094ef5aa1a8d6447d7e0b1b98166a6ad9d36b9c4cf816ae99",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webclaw"
 }

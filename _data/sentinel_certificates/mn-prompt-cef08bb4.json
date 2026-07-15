@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0212483",
+  "certificate_id": "MN-SC-2026-8242404",
   "skill_id": "mn-prompt-cef08bb4",
   "skill_name": "Reddit marketing orgánico sin ser banned",
-  "issued_at": "2026-07-12T04:23:32.483Z",
-  "expires_at": "2026-07-19T04:23:32.483Z",
+  "issued_at": "2026-07-15T01:17:22.404Z",
+  "expires_at": "2026-07-22T01:17:22.404Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eed8174b42625c108ac4e4ac4e14f31de42cb645e2fed8f184d94847bf727162",
+  "signature": "fd2c317976f49e708be4b50d24ab664a66499d4d0a75d38bc18fa76c68353d01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-cef08bb4"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1021611",
+  "certificate_id": "MN-SC-2026-9207650",
   "skill_id": "mn-real-nextjsblogcms",
   "skill_name": "nextjs-blog-cms",
-  "issued_at": "2026-07-12T04:37:01.611Z",
-  "expires_at": "2026-07-19T04:37:01.611Z",
+  "issued_at": "2026-07-15T01:33:27.650Z",
+  "expires_at": "2026-07-22T01:33:27.650Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c5e06de88840cc2687e1dbca957ee1f4b64a3eced16012014cfbf063d2dae1c2",
+  "signature": "5a31a5c5fa176657ef5d0c0b039cb97e36d72817c69ea7a38ad81230f9f0c772",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nextjsblogcms"
 }

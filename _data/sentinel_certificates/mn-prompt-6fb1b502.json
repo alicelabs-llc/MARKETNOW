@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0109898",
+  "certificate_id": "MN-SC-2026-8099584",
   "skill_id": "mn-prompt-6fb1b502",
   "skill_name": "Especialista Marketing de Contenido para SEO",
-  "issued_at": "2026-07-12T04:21:49.898Z",
-  "expires_at": "2026-07-19T04:21:49.898Z",
+  "issued_at": "2026-07-15T01:14:59.584Z",
+  "expires_at": "2026-07-22T01:14:59.584Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "55ef649c0815e628c1a5089b1bbd90b768b12d20bce6288560bfd3d43a8ab6a2",
+  "signature": "7fa6e436003d6caad67cbc6697591f38a99298f3eaa003b828e1e156d9165e4e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-6fb1b502"
 }

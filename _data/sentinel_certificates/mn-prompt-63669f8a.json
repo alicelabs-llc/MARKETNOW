@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0153925",
+  "certificate_id": "MN-SC-2026-8162988",
   "skill_id": "mn-prompt-63669f8a",
   "skill_name": "Especialista KYC/AML + Compliance",
-  "issued_at": "2026-07-12T04:22:33.925Z",
-  "expires_at": "2026-07-19T04:22:33.925Z",
+  "issued_at": "2026-07-15T01:16:02.988Z",
+  "expires_at": "2026-07-22T01:16:02.988Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e3fcf0b0ce4bf6719103582b19800105b3770f71889a7cc194ee544a57935b0",
+  "signature": "5d9737b18149d76125141ebc759aaac3b9c80914a05bd6db537a53e2c7c6cc61",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-63669f8a"
 }

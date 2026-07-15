@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0424016",
+  "certificate_id": "MN-SC-2026-8525197",
   "skill_id": "mn-real-globalpingmcpserver",
   "skill_name": "globalping-mcp-server",
-  "issued_at": "2026-07-12T04:27:04.016Z",
-  "expires_at": "2026-07-19T04:27:04.016Z",
+  "issued_at": "2026-07-15T01:22:05.197Z",
+  "expires_at": "2026-07-22T01:22:05.197Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c981b5dc2b5323dfb7b9843cb4936bfdb1357d872bed5a12512f2ebf3c21608e",
+  "signature": "d1336611ca4948fb53853c396edfccfcb1e78cbbb19ca5888cc72fa6b624b973",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-globalpingmcpserver"
 }

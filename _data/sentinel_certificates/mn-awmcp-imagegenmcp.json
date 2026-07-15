@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0338345",
+  "certificate_id": "MN-SC-2026-8419232",
   "skill_id": "mn-awmcp-imagegenmcp",
   "skill_name": "imagegen-mcp",
-  "issued_at": "2026-07-12T04:25:38.345Z",
-  "expires_at": "2026-07-19T04:25:38.345Z",
+  "issued_at": "2026-07-15T01:20:19.232Z",
+  "expires_at": "2026-07-22T01:20:19.232Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "medium",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 5,
     "l2_execution_status": "ran"
   },
-  "signature": "d90fd7259328583b95cb4d9e64e33173271c16482848d0135285a2c8b7c2faa1",
+  "signature": "edc86d5a75a94e53b2b1bc26560560a448c6e4b889a406bd643da9526b770b8e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-imagegenmcp"
 }

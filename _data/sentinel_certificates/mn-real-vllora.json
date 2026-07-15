@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0603630",
+  "certificate_id": "MN-SC-2026-8719596",
   "skill_id": "mn-real-vllora",
   "skill_name": "vllora",
-  "issued_at": "2026-07-12T04:30:03.630Z",
-  "expires_at": "2026-07-19T04:30:03.630Z",
+  "issued_at": "2026-07-15T01:25:19.596Z",
+  "expires_at": "2026-07-22T01:25:19.596Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "848c4a338b489583c857d351bc9faca426d334295fbb953f4c49a57bf525685d",
+  "signature": "c0db930646794e59c8c0d17df31cb852f302674e52db3bd47e69e68fd3bd2e24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vllora"
 }

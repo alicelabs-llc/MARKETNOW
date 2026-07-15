@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0568884",
+  "certificate_id": "MN-SC-2026-8678348",
   "skill_id": "mn-real-betternotionmcp",
   "skill_name": "better-notion-mcp",
-  "issued_at": "2026-07-12T04:29:28.884Z",
-  "expires_at": "2026-07-19T04:29:28.884Z",
+  "issued_at": "2026-07-15T01:24:38.348Z",
+  "expires_at": "2026-07-22T01:24:38.348Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "87d56ced5eb528dacc75c5111dfa93c1a87e357063293ff4107035bb2ccaa123",
+  "signature": "b71776a623d64e9e08369f3684e390f3bb7853175d7e8cff1f42bb2de51fa09f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-betternotionmcp"
 }

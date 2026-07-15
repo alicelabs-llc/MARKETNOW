@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0815412",
+  "certificate_id": "MN-SC-2026-8980983",
   "skill_id": "mn-real-mcpsalesforce",
   "skill_name": "MCP-Salesforce",
-  "issued_at": "2026-07-12T04:33:35.412Z",
-  "expires_at": "2026-07-19T04:33:35.412Z",
+  "issued_at": "2026-07-15T01:29:40.983Z",
+  "expires_at": "2026-07-22T01:29:40.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "155ebae613f195318fb8371267102fdbc94a4bd1ff5d7705d4e225e5e97ee28c",
+  "signature": "6d5a0a53f461c2ee9d1f7c83e46aae947e299462e748208744de30be2c56f22a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsalesforce"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0180815",
+  "certificate_id": "MN-SC-2026-8200241",
   "skill_id": "mn-prompt-19ffbfc8",
   "skill_name": "Especialista Event Planning + Conference",
-  "issued_at": "2026-07-12T04:23:00.815Z",
-  "expires_at": "2026-07-19T04:23:00.815Z",
+  "issued_at": "2026-07-15T01:16:40.241Z",
+  "expires_at": "2026-07-22T01:16:40.241Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4c0f866d85cf0e4b4038dda4be068b2ff9e1264b6996fc353d005374f5f78e20",
+  "signature": "8798f81f62f4c448596e94bc54b7218b5d865eb89c6b845ca973458d87a6cd83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-19ffbfc8"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1077656",
+  "certificate_id": "MN-SC-2026-8527324",
   "skill_id": "mn-real-rosmcpserver",
   "skill_name": "ros-mcp-server",
-  "issued_at": "2026-07-12T04:37:57.656Z",
-  "expires_at": "2026-07-19T04:37:57.656Z",
+  "issued_at": "2026-07-15T01:22:07.324Z",
+  "expires_at": "2026-07-22T01:22:07.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5df4f28cd84c250c28395815b8cf9386cf66e49bf364a25dddd004f1a0077978",
+  "signature": "031b05788c603699d193114be90675ee2d30aa3c768b1f152e5fd181111c1b75",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rosmcpserver"
 }

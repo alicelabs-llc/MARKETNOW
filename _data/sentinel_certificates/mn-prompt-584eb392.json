@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0181407",
+  "certificate_id": "MN-SC-2026-8201569",
   "skill_id": "mn-prompt-584eb392",
   "skill_name": "Especialista Wedding Planning + Events",
-  "issued_at": "2026-07-12T04:23:01.407Z",
-  "expires_at": "2026-07-19T04:23:01.407Z",
+  "issued_at": "2026-07-15T01:16:41.569Z",
+  "expires_at": "2026-07-22T01:16:41.569Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69f5b7152ed845099c55aba83dfddc979640864d335d9a526eac7dcd4547f256",
+  "signature": "35a9d1f3015eb742e9c71c235cbd25dfd4fec95f3c0bfb9119abfed63d0a471d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-584eb392"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0966022",
+  "certificate_id": "MN-SC-2026-9151206",
   "skill_id": "mn-real-codewalk",
   "skill_name": "codewalk",
-  "issued_at": "2026-07-12T04:36:06.022Z",
-  "expires_at": "2026-07-19T04:36:06.022Z",
+  "issued_at": "2026-07-15T01:32:31.206Z",
+  "expires_at": "2026-07-22T01:32:31.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f426a8b8a4575ea833d0825513c83086974c45e10de6fd6838a206e8693a5195",
+  "signature": "b933bf3b78be5343ea46d5e179cdbf5ac08b2d3452930549d284c4f7667f90ed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codewalk"
 }

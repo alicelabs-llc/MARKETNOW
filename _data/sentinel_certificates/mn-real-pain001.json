@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0755230",
+  "certificate_id": "MN-SC-2026-8908801",
   "skill_id": "mn-real-pain001",
   "skill_name": "pain001",
-  "issued_at": "2026-07-12T04:32:35.230Z",
-  "expires_at": "2026-07-19T04:32:35.230Z",
+  "issued_at": "2026-07-15T01:28:28.801Z",
+  "expires_at": "2026-07-22T01:28:28.801Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23bab8dbbd5a3b0e2b7422ca9b940487f4003da341aa46afc240a8787de6770c",
+  "signature": "7bf756aca0148f08eb692c747e1a9c636fa4b55d8ec2fbd57cd3fcdc790b96cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pain001"
 }

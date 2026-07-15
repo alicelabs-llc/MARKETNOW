@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0535960",
+  "certificate_id": "MN-SC-2026-8642857",
   "skill_id": "mn-real-overseerrmcp",
   "skill_name": "overseerr-mcp",
-  "issued_at": "2026-07-12T04:28:55.960Z",
-  "expires_at": "2026-07-19T04:28:55.960Z",
+  "issued_at": "2026-07-15T01:24:02.857Z",
+  "expires_at": "2026-07-22T01:24:02.857Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e085f84610b8caa746b217f1085c196ef7ed888a1033829b28cec9ee23560736",
+  "signature": "8b02390ed7d37c2d1a119d7a317d0cc23a17772ecd5903662076645e1b19bd70",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-overseerrmcp"
 }

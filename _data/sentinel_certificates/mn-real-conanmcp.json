@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0418175",
+  "certificate_id": "MN-SC-2026-8518041",
   "skill_id": "mn-real-conanmcp",
   "skill_name": "conan-mcp",
-  "issued_at": "2026-07-12T04:26:58.175Z",
-  "expires_at": "2026-07-19T04:26:58.175Z",
+  "issued_at": "2026-07-15T01:21:58.041Z",
+  "expires_at": "2026-07-22T01:21:58.041Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "14c2c297f8c5a389cbf67a580eb28866598fec5957bd8cab07315a85f9e3652c",
+  "signature": "f2bee187a4c3f4a679f88ed4336e125add956a8b7a600c92016470def110ba03",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-conanmcp"
 }

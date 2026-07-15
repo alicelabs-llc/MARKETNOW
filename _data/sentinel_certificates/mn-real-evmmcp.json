@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0463757",
+  "certificate_id": "MN-SC-2026-8569072",
   "skill_id": "mn-real-evmmcp",
   "skill_name": "evm-mcp",
-  "issued_at": "2026-07-12T04:27:43.757Z",
-  "expires_at": "2026-07-19T04:27:43.757Z",
+  "issued_at": "2026-07-15T01:22:49.072Z",
+  "expires_at": "2026-07-22T01:22:49.072Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "26428d3a9bda0d9f85601f6d931d60369a303fb9bd25b766abf0e2a36255afd1",
+  "signature": "c40c7b7a776c6c8681377ea6f5552577534d3c9822258214b60fafefb677fc54",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-evmmcp"
 }

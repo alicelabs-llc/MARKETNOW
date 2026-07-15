@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0263407",
+  "certificate_id": "MN-SC-2026-8309367",
   "skill_id": "mn-prompt-8adfbe52",
   "skill_name": "Copywriting for investor pitch",
-  "issued_at": "2026-07-12T04:24:23.407Z",
-  "expires_at": "2026-07-19T04:24:23.407Z",
+  "issued_at": "2026-07-15T01:18:29.367Z",
+  "expires_at": "2026-07-22T01:18:29.367Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "908034b75ae436eb243d31d28de2a3b40ce3c0bfee224415de293ed662b382d9",
+  "signature": "f04eb58b15e68d206da24eeb4f0aec117e84100c3a81aebcd4c15b610f99c573",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8adfbe52"
 }

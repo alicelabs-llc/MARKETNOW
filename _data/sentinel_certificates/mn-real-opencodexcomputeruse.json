@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0602077",
+  "certificate_id": "MN-SC-2026-8717887",
   "skill_id": "mn-real-opencodexcomputeruse",
   "skill_name": "open-codex-computer-use",
-  "issued_at": "2026-07-12T04:30:02.077Z",
-  "expires_at": "2026-07-19T04:30:02.077Z",
+  "issued_at": "2026-07-15T01:25:17.887Z",
+  "expires_at": "2026-07-22T01:25:17.887Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "963d04a83142ca67310fc6b2df0ef654218171068d5f0a2ebe82072f2adc7038",
+  "signature": "b2faedee9cf40ffd4732b23241f1287cf17be55426b93aa9e2085077b905d064",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opencodexcomputeruse"
 }

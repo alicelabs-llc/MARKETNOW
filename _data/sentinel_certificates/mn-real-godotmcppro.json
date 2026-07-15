@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0634512",
+  "certificate_id": "MN-SC-2026-8757533",
   "skill_id": "mn-real-godotmcppro",
   "skill_name": "godot-mcp-pro",
-  "issued_at": "2026-07-12T04:30:34.512Z",
-  "expires_at": "2026-07-19T04:30:34.512Z",
+  "issued_at": "2026-07-15T01:25:57.533Z",
+  "expires_at": "2026-07-22T01:25:57.533Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "18a7bb117ba9f3b15b1bace38584bf3aca6b531d24af0fd7eed7a94b49e99fd3",
+  "signature": "b8ecfeeed780d4a6b0a99a24012532957fd27a5c1110653b970010fc4909388e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-godotmcppro"
 }

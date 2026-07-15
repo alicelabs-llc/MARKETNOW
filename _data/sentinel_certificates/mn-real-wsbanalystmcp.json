@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0461078",
+  "certificate_id": "MN-SC-2026-8565296",
   "skill_id": "mn-real-wsbanalystmcp",
   "skill_name": "wsb-analyst-mcp",
-  "issued_at": "2026-07-12T04:27:41.078Z",
-  "expires_at": "2026-07-19T04:27:41.078Z",
+  "issued_at": "2026-07-15T01:22:45.296Z",
+  "expires_at": "2026-07-22T01:22:45.296Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "584c78436539ae23fe868f13b22d18774f265ef70d81da8cbef8c0c0c4629146",
+  "signature": "eb45ff7f023eef5ff7cd18d0f5fe6a4cb30c9a083e8ceba731b9c0037ad5e606",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wsbanalystmcp"
 }

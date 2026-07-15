@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0416751",
+  "certificate_id": "MN-SC-2026-8516354",
   "skill_id": "mn-real-pythondocsmcpserver",
   "skill_name": "python-docs-mcp-server",
-  "issued_at": "2026-07-12T04:26:56.751Z",
-  "expires_at": "2026-07-19T04:26:56.751Z",
+  "issued_at": "2026-07-15T01:21:56.354Z",
+  "expires_at": "2026-07-22T01:21:56.354Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b184fa81e131133225404ae4ecb9353bc95be10b6eaeb4eca43f2fb134a3cfbe",
+  "signature": "b8b17e63afb9ee9b14c7e263e63f66e164a019c5e184506fd347bb8d23dc9c0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pythondocsmcpserver"
 }

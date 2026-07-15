@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1029169",
+  "certificate_id": "MN-SC-2026-9217346",
   "skill_id": "mn-real-mcparcgislinncounty",
   "skill_name": "mcp-arcgis-linncounty",
-  "issued_at": "2026-07-12T04:37:09.169Z",
-  "expires_at": "2026-07-19T04:37:09.169Z",
+  "issued_at": "2026-07-15T01:33:37.346Z",
+  "expires_at": "2026-07-22T01:33:37.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8bcbadfa7df0c9f4aaa55b5d032ef30ba1f147ff0ddd290f05b9712408066acd",
+  "signature": "f8aa0fe68033ebb79318ccc9e5b85abf769b84943d43b9b62818902dd0da88e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcparcgislinncounty"
 }

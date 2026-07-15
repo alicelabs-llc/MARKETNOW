@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0963239",
+  "certificate_id": "MN-SC-2026-9148581",
   "skill_id": "mn-real-servercommandsrtk",
   "skill_name": "server-commands-rtk",
-  "issued_at": "2026-07-12T04:36:03.239Z",
-  "expires_at": "2026-07-19T04:36:03.239Z",
+  "issued_at": "2026-07-15T01:32:28.581Z",
+  "expires_at": "2026-07-22T01:32:28.581Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25f2832936bdd15400a5ad3e88ba420187afed81cc8704d35a23f39e3c650acb",
+  "signature": "29cf94b088208013b564f5b688d46b6895061e2b3c68ff4e8254b259137c6ecc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-servercommandsrtk"
 }

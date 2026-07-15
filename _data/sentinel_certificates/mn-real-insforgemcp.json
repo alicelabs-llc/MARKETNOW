@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0629432",
+  "certificate_id": "MN-SC-2026-8750089",
   "skill_id": "mn-real-insforgemcp",
   "skill_name": "insforge-mcp",
-  "issued_at": "2026-07-12T04:30:29.432Z",
-  "expires_at": "2026-07-19T04:30:29.432Z",
+  "issued_at": "2026-07-15T01:25:50.089Z",
+  "expires_at": "2026-07-22T01:25:50.089Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb121cc857afa5ab7919d0300e3aef83bb28d812dde9f8e2994aa594362704d9",
+  "signature": "ef3805d643e29f5a7f95021ef86f12c07ead1b9d0b596f72374d3b7360f800bc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-insforgemcp"
 }

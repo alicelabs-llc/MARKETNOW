@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0780422",
+  "certificate_id": "MN-SC-2026-8939592",
   "skill_id": "mn-real-plasmate",
   "skill_name": "plasmate",
-  "issued_at": "2026-07-12T04:33:00.422Z",
-  "expires_at": "2026-07-19T04:33:00.422Z",
+  "issued_at": "2026-07-15T01:28:59.592Z",
+  "expires_at": "2026-07-22T01:28:59.592Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1090e75b168363144c75a37c3e21a55c65edc3cf3db7690080de97a32a511c58",
+  "signature": "56dedb41e760bc30224e773599b3a707b11e3342c341d3fcea867eb6c095884d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-plasmate"
 }

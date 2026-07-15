@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0656435",
+  "certificate_id": "MN-SC-2026-8780317",
   "skill_id": "mn-real-mcpservermotherduck",
   "skill_name": "mcp-server-motherduck",
-  "issued_at": "2026-07-12T04:30:56.435Z",
-  "expires_at": "2026-07-19T04:30:56.435Z",
+  "issued_at": "2026-07-15T01:26:20.317Z",
+  "expires_at": "2026-07-22T01:26:20.317Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de7facf79e5657173f74ac4872852bfa63d7e6114da25b375d95f2e0a5eb44f4",
+  "signature": "fdbb3208ed8e1c0e59fd12a7f188b12cb7b8aeef741c70f6e6b7ed3c8b47906a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpservermotherduck"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0989611",
+  "certificate_id": "MN-SC-2026-9176159",
   "skill_id": "mn-real-xiaozhimcptools",
   "skill_name": "xiaozhi-MCPTools",
-  "issued_at": "2026-07-12T04:36:29.611Z",
-  "expires_at": "2026-07-19T04:36:29.611Z",
+  "issued_at": "2026-07-15T01:32:56.159Z",
+  "expires_at": "2026-07-22T01:32:56.159Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e82440adf8169ae0a0a0f62f967daa7b8697aa58afba6ba08164ffafea7b9f1c",
+  "signature": "037185f6f671a8f2e7db00053b0721d36416f6be105d54044007c6dd263f5e11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xiaozhimcptools"
 }

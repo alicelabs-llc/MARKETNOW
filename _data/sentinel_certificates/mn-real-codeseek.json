@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0841813",
+  "certificate_id": "MN-SC-2026-9012464",
   "skill_id": "mn-real-codeseek",
   "skill_name": "codeseek",
-  "issued_at": "2026-07-12T04:34:01.813Z",
-  "expires_at": "2026-07-19T04:34:01.813Z",
+  "issued_at": "2026-07-15T01:30:12.464Z",
+  "expires_at": "2026-07-22T01:30:12.464Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3a94954340e0ddb51b8aac0b7f38f8c0bec0852d9646e2e117a8420ed24f1b25",
+  "signature": "1428feff6177bb4bc60b838488764a50a73d933d5f7eff8384fac411f7c7f038",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codeseek"
 }

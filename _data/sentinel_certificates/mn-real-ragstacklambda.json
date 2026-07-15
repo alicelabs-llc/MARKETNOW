@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0493555",
+  "certificate_id": "MN-SC-2026-8602975",
   "skill_id": "mn-real-ragstacklambda",
   "skill_name": "RAGStack-Lambda",
-  "issued_at": "2026-07-12T04:28:13.555Z",
-  "expires_at": "2026-07-19T04:28:13.555Z",
+  "issued_at": "2026-07-15T01:23:22.975Z",
+  "expires_at": "2026-07-22T01:23:22.975Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc6b1831943aa1b6f6d6e3bc42bf7c5af4ce75a85c35af26f18fc3c656657961",
+  "signature": "b6b0ec30efdf9ff4b825463eb9af7b7adf4d79a5ed8320f3c4b5e68b3814047c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ragstacklambda"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0323278",
+  "certificate_id": "MN-SC-2026-8397238",
   "skill_id": "mn-amcp-jupytercad",
   "skill_name": "JupyterCAD",
-  "issued_at": "2026-07-12T04:25:23.278Z",
-  "expires_at": "2026-07-19T04:25:23.278Z",
+  "issued_at": "2026-07-15T01:19:57.238Z",
+  "expires_at": "2026-07-22T01:19:57.238Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "34fe571090702360d8497d6366250671c9331b1b9a58633d33b5a3f859972079",
+  "signature": "a1da1c7a8be51eb80d55d66dd75bc19e5b1cd31121c7b1358a05bb981e8617ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-jupytercad"
 }

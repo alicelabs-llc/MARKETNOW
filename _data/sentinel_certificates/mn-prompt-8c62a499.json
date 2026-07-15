@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0126861",
+  "certificate_id": "MN-SC-2026-8122192",
   "skill_id": "mn-prompt-8c62a499",
   "skill_name": "Especialista Compensation Bands + Leveling",
-  "issued_at": "2026-07-12T04:22:06.861Z",
-  "expires_at": "2026-07-19T04:22:06.861Z",
+  "issued_at": "2026-07-15T01:15:22.192Z",
+  "expires_at": "2026-07-22T01:15:22.192Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa1682a44906fe1a49427ee7ad9454ab50a2ad731d5d43e3df4a1a0537678307",
+  "signature": "da31ff04d72125c260979cdd11d0f5dad1834e225373cf0490026aa9cbda262a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-8c62a499"
 }

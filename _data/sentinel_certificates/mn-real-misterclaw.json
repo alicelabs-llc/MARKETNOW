@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0446029",
+  "certificate_id": "MN-SC-2026-8549741",
   "skill_id": "mn-real-misterclaw",
   "skill_name": "misterclaw",
-  "issued_at": "2026-07-12T04:27:26.029Z",
-  "expires_at": "2026-07-19T04:27:26.029Z",
+  "issued_at": "2026-07-15T01:22:29.741Z",
+  "expires_at": "2026-07-22T01:22:29.741Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3fd0a198dae966cb22bdd6502471535b649ad1ea91c73a0acd5914a35a628ab4",
+  "signature": "01fc8150ecfe07988dd9467661cc8f6834fbc556f4552272a94fa78e048ade3d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-misterclaw"
 }

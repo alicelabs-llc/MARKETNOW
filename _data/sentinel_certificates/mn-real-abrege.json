@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0962443",
+  "certificate_id": "MN-SC-2026-9147844",
   "skill_id": "mn-real-abrege",
   "skill_name": "abrege",
-  "issued_at": "2026-07-12T04:36:02.443Z",
-  "expires_at": "2026-07-19T04:36:02.443Z",
+  "issued_at": "2026-07-15T01:32:27.844Z",
+  "expires_at": "2026-07-22T01:32:27.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "352949a47ef4474f53587f638c7f23564cbd29ae59ff97f3d147641c1432afda",
+  "signature": "5010c9b6b4e0b68191f6beba7720467d83773782bb0615820a0e77e7c8c629c9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-abrege"
 }

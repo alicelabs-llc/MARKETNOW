@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0020226",
+  "certificate_id": "MN-SC-2026-7973231",
   "skill_id": "mn-ai-07043",
   "skill_name": "mcp-maigret",
-  "issued_at": "2026-07-12T04:20:20.226Z",
-  "expires_at": "2026-07-19T04:20:20.226Z",
+  "issued_at": "2026-07-15T01:12:53.231Z",
+  "expires_at": "2026-07-22T01:12:53.231Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "57eface556a2826e764152eff6f0d3dd5080551ef5620630cbc030034e46eb66",
+  "signature": "be6659a854b7bf3976c51f301217c8f53d0744f6daaeb8966283bcbd5243890a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-07043"
 }

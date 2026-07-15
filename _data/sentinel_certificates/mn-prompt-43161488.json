@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0128062",
+  "certificate_id": "MN-SC-2026-8122736",
   "skill_id": "mn-prompt-43161488",
   "skill_name": "Especialista Offboarding + Exit Process",
-  "issued_at": "2026-07-12T04:22:08.062Z",
-  "expires_at": "2026-07-19T04:22:08.062Z",
+  "issued_at": "2026-07-15T01:15:22.736Z",
+  "expires_at": "2026-07-22T01:15:22.736Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c994656e97835cf1a9089e602d7129647c2ba75806e4eda712e35cb727f2f36a",
+  "signature": "72a835ddc8632b4d5f21361ac5c718f1e69878d35b5c5182b9d5a303778fab4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-43161488"
 }

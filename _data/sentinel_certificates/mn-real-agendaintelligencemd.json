@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0528266",
+  "certificate_id": "MN-SC-2026-8635940",
   "skill_id": "mn-real-agendaintelligencemd",
   "skill_name": "agenda-intelligence-md",
-  "issued_at": "2026-07-12T04:28:48.266Z",
-  "expires_at": "2026-07-19T04:28:48.266Z",
+  "issued_at": "2026-07-15T01:23:55.940Z",
+  "expires_at": "2026-07-22T01:23:55.940Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "339539f4a9b335b9e883f01e7f5a7dbbe246eab13f2a4fb687a726cd68182824",
+  "signature": "bf3b821a43cc15059a89a1176965d24d7caf6ce7f3eb84dca934c4e7192edbd5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agendaintelligencemd"
 }

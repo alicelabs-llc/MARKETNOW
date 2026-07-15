@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0837157",
+  "certificate_id": "MN-SC-2026-9006346",
   "skill_id": "mn-real-mcpmontanoserver",
   "skill_name": "mcp-montano-server",
-  "issued_at": "2026-07-12T04:33:57.157Z",
-  "expires_at": "2026-07-19T04:33:57.157Z",
+  "issued_at": "2026-07-15T01:30:06.346Z",
+  "expires_at": "2026-07-22T01:30:06.346Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "91ac3950d7400fe09312350171da3e82ac445dd3faddc5e346b7c6912c4f1189",
+  "signature": "943e683f8a3ef8c0d96ede2f38c97a5c611e7e394f7e72d11c35f100ffdd9e94",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmontanoserver"
 }

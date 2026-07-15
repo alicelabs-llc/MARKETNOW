@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0772151",
+  "certificate_id": "MN-SC-2026-8929894",
   "skill_id": "mn-real-codexclaw",
   "skill_name": "CodexClaw",
-  "issued_at": "2026-07-12T04:32:52.151Z",
-  "expires_at": "2026-07-19T04:32:52.151Z",
+  "issued_at": "2026-07-15T01:28:49.894Z",
+  "expires_at": "2026-07-22T01:28:49.894Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0c81033d49f9b1082999c534b31f125f142cb0cd06bb5b332934eadd108e8391",
+  "signature": "45f6e05ccb82091f18290eb401ccb70c6a9a71e03684f48859ba40391d059683",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codexclaw"
 }

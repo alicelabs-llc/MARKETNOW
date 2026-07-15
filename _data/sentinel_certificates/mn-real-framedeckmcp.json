@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0526409",
+  "certificate_id": "MN-SC-2026-8633173",
   "skill_id": "mn-real-framedeckmcp",
   "skill_name": "framedeck-mcp",
-  "issued_at": "2026-07-12T04:28:46.409Z",
-  "expires_at": "2026-07-19T04:28:46.409Z",
+  "issued_at": "2026-07-15T01:23:53.173Z",
+  "expires_at": "2026-07-22T01:23:53.173Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69b25171abe9bb2b4ca38f658d1f9c61d539b06b8df19ec47d6418acf4c2c905",
+  "signature": "0f44074b258dab7a4e1ef4c6315ecac5801b74baf0f01d71746459ef26ea3e7b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-framedeckmcp"
 }

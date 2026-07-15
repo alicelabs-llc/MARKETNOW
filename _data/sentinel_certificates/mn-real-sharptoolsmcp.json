@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0688052",
+  "certificate_id": "MN-SC-2026-8819713",
   "skill_id": "mn-real-sharptoolsmcp",
   "skill_name": "SharpToolsMCP",
-  "issued_at": "2026-07-12T04:31:28.052Z",
-  "expires_at": "2026-07-19T04:31:28.052Z",
+  "issued_at": "2026-07-15T01:26:59.713Z",
+  "expires_at": "2026-07-22T01:26:59.713Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2bda1298e6d119b139da4befbe137b5fedd4cbae02c0e58a1798c1a2207176ef",
+  "signature": "52d6bc103a062265818547c3992c533be872663e20f7a4864bc6a97a0ad9c2ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sharptoolsmcp"
 }

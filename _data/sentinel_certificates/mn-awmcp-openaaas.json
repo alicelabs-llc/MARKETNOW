@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0335086",
+  "certificate_id": "MN-SC-2026-8414098",
   "skill_id": "mn-awmcp-openaaas",
   "skill_name": "OpenAaaS",
-  "issued_at": "2026-07-12T04:25:35.086Z",
-  "expires_at": "2026-07-19T04:25:35.086Z",
+  "issued_at": "2026-07-15T01:20:14.098Z",
+  "expires_at": "2026-07-22T01:20:14.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "1dc2184673f97e931d12a604f8154f736654842def8202884b31c420f100057c",
+  "signature": "d29ae2153b6e1e91f7c3b674df6f8e7a5db9798e84d398af2b41bb1499c0b49d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-openaaas"
 }

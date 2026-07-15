@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0864180",
+  "certificate_id": "MN-SC-2026-9041216",
   "skill_id": "mn-real-kalimcp",
   "skill_name": "kali_mcp",
-  "issued_at": "2026-07-12T04:34:24.180Z",
-  "expires_at": "2026-07-19T04:34:24.180Z",
+  "issued_at": "2026-07-15T01:30:41.216Z",
+  "expires_at": "2026-07-22T01:30:41.216Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42661ca06be0a2f62127c7251e3042221060111e0a7a7712dbebeed00b05676d",
+  "signature": "cb369e6851975730e3e45c155a5cce51e290f8f5d33a7de36e7a6d3781bacbf5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kalimcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0037690",
+  "certificate_id": "MN-SC-2026-7996793",
   "skill_id": "mn-gen-10795",
   "skill_name": "devpulse-mcp",
-  "issued_at": "2026-07-12T04:20:37.690Z",
-  "expires_at": "2026-07-19T04:20:37.690Z",
+  "issued_at": "2026-07-15T01:13:16.793Z",
+  "expires_at": "2026-07-22T01:13:16.793Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c10f86c94eaa4f462379dc200d3e60aed9a0b52c904277a2a79e66767d68f83",
+  "signature": "cc68fcca979101f4b56cfd3163b16c5507701f7ca08f43980017ea1429222c64",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10795"
 }

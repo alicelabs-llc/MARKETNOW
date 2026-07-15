@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0738792",
+  "certificate_id": "MN-SC-2026-8888603",
   "skill_id": "mn-real-koreandartmcp",
   "skill_name": "korean-dart-mcp",
-  "issued_at": "2026-07-12T04:32:18.792Z",
-  "expires_at": "2026-07-19T04:32:18.792Z",
+  "issued_at": "2026-07-15T01:28:08.603Z",
+  "expires_at": "2026-07-22T01:28:08.603Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bdef05fb21f6d0dc5cb824bc77e5288bdcb8ce092074745d63a1cbe8c32aa0c7",
+  "signature": "7d3397a6ff38dc6b04754116ce3810f2ab725b6c9d81d13116a8b0d55e8b8598",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-koreandartmcp"
 }

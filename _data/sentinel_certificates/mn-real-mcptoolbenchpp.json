@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0873344",
+  "certificate_id": "MN-SC-2026-9052261",
   "skill_id": "mn-real-mcptoolbenchpp",
   "skill_name": "MCPToolBenchPP",
-  "issued_at": "2026-07-12T04:34:33.344Z",
-  "expires_at": "2026-07-19T04:34:33.344Z",
+  "issued_at": "2026-07-15T01:30:52.261Z",
+  "expires_at": "2026-07-22T01:30:52.261Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95348a502519b36545702abccd572329f37b0230fe88acc0ded1f323732123f6",
+  "signature": "8cc6e76768bc661bf19bdf73e182a77281caad1e7383019a97735b4521ba80f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcptoolbenchpp"
 }

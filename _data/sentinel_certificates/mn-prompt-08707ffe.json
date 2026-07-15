@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0262622",
+  "certificate_id": "MN-SC-2026-8308210",
   "skill_id": "mn-prompt-08707ffe",
   "skill_name": "Editing for SEO optimization",
-  "issued_at": "2026-07-12T04:24:22.622Z",
-  "expires_at": "2026-07-19T04:24:22.622Z",
+  "issued_at": "2026-07-15T01:18:28.210Z",
+  "expires_at": "2026-07-22T01:18:28.210Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e3767da1c2a4185305a806a4643a83e02b15fb2197daf2ecfcecc2845054193",
+  "signature": "2d45fc1f378693e87c2ad13f051591a2c063e3408aafe9218febc650ed054a81",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-08707ffe"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0466939",
+  "certificate_id": "MN-SC-2026-8572746",
   "skill_id": "mn-real-csprtrademcp",
   "skill_name": "cspr-trade-mcp",
-  "issued_at": "2026-07-12T04:27:46.939Z",
-  "expires_at": "2026-07-19T04:27:46.939Z",
+  "issued_at": "2026-07-15T01:22:52.746Z",
+  "expires_at": "2026-07-22T01:22:52.746Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b832b5b0caa034ea4ae69ced03e7b07a08089e7c90b2b132f419230852444e65",
+  "signature": "82760c24a74e3cf342235c3f151c2fd6765adc710cefe208a0682bbe2e8382cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-csprtrademcp"
 }

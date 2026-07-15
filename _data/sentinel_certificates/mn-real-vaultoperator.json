@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0844412",
+  "certificate_id": "MN-SC-2026-9015626",
   "skill_id": "mn-real-vaultoperator",
   "skill_name": "vault-operator",
-  "issued_at": "2026-07-12T04:34:04.412Z",
-  "expires_at": "2026-07-19T04:34:04.412Z",
+  "issued_at": "2026-07-15T01:30:15.626Z",
+  "expires_at": "2026-07-22T01:30:15.626Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "912f487698d6a521ad25ed50e5e29fbb27705786bf0b349e7f69f03035277111",
+  "signature": "cb8ddcf8e1e5142b70b037684499f3ec95202ce55140d5af3ee0dfae42ac1d56",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vaultoperator"
 }

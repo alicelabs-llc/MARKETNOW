@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0262111",
+  "certificate_id": "MN-SC-2026-8307624",
   "skill_id": "mn-prompt-50ac98c0",
   "skill_name": "Copywriting for localization",
-  "issued_at": "2026-07-12T04:24:22.111Z",
-  "expires_at": "2026-07-19T04:24:22.111Z",
+  "issued_at": "2026-07-15T01:18:27.624Z",
+  "expires_at": "2026-07-22T01:18:27.624Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb0e72bbba8c7ecab4905df075152ccbc6f0a033151b28786a4ad204b6247af2",
+  "signature": "1fe59b0c0d1830d408a0ed3e4c24e280c9315f5b56644f20c057945fc3204592",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-50ac98c0"
 }

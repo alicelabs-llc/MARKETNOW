@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1083824",
+  "certificate_id": "MN-SC-2026-8652498",
   "skill_id": "mn-real-mcpwall",
   "skill_name": "mcpwall",
-  "issued_at": "2026-07-12T04:38:03.824Z",
-  "expires_at": "2026-07-19T04:38:03.824Z",
+  "issued_at": "2026-07-15T01:24:12.498Z",
+  "expires_at": "2026-07-22T01:24:12.498Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7cf183d9c71cd3fab45093f2faddf6c8069fe0eea1108b1601d71db43dc4919e",
+  "signature": "d05a5bb6fef4436875f9e2f2bb46e6c5e993809d7bbae9756c189b11e5c7cde2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpwall"
 }

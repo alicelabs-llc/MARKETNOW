@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0091849",
+  "certificate_id": "MN-SC-2026-8073865",
   "skill_id": "mn-prompt-9fa3a30b",
   "skill_name": "Especialista Mutation Testing + Stryker",
-  "issued_at": "2026-07-12T04:21:31.849Z",
-  "expires_at": "2026-07-19T04:21:31.849Z",
+  "issued_at": "2026-07-15T01:14:33.865Z",
+  "expires_at": "2026-07-22T01:14:33.865Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "435a66aa45614de565a26ecb482b309b9cf19537249dee92fef29b6dc32f53b8",
+  "signature": "568bcdc13c9c57e8e79ea487b0a35d983d894e298a3724ca3a75091ce18545c4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9fa3a30b"
 }

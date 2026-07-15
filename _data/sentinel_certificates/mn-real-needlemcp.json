@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0656936",
+  "certificate_id": "MN-SC-2026-8780603",
   "skill_id": "mn-real-needlemcp",
   "skill_name": "needle-mcp",
-  "issued_at": "2026-07-12T04:30:56.936Z",
-  "expires_at": "2026-07-19T04:30:56.936Z",
+  "issued_at": "2026-07-15T01:26:20.603Z",
+  "expires_at": "2026-07-22T01:26:20.603Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04a7b866dbcd7f71566b9310238e1ccdceac99e426f54e2d79b76e0a1d05bc36",
+  "signature": "8655804b19333793d6fb76130dc71e48eb31cd749e4bc094cbf472e75ea7012f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-needlemcp"
 }

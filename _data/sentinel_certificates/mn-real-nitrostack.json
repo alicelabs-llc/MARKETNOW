@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0696312",
+  "certificate_id": "MN-SC-2026-8831846",
   "skill_id": "mn-real-nitrostack",
   "skill_name": "nitrostack",
-  "issued_at": "2026-07-12T04:31:36.312Z",
-  "expires_at": "2026-07-19T04:31:36.312Z",
+  "issued_at": "2026-07-15T01:27:11.846Z",
+  "expires_at": "2026-07-22T01:27:11.846Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "125c80799d8a3387a73551f63741f76a59498c0fa95832499835527b6114f4ba",
+  "signature": "670bd2367d0c2444c5247a687d8824d0189abb04634b776d99a1b0d9575d7e6d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nitrostack"
 }

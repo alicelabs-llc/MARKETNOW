@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0589991",
+  "certificate_id": "MN-SC-2026-8703855",
   "skill_id": "mn-real-paperbanana",
   "skill_name": "paperbanana",
-  "issued_at": "2026-07-12T04:29:49.991Z",
-  "expires_at": "2026-07-19T04:29:49.991Z",
+  "issued_at": "2026-07-15T01:25:03.855Z",
+  "expires_at": "2026-07-22T01:25:03.855Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2b0bfb42ed01f71b65171ea46b72ef1277c7540a7a11f9556bc9172bd8297b2b",
+  "signature": "53f8fabe4048080dbc0a8c9c1fdcc0a393979c7b145f097e4036c0c032fc5e1b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-paperbanana"
 }

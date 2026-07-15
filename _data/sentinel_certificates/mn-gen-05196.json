@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0009757",
+  "certificate_id": "MN-SC-2026-7961389",
   "skill_id": "mn-gen-05196",
   "skill_name": "mcp-broker",
-  "issued_at": "2026-07-12T04:20:09.757Z",
-  "expires_at": "2026-07-19T04:20:09.757Z",
+  "issued_at": "2026-07-15T01:12:41.389Z",
+  "expires_at": "2026-07-22T01:12:41.389Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e396e5a8e949f469369e37ffbb7400897c8c4ac31651b63b567972262bf0ccd5",
+  "signature": "8ed5a0f6a4c2eaccf325ce5e309746031306432c38f2004f120627c61690c58b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05196"
 }

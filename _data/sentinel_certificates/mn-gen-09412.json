@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0032422",
+  "certificate_id": "MN-SC-2026-7988098",
   "skill_id": "mn-gen-09412",
   "skill_name": "mcp-server-nano-banana",
-  "issued_at": "2026-07-12T04:20:32.422Z",
-  "expires_at": "2026-07-19T04:20:32.422Z",
+  "issued_at": "2026-07-15T01:13:08.098Z",
+  "expires_at": "2026-07-22T01:13:08.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d16cb324f96c1d2bedbce8648f274ab3ebcdaa9a2684f9e6fc48f47835932e9c",
+  "signature": "6fd15ce15282baaf3165fc76e7c021b18a4d923d4362d152d7d555ad412be8df",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09412"
 }

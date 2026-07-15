@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0056190",
+  "certificate_id": "MN-SC-2026-8022819",
   "skill_id": "mn-prompt-b8b76eca",
   "skill_name": "Especialista Prisma + TypeScript",
-  "issued_at": "2026-07-12T04:20:56.190Z",
-  "expires_at": "2026-07-19T04:20:56.190Z",
+  "issued_at": "2026-07-15T01:13:42.819Z",
+  "expires_at": "2026-07-22T01:13:42.819Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "97835dfb70bec238927b959aa0cc54486741617358fc72f5b50e0adde0e04ef0",
+  "signature": "87cf85debf0395bbefe09891ae454fc3e0e0fb026ef601b058bb3310833fa233",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-b8b76eca"
 }

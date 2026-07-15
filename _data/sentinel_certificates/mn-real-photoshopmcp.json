@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0727358",
+  "certificate_id": "MN-SC-2026-8874149",
   "skill_id": "mn-real-photoshopmcp",
   "skill_name": "photoshop-mcp",
-  "issued_at": "2026-07-12T04:32:07.358Z",
-  "expires_at": "2026-07-19T04:32:07.358Z",
+  "issued_at": "2026-07-15T01:27:54.149Z",
+  "expires_at": "2026-07-22T01:27:54.149Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2bbd076330d5bda2f517338d701285cc75e5f3c03b5b94fbf2d8b9ced2bf124f",
+  "signature": "eb1e397919a6e719fb6728c0e08a395a19112f00b8e564e70251e08a87e0bdd8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-photoshopmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0153154",
+  "certificate_id": "MN-SC-2026-8162619",
   "skill_id": "mn-prompt-0c2e362d",
   "skill_name": "Especialista Lending + Loan Origination",
-  "issued_at": "2026-07-12T04:22:33.154Z",
-  "expires_at": "2026-07-19T04:22:33.154Z",
+  "issued_at": "2026-07-15T01:16:02.619Z",
+  "expires_at": "2026-07-22T01:16:02.619Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ad39a419a8f3d338d9c184494f8a2a0d713f702d602a0583474801faf65ec23",
+  "signature": "af0582f2ec2247098cb1966ff0199119988d2d39bd9e1443b4058927fc56f31f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0c2e362d"
 }

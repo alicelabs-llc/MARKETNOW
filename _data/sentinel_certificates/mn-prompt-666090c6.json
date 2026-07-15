@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0244332",
+  "certificate_id": "MN-SC-2026-8283978",
   "skill_id": "mn-prompt-666090c6",
   "skill_name": "Discovery sprint 5 days GV method",
-  "issued_at": "2026-07-12T04:24:04.332Z",
-  "expires_at": "2026-07-19T04:24:04.332Z",
+  "issued_at": "2026-07-15T01:18:03.978Z",
+  "expires_at": "2026-07-22T01:18:03.978Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81eed13adc99bad9f6bc3076c32a7ee0d9800666eced0d5fe5ca1372ff030ade",
+  "signature": "80e0f4fbd0e3ff744127dd1c651d6a7f38513dd2e87f5d832e378638ff89698f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-666090c6"
 }

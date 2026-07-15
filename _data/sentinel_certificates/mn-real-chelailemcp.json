@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0562890",
+  "certificate_id": "MN-SC-2026-8673028",
   "skill_id": "mn-real-chelailemcp",
   "skill_name": "chelaile-mcp",
-  "issued_at": "2026-07-12T04:29:22.890Z",
-  "expires_at": "2026-07-19T04:29:22.890Z",
+  "issued_at": "2026-07-15T01:24:33.028Z",
+  "expires_at": "2026-07-22T01:24:33.028Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "18531dc5169740f503928a4f43c5ced201dfa93b51cf4fd6b75d63874a38745f",
+  "signature": "4c41b8b7cecccd756c4d92a390c99d0ed78efb242efc18091ed5fe6e418d16a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chelailemcp"
 }

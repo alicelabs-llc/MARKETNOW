@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0634314",
+  "certificate_id": "MN-SC-2026-8757562",
   "skill_id": "mn-real-agentmem",
   "skill_name": "agentmem",
-  "issued_at": "2026-07-12T04:30:34.314Z",
-  "expires_at": "2026-07-19T04:30:34.314Z",
+  "issued_at": "2026-07-15T01:25:57.562Z",
+  "expires_at": "2026-07-22T01:25:57.562Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95b6efc9ae9cbea2ab2743e73461eeb691b23ec05d294bfb7143e869a0d5d6cc",
+  "signature": "c7634072011d7f6b1d329afb7a3302ef354ca1d7cbc07a9f86d1e41a58071bd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentmem"
 }

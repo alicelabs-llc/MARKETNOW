@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0324661",
+  "certificate_id": "MN-SC-2026-8398949",
   "skill_id": "mn-awmcp-pulsenetworkmcp",
   "skill_name": "pulsenetwork-mcp",
-  "issued_at": "2026-07-12T04:25:24.661Z",
-  "expires_at": "2026-07-19T04:25:24.661Z",
+  "issued_at": "2026-07-15T01:19:58.949Z",
+  "expires_at": "2026-07-22T01:19:58.949Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "101ebd65aa95d7a5c8131bc5adc67891adb0be613258f6d0e462cd5e4cff8e95",
+  "signature": "b8a527306e06c796acc59e454e333f413753f432f2731c68ffcc4c455fad31ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-pulsenetworkmcp"
 }

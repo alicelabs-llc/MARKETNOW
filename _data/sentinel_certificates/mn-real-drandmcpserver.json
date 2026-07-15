@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0653951",
+  "certificate_id": "MN-SC-2026-8777178",
   "skill_id": "mn-real-drandmcpserver",
   "skill_name": "drand-mcp-server",
-  "issued_at": "2026-07-12T04:30:53.951Z",
-  "expires_at": "2026-07-19T04:30:53.951Z",
+  "issued_at": "2026-07-15T01:26:17.178Z",
+  "expires_at": "2026-07-22T01:26:17.178Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7e0a0c03c80b6eea606e7f0aed40dbc5604ae6a2f4cf29c4f2905bce693fca4c",
+  "signature": "9c387913f47c5974098de39857f0b80df3fb8e1208714edc5f9e2990c7e0560e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-drandmcpserver"
 }

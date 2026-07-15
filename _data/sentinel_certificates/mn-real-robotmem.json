@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0782846",
+  "certificate_id": "MN-SC-2026-8942887",
   "skill_id": "mn-real-robotmem",
   "skill_name": "robotmem",
-  "issued_at": "2026-07-12T04:33:02.846Z",
-  "expires_at": "2026-07-19T04:33:02.846Z",
+  "issued_at": "2026-07-15T01:29:02.887Z",
+  "expires_at": "2026-07-22T01:29:02.887Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6489fb1ce1a445e9bf815afd51adddfab4eed33381424085a85b33f5bb415314",
+  "signature": "dccef09745690cf5454ffa1fcbeed49155f908452162ef8739f40045df9916cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-robotmem"
 }

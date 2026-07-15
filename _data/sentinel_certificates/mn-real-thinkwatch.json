@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0594818",
+  "certificate_id": "MN-SC-2026-8709746",
   "skill_id": "mn-real-thinkwatch",
   "skill_name": "ThinkWatch",
-  "issued_at": "2026-07-12T04:29:54.818Z",
-  "expires_at": "2026-07-19T04:29:54.818Z",
+  "issued_at": "2026-07-15T01:25:09.746Z",
+  "expires_at": "2026-07-22T01:25:09.746Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "326247dc7d3dd8d4f173e93bcfc62dfbb1e400631d1f0793cd82dfc17cf77571",
+  "signature": "5b40c9a76087d21b5cf01f71057d67d17f3707dcacfaee62348a7b0e9f2bb867",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-thinkwatch"
 }

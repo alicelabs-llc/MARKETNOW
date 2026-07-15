@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0581929",
+  "certificate_id": "MN-SC-2026-8694794",
   "skill_id": "mn-real-wishfinitymcpplusw",
   "skill_name": "wishfinity-mcp-plusw",
-  "issued_at": "2026-07-12T04:29:41.929Z",
-  "expires_at": "2026-07-19T04:29:41.929Z",
+  "issued_at": "2026-07-15T01:24:54.794Z",
+  "expires_at": "2026-07-22T01:24:54.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a5b84d935f649c2fb5acf23458059e016720ab5a659919094cb4130e3af3153f",
+  "signature": "cce0c22445679337a42bed461e794e6be984e72de87b538b7a788b0cf566c9d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wishfinitymcpplusw"
 }

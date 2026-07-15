@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0777786",
+  "certificate_id": "MN-SC-2026-8936073",
   "skill_id": "mn-real-vocamazonreviews",
   "skill_name": "voc-amazon-reviews",
-  "issued_at": "2026-07-12T04:32:57.786Z",
-  "expires_at": "2026-07-19T04:32:57.786Z",
+  "issued_at": "2026-07-15T01:28:56.073Z",
+  "expires_at": "2026-07-22T01:28:56.073Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c13c63b6e89186311dcc17852ed5267abb2bf27bf8d9babc2dc9fb10d5e51f11",
+  "signature": "4fefed0bccf3b2fc1f4d2d04a6ff52aa709fbac9f94c01a45b1f9f22164be70b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vocamazonreviews"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1028148",
+  "certificate_id": "MN-SC-2026-9215277",
   "skill_id": "mn-real-httpsecurityheadersm",
   "skill_name": "http-security-headers-mcp",
-  "issued_at": "2026-07-12T04:37:08.148Z",
-  "expires_at": "2026-07-19T04:37:08.148Z",
+  "issued_at": "2026-07-15T01:33:35.277Z",
+  "expires_at": "2026-07-22T01:33:35.277Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6fd5bc0ea3fbff28d47f0004be5eb9599f7003bf198c7403720bd1b3cbe74437",
+  "signature": "f8618ce890e8ce67e19e45b306d5d8e07b79230cb84e7e50ff7dc395eae059ac",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-httpsecurityheadersm"
 }

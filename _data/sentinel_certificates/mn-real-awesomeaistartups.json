@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0951663",
+  "certificate_id": "MN-SC-2026-9136873",
   "skill_id": "mn-real-awesomeaistartups",
   "skill_name": "awesome-ai-startups",
-  "issued_at": "2026-07-12T04:35:51.663Z",
-  "expires_at": "2026-07-19T04:35:51.663Z",
+  "issued_at": "2026-07-15T01:32:16.873Z",
+  "expires_at": "2026-07-22T01:32:16.873Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "093b70eadbd997439fc8ed59b84c1f2376e5fc50162279bc752d838a343db37a",
+  "signature": "5bff10e5d207c98216534136b3dbecc81e846db01ced536c62e2404144879456",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-awesomeaistartups"
 }

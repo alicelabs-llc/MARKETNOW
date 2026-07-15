@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0549015",
+  "certificate_id": "MN-SC-2026-8657290",
   "skill_id": "mn-real-mcprecon",
   "skill_name": "mcp-recon",
-  "issued_at": "2026-07-12T04:29:09.015Z",
-  "expires_at": "2026-07-19T04:29:09.015Z",
+  "issued_at": "2026-07-15T01:24:17.290Z",
+  "expires_at": "2026-07-22T01:24:17.290Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9e8352caee44c2d5470fc87ebfecf8c99f498f7cb191e424cfba0faa57d6b8da",
+  "signature": "2c928c9dd00f6fef7ae655ef71394fb9b113e7d408dcf39d574cb520f9296652",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcprecon"
 }

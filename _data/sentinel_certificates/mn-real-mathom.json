@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0827579",
+  "certificate_id": "MN-SC-2026-8994268",
   "skill_id": "mn-real-mathom",
   "skill_name": "mathom",
-  "issued_at": "2026-07-12T04:33:47.579Z",
-  "expires_at": "2026-07-19T04:33:47.579Z",
+  "issued_at": "2026-07-15T01:29:54.268Z",
+  "expires_at": "2026-07-22T01:29:54.268Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa463db6e8f15ca0ac744081d614d6a7c84b7c823219e27a91a5a95cea8cc89b",
+  "signature": "9183b5fafdc255c77d9e629e4c64a17b56eefa2ca592c37f0d77956c3fc99ec7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mathom"
 }

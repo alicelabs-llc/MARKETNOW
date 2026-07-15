@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0592414",
+  "certificate_id": "MN-SC-2026-8706453",
   "skill_id": "mn-real-dataapibuilder",
   "skill_name": "data-api-builder",
-  "issued_at": "2026-07-12T04:29:52.414Z",
-  "expires_at": "2026-07-19T04:29:52.414Z",
+  "issued_at": "2026-07-15T01:25:06.453Z",
+  "expires_at": "2026-07-22T01:25:06.453Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5f6bbbc26aaa9d8aafeed22ad7d63819a8e27106fd3a7659854e25f3f500c3a5",
+  "signature": "392e62300b9e3a59901e3e90873ac15f00aaf64c5b504754d84fe5047c5c1332",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dataapibuilder"
 }

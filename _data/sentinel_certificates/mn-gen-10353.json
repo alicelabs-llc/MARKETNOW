@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0036694",
+  "certificate_id": "MN-SC-2026-7993274",
   "skill_id": "mn-gen-10353",
   "skill_name": "pexbot-mcp",
-  "issued_at": "2026-07-12T04:20:36.694Z",
-  "expires_at": "2026-07-19T04:20:36.694Z",
+  "issued_at": "2026-07-15T01:13:13.274Z",
+  "expires_at": "2026-07-22T01:13:13.274Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c4d4a4d75296a835356150db33c8ea08997b32949749bec9e641f2e23a58ede",
+  "signature": "eb7522ce2e49cd29c5496f345b7044e2a79b56883a1aee0b859ed0b2e4a5517e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10353"
 }

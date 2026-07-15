@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0364545",
+  "certificate_id": "MN-SC-2026-8455701",
   "skill_id": "mn-awmcp-portainermcp",
   "skill_name": "portainer-mcp",
-  "issued_at": "2026-07-12T04:26:04.545Z",
-  "expires_at": "2026-07-19T04:26:04.545Z",
+  "issued_at": "2026-07-15T01:20:55.701Z",
+  "expires_at": "2026-07-22T01:20:55.701Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9770c43d9eec3e7635abb1c720e594ef91e6b15a066fc54a5de0f8889a2f9f6c",
+  "signature": "935e6f1c26ebfb4266177083b0333f34875356da60371bf2098c3b09283dc852",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-portainermcp"
 }

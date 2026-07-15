@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0277241",
+  "certificate_id": "MN-SC-2026-8330127",
   "skill_id": "mn-prompt-daf34fd3",
   "skill_name": "Copywriting for customer onboarding checklist",
-  "issued_at": "2026-07-12T04:24:37.241Z",
-  "expires_at": "2026-07-19T04:24:37.241Z",
+  "issued_at": "2026-07-15T01:18:50.127Z",
+  "expires_at": "2026-07-22T01:18:50.127Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa33a52178ed1ea3e2dbbb5a52969a6384b544b2e7e320ee9e06f7b0c5be1a80",
+  "signature": "0ce775493cee898179f6f1b7db194ab8b2fc36da58982e7a2e4c63729c592a70",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-daf34fd3"
 }

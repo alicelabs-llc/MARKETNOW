@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0149821",
+  "certificate_id": "MN-SC-2026-8154105",
   "skill_id": "mn-prompt-a24a3773",
   "skill_name": "Especialista Returns + Reverse Logistics",
-  "issued_at": "2026-07-12T04:22:29.821Z",
-  "expires_at": "2026-07-19T04:22:29.821Z",
+  "issued_at": "2026-07-15T01:15:54.105Z",
+  "expires_at": "2026-07-22T01:15:54.105Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "975d95b407cdb863810047be5b62dfba1cac3a3bc39dd5d7ab0317a92bf7581d",
+  "signature": "f5b75e7189ea6570f1f6f353b26146a37fa52109bd48dd9884e5d8e5a2bc63df",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a24a3773"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0078898",
+  "certificate_id": "MN-SC-2026-8054074",
   "skill_id": "mn-prompt-4973c922",
   "skill_name": "Especialista Data Validation at Ingestion",
-  "issued_at": "2026-07-12T04:21:18.898Z",
-  "expires_at": "2026-07-19T04:21:18.898Z",
+  "issued_at": "2026-07-15T01:14:14.074Z",
+  "expires_at": "2026-07-22T01:14:14.074Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ac6903104d466d002a65f995da4a2c6ea1ad6e53e0d01b944b4ee24e401ecc3",
+  "signature": "678f35a15931c05656be16143372285fc5e26d807c62cc550c89783611e350d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4973c922"
 }

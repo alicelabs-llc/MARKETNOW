@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0021926",
+  "certificate_id": "MN-SC-2026-7975819",
   "skill_id": "mn-dat-07310",
   "skill_name": "postgres_mcp",
-  "issued_at": "2026-07-12T04:20:21.926Z",
-  "expires_at": "2026-07-19T04:20:21.926Z",
+  "issued_at": "2026-07-15T01:12:55.819Z",
+  "expires_at": "2026-07-22T01:12:55.819Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cda16d2054e800aa32013ded85012355821ee0516bd673d61ef37d1ce07c45a1",
+  "signature": "f9dd5ee27a4282016f25b98b0f2c6f6baa92674bbca85b9a6aefdb832fdcbd9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-07310"
 }

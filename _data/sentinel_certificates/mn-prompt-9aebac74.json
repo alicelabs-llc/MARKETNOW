@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0263232",
+  "certificate_id": "MN-SC-2026-8309229",
   "skill_id": "mn-prompt-9aebac74",
   "skill_name": "Content writing for thought leadership",
-  "issued_at": "2026-07-12T04:24:23.232Z",
-  "expires_at": "2026-07-19T04:24:23.232Z",
+  "issued_at": "2026-07-15T01:18:29.229Z",
+  "expires_at": "2026-07-22T01:18:29.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "463a90c7ee6a49a55ad21a6f2ad94e7c7f9f8fb82cc1f0f90f262d634121e1ad",
+  "signature": "f85f16b4f30fefd0d8522baa1175d8ed11c5a19670b0256e0a2de18fc7fdac63",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9aebac74"
 }

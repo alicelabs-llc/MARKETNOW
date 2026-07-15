@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0846151",
+  "certificate_id": "MN-SC-2026-9017212",
   "skill_id": "mn-real-agenticgokit",
   "skill_name": "AgenticGoKit",
-  "issued_at": "2026-07-12T04:34:06.151Z",
-  "expires_at": "2026-07-19T04:34:06.151Z",
+  "issued_at": "2026-07-15T01:30:17.212Z",
+  "expires_at": "2026-07-22T01:30:17.212Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e7e33b879693604aff3fc852aaf3bc988d07bfb6ce63d8bc4d0241d709c6c132",
+  "signature": "ba0c49fc8d39f7b4cef24a98b21bb0822e35e50adda52d5e2f657d7a282b6055",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agenticgokit"
 }

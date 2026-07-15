@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0723754",
+  "certificate_id": "MN-SC-2026-8869767",
   "skill_id": "mn-real-endtoendagenticaiaut",
   "skill_name": "End-to-End-Agentic-Ai-Automation-Lab",
-  "issued_at": "2026-07-12T04:32:03.754Z",
-  "expires_at": "2026-07-19T04:32:03.754Z",
+  "issued_at": "2026-07-15T01:27:49.767Z",
+  "expires_at": "2026-07-22T01:27:49.767Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "904985ef06d26c92786f4b7dadf9dba39164cb8f1fbc303632a36471e17dbcf7",
+  "signature": "462b8f4a029959086ce8c8b0ff7666c1df6a2554984d8e1c62b9c582f437d28a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-endtoendagenticaiaut"
 }

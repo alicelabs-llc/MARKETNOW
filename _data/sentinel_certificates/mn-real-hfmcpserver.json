@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0805289",
+  "certificate_id": "MN-SC-2026-8968512",
   "skill_id": "mn-real-hfmcpserver",
   "skill_name": "hf-mcp-server",
-  "issued_at": "2026-07-12T04:33:25.289Z",
-  "expires_at": "2026-07-19T04:33:25.289Z",
+  "issued_at": "2026-07-15T01:29:28.512Z",
+  "expires_at": "2026-07-22T01:29:28.512Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e05d1268367ee1327ae5b286ea7b474c52669ed7cd8bf827a13a1043403a5659",
+  "signature": "f7b043d0750c9c41439bb58cfa941b9766d91218261294511985a9a52e77979d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hfmcpserver"
 }

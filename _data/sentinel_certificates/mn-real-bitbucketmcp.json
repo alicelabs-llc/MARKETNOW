@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0697960",
+  "certificate_id": "MN-SC-2026-8834279",
   "skill_id": "mn-real-bitbucketmcp",
   "skill_name": "bitbucket-mcp",
-  "issued_at": "2026-07-12T04:31:37.960Z",
-  "expires_at": "2026-07-19T04:31:37.960Z",
+  "issued_at": "2026-07-15T01:27:14.279Z",
+  "expires_at": "2026-07-22T01:27:14.279Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "947b360cb1d7039a443bd8658e7cb3fc5618a2310208a98c2b639cfbd1bf6e5e",
+  "signature": "3f39249d9083c2d361b952c6e81ac17011f9f24824be09fb4eae4937dd503925",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bitbucketmcp"
 }

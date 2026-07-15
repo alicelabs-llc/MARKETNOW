@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0723245",
+  "certificate_id": "MN-SC-2026-8869085",
   "skill_id": "mn-real-kaimonjl",
   "skill_name": "Kaimon.jl",
-  "issued_at": "2026-07-12T04:32:03.245Z",
-  "expires_at": "2026-07-19T04:32:03.245Z",
+  "issued_at": "2026-07-15T01:27:49.085Z",
+  "expires_at": "2026-07-22T01:27:49.085Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5427b016d6abb8477ce7af54e12f6e55a3cc2038e0dbee871b78e10a58a8d0f9",
+  "signature": "35093efc55c3d67b45aebe27d65c615889afc923a6f2707353b50a522fbd06ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kaimonjl"
 }

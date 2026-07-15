@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0739269",
+  "certificate_id": "MN-SC-2026-8889138",
   "skill_id": "mn-real-railwaymcp",
   "skill_name": "railway-mcp",
-  "issued_at": "2026-07-12T04:32:19.269Z",
-  "expires_at": "2026-07-19T04:32:19.269Z",
+  "issued_at": "2026-07-15T01:28:09.138Z",
+  "expires_at": "2026-07-22T01:28:09.138Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8e269c2528fa64fda38da3abe026f1a67d0b60b23b6eb97624dbe9d4570d224",
+  "signature": "f8ae3cf4c2ca61af7a4ae5d6e07489d984953713b2f4668f7f6bbbfa7b04e5ad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-railwaymcp"
 }

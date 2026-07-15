@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0416889",
+  "certificate_id": "MN-SC-2026-8516625",
   "skill_id": "mn-real-reactanalyzermcp",
   "skill_name": "react-analyzer-mcp",
-  "issued_at": "2026-07-12T04:26:56.889Z",
-  "expires_at": "2026-07-19T04:26:56.889Z",
+  "issued_at": "2026-07-15T01:21:56.625Z",
+  "expires_at": "2026-07-22T01:21:56.625Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2261b3982a95bb311e953ae790fb229833d5c51bd81850e603cd14ca51e951f6",
+  "signature": "813caa77be491065b45b7cc2251a3b18e599ff7c88adb2e01a8ff25fe11d4323",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-reactanalyzermcp"
 }

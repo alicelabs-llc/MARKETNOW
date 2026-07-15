@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0852333",
+  "certificate_id": "MN-SC-2026-9025794",
   "skill_id": "mn-real-mcpsnitch",
   "skill_name": "mcp-snitch",
-  "issued_at": "2026-07-12T04:34:12.333Z",
-  "expires_at": "2026-07-19T04:34:12.333Z",
+  "issued_at": "2026-07-15T01:30:25.794Z",
+  "expires_at": "2026-07-22T01:30:25.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3462c4563c0544798b241b9f4facb602898e742012cdf9b3d1da542b88bc42d8",
+  "signature": "9bcfd5ebccc9661f228820a49d4adf9f14ed1c9e5b6a5015270801e9844721b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsnitch"
 }

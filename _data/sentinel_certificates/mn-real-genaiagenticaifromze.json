@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0709804",
+  "certificate_id": "MN-SC-2026-8851324",
   "skill_id": "mn-real-genaiagenticaifromze",
   "skill_name": "GenAI-AgenticAI-From-Zero-to-Production",
-  "issued_at": "2026-07-12T04:31:49.804Z",
-  "expires_at": "2026-07-19T04:31:49.804Z",
+  "issued_at": "2026-07-15T01:27:31.324Z",
+  "expires_at": "2026-07-22T01:27:31.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d6d41e3208ac7ddbe693bc39bacc924531ad2a42833559d59e3963b19ab60b3",
+  "signature": "bb91a7b035f4a71b8a73a6c710053945491d646e7d6c5a58a543cdf72daf431e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-genaiagenticaifromze"
 }

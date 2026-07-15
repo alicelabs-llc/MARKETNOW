@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0718105",
+  "certificate_id": "MN-SC-2026-8861409",
   "skill_id": "mn-real-metingagent",
   "skill_name": "Meting-Agent",
-  "issued_at": "2026-07-12T04:31:58.105Z",
-  "expires_at": "2026-07-19T04:31:58.105Z",
+  "issued_at": "2026-07-15T01:27:41.409Z",
+  "expires_at": "2026-07-22T01:27:41.409Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4a6a65e7fcaaa00ab736fcf3309ac86db7b1ce063d1f4d7168314f7bb9e41ba2",
+  "signature": "aca45641cacd3dea44d19076925a7c5fe96242bfe47e59898aa880470bc7b45f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-metingagent"
 }

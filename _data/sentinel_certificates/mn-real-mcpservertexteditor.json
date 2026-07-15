@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0765066",
+  "certificate_id": "MN-SC-2026-8921070",
   "skill_id": "mn-real-mcpservertexteditor",
   "skill_name": "mcp-server-text-editor",
-  "issued_at": "2026-07-12T04:32:45.066Z",
-  "expires_at": "2026-07-19T04:32:45.066Z",
+  "issued_at": "2026-07-15T01:28:41.070Z",
+  "expires_at": "2026-07-22T01:28:41.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eea7fac2f27a36610c8b4d4ff9511e41d3ed032e6ad88e4dc4d7cb2d05da633c",
+  "signature": "6187b9faa38bfbbc7cff4adbf74c692f14b6c7ec1104a5b57fc63cafe895d842",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpservertexteditor"
 }

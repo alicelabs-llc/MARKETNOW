@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0924195",
+  "certificate_id": "MN-SC-2026-9104987",
   "skill_id": "mn-real-tokenenhancer",
   "skill_name": "token-enhancer",
-  "issued_at": "2026-07-12T04:35:24.195Z",
-  "expires_at": "2026-07-19T04:35:24.195Z",
+  "issued_at": "2026-07-15T01:31:44.987Z",
+  "expires_at": "2026-07-22T01:31:44.987Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d24667ac7271b56d86c2d22a00857f494fab6e748318a9364ce5b7a25616617a",
+  "signature": "5a0d2e6f36c2411325a9e86fcf33019313986b328a368919c8cf8274b547b309",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tokenenhancer"
 }

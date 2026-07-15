@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0612103",
+  "certificate_id": "MN-SC-2026-8729794",
   "skill_id": "mn-real-fennaragodotai",
   "skill_name": "fennara-godot-ai",
-  "issued_at": "2026-07-12T04:30:12.103Z",
-  "expires_at": "2026-07-19T04:30:12.103Z",
+  "issued_at": "2026-07-15T01:25:29.794Z",
+  "expires_at": "2026-07-22T01:25:29.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ef1a3d2e2eb8888ee31e6f627bd0aa5f3f0ee81dd38917b40e9de51d26eba5d",
+  "signature": "eb5591f5de10146f454df1dd7b78c7f5bc3596d73e66c08b8c19bc0878677269",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fennaragodotai"
 }

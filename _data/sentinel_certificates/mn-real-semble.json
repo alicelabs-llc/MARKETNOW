@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0587551",
+  "certificate_id": "MN-SC-2026-8700451",
   "skill_id": "mn-real-semble",
   "skill_name": "semble",
-  "issued_at": "2026-07-12T04:29:47.551Z",
-  "expires_at": "2026-07-19T04:29:47.551Z",
+  "issued_at": "2026-07-15T01:25:00.451Z",
+  "expires_at": "2026-07-22T01:25:00.451Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3de84ba9d8417e59e808f0f76cf4a080e2c12a9acef564df03a437724f05c5a6",
+  "signature": "df15bcdb380c2f13d51812fd1b74b814f01c65db4942e0aa6377b868f520a2d0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-semble"
 }

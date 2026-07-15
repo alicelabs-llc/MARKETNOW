@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0911283",
+  "certificate_id": "MN-SC-2026-9086528",
   "skill_id": "mn-real-100githubprojectstha",
   "skill_name": "100-GitHub-Projects-That-Defined-2025",
-  "issued_at": "2026-07-12T04:35:11.283Z",
-  "expires_at": "2026-07-19T04:35:11.283Z",
+  "issued_at": "2026-07-15T01:31:26.528Z",
+  "expires_at": "2026-07-22T01:31:26.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "555f7ff4e845227bea3e78d3517700fbeca8a58078e7824af7c85335d5019f2a",
+  "signature": "ec360aa06133b3c86228be768e4eb4303e2ec9efe301b74fee7227ebff2e33e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-100githubprojectstha"
 }

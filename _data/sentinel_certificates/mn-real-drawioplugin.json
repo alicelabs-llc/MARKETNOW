@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0952966",
+  "certificate_id": "MN-SC-2026-9137528",
   "skill_id": "mn-real-drawioplugin",
   "skill_name": "drawio_plugin",
-  "issued_at": "2026-07-12T04:35:52.966Z",
-  "expires_at": "2026-07-19T04:35:52.966Z",
+  "issued_at": "2026-07-15T01:32:17.528Z",
+  "expires_at": "2026-07-22T01:32:17.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5d798da43ad8ad7a2a8cb857c15743da26e7f344e5d820ec21faf2fc08ed5201",
+  "signature": "28ad4035a0a876bfe2a8ff67e47488ac394de3c9bdee99a0d56c96c5d3c0005b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-drawioplugin"
 }

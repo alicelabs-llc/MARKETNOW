@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0944166",
+  "certificate_id": "MN-SC-2026-9128628",
   "skill_id": "mn-real-alanecolgsearchmcp",
   "skill_name": "gsearch-mcp",
-  "issued_at": "2026-07-12T04:35:44.166Z",
-  "expires_at": "2026-07-19T04:35:44.166Z",
+  "issued_at": "2026-07-15T01:32:08.628Z",
+  "expires_at": "2026-07-22T01:32:08.628Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49ffb8fa2c47dc154314bb7cd66a12f8e5c5c30cfbaf36616e57058d03ef969c",
+  "signature": "35dba7f35d5d0315c4e9d9b1177658753a0d88c47246b6fed71390a03e83d177",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alanecolgsearchmcp"
 }

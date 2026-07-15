@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0041891",
+  "certificate_id": "MN-SC-2026-8003648",
   "skill_id": "mn-gen-12059",
   "skill_name": "spec-workflow-mcp",
-  "issued_at": "2026-07-12T04:20:41.891Z",
-  "expires_at": "2026-07-19T04:20:41.891Z",
+  "issued_at": "2026-07-15T01:13:23.648Z",
+  "expires_at": "2026-07-22T01:13:23.648Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a254e34c1b3bc402c80e2f9ecf695b392620af026555c62ac62e8c7e003f6b9",
+  "signature": "cc2d3f8199d1043532a04de3fb9285e4230224c019ed063eba8a7661ebd5f41c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12059"
 }

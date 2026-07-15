@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0388788",
+  "certificate_id": "MN-SC-2026-8482880",
   "skill_id": "mn-awmcp-agenticmail",
   "skill_name": "agenticmail",
-  "issued_at": "2026-07-12T04:26:28.788Z",
-  "expires_at": "2026-07-19T04:26:28.788Z",
+  "issued_at": "2026-07-15T01:21:22.880Z",
+  "expires_at": "2026-07-22T01:21:22.880Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "920f8d8062110aabc71cd22bd1b834b6b14bbbb4c96a5384ada4038b4ec15d8d",
+  "signature": "4c39f19379e0a2379bbaab98ff0a0d6210c195535f451f2f8a0100955b630878",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agenticmail"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0639359",
+  "certificate_id": "MN-SC-2026-8761961",
   "skill_id": "mn-real-agent47",
   "skill_name": "agent47",
-  "issued_at": "2026-07-12T04:30:39.359Z",
-  "expires_at": "2026-07-19T04:30:39.359Z",
+  "issued_at": "2026-07-15T01:26:01.961Z",
+  "expires_at": "2026-07-22T01:26:01.961Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2913d3de361fecce94f8624955b10ca8a08dd7bbad72ce0edcbd910246b14fe1",
+  "signature": "4fc69767cbcccd45adb301cd2ff273ab6c02a7a4c85ae1cb9f3eb0936ed454e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agent47"
 }

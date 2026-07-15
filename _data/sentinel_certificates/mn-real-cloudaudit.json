@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0545680",
+  "certificate_id": "MN-SC-2026-8653870",
   "skill_id": "mn-real-cloudaudit",
   "skill_name": "cloud-audit",
-  "issued_at": "2026-07-12T04:29:05.680Z",
-  "expires_at": "2026-07-19T04:29:05.680Z",
+  "issued_at": "2026-07-15T01:24:13.870Z",
+  "expires_at": "2026-07-22T01:24:13.870Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a32734c674e1f0c01b391b74aad21e819c822f31f6852554388f28acc82c4c44",
+  "signature": "b91605991836af80768e6248a2d0237f1b8d1b9897700fc4b1faece8e8125d3f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cloudaudit"
 }

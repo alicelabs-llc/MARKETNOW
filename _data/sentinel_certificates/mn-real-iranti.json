@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0499294",
+  "certificate_id": "MN-SC-2026-8607566",
   "skill_id": "mn-real-iranti",
   "skill_name": "iranti",
-  "issued_at": "2026-07-12T04:28:19.294Z",
-  "expires_at": "2026-07-19T04:28:19.294Z",
+  "issued_at": "2026-07-15T01:23:27.566Z",
+  "expires_at": "2026-07-22T01:23:27.566Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "558133df748be55563ad90185166ce46f4f2f0375065f4a0baa0786c9192a51e",
+  "signature": "cc102b74abe4ffbee04a7d0c7b4a7e8db0ea97bc061491985407a852fd8ce73e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-iranti"
 }

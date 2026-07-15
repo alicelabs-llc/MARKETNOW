@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0819208",
+  "certificate_id": "MN-SC-2026-8984352",
   "skill_id": "mn-real-stash",
   "skill_name": "stash",
-  "issued_at": "2026-07-12T04:33:39.208Z",
-  "expires_at": "2026-07-19T04:33:39.208Z",
+  "issued_at": "2026-07-15T01:29:44.352Z",
+  "expires_at": "2026-07-22T01:29:44.352Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bdd83607183e5d0ef41d063b818a902307385ee7b0b9337c8e9b8c47b4d01f36",
+  "signature": "fad442080e5ff5e2cd6d6a14ed3eb883b07d187374c320bcbe15a7007eed3c5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stash"
 }

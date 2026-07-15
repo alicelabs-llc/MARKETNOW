@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0686001",
+  "certificate_id": "MN-SC-2026-8817029",
   "skill_id": "mn-real-pixra",
   "skill_name": "PIXRA",
-  "issued_at": "2026-07-12T04:31:26.001Z",
-  "expires_at": "2026-07-19T04:31:26.001Z",
+  "issued_at": "2026-07-15T01:26:57.029Z",
+  "expires_at": "2026-07-22T01:26:57.029Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "980267e9c1fb622c50b62dd83e930b3497bb714ff2be196a261c8979a4e962e8",
+  "signature": "6c642272e3568687ed54434d421694dc254a9f1620e1de176057a23bf2fc01db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pixra"
 }

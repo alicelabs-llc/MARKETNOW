@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0098844",
+  "certificate_id": "MN-SC-2026-8083924",
   "skill_id": "mn-prompt-302423d0",
   "skill_name": "Especialista Database Capacity Planning",
-  "issued_at": "2026-07-12T04:21:38.844Z",
-  "expires_at": "2026-07-19T04:21:38.844Z",
+  "issued_at": "2026-07-15T01:14:43.924Z",
+  "expires_at": "2026-07-22T01:14:43.924Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9814317129e210078c3431a037a532f328f0d5a0c2bf8fbac2773e4cc275815e",
+  "signature": "44f71af4d3f66c9f512094b8c764ae05e18fcf207909b2f6c2ea3add87dab511",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-302423d0"
 }

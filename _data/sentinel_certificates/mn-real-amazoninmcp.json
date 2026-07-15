@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0632056",
+  "certificate_id": "MN-SC-2026-8754440",
   "skill_id": "mn-real-amazoninmcp",
   "skill_name": "amazon-in-mcp",
-  "issued_at": "2026-07-12T04:30:32.056Z",
-  "expires_at": "2026-07-19T04:30:32.056Z",
+  "issued_at": "2026-07-15T01:25:54.440Z",
+  "expires_at": "2026-07-22T01:25:54.440Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "476d1ae7b9bacfdc63bba7920ca8efc275a5236c13490aeb66dfff8673fa7713",
+  "signature": "d8f65ba02fd37a0f1fd8284dfb138fc3c2640edb8314f34f5a17df2d66c6f5b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-amazoninmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0806786",
+  "certificate_id": "MN-SC-2026-8970070",
   "skill_id": "mn-real-googleresearchmcp",
   "skill_name": "Google-Research-MCP",
-  "issued_at": "2026-07-12T04:33:26.786Z",
-  "expires_at": "2026-07-19T04:33:26.786Z",
+  "issued_at": "2026-07-15T01:29:30.070Z",
+  "expires_at": "2026-07-22T01:29:30.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa0faa5f09338c1ad2723a020cc40c6facb4f2a111ef06c5bf608436e3d2a126",
+  "signature": "9fecdc4be54b4313b02bc52b07f388be05333f132ff8fd8f80d2c7596db93bbb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-googleresearchmcp"
 }

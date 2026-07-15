@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0785908",
+  "certificate_id": "MN-SC-2026-8946001",
   "skill_id": "mn-real-ukcaselawmcpserver",
   "skill_name": "uk-case-law-mcp-server",
-  "issued_at": "2026-07-12T04:33:05.908Z",
-  "expires_at": "2026-07-19T04:33:05.908Z",
+  "issued_at": "2026-07-15T01:29:06.001Z",
+  "expires_at": "2026-07-22T01:29:06.001Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7653cc10a4b698ff02f0677f693327c3964dc2ab39b4dc39ee4442ca85c37cb7",
+  "signature": "41c8bd7c8ed26791655b32e842a8e14844f5234b01edc5fd7aaee0d9455d1e70",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ukcaselawmcpserver"
 }

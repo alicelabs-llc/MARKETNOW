@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0422445",
+  "certificate_id": "MN-SC-2026-8523160",
   "skill_id": "mn-real-mcpimagecompression",
   "skill_name": "mcp-image-compression",
-  "issued_at": "2026-07-12T04:27:02.445Z",
-  "expires_at": "2026-07-19T04:27:02.445Z",
+  "issued_at": "2026-07-15T01:22:03.160Z",
+  "expires_at": "2026-07-22T01:22:03.160Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d02b08f8d802a4f36ff8fa5b462dfe1d274473985a11cb199613b2c94a0d712e",
+  "signature": "95ca072728d71eb376c245b50b4c4d13f22ecc8a9103a98322bed9547e331dbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpimagecompression"
 }

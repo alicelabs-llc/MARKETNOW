@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0551345",
+  "certificate_id": "MN-SC-2026-8659899",
   "skill_id": "mn-real-thalescdspcrdpmcpser",
   "skill_name": "thales-cdsp-crdp-mcp-server",
-  "issued_at": "2026-07-12T04:29:11.345Z",
-  "expires_at": "2026-07-19T04:29:11.345Z",
+  "issued_at": "2026-07-15T01:24:19.899Z",
+  "expires_at": "2026-07-22T01:24:19.899Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd52786dadbdc34bdd12b1db908af3262ff33d2eb534a31e4d790dd94c5b5217",
+  "signature": "672e60ca58a0dfd7cc1fc18bd7ab987b42e346e8eb0f1dff7884885f3f418667",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-thalescdspcrdpmcpser"
 }

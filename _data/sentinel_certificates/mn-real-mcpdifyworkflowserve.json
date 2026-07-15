@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0574907",
+  "certificate_id": "MN-SC-2026-8687413",
   "skill_id": "mn-real-mcpdifyworkflowserve",
   "skill_name": "mcp-difyworkflow-server",
-  "issued_at": "2026-07-12T04:29:34.907Z",
-  "expires_at": "2026-07-19T04:29:34.907Z",
+  "issued_at": "2026-07-15T01:24:47.413Z",
+  "expires_at": "2026-07-22T01:24:47.413Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "86c0f9f2866bf99b94b6ee77fae177850cde1306d1bf994f8fcef5bef46c4264",
+  "signature": "e5e0cbfa44067f9a30286345130b4162208015c691ee0e80b413f6eda0d5d673",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdifyworkflowserve"
 }

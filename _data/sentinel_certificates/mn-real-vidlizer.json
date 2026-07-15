@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1002108",
+  "certificate_id": "MN-SC-2026-9188521",
   "skill_id": "mn-real-vidlizer",
   "skill_name": "vidlizer",
-  "issued_at": "2026-07-12T04:36:42.108Z",
-  "expires_at": "2026-07-19T04:36:42.108Z",
+  "issued_at": "2026-07-15T01:33:08.521Z",
+  "expires_at": "2026-07-22T01:33:08.521Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "63e02f8c74037143b9f4dd7236f2cc4dbe6a96b40b29e8be95b01b15e0556a39",
+  "signature": "09e470ec6cc71b6454db343c9150fe65a4c06c4107f024c2f0b650f9e511c3f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vidlizer"
 }

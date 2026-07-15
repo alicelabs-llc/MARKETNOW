@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1011717",
+  "certificate_id": "MN-SC-2026-9198829",
   "skill_id": "mn-real-hkhousingmcpserver",
   "skill_name": "hk-housing-mcp-server",
-  "issued_at": "2026-07-12T04:36:51.717Z",
-  "expires_at": "2026-07-19T04:36:51.717Z",
+  "issued_at": "2026-07-15T01:33:18.829Z",
+  "expires_at": "2026-07-22T01:33:18.829Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0827c46725db85a03a7adac559b3d94d09f28056dfd8354c30115a678190adb7",
+  "signature": "b1e4d891c0533f1803b33bdd0a611815f44744df79512a0b9a17cad6fe569fe1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hkhousingmcpserver"
 }

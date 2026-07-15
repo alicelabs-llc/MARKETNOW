@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0979876",
+  "certificate_id": "MN-SC-2026-9167357",
   "skill_id": "mn-real-samplegenaioneksstar",
   "skill_name": "sample-genai-on-eks-starter-kit",
-  "issued_at": "2026-07-12T04:36:19.876Z",
-  "expires_at": "2026-07-19T04:36:19.876Z",
+  "issued_at": "2026-07-15T01:32:47.357Z",
+  "expires_at": "2026-07-22T01:32:47.357Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af1721d4c5fa04194f74a0b0e2302e4d2ae1f9136756e664a065271937204ed8",
+  "signature": "e2bd2375e5ada2fe7478e35642ee1a108a1dd722e2a2e39a501799ccdbe5a72b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-samplegenaioneksstar"
 }

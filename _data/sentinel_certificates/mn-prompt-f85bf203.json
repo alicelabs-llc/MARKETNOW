@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0071304",
+  "certificate_id": "MN-SC-2026-8044031",
   "skill_id": "mn-prompt-f85bf203",
   "skill_name": "Especialista SSL/TLS + Cert Manager",
-  "issued_at": "2026-07-12T04:21:11.304Z",
-  "expires_at": "2026-07-19T04:21:11.304Z",
+  "issued_at": "2026-07-15T01:14:04.031Z",
+  "expires_at": "2026-07-22T01:14:04.031Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8a5cc548f25ffb4f4af28817bc5b15620c1521820ccfbed12e114d62871e20bb",
+  "signature": "441fa5272c9063a3d5adeea323b6e67571f9b39f029d670ca048be73941d887b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f85bf203"
 }

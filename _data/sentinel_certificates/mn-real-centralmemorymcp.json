@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1081422",
+  "certificate_id": "MN-SC-2026-8607217",
   "skill_id": "mn-real-centralmemorymcp",
   "skill_name": "Central-Memory-MCP",
-  "issued_at": "2026-07-12T04:38:01.422Z",
-  "expires_at": "2026-07-19T04:38:01.422Z",
+  "issued_at": "2026-07-15T01:23:27.217Z",
+  "expires_at": "2026-07-22T01:23:27.217Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "36686015db515570569f6f7f6a94d6f2fb3cf7ea20f7339d92de9cd1a6553de7",
+  "signature": "d285b3add452fb107765b6eeb67917bdc235b5337b64a7a5f01a339b6210f1c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-centralmemorymcp"
 }

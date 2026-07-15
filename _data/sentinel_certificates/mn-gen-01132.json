@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9985201",
+  "certificate_id": "MN-SC-2026-7932951",
   "skill_id": "mn-gen-01132",
   "skill_name": "Agent-skills",
-  "issued_at": "2026-07-12T04:19:45.201Z",
-  "expires_at": "2026-07-19T04:19:45.201Z",
+  "issued_at": "2026-07-15T01:12:12.951Z",
+  "expires_at": "2026-07-22T01:12:12.951Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2deea20e1745d2fc8b4ac350c2778f4a3804db49c7f40208886a4ba7ac29d82c",
+  "signature": "2f43efdcfb028e995ee1b9141b5740584a4bc905c3d19de5e8486c74f92256dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01132"
 }

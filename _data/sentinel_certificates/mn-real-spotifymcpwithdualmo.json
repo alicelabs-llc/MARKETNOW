@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1024050",
+  "certificate_id": "MN-SC-2026-9210576",
   "skill_id": "mn-real-spotifymcpwithdualmo",
   "skill_name": "Spotify-MCP-with-dual-mode",
-  "issued_at": "2026-07-12T04:37:04.050Z",
-  "expires_at": "2026-07-19T04:37:04.050Z",
+  "issued_at": "2026-07-15T01:33:30.576Z",
+  "expires_at": "2026-07-22T01:33:30.576Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "457182c359c8d3456e3e7766e35cbe12cd49e5285466aab7ddaa72fc2d5b1588",
+  "signature": "c6a7e9f25ad372b051de59b7c86c664ed53c949f1533d11739eb89be1a1b439e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-spotifymcpwithdualmo"
 }

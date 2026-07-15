@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0555684",
+  "certificate_id": "MN-SC-2026-8664993",
   "skill_id": "mn-real-redditmcpbuddy",
   "skill_name": "reddit-mcp-buddy",
-  "issued_at": "2026-07-12T04:29:15.684Z",
-  "expires_at": "2026-07-19T04:29:15.684Z",
+  "issued_at": "2026-07-15T01:24:24.993Z",
+  "expires_at": "2026-07-22T01:24:24.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "56a8d3cd18525884512d5bc2e59e4bcb5dd74ebe8352d98c4e2c7e08191a2ee2",
+  "signature": "245f3cf6c12d83b4d0867e12defe1c983e1558363d030db0af38f563c985a3c4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-redditmcpbuddy"
 }

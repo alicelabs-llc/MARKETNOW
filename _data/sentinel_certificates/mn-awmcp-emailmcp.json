@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0390193",
+  "certificate_id": "MN-SC-2026-8485017",
   "skill_id": "mn-awmcp-emailmcp",
   "skill_name": "email-mcp",
-  "issued_at": "2026-07-12T04:26:30.193Z",
-  "expires_at": "2026-07-19T04:26:30.193Z",
+  "issued_at": "2026-07-15T01:21:25.017Z",
+  "expires_at": "2026-07-22T01:21:25.017Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4cec0c6a313016f6eacc37a9bc13510b3645a3a0ec949dba954f7b97eccafb51",
+  "signature": "2b39c9fff3147512af5640cbdc0b28f33a4bac8b024d368ea330ae340e855a06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-emailmcp"
 }

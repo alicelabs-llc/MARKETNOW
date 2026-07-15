@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0580017",
+  "certificate_id": "MN-SC-2026-8693499",
   "skill_id": "mn-real-thinqconnectmcp",
   "skill_name": "thinqconnect-mcp",
-  "issued_at": "2026-07-12T04:29:40.017Z",
-  "expires_at": "2026-07-19T04:29:40.017Z",
+  "issued_at": "2026-07-15T01:24:53.499Z",
+  "expires_at": "2026-07-22T01:24:53.499Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f3f6dde6eac330013b0d026a0fd9ef3e98f94721ac75f9d4baa1db6a9550b6d",
+  "signature": "67fe44f73e8531606168dc641c4f29b323c061b59b68ba6922e283073dbe83dd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-thinqconnectmcp"
 }

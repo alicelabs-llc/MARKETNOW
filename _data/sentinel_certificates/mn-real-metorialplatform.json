@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0687564",
+  "certificate_id": "MN-SC-2026-8819211",
   "skill_id": "mn-real-metorialplatform",
   "skill_name": "metorial-platform",
-  "issued_at": "2026-07-12T04:31:27.564Z",
-  "expires_at": "2026-07-19T04:31:27.564Z",
+  "issued_at": "2026-07-15T01:26:59.211Z",
+  "expires_at": "2026-07-22T01:26:59.211Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8967ac4e9eb0e7e25810f4f5bc7970d339ead4ae3c0efbafe379f45e12963520",
+  "signature": "54bce9c1d0080e594260b26ac413b6e599ea47734ce5c0e21a04b54845592dd7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-metorialplatform"
 }

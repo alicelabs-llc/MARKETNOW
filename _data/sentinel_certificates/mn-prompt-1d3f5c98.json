@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0236339",
+  "certificate_id": "MN-SC-2026-8272411",
   "skill_id": "mn-prompt-1d3f5c98",
   "skill_name": "FP&A business partnering",
-  "issued_at": "2026-07-12T04:23:56.339Z",
-  "expires_at": "2026-07-19T04:23:56.339Z",
+  "issued_at": "2026-07-15T01:17:52.411Z",
+  "expires_at": "2026-07-22T01:17:52.411Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "349b651ed5982d2ca6aa571835a840f05ef464210af99bb242a4e3a999f1ea3a",
+  "signature": "ee9e89d3ca0635765d5d4d93517e5dfd1709df70b90e72b480472e0740b795f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1d3f5c98"
 }

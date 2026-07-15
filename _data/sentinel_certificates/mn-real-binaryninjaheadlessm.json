@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0810616",
+  "certificate_id": "MN-SC-2026-8975074",
   "skill_id": "mn-real-binaryninjaheadlessm",
   "skill_name": "binary-ninja-headless-mcp",
-  "issued_at": "2026-07-12T04:33:30.616Z",
-  "expires_at": "2026-07-19T04:33:30.616Z",
+  "issued_at": "2026-07-15T01:29:35.074Z",
+  "expires_at": "2026-07-22T01:29:35.074Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "20e95eb3890dfc0ac3240e1a5db40076bceb99b4612aa05a3cd5447b3ed820e4",
+  "signature": "cfdedf38b65d936e277f3afb2655baa1db2e8b1ac8aa19eb5df7620c1adb33a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-binaryninjaheadlessm"
 }

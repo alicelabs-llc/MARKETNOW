@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0765629",
+  "certificate_id": "MN-SC-2026-8921632",
   "skill_id": "mn-real-deskdrop",
   "skill_name": "Deskdrop",
-  "issued_at": "2026-07-12T04:32:45.629Z",
-  "expires_at": "2026-07-19T04:32:45.629Z",
+  "issued_at": "2026-07-15T01:28:41.632Z",
+  "expires_at": "2026-07-22T01:28:41.632Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3527e05b236d089f38f717105a8e27176f50918aadbbe339748a4dd560ba90f1",
+  "signature": "b4ef2ae3e5b669c104cc6b20f9549a4ee405e98c28c7367b45a98e1737e570c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-deskdrop"
 }

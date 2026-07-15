@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0152449",
+  "certificate_id": "MN-SC-2026-8160827",
   "skill_id": "mn-prompt-54d2f647",
   "skill_name": "Especialista Ecommerce Customer Journey Mapping",
-  "issued_at": "2026-07-12T04:22:32.449Z",
-  "expires_at": "2026-07-19T04:22:32.449Z",
+  "issued_at": "2026-07-15T01:16:00.827Z",
+  "expires_at": "2026-07-22T01:16:00.827Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3595a0d66b7b540c4fb0be79a10cabcc012993af014d622a023aa36c28155b8e",
+  "signature": "af4afc337cc50b3f7fb1a4868d03437c2989c9fef21f75ab912a478e788945b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-54d2f647"
 }

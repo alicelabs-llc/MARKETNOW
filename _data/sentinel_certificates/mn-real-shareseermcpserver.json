@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0476218",
+  "certificate_id": "MN-SC-2026-8582621",
   "skill_id": "mn-real-shareseermcpserver",
   "skill_name": "shareseer-mcp-server",
-  "issued_at": "2026-07-12T04:27:56.218Z",
-  "expires_at": "2026-07-19T04:27:56.218Z",
+  "issued_at": "2026-07-15T01:23:02.621Z",
+  "expires_at": "2026-07-22T01:23:02.621Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e6ea1efabbc9d6cfe07fa89fd2e1029f087ad7f1d6fcc197016b5f349a4ef47",
+  "signature": "72fd6106942b600d58b310a8bcc9a6a01cc09f93a989ef1a72e050240a27fc80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-shareseermcpserver"
 }

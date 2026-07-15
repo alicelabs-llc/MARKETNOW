@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0729008",
+  "certificate_id": "MN-SC-2026-8875313",
   "skill_id": "mn-real-askexpertconsultmcp",
   "skill_name": "ask-expert-consult-mcp",
-  "issued_at": "2026-07-12T04:32:09.008Z",
-  "expires_at": "2026-07-19T04:32:09.008Z",
+  "issued_at": "2026-07-15T01:27:55.313Z",
+  "expires_at": "2026-07-22T01:27:55.313Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ae5d3684d7914be07efa96c9f23d28e916915b6f76cb711b9ff2c56a607f1c98",
+  "signature": "b835d609ad769f3d86af3abe11c87a9511495a49f6bd7cc1db749d27f24a2361",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-askexpertconsultmcp"
 }

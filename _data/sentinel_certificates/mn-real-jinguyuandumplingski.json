@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0940140",
+  "certificate_id": "MN-SC-2026-9124242",
   "skill_id": "mn-real-jinguyuandumplingski",
   "skill_name": "jinguyuan-dumpling-skill",
-  "issued_at": "2026-07-12T04:35:40.140Z",
-  "expires_at": "2026-07-19T04:35:40.140Z",
+  "issued_at": "2026-07-15T01:32:04.242Z",
+  "expires_at": "2026-07-22T01:32:04.242Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "47c0a1c824828ed9b18d879ea5526822babde8758820fcdb0f30557c83ed56fe",
+  "signature": "cf32d469c6d312297dae4b638075755cddd00092cbcf3eb83e3d5f2616f83e3f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jinguyuandumplingski"
 }

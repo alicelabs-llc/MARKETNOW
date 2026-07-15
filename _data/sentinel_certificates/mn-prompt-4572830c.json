@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0070116",
+  "certificate_id": "MN-SC-2026-8042506",
   "skill_id": "mn-prompt-4572830c",
   "skill_name": "Especialista GitLab CI + DORA Metrics",
-  "issued_at": "2026-07-12T04:21:10.116Z",
-  "expires_at": "2026-07-19T04:21:10.116Z",
+  "issued_at": "2026-07-15T01:14:02.506Z",
+  "expires_at": "2026-07-22T01:14:02.506Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "492f5cca3a208422b94ccca04ad4ccc226e76e27879f038de071015b0f7f0c84",
+  "signature": "22dc0e3771a102cb6e0a047e6effda60421519458e99c6b6b00e59ed50aba893",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-4572830c"
 }

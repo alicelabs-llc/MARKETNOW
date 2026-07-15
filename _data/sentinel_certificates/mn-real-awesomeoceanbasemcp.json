@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0656942",
+  "certificate_id": "MN-SC-2026-8780823",
   "skill_id": "mn-real-awesomeoceanbasemcp",
   "skill_name": "awesome-oceanbase-mcp",
-  "issued_at": "2026-07-12T04:30:56.942Z",
-  "expires_at": "2026-07-19T04:30:56.942Z",
+  "issued_at": "2026-07-15T01:26:20.823Z",
+  "expires_at": "2026-07-22T01:26:20.823Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "156c59ae9092022b45ac2d837774bd3d10074f16367635b0483e0febc158e72c",
+  "signature": "2648e46a981f28587bbd60f945ac0d89df480522edd4781d9f96de5f004561bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-awesomeoceanbasemcp"
 }

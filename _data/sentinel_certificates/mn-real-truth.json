@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0959573",
+  "certificate_id": "MN-SC-2026-9143926",
   "skill_id": "mn-real-truth",
   "skill_name": "truth",
-  "issued_at": "2026-07-12T04:35:59.573Z",
-  "expires_at": "2026-07-19T04:35:59.573Z",
+  "issued_at": "2026-07-15T01:32:23.926Z",
+  "expires_at": "2026-07-22T01:32:23.926Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "095fc8138624229b565e9d4f66e62b33ee106cb4821e39bd9b8b14c50fe422ff",
+  "signature": "92dd9c1103bda4cadf831633cb3c2ee912998624d59d161029a4186857d5e73f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-truth"
 }

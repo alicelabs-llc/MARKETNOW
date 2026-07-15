@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1083286",
+  "certificate_id": "MN-SC-2026-8641482",
   "skill_id": "mn-real-zeroapikeywebsearch",
   "skill_name": "zero-api-key-web-search",
-  "issued_at": "2026-07-12T04:38:03.286Z",
-  "expires_at": "2026-07-19T04:38:03.286Z",
+  "issued_at": "2026-07-15T01:24:01.482Z",
+  "expires_at": "2026-07-22T01:24:01.482Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94cb5293e4b1003c019e03fb01f01e4b27508e047ad1b54c5c8a8edd8efc8724",
+  "signature": "d421dd6013aadc7069e2ae6c3cbd6695d25b61bfbc661ff7833ddff8ef79c77f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zeroapikeywebsearch"
 }

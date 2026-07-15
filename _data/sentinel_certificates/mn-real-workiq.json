@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0618656",
+  "certificate_id": "MN-SC-2026-8737159",
   "skill_id": "mn-real-workiq",
   "skill_name": "work-iq",
-  "issued_at": "2026-07-12T04:30:18.656Z",
-  "expires_at": "2026-07-19T04:30:18.656Z",
+  "issued_at": "2026-07-15T01:25:37.159Z",
+  "expires_at": "2026-07-22T01:25:37.159Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9ea43e5fb359bc877f10a109bd8c14b528a057be5baefb5363bac6d878de784d",
+  "signature": "61bdd4aaa02ea348f58d779151a32f60da84055b7a9ad8120b453d77fdde0c15",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-workiq"
 }

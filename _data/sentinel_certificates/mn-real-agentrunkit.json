@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0783015",
+  "certificate_id": "MN-SC-2026-8943024",
   "skill_id": "mn-real-agentrunkit",
   "skill_name": "AgentRunKit",
-  "issued_at": "2026-07-12T04:33:03.015Z",
-  "expires_at": "2026-07-19T04:33:03.015Z",
+  "issued_at": "2026-07-15T01:29:03.024Z",
+  "expires_at": "2026-07-22T01:29:03.024Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3225e91eb2916cd721aafc6e7889f840de9a337051b39bf0cb7ec065b19d1fb9",
+  "signature": "7d4896c490045cd1c6510fa4ec2c512badbb47496f9d8e8ab35fecb3db92e83e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentrunkit"
 }

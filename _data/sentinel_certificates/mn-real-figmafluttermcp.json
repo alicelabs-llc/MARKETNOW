@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0426441",
+  "certificate_id": "MN-SC-2026-8528506",
   "skill_id": "mn-real-figmafluttermcp",
   "skill_name": "figma-flutter-mcp",
-  "issued_at": "2026-07-12T04:27:06.441Z",
-  "expires_at": "2026-07-19T04:27:06.441Z",
+  "issued_at": "2026-07-15T01:22:08.506Z",
+  "expires_at": "2026-07-22T01:22:08.506Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1f038a6b9aceccbedb5f09f60bf16d50d9c8267f172ffc0c787c931ad37e4508",
+  "signature": "3371d5a5e6fa736ff2926c854ae4bb0f7e63a03412f3c4a59ced96bd3d9b0c7c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-figmafluttermcp"
 }

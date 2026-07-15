@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0611647",
+  "certificate_id": "MN-SC-2026-8729256",
   "skill_id": "mn-real-darknetmcpserver",
   "skill_name": "darknet-mcp-server",
-  "issued_at": "2026-07-12T04:30:11.647Z",
-  "expires_at": "2026-07-19T04:30:11.647Z",
+  "issued_at": "2026-07-15T01:25:29.256Z",
+  "expires_at": "2026-07-22T01:25:29.256Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
   "risk_level": "critical",
   "risk_breakdown": {
-    "l15_l16": "critical",
+    "l15_l16_l17": "critical",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "critical"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7eef8901a30d0a83a02bdab6110dfe470cbe3d6d2fa0615f19a632f37ba53630",
+  "signature": "f929f8f3425a07c4cfcec814e6ebe8d193a1174cb7d409b22e5ce8c2ab9c344e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-darknetmcpserver"
 }

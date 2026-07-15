@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0890972",
+  "certificate_id": "MN-SC-2026-9063950",
   "skill_id": "mn-real-deadletter",
   "skill_name": "dead-letter",
-  "issued_at": "2026-07-12T04:34:50.972Z",
-  "expires_at": "2026-07-19T04:34:50.972Z",
+  "issued_at": "2026-07-15T01:31:03.950Z",
+  "expires_at": "2026-07-22T01:31:03.950Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f58f3f339ddf5dcc2a3573ffb50f065e390490c9e4e25a14f67537457f50da12",
+  "signature": "5cd31109bc2f1a04840e9597275d34b6363b6fea1d488e7056adb73897cfa54e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-deadletter"
 }

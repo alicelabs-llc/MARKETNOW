@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0794969",
+  "certificate_id": "MN-SC-2026-8956219",
   "skill_id": "mn-real-fastapimcplanggrapht",
   "skill_name": "fastapi-mcp-langgraph-template",
-  "issued_at": "2026-07-12T04:33:14.969Z",
-  "expires_at": "2026-07-19T04:33:14.969Z",
+  "issued_at": "2026-07-15T01:29:16.219Z",
+  "expires_at": "2026-07-22T01:29:16.219Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef820ed9ef28e61db47d1dba9659327003233438b1dd7619e9a5c7fb20b59a88",
+  "signature": "9caaf2477e7be8af74cbffab64c91016128e9103cc58e63bf44d170b7c5aa3f6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fastapimcplanggrapht"
 }

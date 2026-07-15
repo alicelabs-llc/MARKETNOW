@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0225781",
+  "certificate_id": "MN-SC-2026-8257961",
   "skill_id": "mn-prompt-75f4c90e",
   "skill_name": "Sales discovery questions powerful",
-  "issued_at": "2026-07-12T04:23:45.781Z",
-  "expires_at": "2026-07-19T04:23:45.781Z",
+  "issued_at": "2026-07-15T01:17:37.961Z",
+  "expires_at": "2026-07-22T01:17:37.961Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bcb0748bbdd6217f4cfed95cf6de54d7f0a55ce06059089fe14bc545cd1e6f55",
+  "signature": "fd0692a524fe31cf75bc8ff66c2705654cc9f89653ae72391f42eb86b9f59e04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-75f4c90e"
 }

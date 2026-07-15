@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0669806",
+  "certificate_id": "MN-SC-2026-8797750",
   "skill_id": "mn-real-genkit",
   "skill_name": "genkit",
-  "issued_at": "2026-07-12T04:31:09.806Z",
-  "expires_at": "2026-07-19T04:31:09.806Z",
+  "issued_at": "2026-07-15T01:26:37.750Z",
+  "expires_at": "2026-07-22T01:26:37.750Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "252c5f3ad1e773c7ea50d19c68a9d8b716b1f923c282ce95b92294b0808e6db1",
+  "signature": "031ed687aca07aca265cae2eee0b1940d6c7400aafed7aa4978c57c2e05b1006",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-genkit"
 }

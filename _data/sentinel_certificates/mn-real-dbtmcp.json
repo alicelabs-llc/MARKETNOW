@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0409447",
+  "certificate_id": "MN-SC-2026-8506379",
   "skill_id": "mn-real-dbtmcp",
   "skill_name": "dbt-mcp",
-  "issued_at": "2026-07-12T04:26:49.447Z",
-  "expires_at": "2026-07-19T04:26:49.447Z",
+  "issued_at": "2026-07-15T01:21:46.379Z",
+  "expires_at": "2026-07-22T01:21:46.379Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c6e64a08036e6d64d8c51861f998ba1eac2bb5d7cb69cc34a9b2e288dc74625",
+  "signature": "13a14903bf52c6002de2028d3f6b71a6d557bd61e400ad3e93d4928d3063256c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dbtmcp"
 }

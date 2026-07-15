@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0564341",
+  "certificate_id": "MN-SC-2026-8674989",
   "skill_id": "mn-real-atomgitmcpserver",
   "skill_name": "atomgit-mcp-server",
-  "issued_at": "2026-07-12T04:29:24.341Z",
-  "expires_at": "2026-07-19T04:29:24.341Z",
+  "issued_at": "2026-07-15T01:24:34.989Z",
+  "expires_at": "2026-07-22T01:24:34.989Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb12d4265798371643bf7eaf8fa856b774920fa9e134ab4f31b3cc37099f3cde",
+  "signature": "b2ba39c289edef051484b5a4e5f2f11b5030fb2f94c43d668f7fe56702e8bd81",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-atomgitmcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0715811",
+  "certificate_id": "MN-SC-2026-8858017",
   "skill_id": "mn-real-turbular",
   "skill_name": "turbular",
-  "issued_at": "2026-07-12T04:31:55.811Z",
-  "expires_at": "2026-07-19T04:31:55.811Z",
+  "issued_at": "2026-07-15T01:27:38.017Z",
+  "expires_at": "2026-07-22T01:27:38.017Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a211c567f254cfbf9ecdec421c2b1245092928a0ff19d44b181c8ca9d1f3bdf5",
+  "signature": "b491cb24f370e91eb6d0dc167105ec181989c1db950be5a7eb3b25e336406e45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-turbular"
 }

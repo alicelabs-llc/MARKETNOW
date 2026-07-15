@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0288354",
+  "certificate_id": "MN-SC-2026-8348742",
   "skill_id": "mn-prompt-da25a3a4",
   "skill_name": "Statistical analysis for product",
-  "issued_at": "2026-07-12T04:24:48.354Z",
-  "expires_at": "2026-07-19T04:24:48.354Z",
+  "issued_at": "2026-07-15T01:19:08.742Z",
+  "expires_at": "2026-07-22T01:19:08.742Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93cc1b9275c62245c4edc884fdf2fc74ed8fc6412358aaa59412d626edb2572d",
+  "signature": "80dc0d06f7b026e7ae5d611f617d16695ad2181db2cf3f5c686c20c0e0e04831",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-da25a3a4"
 }

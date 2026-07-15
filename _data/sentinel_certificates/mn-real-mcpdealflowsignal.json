@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0469777",
+  "certificate_id": "MN-SC-2026-8575651",
   "skill_id": "mn-real-mcpdealflowsignal",
   "skill_name": "mcp-deal-flow-signal",
-  "issued_at": "2026-07-12T04:27:49.777Z",
-  "expires_at": "2026-07-19T04:27:49.777Z",
+  "issued_at": "2026-07-15T01:22:55.651Z",
+  "expires_at": "2026-07-22T01:22:55.651Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f5b7ed91fb3c369289a168f857e2c641699c74a77584007d5100e094f8ad696",
+  "signature": "90e7fe5d2729efea75d1c7c03ab53a359e687bd17c0d41daa882348f52ba797c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdealflowsignal"
 }

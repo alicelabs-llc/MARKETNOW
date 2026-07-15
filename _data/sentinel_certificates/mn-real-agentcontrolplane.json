@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0842430",
+  "certificate_id": "MN-SC-2026-9012866",
   "skill_id": "mn-real-agentcontrolplane",
   "skill_name": "agentcontrolplane",
-  "issued_at": "2026-07-12T04:34:02.430Z",
-  "expires_at": "2026-07-19T04:34:02.430Z",
+  "issued_at": "2026-07-15T01:30:12.866Z",
+  "expires_at": "2026-07-22T01:30:12.866Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e15b0294e7e6c146f626d8b8e5e41a2140d9afee5e15de30ab65e1c2f7abda4f",
+  "signature": "6e4ff845b546b1d5334714298fe2ae59e0137dd522ea0d0dc9059fcefd28bb16",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentcontrolplane"
 }

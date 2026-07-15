@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0806141",
+  "certificate_id": "MN-SC-2026-8969533",
   "skill_id": "mn-real-mcpfoundry",
   "skill_name": "mcp-foundry",
-  "issued_at": "2026-07-12T04:33:26.141Z",
-  "expires_at": "2026-07-19T04:33:26.141Z",
+  "issued_at": "2026-07-15T01:29:29.533Z",
+  "expires_at": "2026-07-22T01:29:29.533Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a1771e11d50ad3b62be68c87a246509a9c47835fb13baeb4b72cdd1aee7228a0",
+  "signature": "48ed421ff0ccd8dea2041e7841951e102074d7cff9b0c12399080493e9b3ee9e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpfoundry"
 }

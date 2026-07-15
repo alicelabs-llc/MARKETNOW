@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0732300",
+  "certificate_id": "MN-SC-2026-8880120",
   "skill_id": "mn-real-usgovopendatamcp",
   "skill_name": "us-gov-open-data-mcp",
-  "issued_at": "2026-07-12T04:32:12.300Z",
-  "expires_at": "2026-07-19T04:32:12.300Z",
+  "issued_at": "2026-07-15T01:28:00.120Z",
+  "expires_at": "2026-07-22T01:28:00.120Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0bd051c11b954fa998b653bcc564e41a68251e705df59ea7267ccdc96d699399",
+  "signature": "c620beee5602ba8a78b3aab8d3266847992e1e8155ef088cf1bf32db1a53e5c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-usgovopendatamcp"
 }

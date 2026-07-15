@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0491885",
+  "certificate_id": "MN-SC-2026-8600575",
   "skill_id": "mn-real-memorylane",
   "skill_name": "memorylane",
-  "issued_at": "2026-07-12T04:28:11.885Z",
-  "expires_at": "2026-07-19T04:28:11.885Z",
+  "issued_at": "2026-07-15T01:23:20.575Z",
+  "expires_at": "2026-07-22T01:23:20.575Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e485d997dfac3d232d87bd1f12f9fa25459f68cf7c1d18545fe077d236dee9c4",
+  "signature": "cce5a28f85d87925dd10898ca23d522a437fc257676b5d25bbaee7fdf4b11bce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-memorylane"
 }

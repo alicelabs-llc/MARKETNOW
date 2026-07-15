@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0840100",
+  "certificate_id": "MN-SC-2026-9010413",
   "skill_id": "mn-real-chatgptcli",
   "skill_name": "chatgpt-cli",
-  "issued_at": "2026-07-12T04:34:00.100Z",
-  "expires_at": "2026-07-19T04:34:00.100Z",
+  "issued_at": "2026-07-15T01:30:10.413Z",
+  "expires_at": "2026-07-22T01:30:10.413Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1a9f0aa9dd3a9870e45ab5aa83512c2c3803ab60dd7b970d230964ead52441ed",
+  "signature": "b1684be2b0f94c5b48dd66daf637727ed9cd8c406415665d44ac6d8606fb0451",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chatgptcli"
 }

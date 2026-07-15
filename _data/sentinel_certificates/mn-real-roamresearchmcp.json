@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0850993",
+  "certificate_id": "MN-SC-2026-9024439",
   "skill_id": "mn-real-roamresearchmcp",
   "skill_name": "roam-research-mcp",
-  "issued_at": "2026-07-12T04:34:10.993Z",
-  "expires_at": "2026-07-19T04:34:10.993Z",
+  "issued_at": "2026-07-15T01:30:24.439Z",
+  "expires_at": "2026-07-22T01:30:24.439Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "90d3d378a9b3a2250e24a5ca03e9f602f9b99cf953911b7a79e721d0b09cd092",
+  "signature": "6aa30b42184669493893ba1c55121aa6b20ba5fa7f3f671acc8cdc48aecbb709",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-roamresearchmcp"
 }

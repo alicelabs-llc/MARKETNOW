@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0369763",
+  "certificate_id": "MN-SC-2026-8463719",
   "skill_id": "mn-awmcp-prims",
   "skill_name": "PRIMS",
-  "issued_at": "2026-07-12T04:26:09.763Z",
-  "expires_at": "2026-07-19T04:26:09.763Z",
+  "issued_at": "2026-07-15T01:21:03.719Z",
+  "expires_at": "2026-07-22T01:21:03.719Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f2cf01c5fbe0a9046750d553e19296070a7d2d806ba43acdd7f6d6875aa8a277",
+  "signature": "0e5430a15dba157c2b54574a0ffc9ab55ba857a3c5a26c3f3dc1fb971653651a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-prims"
 }

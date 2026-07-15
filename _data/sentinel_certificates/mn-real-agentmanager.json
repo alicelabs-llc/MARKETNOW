@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0831103",
+  "certificate_id": "MN-SC-2026-8998709",
   "skill_id": "mn-real-agentmanager",
   "skill_name": "Agent_Manager",
-  "issued_at": "2026-07-12T04:33:51.103Z",
-  "expires_at": "2026-07-19T04:33:51.103Z",
+  "issued_at": "2026-07-15T01:29:58.709Z",
+  "expires_at": "2026-07-22T01:29:58.709Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1c6cfbf10148749db5f9baee159fe38ca4a6971f1e99cc969ca0d27992bf6f1b",
+  "signature": "65102853a2013957510ce65f518dc44cecf13dc76f69a1706ee1a2666631ca03",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentmanager"
 }

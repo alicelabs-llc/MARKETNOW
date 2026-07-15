@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0557581",
+  "certificate_id": "MN-SC-2026-8667407",
   "skill_id": "mn-real-sportsmcpserver",
   "skill_name": "sports-mcp-server",
-  "issued_at": "2026-07-12T04:29:17.581Z",
-  "expires_at": "2026-07-19T04:29:17.581Z",
+  "issued_at": "2026-07-15T01:24:27.407Z",
+  "expires_at": "2026-07-22T01:24:27.407Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0485536e2f90dee32d6bcac1fbf08ed8d8264b834929800d3f5892fc99bd4c1c",
+  "signature": "a28f21595e912f86e3fa01d582fe3d32f97efeffe2f250c4e30d3f73a343c476",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sportsmcpserver"
 }

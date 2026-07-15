@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0043924",
+  "certificate_id": "MN-SC-2026-8006696",
   "skill_id": "mn-gen-12517",
   "skill_name": "mcp-telegram",
-  "issued_at": "2026-07-12T04:20:43.924Z",
-  "expires_at": "2026-07-19T04:20:43.924Z",
+  "issued_at": "2026-07-15T01:13:26.696Z",
+  "expires_at": "2026-07-22T01:13:26.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9101531c77e1c33a9dc1f2b7ee411d711ca317ccbc2396617d955caa50dea9e6",
+  "signature": "2310543671ac70dd75244d4d13fd512008f9b42eb28938d421a6c64f546840f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12517"
 }

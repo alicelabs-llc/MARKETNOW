@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0674496",
+  "certificate_id": "MN-SC-2026-8801313",
   "skill_id": "mn-real-idamcprs",
   "skill_name": "ida-mcp-rs",
-  "issued_at": "2026-07-12T04:31:14.496Z",
-  "expires_at": "2026-07-19T04:31:14.496Z",
+  "issued_at": "2026-07-15T01:26:41.313Z",
+  "expires_at": "2026-07-22T01:26:41.313Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acecd062da03dc242230cc1280752607d146519167bed69a4c907867562292ef",
+  "signature": "9440f4d9d8129ad55bb7bee1a4e36db09ffec215f0afb4b5b667bbdbbaf4911d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-idamcprs"
 }

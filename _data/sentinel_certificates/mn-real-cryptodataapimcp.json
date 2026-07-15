@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0478439",
+  "certificate_id": "MN-SC-2026-8585749",
   "skill_id": "mn-real-cryptodataapimcp",
   "skill_name": "cryptodataapi-mcp",
-  "issued_at": "2026-07-12T04:27:58.439Z",
-  "expires_at": "2026-07-19T04:27:58.439Z",
+  "issued_at": "2026-07-15T01:23:05.749Z",
+  "expires_at": "2026-07-22T01:23:05.749Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c174ce1d256d5e00150ce0708991cf89c8c6cd6db71a2d9562b85f021d32f16",
+  "signature": "f3690a166a60723dae10b1a6b20be140409e01ed46ae3bd3f1b02751fa9d8ffb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cryptodataapimcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0557566",
+  "certificate_id": "MN-SC-2026-8667712",
   "skill_id": "mn-real-mlbapimcp",
   "skill_name": "mlb-api-mcp",
-  "issued_at": "2026-07-12T04:29:17.566Z",
-  "expires_at": "2026-07-19T04:29:17.566Z",
+  "issued_at": "2026-07-15T01:24:27.712Z",
+  "expires_at": "2026-07-22T01:24:27.712Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15b34d0cfe67888d9ae85da10c8da6f1b169332ea4fd15c723d1dd702292170b",
+  "signature": "86dd3f4d0d3a60b8b340974fced15a8c695b41d7910e2c9d0f518d5938d39dcc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mlbapimcp"
 }

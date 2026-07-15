@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0747284",
+  "certificate_id": "MN-SC-2026-8899348",
   "skill_id": "mn-real-openevidencemcp",
   "skill_name": "openevidence-mcp",
-  "issued_at": "2026-07-12T04:32:27.284Z",
-  "expires_at": "2026-07-19T04:32:27.284Z",
+  "issued_at": "2026-07-15T01:28:19.348Z",
+  "expires_at": "2026-07-22T01:28:19.348Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f1b3b340b3fd312f88502af9a5c21b0d79780b04004edebeacd87bb0405b4e2f",
+  "signature": "1ba549991dd3b49cae55b6c993a58533f7293cebee783ab4917988c15ba087cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openevidencemcp"
 }

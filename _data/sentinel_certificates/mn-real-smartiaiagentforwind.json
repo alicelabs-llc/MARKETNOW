@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0858563",
+  "certificate_id": "MN-SC-2026-9032923",
   "skill_id": "mn-real-smartiaiagentforwind",
   "skill_name": "SmartiAI-Agent-for-Windows",
-  "issued_at": "2026-07-12T04:34:18.563Z",
-  "expires_at": "2026-07-19T04:34:18.563Z",
+  "issued_at": "2026-07-15T01:30:32.923Z",
+  "expires_at": "2026-07-22T01:30:32.923Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ecd8e5748b528d6e78d32790d28ce20596b2e149636b3b78ed85a9ecdd2264cb",
+  "signature": "1dfca7b6dec0fc3b56a738937246b993fe14373090cdff67b6a2c22f6c8fcf50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-smartiaiagentforwind"
 }

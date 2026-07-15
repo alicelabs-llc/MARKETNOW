@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0487101",
+  "certificate_id": "MN-SC-2026-8595899",
   "skill_id": "mn-real-cognirepo",
   "skill_name": "cognirepo",
-  "issued_at": "2026-07-12T04:28:07.101Z",
-  "expires_at": "2026-07-19T04:28:07.101Z",
+  "issued_at": "2026-07-15T01:23:15.899Z",
+  "expires_at": "2026-07-22T01:23:15.899Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "65c8f68c8122bb092e854048f7dc9b3ba1b3a87d525651ee56ac799c25d2ece7",
+  "signature": "60a2e99690bf682fc22681192cb7fdb1ca5b13b2a41a5ee4a12c970430c70c67",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cognirepo"
 }

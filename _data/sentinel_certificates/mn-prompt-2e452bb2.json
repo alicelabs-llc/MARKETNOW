@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0300088",
+  "certificate_id": "MN-SC-2026-8364835",
   "skill_id": "mn-prompt-2e452bb2",
   "skill_name": "Data warehouse roadmap",
-  "issued_at": "2026-07-12T04:25:00.088Z",
-  "expires_at": "2026-07-19T04:25:00.088Z",
+  "issued_at": "2026-07-15T01:19:24.835Z",
+  "expires_at": "2026-07-22T01:19:24.835Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4f8da08d333f5ae55da3dc4b7ab5524c38ac5740108134d43cf863ae0c54556f",
+  "signature": "b64022841deb56bf9a478280b70e02047ab5fc1a760001701ac2cca4eba2a295",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2e452bb2"
 }

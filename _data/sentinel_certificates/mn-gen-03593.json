@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0000035",
+  "certificate_id": "MN-SC-2026-7949688",
   "skill_id": "mn-gen-03593",
   "skill_name": "dechonet-mcp",
-  "issued_at": "2026-07-12T04:20:00.035Z",
-  "expires_at": "2026-07-19T04:20:00.035Z",
+  "issued_at": "2026-07-15T01:12:29.688Z",
+  "expires_at": "2026-07-22T01:12:29.688Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d61aa22d85cfd096b8c9aab6e23e55bd91364275decc621b11a8314131f04507",
+  "signature": "be29f7aa49c0613829d18392617e7c65fe79a9de1c7ff34208661c6a97b0b774",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03593"
 }

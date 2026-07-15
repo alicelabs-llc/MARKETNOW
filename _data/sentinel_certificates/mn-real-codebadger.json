@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0701429",
+  "certificate_id": "MN-SC-2026-8839684",
   "skill_id": "mn-real-codebadger",
   "skill_name": "codebadger",
-  "issued_at": "2026-07-12T04:31:41.429Z",
-  "expires_at": "2026-07-19T04:31:41.429Z",
+  "issued_at": "2026-07-15T01:27:19.684Z",
+  "expires_at": "2026-07-22T01:27:19.684Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6dc44ac6c883f4f32e8d79788c49a7b92d699624b1f2c0ec0907afee80e9fc2a",
+  "signature": "f549762ec02ed146a7ac0ea73e633edff45d68b401bd6aa04539b74d52d933b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codebadger"
 }

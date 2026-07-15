@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0572882",
+  "certificate_id": "MN-SC-2026-8685129",
   "skill_id": "mn-real-mcpsimpletimeserver",
   "skill_name": "mcp-simple-timeserver",
-  "issued_at": "2026-07-12T04:29:32.882Z",
-  "expires_at": "2026-07-19T04:29:32.882Z",
+  "issued_at": "2026-07-15T01:24:45.129Z",
+  "expires_at": "2026-07-22T01:24:45.129Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4db16ed0905e2a79274b45a824dd1634ccd2a20d4891ab76a5ac49b9e488859f",
+  "signature": "b01a6e5063607bc6a25c166929f3f8636a7a0e99ef5f5c4c84c2919cfbae0945",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsimpletimeserver"
 }

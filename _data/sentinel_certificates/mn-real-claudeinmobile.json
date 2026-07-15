@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0823516",
+  "certificate_id": "MN-SC-2026-8990077",
   "skill_id": "mn-real-claudeinmobile",
   "skill_name": "claude-in-mobile",
-  "issued_at": "2026-07-12T04:33:43.516Z",
-  "expires_at": "2026-07-19T04:33:43.516Z",
+  "issued_at": "2026-07-15T01:29:50.077Z",
+  "expires_at": "2026-07-22T01:29:50.077Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ec721f2d06b741c531244d2281217ee1e3e22cbef503429f966eb46f5c41bf9",
+  "signature": "c0ea9783f6620930562d230abfbb867ca2db7728aefd286b46de9c1b1e557022",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudeinmobile"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0241001",
+  "certificate_id": "MN-SC-2026-8278898",
   "skill_id": "mn-prompt-a7945bf6",
   "skill_name": "Employee survey action planning",
-  "issued_at": "2026-07-12T04:24:01.001Z",
-  "expires_at": "2026-07-19T04:24:01.001Z",
+  "issued_at": "2026-07-15T01:17:58.898Z",
+  "expires_at": "2026-07-22T01:17:58.898Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "840dee1947425f7f7779b42d9b3faa749add74c7847fc8398e417f1a6c340fff",
+  "signature": "b8f695a1ed7795e3060abf040e1b465b98b6913cb576665e9dc29e4da2e04814",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a7945bf6"
 }

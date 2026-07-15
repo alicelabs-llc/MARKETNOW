@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0927953",
+  "certificate_id": "MN-SC-2026-9109207",
   "skill_id": "mn-real-codexworkflows",
   "skill_name": "codex-workflows",
-  "issued_at": "2026-07-12T04:35:27.953Z",
-  "expires_at": "2026-07-19T04:35:27.953Z",
+  "issued_at": "2026-07-15T01:31:49.207Z",
+  "expires_at": "2026-07-22T01:31:49.207Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9eb7e83ec6caeb9bc9630ab5f512c0723439e1638327c2f2c7cadef3dc881e36",
+  "signature": "876602b43651a3b07c2fbb8b4805f64de74f4024e2ce6d1203c3304897bb855f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codexworkflows"
 }

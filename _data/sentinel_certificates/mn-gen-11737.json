@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0041402",
+  "certificate_id": "MN-SC-2026-8002491",
   "skill_id": "mn-gen-11737",
   "skill_name": "mcp-shodan",
-  "issued_at": "2026-07-12T04:20:41.402Z",
-  "expires_at": "2026-07-19T04:20:41.402Z",
+  "issued_at": "2026-07-15T01:13:22.491Z",
+  "expires_at": "2026-07-22T01:13:22.491Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9a078772a392ff9cca5f0e24aece8f829586942ca39bc0372dd7e6d55807b4de",
+  "signature": "c8882ea7b0e298d0683a4b99eee260d983e9ae3c215ec4fe59b2ec578eec7b32",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11737"
 }

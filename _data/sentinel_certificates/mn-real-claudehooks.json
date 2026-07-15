@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0908720",
+  "certificate_id": "MN-SC-2026-9082064",
   "skill_id": "mn-real-claudehooks",
   "skill_name": "claude-hooks",
-  "issued_at": "2026-07-12T04:35:08.720Z",
-  "expires_at": "2026-07-19T04:35:08.720Z",
+  "issued_at": "2026-07-15T01:31:22.064Z",
+  "expires_at": "2026-07-22T01:31:22.064Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2df546e1a269e29963160e08ed4a2438ccd6498ee28c96b30adc0daa575100ac",
+  "signature": "1e5bcb9dd1a069739241cb03f170c453844d9abc2e60f56e2c4efe709aea0bf7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudehooks"
 }

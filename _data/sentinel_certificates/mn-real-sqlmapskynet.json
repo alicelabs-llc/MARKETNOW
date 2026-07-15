@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0852769",
+  "certificate_id": "MN-SC-2026-9026489",
   "skill_id": "mn-real-sqlmapskynet",
   "skill_name": "sqlmap-skynet",
-  "issued_at": "2026-07-12T04:34:12.769Z",
-  "expires_at": "2026-07-19T04:34:12.769Z",
+  "issued_at": "2026-07-15T01:30:26.489Z",
+  "expires_at": "2026-07-22T01:30:26.489Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b681d9c06a0c5793fe3390e7dbe74bc2ef97095c8c87d16f015ef31765b953f",
+  "signature": "42f4791cf25da369ca2654debd3ee3d52b7098857dc377e22e601231c3ae8033",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sqlmapskynet"
 }

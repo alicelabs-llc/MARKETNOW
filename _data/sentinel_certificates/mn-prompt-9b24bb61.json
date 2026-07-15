@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0082200",
+  "certificate_id": "MN-SC-2026-8058270",
   "skill_id": "mn-prompt-9b24bb61",
   "skill_name": "Especialista Recommender Systems",
-  "issued_at": "2026-07-12T04:21:22.200Z",
-  "expires_at": "2026-07-19T04:21:22.200Z",
+  "issued_at": "2026-07-15T01:14:18.270Z",
+  "expires_at": "2026-07-22T01:14:18.270Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b0a2c6a5308a0ab9c712fab2c06de298e1f5a5054b4e6d5e685c43711c5a529c",
+  "signature": "44022f9b5ae890949fdd915ee0d186389f3c7c49441874240dbb413ab7f10d19",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-9b24bb61"
 }

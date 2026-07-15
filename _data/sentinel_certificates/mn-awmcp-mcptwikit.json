@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0387899",
+  "certificate_id": "MN-SC-2026-8482386",
   "skill_id": "mn-awmcp-mcptwikit",
   "skill_name": "mcp-twikit",
-  "issued_at": "2026-07-12T04:26:27.899Z",
-  "expires_at": "2026-07-19T04:26:27.899Z",
+  "issued_at": "2026-07-15T01:21:22.386Z",
+  "expires_at": "2026-07-22T01:21:22.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "db275af33da1635d618ef81076712e677fb3a67bbe3125696702e5d27ede294b",
+  "signature": "37bea1189811a969221c77f46e78cb11cf9691ecdf21c26939dd5e4d095e2e7a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcptwikit"
 }

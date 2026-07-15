@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0904215",
+  "certificate_id": "MN-SC-2026-9076069",
   "skill_id": "mn-real-agentinfrastructurel",
   "skill_name": "agent-infrastructure-landscape",
-  "issued_at": "2026-07-12T04:35:04.215Z",
-  "expires_at": "2026-07-19T04:35:04.215Z",
+  "issued_at": "2026-07-15T01:31:16.069Z",
+  "expires_at": "2026-07-22T01:31:16.069Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eea28610793692f44cd0fb13892a7de7a83cd7163578ee38ea1ccd9fc1014b5c",
+  "signature": "ca845e7e7065c10adaadf02b27ee2fe29af42e8793c0d611d29676174bd5435b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentinfrastructurel"
 }

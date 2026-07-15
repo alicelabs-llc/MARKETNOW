@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0969020",
+  "certificate_id": "MN-SC-2026-9155106",
   "skill_id": "mn-real-agentsidecar",
   "skill_name": "agent-sidecar",
-  "issued_at": "2026-07-12T04:36:09.020Z",
-  "expires_at": "2026-07-19T04:36:09.020Z",
+  "issued_at": "2026-07-15T01:32:35.106Z",
+  "expires_at": "2026-07-22T01:32:35.106Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "534ea7e8f78e06cec2fc08fd34ef45e6f173dd30b954871c2ce40cfabfa853e6",
+  "signature": "acaa4c463637841c2dd54541809a8f54d3e29ac36bc25717e715eb5cbf7ba142",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentsidecar"
 }

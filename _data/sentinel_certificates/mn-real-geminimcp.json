@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0688072",
+  "certificate_id": "MN-SC-2026-8820284",
   "skill_id": "mn-real-geminimcp",
   "skill_name": "gemini-mcp",
-  "issued_at": "2026-07-12T04:31:28.072Z",
-  "expires_at": "2026-07-19T04:31:28.072Z",
+  "issued_at": "2026-07-15T01:27:00.284Z",
+  "expires_at": "2026-07-22T01:27:00.284Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fdc02132e2570fec3bc692779d5d05076d6432a8ae8085315f58c9397ffe6c1a",
+  "signature": "9f4f3c7cf37d1998b5bcdc71d5136170dd607997ea67e9a6f8a87b95c711ff30",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geminimcp"
 }

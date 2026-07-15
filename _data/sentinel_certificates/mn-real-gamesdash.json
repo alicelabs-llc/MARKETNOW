@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0951814",
+  "certificate_id": "MN-SC-2026-9136265",
   "skill_id": "mn-real-gamesdash",
   "skill_name": "games-dash",
-  "issued_at": "2026-07-12T04:35:51.814Z",
-  "expires_at": "2026-07-19T04:35:51.814Z",
+  "issued_at": "2026-07-15T01:32:16.265Z",
+  "expires_at": "2026-07-22T01:32:16.265Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53a6a9299cf7bd19d0d4ef9aac63f36062acbbbd7e0f2ace66252042c7911072",
+  "signature": "6d8982e5202365f87d23d9bcab0f936244c6d1835c1b6e7047b0351bdab4aac1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gamesdash"
 }

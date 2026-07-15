@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0022190",
+  "certificate_id": "MN-SC-2026-7975976",
   "skill_id": "mn-gen-07330",
   "skill_name": "mcp-prompt-server",
-  "issued_at": "2026-07-12T04:20:22.190Z",
-  "expires_at": "2026-07-19T04:20:22.190Z",
+  "issued_at": "2026-07-15T01:12:55.976Z",
+  "expires_at": "2026-07-22T01:12:55.976Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d6625c4c52bff86d3da3152c3467b0c413e94a125d33acc6681801afb1ada89",
+  "signature": "2fd01e5731a116e9e9a8699ef66b78463b16bd826cd5c69376fcb46a391562b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07330"
 }

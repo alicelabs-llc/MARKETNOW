@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0917806",
+  "certificate_id": "MN-SC-2026-9095445",
   "skill_id": "mn-real-loreweavememoria",
   "skill_name": "loreweave-memoria",
-  "issued_at": "2026-07-12T04:35:17.806Z",
-  "expires_at": "2026-07-19T04:35:17.806Z",
+  "issued_at": "2026-07-15T01:31:35.445Z",
+  "expires_at": "2026-07-22T01:31:35.445Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e30a22b752461576d1ae7a7d0ad4f5ee2d29aed7b39cfea6c2acbf33e07ef87",
+  "signature": "a6961aea10097361bc82ffba6d20fa3496f89a09bd27816a618991a22edffeb7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-loreweavememoria"
 }

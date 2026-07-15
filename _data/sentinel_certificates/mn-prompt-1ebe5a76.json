@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0312276",
+  "certificate_id": "MN-SC-2026-8381590",
   "skill_id": "mn-prompt-1ebe5a76",
   "skill_name": "Junk removal business operations",
-  "issued_at": "2026-07-12T04:25:12.276Z",
-  "expires_at": "2026-07-19T04:25:12.276Z",
+  "issued_at": "2026-07-15T01:19:41.590Z",
+  "expires_at": "2026-07-22T01:19:41.590Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d753dc1fd42e96698dc7689a694a432d436bcfeee09e1de7104d577bc534e21a",
+  "signature": "f4a3c5a4fb32d7e581551cdb1072e100c08048a89961be8e8474e2fd11c26ff2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1ebe5a76"
 }

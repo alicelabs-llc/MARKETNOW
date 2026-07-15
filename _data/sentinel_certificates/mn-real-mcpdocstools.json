@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1021608",
+  "certificate_id": "MN-SC-2026-9207931",
   "skill_id": "mn-real-mcpdocstools",
   "skill_name": "mcp-docs-tools",
-  "issued_at": "2026-07-12T04:37:01.608Z",
-  "expires_at": "2026-07-19T04:37:01.608Z",
+  "issued_at": "2026-07-15T01:33:27.931Z",
+  "expires_at": "2026-07-22T01:33:27.931Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b7622bdbd8b39b78847c232d2d36274dae9c17db1ce71e06266f6f9dccb88707",
+  "signature": "5cde385ddc85571f73aea68f73620cf365b1fcf746a723979b92387442d4e8b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpdocstools"
 }

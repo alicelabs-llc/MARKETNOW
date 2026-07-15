@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0966695",
+  "certificate_id": "MN-SC-2026-9151940",
   "skill_id": "mn-real-toolusefirewall",
   "skill_name": "tool-use-firewall",
-  "issued_at": "2026-07-12T04:36:06.695Z",
-  "expires_at": "2026-07-19T04:36:06.695Z",
+  "issued_at": "2026-07-15T01:32:31.940Z",
+  "expires_at": "2026-07-22T01:32:31.940Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ff480015e0e8dcd4003287b8494297e6f6389ffa28426953410691060641418",
+  "signature": "0314076138b8cee36e84c291c7af4ee34746f54654a6cab4cba8000945c2c276",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-toolusefirewall"
 }

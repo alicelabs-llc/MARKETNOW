@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0192827",
+  "certificate_id": "MN-SC-2026-8217284",
   "skill_id": "mn-prompt-1ce60a4f",
   "skill_name": "Escritor de tests E2E con Playwright que no son flaky",
-  "issued_at": "2026-07-12T04:23:12.827Z",
-  "expires_at": "2026-07-19T04:23:12.827Z",
+  "issued_at": "2026-07-15T01:16:57.284Z",
+  "expires_at": "2026-07-22T01:16:57.284Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3fc00d26442b774740f485f227c3e04b267ba135811ea96ce64d8e4c43079c82",
+  "signature": "36b52abd060c7d0230b88ac893da2fdc29440f095a9b1a00bd11d300ac326e48",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1ce60a4f"
 }

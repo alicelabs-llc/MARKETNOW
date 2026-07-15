@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0000020",
+  "certificate_id": "MN-SC-2026-7949130",
   "skill_id": "mn-gen-03515",
   "skill_name": "driflyte-mcp-server",
-  "issued_at": "2026-07-12T04:20:00.020Z",
-  "expires_at": "2026-07-19T04:20:00.020Z",
+  "issued_at": "2026-07-15T01:12:29.130Z",
+  "expires_at": "2026-07-22T01:12:29.130Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d73af02266e315faa7035e46173d800b10a39b3a6c1c1ccd58b34b06008ed236",
+  "signature": "13832aff378992f3c6cb33bdb12fec80aff7e880318b0c57a2f98289582aeda1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03515"
 }

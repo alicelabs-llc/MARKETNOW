@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0949952",
+  "certificate_id": "MN-SC-2026-9135497",
   "skill_id": "mn-real-ecosentinel",
   "skill_name": "ecosentinel",
-  "issued_at": "2026-07-12T04:35:49.952Z",
-  "expires_at": "2026-07-19T04:35:49.952Z",
+  "issued_at": "2026-07-15T01:32:15.497Z",
+  "expires_at": "2026-07-22T01:32:15.497Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "82f98a890f3ab96a5a72940624612b1e4a14289b1cf8dc010f23edc2efada861",
+  "signature": "d348908add76a7b03e621df4e58f7df9052622f8233438fda52f1545a4a99c65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ecosentinel"
 }

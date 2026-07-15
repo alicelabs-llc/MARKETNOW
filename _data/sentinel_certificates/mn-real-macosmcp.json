@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0711732",
+  "certificate_id": "MN-SC-2026-8853119",
   "skill_id": "mn-real-macosmcp",
   "skill_name": "MacOS-MCP",
-  "issued_at": "2026-07-12T04:31:51.732Z",
-  "expires_at": "2026-07-19T04:31:51.732Z",
+  "issued_at": "2026-07-15T01:27:33.119Z",
+  "expires_at": "2026-07-22T01:27:33.119Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "44af4a0844cccea612c26a8498c9d849358fe3e0d0f34786a6d3eee4fe9fc28a",
+  "signature": "f567a5b974be3f1549c3d5a433c549e8eb5c84c1a31b867f9a73c90e9381b80a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-macosmcp"
 }

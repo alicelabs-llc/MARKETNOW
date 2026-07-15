@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0087634",
+  "certificate_id": "MN-SC-2026-8065826",
   "skill_id": "mn-prompt-104da454",
   "skill_name": "Especialista Bug Bounty Triage",
-  "issued_at": "2026-07-12T04:21:27.634Z",
-  "expires_at": "2026-07-19T04:21:27.634Z",
+  "issued_at": "2026-07-15T01:14:25.826Z",
+  "expires_at": "2026-07-22T01:14:25.826Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d51079bc0baecdb76855a1119059eadd8bf132c1334d67a973978db2f441bb6f",
+  "signature": "65a422349ededa8783702de224ace0e732ad5980ca2398e3ca63798bd5b362ed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-104da454"
 }

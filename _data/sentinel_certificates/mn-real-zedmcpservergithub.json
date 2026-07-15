@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0719674",
+  "certificate_id": "MN-SC-2026-8863940",
   "skill_id": "mn-real-zedmcpservergithub",
   "skill_name": "zed-mcp-server-github",
-  "issued_at": "2026-07-12T04:31:59.674Z",
-  "expires_at": "2026-07-19T04:31:59.674Z",
+  "issued_at": "2026-07-15T01:27:43.940Z",
+  "expires_at": "2026-07-22T01:27:43.940Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aebe9824f6dddf8125878206f492f2ff2175c1e9d276fe230ba7925f53dd7776",
+  "signature": "0c204841142b4b3e47b1ed5a77892bc2f30447e5ad1795491a640f1bad714938",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zedmcpservergithub"
 }

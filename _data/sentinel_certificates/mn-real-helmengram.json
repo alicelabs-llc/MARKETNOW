@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0976552",
+  "certificate_id": "MN-SC-2026-9163678",
   "skill_id": "mn-real-helmengram",
   "skill_name": "helm-engram",
-  "issued_at": "2026-07-12T04:36:16.552Z",
-  "expires_at": "2026-07-19T04:36:16.552Z",
+  "issued_at": "2026-07-15T01:32:43.678Z",
+  "expires_at": "2026-07-22T01:32:43.678Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5548b38a0e4619deffac9993c8f79d5a176d7109a4addcfe7dd10e0800cdec8",
+  "signature": "939df3a53c067d013165056fb0e31011733bb50649c4305d570a42eaf1d34aeb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-helmengram"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0021440",
+  "certificate_id": "MN-SC-2026-7974501",
   "skill_id": "mn-dat-07107",
   "skill_name": "mssql_mcp_server",
-  "issued_at": "2026-07-12T04:20:21.440Z",
-  "expires_at": "2026-07-19T04:20:21.440Z",
+  "issued_at": "2026-07-15T01:12:54.501Z",
+  "expires_at": "2026-07-22T01:12:54.501Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fc41cb88a46545d6c847cce4217f2a10ddf6ad7c89ec6858a3138457fa477505",
+  "signature": "6791a7cab39c9776a36369a31c01ae86563c10ff668c91e3c1e1397b4982a569",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-07107"
 }

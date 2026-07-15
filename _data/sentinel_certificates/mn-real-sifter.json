@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0539042",
+  "certificate_id": "MN-SC-2026-8646679",
   "skill_id": "mn-real-sifter",
   "skill_name": "sifter",
-  "issued_at": "2026-07-12T04:28:59.042Z",
-  "expires_at": "2026-07-19T04:28:59.042Z",
+  "issued_at": "2026-07-15T01:24:06.679Z",
+  "expires_at": "2026-07-22T01:24:06.679Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23da7bcad7d9025fe506b871e1b0e63f06b0384efc7854837e7203b140e2949d",
+  "signature": "2295eead9e931dcca0a0051d15c489af888da0010edac5d0251007591e31be34",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sifter"
 }

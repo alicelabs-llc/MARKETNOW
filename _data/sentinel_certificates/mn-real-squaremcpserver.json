@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0658661",
+  "certificate_id": "MN-SC-2026-8782580",
   "skill_id": "mn-real-squaremcpserver",
   "skill_name": "square-mcp-server",
-  "issued_at": "2026-07-12T04:30:58.661Z",
-  "expires_at": "2026-07-19T04:30:58.661Z",
+  "issued_at": "2026-07-15T01:26:22.580Z",
+  "expires_at": "2026-07-22T01:26:22.580Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4caf0a9d7248170847057f4a8710c587e88dbd5e69a8effeccd09fdf9ca5678f",
+  "signature": "9d5131e00d88a57f8fe2c7250495186ffe56d964b1ddd8b73ce4bc129cec76f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-squaremcpserver"
 }

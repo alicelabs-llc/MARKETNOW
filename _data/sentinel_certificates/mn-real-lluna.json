@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0908083",
+  "certificate_id": "MN-SC-2026-9081203",
   "skill_id": "mn-real-lluna",
   "skill_name": "LLuna",
-  "issued_at": "2026-07-12T04:35:08.083Z",
-  "expires_at": "2026-07-19T04:35:08.083Z",
+  "issued_at": "2026-07-15T01:31:21.203Z",
+  "expires_at": "2026-07-22T01:31:21.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3d012a05f2b54fbc2ed67d8a452c97fa19792ca038fe635ad4fce002adf11ae",
+  "signature": "8d8fd269fc538870e82307e1ba09a0c3a0641cb175cf0d8777674b66d3248655",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lluna"
 }

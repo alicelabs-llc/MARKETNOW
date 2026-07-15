@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0514352",
+  "certificate_id": "MN-SC-2026-8619633",
   "skill_id": "mn-real-mcpmailboxvalidator",
   "skill_name": "mcp-mailboxvalidator",
-  "issued_at": "2026-07-12T04:28:34.352Z",
-  "expires_at": "2026-07-19T04:28:34.352Z",
+  "issued_at": "2026-07-15T01:23:39.633Z",
+  "expires_at": "2026-07-22T01:23:39.633Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "13c23a8d9549804ed2cf343512c8dfeab2f4aa0eed60ad77b80e24bb07fad41c",
+  "signature": "0e729c806878d76e9c59933a54a73598dba1b225c15fcedf7399b0d44349c4a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmailboxvalidator"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0010885",
+  "certificate_id": "MN-SC-2026-7963154",
   "skill_id": "mn-gen-05323",
   "skill_name": "jobgpt-mcp-server",
-  "issued_at": "2026-07-12T04:20:10.885Z",
-  "expires_at": "2026-07-19T04:20:10.885Z",
+  "issued_at": "2026-07-15T01:12:43.154Z",
+  "expires_at": "2026-07-22T01:12:43.154Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d8a5b3c408eeab7541b574c7d4636977d41c30105362c14471e8f678a1887312",
+  "signature": "3582a360a2f54b7aaa2bb99dae9305c994f144117b5a1a92ec0b751f152eee6f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05323"
 }

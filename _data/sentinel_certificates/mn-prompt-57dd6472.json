@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0097521",
+  "certificate_id": "MN-SC-2026-8081801",
   "skill_id": "mn-prompt-57dd6472",
   "skill_name": "Especialista Database Monitoring + Observability",
-  "issued_at": "2026-07-12T04:21:37.521Z",
-  "expires_at": "2026-07-19T04:21:37.521Z",
+  "issued_at": "2026-07-15T01:14:41.801Z",
+  "expires_at": "2026-07-22T01:14:41.801Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "601e994a9d68041eab5b8b447e970f624a8c6b8c8ba9a318fc7ea2f5aaaa74f0",
+  "signature": "bb9d9343e66688a40b0ea9bb515e1ae3f74e385ca591741aca67c725dccd55f1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-57dd6472"
 }

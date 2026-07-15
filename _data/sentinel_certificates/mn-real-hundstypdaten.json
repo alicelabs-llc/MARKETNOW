@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0946002",
+  "certificate_id": "MN-SC-2026-9130484",
   "skill_id": "mn-real-hundstypdaten",
   "skill_name": "hundstyp-daten",
-  "issued_at": "2026-07-12T04:35:46.002Z",
-  "expires_at": "2026-07-19T04:35:46.002Z",
+  "issued_at": "2026-07-15T01:32:10.484Z",
+  "expires_at": "2026-07-22T01:32:10.484Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "44adfbf60726dc7853efe956348da8739b8712c219415519a2fb23bbcc9eff26",
+  "signature": "f24f2e8ae51c8da36e3fa6c51a5a6dcd99d23fdbffae8553a34da4264b70047b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hundstypdaten"
 }

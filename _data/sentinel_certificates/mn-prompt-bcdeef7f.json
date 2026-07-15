@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0282355",
+  "certificate_id": "MN-SC-2026-8339263",
   "skill_id": "mn-prompt-bcdeef7f",
   "skill_name": "Copywriting for customer onboarding empty state",
-  "issued_at": "2026-07-12T04:24:42.355Z",
-  "expires_at": "2026-07-19T04:24:42.355Z",
+  "issued_at": "2026-07-15T01:18:59.263Z",
+  "expires_at": "2026-07-22T01:18:59.263Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4839849d7c817fba3170f84ba00b66545e8907bdd9be82b7ea2a14d9d588682f",
+  "signature": "80a908cd37568a5d60bd758682da95e7c7fa306867c97fe67f5f616891acc20b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bcdeef7f"
 }

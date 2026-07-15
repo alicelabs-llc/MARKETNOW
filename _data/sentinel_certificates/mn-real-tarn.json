@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0439465",
+  "certificate_id": "MN-SC-2026-8542830",
   "skill_id": "mn-real-tarn",
   "skill_name": "tarn",
-  "issued_at": "2026-07-12T04:27:19.465Z",
-  "expires_at": "2026-07-19T04:27:19.465Z",
+  "issued_at": "2026-07-15T01:22:22.830Z",
+  "expires_at": "2026-07-22T01:22:22.830Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb6df73b0a2d1ba35b3e3f06f435df3e4d58ada90596828e9b8dc46a50a309fc",
+  "signature": "58bbac891972da8212ae6b22d96e42726d72b664d6d0a2fccefeab3a8a7323de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tarn"
 }

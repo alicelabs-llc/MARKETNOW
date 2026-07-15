@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0669634",
+  "certificate_id": "MN-SC-2026-8797950",
   "skill_id": "mn-real-mcpconnect",
   "skill_name": "MCP-connect",
-  "issued_at": "2026-07-12T04:31:09.634Z",
-  "expires_at": "2026-07-19T04:31:09.634Z",
+  "issued_at": "2026-07-15T01:26:37.950Z",
+  "expires_at": "2026-07-22T01:26:37.950Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 1,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8bd06e41207835a9588dbedceb6872feb00647f7a6c1b814ea67dfb2c0f4655d",
+  "signature": "3c1035b28726b457ef251543d36f88bc5b756eb75ecf53c12ff9951105521c7c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpconnect"
 }

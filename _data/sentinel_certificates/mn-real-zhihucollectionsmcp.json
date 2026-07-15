@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0834362",
+  "certificate_id": "MN-SC-2026-9002657",
   "skill_id": "mn-real-zhihucollectionsmcp",
   "skill_name": "Zhihu-Collections-MCP",
-  "issued_at": "2026-07-12T04:33:54.362Z",
-  "expires_at": "2026-07-19T04:33:54.362Z",
+  "issued_at": "2026-07-15T01:30:02.657Z",
+  "expires_at": "2026-07-22T01:30:02.657Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a6335619941bd1b1c642b038ff78c77fe7edce0c5fddf6b6b4f32c5ff7381b9",
+  "signature": "c04494e2650a1e9e5b4362c288ffc13b11e91eef0a42e10d9bf1809a2b569250",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zhihucollectionsmcp"
 }

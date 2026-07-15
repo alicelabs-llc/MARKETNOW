@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0064023",
+  "certificate_id": "MN-SC-2026-8035207",
   "skill_id": "mn-prompt-f797a93d",
   "skill_name": "Especialista Mobile Design System",
-  "issued_at": "2026-07-12T04:21:04.023Z",
-  "expires_at": "2026-07-19T04:21:04.023Z",
+  "issued_at": "2026-07-15T01:13:55.207Z",
+  "expires_at": "2026-07-22T01:13:55.207Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dfaad55f166a99fd64c8e30c1b06c8d09917e0ee216f08257f3bf6519b35709d",
+  "signature": "5f6859fd0d61aa9f23b0cd2064cd1a77195ef008b91bacdae7497021f26f3093",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f797a93d"
 }

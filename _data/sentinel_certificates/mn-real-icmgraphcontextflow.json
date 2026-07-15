@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0916823",
+  "certificate_id": "MN-SC-2026-9094265",
   "skill_id": "mn-real-icmgraphcontextflow",
   "skill_name": "icm-graph-context-flow",
-  "issued_at": "2026-07-12T04:35:16.823Z",
-  "expires_at": "2026-07-19T04:35:16.823Z",
+  "issued_at": "2026-07-15T01:31:34.265Z",
+  "expires_at": "2026-07-22T01:31:34.265Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b72d0eb90e2f682cd3d0681b4799951fd6bf23a6ad44268bebc3b2ceec30a03",
+  "signature": "1abaac43961fb64ba673f627055faa4f4c1fc5387e85da2d930ac6ed96cf3898",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-icmgraphcontextflow"
 }

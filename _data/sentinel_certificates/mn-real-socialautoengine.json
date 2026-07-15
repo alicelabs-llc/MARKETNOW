@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0998645",
+  "certificate_id": "MN-SC-2026-9183761",
   "skill_id": "mn-real-socialautoengine",
   "skill_name": "social-auto-engine",
-  "issued_at": "2026-07-12T04:36:38.645Z",
-  "expires_at": "2026-07-19T04:36:38.645Z",
+  "issued_at": "2026-07-15T01:33:03.761Z",
+  "expires_at": "2026-07-22T01:33:03.761Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1b1bc8c1ddcd3322cc0e94f03a0cfa6b30829af909522f2b51bd3ee1f8e0082d",
+  "signature": "7c7dc05c5edef3d4a07bf5b3334fcd3c0d54718b19e0256449cfe612629961fb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-socialautoengine"
 }

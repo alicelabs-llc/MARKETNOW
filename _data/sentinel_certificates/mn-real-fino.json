@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0924883",
+  "certificate_id": "MN-SC-2026-9105552",
   "skill_id": "mn-real-fino",
   "skill_name": "fino",
-  "issued_at": "2026-07-12T04:35:24.883Z",
-  "expires_at": "2026-07-19T04:35:24.883Z",
+  "issued_at": "2026-07-15T01:31:45.552Z",
+  "expires_at": "2026-07-22T01:31:45.552Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af26c3872f73f61f25f26b0717768af746cde45fbd978e2c5627fb3dd6c71f3e",
+  "signature": "bdafb414c72b53ff12082bd2544259369fb429a44f93ea2f301b499df7b5c462",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fino"
 }

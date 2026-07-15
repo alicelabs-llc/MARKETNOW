@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0761733",
+  "certificate_id": "MN-SC-2026-8915062",
   "skill_id": "mn-real-amazingmarvinmcp",
   "skill_name": "Amazing-Marvin-MCP",
-  "issued_at": "2026-07-12T04:32:41.733Z",
-  "expires_at": "2026-07-19T04:32:41.733Z",
+  "issued_at": "2026-07-15T01:28:35.062Z",
+  "expires_at": "2026-07-22T01:28:35.062Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb590c18760cebb1b06558f0a27b37817721c4cad5e7f7dfd9423f7e3698a568",
+  "signature": "1457be58cb89dad80019e12c237857114ffb6187fe9ce645c0e2aa3bc34bc815",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-amazingmarvinmcp"
 }

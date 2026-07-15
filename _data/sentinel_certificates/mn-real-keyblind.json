@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0582401",
+  "certificate_id": "MN-SC-2026-8695568",
   "skill_id": "mn-real-keyblind",
   "skill_name": "keyblind",
-  "issued_at": "2026-07-12T04:29:42.401Z",
-  "expires_at": "2026-07-19T04:29:42.401Z",
+  "issued_at": "2026-07-15T01:24:55.568Z",
+  "expires_at": "2026-07-22T01:24:55.568Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ce10553020e38c3f81a44eab7b5ccec8d205a22d2f0dcc879d25d241caffa49",
+  "signature": "486ef51b96425a523702d00f1d06769d794165d40d7106e9294c1bdfc605eb9e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keyblind"
 }

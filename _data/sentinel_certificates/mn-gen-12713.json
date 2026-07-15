@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0045122",
+  "certificate_id": "MN-SC-2026-8008246",
   "skill_id": "mn-gen-12713",
   "skill_name": "agenticpay",
-  "issued_at": "2026-07-12T04:20:45.122Z",
-  "expires_at": "2026-07-19T04:20:45.122Z",
+  "issued_at": "2026-07-15T01:13:28.246Z",
+  "expires_at": "2026-07-22T01:13:28.246Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "737fe4ed0033a7fcd6f6f4b5ae921771b2d5c78191478c6fc3a51429c9433788",
+  "signature": "b5df588b4cbeceb7a2d314bbfea87e0ed25d8d4571498fddbe8bc8f385bd617d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12713"
 }

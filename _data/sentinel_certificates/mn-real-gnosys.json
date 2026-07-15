@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0890119",
+  "certificate_id": "MN-SC-2026-9062758",
   "skill_id": "mn-real-gnosys",
   "skill_name": "gnosys",
-  "issued_at": "2026-07-12T04:34:50.119Z",
-  "expires_at": "2026-07-19T04:34:50.119Z",
+  "issued_at": "2026-07-15T01:31:02.758Z",
+  "expires_at": "2026-07-22T01:31:02.758Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7538656684692261584b05f2da89f5cc18b5a70ed475bfebb76e16f54b1d7f5",
+  "signature": "23f9b796e3c2e6d60fe0ab5d2bd4f1b96424d100dfdafeb19f00e5b2184c8aba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gnosys"
 }

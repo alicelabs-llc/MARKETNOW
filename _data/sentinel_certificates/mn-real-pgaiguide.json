@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0590628",
+  "certificate_id": "MN-SC-2026-8704733",
   "skill_id": "mn-real-pgaiguide",
   "skill_name": "pg-aiguide",
-  "issued_at": "2026-07-12T04:29:50.628Z",
-  "expires_at": "2026-07-19T04:29:50.628Z",
+  "issued_at": "2026-07-15T01:25:04.733Z",
+  "expires_at": "2026-07-22T01:25:04.733Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "735b22a4a3b4ec768f277cf0a8621d0d0dada4f4ceacbf5e46e1f70942eb89f4",
+  "signature": "d096a011d29ad10f526520eb09520b521eb66d2a6c049dab5ffb602a600c1e13",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pgaiguide"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1022578",
+  "certificate_id": "MN-SC-2026-9209347",
   "skill_id": "mn-real-copilotsecurityinstr",
   "skill_name": "copilot-security-instructions",
-  "issued_at": "2026-07-12T04:37:02.578Z",
-  "expires_at": "2026-07-19T04:37:02.578Z",
+  "issued_at": "2026-07-15T01:33:29.347Z",
+  "expires_at": "2026-07-22T01:33:29.347Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06016e48cb7a7001bbc75170a10b76a6e9ab7e22572acde1e3934e614a13b865",
+  "signature": "3ed921ee15f175fd14978036db345629d7ba3c4320139e4e29885ed52f7da041",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-copilotsecurityinstr"
 }

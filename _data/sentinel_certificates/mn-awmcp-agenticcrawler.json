@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0354200",
+  "certificate_id": "MN-SC-2026-8441095",
   "skill_id": "mn-awmcp-agenticcrawler",
   "skill_name": "AgenticCrawler",
-  "issued_at": "2026-07-12T04:25:54.200Z",
-  "expires_at": "2026-07-19T04:25:54.200Z",
+  "issued_at": "2026-07-15T01:20:41.095Z",
+  "expires_at": "2026-07-22T01:20:41.095Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "fe97131dbcf2dda83f862907d9f2c097e75e4d9d4fd6b2e8efac9b48f389a69c",
+  "signature": "4c81276dbbba835b77633c5d3f02291324f5b33abcb78057af26eac4b25f9ea0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-agenticcrawler"
 }

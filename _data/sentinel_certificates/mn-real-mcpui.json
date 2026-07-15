@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0719707",
+  "certificate_id": "MN-SC-2026-8864098",
   "skill_id": "mn-real-mcpui",
   "skill_name": "mcp-ui",
-  "issued_at": "2026-07-12T04:31:59.707Z",
-  "expires_at": "2026-07-19T04:31:59.707Z",
+  "issued_at": "2026-07-15T01:27:44.098Z",
+  "expires_at": "2026-07-22T01:27:44.098Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38dd854a346f048fa0d3b3b763023651aaa37f1d3cdc7525e5151e34c0243e39",
+  "signature": "a6f84fc203973890142310e8e17b010983df3d77a9a5f898b639e2fbbe797b96",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpui"
 }

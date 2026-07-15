@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0648411",
+  "certificate_id": "MN-SC-2026-8770297",
   "skill_id": "mn-real-websearchmcp",
   "skill_name": "WebSearch-MCP",
-  "issued_at": "2026-07-12T04:30:48.411Z",
-  "expires_at": "2026-07-19T04:30:48.411Z",
+  "issued_at": "2026-07-15T01:26:10.297Z",
+  "expires_at": "2026-07-22T01:26:10.297Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "965b2ba4a4be2a464915bc76a5a877df48ad00493801cb76476aedf93a84177d",
+  "signature": "566b3d0d2b89dadba7d9487eb06d939f96c322e46324021378092229eba005bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-websearchmcp"
 }

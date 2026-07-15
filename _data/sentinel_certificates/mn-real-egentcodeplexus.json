@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0950775",
+  "certificate_id": "MN-SC-2026-9135786",
   "skill_id": "mn-real-egentcodeplexus",
   "skill_name": "egent-code-plexus",
-  "issued_at": "2026-07-12T04:35:50.775Z",
-  "expires_at": "2026-07-19T04:35:50.775Z",
+  "issued_at": "2026-07-15T01:32:15.786Z",
+  "expires_at": "2026-07-22T01:32:15.786Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e26d3a9d86049ea1464c534619ce89959f631e1e280412ff96667582c6d7800f",
+  "signature": "f3788e98d6fc38cf544c045baee8bcf216e77c9ab33c0f5ba206e30fd1969439",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-egentcodeplexus"
 }

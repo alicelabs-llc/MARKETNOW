@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9989340",
+  "certificate_id": "MN-SC-2026-7938066",
   "skill_id": "mn-gen-01703",
   "skill_name": "mcp-page-capture",
-  "issued_at": "2026-07-12T04:19:49.340Z",
-  "expires_at": "2026-07-19T04:19:49.340Z",
+  "issued_at": "2026-07-15T01:12:18.066Z",
+  "expires_at": "2026-07-22T01:12:18.066Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "680d9a79e472d435e69026301597e1cff04055a1c49f5fb6f1e6da1a6dce8160",
+  "signature": "ebf4270e84c8174e5f42cdac4f04d17195e3b22af9332116498ba5f08b823ae4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01703"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0852912",
+  "certificate_id": "MN-SC-2026-9026213",
   "skill_id": "mn-real-linedesktopmcp",
   "skill_name": "line-desktop-mcp",
-  "issued_at": "2026-07-12T04:34:12.912Z",
-  "expires_at": "2026-07-19T04:34:12.912Z",
+  "issued_at": "2026-07-15T01:30:26.213Z",
+  "expires_at": "2026-07-22T01:30:26.213Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "459010ecb4214024b0d467df4016e72fce9bc69dc27a4bf9fbc1e5f29db60ee8",
+  "signature": "a862d82f94dcd5736a49a1815f958761d728074a2c88cd05e883064108c7885e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-linedesktopmcp"
 }

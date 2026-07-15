@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0661060",
+  "certificate_id": "MN-SC-2026-8786149",
   "skill_id": "mn-real-doltmcp",
   "skill_name": "dolt-mcp",
-  "issued_at": "2026-07-12T04:31:01.060Z",
-  "expires_at": "2026-07-19T04:31:01.060Z",
+  "issued_at": "2026-07-15T01:26:26.149Z",
+  "expires_at": "2026-07-22T01:26:26.149Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "68363e4e8305d9aedf8818195aa3ac713c460234f9332e7829b90ce684c60e7b",
+  "signature": "81211bd43b27fefd82811bb3c4a7c2b14c9f40b62d15d8ca2956ffd45d7837d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-doltmcp"
 }

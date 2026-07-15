@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0795109",
+  "certificate_id": "MN-SC-2026-8956517",
   "skill_id": "mn-real-claudetradingviewmcp",
   "skill_name": "claude-tradingview-mcp-trading",
-  "issued_at": "2026-07-12T04:33:15.109Z",
-  "expires_at": "2026-07-19T04:33:15.109Z",
+  "issued_at": "2026-07-15T01:29:16.517Z",
+  "expires_at": "2026-07-22T01:29:16.517Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c1f09151dc5ccd6b095775c41a52d7f8c87fff88aa63fbb2aa83a1c53504f3e2",
+  "signature": "a80c50c7e449b4f847259073fa3ff7e8a540bc3b198fa7e43255c93446bd3aaf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudetradingviewmcp"
 }

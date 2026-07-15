@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0133686",
+  "certificate_id": "MN-SC-2026-8130434",
   "skill_id": "mn-prompt-77845ee0",
   "skill_name": "Especialista Board Reporting + Investor Relations",
-  "issued_at": "2026-07-12T04:22:13.686Z",
-  "expires_at": "2026-07-19T04:22:13.686Z",
+  "issued_at": "2026-07-15T01:15:30.434Z",
+  "expires_at": "2026-07-22T01:15:30.434Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a73f8392ff92fb687c2ce2e79bf8b9a5a9dedf04fa1521de133f093b55215250",
+  "signature": "23d66962caa8702c0a0329ab862b2476de52092ff24cfa44869f383455a38f02",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-77845ee0"
 }

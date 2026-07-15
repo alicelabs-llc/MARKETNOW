@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0172992",
+  "certificate_id": "MN-SC-2026-8189228",
   "skill_id": "mn-prompt-f633a91b",
   "skill_name": "Especialista Architecture + Building Design",
-  "issued_at": "2026-07-12T04:22:52.992Z",
-  "expires_at": "2026-07-19T04:22:52.992Z",
+  "issued_at": "2026-07-15T01:16:29.228Z",
+  "expires_at": "2026-07-22T01:16:29.228Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b2173d2740b146f024cce52603b694bd838eeac61053d8b81e80e12d86e6fa0",
+  "signature": "6b4cff7492995683d85229e79072ccd153db7cf9d6e6b46f874278f3b0658d58",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f633a91b"
 }

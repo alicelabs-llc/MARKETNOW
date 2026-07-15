@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0547003",
+  "certificate_id": "MN-SC-2026-8655485",
   "skill_id": "mn-real-entraidmcpserver",
   "skill_name": "entraid-mcp-server",
-  "issued_at": "2026-07-12T04:29:07.003Z",
-  "expires_at": "2026-07-19T04:29:07.003Z",
+  "issued_at": "2026-07-15T01:24:15.485Z",
+  "expires_at": "2026-07-22T01:24:15.485Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8d518c000b73bbdb1ec8800b2ea67b9aefb35dbb19a9295dfa69891d61f85dd",
+  "signature": "95dc75c8bdaf018c754869be47bb129ab9feea3a7ceeecae8f87c55b3b8e39c4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-entraidmcpserver"
 }

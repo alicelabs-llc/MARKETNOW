@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0743748",
+  "certificate_id": "MN-SC-2026-8893936",
   "skill_id": "mn-real-redteamagent",
   "skill_name": "RedTeam-Agent",
-  "issued_at": "2026-07-12T04:32:23.748Z",
-  "expires_at": "2026-07-19T04:32:23.748Z",
+  "issued_at": "2026-07-15T01:28:13.936Z",
+  "expires_at": "2026-07-22T01:28:13.936Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a75e0738a8a08f49f53876389f0a5530b6b1c5a98b31f19ab1d11695d4a3223",
+  "signature": "8cbb7bab0a806fe5f6dd25c2488e4628f52eaedc6a2c46fe3c762bb9de301f1d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-redteamagent"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0832670",
+  "certificate_id": "MN-SC-2026-9000583",
   "skill_id": "mn-real-easycodereader",
   "skill_name": "easy-code-reader",
-  "issued_at": "2026-07-12T04:33:52.670Z",
-  "expires_at": "2026-07-19T04:33:52.670Z",
+  "issued_at": "2026-07-15T01:30:00.583Z",
+  "expires_at": "2026-07-22T01:30:00.583Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "138c8a6cdc89a9e1c63d726678ffbf5c429edca3b2ef1c93b9a3a89f191522fb",
+  "signature": "8e16b996d40b1a6c3a0181442ce17e4deff40bd5ac9971fcf18a79cb3d1c79b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-easycodereader"
 }

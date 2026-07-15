@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0465594",
+  "certificate_id": "MN-SC-2026-8571305",
   "skill_id": "mn-real-cryptofundsmcp",
   "skill_name": "crypto-funds-mcp",
-  "issued_at": "2026-07-12T04:27:45.594Z",
-  "expires_at": "2026-07-19T04:27:45.594Z",
+  "issued_at": "2026-07-15T01:22:51.305Z",
+  "expires_at": "2026-07-22T01:22:51.305Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e511cc9156e2ce5a4b12ad415ad55f0c7588d30e623e15a1378fb5dfc8f69ab",
+  "signature": "3c50e30c1f365938f51053987129186efc83dfd18b1d388bb4fd845e3a76dfae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cryptofundsmcp"
 }

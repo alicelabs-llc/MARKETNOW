@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0790220",
+  "certificate_id": "MN-SC-2026-8950844",
   "skill_id": "mn-real-stitchmcp",
   "skill_name": "stitch-mcp",
-  "issued_at": "2026-07-12T04:33:10.220Z",
-  "expires_at": "2026-07-19T04:33:10.220Z",
+  "issued_at": "2026-07-15T01:29:10.844Z",
+  "expires_at": "2026-07-22T01:29:10.844Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0c1e07a77d58f6089ea1e94d5f0970dfa040a56fcaf2eb12caf0a4e22a939d73",
+  "signature": "1e9df3fbaa49c3f65027fd157e0ab3202a9e4be7402653a5f283cc0f489e119b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stitchmcp"
 }

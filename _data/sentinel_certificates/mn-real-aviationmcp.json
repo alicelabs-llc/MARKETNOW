@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0562861",
+  "certificate_id": "MN-SC-2026-8673205",
   "skill_id": "mn-real-aviationmcp",
   "skill_name": "aviation-mcp",
-  "issued_at": "2026-07-12T04:29:22.861Z",
-  "expires_at": "2026-07-19T04:29:22.861Z",
+  "issued_at": "2026-07-15T01:24:33.205Z",
+  "expires_at": "2026-07-22T01:24:33.205Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb05a2b1f511ab0bc0e65e5f279f3a4bb4dbdf85938e20e38ac6ba834cf2b848",
+  "signature": "2bd0586a9686504a1f4bf13d258f1575a8ad971cf5dd9ab2ca148c47a014e8d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aviationmcp"
 }

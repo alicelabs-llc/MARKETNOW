@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0578871",
+  "certificate_id": "MN-SC-2026-8692642",
   "skill_id": "mn-real-shopifystorefrontmcp",
   "skill_name": "shopify-storefront-mcp-server",
-  "issued_at": "2026-07-12T04:29:38.871Z",
-  "expires_at": "2026-07-19T04:29:38.871Z",
+  "issued_at": "2026-07-15T01:24:52.642Z",
+  "expires_at": "2026-07-22T01:24:52.642Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "268ff80f6fb27f7e713ce8172ae1896055cad5069de41112f41aa41f966a813c",
+  "signature": "aa40eccd3d034625c5c1444dcb9477125e237c759a871e5db59024ad850177be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-shopifystorefrontmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0458060",
+  "certificate_id": "MN-SC-2026-8561520",
   "skill_id": "mn-real-coinrithmagenttradin",
   "skill_name": "coinrithm-agent-trading",
-  "issued_at": "2026-07-12T04:27:38.060Z",
-  "expires_at": "2026-07-19T04:27:38.060Z",
+  "issued_at": "2026-07-15T01:22:41.520Z",
+  "expires_at": "2026-07-22T01:22:41.520Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cda47c216379ee1bc74887bd0e4f642d2d26c8a7d0a39187bf8504dfa40c1d00",
+  "signature": "11ff4e456cb93deefb5279d35722a782d56d0aa8facf1881b3fba650d87696e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-coinrithmagenttradin"
 }

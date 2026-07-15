@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0755434",
+  "certificate_id": "MN-SC-2026-8909032",
   "skill_id": "mn-real-helpscoutmcpserver",
   "skill_name": "help-scout-mcp-server",
-  "issued_at": "2026-07-12T04:32:35.434Z",
-  "expires_at": "2026-07-19T04:32:35.434Z",
+  "issued_at": "2026-07-15T01:28:29.032Z",
+  "expires_at": "2026-07-22T01:28:29.032Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4324adfdc2b510f243512d41cbb270d7e65a90c86723136f3f5e1629865a3bf4",
+  "signature": "761c70d9ff30a40f40c26703d9cdb2b1bb6367a335c87a595ef7bd65bf670724",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-helpscoutmcpserver"
 }

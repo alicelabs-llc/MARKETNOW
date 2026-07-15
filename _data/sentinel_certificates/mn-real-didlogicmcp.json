@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0400088",
+  "certificate_id": "MN-SC-2026-8495639",
   "skill_id": "mn-real-didlogicmcp",
   "skill_name": "didlogic_mcp",
-  "issued_at": "2026-07-12T04:26:40.088Z",
-  "expires_at": "2026-07-19T04:26:40.088Z",
+  "issued_at": "2026-07-15T01:21:35.639Z",
+  "expires_at": "2026-07-22T01:21:35.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d74e4a740c82c2c38a54d0ed68059b2c884cf9afef2cad87a07e7ae960fdeac",
+  "signature": "bc085caac8a9afaa9909edb9b785d69cc8d02531b683095a9f690447a6cebeaf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-didlogicmcp"
 }

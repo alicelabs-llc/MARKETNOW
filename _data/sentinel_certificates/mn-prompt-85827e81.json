@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0239018",
+  "certificate_id": "MN-SC-2026-8276076",
   "skill_id": "mn-prompt-85827e81",
   "skill_name": "HR analytics people data",
-  "issued_at": "2026-07-12T04:23:59.018Z",
-  "expires_at": "2026-07-19T04:23:59.018Z",
+  "issued_at": "2026-07-15T01:17:56.076Z",
+  "expires_at": "2026-07-22T01:17:56.076Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a8ee994e857304763607792f9998e4f72f41a487d60bac72b24ad47f2b9fa91",
+  "signature": "8b6ec0e115fe4b5444eca94071f9222dcaa6295bd93ef5beeb77089a7cb299c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-85827e81"
 }

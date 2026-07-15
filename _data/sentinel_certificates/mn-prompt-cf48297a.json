@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0317179",
+  "certificate_id": "MN-SC-2026-8388082",
   "skill_id": "mn-prompt-cf48297a",
   "skill_name": "Fintech company operations final",
-  "issued_at": "2026-07-12T04:25:17.179Z",
-  "expires_at": "2026-07-19T04:25:17.179Z",
+  "issued_at": "2026-07-15T01:19:48.082Z",
+  "expires_at": "2026-07-22T01:19:48.082Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81bcfc341dc4ae97646f649605e7af58b6d2d4b9598724bed276e96e2ff38f3b",
+  "signature": "355a2cb72360994dff129f3c52041129a4e6440d1eac165a6cff7ea843db16d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-cf48297a"
 }

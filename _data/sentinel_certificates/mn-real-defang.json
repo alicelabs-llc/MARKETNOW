@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0649723",
+  "certificate_id": "MN-SC-2026-8773058",
   "skill_id": "mn-real-defang",
   "skill_name": "defang",
-  "issued_at": "2026-07-12T04:30:49.723Z",
-  "expires_at": "2026-07-19T04:30:49.723Z",
+  "issued_at": "2026-07-15T01:26:13.058Z",
+  "expires_at": "2026-07-22T01:26:13.058Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "034a2321bec44c6a749a18dfdfab7d6334c0208d06a9f389bfe5644b3fd6254d",
+  "signature": "01caf2cd9f7d2d28a12df420b7bb1402d7315ac4a12751fcc8a7e4ec974948d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-defang"
 }

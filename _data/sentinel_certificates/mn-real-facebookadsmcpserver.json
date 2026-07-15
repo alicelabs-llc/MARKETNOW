@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0509888",
+  "certificate_id": "MN-SC-2026-8618595",
   "skill_id": "mn-real-facebookadsmcpserver",
   "skill_name": "facebook-ads-mcp-server",
-  "issued_at": "2026-07-12T04:28:29.888Z",
-  "expires_at": "2026-07-19T04:28:29.888Z",
+  "issued_at": "2026-07-15T01:23:38.595Z",
+  "expires_at": "2026-07-22T01:23:38.595Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8926aa33346745ebc2d23ee1dc438dff33fc1fb2223f627d95f6ae5b45f03aa3",
+  "signature": "e8cd5dd4acb30881153e8fe0338f7732b7fcd02945aa10700fa7f150b728222c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-facebookadsmcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0446677",
+  "certificate_id": "MN-SC-2026-8550485",
   "skill_id": "mn-real-buywheremcp",
   "skill_name": "buywhere-mcp",
-  "issued_at": "2026-07-12T04:27:26.677Z",
-  "expires_at": "2026-07-19T04:27:26.677Z",
+  "issued_at": "2026-07-15T01:22:30.485Z",
+  "expires_at": "2026-07-22T01:22:30.485Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4cd06efb34026b0b9763cfb180f430bcea55e2f5c9a148ae15c867816c17b47b",
+  "signature": "92d609c79a84cb20b282b313648ecb0097aab105bdbd57cb7f3d9dc4b00190e9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-buywheremcp"
 }

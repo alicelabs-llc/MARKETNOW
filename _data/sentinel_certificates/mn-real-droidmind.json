@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0421729",
+  "certificate_id": "MN-SC-2026-8522260",
   "skill_id": "mn-real-droidmind",
   "skill_name": "droidmind",
-  "issued_at": "2026-07-12T04:27:01.729Z",
-  "expires_at": "2026-07-19T04:27:01.729Z",
+  "issued_at": "2026-07-15T01:22:02.260Z",
+  "expires_at": "2026-07-22T01:22:02.260Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "290495bc50f22b7f9fc9cc84c07aa2fc5eb536fc28b4a47e714b8b52453dcf4f",
+  "signature": "31185b1b3e01cb4452a7abb7a999c7abf1a892cd4a25e4199efcabe46ab39b0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-droidmind"
 }

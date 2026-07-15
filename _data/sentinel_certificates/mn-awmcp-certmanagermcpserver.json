@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0363908",
+  "certificate_id": "MN-SC-2026-8455314",
   "skill_id": "mn-awmcp-certmanagermcpserver",
   "skill_name": "cert-manager-mcp-server",
-  "issued_at": "2026-07-12T04:26:03.908Z",
-  "expires_at": "2026-07-19T04:26:03.908Z",
+  "issued_at": "2026-07-15T01:20:55.314Z",
+  "expires_at": "2026-07-22T01:20:55.314Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17a055b87441d26f06f533e42273f438635fcf0d3053488f2498b7a1b0fd7dde",
+  "signature": "a11196b1480bd3a85230e6614646f5857050579ca3e871a16c6587a195b18011",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-certmanagermcpserver"
 }

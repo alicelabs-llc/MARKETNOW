@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0685479",
+  "certificate_id": "MN-SC-2026-8815628",
   "skill_id": "mn-real-foundrymcpserver",
   "skill_name": "foundry-mcp-server",
-  "issued_at": "2026-07-12T04:31:25.479Z",
-  "expires_at": "2026-07-19T04:31:25.479Z",
+  "issued_at": "2026-07-15T01:26:55.628Z",
+  "expires_at": "2026-07-22T01:26:55.628Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "966789389059ee557beaf8f2670e5b31ade0aa0308dfabe0473c7c92fe058758",
+  "signature": "20a0f049af3342082f8d2fa1f1440cc853ac6b97da28e2c0e1ac821396877578",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-foundrymcpserver"
 }

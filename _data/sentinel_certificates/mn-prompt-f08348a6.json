@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0317653",
+  "certificate_id": "MN-SC-2026-8390285",
   "skill_id": "mn-prompt-f08348a6",
   "skill_name": "Travel company operations final",
-  "issued_at": "2026-07-12T04:25:17.653Z",
-  "expires_at": "2026-07-19T04:25:17.653Z",
+  "issued_at": "2026-07-15T01:19:50.285Z",
+  "expires_at": "2026-07-22T01:19:50.285Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "909eed5ea34c7de76516f38f370d44544b6f464bfc2a7aea5c71ef14c4e21f66",
+  "signature": "3142c081403a42b6d54bf37d86b2fdc7ebbc76d24f2960fc3e81e01f6f497d80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-f08348a6"
 }

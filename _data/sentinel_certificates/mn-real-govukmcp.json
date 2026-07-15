@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0537699",
+  "certificate_id": "MN-SC-2026-8644953",
   "skill_id": "mn-real-govukmcp",
   "skill_name": "govuk-mcp",
-  "issued_at": "2026-07-12T04:28:57.699Z",
-  "expires_at": "2026-07-19T04:28:57.699Z",
+  "issued_at": "2026-07-15T01:24:04.953Z",
+  "expires_at": "2026-07-22T01:24:04.953Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d1c762be1b921fdd9297db9f07fd276df8f1421853aca880ea011d5888591fb0",
+  "signature": "cea600cbab99d4d1a36f6bb9fa7b9e803e7e4e1141ecfc573da1e253bb075a50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-govukmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0535346",
+  "certificate_id": "MN-SC-2026-8642014",
   "skill_id": "mn-real-heventuresearchmcp",
   "skill_name": "heventure-search-mcp",
-  "issued_at": "2026-07-12T04:28:55.346Z",
-  "expires_at": "2026-07-19T04:28:55.346Z",
+  "issued_at": "2026-07-15T01:24:02.014Z",
+  "expires_at": "2026-07-22T01:24:02.014Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09bd9c70c7c77adad51351985b2df0bf843bfc586b89b96a33109858dd939ae7",
+  "signature": "1c51aa6210803ba92e9c0bd6d3c5160a2d664a404fcf597ae5a00366a5fafd0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-heventuresearchmcp"
 }

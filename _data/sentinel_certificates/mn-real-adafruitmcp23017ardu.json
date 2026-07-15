@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0799582",
+  "certificate_id": "MN-SC-2026-8962020",
   "skill_id": "mn-real-adafruitmcp23017ardu",
   "skill_name": "Adafruit-MCP23017-Arduino-Library",
-  "issued_at": "2026-07-12T04:33:19.582Z",
-  "expires_at": "2026-07-19T04:33:19.582Z",
+  "issued_at": "2026-07-15T01:29:22.020Z",
+  "expires_at": "2026-07-22T01:29:22.020Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "127ae19e85cd41e74c0001fd330c947b6c356ef8b58093dc9cac1641b9de20bf",
+  "signature": "81a3ab50832d1793836f00a26c005b54e8f3fd3b08ec08cfa7cf05cc37661847",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-adafruitmcp23017ardu"
 }

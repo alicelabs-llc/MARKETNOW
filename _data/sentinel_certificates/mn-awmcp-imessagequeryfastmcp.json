@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0392461",
+  "certificate_id": "MN-SC-2026-8488154",
   "skill_id": "mn-awmcp-imessagequeryfastmcp",
   "skill_name": "imessage-query-fastmcp-mcp-server",
-  "issued_at": "2026-07-12T04:26:32.461Z",
-  "expires_at": "2026-07-19T04:26:32.461Z",
+  "issued_at": "2026-07-15T01:21:28.154Z",
+  "expires_at": "2026-07-22T01:21:28.154Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5c353414d31eabf6d79749cffec532b4bb3f3ad0a521281d8293923362c4af9",
+  "signature": "d97474250784ddae4d1beec2700822f048264cb55b7cf3fc526e32ebf3e51c45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-imessagequeryfastmcp"
 }

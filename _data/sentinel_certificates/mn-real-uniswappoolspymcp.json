@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0468589",
+  "certificate_id": "MN-SC-2026-8574677",
   "skill_id": "mn-real-uniswappoolspymcp",
   "skill_name": "uniswap-poolspy-mcp",
-  "issued_at": "2026-07-12T04:27:48.589Z",
-  "expires_at": "2026-07-19T04:27:48.589Z",
+  "issued_at": "2026-07-15T01:22:54.677Z",
+  "expires_at": "2026-07-22T01:22:54.677Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2b68caa6c1ec7f53070ad65c02b9a4bd9723e3e2aa707846529f49ea9acd33a2",
+  "signature": "4c0cd8a91e39cb06523e6c6dd5b05e4edbc4e9f10427121ce3c8d96863f6f33d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-uniswappoolspymcp"
 }

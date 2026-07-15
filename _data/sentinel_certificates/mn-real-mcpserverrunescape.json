@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1080206",
+  "certificate_id": "MN-SC-2026-8594205",
   "skill_id": "mn-real-mcpserverrunescape",
   "skill_name": "mcp-server-runescape",
-  "issued_at": "2026-07-12T04:38:00.206Z",
-  "expires_at": "2026-07-19T04:38:00.206Z",
+  "issued_at": "2026-07-15T01:23:14.205Z",
+  "expires_at": "2026-07-22T01:23:14.205Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb99e10f789a1d142173972cceb36a6364ec8c1c73e7e908ab1f336b615df239",
+  "signature": "42e359fa688e5346e3db2a6a4e371f9865b9858bdedded0309a24b6b0bddf534",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserverrunescape"
 }

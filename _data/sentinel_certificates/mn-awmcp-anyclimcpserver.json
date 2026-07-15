@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0374626",
+  "certificate_id": "MN-SC-2026-8468870",
   "skill_id": "mn-awmcp-anyclimcpserver",
   "skill_name": "any-cli-mcp-server",
-  "issued_at": "2026-07-12T04:26:14.626Z",
-  "expires_at": "2026-07-19T04:26:14.626Z",
+  "issued_at": "2026-07-15T01:21:08.870Z",
+  "expires_at": "2026-07-22T01:21:08.870Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "74a5126651e84af1679c31951075c2d4ca2a846f69524d5c474dd22093aa9328",
+  "signature": "10bec3da323d100d1fd25c52cd70ea2e72a48ae410ab5c8e080c3f5a3ec4b6d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-anyclimcpserver"
 }

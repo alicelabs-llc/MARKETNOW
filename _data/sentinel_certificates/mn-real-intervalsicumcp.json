@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0777797",
+  "certificate_id": "MN-SC-2026-8936039",
   "skill_id": "mn-real-intervalsicumcp",
   "skill_name": "intervals-icu-mcp",
-  "issued_at": "2026-07-12T04:32:57.797Z",
-  "expires_at": "2026-07-19T04:32:57.797Z",
+  "issued_at": "2026-07-15T01:28:56.039Z",
+  "expires_at": "2026-07-22T01:28:56.039Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a75d28d24947863a7c6d235247d01bc3d4936ed308b434235a2e6850d69f23be",
+  "signature": "11f9911047c6daed1723e06739a217a9ab9200c0ec5dcb0434a27ce2a6684995",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-intervalsicumcp"
 }

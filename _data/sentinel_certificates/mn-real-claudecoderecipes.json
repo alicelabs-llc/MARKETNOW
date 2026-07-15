@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0889482",
+  "certificate_id": "MN-SC-2026-9061612",
   "skill_id": "mn-real-claudecoderecipes",
   "skill_name": "claude-code-recipes",
-  "issued_at": "2026-07-12T04:34:49.482Z",
-  "expires_at": "2026-07-19T04:34:49.482Z",
+  "issued_at": "2026-07-15T01:31:01.612Z",
+  "expires_at": "2026-07-22T01:31:01.612Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "045ac1d21224371567eb71c457ff6ef4fcbec6a9fd58e7348e4bab728b3de220",
+  "signature": "1546d2ce77dd85e5a58cf32dccdb6be6e29f136d2a81c833f385993f44d255b9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecoderecipes"
 }

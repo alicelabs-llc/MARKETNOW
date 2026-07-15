@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0502894",
+  "certificate_id": "MN-SC-2026-8609939",
   "skill_id": "mn-real-alaya",
   "skill_name": "alaya",
-  "issued_at": "2026-07-12T04:28:22.894Z",
-  "expires_at": "2026-07-19T04:28:22.894Z",
+  "issued_at": "2026-07-15T01:23:29.939Z",
+  "expires_at": "2026-07-22T01:23:29.939Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b03f5e7ae72bc6d5ef13f9df6d74a1363ccbf28103b09e2e0f33f4aac53246f2",
+  "signature": "eabfa0517d27d2fd854d57010e8a344c259e1491dbab2a80320543322a66fed1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alaya"
 }

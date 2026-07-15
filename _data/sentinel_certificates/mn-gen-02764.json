@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9995435",
+  "certificate_id": "MN-SC-2026-7944130",
   "skill_id": "mn-gen-02764",
   "skill_name": "mcp-context-forge",
-  "issued_at": "2026-07-12T04:19:55.435Z",
-  "expires_at": "2026-07-19T04:19:55.435Z",
+  "issued_at": "2026-07-15T01:12:24.130Z",
+  "expires_at": "2026-07-22T01:12:24.130Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5986230bb85803a514cc68b851078db08bc45b487779ea47f65245aace47bd28",
+  "signature": "0a8dc35c9f08752827fc0d5b5d1a19718a34fa758d90aebb4b26dce89d6cbcb2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02764"
 }

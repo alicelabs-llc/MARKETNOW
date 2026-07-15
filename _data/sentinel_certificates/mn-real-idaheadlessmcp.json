@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0552493",
+  "certificate_id": "MN-SC-2026-8661409",
   "skill_id": "mn-real-idaheadlessmcp",
   "skill_name": "ida-headless-mcp",
-  "issued_at": "2026-07-12T04:29:12.493Z",
-  "expires_at": "2026-07-19T04:29:12.493Z",
+  "issued_at": "2026-07-15T01:24:21.409Z",
+  "expires_at": "2026-07-22T01:24:21.409Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa91f7deba63e45b5ecd3722320e2881b0abd39341ab0d6ca1a86a28aa7b667f",
+  "signature": "c8e4d65d91fd55320564e89ba685aa6ed7b5d7ab2a1e349103ecbb2b0e5f9688",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-idaheadlessmcp"
 }

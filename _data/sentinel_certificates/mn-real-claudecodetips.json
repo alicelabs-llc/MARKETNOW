@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0934121",
+  "certificate_id": "MN-SC-2026-9117727",
   "skill_id": "mn-real-claudecodetips",
   "skill_name": "claude-code-tips",
-  "issued_at": "2026-07-12T04:35:34.121Z",
-  "expires_at": "2026-07-19T04:35:34.121Z",
+  "issued_at": "2026-07-15T01:31:57.727Z",
+  "expires_at": "2026-07-22T01:31:57.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "df46123895795e54b86ec6275563a2579d805accaf19afe296b02d44c04173e5",
+  "signature": "ed4be430f610fb91701a4de1da98c0aeca0144dfc72e57121c76137605655bb6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecodetips"
 }

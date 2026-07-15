@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0408601",
+  "certificate_id": "MN-SC-2026-8505031",
   "skill_id": "mn-real-scalamcpserver",
   "skill_name": "scala-mcp-server",
-  "issued_at": "2026-07-12T04:26:48.601Z",
-  "expires_at": "2026-07-19T04:26:48.601Z",
+  "issued_at": "2026-07-15T01:21:45.031Z",
+  "expires_at": "2026-07-22T01:21:45.031Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3de667a9bb34ead911f1d563eb4ad9cfe941323820a54a2f443892d0939a1ea4",
+  "signature": "93747d3934168d03c7fe34689a3c387b3fdad0d963b0c031326b28930991f1a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scalamcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0498628",
+  "certificate_id": "MN-SC-2026-8606959",
   "skill_id": "mn-real-nebulamind",
   "skill_name": "NebulaMind",
-  "issued_at": "2026-07-12T04:28:18.628Z",
-  "expires_at": "2026-07-19T04:28:18.628Z",
+  "issued_at": "2026-07-15T01:23:26.959Z",
+  "expires_at": "2026-07-22T01:23:26.959Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff9d074bd92face67dac9272c467cf1939664c9b529445cad1e3ea28aa04a679",
+  "signature": "7e9c092edf13caecde2f5f65ecb4e5dca3fe0f709a2121debfe340b042e5941b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nebulamind"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0681763",
+  "certificate_id": "MN-SC-2026-8810812",
   "skill_id": "mn-real-napi",
   "skill_name": "napi",
-  "issued_at": "2026-07-12T04:31:21.763Z",
-  "expires_at": "2026-07-19T04:31:21.763Z",
+  "issued_at": "2026-07-15T01:26:50.812Z",
+  "expires_at": "2026-07-22T01:26:50.812Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "185f8b2acdeac5a4e62e4dee44ef671220be5b8e433c228c6d04137b8212ab7e",
+  "signature": "981557fd256676c3ef01aff79abcb1214e2c95c2a971e91dfec260ea24b1cb2f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-napi"
 }

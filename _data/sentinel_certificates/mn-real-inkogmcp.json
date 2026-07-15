@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0547657",
+  "certificate_id": "MN-SC-2026-8655970",
   "skill_id": "mn-real-inkogmcp",
   "skill_name": "inkog-mcp",
-  "issued_at": "2026-07-12T04:29:07.657Z",
-  "expires_at": "2026-07-19T04:29:07.657Z",
+  "issued_at": "2026-07-15T01:24:15.970Z",
+  "expires_at": "2026-07-22T01:24:15.970Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c1ebb2c194f44884a63d2868172852b58ddd4648f4852f285004ce7ff017b283",
+  "signature": "20aa4af0212da7c231f6c310a9f231a9c2d1992fd79a74e0f82e757e5243ab06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-inkogmcp"
 }

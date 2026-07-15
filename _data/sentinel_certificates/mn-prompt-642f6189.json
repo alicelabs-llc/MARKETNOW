@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0169769",
+  "certificate_id": "MN-SC-2026-8185274",
   "skill_id": "mn-prompt-642f6189",
   "skill_name": "Especialista Brand Identity + Logo Design",
-  "issued_at": "2026-07-12T04:22:49.769Z",
-  "expires_at": "2026-07-19T04:22:49.769Z",
+  "issued_at": "2026-07-15T01:16:25.274Z",
+  "expires_at": "2026-07-22T01:16:25.274Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a925f0eb9de72a2af8d7674ac2e66715cb7f1262f92a3e6464e8d694b26cc7e9",
+  "signature": "0dcb08e44be3e6f743f7a95e5bf8f5ccbd6e259f81301e1d5c835190b137fc8a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-642f6189"
 }

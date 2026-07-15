@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0309259",
+  "certificate_id": "MN-SC-2026-8378381",
   "skill_id": "mn-prompt-89d412b3",
   "skill_name": "Video production company",
-  "issued_at": "2026-07-12T04:25:09.259Z",
-  "expires_at": "2026-07-19T04:25:09.259Z",
+  "issued_at": "2026-07-15T01:19:38.381Z",
+  "expires_at": "2026-07-22T01:19:38.381Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b53fe099fd3713d75f6059eb6edaef735cbe02d4ffcf189ccbe08e830802494",
+  "signature": "35b385993a8af28307f37c11aed49db4db9786ccf1e7d41ae29da7797e8a7402",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-89d412b3"
 }

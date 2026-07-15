@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0706643",
+  "certificate_id": "MN-SC-2026-8846291",
   "skill_id": "mn-real-remindb",
   "skill_name": "remindb",
-  "issued_at": "2026-07-12T04:31:46.643Z",
-  "expires_at": "2026-07-19T04:31:46.643Z",
+  "issued_at": "2026-07-15T01:27:26.291Z",
+  "expires_at": "2026-07-22T01:27:26.291Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a54afacd6dc3c2aad885eab00994e6774d2a76039d4b07d9a59572dfffbb6633",
+  "signature": "4b2b6e4081b6b12252399ee00f2c71199f2a4d22ec9bea1cf674609a7f2e4c00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-remindb"
 }

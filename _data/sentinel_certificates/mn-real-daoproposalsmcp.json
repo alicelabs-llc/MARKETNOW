@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0466794",
+  "certificate_id": "MN-SC-2026-8572776",
   "skill_id": "mn-real-daoproposalsmcp",
   "skill_name": "dao-proposals-mcp",
-  "issued_at": "2026-07-12T04:27:46.794Z",
-  "expires_at": "2026-07-19T04:27:46.794Z",
+  "issued_at": "2026-07-15T01:22:52.776Z",
+  "expires_at": "2026-07-22T01:22:52.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "279d49536320cf777bd78d673eb0df2f47ab0c512a4842c305baac7a0e0a33bf",
+  "signature": "d6945ad97a7491285621ec6c0dc26cffee7a6245024c90bfc93a0df07f611a34",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-daoproposalsmcp"
 }

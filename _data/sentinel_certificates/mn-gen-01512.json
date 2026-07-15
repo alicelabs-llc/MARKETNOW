@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9986973",
+  "certificate_id": "MN-SC-2026-7936320",
   "skill_id": "mn-gen-01512",
   "skill_name": "Box",
-  "issued_at": "2026-07-12T04:19:46.973Z",
-  "expires_at": "2026-07-19T04:19:46.973Z",
+  "issued_at": "2026-07-15T01:12:16.320Z",
+  "expires_at": "2026-07-22T01:12:16.320Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ce7e6142dba0de8f21c0aa1448727ef154d1b56422bd6f05c00fdf4d36655e1",
+  "signature": "03e7eef478f0006b7ea78cd2e9bd97f993140f17da681e5f13f5102732714bd1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01512"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0817082",
+  "certificate_id": "MN-SC-2026-8982920",
   "skill_id": "mn-real-difymcpclient",
   "skill_name": "dify-mcp-client",
-  "issued_at": "2026-07-12T04:33:37.082Z",
-  "expires_at": "2026-07-19T04:33:37.082Z",
+  "issued_at": "2026-07-15T01:29:42.920Z",
+  "expires_at": "2026-07-22T01:29:42.920Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c171cbd32eefad0ab8b30e9781e0b624b360922d131b313ef321120af24aabe3",
+  "signature": "a78388c8ce2fe711ceafd3ebc15706764c8a7a462487d38c9b327367a07c531e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-difymcpclient"
 }

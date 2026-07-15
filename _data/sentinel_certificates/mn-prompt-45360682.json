@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0056184",
+  "certificate_id": "MN-SC-2026-8022587",
   "skill_id": "mn-prompt-45360682",
   "skill_name": "Especialista SQLAlchemy 2.0",
-  "issued_at": "2026-07-12T04:20:56.184Z",
-  "expires_at": "2026-07-19T04:20:56.184Z",
+  "issued_at": "2026-07-15T01:13:42.587Z",
+  "expires_at": "2026-07-22T01:13:42.587Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "335ea5b8ddbb969b4dbd3951c43c70c4fd80cb0835c45d6ef36bf3af063dc229",
+  "signature": "8196dc0af61794801f01e7e0643c7cf867443ac2ffee95fc68720af9acb0e4d1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-45360682"
 }

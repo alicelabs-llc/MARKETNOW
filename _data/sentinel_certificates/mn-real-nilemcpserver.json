@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0405500",
+  "certificate_id": "MN-SC-2026-8501466",
   "skill_id": "mn-real-nilemcpserver",
   "skill_name": "nile-mcp-server",
-  "issued_at": "2026-07-12T04:26:45.500Z",
-  "expires_at": "2026-07-19T04:26:45.500Z",
+  "issued_at": "2026-07-15T01:21:41.466Z",
+  "expires_at": "2026-07-22T01:21:41.466Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9fe7c7eee9741e02e434900998a27374748aab1d530146d10c1636e2f6c47592",
+  "signature": "e9ee946c7fa3b65754db75e6533845ea0282231bac35d15d6f7e6dbacf3aebda",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nilemcpserver"
 }

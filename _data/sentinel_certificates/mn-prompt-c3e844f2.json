@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0314556",
+  "certificate_id": "MN-SC-2026-8384141",
   "skill_id": "mn-prompt-c3e844f2",
   "skill_name": "Ghost kitchen operations",
-  "issued_at": "2026-07-12T04:25:14.556Z",
-  "expires_at": "2026-07-19T04:25:14.556Z",
+  "issued_at": "2026-07-15T01:19:44.141Z",
+  "expires_at": "2026-07-22T01:19:44.141Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a54c6df562cc1c3495786602b23327a94973bab8b090a71faaf5d12a41a2672c",
+  "signature": "147d6880af45192ff57d0cdf96e769fc673a63d911a99e12462388416d53dcf3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c3e844f2"
 }

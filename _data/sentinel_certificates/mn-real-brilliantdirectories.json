@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0915764",
+  "certificate_id": "MN-SC-2026-9092999",
   "skill_id": "mn-real-brilliantdirectories",
   "skill_name": "brilliant-directories-mcp",
-  "issued_at": "2026-07-12T04:35:15.764Z",
-  "expires_at": "2026-07-19T04:35:15.764Z",
+  "issued_at": "2026-07-15T01:31:32.999Z",
+  "expires_at": "2026-07-22T01:31:32.999Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc7774fc0abdda23d98126d23660dcb9f0c8135ce16df919209fb83e03b0b04c",
+  "signature": "4f5895bbb6c99e0346bc0049aa438dcdccbb6e7df157cb22dfff5c9aa5674248",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-brilliantdirectories"
 }

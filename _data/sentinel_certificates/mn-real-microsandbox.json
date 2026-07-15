@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0647205",
+  "certificate_id": "MN-SC-2026-8769218",
   "skill_id": "mn-real-microsandbox",
   "skill_name": "microsandbox",
-  "issued_at": "2026-07-12T04:30:47.205Z",
-  "expires_at": "2026-07-19T04:30:47.205Z",
+  "issued_at": "2026-07-15T01:26:09.218Z",
+  "expires_at": "2026-07-22T01:26:09.218Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b8b622acb112f3d92b403c1d9a898df1114e9fc5d7d56e7bf56089309fc56d39",
+  "signature": "8aa28daba9b9e1f4e89b03efb9f31191fd10c1802f310a83868f7a2fbb041f14",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-microsandbox"
 }

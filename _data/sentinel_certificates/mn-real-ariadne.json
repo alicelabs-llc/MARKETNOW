@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0437441",
+  "certificate_id": "MN-SC-2026-8540128",
   "skill_id": "mn-real-ariadne",
   "skill_name": "ariadne",
-  "issued_at": "2026-07-12T04:27:17.441Z",
-  "expires_at": "2026-07-19T04:27:17.441Z",
+  "issued_at": "2026-07-15T01:22:20.128Z",
+  "expires_at": "2026-07-22T01:22:20.128Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7a870dba1b214309b50ddfac3e39a9eaeeb087afccd8e0b8fe64889e6a3b1d1",
+  "signature": "e0c5b5af934a4b218a58a52436878e156893430de9b63c0e7e5dda5f5a61b65f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ariadne"
 }

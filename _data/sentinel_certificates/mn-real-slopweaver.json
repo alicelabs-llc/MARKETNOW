@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1029461",
+  "certificate_id": "MN-SC-2026-9216690",
   "skill_id": "mn-real-slopweaver",
   "skill_name": "slopweaver",
-  "issued_at": "2026-07-12T04:37:09.461Z",
-  "expires_at": "2026-07-19T04:37:09.461Z",
+  "issued_at": "2026-07-15T01:33:36.690Z",
+  "expires_at": "2026-07-22T01:33:36.690Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "380e82d4d8032b6e544a715927101906495364a9b2450858550823d67672f291",
+  "signature": "0a5c9712462b2e7697fd7b95cc4dff3addb1782eb96af83ec247dd8f99704fdc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-slopweaver"
 }

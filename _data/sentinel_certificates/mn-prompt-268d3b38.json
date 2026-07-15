@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0302647",
+  "certificate_id": "MN-SC-2026-8368746",
   "skill_id": "mn-prompt-268d3b38",
   "skill_name": "Insurance underwriting",
-  "issued_at": "2026-07-12T04:25:02.647Z",
-  "expires_at": "2026-07-19T04:25:02.647Z",
+  "issued_at": "2026-07-15T01:19:28.746Z",
+  "expires_at": "2026-07-22T01:19:28.746Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e36a7fb49f002e54e404f60d6ae61e69769d8844b366d4d44589150427d859ff",
+  "signature": "31ca9369e7f9007c5159c9eb60e4f4d017c3da493fb432a75c10a6a336ee5dbf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-268d3b38"
 }

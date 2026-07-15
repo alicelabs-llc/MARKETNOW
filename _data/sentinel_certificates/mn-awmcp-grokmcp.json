@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0330670",
+  "certificate_id": "MN-SC-2026-8408666",
   "skill_id": "mn-awmcp-grokmcp",
   "skill_name": "Grok-MCP",
-  "issued_at": "2026-07-12T04:25:30.670Z",
-  "expires_at": "2026-07-19T04:25:30.670Z",
+  "issued_at": "2026-07-15T01:20:08.666Z",
+  "expires_at": "2026-07-22T01:20:08.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "89261f077dfbde024422a718fbe892fe8841649d8abb9edbd6653949a2c59675",
+  "signature": "6ff023c5bbb71e433e343d8f51f61edc4a9d4d7d4874bd57756ef699fb76f8e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-grokmcp"
 }

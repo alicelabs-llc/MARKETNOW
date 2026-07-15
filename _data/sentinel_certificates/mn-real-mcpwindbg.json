@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0592276",
+  "certificate_id": "MN-SC-2026-8706795",
   "skill_id": "mn-real-mcpwindbg",
   "skill_name": "mcp-windbg",
-  "issued_at": "2026-07-12T04:29:52.276Z",
-  "expires_at": "2026-07-19T04:29:52.276Z",
+  "issued_at": "2026-07-15T01:25:06.795Z",
+  "expires_at": "2026-07-22T01:25:06.795Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "572a50b1ac81fa6b8e0be8becca055af0a0cb121fc209bb8b99184c1eb0fba44",
+  "signature": "b9424a07964c571a901efeb7d842ae522674d5fa4ec0328210f8edb2e2735c62",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpwindbg"
 }

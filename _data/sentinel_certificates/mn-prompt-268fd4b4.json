@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0141336",
+  "certificate_id": "MN-SC-2026-8142941",
   "skill_id": "mn-prompt-268fd4b4",
   "skill_name": "Especialista Student Affairs + Services",
-  "issued_at": "2026-07-12T04:22:21.336Z",
-  "expires_at": "2026-07-19T04:22:21.336Z",
+  "issued_at": "2026-07-15T01:15:42.941Z",
+  "expires_at": "2026-07-22T01:15:42.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e688735ac7c35ae815cce4b2fe01cd02a096c5cc0944552511130713abca5186",
+  "signature": "a445259ca5872256045d0b846fd131af1ddb263535b7a418b734b27b4027824e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-268fd4b4"
 }

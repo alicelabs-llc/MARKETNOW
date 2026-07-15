@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0619914",
+  "certificate_id": "MN-SC-2026-8738457",
   "skill_id": "mn-real-pythonsdk",
   "skill_name": "python-sdk",
-  "issued_at": "2026-07-12T04:30:19.914Z",
-  "expires_at": "2026-07-19T04:30:19.914Z",
+  "issued_at": "2026-07-15T01:25:38.457Z",
+  "expires_at": "2026-07-22T01:25:38.457Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4eb45f9f69d32d1a40254387296fca1946e5252c723e079435d5db66049a3692",
+  "signature": "3348efbf350c3b4ef07a9b1d7bfeb8e213678aae372c6711e2a5798834529f50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pythonsdk"
 }

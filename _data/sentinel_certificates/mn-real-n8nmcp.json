@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0630610",
+  "certificate_id": "MN-SC-2026-8751011",
   "skill_id": "mn-real-n8nmcp",
   "skill_name": "n8n-mcp",
-  "issued_at": "2026-07-12T04:30:30.610Z",
-  "expires_at": "2026-07-19T04:30:30.610Z",
+  "issued_at": "2026-07-15T01:25:51.011Z",
+  "expires_at": "2026-07-22T01:25:51.011Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 0,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
@@ -22,10 +23,10 @@
     "l15_findings": 2,
     "l16_semgrep_findings": 0,
     "l16_secret_findings": 0,
-    "l16_osv_findings": 9,
+    "l16_osv_findings": 11,
     "l2_execution_status": null
   },
-  "signature": "9ea2579dfb057ba8d572843dbb962a6ee5ed564bd89670ff5f2463a95acc3e50",
+  "signature": "1aeef5c0d93b90c30f43513cdd5793d5135c5f6ac6d26801499895881add88cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-n8nmcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0751897",
+  "certificate_id": "MN-SC-2026-8904541",
   "skill_id": "mn-real-synthpilot",
   "skill_name": "SynthPilot",
-  "issued_at": "2026-07-12T04:32:31.897Z",
-  "expires_at": "2026-07-19T04:32:31.897Z",
+  "issued_at": "2026-07-15T01:28:24.541Z",
+  "expires_at": "2026-07-22T01:28:24.541Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ee03ff514a3db96218fb8655d660668272bd4625358904975f7299a186b09db",
+  "signature": "cedf3da413b32f48acad58a6ffd25d76c8f95d55919440c309be3eacef3bc43d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-synthpilot"
 }

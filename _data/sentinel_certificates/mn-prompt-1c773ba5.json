@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0120969",
+  "certificate_id": "MN-SC-2026-8114944",
   "skill_id": "mn-prompt-1c773ba5",
   "skill_name": "Especialista Product Retention + Churn Prevention",
-  "issued_at": "2026-07-12T04:22:00.969Z",
-  "expires_at": "2026-07-19T04:22:00.969Z",
+  "issued_at": "2026-07-15T01:15:14.944Z",
+  "expires_at": "2026-07-22T01:15:14.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac87ffc8ae7cc3223e325354633719586aaa179314bb8e8f7ff3a0c9f0b0c32b",
+  "signature": "3f0a58f457b1aac134d5af99f05c0cb8bd4fd667cc527a00fb63ec8f6cd4e3c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-1c773ba5"
 }

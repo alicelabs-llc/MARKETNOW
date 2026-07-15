@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0391855",
+  "certificate_id": "MN-SC-2026-8487166",
   "skill_id": "mn-awmcp-callcenterjsmcp",
   "skill_name": "callcenter.js-mcp",
-  "issued_at": "2026-07-12T04:26:31.855Z",
-  "expires_at": "2026-07-19T04:26:31.855Z",
+  "issued_at": "2026-07-15T01:21:27.166Z",
+  "expires_at": "2026-07-22T01:21:27.166Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58d2840e84c3b35c4a5dcce54c6c9e869d53b529dfa0362780fa85202a8dd209",
+  "signature": "322b9db5a7c9524bb425b0ec0d1d862cdcabbdcb30e99e7b8a83c8d3d2e52f86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-callcenterjsmcp"
 }

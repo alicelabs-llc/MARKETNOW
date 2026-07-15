@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0576889",
+  "certificate_id": "MN-SC-2026-8689676",
   "skill_id": "mn-real-latexmcpserver",
   "skill_name": "latex-mcp-server",
-  "issued_at": "2026-07-12T04:29:36.889Z",
-  "expires_at": "2026-07-19T04:29:36.889Z",
+  "issued_at": "2026-07-15T01:24:49.676Z",
+  "expires_at": "2026-07-22T01:24:49.676Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "35b876e9394669ea39c257c73fa00ec03ea1d2bdc2428191541a77dc2084cf1e",
+  "signature": "ac2b00e290a3a5ffbb4818475ebe02a60dde3970d511d16226e53715218a7fe0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-latexmcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0538210",
+  "certificate_id": "MN-SC-2026-8645646",
   "skill_id": "mn-real-opentkmcp",
   "skill_name": "opentk-mcp",
-  "issued_at": "2026-07-12T04:28:58.210Z",
-  "expires_at": "2026-07-19T04:28:58.210Z",
+  "issued_at": "2026-07-15T01:24:05.646Z",
+  "expires_at": "2026-07-22T01:24:05.646Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39f129822fb193046f97fe554ba2b9f0e2eda5647734c0dfd45fb9bb87969f81",
+  "signature": "fefd14b328ce6cf91e32b28067a5c67f8f4f4aa6f213a8ae256d367ba0d6ebc0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opentkmcp"
 }

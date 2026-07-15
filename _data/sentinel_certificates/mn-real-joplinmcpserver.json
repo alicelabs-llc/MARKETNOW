@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0725537",
+  "certificate_id": "MN-SC-2026-8871944",
   "skill_id": "mn-real-joplinmcpserver",
   "skill_name": "joplin-mcp-server",
-  "issued_at": "2026-07-12T04:32:05.537Z",
-  "expires_at": "2026-07-19T04:32:05.537Z",
+  "issued_at": "2026-07-15T01:27:51.944Z",
+  "expires_at": "2026-07-22T01:27:51.944Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a05cb72cc2057e8e89ddf7c109ebbb1374d2f2ffa72586d599697f38eb3f7cc4",
+  "signature": "bdfc1f0c0d33bb394bb7db64fa97cd173016cf1ee83877b500e68507936e5d11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-joplinmcpserver"
 }

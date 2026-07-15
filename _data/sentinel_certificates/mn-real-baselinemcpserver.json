@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0540281",
+  "certificate_id": "MN-SC-2026-8648417",
   "skill_id": "mn-real-baselinemcpserver",
   "skill_name": "baseline-mcp-server",
-  "issued_at": "2026-07-12T04:29:00.281Z",
-  "expires_at": "2026-07-19T04:29:00.281Z",
+  "issued_at": "2026-07-15T01:24:08.417Z",
+  "expires_at": "2026-07-22T01:24:08.417Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "589c86d933b01f885ffe0761a660b5e48713c9374566c4d2345fe5ce8bb803b2",
+  "signature": "ced75e6c4bd12c6da1a1cb0fe4093f8cf9fb336d0a38c442b7de9c1b7b0901ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-baselinemcpserver"
 }

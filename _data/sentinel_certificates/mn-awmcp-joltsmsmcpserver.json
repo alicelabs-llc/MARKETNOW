@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0393766",
+  "certificate_id": "MN-SC-2026-8490156",
   "skill_id": "mn-awmcp-joltsmsmcpserver",
   "skill_name": "joltsms-mcp-server",
-  "issued_at": "2026-07-12T04:26:33.766Z",
-  "expires_at": "2026-07-19T04:26:33.766Z",
+  "issued_at": "2026-07-15T01:21:30.156Z",
+  "expires_at": "2026-07-22T01:21:30.156Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3515cdf3469bcacc569499617872716e3fc05284511ace49591e83926f7286a",
+  "signature": "78873164259653a1f79a6d057042d71995e954ec9bb3ab0407c9cdbafdc3446a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-joltsmsmcpserver"
 }

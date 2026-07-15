@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0774837",
+  "certificate_id": "MN-SC-2026-8932176",
   "skill_id": "mn-real-excalimate",
   "skill_name": "excalimate",
-  "issued_at": "2026-07-12T04:32:54.837Z",
-  "expires_at": "2026-07-19T04:32:54.837Z",
+  "issued_at": "2026-07-15T01:28:52.176Z",
+  "expires_at": "2026-07-22T01:28:52.176Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d680b789118fddc42a667da907a8aff664f1204ec84483643cea1cd31662e7c3",
+  "signature": "6abb58473da60bcc23812fb87606dd61a6f3ba0782a639e12a99b0ebec50472e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-excalimate"
 }

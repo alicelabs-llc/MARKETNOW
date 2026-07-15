@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0724847",
+  "certificate_id": "MN-SC-2026-8871235",
   "skill_id": "mn-real-perplexitywebapimcp",
   "skill_name": "perplexity-web-api-mcp",
-  "issued_at": "2026-07-12T04:32:04.847Z",
-  "expires_at": "2026-07-19T04:32:04.847Z",
+  "issued_at": "2026-07-15T01:27:51.235Z",
+  "expires_at": "2026-07-22T01:27:51.235Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac612b6741f43c02c1a1c01c7bffa11e32f7cbac5ad83b0d97fbc10ed7af4299",
+  "signature": "19a1faf3c2fedd98a7d42b4e5d576b1a69699b59f3b8d46908cb58806e6b2526",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-perplexitywebapimcp"
 }

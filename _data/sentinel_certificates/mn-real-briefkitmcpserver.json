@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0413315",
+  "certificate_id": "MN-SC-2026-8510885",
   "skill_id": "mn-real-briefkitmcpserver",
   "skill_name": "briefkit-mcp-server",
-  "issued_at": "2026-07-12T04:26:53.315Z",
-  "expires_at": "2026-07-19T04:26:53.315Z",
+  "issued_at": "2026-07-15T01:21:50.885Z",
+  "expires_at": "2026-07-22T01:21:50.885Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa97a538ca5345f251b8f5d0938bdd61f24fd5c3cc2f85918091257eecd568fd",
+  "signature": "c14d5c3893a386204ae0676280bb2724e7ca57a4c9caa05ec1810fa460b8d353",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-briefkitmcpserver"
 }

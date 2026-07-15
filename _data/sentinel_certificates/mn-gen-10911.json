@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0038223",
+  "certificate_id": "MN-SC-2026-7997083",
   "skill_id": "mn-gen-10911",
   "skill_name": "qlik-mcp",
-  "issued_at": "2026-07-12T04:20:38.223Z",
-  "expires_at": "2026-07-19T04:20:38.223Z",
+  "issued_at": "2026-07-15T01:13:17.083Z",
+  "expires_at": "2026-07-22T01:13:17.083Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ecb19ef015662674acc05895d7fab9302ab02fef1eb774adf35da2194d00885a",
+  "signature": "9ba9ddb732e2d99df483be946b703fc0d9e2a896be6517d0712f2be7d1a3b773",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10911"
 }

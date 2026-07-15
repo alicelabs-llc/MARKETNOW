@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0856533",
+  "certificate_id": "MN-SC-2026-9030206",
   "skill_id": "mn-real-powershellmcp",
   "skill_name": "PowerShell.MCP",
-  "issued_at": "2026-07-12T04:34:16.533Z",
-  "expires_at": "2026-07-19T04:34:16.533Z",
+  "issued_at": "2026-07-15T01:30:30.206Z",
+  "expires_at": "2026-07-22T01:30:30.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8dafd890d48de965fa323ccd7d787b3095f2125db7b3fc5cdfcc82a2e3fa58ef",
+  "signature": "9a6246eaa0ef10ae0c2c96a07c3414da59a5fc742ae8f8dcae9d974b15a2b995",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-powershellmcp"
 }

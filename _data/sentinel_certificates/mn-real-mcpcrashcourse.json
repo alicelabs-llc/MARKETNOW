@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0726630",
+  "certificate_id": "MN-SC-2026-8873278",
   "skill_id": "mn-real-mcpcrashcourse",
   "skill_name": "mcp-crash-course",
-  "issued_at": "2026-07-12T04:32:06.630Z",
-  "expires_at": "2026-07-19T04:32:06.630Z",
+  "issued_at": "2026-07-15T01:27:53.278Z",
+  "expires_at": "2026-07-22T01:27:53.278Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7dc903a49b930787d925b4f613c8fe60287066804d4bcde5a0d4fd733e3d4857",
+  "signature": "a527232c90a37c595990219ba4b570df74f58ca953fc366e2b0e6cda142a4978",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcrashcourse"
 }

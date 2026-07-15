@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0527907",
+  "certificate_id": "MN-SC-2026-8635343",
   "skill_id": "mn-real-mcpserveroriginalvoi",
   "skill_name": "mcp-server-originalvoices",
-  "issued_at": "2026-07-12T04:28:47.907Z",
-  "expires_at": "2026-07-19T04:28:47.907Z",
+  "issued_at": "2026-07-15T01:23:55.343Z",
+  "expires_at": "2026-07-22T01:23:55.343Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "42f190777477a91b3fbe7422facad43e7745fe0969cfa67a3cbfe31ade8115e1",
+  "signature": "9ba31ae4faf3eec2f41a254eb4f3a502b4ecf6e012c4f983d433acf168cfcc9e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserveroriginalvoi"
 }

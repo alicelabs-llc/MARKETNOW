@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0912334",
+  "certificate_id": "MN-SC-2026-9089045",
   "skill_id": "mn-real-mcpagentsearchhub",
   "skill_name": "mcp-agent-search-hub",
-  "issued_at": "2026-07-12T04:35:12.334Z",
-  "expires_at": "2026-07-19T04:35:12.334Z",
+  "issued_at": "2026-07-15T01:31:29.045Z",
+  "expires_at": "2026-07-22T01:31:29.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "19f55653178b9c6ae230bdc34d00120a1c9f5e1b2728e4a51d0bfe475d968b28",
+  "signature": "9e79463620fb8bff2a7385bd933d42c72352c47ff7ac77a70bed0f74d58c522d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpagentsearchhub"
 }

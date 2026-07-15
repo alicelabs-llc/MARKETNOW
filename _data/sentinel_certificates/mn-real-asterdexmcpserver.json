@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0896023",
+  "certificate_id": "MN-SC-2026-9067076",
   "skill_id": "mn-real-asterdexmcpserver",
   "skill_name": "asterdex-mcp-server",
-  "issued_at": "2026-07-12T04:34:56.023Z",
-  "expires_at": "2026-07-19T04:34:56.023Z",
+  "issued_at": "2026-07-15T01:31:07.076Z",
+  "expires_at": "2026-07-22T01:31:07.076Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24ff6b338d22332956e6819e1ac4b135ab0a6fe76c4c30d49304cc19961b79ad",
+  "signature": "798f89653ad6a7e701177e416f1c6c992887c85bd33801c85180d6d6265f16fa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-asterdexmcpserver"
 }

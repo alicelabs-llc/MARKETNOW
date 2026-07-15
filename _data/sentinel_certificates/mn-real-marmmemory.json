@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1086458",
+  "certificate_id": "MN-SC-2026-9241068",
   "skill_id": "mn-real-marmmemory",
   "skill_name": "marm-memory",
-  "issued_at": "2026-07-12T04:38:06.458Z",
-  "expires_at": "2026-07-19T04:38:06.458Z",
+  "issued_at": "2026-07-15T01:34:01.068Z",
+  "expires_at": "2026-07-22T01:34:01.068Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "71eee9278e7d946a15eb18d513c376eccbb5d0ccfc921c4f68d191e3284189fa",
+  "signature": "2bd0a61611937b7bd17a19e4e1adb868f8b5fa08e7d6b56b772f867020c534ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-marmmemory"
 }

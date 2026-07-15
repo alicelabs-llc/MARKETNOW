@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0609131",
+  "certificate_id": "MN-SC-2026-8726388",
   "skill_id": "mn-real-contextengineeringfo",
   "skill_name": "Context-Engineering-for-Multi-Agent-Systems",
-  "issued_at": "2026-07-12T04:30:09.131Z",
-  "expires_at": "2026-07-19T04:30:09.131Z",
+  "issued_at": "2026-07-15T01:25:26.388Z",
+  "expires_at": "2026-07-22T01:25:26.388Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bdea23cb43850b3d933b532eb845890e33b8df877fa7322122d724f08bfa8c9d",
+  "signature": "98451efd25ff3636b7a5bf9804a23ae03c222c33caa4d2ff50c84866d1a6255d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-contextengineeringfo"
 }

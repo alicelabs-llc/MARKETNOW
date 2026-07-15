@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0453747",
+  "certificate_id": "MN-SC-2026-8557579",
   "skill_id": "mn-real-bicscanmcp",
   "skill_name": "bicscan-mcp",
-  "issued_at": "2026-07-12T04:27:33.747Z",
-  "expires_at": "2026-07-19T04:27:33.747Z",
+  "issued_at": "2026-07-15T01:22:37.579Z",
+  "expires_at": "2026-07-22T01:22:37.579Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8651ec7a14607a6cca3bcfa8f1cc4eaa292fae6c16dfcfe90cd80e72bdf3112",
+  "signature": "3de531d34aa0489a66e29b7ab44d459ac4a1a578dce06e373d26ba945b8326b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bicscanmcp"
 }

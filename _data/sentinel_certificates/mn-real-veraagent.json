@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0963108",
+  "certificate_id": "MN-SC-2026-9148339",
   "skill_id": "mn-real-veraagent",
   "skill_name": "vera-agent",
-  "issued_at": "2026-07-12T04:36:03.108Z",
-  "expires_at": "2026-07-19T04:36:03.108Z",
+  "issued_at": "2026-07-15T01:32:28.339Z",
+  "expires_at": "2026-07-22T01:32:28.339Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c77bb547c7429729f045318d91a8c89c053a5f042a4d308aec45eb921733072",
+  "signature": "8be35ef08627a408ecfaf902da99bbcd3b5c019d4f4a31f3ba4b05c0ce2d2f89",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-veraagent"
 }

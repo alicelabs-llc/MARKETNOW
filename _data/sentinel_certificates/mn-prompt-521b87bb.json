@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0063152",
+  "certificate_id": "MN-SC-2026-8033875",
   "skill_id": "mn-prompt-521b87bb",
   "skill_name": "Especialista PWA Install + A2HS",
-  "issued_at": "2026-07-12T04:21:03.152Z",
-  "expires_at": "2026-07-19T04:21:03.152Z",
+  "issued_at": "2026-07-15T01:13:53.875Z",
+  "expires_at": "2026-07-22T01:13:53.875Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94e0dfb9f0d002d2e8377e1ca520d37ee5e7b829f6d00969ff9d6bd5605739ac",
+  "signature": "0c005f5a8c15b7546be09ad5f46a3a04f3b46c38fc29b48ee7b45f6460c532c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-521b87bb"
 }

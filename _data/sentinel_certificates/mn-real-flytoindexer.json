@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0992110",
+  "certificate_id": "MN-SC-2026-9179744",
   "skill_id": "mn-real-flytoindexer",
   "skill_name": "flyto-indexer",
-  "issued_at": "2026-07-12T04:36:32.110Z",
-  "expires_at": "2026-07-19T04:36:32.110Z",
+  "issued_at": "2026-07-15T01:32:59.744Z",
+  "expires_at": "2026-07-22T01:32:59.744Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "faf8b50c9f4aa55819c08ef86105584f80b1aaee53c7c6e222f003d3fe0e1ad8",
+  "signature": "9604aefd015f427121178edf4eb6df883f48ea77c5b71a962607deeb71db107c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-flytoindexer"
 }

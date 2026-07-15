@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0131652",
+  "certificate_id": "MN-SC-2026-8127889",
   "skill_id": "mn-prompt-a15c3f35",
   "skill_name": "Especialista Tax Compliance + Planning",
-  "issued_at": "2026-07-12T04:22:11.652Z",
-  "expires_at": "2026-07-19T04:22:11.652Z",
+  "issued_at": "2026-07-15T01:15:27.889Z",
+  "expires_at": "2026-07-22T01:15:27.889Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef80a35377cc45e771fd3e2fe119e466d9b7fe24d5595fc7f2d8c440b5d795dd",
+  "signature": "c8cf7b0fb6e1c21cbc00186d6e179d79dbb93ba0119c674a428daabf40e4e1ec",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-a15c3f35"
 }

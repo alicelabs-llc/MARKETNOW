@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0488233",
+  "certificate_id": "MN-SC-2026-8596876",
   "skill_id": "mn-real-centralintelligence",
   "skill_name": "central-intelligence",
-  "issued_at": "2026-07-12T04:28:08.233Z",
-  "expires_at": "2026-07-19T04:28:08.233Z",
+  "issued_at": "2026-07-15T01:23:16.876Z",
+  "expires_at": "2026-07-22T01:23:16.876Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "023841a269d86816277cd2bbf4207125a6e2fe59a82b4d9a6f21a8bc5ef4b7ce",
+  "signature": "43dc4e2de559722b2f089850331437b2c0049555ac13239274875d0dbc87385f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-centralintelligence"
 }

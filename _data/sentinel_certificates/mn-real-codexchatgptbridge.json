@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0720232",
+  "certificate_id": "MN-SC-2026-8864790",
   "skill_id": "mn-real-codexchatgptbridge",
   "skill_name": "codex-chatgpt-bridge",
-  "issued_at": "2026-07-12T04:32:00.232Z",
-  "expires_at": "2026-07-19T04:32:00.232Z",
+  "issued_at": "2026-07-15T01:27:44.790Z",
+  "expires_at": "2026-07-22T01:27:44.790Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa74ba4400914032cc3a73dac01d4d8d209bb8011b45ab3ced8e07345e350c3a",
+  "signature": "128ceec2f7d139334310cb1f7c9d56fc4f391f6397732f1f3b380b685311632e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codexchatgptbridge"
 }

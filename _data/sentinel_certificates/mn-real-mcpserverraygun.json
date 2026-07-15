@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0520432",
+  "certificate_id": "MN-SC-2026-8626344",
   "skill_id": "mn-real-mcpserverraygun",
   "skill_name": "mcp-server-raygun",
-  "issued_at": "2026-07-12T04:28:40.432Z",
-  "expires_at": "2026-07-19T04:28:40.432Z",
+  "issued_at": "2026-07-15T01:23:46.344Z",
+  "expires_at": "2026-07-22T01:23:46.344Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d308069c5da9c91b87020b709bca8769c8b0e90a5da468f018a50b68ebfd274e",
+  "signature": "de4b6ce5b268634a7133c6229cf15824b9e238af324d4799e7f92e2be005d31f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserverraygun"
 }

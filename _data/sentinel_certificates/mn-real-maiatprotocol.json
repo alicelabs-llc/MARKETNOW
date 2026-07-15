@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0464231",
+  "certificate_id": "MN-SC-2026-8569200",
   "skill_id": "mn-real-maiatprotocol",
   "skill_name": "maiat-protocol",
-  "issued_at": "2026-07-12T04:27:44.231Z",
-  "expires_at": "2026-07-19T04:27:44.231Z",
+  "issued_at": "2026-07-15T01:22:49.200Z",
+  "expires_at": "2026-07-22T01:22:49.200Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b07e7de2c0af1f86479c2cf2b3276d64698df7d715b3e10f694e70d65cc4d66b",
+  "signature": "5b01b5c0dbb0ea1779b69686bbaa3f1048b502d61fd9cde66323684869a1799f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-maiatprotocol"
 }

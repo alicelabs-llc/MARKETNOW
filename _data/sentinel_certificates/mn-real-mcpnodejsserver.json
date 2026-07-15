@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0662084",
+  "certificate_id": "MN-SC-2026-8787261",
   "skill_id": "mn-real-mcpnodejsserver",
   "skill_name": "mcp-nodejs-server",
-  "issued_at": "2026-07-12T04:31:02.084Z",
-  "expires_at": "2026-07-19T04:31:02.084Z",
+  "issued_at": "2026-07-15T01:26:27.261Z",
+  "expires_at": "2026-07-22T01:26:27.261Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96fe268e1d7dbb2d63f8b05f9547acf5828f8477cb23d3c501146fd2c68de567",
+  "signature": "31657b73895bb3d13083e55263cfb690e9244daf2e4b005356e360f0ebc6ef51",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpnodejsserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0347187",
+  "certificate_id": "MN-SC-2026-8431794",
   "skill_id": "mn-awmcp-synergyagemcp",
   "skill_name": "synergy-age-mcp",
-  "issued_at": "2026-07-12T04:25:47.187Z",
-  "expires_at": "2026-07-19T04:25:47.187Z",
+  "issued_at": "2026-07-15T01:20:31.794Z",
+  "expires_at": "2026-07-22T01:20:31.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "a940dc8a623142460105488d5263124369a2cb5bbfa5aed09a3a67fe62f7a698",
+  "signature": "fc4ae1cbd123e2d2e8e11b37b4de7df43601dcd217a25e1eeab45efa66664969",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-synergyagemcp"
 }

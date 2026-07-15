@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0702599",
+  "certificate_id": "MN-SC-2026-8840963",
   "skill_id": "mn-real-rustdocsmcp",
   "skill_name": "rust-docs-mcp",
-  "issued_at": "2026-07-12T04:31:42.599Z",
-  "expires_at": "2026-07-19T04:31:42.599Z",
+  "issued_at": "2026-07-15T01:27:20.963Z",
+  "expires_at": "2026-07-22T01:27:20.963Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dcda5753ff7f170301d5fd990ea6f9de0ffd87794bf03ee1dc4c85a1b31db61c",
+  "signature": "05789b5883931bbcf2e13a79959a545f53f3b8a37df560a6d9e6be1898531302",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rustdocsmcp"
 }

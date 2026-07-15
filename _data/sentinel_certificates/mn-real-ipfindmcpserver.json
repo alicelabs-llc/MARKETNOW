@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0508149",
+  "certificate_id": "MN-SC-2026-8615941",
   "skill_id": "mn-real-ipfindmcpserver",
   "skill_name": "ipfind-mcp-server",
-  "issued_at": "2026-07-12T04:28:28.149Z",
-  "expires_at": "2026-07-19T04:28:28.149Z",
+  "issued_at": "2026-07-15T01:23:35.941Z",
+  "expires_at": "2026-07-22T01:23:35.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be79d9d3bb61d3f5f4338b4d2894a205b02b4100181e15434a840c7439140e14",
+  "signature": "a6c19cbb2d1ae4a6eac63b643c086ff98e0ed73d918700d22be82855ff75008f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ipfindmcpserver"
 }

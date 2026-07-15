@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0693771",
+  "certificate_id": "MN-SC-2026-8828321",
   "skill_id": "mn-real-eshoplite",
   "skill_name": "eShopLite",
-  "issued_at": "2026-07-12T04:31:33.771Z",
-  "expires_at": "2026-07-19T04:31:33.771Z",
+  "issued_at": "2026-07-15T01:27:08.321Z",
+  "expires_at": "2026-07-22T01:27:08.321Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c59025a6884db5c01f830d29a7f73d6e5e1c5a5989fb5dc5eb8585639d7a2c01",
+  "signature": "df3286c1f99b98e21ba41c49f7ded6e5eadcbea32d339c0c4c2a974f86af1278",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-eshoplite"
 }

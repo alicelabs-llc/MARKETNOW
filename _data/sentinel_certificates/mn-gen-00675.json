@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9982503",
+  "certificate_id": "MN-SC-2026-7929644",
   "skill_id": "mn-gen-00675",
   "skill_name": "alchemy-mcp-server",
-  "issued_at": "2026-07-12T04:19:42.503Z",
-  "expires_at": "2026-07-19T04:19:42.503Z",
+  "issued_at": "2026-07-15T01:12:09.644Z",
+  "expires_at": "2026-07-22T01:12:09.644Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e874e60eeacbbb709360269473ab69c66700c805093d0f02a2a05452f25e95d",
+  "signature": "e8f1a00a88385c4477729dad4fcd1054b74f37640aedb4f94e4239051819263e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00675"
 }

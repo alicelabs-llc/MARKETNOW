@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0637461",
+  "certificate_id": "MN-SC-2026-8760549",
   "skill_id": "mn-real-obsidianmcppro",
   "skill_name": "obsidian-mcp-pro",
-  "issued_at": "2026-07-12T04:30:37.461Z",
-  "expires_at": "2026-07-19T04:30:37.461Z",
+  "issued_at": "2026-07-15T01:26:00.549Z",
+  "expires_at": "2026-07-22T01:26:00.549Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f08c2dc0f376e6c07ec5e34b1ea55668bc5317202eb7d06d1d6493589b2e4c63",
+  "signature": "16d2eec46abfbb92041da4837a3aa541cd5442fd74f20b528ae5f01a39dc4a6c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-obsidianmcppro"
 }

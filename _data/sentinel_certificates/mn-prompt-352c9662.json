@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0182790",
+  "certificate_id": "MN-SC-2026-8203298",
   "skill_id": "mn-prompt-352c9662",
   "skill_name": "Especialista Convention Center + Venue Management",
-  "issued_at": "2026-07-12T04:23:02.790Z",
-  "expires_at": "2026-07-19T04:23:02.790Z",
+  "issued_at": "2026-07-15T01:16:43.298Z",
+  "expires_at": "2026-07-22T01:16:43.298Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d467a9f739d4d977cf6285355dc958b2c41724219b8c5180329fb72805526962",
+  "signature": "46fda00283654e05bd170fd8f4627feb79b6b3ff5aefc65530a786159a36ff1a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-352c9662"
 }

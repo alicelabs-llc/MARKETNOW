@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0518717",
+  "certificate_id": "MN-SC-2026-8624691",
   "skill_id": "mn-real-luciditymcp",
   "skill_name": "lucidity-mcp",
-  "issued_at": "2026-07-12T04:28:38.717Z",
-  "expires_at": "2026-07-19T04:28:38.717Z",
+  "issued_at": "2026-07-15T01:23:44.691Z",
+  "expires_at": "2026-07-22T01:23:44.691Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b4279885f9c02d3f3da14a25650316fb8908ea4d0ba6c3cb3c1586f5cd005800",
+  "signature": "7c3125f35dc459675fb542566ae681b5a22da6d4e9cb4e9aa09deaa4d0f3b506",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-luciditymcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0903236",
+  "certificate_id": "MN-SC-2026-9074971",
   "skill_id": "mn-real-buddyai",
   "skill_name": "Buddy.ai",
-  "issued_at": "2026-07-12T04:35:03.236Z",
-  "expires_at": "2026-07-19T04:35:03.236Z",
+  "issued_at": "2026-07-15T01:31:14.971Z",
+  "expires_at": "2026-07-22T01:31:14.971Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7af0c91b344955ec7cba1d42f2fad320d6ca11361529110499fe5bb28ca3f463",
+  "signature": "9c726ac37c05bcbae05d9f4bcdbb13af3cbbd0deea4bc1e26de52d3ee1381a68",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-buddyai"
 }

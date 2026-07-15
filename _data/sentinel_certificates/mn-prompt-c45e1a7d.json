@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0258101",
+  "certificate_id": "MN-SC-2026-8301713",
   "skill_id": "mn-prompt-c45e1a7d",
   "skill_name": "Brand voice guidelines document",
-  "issued_at": "2026-07-12T04:24:18.101Z",
-  "expires_at": "2026-07-19T04:24:18.101Z",
+  "issued_at": "2026-07-15T01:18:21.713Z",
+  "expires_at": "2026-07-22T01:18:21.713Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58da977e946a1e8daa59649a52d24ce653755d29bebcc327af79dd3d38e5a3ec",
+  "signature": "872e3749ed1e8d580f47b6525dcd3ab0134c52eaa45aec557500d356c83421a5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c45e1a7d"
 }

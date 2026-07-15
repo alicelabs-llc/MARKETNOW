@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9997121",
+  "certificate_id": "MN-SC-2026-7945817",
   "skill_id": "mn-gen-03058",
   "skill_name": "arkforge-mcp",
-  "issued_at": "2026-07-12T04:19:57.121Z",
-  "expires_at": "2026-07-19T04:19:57.121Z",
+  "issued_at": "2026-07-15T01:12:25.817Z",
+  "expires_at": "2026-07-22T01:12:25.817Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a5798a25ea4a3d4fa0cb755ef902bc1ef0c37deaced4af079d50fab83aabc3a1",
+  "signature": "a74adc607204b8148b1729055238f0a5697cfc8e970bddcc5109c30a1ce7695b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03058"
 }

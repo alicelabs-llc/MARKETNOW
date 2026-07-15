@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0720706",
+  "certificate_id": "MN-SC-2026-8865175",
   "skill_id": "mn-real-ccxtmcp",
   "skill_name": "ccxt-mcp",
-  "issued_at": "2026-07-12T04:32:00.706Z",
-  "expires_at": "2026-07-19T04:32:00.706Z",
+  "issued_at": "2026-07-15T01:27:45.175Z",
+  "expires_at": "2026-07-22T01:27:45.175Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "645fb00498eea6be2ce37e8a792a9cf5a780f4a5712b896c0df1a45fa084f5fd",
+  "signature": "640a3d93fa63f33e65be5a1eb7debb2072870fd1252153bab45c53bdc4d2c78a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ccxtmcp"
 }

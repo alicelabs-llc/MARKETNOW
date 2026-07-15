@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1047168",
+  "certificate_id": "MN-SC-2026-9240079",
   "skill_id": "mn-real-uikit",
   "skill_name": "ui-kit",
-  "issued_at": "2026-07-12T04:37:27.168Z",
-  "expires_at": "2026-07-19T04:37:27.168Z",
+  "issued_at": "2026-07-15T01:34:00.079Z",
+  "expires_at": "2026-07-22T01:34:00.079Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb1f1d561b56d4fbbb09baf22f3771552511cde3e4c85e310dd0e4fe8e61c0b6",
+  "signature": "05dc4ff8a4bd3516ede923e715ced4fd7a60245de85fbbda4288f393d33821ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-uikit"
 }

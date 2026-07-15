@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0074597",
+  "certificate_id": "MN-SC-2026-8047517",
   "skill_id": "mn-prompt-7b8d1561",
   "skill_name": "Especialista Cloud Monitoring + Alerting",
-  "issued_at": "2026-07-12T04:21:14.597Z",
-  "expires_at": "2026-07-19T04:21:14.597Z",
+  "issued_at": "2026-07-15T01:14:07.517Z",
+  "expires_at": "2026-07-22T01:14:07.517Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1aacf4edbcb11154fd0067cdb1d0ad527cc348bc9bcca0dba3f883874891b281",
+  "signature": "ba72f17e072fabdf0f8af1fac783a1ac87fb98d5bd4e3e8660406b7465c4475d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-7b8d1561"
 }

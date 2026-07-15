@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0829311",
+  "certificate_id": "MN-SC-2026-8996811",
   "skill_id": "mn-real-command",
   "skill_name": "command",
-  "issued_at": "2026-07-12T04:33:49.311Z",
-  "expires_at": "2026-07-19T04:33:49.311Z",
+  "issued_at": "2026-07-15T01:29:56.811Z",
+  "expires_at": "2026-07-22T01:29:56.811Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "509d9e5be73eb8e8b9f612045855dd6e3dbfe87c3604dfbc8da4c98694ed956a",
+  "signature": "9387dfeba30d831e7b5e8ef7f4ca3a21226b7779f2bcebc9ea2ff84c017f59b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-command"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0290313",
+  "certificate_id": "MN-SC-2026-8351017",
   "skill_id": "mn-prompt-2146183f",
   "skill_name": "Customer data platform CDP setup",
-  "issued_at": "2026-07-12T04:24:50.313Z",
-  "expires_at": "2026-07-19T04:24:50.313Z",
+  "issued_at": "2026-07-15T01:19:11.017Z",
+  "expires_at": "2026-07-22T01:19:11.017Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f0de5a670c5855bef753759c5b853525bcd94183fba3c5524fab8357dd50e61a",
+  "signature": "0bdb87bb4736166b13cb73d2d171b8185465624dadd4fbce0ce00a710034d5b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-2146183f"
 }

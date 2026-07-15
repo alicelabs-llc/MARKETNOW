@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0932769",
+  "certificate_id": "MN-SC-2026-9115362",
   "skill_id": "mn-real-spinepro",
   "skill_name": "Spine-Pro",
-  "issued_at": "2026-07-12T04:35:32.769Z",
-  "expires_at": "2026-07-19T04:35:32.769Z",
+  "issued_at": "2026-07-15T01:31:55.362Z",
+  "expires_at": "2026-07-22T01:31:55.362Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf978333c644d956c957e9608c00a89aec6d5ae312c56350a31d2967c533be67",
+  "signature": "789cc24d91602cf434676e84d0c2ded8faaaf8993a47073a7a4d7579f32c2f44",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-spinepro"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0873807",
+  "certificate_id": "MN-SC-2026-9052734",
   "skill_id": "mn-local-amineracademicsearch",
   "skill_name": "aminer-academic-search",
-  "issued_at": "2026-07-12T04:34:33.807Z",
-  "expires_at": "2026-07-19T04:34:33.807Z",
+  "issued_at": "2026-07-15T01:30:52.734Z",
+  "expires_at": "2026-07-22T01:30:52.734Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52dbc766c1e9f668c08f144a35cd9e83fdc31936378cb7202e75ef84f6c17405",
+  "signature": "4349ac5a68ad3f79ea453ae8bd8b33f90b4bf23c54cda7c8bf7c5abee2b68531",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-local-amineracademicsearch"
 }

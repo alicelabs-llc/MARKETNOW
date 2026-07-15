@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0207992",
+  "certificate_id": "MN-SC-2026-8236924",
   "skill_id": "mn-prompt-50fdfa97",
   "skill_name": "End user license agreement (EULA)",
-  "issued_at": "2026-07-12T04:23:27.992Z",
-  "expires_at": "2026-07-19T04:23:27.992Z",
+  "issued_at": "2026-07-15T01:17:16.924Z",
+  "expires_at": "2026-07-22T01:17:16.924Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3922b092de1ed07b756c7ba81f7cf508191b75782141fa96ed0980128e4a580b",
+  "signature": "c456c9ac4832bcf7b168cfa2ad8c4311b7186fac5b669042a9465c44fa8cf79e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-50fdfa97"
 }

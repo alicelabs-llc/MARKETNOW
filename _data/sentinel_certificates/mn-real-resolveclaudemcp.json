@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0623909",
+  "certificate_id": "MN-SC-2026-8743450",
   "skill_id": "mn-real-resolveclaudemcp",
   "skill_name": "resolve-claude-mcp",
-  "issued_at": "2026-07-12T04:30:23.909Z",
-  "expires_at": "2026-07-19T04:30:23.909Z",
+  "issued_at": "2026-07-15T01:25:43.450Z",
+  "expires_at": "2026-07-22T01:25:43.450Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3732f81db94320208c88290ce3980883a342c38dc64bdf7fb977d8c6bdda3420",
+  "signature": "f99cb7a5fdd7750077f8deb1900fe35939ae21fa64c4c1c146d84aaad03f3a2d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-resolveclaudemcp"
 }

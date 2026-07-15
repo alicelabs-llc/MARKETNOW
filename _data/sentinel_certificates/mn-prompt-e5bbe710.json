@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0152514",
+  "certificate_id": "MN-SC-2026-8161582",
   "skill_id": "mn-prompt-e5bbe710",
   "skill_name": "Especialista Ecommerce Search + Merchandising",
-  "issued_at": "2026-07-12T04:22:32.514Z",
-  "expires_at": "2026-07-19T04:22:32.514Z",
+  "issued_at": "2026-07-15T01:16:01.582Z",
+  "expires_at": "2026-07-22T01:16:01.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0408be6126c5457de1a7ec62be61a48e8fd70600749ea6bf317746f19c9b6a09",
+  "signature": "64d03039c94fd682e75cc85fda3315c0310abed6f143392f5be79c76fb4919ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e5bbe710"
 }

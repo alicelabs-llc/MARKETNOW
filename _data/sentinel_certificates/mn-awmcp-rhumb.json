@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0332955",
+  "certificate_id": "MN-SC-2026-8411506",
   "skill_id": "mn-awmcp-rhumb",
   "skill_name": "rhumb",
-  "issued_at": "2026-07-12T04:25:32.955Z",
-  "expires_at": "2026-07-19T04:25:32.955Z",
+  "issued_at": "2026-07-15T01:20:11.506Z",
+  "expires_at": "2026-07-22T01:20:11.506Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "bed0da4194792c137f4e53379ab8d265ab0e3055044ea21ae1bcf167aebc841d",
+  "signature": "275e8f6a9bbb2ca845cc61704f9d456f06d445cd15798fd841b769d1062cbea2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-rhumb"
 }

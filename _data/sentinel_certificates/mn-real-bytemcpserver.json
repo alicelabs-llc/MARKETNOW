@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0452272",
+  "certificate_id": "MN-SC-2026-8555696",
   "skill_id": "mn-real-bytemcpserver",
   "skill_name": "byte-mcp-server",
-  "issued_at": "2026-07-12T04:27:32.272Z",
-  "expires_at": "2026-07-19T04:27:32.272Z",
+  "issued_at": "2026-07-15T01:22:35.696Z",
+  "expires_at": "2026-07-22T01:22:35.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1436c8db390793c67ab0296217b2608961eb1276687d9943334ddc84a8b75432",
+  "signature": "6b88448411b056b5237bbf4e2e4434ea034bf147cc77f127bab114c89b90a3fe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bytemcpserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0438471",
+  "certificate_id": "MN-SC-2026-8541359",
   "skill_id": "mn-real-piloty",
   "skill_name": "PiloTY",
-  "issued_at": "2026-07-12T04:27:18.471Z",
-  "expires_at": "2026-07-19T04:27:18.471Z",
+  "issued_at": "2026-07-15T01:22:21.359Z",
+  "expires_at": "2026-07-22T01:22:21.359Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "875a3db5aa9c1fc1a4bd16afb08c76c366bcb4bd59b4891ee863f8b4aeaf56fb",
+  "signature": "7d179b7d35f060c7089114923b85e252aeb6a510322a0fac6940410e134defb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-piloty"
 }

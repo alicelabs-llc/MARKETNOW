@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0509554",
+  "certificate_id": "MN-SC-2026-8617987",
   "skill_id": "mn-real-foundersignalmcp",
   "skill_name": "foundersignal-mcp",
-  "issued_at": "2026-07-12T04:28:29.554Z",
-  "expires_at": "2026-07-19T04:28:29.554Z",
+  "issued_at": "2026-07-15T01:23:37.987Z",
+  "expires_at": "2026-07-22T01:23:37.987Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aa83ada62b4c89b7ef715da522e441bcce95a56ccdb1faba03d40751a397c836",
+  "signature": "ed991b103f6fe8bb9815f9040fae0a9e2a40b3c251090630b229127b8f420d91",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-foundersignalmcp"
 }

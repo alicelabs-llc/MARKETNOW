@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0436347",
+  "certificate_id": "MN-SC-2026-8538696",
   "skill_id": "mn-real-mcpnixos",
   "skill_name": "mcp-nixos",
-  "issued_at": "2026-07-12T04:27:16.347Z",
-  "expires_at": "2026-07-19T04:27:16.347Z",
+  "issued_at": "2026-07-15T01:22:18.696Z",
+  "expires_at": "2026-07-22T01:22:18.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e07e1785dda1cbf61f3c1a854dda21612d82b885b32fa82b7fe50887e183e60",
+  "signature": "558204aac3955bd23e6c81e0300eb3373d78059cb46b40759d6df3b4c1897658",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpnixos"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0550285",
+  "certificate_id": "MN-SC-2026-8658795",
   "skill_id": "mn-real-promptdefenseaudit",
   "skill_name": "prompt-defense-audit",
-  "issued_at": "2026-07-12T04:29:10.285Z",
-  "expires_at": "2026-07-19T04:29:10.285Z",
+  "issued_at": "2026-07-15T01:24:18.795Z",
+  "expires_at": "2026-07-22T01:24:18.795Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2a148c90e03bb45c27979be1e01e63f0c1dbd49e8f00fc0579a314dd725b05c7",
+  "signature": "b876106135725dd9db7bd1f2644d6afdb205e8e996be0964c35fef5c5a3762ee",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-promptdefenseaudit"
 }

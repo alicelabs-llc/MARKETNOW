@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0600669",
+  "certificate_id": "MN-SC-2026-8716826",
   "skill_id": "mn-real-openagent",
   "skill_name": "openagent",
-  "issued_at": "2026-07-12T04:30:00.669Z",
-  "expires_at": "2026-07-19T04:30:00.669Z",
+  "issued_at": "2026-07-15T01:25:16.826Z",
+  "expires_at": "2026-07-22T01:25:16.826Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9cc4a83faf54971b6795543dbbba65ecb51613d458315704bfe0a2e78701a5f2",
+  "signature": "daf28f4e0071b2df3413b8d5f93a3daa9c35690b0ac3e0eb10eb0390a3da3f08",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openagent"
 }

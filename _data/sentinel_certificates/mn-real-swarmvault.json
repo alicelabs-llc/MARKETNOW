@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0674498",
+  "certificate_id": "MN-SC-2026-8801639",
   "skill_id": "mn-real-swarmvault",
   "skill_name": "swarmvault",
-  "issued_at": "2026-07-12T04:31:14.498Z",
-  "expires_at": "2026-07-19T04:31:14.498Z",
+  "issued_at": "2026-07-15T01:26:41.639Z",
+  "expires_at": "2026-07-22T01:26:41.639Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "654a35d678352872f16cecb65f0eb5564df14077a4e00a84709d2e5a04388d4f",
+  "signature": "8a399e1b1462c2d9ebad36ce447cb893295d776ddf64b41a918bdbdc0018da69",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-swarmvault"
 }

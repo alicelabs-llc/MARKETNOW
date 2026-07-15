@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0867921",
+  "certificate_id": "MN-SC-2026-9046085",
   "skill_id": "mn-real-openaicodexmcp",
   "skill_name": "openai-codex-mcp",
-  "issued_at": "2026-07-12T04:34:27.921Z",
-  "expires_at": "2026-07-19T04:34:27.921Z",
+  "issued_at": "2026-07-15T01:30:46.085Z",
+  "expires_at": "2026-07-22T01:30:46.085Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1b5fe7dd2b22012532cb6c39309e9213967491f70802442fd85721f397305a33",
+  "signature": "9b57ef7c6cb04ff010fc440eced062d0a147c618d83665a060d7c9ede6a17127",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openaicodexmcp"
 }

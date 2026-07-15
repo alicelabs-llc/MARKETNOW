@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0851673",
+  "certificate_id": "MN-SC-2026-9024838",
   "skill_id": "mn-real-samplegettingstarted",
   "skill_name": "sample-getting-started-with-strands-agents-course",
-  "issued_at": "2026-07-12T04:34:11.673Z",
-  "expires_at": "2026-07-19T04:34:11.673Z",
+  "issued_at": "2026-07-15T01:30:24.838Z",
+  "expires_at": "2026-07-22T01:30:24.838Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f767efa61d6628cf110dfce14106d793784a75d25e4144db76fe8da23bf96c5a",
+  "signature": "86bcd62ed9755fe7170dafc620f07be81643050f51faa4681c30ff3d6af8856f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-samplegettingstarted"
 }

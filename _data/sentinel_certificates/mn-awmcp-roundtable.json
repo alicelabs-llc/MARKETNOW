@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0326640",
+  "certificate_id": "MN-SC-2026-8401580",
   "skill_id": "mn-awmcp-roundtable",
   "skill_name": "roundtable",
-  "issued_at": "2026-07-12T04:25:26.640Z",
-  "expires_at": "2026-07-19T04:25:26.640Z",
+  "issued_at": "2026-07-15T01:20:01.580Z",
+  "expires_at": "2026-07-22T01:20:01.580Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "79ec718e9d5d94dd107b4dde1c84cf6f304b8df761ff2d77dc2acfd432584d5a",
+  "signature": "5e87b7ad0e916245d714f9fb9faa0f0f94dcfbdeb348c3cfa39fb8e0dc3a8094",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-roundtable"
 }

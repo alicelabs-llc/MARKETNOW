@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-9984341",
+  "certificate_id": "MN-SC-2026-7931975",
   "skill_id": "mn-gen-01055",
   "skill_name": "atlas-mcp-server",
-  "issued_at": "2026-07-12T04:19:44.341Z",
-  "expires_at": "2026-07-19T04:19:44.341Z",
+  "issued_at": "2026-07-15T01:12:11.975Z",
+  "expires_at": "2026-07-22T01:12:11.975Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c52eb5efff3e62d8fc79d28180cb300c394873cc79f5ecffe47abf36bf96f962",
+  "signature": "9ae6c5086dd08cc08f5e57f2951d37c49cafcd0d0a560d66d91e966f732118ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01055"
 }

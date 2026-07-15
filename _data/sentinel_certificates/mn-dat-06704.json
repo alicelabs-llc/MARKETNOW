@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0017916",
+  "certificate_id": "MN-SC-2026-7971213",
   "skill_id": "mn-dat-06704",
   "skill_name": "mcp-feedback-collector",
-  "issued_at": "2026-07-12T04:20:17.916Z",
-  "expires_at": "2026-07-19T04:20:17.916Z",
+  "issued_at": "2026-07-15T01:12:51.213Z",
+  "expires_at": "2026-07-22T01:12:51.213Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cf69a437bdff10e4e7e85b7d4a94c467e26ade0e3796dc98f21faa2f6ea08356",
+  "signature": "717a183056c961994b31a8b897cca21c5e5cc33f8d99c946c3792fac3caaa28c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-06704"
 }

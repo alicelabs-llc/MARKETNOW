@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0439460",
+  "certificate_id": "MN-SC-2026-8542795",
   "skill_id": "mn-real-radar",
   "skill_name": "radar",
-  "issued_at": "2026-07-12T04:27:19.460Z",
-  "expires_at": "2026-07-19T04:27:19.460Z",
+  "issued_at": "2026-07-15T01:22:22.795Z",
+  "expires_at": "2026-07-22T01:22:22.795Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1334487ea22a7b2250ae7811f29caa01ec319b8915d0d735dbca78547c4f06f2",
+  "signature": "5f925323b10e73eb6aa8f8c037cf0322cf8ae8fe3267535c6c2653d041a29674",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-radar"
 }

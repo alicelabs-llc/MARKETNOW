@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0341226",
+  "certificate_id": "MN-SC-2026-8422531",
   "skill_id": "mn-awmcp-texttomodel",
   "skill_name": "text-to-model",
-  "issued_at": "2026-07-12T04:25:41.226Z",
-  "expires_at": "2026-07-19T04:25:41.226Z",
+  "issued_at": "2026-07-15T01:20:22.531Z",
+  "expires_at": "2026-07-22T01:20:22.531Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77a923cd2d25d075c56620ff5353066af54b24df1ba52a05607f8b1b1ae5f8ad",
+  "signature": "86f285ab51ecdbe7daf646f4c715b60e70762f9b8fee7a16a48c2f3b86aa4671",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-texttomodel"
 }

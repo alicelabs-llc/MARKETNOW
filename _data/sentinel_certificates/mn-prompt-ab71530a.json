@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0170454",
+  "certificate_id": "MN-SC-2026-8185666",
   "skill_id": "mn-prompt-ab71530a",
   "skill_name": "Especialista UX Research + User Testing",
-  "issued_at": "2026-07-12T04:22:50.454Z",
-  "expires_at": "2026-07-19T04:22:50.454Z",
+  "issued_at": "2026-07-15T01:16:25.666Z",
+  "expires_at": "2026-07-22T01:16:25.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93a923c58fc12287621ede2dbad2b6cec4756d169fe44e97b1bd5d7edf9892c7",
+  "signature": "15b40481ac60aa10a1f6efd2b71b9c945d583a1748f971b8967f97c676a182a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ab71530a"
 }

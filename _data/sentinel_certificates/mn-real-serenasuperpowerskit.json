@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0906508",
+  "certificate_id": "MN-SC-2026-9078923",
   "skill_id": "mn-real-serenasuperpowerskit",
   "skill_name": "serena-superpowers-kit",
-  "issued_at": "2026-07-12T04:35:06.508Z",
-  "expires_at": "2026-07-19T04:35:06.508Z",
+  "issued_at": "2026-07-15T01:31:18.923Z",
+  "expires_at": "2026-07-22T01:31:18.923Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8f6c6fc86272e011640eaeb17f0f777e0de64ca0f8644fbd80ee2277d594e0eb",
+  "signature": "4d9a1f5e983f25a89aef9a0acc7de15cac7852c90e70c33ce4c6e78c656a2382",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-serenasuperpowerskit"
 }

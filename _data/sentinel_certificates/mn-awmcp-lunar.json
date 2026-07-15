@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0333601",
+  "certificate_id": "MN-SC-2026-8412603",
   "skill_id": "mn-awmcp-lunar",
   "skill_name": "lunar",
-  "issued_at": "2026-07-12T04:25:33.601Z",
-  "expires_at": "2026-07-19T04:25:33.601Z",
+  "issued_at": "2026-07-15T01:20:12.603Z",
+  "expires_at": "2026-07-22T01:20:12.603Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "55686b9fa217b2c85415ddd00f76778a88788530939812fe5037a24fb4860d38",
+  "signature": "d75321bc95a554e53d2ce7b046c9f7110ed96c829d2ee101e4869214c02cd936",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-lunar"
 }

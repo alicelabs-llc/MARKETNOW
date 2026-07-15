@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0848303",
+  "certificate_id": "MN-SC-2026-9020342",
   "skill_id": "mn-real-fabricrtimcp",
   "skill_name": "fabric-rti-mcp",
-  "issued_at": "2026-07-12T04:34:08.303Z",
-  "expires_at": "2026-07-19T04:34:08.303Z",
+  "issued_at": "2026-07-15T01:30:20.342Z",
+  "expires_at": "2026-07-22T01:30:20.342Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a400a18ee0e3ecf1543ef3088760d05c23a0b8d6a130d2be0960b76ec741bae2",
+  "signature": "f05484087e7a9bcf5a4088429c4674d764a584491e4b764161863980ad7e3503",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fabricrtimcp"
 }

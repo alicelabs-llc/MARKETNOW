@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0262738",
+  "certificate_id": "MN-SC-2026-8308799",
   "skill_id": "mn-prompt-e98001e1",
   "skill_name": "Editorial guidelines for content team",
-  "issued_at": "2026-07-12T04:24:22.738Z",
-  "expires_at": "2026-07-19T04:24:22.738Z",
+  "issued_at": "2026-07-15T01:18:28.799Z",
+  "expires_at": "2026-07-22T01:18:28.799Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a9e473c377f02331bf0b8fd3d934d358e249fd75a2f73f392047f594e451da7b",
+  "signature": "0ca18a8af7e29daf8af1aa92ce0dbbae2a652b5dd4fea4da12c1796cb1f32a23",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-e98001e1"
 }

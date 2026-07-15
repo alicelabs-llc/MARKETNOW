@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1029928",
+  "certificate_id": "MN-SC-2026-9217594",
   "skill_id": "mn-real-mcparcgisalbuquerque",
   "skill_name": "mcp-arcgis-albuquerque",
-  "issued_at": "2026-07-12T04:37:09.928Z",
-  "expires_at": "2026-07-19T04:37:09.928Z",
+  "issued_at": "2026-07-15T01:33:37.594Z",
+  "expires_at": "2026-07-22T01:33:37.594Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2b490a09a77d52d5630e3fc7a7663bbb717ee3818a8fc74a796219cc08b3cf0b",
+  "signature": "fa6e001015f29cefa158a1d341e2babb507b8d334d303b843ebd28bc4a9ca67a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcparcgisalbuquerque"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0339072",
+  "certificate_id": "MN-SC-2026-8419558",
   "skill_id": "mn-awmcp-studiomcphub",
   "skill_name": "studiomcphub",
-  "issued_at": "2026-07-12T04:25:39.072Z",
-  "expires_at": "2026-07-19T04:25:39.072Z",
+  "issued_at": "2026-07-15T01:20:19.558Z",
+  "expires_at": "2026-07-22T01:20:19.558Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "medium",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 5,
     "l2_execution_status": "ran"
   },
-  "signature": "87d197fed90438be79eb1ccb60750542224ffb5238c431f406017453527d97ac",
+  "signature": "10490b686d4d51275f4668b6650a89794401ff78831e87423ba8813700f93678",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-studiomcphub"
 }

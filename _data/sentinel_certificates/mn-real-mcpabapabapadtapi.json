@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0830638",
+  "certificate_id": "MN-SC-2026-8998133",
   "skill_id": "mn-real-mcpabapabapadtapi",
   "skill_name": "mcp-abap-abap-adt-api",
-  "issued_at": "2026-07-12T04:33:50.638Z",
-  "expires_at": "2026-07-19T04:33:50.638Z",
+  "issued_at": "2026-07-15T01:29:58.133Z",
+  "expires_at": "2026-07-22T01:29:58.133Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fc7bd794763ef544a0d2f764632b9650d2e2cbd245e99431a29f8f011bf0248",
+  "signature": "b7fb27b2f5f812a06194150caf3746f459b4c3af9b23ad15c0c33f067d0366b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpabapabapadtapi"
 }

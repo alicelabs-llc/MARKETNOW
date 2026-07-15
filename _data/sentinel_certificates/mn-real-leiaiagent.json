@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0866925",
+  "certificate_id": "MN-SC-2026-9044946",
   "skill_id": "mn-real-leiaiagent",
   "skill_name": "lei-ai-agent",
-  "issued_at": "2026-07-12T04:34:26.925Z",
-  "expires_at": "2026-07-19T04:34:26.925Z",
+  "issued_at": "2026-07-15T01:30:44.946Z",
+  "expires_at": "2026-07-22T01:30:44.946Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3cb7e917438e884ea0a111b057ae5de6c759b886946a7c1ea5fd3bd0bf7c0040",
+  "signature": "8ad958be412c05c6e5d3699b2a63cfc577883d670fd5b599b32cd5576045854d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-leiaiagent"
 }

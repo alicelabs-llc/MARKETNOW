@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0969517",
+  "certificate_id": "MN-SC-2026-9156363",
   "skill_id": "mn-real-mcpjsonyamltoml",
   "skill_name": "mcp-json-yaml-toml",
-  "issued_at": "2026-07-12T04:36:09.517Z",
-  "expires_at": "2026-07-19T04:36:09.517Z",
+  "issued_at": "2026-07-15T01:32:36.363Z",
+  "expires_at": "2026-07-22T01:32:36.363Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbd63d297eccdf72d669531b3b4e4331024a51cf6e444c34a1d21f127c4c175e",
+  "signature": "0ff0e92b0b0da82c03dc19779e8436aea218a90a13a8ccb03b48133d928f5ec2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpjsonyamltoml"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0666289",
+  "certificate_id": "MN-SC-2026-8791941",
   "skill_id": "mn-real-reloaderoo",
   "skill_name": "reloaderoo",
-  "issued_at": "2026-07-12T04:31:06.289Z",
-  "expires_at": "2026-07-19T04:31:06.289Z",
+  "issued_at": "2026-07-15T01:26:31.941Z",
+  "expires_at": "2026-07-22T01:26:31.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a4cbf465941aa8abae050fe672a65a982c515cb05245905d3aa1ff15621151e5",
+  "signature": "16dea76163b9df8234ea60b79eca0d76669d4e4b75351f6b22808881fda1e542",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-reloaderoo"
 }

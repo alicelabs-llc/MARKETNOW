@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0400267",
+  "certificate_id": "MN-SC-2026-8496133",
   "skill_id": "mn-real-nworks",
   "skill_name": "nworks",
-  "issued_at": "2026-07-12T04:26:40.268Z",
-  "expires_at": "2026-07-19T04:26:40.268Z",
+  "issued_at": "2026-07-15T01:21:36.133Z",
+  "expires_at": "2026-07-22T01:21:36.133Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "98e2948245b02554f33f02667b2b82d0f24d8b596c4cf8ab1911759460646ca2",
+  "signature": "869d77657ca4c8b675403e0e8dd72a8ae3fa31f299ed62e8a3d39222e014e60a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nworks"
 }

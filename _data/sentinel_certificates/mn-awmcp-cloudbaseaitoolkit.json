@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0366537",
+  "certificate_id": "MN-SC-2026-8458993",
   "skill_id": "mn-awmcp-cloudbaseaitoolkit",
   "skill_name": "CloudBase-AI-ToolKit",
-  "issued_at": "2026-07-12T04:26:06.537Z",
-  "expires_at": "2026-07-19T04:26:06.537Z",
+  "issued_at": "2026-07-15T01:20:58.993Z",
+  "expires_at": "2026-07-22T01:20:58.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e762e096205194c41eaa6bcbcfbccc724d71caa4faadbcfc3877651aa9425d7",
+  "signature": "eeb113ab211df07d3ad55affb3761ed81cc79eef4f20aea03f6aa9b6b9c01fc3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-cloudbaseaitoolkit"
 }

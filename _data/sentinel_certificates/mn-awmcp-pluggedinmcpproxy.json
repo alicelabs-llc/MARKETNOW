@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0334413",
+  "certificate_id": "MN-SC-2026-8413319",
   "skill_id": "mn-awmcp-pluggedinmcpproxy",
   "skill_name": "pluggedin-mcp-proxy",
-  "issued_at": "2026-07-12T04:25:34.413Z",
-  "expires_at": "2026-07-19T04:25:34.413Z",
+  "issued_at": "2026-07-15T01:20:13.319Z",
+  "expires_at": "2026-07-22T01:20:13.319Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0291253ab26da638f01382c2fa3cd015e26d037d554345d9fc78a35a44632deb",
+  "signature": "60c09a5643cb01a324e2f7721a4e57998dfa3a01e47d6aa791614095f2b5279a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-pluggedinmcpproxy"
 }

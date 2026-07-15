@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0095479",
+  "certificate_id": "MN-SC-2026-8078385",
   "skill_id": "mn-prompt-c5f19e43",
   "skill_name": "Especialista Accessibility Audits + WCAG Reports",
-  "issued_at": "2026-07-12T04:21:35.479Z",
-  "expires_at": "2026-07-19T04:21:35.479Z",
+  "issued_at": "2026-07-15T01:14:38.385Z",
+  "expires_at": "2026-07-22T01:14:38.385Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "12addc3e83e050f7d68f161cfc61d9a0b2b12aa09aacc06bdc4c9a694d8cfcbc",
+  "signature": "1198515ac6ad5dbbbdd793fc35a08977114e56b6e5f1d882ba8604d805206ccc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-c5f19e43"
 }

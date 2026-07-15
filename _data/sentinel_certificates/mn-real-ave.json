@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1034402",
+  "certificate_id": "MN-SC-2026-9223524",
   "skill_id": "mn-real-ave",
   "skill_name": "ave",
-  "issued_at": "2026-07-12T04:37:14.402Z",
-  "expires_at": "2026-07-19T04:37:14.402Z",
+  "issued_at": "2026-07-15T01:33:43.524Z",
+  "expires_at": "2026-07-22T01:33:43.524Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2cd0a438219088d60153bc68aac7032f21c06f38327488cefb8e6c310deab3cd",
+  "signature": "e61d09579e58eda68155d5763fcd3e95ba90417c0e17532d14eae8ea1f605290",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ave"
 }

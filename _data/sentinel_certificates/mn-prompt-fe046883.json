@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0217128",
+  "certificate_id": "MN-SC-2026-8247170",
   "skill_id": "mn-prompt-fe046883",
   "skill_name": "Marketing talent hiring rubric",
-  "issued_at": "2026-07-12T04:23:37.128Z",
-  "expires_at": "2026-07-19T04:23:37.128Z",
+  "issued_at": "2026-07-15T01:17:27.170Z",
+  "expires_at": "2026-07-22T01:17:27.170Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2cfdc7cbaf19581604e5912483fba7a7d9fa6012b4a3d8fbd14bae29b84105ad",
+  "signature": "0d7b3e9af88e97cdd92353da9b5b1403ba30f1bb56ff3e37aece22babbc5f968",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-fe046883"
 }

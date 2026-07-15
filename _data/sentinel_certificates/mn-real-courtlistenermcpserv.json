@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1035056",
+  "certificate_id": "MN-SC-2026-9224069",
   "skill_id": "mn-real-courtlistenermcpserv",
   "skill_name": "courtlistener-mcp-server",
-  "issued_at": "2026-07-12T04:37:15.056Z",
-  "expires_at": "2026-07-19T04:37:15.056Z",
+  "issued_at": "2026-07-15T01:33:44.069Z",
+  "expires_at": "2026-07-22T01:33:44.069Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "215fb859ef552baf80ed235c6eabf1db10b176c427b7492dd61f4fe347a3a0e3",
+  "signature": "75b2809caf4c898e58527270029e60f206a20f76b58778abe715edcc26dec002",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-courtlistenermcpserv"
 }

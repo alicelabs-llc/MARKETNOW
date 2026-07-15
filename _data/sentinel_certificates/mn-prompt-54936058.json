@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0104057",
+  "certificate_id": "MN-SC-2026-8089854",
   "skill_id": "mn-prompt-54936058",
   "skill_name": "Especialista GCP BigQuery + Analytics",
-  "issued_at": "2026-07-12T04:21:44.057Z",
-  "expires_at": "2026-07-19T04:21:44.057Z",
+  "issued_at": "2026-07-15T01:14:49.854Z",
+  "expires_at": "2026-07-22T01:14:49.854Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77d4496eb21463a13de2a51a53fc3cc9b46f40582522d7f3fcbfa219e8cd35d8",
+  "signature": "920f765b9a3b69237e909ba6d0c32695cd330a36d26861a00bea7c2623147651",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-54936058"
 }

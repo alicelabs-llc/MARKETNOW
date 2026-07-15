@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0549510",
+  "certificate_id": "MN-SC-2026-8658050",
   "skill_id": "mn-real-mcppanther",
   "skill_name": "mcp-panther",
-  "issued_at": "2026-07-12T04:29:09.510Z",
-  "expires_at": "2026-07-19T04:29:09.510Z",
+  "issued_at": "2026-07-15T01:24:18.050Z",
+  "expires_at": "2026-07-22T01:24:18.050Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f862b1d899ef744836cc020d6cbcd52aed208b07ad8e86a3ccc97e2ac657ded",
+  "signature": "8e02d5b493636dc4badbd829db0b9998ed6bc41278f41160816dc5e13c97b894",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcppanther"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0552119",
+  "certificate_id": "MN-SC-2026-8661077",
   "skill_id": "mn-real-sintprotocol",
   "skill_name": "sint-protocol",
-  "issued_at": "2026-07-12T04:29:12.119Z",
-  "expires_at": "2026-07-19T04:29:12.119Z",
+  "issued_at": "2026-07-15T01:24:21.077Z",
+  "expires_at": "2026-07-22T01:24:21.077Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f670063e50d2c2ce61991a7c7e1cc1fda71d2115e48b3969575f07c4074b318a",
+  "signature": "a20303abebea81ac1f1ec7ca529b9643513b150b13c8f123941919c79ef6e009",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sintprotocol"
 }

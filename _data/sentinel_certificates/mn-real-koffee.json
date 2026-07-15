@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1011396",
+  "certificate_id": "MN-SC-2026-9198381",
   "skill_id": "mn-real-koffee",
   "skill_name": "koffee",
-  "issued_at": "2026-07-12T04:36:51.396Z",
-  "expires_at": "2026-07-19T04:36:51.396Z",
+  "issued_at": "2026-07-15T01:33:18.381Z",
+  "expires_at": "2026-07-22T01:33:18.381Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5666302f4a94258b682ab57b5d45ff8865a9469141d5b0d280eba6b6739d07d8",
+  "signature": "8afd8b52f449b5bdfb99461dd4fde17875626265bdab3eef8c131021ca2b02ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-koffee"
 }

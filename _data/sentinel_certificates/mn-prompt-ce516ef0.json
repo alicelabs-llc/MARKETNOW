@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0221768",
+  "certificate_id": "MN-SC-2026-8252300",
   "skill_id": "mn-prompt-ce516ef0",
   "skill_name": "Sales battlecard competitive",
-  "issued_at": "2026-07-12T04:23:41.768Z",
-  "expires_at": "2026-07-19T04:23:41.768Z",
+  "issued_at": "2026-07-15T01:17:32.300Z",
+  "expires_at": "2026-07-22T01:17:32.300Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb4b438868c3b2b3485fe3ecb98e80a2f538db551ff5fd7e3b000e5061c393f8",
+  "signature": "e7560e04ade1236558e92e6ecf23dd621858f681a59ac013a832ab1e3c4cad04",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-ce516ef0"
 }

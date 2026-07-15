@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0645892",
+  "certificate_id": "MN-SC-2026-8767912",
   "skill_id": "mn-real-mcpkibelaserver",
   "skill_name": "mcp-kibela-server",
-  "issued_at": "2026-07-12T04:30:45.892Z",
-  "expires_at": "2026-07-19T04:30:45.892Z",
+  "issued_at": "2026-07-15T01:26:07.912Z",
+  "expires_at": "2026-07-22T01:26:07.912Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "56e55465cad31532c0fbcd962d4f4b94625990db2cb565391c0822ac561f6d62",
+  "signature": "2459c34b782969b18a71e4490bc3ee83e2f796f2834687fbe82cc01e72444713",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpkibelaserver"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0235207",
+  "certificate_id": "MN-SC-2026-8270457",
   "skill_id": "mn-prompt-bcc0e6a2",
   "skill_name": "Bankruptcy restructuring financial",
-  "issued_at": "2026-07-12T04:23:55.207Z",
-  "expires_at": "2026-07-19T04:23:55.207Z",
+  "issued_at": "2026-07-15T01:17:50.457Z",
+  "expires_at": "2026-07-22T01:17:50.457Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "62ff1c2fe9fadabe62da0fcad2ec1224b0e586ee112388d6d8f332049014db95",
+  "signature": "e40f5d1f392a18b4745611716d76e6ef43b63d660e030a4d63c18adf6656310b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-bcc0e6a2"
 }

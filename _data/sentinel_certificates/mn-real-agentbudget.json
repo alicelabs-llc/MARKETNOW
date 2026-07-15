@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0913710",
+  "certificate_id": "MN-SC-2026-9091447",
   "skill_id": "mn-real-agentbudget",
   "skill_name": "agent-budget",
-  "issued_at": "2026-07-12T04:35:13.710Z",
-  "expires_at": "2026-07-19T04:35:13.710Z",
+  "issued_at": "2026-07-15T01:31:31.447Z",
+  "expires_at": "2026-07-22T01:31:31.447Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81b3a05926b160f11866a633fde304730c8d88026b874ee0814c7e6f51964f7e",
+  "signature": "8fed748d678c18f6bd2710a0d1eafaf1dd56e19eea03b649bf64fc4caf24f7d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentbudget"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1042792",
+  "certificate_id": "MN-SC-2026-9234209",
   "skill_id": "mn-real-mcpstateclu",
   "skill_name": "mcp-statec-lu",
-  "issued_at": "2026-07-12T04:37:22.792Z",
-  "expires_at": "2026-07-19T04:37:22.792Z",
+  "issued_at": "2026-07-15T01:33:54.209Z",
+  "expires_at": "2026-07-22T01:33:54.209Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "512e02d511ee4276513142e47d8c8b83f7df37190d0e03fc1cd4e94607789e64",
+  "signature": "92a521adcdf126d8852e40cdd4610bd1975517d04a3f9f35530dd4b5138a7374",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpstateclu"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0119305",
+  "certificate_id": "MN-SC-2026-8112586",
   "skill_id": "mn-prompt-d7ca87c1",
   "skill_name": "Especialista PRD Writing + Specs",
-  "issued_at": "2026-07-12T04:21:59.305Z",
-  "expires_at": "2026-07-19T04:21:59.305Z",
+  "issued_at": "2026-07-15T01:15:12.586Z",
+  "expires_at": "2026-07-22T01:15:12.586Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "767d6f9d0e6fbb143e1881305ccada311100082d22355b555fe14be4f47bdc18",
+  "signature": "c96dbf2db8d362b5c61b0083ffe996d4f83fc80a3569e846f4019e9f4fcd5f1e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-d7ca87c1"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0094331",
+  "certificate_id": "MN-SC-2026-8076703",
   "skill_id": "mn-prompt-6114bc2c",
   "skill_name": "Especialista A/B Test Validation",
-  "issued_at": "2026-07-12T04:21:34.331Z",
-  "expires_at": "2026-07-19T04:21:34.331Z",
+  "issued_at": "2026-07-15T01:14:36.703Z",
+  "expires_at": "2026-07-22T01:14:36.703Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c1a2cc6129484ed928d5060dbda8f6ff70b5e460e6d731a0812cdb7c82a85986",
+  "signature": "f2c1ecf93af68cfbe4ea0988eb6def35dcd0fd7eb7c50aeeab0452dfd9302662",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-6114bc2c"
 }

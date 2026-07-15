@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0576518",
+  "certificate_id": "MN-SC-2026-8689511",
   "skill_id": "mn-real-mcpremotecallpingpon",
   "skill_name": "mcp-remote-call-ping-pong",
-  "issued_at": "2026-07-12T04:29:36.518Z",
-  "expires_at": "2026-07-19T04:29:36.518Z",
+  "issued_at": "2026-07-15T01:24:49.511Z",
+  "expires_at": "2026-07-22T01:24:49.511Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f02dca50d666ecce5b2643e595f53b01005469d8148d1d9d66a832337f76c1ea",
+  "signature": "6ed4e3e075c5676cdd5ac8bbc88a49dfc71b0f0311d5963975b5d47dc7459150",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpremotecallpingpon"
 }

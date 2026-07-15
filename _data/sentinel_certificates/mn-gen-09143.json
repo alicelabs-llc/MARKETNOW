@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0031159",
+  "certificate_id": "MN-SC-2026-7986408",
   "skill_id": "mn-gen-09143",
   "skill_name": "mobile-mcp",
-  "issued_at": "2026-07-12T04:20:31.159Z",
-  "expires_at": "2026-07-19T04:20:31.159Z",
+  "issued_at": "2026-07-15T01:13:06.409Z",
+  "expires_at": "2026-07-22T01:13:06.409Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "01cd5604bc1c9d6271e8d57ae2401f2a786aedb413ad9e92a7e141bb616a1dd4",
+  "signature": "389930e89c805c982ae440891fd8a5ac6b28b48ebf8da12d0b53b79923ebb755",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09143"
 }

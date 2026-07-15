@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1046533",
+  "certificate_id": "MN-SC-2026-9238754",
   "skill_id": "mn-real-personalaiemployee",
   "skill_name": "Personal-AI-Employee",
-  "issued_at": "2026-07-12T04:37:26.533Z",
-  "expires_at": "2026-07-19T04:37:26.533Z",
+  "issued_at": "2026-07-15T01:33:58.754Z",
+  "expires_at": "2026-07-22T01:33:58.754Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "efdeccd121f556230280d02abd450a0a9d62c21280e96b90e6efc010fe7402c0",
+  "signature": "96b7d81448da67213010d24beda28769c9e11508f4a9cd15e697a36d91afecd7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-personalaiemployee"
 }

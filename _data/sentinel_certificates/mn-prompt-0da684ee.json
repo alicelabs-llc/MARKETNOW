@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0207236",
+  "certificate_id": "MN-SC-2026-8235573",
   "skill_id": "mn-prompt-0da684ee",
   "skill_name": "GDPR data subject rights procedures",
-  "issued_at": "2026-07-12T04:23:27.236Z",
-  "expires_at": "2026-07-19T04:23:27.236Z",
+  "issued_at": "2026-07-15T01:17:15.573Z",
+  "expires_at": "2026-07-22T01:17:15.573Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25e9be8b9c088b0f9c4189f4b1603bf447611f5f33f636b75f1fea80f4753006",
+  "signature": "fdf2e554c4e5ea78e22a03afa69962f2b3cf000f2e9531734a86bb74b68a24f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-0da684ee"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0780107",
+  "certificate_id": "MN-SC-2026-8939628",
   "skill_id": "mn-real-cdpilot",
   "skill_name": "cdpilot",
-  "issued_at": "2026-07-12T04:33:00.107Z",
-  "expires_at": "2026-07-19T04:33:00.107Z",
+  "issued_at": "2026-07-15T01:28:59.628Z",
+  "expires_at": "2026-07-22T01:28:59.628Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d24c4672b929b1ed605906343b8c8096a8c1dcd864bde57f89ce7a6d302f98c9",
+  "signature": "5d0267c1808e2b0fdb61a507ef1c567f3cfdf0b2ca0510ef3df2186922aa8155",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cdpilot"
 }

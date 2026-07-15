@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0325323",
+  "certificate_id": "MN-SC-2026-8400367",
   "skill_id": "mn-awmcp-aiskillstore",
   "skill_name": "aiskillstore",
-  "issued_at": "2026-07-12T04:25:25.323Z",
-  "expires_at": "2026-07-19T04:25:25.323Z",
+  "issued_at": "2026-07-15T01:20:00.367Z",
+  "expires_at": "2026-07-22T01:20:00.367Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "low",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "e471dafbbaf14c382a17161c5e06d65517d8a3feb309f1db4d0b85ffca11b19e",
+  "signature": "60815cee44e8002967bdd7dac350b0e9b2cc88fb20d709ca39f913380553c5a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-aiskillstore"
 }

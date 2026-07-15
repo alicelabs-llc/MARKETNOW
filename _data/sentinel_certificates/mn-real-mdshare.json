@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0571511",
+  "certificate_id": "MN-SC-2026-8682028",
   "skill_id": "mn-real-mdshare",
   "skill_name": "mdshare",
-  "issued_at": "2026-07-12T04:29:31.511Z",
-  "expires_at": "2026-07-19T04:29:31.511Z",
+  "issued_at": "2026-07-15T01:24:42.028Z",
+  "expires_at": "2026-07-22T01:24:42.028Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2075381e2d7dc76119ffe48c1cfd3f02a4df4ebb23de1053bcdc8baee560896b",
+  "signature": "0c6f3f7a5c287fa8c66d8361f52275495e8b854caf72c817c1d58c384df8654e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mdshare"
 }

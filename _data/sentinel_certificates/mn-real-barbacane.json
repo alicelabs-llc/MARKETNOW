@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0975159",
+  "certificate_id": "MN-SC-2026-9162268",
   "skill_id": "mn-real-barbacane",
   "skill_name": "barbacane",
-  "issued_at": "2026-07-12T04:36:15.159Z",
-  "expires_at": "2026-07-19T04:36:15.159Z",
+  "issued_at": "2026-07-15T01:32:42.268Z",
+  "expires_at": "2026-07-22T01:32:42.268Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1fe30922df7d2eeb6fe3d27fb6eb0005b92b6fcd259dbc70e4cbeaac038dd6e3",
+  "signature": "d7ece8959c4564aba877e80677dea7b662c2561822980b50c92b506014c93d8b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-barbacane"
 }

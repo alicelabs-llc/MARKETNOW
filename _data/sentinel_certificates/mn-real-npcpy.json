@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0592280",
+  "certificate_id": "MN-SC-2026-8706742",
   "skill_id": "mn-real-npcpy",
   "skill_name": "npcpy",
-  "issued_at": "2026-07-12T04:29:52.280Z",
-  "expires_at": "2026-07-19T04:29:52.280Z",
+  "issued_at": "2026-07-15T01:25:06.742Z",
+  "expires_at": "2026-07-22T01:25:06.742Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f266af9c7bd7dc3f138150703ab3cf5d352c678286a69f965835e43d965c6d5c",
+  "signature": "70932cd093fd8cbd29f8430a9bc0dbf42c9e2d08382e3806ab6a7346b93adba1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-npcpy"
 }

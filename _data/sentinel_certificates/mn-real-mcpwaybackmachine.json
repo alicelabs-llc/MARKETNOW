@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0762522",
+  "certificate_id": "MN-SC-2026-8916221",
   "skill_id": "mn-real-mcpwaybackmachine",
   "skill_name": "mcp-wayback-machine",
-  "issued_at": "2026-07-12T04:32:42.522Z",
-  "expires_at": "2026-07-19T04:32:42.522Z",
+  "issued_at": "2026-07-15T01:28:36.221Z",
+  "expires_at": "2026-07-22T01:28:36.221Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1b32a941fdfb664c57de3caef34a5311dde203ebd119fc76b1ddfda280c0a9b1",
+  "signature": "3aecfb11b3b7d66bff7ddbf739b8cd9471268f80abee3f2845ed49005228dec9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpwaybackmachine"
 }

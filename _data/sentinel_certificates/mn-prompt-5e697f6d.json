@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0290221",
+  "certificate_id": "MN-SC-2026-8351419",
   "skill_id": "mn-prompt-5e697f6d",
   "skill_name": "Data modeling for SaaS metrics",
-  "issued_at": "2026-07-12T04:24:50.221Z",
-  "expires_at": "2026-07-19T04:24:50.221Z",
+  "issued_at": "2026-07-15T01:19:11.419Z",
+  "expires_at": "2026-07-22T01:19:11.419Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6c94e148a764f5295f4a67f53fd506d04f6ded49b54971ed3e660981972717d8",
+  "signature": "e2ec8d3d72e42c2e7bd1ca64ffea28d5e34cc15d50d88cfb0e1f9210593e4934",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-prompt-5e697f6d"
 }

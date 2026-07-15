@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0343333",
+  "certificate_id": "MN-SC-2026-8426562",
   "skill_id": "mn-awmcp-reapermcp",
   "skill_name": "reaper-mcp",
-  "issued_at": "2026-07-12T04:25:43.333Z",
-  "expires_at": "2026-07-19T04:25:43.333Z",
+  "issued_at": "2026-07-15T01:20:26.562Z",
+  "expires_at": "2026-07-22T01:20:26.562Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "unknown",
     "final": "medium"
   },
@@ -26,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "584ced8ca5c4747c1ac06b41a93f00a96cebaf725bea07e9f4e3c5c4b1b526b6",
+  "signature": "ffad57a246675020d509ba0ecb795f69b315a126a6e62ec2c050e596a544d954",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-reapermcp"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0400099",
+  "certificate_id": "MN-SC-2026-8495980",
   "skill_id": "mn-real-zulipmcp",
   "skill_name": "zulipmcp",
-  "issued_at": "2026-07-12T04:26:40.099Z",
-  "expires_at": "2026-07-19T04:26:40.099Z",
+  "issued_at": "2026-07-15T01:21:35.980Z",
+  "expires_at": "2026-07-22T01:21:35.980Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ae7d80c121233d0be7a6128758888e9c7c8a483d8d77b04d2462eb0914ca654",
+  "signature": "8ad0bb24e39a6973bd32fe1654f6731951d7c9bce77e8fdc00310b759f0b6668",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zulipmcp"
 }

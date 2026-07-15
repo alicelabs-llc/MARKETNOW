@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0710722",
+  "certificate_id": "MN-SC-2026-8851621",
   "skill_id": "mn-real-fusion360mcpserver",
   "skill_name": "Fusion-360-MCP-Server",
-  "issued_at": "2026-07-12T04:31:50.722Z",
-  "expires_at": "2026-07-19T04:31:50.722Z",
+  "issued_at": "2026-07-15T01:27:31.621Z",
+  "expires_at": "2026-07-22T01:27:31.621Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "da7edc77d6206753f2fa4569accd82fb5979e65113655e5f8be875b9fa5369c2",
+  "signature": "7171617f3e707568d5a814155abe3f9e15e4875af0ee32c15dcb31ca5c4472a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fusion360mcpserver"
 }

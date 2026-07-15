@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1036589",
+  "certificate_id": "MN-SC-2026-9226108",
   "skill_id": "mn-real-rcaagent",
   "skill_name": "RCA-agent",
-  "issued_at": "2026-07-12T04:37:16.589Z",
-  "expires_at": "2026-07-19T04:37:16.589Z",
+  "issued_at": "2026-07-15T01:33:46.108Z",
+  "expires_at": "2026-07-22T01:33:46.108Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95d156e89bf691932af8271cfb69dc503d81842a927150ed51a7506d79cc0004",
+  "signature": "4a08ae9c8c382579bdffba6b254bbc36ac99a14e8548c9194945193f8b41d644",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rcaagent"
 }

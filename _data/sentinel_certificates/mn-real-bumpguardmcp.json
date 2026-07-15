@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0411604",
+  "certificate_id": "MN-SC-2026-8509054",
   "skill_id": "mn-real-bumpguardmcp",
   "skill_name": "bumpguard-mcp",
-  "issued_at": "2026-07-12T04:26:51.604Z",
-  "expires_at": "2026-07-19T04:26:51.604Z",
+  "issued_at": "2026-07-15T01:21:49.054Z",
+  "expires_at": "2026-07-22T01:21:49.054Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "07802f54f20e092dedc49c5ef32b3f2d5b993c588801c96f83533f2751e41a6c",
+  "signature": "f602482d5d0df829c2300c08127e19a20e52a4ae3c1cb35a29ea739e5cd83231",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bumpguardmcp"
 }

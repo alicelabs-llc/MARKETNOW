@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0431286",
+  "certificate_id": "MN-SC-2026-8534748",
   "skill_id": "mn-real-javascript",
   "skill_name": "javascript",
-  "issued_at": "2026-07-12T04:27:11.286Z",
-  "expires_at": "2026-07-19T04:27:11.286Z",
+  "issued_at": "2026-07-15T01:22:14.748Z",
+  "expires_at": "2026-07-22T01:22:14.748Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "121afd19aba40df8fb5ada35e91858633ab629e1134a281f3c573da13810e1cd",
+  "signature": "b04a2f2f7b46758ba4c95ee66e01a91d0a9a935362ddfde58ef86fbe4785ff49",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-javascript"
 }

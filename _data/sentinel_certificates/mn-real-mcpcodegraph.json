@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0799089",
+  "certificate_id": "MN-SC-2026-8961004",
   "skill_id": "mn-real-mcpcodegraph",
   "skill_name": "mcp-code-graph",
-  "issued_at": "2026-07-12T04:33:19.089Z",
-  "expires_at": "2026-07-19T04:33:19.089Z",
+  "issued_at": "2026-07-15T01:29:21.004Z",
+  "expires_at": "2026-07-22T01:29:21.004Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b75e0abd49a9e02a060117115c33d91af1846b4197cb4c947401305be6798a2",
+  "signature": "d766e10b39b6f331bad362ee9884bbe719afbfdaf19431f4d9e5e532c72bd0aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcodegraph"
 }

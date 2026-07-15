@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0828824",
+  "certificate_id": "MN-SC-2026-8995856",
   "skill_id": "mn-real-celeritypanel",
   "skill_name": "CELERITY-panel",
-  "issued_at": "2026-07-12T04:33:48.824Z",
-  "expires_at": "2026-07-19T04:33:48.824Z",
+  "issued_at": "2026-07-15T01:29:55.856Z",
+  "expires_at": "2026-07-22T01:29:55.856Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9fed2162fc10d892423fcc631e7152560b59740333b41f41b33d0f77a61f3391",
+  "signature": "893b0d4886e806de4d8cc37955c218e4659654e723958d0c539874705ae5a366",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-celeritypanel"
 }

@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0589615",
+  "certificate_id": "MN-SC-2026-8703372",
   "skill_id": "mn-real-koreanlawmcp",
   "skill_name": "korean-law-mcp",
-  "issued_at": "2026-07-12T04:29:49.615Z",
-  "expires_at": "2026-07-19T04:29:49.615Z",
+  "issued_at": "2026-07-15T01:25:03.372Z",
+  "expires_at": "2026-07-22T01:25:03.372Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8138d556a2d642fa4b9eb61d45247ee964d07a714549fbf3d40534567f74ca1",
+  "signature": "62a7ca8bbe688d945124dd07d1a3c933fcd4ace9c279a28d97738156d476961f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-koreanlawmcp"
 }

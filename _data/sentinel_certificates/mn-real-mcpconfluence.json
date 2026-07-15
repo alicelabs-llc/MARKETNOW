@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-1042319",
+  "certificate_id": "MN-SC-2026-9232873",
   "skill_id": "mn-real-mcpconfluence",
   "skill_name": "mcp-confluence",
-  "issued_at": "2026-07-12T04:37:22.319Z",
-  "expires_at": "2026-07-19T04:37:22.319Z",
+  "issued_at": "2026-07-15T01:33:52.873Z",
+  "expires_at": "2026-07-22T01:33:52.873Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "71f6f5c88ab734f44590901421c0155e928cf15b9603e890d8b13bc8a71f85ea",
+  "signature": "71c33ddc0e14493ca29fbcfb414eacfd9bbe7ba028a5fa5046d37cd7303271cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpconfluence"
 }

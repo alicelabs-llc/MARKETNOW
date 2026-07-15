@@ -1,15 +1,16 @@
 {
-  "certificate_id": "MN-SC-2026-0702459",
+  "certificate_id": "MN-SC-2026-8840834",
   "skill_id": "mn-real-mcpjenkins",
   "skill_name": "mcp-jenkins",
-  "issued_at": "2026-07-12T04:31:42.459Z",
-  "expires_at": "2026-07-19T04:31:42.459Z",
+  "issued_at": "2026-07-15T01:27:20.834Z",
+  "expires_at": "2026-07-22T01:27:20.834Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
@@ -25,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b7ae8aea61f1dc4ead5d5ababc3947fe9c5cc9b4f39b1d69d34b03885392aa05",
+  "signature": "36387e0dcac931aec264c88f7d2af4f8e4f650f7ad5256f85272111e714e4448",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpjenkins"
 }

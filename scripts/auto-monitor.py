@@ -81,11 +81,43 @@ def load_state():
             'initialized_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         }
 
-def save_state(state):
+def save_state(state, force=False):
+    """Save the state file.
+
+    BUG FIX (15 Jul 2026): previously this was called unconditionally,
+    which updated last_check every run, which made the workflow commit
+    every hour. Now: only write the file if state actually changed
+    (new comments seen, new stars, new npm downloads count, etc.)
+    OR if force=True (e.g. first run).
+    """
+    if not force:
+        # Compare current state to what's on disk
+        try:
+            with open(STATE_FILE, 'r') as f:
+                old_state = json.load(f)
+            # Compare the fields that matter (not last_check)
+            fields_to_compare = [
+                'devto_seen_comments', 'github_seen_comments',
+                'npm_last_downloads', 'github_last_stars'
+            ]
+            changed = False
+            for field in fields_to_compare:
+                if old_state.get(field) != state.get(field):
+                    changed = True
+                    break
+            if not changed:
+                print('  No state changes — file unchanged (no commit).')
+                return False
+        except (FileNotFoundError, json.JSONDecodeError):
+            # File doesn't exist — save it (first run)
+            pass
+
     os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
     state['last_check'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
     with open(STATE_FILE, 'w') as f:
         json.dump(state, f, indent=2)
+    print(f'  State saved (will trigger commit)')
+    return True
 
 # ═══ Email ═══
 def send_email(subject, html_body):

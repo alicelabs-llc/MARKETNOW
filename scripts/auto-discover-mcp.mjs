@@ -42,6 +42,10 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+// L1.7 import: blocks skills whose metadata matches malware patterns
+// (e.g. "Download Latest Release" badges pointing to external zips).
+// This prevents typosquatting repos from entering the catalog.
+import { runL17, MALWARE_PATTERNS } from '../aep-marketplace/lib/sentinel-l17.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -315,7 +319,7 @@ function buildSkillFromRepo(meta) {
       input_types: ['json'],
       output_types: ['json', 'text'],
     },
-    sentinel: { scanned_at: new Date().toISOString(), scan_version: 'L1.5+L1.6', warnings: [] },
+    sentinel: { scanned_at: new Date().toISOString(), scan_version: 'L1.5+L1.6+L1.7', warnings: [] },
     source: {
       type: 'github',
       url: meta.html_url,
@@ -408,6 +412,7 @@ function findSyntheticMatch(realRepo, synthetics) {
   let batchNum = 0;
   const newSkills = [];
   const replacements = []; // {synthetic_id, real_skill}
+  const blocked = []; // {repo, reason, patterns} — L1.7 quarantine blocks
 
   for (let i = 0; i < newRepos.length; i += 10) {
     const batch = newRepos.slice(i, i + 10);
@@ -420,6 +425,29 @@ function findSyntheticMatch(realRepo, synthetics) {
       if (meta.archived) continue; // skip archived repos
 
       const skill = buildSkillFromRepo(meta);
+
+      // ─── L1.7 PRE-IMPORT MALWARE SCAN ────────────────────────────────
+      // Run L1.7 against the skill metadata BEFORE importing. If L1.7
+      // recommends quarantine, skip the skill entirely and log it.
+      // This prevents typosquatting repos (e.g. README promoting external
+      // zip downloads) from entering the catalog in the first place.
+      // See: incident #9 (prospector-email-finder trojan, July 2026).
+      try {
+        const l17 = await runL17(skill);
+        if (l17.quarantine_recommended) {
+          console.log(`  🚨 BLOCKED by L1.7: ${meta.full_name} — ${l17.findings.malware_patterns.length} malware pattern(s), ${l17.findings.binary_files.length} binary file(s)`);
+          blocked.push({
+            repo: meta.full_name,
+            reason: 'L1.7 quarantine recommended',
+            patterns: l17.findings.malware_patterns.map(p => p.id),
+          });
+          continue;
+        }
+      } catch (e) {
+        // L1.7 itself failed — log but don't block (fail open for import,
+        // batch audit will catch it later)
+        console.error(`  ⚠ L1.7 scan failed for ${meta.full_name}: ${e.message}`);
+      }
 
       // Check if this real repo matches a synthetic skill
       const match = findSyntheticMatch(meta, syntheticSkills);
@@ -490,6 +518,13 @@ function findSyntheticMatch(realRepo, synthetics) {
   console.log(`  New skills imported:   ${stats.imported}`);
   console.log(`  Synthetics replaced:   ${stats.replaced}`);
   console.log(`  Synthetics marked:     ${stats.marked_synthetic}`);
+  console.log(`  🚨 Blocked by L1.7:    ${blocked.length} (malware/quarantine)`);
+  if (blocked.length > 0) {
+    console.log(`\nBlocked repos (L1.7 malware scan):`);
+    for (const b of blocked) {
+      console.log(`  - ${b.repo}  (${b.patterns.join(', ')})`);
+    }
+  }
   console.log(`\nNext steps (automated by workflow):`);
   console.log(`  1. Regenerate catalog (generate_skills.cjs)`);
   console.log(`  2. Trigger L2 batch for all new skills with source.url`);

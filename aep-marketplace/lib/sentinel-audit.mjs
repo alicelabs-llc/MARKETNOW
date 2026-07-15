@@ -31,18 +31,20 @@
  */
 
 import { runL16, SEMGREP_RULES, SECRET_PATTERNS } from './sentinel-l16.mjs';
+import { runL17, MALWARE_PATTERNS, quarantineSkill } from './sentinel-l17.mjs';
 import { getL2Results } from './sentinel-l2-trigger.mjs';
 
 /**
- * Run the full L1.5 + L1.6 + L2 audit on a skill.
+ * Run the full L1.5 + L1.6 + L1.7 + L2 audit on a skill.
  *
  * @param {Object} skill — full skill object from skills_index.json
  * @param {Object} [options]
  * @param {boolean} [options.skipL2] — if true, don't fetch L2 results (faster for batch)
+ * @param {Buffer} [options.packageBuffer] — if provided, L1.7 will scan inside the zip
  * @returns {Object} audit report (same structure as /api/audit-skill response)
  */
 export async function auditSkill(skill, options = {}) {
-  const { skipL2 = false } = options;
+  const { skipL2 = false, packageBuffer } = options;
 
   const caps = skill.capabilities || {};
   const setup = skill.doc?.setup || {};
@@ -229,6 +231,18 @@ export async function auditSkill(skill, options = {}) {
   overallScore += l16Result.score_adjustment;
   overallScore = Math.max(0, Math.min(10, overallScore));
 
+  // ═══ L1.7: Binary & malware detection (CRITICAL — quarantines on hit) ═══
+  // Runs malware pattern detection on metadata always; scans the package
+  // zip (if provided) for binaries, launchers, nested archives, obfuscated
+  // bytecode. ANY critical finding → score 0 + quarantine_recommended=true.
+  const l17Result = await runL17(skill, { packageBuffer });
+  overallScore += l17Result.score_adjustment;
+  overallScore = Math.max(0, Math.min(10, overallScore));
+
+  // If L1.7 recommends quarantine, override risk to critical
+  const l17Critical = l17Result.findings.total_critical > 0;
+  const l17Quarantine = l17Result.quarantine_recommended;
+
   // ═══ L2: Docker sandbox results ═══════════════════════════════════
   let l2Data = { status: 'not_triggered', results: null, trigger: null };
   if (!skipL2) {
@@ -313,20 +327,85 @@ export async function auditSkill(skill, options = {}) {
     });
   }
 
+  // ═══ L1.7 checks for report ════════════════════════════════════════
+  const l17Checks = [];
+  if (l17Result.findings.binary_files.length > 0) {
+    l17Checks.push({
+      name: 'L1.7 BINARY FILES',
+      status: 'fail',
+      detail: `${l17Result.findings.binary_files.length} Windows executable(s) found in skill package: ${l17Result.findings.binary_files.map(b => b.path).join(', ')}`,
+      risk: 'critical',
+      recommendation: 'QUARANTINE: skill package contains Windows binaries. Legitimate MCP skills do not ship .exe/.dll files.',
+      files: l17Result.findings.binary_files,
+    });
+  }
+  if (l17Result.findings.launcher_scripts.length > 0) {
+    l17Checks.push({
+      name: 'L1.7 LAUNCHER SCRIPTS',
+      status: 'fail',
+      detail: `${l17Result.findings.launcher_scripts.length} launcher script(s) found: ${l17Result.findings.launcher_scripts.map(s => s.path).join(', ')}`,
+      risk: 'critical',
+      recommendation: 'QUARANTINE: .bat/.cmd/.vbs/.ps1 files are not part of legitimate MCP skill packages.',
+      files: l17Result.findings.launcher_scripts,
+    });
+  }
+  if (l17Result.findings.nested_archives.length > 0) {
+    l17Checks.push({
+      name: 'L1.7 NESTED ARCHIVES',
+      status: 'fail',
+      detail: `${l17Result.findings.nested_archives.length} nested archive(s) found: ${l17Result.findings.nested_archives.map(a => a.path).join(', ')}`,
+      risk: 'high',
+      recommendation: 'Nested zips are a red flag — legitimate MCP skills ship source code, not zips-inside-zips. Inspect the nested archive manually.',
+      files: l17Result.findings.nested_archives,
+    });
+  }
+  if (l17Result.findings.malware_patterns.length > 0) {
+    l17Checks.push({
+      name: 'L1.7 MALWARE PATTERNS',
+      status: 'fail',
+      detail: `${l17Result.findings.malware_patterns.length} malware pattern(s) matched: ${l17Result.findings.malware_patterns.map(p => p.id).join(', ')}`,
+      risk: l17Result.findings.total_critical > 0 ? 'critical' : 'high',
+      recommendation: 'Malware pattern signature detected. Treat as compromised until manually reviewed.',
+      patterns: l17Result.findings.malware_patterns,
+    });
+  }
+  if (l17Result.findings.oversized_text_files.length > 0) {
+    l17Checks.push({
+      name: 'L1.7 OVERSIZED TEXT FILES',
+      status: 'fail',
+      detail: `${l17Result.findings.oversized_text_files.length} suspicious text file(s) >100KB (likely bytecode payload): ${l17Result.findings.oversized_text_files.map(f => f.path).join(', ')}`,
+      risk: 'high',
+      recommendation: 'Text files >100KB that are not valid JSON are typically obfuscated bytecode payloads (Lua, PowerShell). Inspect manually.',
+      files: l17Result.findings.oversized_text_files,
+    });
+  }
+  if (l17Checks.length === 0) {
+    l17Checks.push({
+      name: 'L1.7 MALWARE SCAN',
+      status: 'pass',
+      detail: `${MALWARE_PATTERNS.length} malware patterns checked, 0 binaries, 0 launchers, 0 nested archives`,
+      risk: 'low',
+      recommendation: '',
+    });
+  }
+
   // ═══ Final risk level ════════════════════════════════════════════
-  const allChecks = [...checks, ...l16Checks];
-  const allCritical = criticalCount + l16Result.findings.total_critical;
-  const allHigh = highCount + l16Result.findings.total_high;
+  const allChecks = [...checks, ...l16Checks, ...l17Checks];
+  const allCritical = criticalCount + l16Result.findings.total_critical + l17Result.findings.total_critical;
+  const allHigh = highCount + l16Result.findings.total_high + l17Result.findings.total_high;
 
   const riskRank = { low: 0, medium: 1, high: 2, critical: 3, unknown: 1 };
-  const l15l16Risk = allCritical > 0 ? 'critical'
+  const l15l16l17Risk = allCritical > 0 ? 'critical'
     : allHigh > 0 ? 'high'
     : mediumCount > 0 ? 'medium'
     : 'low';
   const l2Risk = l2Data.results?.l2_risk_level || null;
-  const finalRisk = (l2Risk && riskRank[l2Risk] > riskRank[l15l16Risk])
-    ? l2Risk
-    : l15l16Risk;
+  // L1.7 quarantine overrides everything — even if L2 says "low", a trojan stays critical
+  const finalRisk = l17Quarantine
+    ? 'critical'
+    : (l2Risk && riskRank[l2Risk] > riskRank[l15l16l17Risk])
+      ? l2Risk
+      : l15l16l17Risk;
 
   // ═══ Build report ════════════════════════════════════════════════
   const report = {
@@ -340,16 +419,18 @@ export async function auditSkill(skill, options = {}) {
     },
     audit: {
       timestamp: new Date().toISOString(),
-      auditor: 'Sentinel L1.5 + L1.6 + L2',
+      auditor: 'Sentinel L1.5 + L1.6 + L1.7 + L2',
       overall_score: overallScore,
       max_score: 10,
-      summary: `L1.5: ${passCount} passed, ${warningCount} warnings, ${failCount} failed | L1.6: ${l16Result.findings.semgrep.length} semgrep, ${l16Result.findings.secrets.length} secrets, ${l16Result.findings.osv.length} OSV vulns | L2: ${l2Data.status}`,
+      summary: `L1.5: ${passCount} passed, ${warningCount} warnings, ${failCount} failed | L1.6: ${l16Result.findings.semgrep.length} semgrep, ${l16Result.findings.secrets.length} secrets, ${l16Result.findings.osv.length} OSV vulns | L1.7: ${l17Result.findings.binary_files.length} binaries, ${l17Result.findings.launcher_scripts.length} launchers, ${l17Result.findings.nested_archives.length} nested archives, ${l17Result.findings.malware_patterns.length} malware patterns | L2: ${l2Data.status}`,
       risk_level: finalRisk,
       risk_breakdown: {
-        l15_l16: l15l16Risk,
+        l15_l16_l17: l15l16l17Risk,
+        l17_quarantine_recommended: l17Quarantine,
         l2: l2Risk || 'not_available',
         final: finalRisk,
       },
+      quarantine_recommended: l17Quarantine,
       layers: {
         l15: { checks_run: 6, findings: criticalCount + highCount + mediumCount },
         l16: {
@@ -359,6 +440,16 @@ export async function auditSkill(skill, options = {}) {
           semgrep_findings: l16Result.findings.semgrep.length,
           secret_findings: l16Result.findings.secrets.length,
           osv_findings: l16Result.findings.osv.length,
+        },
+        l17: {
+          malware_rules_run: MALWARE_PATTERNS.length,
+          package_scanned: l17Result.details.package_scanned,
+          binary_files: l17Result.findings.binary_files.length,
+          launcher_scripts: l17Result.findings.launcher_scripts.length,
+          nested_archives: l17Result.findings.nested_archives.length,
+          malware_patterns: l17Result.findings.malware_patterns.length,
+          oversized_text_files: l17Result.findings.oversized_text_files.length,
+          quarantine_recommended: l17Quarantine,
         },
         l2: {
           status: l2Data.status,

@@ -50,6 +50,7 @@ const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.join(__dirname, '..');
 const SKILLS_PATH = path.join(REPO_ROOT, 'aep-marketplace', 'public', 'api', 'skills_index.json');
 const CERTS_DIR = path.join(REPO_ROOT, '_data', 'sentinel_certificates');
+const QUARANTINE_DIR = path.join(REPO_ROOT, '_data', 'quarantine');
 
 // SECURITY: NO fallback secret. The old default 'marketnow-sentinel-default-secret-2026'
 // is now public in git history and must never be used. If SENTINEL_CERT_SECRET
@@ -118,9 +119,10 @@ if (MAX_SKILLS > 0 && targets.length > MAX_SKILLS) {
   console.log(`Limited to first ${MAX_SKILLS} skills.`);
 }
 
-// Ensure certs directory exists
+// Ensure certs + quarantine directories exist
 if (!DRY_RUN) {
   fs.mkdirSync(CERTS_DIR, { recursive: true });
+  fs.mkdirSync(QUARANTINE_DIR, { recursive: true });
 }
 
 // ─── Run audits ───────────────────────────────────────────────────────────
@@ -130,6 +132,7 @@ const stats = {
   audited: 0,
   certified: 0,
   failed: 0,
+  quarantined: 0,
   by_risk: { low: 0, medium: 0, high: 0, critical: 0, unknown: 0 },
   by_score: {},
   with_l2: 0,
@@ -142,26 +145,52 @@ const BATCH_DELAY_MS = 200; // delay between batches
 async function processBatch(batch, batchNum) {
   const promises = batch.map(async (skill) => {
     try {
-      // Run the full audit (L1.5 + L1.6, skip L2 fetch for speed —
-      // L2 results are fetched from _data/l2_results/ which we already have)
+      // Run the full audit (L1.5 + L1.6 + L1.7 + L2)
+      // L1.7 runs malware pattern detection on metadata. Package buffer
+      // scanning is optional (only if the skill has a downloadable zip).
       const report = await auditSkill(skill, { skipL2: false });
 
       // Generate certificate
       const cert = await generateCertificate(report, CERT_SECRET);
 
-      // Update stats
       stats.audited++;
-      stats.by_risk[cert.risk_level] = (stats.by_risk[cert.risk_level] || 0) + 1;
-      stats.by_score[cert.overall_score] = (stats.by_score[cert.overall_score] || 0) + 1;
-      if (cert.layers_run.l2) stats.with_l2++;
 
-      // Write certificate
+      // L1.7 QUARANTINE: if the report recommends quarantine, move the
+      // cert to _data/quarantine/ instead of _data/sentinel_certificates/.
+      // This removes it from the public catalog and lists it publicly
+      // at /api/quarantine for transparency.
+      const quarantined = report.audit?.quarantine_recommended === true;
+      if (quarantined) {
+        cert.status = 'quarantined';
+        cert.quarantined_at = new Date().toISOString();
+        cert.quarantined_reason = 'L1.7 detected critical/high findings';
+        cert.quarantined_findings = report.audit?.layers?.l17 || {};
+        cert.overall_score = 0;
+        cert.risk_level = 'critical';
+        stats.quarantined = (stats.quarantined || 0) + 1;
+      } else {
+        stats.by_risk[cert.risk_level] = (stats.by_risk[cert.risk_level] || 0) + 1;
+      }
+      stats.by_score[cert.overall_score] = (stats.by_score[cert.overall_score] || 0) + 1;
+      if (cert.layers_run?.l2) stats.with_l2++;
+
+      // Write certificate (to quarantine dir or normal certs dir)
       if (!DRY_RUN) {
-        const certPath = path.join(CERTS_DIR, `${skill.id}.json`);
+        const targetDir = quarantined ? QUARANTINE_DIR : CERTS_DIR;
+        const certPath = path.join(targetDir, `${skill.id}.json`);
         fs.writeFileSync(certPath, JSON.stringify(cert, null, 2));
+
+        // If quarantined, also remove from the normal certs dir if it exists there
+        if (quarantined) {
+          const oldPath = path.join(CERTS_DIR, `${skill.id}.json`);
+          if (fs.existsSync(oldPath)) {
+            fs.unlinkSync(oldPath);
+          }
+          console.log(`  🚨 QUARANTINED: ${skill.id} (${skill.name}) — ${cert.quarantined_reason}`);
+        }
       }
 
-      return { skill_id: skill.id, score: cert.overall_score, risk: cert.risk_level, ok: true };
+      return { skill_id: skill.id, score: cert.overall_score, risk: cert.risk_level, quarantined, ok: true };
     } catch (e) {
       stats.failed++;
       return { skill_id: skill.id, error: e.message, ok: false };
@@ -201,6 +230,7 @@ async function processBatch(batch, batchNum) {
   console.log(`Total skills:   ${stats.total}`);
   console.log(`Audited:        ${stats.audited}`);
   console.log(`Failed:         ${stats.failed}`);
+  console.log(`Quarantined:    ${stats.quarantined} 🚨`);
   console.log(`With L2:        ${stats.with_l2}`);
   console.log(`Elapsed:        ${totalElapsed}s`);
   console.log(`\nBy risk level:`);

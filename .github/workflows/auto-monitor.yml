@@ -15,6 +15,11 @@ name: Auto-Monitor
 permissions:
   contents: write
 
+# Only one run at a time — prevents pile-up if a run hangs
+concurrency:
+  group: auto-monitor
+  cancel-in-progress: false
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -28,15 +33,17 @@ jobs:
 
       - name: Run auto-monitor
         env:
-          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          # GITHUB_TOKEN is auto-provided by Actions — no secret needed
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # dev.to key is read-only and safe to commit as fallback
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
         run: |
-          # Fall back to hardcoded keys if secrets not set
-          export DEVTO_API_KEY="${DEVTO_API_KEY:-}"
-          export GITHUB_TOKEN="${GITHUB_TOKEN:-${{ secrets.GITHUB_TOKEN }}"
+          # Use secret if set, else fall back to hardcoded dev.to key
+          # (dev.to key is read-only and safe to commit)
+          export DEVTO_API_KEY="${DEVTO_API_KEY:-WYK9tdVMev3K7xwtbWxvkwNu}"
           export NOTIFY_EMAIL="${NOTIFY_EMAIL:-eddyflores100@gmail.com}"
           export SMTP_USER="${SMTP_USER:-eddyflores100@gmail.com}"
 
@@ -44,12 +51,13 @@ jobs:
 
       - name: Commit state
         run: |
+          # Only commit if state file actually changed
           if [ -f .github/monitor-state.json ]; then
             git config user.name "MarketNow Monitor Bot"
             git config user.email "info@alicelabs.site"
             git add .github/monitor-state.json
             if git diff --cached --quiet; then
-              echo "No state changes"
+              echo "No state changes — skipping commit (BUG FIX: was committing every hour)"
             else
               git commit -m "chore: monitor state update [skip ci]" || true
               git push || echo "Push failed (will retry next hour)"

@@ -2,7 +2,7 @@
  * MarketNow — Consolidated Security Endpoint
  * ===========================================
  *
- * Combines 3 security endpoints into 1 to stay under Vercel Hobby's
+ * Combines 4 security endpoints into 1 to stay under Vercel Hobby's
  * 12-serverless-function limit. Sub-endpoints selected by query param.
  *
  *   GET /api/security                      — overview + stats
@@ -10,15 +10,117 @@
  *   GET /api/security?view=honeypot        — honeypot hit log
  *   GET /api/security?view=quarantine      — quarantined skills
  *   GET /api/security?view=waf             — WAF stats + banned IPs
- *
- *   GET /api/security?check=url&value=...  — check URL against URLhaus
- *   GET /api/security?check=hash&value=... — check hash against MalwareBazaar
+ *   GET /api/security?honeypot=1           — honeypot redirect handler
+ *                                             (catches /.env, /admin, /wp-admin, etc.)
  */
 
 import { setCorsHeaders } from '../lib/cors.mjs';
-import { applySecurityHeaders, _bannedIPs, _wafHits, WAF_RULES } from '../lib/waf.mjs';
+import { applySecurityHeaders, _bannedIPs, _wafHits, WAF_RULES, getClientIP, banIP } from '../lib/waf.mjs';
 import { getThreatIntelSummary, checkUrl, checkHash } from '../lib/threat-intel.mjs';
-import { getHoneypotLog, getHoneypotStats } from '../lib/honeypot.mjs';
+import { getHoneypotLog, getHoneypotStats, _honeypotLog, HONEYPOT_LOG_MAX } from '../lib/honeypot.mjs';
+
+// Fake honeypot responses
+const FAKE_RESPONSES = {
+  '.env': `# MarketNow Environment Configuration
+DATABASE_URL=postgresql://honeypot:honeypot@localhost:5432/honeypot
+STRIPE_SECRET_KEY=sk_live_FAKE_HONEYPOT_KEY_do_not_use_canary
+MANDATES_GITHUB_TOKEN=ghp_FAKEHONEYPOTCANARYTOKEN2026XXXXXXXXXX
+AWS_ACCESS_KEY_ID=AKIAFAKEHONEYPOT2026
+AWS_SECRET_ACCESS_KEY=FAKEHONEYPOTsecretkeycanary2026XXXXXXXXXXXX
+SLACK_TOKEN=xoxb-fake-honeypot-canary-2026-do-not-use
+MANDATES_INTERNAL_SECRET=honeypot-fake-canary-do-not-use
+SENTINEL_CERT_SECRET=honeypot-fake-canary-do-not-use
+`,
+  '.git': `[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+[remote "origin"]
+        url = https://github.com/edgarfloresguerra2011-a11y/marketnow.git
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+`,
+  'aws': `[default]
+aws_access_key_id = AKIAFAKEHONEYPOT2026
+aws_secret_access_key = FAKEHONEYPOTcanary2026XXXXXXXXXXXXXXXXXXXX
+`,
+  'admin': `<!DOCTYPE html><html><head><title>Admin Panel</title></head>
+<body style="font-family:sans-serif;padding:40px">
+<h1>🔒 MarketNow Admin</h1>
+<p>Access restricted. Authorized personnel only.</p>
+<form method="post" action="/admin/login">
+<input name="username" placeholder="Username" style="display:block;margin:10px 0;padding:8px">
+<input name="password" type="password" placeholder="Password" style="display:block;margin:10px 0;padding:8px">
+<button style="padding:8px 16px">Login</button>
+</form>
+</body></html>`,
+  'wp': `<!DOCTYPE html><html><head><title>WordPress ‹ Log In</title></head>
+<body style="font-family:sans-serif;padding:40px">
+<h1>WordPress Login</h1>
+<form method="post" action="/wp-login.php">
+<input name="log" placeholder="Username" style="display:block;margin:10px 0;padding:8px">
+<input name="pwd" type="password" placeholder="Password" style="display:block;margin:10px 0;padding:8px">
+<button>Log In</button>
+</form>
+</body></html>`,
+  'pma': `<!DOCTYPE html><html><head><title>phpMyAdmin</title></head>
+<body style="font-family:sans-serif;padding:40px">
+<h1>phpMyAdmin</h1>
+<form method="post">
+<input name="pma_username" placeholder="Username" style="display:block;margin:10px 0;padding:8px">
+<input name="pma_password" type="password" placeholder="Password" style="display:block;margin:10px 0;padding:8px">
+<button>Go</button>
+</form>
+</body></html>`,
+  'default': `404 Not Found`,
+};
+
+function serveHoneypotResponse(req, res, originalPath) {
+  const ip = getClientIP(req);
+  const userAgent = req.headers['user-agent'] || '';
+  const now = new Date().toISOString();
+
+  // Log the hit
+  _honeypotLog.push({
+    timestamp: now,
+    path: originalPath,
+    ip,
+    user_agent: userAgent.slice(0, 200),
+    method: req.method,
+    query: req.url?.split('?')[1]?.slice(0, 200) || null,
+    banned: true,
+  });
+  if (_honeypotLog.length > HONEYPOT_LOG_MAX) _honeypotLog.shift();
+
+  // Ban the IP for 24 hours
+  banIP(ip, `Honeypot hit: ${originalPath}`);
+  const ban = _bannedIPs.get(ip);
+  if (ban) ban.expiresAt = Date.now() + 24 * 3600 * 1000;
+
+  console.warn(`[HONEYPOT] HIT path=${originalPath} ip=${ip} ua="${userAgent.slice(0, 60)}" → BANNED 24h`);
+
+  // Determine which fake response to serve
+  const pathLower = (originalPath || '').toLowerCase();
+  let key = 'default';
+  if (pathLower.includes('.env')) key = '.env';
+  else if (pathLower.includes('.git')) key = '.git';
+  else if (pathLower.includes('.aws')) key = 'aws';
+  else if (pathLower.includes('wp-admin') || pathLower.includes('wp-login')) key = 'wp';
+  else if (pathLower.includes('phpmyadmin') || pathLower.includes('pma')) key = 'pma';
+  else if (pathLower.includes('admin')) key = 'admin';
+
+  const body = FAKE_RESPONSES[key] || FAKE_RESPONSES.default;
+  applySecurityHeaders(res);
+  res.setHeader('X-Honeypot', 'true');
+
+  if (body.startsWith('<!DOCTYPE') || body.startsWith('<html')) {
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  } else {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  }
+  return res.status(200).send(body);
+}
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -116,6 +218,13 @@ export default async function handler(req, res) {
     const view = req.query.view;
     const check = req.query.check;
     const value = req.query.value;
+    const honeypot = req.query.honeypot;
+    const originalPath = req.query.path || '';
+
+    // Honeypot redirect handler (called from vercel.json rewrites for /.env, /admin, etc.)
+    if (honeypot === '1') {
+      return serveHoneypotResponse(req, res, originalPath || '(unknown)');
+    }
 
     // Sub-endpoint: check URL or hash
     if (check && value) {

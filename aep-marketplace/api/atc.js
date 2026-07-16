@@ -356,15 +356,15 @@ export default async function handler(req, res) {
           });
         }
 
-        // Check expiry
+        // Check expiry (metadata is inside payload)
         const now = new Date();
-        const expires = new Date(atc.metadata.expires_at);
+        const expires = new Date(atc.payload.metadata.expires_at);
         if (now > expires) {
           return res.status(200).json({
             valid: false,
             card_id,
             reason: 'expired',
-            expires_at: atc.metadata.expires_at,
+            expires_at: atc.payload.metadata.expires_at,
             message: 'This ATC has expired. Renew at POST /api/atc {action:"issue", ...}',
           });
         }

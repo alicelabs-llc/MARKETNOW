@@ -60,34 +60,86 @@
     ]
   },
   "pricing": {
-    "model": "MarketNow does NOT sell skills. We administer a free marketplace.",
+    "model": "MarketNow does NOT sell skills. We administer a free marketplace + sell Sentinel subscriptions to sellers.",
     "skills_are_free": true,
-    "explanation": "All 8,764 skills in the catalog are FREE to install and use. MarketNow does not charge per-skill. Our product is Sentinel — the 8-layer security audit pipeline (L1.5 metadata + L1.6 semgrep/secrets/OSV + L1.7 binary/malware detection + L1.8 malware family signatures + WAF + honeypot + threat intel + auto-quarantine). Sentinel is sold as B2B SaaS: Community (Free) / Team ($99/mo) / Enterprise (Custom).",
-    "seller_program": {
-      "description": "Third-party developers can optionally sell THEIR skills on MarketNow. When they do, we facilitate the payment (USDC on Base + mandate infrastructure) and charge a 5% commission. The seller sets the price. Sellers must pass Sentinel audit before listing.",
-      "seller_pricing": "Set by the seller, not MarketNow",
-      "marketnow_commission": "5% of seller-set price",
-      "seller_payout": "95% via Stripe Connect or USDC",
-      "signup": "https://marketnow.site/sell"
+    "explanation": "All 8,764 skills in the catalog are FREE to install and use. MarketNow does not charge per-skill. Our revenue comes from SELLERS who want to list/sell their skills — they subscribe to Sentinel (the security audit pipeline) and we take a commission on each sale.",
+    "revenue_streams": {
+      "1_marketplace_administration": "Free — anyone can browse/install the 8,764 skills at no cost",
+      "2_sentinel_subscriptions_for_sellers": "Sellers who want to list/sell their skills subscribe to Sentinel",
+      "3_commission_on_sales": "When a seller sells a skill, MarketNow takes 20% (15% if affiliate is used)",
+      "4_addons": "Featured listings, verified seller badge, priority review",
+      "5_affiliate_program": "5% commission to referrers, paid monthly via Stripe Connect (min $50)"
     },
-    "sentinel_pricing": {
-      "community": {
-        "price": 0,
-        "includes": "Browse all 8,764 skills, install via npx, basic Sentinel certificate per skill"
+    "seller_tiers": {
+      "FREE": {
+        "price_usd": 0,
+        "period": "forever",
+        "max_skills": 3,
+        "includes": [
+          "Basic Sentinel L1 scan",
+          "Standard review queue (24-48h)",
+          "Community support"
+        ]
       },
-      "team": {
-        "price_usd_per_month": 99,
-        "includes": "Continuous monitoring, analytics dashboard, team mandates, priority L2 sandbox audits"
+      "PRO": {
+        "price_usd_per_month": 9.99,
+        "max_skills": 25,
+        "includes": [
+          "Priority Sentinel scan (<6h)",
+          "Featured badge on listings",
+          "Analytics dashboard",
+          "Custom slug URLs",
+          "Email support"
+        ]
       },
-      "enterprise": {
-        "price": "custom",
-        "includes": "Self-hosted Sentinel, private catalog, custom malware family signatures, SLA, on-prem deployment"
+      "ENTERPRISE": {
+        "price_usd_per_month": 49.99,
+        "max_skills": "unlimited",
+        "includes": [
+          "Instant Sentinel scan (<1h)",
+          "Premium featured placement",
+          "Advanced analytics + revenue reports",
+          "API access for bulk operations",
+          "Dedicated account manager",
+          "Custom commission rates (negotiable)",
+          "Priority support (Slack channel)"
+        ]
       }
     },
-    "no_per_skill_fees": true,
-    "no_subscriptions_for_skills": true,
+    "seller_addons": {
+      "featured_listing": {
+        "price_usd": 4.99,
+        "period": "30 days",
+        "description": "Boost your skill to the top of search results"
+      },
+      "verified_seller_badge": {
+        "price_usd": 19.99,
+        "period": "one-time",
+        "description": "Get a ✓ Verified badge on all your skills. Requires KYC verification."
+      },
+      "priority_review": {
+        "price_usd": 2.99,
+        "period": "per skill",
+        "description": "Skip the queue. Your skill is reviewed within 6 hours instead of 24-48h."
+      }
+    },
+    "storage_fee": {
+      "applies_to": "FREE tier only (PRO/ENTERPRISE include unlimited storage)",
+      "free_threshold": 3,
+      "price_per_skill_usd": 0.5,
+      "period": "month",
+      "description": "FREE tier includes your first 3 skills at no cost. After that, $0.50 per skill per month covers hosting, Sentinel scanning, and continuous monitoring."
+    },
+    "commission_on_sales": {
+      "seller_keeps": "80%",
+      "marketnow_takes": "20% (15% if affiliate is used)",
+      "affiliate_gets": "5% (deducted from MarketNow's share, not seller's)",
+      "note": "Seller always keeps 80%. The 5% affiliate commission comes out of MarketNow's 20% share."
+    },
+    "no_per_skill_fees_for_buyers": true,
+    "no_subscriptions_for_buyers": true,
     "no_credits": true,
-    "no_recurring_billing_for_skills": true,
+    "signup_as_seller": "https://marketnow.site/submit",
     "average": 0,
     "min": 0,
     "max": 0
@@ -377,7 +429,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-16T00:52:14.368Z",
+  "generated_at": "2026-07-16T00:59:14.141Z",
   "trust": {
     "license": "MIT",
     "open_source": false,

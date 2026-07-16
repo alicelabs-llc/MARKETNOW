@@ -162,19 +162,40 @@ curl "https://marketnow.site/api/search?q=scrape" | jq
 curl "https://marketnow.site/api/search?q=数据库&language=zh" | jq
 ```
 
-## 💰 Business model — Sentinel is the product, not skills
+## 💰 Business model — Sentinel subscriptions for sellers, free marketplace for everyone else
 
 **MarketNow does NOT sell skills.** We administer a free marketplace of 8,764 MCP servers. All skills are free to install and use.
 
-Our product is **Sentinel** — the 8-layer security audit pipeline. Pricing:
+**Our revenue comes from sellers** who want to list/sell THEIR skills on MarketNow. They subscribe to Sentinel (the security audit pipeline) and we take a commission on each sale.
 
-| Tier | Price | What you get |
-|---|---|---|
-| **Community** | FREE | Browse all 8,764 skills, install via `npx`, basic Sentinel certificate per skill |
-| **Team** | $99/mo | Continuous monitoring, analytics dashboard, team mandates, priority L2 sandbox audits |
-| **Enterprise** | Custom | Self-hosted Sentinel, private catalog, custom malware family signatures, SLA, on-prem deployment |
+### Seller tiers (Sentinel subscriptions)
 
-**Seller program (optional):** Third-party developers can sell THEIR skills on MarketNow. They set the price, we facilitate payment (USDC on Base + mandates), and take **5% commission**. Sellers must pass Sentinel audit before listing. Sign up at `/sell`.
+| Tier | Price | Max skills | Includes |
+|---|---|---|---|
+| **FREE** | $0 | 3 | Basic Sentinel L1 scan, standard review queue (24-48h) |
+| **PRO** | $9.99/mo | 25 | Priority Sentinel scan (<6h), featured badge, analytics dashboard |
+| **ENTERPRISE** | $49.99/mo | unlimited | Instant Sentinel scan (<1h), API access, dedicated account manager, custom commission |
+
+### Add-ons
+
+- **Featured Listing** — $4.99 / 30 days (boost in search results)
+- **Verified Seller Badge** — $19.99 one-time (KYC verification, ✓ badge)
+- **Priority Review** — $2.99 / skill (skip queue, <6h review)
+- **Storage fee** — $0.50/skill/month after 3 skills (FREE tier only)
+
+### Commission on sales
+
+| Party | Share |
+|---|---|
+| Seller | 80% |
+| MarketNow | 20% (15% if affiliate is used) |
+| Affiliate | 5% (deducted from MarketNow's share) |
+
+### Affiliate program
+
+5% commission on every sale you refer. Monthly payouts via Stripe Connect (min $50 threshold).
+
+**Sign up as a seller:** https://marketnow.site/submit
 
 ## 📡 Public API (no auth required)
 

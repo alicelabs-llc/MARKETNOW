@@ -60,41 +60,37 @@
     ]
   },
   "pricing": {
-    "model": "one-time per skill (USDC or credit card)",
-    "currency": "USD",
-    "min": 0,
-    "max": 9.99,
-    "average": 0.71,
-    "tiers": [
-      {
-        "price": 0.99,
-        "label": "utility",
-        "description": "Single-function MCP servers, simple wrappers"
+    "model": "MarketNow does NOT sell skills. We administer a free marketplace.",
+    "skills_are_free": true,
+    "explanation": "All 8,764 skills in the catalog are FREE to install and use. MarketNow does not charge per-skill. Our product is Sentinel — the 8-layer security audit pipeline (L1.5 metadata + L1.6 semgrep/secrets/OSV + L1.7 binary/malware detection + L1.8 malware family signatures + WAF + honeypot + threat intel + auto-quarantine). Sentinel is sold as B2B SaaS: Community (Free) / Team ($99/mo) / Enterprise (Custom).",
+    "seller_program": {
+      "description": "Third-party developers can optionally sell THEIR skills on MarketNow. When they do, we facilitate the payment (USDC on Base + mandate infrastructure) and charge a 5% commission. The seller sets the price. Sellers must pass Sentinel audit before listing.",
+      "seller_pricing": "Set by the seller, not MarketNow",
+      "marketnow_commission": "5% of seller-set price",
+      "seller_payout": "95% via Stripe Connect or USDC",
+      "signup": "https://marketnow.site/sell"
+    },
+    "sentinel_pricing": {
+      "community": {
+        "price": 0,
+        "includes": "Browse all 8,764 skills, install via npx, basic Sentinel certificate per skill"
       },
-      {
-        "price": 1.99,
-        "label": "standard",
-        "description": "Standard integrations, one API/service"
+      "team": {
+        "price_usd_per_month": 99,
+        "includes": "Continuous monitoring, analytics dashboard, team mandates, priority L2 sandbox audits"
       },
-      {
-        "price": 2.99,
-        "label": "multi-feature",
-        "description": "Multi-feature tools, common choice"
-      },
-      {
-        "price": 4.99,
-        "label": "sophisticated",
-        "description": "Multi-endpoint, complex logic"
-      },
-      {
-        "price": 9.99,
-        "label": "enterprise",
-        "description": "Enterprise-grade, specialized"
+      "enterprise": {
+        "price": "custom",
+        "includes": "Self-hosted Sentinel, private catalog, custom malware family signatures, SLA, on-prem deployment"
       }
-    ],
-    "no_subscriptions": true,
+    },
+    "no_per_skill_fees": true,
+    "no_subscriptions_for_skills": true,
     "no_credits": true,
-    "no_recurring_billing": true
+    "no_recurring_billing_for_skills": true,
+    "average": 0,
+    "min": 0,
+    "max": 0
   },
   "endpoints": {
     "list_all_skills": {
@@ -287,9 +283,9 @@
     "description": "string, real description from source repository",
     "category": "string, one of N categories (see /api/categories.json)",
     "tags": "string[], keywords for search and filtering",
-    "price": "number, USD (0 for free skills)",
-    "currency": "string, always 'USD'",
-    "payment": "string, always 'one-time'",
+    "price": "number, USD (always 0 — MarketNow does not sell skills. If seller_priced=true, the seller set this price and MarketNow takes 5% commission.)",
+    "seller_priced": "boolean — false (default) means MarketNow free skill; true means a third-party seller set the price",
+    "currency": "string, always 'USD' (only relevant if seller_priced=true)",
     "license": "string, always 'AliceLabs LLC' (MarketNow licenses are issued by AliceLabs LLC)",
     "verified": "boolean — DEPRECATED. True only for human-reviewed skills (43 today). Use review_status instead.",
     "review_status": "string — one of: 'auto-scanned' (Sentinel L1.5 ran, no human review — 8,517 skills today), 'human-reviewed' (a human at AliceLabs inspected the repo — 43 skills today), 'maintainer-verified' (GitHub maintainer signed a claim of authorship — 0 today, program not launched)",
@@ -304,7 +300,7 @@
   "workflow_for_agents": {
     "step_1_discover": "GET /api/search?q=your_query — find a skill",
     "step_2_evaluate": "Read description, tags, sentinel_score, system_prompt preview",
-    "step_3_choose_mode": "If skill.price == 0 → call agent-purchase with just skillId. If paid and you have a mandateId → send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If paid and no mandate → ask the human to either approve via Stripe or create a mandate at /mandates.",
+    "step_3_choose_mode": "ALL skills in MarketNow are FREE (price=0). Just POST /api/agent-purchase with {skillId} to get the license + system_prompt instantly. If seller_priced=true (rare — third-party seller set a price), then: if you have a mandateId → send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If no mandate → ask the human to create a mandate at /mandates or pay via Stripe.",
     "step_4_purchase": "POST /api/agent-purchase",
     "step_5_install": "Run the 'install' field as a shell command, e.g. npx -y @marketnow/install <slug>",
     "step_6_use": "Call the skill from your agent runtime using the system_prompt + capabilities returned"
@@ -381,7 +377,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-15T01:57:13.013Z",
+  "generated_at": "2026-07-16T00:52:14.368Z",
   "trust": {
     "license": "MIT",
     "open_source": false,

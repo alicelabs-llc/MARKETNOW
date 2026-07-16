@@ -162,17 +162,19 @@ curl "https://marketnow.site/api/search?q=scrape" | jq
 curl "https://marketnow.site/api/search?q=数据库&language=zh" | jq
 ```
 
-## 💰 Pricing (B2B)
+## 💰 Business model — Sentinel is the product, not skills
 
-MarketNow uses B2B pricing — no per-skill purchases:
+**MarketNow does NOT sell skills.** We administer a free marketplace of 8,764 MCP servers. All skills are free to install and use.
 
-| Tier | Price | Features |
+Our product is **Sentinel** — the 8-layer security audit pipeline. Pricing:
+
+| Tier | Price | What you get |
 |---|---|---|
-| **Community** | FREE | Browse all 8,764 skills, install free skills, basic search |
-| **Team** ($99/mo) | COMING SOON | Team monitoring, analytics, priority support, bulk install |
-| **Enterprise** | Custom | On-prem deployment, custom SLAs, dedicated Sentinel audits, SSO |
+| **Community** | FREE | Browse all 8,764 skills, install via `npx`, basic Sentinel certificate per skill |
+| **Team** | $99/mo | Continuous monitoring, analytics dashboard, team mandates, priority L2 sandbox audits |
+| **Enterprise** | Custom | Self-hosted Sentinel, private catalog, custom malware family signatures, SLA, on-prem deployment |
 
-**Commission**: 20% MarketNow, 80% seller (for paid skills)
+**Seller program (optional):** Third-party developers can sell THEIR skills on MarketNow. They set the price, we facilitate payment (USDC on Base + mandates), and take **5% commission**. Sellers must pass Sentinel audit before listing. Sign up at `/sell`.
 
 ## 📡 Public API (no auth required)
 

@@ -194,9 +194,19 @@ for (const s of skills) {
   // or expand-catalog-awesome-mcp.cjs). Only set the default note when url is missing.
   const existingUrl = s.source?.url;
   if (s.id && s.id.startsWith('mn-prompt-')) {
+    // mn-prompt-* skills are SYNTHETIC — they should have been removed already.
+    // If any remain, mark them as curated (not from GitHub).
     s.source = { type: 'curated', url: null, note: 'Hand-curated by AliceLabs — usually a system prompt, not a code package.' };
   } else if (s.id && s.id.startsWith('mn-gen-')) {
-    s.source = { type: 'bulk-import', url: null, note: 'Imported from a community agent tool inventory. Sentinel-scanned, not individually curated.' };
+    // mn-gen-* skills ARE from GitHub repos (imported by massive-indexer.cjs).
+    // PRESERVE their source.url — don't overwrite with null.
+    if (existingUrl) {
+      s.source = { type: 'github', url: existingUrl, note: s.source?.note || 'Imported from GitHub via massive-indexer. Sentinel-scanned.' };
+    } else {
+      // If no URL, this skill should be removed (not real). But if it's still here,
+      // mark it honestly as missing source.
+      s.source = { type: 'bulk-import', url: null, note: 'Imported from a community agent tool inventory. GitHub URL not yet resolved.' };
+    }
   } else if (existingUrl) {
     // Keep the URL — just ensure type is set
     s.source = { type: 'github', url: existingUrl, note: s.source?.note || 'Sourced from a public GitHub MCP server repo.' };

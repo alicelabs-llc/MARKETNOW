@@ -136,19 +136,24 @@ async function fetchATC(card_id, { skipCache = false } = {}) {
     }
   }
 
-  // Fetch the raw file content
-  const rawUrl = `https://raw.githubusercontent.com/${REPO}/${encodeURIComponent(BRANCH)}/${ATC_DIR}/${encodeURIComponent(card_id)}.json`;
+  // Use GitHub Contents API (not raw) — raw has CDN cache that breaks
+  // revocation consistency. The Contents API returns fresh content + the
+  // file's current SHA (so we can detect updates).
+  const url = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}/${encodeURIComponent(card_id)}.json?ref=${encodeURIComponent(BRANCH)}`;
   try {
-    const r = await fetch(rawUrl, {
+    const r = await fetch(url, {
       headers: {
         Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github+json',
         'User-Agent': 'marketnow-atc',
-        Accept: 'application/vnd.github.raw',
       },
     });
     if (r.status === 404) return null;
     if (!r.ok) throw new Error(`GitHub ${r.status}`);
-    const data = await r.json();
+    const meta = await r.json();
+    // Content is base64-encoded
+    const content = Buffer.from(meta.content, 'base64').toString('utf8');
+    const data = JSON.parse(content);
     _atcCache.set(card_id, { data, fetchedAt: Date.now() });
     return data;
   } catch (e) {

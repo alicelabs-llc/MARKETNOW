@@ -1,6 +1,6 @@
 {
   "card_id": "ATC-2026-0553088",
-  "status": "active",
+  "status": "revoked",
   "payload": {
     "card_id": "ATC-2026-0553088",
     "agent_id": "agent.test.alicelabs",
@@ -46,5 +46,7 @@
     "signed_at": "2026-07-16T02:55:53.088Z",
     "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
     "verify_with": "GET /api/atc?action=ca-key"
-  }
+  },
+  "revoked_at": "2026-07-16T02:55:59.720Z",
+  "revocation_reason": "Smoke test — verifying revocation works"
 }

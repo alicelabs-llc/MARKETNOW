@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-8750349",
+  "skill_id": "mn-real-iossimulatormcp",
+  "skill_name": "ios-simulator-mcp",
+  "issued_at": "2026-07-15T01:25:50.349Z",
+  "expires_at": "2026-07-22T01:25:50.349Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
+  "max_score": 10,
+  "risk_level": "high",
+  "risk_breakdown": {
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "high"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 1,
+    "l2_execution_status": null
+  },
+  "signature": "d6f7e45a1fa7a184c6ac52e6fafdc36b6b9b7207a5282c9f86f402f95b44bbb2",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-iossimulatormcp"
+}

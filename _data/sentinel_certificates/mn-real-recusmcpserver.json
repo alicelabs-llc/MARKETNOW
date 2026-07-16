@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-9199097",
+  "skill_id": "mn-real-recusmcpserver",
+  "skill_name": "rec-us-mcp-server",
+  "issued_at": "2026-07-15T01:33:19.097Z",
+  "expires_at": "2026-07-22T01:33:19.097Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "03d483bdc7d4e243e2a1bdd7ebe8a280ce75994524d511108f610f2a4893b3ab",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-recusmcpserver"
+}

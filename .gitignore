@@ -47,3 +47,14 @@ __pycache__/
 
 # OS
 Thumbs.db
+
+# ─── n8n workflow templates (third-party reference data) ───────────────
+# These 61 commercial n8n workflow templates (PUQ Docker, hdwLinkedin,
+# SignalFx examples, etc.) were downloaded as reference material. They are
+# not part of the MarketNow product, contain no code we depend on, and
+# their embedded example credentials trigger false-positive gitleaks hits
+# in the weekly L1.6 batch audit.
+#
+# To work with them locally, clone them into a SEPARATE repo or just drop
+# the folder back in for development — it won't be tracked by git.
+n8n-workflows/

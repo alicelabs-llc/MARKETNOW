@@ -34,7 +34,7 @@ async function main() {
   }
   
   console.log('Navegando a Pages Custom Domains...');
-  await page.goto(`https://dash.cloudflare.com/faf93cd2a0d373573de0859b1cc95328/pages/view/aep-marketplace/custom-domains`, {
+  await page.goto(`https://dash.cloudflare.com/${process.env.CLOUDFLARE_ACCOUNT_ID || "unknown"}/pages/view/aep-marketplace/custom-domains`, {
     waitUntil: 'domcontentloaded',
     timeout: 60000
   });

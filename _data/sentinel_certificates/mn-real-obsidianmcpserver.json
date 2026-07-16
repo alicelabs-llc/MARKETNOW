@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-8760685",
+  "skill_id": "mn-real-obsidianmcpserver",
+  "skill_name": "obsidian-mcp-server",
+  "issued_at": "2026-07-15T01:26:00.685Z",
+  "expires_at": "2026-07-22T01:26:00.685Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "e612060cf86593b6baa4eb778e7038e2cbb743041e947b5f96c699c0baf19faf",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-obsidianmcpserver"
+}

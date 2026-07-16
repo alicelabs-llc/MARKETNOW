@@ -33,7 +33,7 @@
     "purchase": "POST /api/create-checkout-session",
     "mcp_server": "npx -y marketnow-mcp",
     "agent_instructions": "GET /api/agent.json",
-    "openapi_spec": "GET /api/openapi.yaml",
+    "openapi_spec": "GET /api/openapi.json",
     "bundles": "GET /api/bundles.json"
   },
   "mn:protocols": ["HTTP/1.1", "HTTPS", "JSON", "MCP v1.0", "Stripe Checkout"],

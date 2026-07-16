@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-8524258",
+  "skill_id": "mn-real-tnl",
+  "skill_name": "tnl",
+  "issued_at": "2026-07-15T01:22:04.258Z",
+  "expires_at": "2026-07-22T01:22:04.258Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "ed0de6c7807662299146ff51228cda9ce7b5f425c182ad06f05771aa7ad771c0",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tnl"
+}

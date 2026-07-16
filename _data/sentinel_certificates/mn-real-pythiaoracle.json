@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-8686766",
+  "skill_id": "mn-real-pythiaoracle",
+  "skill_name": "pythia-oracle",
+  "issued_at": "2026-07-15T01:24:46.766Z",
+  "expires_at": "2026-07-22T01:24:46.766Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "a0ea4a7e15e5a228db6cfd192cfcdbb34e83e0fec3accb7e0f1ae3ccf976bba7",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pythiaoracle"
+}

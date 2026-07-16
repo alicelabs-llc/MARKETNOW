@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-8571075",
+  "skill_id": "mn-real-chainlinkfeedsmcp",
+  "skill_name": "chainlink-feeds-mcp",
+  "issued_at": "2026-07-15T01:22:51.075Z",
+  "expires_at": "2026-07-22T01:22:51.075Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "468fdfea2aeaa227240195b55d24f9e85321a68768c30ba1600dbcd60d7c4522",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chainlinkfeedsmcp"
+}

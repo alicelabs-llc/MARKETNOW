@@ -46,13 +46,19 @@ MarketNow is the open marketplace for MCP-compatible agent skills. It allows any
 
 | Metric | Value |
 |---|---|
-| Total skills | 8,560 |
+| Total skills | 8,764 |
 | Categories | 58 |
-| Price range | $0.99 - $9.99 (one-time) |
-| Free skills | 43 |
+| Sentinel certificates | 14,581 (L1.5+L1.6+L1.7+L1.8) |
+| L2 sandbox audits | 206 skills (gVisor, --network none, --read-only) |
+| Security layers | 8 (L1.5 → L1.8 + WAF + Honeypot + Threat Intel + Quarantine) |
+| WAF rules | 40 (SQLi/XSS/SSRF/path traversal/cmd injection) |
+| Malware family signatures | 17 (Emotet, Cobalt Strike, Mimikatz, RedLine, etc.) |
+| Honeypot paths | 50+ (auto-ban scanners 24h) |
+| Countries with traffic | 33 (NL, US, FR, SE, ZA, IN, SG, DE, CA, BG, IE, GB, +21 more) |
+| npm package | marketnow-mcp v1.4.1 |
+| MCP Registry | io.github.edgarfloresguerra2011-a11y/marketnow |
 | Languages | EN, ES, ZH, PT, FR |
-| Active sellers | 15 |
-| MCP server tools | 5 |
+| Price range | Free → $9.99 (USDC on Base) |
 
 ## 🚀 Quick Start
 

@@ -11,7 +11,7 @@ export default secureLight(async function handler(req, res) {
   res.status(200).json({
     service: 'MarketNow',
     version: '4.0.0',
-    description: 'Trust layer for agent commerce. 8,764 MCP servers, each security-audited by Sentinel L2.5.',
+    description: 'Trust layer for agent commerce. 7,063 MCP servers, each security-audited by Sentinel L2.5.',
     homepage: 'https://marketnow.site',
     
     // Agent connection methods
@@ -127,7 +127,7 @@ export default secureLight(async function handler(req, res) {
     
     // Stats (cached, fast)
     stats: {
-      total_skills: 8764,
+      total_skills: 7063,
       audited: 5120,
       l25_tested: 206,
       free_skills: 65,

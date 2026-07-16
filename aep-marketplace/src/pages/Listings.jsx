@@ -78,7 +78,7 @@ const CONTENT = {
       },
       {
         name: 'Smithery',
-        url: 'https://smithery.ai/servers/eddyflores100/marketnow',
+        url: 'https://smithery.ai/servers/alicelabs/marketnow',
         status: 'partially-correct',
         version: 'N/A',
         lastChecked: '2026-07-04',
@@ -227,7 +227,7 @@ const CONTENT = {
       },
       {
         name: 'Smithery',
-        url: 'https://smithery.ai/servers/eddyflores100/marketnow',
+        url: 'https://smithery.ai/servers/alicelabs/marketnow',
         status: 'partially-correct',
         version: 'N/A',
         lastChecked: '2026-07-04',
@@ -376,7 +376,7 @@ const CONTENT = {
       },
       {
         name: 'Smithery',
-        url: 'https://smithery.ai/servers/eddyflores100/marketnow',
+        url: 'https://smithery.ai/servers/alicelabs/marketnow',
         status: 'partially-correct',
         version: 'N/A',
         lastChecked: '2026-07-04',
@@ -523,7 +523,7 @@ const CONTENT = {
       },
       {
         name: 'Smithery',
-        url: 'https://smithery.ai/servers/eddyflores100/marketnow',
+        url: 'https://smithery.ai/servers/alicelabs/marketnow',
         status: 'partially-correct',
         version: 'N/A',
         lastChecked: '2026-07-04',
@@ -672,7 +672,7 @@ const CONTENT = {
       },
       {
         name: 'Smithery',
-        url: 'https://smithery.ai/servers/eddyflores100/marketnow',
+        url: 'https://smithery.ai/servers/alicelabs/marketnow',
         status: 'partially-correct',
         version: 'N/A',
         lastChecked: '2026-07-04',

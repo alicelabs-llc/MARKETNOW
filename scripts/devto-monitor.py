@@ -6,7 +6,7 @@
 #
 # Monitors all dev.to articles by the authenticated user for new comments.
 # When a new comment is detected (from anyone other than the author),
-# sends an email notification to eddyflores100@gmail.com.
+# sends an email notification to support@alicelabs.site.
 #
 # State is persisted to .github/devto-state.json so we only notify on NEW comments.
 #
@@ -15,9 +15,9 @@
 #
 # Environment variables:
 #   DEVTO_API_KEY     — dev.to API key (required)
-#   SMTP_USER         — Gmail address for sending (e.g. eddyflores100@gmail.com)
+#   SMTP_USER         — Gmail address for sending (e.g. support@alicelabs.site)
 #   SMTP_PASS         — Gmail App Password (required for email notifications)
-#   NOTIFY_EMAIL      — Recipient email (default: eddyflores100@gmail.com)
+#   NOTIFY_EMAIL      — Recipient email (default: support@alicelabs.site)
 #   GITHUB_TOKEN      — For committing state back to repo (optional, for local runs)
 #
 # Output:
@@ -40,9 +40,9 @@ import urllib.error
 # ═══════════════════════════════════════════════════════════════════════════
 
 DEVTO_API_KEY = os.environ.get('DEVTO_API_KEY', '')
-SMTP_USER = os.environ.get('SMTP_USER', 'eddyflores100@gmail.com')
+SMTP_USER = os.environ.get('SMTP_USER', 'support@alicelabs.site')
 SMTP_PASS = os.environ.get('SMTP_PASS', '')
-NOTIFY_EMAIL = os.environ.get('NOTIFY_EMAIL', 'eddyflores100@gmail.com')
+NOTIFY_EMAIL = os.environ.get('NOTIFY_EMAIL', 'support@alicelabs.site')
 
 # dev.to API base
 DEVTO_API = 'https://dev.to/api'

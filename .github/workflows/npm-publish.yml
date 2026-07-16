@@ -27,7 +27,7 @@ jobs:
           if [ -z "$NPM_TOKEN" ]; then
             echo "⚠ NPM_TOKEN secret is not set."
             echo "  To enable: add NPM_TOKEN as a GitHub secret with your npm access token"
-            echo "  1. Create at https://www.npmjs.com/settings/eddyflores100/tokens"
+            echo "  1. Create at https://www.npmjs.com/settings/edgarfloresguerra2011-a11y/tokens"
             echo "  2. Add as GitHub secret: NPM_TOKEN"
             echo "  Skipping publish."
             echo "has_token=false" >> $GITHUB_OUTPUT

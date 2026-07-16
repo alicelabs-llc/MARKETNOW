@@ -22,7 +22,7 @@ const CONTENT = {
     githubDesc: '15 public repos. Real org with 3 members. Wyoming LLC.',
     npmTitle: 'npm — marketnow-mcp',
     npmDesc: 'Our MCP server package. Download counts are public.',
-    smitheryTitle: 'Smithery — eddyflores100/marketnow',
+    smitheryTitle: 'Smithery — alicelabs/marketnow',
     smitheryDescPre: 'Smithery registry listing with quality score (',
     smitheryLink: '84/100 — verify ↗',
     smitheryDescPost: ').',
@@ -67,7 +67,7 @@ const CONTENT = {
     githubDesc: '15 repos públicos. Org real con 3 miembros. Wyoming LLC.',
     npmTitle: 'npm — marketnow-mcp',
     npmDesc: 'Nuestro paquete de MCP server. Los conteos de descarga son públicos.',
-    smitheryTitle: 'Smithery — eddyflores100/marketnow',
+    smitheryTitle: 'Smithery — alicelabs/marketnow',
     smitheryDescPre: 'Listado del registro de Smithery con quality score (',
     smitheryLink: '84/100 — verificar ↗',
     smitheryDescPost: ').',
@@ -112,7 +112,7 @@ const CONTENT = {
     githubDesc: '15 repos públicos. Org real com 3 membros. Wyoming LLC.',
     npmTitle: 'npm — marketnow-mcp',
     npmDesc: 'Nosso pacote de MCP server. Contagens de download são públicas.',
-    smitheryTitle: 'Smithery — eddyflores100/marketnow',
+    smitheryTitle: 'Smithery — alicelabs/marketnow',
     smitheryDescPre: 'Listagem do registro Smithery com quality score (',
     smitheryLink: '84/100 — verificar ↗',
     smitheryDescPost: ').',
@@ -157,7 +157,7 @@ const CONTENT = {
     githubDesc: '15 个公开仓库。真实组织，3 名成员。怀俄明州 LLC。',
     npmTitle: 'npm — marketnow-mcp',
     npmDesc: '我们的 MCP server 包。下载数据公开可查。',
-    smitheryTitle: 'Smithery — eddyflores100/marketnow',
+    smitheryTitle: 'Smithery — alicelabs/marketnow',
     smitheryDescPre: 'Smithery 注册列表及质量评分（',
     smitheryLink: '84/100 — 核验 ↗',
     smitheryDescPost: '）。',
@@ -202,7 +202,7 @@ const CONTENT = {
     githubDesc: '15 dépôts publics. Organisation réelle avec 3 membres. Wyoming LLC.',
     npmTitle: 'npm — marketnow-mcp',
     npmDesc: 'Notre paquet MCP server. Les compteurs de téléchargement sont publics.',
-    smitheryTitle: 'Smithery — eddyflores100/marketnow',
+    smitheryTitle: 'Smithery — alicelabs/marketnow',
     smitheryDescPre: 'Liste du registre Smithery avec score de qualité (',
     smitheryLink: '84/100 — vérifier ↗',
     smitheryDescPost: ').',
@@ -324,7 +324,7 @@ export default function About() {
               <div className="text-zinc-500 text-xs">{c.npmDesc}</div>
             </a>
             <a
-              href="https://smithery.ai/servers/eddyflores100/marketnow"
+              href="https://smithery.ai/servers/alicelabs/marketnow"
               target="_blank"
               rel="noopener"
               className="block p-4 rounded-lg bg-black/40 hover:bg-black/60 transition-colors"
@@ -332,7 +332,7 @@ export default function About() {
               <div className="text-white text-sm font-bold">{c.smitheryTitle}</div>
               <div className="text-zinc-500 text-xs">
                 {c.smitheryDescPre}
-                <a href="https://smithery.ai/servers/eddyflores100/marketnow" target="_blank" rel="noopener" className="text-[#00F299] hover:underline">{c.smitheryLink}</a>
+                <a href="https://smithery.ai/servers/alicelabs/marketnow" target="_blank" rel="noopener" className="text-[#00F299] hover:underline">{c.smitheryLink}</a>
                 {c.smitheryDescPost}
               </div>
             </a>

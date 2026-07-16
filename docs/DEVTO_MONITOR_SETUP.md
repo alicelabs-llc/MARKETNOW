@@ -2,7 +2,7 @@
 
 ## What this does
 
-A GitHub Actions workflow runs **every hour** and checks all your dev.to articles for new comments. When someone comments on any of your posts (and you haven't seen it yet), you get an **email at eddyflores100@gmail.com** with:
+A GitHub Actions workflow runs **every hour** and checks all your dev.to articles for new comments. When someone comments on any of your posts (and you haven't seen it yet), you get an **email at support@alicelabs.site** with:
 
 - The commenter's username
 - The article title and URL
@@ -32,9 +32,9 @@ Click "New repository secret" for each of these:
 
 | Secret name | Value |
 |---|---|
-| `SMTP_USER` | `eddyflores100@gmail.com` |
+| `SMTP_USER` | `support@alicelabs.site` |
 | `SMTP_PASS` | your 16-char Gmail App Password (no spaces) |
-| `NOTIFY_EMAIL` | `eddyflores100@gmail.com` (or any email you want notifications sent to) |
+| `NOTIFY_EMAIL` | `support@alicelabs.site` (or any email you want notifications sent to) |
 | `DEVTO_API_KEY` | `WYK9tdVMev3K7xwtbWxvkwNu` (already hardcoded as fallback, but add it as secret for security) |
 
 ### Step 3: Verify the workflow is enabled
@@ -58,7 +58,7 @@ For each article, fetches all comments
 Compares against .github/devto-state.json (seen comment IDs)
     ↓
 If NEW comments found:
-    → Sends email to eddyflores100@gmail.com
+    → Sends email to support@alicelabs.site
     → Updates .github/devto-state.json
     → Commits state back to repo
 If no new comments:
@@ -76,7 +76,7 @@ To run the monitor manually and verify the email works:
    - "Authenticated as: @edison_flores_6d2cd381b13"
    - "Found N articles"
    - Either "NEW comments needing attention: N" or "No new comments"
-5. If new comments: check your email at eddyflores100@gmail.com
+5. If new comments: check your email at support@alicelabs.site
 
 ## Troubleshooting
 

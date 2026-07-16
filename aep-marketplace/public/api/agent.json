@@ -62,9 +62,9 @@
   "pricing": {
     "model": "MarketNow does NOT sell skills. We administer a free marketplace + sell Sentinel subscriptions to sellers.",
     "skills_are_free": true,
-    "explanation": "All 9,035 skills in the catalog are FREE to install and use. MarketNow does not charge per-skill. Our revenue comes from SELLERS who want to list/sell their skills — they subscribe to Sentinel (the security audit pipeline) and we take a commission on each sale.",
+    "explanation": "All 7,063 skills in the catalog are FREE to install and use. MarketNow does not charge per-skill. Our revenue comes from SELLERS who want to list/sell their skills — they subscribe to Sentinel (the security audit pipeline) and we take a commission on each sale.",
     "revenue_streams": {
-      "1_marketplace_administration": "Free — anyone can browse/install the 9,035 skills at no cost",
+      "1_marketplace_administration": "Free — anyone can browse/install the 7,063 skills at no cost",
       "2_sentinel_subscriptions_for_sellers": "Sellers who want to list/sell their skills subscribe to Sentinel",
       "3_commission_on_sales": "When a seller sells a skill, MarketNow takes 20% (15% if affiliate is used)",
       "4_addons": "Featured listings, verified seller badge, priority review",
@@ -429,7 +429,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-16T01:05:51.844Z",
+  "generated_at": "2026-07-16T01:12:11.644Z",
   "trust": {
     "license": "MIT",
     "open_source": false,

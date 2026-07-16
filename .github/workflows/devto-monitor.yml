@@ -1,16 +1,16 @@
 # MarketNow — dev.to Comment Monitor
 # =====================================
 # Runs every hour, checks all dev.to articles for new comments.
-# Sends an email to eddyflores100@gmail.com when new comments are found.
+# Sends an email to support@alicelabs.site when new comments are found.
 #
 # Setup required (one-time):
-#   1. Generate a Gmail App Password for eddyflores100@gmail.com
+#   1. Generate a Gmail App Password for support@alicelabs.site
 #      (Google Account → Security → 2-Step Verification → App passwords)
 #   2. Add GitHub repository secrets:
 #      - DEVTO_API_KEY   = your dev.to API key (WYK9tdVMev3K7xwtbWxvkwNu)
-#      - SMTP_USER       = eddyflores100@gmail.com
+#      - SMTP_USER       = support@alicelabs.site
 #      - SMTP_PASS       = your Gmail App Password
-#      - NOTIFY_EMAIL    = eddyflores100@gmail.com (optional, defaults to SMTP_USER)
+#      - NOTIFY_EMAIL    = support@alicelabs.site (optional, defaults to SMTP_USER)
 #
 # State is persisted in .github/devto-state.json (committed back to repo)
 # so we only notify on truly NEW comments.
@@ -51,8 +51,8 @@ jobs:
           # Fall back to hardcoded dev.to API key if secret not set
           # (the dev.to key is read-only and safe to commit)
           export DEVTO_API_KEY="${DEVTO_API_KEY:-WYK9tdVMev3K7xwtbWxvkwNu}"
-          export NOTIFY_EMAIL="${NOTIFY_EMAIL:-eddyflores100@gmail.com}"
-          export SMTP_USER="${SMTP_USER:-eddyflores100@gmail.com}"
+          export NOTIFY_EMAIL="${NOTIFY_EMAIL:-support@alicelabs.site}"
+          export SMTP_USER="${SMTP_USER:-support@alicelabs.site}"
 
           python3 scripts/devto-monitor.py
 

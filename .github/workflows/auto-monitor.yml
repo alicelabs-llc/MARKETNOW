@@ -2,7 +2,7 @@
 # ============================================
 # Monitors: dev.to comments, GitHub issue comments, npm downloads,
 # GitHub stars, site uptime.
-# Sends email to eddyflores100@gmail.com when there's new activity.
+# Sends email to support@alicelabs.site when there's new activity.
 
 name: Auto-Monitor
 
@@ -44,8 +44,8 @@ jobs:
           # Use secret if set, else fall back to hardcoded dev.to key
           # (dev.to key is read-only and safe to commit)
           export DEVTO_API_KEY="${DEVTO_API_KEY:-WYK9tdVMev3K7xwtbWxvkwNu}"
-          export NOTIFY_EMAIL="${NOTIFY_EMAIL:-eddyflores100@gmail.com}"
-          export SMTP_USER="${SMTP_USER:-eddyflores100@gmail.com}"
+          export NOTIFY_EMAIL="${NOTIFY_EMAIL:-support@alicelabs.site}"
+          export SMTP_USER="${SMTP_USER:-support@alicelabs.site}"
 
           python3 scripts/auto-monitor.py
 

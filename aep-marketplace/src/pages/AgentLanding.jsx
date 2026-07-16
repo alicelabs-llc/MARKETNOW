@@ -246,7 +246,7 @@ export default function AgentLanding() {
                 <span className="text-zinc-700 text-[10px] ml-2">·</span>
                 <a href="https://www.npmjs.com/package/marketnow-mcp" target="_blank" rel="noopener" className="text-zinc-500 text-[10px] ml-2 hover:text-[#00F299]">npm</a>
                 <span className="text-zinc-700 text-[10px]">·</span>
-                <a href="https://smithery.ai/servers/eddyflores100/marketnow" target="_blank" rel="noopener" className="text-zinc-500 text-[10px] hover:text-[#00F299]">Smithery</a>
+                <a href="https://smithery.ai/servers/alicelabs/marketnow" target="_blank" rel="noopener" className="text-zinc-500 text-[10px] hover:text-[#00F299]">Smithery</a>
               </div>
             </div>
           </motion.div>

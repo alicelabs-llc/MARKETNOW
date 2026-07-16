@@ -14,7 +14,7 @@ tags:
 url: https://marketnow.site
 api: https://marketnow.site/api/skills.json
 mcp_server: npx -y @marketnow/mcp-server
-contact: edgar.flores.guerra.2011@gmail.com
+contact: support@alicelabs.site
 ---
 
 # MarketNow Agent Skill Marketplace

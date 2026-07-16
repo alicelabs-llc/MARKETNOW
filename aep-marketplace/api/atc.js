@@ -53,7 +53,7 @@ let _caPrivateKey = null;
 let _caPublicKey = null;
 let _caPublicKeyPem = null;
 let _atcCache = new Map(); // card_id → { data, fetchedAt }
-const ATC_CACHE_TTL_MS = 60 * 1000; // 1 min
+const ATC_CACHE_TTL_MS = 5 * 1000; // 5s — short to avoid stale revocation across instances
 
 // ─── CA key loading ──────────────────────────────────────────────────────
 
@@ -127,11 +127,13 @@ async function ghApiCall(method, path, body) {
   return r;
 }
 
-async function fetchATC(card_id) {
-  // Check cache
-  const cached = _atcCache.get(card_id);
-  if (cached && Date.now() - cached.fetchedAt < ATC_CACHE_TTL_MS) {
-    return cached.data;
+async function fetchATC(card_id, { skipCache = false } = {}) {
+  // Check cache (unless skipCache — verify always reads fresh)
+  if (!skipCache) {
+    const cached = _atcCache.get(card_id);
+    if (cached && Date.now() - cached.fetchedAt < ATC_CACHE_TTL_MS) {
+      return cached.data;
+    }
   }
 
   // Fetch the raw file content
@@ -334,7 +336,7 @@ export default async function handler(req, res) {
           return res.status(400).json({ error: 'card_id required' });
         }
 
-        const atc = await fetchATC(card_id);
+        const atc = await fetchATC(card_id, { skipCache: true }); // verify always reads fresh
         if (!atc) {
           return res.status(404).json({
             valid: false,
@@ -560,7 +562,7 @@ export default async function handler(req, res) {
           return res.status(400).json({ error: 'card_id required' });
         }
 
-        const atc = await fetchATC(card_id);
+        const atc = await fetchATC(card_id, { skipCache: true }); // revoke reads fresh
         if (!atc) {
           return res.status(404).json({ error: 'ATC not found', card_id });
         }

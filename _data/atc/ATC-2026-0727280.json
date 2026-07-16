@@ -1,6 +1,6 @@
 {
   "card_id": "ATC-2026-0727280",
-  "status": "active",
+  "status": "revoked",
   "payload": {
     "card_id": "ATC-2026-0727280",
     "agent_id": "agent.production.test",
@@ -47,5 +47,7 @@
     "signed_at": "2026-07-16T02:58:47.280Z",
     "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
     "verify_with": "GET /api/atc?action=ca-key"
-  }
+  },
+  "revoked_at": "2026-07-16T02:58:57.604Z",
+  "revocation_reason": "Production test complete"
 }

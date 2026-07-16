@@ -96,12 +96,12 @@ export default secureLight(async function handler(req, res) {
         description: 'L4.5 Content fingerprint schema — SHA-256 of repo HEAD',
         auth: 'none',
       },
-      acp: {
+      atc: {
         method: 'ANY',
-        path: '/api/acp',
-        description: 'ACP — Agent Communication Protocol. Discover, negotiate, transact with other agents.',
+        path: '/api/atc',
+        description: 'Agent Trust Card — identity, trust, payment for AI agents. The trust layer for A2A + MCP.',
         auth: 'none',
-        spec: '/acp-spec.json',
+        spec: '/atc-spec.json',
       },
       egress_allowlist: {
         method: 'GET',

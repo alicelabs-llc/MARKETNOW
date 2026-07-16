@@ -6,7 +6,7 @@
       "version": "4.1.0",
       "date": "2026-07-12",
       "changes": [
-        "ACP \u2014 Agent Communication Protocol launched",
+        "ATC \u2014 Agent Trust Card launched (replaces ACP)",
         "L4 Supply Chain Audit (SBOM + OSV) \u2014 LIVE",
         "L4.5 Content Fingerprint (SHA-256) \u2014 LIVE",
         "L2.6 Egress Proxy with Allowlist \u2014 LIVE",
@@ -15,8 +15,8 @@
       ],
       "breaking": [],
       "new_endpoints": [
-        "/api/acp",
-        "/acp-spec.json",
+        "/api/atc",
+        "/atc-spec.json",
         "/sbom-schema.json",
         "/egress-allowlist.json"
       ]

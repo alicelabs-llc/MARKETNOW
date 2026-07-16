@@ -325,7 +325,7 @@
     "/api/mandates": {
       "get": {
         "summary": "Get / list delegated mandates",
-        "description": "ACP / AP2 delegated mandates. With ?id= returns a single mandate. With ?owner=0x... returns all mandates owned by that wallet. With ?agent=agent_xxx returns all mandates granted to that agent.",
+        "description": "ATC/AP2 delegated mandates. With ?id= returns a single mandate. With ?owner=0x... returns all mandates owned by that wallet. With ?agent=agent_xxx returns all mandates granted to that agent.",
         "operationId": "getMandates",
         "parameters": [
           {

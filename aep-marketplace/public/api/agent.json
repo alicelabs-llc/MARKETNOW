@@ -17,7 +17,7 @@
     "standards_page": "https://marketnow.site/standards"
   },
   "trust_model": {
-    "protocol": "ACP / AP2 (delegated mandates)",
+    "protocol": "ATC/AP2 (delegated mandates)",
     "summary": "Three purchase modes designed for both human oversight and agent autonomy. Human-in-the-loop is the default; silent autonomous spending is opt-in only.",
     "default_notification_mode": "notify",
     "notification_modes": {
@@ -208,7 +208,7 @@
     "mandates": {
       "method": "GET | POST",
       "path": "/api/mandates",
-      "description": "Manage delegated spending mandates (ACP / AP2).",
+      "description": "Manage delegated spending mandates (ATC/AP2).",
       "actions": {
         "create": "POST /api/mandates with {owner, agentId, spendingLimitUsd, perPurchaseCapUsd, categories, expiresAt}",
         "get": "GET /api/mandates?id=mand_xxx",
@@ -376,7 +376,7 @@
     "HTTP/1.1",
     "HTTPS",
     "JSON",
-    "ACP/AP2 (delegated mandates)"
+    "ATC/AP2 (delegated mandates)"
   ],
   "mcp_server": {
     "name": "marketnow-mcp",
@@ -429,7 +429,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-16T01:20:33.091Z",
+  "generated_at": "2026-07-16T02:23:15.768Z",
   "trust": {
     "license": "MIT",
     "open_source": false,

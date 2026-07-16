@@ -62,11 +62,11 @@
       "sitemap": "https://marketnow.site/sitemap.xml",
       "robots": "https://marketnow.site/robots.txt"
     },
-    "acp": {
+    "atc": {
       "version": "1.0.0",
-      "endpoint": "https://marketnow.site/api/acp",
-      "spec": "https://marketnow.site/acp-spec.json",
-      "description": "Agent Communication Protocol \u2014 discover, negotiate, transact"
+      "endpoint": "https://marketnow.site/api/atc",
+      "spec": "https://marketnow.site/atc-spec.json",
+      "description": "Agent Trust Card — identity, trust score, and payment for AI agents. The trust layer for A2A + MCP."
     }
   },
   "security": {

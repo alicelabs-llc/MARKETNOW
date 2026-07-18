@@ -1,6 +1,6 @@
 {
   "card_id": "ATC-2026-5837752",
-  "status": "active",
+  "status": "revoked",
   "payload": {
     "card_id": "ATC-2026-5837752",
     "agent_id": "agent.alicelabs.marketnow",
@@ -44,5 +44,7 @@
     "signed_at": "2026-07-18T03:37:17.752Z",
     "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
     "verify_with": "GET /api/atc?action=ca-key"
-  }
+  },
+  "revoked_at": "2026-07-18T03:38:45.419Z",
+  "revocation_reason": "Replaced with new ATC linked to Sentinel certificate (score 10)"
 }

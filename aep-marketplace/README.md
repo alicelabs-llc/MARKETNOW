@@ -60,7 +60,7 @@ Connect any MCP-compatible AI client (Claude, Cursor, Windsurf, etc.) to MarketN
 
 - 🌐 Website: https://marketnow.site
 - 🔌 MCP API: https://marketnow.site/api/mcp
-- 📘 OpenAPI Spec: https://marketnow.site/openapi.yaml
+- 📘 OpenAPI Spec: https://marketnow.site/api/openapi.json (YAML: https://marketnow.site/api/openapi.yaml)
 
 ## License
 

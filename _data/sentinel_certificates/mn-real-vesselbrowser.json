@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-8850692",
+  "skill_id": "mn-real-vesselbrowser",
+  "skill_name": "vessel-browser",
+  "issued_at": "2026-07-15T01:27:30.692Z",
+  "expires_at": "2026-07-22T01:27:30.692Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "6ea0b777ef7565a622c6de8bf077d37ccfc4bf8e9c5a9b2d17e085b286b17629",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vesselbrowser"
+}

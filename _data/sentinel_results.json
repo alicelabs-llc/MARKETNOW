@@ -1,0 +1,2761 @@
+{
+  "audit_type": "sentinel-l16-batch",
+  "timestamp": "2026-07-12T01:19:29.113Z",
+  "tools": {
+    "semgrep": {
+      "rules": 18,
+      "findings": 0
+    },
+    "gitleaks": {
+      "findings": 456
+    },
+    "osv": {
+      "vulnerabilities": 0
+    }
+  },
+  "totals": {
+    "critical": 456,
+    "high": 0,
+    "medium": 0
+  },
+  "semgrep_findings": [],
+  "secret_findings": [
+    {
+      "rule": "stripe-access-token",
+      "file": ".gitleaksignore",
+      "startLine": 10,
+      "secret": "sk_t…der'"
+    },
+    {
+      "rule": "stripe-access-token",
+      "file": "aep-marketplace/api/create-checkout-session.js",
+      "startLine": 15,
+      "secret": "sk_t…der'"
+    },
+    {
+      "rule": "stripe-access-token",
+      "file": "aep-marketplace/api/create-checkout-session.js",
+      "startLine": 37,
+      "secret": "sk_t…der'"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Linc…2017"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "bart…llab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "andr…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "8ran…art5"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "scot…-bot"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "blac…e084"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "paul…1357"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "srij…la18"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Vikr…gh01"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "samr…ld23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "jiay…-max"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Alex…on17"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "jack…9743"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "jaco…-cpu"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "pine…pass"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mich…-gif"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "wuze…lang"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Moha…h-14"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Chro…e411"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "join…2-AI"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "irin…-oss"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "spac…1225"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "roha…y231"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "nori…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Daoy…2816"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "ebin…-akl"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "syed…bnr1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mcp2…hing"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Alex…yber"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Nonm…s990"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Unfa…en38"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Dura…e252"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Zona…o932"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Poly…n261"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Fowl…g973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Andr…ic63"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "warm…n723"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Eigh…a934"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "unhe…r317"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "gbh3…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "half…ss75"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "exte…d280"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "cele…e925"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Exca…9271"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Umer…1973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Fabi…n123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "edga…a11y"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "surd…g583"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "iron…vs27"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Gabr…es16"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "abra…-png"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "oliv…ye23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mako…2001"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "amit…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Genu…o654"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mugo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "WP2-…suma"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "sapw…y475"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Foot…n742"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "joni…an87"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "oste…g210"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Unpo…er58"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Caro…g944"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "shee…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "smoo…l702"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Bruc…w513"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "m8lo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "apon…g807"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "herm…l848"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Matt…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Wile…4031"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Alys…ve64"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "abor…r926"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Glab…g823"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "inca…s977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Mira…e290"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Ramo…ia23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "aest…5470"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Dyna…2652"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mino…3023"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "inqu…a144"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Norr…e368"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "sedu…y787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "carv…r804"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "eveh…c255"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Bird…g787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "East…t735"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "vale…d265"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Rosa…l716"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "DevO…u123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "achu…e004"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "bais…tcom"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Mind…got1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Anki…h007"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "prat…2726"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "luis…1991"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "ramb…0403"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "leoj…-sys"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "gopi…d458"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Madh…2301"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "maka…p1et"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "Eust…e977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "robe…cmyk"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "jona…er97"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills-lite.json",
+      "startLine": 1,
+      "secret": "mohi…5856"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/utils/stripe.js",
+      "startLine": 24,
+      "secret": "pk_l…LWuD"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 10856,
+      "secret": "Linc…2017"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 21398,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 23742,
+      "secret": "bart…llab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 31304,
+      "secret": "andr…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 188972,
+      "secret": "8ran…art5"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 192205,
+      "secret": "scot…-bot"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 198936,
+      "secret": "blac…e084"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 233092,
+      "secret": "paul…1357"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 237117,
+      "secret": "srij…la18"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 238727,
+      "secret": "Vikr…gh01"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 245317,
+      "secret": "samr…ld23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 247995,
+      "secret": "jiay…-max"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 248437,
+      "secret": "Alex…on17"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 249293,
+      "secret": "jack…9743"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 249675,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 254729,
+      "secret": "jaco…-cpu"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 264046,
+      "secret": "pine…pass"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 264108,
+      "secret": "mich…-gif"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 264366,
+      "secret": "wuze…lang"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 282455,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 286926,
+      "secret": "Moha…h-14"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 303478,
+      "secret": "Chro…e411"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 321731,
+      "secret": "join…2-AI"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 328416,
+      "secret": "irin…-oss"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 368614,
+      "secret": "spac…1225"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 384593,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 390815,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 395390,
+      "secret": "roha…y231"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 398867,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 420644,
+      "secret": "nori…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 428147,
+      "secret": "Daoy…2816"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 434430,
+      "secret": "ebin…-akl"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 437236,
+      "secret": "syed…bnr1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 442116,
+      "secret": "mcp2…hing"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 466089,
+      "secret": "Alex…yber"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 484621,
+      "secret": "Nonm…s990"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 484743,
+      "secret": "Unfa…en38"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 484865,
+      "secret": "Dura…e252"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 484987,
+      "secret": "Zona…o932"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 485536,
+      "secret": "Poly…n261"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 485597,
+      "secret": "Fowl…g973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 485902,
+      "secret": "Andr…ic63"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 486512,
+      "secret": "warm…n723"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 486756,
+      "secret": "Eigh…a934"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 486817,
+      "secret": "unhe…r317"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 487061,
+      "secret": "gbh3…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 487183,
+      "secret": "half…ss75"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 487305,
+      "secret": "exte…d280"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 487366,
+      "secret": "cele…e925"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 489806,
+      "secret": "Exca…9271"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 489928,
+      "secret": "Umer…1973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 490111,
+      "secret": "Fabi…n123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 491087,
+      "secret": "edga…a11y"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 491819,
+      "secret": "surd…g583"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 491941,
+      "secret": "iron…vs27"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 494503,
+      "secret": "Gabr…es16"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 494869,
+      "secret": "abra…-png"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 496150,
+      "secret": "oliv…ye23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 497736,
+      "secret": "mako…2001"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 502006,
+      "secret": "amit…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 502738,
+      "secret": "Genu…o654"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 503043,
+      "secret": "mugo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 505117,
+      "secret": "WP2-…suma"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 505239,
+      "secret": "sapw…y475"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 505300,
+      "secret": "Foot…n742"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 505910,
+      "secret": "joni…an87"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 506032,
+      "secret": "oste…g210"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 506398,
+      "secret": "Unpo…er58"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 507252,
+      "secret": "Caro…g944"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 507435,
+      "secret": "shee…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 507679,
+      "secret": "smoo…l702"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 509875,
+      "secret": "Bruc…w513"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 510485,
+      "secret": "m8lo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 510912,
+      "secret": "apon…g807"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 511034,
+      "secret": "herm…l848"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 511217,
+      "secret": "Matt…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 511339,
+      "secret": "Wile…4031"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 512193,
+      "secret": "Alys…ve64"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 512376,
+      "secret": "abor…r926"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 512620,
+      "secret": "Glab…g823"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 512681,
+      "secret": "inca…s977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 512864,
+      "secret": "Mira…e290"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 513108,
+      "secret": "Ramo…ia23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 513291,
+      "secret": "aest…5470"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 513840,
+      "secret": "Dyna…2652"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 513962,
+      "secret": "mino…3023"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 514511,
+      "secret": "inqu…a144"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 514633,
+      "secret": "Norr…e368"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 515304,
+      "secret": "sedu…y787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 515426,
+      "secret": "carv…r804"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 515670,
+      "secret": "eveh…c255"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 515914,
+      "secret": "Bird…g787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 516402,
+      "secret": "East…t735"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 516524,
+      "secret": "vale…d265"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 516585,
+      "secret": "Rosa…l716"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 522929,
+      "secret": "DevO…u123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 527382,
+      "secret": "achu…e004"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 527504,
+      "secret": "bais…tcom"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 530737,
+      "secret": "Mind…got1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 540375,
+      "secret": "Anki…h007"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 540497,
+      "secret": "prat…2726"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 542205,
+      "secret": "luis…1991"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 548244,
+      "secret": "ramb…0403"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 551111,
+      "secret": "leoj…-sys"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 551782,
+      "secret": "gopi…d458"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 552209,
+      "secret": "Madh…2301"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 553002,
+      "secret": "maka…p1et"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 554039,
+      "secret": "Eust…e977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 554649,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 556052,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 557333,
+      "secret": "robe…cmyk"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 561725,
+      "secret": "jona…er97"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills_index.json",
+      "startLine": 585504,
+      "secret": "mohi…5856"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 11822,
+      "secret": "Linc…2017"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 23306,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 25860,
+      "secret": "bart…llab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 34100,
+      "secret": "andr…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 226394,
+      "secret": "8ran…art5"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 230176,
+      "secret": "scot…-bot"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 238050,
+      "secret": "blac…e084"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 276523,
+      "secret": "paul…1357"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 280920,
+      "secret": "srij…la18"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 282680,
+      "secret": "Vikr…gh01"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 289876,
+      "secret": "samr…ld23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 292800,
+      "secret": "jiay…-max"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 293284,
+      "secret": "Alex…on17"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 294218,
+      "secret": "jack…9743"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 294636,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 300158,
+      "secret": "jaco…-cpu"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 310351,
+      "secret": "pine…pass"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 310419,
+      "secret": "mich…-gif"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 310701,
+      "secret": "wuze…lang"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 330452,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 335337,
+      "secret": "Moha…h-14"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 353419,
+      "secret": "Chro…e411"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 373364,
+      "secret": "join…2-AI"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 380649,
+      "secret": "irin…-oss"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 424579,
+      "secret": "spac…1225"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 442112,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 448946,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 453971,
+      "secret": "roha…y231"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 457790,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 481709,
+      "secret": "nori…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 489950,
+      "secret": "Daoy…2816"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 496851,
+      "secret": "ebin…-akl"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 499933,
+      "secret": "syed…bnr1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 505293,
+      "secret": "mcp2…hing"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 531624,
+      "secret": "Alex…yber"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 552136,
+      "secret": "Nonm…s990"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 552270,
+      "secret": "Unfa…en38"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 552404,
+      "secret": "Dura…e252"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 552538,
+      "secret": "Zona…o932"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 553141,
+      "secret": "Poly…n261"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 553208,
+      "secret": "Fowl…g973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 553543,
+      "secret": "Andr…ic63"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 554213,
+      "secret": "warm…n723"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 554481,
+      "secret": "Eigh…a934"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 554548,
+      "secret": "unhe…r317"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 554816,
+      "secret": "gbh3…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 554950,
+      "secret": "half…ss75"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 555084,
+      "secret": "exte…d280"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 555151,
+      "secret": "cele…e925"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 557831,
+      "secret": "Exca…9271"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 557965,
+      "secret": "Umer…1973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 558166,
+      "secret": "Fabi…n123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 559238,
+      "secret": "edga…a11y"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 560042,
+      "secret": "surd…g583"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 560176,
+      "secret": "iron…vs27"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 562990,
+      "secret": "Gabr…es16"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 563392,
+      "secret": "abra…-png"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 564799,
+      "secret": "oliv…ye23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 566541,
+      "secret": "mako…2001"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 571231,
+      "secret": "amit…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 572035,
+      "secret": "Genu…o654"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 572370,
+      "secret": "mugo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 574648,
+      "secret": "WP2-…suma"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 574782,
+      "secret": "sapw…y475"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 574849,
+      "secret": "Foot…n742"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 575519,
+      "secret": "joni…an87"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 575653,
+      "secret": "oste…g210"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 576055,
+      "secret": "Unpo…er58"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 576993,
+      "secret": "Caro…g944"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 577194,
+      "secret": "shee…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 577462,
+      "secret": "smoo…l702"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 579874,
+      "secret": "Bruc…w513"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 580544,
+      "secret": "m8lo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 581013,
+      "secret": "apon…g807"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 581147,
+      "secret": "herm…l848"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 581348,
+      "secret": "Matt…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 581482,
+      "secret": "Wile…4031"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 582420,
+      "secret": "Alys…ve64"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 582621,
+      "secret": "abor…r926"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 582889,
+      "secret": "Glab…g823"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 582956,
+      "secret": "inca…s977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 583157,
+      "secret": "Mira…e290"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 583425,
+      "secret": "Ramo…ia23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 583626,
+      "secret": "aest…5470"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 584229,
+      "secret": "Dyna…2652"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 584363,
+      "secret": "mino…3023"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 584966,
+      "secret": "inqu…a144"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 585100,
+      "secret": "Norr…e368"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 585837,
+      "secret": "sedu…y787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 585971,
+      "secret": "carv…r804"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 586239,
+      "secret": "eveh…c255"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 586507,
+      "secret": "Bird…g787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 587043,
+      "secret": "East…t735"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 587177,
+      "secret": "vale…d265"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 587244,
+      "secret": "Rosa…l716"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 594212,
+      "secret": "DevO…u123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 599103,
+      "secret": "achu…e004"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 599237,
+      "secret": "bais…tcom"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 602788,
+      "secret": "Mind…got1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 613374,
+      "secret": "Anki…h007"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 613508,
+      "secret": "prat…2726"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 615384,
+      "secret": "luis…1991"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 622017,
+      "secret": "ramb…0403"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 625166,
+      "secret": "leoj…-sys"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 625903,
+      "secret": "gopi…d458"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 626372,
+      "secret": "Madh…2301"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 627243,
+      "secret": "maka…p1et"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 628382,
+      "secret": "Eust…e977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 629052,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 630593,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 632000,
+      "secret": "robe…cmyk"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 636824,
+      "secret": "jona…er97"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/public/api/skills.json",
+      "startLine": 663182,
+      "secret": "mohi…5856"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 11822,
+      "secret": "Linc…2017"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 23306,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 25860,
+      "secret": "bart…llab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 34100,
+      "secret": "andr…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 226394,
+      "secret": "8ran…art5"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 230176,
+      "secret": "scot…-bot"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 238050,
+      "secret": "blac…e084"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 276523,
+      "secret": "paul…1357"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 280920,
+      "secret": "srij…la18"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 282680,
+      "secret": "Vikr…gh01"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 289876,
+      "secret": "samr…ld23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 292800,
+      "secret": "jiay…-max"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 293284,
+      "secret": "Alex…on17"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 294218,
+      "secret": "jack…9743"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 294636,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 300158,
+      "secret": "jaco…-cpu"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 310351,
+      "secret": "pine…pass"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 310419,
+      "secret": "mich…-gif"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 310701,
+      "secret": "wuze…lang"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 330452,
+      "secret": "whdr…-cmd"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 335337,
+      "secret": "Moha…h-14"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 353419,
+      "secret": "Chro…e411"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 373364,
+      "secret": "join…2-AI"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 380649,
+      "secret": "irin…-oss"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 424579,
+      "secret": "spac…1225"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 442112,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 448946,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 453971,
+      "secret": "roha…y231"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 457790,
+      "secret": "DMon…ry40"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 481709,
+      "secret": "nori…-lab"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 489950,
+      "secret": "Daoy…2816"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 496851,
+      "secret": "ebin…-akl"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 499933,
+      "secret": "syed…bnr1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 505293,
+      "secret": "mcp2…hing"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 531624,
+      "secret": "Alex…yber"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 552136,
+      "secret": "Nonm…s990"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 552270,
+      "secret": "Unfa…en38"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 552404,
+      "secret": "Dura…e252"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 552538,
+      "secret": "Zona…o932"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 553141,
+      "secret": "Poly…n261"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 553208,
+      "secret": "Fowl…g973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 553543,
+      "secret": "Andr…ic63"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 554213,
+      "secret": "warm…n723"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 554481,
+      "secret": "Eigh…a934"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 554548,
+      "secret": "unhe…r317"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 554816,
+      "secret": "gbh3…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 554950,
+      "secret": "half…ss75"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 555084,
+      "secret": "exte…d280"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 555151,
+      "secret": "cele…e925"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 557831,
+      "secret": "Exca…9271"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 557965,
+      "secret": "Umer…1973"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 558166,
+      "secret": "Fabi…n123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 559238,
+      "secret": "edga…a11y"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 560042,
+      "secret": "surd…g583"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 560176,
+      "secret": "iron…vs27"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 562990,
+      "secret": "Gabr…es16"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 563392,
+      "secret": "abra…-png"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 564799,
+      "secret": "oliv…ye23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 566541,
+      "secret": "mako…2001"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 571231,
+      "secret": "amit…-del"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 572035,
+      "secret": "Genu…o654"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 572370,
+      "secret": "mugo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 574648,
+      "secret": "WP2-…suma"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 574782,
+      "secret": "sapw…y475"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 574849,
+      "secret": "Foot…n742"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 575519,
+      "secret": "joni…an87"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 575653,
+      "secret": "oste…g210"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 576055,
+      "secret": "Unpo…er58"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 576993,
+      "secret": "Caro…g944"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 577194,
+      "secret": "shee…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 577462,
+      "secret": "smoo…l702"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 579874,
+      "secret": "Bruc…w513"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 580544,
+      "secret": "m8lo…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 581013,
+      "secret": "apon…g807"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 581147,
+      "secret": "herm…l848"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 581348,
+      "secret": "Matt…e483"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 581482,
+      "secret": "Wile…4031"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 582420,
+      "secret": "Alys…ve64"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 582621,
+      "secret": "abor…r926"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 582889,
+      "secret": "Glab…g823"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 582956,
+      "secret": "inca…s977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 583157,
+      "secret": "Mira…e290"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 583425,
+      "secret": "Ramo…ia23"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 583626,
+      "secret": "aest…5470"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 584229,
+      "secret": "Dyna…2652"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 584363,
+      "secret": "mino…3023"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 584966,
+      "secret": "inqu…a144"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 585100,
+      "secret": "Norr…e368"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 585837,
+      "secret": "sedu…y787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 585971,
+      "secret": "carv…r804"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 586239,
+      "secret": "eveh…c255"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 586507,
+      "secret": "Bird…g787"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 587043,
+      "secret": "East…t735"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 587177,
+      "secret": "vale…d265"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 587244,
+      "secret": "Rosa…l716"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 594212,
+      "secret": "DevO…u123"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 599103,
+      "secret": "achu…e004"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 599237,
+      "secret": "bais…tcom"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 602788,
+      "secret": "Mind…got1"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 613374,
+      "secret": "Anki…h007"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 613508,
+      "secret": "prat…2726"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 615384,
+      "secret": "luis…1991"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 622017,
+      "secret": "ramb…0403"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 625166,
+      "secret": "leoj…-sys"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 625903,
+      "secret": "gopi…d458"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 626372,
+      "secret": "Madh…2301"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 627243,
+      "secret": "maka…p1et"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 628382,
+      "secret": "Eust…e977"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 629052,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 630593,
+      "secret": "mdfi…boop"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 632000,
+      "secret": "robe…cmyk"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 636824,
+      "secret": "jona…er97"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "aep-marketplace/src/data/all_skills.json",
+      "startLine": 663182,
+      "secret": "mohi…5856"
+    }
+  ],
+  "osv_findings": []
+}

@@ -159,7 +159,7 @@ Thanks for maintaining mcp.so — it's a great resource for the MCP community!
 
 Best,
 Edgar Flores
-eddyflores100@gmail.com
+support@alicelabs.site
 ```
 
 ### Email Template — For new directory submissions
@@ -210,7 +210,7 @@ Please let me know if you need any additional information.
 
 Best,
 Edgar Flores
-eddyflores100@gmail.com
+support@alicelabs.site
 ```
 
 ### Chinese Submission Template (中文)
@@ -255,7 +255,7 @@ MCP 配置:
 
 此致,
 Edgar Flores
-eddyflores100@gmail.com
+support@alicelabs.site
 ```
 
 ### GitHub PR Template (for awesome-mcp repos)

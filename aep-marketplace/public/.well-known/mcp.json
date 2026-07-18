@@ -1,18 +1,19 @@
 {
   "$schema": "https://marketnow.site/.well-known/mcp.schema.json",
   "name": "marketnow",
-  "description": "MarketNow — The open marketplace for MCP-compatible agent skills. Search, discover, and install 5,054+ verified MCP skills with transparent one-time pricing (from $0.99). Designed for autonomous agent consumption.",
-  "version": "1.0.0",
+  "description": "MarketNow \u2014 Trust layer for agent commerce. 8,764 MCP-compatible skills with Sentinel L2.5 gVisor sandbox security audits, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. AliceLabs LLC Proprietary. Maintained by AliceLabs LLC (Wyoming, USA, 2025).",
+  "version": "1.4.0",
   "homepage": "https://marketnow.site",
   "repository": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
   "npm_package": "marketnow-mcp",
   "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
   "install": "npx -y marketnow-mcp",
   "transport": {
-    "type": "stdio",
+    "type": "http+sse",
+    "http_url": "https://marketnow.site/api/mcp",
     "stdio_command": "npx -y marketnow-mcp",
-    "http_url": null,
-    "note": "Currently stdio only. HTTP transport (SSE/WebSocket) is on the roadmap."
+    "sse_url": "https://marketnow.site/api/mcp",
+    "note": "Supports both HTTP (SSE + JSON-RPC) and stdio transport."
   },
   "tools": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "name": "get_manifest",
-      "description": "Get marketplace metadata (8535 skills, pricing tiers, commission)"
+      "description": "Get marketplace metadata (8,764 skills, pricing tiers, commission)"
     },
     {
       "name": "get_install_command",
@@ -72,7 +73,7 @@
     }
   },
   "marketplace_stats": {
-    "total_skills": 8535,
+    "total_skills": 8764,
     "categories": 58,
     "price_min_usd": 0.99,
     "price_max_usd": 9.99,
@@ -99,7 +100,7 @@
       "directory": "mcp.so",
       "url": "https://mcp.so/server/marketnow-mcp---aep-agent-exchange-protocol/edgarfloresguerra2011-a11y",
       "status": "listed",
-      "note": "Listed but data is outdated (shows 13,859 skills, mentions crypto payments that don't exist). Contact mcp.so to update."
+      "note": "Listed but data is outdated (shows 8,764 skills, mentions crypto payments that don't exist). Contact mcp.so to update."
     },
     {
       "directory": "glama.ai",
@@ -117,6 +118,8 @@
     "email": "info@alicelabs.site",
     "github": "edgarfloresguerra2011-a11y"
   },
-  "license": "MIT",
-  "generated_at": "2026-06-29T03:10:00Z"
+  "license": "MNNC-1.0",
+  "maintainer": "AliceLabs LLC (Wyoming, USA, 2025)",
+  "founder": "Edison Flores",
+  "generated_at": "2026-07-04T00:00:00Z"
 }

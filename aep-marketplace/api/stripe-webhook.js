@@ -23,14 +23,21 @@
  */
 
 import Stripe from 'stripe';
+import crypto from 'crypto';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder');
+// H4 FIX: fail fast si STRIPE_SECRET_KEY no está configurada
+const STRIPE_KEY = process.env.STRIPE_SECRET_KEY;
+if (!STRIPE_KEY) {
+  console.error('CRITICAL: STRIPE_SECRET_KEY is not set. Webhook verification will fail.');
+}
+const stripe = STRIPE_KEY ? new Stripe(STRIPE_KEY) : null;
 const CLIENT_URL = process.env.CLIENT_URL || 'https://marketnow.site';
 
 /**
  * Verify the webhook signature (security critical).
  */
 function verifySignature(payload, signature, secret) {
+  if (!stripe) return null;
   try {
     const event = stripe.webhooks.constructEvent(payload, signature, secret);
     return event;
@@ -61,43 +68,80 @@ async function handleCheckoutComplete(session) {
   const marketnowRevenue = skillPrice * commissionRate;
   const affiliatePayout = affiliateCode ? skillPrice * 0.05 : 0;
 
-  console.log('✅ Payment successful:', {
-    sessionId: session.id,
-    skillId,
-    skillName,
-    price: skillPrice,
-    sellerEarnings,
-    marketnowRevenue,
-    affiliatePayout,
-    affiliateCode,
-    customerEmail: session.customer_email || session.customer_details?.email,
-  });
+  // L2 FIX: license key determinístico (SHA-256 de sessionId:skillId)
+  const licenseKey = `MN-STRIPE-${skillId?.slice(-8).toUpperCase() || 'XXXX'}-${crypto.createHash('sha256').update(`${session.id}:${skillId}`).digest('hex').slice(0, 12).toUpperCase()}`;
 
-  // TODO: In production, save to database:
-  // await db.purchase.create({
-  //   id: session.id,
-  //   skillId,
-  //   buyerEmail: session.customer_email,
-  //   price: skillPrice,
-  //   sellerEarnings,
-  //   marketnowRevenue,
-  //   affiliatePayout,
-  //   affiliateCode,
-  //   licenseKey: generateLicenseKey(),
-  //   purchasedAt: new Date(),
-  //   status: 'completed',
-  // });
+  // H5 FIX: idempotencia — verificar si ya existe el archivo antes de escribir
+  try {
+    const cfg = {
+      token: process.env.MANDATES_GITHUB_TOKEN,
+      repo: process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow',
+      branch: process.env.MANDATES_BRANCH || 'master',
+    };
+    if (cfg.token) {
+      const filename = `stripe_${session.id}.json`;
+      const checkUrl = `https://api.github.com/repos/${cfg.repo}/contents/_data/purchases/${filename}?ref=${encodeURIComponent(cfg.branch)}`;
+      const existsResp = await fetch(checkUrl, {
+        headers: {
+          'User-Agent': 'marketnow-stripe-webhook',
+          Authorization: `Bearer ${cfg.token}`,
+        },
+      });
+      if (existsResp.status === 200) {
+        // Ya procesado — idempotency hit
+        console.log(`[stripe-webhook] Duplicate event for ${session.id}, skipping (idempotent)`);
+        return { success: true, already_processed: true, licenseKey };
+      }
 
-  // TODO: Send receipt email
-  // await sendEmail(session.customer_email, 'receipt', { skillName, price: skillPrice });
+      console.log('✅ Payment successful:', {
+        sessionId: session.id,
+        skillId,
+        skillName,
+        price: skillPrice,
+        sellerEarnings,
+        marketnowRevenue,
+        affiliatePayout,
+        affiliateCode,
+        licenseKey,
+        customerEmail: session.customer_email || session.customer_details?.email,
+      });
 
-  // TODO: Update seller balance
-  // await db.seller.updateBalance(skill.author, sellerEarnings);
+      const record = {
+        purchaseId: session.id,
+        source: 'stripe',
+        skillId,
+        skillName,
+        price: skillPrice,
+        sellerEarnings,
+        marketnowRevenue,
+        affiliatePayout: affiliateCode ? affiliatePayout : 0,
+        affiliateCode: affiliateCode || null,
+        licenseKey,
+        buyerEmail: session.customer_email || session.customer_details?.email || null,
+        purchasedAt: new Date().toISOString(),
+        status: 'completed',
+      };
+      const fileUrl = `https://api.github.com/repos/${cfg.repo}/contents/_data/purchases/${filename}?ref=${encodeURIComponent(cfg.branch)}`;
+      const body = {
+        message: `purchase: Stripe ${session.id} — ${skillName} ($${skillPrice})`,
+        content: Buffer.from(JSON.stringify(record, null, 2)).toString('base64'),
+        branch: cfg.branch,
+      };
+      await fetch(fileUrl, {
+        method: 'PUT',
+        headers: {
+          'User-Agent': 'marketnow-stripe-webhook',
+          Authorization: `Bearer ${cfg.token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+    }
+  } catch (e) {
+    console.error('Failed to persist purchase record (non-fatal):', e);
+  }
 
-  // TODO: Update affiliate balance
-  // if (affiliateCode) await db.affiliate.updateBalance(affiliateCode, affiliatePayout);
-
-  return { success: true };
+  return { success: true, licenseKey };
 }
 
 export default async function handler(req, res) {
@@ -105,17 +149,26 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Get the raw body (Stripe needs it for signature verification)
-  const payload = req.body; // Vercel provides this as a Buffer/string
+  // SECURITY FIX 3.1: Use raw body for Stripe signature verification
+  // Stripe signs the exact bytes it sends. If Vercel's body parser
+  // already parsed req.body into an object, JSON.stringify won't
+  // reproduce the exact original bytes (key order, whitespace).
+  // Solution: disable body parser (in config below) and read raw buffer.
+  const chunks = [];
+  for await (const chunk of req) {
+    chunks.push(chunk);
+  }
+  const rawBody = Buffer.concat(chunks).toString('utf-8');
+  
   const signature = req.headers['stripe-signature'];
 
   if (!signature) {
     return res.status(400).json({ error: 'Missing stripe-signature header' });
   }
 
-  // Verify the webhook signature
+  // Verify the webhook signature with the RAW body
   const event = verifySignature(
-    typeof payload === 'string' ? payload : JSON.stringify(payload),
+    rawBody,
     signature,
     process.env.STRIPE_WEBHOOK_SECRET
   );
@@ -158,11 +211,10 @@ export default async function handler(req, res) {
   }
 }
 
-// Vercel needs this to parse the raw body for signature verification
+// SECURITY FIX 3.1: Disable body parser so we get the raw body
+// This is required for Stripe signature verification
 export const config = {
   api: {
-    bodyParser: {
-      sizeLimit: '1mb',
-    },
+    bodyParser: false,
   },
 };

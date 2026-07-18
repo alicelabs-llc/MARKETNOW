@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { readDB } from '../db.js';
+import { readDB, writeDB } from '../db.js';  // FINDING S6 FIX: added writeDB
 import { authenticateToken } from '../middleware/auth.js';
 
 const router = Router();

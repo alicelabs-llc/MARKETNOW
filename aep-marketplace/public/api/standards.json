@@ -49,7 +49,7 @@
         "stored_in_mandate": "ap2: { format, mandate_id, signature, issuer, verified }",
         "verification_status": "not_yet_verified (we store but do not yet cryptographically verify AP2 signatures)"
       },
-      "link": "https://github.com/google/agent-payments-protocol"
+      "link": "https://developers.google.com/pay/agent-payments"
     },
     {
       "id": "server-cards",
@@ -97,7 +97,7 @@
         "stored_in_mandate": "taskScope: { description, hash }",
         "enforcement": "not_yet_enforced (we store but do not yet verify task scope at spend time)"
       },
-      "link": "https://agentcommunicationprotocol.org"
+      "link": "https://github.com/anthropics/agent-communication-protocol"
     }
   ],
   "honest_disclosure": [

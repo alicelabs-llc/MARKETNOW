@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5374157",
+  "skill_id": "mn-real-nlmcpstdioollamatime",
+  "skill_name": "nl-mcp-stdio-ollama-time-demo",
+  "issued_at": "2026-07-19T04:29:34.157Z",
+  "expires_at": "2026-07-26T04:29:34.157Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "1cf4b6e9f1098fb956642ee0aac179fac1597c74cf867925195351b58ac55a7b",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nlmcpstdioollamatime"
+}

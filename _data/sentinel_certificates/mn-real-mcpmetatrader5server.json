@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5119567",
+  "skill_id": "mn-real-mcpmetatrader5server",
+  "skill_name": "mcp-metatrader5-server",
+  "issued_at": "2026-07-19T04:25:19.567Z",
+  "expires_at": "2026-07-26T04:25:19.567Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "1c1dd0da9d81bd1acc60ce3101e4fa55fadd46fa0e9d942c2c7fced624deb408",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmetatrader5server"
+}

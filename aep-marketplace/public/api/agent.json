@@ -1,7 +1,7 @@
 {
-  "$schema": "https://marketnow.site/api/agent.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "MarketNow",
-  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payment protocol, and human-in-the-loop-by-default agent spending. 8,560 MCP servers, $0.99-$9.99 one-time, 43 free. Open source MIT, maintained by AliceLabs LLC.",
+  "description": "Trust layer for agent commerce. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides Sentinel security audits, AP2-compatible mandates, x402 payment protocol, and human-in-the-loop-by-default agent spending. 5,023 MCP servers, B2B pricing. AliceLabs LLC proprietary (see SENTINEL-LICENSE), maintained by AliceLabs LLC.",
   "url": "https://marketnow.site",
   "api_base": "https://marketnow.site/api",
   "positioning": {
@@ -17,7 +17,7 @@
     "standards_page": "https://marketnow.site/standards"
   },
   "trust_model": {
-    "protocol": "ACP / AP2 (delegated mandates)",
+    "protocol": "ATC/AP2 (delegated mandates)",
     "summary": "Three purchase modes designed for both human oversight and agent autonomy. Human-in-the-loop is the default; silent autonomous spending is opt-in only.",
     "default_notification_mode": "notify",
     "notification_modes": {
@@ -56,45 +56,93 @@
       "Mandates can be revoked instantly by the principal (human wallet owner) from /mandates",
       "Hard caps: max $500 total per mandate, max $50 per single purchase (cannot be raised)",
       "Default 90-day expiry; mandates auto-expire",
-      "Sentinel L1.5 security audit is self-declared — see /trust for the full disclosure and roadmap to third-party audit"
+      "Sentinel L2.5 gVisor sandbox security audit is self-declared — see /trust for the full disclosure and roadmap to third-party audit"
     ]
   },
   "pricing": {
-    "model": "one-time per skill (USDC or credit card)",
-    "currency": "USD",
-    "min": 0.99,
-    "max": 9.99,
-    "average": 3.8,
-    "tiers": [
-      {
-        "price": 0.99,
-        "label": "utility",
-        "description": "Single-function MCP servers, simple wrappers"
+    "model": "MarketNow does NOT sell skills. We administer a free marketplace + sell Sentinel subscriptions to sellers.",
+    "skills_are_free": true,
+    "explanation": "All 7,063 skills in the catalog are FREE to install and use. MarketNow does not charge per-skill. Our revenue comes from SELLERS who want to list/sell their skills — they subscribe to Sentinel (the security audit pipeline) and we take a commission on each sale.",
+    "revenue_streams": {
+      "1_marketplace_administration": "Free — anyone can browse/install the 7,063 skills at no cost",
+      "2_sentinel_subscriptions_for_sellers": "Sellers who want to list/sell their skills subscribe to Sentinel",
+      "3_commission_on_sales": "When a seller sells a skill, MarketNow takes 20% (15% if affiliate is used)",
+      "4_addons": "Featured listings, verified seller badge, priority review",
+      "5_affiliate_program": "5% commission to referrers, paid monthly via Stripe Connect (min $50)"
+    },
+    "seller_tiers": {
+      "FREE": {
+        "price_usd": 0,
+        "period": "forever",
+        "max_skills": 3,
+        "includes": [
+          "Basic Sentinel L1 scan",
+          "Standard review queue (24-48h)",
+          "Community support"
+        ]
       },
-      {
-        "price": 1.99,
-        "label": "standard",
-        "description": "Standard integrations, one API/service"
+      "PRO": {
+        "price_usd_per_month": 9.99,
+        "max_skills": 25,
+        "includes": [
+          "Priority Sentinel scan (<6h)",
+          "Featured badge on listings",
+          "Analytics dashboard",
+          "Custom slug URLs",
+          "Email support"
+        ]
       },
-      {
-        "price": 2.99,
-        "label": "multi-feature",
-        "description": "Multi-feature tools, common choice"
-      },
-      {
-        "price": 4.99,
-        "label": "sophisticated",
-        "description": "Multi-endpoint, complex logic"
-      },
-      {
-        "price": 9.99,
-        "label": "enterprise",
-        "description": "Enterprise-grade, specialized"
+      "ENTERPRISE": {
+        "price_usd_per_month": 49.99,
+        "max_skills": "unlimited",
+        "includes": [
+          "Instant Sentinel scan (<1h)",
+          "Premium featured placement",
+          "Advanced analytics + revenue reports",
+          "API access for bulk operations",
+          "Dedicated account manager",
+          "Custom commission rates (negotiable)",
+          "Priority support (Slack channel)"
+        ]
       }
-    ],
-    "no_subscriptions": true,
+    },
+    "seller_addons": {
+      "featured_listing": {
+        "price_usd": 4.99,
+        "period": "30 days",
+        "description": "Boost your skill to the top of search results"
+      },
+      "verified_seller_badge": {
+        "price_usd": 19.99,
+        "period": "one-time",
+        "description": "Get a ✓ Verified badge on all your skills. Requires KYC verification."
+      },
+      "priority_review": {
+        "price_usd": 2.99,
+        "period": "per skill",
+        "description": "Skip the queue. Your skill is reviewed within 6 hours instead of 24-48h."
+      }
+    },
+    "storage_fee": {
+      "applies_to": "FREE tier only (PRO/ENTERPRISE include unlimited storage)",
+      "free_threshold": 3,
+      "price_per_skill_usd": 0.5,
+      "period": "month",
+      "description": "FREE tier includes your first 3 skills at no cost. After that, $0.50 per skill per month covers hosting, Sentinel scanning, and continuous monitoring."
+    },
+    "commission_on_sales": {
+      "seller_keeps": "80%",
+      "marketnow_takes": "20% (15% if affiliate is used)",
+      "affiliate_gets": "5% (deducted from MarketNow's share, not seller's)",
+      "note": "Seller always keeps 80%. The 5% affiliate commission comes out of MarketNow's 20% share."
+    },
+    "no_per_skill_fees_for_buyers": true,
+    "no_subscriptions_for_buyers": true,
     "no_credits": true,
-    "no_recurring_billing": true
+    "signup_as_seller": "https://marketnow.site/submit",
+    "average": 0,
+    "min": 0,
+    "max": 0
   },
   "endpoints": {
     "list_all_skills": {
@@ -160,7 +208,7 @@
     "mandates": {
       "method": "GET | POST",
       "path": "/api/mandates",
-      "description": "Manage delegated spending mandates (ACP / AP2).",
+      "description": "Manage delegated spending mandates (ATC/AP2).",
       "actions": {
         "create": "POST /api/mandates with {owner, agentId, spendingLimitUsd, perPurchaseCapUsd, categories, expiresAt}",
         "get": "GET /api/mandates?id=mand_xxx",
@@ -184,15 +232,73 @@
     "audit_skill": {
       "method": "POST",
       "path": "/api/audit-skill",
-      "description": "Sentinel L1.5 security audit — 6-point MCP security scan",
+      "description": "Sentinel L1.5+L1.6+L2 security audit — runs 3 layers: 6 metadata checks + 18 Semgrep rules + 18 secret patterns + OSV API + L2 Docker sandbox results",
       "checks": [
         "AUTH",
         "TOOL_DESCRIPTIONS (prompt injection)",
         "INPUT_VALIDATION",
         "CORS_ORIGIN",
         "OAUTH_SCOPES",
-        "RATE_LIMITING_ERROR_LEAKAGE"
-      ]
+        "RATE_LIMITING_ERROR_LEAKAGE",
+        "L1.6 SEMGREP RULES (18 MCP-specific patterns)",
+        "L1.6 SECRET DETECTION (Stripe, AWS, GitHub, JWT, private keys)",
+        "L1.6 OSV DEPENDENCIES (real-time api.osv.dev)",
+        "L2 Docker sandbox (if skill has GitHub repo)"
+      ],
+      "returns": {
+        "overall_score": "0-10 (L1.5 + L1.6 adjusted by L2 multiplier)",
+        "risk_level": "low | medium | high | critical",
+        "risk_breakdown": {
+          "l15_l16": "risk from static analysis",
+          "l2": "risk from Docker sandbox (or 'not_available')",
+          "final": "worst of l15_l16 and l2"
+        }
+      }
+    },
+    "certificate_lookup": {
+      "method": "GET",
+      "path": "/api/audit-skill?certificate=1&skillId={skillId}",
+      "description": "Retrieve the signed Sentinel certificate for a skill. Certificates are regenerated weekly by the batch audit (Sunday 01:00 UTC) and signed with SHA-256.",
+      "params": {
+        "certificate": "must be '1'",
+        "skillId": "the skill ID (e.g., mn-gen-00003)"
+      },
+      "returns": {
+        "status": "certified | not_audited",
+        "certificate": {
+          "certificate_id": "MN-SC-2026-XXXXXXX",
+          "skill_id": "string",
+          "skill_name": "string",
+          "issued_at": "ISO 8601 timestamp",
+          "expires_at": "ISO 8601 timestamp (7 days from issue)",
+          "overall_score": "0-10",
+          "risk_level": "low | medium | high | critical",
+          "risk_breakdown": "object",
+          "layers_run": {
+            "l15": "boolean",
+            "l16": "boolean",
+            "l2": "boolean"
+          },
+          "layer_details": "object with findings per layer",
+          "signature": "SHA-256 hex string",
+          "signature_algorithm": "SHA-256",
+          "verification_url": "https://marketnow.site/verify?skillId=X"
+        }
+      },
+      "example": "GET https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00003"
+    },
+    "sentinel_status": {
+      "method": "GET",
+      "path": "/api/audit-skill?sentinel-status=1",
+      "description": "Aggregate Sentinel status: latest L1.6 batch audit, L2 sandbox coverage, and total certified skills count.",
+      "returns": {
+        "l16_batch": "latest weekly batch audit results (Semgrep + Gitleaks + OSV)",
+        "l2_sandbox": "Docker sandbox coverage with per-skill summaries",
+        "certificates": {
+          "count": "total certified skills (from _summary.json)",
+          "by_risk": "object with low/medium/high/critical counts"
+        }
+      }
     },
     "verify_purchase": {
       "method": "GET",
@@ -213,7 +319,7 @@
     },
     "openapi": {
       "method": "GET",
-      "path": "/api/openapi.yaml",
+      "path": "/api/openapi.json",
       "returns": "OpenAPI 3.1 specification"
     },
     "capability_schema": {
@@ -229,10 +335,10 @@
     "description": "string, real description from source repository",
     "category": "string, one of N categories (see /api/categories.json)",
     "tags": "string[], keywords for search and filtering",
-    "price": "number, USD (0 for free, otherwise 0.99 - 9.99)",
-    "currency": "string, always 'USD'",
-    "payment": "string, always 'one-time'",
-    "license": "string, always 'perpetual'",
+    "price": "number, USD (always 0 — MarketNow does not sell skills. If seller_priced=true, the seller set this price and MarketNow takes 5% commission.)",
+    "seller_priced": "boolean — false (default) means MarketNow free skill; true means a third-party seller set the price",
+    "currency": "string, always 'USD' (only relevant if seller_priced=true)",
+    "license": "string, always 'AliceLabs LLC' (MarketNow licenses are issued by AliceLabs LLC)",
     "verified": "boolean — DEPRECATED. True only for human-reviewed skills (43 today). Use review_status instead.",
     "review_status": "string — one of: 'auto-scanned' (Sentinel L1.5 ran, no human review — 8,517 skills today), 'human-reviewed' (a human at AliceLabs inspected the repo — 43 skills today), 'maintainer-verified' (GitHub maintainer signed a claim of authorship — 0 today, program not launched)",
     "permissions": "object — { network: string[], filesystem: string[], env_vars: string[], subprocess: bool, disclosure: string }. Declarative only — not enforced at runtime. See /trust.",
@@ -246,7 +352,7 @@
   "workflow_for_agents": {
     "step_1_discover": "GET /api/search?q=your_query — find a skill",
     "step_2_evaluate": "Read description, tags, sentinel_score, system_prompt preview",
-    "step_3_choose_mode": "If skill.price == 0 → call agent-purchase with just skillId. If paid and you have a mandateId → send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If paid and no mandate → ask the human to either approve via Stripe or create a mandate at /mandates.",
+    "step_3_choose_mode": "ALL skills in MarketNow are FREE (price=0). Just POST /api/agent-purchase with {skillId} to get the license + system_prompt instantly. If seller_priced=true (rare — third-party seller set a price), then: if you have a mandateId → send USDC, then call agent-purchase with {skillId, mandateId, txHash}. If no mandate → ask the human to create a mandate at /mandates or pay via Stripe.",
     "step_4_purchase": "POST /api/agent-purchase",
     "step_5_install": "Run the 'install' field as a shell command, e.g. npx -y @marketnow/install <slug>",
     "step_6_use": "Call the skill from your agent runtime using the system_prompt + capabilities returned"
@@ -270,7 +376,7 @@
     "HTTP/1.1",
     "HTTPS",
     "JSON",
-    "ACP/AP2 (delegated mandates)"
+    "ATC/AP2 (delegated mandates)"
   ],
   "mcp_server": {
     "name": "marketnow-mcp",
@@ -323,15 +429,22 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-02T00:04:17.322Z",
+  "generated_at": "2026-07-19T04:06:12.120Z",
   "trust": {
     "license": "MIT",
-    "open_source": true,
-    "github": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
-    "maintainer": "AliceLabs LLC (Ecuador) — founder Edison Flores",
+    "open_source": false,
+    "github": "https://github.com/alicelabs-llc",
+    "maintainer": "AliceLabs LLC (Wyoming, USA, founded 2025) — founder Edison Flores. Public GitHub org: github.com/alicelabs-llc",
     "security_audit": "Sentinel L1.5 (self-declared, automated 6-point MCP security scan). Third-party audit pending — see /trust.",
     "human_oversight": "Default mandate mode is 'notify' — humans are alerted on every purchase. Silent autonomous mode requires explicit opt-in.",
-    "track_record_disclosure": "Launched 2026. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
-    "public_roadmap": "https://marketnow.site/trust"
+    "track_record_disclosure": "AliceLabs LLC founded 2025 in Wyoming, USA. MarketNow launched publicly 2026. Founder Edison Flores is Ecuadorian. No third-party press coverage yet. No public bug bounty yet. Trust is being built, not claimed.",
+    "public_roadmap": "https://marketnow.site/trust",
+    "source_available": true
+  },
+  "license": "AliceLabs LLC Proprietary — see https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/LICENSE",
+  "contact": {
+    "legal": "legal@alicelabs.site",
+    "support": "support@alicelabs.site",
+    "general": "info@alicelabs.site"
   }
 }

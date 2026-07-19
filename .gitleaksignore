@@ -1,0 +1,18 @@
+# MarketNow — Gitleaks Ignore List
+# =================================
+# Suppreses known false positives so the weekly L1.6 batch audit doesn't
+# flag legitimate placeholders / public-by-design keys.
+#
+# Each entry is a path:line match. Re-evaluate this file whenever the
+# referenced lines change.
+
+# 1. Stripe test placeholder — never a real secret. The api code at line 37
+#    explicitly rejects requests when STRIPE_SECRET_KEY === 'sk_test_placeholder'.
+aep-marketplace/api/create-checkout-session.js:15
+aep-marketplace/api/create-checkout-session.js:37
+
+# 2. Stripe publishable key (pk_live_*) — designed to be public. Lives in the
+#    frontend bundle by design. See comment at stripe.js:22.
+#    (If you ever rotate keys: change STRIPE_PUBLISHABLE_KEY in this file
+#    AND in Vercel env vars, then redeploy.)
+aep-marketplace/src/utils/stripe.js:24

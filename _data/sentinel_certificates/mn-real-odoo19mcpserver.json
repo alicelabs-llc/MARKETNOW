@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5061950",
+  "skill_id": "mn-real-odoo19mcpserver",
+  "skill_name": "odoo19-mcp-server",
+  "issued_at": "2026-07-19T04:24:21.950Z",
+  "expires_at": "2026-07-26T04:24:21.950Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 7,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 3,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "291dbb3981ae987d5990907983a921ed637fe2b5a1e5148c41f9c65b99be145b",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-odoo19mcpserver"
+}

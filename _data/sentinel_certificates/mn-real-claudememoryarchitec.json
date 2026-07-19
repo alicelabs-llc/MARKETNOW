@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5489983",
+  "skill_id": "mn-real-claudememoryarchitec",
+  "skill_name": "claude-memory-architecture",
+  "issued_at": "2026-07-19T04:31:29.983Z",
+  "expires_at": "2026-07-26T04:31:29.983Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "06694bf42d17a962486b4b544ee09506cda5d77c8f522365798b14dea5e2ce6c",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudememoryarchitec"
+}

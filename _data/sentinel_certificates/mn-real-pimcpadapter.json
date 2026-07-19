@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5013750",
+  "skill_id": "mn-real-pimcpadapter",
+  "skill_name": "pi-mcp-adapter",
+  "issued_at": "2026-07-19T04:23:33.750Z",
+  "expires_at": "2026-07-26T04:23:33.750Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "9cdc347d644305ce2701e587808ee0b4efe7602564f8b91167a11db1c6e02ba1",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pimcpadapter"
+}

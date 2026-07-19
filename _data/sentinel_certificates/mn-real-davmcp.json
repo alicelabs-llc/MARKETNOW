@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5236589",
+  "skill_id": "mn-real-davmcp",
+  "skill_name": "dav-mcp",
+  "issued_at": "2026-07-19T04:27:16.589Z",
+  "expires_at": "2026-07-26T04:27:16.589Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "b55988974771990e27d59332aae6f5af293c28ecb498eec4bacc62bbe69c4e58",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-davmcp"
+}

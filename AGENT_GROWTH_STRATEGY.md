@@ -98,7 +98,7 @@
 
 ### 19. Skill Warranty
 - Si una skill no funciona como se anuncia, reembolso automático
-- Requiere Sentinel L2 (sandboxed execution verification)
+- Requiere Sentinel L2.5 (gVisor sandbox execution verification)
 
 ### 20. Skill Sponsorships
 - Empresas pagan para destacar skills que usan sus APIs

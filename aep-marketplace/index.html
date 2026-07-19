@@ -10,12 +10,56 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CANONICAL — Google needs this -->
+    <!-- CANONICAL — Google needs this. Default to homepage; JS updates per-route -->
     <link rel="canonical" href="https://marketnow.site/" />
+    <script>
+      // Update canonical URL and title based on current route (SPA fix for SEO)
+      (function() {
+        var path = window.location.pathname;
+        if (path !== '/' && path !== '') {
+          var canonical = document.querySelector('link[rel="canonical"]');
+          if (canonical) {
+            canonical.href = 'https://marketnow.site' + path;
+          }
+          var ogUrl = document.querySelector('meta[property="og:url"]');
+          if (ogUrl) {
+            ogUrl.content = 'https://marketnow.site' + path;
+          }
+        }
+
+        // Dynamic page titles for SEO (prevents duplicate title penalty)
+        var pageTitle = document.title;
+        var routeTitles = {
+          '/registry': 'Browse 8,764 MCP Servers — MarketNow Registry',
+          '/trust': 'Trust Roadmap — Sentinel L2.5 Audit Pipeline — MarketNow',
+          '/security': 'Sentinel L2.5 Security Audit Methodology — MarketNow',
+          '/pricing': 'Pricing — $0.99-$9.99 One-Time, 65 Free — MarketNow',
+          '/about': 'About AliceLabs LLC — MarketNow',
+          '/handshake': 'API Documentation — MarketNow',
+          '/verify': 'Verify Sentinel Certificate — MarketNow',
+          '/catalog': 'Catalog Transparency — Where 8,764 MCP Servers Come From — MarketNow',
+          '/policies': 'Terms, Refund, Privacy Policies — MarketNow',
+          '/mandates': 'AP2 Mandates — Human-in-Loop Agent Spending — MarketNow',
+          '/standards': 'Open Standards — MCP, AP2, x402 — MarketNow',
+          '/embed': 'Embed Badges — Powered by MarketNow',
+          '/submit': 'Submit Your MCP Server — MarketNow',
+          '/dashboard': 'Dashboard — MarketNow',
+          '/governance': 'Governance — MarketNow',
+          '/vault': 'Vault — MarketNow',
+          '/compare': 'Compare MCP Marketplaces — MarketNow',
+          '/buyers-guide': 'MCP Server Buyer\'s Guide — MarketNow',
+          '/onboarding': 'Onboarding — MarketNow',
+          '/blog': 'Blog — MarketNow',
+        };
+        if (routeTitles[path]) {
+          document.title = routeTitles[path];
+        }
+      })();
+    </script>
 
     <!-- BRANDING -->
-    <title>MarketNow — Trust layer for agent commerce (8,560 MCP skills, x402, AP2)</title>
-    <meta name="description" content="Trust layer for agent commerce. Discovery is solved (MCP registry); trust is not. 8,560 MCP servers, Sentinel L1.5 scanned, AP2-compatible mandates, x402 payments. $0.99-$9.99 one-time. 43 free. Open source MIT." />
+    <title>MarketNow — Trust Layer for Agent Commerce (8,764 MCP Skills, Sentinel L2.5)</title>
+    <meta name="description" content="Trust layer for agent commerce. 8,764 MCP servers, Sentinel L2.5 gVisor sandbox audits, x402+USDC payments, AP2 mandates. 65 free. AliceLabs LLC Proprietary." />
     <meta name="application-name" content="MarketNow" />
     <meta name="theme-color" content="#050505" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -25,7 +69,7 @@
 
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="MarketNow — Trust layer for agent commerce" />
-    <meta property="og:description" content="Discovery is solved (MCP registry); trust is not. 8,560 MCP servers, Sentinel-scanned, AP2 mandates, x402 payments. Open source MIT." />
+    <meta property="og:description" content="8,764 MCP servers, Sentinel L2.5 gVisor sandbox audits, AP2 mandates, x402 payments. AliceLabs LLC Proprietary." />
     <meta property="og:url" content="https://marketnow.site/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MarketNow" />
@@ -37,7 +81,7 @@
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MarketNow — Trust layer for agent commerce" />
-    <meta name="twitter:description" content="Discovery is solved; trust is not. 8,560 MCP servers, Sentinel-scanned, AP2 mandates, x402 payments. Open source MIT." />
+    <meta name="twitter:description" content="8,764 MCP servers, Sentinel L2.5 gVisor sandbox, AP2 mandates, x402 payments. AliceLabs LLC Proprietary." />
     <meta name="twitter:image" content="https://marketnow.site/og-image.png" />
 
     <!-- SITEMAP & STRUCTURED DATA LINKS -->
@@ -55,14 +99,14 @@
           "@type": "Organization",
           "@id": "https://marketnow.site/#organization",
           "name": "AliceLabs LLC",
-          "founder": { "@type": "Person", "name": "Edgar Flores" },
-          "foundingLocation": { "@type": "Place", "address": "Ecuador" },
+          "founder": { "@type": "Person", "name": "Edison Flores" },
+          "foundingLocation": { "@type": "Place", "address": "Wyoming, USA" },
           "url": "https://marketnow.site",
           "logo": "https://marketnow.site/favicon.svg",
           "sameAs": [
             "https://github.com/edgarfloresguerra2011-a11y/marketnow",
             "https://www.npmjs.com/package/marketnow-mcp",
-            "https://smithery.ai/servers/eddyflores100/marketnow"
+            "https://smithery.ai/servers/alicelabs/marketnow"
           ]
         },
         {
@@ -70,7 +114,7 @@
           "@id": "https://marketnow.site/#website",
           "url": "https://marketnow.site/",
           "name": "MarketNow",
-          "description": "npm for MCP servers. 8,560 verified skills for Claude Desktop, Cursor, Cline.",
+          "description": "Trust layer for agent commerce. 8,764 MCP servers, each security-audited by Sentinel (L1.5 to L2.5 gVisor sandbox). AliceLabs LLC.",
           "publisher": { "@id": "https://marketnow.site/#organization" },
           "potentialAction": {
             "@type": "SearchAction",
@@ -128,15 +172,15 @@
     -->
     <div class="seo-only" aria-hidden="true">
       <h1>MarketNow — npm for MCP servers</h1>
-      <p>8,560 verified MCP servers for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 43 skills are free. Sentinel L1.5 security scanned. Open source MIT, maintained by AliceLabs LLC (Ecuador).</p>
+      <p>8,764 MCP servers for Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible agent. $0.99–$9.99 one-time payment. 65 skills are free. Sentinel L2.5 security audited (gVisor sandbox). AliceLabs LLC Proprietary.</p>
 
       <h2>Find an MCP server. Install in one command.</h2>
-      <p>The fastest way to add a capability to your agent stack. Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
+      <p>The fastest way to add a capability to your agent stack. Browse 8,764 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
       <p>npx -y @marketnow/install &lt;slug&gt;</p>
 
       <h2>For Developers</h2>
       <h3>1. Search</h3>
-      <p>Browse 8,560 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
+      <p>Browse 8,764 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.</p>
       <h3>2. Pay (or grab free)</h3>
       <p>Credit card via Stripe (full chargeback rights) or USDC on Base L2. 43 skills are free — no payment, no signup. Just install.</p>
       <h3>3. Install</h3>
@@ -161,7 +205,7 @@
       <h2>For AI Agents</h2>
       <p>Machine-readable everything. Public JSON API. Human-in-the-loop by default.</p>
       <ul>
-        <li>GET /api/skills.json — Full catalog (8,560 skills, JSON, ~24MB)</li>
+        <li>GET /api/skills.json — Full catalog (8,764 skills, JSON, ~24MB)</li>
         <li>GET /api/search?q= — Server-side search with relevance scoring</li>
         <li>GET /api/agent.json — Machine-readable instructions, trust model, schema</li>
         <li>GET /api/policies.json — Terms, refund, dispute, privacy policies</li>
@@ -174,7 +218,7 @@
 
       <h2>Why people recommend us</h2>
       <ul>
-        <li>Open Source MIT — Full code on GitHub. Every change is a public commit. No black box.</li>
+        <li>AliceLabs Proprietary — Full audit methodology on GitHub. Every change is a public commit. No black box.</li>
         <li>Sentinel L1.5 — 6-point MCP security audit on every skill. Methodology published. Re-runnable.</li>
         <li>43 Free Skills — Real value, zero cost. No signup, no credit card, no mandate.</li>
         <li>$0.99–$9.99 One-Time — No subscriptions. No per-call fees. No tiered plans. Pay once, own forever.</li>
@@ -187,21 +231,21 @@
       <h2>Trust &amp; Transparency</h2>
       <ul>
         <li><a href="/trust">/trust</a> — Public trust roadmap (7 points raised by Claude AI reviewer)</li>
-        <li><a href="/about">/about</a> — Who we are (AliceLabs LLC, Ecuador, founder Edgar Flores)</li>
-        <li><a href="/catalog">/catalog</a> — Where the 8,560 skills come from (catalog transparency)</li>
+        <li><a href="/about">/about</a> — Who we are (AliceLabs LLC, Wyoming USA, founder Edison Flores)</li>
+        <li><a href="/catalog">/catalog</a> — Where the 8,764 skills come from (catalog transparency)</li>
         <li><a href="/policies">/policies</a> — Terms, refund, dispute policy (incl. USDC dispute process)</li>
         <li><a href="/mandates">/mandates</a> — Manage spending mandates (human-in-loop by default)</li>
-        <li><a href="/embed">/embed</a> — Shareable badges (Powered by MarketNow, Sentinel L1.5, MIT)</li>
+        <li><a href="/embed">/embed</a> — Shareable badges (Powered by MarketNow, Sentinel L2.5)</li>
         <li><a href="/pricing">/pricing</a> — Pricing tiers for sellers</li>
         <li><a href="/security">/security</a> — Sentinel L1.5 methodology</li>
         <li><a href="/handshake">/handshake</a> — API documentation</li>
       </ul>
 
       <h2>Review Status Disclosure</h2>
-      <p>Of 8,560 skills: 8,517 are auto-scanned (Sentinel ran, no human review), 43 are human-reviewed (curated free skills), 0 are maintainer-verified (program not yet launched). We never claim "verified" without earning it.</p>
+      <p>Of 8,764 skills: 8,742 are auto-scanned (Sentinel ran, no human review), 22 are human-reviewed (curated free skills), 0 are maintainer-verified (program not yet launched). We never claim "verified" without earning it.</p>
 
       <h2>Maintained by AliceLabs LLC</h2>
-      <p>Founded 2024 by Edgar Flores in Ecuador. No investors, no employees besides the founder, no marketing budget. Built in public. Every change is a git commit visible at github.com/edgarfloresguerra2011-a11y/marketnow.</p>
+      <p>Founded 2024 by Edison Flores (AliceLabs LLC, Wyoming USA). No investors, no employees besides the founder, no marketing budget. Built in public. Every change is a git commit visible at github.com/edgarfloresguerra2011-a11y/marketnow.</p>
 
       <h2>Languages</h2>
       <p>English, Español, 中文, Português, Français</p>
@@ -215,3 +259,4 @@
     <script type="module" src="/src/main.jsx?v=27"></script>
   </body>
 </html>
+<!-- trigger 1783459472 -->

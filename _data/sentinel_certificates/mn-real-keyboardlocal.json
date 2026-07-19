@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5294270",
+  "skill_id": "mn-real-keyboardlocal",
+  "skill_name": "keyboard-local",
+  "issued_at": "2026-07-19T04:28:14.270Z",
+  "expires_at": "2026-07-26T04:28:14.270Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 9,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 1,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "340d2326781cb13f27507abbf6f7a1da99a7548c7202ff3a43ab05b5fd2908c2",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keyboardlocal"
+}

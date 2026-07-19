@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9238036",
+  "certificate_id": "MN-SC-2026-5526895",
   "skill_id": "mn-real-openclawlegalquery",
   "skill_name": "openclaw-legal-query",
-  "issued_at": "2026-07-15T01:33:58.036Z",
-  "expires_at": "2026-07-22T01:33:58.036Z",
+  "issued_at": "2026-07-19T04:32:06.895Z",
+  "expires_at": "2026-07-26T04:32:06.895Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f35f3c7651155b6cec3be81fbf5b279e3d32866acfcd30fc828c863b2b8350f5",
+  "signature": "f84938d2e9f81942e4b4084e529c1d6bcbc824975439f19f6b7e7dc6a0fbf1f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openclawlegalquery"
 }

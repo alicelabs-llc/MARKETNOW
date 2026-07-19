@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8956180",
+  "certificate_id": "MN-SC-2026-5253003",
   "skill_id": "mn-real-iosmcp",
   "skill_name": "ios-mcp",
-  "issued_at": "2026-07-15T01:29:16.180Z",
-  "expires_at": "2026-07-22T01:29:16.180Z",
+  "issued_at": "2026-07-19T04:27:33.003Z",
+  "expires_at": "2026-07-26T04:27:33.003Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11f04a8e97dab92693e18a1746410e8c0f47923d5e4d7185737daf88b4b630ad",
+  "signature": "120b043ea9b968922f27be908674b8003cbbcc97d86211bfdbba7c556f0b54de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-iosmcp"
 }

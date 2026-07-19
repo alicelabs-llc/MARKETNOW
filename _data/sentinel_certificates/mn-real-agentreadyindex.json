@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9109345",
+  "certificate_id": "MN-SC-2026-5397469",
   "skill_id": "mn-real-agentreadyindex",
   "skill_name": "agent-ready-index",
-  "issued_at": "2026-07-15T01:31:49.345Z",
-  "expires_at": "2026-07-22T01:31:49.345Z",
+  "issued_at": "2026-07-19T04:29:57.469Z",
+  "expires_at": "2026-07-26T04:29:57.469Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7b317c8cb04f4a73e5db87f0f6095e0dcca2595b48e28f7a59b8922a55342d54",
+  "signature": "76275f8cb22f4759d21a6a2739b5f0e9c2a5b4d01f95e1e2fff17dff39cea158",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentreadyindex"
 }

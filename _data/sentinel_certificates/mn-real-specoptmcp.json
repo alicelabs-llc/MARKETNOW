@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9080259",
+  "certificate_id": "MN-SC-2026-5371617",
   "skill_id": "mn-real-specoptmcp",
   "skill_name": "specopt-mcp",
-  "issued_at": "2026-07-15T01:31:20.259Z",
-  "expires_at": "2026-07-22T01:31:20.259Z",
+  "issued_at": "2026-07-19T04:29:31.617Z",
+  "expires_at": "2026-07-26T04:29:31.617Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "19da385ca8ce71075dc5257b3d60f14db85a276b97e1a9bd50ce2e05b8730cb0",
+  "signature": "7d04daed3fb059f81c6305da727ee3eb09300c219e2a60a73e1bbdfb014ae767",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-specoptmcp"
 }

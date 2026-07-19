@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9196062",
+  "certificate_id": "MN-SC-2026-5486084",
   "skill_id": "mn-real-kdgen",
   "skill_name": "kd-gen",
-  "issued_at": "2026-07-15T01:33:16.062Z",
-  "expires_at": "2026-07-22T01:33:16.062Z",
+  "issued_at": "2026-07-19T04:31:26.084Z",
+  "expires_at": "2026-07-26T04:31:26.084Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d4bc837da399c97a4020ea3b2d9cc167bdf2842f1a2cfce5e8bef0f49ec92923",
+  "signature": "2a6edfcab1b091d220e5fcbb9834d651ef9c21140c2609d83da9a0b60e33fdf0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kdgen"
 }

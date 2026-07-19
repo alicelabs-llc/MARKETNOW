@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8498344",
+  "certificate_id": "MN-SC-2026-4790480",
   "skill_id": "mn-real-schemabrain",
   "skill_name": "schemabrain",
-  "issued_at": "2026-07-15T01:21:38.344Z",
-  "expires_at": "2026-07-22T01:21:38.344Z",
+  "issued_at": "2026-07-19T04:19:50.480Z",
+  "expires_at": "2026-07-26T04:19:50.480Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ee275fa1897ec2b57035a5b1c0acf9f4439bc64ca51504fb9370f4af072a69b",
+  "signature": "6f3a48ac3944e5ac519587445ee726deda1ec9395e5f4ea2b1830fae42fad59d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-schemabrain"
 }

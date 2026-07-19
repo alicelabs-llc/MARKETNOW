@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8963311",
+  "certificate_id": "MN-SC-2026-5260177",
   "skill_id": "mn-real-sapaimcpservers",
   "skill_name": "sap-ai-mcp-servers",
-  "issued_at": "2026-07-15T01:29:23.311Z",
-  "expires_at": "2026-07-22T01:29:23.311Z",
+  "issued_at": "2026-07-19T04:27:40.177Z",
+  "expires_at": "2026-07-26T04:27:40.177Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6e13a835d9a4119c954cb43924832d36c9eafef12516b2ee3197015c2a7eeb2d",
+  "signature": "e7b33f667e968d6f3c95ed4c34fb5be26d7ee736d6c6d572fe591cd3c12d8301",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sapaimcpservers"
 }

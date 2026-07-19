@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7950001",
+  "certificate_id": "MN-SC-2026-4615522",
   "skill_id": "mn-ai-03653",
   "skill_name": "email-mcp",
-  "issued_at": "2026-07-15T01:12:30.001Z",
-  "expires_at": "2026-07-22T01:12:30.001Z",
+  "issued_at": "2026-07-19T04:16:55.522Z",
+  "expires_at": "2026-07-26T04:16:55.522Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "10be28337ff33a45d07dfb9211c5d40116184ff27ace0c4814cbc70df0aaf132",
+  "signature": "625307c386df2c917382aa6677f4fb55d78294d53167999b54417364c16bce12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-03653"
 }

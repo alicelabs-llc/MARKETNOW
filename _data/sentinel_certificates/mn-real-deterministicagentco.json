@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8866346",
+  "certificate_id": "MN-SC-2026-5162168",
   "skill_id": "mn-real-deterministicagentco",
   "skill_name": "deterministic-agent-control-protocol",
-  "issued_at": "2026-07-15T01:27:46.346Z",
-  "expires_at": "2026-07-22T01:27:46.346Z",
+  "issued_at": "2026-07-19T04:26:02.168Z",
+  "expires_at": "2026-07-26T04:26:02.168Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02bd7ae98d505460d0de4348fb17f54c1547d632d984dff6c84411e07a4ab651",
+  "signature": "db79ff3791a6cb0ec38bd823c83db2e5a8faee4fb23a13ccf66c9446c8281953",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-deterministicagentco"
 }

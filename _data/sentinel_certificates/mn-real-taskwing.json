@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9028210",
+  "certificate_id": "MN-SC-2026-5324990",
   "skill_id": "mn-real-taskwing",
   "skill_name": "TaskWing",
-  "issued_at": "2026-07-15T01:30:28.210Z",
-  "expires_at": "2026-07-22T01:30:28.210Z",
+  "issued_at": "2026-07-19T04:28:44.990Z",
+  "expires_at": "2026-07-26T04:28:44.990Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30f2264fce0fb86083a1b33c4280b44cc71fa00d2eb33eea8637e781578bdc28",
+  "signature": "dbccbf80e7f3b844ab2370a305f7ea718dcd18a338dafe9aa7c5beda775f92f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-taskwing"
 }

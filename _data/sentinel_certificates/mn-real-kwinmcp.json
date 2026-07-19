@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8925480",
+  "certificate_id": "MN-SC-2026-5223370",
   "skill_id": "mn-real-kwinmcp",
   "skill_name": "kwin-mcp",
-  "issued_at": "2026-07-15T01:28:45.480Z",
-  "expires_at": "2026-07-22T01:28:45.480Z",
+  "issued_at": "2026-07-19T04:27:03.370Z",
+  "expires_at": "2026-07-26T04:27:03.370Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "86cc95be8213e19ef124c73bc49ce6f03e414154b938a7968a1b585c1759a0a0",
+  "signature": "5a4da076e87755b319b5b3c1fee3acc431a3dbb569a9bdddbb167a894693ddfd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kwinmcp"
 }

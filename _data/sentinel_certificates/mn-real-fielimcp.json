@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5588078",
+  "skill_id": "mn-real-fielimcp",
+  "skill_name": "fi-eli-mcp",
+  "issued_at": "2026-07-19T04:33:08.078Z",
+  "expires_at": "2026-07-26T04:33:08.078Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "878b3ad10de158a0cd9afa197d1b099f083e5f9d99f7409a527d758033c45dce",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fielimcp"
+}

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8616334",
+  "certificate_id": "MN-SC-2026-4909604",
   "skill_id": "mn-real-aiwenmcpservergeoip",
   "skill_name": "aiwen-mcp-server-geoip",
-  "issued_at": "2026-07-15T01:23:36.334Z",
-  "expires_at": "2026-07-22T01:23:36.334Z",
+  "issued_at": "2026-07-19T04:21:49.604Z",
+  "expires_at": "2026-07-26T04:21:49.604Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d3c79ea57fe9c5f3be6e830bf75b4488dc7899ef536b843b1bc69f6beada655f",
+  "signature": "c71301ce9de18cbabca89a81fce3a2e0abfc8b9810ac5a826709727d66312d73",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aiwenmcpservergeoip"
 }

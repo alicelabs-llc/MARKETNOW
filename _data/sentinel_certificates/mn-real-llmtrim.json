@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9003157",
+  "certificate_id": "MN-SC-2026-5300849",
   "skill_id": "mn-real-llmtrim",
   "skill_name": "llmtrim",
-  "issued_at": "2026-07-15T01:30:03.157Z",
-  "expires_at": "2026-07-22T01:30:03.157Z",
+  "issued_at": "2026-07-19T04:28:20.849Z",
+  "expires_at": "2026-07-26T04:28:20.849Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a5e099fbe71bfcd46995ac87876dc3be13552b9922f665cba20d0a8dfa02ed5f",
+  "signature": "d5014b534c9db2bcca6c9458d1f0611027f62f6c80d6214ee875884022493644",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-llmtrim"
 }

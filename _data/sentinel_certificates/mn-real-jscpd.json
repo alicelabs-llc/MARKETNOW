@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8731465",
+  "certificate_id": "MN-SC-2026-5026620",
   "skill_id": "mn-real-jscpd",
   "skill_name": "jscpd",
-  "issued_at": "2026-07-15T01:25:31.465Z",
-  "expires_at": "2026-07-22T01:25:31.465Z",
+  "issued_at": "2026-07-19T04:23:46.620Z",
+  "expires_at": "2026-07-26T04:23:46.620Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "503e121454a04f3365df4a1911d9dea2de1acbe30dbb198bbb477a659684d05e",
+  "signature": "04f5d4947d7b3f6effd6b5b5c66d9e7ee622d823d04cbb9908947e13c6765a34",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jscpd"
 }

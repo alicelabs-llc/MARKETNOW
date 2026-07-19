@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9062094",
+  "certificate_id": "MN-SC-2026-5353125",
   "skill_id": "mn-real-paperdistillmcp",
   "skill_name": "paper-distill-mcp",
-  "issued_at": "2026-07-15T01:31:02.094Z",
-  "expires_at": "2026-07-22T01:31:02.094Z",
+  "issued_at": "2026-07-19T04:29:13.125Z",
+  "expires_at": "2026-07-26T04:29:13.125Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8f0a1cf27fd3fc2f058a3c21c831dae0f9da8fe58964b8f22905a9fdaec3ffbb",
+  "signature": "3f198130cae7bc7d5b183acb457b5530076e31b736b0e94cd24a705bf2b3cc03",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-paperdistillmcp"
 }

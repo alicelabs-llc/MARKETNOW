@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8421135",
+  "certificate_id": "MN-SC-2026-4711265",
   "skill_id": "mn-awmcp-animcp",
   "skill_name": "ani-mcp",
-  "issued_at": "2026-07-15T01:20:21.135Z",
-  "expires_at": "2026-07-22T01:20:21.135Z",
+  "issued_at": "2026-07-19T04:18:31.265Z",
+  "expires_at": "2026-07-26T04:18:31.265Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "98a48544af0e66cfea7227329b21c57eeb478d56a3f115636598e9450374f325",
+  "signature": "eaa9c1ca210cc8d38f35fd781d379b5b44d1a2d3b25181e073b8c53ea9a617d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-animcp"
 }

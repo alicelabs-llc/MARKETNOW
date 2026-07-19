@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8634142",
+  "certificate_id": "MN-SC-2026-4927769",
   "skill_id": "mn-real-benchclawintegration",
   "skill_name": "benchclaw-integrations",
-  "issued_at": "2026-07-15T01:23:54.142Z",
-  "expires_at": "2026-07-22T01:23:54.142Z",
+  "issued_at": "2026-07-19T04:22:07.769Z",
+  "expires_at": "2026-07-26T04:22:07.769Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d59cdba5eab42e1837bd0afb23238bfd4949a9d2e505ebb82cea04c14a743303",
+  "signature": "42bdf178b53f0ceeed1dc6f3097c6af0cb0861afd129b7059db85d9a3427f005",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-benchclawintegration"
 }

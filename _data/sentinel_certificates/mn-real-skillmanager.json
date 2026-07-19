@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8992162",
+  "certificate_id": "MN-SC-2026-5289742",
   "skill_id": "mn-real-skillmanager",
   "skill_name": "skill-manager",
-  "issued_at": "2026-07-15T01:29:52.162Z",
-  "expires_at": "2026-07-22T01:29:52.162Z",
+  "issued_at": "2026-07-19T04:28:09.742Z",
+  "expires_at": "2026-07-26T04:28:09.742Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28ce639ed39b49a8631140d0333e6182ef8368d30707a9afd4dbdd75c7308389",
+  "signature": "df251f47415ca71b80d4f4c7b75e7f44acdf4b4073b6d3b6f196578a5950d553",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-skillmanager"
 }

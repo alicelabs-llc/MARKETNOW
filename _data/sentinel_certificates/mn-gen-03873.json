@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7951578",
+  "certificate_id": "MN-SC-2026-4617021",
   "skill_id": "mn-gen-03873",
   "skill_name": "alai-mcp-server",
-  "issued_at": "2026-07-15T01:12:31.578Z",
-  "expires_at": "2026-07-22T01:12:31.578Z",
+  "issued_at": "2026-07-19T04:16:57.021Z",
+  "expires_at": "2026-07-26T04:16:57.021Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbe2e2eed3c27c8b6142f0f7ee2a919b8fadb781ca0df97a1e4fe58173361f25",
+  "signature": "d5e82a9bc84d85e82a73cbfaaa5dcb3108a55cdaf538b50692dc6940f07daa63",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03873"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7962482",
+  "certificate_id": "MN-SC-2026-4628255",
   "skill_id": "mn-gen-05312",
   "skill_name": "mcp-link",
-  "issued_at": "2026-07-15T01:12:42.482Z",
-  "expires_at": "2026-07-22T01:12:42.482Z",
+  "issued_at": "2026-07-19T04:17:08.255Z",
+  "expires_at": "2026-07-26T04:17:08.255Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e06caf51458bebcbb9ed87b8101d254a66e5bd187ae363f2aee90adfd7e1f6a8",
+  "signature": "f62bab3f38a0aceb8cc2610651a5ba45a3def74e39696f9ca44257bc25596a10",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05312"
 }

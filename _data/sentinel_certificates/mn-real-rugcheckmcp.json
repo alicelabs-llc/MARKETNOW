@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8573935",
+  "certificate_id": "MN-SC-2026-4866748",
   "skill_id": "mn-real-rugcheckmcp",
   "skill_name": "rug-check-mcp",
-  "issued_at": "2026-07-15T01:22:53.935Z",
-  "expires_at": "2026-07-22T01:22:53.935Z",
+  "issued_at": "2026-07-19T04:21:06.748Z",
+  "expires_at": "2026-07-26T04:21:06.748Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03c8128786412996f013c174cdac2f74f30ec5870819f69caed5073974e6fa7e",
+  "signature": "1d82e54be6a4df4e038039fe632e85c250259f5f4d83ed865f42662d8d660991",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rugcheckmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9130799",
+  "certificate_id": "MN-SC-2026-5421235",
   "skill_id": "mn-real-aiservicesapi",
   "skill_name": "aiservices-api",
-  "issued_at": "2026-07-15T01:32:10.799Z",
-  "expires_at": "2026-07-22T01:32:10.799Z",
+  "issued_at": "2026-07-19T04:30:21.235Z",
+  "expires_at": "2026-07-26T04:30:21.235Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1d40c6b4b6911bfdfa448470fd02d1f397d3dff031b8a95d95c34ca38a29fc94",
+  "signature": "da1eb5de9445eef3d21b11f54152a340d5c7308a7d44f1448d56ae8c8860f7e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aiservicesapi"
 }

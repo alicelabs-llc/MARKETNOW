@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8643833",
+  "certificate_id": "MN-SC-2026-4939416",
   "skill_id": "mn-real-marketplacesearchmcp",
   "skill_name": "marketplace-search-mcp",
-  "issued_at": "2026-07-15T01:24:03.833Z",
-  "expires_at": "2026-07-22T01:24:03.833Z",
+  "issued_at": "2026-07-19T04:22:19.416Z",
+  "expires_at": "2026-07-26T04:22:19.416Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7a7349fcd663cec519296c3679c9af282bd9472abe33d230a28efd517eab9050",
+  "signature": "7de915a36e9f661e9153a6d678455e370566d4c75abfd9e595469d851c4203d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-marketplacesearchmcp"
 }

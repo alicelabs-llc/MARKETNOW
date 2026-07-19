@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8430511",
+  "certificate_id": "MN-SC-2026-4720872",
   "skill_id": "mn-awmcp-leckamcp",
   "skill_name": "lecka-mcp",
-  "issued_at": "2026-07-15T01:20:30.511Z",
-  "expires_at": "2026-07-22T01:20:30.511Z",
+  "issued_at": "2026-07-19T04:18:40.872Z",
+  "expires_at": "2026-07-26T04:18:40.872Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "3934dbb5d14fda785255f5d271abe56976d18ec5dd3e06991e00ec993506a905",
+  "signature": "1f93b2ab51bfd41730c88437bfda33803126a58cb29f5bfbae0fdfdbce20f418",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-leckamcp"
 }

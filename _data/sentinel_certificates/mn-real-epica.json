@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9215750",
+  "certificate_id": "MN-SC-2026-5505788",
   "skill_id": "mn-real-epica",
   "skill_name": "epica",
-  "issued_at": "2026-07-15T01:33:35.750Z",
-  "expires_at": "2026-07-22T01:33:35.750Z",
+  "issued_at": "2026-07-19T04:31:45.788Z",
+  "expires_at": "2026-07-26T04:31:45.788Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b764536e6265693383235ce13378c21efb6e8171ce5da01d90c4228ef525bfa9",
+  "signature": "445d041c3e528cf598e7783bd00aea6c6cb73d94282ec1e19f2e7467c5f43e9f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-epica"
 }

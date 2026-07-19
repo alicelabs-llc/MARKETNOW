@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9123714",
+  "certificate_id": "MN-SC-2026-5414011",
   "skill_id": "mn-real-fluentmcpservers",
   "skill_name": "fluent-mcp-servers",
-  "issued_at": "2026-07-15T01:32:03.714Z",
-  "expires_at": "2026-07-22T01:32:03.714Z",
+  "issued_at": "2026-07-19T04:30:14.011Z",
+  "expires_at": "2026-07-26T04:30:14.011Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6678369673b7479a750e9669ba6766bf05c9d3f24812a041bb7bc62e43ee19cf",
+  "signature": "a640da379721c97f30f2122fb3ed8a4adb842f17d576f0847cdadf138164e320",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fluentmcpservers"
 }

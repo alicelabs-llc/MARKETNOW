@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9001730",
+  "certificate_id": "MN-SC-2026-5299581",
   "skill_id": "mn-real-mcpclientgo",
   "skill_name": "mcp-client-go",
-  "issued_at": "2026-07-15T01:30:01.730Z",
-  "expires_at": "2026-07-22T01:30:01.730Z",
+  "issued_at": "2026-07-19T04:28:19.581Z",
+  "expires_at": "2026-07-26T04:28:19.581Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b3c9e9b7b9fa851951aec8ed3bc2c4fd91aabd1189833a214591c1c82a90278e",
+  "signature": "cfb0b5fec8eacb73a29cfeacc4515b872ba2bf795c9fa0cd1e37cd6ddbd6c748",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpclientgo"
 }

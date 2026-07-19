@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8944959",
+  "certificate_id": "MN-SC-2026-5241656",
   "skill_id": "mn-real-testrailmcpserver",
   "skill_name": "testrail-mcp-server",
-  "issued_at": "2026-07-15T01:29:04.959Z",
-  "expires_at": "2026-07-22T01:29:04.959Z",
+  "issued_at": "2026-07-19T04:27:21.656Z",
+  "expires_at": "2026-07-26T04:27:21.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7e77420c58402ff341cedf1370ffe35f6cbfd2a9b2180479056b0e0ff170627b",
+  "signature": "b072968d1a06a0c3c659066281cab15de422327643b2e297286dcdcaa19c8c4d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-testrailmcpserver"
 }

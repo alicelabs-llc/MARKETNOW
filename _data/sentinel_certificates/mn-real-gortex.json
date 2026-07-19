@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8713707",
+  "certificate_id": "MN-SC-2026-5008484",
   "skill_id": "mn-real-gortex",
   "skill_name": "gortex",
-  "issued_at": "2026-07-15T01:25:13.707Z",
-  "expires_at": "2026-07-22T01:25:13.707Z",
+  "issued_at": "2026-07-19T04:23:28.484Z",
+  "expires_at": "2026-07-26T04:23:28.484Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec26affab4f8721d2feef9bbb949484b8b4aa13649e51f3a3e2778646eb46f8d",
+  "signature": "80a8c06dab3c585168cceb622567fab7f85229dd4533f9f41854bd2ed651044d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gortex"
 }

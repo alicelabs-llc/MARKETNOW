@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7987652",
+  "certificate_id": "MN-SC-2026-4653363",
   "skill_id": "mn-dat-09357",
   "skill_name": "go-mcp-mysql",
-  "issued_at": "2026-07-15T01:13:07.652Z",
-  "expires_at": "2026-07-22T01:13:07.652Z",
+  "issued_at": "2026-07-19T04:17:33.363Z",
+  "expires_at": "2026-07-26T04:17:33.363Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "092bb3c7a38590198a67411d177a4befd5de72e002575099cd53a7d85a4c0305",
+  "signature": "7212a8641c1b8f1c34287c4d5d4c49439be0c3b0d852f2f57b14719a61049b83",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dat-09357"
 }

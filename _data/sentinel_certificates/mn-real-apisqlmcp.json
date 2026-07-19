@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8920140",
+  "certificate_id": "MN-SC-2026-5217994",
   "skill_id": "mn-real-apisqlmcp",
   "skill_name": "apisql-mcp",
-  "issued_at": "2026-07-15T01:28:40.140Z",
-  "expires_at": "2026-07-22T01:28:40.140Z",
+  "issued_at": "2026-07-19T04:26:57.994Z",
+  "expires_at": "2026-07-26T04:26:57.994Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "43c5417a4246f73af5a36e778bb4d4d25b0b5fffbd24aa000c5b7e2da59a5e5d",
+  "signature": "e4edf792c6ab9d5a7d1d05d13af4ca1dce9700a8e846e810dbd5d14f624be77d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apisqlmcp"
 }

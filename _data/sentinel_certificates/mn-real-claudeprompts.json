@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8873007",
+  "certificate_id": "MN-SC-2026-5169080",
   "skill_id": "mn-real-claudeprompts",
   "skill_name": "claude-prompts",
-  "issued_at": "2026-07-15T01:27:53.007Z",
-  "expires_at": "2026-07-22T01:27:53.007Z",
+  "issued_at": "2026-07-19T04:26:09.080Z",
+  "expires_at": "2026-07-26T04:26:09.080Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d21ee4c4530cecb75e966c7a82f103e8cfacb0a9b036fd125ba2a008a9960f7",
+  "signature": "2a640d7ff2f5b15d9343874f2e778e5aaaf839116696ef912fbbae119db72d7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudeprompts"
 }

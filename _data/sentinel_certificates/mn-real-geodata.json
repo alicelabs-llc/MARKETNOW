@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8915488",
+  "certificate_id": "MN-SC-2026-5213981",
   "skill_id": "mn-real-geodata",
   "skill_name": "geodata",
-  "issued_at": "2026-07-15T01:28:35.488Z",
-  "expires_at": "2026-07-22T01:28:35.488Z",
+  "issued_at": "2026-07-19T04:26:53.981Z",
+  "expires_at": "2026-07-26T04:26:53.981Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c6a858d9a7308227fe14d91b6854202d19d1a979c43106dbd3dd7f8c03bb2ff6",
+  "signature": "832988b7a725329b1c4ff2c76fe2a912fa7509f53a71db81bbf3e1a104ccb3fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geodata"
 }

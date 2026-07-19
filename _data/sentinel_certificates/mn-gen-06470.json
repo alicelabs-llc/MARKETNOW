@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7969362",
+  "certificate_id": "MN-SC-2026-4635051",
   "skill_id": "mn-gen-06470",
   "skill_name": "mcp-server-code-execution-mode",
-  "issued_at": "2026-07-15T01:12:49.362Z",
-  "expires_at": "2026-07-22T01:12:49.362Z",
+  "issued_at": "2026-07-19T04:17:15.051Z",
+  "expires_at": "2026-07-26T04:17:15.051Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "29a7bc7b46fbbf020b838e7cad32f8699da1989aecfea03b2d6e9e3b03af1b52",
+  "signature": "5deb0e8c9dae6a06fe6b8f1c1b98a8253795dcd83fb8a53a8ad1db8db85b97e1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06470"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8697560",
+  "certificate_id": "MN-SC-2026-4994470",
   "skill_id": "mn-real-ruflo",
   "skill_name": "ruflo",
-  "issued_at": "2026-07-15T01:24:57.560Z",
-  "expires_at": "2026-07-22T01:24:57.560Z",
+  "issued_at": "2026-07-19T04:23:14.470Z",
+  "expires_at": "2026-07-26T04:23:14.470Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "80dc381a881ce7e0127b3db9b575748562760973ef410641c2185eedc5c5cb12",
+  "signature": "a493414d2fe200612440b250b8f455fd2db0292af216e2ad94c4ebf3f447e367",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ruflo"
 }

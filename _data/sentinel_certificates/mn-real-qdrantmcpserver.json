@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8925812",
+  "certificate_id": "MN-SC-2026-5223764",
   "skill_id": "mn-real-qdrantmcpserver",
   "skill_name": "qdrant-mcp-server",
-  "issued_at": "2026-07-15T01:28:45.812Z",
-  "expires_at": "2026-07-22T01:28:45.812Z",
+  "issued_at": "2026-07-19T04:27:03.764Z",
+  "expires_at": "2026-07-26T04:27:03.764Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "36cbc214acdbe15cab96f006447b6615f94033d55d3db6bf8d2aa8954b155296",
+  "signature": "30811b6fedfb80af83ccabe562da8794b7c73c9e7f30115fb4e7e3899a8fb7ab",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-qdrantmcpserver"
 }

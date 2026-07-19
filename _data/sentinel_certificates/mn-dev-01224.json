@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7933422",
+  "certificate_id": "MN-SC-2026-4599560",
   "skill_id": "mn-dev-01224",
   "skill_name": "azure-devops-mcp",
-  "issued_at": "2026-07-15T01:12:13.422Z",
-  "expires_at": "2026-07-22T01:12:13.422Z",
+  "issued_at": "2026-07-19T04:16:39.560Z",
+  "expires_at": "2026-07-26T04:16:39.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ed79c62b77079204d9d6a7386b52a89a3c7a19613db9e2dbc175e4b6f4896f7",
+  "signature": "fbc34c554db3a20e5d5e8785c60e2a5fb83e283f534e39f32f72fc4851984eff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-dev-01224"
 }

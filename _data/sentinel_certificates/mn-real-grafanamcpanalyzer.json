@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8909448",
+  "certificate_id": "MN-SC-2026-5207683",
   "skill_id": "mn-real-grafanamcpanalyzer",
   "skill_name": "grafana-mcp-analyzer",
-  "issued_at": "2026-07-15T01:28:29.448Z",
-  "expires_at": "2026-07-22T01:28:29.448Z",
+  "issued_at": "2026-07-19T04:26:47.683Z",
+  "expires_at": "2026-07-26T04:26:47.683Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "54c4890c62450a40c8a07c9de9ec5e50488512a3f595edef080f03703873e082",
+  "signature": "b9e2ff11e3827fd6554d32334a3986b48e906985ef61b16c748a8f2bc47c5583",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-grafanamcpanalyzer"
 }

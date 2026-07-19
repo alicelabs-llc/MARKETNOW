@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9182406",
+  "certificate_id": "MN-SC-2026-5473020",
   "skill_id": "mn-real-saagpatemcpaudit",
   "skill_name": "MCPAudit",
-  "issued_at": "2026-07-15T01:33:02.406Z",
-  "expires_at": "2026-07-22T01:33:02.406Z",
+  "issued_at": "2026-07-19T04:31:13.020Z",
+  "expires_at": "2026-07-26T04:31:13.020Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff5e579ee08d4f74962a86c65eae1d7cbf4945f62e9e67b453578912d41895cb",
+  "signature": "04b7a6c6a48b03532064cbebf7c81701c9f5e140f9bfed1a8477c639d8878eb3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-saagpatemcpaudit"
 }

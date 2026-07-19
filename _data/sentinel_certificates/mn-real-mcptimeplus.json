@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8500713",
+  "certificate_id": "MN-SC-2026-4792726",
   "skill_id": "mn-real-mcptimeplus",
   "skill_name": "mcp-timeplus",
-  "issued_at": "2026-07-15T01:21:40.713Z",
-  "expires_at": "2026-07-22T01:21:40.713Z",
+  "issued_at": "2026-07-19T04:19:52.726Z",
+  "expires_at": "2026-07-26T04:19:52.726Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5292aff366cbfd6c81bcd68b21398527fc9414c31a80eaba88a1a9c58cfdc5dd",
+  "signature": "d2d79e4484d566fc4fcea3d5922208165e183d1fbed46538905c2b843cb82a18",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcptimeplus"
 }

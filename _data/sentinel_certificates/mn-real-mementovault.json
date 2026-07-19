@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9140036",
+  "certificate_id": "MN-SC-2026-5430554",
   "skill_id": "mn-real-mementovault",
   "skill_name": "memento-vault",
-  "issued_at": "2026-07-15T01:32:20.036Z",
-  "expires_at": "2026-07-22T01:32:20.036Z",
+  "issued_at": "2026-07-19T04:30:30.554Z",
+  "expires_at": "2026-07-26T04:30:30.554Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57b3a2fc0d699f68c8d8aa6f8da3694142cc46ffa17acfe38e1274603f2ec0cf",
+  "signature": "e9e3d8769abce823e5f12d25062521cdb64781705e33c073bca97e24cbe7ba7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mementovault"
 }

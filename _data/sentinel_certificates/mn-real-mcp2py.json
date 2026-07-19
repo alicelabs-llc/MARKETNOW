@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8969577",
+  "certificate_id": "MN-SC-2026-5266563",
   "skill_id": "mn-real-mcp2py",
   "skill_name": "mcp2py",
-  "issued_at": "2026-07-15T01:29:29.577Z",
-  "expires_at": "2026-07-22T01:29:29.577Z",
+  "issued_at": "2026-07-19T04:27:46.563Z",
+  "expires_at": "2026-07-26T04:27:46.563Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c17734d87dcfc2f030f866c5dd00d32093910836ff6a2a83ceffbdb293a8040f",
+  "signature": "3fec47afd697d9dc7b7173b7cb48143aac59b217059411e2d9f866d70b8696e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcp2py"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8438570",
+  "certificate_id": "MN-SC-2026-4729940",
   "skill_id": "mn-awmcp-cometmcp",
   "skill_name": "comet-mcp",
-  "issued_at": "2026-07-15T01:20:38.570Z",
-  "expires_at": "2026-07-22T01:20:38.570Z",
+  "issued_at": "2026-07-19T04:18:49.940Z",
+  "expires_at": "2026-07-26T04:18:49.940Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "d8a98c47507e7e14f58c35ebb2a4884ba3fe186b1e661420ce39e3fb63fd1870",
+  "signature": "84486319520f7f9c89e54960df17173c92ef7d41a072291205a2807864fca3c6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-cometmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9021026",
+  "certificate_id": "MN-SC-2026-5318112",
   "skill_id": "mn-real-agentboard",
   "skill_name": "AgentBoard",
-  "issued_at": "2026-07-15T01:30:21.026Z",
-  "expires_at": "2026-07-22T01:30:21.026Z",
+  "issued_at": "2026-07-19T04:28:38.112Z",
+  "expires_at": "2026-07-26T04:28:38.112Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5a5f2c613226263d55e7874f9526b7de884527ef063b40a91e46870c5466a991",
+  "signature": "b9657c3d5be62fb90c422241f581801c6e0e1720a267ac393f3bb059cadb09e9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentboard"
 }

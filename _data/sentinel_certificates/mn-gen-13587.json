@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8014935",
+  "certificate_id": "MN-SC-2026-4679179",
   "skill_id": "mn-gen-13587",
   "skill_name": "x402-mcp",
-  "issued_at": "2026-07-15T01:13:34.935Z",
-  "expires_at": "2026-07-22T01:13:34.935Z",
+  "issued_at": "2026-07-19T04:17:59.179Z",
+  "expires_at": "2026-07-26T04:17:59.179Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4fe4a6aefc2c7de67709fd3282b2dd1884075cb1695c40d2917d6abf17f9def4",
+  "signature": "332b5bc4031eef37661dd9ef83ffbcfa21197c4fc8103df1bb985927a20abf4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13587"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8771945",
+  "certificate_id": "MN-SC-2026-5066924",
   "skill_id": "mn-real-congressmcp",
   "skill_name": "congressMCP",
-  "issued_at": "2026-07-15T01:26:11.945Z",
-  "expires_at": "2026-07-22T01:26:11.945Z",
+  "issued_at": "2026-07-19T04:24:26.924Z",
+  "expires_at": "2026-07-26T04:24:26.924Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09bd945b3d6224fc41c7da70e32573bbdbd16288b2e1d8040f410606cc4b62b4",
+  "signature": "66f3cd5009ae992e8065f5e058ff78171e6cd11d636fef88e061e8fbc65459dd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-congressmcp"
 }

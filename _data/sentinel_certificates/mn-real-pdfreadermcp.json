@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8719740",
+  "certificate_id": "MN-SC-2026-5014521",
   "skill_id": "mn-real-pdfreadermcp",
   "skill_name": "pdf-reader-mcp",
-  "issued_at": "2026-07-15T01:25:19.740Z",
-  "expires_at": "2026-07-22T01:25:19.740Z",
+  "issued_at": "2026-07-19T04:23:34.521Z",
+  "expires_at": "2026-07-26T04:23:34.521Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3da66733871551750d624e0622db398dd5e026a89a076520a544d371f707a921",
+  "signature": "c5404d961b5014cf1a81081bb61c830b1007aef7824226586dea77055b7c79a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pdfreadermcp"
 }

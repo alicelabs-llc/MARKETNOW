@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7925652",
+  "certificate_id": "MN-SC-2026-4591861",
   "skill_id": "mn-gen-00114",
   "skill_name": "acheron-mcp-server",
-  "issued_at": "2026-07-15T01:12:05.652Z",
-  "expires_at": "2026-07-22T01:12:05.652Z",
+  "issued_at": "2026-07-19T04:16:31.861Z",
+  "expires_at": "2026-07-26T04:16:31.861Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e25fde2864f061914c5aa99abe3afbdabd83f399a96a980aa3c1293a458b1de8",
+  "signature": "9e4d0df95a744d96dcb0d6f6ebbc896b35b8c36c241c6eb6209a3e104aa81c50",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00114"
 }

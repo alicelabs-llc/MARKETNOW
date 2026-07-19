@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9181143",
+  "certificate_id": "MN-SC-2026-5471599",
   "skill_id": "mn-real-legaltextmcpde",
   "skill_name": "legal-text-mcp-de",
-  "issued_at": "2026-07-15T01:33:01.143Z",
-  "expires_at": "2026-07-22T01:33:01.143Z",
+  "issued_at": "2026-07-19T04:31:11.599Z",
+  "expires_at": "2026-07-26T04:31:11.599Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b95574ca69ec9bddccb3ac2fe81d2f5218ded23f4ec714a2d5f105c65d9f6db4",
+  "signature": "cbb0b8c6c2c0ef46a5263aff51a9bdcded9bbeb2ade8e836491180f701ee521a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-legaltextmcpde"
 }

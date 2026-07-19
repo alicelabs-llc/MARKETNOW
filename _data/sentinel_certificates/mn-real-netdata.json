@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8626503",
+  "certificate_id": "MN-SC-2026-4919787",
   "skill_id": "mn-real-netdata",
   "skill_name": "netdata",
-  "issued_at": "2026-07-15T01:23:46.503Z",
-  "expires_at": "2026-07-22T01:23:46.503Z",
+  "issued_at": "2026-07-19T04:21:59.787Z",
+  "expires_at": "2026-07-26T04:21:59.787Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dc50a18b94be0d70b08aba9d99dad28d00c948eb28403699355a0931db7586fa",
+  "signature": "9e84d8fc59222f69c0be136ceff595cb69589292f525b1097c4af7e661c69194",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-netdata"
 }

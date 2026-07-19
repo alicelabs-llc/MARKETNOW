@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8981757",
+  "certificate_id": "MN-SC-2026-5278921",
   "skill_id": "mn-real-clojuremcplight",
   "skill_name": "clojure-mcp-light",
-  "issued_at": "2026-07-15T01:29:41.757Z",
-  "expires_at": "2026-07-22T01:29:41.757Z",
+  "issued_at": "2026-07-19T04:27:58.921Z",
+  "expires_at": "2026-07-26T04:27:58.921Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "665e4181c46c4b787c6b07c511ba0812b9fbed4f38d4aeb7c52f11c204760706",
+  "signature": "46055e86e659e5b33036e179ead6f7eca4546e208851e5a975ce9730b62063e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-clojuremcplight"
 }

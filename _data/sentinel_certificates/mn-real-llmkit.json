@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8625936",
+  "certificate_id": "MN-SC-2026-4919335",
   "skill_id": "mn-real-llmkit",
   "skill_name": "llmkit",
-  "issued_at": "2026-07-15T01:23:45.936Z",
-  "expires_at": "2026-07-22T01:23:45.936Z",
+  "issued_at": "2026-07-19T04:21:59.335Z",
+  "expires_at": "2026-07-26T04:21:59.335Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9dabb5a984b04937ac15d1a850790e6f1ef969e082138b9f4f018d2687590efe",
+  "signature": "81cdf6fdba99eeb77f52486e8c5631c5adcc549fa51b70630a19ea87532c2b24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-llmkit"
 }

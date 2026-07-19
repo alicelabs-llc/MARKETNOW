@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8530849",
+  "certificate_id": "MN-SC-2026-4822656",
   "skill_id": "mn-real-tracemcp",
   "skill_name": "trace-mcp",
-  "issued_at": "2026-07-15T01:22:10.849Z",
-  "expires_at": "2026-07-22T01:22:10.849Z",
+  "issued_at": "2026-07-19T04:20:22.656Z",
+  "expires_at": "2026-07-26T04:20:22.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "be073c086384aeca535914d6dbce346a14097eacedb6852cd5b1d1b9e574de98",
+  "signature": "4d1d9ace542110cacc724302c08c24783f3db6c3dd3c54a362bbe3b7f911d8ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tracemcp"
 }

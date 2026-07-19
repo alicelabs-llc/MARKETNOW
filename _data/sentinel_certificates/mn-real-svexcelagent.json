@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9015168",
+  "certificate_id": "MN-SC-2026-5312309",
   "skill_id": "mn-real-svexcelagent",
   "skill_name": "sv-excel-agent",
-  "issued_at": "2026-07-15T01:30:15.168Z",
-  "expires_at": "2026-07-22T01:30:15.168Z",
+  "issued_at": "2026-07-19T04:28:32.309Z",
+  "expires_at": "2026-07-26T04:28:32.309Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9533c9761eaeabcb9be08fc9bb30dae28fbacf057f1b3ee878a2871d3f0eccd4",
+  "signature": "2597fdc9255c5f6a86f4372880080fd0ea958e3137e72414bd0ef49ec2f3837b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-svexcelagent"
 }

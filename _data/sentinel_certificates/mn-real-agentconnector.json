@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9181900",
+  "certificate_id": "MN-SC-2026-5472419",
   "skill_id": "mn-real-agentconnector",
   "skill_name": "agent-connector",
-  "issued_at": "2026-07-15T01:33:01.900Z",
-  "expires_at": "2026-07-22T01:33:01.900Z",
+  "issued_at": "2026-07-19T04:31:12.419Z",
+  "expires_at": "2026-07-26T04:31:12.419Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4dea99a46469722a5ca501fde5ff3fd36ed84c15835575b12ea856a48c152707",
+  "signature": "3ce3fdb9a2e7e01253d14a69561e94a86798164bd02d42116165b8e50a156d41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentconnector"
 }

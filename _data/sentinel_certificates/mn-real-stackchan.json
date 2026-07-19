@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8549553",
+  "certificate_id": "MN-SC-2026-4841746",
   "skill_id": "mn-real-stackchan",
   "skill_name": "stack-chan",
-  "issued_at": "2026-07-15T01:22:29.553Z",
-  "expires_at": "2026-07-22T01:22:29.553Z",
+  "issued_at": "2026-07-19T04:20:41.746Z",
+  "expires_at": "2026-07-26T04:20:41.746Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9756821fe1d751542c99ad5eca7efa0652c27c3a5ea4d5c3914c7fd77e2d035",
+  "signature": "04f4c4606f00ea5b598abe87ac948f16e2a3190ffd767b2d46a6d0e74ef4ad20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stackchan"
 }

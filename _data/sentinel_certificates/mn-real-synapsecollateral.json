@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9236263",
+  "certificate_id": "MN-SC-2026-5525151",
   "skill_id": "mn-real-synapsecollateral",
   "skill_name": "synapse-collateral",
-  "issued_at": "2026-07-15T01:33:56.263Z",
-  "expires_at": "2026-07-22T01:33:56.263Z",
+  "issued_at": "2026-07-19T04:32:05.151Z",
+  "expires_at": "2026-07-26T04:32:05.151Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fbe822f3195f59aa374a86221ca103833e335c1069689294af3056115886445e",
+  "signature": "bc12d6ec13179684cf774fcca77e9c1ba30aa9badce9b8f7186524c5b887c961",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-synapsecollateral"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8750517",
+  "certificate_id": "MN-SC-2026-5046260",
   "skill_id": "mn-real-fixgraphmcp",
   "skill_name": "fixgraph-mcp",
-  "issued_at": "2026-07-15T01:25:50.517Z",
-  "expires_at": "2026-07-22T01:25:50.517Z",
+  "issued_at": "2026-07-19T04:24:06.260Z",
+  "expires_at": "2026-07-26T04:24:06.260Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "08976c78865898f912c79082c591b210de65924ef2f1c433db7c34e8b960f509",
+  "signature": "3e99c8e606a46fb7235545029a2cec6787bff4d7494ddd30812c579e853c71b0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fixgraphmcp"
 }

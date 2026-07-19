@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8772501",
+  "certificate_id": "MN-SC-2026-5067498",
   "skill_id": "mn-real-openrpcmcpserver",
   "skill_name": "openrpc-mcp-server",
-  "issued_at": "2026-07-15T01:26:12.501Z",
-  "expires_at": "2026-07-22T01:26:12.501Z",
+  "issued_at": "2026-07-19T04:24:27.498Z",
+  "expires_at": "2026-07-26T04:24:27.498Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e040d185416cc2e4f44464ed39e0c76d1ff355a035753a511b174aac44558c99",
+  "signature": "d4b8efbf2b24fb1ccedfda0bc472657fed3b406804f3191ce4c0ea45b4d7f1d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openrpcmcpserver"
 }

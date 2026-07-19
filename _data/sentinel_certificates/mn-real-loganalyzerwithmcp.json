@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8997579",
+  "certificate_id": "MN-SC-2026-5295320",
   "skill_id": "mn-real-loganalyzerwithmcp",
   "skill_name": "Log-Analyzer-with-MCP",
-  "issued_at": "2026-07-15T01:29:57.579Z",
-  "expires_at": "2026-07-22T01:29:57.579Z",
+  "issued_at": "2026-07-19T04:28:15.320Z",
+  "expires_at": "2026-07-26T04:28:15.320Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "82c0ab6f0a8e80926e712fe4d117db1ad71f6111f6b90ea91218236ce6855516",
+  "signature": "e65d4999a90619e568d8f3d72a757b52c52993d5435e1369207ba7c1a6234659",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-loganalyzerwithmcp"
 }

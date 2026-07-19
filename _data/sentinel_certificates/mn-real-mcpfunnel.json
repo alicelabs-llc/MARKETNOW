@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9018121",
+  "certificate_id": "MN-SC-2026-5315187",
   "skill_id": "mn-real-mcpfunnel",
   "skill_name": "mcp-funnel",
-  "issued_at": "2026-07-15T01:30:18.121Z",
-  "expires_at": "2026-07-22T01:30:18.121Z",
+  "issued_at": "2026-07-19T04:28:35.187Z",
+  "expires_at": "2026-07-26T04:28:35.187Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "355db7e70404a4ac09f39d27d3a774b466111da99d10298a5dc7723a9dabddd0",
+  "signature": "a5255875d882c45d9760d6ad8409b2fc25ea3a9a1399cc8b686d3f9eb0d20072",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpfunnel"
 }

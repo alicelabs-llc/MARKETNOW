@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8434589",
+  "certificate_id": "MN-SC-2026-4725518",
   "skill_id": "mn-awmcp-domshell",
   "skill_name": "DOMShell",
-  "issued_at": "2026-07-15T01:20:34.589Z",
-  "expires_at": "2026-07-22T01:20:34.589Z",
+  "issued_at": "2026-07-19T04:18:45.518Z",
+  "expires_at": "2026-07-26T04:18:45.518Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "088f1d529c941dd29ec554ab1cda9605139cc4bdf2235da87cd362f412e8f904",
+  "signature": "cd198804a9b998a8698f759f09da9c11e7189aeeda2929fbd247a8fb29be6208",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-domshell"
 }

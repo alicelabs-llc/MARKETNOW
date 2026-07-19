@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9221624",
+  "certificate_id": "MN-SC-2026-5511518",
   "skill_id": "mn-real-apianyaimcp",
   "skill_name": "ApiAny.AI-MCP",
-  "issued_at": "2026-07-15T01:33:41.624Z",
-  "expires_at": "2026-07-22T01:33:41.624Z",
+  "issued_at": "2026-07-19T04:31:51.518Z",
+  "expires_at": "2026-07-26T04:31:51.518Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00e064cedd52851851dc4efba5b00678e4aad55108df198c8ad05b1c79d538ce",
+  "signature": "a50f6e41e1fe7a35a6213829ae422f361ee6ba9c363e4a55bcecfc01bbf73ee1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apianyaimcp"
 }

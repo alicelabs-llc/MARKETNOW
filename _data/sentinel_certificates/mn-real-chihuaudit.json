@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8654829",
+  "certificate_id": "MN-SC-2026-4951376",
   "skill_id": "mn-real-chihuaudit",
   "skill_name": "CHIHUAUDIT",
-  "issued_at": "2026-07-15T01:24:14.829Z",
-  "expires_at": "2026-07-22T01:24:14.829Z",
+  "issued_at": "2026-07-19T04:22:31.376Z",
+  "expires_at": "2026-07-26T04:22:31.376Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ae2c53f124a123590bfdbea24430fda6025d28e78f1bd3673a6b919d6869f53",
+  "signature": "e4b1b06975cc2281dc07174eacccbce1b52ba4d3fbfbf921f60bf7c1d1e29492",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chihuaudit"
 }

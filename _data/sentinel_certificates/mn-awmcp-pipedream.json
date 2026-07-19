@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8410313",
+  "certificate_id": "MN-SC-2026-4699416",
   "skill_id": "mn-awmcp-pipedream",
   "skill_name": "pipedream",
-  "issued_at": "2026-07-15T01:20:10.313Z",
-  "expires_at": "2026-07-22T01:20:10.313Z",
+  "issued_at": "2026-07-19T04:18:19.416Z",
+  "expires_at": "2026-07-26T04:18:19.416Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "e574ab94201ca27f27f7efec0efb227dedbbb8d91c809609b4e9ff55e0184272",
+  "signature": "f68e1218b2a2d35a93f22f45204ee96ef17ec7b74d7eeb4af299b9df333ccca8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-pipedream"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8705969",
+  "certificate_id": "MN-SC-2026-5002504",
   "skill_id": "mn-real-litterbox",
   "skill_name": "LitterBox",
-  "issued_at": "2026-07-15T01:25:05.969Z",
-  "expires_at": "2026-07-22T01:25:05.969Z",
+  "issued_at": "2026-07-19T04:23:22.504Z",
+  "expires_at": "2026-07-26T04:23:22.504Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8d48c3831613c40114d665cd0eeaf01518d107a9b797b245c237877433f8bf31",
+  "signature": "71621042b8d95d0d08c705f04c2b664e5276da212415ca0dcbb8329627ba53c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-litterbox"
 }

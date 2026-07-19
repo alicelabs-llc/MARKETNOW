@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8894949",
+  "certificate_id": "MN-SC-2026-5191039",
   "skill_id": "mn-real-hasmcpce",
   "skill_name": "hasmcp-ce",
-  "issued_at": "2026-07-15T01:28:14.949Z",
-  "expires_at": "2026-07-22T01:28:14.949Z",
+  "issued_at": "2026-07-19T04:26:31.039Z",
+  "expires_at": "2026-07-26T04:26:31.039Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9063e7bf3c0541aff2329f20d057d74543ef263cdf0936867cf33937f524055c",
+  "signature": "6d45e841c346bd58ce3dfc59ec66c4e9867cc15b642da9d25c820d5831085241",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hasmcpce"
 }

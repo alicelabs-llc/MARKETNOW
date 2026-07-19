@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8742548",
+  "certificate_id": "MN-SC-2026-5037863",
   "skill_id": "mn-real-frappeassistantcore",
   "skill_name": "Frappe_Assistant_Core",
-  "issued_at": "2026-07-15T01:25:42.548Z",
-  "expires_at": "2026-07-22T01:25:42.548Z",
+  "issued_at": "2026-07-19T04:23:57.863Z",
+  "expires_at": "2026-07-26T04:23:57.863Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9add8ddd2f9bff57855b3bc6b46ef40e212f2a5a30890fad540dddf984ae870c",
+  "signature": "84ea7250f18a9f6866879b2d97a8b9223f76fa44e3b93b79d824ed6a0376e35c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-frappeassistantcore"
 }

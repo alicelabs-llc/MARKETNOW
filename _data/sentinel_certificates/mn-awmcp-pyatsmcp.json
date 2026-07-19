@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8467069",
+  "certificate_id": "MN-SC-2026-4759126",
   "skill_id": "mn-awmcp-pyatsmcp",
   "skill_name": "pyATS_MCP",
-  "issued_at": "2026-07-15T01:21:07.069Z",
-  "expires_at": "2026-07-22T01:21:07.069Z",
+  "issued_at": "2026-07-19T04:19:19.126Z",
+  "expires_at": "2026-07-26T04:19:19.126Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc388bcddf013857ff478a37673227f9001da99513df419a807e365545d11059",
+  "signature": "44a4292bf1bf1454483161fd29503a4749f04393a0f59679ce3dd29390bb6142",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-pyatsmcp"
 }

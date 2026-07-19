@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8548230",
+  "certificate_id": "MN-SC-2026-4840274",
   "skill_id": "mn-real-mcpturboquant",
   "skill_name": "mcp-turboquant",
-  "issued_at": "2026-07-15T01:22:28.230Z",
-  "expires_at": "2026-07-22T01:22:28.230Z",
+  "issued_at": "2026-07-19T04:20:40.274Z",
+  "expires_at": "2026-07-26T04:20:40.274Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6818029ea51d0ff679970d73bf5bf811d3505d263d47fb99cab17d467aba9268",
+  "signature": "2a83507ad4bf8fc3eca43457936b2a212b289b70cef7994f98ac7b9e1325525f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpturboquant"
 }

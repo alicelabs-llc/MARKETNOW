@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8667870",
+  "certificate_id": "MN-SC-2026-4964748",
   "skill_id": "mn-real-arvomcp",
   "skill_name": "arvo-mcp",
-  "issued_at": "2026-07-15T01:24:27.870Z",
-  "expires_at": "2026-07-22T01:24:27.870Z",
+  "issued_at": "2026-07-19T04:22:44.748Z",
+  "expires_at": "2026-07-26T04:22:44.748Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6db2f4285d31756573164f13f583379891adf8f05f8e51b704ff7ad70898a5d1",
+  "signature": "94a2be9cd70820124864cecb3aad40ab583b85e3b806caa1d9d103156bbff953",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-arvomcp"
 }

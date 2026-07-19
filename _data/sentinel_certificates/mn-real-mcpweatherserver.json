@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8761022",
+  "certificate_id": "MN-SC-2026-5055536",
   "skill_id": "mn-real-mcpweatherserver",
   "skill_name": "mcp_weather_server",
-  "issued_at": "2026-07-15T01:26:01.022Z",
-  "expires_at": "2026-07-22T01:26:01.022Z",
+  "issued_at": "2026-07-19T04:24:15.536Z",
+  "expires_at": "2026-07-26T04:24:15.536Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a55cb38fca0585bc5d1b4ebd21838152ac735ac0bde949df4fdfad225bf292c1",
+  "signature": "e3add2f78e6bfa73275d0199370c2784216f0112af074e8b61b5a564fcf101a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpweatherserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8429700",
+  "certificate_id": "MN-SC-2026-4719840",
   "skill_id": "mn-awmcp-fulcracontextmcp",
   "skill_name": "fulcra-context-mcp",
-  "issued_at": "2026-07-15T01:20:29.700Z",
-  "expires_at": "2026-07-22T01:20:29.700Z",
+  "issued_at": "2026-07-19T04:18:39.840Z",
+  "expires_at": "2026-07-26T04:18:39.840Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "0a8c2f180f774d585476cf88bee5b702edf5dc5231a8bb768d8fe45d5c4939a4",
+  "signature": "7ea4a91c0d61538f3785fe120716db0be0a2ba1377902be5fa558927cab4798d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-fulcracontextmcp"
 }

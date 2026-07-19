@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8432477",
+  "certificate_id": "MN-SC-2026-4722976",
   "skill_id": "mn-awmcp-dicomwebmcpserver",
   "skill_name": "dicomweb-mcp-server",
-  "issued_at": "2026-07-15T01:20:32.477Z",
-  "expires_at": "2026-07-22T01:20:32.477Z",
+  "issued_at": "2026-07-19T04:18:42.976Z",
+  "expires_at": "2026-07-26T04:18:42.976Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "96f6a6efee79ff6e29243d2d593c92aa7bb3e05c61c0220eb88fe871d218bfd9",
+  "signature": "ead9b9c43b43627086201366ce07e9bc3849bedcd4558e8cb3f4e0aca303a79d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-dicomwebmcpserver"
 }

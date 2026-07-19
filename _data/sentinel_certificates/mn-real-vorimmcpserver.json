@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8654798",
+  "certificate_id": "MN-SC-2026-4951342",
   "skill_id": "mn-real-vorimmcpserver",
   "skill_name": "vorim-mcp-server",
-  "issued_at": "2026-07-15T01:24:14.798Z",
-  "expires_at": "2026-07-22T01:24:14.798Z",
+  "issued_at": "2026-07-19T04:22:31.342Z",
+  "expires_at": "2026-07-26T04:22:31.342Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0131359243882b3cace2cf7f55e60a66e99f0797ee2961ccb0d4ea908b1020f",
+  "signature": "2a891d2521ff7c96dc59e1d84b67b623b0c6eb804accd2fca6b80165f7cf8787",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vorimmcpserver"
 }

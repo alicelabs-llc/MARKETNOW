@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9236023",
+  "certificate_id": "MN-SC-2026-5524832",
   "skill_id": "mn-real-businessmcpservers",
   "skill_name": "business-mcp-servers",
-  "issued_at": "2026-07-15T01:33:56.023Z",
-  "expires_at": "2026-07-22T01:33:56.023Z",
+  "issued_at": "2026-07-19T04:32:04.832Z",
+  "expires_at": "2026-07-26T04:32:04.832Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1201ed845a05a9b7cc575dc89362d685d3521f7059441b74864fb44a060578da",
+  "signature": "627b4291f30883d2da972b518765ae9cf0dab95d7e2acaebde836b61581af353",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-businessmcpservers"
 }

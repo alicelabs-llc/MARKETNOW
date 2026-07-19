@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8894151",
+  "certificate_id": "MN-SC-2026-5190305",
   "skill_id": "mn-real-mcpbridgekit",
   "skill_name": "mcp-bridgekit",
-  "issued_at": "2026-07-15T01:28:14.151Z",
-  "expires_at": "2026-07-22T01:28:14.151Z",
+  "issued_at": "2026-07-19T04:26:30.305Z",
+  "expires_at": "2026-07-26T04:26:30.305Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85e547c226015611fe8093e6771647d1e40458a0d3d0b4ad5495eaea3f09a655",
+  "signature": "f74d25c565396a9c0c6741b2b5f0f33956ebbb64d8f5ef86f0673ca8030e48bb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpbridgekit"
 }

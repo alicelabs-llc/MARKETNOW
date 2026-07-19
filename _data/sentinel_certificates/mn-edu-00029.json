@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8392001",
+  "certificate_id": "MN-SC-2026-4680596",
   "skill_id": "mn-edu-00029",
   "skill_name": "interactive-mcp",
-  "issued_at": "2026-07-15T01:19:52.001Z",
-  "expires_at": "2026-07-22T01:19:52.001Z",
+  "issued_at": "2026-07-19T04:18:00.596Z",
+  "expires_at": "2026-07-26T04:18:00.596Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e0193ac8c11a1f15a24605ffd910bb1234bb9921ef1c88ffcc516056a8379a98",
+  "signature": "7ba7b5e393641077dbdbf799f7b7c94224c7b09fedb213025a0941851376d350",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-edu-00029"
 }

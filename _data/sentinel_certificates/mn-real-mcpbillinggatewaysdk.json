@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8510186",
+  "certificate_id": "MN-SC-2026-4801759",
   "skill_id": "mn-real-mcpbillinggatewaysdk",
   "skill_name": "mcp-billing-gateway-sdk",
-  "issued_at": "2026-07-15T01:21:50.186Z",
-  "expires_at": "2026-07-22T01:21:50.186Z",
+  "issued_at": "2026-07-19T04:20:01.759Z",
+  "expires_at": "2026-07-26T04:20:01.759Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "09e7ba5640a118964f8c5218b1a4d9bfb06d2c4599f5954887a9342a44d72626",
+  "signature": "a759669cf9c981513034c5b4d728ee2fdd09f13be38f41d1d33acb47b02aab6b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpbillinggatewaysdk"
 }

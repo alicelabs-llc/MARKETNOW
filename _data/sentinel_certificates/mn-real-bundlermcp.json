@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8548426",
+  "certificate_id": "MN-SC-2026-4840555",
   "skill_id": "mn-real-bundlermcp",
   "skill_name": "bundler_mcp",
-  "issued_at": "2026-07-15T01:22:28.426Z",
-  "expires_at": "2026-07-22T01:22:28.426Z",
+  "issued_at": "2026-07-19T04:20:40.555Z",
+  "expires_at": "2026-07-26T04:20:40.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9bac4de76a4791f15e7870f4aea0dcaa79ea0aceec2baaa61bee60fbcac89294",
+  "signature": "6f1256e6605b7a5c88d25073b8f9923c7939d180eee2d502fe7eb8e376e98f86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bundlermcp"
 }

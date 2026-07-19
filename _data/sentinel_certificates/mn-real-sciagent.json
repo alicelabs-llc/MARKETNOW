@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9094325",
+  "certificate_id": "MN-SC-2026-5382862",
   "skill_id": "mn-real-sciagent",
   "skill_name": "sciagent",
-  "issued_at": "2026-07-15T01:31:34.325Z",
-  "expires_at": "2026-07-22T01:31:34.325Z",
+  "issued_at": "2026-07-19T04:29:42.862Z",
+  "expires_at": "2026-07-26T04:29:42.862Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f1551fcba4da92b1e50cee40f1b82ac1d784bdb68e321a380c64ea3a36e50e9a",
+  "signature": "19333cb59b059b2b394232d863d298281e2101c2c0ff53b6b36b9f18db0b4108",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sciagent"
 }

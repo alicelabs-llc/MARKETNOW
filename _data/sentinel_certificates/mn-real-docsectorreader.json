@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9150642",
+  "certificate_id": "MN-SC-2026-5441586",
   "skill_id": "mn-real-docsectorreader",
   "skill_name": "docsector-reader",
-  "issued_at": "2026-07-15T01:32:30.642Z",
-  "expires_at": "2026-07-22T01:32:30.642Z",
+  "issued_at": "2026-07-19T04:30:41.586Z",
+  "expires_at": "2026-07-26T04:30:41.586Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1eccfd351712fec785047a08061479db2375db973bbcdcd4d5fd34a83e6f24d3",
+  "signature": "700f8862536f164117d4fe67d58a1c403f2df0135e82736f7eedade54fe1326f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-docsectorreader"
 }

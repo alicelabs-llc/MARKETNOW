@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7970303",
+  "certificate_id": "MN-SC-2026-4635983",
   "skill_id": "mn-gen-06583",
   "skill_name": "DebugMCP",
-  "issued_at": "2026-07-15T01:12:50.303Z",
-  "expires_at": "2026-07-22T01:12:50.303Z",
+  "issued_at": "2026-07-19T04:17:15.983Z",
+  "expires_at": "2026-07-26T04:17:15.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e98a0bcd802976da965da730918a2cf9d7dd61c2efed1b1c06c04837d02d62cc",
+  "signature": "4f9e9256fc1a5ee50ac941c56744e36d7d41b7f871af3e783d38a5b8f3c89c86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06583"
 }

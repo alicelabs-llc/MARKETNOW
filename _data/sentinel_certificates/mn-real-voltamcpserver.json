@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8662838",
+  "certificate_id": "MN-SC-2026-4959508",
   "skill_id": "mn-real-voltamcpserver",
   "skill_name": "volta-mcp-server",
-  "issued_at": "2026-07-15T01:24:22.838Z",
-  "expires_at": "2026-07-22T01:24:22.838Z",
+  "issued_at": "2026-07-19T04:22:39.508Z",
+  "expires_at": "2026-07-26T04:22:39.508Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9b4cfd1568352886a02cd0729cafafcaed4e0c2aaf655736f8f3b9cc88efd8c",
+  "signature": "982e10057d25d026a7c3e580c6f592f3a033158b08c4bca3595152dc6f57144a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-voltamcpserver"
 }

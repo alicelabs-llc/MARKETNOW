@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8988521",
+  "certificate_id": "MN-SC-2026-5286115",
   "skill_id": "mn-real-harnesskit",
   "skill_name": "HarnessKit",
-  "issued_at": "2026-07-15T01:29:48.521Z",
-  "expires_at": "2026-07-22T01:29:48.521Z",
+  "issued_at": "2026-07-19T04:28:06.115Z",
+  "expires_at": "2026-07-26T04:28:06.115Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "674ca80579a9c01262470de7c1414fe70ae0a3f00ef3530905e266cb6a99c7fb",
+  "signature": "c4a080a62496f9468ded4bef600fef1df80001a1c069c27158482e3286888d14",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-harnesskit"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8910982",
+  "certificate_id": "MN-SC-2026-5209439",
   "skill_id": "mn-real-mcpflightsearch",
   "skill_name": "mcp-flight-search",
-  "issued_at": "2026-07-15T01:28:30.982Z",
-  "expires_at": "2026-07-22T01:28:30.982Z",
+  "issued_at": "2026-07-19T04:26:49.439Z",
+  "expires_at": "2026-07-26T04:26:49.439Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5469bb57287b945b3796aa547b3aae04a3ec122ec8daa4beefa26eb15bc7557d",
+  "signature": "b97f321120ae572123c3ef9ee247e70be43fb9aaa264240cc3fd31338858b843",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpflightsearch"
 }

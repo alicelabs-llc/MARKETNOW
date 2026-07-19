@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9157602",
+  "certificate_id": "MN-SC-2026-5448072",
   "skill_id": "mn-real-crowdsecmcp",
   "skill_name": "crowdsec-mcp",
-  "issued_at": "2026-07-15T01:32:37.602Z",
-  "expires_at": "2026-07-22T01:32:37.602Z",
+  "issued_at": "2026-07-19T04:30:48.072Z",
+  "expires_at": "2026-07-26T04:30:48.072Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77d4206094774cab95b27e3c394eaed2c658b677bbd6a284f344ec284e773e1e",
+  "signature": "52c1e1493e7863607b9ceacaad51babc6af57e68ff563d1634ca4d0a42a6a32f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-crowdsecmcp"
 }

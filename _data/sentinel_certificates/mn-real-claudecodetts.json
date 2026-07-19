@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8766134",
+  "certificate_id": "MN-SC-2026-5061141",
   "skill_id": "mn-real-claudecodetts",
   "skill_name": "claude-code-tts",
-  "issued_at": "2026-07-15T01:26:06.134Z",
-  "expires_at": "2026-07-22T01:26:06.134Z",
+  "issued_at": "2026-07-19T04:24:21.141Z",
+  "expires_at": "2026-07-26T04:24:21.141Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e42cd8061061eb6a4d606753077aa848ee0eb52495435c2288011414a7242c7",
+  "signature": "2193773f99066f9054cb40c2f73e79e5a13574e70f557dd4fdd541cb6d48b0ba",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecodetts"
 }

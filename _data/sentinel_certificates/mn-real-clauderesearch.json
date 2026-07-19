@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9105999",
+  "certificate_id": "MN-SC-2026-5394022",
   "skill_id": "mn-real-clauderesearch",
   "skill_name": "claude-research",
-  "issued_at": "2026-07-15T01:31:45.999Z",
-  "expires_at": "2026-07-22T01:31:45.999Z",
+  "issued_at": "2026-07-19T04:29:54.022Z",
+  "expires_at": "2026-07-26T04:29:54.022Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7ddb99f89d72b2ab8839a77e13177ad8340dbd024550e2bbb6523e84772420d",
+  "signature": "d8b3d68cb72d3215189380c6f18f7636356a9653468a99ec358f394bac6e8106",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-clauderesearch"
 }

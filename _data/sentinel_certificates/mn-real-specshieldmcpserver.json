@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9102572",
+  "certificate_id": "MN-SC-2026-5390978",
   "skill_id": "mn-real-specshieldmcpserver",
   "skill_name": "specshield-mcp-server",
-  "issued_at": "2026-07-15T01:31:42.572Z",
-  "expires_at": "2026-07-22T01:31:42.572Z",
+  "issued_at": "2026-07-19T04:29:50.978Z",
+  "expires_at": "2026-07-26T04:29:50.978Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "335c0ca23c993fedf4905ebf766239041cf9383e1159ba952d8b4417b581c9ca",
+  "signature": "50a68d46892167fe402b24a928205f702f3bff9f5e7593d90be948f62b57c87f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-specshieldmcpserver"
 }

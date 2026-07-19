@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8616405",
+  "certificate_id": "MN-SC-2026-4909766",
   "skill_id": "mn-real-nearbysearchmcp",
   "skill_name": "nearby-search-mcp",
-  "issued_at": "2026-07-15T01:23:36.405Z",
-  "expires_at": "2026-07-22T01:23:36.405Z",
+  "issued_at": "2026-07-19T04:21:49.766Z",
+  "expires_at": "2026-07-26T04:21:49.766Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "12ceb44b5020f62fc634b2f6af08047e44ad39d36d506af2ef5d7f3abb8a729a",
+  "signature": "1bd78bb9ce3a485a100e6add87b6792e1d798effc759446abc67a41f14d8377f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nearbysearchmcp"
 }

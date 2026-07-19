@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8873980",
+  "certificate_id": "MN-SC-2026-5170067",
   "skill_id": "mn-real-hanzibrowse",
   "skill_name": "hanzi-browse",
-  "issued_at": "2026-07-15T01:27:53.980Z",
-  "expires_at": "2026-07-22T01:27:53.980Z",
+  "issued_at": "2026-07-19T04:26:10.067Z",
+  "expires_at": "2026-07-26T04:26:10.067Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4509bcddd1e9f490f518784898aca774470147967ab4aea789feef6cdc776961",
+  "signature": "349531a695c251cb248b06bcac9a8b0f05db8f17470fa6934a2e117f31ac62e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hanzibrowse"
 }

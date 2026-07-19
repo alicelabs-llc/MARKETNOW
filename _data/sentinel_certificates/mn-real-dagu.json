@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8701408",
+  "certificate_id": "MN-SC-2026-4998119",
   "skill_id": "mn-real-dagu",
   "skill_name": "dagu",
-  "issued_at": "2026-07-15T01:25:01.408Z",
-  "expires_at": "2026-07-22T01:25:01.408Z",
+  "issued_at": "2026-07-19T04:23:18.119Z",
+  "expires_at": "2026-07-26T04:23:18.119Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30ebdb0adbe5253e05f659834217fffd4a40c32de3884bcc3ec125c69b9be30d",
+  "signature": "62479f4b0c2451f27dec69d956dbdd0f8bf59e5eb1b004353c3d490dd7ef1fef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dagu"
 }

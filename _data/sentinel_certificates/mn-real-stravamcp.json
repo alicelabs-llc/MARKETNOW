@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8668593",
+  "certificate_id": "MN-SC-2026-4965347",
   "skill_id": "mn-real-stravamcp",
   "skill_name": "strava-mcp",
-  "issued_at": "2026-07-15T01:24:28.593Z",
-  "expires_at": "2026-07-22T01:24:28.593Z",
+  "issued_at": "2026-07-19T04:22:45.347Z",
+  "expires_at": "2026-07-26T04:22:45.347Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77cafa7e9f03e1279f693fc86aa23bccc2044f61bdb7557a19a53544e51c5746",
+  "signature": "f6f08fe27ab00ef94a451c557d811e74086778a3718693eb88a160c0cceee1fe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-stravamcp"
 }

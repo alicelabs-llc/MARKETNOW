@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8577712",
+  "certificate_id": "MN-SC-2026-4870750",
   "skill_id": "mn-real-oathscore",
   "skill_name": "oathscore",
-  "issued_at": "2026-07-15T01:22:57.712Z",
-  "expires_at": "2026-07-22T01:22:57.712Z",
+  "issued_at": "2026-07-19T04:21:10.750Z",
+  "expires_at": "2026-07-26T04:21:10.750Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25307bc37c1f9726e175276088f7fc997990e6cb46a06fb99f2d1687b86e8042",
+  "signature": "b4fa733795ed94e319b734c7da8c075be0ea16602fcc770026f4e93f24a7cf75",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-oathscore"
 }

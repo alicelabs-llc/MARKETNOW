@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7943591",
+  "certificate_id": "MN-SC-2026-4609146",
   "skill_id": "mn-gen-02737",
   "skill_name": "context-awesome",
-  "issued_at": "2026-07-15T01:12:23.591Z",
-  "expires_at": "2026-07-22T01:12:23.591Z",
+  "issued_at": "2026-07-19T04:16:49.146Z",
+  "expires_at": "2026-07-26T04:16:49.146Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8fefb469c7b811b02f29729fbe894cb15e02f6bb8f1224eb0c37cb56271a2bc5",
+  "signature": "16ee5fc412eb901cef8e6f21745990f55cc584855635b96af466e9779a73a501",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02737"
 }

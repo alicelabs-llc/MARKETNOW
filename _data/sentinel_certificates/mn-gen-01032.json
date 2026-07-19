@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7931782",
+  "certificate_id": "MN-SC-2026-4597908",
   "skill_id": "mn-gen-01032",
   "skill_name": "astroway-mcp",
-  "issued_at": "2026-07-15T01:12:11.782Z",
-  "expires_at": "2026-07-22T01:12:11.782Z",
+  "issued_at": "2026-07-19T04:16:37.908Z",
+  "expires_at": "2026-07-26T04:16:37.908Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9febe173e8e165d9207145318a84a8b3ed8bf37ee3a96557372d542c28ca3ed2",
+  "signature": "b12a2868c617f1ab7d8b211cd102f84b2cece01e5898b128afd278cec94f1a25",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01032"
 }

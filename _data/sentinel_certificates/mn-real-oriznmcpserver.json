@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8672581",
+  "certificate_id": "MN-SC-2026-4969281",
   "skill_id": "mn-real-oriznmcpserver",
   "skill_name": "orizn-mcp-server",
-  "issued_at": "2026-07-15T01:24:32.581Z",
-  "expires_at": "2026-07-22T01:24:32.581Z",
+  "issued_at": "2026-07-19T04:22:49.281Z",
+  "expires_at": "2026-07-26T04:22:49.281Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06d71d352e4cfa915b6cf3c64d83b8944c5592f5dcfe29e228e5fe5665038fcf",
+  "signature": "0c246c8d3c37b4c6e87dae05aa99eb88c771442a66244d20f426c02f4d0b7bad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-oriznmcpserver"
 }

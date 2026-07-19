@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8966462",
+  "certificate_id": "MN-SC-2026-5263542",
   "skill_id": "mn-real-datagomcpservers",
   "skill_name": "data-go-mcp-servers",
-  "issued_at": "2026-07-15T01:29:26.462Z",
-  "expires_at": "2026-07-22T01:29:26.462Z",
+  "issued_at": "2026-07-19T04:27:43.542Z",
+  "expires_at": "2026-07-26T04:27:43.542Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bf69405386432335500a1f4e90f394b537a5a3b1bdd24fd36fa3eea9181cc156",
+  "signature": "ef30ea9cdf3e6e7d1b8c3c0045ece33184b6332c8f357d97714efc9fab871468",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-datagomcpservers"
 }

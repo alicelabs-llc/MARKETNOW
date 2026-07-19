@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8621950",
+  "certificate_id": "MN-SC-2026-4915194",
   "skill_id": "mn-real-sweeppeamcpinfo",
   "skill_name": "sweeppea-mcp-info",
-  "issued_at": "2026-07-15T01:23:41.950Z",
-  "expires_at": "2026-07-22T01:23:41.950Z",
+  "issued_at": "2026-07-19T04:21:55.194Z",
+  "expires_at": "2026-07-26T04:21:55.194Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4029ed27a16dcbcd88f36c66e0756f0629a3d305a77426e50324a5a74143b629",
+  "signature": "09ca98e9f61f823e2ff3dd5e624d7b92986da751c1a28ea15d0122866b2fbc16",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sweeppeamcpinfo"
 }

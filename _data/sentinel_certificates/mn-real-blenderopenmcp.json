@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8853563",
+  "certificate_id": "MN-SC-2026-5149712",
   "skill_id": "mn-real-blenderopenmcp",
   "skill_name": "blender-open-mcp",
-  "issued_at": "2026-07-15T01:27:33.563Z",
-  "expires_at": "2026-07-22T01:27:33.563Z",
+  "issued_at": "2026-07-19T04:25:49.712Z",
+  "expires_at": "2026-07-26T04:25:49.712Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d1f30e23b513ad9b5366003e90aacf0520b6ca764d5bd0d16c542d42678f1b7",
+  "signature": "35aef78d23e7fcfc43d6b073f228847720b78696ecc2c11db70718cdea3fc3dc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-blenderopenmcp"
 }

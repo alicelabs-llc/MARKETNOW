@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8870644",
+  "certificate_id": "MN-SC-2026-5166812",
   "skill_id": "mn-real-chmconverter",
   "skill_name": "chm-converter",
-  "issued_at": "2026-07-15T01:27:50.644Z",
-  "expires_at": "2026-07-22T01:27:50.644Z",
+  "issued_at": "2026-07-19T04:26:06.812Z",
+  "expires_at": "2026-07-26T04:26:06.812Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3dfe7c9495e1bf40c3d0e24cd96e6711de13b4443ae76ba3bc6080cff93e9d0e",
+  "signature": "d2cc238faaa3852948a64621501ee93fd436efc214da6aa5826316e3c4334f1b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chmconverter"
 }

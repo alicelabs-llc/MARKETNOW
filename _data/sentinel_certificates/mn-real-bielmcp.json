@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8611190",
+  "certificate_id": "MN-SC-2026-4904648",
   "skill_id": "mn-real-bielmcp",
   "skill_name": "biel-mcp",
-  "issued_at": "2026-07-15T01:23:31.190Z",
-  "expires_at": "2026-07-22T01:23:31.190Z",
+  "issued_at": "2026-07-19T04:21:44.648Z",
+  "expires_at": "2026-07-26T04:21:44.648Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b771f09367695144885751fdb82c873036bd27cf94f6f06978441d7cbb51bde",
+  "signature": "671588c3d6c449d9a64b6bd53d9a7458ef0fbe62966f2e90eee6013a96da9289",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bielmcp"
 }

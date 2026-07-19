@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7930302",
+  "certificate_id": "MN-SC-2026-4596323",
   "skill_id": "mn-gen-00812",
   "skill_name": "any-chat-completions-mcp",
-  "issued_at": "2026-07-15T01:12:10.302Z",
-  "expires_at": "2026-07-22T01:12:10.302Z",
+  "issued_at": "2026-07-19T04:16:36.323Z",
+  "expires_at": "2026-07-26T04:16:36.323Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bab537263e12f440a117f7c478ed3d2bf3346b0c482e8334364189159509b47c",
+  "signature": "183be374964229eea6b49575c81b6f2f197158f8d54fe61c33813d7da1306a0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00812"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8449325",
+  "certificate_id": "MN-SC-2026-4741276",
   "skill_id": "mn-awmcp-mcpcyclops",
   "skill_name": "mcp-cyclops",
-  "issued_at": "2026-07-15T01:20:49.325Z",
-  "expires_at": "2026-07-22T01:20:49.325Z",
+  "issued_at": "2026-07-19T04:19:01.276Z",
+  "expires_at": "2026-07-26T04:19:01.276Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7caa301a34d544b98d9f718d7dee3ff00fb8a7e84b9298b6b52b818a35994295",
+  "signature": "1fed62560fee9ded98a14d4be497ee856c9bcefb51fd6b082664b21b658034a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpcyclops"
 }

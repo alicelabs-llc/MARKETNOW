@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8622966",
+  "certificate_id": "MN-SC-2026-4916230",
   "skill_id": "mn-real-orbiadsgammcp",
   "skill_name": "Orbiads-GAM-MCP",
-  "issued_at": "2026-07-15T01:23:42.966Z",
-  "expires_at": "2026-07-22T01:23:42.966Z",
+  "issued_at": "2026-07-19T04:21:56.230Z",
+  "expires_at": "2026-07-26T04:21:56.230Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e7bc2cc7882fc91b5c215781e30688c5b90c936afe4a4d708145c10b6da2cfa",
+  "signature": "44e365b2a2f8acf7430bb48a4ebd47e329c986d01da927ee163091a30f7136b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-orbiadsgammcp"
 }

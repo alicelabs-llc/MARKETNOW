@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8958840",
+  "certificate_id": "MN-SC-2026-5255580",
   "skill_id": "mn-real-securitydetectionsmc",
   "skill_name": "Security-Detections-MCP",
-  "issued_at": "2026-07-15T01:29:18.840Z",
-  "expires_at": "2026-07-22T01:29:18.840Z",
+  "issued_at": "2026-07-19T04:27:35.580Z",
+  "expires_at": "2026-07-26T04:27:35.580Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5e35cd2fc5d6d1387567b8b258698d30a5b12b921814a5ffcaf09f037d6c4d5",
+  "signature": "bf69a09b8398978f9b17fb9e560eeb17491fbef9a8f95e08873572a60db00eeb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-securitydetectionsmc"
 }

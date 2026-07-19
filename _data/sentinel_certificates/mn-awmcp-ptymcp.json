@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8480696",
+  "certificate_id": "MN-SC-2026-4771552",
   "skill_id": "mn-awmcp-ptymcp",
   "skill_name": "pty-mcp",
-  "issued_at": "2026-07-15T01:21:20.696Z",
-  "expires_at": "2026-07-22T01:21:20.696Z",
+  "issued_at": "2026-07-19T04:19:31.552Z",
+  "expires_at": "2026-07-26T04:19:31.552Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7783dec354a05af8cb355d98c5e75a5c27c87afa9ded860ff9d17f9484d15e15",
+  "signature": "5bb015116ca51695dcf371902005d032a586a88ca94637baaf57b3051ba01101",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-ptymcp"
 }

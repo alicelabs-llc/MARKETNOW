@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7955243",
+  "certificate_id": "MN-SC-2026-4620602",
   "skill_id": "mn-gen-04227",
   "skill_name": "frihet-mcp",
-  "issued_at": "2026-07-15T01:12:35.243Z",
-  "expires_at": "2026-07-22T01:12:35.243Z",
+  "issued_at": "2026-07-19T04:17:00.602Z",
+  "expires_at": "2026-07-26T04:17:00.602Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93b87470763fd6bbe4da8f180c14efc9deca875537d0d1b1ef705aa989331add",
+  "signature": "7375928900d0d7508b02f51eb5dbc67867dd3f55824e4121bf762d7582bac2bb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04227"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8445459",
+  "certificate_id": "MN-SC-2026-4737301",
   "skill_id": "mn-awmcp-rendexmcp",
   "skill_name": "rendex-mcp",
-  "issued_at": "2026-07-15T01:20:45.459Z",
-  "expires_at": "2026-07-22T01:20:45.459Z",
+  "issued_at": "2026-07-19T04:18:57.301Z",
+  "expires_at": "2026-07-26T04:18:57.301Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4affcfc24986ea0c54ce6a2c539ae9b426cde0ced40733e2c8bbf908321cac6b",
+  "signature": "d1977aeab6f7360e214d39a2f286ab6f38bb690ce8e34402927ed5f1f27cbc0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-rendexmcp"
 }

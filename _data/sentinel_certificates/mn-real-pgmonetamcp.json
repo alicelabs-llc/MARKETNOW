@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9169782",
+  "certificate_id": "MN-SC-2026-5460131",
   "skill_id": "mn-real-pgmonetamcp",
   "skill_name": "pgmoneta_mcp",
-  "issued_at": "2026-07-15T01:32:49.782Z",
-  "expires_at": "2026-07-22T01:32:49.782Z",
+  "issued_at": "2026-07-19T04:31:00.131Z",
+  "expires_at": "2026-07-26T04:31:00.131Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8878654f4800daf02f06bc6cfa6575636c7b1adf3ec2bc5a8944636a2ed64b2",
+  "signature": "82e4ee98b0b3fcb0d9fda940b9b6a125b46a78d4308005362ef9c6b769ba4935",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pgmonetamcp"
 }

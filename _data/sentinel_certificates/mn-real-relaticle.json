@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9009473",
+  "certificate_id": "MN-SC-2026-5306931",
   "skill_id": "mn-real-relaticle",
   "skill_name": "relaticle",
-  "issued_at": "2026-07-15T01:30:09.473Z",
-  "expires_at": "2026-07-22T01:30:09.473Z",
+  "issued_at": "2026-07-19T04:28:26.931Z",
+  "expires_at": "2026-07-26T04:28:26.931Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02e252353f61a6d6ab78deb018b448c18179ccb9492128ae9f1d575a907b2229",
+  "signature": "4d78b9dcaa8005e19101461d77b406d1ab3086069d9a62ca6bd72fc835cfae5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-relaticle"
 }

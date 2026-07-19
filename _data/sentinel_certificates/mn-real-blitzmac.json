@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9009244",
+  "certificate_id": "MN-SC-2026-5306771",
   "skill_id": "mn-real-blitzmac",
   "skill_name": "blitz-mac",
-  "issued_at": "2026-07-15T01:30:09.244Z",
-  "expires_at": "2026-07-22T01:30:09.244Z",
+  "issued_at": "2026-07-19T04:28:26.771Z",
+  "expires_at": "2026-07-26T04:28:26.771Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66a7b4b0c83719e3d913ceddc1a97daef86a8ce6fdfc9338c846fcf01d453847",
+  "signature": "dba3f85466b26d5079740acc8c45fef45633d7c03bed9365284aac0a61a9b1f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-blitzmac"
 }

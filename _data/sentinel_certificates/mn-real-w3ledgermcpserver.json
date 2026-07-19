@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8586163",
+  "certificate_id": "MN-SC-2026-4879306",
   "skill_id": "mn-real-w3ledgermcpserver",
   "skill_name": "w3ledger-mcp-server",
-  "issued_at": "2026-07-15T01:23:06.163Z",
-  "expires_at": "2026-07-22T01:23:06.163Z",
+  "issued_at": "2026-07-19T04:21:19.306Z",
+  "expires_at": "2026-07-26T04:21:19.306Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "40c4019d01415939473735dd6012fc40240a121e1518c456bfb97f69afba8ea2",
+  "signature": "417857cec284a13ef1d55f50105b28a80ac91798a42d884007bf83b137c3675d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-w3ledgermcpserver"
 }

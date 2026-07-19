@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8669251",
+  "certificate_id": "MN-SC-2026-4966013",
   "skill_id": "mn-real-freshdeskmcp",
   "skill_name": "freshdesk_mcp",
-  "issued_at": "2026-07-15T01:24:29.251Z",
-  "expires_at": "2026-07-22T01:24:29.251Z",
+  "issued_at": "2026-07-19T04:22:46.013Z",
+  "expires_at": "2026-07-26T04:22:46.013Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dba5fee79493c02f22bab5318248c570c318ca637ddc1ff7f23c3fdd238d13f8",
+  "signature": "5f391d8e42a92097e8ae1aff1b8dc22bb3d8be0016965df7b92b2b0231eff58f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-freshdeskmcp"
 }

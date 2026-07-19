@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9048560",
+  "certificate_id": "MN-SC-2026-5343868",
   "skill_id": "mn-real-langchaingomcpadapte",
   "skill_name": "langchaingo-mcp-adapter",
-  "issued_at": "2026-07-15T01:30:48.560Z",
-  "expires_at": "2026-07-22T01:30:48.560Z",
+  "issued_at": "2026-07-19T04:29:03.868Z",
+  "expires_at": "2026-07-26T04:29:03.868Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aeacfdce4291c2501ad975259931951d5dd27a948b229d6cffbe95170def7ce5",
+  "signature": "627f87c4e6ce6e40ae4f61b3057f5a651df188a467d7eef5b747f98b153ccf64",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-langchaingomcpadapte"
 }

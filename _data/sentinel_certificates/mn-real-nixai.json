@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9159073",
+  "certificate_id": "MN-SC-2026-5449501",
   "skill_id": "mn-real-nixai",
   "skill_name": "nix-ai",
-  "issued_at": "2026-07-15T01:32:39.073Z",
-  "expires_at": "2026-07-22T01:32:39.073Z",
+  "issued_at": "2026-07-19T04:30:49.501Z",
+  "expires_at": "2026-07-26T04:30:49.501Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8327fc439e9d21d4841bfe78f0ec1d870155f2a58a1a529f28a87dcb36e5dd87",
+  "signature": "ca17b76d5dd6e9e97b2e6c551e3bb9e88d344bc1b878f9853525e5a520e5ddf2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nixai"
 }

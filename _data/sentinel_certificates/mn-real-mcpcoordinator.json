@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9182853",
+  "certificate_id": "MN-SC-2026-5473353",
   "skill_id": "mn-real-mcpcoordinator",
   "skill_name": "mcp-coordinator",
-  "issued_at": "2026-07-15T01:33:02.853Z",
-  "expires_at": "2026-07-22T01:33:02.853Z",
+  "issued_at": "2026-07-19T04:31:13.353Z",
+  "expires_at": "2026-07-26T04:31:13.353Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "420016dc989848b6a2176189cf6c0d1dff7834b0feaddb22713f8f9d16d4859e",
+  "signature": "253f68c609526d173891ad8a4924d20151ccc54e80e0047745183e68f5bd53e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcoordinator"
 }

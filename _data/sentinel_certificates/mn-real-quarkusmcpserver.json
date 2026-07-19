@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8977780",
+  "certificate_id": "MN-SC-2026-5275036",
   "skill_id": "mn-real-quarkusmcpserver",
   "skill_name": "quarkus-mcp-server",
-  "issued_at": "2026-07-15T01:29:37.780Z",
-  "expires_at": "2026-07-22T01:29:37.780Z",
+  "issued_at": "2026-07-19T04:27:55.036Z",
+  "expires_at": "2026-07-26T04:27:55.036Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2057e8a0ff7a5b67881d41055c952f1d9da9caf54204839fd1c91426f120bbce",
+  "signature": "4dca6760fee6fa501bfbd5c4a535c30571da5df86d81ed64f2f5c523738acc09",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-quarkusmcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9227031",
+  "certificate_id": "MN-SC-2026-5517113",
   "skill_id": "mn-real-omnifeed",
   "skill_name": "omnifeed",
-  "issued_at": "2026-07-15T01:33:47.031Z",
-  "expires_at": "2026-07-22T01:33:47.031Z",
+  "issued_at": "2026-07-19T04:31:57.113Z",
+  "expires_at": "2026-07-26T04:31:57.113Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f58dbec79e9d66433c0f1f0bfc5ff5cb243bea2b8542ea23c6d65c8a419661c7",
+  "signature": "9af4b5da99a792f56a2a59e890ab372bd81e968d15a2078974b400a90b08c5bc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-omnifeed"
 }

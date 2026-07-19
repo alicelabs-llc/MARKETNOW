@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8792650",
+  "certificate_id": "MN-SC-2026-5089675",
   "skill_id": "mn-real-schemaflowmcpserver",
   "skill_name": "schemaflow-mcp-server",
-  "issued_at": "2026-07-15T01:26:32.650Z",
-  "expires_at": "2026-07-22T01:26:32.650Z",
+  "issued_at": "2026-07-19T04:24:49.676Z",
+  "expires_at": "2026-07-26T04:24:49.676Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17e5235fdff64a4d072996aab00598ccd5b59c0dcba10f07e29dbe2b5366e8bd",
+  "signature": "f8396c2f1fa1739bf5fbd27cd455164b003a2310cdf52c1a20c1f1a63493bcaf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-schemaflowmcpserver"
 }

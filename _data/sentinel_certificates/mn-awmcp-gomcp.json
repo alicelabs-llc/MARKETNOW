@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8440177",
+  "certificate_id": "MN-SC-2026-4731771",
   "skill_id": "mn-awmcp-gomcp",
   "skill_name": "gomcp",
-  "issued_at": "2026-07-15T01:20:40.177Z",
-  "expires_at": "2026-07-22T01:20:40.177Z",
+  "issued_at": "2026-07-19T04:18:51.771Z",
+  "expires_at": "2026-07-26T04:18:51.771Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "be77fb8a26aa6c15dcb7963803a6fbdfea1031ea1645ada7b8a8b8aad74e8fc6",
+  "signature": "779b5bf965015d8bb3486922a7adea1ac1c7baba7ebf05e8597a09e3bb2eaacf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-gomcp"
 }

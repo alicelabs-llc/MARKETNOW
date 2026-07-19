@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8465408",
+  "certificate_id": "MN-SC-2026-4757424",
   "skill_id": "mn-awmcp-colabmcp",
   "skill_name": "colab-mcp",
-  "issued_at": "2026-07-15T01:21:05.408Z",
-  "expires_at": "2026-07-22T01:21:05.408Z",
+  "issued_at": "2026-07-19T04:19:17.424Z",
+  "expires_at": "2026-07-26T04:19:17.424Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e3f454609db42f9fd1efdab83e8996b068a700c2e2f97f66863f99ad2d6b5d9",
+  "signature": "0afe1fd493d2a910009a0d2182d3d0e691124e118f09d73241ee3224dede0c01",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-colabmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8985625",
+  "certificate_id": "MN-SC-2026-5282982",
   "skill_id": "mn-real-chubbyskills",
   "skill_name": "chubbyskills",
-  "issued_at": "2026-07-15T01:29:45.625Z",
-  "expires_at": "2026-07-22T01:29:45.625Z",
+  "issued_at": "2026-07-19T04:28:02.982Z",
+  "expires_at": "2026-07-26T04:28:02.982Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0729d51d1fe81c03e6074355a0c5ac9468d246d4fec310fe03d91bd1e55da30f",
+  "signature": "05be500d47b89c754d73635c4ec06ded490c6d5dd18d19583ad3f670dda6e01b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chubbyskills"
 }

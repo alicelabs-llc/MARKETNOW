@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8418452",
+  "certificate_id": "MN-SC-2026-4708528",
   "skill_id": "mn-awmcp-thirimcp",
   "skill_name": "thiri-mcp",
-  "issued_at": "2026-07-15T01:20:18.452Z",
-  "expires_at": "2026-07-22T01:20:18.452Z",
+  "issued_at": "2026-07-19T04:18:28.528Z",
+  "expires_at": "2026-07-26T04:18:28.528Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "99904ec816f089aec6951deec2195268e1db0c94e2043fec1b5649f2e3c68540",
+  "signature": "96dcfa61fca54fca8bb7aa4cff260648ff7600ac66ffe16c0bbb3c8602bd0297",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-thirimcp"
 }

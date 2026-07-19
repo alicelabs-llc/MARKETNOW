@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8483277",
+  "certificate_id": "MN-SC-2026-4773727",
   "skill_id": "mn-awmcp-mailboxmcp",
   "skill_name": "mailbox-mcp",
-  "issued_at": "2026-07-15T01:21:23.277Z",
-  "expires_at": "2026-07-22T01:21:23.277Z",
+  "issued_at": "2026-07-19T04:19:33.727Z",
+  "expires_at": "2026-07-26T04:19:33.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b270c80cf16696fdd944b646b4ca3fa76a189931c7a35ddc3209f18fd47d9b1f",
+  "signature": "4b97c91b646a5c3a92676f956d57326fd46c163ed5b7a432fb61b52c6a50fa31",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mailboxmcp"
 }

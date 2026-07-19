@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9206972",
+  "certificate_id": "MN-SC-2026-5497012",
   "skill_id": "mn-real-compliancemcpserver",
   "skill_name": "compliance-mcp-server",
-  "issued_at": "2026-07-15T01:33:26.972Z",
-  "expires_at": "2026-07-22T01:33:26.972Z",
+  "issued_at": "2026-07-19T04:31:37.012Z",
+  "expires_at": "2026-07-26T04:31:37.012Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7938231e3ffca53a9b059684b9d35cc2a430a87fd784395b4ca699ae1bf9db98",
+  "signature": "fa7e49694aa19a95d611d3c77d5e8709c3ace0db38b8f28536f7697b9d46c65e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-compliancemcpserver"
 }

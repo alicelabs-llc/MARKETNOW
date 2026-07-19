@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8905629",
+  "certificate_id": "MN-SC-2026-5203780",
   "skill_id": "mn-real-datawrappermcp",
   "skill_name": "datawrapper-mcp",
-  "issued_at": "2026-07-15T01:28:25.629Z",
-  "expires_at": "2026-07-22T01:28:25.629Z",
+  "issued_at": "2026-07-19T04:26:43.780Z",
+  "expires_at": "2026-07-26T04:26:43.780Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0d2cdccb8577f6d9dc72182df428661a8f4d139ae71784cd7e87e5e0101f98c3",
+  "signature": "9ebcc55b8ecff696d4f02470e06996edd18cb7ba16e67b6c012a038ee2588637",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-datawrappermcp"
 }

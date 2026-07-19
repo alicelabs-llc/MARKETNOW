@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9028883",
+  "certificate_id": "MN-SC-2026-5325519",
   "skill_id": "mn-real-fastllmagentmcp",
   "skill_name": "Fast-LLM-Agent-MCP",
-  "issued_at": "2026-07-15T01:30:28.883Z",
-  "expires_at": "2026-07-22T01:30:28.883Z",
+  "issued_at": "2026-07-19T04:28:45.519Z",
+  "expires_at": "2026-07-26T04:28:45.519Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ec999ff5d811df49395838be6247b5d5c75e912b7dbf0b01a343e587872c965e",
+  "signature": "087608b5d6d33ff6360928e8969f0d29e2b7cfc4328e50055beb8af1bece8cd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fastllmagentmcp"
 }

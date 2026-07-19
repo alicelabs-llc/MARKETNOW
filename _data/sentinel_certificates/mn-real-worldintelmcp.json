@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8918181",
+  "certificate_id": "MN-SC-2026-5216754",
   "skill_id": "mn-real-worldintelmcp",
   "skill_name": "world-intel-mcp",
-  "issued_at": "2026-07-15T01:28:38.181Z",
-  "expires_at": "2026-07-22T01:28:38.181Z",
+  "issued_at": "2026-07-19T04:26:56.754Z",
+  "expires_at": "2026-07-26T04:26:56.754Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5e3a5899b4571305bf1e6e97b1201a2434e8feb6ac1f2b3ec5e716088535bab1",
+  "signature": "e4e6e744fcd1d34ba119bbc3c59cf4e6d22e0123f0e2c33806ca7788a87883b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-worldintelmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7930579",
+  "certificate_id": "MN-SC-2026-4596671",
   "skill_id": "mn-net-00850",
   "skill_name": "fable",
-  "issued_at": "2026-07-15T01:12:10.579Z",
-  "expires_at": "2026-07-22T01:12:10.579Z",
+  "issued_at": "2026-07-19T04:16:36.671Z",
+  "expires_at": "2026-07-26T04:16:36.671Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8551902c2b1409126f50080da154445251587d695414fe9439ac675c920c27eb",
+  "signature": "41e413db4536f1266495f67da806e588799a15069f99da8619a0eb6bab863828",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-net-00850"
 }

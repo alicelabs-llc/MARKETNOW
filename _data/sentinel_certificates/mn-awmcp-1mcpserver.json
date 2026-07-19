@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8410036",
+  "certificate_id": "MN-SC-2026-4699250",
   "skill_id": "mn-awmcp-1mcpserver",
   "skill_name": "1mcpserver",
-  "issued_at": "2026-07-15T01:20:10.036Z",
-  "expires_at": "2026-07-22T01:20:10.036Z",
+  "issued_at": "2026-07-19T04:18:19.250Z",
+  "expires_at": "2026-07-26T04:18:19.250Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "679d642eb4881ce4cfe22aa81962ce150a1393dcac91bcfd56ba48c3c38b9342",
+  "signature": "9cc870233447e1cc97a9efd2781c0ff0f602f1fb55b2a04e967906a170bc1853",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-1mcpserver"
 }

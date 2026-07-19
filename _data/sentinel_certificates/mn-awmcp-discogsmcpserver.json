@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8419975",
+  "certificate_id": "MN-SC-2026-4710071",
   "skill_id": "mn-awmcp-discogsmcpserver",
   "skill_name": "discogs-mcp-server",
-  "issued_at": "2026-07-15T01:20:19.975Z",
-  "expires_at": "2026-07-22T01:20:19.975Z",
+  "issued_at": "2026-07-19T04:18:30.071Z",
+  "expires_at": "2026-07-26T04:18:30.071Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 4,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 5,
     "l2_execution_status": "ran"
   },
-  "signature": "63ae611549cb70744b850b8c206f09c1fb3d86137761b4c1c81d9090d68c037a",
+  "signature": "7ab03a694a5cfa1feecf73817483ced98301a16b83823533e3361e1171d4df1b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-discogsmcpserver"
 }

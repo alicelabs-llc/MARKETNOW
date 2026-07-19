@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7974740",
+  "certificate_id": "MN-SC-2026-4640449",
   "skill_id": "mn-gen-07122",
   "skill_name": "n8n-mcp-server",
-  "issued_at": "2026-07-15T01:12:54.740Z",
-  "expires_at": "2026-07-22T01:12:54.740Z",
+  "issued_at": "2026-07-19T04:17:20.449Z",
+  "expires_at": "2026-07-26T04:17:20.449Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "412edbcd05040b81ba4f324b8e92d2a730aa294eeb6a4a91b0857a1141df89b8",
+  "signature": "a39fd1a6d953a5f87f92f29b5ba765f16eeb077a9cbdfdb2c7f6991802681c8b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-07122"
 }

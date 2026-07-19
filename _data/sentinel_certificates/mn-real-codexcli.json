@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9072009",
+  "certificate_id": "MN-SC-2026-5363345",
   "skill_id": "mn-real-codexcli",
   "skill_name": "codexCLI",
-  "issued_at": "2026-07-15T01:31:12.009Z",
-  "expires_at": "2026-07-22T01:31:12.009Z",
+  "issued_at": "2026-07-19T04:29:23.345Z",
+  "expires_at": "2026-07-26T04:29:23.345Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff6e824412394df16cb4b56032693dd7595e29453ad067a39e96640e82432e8a",
+  "signature": "b508252353e5275cbb58c8efe4a81eac10b35e3a66e311c77a8409a176edc76a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codexcli"
 }

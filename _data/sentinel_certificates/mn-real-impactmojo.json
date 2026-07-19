@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9070757",
+  "certificate_id": "MN-SC-2026-5362044",
   "skill_id": "mn-real-impactmojo",
   "skill_name": "ImpactMojo",
-  "issued_at": "2026-07-15T01:31:10.757Z",
-  "expires_at": "2026-07-22T01:31:10.757Z",
+  "issued_at": "2026-07-19T04:29:22.044Z",
+  "expires_at": "2026-07-26T04:29:22.044Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "921b5a6762e2cf162dab624b7607d1a8437e92caf6bcc17bf00d740900794b53",
+  "signature": "4af5cca1c3219ecc0ec383da45a336d3ac6568c9ff2f8ac984afd3719d11a16f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-impactmojo"
 }

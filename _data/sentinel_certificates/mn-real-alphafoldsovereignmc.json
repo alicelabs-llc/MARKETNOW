@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9142506",
+  "certificate_id": "MN-SC-2026-5433096",
   "skill_id": "mn-real-alphafoldsovereignmc",
   "skill_name": "alphafold-sovereign-mcp",
-  "issued_at": "2026-07-15T01:32:22.506Z",
-  "expires_at": "2026-07-22T01:32:22.506Z",
+  "issued_at": "2026-07-19T04:30:33.096Z",
+  "expires_at": "2026-07-26T04:30:33.096Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d31a5a7519da7ae4664b0828024f0afb7cc6c783a6ac732ae50f43ee182fd49b",
+  "signature": "f2c00fdfa21ecdaa6bd9b666c408e389759f720fbeb8ebd1a4be4b307f7d5cfa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alphafoldsovereignmc"
 }

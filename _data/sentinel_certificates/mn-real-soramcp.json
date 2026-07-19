@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8976329",
+  "certificate_id": "MN-SC-2026-5273486",
   "skill_id": "mn-real-soramcp",
   "skill_name": "sora-mcp",
-  "issued_at": "2026-07-15T01:29:36.329Z",
-  "expires_at": "2026-07-22T01:29:36.329Z",
+  "issued_at": "2026-07-19T04:27:53.486Z",
+  "expires_at": "2026-07-26T04:27:53.486Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "729cf556560e41088bb745d76c63056a783da1a6ae045cac8a26f539d9cf010e",
+  "signature": "d1fa8540c03d949f14a635231cc11ec0cece685c6cc09fdbbc36395463a54344",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-soramcp"
 }

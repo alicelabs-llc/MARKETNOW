@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9137226",
+  "certificate_id": "MN-SC-2026-5427585",
   "skill_id": "mn-real-mychatarchive",
   "skill_name": "mychatarchive",
-  "issued_at": "2026-07-15T01:32:17.226Z",
-  "expires_at": "2026-07-22T01:32:17.226Z",
+  "issued_at": "2026-07-19T04:30:27.585Z",
+  "expires_at": "2026-07-26T04:30:27.585Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "144127db5857d7c61deb895f2698758d42cb7a99b1321ec8a182e1dcafa7737d",
+  "signature": "cf86a49287b8e95c572e00f53ab53cbfeb8cb46189da53a497ccf543eb9169b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mychatarchive"
 }

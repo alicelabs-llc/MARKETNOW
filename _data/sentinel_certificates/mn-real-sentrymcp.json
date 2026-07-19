@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8624283",
+  "certificate_id": "MN-SC-2026-4917555",
   "skill_id": "mn-real-sentrymcp",
   "skill_name": "sentry-mcp",
-  "issued_at": "2026-07-15T01:23:44.283Z",
-  "expires_at": "2026-07-22T01:23:44.283Z",
+  "issued_at": "2026-07-19T04:21:57.555Z",
+  "expires_at": "2026-07-26T04:21:57.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "57f03e755043771bb9b7127b3bfdc61b4da7e58ac055915bc3e97bbde1283d33",
+  "signature": "a5d73aa360bbee44dd7cc204c155251b79f739e8fac55046f5e2fde8af585312",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sentrymcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9090633",
+  "certificate_id": "MN-SC-2026-5379114",
   "skill_id": "mn-real-aivibecheck",
   "skill_name": "AI-Vibe-Check",
-  "issued_at": "2026-07-15T01:31:30.633Z",
-  "expires_at": "2026-07-22T01:31:30.633Z",
+  "issued_at": "2026-07-19T04:29:39.114Z",
+  "expires_at": "2026-07-26T04:29:39.114Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c0158d74ee3549be9af3cc52812edecae7602739f4c83e9b9e215ba5636a15b",
+  "signature": "6ef9d7ce74f33d8188be27086eaa742aaaeebd88d188caa0a7ca5f9734bc6346",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aivibecheck"
 }

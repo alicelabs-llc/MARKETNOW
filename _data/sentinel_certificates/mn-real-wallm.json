@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8830240",
+  "certificate_id": "MN-SC-2026-5126198",
   "skill_id": "mn-real-wallm",
   "skill_name": "wa_llm",
-  "issued_at": "2026-07-15T01:27:10.240Z",
-  "expires_at": "2026-07-22T01:27:10.240Z",
+  "issued_at": "2026-07-19T04:25:26.198Z",
+  "expires_at": "2026-07-26T04:25:26.198Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ef098b7c068d6190f299fdadcce476fba8d5c86cbf303ee1bd3845bd0e6fe375",
+  "signature": "74c483189c7307981cd4ba46641989a0b511d02fb5d35506aa692b31c4612519",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wallm"
 }

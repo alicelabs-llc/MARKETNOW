@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8672880",
+  "certificate_id": "MN-SC-2026-4969621",
   "skill_id": "mn-real-tripadvisormcp",
   "skill_name": "tripadvisor-mcp",
-  "issued_at": "2026-07-15T01:24:32.880Z",
-  "expires_at": "2026-07-22T01:24:32.880Z",
+  "issued_at": "2026-07-19T04:22:49.621Z",
+  "expires_at": "2026-07-26T04:22:49.621Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7fdf0bcb16af88a35f87da9a080b64c2c9fffa1b68239214e3d54f13c772cba8",
+  "signature": "bece9d3c748ea1a2a1b0f4a5f1e88d51698286887bc8973a79a522ef0529cf52",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tripadvisormcp"
 }

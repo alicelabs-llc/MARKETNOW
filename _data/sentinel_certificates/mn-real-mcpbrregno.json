@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9234447",
+  "certificate_id": "MN-SC-2026-5523305",
   "skill_id": "mn-real-mcpbrregno",
   "skill_name": "mcp-brreg-no",
-  "issued_at": "2026-07-15T01:33:54.447Z",
-  "expires_at": "2026-07-22T01:33:54.447Z",
+  "issued_at": "2026-07-19T04:32:03.305Z",
+  "expires_at": "2026-07-26T04:32:03.305Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2fa86861046e8401d067dca32a82da8a2fc654d14e73e9ac620423618d56f62a",
+  "signature": "c80b72c3cfa810c77b5b3d5003892798f4dd31ae80c09562be7ae204929bdad1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpbrregno"
 }

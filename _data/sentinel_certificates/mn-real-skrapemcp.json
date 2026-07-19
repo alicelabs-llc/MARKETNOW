@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9189430",
+  "certificate_id": "MN-SC-2026-5479888",
   "skill_id": "mn-real-skrapemcp",
   "skill_name": "skrape-mcp",
-  "issued_at": "2026-07-15T01:33:09.430Z",
-  "expires_at": "2026-07-22T01:33:09.430Z",
+  "issued_at": "2026-07-19T04:31:19.888Z",
+  "expires_at": "2026-07-26T04:31:19.888Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7f6593c781df09742ffad0159d389b83f791bc17c8d77435048011081eeb058a",
+  "signature": "cf7d07361f3d2208d3dc8b03ee3741cd28aef114f31321f34a6b770127758b3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-skrapemcp"
 }

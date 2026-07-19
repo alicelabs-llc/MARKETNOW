@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9182891",
+  "certificate_id": "MN-SC-2026-5473483",
   "skill_id": "mn-real-mcppydevto",
   "skill_name": "mcp-py-devto",
-  "issued_at": "2026-07-15T01:33:02.891Z",
-  "expires_at": "2026-07-22T01:33:02.891Z",
+  "issued_at": "2026-07-19T04:31:13.483Z",
+  "expires_at": "2026-07-26T04:31:13.483Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bda7644b29031fa85ff82ef266b5a403d985b330ebc15409276b811a024c2cae",
+  "signature": "c94e1719d8be291c7bb4c51f4e8a0f463bf192d3fdc6ade8712b983d987439fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcppydevto"
 }

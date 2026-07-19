@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7944665",
+  "certificate_id": "MN-SC-2026-4610215",
   "skill_id": "mn-ai-02848",
   "skill_name": "platform",
-  "issued_at": "2026-07-15T01:12:24.665Z",
-  "expires_at": "2026-07-22T01:12:24.665Z",
+  "issued_at": "2026-07-19T04:16:50.215Z",
+  "expires_at": "2026-07-26T04:16:50.215Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0e2e5be2b62bfa0860c4fdf56df665d8f6761f806ba77cca90330bb9a56e9833",
+  "signature": "bc2f42e9415c30968bb55e96ab1684d852e719e7670cba6bb933f078bab967fc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-ai-02848"
 }

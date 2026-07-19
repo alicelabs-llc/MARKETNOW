@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8736179",
+  "certificate_id": "MN-SC-2026-5031458",
   "skill_id": "mn-real-muapicli",
   "skill_name": "muapi-cli",
-  "issued_at": "2026-07-15T01:25:36.179Z",
-  "expires_at": "2026-07-22T01:25:36.179Z",
+  "issued_at": "2026-07-19T04:23:51.458Z",
+  "expires_at": "2026-07-26T04:23:51.458Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4a4f786453a6b680d6623d46fad0696d80161ebc0a1e561f290d5b5dfaf8903a",
+  "signature": "3fa405cd5a8999a294cf4932793d9d738de40313abd058217a38adf50e735f5f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-muapicli"
 }

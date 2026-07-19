@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8000073",
+  "certificate_id": "MN-SC-2026-4664655",
   "skill_id": "mn-gen-11240",
   "skill_name": "vibe",
-  "issued_at": "2026-07-15T01:13:20.074Z",
-  "expires_at": "2026-07-22T01:13:20.074Z",
+  "issued_at": "2026-07-19T04:17:44.655Z",
+  "expires_at": "2026-07-26T04:17:44.655Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c2836f99308d661981221b460f14eb28677e54f53ecb165dc20a69ae79f51bb6",
+  "signature": "a357a50cc9a9889ba4a93278ee6fc09da2e0b090b559495f02999ba998d2cc0e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11240"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8791036",
+  "certificate_id": "MN-SC-2026-5087816",
   "skill_id": "mn-real-npmsearchmcpserver",
   "skill_name": "npm-search-mcp-server",
-  "issued_at": "2026-07-15T01:26:31.036Z",
-  "expires_at": "2026-07-22T01:26:31.036Z",
+  "issued_at": "2026-07-19T04:24:47.816Z",
+  "expires_at": "2026-07-26T04:24:47.816Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb319bd5ca6c91b5b17124293050d93c5c17048cdd92cedae86f7ace6d519641",
+  "signature": "59cb1168fae40b240d0241043d1e7c17a5a3998bd1999ba189d9041588d9b240",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-npmsearchmcpserver"
 }

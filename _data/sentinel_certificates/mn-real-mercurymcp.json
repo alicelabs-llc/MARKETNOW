@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8909929",
+  "certificate_id": "MN-SC-2026-5208228",
   "skill_id": "mn-real-mercurymcp",
   "skill_name": "mercury-mcp",
-  "issued_at": "2026-07-15T01:28:29.929Z",
-  "expires_at": "2026-07-22T01:28:29.929Z",
+  "issued_at": "2026-07-19T04:26:48.228Z",
+  "expires_at": "2026-07-26T04:26:48.228Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c479820aa2ac4d93cff904b667c9cd4374e5f1104459694d838414fc6ad0405a",
+  "signature": "029ac64ed25683a135a7fe9d24baeeb68af5b3f1068731b72a293764716c8e82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mercurymcp"
 }

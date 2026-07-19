@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8794130",
+  "certificate_id": "MN-SC-2026-5091244",
   "skill_id": "mn-real-texttographqlmcp",
   "skill_name": "text-to-graphql-mcp",
-  "issued_at": "2026-07-15T01:26:34.130Z",
-  "expires_at": "2026-07-22T01:26:34.130Z",
+  "issued_at": "2026-07-19T04:24:51.244Z",
+  "expires_at": "2026-07-26T04:24:51.244Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "645955a8f318715f5b185b7ba24dad11aae3a16c652ed296144fb5d6f1ac85eb",
+  "signature": "0ff63b1d082384645fa5f7c6e34a70d3144b42b9e32fbe1c7138a5402eabce97",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-texttographqlmcp"
 }

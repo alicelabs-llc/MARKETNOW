@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9131628",
+  "certificate_id": "MN-SC-2026-5422052",
   "skill_id": "mn-real-githitscli",
   "skill_name": "githits-cli",
-  "issued_at": "2026-07-15T01:32:11.628Z",
-  "expires_at": "2026-07-22T01:32:11.628Z",
+  "issued_at": "2026-07-19T04:30:22.052Z",
+  "expires_at": "2026-07-26T04:30:22.052Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5aa05d6dcd585724a1ce10e119d5e4bdbf9fe3e9a74ec2ee38811b9fa495b292",
+  "signature": "2a3cd60cc42f3c31af06de75ad1a4617ca96c28d01333a5e1a43cae429d28f55",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-githitscli"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8622248",
+  "certificate_id": "MN-SC-2026-4915622",
   "skill_id": "mn-real-tokenmeter",
   "skill_name": "token-meter",
-  "issued_at": "2026-07-15T01:23:42.248Z",
-  "expires_at": "2026-07-22T01:23:42.248Z",
+  "issued_at": "2026-07-19T04:21:55.622Z",
+  "expires_at": "2026-07-26T04:21:55.622Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "183641a5e0114fb85dd1afbdcfcf023e3fb43988aeba32957c18c68b32d9df97",
+  "signature": "4c74fbbd54ef4c7cb143ad4b91fb96230a5ee5db2409ba12686ed2943aa2f098",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tokenmeter"
 }

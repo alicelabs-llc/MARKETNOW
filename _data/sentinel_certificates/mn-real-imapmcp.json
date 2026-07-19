@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8788081",
+  "certificate_id": "MN-SC-2026-5083154",
   "skill_id": "mn-real-imapmcp",
   "skill_name": "imap-mcp",
-  "issued_at": "2026-07-15T01:26:28.081Z",
-  "expires_at": "2026-07-22T01:26:28.081Z",
+  "issued_at": "2026-07-19T04:24:43.154Z",
+  "expires_at": "2026-07-26T04:24:43.154Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5199914d5ab8f1e7fd7494944c5f59c9403e3346c71bb93d3c7b6830b734e30e",
+  "signature": "eae6f646dc7424aa77a446783ec959b9af733e0376368951c245954de4876948",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-imapmcp"
 }

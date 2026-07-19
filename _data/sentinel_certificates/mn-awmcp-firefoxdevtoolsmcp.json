@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8437764",
+  "certificate_id": "MN-SC-2026-4729107",
   "skill_id": "mn-awmcp-firefoxdevtoolsmcp",
   "skill_name": "firefox-devtools-mcp",
-  "issued_at": "2026-07-15T01:20:37.764Z",
-  "expires_at": "2026-07-22T01:20:37.764Z",
+  "issued_at": "2026-07-19T04:18:49.107Z",
+  "expires_at": "2026-07-26T04:18:49.108Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "b4e039a94e3f6a65573c139ffafa1c05024d07d3ac741ea50c332ed66eee65d2",
+  "signature": "6710cb2cf5f71613f85c10f577de4e499538665f42b4947f58bdbefea373bda5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-firefoxdevtoolsmcp"
 }

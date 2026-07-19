@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9061353",
+  "certificate_id": "MN-SC-2026-5352441",
   "skill_id": "mn-real-notebooklmpy",
   "skill_name": "notebooklm-py",
-  "issued_at": "2026-07-15T01:31:01.353Z",
-  "expires_at": "2026-07-22T01:31:01.353Z",
+  "issued_at": "2026-07-19T04:29:12.441Z",
+  "expires_at": "2026-07-26T04:29:12.441Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b81c70d5151e9a64aa51d8efd894160ecd9544cbfade456c606a71d3b7a3ca1a",
+  "signature": "9d2987e08fccb3e3e1d792dd62176642939922c4c018499cafaf1e5a28774cd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-notebooklmpy"
 }

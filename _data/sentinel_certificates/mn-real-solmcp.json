@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8559208",
+  "certificate_id": "MN-SC-2026-4851791",
   "skill_id": "mn-real-solmcp",
   "skill_name": "sol-mcp",
-  "issued_at": "2026-07-15T01:22:39.208Z",
-  "expires_at": "2026-07-22T01:22:39.208Z",
+  "issued_at": "2026-07-19T04:20:51.791Z",
+  "expires_at": "2026-07-26T04:20:51.791Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "17e1c4d02c639b84d5d2a76b0a2923d2ae0ec41ca7e5960d570a138b7c9db61e",
+  "signature": "b18f075b9022152004f8acd19d1f7a48f5036ae357eb2b82601aee00d5eea661",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-solmcp"
 }

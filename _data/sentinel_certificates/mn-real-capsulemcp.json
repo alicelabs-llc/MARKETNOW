@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8508336",
+  "certificate_id": "MN-SC-2026-4800146",
   "skill_id": "mn-real-capsulemcp",
   "skill_name": "capsulemcp",
-  "issued_at": "2026-07-15T01:21:48.336Z",
-  "expires_at": "2026-07-22T01:21:48.336Z",
+  "issued_at": "2026-07-19T04:20:00.146Z",
+  "expires_at": "2026-07-26T04:20:00.146Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c3c897cab07e492ff2662c98721c7a7daa0cf9feb7c0b07ff86ab4c3787dc356",
+  "signature": "ddbb4896722ca7658004993f93226438b5e2179ada3a256627dec114599be3d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-capsulemcp"
 }

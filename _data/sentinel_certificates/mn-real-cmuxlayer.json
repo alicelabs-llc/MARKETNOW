@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9108630",
+  "certificate_id": "MN-SC-2026-5396585",
   "skill_id": "mn-real-cmuxlayer",
   "skill_name": "cmuxlayer",
-  "issued_at": "2026-07-15T01:31:48.630Z",
-  "expires_at": "2026-07-22T01:31:48.630Z",
+  "issued_at": "2026-07-19T04:29:56.585Z",
+  "expires_at": "2026-07-26T04:29:56.585Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "78e8b39ec8275dda531f7c0f6f13dba35648c221b009b8f24c16da6a43de0b54",
+  "signature": "a8bfd90b059da9608296a9851ff17d4ed51aacc5b58dc41c958c6f3028d86788",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cmuxlayer"
 }

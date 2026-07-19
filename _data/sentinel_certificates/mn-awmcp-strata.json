@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8476364",
+  "certificate_id": "MN-SC-2026-4768514",
   "skill_id": "mn-awmcp-strata",
   "skill_name": "Strata",
-  "issued_at": "2026-07-15T01:21:16.364Z",
-  "expires_at": "2026-07-22T01:21:16.364Z",
+  "issued_at": "2026-07-19T04:19:28.514Z",
+  "expires_at": "2026-07-26T04:19:28.514Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a619658ace14b208ebbb11ecb10d5e927d5b318e269dabac8ebb4dffcd5fff39",
+  "signature": "6d38d5fda94b07391cc44e8ffc974dd1f70ca348182767c3df563da14812b0a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-strata"
 }

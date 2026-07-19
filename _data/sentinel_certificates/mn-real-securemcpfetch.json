@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8792857",
+  "certificate_id": "MN-SC-2026-5089887",
   "skill_id": "mn-real-securemcpfetch",
   "skill_name": "secure-mcp-fetch",
-  "issued_at": "2026-07-15T01:26:32.857Z",
-  "expires_at": "2026-07-22T01:26:32.857Z",
+  "issued_at": "2026-07-19T04:24:49.887Z",
+  "expires_at": "2026-07-26T04:24:49.887Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c203c66a67e9425845b289ff4e3af0e69dfc7c736323b4a03ef4f00d0f28491a",
+  "signature": "a02c95e2682fe0891e595755289b19d4542d7c52fca726cf3b2730426c3f7feb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-securemcpfetch"
 }

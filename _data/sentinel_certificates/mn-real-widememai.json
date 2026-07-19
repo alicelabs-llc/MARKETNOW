@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9150031",
+  "certificate_id": "MN-SC-2026-5440947",
   "skill_id": "mn-real-widememai",
   "skill_name": "widemem-ai",
-  "issued_at": "2026-07-15T01:32:30.031Z",
-  "expires_at": "2026-07-22T01:32:30.031Z",
+  "issued_at": "2026-07-19T04:30:40.947Z",
+  "expires_at": "2026-07-26T04:30:40.947Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3eb6b1d441a5b8ce39a416cff423b443e943a0fa21e6eaeded7e974698419c13",
+  "signature": "8ad21f94585e1facf7f63b38f89bcb8cafc36c0308b647205e004516e184961f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-widememai"
 }

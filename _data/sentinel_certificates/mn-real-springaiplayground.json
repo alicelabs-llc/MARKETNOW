@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8844000",
+  "certificate_id": "MN-SC-2026-5140163",
   "skill_id": "mn-real-springaiplayground",
   "skill_name": "spring-ai-playground",
-  "issued_at": "2026-07-15T01:27:24.000Z",
-  "expires_at": "2026-07-22T01:27:24.000Z",
+  "issued_at": "2026-07-19T04:25:40.163Z",
+  "expires_at": "2026-07-26T04:25:40.163Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "842f0210738dc4114ea446d2b54ce674997062ce38c15a26ffc1d03454f09312",
+  "signature": "a8c67e712bf431c32ed4cfc5ca07279943603205822045058a3ed97ed7a2a4d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-springaiplayground"
 }

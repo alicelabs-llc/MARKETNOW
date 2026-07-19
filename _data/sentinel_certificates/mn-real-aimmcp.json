@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8651643",
+  "certificate_id": "MN-SC-2026-4948076",
   "skill_id": "mn-real-aimmcp",
   "skill_name": "AIM-MCP",
-  "issued_at": "2026-07-15T01:24:11.643Z",
-  "expires_at": "2026-07-22T01:24:11.643Z",
+  "issued_at": "2026-07-19T04:22:28.076Z",
+  "expires_at": "2026-07-26T04:22:28.076Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "317379c490d62a625c64c3983b8e5e693980a24d324e7dfa5959065357b32e29",
+  "signature": "6d33014724c9ee116105d5f0e36bf63cf8edbd18ac27090d6599dfd96f297afa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aimmcp"
 }

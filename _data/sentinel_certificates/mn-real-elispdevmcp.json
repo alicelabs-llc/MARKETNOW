@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8786289",
+  "certificate_id": "MN-SC-2026-5081240",
   "skill_id": "mn-real-elispdevmcp",
   "skill_name": "elisp-dev-mcp",
-  "issued_at": "2026-07-15T01:26:26.289Z",
-  "expires_at": "2026-07-22T01:26:26.289Z",
+  "issued_at": "2026-07-19T04:24:41.240Z",
+  "expires_at": "2026-07-26T04:24:41.240Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d674288ceb85839df1be5fe89f4f36f8221078c7358677ead4b11727701390c",
+  "signature": "20fb44dddf3d07510058568818013d2189b4435ec3ef68270f627f52356e1f05",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-elispdevmcp"
 }

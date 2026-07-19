@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9125877",
+  "certificate_id": "MN-SC-2026-5416329",
   "skill_id": "mn-real-vulkmcpserver",
   "skill_name": "vulk-mcp-server",
-  "issued_at": "2026-07-15T01:32:05.877Z",
-  "expires_at": "2026-07-22T01:32:05.877Z",
+  "issued_at": "2026-07-19T04:30:16.329Z",
+  "expires_at": "2026-07-26T04:30:16.329Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "351f23f1184a2fbaf489a4babcb78f8eb1c75b5d9d0634981950bdedaa43b4bd",
+  "signature": "292d9d1dea236488fcdb530f595717d1e5f58f94faa3573e6b0e1f90ba9178b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vulkmcpserver"
 }

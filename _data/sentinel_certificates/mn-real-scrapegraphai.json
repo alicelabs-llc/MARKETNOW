@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8792681",
+  "certificate_id": "MN-SC-2026-5089806",
   "skill_id": "mn-real-scrapegraphai",
   "skill_name": "Scrapegraph-ai",
-  "issued_at": "2026-07-15T01:26:32.681Z",
-  "expires_at": "2026-07-22T01:26:32.681Z",
+  "issued_at": "2026-07-19T04:24:49.806Z",
+  "expires_at": "2026-07-26T04:24:49.806Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93f26ac7b741430f7098da201306f627d7d45f01862f8526ed7ddafec0040788",
+  "signature": "b94a7f26f22f7a90d95d184547df94c852b9af0740da01bea37f4fb062f7083a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scrapegraphai"
 }

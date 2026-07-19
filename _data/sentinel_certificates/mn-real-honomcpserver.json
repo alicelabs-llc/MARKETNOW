@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9079480",
+  "certificate_id": "MN-SC-2026-5370838",
   "skill_id": "mn-real-honomcpserver",
   "skill_name": "hono-mcp-server",
-  "issued_at": "2026-07-15T01:31:19.480Z",
-  "expires_at": "2026-07-22T01:31:19.480Z",
+  "issued_at": "2026-07-19T04:29:30.838Z",
+  "expires_at": "2026-07-26T04:29:30.838Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "82a362518c75356df14fc33b4ac5fbb4f47624a839868b19c1b8e55d9b9e2adf",
+  "signature": "c212223d32fdff633cf9e6432aa99fde86572c18660abb45e3b2fe06fe70255b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-honomcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8684248",
+  "certificate_id": "MN-SC-2026-4980918",
   "skill_id": "mn-real-asktianmcp",
   "skill_name": "asktian-mcp",
-  "issued_at": "2026-07-15T01:24:44.248Z",
-  "expires_at": "2026-07-22T01:24:44.248Z",
+  "issued_at": "2026-07-19T04:23:00.918Z",
+  "expires_at": "2026-07-26T04:23:00.918Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3bf9adabd6c0c5f2bb38e574952b1530065c1b828ab711ab42987a24328fac96",
+  "signature": "79baf9674ca5a3e9daab213773108383faa096c60d1625e98e9c4ca3d634f52b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-asktianmcp"
 }

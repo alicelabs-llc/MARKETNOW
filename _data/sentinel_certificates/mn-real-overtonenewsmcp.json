@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8639576",
+  "certificate_id": "MN-SC-2026-4934906",
   "skill_id": "mn-real-overtonenewsmcp",
   "skill_name": "overtone-news-mcp",
-  "issued_at": "2026-07-15T01:23:59.576Z",
-  "expires_at": "2026-07-22T01:23:59.576Z",
+  "issued_at": "2026-07-19T04:22:14.906Z",
+  "expires_at": "2026-07-26T04:22:14.906Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "49e46d3b720e3a539ebd218fde6f6475a2a4b66a8ace3aa43b7c3f8b17faa582",
+  "signature": "698cc64ffa317d2ffcf5584d07457eae107a6d0264a5d4d12e211a23bd33055b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-overtonenewsmcp"
 }

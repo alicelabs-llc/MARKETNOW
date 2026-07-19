@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8835452",
+  "certificate_id": "MN-SC-2026-5131217",
   "skill_id": "mn-real-gimpmcp",
   "skill_name": "gimp-mcp",
-  "issued_at": "2026-07-15T01:27:15.452Z",
-  "expires_at": "2026-07-22T01:27:15.452Z",
+  "issued_at": "2026-07-19T04:25:31.217Z",
+  "expires_at": "2026-07-26T04:25:31.217Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c62507a14fc9d818a6a315642b89bde970ba641b7f058e1e8b218b22606e34ca",
+  "signature": "ce96aadc2b2088e8f6103571640ccd60d4a7cbecf2da864e09a391fa539c7dce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gimpmcp"
 }

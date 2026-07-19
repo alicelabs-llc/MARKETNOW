@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8502697",
+  "certificate_id": "MN-SC-2026-4794907",
   "skill_id": "mn-real-skysqlmcp",
   "skill_name": "skysql-mcp",
-  "issued_at": "2026-07-15T01:21:42.697Z",
-  "expires_at": "2026-07-22T01:21:42.697Z",
+  "issued_at": "2026-07-19T04:19:54.907Z",
+  "expires_at": "2026-07-26T04:19:54.907Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33e82924d260c336394fb489e6b8be4461eec257e2ae235e814d040f12f89250",
+  "signature": "cb3831bd1bc949ea739cd8b23d301e7f71cd04d74111529129f096aeef739641",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-skysqlmcp"
 }

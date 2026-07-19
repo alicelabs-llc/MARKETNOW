@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7968847",
+  "certificate_id": "MN-SC-2026-4634553",
   "skill_id": "mn-gen-06315",
   "skill_name": "mcp-bridge",
-  "issued_at": "2026-07-15T01:12:48.847Z",
-  "expires_at": "2026-07-22T01:12:48.847Z",
+  "issued_at": "2026-07-19T04:17:14.553Z",
+  "expires_at": "2026-07-26T04:17:14.553Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "ec393958c8d8e615907a8b8a943caa3bd0edda0767e2e085b0068c04f0eab1a9",
+  "signature": "9ec4508621b8e7670a0dd7e4de602a80e702b923fc816aad246812de1139133c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06315"
 }

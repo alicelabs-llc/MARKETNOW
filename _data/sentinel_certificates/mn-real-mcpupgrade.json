@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9122492",
+  "certificate_id": "MN-SC-2026-5412631",
   "skill_id": "mn-real-mcpupgrade",
   "skill_name": "mcp-upgrade",
-  "issued_at": "2026-07-15T01:32:02.492Z",
-  "expires_at": "2026-07-22T01:32:02.492Z",
+  "issued_at": "2026-07-19T04:30:12.631Z",
+  "expires_at": "2026-07-26T04:30:12.631Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "693b7e14371497207bfa6da342a869c5d763c2620b924f9bf9b969ec38ec39a2",
+  "signature": "32655b1d999ab026270677dbeaf1cccffda3c63b1c8db886971aa4cc290f98b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpupgrade"
 }

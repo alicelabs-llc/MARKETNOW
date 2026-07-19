@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9044371",
+  "certificate_id": "MN-SC-2026-5339404",
   "skill_id": "mn-real-litemindagent",
   "skill_name": "LiteMind-Agent",
-  "issued_at": "2026-07-15T01:30:44.371Z",
-  "expires_at": "2026-07-22T01:30:44.371Z",
+  "issued_at": "2026-07-19T04:28:59.404Z",
+  "expires_at": "2026-07-26T04:28:59.404Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1894fe1326f0f83e37fc66772d0efb45f7b151e3d5f8b3e8b3d582fc46062feb",
+  "signature": "768328e46026259ba5d3638704812c45f4f8e62faa46e5c2d31d26612078fed4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-litemindagent"
 }

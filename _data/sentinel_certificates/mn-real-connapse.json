@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8600374",
+  "certificate_id": "MN-SC-2026-4893833",
   "skill_id": "mn-real-connapse",
   "skill_name": "Connapse",
-  "issued_at": "2026-07-15T01:23:20.374Z",
-  "expires_at": "2026-07-22T01:23:20.374Z",
+  "issued_at": "2026-07-19T04:21:33.833Z",
+  "expires_at": "2026-07-26T04:21:33.833Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83e543e4a8b91483946491b6adbe9c3be7efcce85a911f8b8972fd4d76be1920",
+  "signature": "2d1f6f999901f3edd412ea16165afc8884e015002cc09b5ad9d9defd23c0307b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-connapse"
 }

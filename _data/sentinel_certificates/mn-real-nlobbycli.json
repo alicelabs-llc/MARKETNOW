@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9112860",
+  "certificate_id": "MN-SC-2026-5400897",
   "skill_id": "mn-real-nlobbycli",
   "skill_name": "nlobby-cli",
-  "issued_at": "2026-07-15T01:31:52.860Z",
-  "expires_at": "2026-07-22T01:31:52.860Z",
+  "issued_at": "2026-07-19T04:30:00.897Z",
+  "expires_at": "2026-07-26T04:30:00.897Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "81e902cbde1d5dce531cfd2394a2c2054ff6a038cde4077e763d0c35f1c0fa42",
+  "signature": "6924782a2441f69ce041d270c6797311518a07508ce8bf2203c774c79b285aa0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nlobbycli"
 }

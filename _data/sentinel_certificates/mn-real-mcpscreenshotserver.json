@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9223495",
+  "certificate_id": "MN-SC-2026-5513407",
   "skill_id": "mn-real-mcpscreenshotserver",
   "skill_name": "mcp-screenshot-server",
-  "issued_at": "2026-07-15T01:33:43.495Z",
-  "expires_at": "2026-07-22T01:33:43.495Z",
+  "issued_at": "2026-07-19T04:31:53.407Z",
+  "expires_at": "2026-07-26T04:31:53.407Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "73d04031d52ce722c01a2bb7c5653746bfa7ea67b8f6d8134eea51ee0d8e9c0c",
+  "signature": "acfaeba9c9fdd2553bcb590ce0ff669ca008c3ecb50ae71cd9a0db3bb34f9f8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpscreenshotserver"
 }

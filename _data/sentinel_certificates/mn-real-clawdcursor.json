@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8722614",
+  "certificate_id": "MN-SC-2026-5017632",
   "skill_id": "mn-real-clawdcursor",
   "skill_name": "clawdcursor",
-  "issued_at": "2026-07-15T01:25:22.614Z",
-  "expires_at": "2026-07-22T01:25:22.614Z",
+  "issued_at": "2026-07-19T04:23:37.632Z",
+  "expires_at": "2026-07-26T04:23:37.632Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "acfb8eefa045e992bef21657f47f1e9c51ee1a4272bf71c666fa09fbe8846d45",
+  "signature": "2dba7662724ac0f4e30e44fffdda0f35d9433d90640b3b9631c48e6fe506114c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-clawdcursor"
 }

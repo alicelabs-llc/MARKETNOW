@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9175188",
+  "certificate_id": "MN-SC-2026-5465576",
   "skill_id": "mn-real-externalattackermcp",
   "skill_name": "ExternalAttacker-MCP",
-  "issued_at": "2026-07-15T01:32:55.188Z",
-  "expires_at": "2026-07-22T01:32:55.188Z",
+  "issued_at": "2026-07-19T04:31:05.576Z",
+  "expires_at": "2026-07-26T04:31:05.576Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a0f698d76bcfd8601dacc772fa4f094cf50cf002494954c6d2018f76ea502dc",
+  "signature": "7aa8f94117c57a3d18d1d0f10fe2b3d00a148f74d4d31efeb75752f5c3c8d6e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-externalattackermcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9183597",
+  "certificate_id": "MN-SC-2026-5474274",
   "skill_id": "mn-real-vscodewebcomponentsa",
   "skill_name": "vscode-web-components-ai",
-  "issued_at": "2026-07-15T01:33:03.597Z",
-  "expires_at": "2026-07-22T01:33:03.597Z",
+  "issued_at": "2026-07-19T04:31:14.274Z",
+  "expires_at": "2026-07-26T04:31:14.274Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96c67d2017a876a410dc0f93d9c68e31ec9f9c2f3a306857043519ca70e13797",
+  "signature": "eaf2e2bfb9b281399247d3e9dcaccaa86d42aa14d4711dfc18d3765907880172",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vscodewebcomponentsa"
 }

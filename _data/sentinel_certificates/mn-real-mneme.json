@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8606745",
+  "certificate_id": "MN-SC-2026-4900440",
   "skill_id": "mn-real-mneme",
   "skill_name": "mneme",
-  "issued_at": "2026-07-15T01:23:26.745Z",
-  "expires_at": "2026-07-22T01:23:26.745Z",
+  "issued_at": "2026-07-19T04:21:40.440Z",
+  "expires_at": "2026-07-26T04:21:40.440Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "33f4814b9a0af348d44075d4ddee0420261645cc37a46325b567fb6a48ed6977",
+  "signature": "5a40c65e85ccf4240b091e76f5499d13c742fc4fd85884928e99babe2146bb87",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mneme"
 }

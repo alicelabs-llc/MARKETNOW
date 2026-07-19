@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9032652",
+  "certificate_id": "MN-SC-2026-5329156",
   "skill_id": "mn-real-ipybox",
   "skill_name": "ipybox",
-  "issued_at": "2026-07-15T01:30:32.652Z",
-  "expires_at": "2026-07-22T01:30:32.652Z",
+  "issued_at": "2026-07-19T04:28:49.156Z",
+  "expires_at": "2026-07-26T04:28:49.156Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "80c0ac5ac301ab1ad38b8edcb82d5a4ac1a46df2348b37847cabff7d08ac07e4",
+  "signature": "3aec9b75d8a3860366d5fc1e29d9ddef2651ac8833fea5b4c0a16c317711a4db",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ipybox"
 }

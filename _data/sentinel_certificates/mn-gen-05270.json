@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7962135",
+  "certificate_id": "MN-SC-2026-4627905",
   "skill_id": "mn-gen-05270",
   "skill_name": "zcash-mcp",
-  "issued_at": "2026-07-15T01:12:42.135Z",
-  "expires_at": "2026-07-22T01:12:42.135Z",
+  "issued_at": "2026-07-19T04:17:07.905Z",
+  "expires_at": "2026-07-26T04:17:07.905Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f5a8db286387ac931d1dd67674c9114bf6115af9443c904ab163b7174ee98f07",
+  "signature": "1cff0cfc0bdd9aeec7611867033e154cea11811c4e28c06cb15c8dd5ef8fe120",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05270"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8413179",
+  "certificate_id": "MN-SC-2026-4702635",
   "skill_id": "mn-awmcp-satring",
   "skill_name": "satring",
-  "issued_at": "2026-07-15T01:20:13.179Z",
-  "expires_at": "2026-07-22T01:20:13.179Z",
+  "issued_at": "2026-07-19T04:18:22.635Z",
+  "expires_at": "2026-07-26T04:18:22.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "ff453cb607b0169b6d463652d9692c58c63ff061c8d315ded8069a2973d78e7a",
+  "signature": "76a3bc45673a49949f0f4b192b81d727944679df2722182df086132386ddf29a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-satring"
 }

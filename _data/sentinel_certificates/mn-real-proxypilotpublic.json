@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9049929",
+  "certificate_id": "MN-SC-2026-5345116",
   "skill_id": "mn-real-proxypilotpublic",
   "skill_name": "ProxyPilot-public",
-  "issued_at": "2026-07-15T01:30:49.929Z",
-  "expires_at": "2026-07-22T01:30:49.929Z",
+  "issued_at": "2026-07-19T04:29:05.116Z",
+  "expires_at": "2026-07-26T04:29:05.116Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "55904e6b2de485b27d236fb976218d05bbb1135ce357f50a46b9593019438c3a",
+  "signature": "2dd962b2fc727e49e27bf3ff4b1596aaf78102d604f1aa89a12249f33aa0a3e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-proxypilotpublic"
 }

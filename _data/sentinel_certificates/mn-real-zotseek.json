@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8836050",
+  "certificate_id": "MN-SC-2026-5131806",
   "skill_id": "mn-real-zotseek",
   "skill_name": "ZotSeek",
-  "issued_at": "2026-07-15T01:27:16.050Z",
-  "expires_at": "2026-07-22T01:27:16.050Z",
+  "issued_at": "2026-07-19T04:25:31.806Z",
+  "expires_at": "2026-07-26T04:25:31.806Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a946167a823d87af738f8ab71dff47e486fb6e231cfb543835637d1745c102b3",
+  "signature": "8c8e66f66440db0de13ec48ff3613913fc83c9a2a13f3b4ced53bafa5b29c54b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zotseek"
 }

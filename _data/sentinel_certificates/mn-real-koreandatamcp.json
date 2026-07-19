@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8643389",
+  "certificate_id": "MN-SC-2026-4938822",
   "skill_id": "mn-real-koreandatamcp",
   "skill_name": "korean-data-mcp",
-  "issued_at": "2026-07-15T01:24:03.389Z",
-  "expires_at": "2026-07-22T01:24:03.389Z",
+  "issued_at": "2026-07-19T04:22:18.822Z",
+  "expires_at": "2026-07-26T04:22:18.822Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e17d217be099cd773226f44f26f9db9cdc7ed99bd7727e4bf0037cf0f0834267",
+  "signature": "5057b46580d81154cfa5b0120e57bdfbe42b09220f5772775ffd1039fbb14859",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-koreandatamcp"
 }

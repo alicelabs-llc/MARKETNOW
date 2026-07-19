@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8982368",
+  "certificate_id": "MN-SC-2026-5279693",
   "skill_id": "mn-real-mcpsolver",
   "skill_name": "mcp-solver",
-  "issued_at": "2026-07-15T01:29:42.368Z",
-  "expires_at": "2026-07-22T01:29:42.368Z",
+  "issued_at": "2026-07-19T04:27:59.693Z",
+  "expires_at": "2026-07-26T04:27:59.693Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8553f2447b517846b40a642d9c62898d7af3fa8515425a81355a9b749d1b5a3f",
+  "signature": "09dea655bd4173540c5aaeb96c2d59aabdf6db8192448a989e5cb8e4e69d3d4a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsolver"
 }

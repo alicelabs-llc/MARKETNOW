@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8484875",
+  "certificate_id": "MN-SC-2026-4775407",
   "skill_id": "mn-awmcp-clawaimail",
   "skill_name": "clawaimail",
-  "issued_at": "2026-07-15T01:21:24.875Z",
-  "expires_at": "2026-07-22T01:21:24.875Z",
+  "issued_at": "2026-07-19T04:19:35.407Z",
+  "expires_at": "2026-07-26T04:19:35.407Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e132dad49ac446235cd38e85b43709f04b26355467b676b519c2563e0b6c6220",
+  "signature": "875971c0e550713b56e6feeb42da02600c92d16d266801e888ac066cdd0d3af8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-clawaimail"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8015760",
+  "certificate_id": "MN-SC-2026-4679984",
   "skill_id": "mn-gen-13695",
   "skill_name": "Yggdrasil",
-  "issued_at": "2026-07-15T01:13:35.760Z",
-  "expires_at": "2026-07-22T01:13:35.760Z",
+  "issued_at": "2026-07-19T04:17:59.984Z",
+  "expires_at": "2026-07-26T04:17:59.984Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ef08b0c4597fb99b4007173716ea0ed12e4d34802d4cc93d668be38b3e9684f",
+  "signature": "24e9e7a631f8ebfabc94ce6f32fc09ad3ebebee71491bcfab1a62aae19aaf05c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-13695"
 }

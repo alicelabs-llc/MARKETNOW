@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9176324",
+  "certificate_id": "MN-SC-2026-5466808",
   "skill_id": "mn-real-falkordbmcpserver",
   "skill_name": "FalkorDB-MCPServer",
-  "issued_at": "2026-07-15T01:32:56.324Z",
-  "expires_at": "2026-07-22T01:32:56.324Z",
+  "issued_at": "2026-07-19T04:31:06.808Z",
+  "expires_at": "2026-07-26T04:31:06.808Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a7e9b817b4d3375b1d33085b01851dbf5b8c3eda619b45d5c0d54602a4851992",
+  "signature": "e32f10bbdf8100149f60c8d68c16b641da6993269e51f660d747926c1b554c5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-falkordbmcpserver"
 }

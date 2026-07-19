@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8716081",
+  "certificate_id": "MN-SC-2026-5010876",
   "skill_id": "mn-real-cloudrunmcp",
   "skill_name": "cloud-run-mcp",
-  "issued_at": "2026-07-15T01:25:16.081Z",
-  "expires_at": "2026-07-22T01:25:16.081Z",
+  "issued_at": "2026-07-19T04:23:30.876Z",
+  "expires_at": "2026-07-26T04:23:30.876Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ce02309274603383689907ebd8c918f82e023b328a652aeebe9002296f83888",
+  "signature": "d377037a2b13e570e3a1d86ae9d0273142096eb125f846f5892e3ddc185e4e29",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cloudrunmcp"
 }

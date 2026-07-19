@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9220425",
+  "certificate_id": "MN-SC-2026-5510429",
   "skill_id": "mn-real-opencodechatexport",
   "skill_name": "opencode-chat-export",
-  "issued_at": "2026-07-15T01:33:40.425Z",
-  "expires_at": "2026-07-22T01:33:40.425Z",
+  "issued_at": "2026-07-19T04:31:50.429Z",
+  "expires_at": "2026-07-26T04:31:50.429Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3892ea91a27369b5f95b20d623b6301a021d9d3ef812d21663be0f3b3ce448ea",
+  "signature": "f17cdb6332df15cbbabdba1e1212665069f3922dc205f1239b6683f71a238f05",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opencodechatexport"
 }

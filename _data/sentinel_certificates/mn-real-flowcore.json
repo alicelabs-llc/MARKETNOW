@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9095021",
+  "certificate_id": "MN-SC-2026-5383644",
   "skill_id": "mn-real-flowcore",
   "skill_name": "FlowCore",
-  "issued_at": "2026-07-15T01:31:35.021Z",
-  "expires_at": "2026-07-22T01:31:35.021Z",
+  "issued_at": "2026-07-19T04:29:43.644Z",
+  "expires_at": "2026-07-26T04:29:43.644Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c364a2b92a21c4820650d3a1cec39c374e5ac848d99f200a1886286a051ce104",
+  "signature": "a50651c3ad226102030e3285822fa6f7fe303142d4c941e452881e15eb4f5dbb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-flowcore"
 }

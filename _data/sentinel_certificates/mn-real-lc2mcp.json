@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8893968",
+  "certificate_id": "MN-SC-2026-5190117",
   "skill_id": "mn-real-lc2mcp",
   "skill_name": "lc2mcp",
-  "issued_at": "2026-07-15T01:28:13.968Z",
-  "expires_at": "2026-07-22T01:28:13.968Z",
+  "issued_at": "2026-07-19T04:26:30.117Z",
+  "expires_at": "2026-07-26T04:26:30.117Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fcfaa086c51bc3f7f661e2fe59107e0ce91d543720c2fe8d558edd9911c70623",
+  "signature": "535a1b56fefdeb2cbd99ad9244fb981cca297bf668f6844c558a4f05adbdbe8d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lc2mcp"
 }

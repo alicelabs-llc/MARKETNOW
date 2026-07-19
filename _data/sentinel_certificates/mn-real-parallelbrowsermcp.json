@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8910948",
+  "certificate_id": "MN-SC-2026-5209300",
   "skill_id": "mn-real-parallelbrowsermcp",
   "skill_name": "parallel-browser-mcp",
-  "issued_at": "2026-07-15T01:28:30.948Z",
-  "expires_at": "2026-07-22T01:28:30.948Z",
+  "issued_at": "2026-07-19T04:26:49.300Z",
+  "expires_at": "2026-07-26T04:26:49.300Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "02a545871f241fd8c5df9590c94796c2d7293a058f2f22dfc17224b26e7b4075",
+  "signature": "dbd9afa767a2bd6e1d7f61a9634e11ab968d7ef4dca4979478adc055d7674c20",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-parallelbrowsermcp"
 }

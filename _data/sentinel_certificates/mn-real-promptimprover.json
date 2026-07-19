@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9146870",
+  "certificate_id": "MN-SC-2026-5437589",
   "skill_id": "mn-real-promptimprover",
   "skill_name": "Promptimprover",
-  "issued_at": "2026-07-15T01:32:26.870Z",
-  "expires_at": "2026-07-22T01:32:26.870Z",
+  "issued_at": "2026-07-19T04:30:37.589Z",
+  "expires_at": "2026-07-26T04:30:37.589Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e6f2771fbd97cbb696aff7a1de124a76299ae1cd659a37b5d25025f94237dcd",
+  "signature": "2c9b75ea041c0e3797c7975980afef1ed8f31d2fb079f2d5d92f766dc1aa8527",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-promptimprover"
 }

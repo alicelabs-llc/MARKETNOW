@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7934450",
+  "certificate_id": "MN-SC-2026-4600614",
   "skill_id": "mn-gen-01366",
   "skill_name": "mcp-server-bigquery",
-  "issued_at": "2026-07-15T01:12:14.450Z",
-  "expires_at": "2026-07-22T01:12:14.450Z",
+  "issued_at": "2026-07-19T04:16:40.614Z",
+  "expires_at": "2026-07-26T04:16:40.614Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03c1697091a9473565246aafcda1f71c3646a8cf98468636a29e55cfae341de5",
+  "signature": "6b53d330e4f078dd71b2375c089260256572e757ec6ee5272f7e1efd5e5db815",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01366"
 }

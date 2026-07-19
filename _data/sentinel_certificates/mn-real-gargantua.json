@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8888847",
+  "certificate_id": "MN-SC-2026-5184810",
   "skill_id": "mn-real-gargantua",
   "skill_name": "gargantua",
-  "issued_at": "2026-07-15T01:28:08.847Z",
-  "expires_at": "2026-07-22T01:28:08.847Z",
+  "issued_at": "2026-07-19T04:26:24.810Z",
+  "expires_at": "2026-07-26T04:26:24.810Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "409405b2eb286dec168b236d01680ed35ab16b2937a68e8516e5432c59f98fd2",
+  "signature": "79e426c00325999c2ccdc3772ebf13b48484645849833d333bb967db6929c9ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gargantua"
 }

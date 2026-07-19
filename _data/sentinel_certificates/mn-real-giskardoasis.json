@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8601083",
+  "certificate_id": "MN-SC-2026-4894757",
   "skill_id": "mn-real-giskardoasis",
   "skill_name": "giskard-oasis",
-  "issued_at": "2026-07-15T01:23:21.083Z",
-  "expires_at": "2026-07-22T01:23:21.083Z",
+  "issued_at": "2026-07-19T04:21:34.757Z",
+  "expires_at": "2026-07-26T04:21:34.757Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd0f083003f0a59185d01a993550fe6d1d68f7bc75ec3d53c20070db60169000",
+  "signature": "5d42a7ff9bc8c6085a9c775242729d61049eeec6689a3163e8b16388481ee676",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-giskardoasis"
 }

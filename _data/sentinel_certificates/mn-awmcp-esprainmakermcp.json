@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8449859",
+  "certificate_id": "MN-SC-2026-4741851",
   "skill_id": "mn-awmcp-esprainmakermcp",
   "skill_name": "esp-rainmaker-mcp",
-  "issued_at": "2026-07-15T01:20:49.859Z",
-  "expires_at": "2026-07-22T01:20:49.859Z",
+  "issued_at": "2026-07-19T04:19:01.851Z",
+  "expires_at": "2026-07-26T04:19:01.851Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8135f0fb85b2afc45278f0e26e007b0427b279ebd71948130fa8bfe4fef34b8e",
+  "signature": "b84f20d6af80fe375d9cd4a493314885231fd1da000fa2438cbe90e74a5822d4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-esprainmakermcp"
 }

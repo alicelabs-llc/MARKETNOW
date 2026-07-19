@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9011490",
+  "certificate_id": "MN-SC-2026-5309023",
   "skill_id": "mn-real-hyperchat",
   "skill_name": "HyperChat",
-  "issued_at": "2026-07-15T01:30:11.490Z",
-  "expires_at": "2026-07-22T01:30:11.490Z",
+  "issued_at": "2026-07-19T04:28:29.023Z",
+  "expires_at": "2026-07-26T04:28:29.023Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbaad659a7b22e2c5961fed7d332838f57cd71435337d3f76e8cf657f60b07ad",
+  "signature": "f76da05bc569ce8507c3be61b06a9091e1d3f3dad1185c6c8f9ee2c3bbb5b2f4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hyperchat"
 }

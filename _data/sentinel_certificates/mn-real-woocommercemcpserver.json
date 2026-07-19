@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8861275",
+  "certificate_id": "MN-SC-2026-5157287",
   "skill_id": "mn-real-woocommercemcpserver",
   "skill_name": "woocommerce-mcp-server",
-  "issued_at": "2026-07-15T01:27:41.275Z",
-  "expires_at": "2026-07-22T01:27:41.275Z",
+  "issued_at": "2026-07-19T04:25:57.287Z",
+  "expires_at": "2026-07-26T04:25:57.287Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b650b14196a457f237333f90ca25a762e7793fc3472cba421a4f68177cb4db22",
+  "signature": "61a6e204a55444451c780a88b4e2f006d8b44618498bea42df230ed8bd886597",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-woocommercemcpserver"
 }

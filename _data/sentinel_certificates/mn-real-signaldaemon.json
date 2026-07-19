@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8588661",
+  "certificate_id": "MN-SC-2026-4881874",
   "skill_id": "mn-real-signaldaemon",
   "skill_name": "signaldaemon",
-  "issued_at": "2026-07-15T01:23:08.661Z",
-  "expires_at": "2026-07-22T01:23:08.661Z",
+  "issued_at": "2026-07-19T04:21:21.874Z",
+  "expires_at": "2026-07-26T04:21:21.874Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8792205acd48aec62db68f354945f65520dc0bee02c13361d291bae6a670eb0f",
+  "signature": "e23b7a3ec05b4681a3ce7afbbc93bcd1957eb234a553f05594ae71fb5a229b8b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-signaldaemon"
 }

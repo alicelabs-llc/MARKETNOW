@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8952559",
+  "certificate_id": "MN-SC-2026-5249278",
   "skill_id": "mn-real-colabmcp",
   "skill_name": "colab-mcp",
-  "issued_at": "2026-07-15T01:29:12.559Z",
-  "expires_at": "2026-07-22T01:29:12.559Z",
+  "issued_at": "2026-07-19T04:27:29.278Z",
+  "expires_at": "2026-07-26T04:27:29.278Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "180ceb45808e10b44a353e4d389453676200fec32e747bb3f25a8724b0fd1be5",
+  "signature": "3b79ffa58299c3d1f14c35f236ddd10a508c3344172b9327c45266556a70b2a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-colabmcp"
 }

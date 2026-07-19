@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8592848",
+  "certificate_id": "MN-SC-2026-4886135",
   "skill_id": "mn-real-pyxel",
   "skill_name": "pyxel",
-  "issued_at": "2026-07-15T01:23:12.848Z",
-  "expires_at": "2026-07-22T01:23:12.848Z",
+  "issued_at": "2026-07-19T04:21:26.135Z",
+  "expires_at": "2026-07-26T04:21:26.135Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72c194542dbd34e6f1e3f9481a4601f24e6f212fa5d9ff4774b52ce73385bccb",
+  "signature": "65c2c0f29e2364fff802a21cec09366f975519925bf4045c3843d122f8edef00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pyxel"
 }

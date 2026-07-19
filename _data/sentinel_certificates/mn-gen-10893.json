@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7996926",
+  "certificate_id": "MN-SC-2026-4661649",
   "skill_id": "mn-gen-10893",
   "skill_name": "qasphere-mcp",
-  "issued_at": "2026-07-15T01:13:16.926Z",
-  "expires_at": "2026-07-22T01:13:16.926Z",
+  "issued_at": "2026-07-19T04:17:41.649Z",
+  "expires_at": "2026-07-26T04:17:41.649Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "92fba6e3988f4e197693511647e839086ea7116f0399eaec13076bed07c1a197",
+  "signature": "495efc5d568909ccbe4a7202796f32ee8f084b1c04ece6bede8f3d8d5c2b384d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10893"
 }

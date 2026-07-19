@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8968056",
+  "certificate_id": "MN-SC-2026-5265090",
   "skill_id": "mn-real-mcpemailserver",
   "skill_name": "mcp-email-server",
-  "issued_at": "2026-07-15T01:29:28.056Z",
-  "expires_at": "2026-07-22T01:29:28.056Z",
+  "issued_at": "2026-07-19T04:27:45.090Z",
+  "expires_at": "2026-07-26T04:27:45.090Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "30f13b3b5ee0208e67a173089781aa3b48b929eaba0aa9d59e5741c7c9c3e167",
+  "signature": "289b6befab0689166a7cba145a02bb25119bcbfdc77c5b903152528315810e2c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpemailserver"
 }

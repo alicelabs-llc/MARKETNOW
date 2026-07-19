@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8764225",
+  "certificate_id": "MN-SC-2026-5059101",
   "skill_id": "mn-real-shieldapimcp",
   "skill_name": "shieldapi-mcp",
-  "issued_at": "2026-07-15T01:26:04.225Z",
-  "expires_at": "2026-07-22T01:26:04.225Z",
+  "issued_at": "2026-07-19T04:24:19.101Z",
+  "expires_at": "2026-07-26T04:24:19.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a8a6bca2cfb250c51682d56f91433ffee6c2bc34201905e70d55d077c517687d",
+  "signature": "99098d5072e47d02257086b1de2ebdc124988a79584c0afe7436570b22728ebd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-shieldapimcp"
 }

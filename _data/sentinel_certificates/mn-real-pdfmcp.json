@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8889286",
+  "certificate_id": "MN-SC-2026-5185239",
   "skill_id": "mn-real-pdfmcp",
   "skill_name": "pdf-mcp",
-  "issued_at": "2026-07-15T01:28:09.286Z",
-  "expires_at": "2026-07-22T01:28:09.286Z",
+  "issued_at": "2026-07-19T04:26:25.239Z",
+  "expires_at": "2026-07-26T04:26:25.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72e4b89d4d626039da475473cbe316f4ada81f4fcc78c3cfdcb8f60162ac769d",
+  "signature": "45c2c1fba8268020187d4d0c2b5bf0deff1e0c13b15bcb2430069d3fa9defd5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pdfmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8009384",
+  "certificate_id": "MN-SC-2026-4673584",
   "skill_id": "mn-gen-12790",
   "skill_name": "tradingview-mcp",
-  "issued_at": "2026-07-15T01:13:29.384Z",
-  "expires_at": "2026-07-22T01:13:29.384Z",
+  "issued_at": "2026-07-19T04:17:53.584Z",
+  "expires_at": "2026-07-26T04:17:53.584Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b24acc64a2fe1cde25a78841bb1b90976864545d2b344af60a7b9574546ef5d",
+  "signature": "933e615df6fcb23f1ae876d60a2e6599fef7fa909c7288f519fc9285a650b0ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12790"
 }

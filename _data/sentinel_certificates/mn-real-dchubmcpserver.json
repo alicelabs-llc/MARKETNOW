@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8496889",
+  "certificate_id": "MN-SC-2026-4788953",
   "skill_id": "mn-real-dchubmcpserver",
   "skill_name": "dchub-mcp-server",
-  "issued_at": "2026-07-15T01:21:36.889Z",
-  "expires_at": "2026-07-22T01:21:36.889Z",
+  "issued_at": "2026-07-19T04:19:48.953Z",
+  "expires_at": "2026-07-26T04:19:48.953Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb628747550946eb941d962d2d95ebe7ac6c53a4d01438258d6b96a8ce6b466d",
+  "signature": "315f7b7fca0646cf4619f51b0147eaad4a551e70d118b8ce6f25aea145bbe99a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dchubmcpserver"
 }

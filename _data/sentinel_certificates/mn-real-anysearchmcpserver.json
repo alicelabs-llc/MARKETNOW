@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8705795",
+  "certificate_id": "MN-SC-2026-5002321",
   "skill_id": "mn-real-anysearchmcpserver",
   "skill_name": "anysearch-mcp-server",
-  "issued_at": "2026-07-15T01:25:05.795Z",
-  "expires_at": "2026-07-22T01:25:05.795Z",
+  "issued_at": "2026-07-19T04:23:22.321Z",
+  "expires_at": "2026-07-26T04:23:22.321Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bace30bcb1d818098a05b1b8c378c6d45850f729f4f2d1fd9f13513975eb70e1",
+  "signature": "f5272fc62f47904bba1ed1ffc33532ea34c287b555932c3fe2cef5a19864c822",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-anysearchmcpserver"
 }

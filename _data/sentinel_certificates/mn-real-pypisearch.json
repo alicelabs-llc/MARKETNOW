@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9074377",
+  "certificate_id": "MN-SC-2026-5365776",
   "skill_id": "mn-real-pypisearch",
   "skill_name": "pypi_search",
-  "issued_at": "2026-07-15T01:31:14.377Z",
-  "expires_at": "2026-07-22T01:31:14.377Z",
+  "issued_at": "2026-07-19T04:29:25.776Z",
+  "expires_at": "2026-07-26T04:29:25.776Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d8bdbcdccb97fa639cfa44a2790cdec108a2831ee63dbb6c3185e88884966799",
+  "signature": "e56a660a89af9519cad28016b776da49275ddabdc59c555fb4147c3ac38d3ca3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pypisearch"
 }

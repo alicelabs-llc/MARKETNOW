@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8975027",
+  "certificate_id": "MN-SC-2026-5272152",
   "skill_id": "mn-real-htmcp",
   "skill_name": "ht-mcp",
-  "issued_at": "2026-07-15T01:29:35.027Z",
-  "expires_at": "2026-07-22T01:29:35.027Z",
+  "issued_at": "2026-07-19T04:27:52.152Z",
+  "expires_at": "2026-07-26T04:27:52.152Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4711bb1b6ab4d54dbaffed49eafbb2823c95de0bcd8d533c5b3722998767f23f",
+  "signature": "65eb20ed5b58ebf82344bb93505774811feb43609ec581eb7d6e33ca84c4db14",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-htmcp"
 }

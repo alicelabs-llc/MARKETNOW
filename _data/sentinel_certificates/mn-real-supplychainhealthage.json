@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9083546",
+  "certificate_id": "MN-SC-2026-5374788",
   "skill_id": "mn-real-supplychainhealthage",
   "skill_name": "Supply-Chain-Health-Agent",
-  "issued_at": "2026-07-15T01:31:23.546Z",
-  "expires_at": "2026-07-22T01:31:23.546Z",
+  "issued_at": "2026-07-19T04:29:34.788Z",
+  "expires_at": "2026-07-26T04:29:34.788Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c8b487ed507fa50012d142c4a2e34321f17d035d42e958cc846021360dc3eecd",
+  "signature": "9408225772260e402760c7cc326b387d6d93db29cb813b6017aff0a4e5a6c3f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-supplychainhealthage"
 }

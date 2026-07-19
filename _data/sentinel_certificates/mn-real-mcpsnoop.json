@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8728850",
+  "certificate_id": "MN-SC-2026-5024039",
   "skill_id": "mn-real-mcpsnoop",
   "skill_name": "mcpsnoop",
-  "issued_at": "2026-07-15T01:25:28.850Z",
-  "expires_at": "2026-07-22T01:25:28.850Z",
+  "issued_at": "2026-07-19T04:23:44.039Z",
+  "expires_at": "2026-07-26T04:23:44.039Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "32076890ba2b591fb2c191c5a9bc4d22fcb10befc1ee74f7237d3cf885eb4d02",
+  "signature": "2401db0242eef4b78da5e371196410547b486632e532ae3120940a8187dc1db2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpsnoop"
 }

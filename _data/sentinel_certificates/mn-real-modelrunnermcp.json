@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9151440",
+  "certificate_id": "MN-SC-2026-5442436",
   "skill_id": "mn-real-modelrunnermcp",
   "skill_name": "modelrunner-mcp",
-  "issued_at": "2026-07-15T01:32:31.440Z",
-  "expires_at": "2026-07-22T01:32:31.440Z",
+  "issued_at": "2026-07-19T04:30:42.436Z",
+  "expires_at": "2026-07-26T04:30:42.436Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e0c48ca2e13721d55f6511fb7201cb0db3f17058c46398152a21695ec89783ea",
+  "signature": "40faa93f6585555f81929dbadba4cf78deaa08e2f193c141c85efeabd28214f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-modelrunnermcp"
 }

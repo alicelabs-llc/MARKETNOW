@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8532790",
+  "certificate_id": "MN-SC-2026-4824823",
   "skill_id": "mn-real-pmptcli",
   "skill_name": "pmpt-cli",
-  "issued_at": "2026-07-15T01:22:12.790Z",
-  "expires_at": "2026-07-22T01:22:12.790Z",
+  "issued_at": "2026-07-19T04:20:24.823Z",
+  "expires_at": "2026-07-26T04:20:24.823Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3e3eb9c6b61b14656d07d3d39c2da4e1de5a194220287b9f46a39973eadd15f1",
+  "signature": "9a79fb6db875008fc35deba9ff4939113b4a0244dff21fb568d1c3906ebacbd4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pmptcli"
 }

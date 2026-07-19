@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8985655",
+  "certificate_id": "MN-SC-2026-5283018",
   "skill_id": "mn-real-lifesciences",
   "skill_name": "life-sciences",
-  "issued_at": "2026-07-15T01:29:45.655Z",
-  "expires_at": "2026-07-22T01:29:45.655Z",
+  "issued_at": "2026-07-19T04:28:03.018Z",
+  "expires_at": "2026-07-26T04:28:03.018Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cb5c0d6b21d9788e4ff4b5186e7ce4bd48b84d6ce6cb208f02fb680abd1d3469",
+  "signature": "8919f87c960306bc9f3961acf0770c89558d9572b3c5df0798fae5e6866ed018",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lifesciences"
 }

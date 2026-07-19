@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9216152",
+  "certificate_id": "MN-SC-2026-5506073",
   "skill_id": "mn-real-geminiupgradeqamcp",
   "skill_name": "gemini-upgrade-qa-mcp",
-  "issued_at": "2026-07-15T01:33:36.152Z",
-  "expires_at": "2026-07-22T01:33:36.152Z",
+  "issued_at": "2026-07-19T04:31:46.073Z",
+  "expires_at": "2026-07-26T04:31:46.073Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "35d83d1da4b6c3726fa3fdf4d1f6df249d3189a98877e11e27a098098c6e969b",
+  "signature": "519ec25ac4171013aa250f6152a8ba0fb954d0a29e4e907da37581f02d00a133",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geminiupgradeqamcp"
 }

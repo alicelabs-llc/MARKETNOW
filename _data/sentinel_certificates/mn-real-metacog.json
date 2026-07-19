@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9043785",
+  "certificate_id": "MN-SC-2026-5338809",
   "skill_id": "mn-real-metacog",
   "skill_name": "metacog",
-  "issued_at": "2026-07-15T01:30:43.785Z",
-  "expires_at": "2026-07-22T01:30:43.785Z",
+  "issued_at": "2026-07-19T04:28:58.809Z",
+  "expires_at": "2026-07-26T04:28:58.809Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1de4ccaf38e5afcbdf633c3652e62a94d40838828440c9dd46cb42e773a11653",
+  "signature": "21d4bab938ad747821438cd04dc204278605c680748f5fd18aceaa7eed1b74bd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-metacog"
 }

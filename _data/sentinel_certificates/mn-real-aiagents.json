@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8914546",
+  "certificate_id": "MN-SC-2026-5212962",
   "skill_id": "mn-real-aiagents",
   "skill_name": "ai-agents",
-  "issued_at": "2026-07-15T01:28:34.546Z",
-  "expires_at": "2026-07-22T01:28:34.546Z",
+  "issued_at": "2026-07-19T04:26:52.962Z",
+  "expires_at": "2026-07-26T04:26:52.962Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2bbda55787700870402508f016b64d55409d274dc94b415331bc6bcbbae8a662",
+  "signature": "157bce1df6ee4f2a5ca053085b256bf3583ce64385bddeca43f69872c8d8b8c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aiagents"
 }

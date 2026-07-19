@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8624661",
+  "certificate_id": "MN-SC-2026-4917953",
   "skill_id": "mn-real-mcpgrafana",
   "skill_name": "mcp-grafana",
-  "issued_at": "2026-07-15T01:23:44.661Z",
-  "expires_at": "2026-07-22T01:23:44.661Z",
+  "issued_at": "2026-07-19T04:21:57.953Z",
+  "expires_at": "2026-07-26T04:21:57.953Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dadf57c850be89db0c869933f03278d86ef07b37a4b7b2a9bf82b5d3766ab9dd",
+  "signature": "be280b42986c121d0ed5663ad9c8e7ce2e4467d94dfb1dc1395411668754544b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgrafana"
 }

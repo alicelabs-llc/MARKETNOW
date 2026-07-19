@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9224201",
+  "certificate_id": "MN-SC-2026-5514302",
   "skill_id": "mn-real-juliadocmcp",
   "skill_name": "juliadoc-mcp",
-  "issued_at": "2026-07-15T01:33:44.201Z",
-  "expires_at": "2026-07-22T01:33:44.201Z",
+  "issued_at": "2026-07-19T04:31:54.302Z",
+  "expires_at": "2026-07-26T04:31:54.302Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c98c7f6c0369314ddd309736757be0d3aee6c767399aab7cba2493fa59a1ad6",
+  "signature": "f81d53727981656a099992c2b5329a2dc46751429c53b54aa1399b2636016315",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-juliadocmcp"
 }

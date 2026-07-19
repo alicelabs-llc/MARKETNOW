@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8774829",
+  "certificate_id": "MN-SC-2026-5069984",
   "skill_id": "mn-real-dorismcpserver",
   "skill_name": "doris-mcp-server",
-  "issued_at": "2026-07-15T01:26:14.829Z",
-  "expires_at": "2026-07-22T01:26:14.829Z",
+  "issued_at": "2026-07-19T04:24:29.984Z",
+  "expires_at": "2026-07-26T04:24:29.984Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "485c13894b0e2d586b6451eaf256e1bcda1aedfe069675c57500f087742b1863",
+  "signature": "1c767228c662076eff89919c8cb6de2fbdc4cc3b5a83e1aa5f9dfc898db21e97",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dorismcpserver"
 }

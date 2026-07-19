@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8713556",
+  "certificate_id": "MN-SC-2026-5008438",
   "skill_id": "mn-real-nornicdb",
   "skill_name": "NornicDB",
-  "issued_at": "2026-07-15T01:25:13.556Z",
-  "expires_at": "2026-07-22T01:25:13.556Z",
+  "issued_at": "2026-07-19T04:23:28.438Z",
+  "expires_at": "2026-07-26T04:23:28.438Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7ab4b1800960ded237f817129fb61d65feab954c745b3970164d016643dad0f",
+  "signature": "19b0597231223badbd677a0dcb7ac1fbaf456468a384cb307777694a536f95a7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nornicdb"
 }

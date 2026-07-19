@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9027372",
+  "certificate_id": "MN-SC-2026-5324187",
   "skill_id": "mn-real-umlmcp",
   "skill_name": "uml-mcp",
-  "issued_at": "2026-07-15T01:30:27.372Z",
-  "expires_at": "2026-07-22T01:30:27.372Z",
+  "issued_at": "2026-07-19T04:28:44.187Z",
+  "expires_at": "2026-07-26T04:28:44.187Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "616db699d779888224e3549c3bebd094ed7882a95651d42dceefa691190fb840",
+  "signature": "e52da93a818dfcb56b564f3c8e0d0ddf2915a411f1ce850635e6f94a42d42168",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-umlmcp"
 }

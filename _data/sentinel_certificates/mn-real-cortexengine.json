@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9048959",
+  "certificate_id": "MN-SC-2026-5344176",
   "skill_id": "mn-real-cortexengine",
   "skill_name": "cortex-engine",
-  "issued_at": "2026-07-15T01:30:48.959Z",
-  "expires_at": "2026-07-22T01:30:48.959Z",
+  "issued_at": "2026-07-19T04:29:04.176Z",
+  "expires_at": "2026-07-26T04:29:04.176Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c376cd3953baa667a462dd0c05d0f890ed11e99aa086315a59e744c3e8015144",
+  "signature": "ed27d476a680dbb65ea8fecdaa7c904f825907c5fc6015c0830b7cf5bb85203c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cortexengine"
 }

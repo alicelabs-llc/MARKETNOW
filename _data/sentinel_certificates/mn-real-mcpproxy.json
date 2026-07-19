@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8799462",
+  "certificate_id": "MN-SC-2026-5094927",
   "skill_id": "mn-real-mcpproxy",
   "skill_name": "mcp-proxy",
-  "issued_at": "2026-07-15T01:26:39.462Z",
-  "expires_at": "2026-07-22T01:26:39.462Z",
+  "issued_at": "2026-07-19T04:24:54.927Z",
+  "expires_at": "2026-07-26T04:24:54.927Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "844551fe9c18790a50d93224134aea170241809b26766c8cf3bdd8d2a59e3ae3",
+  "signature": "754011fa52d8faaed26748cf99130df7df642d4ff33812550982aef3edac5bf7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpproxy"
 }

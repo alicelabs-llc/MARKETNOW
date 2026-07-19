@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8793855",
+  "certificate_id": "MN-SC-2026-5090939",
   "skill_id": "mn-real-sveltellmmcp",
   "skill_name": "svelte-llm-mcp",
-  "issued_at": "2026-07-15T01:26:33.855Z",
-  "expires_at": "2026-07-22T01:26:33.855Z",
+  "issued_at": "2026-07-19T04:24:50.939Z",
+  "expires_at": "2026-07-26T04:24:50.939Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dd959b2630c1d9bdbbd9ffc06f6c64bb0183dad6f285b37a12b480107ffae1f4",
+  "signature": "c92110397bf2a6cac23f5378f64365b82cc01f649c79e02eb8433d878aca5ac4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sveltellmmcp"
 }

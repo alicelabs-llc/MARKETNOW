@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9165321",
+  "certificate_id": "MN-SC-2026-5455949",
   "skill_id": "mn-real-externalbrain",
   "skill_name": "ExternalBrain",
-  "issued_at": "2026-07-15T01:32:45.321Z",
-  "expires_at": "2026-07-22T01:32:45.321Z",
+  "issued_at": "2026-07-19T04:30:55.949Z",
+  "expires_at": "2026-07-26T04:30:55.949Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b0e889668098448cd46c5b46abf5e876ddd014cb48414fcee4622bd01483cf56",
+  "signature": "8a0c554c43d744ab64ab6bbcf273e73df62c15524346a4812a281b759b021e29",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-externalbrain"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7992227",
+  "certificate_id": "MN-SC-2026-4658122",
   "skill_id": "mn-gen-10051",
   "skill_name": "opik-mcp",
-  "issued_at": "2026-07-15T01:13:12.227Z",
-  "expires_at": "2026-07-22T01:13:12.227Z",
+  "issued_at": "2026-07-19T04:17:38.122Z",
+  "expires_at": "2026-07-26T04:17:38.122Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "080aac3430c1260fbcdaf680add2c20a08396a5b1eb503682535892d80686594",
+  "signature": "40f044fbe3455fbdc8c488264e2f8ce387975c2422c322c4c4b00d7b5352d920",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10051"
 }

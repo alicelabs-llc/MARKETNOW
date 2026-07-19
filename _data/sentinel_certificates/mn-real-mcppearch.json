@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8644984",
+  "certificate_id": "MN-SC-2026-4940436",
   "skill_id": "mn-real-mcppearch",
   "skill_name": "mcp_pearch",
-  "issued_at": "2026-07-15T01:24:04.984Z",
-  "expires_at": "2026-07-22T01:24:04.984Z",
+  "issued_at": "2026-07-19T04:22:20.436Z",
+  "expires_at": "2026-07-26T04:22:20.436Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a0ff654286c7e25580290bd6937e001a200792ba25207f35bda74e5fbcd91745",
+  "signature": "c3edab54511750430fdd7b7525dde513f66168391f1335277cbf63fddc1e8187",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcppearch"
 }

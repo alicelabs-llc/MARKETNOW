@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9024300",
+  "certificate_id": "MN-SC-2026-5321043",
   "skill_id": "mn-real-mcpagentmailrust",
   "skill_name": "mcp_agent_mail_rust",
-  "issued_at": "2026-07-15T01:30:24.300Z",
-  "expires_at": "2026-07-22T01:30:24.300Z",
+  "issued_at": "2026-07-19T04:28:41.043Z",
+  "expires_at": "2026-07-26T04:28:41.043Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de4cfd2d33d33df91a33ed4e6c0f5cafc56065eb873108a9e7fc3ca405569c43",
+  "signature": "acec9553d20dd794baa386a678c6297a2c3ea0e903c0024d7df0b851bfa859a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpagentmailrust"
 }

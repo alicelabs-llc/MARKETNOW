@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9207388",
+  "certificate_id": "MN-SC-2026-5497425",
   "skill_id": "mn-real-crux",
   "skill_name": "crux",
-  "issued_at": "2026-07-15T01:33:27.388Z",
-  "expires_at": "2026-07-22T01:33:27.388Z",
+  "issued_at": "2026-07-19T04:31:37.425Z",
+  "expires_at": "2026-07-26T04:31:37.425Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1924a35b52579e71ee57b1d4c187959dd9d89d6b8f2133274ffc276c00cef1ce",
+  "signature": "5e25fad7c4ebe256b6deb9303161d37c03681af564456cffc635efb2252f6179",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-crux"
 }

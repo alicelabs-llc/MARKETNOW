@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9030624",
+  "certificate_id": "MN-SC-2026-5327341",
   "skill_id": "mn-real-slackmcpplugin",
   "skill_name": "slack-mcp-plugin",
-  "issued_at": "2026-07-15T01:30:30.624Z",
-  "expires_at": "2026-07-22T01:30:30.624Z",
+  "issued_at": "2026-07-19T04:28:47.341Z",
+  "expires_at": "2026-07-26T04:28:47.341Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff273eecccc04043769897c9fe818e66f5a2c432b5886ee5ba2871389af394e3",
+  "signature": "9795ea80d4696aa5e158983c7c535c01625cdd4ab8a1e0f6a74c971458d2632a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-slackmcpplugin"
 }

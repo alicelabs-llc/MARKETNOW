@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8975790",
+  "certificate_id": "MN-SC-2026-5272928",
   "skill_id": "mn-real-protocgengomcp",
   "skill_name": "protoc-gen-go-mcp",
-  "issued_at": "2026-07-15T01:29:35.790Z",
-  "expires_at": "2026-07-22T01:29:35.790Z",
+  "issued_at": "2026-07-19T04:27:52.928Z",
+  "expires_at": "2026-07-26T04:27:52.928Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "803130d097f7990eb949209ce60ef89a91d35c332ff989cbf18b14e87b35fbda",
+  "signature": "44ebe7b0170ee0c9f6074c411a43d8f84ca0a3afd6fdff217c72440d87d52625",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-protocgengomcp"
 }

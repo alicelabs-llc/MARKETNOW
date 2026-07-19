@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8617567",
+  "certificate_id": "MN-SC-2026-4910792",
   "skill_id": "mn-real-mcpgeo",
   "skill_name": "MCP-Geo",
-  "issued_at": "2026-07-15T01:23:37.567Z",
-  "expires_at": "2026-07-22T01:23:37.567Z",
+  "issued_at": "2026-07-19T04:21:50.792Z",
+  "expires_at": "2026-07-26T04:21:50.792Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "41b5f622fdca030767ed778f155400958923b91b1b3f2fa2daef282dbb280e89",
+  "signature": "88845c5fc4dc8cac1b814d3b117b8e08a7f6e14f088939cf55dc1706f3d661fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgeo"
 }

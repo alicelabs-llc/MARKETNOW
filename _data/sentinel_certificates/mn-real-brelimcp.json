@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9134257",
+  "certificate_id": "MN-SC-2026-5424626",
   "skill_id": "mn-real-brelimcp",
   "skill_name": "br-eli-mcp",
-  "issued_at": "2026-07-15T01:32:14.257Z",
-  "expires_at": "2026-07-22T01:32:14.257Z",
+  "issued_at": "2026-07-19T04:30:24.626Z",
+  "expires_at": "2026-07-26T04:30:24.626Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "db71dea04ef12c177db77405d60cc2f0c8f9648a046b131a55ef4be30a19b3af",
+  "signature": "f77035e1198313e0db0f3229f081c33875b0e920409c9b547e84d44f2a7217bb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-brelimcp"
 }

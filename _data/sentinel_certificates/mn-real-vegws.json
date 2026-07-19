@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8677350",
+  "certificate_id": "MN-SC-2026-4974502",
   "skill_id": "mn-real-vegws",
   "skill_name": "ve-gws",
-  "issued_at": "2026-07-15T01:24:37.350Z",
-  "expires_at": "2026-07-22T01:24:37.350Z",
+  "issued_at": "2026-07-19T04:22:54.502Z",
+  "expires_at": "2026-07-26T04:22:54.502Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8870488a4db1d8c49e3454af3805ebce2932705b160dac0598634740d428d612",
+  "signature": "fa5c18393be8ab8c8bfb27a1bc3b2330d692bbd0c9f1ecac697d996ef202df4b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vegws"
 }

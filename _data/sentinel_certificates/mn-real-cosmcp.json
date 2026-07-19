@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8782844",
+  "certificate_id": "MN-SC-2026-5077725",
   "skill_id": "mn-real-cosmcp",
   "skill_name": "cos-mcp",
-  "issued_at": "2026-07-15T01:26:22.844Z",
-  "expires_at": "2026-07-22T01:26:22.844Z",
+  "issued_at": "2026-07-19T04:24:37.725Z",
+  "expires_at": "2026-07-26T04:24:37.725Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bffbec4fc42884d7442b30f12996325f1913b9d4741dbc28ac8dd9b52001f784",
+  "signature": "6be0b36f6684f868b9fd62c42054e03eb14d2b37a7d7ed75376b198831e57450",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cosmcp"
 }

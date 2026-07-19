@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8954020",
+  "certificate_id": "MN-SC-2026-5250700",
   "skill_id": "mn-real-mcphandler",
   "skill_name": "mcp-handler",
-  "issued_at": "2026-07-15T01:29:14.020Z",
-  "expires_at": "2026-07-22T01:29:14.020Z",
+  "issued_at": "2026-07-19T04:27:30.700Z",
+  "expires_at": "2026-07-26T04:27:30.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "9fb838bf48bb78d9373de92f8ab764c3dda4a78ffbe953dae347b79525ad370f",
+  "signature": "bbc6db52bcad8137c7c58ee7cceef7f30b9d44f8b73c4f8f5f8f3e31abecf827",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcphandler"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8954155",
+  "certificate_id": "MN-SC-2026-5250939",
   "skill_id": "mn-real-openapimcpgenerator",
   "skill_name": "openapi-mcp-generator",
-  "issued_at": "2026-07-15T01:29:14.155Z",
-  "expires_at": "2026-07-22T01:29:14.155Z",
+  "issued_at": "2026-07-19T04:27:30.939Z",
+  "expires_at": "2026-07-26T04:27:30.939Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0abbcd1f76aa83a5af089889b45b64423949459b965838426c0b299e9a326da6",
+  "signature": "605917465d9eab7c3862810f58e30a65ec31318fcf1b5045b0920343831a4130",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openapimcpgenerator"
 }

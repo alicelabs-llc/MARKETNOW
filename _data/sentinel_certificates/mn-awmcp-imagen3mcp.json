@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8404073",
+  "certificate_id": "MN-SC-2026-4693662",
   "skill_id": "mn-awmcp-imagen3mcp",
   "skill_name": "imagen3-mcp",
-  "issued_at": "2026-07-15T01:20:04.073Z",
-  "expires_at": "2026-07-22T01:20:04.073Z",
+  "issued_at": "2026-07-19T04:18:13.662Z",
+  "expires_at": "2026-07-26T04:18:13.662Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3ce4e635facaef8bcac7a6183a5ed5b80b739df2266b722a9de4da89c3ff072",
+  "signature": "f493b695fd2a1f28a2cc0ced8b8f27c4beef274182756df1e92d72d369ac0e76",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-imagen3mcp"
 }

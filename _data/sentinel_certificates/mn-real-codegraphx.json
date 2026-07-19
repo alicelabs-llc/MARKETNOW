@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9095268",
+  "certificate_id": "MN-SC-2026-5383810",
   "skill_id": "mn-real-codegraphx",
   "skill_name": "CodeGraphX",
-  "issued_at": "2026-07-15T01:31:35.268Z",
-  "expires_at": "2026-07-22T01:31:35.268Z",
+  "issued_at": "2026-07-19T04:29:43.810Z",
+  "expires_at": "2026-07-26T04:29:43.810Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ab5598e35b979d40754ae26b4254dae037830fb57aa1d4eafd52778cc1ba3b6",
+  "signature": "e95aa426e3d72b6ba6d57285d3c98f56f5ad28411ef95ec6e967a01fe6efdf9c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codegraphx"
 }

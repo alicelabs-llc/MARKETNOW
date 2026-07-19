@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9078232",
+  "certificate_id": "MN-SC-2026-5369540",
   "skill_id": "mn-real-mcpgatewayorchestrat",
   "skill_name": "mcp-gateway-orchestrator",
-  "issued_at": "2026-07-15T01:31:18.232Z",
-  "expires_at": "2026-07-22T01:31:18.232Z",
+  "issued_at": "2026-07-19T04:29:29.540Z",
+  "expires_at": "2026-07-26T04:29:29.540Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "008a0157db9de43f54ec26d85391c4eb1c95d4b676597ab98224cdbdd3028962",
+  "signature": "2b1fcc880284197b2119e47dbccb311273883a633cd6e0298fbea3a8ce43320d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgatewayorchestrat"
 }

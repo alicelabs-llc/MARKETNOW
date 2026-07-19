@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9188701",
+  "certificate_id": "MN-SC-2026-5479269",
   "skill_id": "mn-real-offramp2",
   "skill_name": "offramp2",
-  "issued_at": "2026-07-15T01:33:08.701Z",
-  "expires_at": "2026-07-22T01:33:08.701Z",
+  "issued_at": "2026-07-19T04:31:19.269Z",
+  "expires_at": "2026-07-26T04:31:19.269Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94c7f924e04796b0d71914e8ae1da20480284ec609004abaf811d464a5b0ec13",
+  "signature": "6e761ecfbccb871ec3e4d13fe4489ebb2c1698c23f74834b3dc0e7699bb94a00",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-offramp2"
 }

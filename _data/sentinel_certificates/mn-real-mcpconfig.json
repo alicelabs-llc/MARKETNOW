@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8970950",
+  "certificate_id": "MN-SC-2026-5267913",
   "skill_id": "mn-real-mcpconfig",
   "skill_name": "MCPConfig",
-  "issued_at": "2026-07-15T01:29:30.950Z",
-  "expires_at": "2026-07-22T01:29:30.950Z",
+  "issued_at": "2026-07-19T04:27:47.913Z",
+  "expires_at": "2026-07-26T04:27:47.913Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ffd8fc92e61e5c5249f8a06d1396c5c6bc7f17da0d75c7c129009e5d9d5fbdbc",
+  "signature": "9348e8b655de77eb3a51da51c3a61e6e4a5c4154524dc0e237eaa86208a43c5b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpconfig"
 }

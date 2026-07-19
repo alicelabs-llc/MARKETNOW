@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8613886",
+  "certificate_id": "MN-SC-2026-4907252",
   "skill_id": "mn-real-nexusfeedmcp",
   "skill_name": "nexusfeed-mcp",
-  "issued_at": "2026-07-15T01:23:33.886Z",
-  "expires_at": "2026-07-22T01:23:33.886Z",
+  "issued_at": "2026-07-19T04:21:47.252Z",
+  "expires_at": "2026-07-26T04:21:47.252Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9d4f70902359a3b38a556701004cf64ca4fe7f9181eb91af7178c844f95bcb09",
+  "signature": "1b0bb7eb9d6dc0981a8f383e575086f6644d8a003c0ed03c557a1e839d29d255",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nexusfeedmcp"
 }

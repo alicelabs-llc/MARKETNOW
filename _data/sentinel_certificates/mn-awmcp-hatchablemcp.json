@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8460440",
+  "certificate_id": "MN-SC-2026-4752644",
   "skill_id": "mn-awmcp-hatchablemcp",
   "skill_name": "hatchable-mcp",
-  "issued_at": "2026-07-15T01:21:00.440Z",
-  "expires_at": "2026-07-22T01:21:00.440Z",
+  "issued_at": "2026-07-19T04:19:12.644Z",
+  "expires_at": "2026-07-26T04:19:12.644Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e6a022175185a12f2b51d00156e8380058de791a102941354439b00763c9ae8",
+  "signature": "a8da79c2d5b7dce5bf89aed0b0fe3336f3351ce0f4e719aca36d5d2c9626fb91",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-hatchablemcp"
 }

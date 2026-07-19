@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8542349",
+  "certificate_id": "MN-SC-2026-4834247",
   "skill_id": "mn-real-automobile",
   "skill_name": "auto-mobile",
-  "issued_at": "2026-07-15T01:22:22.349Z",
-  "expires_at": "2026-07-22T01:22:22.349Z",
+  "issued_at": "2026-07-19T04:20:34.247Z",
+  "expires_at": "2026-07-26T04:20:34.247Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5983b0053391b2e098a9a90db4707e25cbd6d995e815501066f9dee81728cad7",
+  "signature": "6f0a324c919faea2d7c2e31147ba888c6d4e3269c6e9902c5c239bd3a7bc8b7f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-automobile"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9104585",
+  "certificate_id": "MN-SC-2026-5392811",
   "skill_id": "mn-real-googlecloudmcp",
   "skill_name": "google-cloud-mcp",
-  "issued_at": "2026-07-15T01:31:44.585Z",
-  "expires_at": "2026-07-22T01:31:44.585Z",
+  "issued_at": "2026-07-19T04:29:52.811Z",
+  "expires_at": "2026-07-26T04:29:52.811Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7453be1d3a667b032df71b52e83f39e5d2b95327bb588fd841ede8e54f9c1410",
+  "signature": "1589e15517f7316cc1f7c523545c4d4a70d5f8a9220a4a794ac8ac5cfef970b1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-googlecloudmcp"
 }

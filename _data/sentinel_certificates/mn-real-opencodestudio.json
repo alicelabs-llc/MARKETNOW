@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8720326",
+  "certificate_id": "MN-SC-2026-5015070",
   "skill_id": "mn-real-opencodestudio",
   "skill_name": "opencode-studio",
-  "issued_at": "2026-07-15T01:25:20.326Z",
-  "expires_at": "2026-07-22T01:25:20.326Z",
+  "issued_at": "2026-07-19T04:23:35.070Z",
+  "expires_at": "2026-07-26T04:23:35.070Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "69d9a4840ba946d5fd5845beebfb9a1b77c158cacd1d458ba9fbabe3747783af",
+  "signature": "517cfd4e9132596bc9d9fd52651a835222d03d163e884a843c11e25f1bc8f880",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opencodestudio"
 }

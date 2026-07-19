@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8948140",
+  "certificate_id": "MN-SC-2026-5244972",
   "skill_id": "mn-real-mcpagentmail",
   "skill_name": "mcp_agent_mail",
-  "issued_at": "2026-07-15T01:29:08.140Z",
-  "expires_at": "2026-07-22T01:29:08.140Z",
+  "issued_at": "2026-07-19T04:27:24.972Z",
+  "expires_at": "2026-07-26T04:27:24.972Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9cb77429f8edee16d726eee942807005a2c41ebff464448d9b2380200b3be30f",
+  "signature": "81656aa3dfb7eab94242d3577b34d4e79a851b122e2e07a8011ceb106050c1cb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpagentmail"
 }

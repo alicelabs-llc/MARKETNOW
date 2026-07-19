@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8929724",
+  "certificate_id": "MN-SC-2026-5227657",
   "skill_id": "mn-real-apifoxmcp",
   "skill_name": "apifox-mcp",
-  "issued_at": "2026-07-15T01:28:49.724Z",
-  "expires_at": "2026-07-22T01:28:49.724Z",
+  "issued_at": "2026-07-19T04:27:07.657Z",
+  "expires_at": "2026-07-26T04:27:07.657Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85004f842a987d5046f64e01973c6ad0d4236d16399c0a9ecdb9e599f2fc9e1f",
+  "signature": "541acabade4f617a86bf77fdc1c5c03b4e04517e1dd8335c6c29fa3cf39d3605",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apifoxmcp"
 }

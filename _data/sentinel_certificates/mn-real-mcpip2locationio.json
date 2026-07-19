@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8615754",
+  "certificate_id": "MN-SC-2026-4909193",
   "skill_id": "mn-real-mcpip2locationio",
   "skill_name": "mcp-ip2location-io",
-  "issued_at": "2026-07-15T01:23:35.754Z",
-  "expires_at": "2026-07-22T01:23:35.754Z",
+  "issued_at": "2026-07-19T04:21:49.193Z",
+  "expires_at": "2026-07-26T04:21:49.193Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7d64c46f72a9b24b3af78b24e7691a8de3f61d00cc937e547bc2cd910db435e4",
+  "signature": "3690baadf7fc1fcb31bd88736fa8222259712efa147f5197e1381b9651397ca0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpip2locationio"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9193149",
+  "certificate_id": "MN-SC-2026-5483880",
   "skill_id": "mn-real-kamekamegooglecalend",
   "skill_name": "googlecalendar-mcp",
-  "issued_at": "2026-07-15T01:33:13.149Z",
-  "expires_at": "2026-07-22T01:33:13.149Z",
+  "issued_at": "2026-07-19T04:31:23.880Z",
+  "expires_at": "2026-07-26T04:31:23.880Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9c81199a5b3c6553137057ee6b27d7ba868e35005e4c0351b25c27f72b4a1b64",
+  "signature": "468f4825833bd739087a53efe045da5cb3f379a06ad19f156c945d05ad22f2fd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kamekamegooglecalend"
 }

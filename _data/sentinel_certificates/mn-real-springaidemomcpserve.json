@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9206077",
+  "certificate_id": "MN-SC-2026-5496136",
   "skill_id": "mn-real-springaidemomcpserve",
   "skill_name": "spring-ai-demo-mcp-server",
-  "issued_at": "2026-07-15T01:33:26.077Z",
-  "expires_at": "2026-07-22T01:33:26.077Z",
+  "issued_at": "2026-07-19T04:31:36.136Z",
+  "expires_at": "2026-07-26T04:31:36.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ecdead5ca7d292e8012d360edfbdad9e108a4948d0c63d842803c85c2f69ec0a",
+  "signature": "10c2af801d0e68c719e40a5b011b63ea249ab08f8ffec4b01c2dc178fbaca7b2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-springaidemomcpserve"
 }

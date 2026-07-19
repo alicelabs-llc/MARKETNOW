@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8427839",
+  "certificate_id": "MN-SC-2026-4717789",
   "skill_id": "mn-awmcp-aidiagrammakermcp",
   "skill_name": "ai-diagram-maker-mcp",
-  "issued_at": "2026-07-15T01:20:27.839Z",
-  "expires_at": "2026-07-22T01:20:27.839Z",
+  "issued_at": "2026-07-19T04:18:37.789Z",
+  "expires_at": "2026-07-26T04:18:37.789Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 2,
     "l2_execution_status": "ran"
   },
-  "signature": "0f9a1c44cd03a87ef60cbeae84e21d403df5f11985bf8d192143091a2e3d88fb",
+  "signature": "e0b9836064ef0aa7a4ee8a0336bf424a4168377904a96cc63baaec845c0062c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-aidiagrammakermcp"
 }

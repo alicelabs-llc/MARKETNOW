@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9076306",
+  "certificate_id": "MN-SC-2026-5367523",
   "skill_id": "mn-real-farcasteragent",
   "skill_name": "farcaster-agent",
-  "issued_at": "2026-07-15T01:31:16.306Z",
-  "expires_at": "2026-07-22T01:31:16.306Z",
+  "issued_at": "2026-07-19T04:29:27.523Z",
+  "expires_at": "2026-07-26T04:29:27.523Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2486c82314535287992246bc982070597881b3f18676c44b361b53d1e8109cde",
+  "signature": "aab1284f16bfd5da150f19a40051c1c0013af5e60986967a9389f87052c80214",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-farcasteragent"
 }

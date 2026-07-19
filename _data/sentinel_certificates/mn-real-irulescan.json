@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8788244",
+  "certificate_id": "MN-SC-2026-5083229",
   "skill_id": "mn-real-irulescan",
   "skill_name": "irulescan",
-  "issued_at": "2026-07-15T01:26:28.244Z",
-  "expires_at": "2026-07-22T01:26:28.244Z",
+  "issued_at": "2026-07-19T04:24:43.229Z",
+  "expires_at": "2026-07-26T04:24:43.229Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f73c2fe8465e886e0514303f16946b4d9134f555ec1d97b14cdbd24c78977c2f",
+  "signature": "920bdcb914a9d6099695baafd57cff0e92007fd87864341a847d666b2fa68998",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-irulescan"
 }

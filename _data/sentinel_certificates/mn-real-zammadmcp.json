@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8920833",
+  "certificate_id": "MN-SC-2026-5218888",
   "skill_id": "mn-real-zammadmcp",
   "skill_name": "Zammad-MCP",
-  "issued_at": "2026-07-15T01:28:40.833Z",
-  "expires_at": "2026-07-22T01:28:40.833Z",
+  "issued_at": "2026-07-19T04:26:58.888Z",
+  "expires_at": "2026-07-26T04:26:58.888Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3721f28bda5eaee49f899e10fd7bb74344ec7f63dc9f2a580edcddf7a4354a55",
+  "signature": "ff48d2fd5dd38be61cb8177c5c5d1032ec625117e55a0f62af54778d10b1a0a3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zammadmcp"
 }

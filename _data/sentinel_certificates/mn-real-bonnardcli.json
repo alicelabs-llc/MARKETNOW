@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9071713",
+  "certificate_id": "MN-SC-2026-5362966",
   "skill_id": "mn-real-bonnardcli",
   "skill_name": "bonnard-cli",
-  "issued_at": "2026-07-15T01:31:11.713Z",
-  "expires_at": "2026-07-22T01:31:11.713Z",
+  "issued_at": "2026-07-19T04:29:22.966Z",
+  "expires_at": "2026-07-26T04:29:22.966Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "94590b41ef82abc0cda3ce7bf7374d7504f23e1061064e0330745a8dd2cf2102",
+  "signature": "f83b86e1b2c3525e87530495d4befac5219462a9f83850cb35e9c2fc79413a42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bonnardcli"
 }

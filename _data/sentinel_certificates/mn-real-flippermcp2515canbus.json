@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8982334",
+  "certificate_id": "MN-SC-2026-5279548",
   "skill_id": "mn-real-flippermcp2515canbus",
   "skill_name": "flipper-MCP2515-CANBUS",
-  "issued_at": "2026-07-15T01:29:42.334Z",
-  "expires_at": "2026-07-22T01:29:42.334Z",
+  "issued_at": "2026-07-19T04:27:59.548Z",
+  "expires_at": "2026-07-26T04:27:59.548Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2ead97c2be4cdb3559115ded0a1d1b788f774f053988c81805af143a18bef65a",
+  "signature": "7f194276da8bacdb9b3baf19440d5adbecffcf1e965e4b6f1e4c1df441865473",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-flippermcp2515canbus"
 }

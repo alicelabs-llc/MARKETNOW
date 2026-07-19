@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8915661",
+  "certificate_id": "MN-SC-2026-5214125",
   "skill_id": "mn-real-wondersuiteaibugboun",
   "skill_name": "WonderSuite-Ai-Bug-Bounty",
-  "issued_at": "2026-07-15T01:28:35.661Z",
-  "expires_at": "2026-07-22T01:28:35.661Z",
+  "issued_at": "2026-07-19T04:26:54.125Z",
+  "expires_at": "2026-07-26T04:26:54.125Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a747418b4bcdd63ab850faff0966d004184df542715373815f0bd9d31ec44747",
+  "signature": "7204951148aebda15a5a702069a40b906fe58b0dd992a78715bd571b51d67215",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wondersuiteaibugboun"
 }

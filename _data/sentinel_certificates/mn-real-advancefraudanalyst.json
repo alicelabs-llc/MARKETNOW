@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9104126",
+  "certificate_id": "MN-SC-2026-5392424",
   "skill_id": "mn-real-advancefraudanalyst",
   "skill_name": "advance-fraud-analyst",
-  "issued_at": "2026-07-15T01:31:44.126Z",
-  "expires_at": "2026-07-22T01:31:44.126Z",
+  "issued_at": "2026-07-19T04:29:52.424Z",
+  "expires_at": "2026-07-26T04:29:52.424Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "761c0a98fb3ed72efa520fca1d55243ffb42456ff401bd15cfb450a7c4d665f8",
+  "signature": "b927784e4136baa1ad6d546baadfff32c11e133a6a1fb9dd139241f4a13bed14",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-advancefraudanalyst"
 }

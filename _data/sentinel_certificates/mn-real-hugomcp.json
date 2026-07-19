@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9198061",
+  "certificate_id": "MN-SC-2026-5488072",
   "skill_id": "mn-real-hugomcp",
   "skill_name": "hugo-mcp",
-  "issued_at": "2026-07-15T01:33:18.061Z",
-  "expires_at": "2026-07-22T01:33:18.061Z",
+  "issued_at": "2026-07-19T04:31:28.072Z",
+  "expires_at": "2026-07-26T04:31:28.072Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7186d11cd1173c71595143753857f8346ef3e53fc5d47c2e774b2bb81f45dff2",
+  "signature": "88dcdd1a47dcca9e879229fc7ca8e9c007401e64534065970abdf3e114a0ed4c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hugomcp"
 }

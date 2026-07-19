@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8001751",
+  "certificate_id": "MN-SC-2026-4666181",
   "skill_id": "mn-res-11538",
   "skill_name": "searchatlas-mcp-server",
-  "issued_at": "2026-07-15T01:13:21.751Z",
-  "expires_at": "2026-07-22T01:13:21.751Z",
+  "issued_at": "2026-07-19T04:17:46.181Z",
+  "expires_at": "2026-07-26T04:17:46.181Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ba47e65777239fa58f0ac0282024ac1e09940f45f3e8f40b2b993504358e7384",
+  "signature": "ebc8e0062518e598ef520a506a25fa25738d28e2840f51da38075b06673612cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-res-11538"
 }

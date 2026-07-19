@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8593598",
+  "certificate_id": "MN-SC-2026-4886882",
   "skill_id": "mn-real-opggmcp",
   "skill_name": "opgg-mcp",
-  "issued_at": "2026-07-15T01:23:13.598Z",
-  "expires_at": "2026-07-22T01:23:13.598Z",
+  "issued_at": "2026-07-19T04:21:26.882Z",
+  "expires_at": "2026-07-26T04:21:26.882Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2310f63fc247930175256e33a95a5119430a0bf4fb6539b6141ab3883021a787",
+  "signature": "66798c1f6c83203a16ddf7ed9f4c6b2a5a6afe5b925e6f416c61e1fc30006c78",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opggmcp"
 }

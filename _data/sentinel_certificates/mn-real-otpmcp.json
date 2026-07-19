@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9237559",
+  "certificate_id": "MN-SC-2026-5526442",
   "skill_id": "mn-real-otpmcp",
   "skill_name": "otp-mcp",
-  "issued_at": "2026-07-15T01:33:57.559Z",
-  "expires_at": "2026-07-22T01:33:57.559Z",
+  "issued_at": "2026-07-19T04:32:06.442Z",
+  "expires_at": "2026-07-26T04:32:06.442Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11e4269231356093f712818be8240c7c34069f5dce998b96e1cdaa36f661b605",
+  "signature": "9e578ef554a048f861d8fff2ed9c61928fb2c37e05019b676e94f78af4a518d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-otpmcp"
 }

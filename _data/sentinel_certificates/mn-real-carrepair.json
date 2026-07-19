@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9192712",
+  "certificate_id": "MN-SC-2026-5483288",
   "skill_id": "mn-real-carrepair",
   "skill_name": "car_repair",
-  "issued_at": "2026-07-15T01:33:12.712Z",
-  "expires_at": "2026-07-22T01:33:12.712Z",
+  "issued_at": "2026-07-19T04:31:23.288Z",
+  "expires_at": "2026-07-26T04:31:23.288Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93e531e1d6049101532e8647ccecdc30e05e23cd021faed491b4d202ef4d3c26",
+  "signature": "46e378333d507a213e371c87e1f4d25ae9831dd0de640ea28840e1ae1431d030",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-carrepair"
 }

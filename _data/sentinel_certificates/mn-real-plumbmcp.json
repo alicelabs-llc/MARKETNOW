@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8893505",
+  "certificate_id": "MN-SC-2026-5189633",
   "skill_id": "mn-real-plumbmcp",
   "skill_name": "plumb-mcp",
-  "issued_at": "2026-07-15T01:28:13.505Z",
-  "expires_at": "2026-07-22T01:28:13.505Z",
+  "issued_at": "2026-07-19T04:26:29.633Z",
+  "expires_at": "2026-07-26T04:26:29.633Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "82dbeccf4c45c918d9bd5322d1ee3551bd60cc61e41cd3df5248efe5c6d6696e",
+  "signature": "def5feae19e0267ec227d59a72e5b419b67b619ec303c47a34edc0fa319b44b6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-plumbmcp"
 }

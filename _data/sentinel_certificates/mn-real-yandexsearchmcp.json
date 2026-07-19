@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9206487",
+  "certificate_id": "MN-SC-2026-5496571",
   "skill_id": "mn-real-yandexsearchmcp",
   "skill_name": "yandex-search-mcp",
-  "issued_at": "2026-07-15T01:33:26.487Z",
-  "expires_at": "2026-07-22T01:33:26.487Z",
+  "issued_at": "2026-07-19T04:31:36.571Z",
+  "expires_at": "2026-07-26T04:31:36.571Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 2,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "66879a2b124d6180dd65fb31b7d12aa763976bdb69a079d9ffa8d9a1869d1789",
+  "signature": "9ca0a877f02a1d4a1481efac47968b6c8d9098f47fa40d0350319e4ceb33776b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-yandexsearchmcp"
 }

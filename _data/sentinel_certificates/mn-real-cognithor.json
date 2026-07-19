@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9018618",
+  "certificate_id": "MN-SC-2026-5315643",
   "skill_id": "mn-real-cognithor",
   "skill_name": "cognithor",
-  "issued_at": "2026-07-15T01:30:18.618Z",
-  "expires_at": "2026-07-22T01:30:18.618Z",
+  "issued_at": "2026-07-19T04:28:35.643Z",
+  "expires_at": "2026-07-26T04:28:35.643Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b60eef473d8794b088bcd27c812fa1bf922cd84edfe0547fe909540531c13b3e",
+  "signature": "33502d516c329b6bd53b55dd36f4c1689072a8da6c2477903ec3c097fedf36ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cognithor"
 }

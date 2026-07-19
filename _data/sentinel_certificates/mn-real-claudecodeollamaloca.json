@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9126427",
+  "certificate_id": "MN-SC-2026-5416945",
   "skill_id": "mn-real-claudecodeollamaloca",
   "skill_name": "claude-code-ollama-local",
-  "issued_at": "2026-07-15T01:32:06.427Z",
-  "expires_at": "2026-07-22T01:32:06.427Z",
+  "issued_at": "2026-07-19T04:30:16.945Z",
+  "expires_at": "2026-07-26T04:30:16.945Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "75cb152697f3aab59140e0922359757c79f4cceb94ff2226bccef93f06fd3e73",
+  "signature": "476c7ef7fcf76abb14cb1db696479c7b4da24102590afb64a27a6bbcdda4200b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecodeollamaloca"
 }

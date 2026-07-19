@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9222472",
+  "certificate_id": "MN-SC-2026-5512227",
   "skill_id": "mn-real-mcplawfeeds",
   "skill_name": "mcp-law-feeds",
-  "issued_at": "2026-07-15T01:33:42.472Z",
-  "expires_at": "2026-07-22T01:33:42.472Z",
+  "issued_at": "2026-07-19T04:31:52.227Z",
+  "expires_at": "2026-07-26T04:31:52.227Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "35d87649df2b5d9ac5556a31ed0d3d62ddfa686162dc11359da6296249e1e1ab",
+  "signature": "bd472c46dc5b96fb50314f80a7c117f61d3a6160d9f7ad1bfe583b9ccf90dd27",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcplawfeeds"
 }

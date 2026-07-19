@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8473354",
+  "certificate_id": "MN-SC-2026-4765462",
   "skill_id": "mn-awmcp-killprocessmcp",
   "skill_name": "kill-process-mcp",
-  "issued_at": "2026-07-15T01:21:13.354Z",
-  "expires_at": "2026-07-22T01:21:13.354Z",
+  "issued_at": "2026-07-19T04:19:25.462Z",
+  "expires_at": "2026-07-26T04:19:25.462Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fe94b6b298d741740423cb1d9f9330dbf0bd3a87899133599a3032c3cf6172f4",
+  "signature": "6754a2690c146aa5b6cd606012424483c3748f66231b3c9e9068925ff20076be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-killprocessmcp"
 }

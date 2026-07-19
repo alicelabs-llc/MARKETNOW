@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8540286",
+  "certificate_id": "MN-SC-2026-4832116",
   "skill_id": "mn-real-mcpgatewayscan",
   "skill_name": "mcp-gateway-scan",
-  "issued_at": "2026-07-15T01:22:20.286Z",
-  "expires_at": "2026-07-22T01:22:20.286Z",
+  "issued_at": "2026-07-19T04:20:32.116Z",
+  "expires_at": "2026-07-26T04:20:32.116Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4292096b31ab83648ef2987647382631e3e7d4d45dd37669100dd33ef0da8ef2",
+  "signature": "1468f581a8d04ac57514d9c430f8c9ce377e546d883bf7d65b015bd7f0caf15e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpgatewayscan"
 }

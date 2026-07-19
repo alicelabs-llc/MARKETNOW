@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8459555",
+  "certificate_id": "MN-SC-2026-4751651",
   "skill_id": "mn-awmcp-kubefwd",
   "skill_name": "kubefwd",
-  "issued_at": "2026-07-15T01:20:59.555Z",
-  "expires_at": "2026-07-22T01:20:59.555Z",
+  "issued_at": "2026-07-19T04:19:11.651Z",
+  "expires_at": "2026-07-26T04:19:11.651Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "77935d58bcc9e4954610ee35c9c60e29d6a37174b0d0a73e6c835e873ea88d8e",
+  "signature": "2ecc0e5b86dbf2f54149173e44a23d089850534cf8a09a510c0080392f09c660",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-kubefwd"
 }

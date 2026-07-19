@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8520162",
+  "certificate_id": "MN-SC-2026-4811893",
   "skill_id": "mn-real-swaggertestcasemcp",
   "skill_name": "swagger-testcase-mcp",
-  "issued_at": "2026-07-15T01:22:00.162Z",
-  "expires_at": "2026-07-22T01:22:00.162Z",
+  "issued_at": "2026-07-19T04:20:11.893Z",
+  "expires_at": "2026-07-26T04:20:11.893Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d96c0e5d22084e851f636b0e268f3a09a512b6e8866df5e8ff6ac396469f7860",
+  "signature": "1a1a69b78718683a15578600ab3665aa64332988bd818d3bdeba859c75465245",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-swaggertestcasemcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9173768",
+  "certificate_id": "MN-SC-2026-5464054",
   "skill_id": "mn-real-localcodingagent",
   "skill_name": "local-coding-agent",
-  "issued_at": "2026-07-15T01:32:53.768Z",
-  "expires_at": "2026-07-22T01:32:53.768Z",
+  "issued_at": "2026-07-19T04:31:04.054Z",
+  "expires_at": "2026-07-26T04:31:04.054Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b4561c449fae6095cf21714011e8bfca07e6478c698c3719353e46ade31d4f0b",
+  "signature": "45d5c9508c2ee0ec87c1003762ee02ed349d46fe6a494fa44fcf30cd5906bf80",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-localcodingagent"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8649522",
+  "certificate_id": "MN-SC-2026-4945934",
   "skill_id": "mn-real-trustboostapi",
   "skill_name": "trustboost-api",
-  "issued_at": "2026-07-15T01:24:09.522Z",
-  "expires_at": "2026-07-22T01:24:09.522Z",
+  "issued_at": "2026-07-19T04:22:25.934Z",
+  "expires_at": "2026-07-26T04:22:25.934Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "622bfc6d94d19473f60ebbb6e31e145c14aaa6bb1c4a1412885ecb600023cf8e",
+  "signature": "00e52fc07fde6486bfd26b6bf82504e56f93ff0ad5c1e95f6478d03006ad0a12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-trustboostapi"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8892207",
+  "certificate_id": "MN-SC-2026-5188285",
   "skill_id": "mn-real-chucknorris",
   "skill_name": "chucknorris",
-  "issued_at": "2026-07-15T01:28:12.207Z",
-  "expires_at": "2026-07-22T01:28:12.207Z",
+  "issued_at": "2026-07-19T04:26:28.285Z",
+  "expires_at": "2026-07-26T04:26:28.285Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f815bd86b5c8940bf23389cda8ce73153beca5c3b498058ed83785e263edb7bf",
+  "signature": "ca9a0939c8e1a6bac5829d13baf56455f1e4e91a5614698865eb67c4abd2aea2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chucknorris"
 }

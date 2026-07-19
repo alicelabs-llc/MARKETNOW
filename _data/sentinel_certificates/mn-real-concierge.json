@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8803481",
+  "certificate_id": "MN-SC-2026-5099287",
   "skill_id": "mn-real-concierge",
   "skill_name": "concierge",
-  "issued_at": "2026-07-15T01:26:43.481Z",
-  "expires_at": "2026-07-22T01:26:43.481Z",
+  "issued_at": "2026-07-19T04:24:59.287Z",
+  "expires_at": "2026-07-26T04:24:59.287Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a4648a3951e71c83284bcef9c1346bf49b191bd34edd83d88b989e8f903845d9",
+  "signature": "031a7d97059d6951bc276b3a36b68974adc405b20618918cd169edf1ede0498e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-concierge"
 }

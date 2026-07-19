@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9089896",
+  "certificate_id": "MN-SC-2026-5378386",
   "skill_id": "mn-real-langextract",
   "skill_name": "langextract",
-  "issued_at": "2026-07-15T01:31:29.896Z",
-  "expires_at": "2026-07-22T01:31:29.896Z",
+  "issued_at": "2026-07-19T04:29:38.386Z",
+  "expires_at": "2026-07-26T04:29:38.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "538dabab3cf4a49998201cc3051d750d2f4c93b664463960b4b4786b5dd67de9",
+  "signature": "117b9af2309bd0c89003bfae76983d936431bcc3ff22bb4c1a518982b822a930",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-langextract"
 }

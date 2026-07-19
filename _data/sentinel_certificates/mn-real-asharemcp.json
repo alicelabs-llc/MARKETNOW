@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8586496",
+  "certificate_id": "MN-SC-2026-4879642",
   "skill_id": "mn-real-asharemcp",
   "skill_name": "ashare-mcp",
-  "issued_at": "2026-07-15T01:23:06.496Z",
-  "expires_at": "2026-07-22T01:23:06.496Z",
+  "issued_at": "2026-07-19T04:21:19.642Z",
+  "expires_at": "2026-07-26T04:21:19.642Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e05100d7bf59983381b091e975fede95e20b2555a8d9c753182533f4d0131087",
+  "signature": "e15ba3f0eeb43ba9ab5f944e09b8a01d7585db6d46c004ddb273d0394bf0e14c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-asharemcp"
 }

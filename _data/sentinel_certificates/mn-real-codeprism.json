@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8932952",
+  "certificate_id": "MN-SC-2026-5230884",
   "skill_id": "mn-real-codeprism",
   "skill_name": "codeprism",
-  "issued_at": "2026-07-15T01:28:52.952Z",
-  "expires_at": "2026-07-22T01:28:52.952Z",
+  "issued_at": "2026-07-19T04:27:10.884Z",
+  "expires_at": "2026-07-26T04:27:10.884Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "efeb2350fa6bf77a4342788ae9f82126625061f36ba41969574c66e392b97870",
+  "signature": "d68f222e13a8dd9b56410b8c71a42887da48ef1464ba49aaeef1fcc9e4c55f02",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codeprism"
 }

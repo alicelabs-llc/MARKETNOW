@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8785295",
+  "certificate_id": "MN-SC-2026-5080376",
   "skill_id": "mn-real-cljkondomcp",
   "skill_name": "clj-kondo-MCP",
-  "issued_at": "2026-07-15T01:26:25.295Z",
-  "expires_at": "2026-07-22T01:26:25.295Z",
+  "issued_at": "2026-07-19T04:24:40.376Z",
+  "expires_at": "2026-07-26T04:24:40.376Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a9e1afbd864d3855e79b498edbf80219c6764c99f465d695eedf0e5db86e393",
+  "signature": "3fda4fa4e5bcdd845acd0f8a83c7b762957682cd105c958185f561da3c1466be",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cljkondomcp"
 }

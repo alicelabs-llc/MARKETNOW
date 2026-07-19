@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9170476",
+  "certificate_id": "MN-SC-2026-5460840",
   "skill_id": "mn-real-gmailmcpserver",
   "skill_name": "gmail-mcp-server",
-  "issued_at": "2026-07-15T01:32:50.476Z",
-  "expires_at": "2026-07-22T01:32:50.476Z",
+  "issued_at": "2026-07-19T04:31:00.840Z",
+  "expires_at": "2026-07-26T04:31:00.840Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbb25da919731fbad8c90558b2bccdd76d938a14a373ac0e13840924d1291764",
+  "signature": "49ac93b924d42a63772b5ac9ea25593e3ae07dce41df96274263f6f68127cf7a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gmailmcpserver"
 }

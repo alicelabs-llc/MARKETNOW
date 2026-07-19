@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9211059",
+  "certificate_id": "MN-SC-2026-5500935",
   "skill_id": "mn-real-signalmcpspec",
   "skill_name": "signal-MCP-spec",
-  "issued_at": "2026-07-15T01:33:31.059Z",
-  "expires_at": "2026-07-22T01:33:31.059Z",
+  "issued_at": "2026-07-19T04:31:40.935Z",
+  "expires_at": "2026-07-26T04:31:40.935Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "24a9b202da26f42be930cb49810aab28e2d8dd5795282a9cae77e40d82c13afb",
+  "signature": "01e3c60d3391f9c51d00f7cf2d1f4afe654979901d8a5c2c26992670467920b8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-signalmcpspec"
 }

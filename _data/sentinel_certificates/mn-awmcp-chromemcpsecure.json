@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8442626",
+  "certificate_id": "MN-SC-2026-4734425",
   "skill_id": "mn-awmcp-chromemcpsecure",
   "skill_name": "chrome-mcp-secure",
-  "issued_at": "2026-07-15T01:20:42.626Z",
-  "expires_at": "2026-07-22T01:20:42.626Z",
+  "issued_at": "2026-07-19T04:18:54.425Z",
+  "expires_at": "2026-07-26T04:18:54.425Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "26e01eea5b1aa210892327e1033ef74651962253a71164de04b8f3603da0ac19",
+  "signature": "f8e06e25d802c1e51dda47825335ff7cef09bf5d2e1fbecdb03aac4fa4a363a8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-chromemcpsecure"
 }

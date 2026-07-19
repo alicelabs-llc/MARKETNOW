@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8549058",
+  "certificate_id": "MN-SC-2026-4841197",
   "skill_id": "mn-real-embeddeddebuggermcp",
   "skill_name": "embedded-debugger-mcp",
-  "issued_at": "2026-07-15T01:22:29.058Z",
-  "expires_at": "2026-07-22T01:22:29.058Z",
+  "issued_at": "2026-07-19T04:20:41.197Z",
+  "expires_at": "2026-07-26T04:20:41.197Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6ad6cb8220b0768dca8deffa272d3405b0ba912c63394102c836292315a9b061",
+  "signature": "04f562b8b544a413617d0be111d89ba24b3d5fc8f0345d47550802f5f55567d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-embeddeddebuggermcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8406814",
+  "certificate_id": "MN-SC-2026-4696886",
   "skill_id": "mn-awmcp-mcpgtmsuite",
   "skill_name": "mcp-gtm-suite",
-  "issued_at": "2026-07-15T01:20:06.814Z",
-  "expires_at": "2026-07-22T01:20:06.814Z",
+  "issued_at": "2026-07-19T04:18:16.886Z",
+  "expires_at": "2026-07-26T04:18:16.886Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "0f9c2ba1b4642a0c83063ab3d6383c0057e0828792286a77765c7dd5d54093f1",
+  "signature": "44f9e39ef4360875fb64bcb8ae9d6d549f4e2a3516ff0a6cfe976f3650056f1e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpgtmsuite"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9145566",
+  "certificate_id": "MN-SC-2026-5436373",
   "skill_id": "mn-real-awesomeweread",
   "skill_name": "awesome-weread",
-  "issued_at": "2026-07-15T01:32:25.566Z",
-  "expires_at": "2026-07-22T01:32:25.566Z",
+  "issued_at": "2026-07-19T04:30:36.373Z",
+  "expires_at": "2026-07-26T04:30:36.373Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "872617f8a76e18b0f109c97bfdc0804aa0e77cf77d26b66e5bb3aa6c739327a3",
+  "signature": "25dcb08084e0539e33ff4744f814235665334abc98d6cb37ec2fd2a1511fae15",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-awesomeweread"
 }

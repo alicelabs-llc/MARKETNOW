@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8447867",
+  "certificate_id": "MN-SC-2026-4739787",
   "skill_id": "mn-awmcp-awsmcpserver",
   "skill_name": "aws-mcp-server",
-  "issued_at": "2026-07-15T01:20:47.867Z",
-  "expires_at": "2026-07-22T01:20:47.867Z",
+  "issued_at": "2026-07-19T04:18:59.787Z",
+  "expires_at": "2026-07-26T04:18:59.787Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15068753abaff6e154c3ce8789c54526b0dc112f3a147ec6b016049c5fc23a33",
+  "signature": "c6921a99ff6a55f1fef31cc20a59681777bafd081e6ecdaf6d98b37a296919ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-awsmcpserver"
 }

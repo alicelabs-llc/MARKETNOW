@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7977129",
+  "certificate_id": "MN-SC-2026-4642863",
   "skill_id": "mn-sec-07518",
   "skill_name": "mcp-security-audit",
-  "issued_at": "2026-07-15T01:12:57.129Z",
-  "expires_at": "2026-07-22T01:12:57.129Z",
+  "issued_at": "2026-07-19T04:17:22.863Z",
+  "expires_at": "2026-07-26T04:17:22.863Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0272a9ac0f7f54deb5a4cc1a5fa6e418b8d17c82d57af23af53389fc08ba65da",
+  "signature": "af8e1f98be21741cbe0312919eb297a2af09414ab4e499a37c7e0863875d6280",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-sec-07518"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8744283",
+  "certificate_id": "MN-SC-2026-5039715",
   "skill_id": "mn-real-mangabaai",
   "skill_name": "mangaba_ai",
-  "issued_at": "2026-07-15T01:25:44.283Z",
-  "expires_at": "2026-07-22T01:25:44.283Z",
+  "issued_at": "2026-07-19T04:23:59.715Z",
+  "expires_at": "2026-07-26T04:23:59.715Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c233997290a6e143a2dad927669cfef36e02d8247d4b4e3c8ea17d7e884912fd",
+  "signature": "7f8b702f8216001727a5c348a1e5960ed5910d0ebbf1d60ca3f223628bf8a21f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mangabaai"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9193451",
+  "certificate_id": "MN-SC-2026-5484055",
   "skill_id": "mn-real-mcpbluetoothspecific",
   "skill_name": "mcp-bluetooth-specification",
-  "issued_at": "2026-07-15T01:33:13.451Z",
-  "expires_at": "2026-07-22T01:33:13.451Z",
+  "issued_at": "2026-07-19T04:31:24.055Z",
+  "expires_at": "2026-07-26T04:31:24.055Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c9657f3816709703e4c2bc91f7c8db9477a74b933204983ace5d7470baeba69",
+  "signature": "7bc4b9ad8f9720c5e88526d9b6f9ce176d64480c16366e3925377fad7370b38f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpbluetoothspecific"
 }

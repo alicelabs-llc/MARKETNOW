@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9078644",
+  "certificate_id": "MN-SC-2026-5369962",
   "skill_id": "mn-real-mcpagentframework",
   "skill_name": "mcp-agent-framework",
-  "issued_at": "2026-07-15T01:31:18.644Z",
-  "expires_at": "2026-07-22T01:31:18.644Z",
+  "issued_at": "2026-07-19T04:29:29.962Z",
+  "expires_at": "2026-07-26T04:29:29.962Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03f591c6a5526d1a831377b02e4080949bc07d80fb85b93214097fd820f7c810",
+  "signature": "4116de21eeccdcebf6493b59429532ec837c3edd0547fc64d49b228ffeefc37d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpagentframework"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9149297",
+  "certificate_id": "MN-SC-2026-5440072",
   "skill_id": "mn-real-fluxgitmcpserver",
   "skill_name": "fluxgit-mcp-server",
-  "issued_at": "2026-07-15T01:32:29.297Z",
-  "expires_at": "2026-07-22T01:32:29.297Z",
+  "issued_at": "2026-07-19T04:30:40.072Z",
+  "expires_at": "2026-07-26T04:30:40.072Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ee96eed15ba289ec3f9cc47d2ec0fb6e2e49a76ba0b4f394ced9db6f3eec34e4",
+  "signature": "4ae68be53384986bddba83d557d9f8ab5b1f397b0e221076c98bcd59861b9830",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fluxgitmcpserver"
 }

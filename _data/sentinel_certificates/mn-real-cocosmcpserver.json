@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8735589",
+  "certificate_id": "MN-SC-2026-5030784",
   "skill_id": "mn-real-cocosmcpserver",
   "skill_name": "cocos-mcp-server",
-  "issued_at": "2026-07-15T01:25:35.589Z",
-  "expires_at": "2026-07-22T01:25:35.589Z",
+  "issued_at": "2026-07-19T04:23:50.784Z",
+  "expires_at": "2026-07-26T04:23:50.784Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93a57665630fba38891cdd5e48c4390bc4702533d1f580a1af89752d773f32ab",
+  "signature": "881c416b140f2bfc624de85487e06057003198573895bbc93afbf21fa5df208f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cocosmcpserver"
 }

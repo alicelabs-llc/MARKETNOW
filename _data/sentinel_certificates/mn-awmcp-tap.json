@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8439103",
+  "certificate_id": "MN-SC-2026-4730554",
   "skill_id": "mn-awmcp-tap",
   "skill_name": "tap",
-  "issued_at": "2026-07-15T01:20:39.103Z",
-  "expires_at": "2026-07-22T01:20:39.103Z",
+  "issued_at": "2026-07-19T04:18:50.554Z",
+  "expires_at": "2026-07-26T04:18:50.554Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "667da7da52035b3480644a2f54dfb281686fddcf2e5dce68f51e71dc765c26d3",
+  "signature": "87961d36a12a3a63dac621ed5697326403717668138eecf2803533df97904993",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-tap"
 }

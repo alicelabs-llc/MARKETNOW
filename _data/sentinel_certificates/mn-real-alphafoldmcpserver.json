@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8922341",
+  "certificate_id": "MN-SC-2026-5220310",
   "skill_id": "mn-real-alphafoldmcpserver",
   "skill_name": "AlphaFold-MCP-Server",
-  "issued_at": "2026-07-15T01:28:42.341Z",
-  "expires_at": "2026-07-22T01:28:42.341Z",
+  "issued_at": "2026-07-19T04:27:00.310Z",
+  "expires_at": "2026-07-26T04:27:00.310Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "da35ce7a90b39e9f5746e8fc9eadeec61048722bdc5c05f01ed8878f5073f072",
+  "signature": "4805f8afcae3471b071fbc9d004bf9d9bf8c3cbc7dc6ae653ec87d8f77d48003",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alphafoldmcpserver"
 }

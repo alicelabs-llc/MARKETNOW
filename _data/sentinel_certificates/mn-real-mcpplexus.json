@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8798495",
+  "certificate_id": "MN-SC-2026-5094027",
   "skill_id": "mn-real-mcpplexus",
   "skill_name": "mcp_plexus",
-  "issued_at": "2026-07-15T01:26:38.495Z",
-  "expires_at": "2026-07-22T01:26:38.495Z",
+  "issued_at": "2026-07-19T04:24:54.027Z",
+  "expires_at": "2026-07-26T04:24:54.027Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c3f0216e6069095f42f651645cf1cd5ecd50cab6526e6b81cd977a37bae88fab",
+  "signature": "819d8b7f176fbbbad3ea78d57a65ecc664ae176ae3726f90589791d213470138",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpplexus"
 }

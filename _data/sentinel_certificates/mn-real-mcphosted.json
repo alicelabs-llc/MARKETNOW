@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8845519",
+  "certificate_id": "MN-SC-2026-5141883",
   "skill_id": "mn-real-mcphosted",
   "skill_name": "mcp-hosted",
-  "issued_at": "2026-07-15T01:27:25.519Z",
-  "expires_at": "2026-07-22T01:27:25.519Z",
+  "issued_at": "2026-07-19T04:25:41.883Z",
+  "expires_at": "2026-07-26T04:25:41.883Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c9a13fd7ccc77798ea0bac09fd627d25bc6e70883881c4ba75781ed312bb89b6",
+  "signature": "efda6b612049103dff510c8775acaae35a2d3e31ed44ddefbb0a39016235b2b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcphosted"
 }

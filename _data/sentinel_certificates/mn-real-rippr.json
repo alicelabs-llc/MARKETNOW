@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8637615",
+  "certificate_id": "MN-SC-2026-4932919",
   "skill_id": "mn-real-rippr",
   "skill_name": "rippr",
-  "issued_at": "2026-07-15T01:23:57.615Z",
-  "expires_at": "2026-07-22T01:23:57.615Z",
+  "issued_at": "2026-07-19T04:22:12.919Z",
+  "expires_at": "2026-07-26T04:22:12.919Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f4e1b4ae8e1537814ec6345aa01f567176d5a9b696ef748caffcaeef4fa00942",
+  "signature": "90e17416a51e34525e93b7c0ca85f819f0015548290d3c6413deee55a560b95b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rippr"
 }

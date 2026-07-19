@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9099087",
+  "certificate_id": "MN-SC-2026-5387691",
   "skill_id": "mn-real-socratic",
   "skill_name": "Socratic",
-  "issued_at": "2026-07-15T01:31:39.087Z",
-  "expires_at": "2026-07-22T01:31:39.087Z",
+  "issued_at": "2026-07-19T04:29:47.691Z",
+  "expires_at": "2026-07-26T04:29:47.691Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "52ba8596f80a45c141b6c90b3a321d724df54c5d60ff5d47ece3d17e301f1a34",
+  "signature": "cdbcd8e3654a76f95cec405976b89f59d360b31afba6dabdd50f46b061cb82d9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-socratic"
 }

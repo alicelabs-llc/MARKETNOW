@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8572942",
+  "certificate_id": "MN-SC-2026-4865672",
   "skill_id": "mn-real-dexpoolsmcp",
   "skill_name": "dex-pools-mcp",
-  "issued_at": "2026-07-15T01:22:52.942Z",
-  "expires_at": "2026-07-22T01:22:52.942Z",
+  "issued_at": "2026-07-19T04:21:05.672Z",
+  "expires_at": "2026-07-26T04:21:05.672Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a0ae0a69f014cb800790c3638738b56db92b7a3bd1c51ca66386bff34942aae5",
+  "signature": "30566413a8ef14c0ab7b1ef39233c7f66b080fcdac8d14c3dcc755a18189daf0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dexpoolsmcp"
 }

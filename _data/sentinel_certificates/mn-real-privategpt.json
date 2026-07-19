@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9240381",
+  "certificate_id": "MN-SC-2026-5529397",
   "skill_id": "mn-real-privategpt",
   "skill_name": "private-gpt",
-  "issued_at": "2026-07-15T01:34:00.381Z",
-  "expires_at": "2026-07-22T01:34:00.381Z",
+  "issued_at": "2026-07-19T04:32:09.397Z",
+  "expires_at": "2026-07-26T04:32:09.397Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6ab5af6938609f1c57255ac343a077be84d76fb2546b8ef2950231009e818d4",
+  "signature": "5e8d8494f3d6eba82cbbbc662bdf2324dc314469a32a1d0c0fef67098661b5c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-privategpt"
 }

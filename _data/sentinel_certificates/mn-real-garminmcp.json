@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8952193",
+  "certificate_id": "MN-SC-2026-5248982",
   "skill_id": "mn-real-garminmcp",
   "skill_name": "garmin_mcp",
-  "issued_at": "2026-07-15T01:29:12.193Z",
-  "expires_at": "2026-07-22T01:29:12.193Z",
+  "issued_at": "2026-07-19T04:27:28.982Z",
+  "expires_at": "2026-07-26T04:27:28.982Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "471e7e4cde07301b4a21818d53ab8b719e8bdadcbe4ebc5a8935e90e0b5a6c8e",
+  "signature": "850dd86570891da314aee60392ab82ded8de5a6809871749815cb4eb41b558ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-garminmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8409364",
+  "certificate_id": "MN-SC-2026-4698313",
   "skill_id": "mn-awmcp-openapimcpgateway",
   "skill_name": "openapi-mcp-gateway",
-  "issued_at": "2026-07-15T01:20:09.364Z",
-  "expires_at": "2026-07-22T01:20:09.364Z",
+  "issued_at": "2026-07-19T04:18:18.313Z",
+  "expires_at": "2026-07-26T04:18:18.313Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "cc6da46f4d99a83a7b77973e8f142f9825568c7eff57434b7e0c969448f62010",
+  "signature": "d4216081f3667707661487b976d92a59e3b3043b23766cd7a4194b85f97ce74a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-openapimcpgateway"
 }

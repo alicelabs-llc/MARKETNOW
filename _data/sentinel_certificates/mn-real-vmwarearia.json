@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8627473",
+  "certificate_id": "MN-SC-2026-4920797",
   "skill_id": "mn-real-vmwarearia",
   "skill_name": "VMware-Aria",
-  "issued_at": "2026-07-15T01:23:47.473Z",
-  "expires_at": "2026-07-22T01:23:47.473Z",
+  "issued_at": "2026-07-19T04:22:00.797Z",
+  "expires_at": "2026-07-26T04:22:00.797Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "800e76587cc5a987878085b32e1a04e9dfcb2a5ef40805327945f9f5f9369357",
+  "signature": "05be949e0f929555c2b7bbafec4aba89b9c317fe7c625855029ec7fcbb26c99e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vmwarearia"
 }

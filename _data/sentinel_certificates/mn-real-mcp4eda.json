@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9026361",
+  "certificate_id": "MN-SC-2026-5323221",
   "skill_id": "mn-real-mcp4eda",
   "skill_name": "MCP4EDA",
-  "issued_at": "2026-07-15T01:30:26.361Z",
-  "expires_at": "2026-07-22T01:30:26.361Z",
+  "issued_at": "2026-07-19T04:28:43.221Z",
+  "expires_at": "2026-07-26T04:28:43.221Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de19eed7a9384783c2d76a4d24869f3479669dbcfbf6f88946568d88f78c695d",
+  "signature": "32a28888644ae9be263070204f24866fd551534a50f6768302db47ef7587d8a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcp4eda"
 }

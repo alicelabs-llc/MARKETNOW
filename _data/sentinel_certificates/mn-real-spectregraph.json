@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9071189",
+  "certificate_id": "MN-SC-2026-5362356",
   "skill_id": "mn-real-spectregraph",
   "skill_name": "spectre-graph",
-  "issued_at": "2026-07-15T01:31:11.189Z",
-  "expires_at": "2026-07-22T01:31:11.189Z",
+  "issued_at": "2026-07-19T04:29:22.356Z",
+  "expires_at": "2026-07-26T04:29:22.356Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e268f0b10234864c6d9df54f49fe8591d0fb0f3faa91353e4394e246d325629b",
+  "signature": "f6699bc6825f18ecb5f8d2023528674d29f009b3f6f3061b481f9b8385f73771",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-spectregraph"
 }

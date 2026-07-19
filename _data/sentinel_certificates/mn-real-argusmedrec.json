@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9215574",
+  "certificate_id": "MN-SC-2026-5505534",
   "skill_id": "mn-real-argusmedrec",
   "skill_name": "argus-medrec",
-  "issued_at": "2026-07-15T01:33:35.574Z",
-  "expires_at": "2026-07-22T01:33:35.574Z",
+  "issued_at": "2026-07-19T04:31:45.534Z",
+  "expires_at": "2026-07-26T04:31:45.534Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "54c79c928b3332a0b2745b98bf1938fde6298f4b60a957f27f61989a49a44e02",
+  "signature": "4597d6d3bdad3a5b4aef5fe6c9352ed08e55133f22ae42addef6e2acd6484a97",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-argusmedrec"
 }

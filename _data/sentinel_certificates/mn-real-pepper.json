@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8856006",
+  "certificate_id": "MN-SC-2026-5152254",
   "skill_id": "mn-real-pepper",
   "skill_name": "Pepper",
-  "issued_at": "2026-07-15T01:27:36.006Z",
-  "expires_at": "2026-07-22T01:27:36.006Z",
+  "issued_at": "2026-07-19T04:25:52.254Z",
+  "expires_at": "2026-07-26T04:25:52.254Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "60ce1005a78f35c19955c990a4e169ebebbfac542d71f44cf51e6986e9168ceb",
+  "signature": "b59b6fba1574b68acd2463eca4c338a528a8f6a80d47ef3a43dd2bd91a34e408",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pepper"
 }

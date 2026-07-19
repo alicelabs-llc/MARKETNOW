@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8423376",
+  "certificate_id": "MN-SC-2026-4714131",
   "skill_id": "mn-awmcp-mayamcp",
   "skill_name": "MayaMCP",
-  "issued_at": "2026-07-15T01:20:23.376Z",
-  "expires_at": "2026-07-22T01:20:23.376Z",
+  "issued_at": "2026-07-19T04:18:34.131Z",
+  "expires_at": "2026-07-26T04:18:34.131Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "ed90600f7ddbfdc02b78112ecf27524fbfafe659224ba2b6320eafcf5bdb77fb",
+  "signature": "993f9f57695f50d8b8bdd640dcedd07bf0581b61967e8bef0bffb9b72daa66bc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mayamcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9043148",
+  "certificate_id": "MN-SC-2026-5338219",
   "skill_id": "mn-real-vsync",
   "skill_name": "vsync",
-  "issued_at": "2026-07-15T01:30:43.148Z",
-  "expires_at": "2026-07-22T01:30:43.148Z",
+  "issued_at": "2026-07-19T04:28:58.219Z",
+  "expires_at": "2026-07-26T04:28:58.219Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b4e4f0943860e24425cc705ba8fb60c9192e4f376a330ca8f1886b7344c6266",
+  "signature": "051ac6c14982f0ac52d0c4a5528a420daf0b049d1e3d3917919f6f7f92688343",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vsync"
 }

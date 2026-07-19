@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8852856",
+  "certificate_id": "MN-SC-2026-5148981",
   "skill_id": "mn-real-djangoaiboost",
   "skill_name": "django-ai-boost",
-  "issued_at": "2026-07-15T01:27:32.856Z",
-  "expires_at": "2026-07-22T01:27:32.856Z",
+  "issued_at": "2026-07-19T04:25:48.981Z",
+  "expires_at": "2026-07-26T04:25:48.981Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "79b826a440d4c6eb861a9be5257beb17df2f97a4840e5e6190a096462843f067",
+  "signature": "2a0f7b2cc2f9dcb8cad180f404d526250dabdc407a2e76580e4bb0d55e4ab845",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-djangoaiboost"
 }

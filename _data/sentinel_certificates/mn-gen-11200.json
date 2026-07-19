@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7999916",
+  "certificate_id": "MN-SC-2026-4664456",
   "skill_id": "mn-gen-11200",
   "skill_name": "rescuedogs-mcp-server",
-  "issued_at": "2026-07-15T01:13:19.916Z",
-  "expires_at": "2026-07-22T01:13:19.916Z",
+  "issued_at": "2026-07-19T04:17:44.456Z",
+  "expires_at": "2026-07-26T04:17:44.456Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "863828a96bc38fb2b9508a2496621614c1259a7fb52c83092f4e480154a9f8fc",
+  "signature": "5eeec4753fb32d7065375a77cbf971c70707bfbb00343b62182d16acf46f530b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-11200"
 }

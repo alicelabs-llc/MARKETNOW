@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9051629",
+  "certificate_id": "MN-SC-2026-5346983",
   "skill_id": "mn-real-specialagentplugin",
   "skill_name": "SpecialAgentPlugin",
-  "issued_at": "2026-07-15T01:30:51.629Z",
-  "expires_at": "2026-07-22T01:30:51.629Z",
+  "issued_at": "2026-07-19T04:29:06.983Z",
+  "expires_at": "2026-07-26T04:29:06.983Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b2706efd3aa47490469d217dbb72c88c1381daa640e9ffc0bc6fc23628430b57",
+  "signature": "397edc25c5c41ba14014e0fbb6b047a9083b9ec7e21cf3fb02924f9fcea597cc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-specialagentplugin"
 }

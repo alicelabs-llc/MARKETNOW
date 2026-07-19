@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8993556",
+  "certificate_id": "MN-SC-2026-5291094",
   "skill_id": "mn-real-securityinvestigator",
   "skill_name": "security-investigator",
-  "issued_at": "2026-07-15T01:29:53.556Z",
-  "expires_at": "2026-07-22T01:29:53.556Z",
+  "issued_at": "2026-07-19T04:28:11.094Z",
+  "expires_at": "2026-07-26T04:28:11.094Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e897ae79760e6b1306da7a5613065749e24f3dc61d487cd6fc66ce185403443",
+  "signature": "1b07ea0bb50711c3cb7038ff429b6635d280dfe9b48fede2f078f9cc913e25d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-securityinvestigator"
 }

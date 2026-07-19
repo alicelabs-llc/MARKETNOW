@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8978225",
+  "certificate_id": "MN-SC-2026-5275488",
   "skill_id": "mn-real-androidproxymcp",
   "skill_name": "android_proxy_mcp",
-  "issued_at": "2026-07-15T01:29:38.225Z",
-  "expires_at": "2026-07-22T01:29:38.225Z",
+  "issued_at": "2026-07-19T04:27:55.488Z",
+  "expires_at": "2026-07-26T04:27:55.488Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "304a7c8191951e0e5479ae1cc0b4f5328b7643490fc2ad8de7d5dba743d3bdb2",
+  "signature": "cdc40c0ba4284793799e7a3fd3417bb2cda012f36fbd28a6f872a07880e0e3a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-androidproxymcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8393675",
+  "certificate_id": "MN-SC-2026-4682366",
   "skill_id": "mn-web-002",
   "skill_name": "google-search",
-  "issued_at": "2026-07-15T01:19:53.675Z",
-  "expires_at": "2026-07-22T01:19:53.675Z",
+  "issued_at": "2026-07-19T04:18:02.366Z",
+  "expires_at": "2026-07-26T04:18:02.366Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4dd44ea85c36c87127a76530049e60ceec79b35b2042254990b42f69b6eb7066",
+  "signature": "a9f002cbfbdb0b671477d2e3a7c7a89589aac1cce47abb971c9bc952f1921a34",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-web-002"
 }

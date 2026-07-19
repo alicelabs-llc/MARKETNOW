@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8616824",
+  "certificate_id": "MN-SC-2026-4910030",
   "skill_id": "mn-real-postaldatapimcp",
   "skill_name": "postaldatapi-mcp",
-  "issued_at": "2026-07-15T01:23:36.824Z",
-  "expires_at": "2026-07-22T01:23:36.824Z",
+  "issued_at": "2026-07-19T04:21:50.030Z",
+  "expires_at": "2026-07-26T04:21:50.030Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3d6f074a6ffca55ddaf72eff0950192384dde10648ce978d76909ade69d4e4c1",
+  "signature": "a7fb0798f3f9290b00f13ea63f34a85d37d4e54b75dcfb1610a1855d6ca66d85",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-postaldatapimcp"
 }

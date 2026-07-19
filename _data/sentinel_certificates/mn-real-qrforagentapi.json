@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8534305",
+  "certificate_id": "MN-SC-2026-4826330",
   "skill_id": "mn-real-qrforagentapi",
   "skill_name": "qr-for-agent-api",
-  "issued_at": "2026-07-15T01:22:14.305Z",
-  "expires_at": "2026-07-22T01:22:14.305Z",
+  "issued_at": "2026-07-19T04:20:26.330Z",
+  "expires_at": "2026-07-26T04:20:26.330Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c0005848f411d1f36bf955c7df85aaddb0181a5451d4397c41cc2eaf20179065",
+  "signature": "5afe8a23bcb3f1c286178019dd4c7dc27ab68f828f3cfd2dd5485ae63e221d11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-qrforagentapi"
 }

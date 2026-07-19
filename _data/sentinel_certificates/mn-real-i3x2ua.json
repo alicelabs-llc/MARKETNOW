@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9183197",
+  "certificate_id": "MN-SC-2026-5473797",
   "skill_id": "mn-real-i3x2ua",
   "skill_name": "i3x2ua",
-  "issued_at": "2026-07-15T01:33:03.197Z",
-  "expires_at": "2026-07-22T01:33:03.197Z",
+  "issued_at": "2026-07-19T04:31:13.797Z",
+  "expires_at": "2026-07-26T04:31:13.797Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "16c41e8785ff44954e9270e0df2d1046f3b55904e11aed446422c043215fbbf5",
+  "signature": "f50c0f5bd4d1ba19fa3d4cbc336af317b8afbe048979c9715d1f5198fcb1f404",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-i3x2ua"
 }

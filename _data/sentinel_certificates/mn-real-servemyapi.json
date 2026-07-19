@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8524528",
+  "certificate_id": "MN-SC-2026-4816212",
   "skill_id": "mn-real-servemyapi",
   "skill_name": "serveMyAPI",
-  "issued_at": "2026-07-15T01:22:04.528Z",
-  "expires_at": "2026-07-22T01:22:04.528Z",
+  "issued_at": "2026-07-19T04:20:16.212Z",
+  "expires_at": "2026-07-26T04:20:16.212Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bf0f2dde76de24d5881cc3d86f7b788f02677dd78c9e203ab1e5b6e5a3e67cc1",
+  "signature": "0cd7164367cc96e8c46f7059e64e214abdd2ac51cabe61201164c6171fd7e431",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-servemyapi"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9177105",
+  "certificate_id": "MN-SC-2026-5467475",
   "skill_id": "mn-real-zenkuv2",
   "skill_name": "zenku-v2",
-  "issued_at": "2026-07-15T01:32:57.105Z",
-  "expires_at": "2026-07-22T01:32:57.105Z",
+  "issued_at": "2026-07-19T04:31:07.475Z",
+  "expires_at": "2026-07-26T04:31:07.475Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e7ecf39cc6ff987bc1156c657bc1b57a690f94dc12c0bb78ae079b0301985f08",
+  "signature": "adcc579d51da40470fb41e1497481136df3a5a9cedbe869f55d85e6cb9a343ca",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zenkuv2"
 }

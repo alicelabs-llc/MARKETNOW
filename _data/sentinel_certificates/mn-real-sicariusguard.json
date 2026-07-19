@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8660888",
+  "certificate_id": "MN-SC-2026-4957592",
   "skill_id": "mn-real-sicariusguard",
   "skill_name": "sicarius-guard",
-  "issued_at": "2026-07-15T01:24:20.888Z",
-  "expires_at": "2026-07-22T01:24:20.888Z",
+  "issued_at": "2026-07-19T04:22:37.592Z",
+  "expires_at": "2026-07-26T04:22:37.592Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5852280dc52651822d393beb9616bda48bf915b11077c82a0d70dcf4b7e82e2f",
+  "signature": "af0b75bc0890c2032b53a035f5bf9a77bb742dd1b4fec5c95c724da219faca3c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sicariusguard"
 }

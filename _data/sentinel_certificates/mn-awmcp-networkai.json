@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8405462",
+  "certificate_id": "MN-SC-2026-4695448",
   "skill_id": "mn-awmcp-networkai",
   "skill_name": "Network-AI",
-  "issued_at": "2026-07-15T01:20:05.462Z",
-  "expires_at": "2026-07-22T01:20:05.462Z",
+  "issued_at": "2026-07-19T04:18:15.448Z",
+  "expires_at": "2026-07-26T04:18:15.448Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 8,
     "l2_execution_status": "ran"
   },
-  "signature": "847f31aa0af5e4278a08595e0280a19f9d2c02ffb74b31dff1cd5dcc21405cd3",
+  "signature": "7eea6314ecbe7f1c44a2c61b6dacf9bbecd2ce4c086945e1363637d16d495b9b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-networkai"
 }

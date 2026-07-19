@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9029503",
+  "certificate_id": "MN-SC-2026-5326255",
   "skill_id": "mn-real-nav2mcpserver",
   "skill_name": "nav2_mcp_server",
-  "issued_at": "2026-07-15T01:30:29.503Z",
-  "expires_at": "2026-07-22T01:30:29.503Z",
+  "issued_at": "2026-07-19T04:28:46.255Z",
+  "expires_at": "2026-07-26T04:28:46.255Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cc7eaa4659488b62aa7e8337e6ee8e6b91640b3a538e53956d86f17d1a4d07ef",
+  "signature": "9e820cd65efcfbc1a9747113067883172d495a80b99ddce451d610af987d197e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nav2mcpserver"
 }

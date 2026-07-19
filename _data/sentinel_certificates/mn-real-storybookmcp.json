@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9190832",
+  "certificate_id": "MN-SC-2026-5481538",
   "skill_id": "mn-real-storybookmcp",
   "skill_name": "storybook-mcp",
-  "issued_at": "2026-07-15T01:33:10.832Z",
-  "expires_at": "2026-07-22T01:33:10.832Z",
+  "issued_at": "2026-07-19T04:31:21.538Z",
+  "expires_at": "2026-07-26T04:31:21.538Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d14aa34c2a91a93c71cb3b5961fd6c8e81de144c774098225c98a14b0ba6fd1d",
+  "signature": "781a6b92202507983c537dc42d114616fa4ab6fb8423ece983a23bff4ac45e11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-storybookmcp"
 }

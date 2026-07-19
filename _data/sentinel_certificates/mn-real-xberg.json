@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8730869",
+  "certificate_id": "MN-SC-2026-5026083",
   "skill_id": "mn-real-xberg",
   "skill_name": "xberg",
-  "issued_at": "2026-07-15T01:25:30.869Z",
-  "expires_at": "2026-07-22T01:25:30.869Z",
+  "issued_at": "2026-07-19T04:23:46.083Z",
+  "expires_at": "2026-07-26T04:23:46.083Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b2503dbf3445a8288289d9702433abbc47e8d8426f436bfc5608deb7361268f",
+  "signature": "58a5ce233494504cb6ac10b34b856447d6ae8b2cf0eec7bcdc5e0887bc46e12a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xberg"
 }

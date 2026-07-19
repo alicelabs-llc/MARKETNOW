@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8933242",
+  "certificate_id": "MN-SC-2026-5231315",
   "skill_id": "mn-real-lyratooldiscovery",
   "skill_name": "lyra-tool-discovery",
-  "issued_at": "2026-07-15T01:28:53.242Z",
-  "expires_at": "2026-07-22T01:28:53.242Z",
+  "issued_at": "2026-07-19T04:27:11.315Z",
+  "expires_at": "2026-07-26T04:27:11.315Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a68d95eb76baca2db30a9d9933531172edfa2f9d482789f4ea17e40ff6007cc",
+  "signature": "ecfef509e21dbeeee65c6dbe4ff43f07c52a263f19e91b8e37a18f355d7d1a5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lyratooldiscovery"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8971082",
+  "certificate_id": "MN-SC-2026-5268183",
   "skill_id": "mn-real-mcpcompass",
   "skill_name": "mcp-compass",
-  "issued_at": "2026-07-15T01:29:31.082Z",
-  "expires_at": "2026-07-22T01:29:31.082Z",
+  "issued_at": "2026-07-19T04:27:48.183Z",
+  "expires_at": "2026-07-26T04:27:48.183Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d3b0d6b588ca4cdba6fe9bb202c7931112d0f08b63aa3b06ac7415215ce14b8",
+  "signature": "f6bd602ee982640dcd2ca1cd83b131c2f9020286634213a63bfd74ac68cdc658",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcompass"
 }

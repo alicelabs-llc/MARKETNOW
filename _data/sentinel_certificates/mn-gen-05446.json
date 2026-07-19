@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7964156",
+  "certificate_id": "MN-SC-2026-4629887",
   "skill_id": "mn-gen-05446",
   "skill_name": "mcp-keycloak-admin",
-  "issued_at": "2026-07-15T01:12:44.156Z",
-  "expires_at": "2026-07-22T01:12:44.156Z",
+  "issued_at": "2026-07-19T04:17:09.887Z",
+  "expires_at": "2026-07-26T04:17:09.887Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d67bbcabe12a26ff11ba6ca808eedc271211c29c7e7a12a8c8a423cd4c9a931d",
+  "signature": "94ef6b43709cf0ad084ee09658e24ceee5f29a86eedbd6e17a5b355895074e82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05446"
 }

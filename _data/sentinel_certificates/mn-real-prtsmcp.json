@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8588733",
+  "certificate_id": "MN-SC-2026-4882039",
   "skill_id": "mn-real-prtsmcp",
   "skill_name": "prts-mcp",
-  "issued_at": "2026-07-15T01:23:08.733Z",
-  "expires_at": "2026-07-22T01:23:08.733Z",
+  "issued_at": "2026-07-19T04:21:22.039Z",
+  "expires_at": "2026-07-26T04:21:22.039Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9a56e19d2ced0cf34787126925d99d34c274aad58af479e9356d20c54dcffa2",
+  "signature": "0d6d2864faaa9f364324ffe6e8e01eda755477c85fcc6f14427ebe1d95de05d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-prtsmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9106599",
+  "certificate_id": "MN-SC-2026-5394693",
   "skill_id": "mn-real-logoloom",
   "skill_name": "logoloom",
-  "issued_at": "2026-07-15T01:31:46.599Z",
-  "expires_at": "2026-07-22T01:31:46.599Z",
+  "issued_at": "2026-07-19T04:29:54.693Z",
+  "expires_at": "2026-07-26T04:29:54.693Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1edafe23778e07f43b627ccb9d184cd30a6995054de50e097fe9ec8f8ac9469c",
+  "signature": "01323f869cb8a2745ae426ce9046e3dd9ca7346861ff94d54051d2fc11652d95",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-logoloom"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8881858",
+  "certificate_id": "MN-SC-2026-5177899",
   "skill_id": "mn-real-slithermcp",
   "skill_name": "slither-mcp",
-  "issued_at": "2026-07-15T01:28:01.858Z",
-  "expires_at": "2026-07-22T01:28:01.858Z",
+  "issued_at": "2026-07-19T04:26:17.899Z",
+  "expires_at": "2026-07-26T04:26:17.899Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a919739998914a645b029c0fd598b4decc3a9a490bcbb05f51456a29ff2948ee",
+  "signature": "3c843daeba9228048693c7ece84610c9ed044b2506278d82020acadf04a0fa9a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-slithermcp"
 }

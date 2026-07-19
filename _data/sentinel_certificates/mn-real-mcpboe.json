@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8909796",
+  "certificate_id": "MN-SC-2026-5208182",
   "skill_id": "mn-real-mcpboe",
   "skill_name": "MCP-BOE",
-  "issued_at": "2026-07-15T01:28:29.796Z",
-  "expires_at": "2026-07-22T01:28:29.796Z",
+  "issued_at": "2026-07-19T04:26:48.182Z",
+  "expires_at": "2026-07-26T04:26:48.182Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "662ae4b00a2060bb84768918f9563cc9ee96740f27595746c59836881ceb61cf",
+  "signature": "e1bfc05b9760109ec836a47dced9a1d06b55af947942c12263a1dedd766de7a2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpboe"
 }

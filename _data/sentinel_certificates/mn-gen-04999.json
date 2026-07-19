@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7960872",
+  "certificate_id": "MN-SC-2026-4626645",
   "skill_id": "mn-gen-04999",
   "skill_name": "human-in-the-loop",
-  "issued_at": "2026-07-15T01:12:40.872Z",
-  "expires_at": "2026-07-22T01:12:40.872Z",
+  "issued_at": "2026-07-19T04:17:06.645Z",
+  "expires_at": "2026-07-26T04:17:06.645Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a16a568e33076af484da8c2c13eff3aa3cf7d3db20a8b998e5838498b0028825",
+  "signature": "52828481d3cbb6e53155dbdb30b0b30755b4fc6a3b2edd7e41e95ca7e54c4f48",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-04999"
 }

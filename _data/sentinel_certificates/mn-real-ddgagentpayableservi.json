@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9148917",
+  "certificate_id": "MN-SC-2026-5439799",
   "skill_id": "mn-real-ddgagentpayableservi",
   "skill_name": "ddg-agent-payable-services",
-  "issued_at": "2026-07-15T01:32:28.917Z",
-  "expires_at": "2026-07-22T01:32:28.917Z",
+  "issued_at": "2026-07-19T04:30:39.799Z",
+  "expires_at": "2026-07-26T04:30:39.799Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d319cbfdee3ba4eb70480fbbd8d0895efb1ca9e694e4240e89ae773a785f3d1e",
+  "signature": "5956fa383c45e8ef2937c9abc8712443f4577e536239b63efc4c6dd77c11a3c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ddgagentpayableservi"
 }

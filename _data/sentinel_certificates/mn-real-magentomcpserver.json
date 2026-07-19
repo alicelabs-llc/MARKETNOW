@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9146436",
+  "certificate_id": "MN-SC-2026-5437141",
   "skill_id": "mn-real-magentomcpserver",
   "skill_name": "Magento-MCP-Server",
-  "issued_at": "2026-07-15T01:32:26.436Z",
-  "expires_at": "2026-07-22T01:32:26.436Z",
+  "issued_at": "2026-07-19T04:30:37.141Z",
+  "expires_at": "2026-07-26T04:30:37.141Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0f816f09d36111ca38c788414e861fc86cad9af0db1806c6dff75e46d37b9649",
+  "signature": "efc3024fa46b4a511d95afd16f1ac6dfec88c693f39c0b8f4a0b42e9dd559f3d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-magentomcpserver"
 }

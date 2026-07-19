@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9239127",
+  "certificate_id": "MN-SC-2026-5528069",
   "skill_id": "mn-real-mcpserper",
   "skill_name": "mcp-serper",
-  "issued_at": "2026-07-15T01:33:59.127Z",
-  "expires_at": "2026-07-22T01:33:59.127Z",
+  "issued_at": "2026-07-19T04:32:08.069Z",
+  "expires_at": "2026-07-26T04:32:08.069Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dbdd09cbc84c794a5238b6124dd8a93749566306e20c775a0630310c721fa77c",
+  "signature": "01e1a50be4197cef2d10b608a2b17c6c54ef8f0d5561bc6a2872c03c6307091f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserper"
 }

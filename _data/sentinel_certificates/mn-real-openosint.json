@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8710225",
+  "certificate_id": "MN-SC-2026-5006659",
   "skill_id": "mn-real-openosint",
   "skill_name": "OpenOSINT",
-  "issued_at": "2026-07-15T01:25:10.225Z",
-  "expires_at": "2026-07-22T01:25:10.225Z",
+  "issued_at": "2026-07-19T04:23:26.659Z",
+  "expires_at": "2026-07-26T04:23:26.659Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "634a107eb23d07e0f6dd09d570d3a64b7f04969504b64808e22dd4df37d02987",
+  "signature": "34e2158c9128ac54d592ea16fb875ed2f7c754f9a2a146271c9f4a2f5f001e3b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openosint"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8459713",
+  "certificate_id": "MN-SC-2026-4751797",
   "skill_id": "mn-awmcp-booksmcpserver",
   "skill_name": "books-mcp-server",
-  "issued_at": "2026-07-15T01:20:59.713Z",
-  "expires_at": "2026-07-22T01:20:59.713Z",
+  "issued_at": "2026-07-19T04:19:11.797Z",
+  "expires_at": "2026-07-26T04:19:11.797Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11ba9c93a03fa9d9608d07dc25ff848b6d8dc75080fd8c25836d76ec3bca0243",
+  "signature": "2de01191e5073ffbd175f5a5a2cb17436ff9e21da4165dfce212bac160e4e4f5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-booksmcpserver"
 }

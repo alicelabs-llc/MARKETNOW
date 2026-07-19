@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8616649",
+  "certificate_id": "MN-SC-2026-4909858",
   "skill_id": "mn-real-gismcp",
   "skill_name": "gis-mcp",
-  "issued_at": "2026-07-15T01:23:36.649Z",
-  "expires_at": "2026-07-22T01:23:36.649Z",
+  "issued_at": "2026-07-19T04:21:49.858Z",
+  "expires_at": "2026-07-26T04:21:49.858Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6da40098d076ff33c70d596739e1da10f8c6a865cbae7611cc1ff99b1dd4339",
+  "signature": "4c968663b06dcc4b1e54a9d72f05fcbc0e6cd01a3e813eb4e8f1f79a982b4202",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gismcp"
 }

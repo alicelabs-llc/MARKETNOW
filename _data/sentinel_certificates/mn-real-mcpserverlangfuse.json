@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8750787",
+  "certificate_id": "MN-SC-2026-5046439",
   "skill_id": "mn-real-mcpserverlangfuse",
   "skill_name": "mcp-server-langfuse",
-  "issued_at": "2026-07-15T01:25:50.787Z",
-  "expires_at": "2026-07-22T01:25:50.787Z",
+  "issued_at": "2026-07-19T04:24:06.439Z",
+  "expires_at": "2026-07-26T04:24:06.439Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "507b01eb2a617930dceb5463aafdfbabdd180dcc4dc4085cda8fefd6cd724392",
+  "signature": "697be7c79339dde7cdee55b2ea69496e8678015004b2835146551ef7384fa7c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserverlangfuse"
 }

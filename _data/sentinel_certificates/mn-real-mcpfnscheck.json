@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8558786",
+  "certificate_id": "MN-SC-2026-4851496",
   "skill_id": "mn-real-mcpfnscheck",
   "skill_name": "mcp-fns-check",
-  "issued_at": "2026-07-15T01:22:38.786Z",
-  "expires_at": "2026-07-22T01:22:38.786Z",
+  "issued_at": "2026-07-19T04:20:51.496Z",
+  "expires_at": "2026-07-26T04:20:51.496Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cff6c7a56877c641754e50f20fd448111844b1beb97dc28855863ba1f40750a8",
+  "signature": "d4287fdd101e7653146521ef799b165f8984e30eeb8d4a5a97ec366afadcaa26",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpfnscheck"
 }

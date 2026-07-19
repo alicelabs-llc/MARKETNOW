@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8737294",
+  "certificate_id": "MN-SC-2026-5032543",
   "skill_id": "mn-real-nuxtmcpdev",
   "skill_name": "nuxt-mcp-dev",
-  "issued_at": "2026-07-15T01:25:37.294Z",
-  "expires_at": "2026-07-22T01:25:37.294Z",
+  "issued_at": "2026-07-19T04:23:52.543Z",
+  "expires_at": "2026-07-26T04:23:52.543Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ba2995e8f13281d3a44c671c1a077b1470eef8eb9ab2b75cbd0a2edaf6b243d2",
+  "signature": "36fd2dfe70a2d7f4e77ceab08dc9a1017c13f410baa61e55d0044bc2ebd173a0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nuxtmcpdev"
 }

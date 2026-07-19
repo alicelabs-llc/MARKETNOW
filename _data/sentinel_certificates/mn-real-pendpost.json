@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9155932",
+  "certificate_id": "MN-SC-2026-5446517",
   "skill_id": "mn-real-pendpost",
   "skill_name": "pendpost",
-  "issued_at": "2026-07-15T01:32:35.932Z",
-  "expires_at": "2026-07-22T01:32:35.932Z",
+  "issued_at": "2026-07-19T04:30:46.517Z",
+  "expires_at": "2026-07-26T04:30:46.517Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "db45627901ee88299ffae9aba51308411975599d443b75f08417568311754351",
+  "signature": "0259915cc395e515d3dc39c7c590a1a8c35dd136f8fb5a6543006601b291650b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pendpost"
 }

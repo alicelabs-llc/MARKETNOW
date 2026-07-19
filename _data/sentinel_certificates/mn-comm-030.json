@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8393050",
+  "certificate_id": "MN-SC-2026-4681724",
   "skill_id": "mn-comm-030",
   "skill_name": "mcp-marketplace",
-  "issued_at": "2026-07-15T01:19:53.050Z",
-  "expires_at": "2026-07-22T01:19:53.050Z",
+  "issued_at": "2026-07-19T04:18:01.724Z",
+  "expires_at": "2026-07-26T04:18:01.724Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ccf676b98b4b5254f68825c867c3ef53bc55d2161991a3f5d6e809285b64e02",
+  "signature": "29a7f474438b4ea3620eb2b574877c8c0af75170c2d417feccb465800084396c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-comm-030"
 }

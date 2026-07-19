@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8842260",
+  "certificate_id": "MN-SC-2026-5138484",
   "skill_id": "mn-real-delphimcpserver",
   "skill_name": "Delphi-MCP-Server",
-  "issued_at": "2026-07-15T01:27:22.260Z",
-  "expires_at": "2026-07-22T01:27:22.260Z",
+  "issued_at": "2026-07-19T04:25:38.484Z",
+  "expires_at": "2026-07-26T04:25:38.484Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c340d4cfdc3b80b6137e532c5002b674d5e3f30809ebad9a1fcccc22346e8b3",
+  "signature": "e5889d387020fa68ee36a883bc6a1c34bc199f090703cc600925a9c4a21289cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-delphimcpserver"
 }

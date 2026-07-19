@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7951016",
+  "certificate_id": "MN-SC-2026-4616430",
   "skill_id": "mn-gen-03777",
   "skill_name": "evmscope",
-  "issued_at": "2026-07-15T01:12:31.016Z",
-  "expires_at": "2026-07-22T01:12:31.016Z",
+  "issued_at": "2026-07-19T04:16:56.430Z",
+  "expires_at": "2026-07-26T04:16:56.430Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cbfa206ec9096edd56d13fa32411f706cdaba0bb90dc4068087c10c9b1ae7b44",
+  "signature": "df3447295d3d169180f68a460b6370c0188b8fcf0f98996ab448d16a811db90b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-03777"
 }

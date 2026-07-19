@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8445070",
+  "certificate_id": "MN-SC-2026-4736879",
   "skill_id": "mn-awmcp-cloakbrowsermcp",
   "skill_name": "cloakbrowser-mcp",
-  "issued_at": "2026-07-15T01:20:45.070Z",
-  "expires_at": "2026-07-22T01:20:45.070Z",
+  "issued_at": "2026-07-19T04:18:56.879Z",
+  "expires_at": "2026-07-26T04:18:56.879Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bffbb1807e2a59d6ed8a267ead3cdce6015c492c9025f8abba90afd3f93c116f",
+  "signature": "0804fa831236f3833deb1ac6ce93d53187dec52c8df38288f42a109beb55ad0d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-cloakbrowsermcp"
 }

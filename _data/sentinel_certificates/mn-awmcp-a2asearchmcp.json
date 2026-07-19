@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8399076",
+  "certificate_id": "MN-SC-2026-4688354",
   "skill_id": "mn-awmcp-a2asearchmcp",
   "skill_name": "a2asearch-mcp",
-  "issued_at": "2026-07-15T01:19:59.076Z",
-  "expires_at": "2026-07-22T01:19:59.076Z",
+  "issued_at": "2026-07-19T04:18:08.354Z",
+  "expires_at": "2026-07-26T04:18:08.354Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "06fdfa16096770a9510695729b458af7cf79ff13422d3270e46a2ae22cb13807",
+  "signature": "253acfc95fd347fa510f34f72a56f24b85bf36c1c35bfe91b2ce40a74cdc5f51",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-a2asearchmcp"
 }

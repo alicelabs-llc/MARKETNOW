@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9207353",
+  "certificate_id": "MN-SC-2026-5497393",
   "skill_id": "mn-real-kubectldebugqueries",
   "skill_name": "kubectl-debug-queries",
-  "issued_at": "2026-07-15T01:33:27.353Z",
-  "expires_at": "2026-07-22T01:33:27.353Z",
+  "issued_at": "2026-07-19T04:31:37.393Z",
+  "expires_at": "2026-07-26T04:31:37.393Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6b790c30ab5019d621486ed7fa58df896866d2eeed531287d6e392119117794a",
+  "signature": "e821981898be361e6d5f94e1b17b5898473a9ef1de08411c2cdf41f68541f8a6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kubectldebugqueries"
 }

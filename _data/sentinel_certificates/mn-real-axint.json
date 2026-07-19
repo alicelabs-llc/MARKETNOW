@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8510316",
+  "certificate_id": "MN-SC-2026-4801902",
   "skill_id": "mn-real-axint",
   "skill_name": "axint",
-  "issued_at": "2026-07-15T01:21:50.316Z",
-  "expires_at": "2026-07-22T01:21:50.316Z",
+  "issued_at": "2026-07-19T04:20:01.902Z",
+  "expires_at": "2026-07-26T04:20:01.902Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ac89c68f9c64892539a4c11246779a2b2aafeba62be0205edea81923de996591",
+  "signature": "9accbe539cd04ea8e2fa902ccd23231e8ea60d33a8f62d40120c73ad0acc2522",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-axint"
 }

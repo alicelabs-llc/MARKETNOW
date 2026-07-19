@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9037361",
+  "certificate_id": "MN-SC-2026-5332484",
   "skill_id": "mn-real-mcpguarddynamic",
   "skill_name": "mcpguard-dynamic",
-  "issued_at": "2026-07-15T01:30:37.361Z",
-  "expires_at": "2026-07-22T01:30:37.361Z",
+  "issued_at": "2026-07-19T04:28:52.484Z",
+  "expires_at": "2026-07-26T04:28:52.484Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bde06b6c7b57d69e5f9b7b6d77e71abfbf83a1d4870fe0b7ff2207cd7e9d2224",
+  "signature": "f98e57d10f16c83b9413935c2a84cb38e00eb0113b1d2b72ee28fd99e7423b0a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpguarddynamic"
 }

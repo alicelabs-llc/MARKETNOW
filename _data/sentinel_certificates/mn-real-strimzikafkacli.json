@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8866712",
+  "certificate_id": "MN-SC-2026-5162476",
   "skill_id": "mn-real-strimzikafkacli",
   "skill_name": "strimzi-kafka-cli",
-  "issued_at": "2026-07-15T01:27:46.712Z",
-  "expires_at": "2026-07-22T01:27:46.712Z",
+  "issued_at": "2026-07-19T04:26:02.476Z",
+  "expires_at": "2026-07-26T04:26:02.476Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ad97bc4724b71945ef8c761df61fe88755d5f67deb643f6f9434fbfac82a0674",
+  "signature": "7e8c9d5995db126f2fd31c2dcd9d35b1ae233b78834d405ac61e07452c06a19d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-strimzikafkacli"
 }

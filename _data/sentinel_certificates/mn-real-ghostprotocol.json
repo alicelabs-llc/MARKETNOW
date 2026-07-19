@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9081804",
+  "certificate_id": "MN-SC-2026-5373011",
   "skill_id": "mn-real-ghostprotocol",
   "skill_name": "ghost-protocol",
-  "issued_at": "2026-07-15T01:31:21.804Z",
-  "expires_at": "2026-07-22T01:31:21.804Z",
+  "issued_at": "2026-07-19T04:29:33.011Z",
+  "expires_at": "2026-07-26T04:29:33.011Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a58c8c491e283eaa047fc7a75eb68de44e0440e0df6df8522d605dd0bdddf397",
+  "signature": "200045852f9aa48ebc270b77580793db3f153fd84e5e567c08212f26fc202a3e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ghostprotocol"
 }

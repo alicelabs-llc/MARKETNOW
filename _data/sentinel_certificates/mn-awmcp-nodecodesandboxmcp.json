@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8462606",
+  "certificate_id": "MN-SC-2026-4754554",
   "skill_id": "mn-awmcp-nodecodesandboxmcp",
   "skill_name": "node-code-sandbox-mcp",
-  "issued_at": "2026-07-15T01:21:02.606Z",
-  "expires_at": "2026-07-22T01:21:02.606Z",
+  "issued_at": "2026-07-19T04:19:14.554Z",
+  "expires_at": "2026-07-26T04:19:14.554Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 1,
     "l2_execution_status": null
   },
-  "signature": "508bcbabb67277587bde195851b76f494dcd7e93779cb39427f9e1eb06fd8d3d",
+  "signature": "3c0a837f720e12c89877943089da5d68b6c2d8b9d3084bedf8942b453c051562",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-nodecodesandboxmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9003868",
+  "certificate_id": "MN-SC-2026-5301460",
   "skill_id": "mn-real-polymarketmcp",
   "skill_name": "polymarket-mcp",
-  "issued_at": "2026-07-15T01:30:03.868Z",
-  "expires_at": "2026-07-22T01:30:03.868Z",
+  "issued_at": "2026-07-19T04:28:21.460Z",
+  "expires_at": "2026-07-26T04:28:21.460Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fa8ee0198ad70c6f4ba331b37c5a2f96778814e66145467f1f1cf843ae76adfe",
+  "signature": "34c719dfd4f73bd1d91d8b4acb19d078d6750ee4be0bb994d723bd0cf4110cd8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-polymarketmcp"
 }

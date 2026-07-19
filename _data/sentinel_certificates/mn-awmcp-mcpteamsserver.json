@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8489095",
+  "certificate_id": "MN-SC-2026-4781210",
   "skill_id": "mn-awmcp-mcpteamsserver",
   "skill_name": "mcp-teams-server",
-  "issued_at": "2026-07-15T01:21:29.095Z",
-  "expires_at": "2026-07-22T01:21:29.095Z",
+  "issued_at": "2026-07-19T04:19:41.210Z",
+  "expires_at": "2026-07-26T04:19:41.210Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f2755cedb1e9b2a94944cce8f620ff330d2884e4393255b91c09f080afa4f9f",
+  "signature": "603cec1b6206bab68d92787cf642008b06790b45ea768c4c882d78013d9f67ce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpteamsserver"
 }

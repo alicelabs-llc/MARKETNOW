@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8536551",
+  "certificate_id": "MN-SC-2026-4828594",
   "skill_id": "mn-real-lldbmcp",
   "skill_name": "lldb-mcp",
-  "issued_at": "2026-07-15T01:22:16.551Z",
-  "expires_at": "2026-07-22T01:22:16.551Z",
+  "issued_at": "2026-07-19T04:20:28.594Z",
+  "expires_at": "2026-07-26T04:20:28.594Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "730fe4baad8e7564ec0c732b2cc0a462790f8b226944313e3d4a09cf981e74c0",
+  "signature": "c4dad23c56f5b66646eefe0dd853d5a21ab605fb8fb329a3a91ef0000f5eb69f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lldbmcp"
 }

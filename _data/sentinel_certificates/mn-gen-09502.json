@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7988294",
+  "certificate_id": "MN-SC-2026-4654042",
   "skill_id": "mn-gen-09502",
   "skill_name": "ai-toolkit",
-  "issued_at": "2026-07-15T01:13:08.294Z",
-  "expires_at": "2026-07-22T01:13:08.294Z",
+  "issued_at": "2026-07-19T04:17:34.042Z",
+  "expires_at": "2026-07-26T04:17:34.042Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1101e54e4f7786f392ac74f13d8171b58ba1a1f90c3f697e635eae60f35529af",
+  "signature": "b9d36502dd3b02d4e07df52a6f3ea6b574dc654755ad7bae2899385301f6cd11",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09502"
 }

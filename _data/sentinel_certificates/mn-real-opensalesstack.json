@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8640996",
+  "certificate_id": "MN-SC-2026-4936450",
   "skill_id": "mn-real-opensalesstack",
   "skill_name": "open-sales-stack",
-  "issued_at": "2026-07-15T01:24:00.996Z",
-  "expires_at": "2026-07-22T01:24:00.996Z",
+  "issued_at": "2026-07-19T04:22:16.450Z",
+  "expires_at": "2026-07-26T04:22:16.450Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "dde3cdadfdad3c8bcbb63d2668a8876e0d29b09abe3ff62cec9e06a85d34bca9",
+  "signature": "0a2cf7207349937aa78003071d4b5b8bd4bbb32fa108c2094faab80b698b3b7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opensalesstack"
 }

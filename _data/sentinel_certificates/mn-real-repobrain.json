@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9240722",
+  "certificate_id": "MN-SC-2026-5529727",
   "skill_id": "mn-real-repobrain",
   "skill_name": "repobrain",
-  "issued_at": "2026-07-15T01:34:00.722Z",
-  "expires_at": "2026-07-22T01:34:00.722Z",
+  "issued_at": "2026-07-19T04:32:09.727Z",
+  "expires_at": "2026-07-26T04:32:09.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "31975f85e75fdad5345556919af53034ceddeb9cc01aa28826afb6ffd191b09f",
+  "signature": "5f2fd5c9ec4da10a9b27c343d6abcdbba79364d7d27438805df6b473e9802b24",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-repobrain"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9226891",
+  "certificate_id": "MN-SC-2026-5516871",
   "skill_id": "mn-real-trendpulse",
   "skill_name": "trend-pulse",
-  "issued_at": "2026-07-15T01:33:46.891Z",
-  "expires_at": "2026-07-22T01:33:46.891Z",
+  "issued_at": "2026-07-19T04:31:56.871Z",
+  "expires_at": "2026-07-26T04:31:56.871Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c8b279afc450371e26e4f971e01766c0f4aa2fabfeecbd95c2186d29c915c89",
+  "signature": "3d060ca54e81c41949bcfb50cc9bde30ce6679d983678993ed1e0bc141859a39",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-trendpulse"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8937806",
+  "certificate_id": "MN-SC-2026-5234802",
   "skill_id": "mn-real-appcontrolmcpgo",
   "skill_name": "appcontrol-mcp-go",
-  "issued_at": "2026-07-15T01:28:57.806Z",
-  "expires_at": "2026-07-22T01:28:57.806Z",
+  "issued_at": "2026-07-19T04:27:14.802Z",
+  "expires_at": "2026-07-26T04:27:14.802Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0a45b658a3175872feab1841fcb514c3769c3c9cd69e4a1cb7eee78cf40f30f8",
+  "signature": "faa4cfec4688bedaa315df16941986163f23725ec705b5bf9bc379d909a73139",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-appcontrolmcpgo"
 }

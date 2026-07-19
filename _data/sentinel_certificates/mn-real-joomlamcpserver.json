@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9155238",
+  "certificate_id": "MN-SC-2026-5445807",
   "skill_id": "mn-real-joomlamcpserver",
   "skill_name": "joomla-mcp-server",
-  "issued_at": "2026-07-15T01:32:35.238Z",
-  "expires_at": "2026-07-22T01:32:35.238Z",
+  "issued_at": "2026-07-19T04:30:45.807Z",
+  "expires_at": "2026-07-26T04:30:45.807Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6f887c4feaf5d263f87c1819cb3238c7d7aeb4986a27e5e2dad134c4a02de39a",
+  "signature": "757385547d704a088c1868aea6cf5fd98eae1ef766d7bafd4035cbdaeb4c777f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-joomlamcpserver"
 }

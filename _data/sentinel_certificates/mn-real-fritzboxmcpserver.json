@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8594869",
+  "certificate_id": "MN-SC-2026-4888264",
   "skill_id": "mn-real-fritzboxmcpserver",
   "skill_name": "fritzbox-mcp-server",
-  "issued_at": "2026-07-15T01:23:14.869Z",
-  "expires_at": "2026-07-22T01:23:14.869Z",
+  "issued_at": "2026-07-19T04:21:28.264Z",
+  "expires_at": "2026-07-26T04:21:28.264Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3ff68ea38946844aa2113b2b55158666f76f80f8462828d25904e054e3ed7174",
+  "signature": "424c2ec3052d0b9608afc78d3c611cd01bd3e996579145b6e5a17f1c7c9b6343",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-fritzboxmcpserver"
 }

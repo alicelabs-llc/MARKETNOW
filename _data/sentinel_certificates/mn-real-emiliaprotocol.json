@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8654309",
+  "certificate_id": "MN-SC-2026-4950854",
   "skill_id": "mn-real-emiliaprotocol",
   "skill_name": "emilia-protocol",
-  "issued_at": "2026-07-15T01:24:14.309Z",
-  "expires_at": "2026-07-22T01:24:14.309Z",
+  "issued_at": "2026-07-19T04:22:30.854Z",
+  "expires_at": "2026-07-26T04:22:30.854Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bdab10513e216a5d1d0f18e41215059cd2290e20fca788d3a3abca4ade23198d",
+  "signature": "de0a75f411226ac4a9356dbcd1e4100b741301377998ed84a7560ef864f5cf27",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-emiliaprotocol"
 }

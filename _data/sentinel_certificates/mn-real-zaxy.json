@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8613181",
+  "certificate_id": "MN-SC-2026-4906623",
   "skill_id": "mn-real-zaxy",
   "skill_name": "zaxy",
-  "issued_at": "2026-07-15T01:23:33.181Z",
-  "expires_at": "2026-07-22T01:23:33.181Z",
+  "issued_at": "2026-07-19T04:21:46.623Z",
+  "expires_at": "2026-07-26T04:21:46.623Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "67cd2223c6666db297ca472d1c91b7cae7415318662102e669ef51102c3b8924",
+  "signature": "07d66599213ce73397d5bfdbf2e978396fcbc20bd853fe92006977c4ff09002b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zaxy"
 }

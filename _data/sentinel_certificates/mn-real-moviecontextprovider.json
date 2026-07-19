@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9167050",
+  "certificate_id": "MN-SC-2026-5457696",
   "skill_id": "mn-real-moviecontextprovider",
   "skill_name": "movie-context-provider",
-  "issued_at": "2026-07-15T01:32:47.050Z",
-  "expires_at": "2026-07-22T01:32:47.050Z",
+  "issued_at": "2026-07-19T04:30:57.696Z",
+  "expires_at": "2026-07-26T04:30:57.696Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aeaff729f45999838bf2ed4e04b33e7166f320175004a869db9130d4a5110e35",
+  "signature": "51754bcafaafbca2b3434f1694944d01f848212fef6899e4635971f7c9dc3109",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-moviecontextprovider"
 }

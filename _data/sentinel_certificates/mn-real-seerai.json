@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8892872",
+  "certificate_id": "MN-SC-2026-5189024",
   "skill_id": "mn-real-seerai",
   "skill_name": "seerai",
-  "issued_at": "2026-07-15T01:28:12.872Z",
-  "expires_at": "2026-07-22T01:28:12.872Z",
+  "issued_at": "2026-07-19T04:26:29.024Z",
+  "expires_at": "2026-07-26T04:26:29.024Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f3946a81c93233ccd98d2510117f5cec23f1f2eb1d796666b89c7037ed2ee55b",
+  "signature": "ae2c317907d180e26f8a836fae640b93609cd843475cc5ab94801bd89b53bf31",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-seerai"
 }

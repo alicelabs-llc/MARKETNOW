@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8418993",
+  "certificate_id": "MN-SC-2026-4709160",
   "skill_id": "mn-awmcp-openmuseummcp",
   "skill_name": "open-museum-mcp",
-  "issued_at": "2026-07-15T01:20:18.993Z",
-  "expires_at": "2026-07-22T01:20:18.993Z",
+  "issued_at": "2026-07-19T04:18:29.160Z",
+  "expires_at": "2026-07-26T04:18:29.160Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "e6333529f3683d8f6fef27f76daa7a3f199d3d23395e7b761bdb5502b2a1d7a0",
+  "signature": "ce49c672404532139f17d7c65554cd999d1da38ff8053e7961879aeaa4e3cfc0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-openmuseummcp"
 }

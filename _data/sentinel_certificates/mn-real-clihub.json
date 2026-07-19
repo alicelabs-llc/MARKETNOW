@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8984880",
+  "certificate_id": "MN-SC-2026-5282203",
   "skill_id": "mn-real-clihub",
   "skill_name": "clihub",
-  "issued_at": "2026-07-15T01:29:44.880Z",
-  "expires_at": "2026-07-22T01:29:44.880Z",
+  "issued_at": "2026-07-19T04:28:02.203Z",
+  "expires_at": "2026-07-26T04:28:02.203Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ab1ef3a7e25ed2588cdf72ad8c84a9e8962dfbe1cd944712c0843900bb62a6e",
+  "signature": "5c290c74e05ed43a6db2a255cf5e472a01b5fbb4fd05e68ba73751c42addf508",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-clihub"
 }

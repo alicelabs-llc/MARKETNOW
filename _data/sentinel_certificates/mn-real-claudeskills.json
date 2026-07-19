@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8810364",
+  "certificate_id": "MN-SC-2026-5106610",
   "skill_id": "mn-real-claudeskills",
   "skill_name": "Claude-Skills",
-  "issued_at": "2026-07-15T01:26:50.364Z",
-  "expires_at": "2026-07-22T01:26:50.364Z",
+  "issued_at": "2026-07-19T04:25:06.610Z",
+  "expires_at": "2026-07-26T04:25:06.610Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "04cf709e0170213c244758cbb32697b747d54aeddb7099a16482d1fcc7f97fd0",
+  "signature": "21a0ac8875d75fd07e92c35c7905d24231d8f30b4e94ec0b22529901a5ac1069",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudeskills"
 }

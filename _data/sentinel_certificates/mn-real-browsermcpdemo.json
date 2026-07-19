@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9203175",
+  "certificate_id": "MN-SC-2026-5493239",
   "skill_id": "mn-real-browsermcpdemo",
   "skill_name": "browser-mcp-demo",
-  "issued_at": "2026-07-15T01:33:23.175Z",
-  "expires_at": "2026-07-22T01:33:23.175Z",
+  "issued_at": "2026-07-19T04:31:33.239Z",
+  "expires_at": "2026-07-26T04:31:33.239Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4f6352aecbd0762ce4152a0b582439da2660cd42988042a9043e9139375a40d0",
+  "signature": "882f70c71cca1084c5f993a66d0bae782359b011ac40e462ead3b14e51e3b5d6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-browsermcpdemo"
 }

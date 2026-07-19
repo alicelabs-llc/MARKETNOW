@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9183788",
+  "certificate_id": "MN-SC-2026-5474485",
   "skill_id": "mn-real-arxivmcp",
   "skill_name": "arxiv-mcp",
-  "issued_at": "2026-07-15T01:33:03.788Z",
-  "expires_at": "2026-07-22T01:33:03.788Z",
+  "issued_at": "2026-07-19T04:31:14.485Z",
+  "expires_at": "2026-07-26T04:31:14.485Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0c08b354f8c1566fda011e617ba39f761a3962c8c664518d16c3c711354427b4",
+  "signature": "19c97c37669efbb97054b514aa6720dfdb7fc47f0a4d0b098ef6f0440bac65f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-arxivmcp"
 }

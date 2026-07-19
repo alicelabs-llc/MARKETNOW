@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9129906",
+  "certificate_id": "MN-SC-2026-5420372",
   "skill_id": "mn-real-mcplibrarian",
   "skill_name": "mcp-librarian",
-  "issued_at": "2026-07-15T01:32:09.906Z",
-  "expires_at": "2026-07-22T01:32:09.906Z",
+  "issued_at": "2026-07-19T04:30:20.372Z",
+  "expires_at": "2026-07-26T04:30:20.372Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ca54b2c49180b35b704997720b9a2ca75b616bf6e1945dd1d434408cc6e99450",
+  "signature": "9125292992acb9abeb72976767d25fab3edf0e17e66d6b3cc71494e8f7ba08f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcplibrarian"
 }

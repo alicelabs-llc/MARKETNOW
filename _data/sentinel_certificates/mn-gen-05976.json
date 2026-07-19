@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7966808",
+  "certificate_id": "MN-SC-2026-4632405",
   "skill_id": "mn-gen-05976",
   "skill_name": "registry",
-  "issued_at": "2026-07-15T01:12:46.808Z",
-  "expires_at": "2026-07-22T01:12:46.808Z",
+  "issued_at": "2026-07-19T04:17:12.405Z",
+  "expires_at": "2026-07-26T04:17:12.405Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5dfa11bef727715d55d597af90f32debcf03819b7dddf8fcd86a079cba1cdbfb",
+  "signature": "b1f4dbebdc6c2e69d208e8b93fc7a9e8c9a151db4402b8acbc6a8abe48a9041d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-05976"
 }

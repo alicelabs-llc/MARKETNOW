@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8928276",
+  "certificate_id": "MN-SC-2026-5226296",
   "skill_id": "mn-real-webmcpnexus",
   "skill_name": "webmcp-nexus",
-  "issued_at": "2026-07-15T01:28:48.276Z",
-  "expires_at": "2026-07-22T01:28:48.276Z",
+  "issued_at": "2026-07-19T04:27:06.296Z",
+  "expires_at": "2026-07-26T04:27:06.296Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "70c534ad853c02e03dd3c87c353516f51995e21884619a78ee4ffe4a4b6daaf3",
+  "signature": "d725a2dbf34aa8fc9d39ccdbf6f334ba779b8e054f9d0eaefe9c44c536fa3196",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webmcpnexus"
 }

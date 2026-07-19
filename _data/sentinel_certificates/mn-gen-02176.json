@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7939971",
+  "certificate_id": "MN-SC-2026-4605496",
   "skill_id": "mn-gen-02176",
   "skill_name": "mcp-manager",
-  "issued_at": "2026-07-15T01:12:19.971Z",
-  "expires_at": "2026-07-22T01:12:19.971Z",
+  "issued_at": "2026-07-19T04:16:45.496Z",
+  "expires_at": "2026-07-26T04:16:45.496Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "95517e230a0fdd80e06e16f7735ae8d67b515cd5d93537ef4a0378462a282b6d",
+  "signature": "8d6b97201281831acd4463ba419c62aac1dba83294435f2cf497d3f04fb1a4a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-02176"
 }

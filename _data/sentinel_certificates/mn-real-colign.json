@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9107584",
+  "certificate_id": "MN-SC-2026-5395656",
   "skill_id": "mn-real-colign",
   "skill_name": "colign",
-  "issued_at": "2026-07-15T01:31:47.584Z",
-  "expires_at": "2026-07-22T01:31:47.584Z",
+  "issued_at": "2026-07-19T04:29:55.656Z",
+  "expires_at": "2026-07-26T04:29:55.656Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "abe7fe9d9fee83ac6ef06623279b9954fd3ad368ec589d9241042d0b2d7d8571",
+  "signature": "c8fa73ac9e4ad07193c5d5c7b358ac04fe394f0f174e923e75f45079734d3416",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-colign"
 }

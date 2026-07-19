@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9007018",
+  "certificate_id": "MN-SC-2026-5304483",
   "skill_id": "mn-real-subagentsdirectory",
   "skill_name": "sub-agents.directory",
-  "issued_at": "2026-07-15T01:30:07.018Z",
-  "expires_at": "2026-07-22T01:30:07.018Z",
+  "issued_at": "2026-07-19T04:28:24.483Z",
+  "expires_at": "2026-07-26T04:28:24.483Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "58a680411f12f5abc9097545b68f2157d58e0e79c2d132ceaa81c6ccd6cd6215",
+  "signature": "98b045feb1dcc783c22c0cea57a37ca74b0c29c52d76aac375ea5975f825f264",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-subagentsdirectory"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9014344",
+  "certificate_id": "MN-SC-2026-5311501",
   "skill_id": "mn-real-c2sagent",
   "skill_name": "c2sagent",
-  "issued_at": "2026-07-15T01:30:14.344Z",
-  "expires_at": "2026-07-22T01:30:14.344Z",
+  "issued_at": "2026-07-19T04:28:31.501Z",
+  "expires_at": "2026-07-26T04:28:31.501Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c397bbe32dbbde2988753dcfd1c630390f3db9738fa16c9abf687985a08c76a",
+  "signature": "f3383b3f179bd93326e9af5d2ed30b67275474c653d3cde2d1d4fa36cf450c74",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-c2sagent"
 }

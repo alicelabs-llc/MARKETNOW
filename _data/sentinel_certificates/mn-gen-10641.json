@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7996017",
+  "certificate_id": "MN-SC-2026-4660660",
   "skill_id": "mn-gen-10641",
   "skill_name": "prediction-market-mcp",
-  "issued_at": "2026-07-15T01:13:16.017Z",
-  "expires_at": "2026-07-22T01:13:16.017Z",
+  "issued_at": "2026-07-19T04:17:40.660Z",
+  "expires_at": "2026-07-26T04:17:40.660Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ed13681d8f81ca524c765c994bb412433f4cd94844a75175e5465b2345b443a",
+  "signature": "01effdb9b2c4e35d4644e5701e79d44eae3008ce050a7700dbe6bbb16a2ec957",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-10641"
 }

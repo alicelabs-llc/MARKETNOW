@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7971691",
+  "certificate_id": "MN-SC-2026-4637275",
   "skill_id": "mn-gen-06735",
   "skill_name": "mlflow-mcp-server",
-  "issued_at": "2026-07-15T01:12:51.691Z",
-  "expires_at": "2026-07-22T01:12:51.691Z",
+  "issued_at": "2026-07-19T04:17:17.275Z",
+  "expires_at": "2026-07-26T04:17:17.275Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b9c5bf44d76ee4382d3530fd60e95b5e24076c8d7ce6df1abaaf21f10587e574",
+  "signature": "af4127df6b7954d49f4d0144f4d53fdbd6fcbff4ba736a08ceb9245349e9dad9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-06735"
 }

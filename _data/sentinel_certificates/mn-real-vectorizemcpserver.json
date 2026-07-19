@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8647774",
+  "certificate_id": "MN-SC-2026-4944283",
   "skill_id": "mn-real-vectorizemcpserver",
   "skill_name": "vectorize-mcp-server",
-  "issued_at": "2026-07-15T01:24:07.774Z",
-  "expires_at": "2026-07-22T01:24:07.774Z",
+  "issued_at": "2026-07-19T04:22:24.283Z",
+  "expires_at": "2026-07-26T04:22:24.283Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af73ae5122ab130a92c4b434eb9db1282df0e6323eb0a860ea4afa9e4099a75c",
+  "signature": "d034c894fa59b7230201c9e72894a7d9a3f9dfa93466b86b9ec6b7c5adfd6032",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vectorizemcpserver"
 }

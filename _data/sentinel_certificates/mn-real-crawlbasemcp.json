@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8775455",
+  "certificate_id": "MN-SC-2026-5070640",
   "skill_id": "mn-real-crawlbasemcp",
   "skill_name": "crawlbase-mcp",
-  "issued_at": "2026-07-15T01:26:15.455Z",
-  "expires_at": "2026-07-22T01:26:15.455Z",
+  "issued_at": "2026-07-19T04:24:30.640Z",
+  "expires_at": "2026-07-26T04:24:30.640Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8b3cbb43a7768b38af88d1762848a45a0bf70f861a22c0e5237362851029099a",
+  "signature": "9ad818b8b2b48f9572e22f945c55f9f465d6e99008975649592e17f54f410772",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-crawlbasemcp"
 }

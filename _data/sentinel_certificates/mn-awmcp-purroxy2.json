@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8443455",
+  "certificate_id": "MN-SC-2026-4735431",
   "skill_id": "mn-awmcp-purroxy2",
   "skill_name": "purroxy2",
-  "issued_at": "2026-07-15T01:20:43.455Z",
-  "expires_at": "2026-07-22T01:20:43.455Z",
+  "issued_at": "2026-07-19T04:18:55.431Z",
+  "expires_at": "2026-07-26T04:18:55.431Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2d6ba0fcbdae75316485cdcede91d5efa54fcaefb0d3b9fef360e3b1d47b665f",
+  "signature": "33fbc2ad961a40be2478bc4a654410c95b6e125c7699daf4466c1d3743504360",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-purroxy2"
 }

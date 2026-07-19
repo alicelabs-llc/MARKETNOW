@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8789263",
+  "certificate_id": "MN-SC-2026-5084303",
   "skill_id": "mn-real-keycloakmcpserver",
   "skill_name": "keycloak-mcp-server",
-  "issued_at": "2026-07-15T01:26:29.263Z",
-  "expires_at": "2026-07-22T01:26:29.263Z",
+  "issued_at": "2026-07-19T04:24:44.303Z",
+  "expires_at": "2026-07-26T04:24:44.303Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "250fba940dff13833cef0c0fc4baeb54b2bfdf4e69725dd83a1938a4775ecae0",
+  "signature": "6aef11d2222387b6f5e4aa3444fb0e3f2b1f9200ad9f25a5c0a12a7073c1555f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keycloakmcpserver"
 }

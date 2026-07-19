@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8419380",
+  "certificate_id": "MN-SC-2026-4709477",
   "skill_id": "mn-awmcp-mcpapplemusic",
   "skill_name": "mcp-apple-music",
-  "issued_at": "2026-07-15T01:20:19.380Z",
-  "expires_at": "2026-07-22T01:20:19.380Z",
+  "issued_at": "2026-07-19T04:18:29.477Z",
+  "expires_at": "2026-07-26T04:18:29.477Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "03a2c7a8925af1c68203f65993623f2f427de1dde2c169ec443ac925a322396e",
+  "signature": "d87f10cba32330a9673110accdf039c915e7a35eaa3118a74232bf367a93247d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpapplemusic"
 }

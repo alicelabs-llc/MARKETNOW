@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8394600",
+  "certificate_id": "MN-SC-2026-4683369",
   "skill_id": "mn-mcp-memory",
   "skill_name": "MCP Memory Server (Official)",
-  "issued_at": "2026-07-15T01:19:54.600Z",
-  "expires_at": "2026-07-22T01:19:54.600Z",
+  "issued_at": "2026-07-19T04:18:03.369Z",
+  "expires_at": "2026-07-26T04:18:03.369Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran"
   },
-  "signature": "3d4449329e9fd8980579f196b400dac64f9e5b2be2bcbaf70a17d4a9b7e67122",
+  "signature": "8f86f084120281918a55046b8b5fb87a6a20a5ddcd198efe889bf918cbb8bdc3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-memory"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9161487",
+  "certificate_id": "MN-SC-2026-5452081",
   "skill_id": "mn-real-mcpcompliancelite",
   "skill_name": "mcp-compliance-lite",
-  "issued_at": "2026-07-15T01:32:41.487Z",
-  "expires_at": "2026-07-22T01:32:41.487Z",
+  "issued_at": "2026-07-19T04:30:52.081Z",
+  "expires_at": "2026-07-26T04:30:52.081Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9082ddbfaae91ab6abe6a864505f91c91433c4a388071078c0c0ec15a3fcf30d",
+  "signature": "e5904cb13ecc418874461bc77a9642ffdcccaa84e3d0cb47954fafd9e1fde87b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcompliancelite"
 }

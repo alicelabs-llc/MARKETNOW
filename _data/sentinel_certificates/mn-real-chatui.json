@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8882006",
+  "certificate_id": "MN-SC-2026-5178056",
   "skill_id": "mn-real-chatui",
   "skill_name": "chat-ui",
-  "issued_at": "2026-07-15T01:28:02.006Z",
-  "expires_at": "2026-07-22T01:28:02.006Z",
+  "issued_at": "2026-07-19T04:26:18.056Z",
+  "expires_at": "2026-07-26T04:26:18.056Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "85834a2a8d576696904f49d74b6f82254c675c23b231234bd3e46c20d839f15d",
+  "signature": "270395700fef9e6c47399759977823734bb3ad54283912124b925b9014f8ef8b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-chatui"
 }

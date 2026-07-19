@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8778522",
+  "certificate_id": "MN-SC-2026-5073449",
   "skill_id": "mn-real-greptimedb",
   "skill_name": "greptimedb",
-  "issued_at": "2026-07-15T01:26:18.522Z",
-  "expires_at": "2026-07-22T01:26:18.522Z",
+  "issued_at": "2026-07-19T04:24:33.449Z",
+  "expires_at": "2026-07-26T04:24:33.449Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "48242f71f164ffc54da910b8a5524f8aa02c97315988ae369100b057b2d7245d",
+  "signature": "4bb8628c15a8795724b4057c51c0dcd882c589f7e429fb50f1b96cae7d41c27e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-greptimedb"
 }

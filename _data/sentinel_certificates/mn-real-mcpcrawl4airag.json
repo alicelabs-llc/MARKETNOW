@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8947848",
+  "certificate_id": "MN-SC-2026-5244658",
   "skill_id": "mn-real-mcpcrawl4airag",
   "skill_name": "mcp-crawl4ai-rag",
-  "issued_at": "2026-07-15T01:29:07.848Z",
-  "expires_at": "2026-07-22T01:29:07.848Z",
+  "issued_at": "2026-07-19T04:27:24.658Z",
+  "expires_at": "2026-07-26T04:27:24.658Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e4c930e88238739e92cf442d20196b20070781bec9df0bf5092b4e20c09d2cab",
+  "signature": "657d681aa34cb077ab5e647dd4342c9c68e6868bea13ad87651e2999a8de95e7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcrawl4airag"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8979200",
+  "certificate_id": "MN-SC-2026-5276512",
   "skill_id": "mn-real-tripomcp",
   "skill_name": "tripo-mcp",
-  "issued_at": "2026-07-15T01:29:39.200Z",
-  "expires_at": "2026-07-22T01:29:39.200Z",
+  "issued_at": "2026-07-19T04:27:56.512Z",
+  "expires_at": "2026-07-26T04:27:56.512Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "333ae8a7a73fd14e2fd5aa367906f61068db48d36f8ded4c3dd6f7d4fbf296d3",
+  "signature": "fddccb217c3fd8bb6793c2471eda7488c5ea68b441d2d2916063fcdcd8a3ccff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tripomcp"
 }

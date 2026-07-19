@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8936496",
+  "certificate_id": "MN-SC-2026-5233605",
   "skill_id": "mn-real-focusrelaymcp",
   "skill_name": "FocusRelayMCP",
-  "issued_at": "2026-07-15T01:28:56.496Z",
-  "expires_at": "2026-07-22T01:28:56.496Z",
+  "issued_at": "2026-07-19T04:27:13.605Z",
+  "expires_at": "2026-07-26T04:27:13.605Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00c96e1a0335ad865875d663b5f63ec0987eaee8073923587799cd31003ec079",
+  "signature": "2b5b6ecd06dc0bef9085dbccc5d1964991fd1f992e5587242b17d73b11bc367f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-focusrelaymcp"
 }

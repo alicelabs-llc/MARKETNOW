@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8698082",
+  "certificate_id": "MN-SC-2026-4994956",
   "skill_id": "mn-real-maxkb",
   "skill_name": "MaxKB",
-  "issued_at": "2026-07-15T01:24:58.082Z",
-  "expires_at": "2026-07-22T01:24:58.082Z",
+  "issued_at": "2026-07-19T04:23:14.956Z",
+  "expires_at": "2026-07-26T04:23:14.956Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "047fa229c028144f586846914c7647024a84a8b4b3024e3d26dec8186ce68e6a",
+  "signature": "4b2efe265415a0d96152d50a5cc9da3ffaf4897c3b2252fccd5136cf82355f16",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-maxkb"
 }

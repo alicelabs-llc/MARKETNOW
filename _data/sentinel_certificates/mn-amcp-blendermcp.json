@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8395291",
+  "certificate_id": "MN-SC-2026-4684120",
   "skill_id": "mn-amcp-blendermcp",
   "skill_name": "blender-mcp",
-  "issued_at": "2026-07-15T01:19:55.291Z",
-  "expires_at": "2026-07-22T01:19:55.291Z",
+  "issued_at": "2026-07-19T04:18:04.120Z",
+  "expires_at": "2026-07-26T04:18:04.120Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "83df9766308ff4b0b57cc6118aba73139c57b1096d13286a25bf2aeaa30fcac2",
+  "signature": "e7676e2df390cb795b757af737fa39e1817fbb346121e1fda0a1cce8a14e370a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-amcp-blendermcp"
 }

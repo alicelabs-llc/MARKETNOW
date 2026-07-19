@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8899980",
+  "certificate_id": "MN-SC-2026-5197527",
   "skill_id": "mn-real-generativeuimcp",
   "skill_name": "Generative-UI-MCP",
-  "issued_at": "2026-07-15T01:28:19.980Z",
-  "expires_at": "2026-07-22T01:28:19.980Z",
+  "issued_at": "2026-07-19T04:26:37.527Z",
+  "expires_at": "2026-07-26T04:26:37.527Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e9138caeb0ad0cd6d0934256c369ae9085ce6375e96e6d9bcede8a9552618bce",
+  "signature": "bb2b06b6a352cb2d318cb6690ec8b88d9a4c8e37974d0433e68fd53f1e6655e0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-generativeuimcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8556168",
+  "certificate_id": "MN-SC-2026-4848774",
   "skill_id": "mn-real-intelicamcp",
   "skill_name": "intelica-mcp",
-  "issued_at": "2026-07-15T01:22:36.168Z",
-  "expires_at": "2026-07-22T01:22:36.168Z",
+  "issued_at": "2026-07-19T04:20:48.774Z",
+  "expires_at": "2026-07-26T04:20:48.774Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ede7fbfc47be3d8487d1c29af41d8b99ab772ce859a21d1586bb2c3cc2048d8b",
+  "signature": "1a974fe976a87cc779e0ffee0936c54e02cf594a05c975e44d98ca39a38130da",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-intelicamcp"
 }

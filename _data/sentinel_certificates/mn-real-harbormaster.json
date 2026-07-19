@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9131163",
+  "certificate_id": "MN-SC-2026-5421452",
   "skill_id": "mn-real-harbormaster",
   "skill_name": "harbormaster",
-  "issued_at": "2026-07-15T01:32:11.163Z",
-  "expires_at": "2026-07-22T01:32:11.163Z",
+  "issued_at": "2026-07-19T04:30:21.452Z",
+  "expires_at": "2026-07-26T04:30:21.452Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "96f94ad26125370b2c4d2e231a2307b7fb63e2f9734aaec4ec43056fca7d8e05",
+  "signature": "9be88a71e49a394696dc3c5afc820bdfc27b621c748a135558d7e132417adb42",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-harbormaster"
 }

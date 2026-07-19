@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8898330",
+  "certificate_id": "MN-SC-2026-5194399",
   "skill_id": "mn-real-rsutcp",
   "skill_name": "rs-utcp",
-  "issued_at": "2026-07-15T01:28:18.330Z",
-  "expires_at": "2026-07-22T01:28:18.330Z",
+  "issued_at": "2026-07-19T04:26:34.399Z",
+  "expires_at": "2026-07-26T04:26:34.399Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4784a2e88e358deada78bf226b1ba4a25e7f8bf4c97ddc08295cebc080cbffc5",
+  "signature": "433ce065dda884b874fa9ccd018bf5a9d65c5162a553225dc3de9cb9f3da4064",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rsutcp"
 }

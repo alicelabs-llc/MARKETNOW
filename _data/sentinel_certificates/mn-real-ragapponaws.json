@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9167769",
+  "certificate_id": "MN-SC-2026-5458383",
   "skill_id": "mn-real-ragapponaws",
   "skill_name": "rag-app-on-aws",
-  "issued_at": "2026-07-15T01:32:47.769Z",
-  "expires_at": "2026-07-22T01:32:47.769Z",
+  "issued_at": "2026-07-19T04:30:58.383Z",
+  "expires_at": "2026-07-26T04:30:58.383Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0c456fa3a101a7ed7d086e697780831c13fe12318eaefee291397dd7c8c5e28b",
+  "signature": "295964d086e7576a6d21b31d4b50934f85348e4ab3d06b913df84c6091d63fc6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ragapponaws"
 }

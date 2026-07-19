@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8912829",
+  "certificate_id": "MN-SC-2026-5211177",
   "skill_id": "mn-real-agentafk",
   "skill_name": "agent-afk",
-  "issued_at": "2026-07-15T01:28:32.829Z",
-  "expires_at": "2026-07-22T01:28:32.829Z",
+  "issued_at": "2026-07-19T04:26:51.177Z",
+  "expires_at": "2026-07-26T04:26:51.177Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f8338c0074556b904980eb6c40961cf24ff953c0ef6d8d40072b098d9a9b7e5f",
+  "signature": "2d7c500c7cc6f99a96f0b4a036d531f76d05e1dba033a82c3b4038f1dd9b4494",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentafk"
 }

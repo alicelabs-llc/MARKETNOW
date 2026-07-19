@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8824363",
+  "certificate_id": "MN-SC-2026-5120344",
   "skill_id": "mn-real-mingyu",
   "skill_name": "mingyu",
-  "issued_at": "2026-07-15T01:27:04.363Z",
-  "expires_at": "2026-07-22T01:27:04.363Z",
+  "issued_at": "2026-07-19T04:25:20.344Z",
+  "expires_at": "2026-07-26T04:25:20.344Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0331611429c155a8f64f0a3746a70165f1f35e9fc3db6402a19f7275affcf680",
+  "signature": "322bfd415f5a289e2652fb24d2444969884863250a065dfaa589050e0d2889a5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mingyu"
 }

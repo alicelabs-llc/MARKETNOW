@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9081440",
+  "certificate_id": "MN-SC-2026-5372548",
   "skill_id": "mn-real-cloudflaremcp",
   "skill_name": "cloudflare-mcp",
-  "issued_at": "2026-07-15T01:31:21.440Z",
-  "expires_at": "2026-07-22T01:31:21.440Z",
+  "issued_at": "2026-07-19T04:29:32.548Z",
+  "expires_at": "2026-07-26T04:29:32.548Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00bd57393f912ed199b359c15a5526bb67cfa6b53ae58dc39f8d37a045aeaa6e",
+  "signature": "b7b6d6d3f503a7060f8b0eacc03145bc7b93d4e28cef1eb58ffe0a913059d98c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cloudflaremcp"
 }

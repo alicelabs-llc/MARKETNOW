@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9122152",
+  "certificate_id": "MN-SC-2026-5412307",
   "skill_id": "mn-real-hecate",
   "skill_name": "hecate",
-  "issued_at": "2026-07-15T01:32:02.152Z",
-  "expires_at": "2026-07-22T01:32:02.152Z",
+  "issued_at": "2026-07-19T04:30:12.307Z",
+  "expires_at": "2026-07-26T04:30:12.307Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c85e822830418a2fda35c2f7a5d1934e40e353e1b551f27396d27cbd9478bb44",
+  "signature": "940fa155f7571af542f2ac2e3cb5279686725d378774f745f513ca666f7b8d57",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hecate"
 }

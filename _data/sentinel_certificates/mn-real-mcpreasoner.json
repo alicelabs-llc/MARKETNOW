@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8967288",
+  "certificate_id": "MN-SC-2026-5264324",
   "skill_id": "mn-real-mcpreasoner",
   "skill_name": "mcp-reasoner",
-  "issued_at": "2026-07-15T01:29:27.288Z",
-  "expires_at": "2026-07-22T01:29:27.288Z",
+  "issued_at": "2026-07-19T04:27:44.324Z",
+  "expires_at": "2026-07-26T04:27:44.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "687b2a5286dfe5b0f2585b7c2e8221df11bd969d1b145a286bc8910b06d5b0fb",
+  "signature": "427a783115d68dd41cc52b75005e2ff89b529ded2ec39c088bf6af61304b438f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpreasoner"
 }

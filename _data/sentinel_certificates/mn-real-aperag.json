@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8597075",
+  "certificate_id": "MN-SC-2026-4890535",
   "skill_id": "mn-real-aperag",
   "skill_name": "ApeRAG",
-  "issued_at": "2026-07-15T01:23:17.075Z",
-  "expires_at": "2026-07-22T01:23:17.075Z",
+  "issued_at": "2026-07-19T04:21:30.535Z",
+  "expires_at": "2026-07-26T04:21:30.535Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3228e9c60d4e964127b4afcc6c39f15dd10711189ba1c599652ab170125115d1",
+  "signature": "59ee2131c736dab058cce18a3f97fa626400cfac91186f804299c6b1be6d0157",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aperag"
 }

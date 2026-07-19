@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9105749",
+  "certificate_id": "MN-SC-2026-5393848",
   "skill_id": "mn-real-homeenergymanager",
   "skill_name": "home-energy-manager",
-  "issued_at": "2026-07-15T01:31:45.749Z",
-  "expires_at": "2026-07-22T01:31:45.749Z",
+  "issued_at": "2026-07-19T04:29:53.848Z",
+  "expires_at": "2026-07-26T04:29:53.848Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a73359e7f1ed6296285e184680ceaa535087ae620680947ffcfffe9ed7852b70",
+  "signature": "4ea503ba0c1e3d79d725b7584b1c47ba6e5902df23523a4787477cce619db446",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-homeenergymanager"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8507377",
+  "certificate_id": "MN-SC-2026-4799418",
   "skill_id": "mn-real-keynegmcp",
   "skill_name": "keyneg-mcp",
-  "issued_at": "2026-07-15T01:21:47.377Z",
-  "expires_at": "2026-07-22T01:21:47.377Z",
+  "issued_at": "2026-07-19T04:19:59.418Z",
+  "expires_at": "2026-07-26T04:19:59.418Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ecdd92198228924f8f302c73076875344b73597a35125d43b92c7f7419c97b6",
+  "signature": "528d2b689d190467e39d3a5da06c0ebc9fa0b15dc943a82a9cce864d92f51edb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-keynegmcp"
 }

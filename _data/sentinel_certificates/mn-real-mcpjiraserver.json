@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8766105",
+  "certificate_id": "MN-SC-2026-5061001",
   "skill_id": "mn-real-mcpjiraserver",
   "skill_name": "mcp-jira-server",
-  "issued_at": "2026-07-15T01:26:06.105Z",
-  "expires_at": "2026-07-22T01:26:06.105Z",
+  "issued_at": "2026-07-19T04:24:21.001Z",
+  "expires_at": "2026-07-26T04:24:21.001Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3c40be1b13a2f279e8aa2774751465b2098baf598414cd0e952b03aec4b26076",
+  "signature": "65b9dd7984c46be63078ee38aae59f5ab66d8d629ac7dc4a713fe5ebeaba03b5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpjiraserver"
 }

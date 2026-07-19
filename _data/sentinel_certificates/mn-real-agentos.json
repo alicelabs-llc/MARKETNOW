@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9145980",
+  "certificate_id": "MN-SC-2026-5436666",
   "skill_id": "mn-real-agentos",
   "skill_name": "AgentOS",
-  "issued_at": "2026-07-15T01:32:25.980Z",
-  "expires_at": "2026-07-22T01:32:25.980Z",
+  "issued_at": "2026-07-19T04:30:36.666Z",
+  "expires_at": "2026-07-26T04:30:36.666Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "135faada000a76ae0c65317f7338c87579345094f554be882ca2c3ff0084caf1",
+  "signature": "a85f2edbe895b4279ee03cf4547e6e9ceb0a4c74bf07aee39ee13197cd5a400b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentos"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9136425",
+  "certificate_id": "MN-SC-2026-5426862",
   "skill_id": "mn-real-pbxestimation",
   "skill_name": "pbx_estimation",
-  "issued_at": "2026-07-15T01:32:16.425Z",
-  "expires_at": "2026-07-22T01:32:16.425Z",
+  "issued_at": "2026-07-19T04:30:26.862Z",
+  "expires_at": "2026-07-26T04:30:26.862Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb568339333bbb0b65efaacddf20896d82101c003060e405dd81ec6ce3824fa7",
+  "signature": "70f45c882540d0b78f4afab3c61b6a8760161aa40792462efd0f5589108b8e4e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pbxestimation"
 }

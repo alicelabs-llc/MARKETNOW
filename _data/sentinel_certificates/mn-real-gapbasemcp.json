@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8635503",
+  "certificate_id": "MN-SC-2026-4929114",
   "skill_id": "mn-real-gapbasemcp",
   "skill_name": "gapbase-mcp",
-  "issued_at": "2026-07-15T01:23:55.503Z",
-  "expires_at": "2026-07-22T01:23:55.503Z",
+  "issued_at": "2026-07-19T04:22:09.114Z",
+  "expires_at": "2026-07-26T04:22:09.114Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e8dacb1249b10a75e397c17a1d958961b8e2b68bfaf3a4874b22f8f5168cff64",
+  "signature": "eb8db94e421c4650d8fce349704f239b2c67e60a0f9b8fcda9b27297eefc07d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gapbasemcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7936049",
+  "certificate_id": "MN-SC-2026-4601454",
   "skill_id": "mn-gen-01487",
   "skill_name": "boldsign-mcp",
-  "issued_at": "2026-07-15T01:12:16.049Z",
-  "expires_at": "2026-07-22T01:12:16.049Z",
+  "issued_at": "2026-07-19T04:16:41.454Z",
+  "expires_at": "2026-07-26T04:16:41.454Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "de8ad06668ee56791ead984b84a6238eb28b741288a9a767bb9481967ef94b3a",
+  "signature": "503ccaa9a32165d0faa4aa123df13a6714382c5fd62f7f55ea20e322a15e0a27",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-01487"
 }

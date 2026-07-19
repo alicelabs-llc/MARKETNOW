@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9222085",
+  "certificate_id": "MN-SC-2026-5511900",
   "skill_id": "mn-real-agentpm",
   "skill_name": "agent-pm",
-  "issued_at": "2026-07-15T01:33:42.085Z",
-  "expires_at": "2026-07-22T01:33:42.085Z",
+  "issued_at": "2026-07-19T04:31:51.900Z",
+  "expires_at": "2026-07-26T04:31:51.900Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "274558da9327584a2d4a5be0f9e4e9463a829f05f36bc543e100c39691c12914",
+  "signature": "be7a80695dcde64cdf5df20bec8143326491c74078e26680a0ee8e0606decdb4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentpm"
 }

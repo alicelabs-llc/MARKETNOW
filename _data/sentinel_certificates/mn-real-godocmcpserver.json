@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8753856",
+  "certificate_id": "MN-SC-2026-5048230",
   "skill_id": "mn-real-godocmcpserver",
   "skill_name": "godoc-mcp-server",
-  "issued_at": "2026-07-15T01:25:53.856Z",
-  "expires_at": "2026-07-22T01:25:53.856Z",
+  "issued_at": "2026-07-19T04:24:08.230Z",
+  "expires_at": "2026-07-26T04:24:08.230Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "656da3b6d8393e4a987888d7292917ded918704961541c345a44af8e2b19488c",
+  "signature": "9f4911939885d5f0aceca1709e5c7d7dfb9244f649a87c86b772c2c26a108ecd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-godocmcpserver"
 }

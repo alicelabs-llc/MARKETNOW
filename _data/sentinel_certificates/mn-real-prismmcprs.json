@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8905319",
+  "certificate_id": "MN-SC-2026-5203443",
   "skill_id": "mn-real-prismmcprs",
   "skill_name": "prism-mcp-rs",
-  "issued_at": "2026-07-15T01:28:25.319Z",
-  "expires_at": "2026-07-22T01:28:25.319Z",
+  "issued_at": "2026-07-19T04:26:43.443Z",
+  "expires_at": "2026-07-26T04:26:43.443Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "745b6cb13fd43bb8952eff2e9379ad4b526201dacb0ff98cf0ffb2005ae4c857",
+  "signature": "1d8e421d86a5b99cbe00c558f2746a0443ad6eca39eb93bdd0b4b314c970b959",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-prismmcprs"
 }

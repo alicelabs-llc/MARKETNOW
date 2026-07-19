@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9091624",
+  "certificate_id": "MN-SC-2026-5380077",
   "skill_id": "mn-real-finopsmcp",
   "skill_name": "finopsmcp",
-  "issued_at": "2026-07-15T01:31:31.624Z",
-  "expires_at": "2026-07-22T01:31:31.624Z",
+  "issued_at": "2026-07-19T04:29:40.077Z",
+  "expires_at": "2026-07-26T04:29:40.077Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7c66c2a80d0f356524e133a43f2b23c7c7eee9019366b05a5027076b66427064",
+  "signature": "970a72f92b11764badc76ee793f6c0f504a73b1a5e22e83d6194f01bcdb6bca8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-finopsmcp"
 }

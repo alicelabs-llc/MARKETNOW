@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8883854",
+  "certificate_id": "MN-SC-2026-5179957",
   "skill_id": "mn-real-tiaportalopennessmcp",
   "skill_name": "TIA_Portal_Openness_MCP",
-  "issued_at": "2026-07-15T01:28:03.854Z",
-  "expires_at": "2026-07-22T01:28:03.854Z",
+  "issued_at": "2026-07-19T04:26:19.957Z",
+  "expires_at": "2026-07-26T04:26:19.957Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4e422de581a4e9804670376656e1f2a51cbb288024c8352fe19a0e824e12a5e2",
+  "signature": "f12fc02bdee3669ff303e9a362c1ae3c83ded1a7dc9ad0576991b1a19fd2972b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tiaportalopennessmcp"
 }

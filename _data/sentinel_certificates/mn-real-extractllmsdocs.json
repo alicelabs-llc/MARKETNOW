@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8929068",
+  "certificate_id": "MN-SC-2026-5227016",
   "skill_id": "mn-real-extractllmsdocs",
   "skill_name": "extract-llms-docs",
-  "issued_at": "2026-07-15T01:28:49.068Z",
-  "expires_at": "2026-07-22T01:28:49.068Z",
+  "issued_at": "2026-07-19T04:27:07.016Z",
+  "expires_at": "2026-07-26T04:27:07.016Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aacf75e169ae813ebbc6179cfaf8b3f54794703ff389fdc79fa780a4e0bf6f77",
+  "signature": "b2203c18915d75f851c0155e75b9f9373d6690d139d060b80b897e97b5d9e62b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-extractllmsdocs"
 }

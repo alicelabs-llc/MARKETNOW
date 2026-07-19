@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8839524",
+  "certificate_id": "MN-SC-2026-5135555",
   "skill_id": "mn-real-claudeipcmcp",
   "skill_name": "claude-ipc-mcp",
-  "issued_at": "2026-07-15T01:27:19.524Z",
-  "expires_at": "2026-07-22T01:27:19.524Z",
+  "issued_at": "2026-07-19T04:25:35.555Z",
+  "expires_at": "2026-07-26T04:25:35.555Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "23d92af557c19224f43a33fb5b6359c11a49fd08262d60ad04201164a154d1a8",
+  "signature": "abd3e3b2568ada4a30f7df9d0b856b8eb460e7cffb99ff0717cf7499aa1340a7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudeipcmcp"
 }

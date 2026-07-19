@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8784767",
+  "certificate_id": "MN-SC-2026-5079804",
   "skill_id": "mn-real-mcpautogendoc",
   "skill_name": "mcp-autogen-doc",
-  "issued_at": "2026-07-15T01:26:24.767Z",
-  "expires_at": "2026-07-22T01:26:24.767Z",
+  "issued_at": "2026-07-19T04:24:39.804Z",
+  "expires_at": "2026-07-26T04:24:39.804Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "eb06c38b7c7340d398224a6a5fc2e9440f4196676bc574595eaff7fe6c8defc8",
+  "signature": "96fa150781dcd8135d2a497ab3a6d3c2a5616de5cc1670b6ec3229494f7485d3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpautogendoc"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8662972",
+  "certificate_id": "MN-SC-2026-4959794",
   "skill_id": "mn-real-openstoa",
   "skill_name": "openstoa",
-  "issued_at": "2026-07-15T01:24:22.972Z",
-  "expires_at": "2026-07-22T01:24:22.972Z",
+  "issued_at": "2026-07-19T04:22:39.794Z",
+  "expires_at": "2026-07-26T04:22:39.794Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5595e2781e5b18bb97f4dd6749aea73b1cca0c57d5e5e8be52fbf32a0194dc73",
+  "signature": "518df6123c7af913b6c5e3bcf98615686d89418c6e79034fb336b32fd074cc7d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openstoa"
 }

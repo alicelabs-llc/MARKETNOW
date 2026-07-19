@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8660757",
+  "certificate_id": "MN-SC-2026-4957452",
   "skill_id": "mn-real-cyberchefapimcpserve",
   "skill_name": "cyberchef-api-mcp-server",
-  "issued_at": "2026-07-15T01:24:20.757Z",
-  "expires_at": "2026-07-22T01:24:20.757Z",
+  "issued_at": "2026-07-19T04:22:37.452Z",
+  "expires_at": "2026-07-26T04:22:37.452Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f40b0a5b821220dbbba7ab0ba7d5f275c714674bd3bda6bbc5ad828542c0fb5",
+  "signature": "965ce128c2253d255c7457b1a6917cb443adac806e459730d22ecaf33404393d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cyberchefapimcpserve"
 }

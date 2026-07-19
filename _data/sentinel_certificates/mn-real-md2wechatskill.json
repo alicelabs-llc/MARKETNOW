@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8702285",
+  "certificate_id": "MN-SC-2026-4999171",
   "skill_id": "mn-real-md2wechatskill",
   "skill_name": "md2wechat-skill",
-  "issued_at": "2026-07-15T01:25:02.285Z",
-  "expires_at": "2026-07-22T01:25:02.285Z",
+  "issued_at": "2026-07-19T04:23:19.171Z",
+  "expires_at": "2026-07-26T04:23:19.171Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2c4ee1b97d794a4953374a51b7de817bf1ff6f8e42a6fb4bfbf6b904c8f09fcb",
+  "signature": "70c49f7bc05e0ac59fe65e30e1a83eecb859cc034b6c7177484f1268be347f65",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-md2wechatskill"
 }

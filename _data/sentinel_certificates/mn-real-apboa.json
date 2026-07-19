@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9017052",
+  "certificate_id": "MN-SC-2026-5314102",
   "skill_id": "mn-real-apboa",
   "skill_name": "apboa",
-  "issued_at": "2026-07-15T01:30:17.052Z",
-  "expires_at": "2026-07-22T01:30:17.052Z",
+  "issued_at": "2026-07-19T04:28:34.102Z",
+  "expires_at": "2026-07-26T04:28:34.102Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e3967b60e64465990de5335554180edcdf6b90ac3f59f873e423821eb43b3ec0",
+  "signature": "c19caca559b8af2588bce7e0b05ec18a3f3622d0e56047dadcb258b1fa52eacc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apboa"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8431933",
+  "certificate_id": "MN-SC-2026-4722410",
   "skill_id": "mn-awmcp-plantgenomicsmcp",
   "skill_name": "plant-genomics-mcp",
-  "issued_at": "2026-07-15T01:20:31.933Z",
-  "expires_at": "2026-07-22T01:20:31.933Z",
+  "issued_at": "2026-07-19T04:18:42.410Z",
+  "expires_at": "2026-07-26T04:18:42.410Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 10,
     "l2_execution_status": "ran_idle"
   },
-  "signature": "e0c551939526074fc7bc0748f95e415398bca82b6dd49ec72981da872b8da4f3",
+  "signature": "22ce850687129d7fd1e82367d91c512daa9d2df0da77c8afc6a2fa4ac7b583e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-plantgenomicsmcp"
 }

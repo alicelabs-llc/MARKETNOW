@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9185109",
+  "certificate_id": "MN-SC-2026-5475788",
   "skill_id": "mn-real-claudecodexbridge",
   "skill_name": "claude-codex-bridge",
-  "issued_at": "2026-07-15T01:33:05.109Z",
-  "expires_at": "2026-07-22T01:33:05.109Z",
+  "issued_at": "2026-07-19T04:31:15.788Z",
+  "expires_at": "2026-07-26T04:31:15.788Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "56e951f5e8dfa79f16bd9fdf0814ec467fc494f37c9a63ff8c45ce4c3f200ff9",
+  "signature": "dfcc1b34e71221929ebe1d5e3b68c574afbbc219902f3ea039803629ddb7a1d2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecodexbridge"
 }

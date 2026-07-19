@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8597003",
+  "certificate_id": "MN-SC-2026-4890367",
   "skill_id": "mn-real-nucleusmcp",
   "skill_name": "nucleus-mcp",
-  "issued_at": "2026-07-15T01:23:17.003Z",
-  "expires_at": "2026-07-22T01:23:17.003Z",
+  "issued_at": "2026-07-19T04:21:30.367Z",
+  "expires_at": "2026-07-26T04:21:30.367Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cbaeecb3cc8b40d98a6967afe6df306adb811e408cbde874a5a78b878b28030b",
+  "signature": "9062d547cb424828266858faf58273842cff351a9cd7501bcbc68eef80e822e8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nucleusmcp"
 }

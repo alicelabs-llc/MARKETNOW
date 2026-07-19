@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8409206",
+  "certificate_id": "MN-SC-2026-4698148",
   "skill_id": "mn-awmcp-mindsdb",
   "skill_name": "mindsdb",
-  "issued_at": "2026-07-15T01:20:09.206Z",
-  "expires_at": "2026-07-22T01:20:09.206Z",
+  "issued_at": "2026-07-19T04:18:18.148Z",
+  "expires_at": "2026-07-26T04:18:18.148Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "38b4389fb544032fbc5760eb873ca4906bef34395fe1cbe22f08627f732db277",
+  "signature": "078830016647f947a8fc8c9cd755a5990baa9ff2bc71139b9f26d3de08704eb8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mindsdb"
 }

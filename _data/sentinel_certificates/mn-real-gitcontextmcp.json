@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8529704",
+  "certificate_id": "MN-SC-2026-4821463",
   "skill_id": "mn-real-gitcontextmcp",
   "skill_name": "git-context-mcp",
-  "issued_at": "2026-07-15T01:22:09.704Z",
-  "expires_at": "2026-07-22T01:22:09.704Z",
+  "issued_at": "2026-07-19T04:20:21.463Z",
+  "expires_at": "2026-07-26T04:20:21.463Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "43d5db84cf256b082b13d47f1ac54708930d3e107e082ed41fc32fe92ad61d47",
+  "signature": "7459ed2c2d99aadd1332d3a2aa536edcdfa778e2c88ec3d5224738b81f42da0b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gitcontextmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8887659",
+  "certificate_id": "MN-SC-2026-5183709",
   "skill_id": "mn-real-modelcompose",
   "skill_name": "model-compose",
-  "issued_at": "2026-07-15T01:28:07.659Z",
-  "expires_at": "2026-07-22T01:28:07.659Z",
+  "issued_at": "2026-07-19T04:26:23.709Z",
+  "expires_at": "2026-07-26T04:26:23.709Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "84faef8fbe0bb416b2d9ca2b1314ed9edb6216a32bbbeab405e4c135f92643cd",
+  "signature": "ca55081a0c87e0d7f0ecc759aa2a4d6acbc2be2b12ed5c8e7d32302595dfddc6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-modelcompose"
 }

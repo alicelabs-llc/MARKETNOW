@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9213672",
+  "certificate_id": "MN-SC-2026-5503582",
   "skill_id": "mn-real-mcppromptlab",
   "skill_name": "mcp-prompt-lab",
-  "issued_at": "2026-07-15T01:33:33.672Z",
-  "expires_at": "2026-07-22T01:33:33.672Z",
+  "issued_at": "2026-07-19T04:31:43.582Z",
+  "expires_at": "2026-07-26T04:31:43.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "aeefdbfda2f97f4153e917990a258bfb813ab8bb595de4e40fa0ad7c21db0e67",
+  "signature": "b65828baffbd2c703ed9c0bc103d7e926db6ac9705ad84ddbde918953e4969ff",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcppromptlab"
 }

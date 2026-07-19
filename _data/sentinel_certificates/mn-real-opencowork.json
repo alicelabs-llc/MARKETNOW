@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9009109",
+  "certificate_id": "MN-SC-2026-5306476",
   "skill_id": "mn-real-opencowork",
   "skill_name": "open-cowork",
-  "issued_at": "2026-07-15T01:30:09.109Z",
-  "expires_at": "2026-07-22T01:30:09.109Z",
+  "issued_at": "2026-07-19T04:28:26.476Z",
+  "expires_at": "2026-07-26T04:28:26.476Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7061041092fb4a1d2d64d520864ab12c002933bc1d99148484edecac07118f5",
+  "signature": "37ae5eab1eafafd8ab61e0258fffccca77d20281f0de60c512b326d068e088f7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-opencowork"
 }

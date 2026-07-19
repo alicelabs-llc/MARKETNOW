@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8652652",
+  "certificate_id": "MN-SC-2026-4949063",
   "skill_id": "mn-real-webexposuremcp",
   "skill_name": "web-exposure-mcp",
-  "issued_at": "2026-07-15T01:24:12.652Z",
-  "expires_at": "2026-07-22T01:24:12.652Z",
+  "issued_at": "2026-07-19T04:22:29.063Z",
+  "expires_at": "2026-07-26T04:22:29.063Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "80e323ece6df4f655e16d352f624bb46caf6d9c414287fb6fcc9648fe66831a5",
+  "signature": "ce38cc07884d7501e4ab40f2c1838ee0e96e9e6c171b0846a891e9bf0e5f4799",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webexposuremcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8767459",
+  "certificate_id": "MN-SC-2026-5062493",
   "skill_id": "mn-real-tickticksdk",
   "skill_name": "ticktick-sdk",
-  "issued_at": "2026-07-15T01:26:07.459Z",
-  "expires_at": "2026-07-22T01:26:07.459Z",
+  "issued_at": "2026-07-19T04:24:22.493Z",
+  "expires_at": "2026-07-26T04:24:22.493Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bb4edcaa0e661bb50e66d3a34dbc436f94bb3df54a21df5a3b47cb210dce3b16",
+  "signature": "fdf0ccde9aabdb5358591ad0e9ab991fcb76b19ba19305bc4fab53f4085935d5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-tickticksdk"
 }

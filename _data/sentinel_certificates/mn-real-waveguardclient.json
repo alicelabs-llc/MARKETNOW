@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8546557",
+  "certificate_id": "MN-SC-2026-4838660",
   "skill_id": "mn-real-waveguardclient",
   "skill_name": "WaveGuardClient",
-  "issued_at": "2026-07-15T01:22:26.557Z",
-  "expires_at": "2026-07-22T01:22:26.557Z",
+  "issued_at": "2026-07-19T04:20:38.660Z",
+  "expires_at": "2026-07-26T04:20:38.660Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "78626e50c2752d39a24dc7a8e3f3a64987784c2d95cd5e53f013d33f85a684b4",
+  "signature": "ae0e8935e452aae5e5a362ed637de86a07322b923c1806f02a5ba0cb70ec3fd2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-waveguardclient"
 }

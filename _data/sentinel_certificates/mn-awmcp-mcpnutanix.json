@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8459146",
+  "certificate_id": "MN-SC-2026-4751183",
   "skill_id": "mn-awmcp-mcpnutanix",
   "skill_name": "mcp-nutanix",
-  "issued_at": "2026-07-15T01:20:59.146Z",
-  "expires_at": "2026-07-22T01:20:59.146Z",
+  "issued_at": "2026-07-19T04:19:11.183Z",
+  "expires_at": "2026-07-26T04:19:11.183Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2e1fe0ed89d4ac646e23f67f39218dbac5ee42c995e173a51ba1fc4050f0ecac",
+  "signature": "fa53ea588c541fae6b5876fcf2d5a5b7cb8aa101d8343aede669895be35dc99f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-mcpnutanix"
 }

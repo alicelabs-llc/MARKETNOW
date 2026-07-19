@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8771456",
+  "certificate_id": "MN-SC-2026-5066467",
   "skill_id": "mn-real-cmdmcpserver",
   "skill_name": "CMD-MCP-Server",
-  "issued_at": "2026-07-15T01:26:11.456Z",
-  "expires_at": "2026-07-22T01:26:11.456Z",
+  "issued_at": "2026-07-19T04:24:26.467Z",
+  "expires_at": "2026-07-26T04:24:26.467Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "2b0311da0e46f6dee8f3087227fab0db983230278ae44fdcef2679a63a67930d",
+  "signature": "88f702216ebf6a37837c0b41286e0f00a66a43d6efd5a1772754e0403a018eb0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cmdmcpserver"
 }

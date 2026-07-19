@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9124624",
+  "certificate_id": "MN-SC-2026-5414966",
   "skill_id": "mn-real-hyperliquidtradingag",
   "skill_name": "hyperliquid-trading-agent",
-  "issued_at": "2026-07-15T01:32:04.624Z",
-  "expires_at": "2026-07-22T01:32:04.624Z",
+  "issued_at": "2026-07-19T04:30:14.966Z",
+  "expires_at": "2026-07-26T04:30:14.966Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4476aa32adb873cc377a88a6d6f91b6badea806e57686901d3434d4375ffab21",
+  "signature": "805b46c9c7df250f3120f80ad07165b4d9d78862eafa97b833487b96c2b181af",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-hyperliquidtradingag"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8825488",
+  "certificate_id": "MN-SC-2026-5121659",
   "skill_id": "mn-real-xclaudeplugin",
   "skill_name": "xclaude-plugin",
-  "issued_at": "2026-07-15T01:27:05.488Z",
-  "expires_at": "2026-07-22T01:27:05.488Z",
+  "issued_at": "2026-07-19T04:25:21.659Z",
+  "expires_at": "2026-07-26T04:25:21.659Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4557be4529aef3dc9e043181d9e4521e0912b0cb0ccf62a10ef679fc9e0c969e",
+  "signature": "f61b23d2a46a0217b109d4920604c8411f2c6d50c7e72bded65a55d68b5cd7f9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xclaudeplugin"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8518636",
+  "certificate_id": "MN-SC-2026-4810413",
   "skill_id": "mn-real-currentsmcp",
   "skill_name": "currents-mcp",
-  "issued_at": "2026-07-15T01:21:58.636Z",
-  "expires_at": "2026-07-22T01:21:58.636Z",
+  "issued_at": "2026-07-19T04:20:10.413Z",
+  "expires_at": "2026-07-26T04:20:10.413Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6498a6fdf2ef339da648e5059710c6ea6e4edacb256c670352dbc720524ad782",
+  "signature": "b8398723dafcc42ec4aa6767307571eecae37ea0a2387111cfa6d9b7f8e60354",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-currentsmcp"
 }

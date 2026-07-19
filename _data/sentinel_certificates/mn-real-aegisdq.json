@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8747672",
+  "certificate_id": "MN-SC-2026-5043249",
   "skill_id": "mn-real-aegisdq",
   "skill_name": "aegis-dq",
-  "issued_at": "2026-07-15T01:25:47.672Z",
-  "expires_at": "2026-07-22T01:25:47.672Z",
+  "issued_at": "2026-07-19T04:24:03.249Z",
+  "expires_at": "2026-07-26T04:24:03.249Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c212e9ce9f881d0596a398efe25a917e77a0572a2c5d7e9f673334deb9487d6",
+  "signature": "a1ab3bbb8bbbfe0b1eaf3895cceeb7f58ee17e4210d514b9a95bbd1d5c8c8987",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aegisdq"
 }

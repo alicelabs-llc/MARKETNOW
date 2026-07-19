@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8613845",
+  "certificate_id": "MN-SC-2026-4907222",
   "skill_id": "mn-real-conformisearchmcp",
   "skill_name": "conformi-search-mcp",
-  "issued_at": "2026-07-15T01:23:33.845Z",
-  "expires_at": "2026-07-22T01:23:33.845Z",
+  "issued_at": "2026-07-19T04:21:47.222Z",
+  "expires_at": "2026-07-26T04:21:47.222Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ba92adf4cd7cf5117df6634335ed6514570bd9354b02cfc43c1f89fb21c2c976",
+  "signature": "7c32fc2779449054628623ddcd2501320500e86ae72cbec6e7f029bcd20e8235",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-conformisearchmcp"
 }

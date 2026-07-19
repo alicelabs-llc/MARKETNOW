@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9008368",
+  "certificate_id": "MN-SC-2026-5305682",
   "skill_id": "mn-real-ui",
   "skill_name": "ui",
-  "issued_at": "2026-07-15T01:30:08.368Z",
-  "expires_at": "2026-07-22T01:30:08.368Z",
+  "issued_at": "2026-07-19T04:28:25.682Z",
+  "expires_at": "2026-07-26T04:28:25.682Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "406d4c282b463ac9139769ebc3cbd039760342073741994fe77364fb149d50ff",
+  "signature": "9227605d566ebca39ee902fb62a2ee411a2139ba0d3599d6c17449734cf54621",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ui"
 }

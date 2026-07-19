@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8601823",
+  "certificate_id": "MN-SC-2026-4895386",
   "skill_id": "mn-real-gingugu",
   "skill_name": "gingugu",
-  "issued_at": "2026-07-15T01:23:21.823Z",
-  "expires_at": "2026-07-22T01:23:21.823Z",
+  "issued_at": "2026-07-19T04:21:35.386Z",
+  "expires_at": "2026-07-26T04:21:35.386Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d18b3ddceba01b34b03c21471a58d37ff59b7c5bf51f65fabea03692cd9caa1c",
+  "signature": "794e24c1b4e8d927f5bfb7c0aea8b4f2ade68904a007c46988ab232f02748a5c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gingugu"
 }

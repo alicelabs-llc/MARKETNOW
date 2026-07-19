@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8489910",
+  "certificate_id": "MN-SC-2026-4782206",
   "skill_id": "mn-awmcp-qmailingmcpserver",
   "skill_name": "qmailing-mcp-server",
-  "issued_at": "2026-07-15T01:21:29.910Z",
-  "expires_at": "2026-07-22T01:21:29.910Z",
+  "issued_at": "2026-07-19T04:19:42.206Z",
+  "expires_at": "2026-07-26T04:19:42.206Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f30294ebbd4f0197794851816f86ba2f64a117f1c8c152a2f5cdf02822d9aa10",
+  "signature": "ed93d48c85e571f3b549baaaf4ec6d479e78a4e8fd8e4c87f7790d396b47663b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-qmailingmcpserver"
 }

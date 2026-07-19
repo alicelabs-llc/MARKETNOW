@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8744237",
+  "certificate_id": "MN-SC-2026-5039587",
   "skill_id": "mn-real-ghostmcp",
   "skill_name": "ghost-mcp",
-  "issued_at": "2026-07-15T01:25:44.237Z",
-  "expires_at": "2026-07-22T01:25:44.237Z",
+  "issued_at": "2026-07-19T04:23:59.587Z",
+  "expires_at": "2026-07-26T04:23:59.587Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f3d58293cb9690ed38e9b3045ef605f28ceb6ff21e0651aa5acef833474f457d",
+  "signature": "585f00bffb4edc73207fb9d02a70ce0151899de10be1e7181289d1f95523bbd2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ghostmcp"
 }

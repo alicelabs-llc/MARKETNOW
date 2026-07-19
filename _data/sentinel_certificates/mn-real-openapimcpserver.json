@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8753147",
+  "certificate_id": "MN-SC-2026-5047560",
   "skill_id": "mn-real-openapimcpserver",
   "skill_name": "openapi-mcp-server",
-  "issued_at": "2026-07-15T01:25:53.147Z",
-  "expires_at": "2026-07-22T01:25:53.147Z",
+  "issued_at": "2026-07-19T04:24:07.560Z",
+  "expires_at": "2026-07-26T04:24:07.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8ae337cd0c28764b69104f95069a18af45f49a7a773dcf2ff4c805b8b5e3d773",
+  "signature": "feef470da2cbef1401606edf40e4ea913a33a460c6f5ea0eeba6b6b23e0f5afd",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openapimcpserver"
 }

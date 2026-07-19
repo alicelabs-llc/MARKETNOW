@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8489632",
+  "certificate_id": "MN-SC-2026-4781802",
   "skill_id": "mn-awmcp-protonmailmcp",
   "skill_name": "proton-mail-mcp",
-  "issued_at": "2026-07-15T01:21:29.632Z",
-  "expires_at": "2026-07-22T01:21:29.632Z",
+  "issued_at": "2026-07-19T04:19:41.802Z",
+  "expires_at": "2026-07-26T04:19:41.802Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab32639acb314d7d991bd305869aa5c4bc9121c591d736f0e6329ab091298390",
+  "signature": "c7190f29543a3ce8fe5cf52abae10b7d74d0731469827614e1308426ad26f568",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-protonmailmcp"
 }

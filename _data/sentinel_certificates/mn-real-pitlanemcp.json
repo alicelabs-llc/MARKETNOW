@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8885592",
+  "certificate_id": "MN-SC-2026-5181700",
   "skill_id": "mn-real-pitlanemcp",
   "skill_name": "pitlane-mcp",
-  "issued_at": "2026-07-15T01:28:05.592Z",
-  "expires_at": "2026-07-22T01:28:05.592Z",
+  "issued_at": "2026-07-19T04:26:21.700Z",
+  "expires_at": "2026-07-26T04:26:21.700Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ae111b2ad5a3ae9e1a7a4d1c1fe7bb16be24dd5e8c69046163be93adf40f9fc",
+  "signature": "6da1ee48a1b531861a42665176ac9d97d9ccc1071750194c4528f22043f4b715",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pitlanemcp"
 }

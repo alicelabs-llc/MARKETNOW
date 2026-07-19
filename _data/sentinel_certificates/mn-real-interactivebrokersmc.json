@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8822899",
+  "certificate_id": "MN-SC-2026-5118808",
   "skill_id": "mn-real-interactivebrokersmc",
   "skill_name": "interactive-brokers-mcp",
-  "issued_at": "2026-07-15T01:27:02.899Z",
-  "expires_at": "2026-07-22T01:27:02.899Z",
+  "issued_at": "2026-07-19T04:25:18.808Z",
+  "expires_at": "2026-07-26T04:25:18.808Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "50d28deb3f74dc34a8f615c4d82eeadbb5affa05d72c76045fe97ce5d68003ef",
+  "signature": "09c987962458bd8a4ecdaec63f6c7e17f008bf50c07a90990d8b6a14459e8cb0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-interactivebrokersmc"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8994754",
+  "certificate_id": "MN-SC-2026-5292415",
   "skill_id": "mn-real-aleph",
   "skill_name": "aleph",
-  "issued_at": "2026-07-15T01:29:54.754Z",
-  "expires_at": "2026-07-22T01:29:54.754Z",
+  "issued_at": "2026-07-19T04:28:12.415Z",
+  "expires_at": "2026-07-26T04:28:12.415Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7021c353f08bd227dd5b8851692b2b70a691ef1419619a2f5b1dd87ca156f173",
+  "signature": "541e627c36a8fcfba15194427b2af17078e9fcae4e553bbd65106626381a5de1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aleph"
 }

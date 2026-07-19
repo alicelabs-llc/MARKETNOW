@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8713916",
+  "certificate_id": "MN-SC-2026-5008690",
   "skill_id": "mn-real-aderyn",
   "skill_name": "aderyn",
-  "issued_at": "2026-07-15T01:25:13.916Z",
-  "expires_at": "2026-07-22T01:25:13.916Z",
+  "issued_at": "2026-07-19T04:23:28.690Z",
+  "expires_at": "2026-07-26T04:23:28.690Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b4cf00cd218eacf05dae03b9b1f314ef128117aaa9013e8e5001b9d3c380a137",
+  "signature": "4c4d7c853e3bce969d39c4ea51662d2f2451761f99f9b98f2403599ae7f0fde2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aderyn"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8814483",
+  "certificate_id": "MN-SC-2026-5110661",
   "skill_id": "mn-real-pasal",
   "skill_name": "pasal",
-  "issued_at": "2026-07-15T01:26:54.483Z",
-  "expires_at": "2026-07-22T01:26:54.483Z",
+  "issued_at": "2026-07-19T04:25:10.661Z",
+  "expires_at": "2026-07-26T04:25:10.661Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1722ee7f2a3fc44ef3e46ebbb3f1a26d55b1fd18c50fa3aacdd28e2f84b591f0",
+  "signature": "e26cf4afe43d4f1fcf666511b2af301f17e9c2248d1e4657917a833ec7c31bad",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pasal"
 }

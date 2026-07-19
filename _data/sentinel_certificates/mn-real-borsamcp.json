@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8954466",
+  "certificate_id": "MN-SC-2026-5251272",
   "skill_id": "mn-real-borsamcp",
   "skill_name": "borsa-mcp",
-  "issued_at": "2026-07-15T01:29:14.466Z",
-  "expires_at": "2026-07-22T01:29:14.466Z",
+  "issued_at": "2026-07-19T04:27:31.272Z",
+  "expires_at": "2026-07-26T04:27:31.272Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e5c03eb53e794e2a91cbec12c60f9514f7b60910ef84a400ca0651f9dca4a612",
+  "signature": "f95e97620f1c45708c24f8b6239f013c4be1a4629cc8af2c194d1a83e9f376f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-borsamcp"
 }

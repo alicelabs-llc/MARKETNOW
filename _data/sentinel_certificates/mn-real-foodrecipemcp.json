@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8684417",
+  "certificate_id": "MN-SC-2026-4981095",
   "skill_id": "mn-real-foodrecipemcp",
   "skill_name": "Food-Recipe-MCP",
-  "issued_at": "2026-07-15T01:24:44.417Z",
-  "expires_at": "2026-07-22T01:24:44.417Z",
+  "issued_at": "2026-07-19T04:23:01.095Z",
+  "expires_at": "2026-07-26T04:23:01.095Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4126f2b954bf870dd10fb9d1ac99297b3c8c506d3a905447046dd87c367bec35",
+  "signature": "2194a58dc379210709643f845ac9ae997d7c448c7cb9f3f2013410f9de989101",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-foodrecipemcp"
 }

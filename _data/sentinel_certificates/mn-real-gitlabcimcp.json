@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8675281",
+  "certificate_id": "MN-SC-2026-4972170",
   "skill_id": "mn-real-gitlabcimcp",
   "skill_name": "gitlab-ci-mcp",
-  "issued_at": "2026-07-15T01:24:35.281Z",
-  "expires_at": "2026-07-22T01:24:35.281Z",
+  "issued_at": "2026-07-19T04:22:52.170Z",
+  "expires_at": "2026-07-26T04:22:52.170Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "60c3ebf8b80c1cde8dc6f80d1ebe420af455352d5d0e9fbe7bf58bd25ee2a3a0",
+  "signature": "63a9d9decbfa76965f6fe71e935cbd62e7be172ce886832bf194e8381d8ff9e4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gitlabcimcp"
 }

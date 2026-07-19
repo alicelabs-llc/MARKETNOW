@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8540972",
+  "certificate_id": "MN-SC-2026-4832841",
   "skill_id": "mn-real-jsrmcp",
   "skill_name": "jsr-mcp",
-  "issued_at": "2026-07-15T01:22:20.972Z",
-  "expires_at": "2026-07-22T01:22:20.972Z",
+  "issued_at": "2026-07-19T04:20:32.841Z",
+  "expires_at": "2026-07-26T04:20:32.841Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e70bbbfb0a53af17f21be81b9a9c556a8e50e2774bf33be36c84bdf701bf7717",
+  "signature": "dc0650df0c7634266f7c58c9928fae5f3dec4bf063fc2fb37b1894c2bd9060bf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jsrmcp"
 }

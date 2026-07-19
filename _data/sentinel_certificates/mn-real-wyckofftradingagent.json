@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9012593",
+  "certificate_id": "MN-SC-2026-5310013",
   "skill_id": "mn-real-wyckofftradingagent",
   "skill_name": "WyckoffTradingAgent",
-  "issued_at": "2026-07-15T01:30:12.593Z",
-  "expires_at": "2026-07-22T01:30:12.593Z",
+  "issued_at": "2026-07-19T04:28:30.013Z",
+  "expires_at": "2026-07-26T04:28:30.013Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3059ddbbbf66534f87606b95e1f08aee5d181096da368278fa0c168bcd28f519",
+  "signature": "12bba22fcb8d39ac381f38383760a5a719a7abb5e3612fdd88bcf8fb4aa97c82",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-wyckofftradingagent"
 }

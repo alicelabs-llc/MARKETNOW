@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9091768",
+  "certificate_id": "MN-SC-2026-5380113",
   "skill_id": "mn-real-webyoutubesummarizer",
   "skill_name": "web-youtube-summarizer-llm",
-  "issued_at": "2026-07-15T01:31:31.768Z",
-  "expires_at": "2026-07-22T01:31:31.768Z",
+  "issued_at": "2026-07-19T04:29:40.113Z",
+  "expires_at": "2026-07-26T04:29:40.113Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00d399944840d8d56c6b6fca3419ffa51c7550600bbd54457517df49a71782f0",
+  "signature": "ed3fee2c993646d6f7502a6dc0b6d6bb4e38a2b47f552cc8a672ce642d770bed",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webyoutubesummarizer"
 }

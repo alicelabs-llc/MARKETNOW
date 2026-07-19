@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9160112",
+  "certificate_id": "MN-SC-2026-5450715",
   "skill_id": "mn-real-unifidashboard",
   "skill_name": "unifi-dashboard",
-  "issued_at": "2026-07-15T01:32:40.112Z",
-  "expires_at": "2026-07-22T01:32:40.112Z",
+  "issued_at": "2026-07-19T04:30:50.715Z",
+  "expires_at": "2026-07-26T04:30:50.715Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b86b774e750f5e5aaa33ebc48775d7ae1f000fd326b3f639eb9b9124e8a8d642",
+  "signature": "b7cf8e9f41febe4e3b8430db22098e1e31ad067c909387447fd75831aa47dad1",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-unifidashboard"
 }

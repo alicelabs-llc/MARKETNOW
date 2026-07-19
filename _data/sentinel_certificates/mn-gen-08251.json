@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7983168",
+  "certificate_id": "MN-SC-2026-4649005",
   "skill_id": "mn-gen-08251",
   "skill_name": "whatsapp-mcp",
-  "issued_at": "2026-07-15T01:13:03.168Z",
-  "expires_at": "2026-07-22T01:13:03.168Z",
+  "issued_at": "2026-07-19T04:17:29.005Z",
+  "expires_at": "2026-07-26T04:17:29.005Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 3,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "bbd462e6e22dba9dc1c7b2aef44a0a70eab855a2187a38b48d6d0a71aa97efe0",
+  "signature": "ae511d9627fdd31e044afcbb10ba0348f1a7e1362d68445ac644a1c780dfdfb9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-08251"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8541769",
+  "certificate_id": "MN-SC-2026-4833763",
   "skill_id": "mn-real-dotnettemplatemcp",
   "skill_name": "dotnet-template-mcp",
-  "issued_at": "2026-07-15T01:22:21.769Z",
-  "expires_at": "2026-07-22T01:22:21.769Z",
+  "issued_at": "2026-07-19T04:20:33.763Z",
+  "expires_at": "2026-07-26T04:20:33.763Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "28407f3ec96602a978b8eb0e2318234e1fbe3e374b8b239dea7b0dd00af9d80d",
+  "signature": "dff55a65e6aa15dbe8202c58dab2ded5a2995ac21d597ae71fb673d165a74465",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-dotnettemplatemcp"
 }

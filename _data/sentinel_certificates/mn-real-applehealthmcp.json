@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8956018",
+  "certificate_id": "MN-SC-2026-5252849",
   "skill_id": "mn-real-applehealthmcp",
   "skill_name": "apple-health-mcp",
-  "issued_at": "2026-07-15T01:29:16.018Z",
-  "expires_at": "2026-07-22T01:29:16.018Z",
+  "issued_at": "2026-07-19T04:27:32.849Z",
+  "expires_at": "2026-07-26T04:27:32.849Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "11142933a35ad324b175ccb90434f018a808035ff942bcdfe3b2612f7e88874f",
+  "signature": "bf8cfbe21bc55f9c9deed2895eddec505cab12478817ba55730a175fe7aae236",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-applehealthmcp"
 }

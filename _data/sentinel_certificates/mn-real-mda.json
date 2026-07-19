@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8985049",
+  "certificate_id": "MN-SC-2026-5282481",
   "skill_id": "mn-real-mda",
   "skill_name": "mda",
-  "issued_at": "2026-07-15T01:29:45.049Z",
-  "expires_at": "2026-07-22T01:29:45.049Z",
+  "issued_at": "2026-07-19T04:28:02.481Z",
+  "expires_at": "2026-07-26T04:28:02.481Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ab9d0ca3914908ffbeabedd798b5e544bf9bfaa1dfbc5b7bc804502c56119296",
+  "signature": "a63f00dd215938794eac33f0c9535e6d651e2a7787ff217adc12faf509d2fcd0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mda"
 }

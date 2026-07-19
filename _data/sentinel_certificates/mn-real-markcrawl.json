@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8637929",
+  "certificate_id": "MN-SC-2026-4933236",
   "skill_id": "mn-real-markcrawl",
   "skill_name": "markcrawl",
-  "issued_at": "2026-07-15T01:23:57.929Z",
-  "expires_at": "2026-07-22T01:23:57.929Z",
+  "issued_at": "2026-07-19T04:22:13.236Z",
+  "expires_at": "2026-07-26T04:22:13.236Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f7c08b662665562f3d04b5e46d27ddd541367b5d6f829fc2123ea9d3ee8f784f",
+  "signature": "333eb13fb89e30a218f8da54d949e3eca67ee7e4fd94a49be322f44bf94cf384",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-markcrawl"
 }

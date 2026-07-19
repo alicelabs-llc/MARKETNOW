@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9011773",
+  "certificate_id": "MN-SC-2026-5309205",
   "skill_id": "mn-real-buoy",
   "skill_name": "buoy",
-  "issued_at": "2026-07-15T01:30:11.773Z",
-  "expires_at": "2026-07-22T01:30:11.773Z",
+  "issued_at": "2026-07-19T04:28:29.205Z",
+  "expires_at": "2026-07-26T04:28:29.205Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "90c4f93b65edf16aabf2018ccda874f0a912e73b8a750b35bf095f4bd460b674",
+  "signature": "80a9894457780c58fda27ca55dd1df3f0d4e0a58b30e213cc9f2cda4413c7165",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-buoy"
 }

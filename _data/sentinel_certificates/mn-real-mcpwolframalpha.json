@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8645812",
+  "certificate_id": "MN-SC-2026-4941324",
   "skill_id": "mn-real-mcpwolframalpha",
   "skill_name": "mcp-wolframalpha",
-  "issued_at": "2026-07-15T01:24:05.812Z",
-  "expires_at": "2026-07-22T01:24:05.812Z",
+  "issued_at": "2026-07-19T04:22:21.324Z",
+  "expires_at": "2026-07-26T04:22:21.324Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7cb0d34d93a9c45fc4eed0d75a9dbe60b40575a5e8aae8527edccfef6a468878",
+  "signature": "a491ca13df9085bc71f8d15012805835897ac06aefc836c36c1f47294f26102b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpwolframalpha"
 }

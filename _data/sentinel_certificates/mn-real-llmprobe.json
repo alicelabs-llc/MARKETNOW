@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8625334",
+  "certificate_id": "MN-SC-2026-4918599",
   "skill_id": "mn-real-llmprobe",
   "skill_name": "llmprobe",
-  "issued_at": "2026-07-15T01:23:45.334Z",
-  "expires_at": "2026-07-22T01:23:45.334Z",
+  "issued_at": "2026-07-19T04:21:58.599Z",
+  "expires_at": "2026-07-26T04:21:58.599Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "39112f8d248706d16a98d93acf27a781658e41ea04d3899b5b8760c2cc59a8b3",
+  "signature": "ee65ce84a5990013a182efcaac52dab10576fc08dcb85e6ee3fdbd33e7f5099e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-llmprobe"
 }

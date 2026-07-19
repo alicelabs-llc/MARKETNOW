@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8936323",
+  "certificate_id": "MN-SC-2026-5233335",
   "skill_id": "mn-real-symfonymcpserver",
   "skill_name": "symfony-mcp-server",
-  "issued_at": "2026-07-15T01:28:56.323Z",
-  "expires_at": "2026-07-22T01:28:56.323Z",
+  "issued_at": "2026-07-19T04:27:13.335Z",
+  "expires_at": "2026-07-26T04:27:13.335Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7dff989263ca2e69c794d9ade179ae5f4b78327b2165131daf6e0819e054ebdd",
+  "signature": "89cfaf60b8dc5b440137f83f961b5fb3cfc841c1f6e9814e3dacf32e8e2e8c33",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-symfonymcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8966422",
+  "certificate_id": "MN-SC-2026-5263408",
   "skill_id": "mn-real-humanmcp",
   "skill_name": "human-mcp",
-  "issued_at": "2026-07-15T01:29:26.422Z",
-  "expires_at": "2026-07-22T01:29:26.422Z",
+  "issued_at": "2026-07-19T04:27:43.408Z",
+  "expires_at": "2026-07-26T04:27:43.408Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f6501fb85b72aaab6d53fb64d206efcc3b9b49753679402e6fbbc5e61c038f2d",
+  "signature": "56c66dfc099753246c07fe9dec33e943d8300b12953aacee2a4a5ce15eaa920c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-humanmcp"
 }

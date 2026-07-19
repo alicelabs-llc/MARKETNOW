@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9062481",
+  "certificate_id": "MN-SC-2026-5353578",
   "skill_id": "mn-real-diariz",
   "skill_name": "Diariz",
-  "issued_at": "2026-07-15T01:31:02.481Z",
-  "expires_at": "2026-07-22T01:31:02.481Z",
+  "issued_at": "2026-07-19T04:29:13.578Z",
+  "expires_at": "2026-07-26T04:29:13.578Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a427cad0b3d672723fed0ffb468e2b77c8bf230d41a675e9d976ee31b1efb69c",
+  "signature": "3d34682d87f9332ec631f07a05664e587750594979a3e99377edf9d935982c12",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-diariz"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8802738",
+  "certificate_id": "MN-SC-2026-5098417",
   "skill_id": "mn-real-kuvasz",
   "skill_name": "kuvasz",
-  "issued_at": "2026-07-15T01:26:42.738Z",
-  "expires_at": "2026-07-22T01:26:42.738Z",
+  "issued_at": "2026-07-19T04:24:58.417Z",
+  "expires_at": "2026-07-26T04:24:58.417Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b6ae3cccdef7dd3c6bd9eadb1f33e8c017daa542affce3bb1c077b69350c635c",
+  "signature": "1606f92299a673ee1fda3ba150f4bb0d379ab09396604087f3a392ede488c462",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-kuvasz"
 }

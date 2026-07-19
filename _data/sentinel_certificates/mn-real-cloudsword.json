@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8716405",
+  "certificate_id": "MN-SC-2026-5011212",
   "skill_id": "mn-real-cloudsword",
   "skill_name": "cloudsword",
-  "issued_at": "2026-07-15T01:25:16.405Z",
-  "expires_at": "2026-07-22T01:25:16.405Z",
+  "issued_at": "2026-07-19T04:23:31.213Z",
+  "expires_at": "2026-07-26T04:23:31.213Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d576f57ee33ed58c4118121b800c90f401b0d887edcc7adf9264d7b8a6badf0f",
+  "signature": "5e8fbf1b45e263f397d3b53a6b3318ba5f68eef2909b8a5c037a41954a77ef41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cloudsword"
 }

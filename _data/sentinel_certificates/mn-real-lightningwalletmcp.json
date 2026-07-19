@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8575832",
+  "certificate_id": "MN-SC-2026-4868877",
   "skill_id": "mn-real-lightningwalletmcp",
   "skill_name": "lightning-wallet-mcp",
-  "issued_at": "2026-07-15T01:22:55.832Z",
-  "expires_at": "2026-07-22T01:22:55.832Z",
+  "issued_at": "2026-07-19T04:21:08.877Z",
+  "expires_at": "2026-07-26T04:21:08.877Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "76633b76aabbbea24e88c3d0e5023281bd26114615ac7505a787bf9fe8b3f430",
+  "signature": "7fa53cce95c2bc0fa1a4f018220c166c907207fa2d84c1cc74ca141ad9df5414",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lightningwalletmcp"
 }

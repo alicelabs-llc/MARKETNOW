@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9115826",
+  "certificate_id": "MN-SC-2026-5404045",
   "skill_id": "mn-real-thestall",
   "skill_name": "the-stall",
-  "issued_at": "2026-07-15T01:31:55.826Z",
-  "expires_at": "2026-07-22T01:31:55.826Z",
+  "issued_at": "2026-07-19T04:30:04.045Z",
+  "expires_at": "2026-07-26T04:30:04.045Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b569412b1a4f87765b321105515be433715f4df206f5eb38ec50bedf160abb7f",
+  "signature": "1ab01067e1a9748c441f20938fbacbf138f2bbb82cc268173c45581731d35ee2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-thestall"
 }

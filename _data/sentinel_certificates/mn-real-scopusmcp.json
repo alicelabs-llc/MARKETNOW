@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8926546",
+  "certificate_id": "MN-SC-2026-5224407",
   "skill_id": "mn-real-scopusmcp",
   "skill_name": "scopus-mcp",
-  "issued_at": "2026-07-15T01:28:46.546Z",
-  "expires_at": "2026-07-22T01:28:46.546Z",
+  "issued_at": "2026-07-19T04:27:04.407Z",
+  "expires_at": "2026-07-26T04:27:04.407Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b4ac0e4504bea0b428c347b5575ef76706a08d517586126bc21ff9f191961d2c",
+  "signature": "7e483223f963aa96b593d8fdccde24d60628ff2e9701d043b146283a2389c2f2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-scopusmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9077457",
+  "certificate_id": "MN-SC-2026-5368684",
   "skill_id": "mn-real-skillscanner",
   "skill_name": "skill-scanner",
-  "issued_at": "2026-07-15T01:31:17.457Z",
-  "expires_at": "2026-07-22T01:31:17.457Z",
+  "issued_at": "2026-07-19T04:29:28.684Z",
+  "expires_at": "2026-07-26T04:29:28.684Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f9e93708470c667e7abe752938b05dbbe9c02c448a62777364845e5bae278e0a",
+  "signature": "4c113ce6aea92635cc6dd6a13f1eafd3b499a7fea83606e6dd4dfc78b0d48da6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-skillscanner"
 }

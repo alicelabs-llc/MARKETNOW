@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8668010",
+  "certificate_id": "MN-SC-2026-4964778",
   "skill_id": "mn-real-nbastatsmcp",
   "skill_name": "nba-stats-mcp",
-  "issued_at": "2026-07-15T01:24:28.010Z",
-  "expires_at": "2026-07-22T01:24:28.010Z",
+  "issued_at": "2026-07-19T04:22:44.778Z",
+  "expires_at": "2026-07-26T04:22:44.778Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ff56fce4f18f8a0db0733d719ae9b344692f8bc174f8187ae4d0fa0a117a460b",
+  "signature": "4d26158ef5ff72a9813470459de6469ca39d1eb1b9f0bfdb30c3bdef60119b9d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nbastatsmcp"
 }

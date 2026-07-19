@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8581401",
+  "certificate_id": "MN-SC-2026-4874232",
   "skill_id": "mn-real-lightningenablemcp",
   "skill_name": "lightning-enable-mcp",
-  "issued_at": "2026-07-15T01:23:01.401Z",
-  "expires_at": "2026-07-22T01:23:01.401Z",
+  "issued_at": "2026-07-19T04:21:14.232Z",
+  "expires_at": "2026-07-26T04:21:14.232Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e24aa80a43edbcac3224a0b0b6d176c3afbbc585128fb494f00300b45718cd15",
+  "signature": "d4f55ba1d0153464463dfad1975c5467d25e4e7a49c0a95cc95e46b76b926be5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-lightningenablemcp"
 }

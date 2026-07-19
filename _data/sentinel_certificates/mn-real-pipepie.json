@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8532662",
+  "certificate_id": "MN-SC-2026-4824582",
   "skill_id": "mn-real-pipepie",
   "skill_name": "pipepie",
-  "issued_at": "2026-07-15T01:22:12.662Z",
-  "expires_at": "2026-07-22T01:22:12.662Z",
+  "issued_at": "2026-07-19T04:20:24.582Z",
+  "expires_at": "2026-07-26T04:20:24.582Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "25300ea9a7329c366d52d6136d81a20edb34ac47c47309132a026d1c074b50f3",
+  "signature": "e9faf5b2649c0c06079d593c897373d999ac14936d416d0bc6cf4912759bdb41",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pipepie"
 }

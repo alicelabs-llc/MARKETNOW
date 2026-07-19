@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8909580",
+  "certificate_id": "MN-SC-2026-5207839",
   "skill_id": "mn-real-claudearchitect",
   "skill_name": "claude-architect",
-  "issued_at": "2026-07-15T01:28:29.580Z",
-  "expires_at": "2026-07-22T01:28:29.580Z",
+  "issued_at": "2026-07-19T04:26:47.839Z",
+  "expires_at": "2026-07-26T04:26:47.839Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b29a434ff208859cbc7578c5067b5edd091e7efcf922047340f2c02702f8c029",
+  "signature": "03442dea8be15bfc1abb76462cae5a7c701e889b40ad42d1b0f349ca2061d603",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudearchitect"
 }

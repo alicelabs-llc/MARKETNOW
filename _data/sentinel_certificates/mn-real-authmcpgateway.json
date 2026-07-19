@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8662325",
+  "certificate_id": "MN-SC-2026-4959026",
   "skill_id": "mn-real-authmcpgateway",
   "skill_name": "authmcp-gateway",
-  "issued_at": "2026-07-15T01:24:22.325Z",
-  "expires_at": "2026-07-22T01:24:22.325Z",
+  "issued_at": "2026-07-19T04:22:39.026Z",
+  "expires_at": "2026-07-26T04:22:39.026Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cab951bee9a5c78a5ba2af21c8211a768a13268f27d59a648cce1584fe825c01",
+  "signature": "d1d1fd8c0b3d8c3b1a427f14912351830579ff14467ae88851e70ae52aeb28d8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-authmcpgateway"
 }

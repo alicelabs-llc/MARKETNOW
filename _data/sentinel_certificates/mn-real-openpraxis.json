@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9181007",
+  "certificate_id": "MN-SC-2026-5471565",
   "skill_id": "mn-real-openpraxis",
   "skill_name": "OpenPraxis",
-  "issued_at": "2026-07-15T01:33:01.007Z",
-  "expires_at": "2026-07-22T01:33:01.007Z",
+  "issued_at": "2026-07-19T04:31:11.565Z",
+  "expires_at": "2026-07-26T04:31:11.565Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4b0ecaaa74187d0d88b032de4e6e36b7a7bf5bd063890783426d794b57f34ee8",
+  "signature": "cb850812fd13127c7e90d87038814396838dec4f3e90b3ea46eeb02e91be31c3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-openpraxis"
 }

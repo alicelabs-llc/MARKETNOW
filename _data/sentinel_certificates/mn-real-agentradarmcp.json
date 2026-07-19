@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8652825",
+  "certificate_id": "MN-SC-2026-4949322",
   "skill_id": "mn-real-agentradarmcp",
   "skill_name": "agentradar-mcp",
-  "issued_at": "2026-07-15T01:24:12.825Z",
-  "expires_at": "2026-07-22T01:24:12.825Z",
+  "issued_at": "2026-07-19T04:22:29.322Z",
+  "expires_at": "2026-07-26T04:22:29.322Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3db9be4d60952d344684fd8cebebcec33759913834ec184d2b97512221515c3d",
+  "signature": "44a2e1871c4f9dd770d77ff5b76600b3f2c391b347e7026d0e9dd6f1a50b3334",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentradarmcp"
 }

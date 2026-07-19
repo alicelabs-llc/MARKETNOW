@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8444296",
+  "certificate_id": "MN-SC-2026-4736155",
   "skill_id": "mn-awmcp-seleniummcp",
   "skill_name": "selenium-mcp",
-  "issued_at": "2026-07-15T01:20:44.296Z",
-  "expires_at": "2026-07-22T01:20:44.296Z",
+  "issued_at": "2026-07-19T04:18:56.155Z",
+  "expires_at": "2026-07-26T04:18:56.155Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d3efce869877c752f3d8527effb713671f2757d5c88d9b4e88e9057c41de6071",
+  "signature": "326fe6e704ee147143046bf7d45c195fd8d045791fdfb2db70b2bfacd874a5aa",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-seleniummcp"
 }

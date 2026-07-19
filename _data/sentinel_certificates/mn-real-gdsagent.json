@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9028547",
+  "certificate_id": "MN-SC-2026-5325184",
   "skill_id": "mn-real-gdsagent",
   "skill_name": "gds-agent",
-  "issued_at": "2026-07-15T01:30:28.547Z",
-  "expires_at": "2026-07-22T01:30:28.547Z",
+  "issued_at": "2026-07-19T04:28:45.184Z",
+  "expires_at": "2026-07-26T04:28:45.184Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cdbc64d26d2dec1354c960262eedb7bbbcc7dbda1a90ccafd6dafc66f6f7bcfc",
+  "signature": "ade79f1899f1404d63b7a070ef00d5f3713051b82cc9e04c67e7d0c58ccd712c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gdsagent"
 }

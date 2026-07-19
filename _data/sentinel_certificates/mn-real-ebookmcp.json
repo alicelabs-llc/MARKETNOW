@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8770632",
+  "certificate_id": "MN-SC-2026-5065727",
   "skill_id": "mn-real-ebookmcp",
   "skill_name": "ebook-mcp",
-  "issued_at": "2026-07-15T01:26:10.632Z",
-  "expires_at": "2026-07-22T01:26:10.632Z",
+  "issued_at": "2026-07-19T04:24:25.727Z",
+  "expires_at": "2026-07-26T04:24:25.727Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d28fec0f7a9f16cad60827418341ab714e11b6c8a9f299e53f940891f399b10d",
+  "signature": "5aa2e0cf9479aabae54a9599adfd2225c14f7ea30d1a7ef5274fa5a7d55ba025",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ebookmcp"
 }

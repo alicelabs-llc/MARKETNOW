@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8746579",
+  "certificate_id": "MN-SC-2026-5042101",
   "skill_id": "mn-real-memvidmcpserver",
   "skill_name": "memvid-mcp-server",
-  "issued_at": "2026-07-15T01:25:46.579Z",
-  "expires_at": "2026-07-22T01:25:46.579Z",
+  "issued_at": "2026-07-19T04:24:02.101Z",
+  "expires_at": "2026-07-26T04:24:02.101Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3b218318e11d046cc74db9926ff45df1813e85cfb5198bbd20daca3eeb8eb890",
+  "signature": "264f532c23c41b06e5fcd5131097ad6c91351f21a0f61db472de1efd96d4fd86",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-memvidmcpserver"
 }

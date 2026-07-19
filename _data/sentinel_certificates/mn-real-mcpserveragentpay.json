@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8755651",
+  "certificate_id": "MN-SC-2026-5050160",
   "skill_id": "mn-real-mcpserveragentpay",
   "skill_name": "mcp-server-agentpay",
-  "issued_at": "2026-07-15T01:25:55.651Z",
-  "expires_at": "2026-07-22T01:25:55.651Z",
+  "issued_at": "2026-07-19T04:24:10.160Z",
+  "expires_at": "2026-07-26T04:24:10.160Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6a05b1c9dc5791ccf506e2b943d5cbfdb556e00941bc028d5c4da13674fad0d6",
+  "signature": "c5f79a657ced2e98f2c971689128bb1ae5e4b7257aab5f06a62e4b3811d69fbc",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserveragentpay"
 }

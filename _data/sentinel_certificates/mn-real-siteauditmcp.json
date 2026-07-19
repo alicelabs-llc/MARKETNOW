@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8627400",
+  "certificate_id": "MN-SC-2026-4920625",
   "skill_id": "mn-real-siteauditmcp",
   "skill_name": "siteaudit-mcp",
-  "issued_at": "2026-07-15T01:23:47.400Z",
-  "expires_at": "2026-07-22T01:23:47.400Z",
+  "issued_at": "2026-07-19T04:22:00.625Z",
+  "expires_at": "2026-07-26T04:22:00.625Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "72ea54af105ab3c674e3eebde896f6d9b56491f46955cf1403770b1aa1be24ae",
+  "signature": "6ff8c561d4d703924dcfb9bc47262fcd27807dec49810fe6551499714f1611cb",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-siteauditmcp"
 }

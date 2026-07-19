@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8005400",
+  "certificate_id": "MN-SC-2026-4669873",
   "skill_id": "mn-gen-12294",
   "skill_name": "SunoMCP",
-  "issued_at": "2026-07-15T01:13:25.400Z",
-  "expires_at": "2026-07-22T01:13:25.400Z",
+  "issued_at": "2026-07-19T04:17:49.873Z",
+  "expires_at": "2026-07-26T04:17:49.873Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0b1c4a78079f60a4e10c9d32c62cacfdb5b4101465097062abd03be32d5d8092",
+  "signature": "2e5d046f9ce88cf73c35825e09f94c4af4c0dc20c342aa2e70507653c589b46f",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-12294"
 }

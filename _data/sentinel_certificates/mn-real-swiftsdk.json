@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8739200",
+  "certificate_id": "MN-SC-2026-5034416",
   "skill_id": "mn-real-swiftsdk",
   "skill_name": "swift-sdk",
-  "issued_at": "2026-07-15T01:25:39.200Z",
-  "expires_at": "2026-07-22T01:25:39.200Z",
+  "issued_at": "2026-07-19T04:23:54.416Z",
+  "expires_at": "2026-07-26T04:23:54.416Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "399d4ced0c3995775bb597185cae948f3f3ea0ed87418f0751caec67e3dc7d1a",
+  "signature": "f8223e05267661743a5591c8e2e1d21529a177f2f85825f940ec4b9d9fe2df06",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-swiftsdk"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8572010",
+  "certificate_id": "MN-SC-2026-4864796",
   "skill_id": "mn-real-cryptosentimentmcp",
   "skill_name": "crypto-sentiment-mcp",
-  "issued_at": "2026-07-15T01:22:52.010Z",
-  "expires_at": "2026-07-22T01:22:52.010Z",
+  "issued_at": "2026-07-19T04:21:04.796Z",
+  "expires_at": "2026-07-26T04:21:04.796Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b55148bd38e9c6f98d70be20d35b86a8322e2183ca2127cd87a26e3d1d18ae5e",
+  "signature": "e8a2476336f5479e61e690e02f97b22d526a646eb328e8cd72b485ad50b3cf9c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-cryptosentimentmcp"
 }

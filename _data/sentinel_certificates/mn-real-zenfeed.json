@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8705052",
+  "certificate_id": "MN-SC-2026-5001675",
   "skill_id": "mn-real-zenfeed",
   "skill_name": "zenfeed",
-  "issued_at": "2026-07-15T01:25:05.052Z",
-  "expires_at": "2026-07-22T01:25:05.052Z",
+  "issued_at": "2026-07-19T04:23:21.675Z",
+  "expires_at": "2026-07-26T04:23:21.675Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4f469a33fbef3f75eabbe4ee3a680e8bdf134647907457ce96632d5a574818a0",
+  "signature": "5042501d2c573d004d9ff564962e8dd1f622f8dea5598ec13e904c98fb0a6f5e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zenfeed"
 }

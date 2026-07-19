@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9171537",
+  "certificate_id": "MN-SC-2026-5461873",
   "skill_id": "mn-real-activitywatchmcpserv",
   "skill_name": "activitywatch-mcp-server",
-  "issued_at": "2026-07-15T01:32:51.537Z",
-  "expires_at": "2026-07-22T01:32:51.537Z",
+  "issued_at": "2026-07-19T04:31:01.874Z",
+  "expires_at": "2026-07-26T04:31:01.874Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "cd125da711ef3bd4e921c97f40761fabeb6bd4fde66b31cdc42d10f41646989f",
+  "signature": "f7cfe6031332f974c1bdbf331a8807d9e8754fcfb3be7d7fbeea11058ffb3402",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-activitywatchmcpserv"
 }

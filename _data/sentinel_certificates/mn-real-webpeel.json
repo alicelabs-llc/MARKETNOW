@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8648164",
+  "certificate_id": "MN-SC-2026-4944590",
   "skill_id": "mn-real-webpeel",
   "skill_name": "webpeel",
-  "issued_at": "2026-07-15T01:24:08.164Z",
-  "expires_at": "2026-07-22T01:24:08.164Z",
+  "issued_at": "2026-07-19T04:22:24.590Z",
+  "expires_at": "2026-07-26T04:22:24.590Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7bdd4609a21a1b999ad97fd630cdefc135ab51944583d6cd3f100aba57d4c537",
+  "signature": "1259d2c3346720788279ceccb196c521504f4049f40d1ea9729385b41f106d3e",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-webpeel"
 }

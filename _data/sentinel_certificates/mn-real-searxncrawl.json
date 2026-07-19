@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9005396",
+  "certificate_id": "MN-SC-2026-5302815",
   "skill_id": "mn-real-searxncrawl",
   "skill_name": "searxNcrawl",
-  "issued_at": "2026-07-15T01:30:05.396Z",
-  "expires_at": "2026-07-22T01:30:05.396Z",
+  "issued_at": "2026-07-19T04:28:22.815Z",
+  "expires_at": "2026-07-26T04:28:22.815Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c4ab5c5241db6dbbdc1a6fab134cead2dcd150139987d32504ca6713dcf1aac2",
+  "signature": "3dac47ed4caadd4f0419d2ce6ae288f0952fe0034f8d2a94abb02510c548a387",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-searxncrawl"
 }

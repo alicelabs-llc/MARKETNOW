@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8432074",
+  "certificate_id": "MN-SC-2026-4722678",
   "skill_id": "mn-awmcp-heoragentmcp",
   "skill_name": "heor-agent-mcp",
-  "issued_at": "2026-07-15T01:20:32.074Z",
-  "expires_at": "2026-07-22T01:20:32.074Z",
+  "issued_at": "2026-07-19T04:18:42.678Z",
+  "expires_at": "2026-07-26T04:18:42.678Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 6,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 7,
     "l2_execution_status": "ran"
   },
-  "signature": "6edea96272fd4a39df6721ea331d980d1312180a1cf6db3a5ae321ba3cd69910",
+  "signature": "0ff85e81601a29203f2563c541d8a953629e58e8464900f0cba1cfccd05fb88b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-heoragentmcp"
 }

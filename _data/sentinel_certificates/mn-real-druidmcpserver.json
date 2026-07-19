@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8500532",
+  "certificate_id": "MN-SC-2026-4792549",
   "skill_id": "mn-real-druidmcpserver",
   "skill_name": "druid-mcp-server",
-  "issued_at": "2026-07-15T01:21:40.532Z",
-  "expires_at": "2026-07-22T01:21:40.532Z",
+  "issued_at": "2026-07-19T04:19:52.549Z",
+  "expires_at": "2026-07-26T04:19:52.549Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "b841b7896cfef9d7eacb5555af19c780bdd888bd997af46d1ff39b5c0a25f326",
+  "signature": "5166b430bac576b7a674998359bfb528edc48753950fe76b20abb971fa8204cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-druidmcpserver"
 }

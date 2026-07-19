@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9045878",
+  "certificate_id": "MN-SC-2026-5341011",
   "skill_id": "mn-real-mcpcanada",
   "skill_name": "mcp-canada",
-  "issued_at": "2026-07-15T01:30:45.878Z",
-  "expires_at": "2026-07-22T01:30:45.878Z",
+  "issued_at": "2026-07-19T04:29:01.011Z",
+  "expires_at": "2026-07-26T04:29:01.011Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "f31ed5bddccc7cb9a2b4674b022a65c8082bba64271d6406d1c41c93796dc782",
+  "signature": "d827b9d222c896812133a8a44428a7b664ff6549c96aae1b197cd3e26fd2edf7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpcanada"
 }

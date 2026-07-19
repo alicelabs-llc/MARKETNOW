@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8664321",
+  "certificate_id": "MN-SC-2026-4960980",
   "skill_id": "mn-real-xbirdskill",
   "skill_name": "xbird-skill",
-  "issued_at": "2026-07-15T01:24:24.321Z",
-  "expires_at": "2026-07-22T01:24:24.321Z",
+  "issued_at": "2026-07-19T04:22:40.980Z",
+  "expires_at": "2026-07-26T04:22:40.980Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "774e95a46bcd47a811f666cde4e11aeda70daf4631be4437abc3ff3674ef66f9",
+  "signature": "1f550ec7f1016b341cbfe56bcc8b39b371a37f89f552853e9ddabaa723135ec0",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-xbirdskill"
 }

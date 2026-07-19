@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8984114",
+  "certificate_id": "MN-SC-2026-5281457",
   "skill_id": "mn-real-justprompt",
   "skill_name": "just-prompt",
-  "issued_at": "2026-07-15T01:29:44.114Z",
-  "expires_at": "2026-07-22T01:29:44.114Z",
+  "issued_at": "2026-07-19T04:28:01.457Z",
+  "expires_at": "2026-07-26T04:28:01.457Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "06ec12634931f41585ceb8952cdac254ee15550296968c18c8279214b3d38648",
+  "signature": "0b7107fbd9bfaaf123b1fcc4bb1323c6b6a0717d7596c6b6585cf4c3d7635712",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-justprompt"
 }

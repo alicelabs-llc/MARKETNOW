@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9200327",
+  "certificate_id": "MN-SC-2026-5490293",
   "skill_id": "mn-real-rankpathmcpserver",
   "skill_name": "rankpath-mcp-server",
-  "issued_at": "2026-07-15T01:33:20.327Z",
-  "expires_at": "2026-07-22T01:33:20.327Z",
+  "issued_at": "2026-07-19T04:31:30.293Z",
+  "expires_at": "2026-07-26T04:31:30.293Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "90457d4dd08585e0c0894e540e936ec26087f9b1f728ee4a85040a54a95bedaf",
+  "signature": "4b6ffc2aec4b68460289f6bdcbb9a6df450818cf75531f1adf999bda6abae3e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-rankpathmcpserver"
 }

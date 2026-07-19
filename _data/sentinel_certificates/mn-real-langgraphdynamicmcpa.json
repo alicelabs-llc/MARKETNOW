@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9044402",
+  "certificate_id": "MN-SC-2026-5339534",
   "skill_id": "mn-real-langgraphdynamicmcpa",
   "skill_name": "langgraph-dynamic-mcp-agents",
-  "issued_at": "2026-07-15T01:30:44.402Z",
-  "expires_at": "2026-07-22T01:30:44.402Z",
+  "issued_at": "2026-07-19T04:28:59.534Z",
+  "expires_at": "2026-07-26T04:28:59.534Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ca880d4a32277b93567569f6f80ea2946afefa172b602ad2af12840c2690974",
+  "signature": "da750e09d8ce53c863c06ae7fed87c23f8edc95ff8c97a00be95fc92f29ef0e3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-langgraphdynamicmcpa"
 }

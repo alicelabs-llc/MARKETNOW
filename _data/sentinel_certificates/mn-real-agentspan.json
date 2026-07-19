@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8913590",
+  "certificate_id": "MN-SC-2026-5211960",
   "skill_id": "mn-real-agentspan",
   "skill_name": "Agent-Span",
-  "issued_at": "2026-07-15T01:28:33.590Z",
-  "expires_at": "2026-07-22T01:28:33.590Z",
+  "issued_at": "2026-07-19T04:26:51.960Z",
+  "expires_at": "2026-07-26T04:26:51.960Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "8c43c66586d6e8f86ed61acad3cafcda70729a897b3c8cb2e9f64b88e3cfbfbf",
+  "signature": "bd81fb8fee90c49be1fefb597fe613dce68d0cfae22d2b84b6d47bd2f463bc97",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-agentspan"
 }

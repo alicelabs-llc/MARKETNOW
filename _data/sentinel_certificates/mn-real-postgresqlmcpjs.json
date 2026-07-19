@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9100975",
+  "certificate_id": "MN-SC-2026-5389362",
   "skill_id": "mn-real-postgresqlmcpjs",
   "skill_name": "postgresql-mcp-js",
-  "issued_at": "2026-07-15T01:31:40.975Z",
-  "expires_at": "2026-07-22T01:31:40.975Z",
+  "issued_at": "2026-07-19T04:29:49.362Z",
+  "expires_at": "2026-07-26T04:29:49.362Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "53ea25091528f097bd29dd95f0963593b206598971369c8a103314d1bd98e443",
+  "signature": "84b42453bcbeb05e226e08092646c62b8f227e9b51bd8560250716decc3c5242",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-postgresqlmcpjs"
 }

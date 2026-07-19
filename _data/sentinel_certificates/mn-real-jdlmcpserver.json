@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8641313",
+  "certificate_id": "MN-SC-2026-4936654",
   "skill_id": "mn-real-jdlmcpserver",
   "skill_name": "jdl-mcp-server",
-  "issued_at": "2026-07-15T01:24:01.313Z",
-  "expires_at": "2026-07-22T01:24:01.313Z",
+  "issued_at": "2026-07-19T04:22:16.655Z",
+  "expires_at": "2026-07-26T04:22:16.655Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a7814a5ec9447be72c68117c46939fdaaf7b49813ffef80411d1232d518aeb67",
+  "signature": "c6c32ebafcde687e993df927abb17dee5a41d448a6f6ec367f02e836244d2847",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jdlmcpserver"
 }

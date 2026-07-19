@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8523185",
+  "certificate_id": "MN-SC-2026-4814882",
   "skill_id": "mn-real-mediamcp",
   "skill_name": "media-mcp",
-  "issued_at": "2026-07-15T01:22:03.185Z",
-  "expires_at": "2026-07-22T01:22:03.185Z",
+  "issued_at": "2026-07-19T04:20:14.882Z",
+  "expires_at": "2026-07-26T04:20:14.882Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9bdf4111c664b4da2c742f858532d7cd36ed1dc7ab32e943993c76db368c12ea",
+  "signature": "1e600c0fdfd374ffe754fc25e43e95fdeb108adfcb83842d82ed99e7cce9c120",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mediamcp"
 }

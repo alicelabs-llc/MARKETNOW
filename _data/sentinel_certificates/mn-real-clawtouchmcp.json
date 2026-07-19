@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8632265",
+  "certificate_id": "MN-SC-2026-4925581",
   "skill_id": "mn-real-clawtouchmcp",
   "skill_name": "clawtouch-mcp",
-  "issued_at": "2026-07-15T01:23:52.265Z",
-  "expires_at": "2026-07-22T01:23:52.265Z",
+  "issued_at": "2026-07-19T04:22:05.581Z",
+  "expires_at": "2026-07-26T04:22:05.581Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "489c97af41271545bb6a1aadaab91da4437c783f2cc68da2837196a97d566ec6",
+  "signature": "eef48ab3e294a456e0ef74c3fd05592b7d9e4808bef60f295a5c9aef648f3d17",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-clawtouchmcp"
 }

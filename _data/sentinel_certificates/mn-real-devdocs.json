@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8733483",
+  "certificate_id": "MN-SC-2026-5028633",
   "skill_id": "mn-real-devdocs",
   "skill_name": "DevDocs",
-  "issued_at": "2026-07-15T01:25:33.483Z",
-  "expires_at": "2026-07-22T01:25:33.483Z",
+  "issued_at": "2026-07-19T04:23:48.633Z",
+  "expires_at": "2026-07-26T04:23:48.633Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "78cfeb947dff972b875a1f03b9c92c11f2b4ad3059be186228fb970463195163",
+  "signature": "d6e87a1c15d7be197fed25ae089f239a63cd2acfb08a5f6cac725115c54bbe46",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-devdocs"
 }

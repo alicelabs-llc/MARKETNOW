@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9233021",
+  "certificate_id": "MN-SC-2026-5521982",
   "skill_id": "mn-real-mcppublicsuffixlist",
   "skill_name": "mcp-public-suffix-list",
-  "issued_at": "2026-07-15T01:33:53.021Z",
-  "expires_at": "2026-07-22T01:33:53.021Z",
+  "issued_at": "2026-07-19T04:32:01.982Z",
+  "expires_at": "2026-07-26T04:32:01.982Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "908652f46b8daeff4c593f86fcb97262253a2f6a1d6f253044d04dfa3deb664c",
+  "signature": "21520d0d5e5b9e8ba9c2f8bbb680ec79ad0a263fd850088d754ae4703f5537de",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcppublicsuffixlist"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8887022",
+  "certificate_id": "MN-SC-2026-5182993",
   "skill_id": "mn-real-sverklo",
   "skill_name": "sverklo",
-  "issued_at": "2026-07-15T01:28:07.022Z",
-  "expires_at": "2026-07-22T01:28:07.022Z",
+  "issued_at": "2026-07-19T04:26:22.993Z",
+  "expires_at": "2026-07-26T04:26:22.993Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "9f6033cf50fa891403080fc93b4a2d64c3aee4119bc0bca6eb3143d8e7e84c21",
+  "signature": "6ad04762e027c6076581722ac4062dc66151daa4d685d4128bfa54bc91c090e6",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-sverklo"
 }

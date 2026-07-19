@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8519497",
+  "certificate_id": "MN-SC-2026-4811179",
   "skill_id": "mn-real-poxmcpserver",
   "skill_name": "pox-mcp-server",
-  "issued_at": "2026-07-15T01:21:59.497Z",
-  "expires_at": "2026-07-22T01:21:59.497Z",
+  "issued_at": "2026-07-19T04:20:11.179Z",
+  "expires_at": "2026-07-26T04:20:11.179Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "3051b6e6858496866e949a59b3f13f326c48a1001499394fc786242885104d5d",
+  "signature": "e33d2a949ce8449b8849b1d43aeba55ec21b112895c631bcaeb92be4ab361f29",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-poxmcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9217000",
+  "certificate_id": "MN-SC-2026-5506855",
   "skill_id": "mn-real-vyoniq",
   "skill_name": "vyoniq",
-  "issued_at": "2026-07-15T01:33:37.000Z",
-  "expires_at": "2026-07-22T01:33:37.000Z",
+  "issued_at": "2026-07-19T04:31:46.855Z",
+  "expires_at": "2026-07-26T04:31:46.855Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d7de6dd90040c4db509a62d6816e4ca0e2420005a43d2101862afc0e57893ab9",
+  "signature": "c8607b11bd7fcca14302911e4922062912a9851a54ac06f06900d5f91fbd580b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vyoniq"
 }

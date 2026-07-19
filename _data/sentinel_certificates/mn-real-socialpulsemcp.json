@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9210253",
+  "certificate_id": "MN-SC-2026-5500197",
   "skill_id": "mn-real-socialpulsemcp",
   "skill_name": "socialpulse-mcp",
-  "issued_at": "2026-07-15T01:33:30.253Z",
-  "expires_at": "2026-07-22T01:33:30.253Z",
+  "issued_at": "2026-07-19T04:31:40.197Z",
+  "expires_at": "2026-07-26T04:31:40.197Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d6c5e2fa5b993ee5bb18f2dff2721cf8f965c1ada2685cbd43b16e81d653eb89",
+  "signature": "48cb5e873a7e471c6767f782c759a3ddb57397cdecf0d100eb67b035b41d5571",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-socialpulsemcp"
 }

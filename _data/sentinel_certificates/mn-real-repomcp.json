@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9209665",
+  "certificate_id": "MN-SC-2026-5499590",
   "skill_id": "mn-real-repomcp",
   "skill_name": "repo-mcp",
-  "issued_at": "2026-07-15T01:33:29.665Z",
-  "expires_at": "2026-07-22T01:33:29.665Z",
+  "issued_at": "2026-07-19T04:31:39.590Z",
+  "expires_at": "2026-07-26T04:31:39.590Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "5ccd673856f6792092c8f27a89bbfbd16cd3c5afb79b3e37734e90a706d75687",
+  "signature": "2cf196d545c894176471296fd8512aa4f6cdaa0fc17fa801e0ad0d5e25499ee8",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-repomcp"
 }

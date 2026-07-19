@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9141765",
+  "certificate_id": "MN-SC-2026-5432288",
   "skill_id": "mn-real-surfboard",
   "skill_name": "surfboard",
-  "issued_at": "2026-07-15T01:32:21.765Z",
-  "expires_at": "2026-07-22T01:32:21.765Z",
+  "issued_at": "2026-07-19T04:30:32.288Z",
+  "expires_at": "2026-07-26T04:30:32.288Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d224c40465afda1ae225499a76b9d4de2da15c5e42452b1b2c8cde87a5399043",
+  "signature": "7dfbc60e7ed4a837758f830d5eb6422320a499ecfbcfe5b0bd82c0687ba4eb45",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-surfboard"
 }

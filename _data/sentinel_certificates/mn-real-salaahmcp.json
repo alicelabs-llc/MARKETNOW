@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8792212",
+  "certificate_id": "MN-SC-2026-5089201",
   "skill_id": "mn-real-salaahmcp",
   "skill_name": "salaah-mcp",
-  "issued_at": "2026-07-15T01:26:32.212Z",
-  "expires_at": "2026-07-22T01:26:32.212Z",
+  "issued_at": "2026-07-19T04:24:49.201Z",
+  "expires_at": "2026-07-26T04:24:49.201Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 7,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a654ce85025ac47d03e36adf1955251ce2b54495e33181114d38ffa9dd62bbf6",
+  "signature": "952a8cddb3e69882f5152b790d87546b91a0a8ef9596a0e220d97c7ca5822ce5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-salaahmcp"
 }

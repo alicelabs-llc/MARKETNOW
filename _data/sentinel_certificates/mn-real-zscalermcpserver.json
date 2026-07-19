@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9174269",
+  "certificate_id": "MN-SC-2026-5464690",
   "skill_id": "mn-real-zscalermcpserver",
   "skill_name": "zscaler-mcp-server",
-  "issued_at": "2026-07-15T01:32:54.269Z",
-  "expires_at": "2026-07-22T01:32:54.269Z",
+  "issued_at": "2026-07-19T04:31:04.690Z",
+  "expires_at": "2026-07-26T04:31:04.690Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d9e1ae54ae7d8ec29f42f3bab99464a1f6771f4308ff86ddc2c7b415793744c1",
+  "signature": "6650579d60866d0a73963dce9d0794c4788412dac36edf29a02b70dc10dc747c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-zscalermcpserver"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8877501",
+  "certificate_id": "MN-SC-2026-5173669",
   "skill_id": "mn-real-multillmmcp",
   "skill_name": "multi-llm-mcp",
-  "issued_at": "2026-07-15T01:27:57.501Z",
-  "expires_at": "2026-07-22T01:27:57.501Z",
+  "issued_at": "2026-07-19T04:26:13.669Z",
+  "expires_at": "2026-07-26T04:26:13.669Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1ba62c9ad5970a10606462ca8cc31e4e5361d4d0c8961eadff70337531a73b07",
+  "signature": "11660392b168de54ede0bca706c78afa02de8d92304fbd4f3364830eb3e073cf",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-multillmmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9044802",
+  "certificate_id": "MN-SC-2026-5339835",
   "skill_id": "mn-real-syncmcp",
   "skill_name": "sync-mcp",
-  "issued_at": "2026-07-15T01:30:44.802Z",
-  "expires_at": "2026-07-22T01:30:44.802Z",
+  "issued_at": "2026-07-19T04:28:59.835Z",
+  "expires_at": "2026-07-26T04:28:59.835Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "304653c56579a94702ac5d1104219911125f88c7ca752662552c0d3bdfe5f2ab",
+  "signature": "2a4c41d3d25b70d65e1f3300872bb4a327c06994781d9d9ad9853c371862a0c2",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-syncmcp"
 }

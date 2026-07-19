@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9140428",
+  "certificate_id": "MN-SC-2026-5430967",
   "skill_id": "mn-real-devportal",
   "skill_name": "dev-portal",
-  "issued_at": "2026-07-15T01:32:20.428Z",
-  "expires_at": "2026-07-22T01:32:20.428Z",
+  "issued_at": "2026-07-19T04:30:30.967Z",
+  "expires_at": "2026-07-26T04:30:30.967Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "00f977bb6889332c42c464a027f24e5a3ab0688232265c2413446387e728d2c3",
+  "signature": "34c5728316bc3fa57086f14351e86fa8ffcffce3b314df4f7fde3432d5ac0633",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-devportal"
 }

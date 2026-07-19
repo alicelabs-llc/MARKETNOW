@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9005560",
+  "certificate_id": "MN-SC-2026-5303105",
   "skill_id": "mn-real-jlcmcp",
   "skill_name": "jlcmcp",
-  "issued_at": "2026-07-15T01:30:05.560Z",
-  "expires_at": "2026-07-22T01:30:05.560Z",
+  "issued_at": "2026-07-19T04:28:23.105Z",
+  "expires_at": "2026-07-26T04:28:23.105Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c13a5f9b42118054f4d1bd05f38bdc0573ff53b5020278d3cb647b64b83bd4f7",
+  "signature": "b12a8a782910b9e97c1fb5a48522d313f84460fe38baa9c2e2b01592b0b7e406",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-jlcmcp"
 }

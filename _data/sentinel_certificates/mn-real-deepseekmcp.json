@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8901195",
+  "certificate_id": "MN-SC-2026-5198932",
   "skill_id": "mn-real-deepseekmcp",
   "skill_name": "deepseek-mcp",
-  "issued_at": "2026-07-15T01:28:21.195Z",
-  "expires_at": "2026-07-22T01:28:21.195Z",
+  "issued_at": "2026-07-19T04:26:38.932Z",
+  "expires_at": "2026-07-26T04:26:38.932Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "e290452b9112b889f211b7f46dfe3857a711ebf8e7eae3751f0bc1f381e23f53",
+  "signature": "4e4e2db49cadf118656ed72cfbcb7a710c619594883f5a05b5fbc6401f4889a9",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-deepseekmcp"
 }

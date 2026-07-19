@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8403111",
+  "certificate_id": "MN-SC-2026-4692635",
   "skill_id": "mn-awmcp-evcsparkmcp",
   "skill_name": "evc-spark-mcp",
-  "issued_at": "2026-07-15T01:20:03.111Z",
-  "expires_at": "2026-07-22T01:20:03.111Z",
+  "issued_at": "2026-07-19T04:18:12.635Z",
+  "expires_at": "2026-07-26T04:18:12.635Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 5,
   "max_score": 10,
@@ -27,7 +27,7 @@
     "l2_score": 0,
     "l2_execution_status": "failed_to_start"
   },
-  "signature": "f623c94f3e6aac126ca2d259379647c0d609542bd0ddeff6e559abe6b54c985e",
+  "signature": "b81125a1a9ca323d0baceca8957811357e9a7e9ad984381d529af700c1a840f3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-evcsparkmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8991195",
+  "certificate_id": "MN-SC-2026-5288773",
   "skill_id": "mn-real-apiagent",
   "skill_name": "api-agent",
-  "issued_at": "2026-07-15T01:29:51.195Z",
-  "expires_at": "2026-07-22T01:29:51.195Z",
+  "issued_at": "2026-07-19T04:28:08.773Z",
+  "expires_at": "2026-07-26T04:28:08.773Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ea9f568b0f8f9b6adbe490293a8d345af390ac36092f61e12436490198aee438",
+  "signature": "34492fc4cb353d867c0b8961f8c101d477d6b598f103e7bc0584861860e23a44",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-apiagent"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8649205",
+  "certificate_id": "MN-SC-2026-4945560",
   "skill_id": "mn-real-qiniso",
   "skill_name": "qiniso",
-  "issued_at": "2026-07-15T01:24:09.205Z",
-  "expires_at": "2026-07-22T01:24:09.205Z",
+  "issued_at": "2026-07-19T04:22:25.560Z",
+  "expires_at": "2026-07-26T04:22:25.560Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "af0476e088ae13c04e09d05eb87aa191a700661d5950ebe2ef1f3f405da4bc3b",
+  "signature": "3a94b5bad158004b7ac8eacbdeb513789263245b2d771b969dab4635ee0b41ea",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-qiniso"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8891956",
+  "certificate_id": "MN-SC-2026-5188136",
   "skill_id": "mn-real-adsmcp",
   "skill_name": "ads-mcp",
-  "issued_at": "2026-07-15T01:28:11.956Z",
-  "expires_at": "2026-07-22T01:28:11.956Z",
+  "issued_at": "2026-07-19T04:26:28.136Z",
+  "expires_at": "2026-07-26T04:26:28.136Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "4d708bc87c5cfe5585bf9b352bf8d33152ee4d24886822cb2d0a3a677e135ab9",
+  "signature": "e7d637c6ccb433e2211b1228e28aa33f0ad684be05cdfdcac5c1d8eca72d36c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-adsmcp"
 }

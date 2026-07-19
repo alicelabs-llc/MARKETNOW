@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8458029",
+  "certificate_id": "MN-SC-2026-4750096",
   "skill_id": "mn-awmcp-spaceshipmcp",
   "skill_name": "spaceship-mcp",
-  "issued_at": "2026-07-15T01:20:58.030Z",
-  "expires_at": "2026-07-22T01:20:58.030Z",
+  "issued_at": "2026-07-19T04:19:10.096Z",
+  "expires_at": "2026-07-26T04:19:10.096Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6aaa813a0c126fda74d4083adf02ac0f7efaedfe2299fbcda089873a235b56cf",
+  "signature": "6622369f8cb256dfe5f97b368a051633c0de26e78c7fc396fae5a0e7ca2651ef",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-spaceshipmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8519468",
+  "certificate_id": "MN-SC-2026-4811143",
   "skill_id": "mn-real-timenodemcp",
   "skill_name": "time-node-mcp",
-  "issued_at": "2026-07-15T01:21:59.468Z",
-  "expires_at": "2026-07-22T01:21:59.468Z",
+  "issued_at": "2026-07-19T04:20:11.143Z",
+  "expires_at": "2026-07-26T04:20:11.143Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6270b0cf7442295cebb05155efe6e7c53ff2942e3c59031cda3ae7d0a7a94e48",
+  "signature": "e26d2b4112b00b9e6d9b1b25b334f7e44bd7ecf3175249128ad24d0c77da75af",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-timenodemcp"
 }

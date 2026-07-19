@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9082751",
+  "certificate_id": "MN-SC-2026-5373956",
   "skill_id": "mn-real-claudecanvas",
   "skill_name": "claude-canvas",
-  "issued_at": "2026-07-15T01:31:22.751Z",
-  "expires_at": "2026-07-22T01:31:22.751Z",
+  "issued_at": "2026-07-19T04:29:33.956Z",
+  "expires_at": "2026-07-26T04:29:33.956Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0ec10ffa56c3c38a1c4e63578c01e2279cbce721db21833bcb936f0d7662af30",
+  "signature": "2ad5a4b395ce82e7869e9cdb31f9c83ab3776e5a58316b74cbaa6ce9d4d120d7",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecanvas"
 }

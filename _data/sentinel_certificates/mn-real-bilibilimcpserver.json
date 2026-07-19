@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8979168",
+  "certificate_id": "MN-SC-2026-5276381",
   "skill_id": "mn-real-bilibilimcpserver",
   "skill_name": "bilibili-mcp-server",
-  "issued_at": "2026-07-15T01:29:39.168Z",
-  "expires_at": "2026-07-22T01:29:39.168Z",
+  "issued_at": "2026-07-19T04:27:56.381Z",
+  "expires_at": "2026-07-26T04:27:56.381Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "15aff0bf41cc8b627b9d4a66db0e4ca16712c6d440c66426900b3089ff0b5a99",
+  "signature": "0455bab23b9fd898ec5c84fa7be5e5208187dc329460ac903c6459bedd6b5d26",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-bilibilimcpserver"
 }

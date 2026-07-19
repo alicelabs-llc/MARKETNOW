@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8787936",
+  "certificate_id": "MN-SC-2026-5082829",
   "skill_id": "mn-real-imagician",
   "skill_name": "imagician",
-  "issued_at": "2026-07-15T01:26:27.936Z",
-  "expires_at": "2026-07-22T01:26:27.936Z",
+  "issued_at": "2026-07-19T04:24:42.829Z",
+  "expires_at": "2026-07-26T04:24:42.829Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "99e9bc93679f4cce988c5158f979659d308f5f6bf03e5e24a3477bcb0b7b8c60",
+  "signature": "27c1c3b7d77c505a50394518ad569198e11783e7e1c5752440969142c57d4352",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-imagician"
 }

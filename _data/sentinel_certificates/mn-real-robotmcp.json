@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9171698",
+  "certificate_id": "MN-SC-2026-5461941",
   "skill_id": "mn-real-robotmcp",
   "skill_name": "robot_MCP",
-  "issued_at": "2026-07-15T01:32:51.698Z",
-  "expires_at": "2026-07-22T01:32:51.698Z",
+  "issued_at": "2026-07-19T04:31:01.941Z",
+  "expires_at": "2026-07-26T04:31:01.941Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "368c378c0487531d912f51dee49742aeee2ba1f1eef445ec7e7a54f2a9a9606d",
+  "signature": "9f20b7440030b698f0e46a098a9ebcacbc7b465aff42d042be3bd01f872d2f2c",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-robotmcp"
 }

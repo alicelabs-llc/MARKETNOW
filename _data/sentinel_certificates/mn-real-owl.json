@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9144649",
+  "certificate_id": "MN-SC-2026-5435380",
   "skill_id": "mn-real-owl",
   "skill_name": "Owl",
-  "issued_at": "2026-07-15T01:32:24.649Z",
-  "expires_at": "2026-07-22T01:32:24.649Z",
+  "issued_at": "2026-07-19T04:30:35.380Z",
+  "expires_at": "2026-07-26T04:30:35.380Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a6e6d392c11410b60a37e8a73af5084caa28053c6d462c35720b085718d11473",
+  "signature": "f5536b512eb34c39b97f0cc615cef2189baf70aff869f27715460e0c10b28221",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-owl"
 }

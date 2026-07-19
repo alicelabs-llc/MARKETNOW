@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9002625",
+  "certificate_id": "MN-SC-2026-5300303",
   "skill_id": "mn-real-geminisearchmcp",
   "skill_name": "gemini-search-mcp",
-  "issued_at": "2026-07-15T01:30:02.625Z",
-  "expires_at": "2026-07-22T01:30:02.625Z",
+  "issued_at": "2026-07-19T04:28:20.303Z",
+  "expires_at": "2026-07-26T04:28:20.303Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "636d1e32e8272742679627f4a98b71f68789bbcc7962e337231af24378543888",
+  "signature": "3fcd1f506b5f78949d2578f05cc111c2b42901c9098db561718d6786b43d44b4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-geminisearchmcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8719901",
+  "certificate_id": "MN-SC-2026-5014780",
   "skill_id": "mn-real-repopromptce",
   "skill_name": "repoprompt-ce",
-  "issued_at": "2026-07-15T01:25:19.901Z",
-  "expires_at": "2026-07-22T01:25:19.901Z",
+  "issued_at": "2026-07-19T04:23:34.780Z",
+  "expires_at": "2026-07-26T04:23:34.780Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "6d926db68008f94c12a87ec8d0e4a64c194c8981bc2d352a1a161f8ae65e7ad6",
+  "signature": "2c69a22f13ec9fffd73fb7c15aca614832570500adc04389b804a7c3dc86175b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-repopromptce"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9109803",
+  "certificate_id": "MN-SC-2026-5397923",
   "skill_id": "mn-real-pcloudmcp",
   "skill_name": "pcloud-mcp",
-  "issued_at": "2026-07-15T01:31:49.803Z",
-  "expires_at": "2026-07-22T01:31:49.803Z",
+  "issued_at": "2026-07-19T04:29:57.923Z",
+  "expires_at": "2026-07-26T04:29:57.923Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "361f5d0053d224a1c383c49f97ddf6d8ab255517c50017fa5b1b2884802aca07",
+  "signature": "3b764997bb51b8b052fddc0f4f3182eca669357ad7edc33799e77aa991351823",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-pcloudmcp"
 }

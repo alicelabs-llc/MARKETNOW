@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9003363",
+  "certificate_id": "MN-SC-2026-5301099",
   "skill_id": "mn-real-datagovmcp",
   "skill_name": "datagov-mcp",
-  "issued_at": "2026-07-15T01:30:03.363Z",
-  "expires_at": "2026-07-22T01:30:03.363Z",
+  "issued_at": "2026-07-19T04:28:21.099Z",
+  "expires_at": "2026-07-26T04:28:21.099Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c91fb7ddd9d350e4f0ba5c7fcd6c43d280215df9ced21285386e890c2e86aa25",
+  "signature": "4debbe01d79384bbb5824b9757e3300904e793a38443582f79701f6622320c63",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-datagovmcp"
 }

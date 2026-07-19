@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9132530",
+  "certificate_id": "MN-SC-2026-5422760",
   "skill_id": "mn-real-toolfunnel",
   "skill_name": "toolfunnel",
-  "issued_at": "2026-07-15T01:32:12.530Z",
-  "expires_at": "2026-07-22T01:32:12.530Z",
+  "issued_at": "2026-07-19T04:30:22.760Z",
+  "expires_at": "2026-07-26T04:30:22.760Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fef9d2a9141285457379d0cb7bbda5024e06074ddcc9a2baa2f859a6f0eb5aeb",
+  "signature": "452ad2683fc78b0d2597d914a504fd05a33a16c050853d6f73f9cd98f1fa751d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-toolfunnel"
 }

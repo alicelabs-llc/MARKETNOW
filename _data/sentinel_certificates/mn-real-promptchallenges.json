@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9047854",
+  "certificate_id": "MN-SC-2026-5342962",
   "skill_id": "mn-real-promptchallenges",
   "skill_name": "prompt-challenges",
-  "issued_at": "2026-07-15T01:30:47.854Z",
-  "expires_at": "2026-07-22T01:30:47.854Z",
+  "issued_at": "2026-07-19T04:29:02.962Z",
+  "expires_at": "2026-07-26T04:29:02.962Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d8d039562b5c9bd041e82803e6fcdd8b42aa6b747dc61c0f81ff37fc1c5bec03",
+  "signature": "1bf78316b9c9ecbd22a892d9a22c337a055696b4bd5fc60f2fddfd2bfcb38d66",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-promptchallenges"
 }

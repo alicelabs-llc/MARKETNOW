@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8815967",
+  "certificate_id": "MN-SC-2026-5112363",
   "skill_id": "mn-real-claudecodegeminimcp",
   "skill_name": "claude_code-gemini-mcp",
-  "issued_at": "2026-07-15T01:26:55.967Z",
-  "expires_at": "2026-07-22T01:26:55.967Z",
+  "issued_at": "2026-07-19T04:25:12.363Z",
+  "expires_at": "2026-07-26T04:25:12.363Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "ebe77994847f1ececb5c7e35b38a9d6408b9a1c0a7876cc055dfdc4c4f4556ae",
+  "signature": "9005291ef1558ae873d648710767d92737fe3d8da437b1e1e1f081bdd05502c5",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-claudecodegeminimcp"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9235122",
+  "certificate_id": "MN-SC-2026-5524111",
   "skill_id": "mn-real-mcpbts",
   "skill_name": "mcp-bts",
-  "issued_at": "2026-07-15T01:33:55.122Z",
-  "expires_at": "2026-07-22T01:33:55.122Z",
+  "issued_at": "2026-07-19T04:32:04.111Z",
+  "expires_at": "2026-07-26T04:32:04.111Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "83bc6862b6bb6bb610e08a4ce1acdc8d7a32549f5c8265b7f2578105eb3a1dcf",
+  "signature": "fa0c5f3123e1092150490980ab8fd250d6d3374fc1f8c1cb77abca8cadbf8d4d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpbts"
 }

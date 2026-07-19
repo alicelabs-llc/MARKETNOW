@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8968027",
+  "certificate_id": "MN-SC-2026-5265050",
   "skill_id": "mn-real-mcpserversnix",
   "skill_name": "mcp-servers-nix",
-  "issued_at": "2026-07-15T01:29:28.027Z",
-  "expires_at": "2026-07-22T01:29:28.027Z",
+  "issued_at": "2026-07-19T04:27:45.050Z",
+  "expires_at": "2026-07-26T04:27:45.050Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "276343e082476744a68f6fa39e8c2cd9a592884c02d797d791af3f6dc28a425a",
+  "signature": "55d3e3011ee6b8a9b61547a048290247863e0cb467411ede3b257b56b13cf8ae",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpserversnix"
 }

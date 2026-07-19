@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8538527",
+  "certificate_id": "MN-SC-2026-4830515",
   "skill_id": "mn-real-mcpadranalysisserver",
   "skill_name": "mcp-adr-analysis-server",
-  "issued_at": "2026-07-15T01:22:18.527Z",
-  "expires_at": "2026-07-22T01:22:18.527Z",
+  "issued_at": "2026-07-19T04:20:30.515Z",
+  "expires_at": "2026-07-26T04:20:30.515Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "d96fe03c57f77e8a723cc566040907d6f194c812fa93d0637d224ef394856f44",
+  "signature": "0ee879d99553a03d1d99db94a6b5752922b79f6b03f8d0d802634b67be4dc317",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpadranalysisserver"
 }

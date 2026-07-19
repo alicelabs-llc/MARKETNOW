@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-7985803",
+  "certificate_id": "MN-SC-2026-4651447",
   "skill_id": "mn-gen-09079",
   "skill_name": "minima",
-  "issued_at": "2026-07-15T01:13:05.803Z",
-  "expires_at": "2026-07-22T01:13:05.803Z",
+  "issued_at": "2026-07-19T04:17:31.447Z",
+  "expires_at": "2026-07-26T04:17:31.447Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "381721104199ec93719686d4c0adaad51c7a40bdf826c2b636bc2bec03007641",
+  "signature": "43760aa2d8219a9271157a06ea3be3e3d729e3a348f13d12c0e8a99d62afd813",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-09079"
 }

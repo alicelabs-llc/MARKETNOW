@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9210894",
+  "certificate_id": "MN-SC-2026-5500660",
   "skill_id": "mn-real-codesagealgoliachall",
   "skill_name": "codesage-algolia-challenge",
-  "issued_at": "2026-07-15T01:33:30.894Z",
-  "expires_at": "2026-07-22T01:33:30.894Z",
+  "issued_at": "2026-07-19T04:31:40.660Z",
+  "expires_at": "2026-07-26T04:31:40.660Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "0baa576f5257d2ea35ccf568918162e67b1bfd6b7e18e11cdf433b11d5651d46",
+  "signature": "000041ec403231cd4f49226fdabe5a98b1035d758bb023b704b8ea39ad9eccfe",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-codesagealgoliachall"
 }

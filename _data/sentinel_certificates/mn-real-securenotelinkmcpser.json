@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9198798",
+  "certificate_id": "MN-SC-2026-5488676",
   "skill_id": "mn-real-securenotelinkmcpser",
   "skill_name": "securenote-link-MCP-server",
-  "issued_at": "2026-07-15T01:33:18.798Z",
-  "expires_at": "2026-07-22T01:33:18.798Z",
+  "issued_at": "2026-07-19T04:31:28.676Z",
+  "expires_at": "2026-07-26T04:31:28.676Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "93d41412385f4445f5369717e6b4b996cae2878ff2f7534f4313956b20185d5d",
+  "signature": "282aa2c6e8160ae5ecf2470ece20fec79b53da8f346a29436b42fdb14802f085",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-securenotelinkmcpser"
 }

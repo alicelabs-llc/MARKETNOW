@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8729400",
+  "certificate_id": "MN-SC-2026-5024607",
   "skill_id": "mn-real-mcpchecklists",
   "skill_name": "MCP-Checklists",
-  "issued_at": "2026-07-15T01:25:29.400Z",
-  "expires_at": "2026-07-22T01:25:29.400Z",
+  "issued_at": "2026-07-19T04:23:44.607Z",
+  "expires_at": "2026-07-26T04:23:44.607Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "a99841ecde7723bf23fa03f86ef50744ad29fa5e0ad160acedaf2aedc3828bee",
+  "signature": "f4fec8a149b5704440325492dc813bec4ff11f62bd60f5066ac98620519c11b3",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpchecklists"
 }

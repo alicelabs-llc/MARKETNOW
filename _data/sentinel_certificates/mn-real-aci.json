@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8731767",
+  "certificate_id": "MN-SC-2026-5026939",
   "skill_id": "mn-real-aci",
   "skill_name": "aci",
-  "issued_at": "2026-07-15T01:25:31.767Z",
-  "expires_at": "2026-07-22T01:25:31.767Z",
+  "issued_at": "2026-07-19T04:23:46.939Z",
+  "expires_at": "2026-07-26T04:23:46.939Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "1e234e5c26f77f2c2dc943438aedadd2a0cd2dcc630c799b09568de392c23bd5",
+  "signature": "33eaea3ae9352280f2f9c8ff9b613d8fff2becf8b6e3273ef7cc6700236d01a4",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-aci"
 }

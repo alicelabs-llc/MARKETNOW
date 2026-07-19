@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8478285",
+  "certificate_id": "MN-SC-2026-4770343",
   "skill_id": "mn-awmcp-taskbountymcpserver",
   "skill_name": "taskbounty-mcp-server",
-  "issued_at": "2026-07-15T01:21:18.285Z",
-  "expires_at": "2026-07-22T01:21:18.285Z",
+  "issued_at": "2026-07-19T04:19:30.343Z",
+  "expires_at": "2026-07-26T04:19:30.343Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "c3e4de5fc78342fd49b2cc0add4664d800e53a05d4f06c9c1a41c5fb8a5c2474",
+  "signature": "f6eb345c7f4cee79c58944c497c947dfbef772dbaaed3346da30d6cd32b66fce",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-awmcp-taskbountymcpserver"
 }

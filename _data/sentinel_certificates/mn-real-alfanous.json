@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8812776",
+  "certificate_id": "MN-SC-2026-5109035",
   "skill_id": "mn-real-alfanous",
   "skill_name": "alfanous",
-  "issued_at": "2026-07-15T01:26:52.776Z",
-  "expires_at": "2026-07-22T01:26:52.776Z",
+  "issued_at": "2026-07-19T04:25:09.035Z",
+  "expires_at": "2026-07-26T04:25:09.035Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 9,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "7608f9d466b6ee7a501a11712d4dfaf214628641434bbfc623c760516a361ab9",
+  "signature": "8d2249d7ba26ed369cba6028f883b85b8c08a82b2fe29acd5e0f483df4b36c4d",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-alfanous"
 }

@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-9133300",
+  "certificate_id": "MN-SC-2026-5423520",
   "skill_id": "mn-real-camt053mcp",
   "skill_name": "camt053-mcp",
-  "issued_at": "2026-07-15T01:32:13.300Z",
-  "expires_at": "2026-07-22T01:32:13.300Z",
+  "issued_at": "2026-07-19T04:30:23.520Z",
+  "expires_at": "2026-07-26T04:30:23.520Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "def8be287d47fcc81be2c962a60718820e87ad48c907a02bab69f166e1e46efb",
+  "signature": "7940b655077f120395f36c378ca4af67e0be2409f3c0305622ee26a22bef286b",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-camt053mcp"
 }

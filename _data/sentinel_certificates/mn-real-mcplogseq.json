@@ -1,9 +1,9 @@
 {
-  "certificate_id": "MN-SC-2026-8812071",
+  "certificate_id": "MN-SC-2026-5108490",
   "skill_id": "mn-real-mcplogseq",
   "skill_name": "mcp-logseq",
-  "issued_at": "2026-07-15T01:26:52.071Z",
-  "expires_at": "2026-07-22T01:26:52.071Z",
+  "issued_at": "2026-07-19T04:25:08.490Z",
+  "expires_at": "2026-07-26T04:25:08.490Z",
   "auditor": "Sentinel L1.5 + L1.6 + L2",
   "overall_score": 8,
   "max_score": 10,
@@ -26,7 +26,7 @@
     "l16_osv_findings": 0,
     "l2_execution_status": null
   },
-  "signature": "fb6572fc504388ccac88a402a92dc134065decc120b3d670d325c967b7d112c5",
+  "signature": "dac8c85573787a9ef2fc19cd781800ea2a9c8e84b09d622800b17a36d8aa6b8a",
   "signature_algorithm": "SHA-256",
   "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcplogseq"
 }

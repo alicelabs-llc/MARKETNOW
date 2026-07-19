@@ -76,8 +76,19 @@ function loadCAKeys() {
  * Canonical JSON serialization for signing (deterministic key order).
  */
 function canonicalJson(obj) {
-  // Sort keys recursively, no whitespace
-  return JSON.stringify(obj, Object.keys(obj).sort());
+  // Recursively sort keys at every depth (not just top-level).
+  // FIX: previously used JSON.stringify(obj, Object.keys(obj).sort())
+  // which only sorted top-level keys. Nested objects kept their original
+  // key order, causing signature verification failures if the signer
+  // and verifier serialized nested objects differently.
+  // Reported by @anp2network on dev.to.
+  if (obj === null || typeof obj !== 'object') return JSON.stringify(obj);
+  if (Array.isArray(obj)) return '[' + obj.map(canonicalJson).join(',') + ']';
+  const sorted = {};
+  for (const key of Object.keys(obj).sort()) {
+    sorted[key] = obj[key];
+  }
+  return JSON.stringify(sorted);
 }
 
 /**

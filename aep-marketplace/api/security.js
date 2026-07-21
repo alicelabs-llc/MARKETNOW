@@ -306,6 +306,7 @@ export default async function handler(req, res) {
         l16: { name: 'Semgrep + Secrets + OSV', status: 'live', rules: 36 },
         l17: { name: 'Malware patterns + binary detection', status: 'live', rules: 8 },
         l18: { name: 'Malware family signatures', status: 'live', families: 17 },
+        l3: { name: 'Continuous Runtime Monitoring', status: 'live', description: 'Re-audits skills weekly, detects behavioral drift vs L2 baseline. Addresses TOCTOU: certification is point-in-time, attacks are runtime.' },
         waf: { name: 'Web Application Firewall', status: 'live', rules: WAF_RULES.length, banned_ips: wafStats.currently_banned_ips },
         honeypot: { name: 'Honeypot traps', status: 'live', paths: 50, hits_24h: honeypotStats.total_24h, currently_banned: honeypotStats.currently_banned },
         threat_intel: { name: 'Threat intelligence feeds', status: 'live', sources: 3, urls: threatIntel.sources.urlhaus.malicious_urls, hashes: threatIntel.sources.malwarebazaar.malicious_hashes, iocs: threatIntel.sources.threatfox.iocs },

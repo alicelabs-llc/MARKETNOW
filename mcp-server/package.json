@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.2.0",
-  "description": "MarketNow MCP Server — Trust layer for agent commerce. Search 8,560 MCP-compatible skills from any agent runtime (Claude Desktop, Cursor, Cline). Every skill has a Sentinel L1.5 security report, review_status (auto-scanned | human-reviewed | maintainer-verified), declared permissions, and system prompt. AP2-compatible mandates, x402 payments. Open source MIT.",
+  "version": "1.5.0",
+  "description": "MarketNow MCP Server \u2014 Trust layer for agent commerce. Search, discover, and install 8,560 MCP-compatible skills from any agent runtime (Claude Desktop, Cursor, Cline). Sentinel L2 security audits, x402 payments (USDC on Base), AP2 delegated mandates. 5 languages: EN, ES, ZH, PT, FR. Maintained by AliceLabs LLC (Wyoming, USA, 2025).",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -14,20 +14,43 @@
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "marketplace",
+    "mcp-server",
+    "mcp-marketplace",
+    "mcp-directory",
+    "mcp-registry",
+    "mcp-skills",
+    "mcp-tools",
+    "ai-agents",
     "agent-skills",
-    "ai",
+    "agent-commerce",
+    "agent-payments",
     "claude",
+    "claude-desktop",
     "cursor",
     "cline",
-    "marketnow",
-    "mcp-server",
+    "continue",
+    "aider",
+    "anthropic",
+    "openai",
+    "gemini",
+    "x402",
+    "ap2",
+    "agent-payments-protocol",
+    "sentinel",
+    "security-audit",
+    "mcp-security",
+    "marketplace",
+    "skills",
     "tools",
     "search",
-    "skills"
+    "usdc",
+    "base",
+    "blockchain-payments",
+    "trust-layer",
+    "aliceLabs"
   ],
-  "author": "eddyflores100 <eddyflores100@gmail.com>",
-  "license": "MIT",
+  "author": "AliceLabs LLC <info@alicelabs.site>",
+  "license": "MNNC-1.0",
   "homepage": "https://marketnow.site",
   "repository": {
     "type": "git",
@@ -47,5 +70,6 @@
     "index.js",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "mcpName": "io.github.edgarfloresguerra2011-a11y/marketnow"
 }

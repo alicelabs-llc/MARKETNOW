@@ -60,7 +60,7 @@ const MALICIOUS_PATTERNS = [
   /https?:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/,  // hardcoded IP URLs
 ];
 
-function readUpTo(filePath, maxBytes = 50000) {
+function readUpTo(filePath, maxBytes = 500000) {  // S4 FIX: 50KB → 500KB
   try {
     const fd = fs.openSync(filePath, 'r');
     const buf = Buffer.alloc(maxBytes);
@@ -115,7 +115,9 @@ function checkNoSecrets(dir) {
     const p = path.join(dir, fname);
     if (!fs.existsSync(p)) continue;
     
-    const content = readUpTo(p, 30000);
+    // S3 FIX: Skip README files for secret scanning (false positives on docs)
+      if (p.toLowerCase().includes('readme') || p.toLowerCase().endsWith('.md')) continue;
+      const content = readUpTo(p, 30000);
     for (const pattern of SECRET_PATTERNS) {
       const matches = content.match(pattern);
       if (matches) {

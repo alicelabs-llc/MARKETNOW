@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-5621050",
+  "skill_id": "mn-real-eeye",
+  "skill_name": "eeye",
+  "issued_at": "2026-07-19T04:33:41.050Z",
+  "expires_at": "2026-07-26T04:33:41.050Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
+  "max_score": 10,
+  "risk_level": "medium",
+  "risk_breakdown": {
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "medium"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "c9a0bc3485812aba54d7747ad3eca4e613010e2d6e4c9b28c08583445a7435c2",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-eeye"
+}

@@ -1,6 +1,12 @@
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'aep-marketplace-secret-key-2026';
+// SECURITY FIX 2.2: No hardcoded fallback for JWT_SECRET
+// If the env var is not set, we throw immediately instead of using a
+// public default that anyone can read from the repo.
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  throw new Error('FATAL: JWT_SECRET environment variable is not set. Refusing to start with insecure default.');
+}
 
 export function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];

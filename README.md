@@ -265,3 +265,27 @@ Report IP violations: **legal@alicelabs.site**
 ---
 
 **Built for autonomous agents. Every skill has a signed Sentinel certificate, a ready-to-use system prompt, and auto-configured install. ALL code is proprietary property of AliceLabs LLC. Commercial use requires written permission.**
+
+## 🤝 Contributing
+
+We need help! All contributions are welcome — code, security research, translations, docs.
+
+**Good first issues:** https://github.com/edgarfloresguerra2011-a11y/marketnow/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+
+**Contributing guide:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+**Roadmap:** [ROADMAP.md](./ROADMAP.md)
+
+### Contributors
+
+- [@rushabdev](https://github.com/AmitabhainArunachala) — pro bono peer review (11 findings fixed)
+- [@mario-andreschak](https://github.com/mario-andreschak) — reported the prospector trojan (#9)
+- [@Sravan1011](https://github.com/Sravan1011) — AutoGen integration (in progress)
+- [@Correctover](https://github.com/Correctover) — L3 runtime monitoring feedback
+- [@wrencalloway](https://github.com/wrencalloway) — runtime trust gap analysis
+- [@mads_hansen](https://dev.to/mads_hansen_27b33ebfee4c9) — provenance + runtime security feedback
+- [@anp2network](https://dev.to/anp2network) — canonicalization bug report
+- [@0xbrainkid](https://github.com/0xbrainkid) — pluggable trust policy design
+- [@mayank609](https://github.com/mayank609) — runtime behavior monitoring feedback
+
+Want your name here? Open a PR.

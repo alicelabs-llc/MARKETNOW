@@ -1,6 +1,6 @@
 {
   "card_id": "ATC-2026-5936297",
-  "status": "active",
+  "status": "revoked",
   "payload": {
     "card_id": "ATC-2026-5936297",
     "agent_id": "agent.alicelabs.marketnow",
@@ -52,5 +52,7 @@
     "signed_at": "2026-07-18T03:38:56.297Z",
     "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
     "verify_with": "GET /api/atc?action=ca-key"
-  }
+  },
+  "revoked_at": "2026-07-22T03:11:09.094Z",
+  "revocation_reason": "Signed with buggy canonicalization — re-issuing with fixed recursive sort"
 }

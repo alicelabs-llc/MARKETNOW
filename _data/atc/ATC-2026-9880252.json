@@ -1,6 +1,6 @@
 {
   "card_id": "ATC-2026-9880252",
-  "status": "active",
+  "status": "revoked",
   "payload": {
     "card_id": "ATC-2026-9880252",
     "agent_id": "agent.alicelabs.marketnow",
@@ -52,5 +52,7 @@
     "signed_at": "2026-07-22T03:11:20.252Z",
     "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
     "verify_with": "GET /api/atc?action=ca-key"
-  }
+  },
+  "revoked_at": "2026-07-23T03:36:06.758Z",
+  "revocation_reason": "Re-signing with RFC 8785 canonical JSON"
 }

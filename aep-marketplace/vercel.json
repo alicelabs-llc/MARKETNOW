@@ -28,6 +28,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/agent-analytics",
+      "destination": "/api/security?view=analytics"
+    },
+    {
       "source": "/api/quarantine",
       "destination": "/api/security?view=quarantine"
     },

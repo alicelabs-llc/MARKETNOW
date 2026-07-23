@@ -40,7 +40,7 @@ const CONTENT = {
     rows: [
       {
         feature: 'Catalog size',
-        marketnow: '8,582 skills',
+        marketnow: '8,845 skills',
         smithery: '~3,000 servers',
         glama: '~5,000 servers',
         mcpRegistry: '~64.7M entries (1,691 unique)',
@@ -193,7 +193,7 @@ const CONTENT = {
     rows: [
       {
         feature: 'Tamaño del catálogo',
-        marketnow: '8,582 skills',
+        marketnow: '8,845 skills',
         smithery: '~3,000 servers',
         glama: '~5,000 servers',
         mcpRegistry: '~64.7M entradas (1,691 únicos)',
@@ -346,7 +346,7 @@ const CONTENT = {
     rows: [
       {
         feature: 'Tamanho do catálogo',
-        marketnow: '8,582 skills',
+        marketnow: '8,845 skills',
         smithery: '~3,000 servers',
         glama: '~5,000 servers',
         mcpRegistry: '~64.7M entradas (1.691 únicos)',
@@ -499,7 +499,7 @@ const CONTENT = {
     rows: [
       {
         feature: '目录大小',
-        marketnow: '8,582 skills',
+        marketnow: '8,845 skills',
         smithery: '~3,000 servers',
         glama: '~5,000 servers',
         mcpRegistry: '~64.7M 条目（1,691 个唯一）',

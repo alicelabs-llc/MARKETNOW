@@ -36,7 +36,7 @@ const CONTENT = {
       },
       {
         colorClass: 'text-[#00d1ff]',
-        title: '43 skills — Hand-picked free skills',
+        title: 'All skills — Free to install skills',
         bodyPre:
           'Curated by us as a "starter pack" for agents — high-signal prompts, foundational tools, etc. Available at /api/free-skills.json. No payment, no mandate required.',
         bodyStrong: '',

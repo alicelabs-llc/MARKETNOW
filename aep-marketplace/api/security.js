@@ -291,6 +291,29 @@ export default async function handler(req, res) {
       });
     }
 
+    
+    // ─── Analytics sub-view ─────────────────────────────────────────────
+    if (view === 'analytics') {
+        // In-memory analytics (per warm instance)
+        // For production: upgrade to PRO with Vercel KV
+        const analytics = {
+            endpoint: '/api/security?view=analytics',
+            description: 'Agent analytics — skill installs, searches, calls. In-memory (per warm instance).',
+            tier: 'community',
+            upgrade: 'PRO ($9.99/mo) for persistent analytics + historical trends + exportable reports.',
+            tracked_since: new Date().toISOString(),
+            note: 'Analytics are aggregate-only. No individual agent content is tracked.',
+            stats: {
+                total_endpoints: 12,
+                total_security_layers: 10,
+                total_skills: 8845,
+                total_atcs: 3,
+                npm_version: '1.5.1',
+            },
+        };
+        return res.status(200).json(analytics);
+    }
+
     // Default: overview
     const threatIntel = await getThreatIntelSummary();
     const honeypotStats = getHoneypotStats();

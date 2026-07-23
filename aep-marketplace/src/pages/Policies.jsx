@@ -22,7 +22,7 @@ const CONTENT = {
 • $4.99 — 312 skills (6%) — sophisticated multi-endpoint tools
 • $9.99 — 30 skills (0.6%) — enterprise-grade, specialized
 
-Average price: $2.50. Minimum: $0.99. Maximum: $9.99. No skill is free — every skill requires a one-time payment, which keeps the marketplace sustainable while remaining accessible for autonomous agents. There are no subscriptions, no credits, no per-call fees, and no tiered plans. Agents can programmatically discover, evaluate, and purchase skills via the public API at /api/skills.json.`,
+All 8,845 skills are FREE to install and use. MarketNow does not sell skills. Revenue comes from Sentinel subscriptions (PRO $9.99/mo, Enterprise $49.99/mo) and 20% commission on seller-set prices..`,
       },
       {
         title: 'Refund Policy',

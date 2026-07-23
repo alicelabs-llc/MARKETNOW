@@ -54,7 +54,7 @@ const CONTENT = {
     faq: [
       {
         q: 'Do buyers need a subscription?',
-        a: 'No. MarketNow uses B2B pricing: Community (Free), Team ($99/mo), Enterprise (Custom). All 8,582 skills are Sentinel-certified and browsable for free.',
+        a: 'No. MarketNow uses B2B pricing: Community (Free), Team ($99/mo), Enterprise (Custom). All 8,845 skills are Sentinel-certified and browsable for free.',
       },
       {
         q: 'What happens if I exceed my free tier limit?',
@@ -188,7 +188,7 @@ const CONTENT = {
     faq: [
       {
         q: '¿Los compradores necesitan suscripción?',
-        a: 'No. MarketNow usa precios B2B: Community (Gratis), Team ($99/mes), Enterprise (Custom). Las 8,582 skills están certificadas por Sentinel y son navegables gratis.',
+        a: 'No. MarketNow usa precios B2B: Community (Gratis), Team ($99/mes), Enterprise (Custom). Las 8,845 skills están certificadas por Sentinel y son navegables gratis.',
       },
       {
         q: '¿Qué pasa si excedo el límite del plan free?',
@@ -324,7 +324,7 @@ const CONTENT = {
     faq: [
       {
         q: 'Compradores precisam de assinatura?',
-        a: 'Não. O MarketNow usa preços B2B: Community (Grátis), Team ($99/mês), Enterprise (Custom). Todas as 8,582 skills são certificadas pelo Sentinel e navegáveis gratuitamente.',
+        a: 'Não. O MarketNow usa preços B2B: Community (Grátis), Team ($99/mês), Enterprise (Custom). Todas as 8,845 skills são certificadas pelo Sentinel e navegáveis gratuitamente.',
       },
       {
         q: 'O que acontece se eu exceder o limite do plano free?',
@@ -459,7 +459,7 @@ const CONTENT = {
     faq: [
       {
         q: '买家需要订阅吗？',
-        a: '不需要。MarketNow 使用 B2B 定价：Community（免费）、Team（$99/月）、Enterprise（定制）。所有 8,582 个技能都通过 Sentinel 认证，可免费浏览。',
+        a: '不需要。MarketNow 使用 B2B 定价：Community（免费）、Team（$99/月）、Enterprise（定制）。所有 8,845 个技能都通过 Sentinel 认证，可免费浏览。',
       },
       {
         q: '如果超出免费套餐限额会怎样？',

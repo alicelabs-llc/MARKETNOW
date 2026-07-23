@@ -41,6 +41,7 @@
 import crypto from 'crypto';
 import { setCorsHeaders } from '../lib/cors.mjs';
 import { applySecurityHeaders } from '../lib/waf.mjs';
+import { canonicalize as rfc8785Canonicalize } from '../lib/canonical-json.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -73,22 +74,12 @@ function loadCAKeys() {
 // ─── Signing & verification ─────────────────────────────────────────────
 
 /**
- * Canonical JSON serialization for signing (deterministic key order).
+ * Canonical JSON serialization using RFC 8785 (JCS).
+ * Replaces the ad-hoc recursive sort with the international standard.
+ * Fixes the canonicalization bug reported by @anp2network permanently.
  */
 function canonicalJson(obj) {
-  // Recursively sort keys at every depth (not just top-level).
-  // FIX: previously used JSON.stringify(obj, Object.keys(obj).sort())
-  // which only sorted top-level keys. Nested objects kept their original
-  // key order, causing signature verification failures if the signer
-  // and verifier serialized nested objects differently.
-  // Reported by @anp2network on dev.to.
-  if (obj === null || typeof obj !== 'object') return JSON.stringify(obj);
-  if (Array.isArray(obj)) return '[' + obj.map(canonicalJson).join(',') + ']';
-  const sorted = {};
-  for (const key of Object.keys(obj).sort()) {
-    sorted[key] = obj[key];
-  }
-  return JSON.stringify(sorted);
+  return rfc8785Canonicalize(obj);
 }
 
 /**

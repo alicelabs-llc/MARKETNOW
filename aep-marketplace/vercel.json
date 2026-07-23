@@ -90,6 +90,18 @@
     {
       "source": "/((?!api/|for-agents|landing-pages/|tools/|acp|atc).*)",
       "destination": "/index.html"
+    },
+    {
+      "source": "/best-mcp-marketplace",
+      "destination": "/best-mcp-marketplace.html"
+    },
+    {
+      "source": "/guides/how-to-publish-mcp-server",
+      "destination": "/guides/how-to-publish-mcp-server.html"
+    },
+    {
+      "source": "/guides/how-to-monetize-mcp-tools",
+      "destination": "/guides/how-to-monetize-mcp-tools.html"
     }
   ],
   "headers": [

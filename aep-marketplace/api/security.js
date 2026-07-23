@@ -315,52 +315,7 @@ export default async function handler(req, res) {
     }
 
     // Sub-endpoint: agent-analytics
-    if (view === 'analytics') {
-      let npmData = { week: 0, month: 0 };
-      try {
-        const [weekRes, monthRes] = await Promise.all([
-          fetch('https://api.npmjs.org/downloads/point/last-week/marketnow-mcp'),
-          fetch('https://api.npmjs.org/downloads/point/last-month/marketnow-mcp'),
-        ]);
-        const week = await weekRes.json();
-        const month = await monthRes.json();
-        npmData = { week: week.downloads || 0, month: month.downloads || 0 };
-      } catch {}
-
-      let githubData = { stars: 0, forks: 0 };
-      try {
-        const ghRes = await fetch('https://api.github.com/repos/edgarfloresguerra2011-a11y/marketnow', {
-          headers: { Authorization: 'Bearer ' + GITHUB_TOKEN, 'User-Agent': 'marketnow' },
-        });
-        const gh = await ghRes.json();
-        githubData = { stars: gh.stargazers_count || 0, forks: gh.forks_count || 0 };
-      } catch {}
-
-      return res.status(200).json({
-        endpoint: '/api/security?view=analytics',
-        description: 'Agent analytics — marketplace, distribution, trust, and security metrics.',
-        timestamp: new Date().toISOString(),
-        marketplace: { total_skills: 8845, certified: 8845, l2_coverage: 206 },
-        distribution: {
-          npm: { package: 'marketnow-mcp', version: '1.5.1', downloads_week: npmData.week, downloads_month: npmData.month },
-          github: githubData,
-          mcp_registry: { version: '1.5.0', status: 'active' },
-        },
-        trust: { atc_total: 3, ca_algorithm: 'Ed25519', a2a_support: true, canonical_json: 'RFC 8785' },
-        security: {
-          total_layers: 10, malware_families: 28, prompt_injection_rules: 32,
-          waf_rules: 40, honeypot_paths: 50, threat_intel_feeds: 3,
-        },
-        mcp_server: { version: '1.5.1', tools: 8, viral_mechanism: true },
-        business: {
-          free: 'Browse, install, audit, ATC — all free',
-          pro: '\.99/mo — per-skill analytics, priority audits',
-          enterprise: '\9.99/mo — SOC2 mapping, private catalog, custom signatures',
-        },
-      });
-    }
-
-    // Default: overview
+// Default: overview
     const threatIntel = await getThreatIntelSummary();
     const honeypotStats = getHoneypotStats();
     const quarantine = await fetchQuarantineList();

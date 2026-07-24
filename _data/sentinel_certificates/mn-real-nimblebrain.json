@@ -1,32 +1,82 @@
 {
-  "certificate_id": "MN-SC-2026-5405101",
+  "certificate_id": "MN-SC-2026-8081416",
   "skill_id": "mn-real-nimblebrain",
   "skill_name": "nimblebrain",
-  "issued_at": "2026-07-19T04:30:05.101Z",
-  "expires_at": "2026-07-26T04:30:05.101Z",
-  "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "timestamp": "2026-07-24T03:28:49.077Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L1.7 + L1.8 + L1.9 (Deep Individual Audit)",
+  "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16_l17": "medium",
-    "l17_quarantine_recommended": false,
+    "l15_l16_l17_l18_l19": "medium",
     "l2": "not_available",
     "final": "medium"
   },
+  "quarantine_recommended": false,
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l17": true,
+    "l18": true,
+    "l19": true,
+    "l2": false,
+    "l3": false
   },
-  "layer_details": {
-    "l15_findings": 2,
-    "l16_semgrep_findings": 0,
-    "l16_secret_findings": 0,
-    "l16_osv_findings": 0,
-    "l2_execution_status": null
+  "checks": [
+    {
+      "name": "L1.5 AUTH",
+      "status": "warning",
+      "risk": "medium",
+      "detail": "No auth required"
+    },
+    {
+      "name": "L1.6 SEMGREP",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 rules, 0 findings"
+    },
+    {
+      "name": "L1.6 SECRETS",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 patterns, 0 findings"
+    },
+    {
+      "name": "L1.7 BINARY",
+      "status": "pass",
+      "risk": "low",
+      "detail": "No binaries or launchers detected"
+    },
+    {
+      "name": "L1.7 MALWARE",
+      "status": "pass",
+      "risk": "low",
+      "detail": "7 patterns checked, 0 findings"
+    },
+    {
+      "name": "L1.8 FAMILIES",
+      "status": "pass",
+      "risk": "low",
+      "detail": "28 families checked, 0 matches (README scanned)"
+    },
+    {
+      "name": "L1.9 INJECTION",
+      "status": "pass",
+      "risk": "low",
+      "detail": "32 rules checked, 0 injections"
+    }
+  ],
+  "source": {
+    "type": "github",
+    "url": "https://github.com/NimbleBrainInc/nimblebrain",
+    "note": "Real MCP server. 5 stars. Language: TypeScript.",
+    "stars": 5,
+    "language": "TypeScript",
+    "last_push": "2026-07-06T20:05:03Z"
   },
-  "signature": "e54530c7d68a5f300284c1bab8c4cc2bde6c57d5db6364d799bd0980d536e2d2",
-  "signature_algorithm": "SHA-256",
-  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-nimblebrain"
+  "signature": {
+    "algorithm": "SHA-256",
+    "value": "9127444cbb6f6be6596c72e11400f2c1e3711a3b9327c3402a32eb42fa7f69a4",
+    "signed_by": "Sentinel Deep Auditor"
+  }
 }

@@ -1,32 +1,82 @@
 {
-  "certificate_id": "MN-SC-2026-4834247",
+  "certificate_id": "MN-SC-2026-0000NaN",
   "skill_id": "mn-real-automobile",
   "skill_name": "auto-mobile",
-  "issued_at": "2026-07-19T04:20:34.247Z",
-  "expires_at": "2026-07-26T04:20:34.247Z",
-  "auditor": "Sentinel L1.5 + L1.6 + L2",
-  "overall_score": 8,
+  "timestamp": "2026-07-24T02:57:40.207Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L1.7 + L1.8 + L1.9 (Deep Individual Audit)",
+  "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16_l17": "medium",
-    "l17_quarantine_recommended": false,
+    "l15_l16_l17_l18_l19": "medium",
     "l2": "not_available",
     "final": "medium"
   },
+  "quarantine_recommended": false,
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l17": true,
+    "l18": true,
+    "l19": true,
+    "l2": false,
+    "l3": false
   },
-  "layer_details": {
-    "l15_findings": 2,
-    "l16_semgrep_findings": 0,
-    "l16_secret_findings": 0,
-    "l16_osv_findings": 0,
-    "l2_execution_status": null
+  "checks": [
+    {
+      "name": "L1.5 AUTH",
+      "status": "warning",
+      "risk": "medium",
+      "detail": "No auth required"
+    },
+    {
+      "name": "L1.6 SEMGREP",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 rules, 0 findings"
+    },
+    {
+      "name": "L1.6 SECRETS",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 patterns, 0 findings"
+    },
+    {
+      "name": "L1.7 BINARY",
+      "status": "pass",
+      "risk": "low",
+      "detail": "No binaries or launchers detected"
+    },
+    {
+      "name": "L1.7 MALWARE",
+      "status": "pass",
+      "risk": "low",
+      "detail": "7 patterns checked, 0 findings"
+    },
+    {
+      "name": "L1.8 FAMILIES",
+      "status": "pass",
+      "risk": "low",
+      "detail": "28 families checked, 0 matches (README scanned)"
+    },
+    {
+      "name": "L1.9 INJECTION",
+      "status": "pass",
+      "risk": "low",
+      "detail": "32 rules checked, 0 injections"
+    }
+  ],
+  "source": {
+    "type": "github",
+    "url": "https://github.com/zillow/auto-mobile",
+    "note": "Real MCP server. 79 stars. Language: TypeScript. Last push: 2026-03-10T00:38:11Z. Discovered via auto-discovery.",
+    "stars": 79,
+    "language": "TypeScript",
+    "last_push": "2026-03-10T00:38:11Z"
   },
-  "signature": "6f0a324c919faea2d7c2e31147ba888c6d4e3269c6e9902c5c239bd3a7bc8b7f",
-  "signature_algorithm": "SHA-256",
-  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-automobile"
+  "signature": {
+    "algorithm": "SHA-256",
+    "value": "9127444cbb6f6be6596c72e11400f2c1e3711a3b9327c3402a32eb42fa7f69a4",
+    "signed_by": "Sentinel Deep Auditor"
+  }
 }

@@ -1,32 +1,82 @@
 {
-  "certificate_id": "MN-SC-2026-5286674",
+  "certificate_id": "MN-SC-2026-0000NaN",
   "skill_id": "mn-real-ddddocr",
   "skill_name": "ddddocr",
-  "issued_at": "2026-07-19T04:28:06.674Z",
-  "expires_at": "2026-07-26T04:28:06.674Z",
-  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "timestamp": "2026-07-24T03:22:12.805Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L1.7 + L1.8 + L1.9 (Deep Individual Audit)",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16_l17": "medium",
-    "l17_quarantine_recommended": false,
+    "l15_l16_l17_l18_l19": "medium",
     "l2": "not_available",
     "final": "medium"
   },
+  "quarantine_recommended": false,
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l17": true,
+    "l18": true,
+    "l19": true,
+    "l2": false,
+    "l3": false
   },
-  "layer_details": {
-    "l15_findings": 1,
-    "l16_semgrep_findings": 0,
-    "l16_secret_findings": 0,
-    "l16_osv_findings": 0,
-    "l2_execution_status": null
+  "checks": [
+    {
+      "name": "L1.5 AUTH",
+      "status": "warning",
+      "risk": "medium",
+      "detail": "No auth required"
+    },
+    {
+      "name": "L1.6 SEMGREP",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 rules, 0 findings"
+    },
+    {
+      "name": "L1.6 SECRETS",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 patterns, 0 findings"
+    },
+    {
+      "name": "L1.7 BINARY",
+      "status": "pass",
+      "risk": "low",
+      "detail": "No binaries or launchers detected"
+    },
+    {
+      "name": "L1.7 MALWARE",
+      "status": "pass",
+      "risk": "low",
+      "detail": "7 patterns checked, 0 findings"
+    },
+    {
+      "name": "L1.8 FAMILIES",
+      "status": "pass",
+      "risk": "low",
+      "detail": "28 families checked, 0 matches (README scanned)"
+    },
+    {
+      "name": "L1.9 INJECTION",
+      "status": "pass",
+      "risk": "low",
+      "detail": "32 rules checked, 0 injections"
+    }
+  ],
+  "source": {
+    "type": "github",
+    "url": "https://github.com/86maid/ddddocr",
+    "note": "Real MCP server. 336 stars.",
+    "stars": 336,
+    "language": "Rust",
+    "last_push": "2026-04-30T06:30:38Z"
   },
-  "signature": "efe908793fb765a60f0ee508907ff1190a4f0a3e5bd8f536c8a31299348237c8",
-  "signature_algorithm": "SHA-256",
-  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-ddddocr"
+  "signature": {
+    "algorithm": "SHA-256",
+    "value": "9127444cbb6f6be6596c72e11400f2c1e3711a3b9327c3402a32eb42fa7f69a4",
+    "signed_by": "Sentinel Deep Auditor"
+  }
 }

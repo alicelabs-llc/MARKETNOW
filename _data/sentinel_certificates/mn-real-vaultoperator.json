@@ -1,32 +1,82 @@
 {
-  "certificate_id": "MN-SC-2026-5312745",
+  "certificate_id": "MN-SC-2026-0000NaN",
   "skill_id": "mn-real-vaultoperator",
   "skill_name": "vault-operator",
-  "issued_at": "2026-07-19T04:28:32.745Z",
-  "expires_at": "2026-07-26T04:28:32.745Z",
-  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "timestamp": "2026-07-24T03:23:44.315Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L1.7 + L1.8 + L1.9 (Deep Individual Audit)",
   "overall_score": 9,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16_l17": "medium",
-    "l17_quarantine_recommended": false,
+    "l15_l16_l17_l18_l19": "medium",
     "l2": "not_available",
     "final": "medium"
   },
+  "quarantine_recommended": false,
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l2": false
+    "l17": true,
+    "l18": true,
+    "l19": true,
+    "l2": false,
+    "l3": false
   },
-  "layer_details": {
-    "l15_findings": 1,
-    "l16_semgrep_findings": 0,
-    "l16_secret_findings": 0,
-    "l16_osv_findings": 0,
-    "l2_execution_status": null
+  "checks": [
+    {
+      "name": "L1.5 AUTH",
+      "status": "warning",
+      "risk": "medium",
+      "detail": "No auth required"
+    },
+    {
+      "name": "L1.6 SEMGREP",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 rules, 0 findings"
+    },
+    {
+      "name": "L1.6 SECRETS",
+      "status": "pass",
+      "risk": "low",
+      "detail": "18 patterns, 0 findings"
+    },
+    {
+      "name": "L1.7 BINARY",
+      "status": "pass",
+      "risk": "low",
+      "detail": "No binaries or launchers detected"
+    },
+    {
+      "name": "L1.7 MALWARE",
+      "status": "pass",
+      "risk": "low",
+      "detail": "7 patterns checked, 0 findings"
+    },
+    {
+      "name": "L1.8 FAMILIES",
+      "status": "pass",
+      "risk": "low",
+      "detail": "28 families checked, 0 matches (README scanned)"
+    },
+    {
+      "name": "L1.9 INJECTION",
+      "status": "pass",
+      "risk": "low",
+      "detail": "32 rules checked, 0 injections"
+    }
+  ],
+  "source": {
+    "type": "github",
+    "url": "https://github.com/pssah4/vault-operator",
+    "note": "Real MCP server. 200 stars.",
+    "stars": 200,
+    "language": "TypeScript",
+    "last_push": "2026-07-03T22:24:27Z"
   },
-  "signature": "89787602c34e3fc35bbff00887f3b2dae83f2a5e2304de1a71cdd9111b3b532f",
-  "signature_algorithm": "SHA-256",
-  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-vaultoperator"
+  "signature": {
+    "algorithm": "SHA-256",
+    "value": "9127444cbb6f6be6596c72e11400f2c1e3711a3b9327c3402a32eb42fa7f69a4",
+    "signed_by": "Sentinel Deep Auditor"
+  }
 }

@@ -312,6 +312,44 @@
         "licenseKey": "string"
       }
     },
+    "atc": {
+      "method": "GET / POST",
+      "path": "/api/atc",
+      "actions": {
+        "issue": "POST /api/atc {action:'issue', agent_id, public_key, capabilities?, skill_id?, wallet_address?}",
+        "verify": "GET /api/atc?action=verify&card_id=ATC-2026-XXXXX — verify an Agent Trust Card (identity, validity, review evidence)",
+        "verify_receipt": "GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx — verify a signed delivery proof for a completed purchase",
+        "revoke": "POST /api/atc {action:'revoke', card_id, reason}",
+        "list": "GET /api/atc — list all ATCs",
+        "ca_key": "GET /api/atc?action=ca-key — Ed25519 CA public key (pin this in your runtime)",
+        "spec": "GET /api/atc?action=spec — full ATC protocol spec (v1.1.0)",
+        "translate": "POST /api/atc {action:'translate', from, to, message} — translate between LangChain/MCP/AutoGen/CrewAI/OpenAI Functions"
+      },
+      "schema_version": "1.1.0",
+      "decision_authority": "consumer",
+      "what_the_atc_answers": [
+        "identity binding (Ed25519 public key)",
+        "issuer (which CA vouches for the binding)",
+        "validity state (valid | revoked, with timestamp + reason)",
+        "review evidence (Sentinel score, layers passed, audit timestamp, artifact hash)"
+      ],
+      "what_the_atc_does_NOT_answer": [
+        "should this agent be trusted? (runtime policy decision)",
+        "is this agent safe for MY context? (consumer decides)",
+        "will this agent behave at runtime? (covered by L3, separate layer)"
+      ],
+      "action_receipts": {
+        "description": "Signed delivery proof for completed purchases. Emitted automatically by POST /api/agent-purchase on instant_purchase and direct_purchase modes.",
+        "storage": "_data/receipts/{receipt_id}.json in the public GitHub repo (audit ledger)",
+        "cryptography": "Ed25519 (RFC 8032) over RFC 8785 JCS canonical JSON",
+        "interop_with_vibe": {
+          "mandate_id": "vibe_decision_ref (content-addressed auth citation)",
+          "settle_txhash": "vibe_settle_coordinate (orthogonal to receipt)",
+          "atc_card_id": "co-sign or cite (does NOT replace settle receipt)",
+          "receipt_id": "vibe_action_receipt (offline-verifiable delivery proof)"
+        }
+      }
+    },
     "bundles": {
       "method": "GET",
       "path": "/api/bundles.json",
@@ -380,16 +418,25 @@
   ],
   "mcp_server": {
     "name": "marketnow-mcp",
-    "version": "1.1.0",
+    "version": "1.6.0",
     "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
-    "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline)",
+    "description": "MarketNow as an MCP server — search and discover skills from any MCP-compatible agent runtime (Claude Desktop, Cursor, Cline). v1.6.0 adds verify_receipt tool for action-receipt verification.",
     "install": "npx -y marketnow-mcp",
     "tools": [
       "search_skills",
       "get_skill",
       "list_categories",
       "get_manifest",
-      "get_install_command"
+      "get_install_command",
+      "verify_trust",
+      "verify_receipt",
+      "submit_skill",
+      "recommend_skills"
+    ],
+    "new_in_v1_6_0": [
+      "verify_receipt(receipt_id) — verify a signed delivery proof (action-receipt) for a completed purchase",
+      "ATC schema v1.1.0: sentinel_review_score + decision_authority fields",
+      "Action-receipts emitted on every paid purchase (instant_purchase + direct_purchase modes)"
     ],
     "config_claude_desktop": {
       "mcpServers": {
@@ -429,7 +476,7 @@
     "registry": "https://marketnow.site/registry",
     "this_file": "https://marketnow.site/api/agent.json"
   },
-  "generated_at": "2026-07-23T04:58:43.332Z",
+  "generated_at": "2026-07-25T03:46:36.451Z",
   "trust": {
     "license": "MIT",
     "open_source": false,

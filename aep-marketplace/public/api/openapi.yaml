@@ -435,6 +435,112 @@ paths:
           description: Mandate not found
         '409':
           description: Mandate revoked / expired / insufficient remaining
+  /api/atc:
+    get:
+      summary: Agent Trust Card (ATC) — verify identity, validity, and review evidence
+      description: 'Agent Trust Card API — SSL certificates for AI agents. MarketNow acts as the Certificate Authority.
+        Every ATC is cryptographically signed with the CA Ed25519 private key and persisted to a public GitHub ledger.
+
+
+        Schema v1.1.0 (July 2026): renamed trust.sentinel_score → trust.sentinel_review_score (review evidence,
+        not a verdict). Added decision_authority="consumer" (the runtime makes the trust decision, not the card).
+
+
+        Action-receipts (also v1.1.0): signed delivery proof for completed purchases. Emitted automatically by
+        POST /api/agent-purchase. Verify with action=verify-receipt.'
+      operationId: atcOperations
+      parameters:
+      - name: action
+        in: query
+        description: 'ATC operation to perform'
+        required: true
+        schema:
+          type: string
+          enum:
+          - verify
+          - verify-receipt
+          - ca-key
+          - spec
+          - list
+      - name: card_id
+        in: query
+        description: 'ATC card ID (required for action=verify). Format: ATC-2026-XXXXXXX'
+        required: false
+        schema:
+          type: string
+      - name: receipt_id
+        in: query
+        description: 'Receipt ID (required for action=verify-receipt). Format: rcpt_xxxxxxxxxxxx'
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ATC operation result
+          content:
+            application/json:
+              schema:
+                oneOf:
+                - $ref: '#/components/schemas/ATCVerifyResponse'
+                - $ref: '#/components/schemas/ReceiptVerifyResponse'
+                - $ref: '#/components/schemas/ATCSpec'
+                - $ref: '#/components/schemas/ATCList'
+        '400':
+          description: Missing required parameter (card_id or receipt_id)
+        '404':
+          description: ATC or receipt not found in registry
+        '503':
+          description: CA not configured
+    post:
+      summary: Issue, revoke, or translate ATCs
+      description: 'Issue a new ATC (signs with CA key + persists to GitHub), revoke an existing ATC, or
+        translate agent tool schemas between frameworks (LangChain ↔ MCP ↔ AutoGen ↔ CrewAI ↔ OpenAI Functions).'
+      operationId: atcMutations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - action
+              properties:
+                action:
+                  type: string
+                  enum:
+                  - issue
+                  - revoke
+                  - translate
+                agent_id:
+                  type: string
+                  description: Required for action=issue
+                public_key:
+                  type: string
+                  description: Required for action=issue (Ed25519 public key, SPKI PEM or base64 raw)
+                card_id:
+                  type: string
+                  description: Required for action=revoke
+                reason:
+                  type: string
+                  description: Optional revocation reason
+                from:
+                  type: string
+                  description: Required for action=translate
+                to:
+                  type: string
+                  description: Required for action=translate
+                message:
+                  type: object
+                  description: Required for action=translate
+      responses:
+        '201':
+          description: ATC issued (action=issue)
+        '200':
+          description: ATC revoked or translated
+        '400':
+          description: Missing required field
+        '503':
+          description: CA not configured
   /api/agent-purchase:
     post:
       summary: Agent programmatic purchase (USDC on Base + mandate-aware)
@@ -675,3 +781,196 @@ components:
           type: object
         mcp_server:
           type: object
+    ATCVerifyResponse:
+      type: object
+      description: 'ATC verify response (schema v1.1.0). The ATC answers a narrow set of questions:
+        identity, issuer, validity, review evidence. It does NOT answer "should this agent be trusted?" —
+        that is a runtime policy decision the consumer makes.'
+      properties:
+        valid:
+          type: boolean
+        card_id:
+          type: string
+        agent_id:
+          type: string
+        agent_name:
+          type: string
+        sentinel_review_score:
+          type: number
+          minimum: 0
+          maximum: 10
+          description: 'Review evidence (0-10). NOT a trust verdict. Renamed from sentinel_score in v1.1.0.'
+        sentinel_score:
+          type: number
+          description: 'DEPRECATED alias for sentinel_review_score. Will be removed in v2.0.0.'
+        composite_trust:
+          type: number
+        risk_level:
+          type: string
+          enum:
+          - low
+          - medium
+          - high
+          - critical
+          - not_audited
+          - unknown
+        decision_authority:
+          type: string
+          enum:
+          - consumer
+          description: 'Always "consumer" — the runtime makes the trust decision, not the card.'
+        capabilities:
+          type: array
+          items:
+            type: string
+        protocol_language:
+          type: string
+        wallet:
+          type: string
+        issued_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: string
+          format: date-time
+        issuer:
+          type: string
+        signature_algorithm:
+          type: string
+        signature_valid:
+          type: boolean
+        schema_version:
+          type: string
+          description: 'Current: 1.1.0'
+        schema_changes:
+          type: array
+          items:
+            type: string
+    ReceiptVerifyResponse:
+      type: object
+      description: 'Action-receipt verify response. A signed delivery proof for a completed purchase.
+        Emitted automatically by POST /api/agent-purchase on instant_purchase and direct_purchase modes.
+        Persisted to _data/receipts/{receipt_id}.json (public GitHub audit ledger).
+        Interop with Vibe (doteyeso-ops): receipt_id → vibe_action_receipt, mandate_id → vibe_decision_ref,
+        settle_txhash → vibe_settle_coordinate.'
+      properties:
+        valid:
+          type: boolean
+        receipt_id:
+          type: string
+          pattern: '^rcpt_[a-f0-9]{20}$'
+        issued_at:
+          type: string
+          format: date-time
+        mandate_id:
+          type: string
+          nullable: true
+          description: 'Set when purchase used a mandate. Maps to Vibe decision_ref.'
+        settle_txhash:
+          type: string
+          nullable: true
+          description: 'On-chain tx hash (Base). Maps to Vibe settle_coordinate.'
+        atc_card_id:
+          type: string
+          nullable: true
+          description: 'Co-signed ATC card ID (does NOT replace the settle receipt).'
+        delivered:
+          type: object
+          properties:
+            skill_id:
+              type: string
+            license_key:
+              type: string
+            content_sha256:
+              type: string
+              nullable: true
+        amount_usd:
+          type: number
+        network:
+          type: string
+          enum:
+          - base
+          - none
+        signature_algorithm:
+          type: string
+        signature_valid:
+          type: boolean
+        interop:
+          type: object
+          description: 'Join-key map for Vibe (doteyeso-ops) integration'
+          properties:
+            vibe_decision_ref:
+              type: string
+              nullable: true
+            vibe_settle_coordinate:
+              type: string
+              nullable: true
+            vibe_action_receipt:
+              type: string
+    ATCSpec:
+      type: object
+      description: 'ATC protocol spec (GET /api/atc?action=spec)'
+      properties:
+        protocol:
+          type: string
+        version:
+          type: string
+        schema_version:
+          type: string
+        decision_authority:
+          type: string
+        what_the_atc_answers:
+          type: array
+          items:
+            type: string
+        what_the_atc_does_NOT_answer:
+          type: array
+          items:
+            type: string
+        endpoints:
+          type: object
+        action_receipts:
+          type: object
+        schema_changelog:
+          type: array
+          items:
+            type: string
+    ATCList:
+      type: object
+      description: 'ATC list response (GET /api/atc)'
+      properties:
+        total:
+          type: integer
+        schema_version:
+          type: string
+        decision_authority:
+          type: string
+        cards:
+          type: array
+          items:
+            type: object
+            properties:
+              card_id:
+                type: string
+              agent_id:
+                type: string
+              agent_name:
+                type: string
+              sentinel_review_score:
+                type: number
+              sentinel_score:
+                type: number
+                description: 'DEPRECATED alias'
+              risk_level:
+                type: string
+              status:
+                type: string
+                enum:
+                - active
+                - revoked
+              issued_at:
+                type: string
+                format: date-time
+              expires_at:
+                type: string
+                format: date-time

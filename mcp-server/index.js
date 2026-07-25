@@ -1,21 +1,28 @@
 #!/usr/bin/env node
 /**
- * MarketNow MCP Server v1.5.0
+ * MarketNow MCP Server v1.6.0
  * ============================
  *
  * The MarketNow marketplace as an MCP server. Lets any MCP-compatible
  * agent (Claude, Cursor, Cline, etc.) search, discover, verify, and
  * install skills from the marketplace.
  *
- * Tools exposed:
+ * Tools exposed (9):
  *  - search_skills(query, category?) → matching skills with Sentinel scores
  *  - get_skill(skill_id) → full skill detail
  *  - list_categories() → all categories
  *  - get_manifest() → marketplace metadata
  *  - get_install_command(skill_id) → npx install command
- *  - verify_trust(card_id) → verify an Agent Trust Card (ATC)
+ *  - verify_trust(card_id) → verify an Agent Trust Card (ATC) — identity, validity, review evidence
+ *  - verify_receipt(receipt_id) → verify a signed delivery proof (action-receipt)
  *  - submit_skill(repo_url, name, description) → submit your MCP server to the marketplace
  *  - recommend_skills(task) → get AI-powered skill recommendations for a task
+ *
+ * v1.6.0 (July 2026):
+ *  - Added verify_receipt tool for action-receipt verification
+ *  - Receipts are signed delivery proofs emitted on every paid purchase
+ *  - Closes the gap identified with @doteyeso-ops (Vibe) on Pipedream #94
+ *  - ATC schema is now v1.1.0 (sentinel_review_score + decision_authority)
  *
  * VIRAL MECHANISM: Every search result includes a referral link.
  * When an agent installs a skill, it gets a referral code.
@@ -150,6 +157,32 @@ async function verifyTrust(args) {
   if (!card_id) throw new Error('card_id is required');
   const res = await fetch(`${API_BASE}/atc?action=verify&card_id=${encodeURIComponent(card_id)}`);
   if (!res.ok) throw new Error(`Verify failed: ${res.status}`);
+  return await res.json();
+}
+
+// ─── NEW (v1.6.0): Verify Action Receipt ────────────────────────────────────
+// Receipts are signed delivery proofs emitted on every paid purchase.
+// Use this to verify that a purchase actually completed and what was delivered.
+// Interop with Vibe (doteyeso-ops): receipt_id ↔ vibe_action_receipt,
+// mandate_id ↔ vibe_decision_ref, settle_txhash ↔ vibe_settle_coordinate.
+async function verifyReceipt(args) {
+  const { receipt_id } = args;
+  if (!receipt_id) throw new Error('receipt_id is required');
+  if (!receipt_id.startsWith('rcpt_')) {
+    throw new Error('receipt_id must start with "rcpt_" (e.g. rcpt_c8b9dc67f88e4da5bd3a)');
+  }
+  const res = await fetch(`${API_BASE}/atc?action=verify-receipt&receipt_id=${encodeURIComponent(receipt_id)}`);
+  if (!res.ok) {
+    if (res.status === 404) {
+      return {
+        valid: false,
+        receipt_id,
+        reason: 'not_found',
+        message: `No receipt with id ${receipt_id} exists in the public ledger.`,
+      };
+    }
+    throw new Error(`Verify receipt failed: ${res.status}`);
+  }
   return await res.json();
 }
 
@@ -304,16 +337,30 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: 'verify_trust',
-      description: 'Verify an Agent Trust Card (ATC). Checks signature, expiry, and revocation status. Use this before interacting with untrusted agents.',
+      description: 'Verify an Agent Trust Card (ATC). Checks signature, expiry, and revocation status. Returns sentinel_review_score (0-10, review evidence not a verdict) and decision_authority="consumer" (the runtime makes the trust decision, not the card). Use this before interacting with untrusted agents.',
       inputSchema: {
         type: 'object',
         properties: {
           card_id: {
             type: 'string',
-            description: 'ATC card ID (e.g. ATC-2026-9880252)',
+            description: 'ATC card ID (e.g. ATC-2026-7777670)',
           },
         },
         required: ['card_id'],
+      },
+    },
+    {
+      name: 'verify_receipt',
+      description: 'Verify a signed delivery proof (action-receipt) for a completed purchase. Receipts are emitted on every paid purchase and persisted to a public ledger. Returns what was delivered (skill_id, license_key, amount), the settle txhash, and interop fields for the Vibe action-ref system. Use this to confirm a purchase actually completed.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          receipt_id: {
+            type: 'string',
+            description: 'Receipt ID (starts with "rcpt_", e.g. rcpt_c8b9dc67f88e4da5bd3a)',
+          },
+        },
+        required: ['receipt_id'],
       },
     },
     {
@@ -383,6 +430,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         break;
       case 'verify_trust':
         result = await verifyTrust(args || {});
+        break;
+      case 'verify_receipt':
+        result = await verifyReceipt(args || {});
         break;
       case 'submit_skill':
         result = await submitSkill(args || {});

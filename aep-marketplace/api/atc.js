@@ -42,6 +42,12 @@ import crypto from 'crypto';
 import { setCorsHeaders } from '../lib/cors.mjs';
 import { applySecurityHeaders } from '../lib/waf.mjs';
 import { canonicalize as rfc8785Canonicalize } from '../lib/canonical-json.mjs';
+import {
+  buildReceipt,
+  persistReceipt,
+  fetchReceipt,
+  verifyReceipt,
+} from '../lib/action-receipt.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -316,23 +322,116 @@ export default async function handler(req, res) {
       if (action === 'spec') {
         return res.status(200).json({
           protocol: 'ATC',
-          version: '1.0.0',
+          version: '1.1.0',
           description: 'Agent Trust Card — SSL certificates for AI agents. Cryptographically signed by MarketNow Sentinel CA.',
           cryptography: {
             algorithm: 'Ed25519 (RFC 8032)',
             signature_format: 'detached, hex-encoded',
-            canonical_json: 'JSON.stringify(payload, Object.keys(payload).sort())',
+            canonical_json: 'RFC 8785 JCS (JSON Canonicalization Scheme)',
           },
           endpoints: {
             issue: 'POST /api/atc {action:"issue", agent_id, public_key, capabilities?, skill_id?, wallet_address?}',
             verify: 'GET /api/atc?action=verify&card_id=ATC-2026-XXXXX',
+            verify_receipt: 'GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx',
             revoke: 'POST /api/atc {action:"revoke", card_id, reason}',
             list: 'GET /api/atc',
             ca_key: 'GET /api/atc?action=ca-key',
+            spec: 'GET /api/atc?action=spec',
             translate: 'POST /api/atc {action:"translate", from, to, message}',
           },
-          trust_score: 'Derived from Sentinel certificate (0-10). Pass skill_id to link ATC to a Sentinel-audited skill.',
-          persistence: 'ATCs are persisted to _data/atc/{card_id}.json in the public GitHub repo. Anyone can audit the ledger.',
+          // Schema v1.1.0 changes (response to @0xbrainkid on autogen#7965):
+          // The ATC answers a NARROW set of questions (identity, issuer,
+          // validity, review evidence). It does NOT answer "should this
+          // agent be trusted?" — that is a runtime policy decision the
+          // consumer makes using ATC evidence.
+          schema_version: '1.1.0',
+          decision_authority: 'consumer',
+          what_the_atc_answers: [
+            'identity binding (Ed25519 public key)',
+            'issuer (which CA vouches for the binding)',
+            'validity state (valid | revoked, with timestamp + reason)',
+            'review evidence (Sentinel score, layers passed, audit timestamp, artifact hash)',
+          ],
+          what_the_atc_does_NOT_answer: [
+            'should this agent be trusted? (runtime policy decision)',
+            'is this agent safe for MY context? (consumer decides)',
+            'will this agent behave at runtime? (covered by L3, separate layer)',
+          ],
+          sentinel_review_score: 'Review evidence (0-10). Derived from Sentinel certificate. NOT a trust verdict.',
+          action_receipts: {
+            description: 'Signed delivery proof for completed purchases. Closes the gap identified with @doteyeso-ops (Vibe) on PipedreamHQ/awesome-mcp-servers#94.',
+            issue: 'Emitted automatically by POST /api/agent-purchase on successful instant_purchase or direct_purchase.',
+            verify: 'GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx',
+            storage: '_data/receipts/{receipt_id}.json (public GitHub repo, same audit-ledger pattern as ATC)',
+            interop: {
+              vibe_decision_ref: 'mandate_id field',
+              vibe_settle_coordinate: 'settle_txhash field',
+              vibe_action_receipt: 'receipt_id field',
+            },
+          },
+          persistence: 'ATCs persisted to _data/atc/{card_id}.json; receipts to _data/receipts/{receipt_id}.json. Both in the public GitHub repo — anyone can audit the ledger.',
+          schema_changelog: [
+            'v1.1.0 (2026-07-25): renamed trust.sentinel_score → trust.sentinel_review_score (review evidence, not verdict). Added decision_authority="consumer". Added action-receipt endpoint. sentinel_score kept as backward-compat alias.',
+            'v1.0.0: original schema (sentinel_score, no decision_authority, no receipts).',
+          ],
+        });
+      }
+
+      // ── verify-receipt: verify an action-receipt ──
+      // Closes the gap identified with @doteyeso-ops (Vibe) on
+      // PipedreamHQ/awesome-mcp-servers#94 — agents can now verify the
+      // signed delivery proof for a completed purchase.
+      if (action === 'verify-receipt') {
+        const { receipt_id } = req.query;
+        if (!receipt_id) {
+          return res.status(400).json({
+            error: 'receipt_id required',
+            example:
+              'GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx',
+          });
+        }
+
+        const receipt = await fetchReceipt(receipt_id);
+        if (!receipt) {
+          return res.status(404).json({
+            valid: false,
+            receipt_id,
+            reason: 'not_found',
+            message: `No receipt with id ${receipt_id} exists.`,
+          });
+        }
+
+        const result = verifyReceipt(receipt);
+        if (!result.valid) {
+          return res.status(200).json({
+            valid: false,
+            receipt_id,
+            reason: result.reason,
+            message:
+              'Receipt signature does not verify against the CA public key. The record may have been tampered with.',
+          });
+        }
+
+        return res.status(200).json({
+          valid: true,
+          receipt_id,
+          issued_at: receipt.issued_at,
+          mandate_id: receipt.mandate_id,
+          settle_txhash: receipt.settle_txhash,
+          atc_card_id: receipt.atc_card_id,
+          delivered: receipt.delivered,
+          amount_usd: receipt.amount_usd,
+          network: receipt.network,
+          signature_algorithm: receipt.signature.algorithm,
+          signature_valid: true,
+          message:
+            'Receipt is valid. Delivery proof cryptographically verified against MarketNow CA.',
+          // Join-key mapping for Vibe (doteyeso-ops) interoperability
+          interop: {
+            vibe_decision_ref: receipt.mandate_id,
+            vibe_settle_coordinate: receipt.settle_txhash,
+            vibe_action_receipt: receipt.receipt_id,
+          },
         });
       }
 
@@ -400,14 +499,30 @@ export default async function handler(req, res) {
         }
 
         // All checks pass
+        //
+        // Schema note (July 2026, response to @0xbrainkid on
+        // microsoft/autogen#7965): the ATC answers a NARROW set of
+        // questions (identity, issuer, validity state, review evidence).
+        // It does NOT answer "should this agent be trusted?" — that is
+        // a runtime policy decision the consumer makes using ATC evidence.
+        // The new `decision_authority: "consumer"` field makes this
+        // explicit. The renamed `sentinel_review_score` (was
+        // `sentinel_score`) clarifies that the score is REVIEW EVIDENCE,
+        // not a trust verdict. The old field is kept as an alias for
+        // backward compatibility with existing consumers.
         return res.status(200).json({
           valid: true,
           card_id,
           agent_id: payload.agent_id,
           agent_name: payload.agent_name,
-          sentinel_score: payload.trust.sentinel_score,
+          // Renamed field (was sentinel_score) — review evidence, not a verdict
+          sentinel_review_score: payload.trust.sentinel_review_score ?? payload.trust.sentinel_score,
+          // Backward-compat alias — deprecated, will be removed in v2.0.0
+          sentinel_score: payload.trust.sentinel_review_score ?? payload.trust.sentinel_score,
           composite_trust: payload.trust.composite_trust,
           risk_level: payload.trust.risk_level,
+          // Explicit: the consumer (not the ATC) is the trust-decision authority
+          decision_authority: 'consumer',
           capabilities: payload.capabilities.provides,
           protocol_language: payload.capabilities.protocol_language,
           wallet: payload.payment.wallet_address,
@@ -417,6 +532,12 @@ export default async function handler(req, res) {
           signature_algorithm: signature.algorithm,
           signature_valid: true,
           message: 'ATC is valid, signature verified, not expired, not revoked.',
+          schema_version: '1.1.0',
+          schema_changes: [
+            'v1.1.0: renamed trust.sentinel_score → trust.sentinel_review_score (review evidence, not verdict)',
+            'v1.1.0: added decision_authority="consumer" (consumer makes the trust decision, not the card)',
+            'v1.0.0: original schema (sentinel_score, no decision_authority)',
+          ],
         });
       }
 
@@ -424,11 +545,22 @@ export default async function handler(req, res) {
       const atcs = await listATCs();
       return res.status(200).json({
         total: atcs.length,
+        schema_version: '1.1.0',
+        decision_authority: 'consumer',
         cards: atcs.map(a => ({
           card_id: a.payload?.card_id || a.card_id,
           agent_id: a.payload?.agent_id,
           agent_name: a.payload?.agent_name,
-          sentinel_score: a.payload?.trust?.sentinel_score ?? 0,
+          // Renamed (was sentinel_score) — review evidence, not verdict
+          sentinel_review_score:
+            a.payload?.trust?.sentinel_review_score ??
+            a.payload?.trust?.sentinel_score ??
+            0,
+          // Backward-compat alias
+          sentinel_score:
+            a.payload?.trust?.sentinel_review_score ??
+            a.payload?.trust?.sentinel_score ??
+            0,
           risk_level: a.payload?.trust?.risk_level ?? 'unknown',
           status: a.status || 'active',
           issued_at: a.payload?.metadata?.issued_at,
@@ -485,8 +617,17 @@ export default async function handler(req, res) {
         }
 
         // Build the payload (this is what gets signed)
+        //
+        // Schema v1.1.0 (July 2026, response to @0xbrainkid on
+        // microsoft/autogen#7965):
+        //   - Renamed trust.sentinel_score → trust.sentinel_review_score
+        //     (review evidence, not a trust verdict)
+        //   - Added decision_authority="consumer" at the top level
+        //   - sentinel_score kept as alias for backward compat with v1.0.0
         const payload = {
           card_id,
+          schema_version: '1.1.0',
+          decision_authority: 'consumer',
           agent_id,
           agent_name: agent_name || agent_id,
           identity: {
@@ -494,9 +635,12 @@ export default async function handler(req, res) {
             key_algorithm: 'Ed25519',
           },
           trust: {
+            // Renamed (was sentinel_score) — review evidence, not a verdict
+            sentinel_review_score: sentinelInfo.score,
+            // Backward-compat alias — deprecated, will be removed in v2.0.0
             sentinel_score: sentinelInfo.score,
             audit_layers_passed: sentinelInfo.layers_run,
-            composite_trust: sentinelInfo.score, // for now, = sentinel_score
+            composite_trust: sentinelInfo.score,
             risk_level: sentinelInfo.risk_level,
             certificate_id: sentinelInfo.certificate_id,
           },
@@ -655,7 +799,7 @@ export default async function handler(req, res) {
 
       return res.status(400).json({
         error: 'Unknown action',
-        supported: ['issue', 'verify (GET)', 'revoke', 'list (GET)', 'ca-key (GET)', 'spec (GET)', 'translate'],
+        supported: ['issue', 'verify (GET)', 'verify-receipt (GET)', 'revoke', 'list (GET)', 'ca-key (GET)', 'spec (GET)', 'translate'],
       });
     }
 

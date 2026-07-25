@@ -213,7 +213,7 @@ curl "https://marketnow.site/api/search?q=数据库&language=zh" | jq
 | `GET /api/verify-purchase?sessionId=X` | Verify a Stripe purchase |
 | `GET /.well-known/mcp/server-card.json` | MCP server discovery |
 
-## 🔧 MCP Server Tools
+## 🔧 MCP Server Tools (v1.7.0 — 11 tools)
 
 | Tool | Description |
 |---|---|
@@ -222,6 +222,49 @@ curl "https://marketnow.site/api/search?q=数据库&language=zh" | jq
 | `list_categories` | List all 61 categories |
 | `get_manifest` | Marketplace metadata |
 | `get_install_command` | Get npx install command |
+| `verify_trust` | Verify an Agent Trust Card (ATC) — schema v1.1.0 |
+| `verify_receipt` | Verify a signed delivery proof (action-receipt) — NEW v1.6.0 |
+| `submit_skill` | REAL submission — runs L1.5+L1.7 sync, queues L2 audit — NEW v1.7.0 |
+| `mint_referral` | Mint a unique ref code (5% commission on referred purchases) — NEW v1.7.0 |
+| `lookup_referral` | Check referral stats (clicks, installs, purchases, total earned) — NEW v1.7.0 |
+| `recommend_skills` | AI-powered skill recommendations for any task |
+
+## 🔁 Viral Loop (now real, was theoretical before v1.7.0)
+
+The "agent magnet" is now technically real:
+
+1. **Agent A** calls `mint_referral(agent_id)` → gets `ref_xxxxxxxx`
+2. **Agent A** shares `ref_xxxxxxxx` with **Agent B**
+3. **Agent B** calls `agent-purchase` with `ref_code=ref_xxxxxxxx`
+4. `/api/agent-purchase` credits **Agent A** 5% commission
+5. **Agent A** checks stats with `lookup_referral(ref_code)`
+
+Network effect: more agents → more ref codes → more purchases → more agents.
+
+Any agent can also call `submit_skill(repo_url)` to submit a GitHub repo. The flow:
+- L1.5 metadata checks (sync) → score 0-10
+- L1.7 malware pattern check (sync) → blocks typosquats
+- L2 Docker sandbox audit (queued, ~1h via GitHub Actions)
+- If L2 passes (score ≥ 7) → skill is promoted to catalog + gets an ATC
+- Submission persisted to public GitHub ledger (`_data/pending_submissions/`)
+
+Real example (live on production):
+```bash
+# Mint a referral
+curl -X POST https://marketnow.site/api/referrals \
+  -H "Content-Type: application/json" \
+  -d '{"action": "mint", "agent_id": "agent_claude_001"}'
+# → {"ref_code": "ref_d5444f97", "share_url": "..."}
+
+# Submit a real MCP server
+curl -X POST https://marketnow.site/api/submit-skill \
+  -H "Content-Type: application/json" \
+  -d '{"repo_url": "https://github.com/modelcontextprotocol/servers"}'
+# → {"submission_id": "sub_bo0fi7kjty3p", "l15_score": 10, "l2_status": "queued"}
+
+# Check submission status
+curl "https://marketnow.site/api/submit-skill?submission_id=sub_bo0fi7kjty3p"
+```
 
 ## 🔗 Links
 

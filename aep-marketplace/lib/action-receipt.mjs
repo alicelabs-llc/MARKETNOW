@@ -214,9 +214,12 @@ export async function persistReceipt(receipt) {
     });
     if (metaR.ok) {
       const meta = await metaR.json();
-      sha = meta.sha;
+      sha = meta?.sha || null;
     }
-  } catch {}
+    // 404 is expected for a new receipt — sha stays null
+  } catch {
+    // Network error etc — proceed without sha, will create new file
+  }
 
   const content = Buffer.from(JSON.stringify(receipt, null, 2)).toString('base64');
   const url = `https://api.github.com/repos/${REPO}/contents/${filePath}`;

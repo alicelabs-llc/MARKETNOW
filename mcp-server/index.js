@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * MarketNow MCP Server v1.6.0
+ * MarketNow MCP Server v1.7.0
  * ============================
  *
  * The MarketNow marketplace as an MCP server. Lets any MCP-compatible
- * agent (Claude, Cursor, Cline, etc.) search, discover, verify, and
- * install skills from the marketplace.
+ * agent (Claude, Cursor, Cline, etc.) search, discover, verify, install,
+ * submit, and earn from skills in the marketplace.
  *
- * Tools exposed (9):
+ * Tools exposed (11):
  *  - search_skills(query, category?) → matching skills with Sentinel scores
  *  - get_skill(skill_id) → full skill detail
  *  - list_categories() → all categories
@@ -15,8 +15,19 @@
  *  - get_install_command(skill_id) → npx install command
  *  - verify_trust(card_id) → verify an Agent Trust Card (ATC) — identity, validity, review evidence
  *  - verify_receipt(receipt_id) → verify a signed delivery proof (action-receipt)
- *  - submit_skill(repo_url, name, description) → submit your MCP server to the marketplace
+ *  - submit_skill(repo_url, ...) → REAL submission — calls /api/submit-skill (L1.5+L1.7 sync, L2 queued)
+ *  - mint_referral(agent_id) → mint a unique ref_code (5% commission on referred purchases)
+ *  - lookup_referral(ref_code) → check referral stats (clicks, installs, purchases, total earned)
  *  - recommend_skills(task) → get AI-powered skill recommendations for a task
+ *
+ * v1.7.0 (July 2026):
+ *  - submit_skill now does a REAL submission (was just returning a URL)
+ *    Calls /api/submit-skill which runs L1.5 + L1.7 checks synchronously,
+ *    persists to _data/pending_submissions/ on GitHub, queues L2 audit
+ *  - New tool: mint_referral — agents can mint unique ref codes
+ *  - New tool: lookup_referral — agents can check their referral stats
+ *  - /api/agent-purchase now credits referrer 5% commission when ref_code is present
+ *  - Closes the "agent magnet" gap — viral loop is now technically real
  *
  * v1.6.0 (July 2026):
  *  - Added verify_receipt tool for action-receipt verification
@@ -24,10 +35,13 @@
  *  - Closes the gap identified with @doteyeso-ops (Vibe) on Pipedream #94
  *  - ATC schema is now v1.1.0 (sentinel_review_score + decision_authority)
  *
- * VIRAL MECHANISM: Every search result includes a referral link.
- * When an agent installs a skill, it gets a referral code.
- * Other agents that use the referral code get a "verified by" badge.
- * This creates a network effect: more agents → more skills → more agents.
+ * VIRAL MECHANISM (now real, was theoretical before v1.7.0):
+ *  1. Agent A calls mint_referral → gets ref_xxxxxxxx
+ *  2. Agent A shares ref_xxxxxxxx with Agent B
+ *  3. Agent B calls agent-purchase with ref_code=ref_xxxxxxxx
+ *  4. /api/agent-purchase credits Agent A 5% commission
+ *  5. Agent A checks stats with lookup_referral
+ *  Network effect: more agents → more ref codes → more purchases → more agents
  */
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -186,25 +200,89 @@ async function verifyReceipt(args) {
   return await res.json();
 }
 
-// ─── NEW: Submit a skill to the marketplace ─────────────────────────────────
+// ─── NEW: Submit a skill to the marketplace (REAL — calls /api/submit-skill) ──
 async function submitSkill(args) {
-  const { repo_url, name, description } = args;
+  const { repo_url, name, description, submitter_agent_id, submitter_email, ref_code } = args;
   if (!repo_url) throw new Error('repo_url is required');
+
+  // Call the real /api/submit-skill endpoint which:
+  //   1. Fetches repo metadata from GitHub
+  //   2. Runs L1.5 metadata + L1.7 malware checks synchronously
+  //   3. Persists submission to _data/pending_submissions/ on GitHub
+  //   4. Queues L2 sandbox audit
+  const res = await fetch(`${API_BASE}/submit-skill`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      repo_url,
+      name,
+      description,
+      submitter_agent_id,
+      submitter_email,
+      ref_code,
+    }),
+  });
+
+  if (!res.ok) {
+    const errBody = await res.text();
+    let parsed;
+    try { parsed = JSON.parse(errBody); } catch { parsed = { raw: errBody }; }
+    return {
+      status: 'rejected',
+      http_status: res.status,
+      error: parsed.error || 'unknown',
+      message: parsed.message || `Submit failed: ${res.status}`,
+      repo_url,
+      ...(parsed.findings ? { findings: parsed.findings } : {}),
+    };
+  }
+
+  const result = await res.json();
   return {
-    status: 'submission_ready',
-    repo_url,
-    name: name || '(auto-detect from repo)',
-    description: description || '(auto-detect from README)',
-    next_steps: [
-      `1. Open: https://marketnow.site/submit`,
-      `2. Enter your repo URL: ${repo_url}`,
-      `3. Sentinel will audit your MCP server (9 layers, free)`,
-      `4. Your skill gets a signed certificate + Sentinel score (0-10)`,
-      `5. It appears in the marketplace for other agents to discover`,
-    ],
-    submit_url: `https://marketnow.site/submit?repo=${encodeURIComponent(repo_url)}`,
-    note: 'Submitting is FREE. Every skill gets a 9-layer security audit. No payment required.',
+    status: 'submitted',
+    submission_id: result.submission_id,
+    skill_id: result.skill_id,
+    repo: result.repo,
+    audit: result.audit,
+    ledger_url: result.ledger_url,
+    next_steps: result.next_steps,
+    check_status_url: result.check_status_url,
+    note: 'L1.5 + L1.7 checks passed. L2 sandbox audit queued (~1h). You will be discoverable via search_skills once L2 passes.',
   };
+}
+
+// ─── NEW (v1.7.0): Mint a referral code ─────────────────────────────────────
+async function mintReferral(args) {
+  const { agent_id } = args;
+  if (!agent_id) throw new Error('agent_id is required');
+  const res = await fetch(`${API_BASE}/referrals`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action: 'mint', agent_id }),
+  });
+  if (!res.ok) throw new Error(`Mint referral failed: ${res.status}`);
+  return await res.json();
+}
+
+// ─── NEW (v1.7.0): Look up referral stats ───────────────────────────────────
+async function lookupReferral(args) {
+  const { ref_code } = args;
+  if (!ref_code) throw new Error('ref_code is required');
+  if (!ref_code.startsWith('ref_')) {
+    throw new Error('ref_code must start with "ref_" (e.g. ref_a1b2c3d4)');
+  }
+  const res = await fetch(`${API_BASE}/referrals?action=lookup&ref_code=${encodeURIComponent(ref_code)}`);
+  if (!res.ok) {
+    if (res.status === 404) {
+      return {
+        status: 'not_found',
+        ref_code,
+        message: `No referral with code ${ref_code} exists. Mint one with mint_referral.`,
+      };
+    }
+    throw new Error(`Lookup referral failed: ${res.status}`);
+  }
+  return await res.json();
 }
 
 // ─── NEW: Recommend skills for a task ───────────────────────────────────────
@@ -365,7 +443,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: 'submit_skill',
-      description: 'Submit your MCP server to the MarketNow marketplace. Gets a free 9-layer security audit + signed Sentinel certificate. Any GitHub repo with an MCP server can be submitted.',
+      description: 'Submit a GitHub repo to the MarketNow marketplace. Runs L1.5 metadata + L1.7 malware checks synchronously, queues L2 sandbox audit (~1h). If the repo passes, it becomes discoverable via search_skills and gets an ATC. FREE. Any GitHub repo with an MCP server can be submitted.',
       inputSchema: {
         type: 'object',
         properties: {
@@ -381,8 +459,48 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             type: 'string',
             description: 'Short description (optional, auto-detected from README)',
           },
+          submitter_agent_id: {
+            type: 'string',
+            description: 'Your agent ID (optional, for attribution + ATC pre-allocation)',
+          },
+          submitter_email: {
+            type: 'string',
+            description: 'Email for review notification (optional)',
+          },
+          ref_code: {
+            type: 'string',
+            description: 'Referral code if you were referred by another agent (optional, starts with ref_)',
+          },
         },
         required: ['repo_url'],
+      },
+    },
+    {
+      name: 'mint_referral',
+      description: 'Mint a unique referral code (ref_xxxxxxxx) that you can share with other agents. When they use it for purchases, you earn 5% commission. Check your stats with lookup_referral. Closes the viral loop — agents helping agents discover the marketplace.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          agent_id: {
+            type: 'string',
+            description: 'Your agent ID (e.g. agent_claude_001)',
+          },
+        },
+        required: ['agent_id'],
+      },
+    },
+    {
+      name: 'lookup_referral',
+      description: 'Look up referral stats: clicks, installs, purchases, total commission earned. Use this to track your viral loop performance.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          ref_code: {
+            type: 'string',
+            description: 'Referral code (starts with ref_, e.g. ref_a1b2c3d4)',
+          },
+        },
+        required: ['ref_code'],
       },
     },
     {
@@ -436,6 +554,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         break;
       case 'submit_skill':
         result = await submitSkill(args || {});
+        break;
+      case 'mint_referral':
+        result = await mintReferral(args || {});
+        break;
+      case 'lookup_referral':
+        result = await lookupReferral(args || {});
         break;
       case 'recommend_skills':
         result = await recommendSkills(args || {});

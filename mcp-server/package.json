@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.5.1",
-  "description": "MarketNow MCP Server \u2014 Trust layer for agent commerce. Search, discover, and install 8,560 MCP-compatible skills from any agent runtime (Claude Desktop, Cursor, Cline). Sentinel L2 security audits, x402 payments (USDC on Base), AP2 delegated mandates. 5 languages: EN, ES, ZH, PT, FR. Maintained by AliceLabs LLC (Wyoming, USA, 2025).",
+  "version": "1.6.0",
+  "description": "MarketNow MCP Server v1.6.0 \u2014 Trust layer for agent commerce. 9 MCP tools: search_skills, get_skill, list_categories, get_manifest, get_install_command, verify_trust (ATC), verify_receipt (signed delivery proof), submit_skill, recommend_skills. ATC schema v1.1.0 with sentinel_review_score + decision_authority. Action-receipts for x402 + Vibe interop. 8,845 security-audited skills. Maintained by AliceLabs LLC (Wyoming, USA, 2026).",
   "type": "module",
   "main": "index.js",
   "bin": {

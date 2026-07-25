@@ -36,6 +36,10 @@ import * as baseRpc from '../lib/base-rpc-pool.mjs';
 // Eliminates the internal call over public internet, removes ~200ms latency,
 // and closes the SSRF-adjacent pattern of trusting process.env.VERCEL_URL.
 import { getMandate as getMandateDirect, recordSpend as recordSpendDirect } from '../lib/mandates-logic.mjs';
+// ACTION-RECEIPT (July 2026, response to @doteyeso-ops on Pipedream #94):
+// Every successful paid purchase now emits a signed delivery proof that
+// agents (and the Vibe action-ref system) can verify offline.
+import { buildReceipt, persistReceipt } from '../lib/action-receipt.mjs';
 
 const USDC_CONTRACT = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
 const PAYMENT_WALLET = '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee';
@@ -487,6 +491,34 @@ export default async function handler(req, res) {
       const sellerEarnings = skill.price * (1 - COMMISSION_RATE);
       const marketnowRevenue = skill.price * COMMISSION_RATE;
 
+      // ACTION-RECEIPT: emit signed delivery proof (closes Pipedream #94 gap).
+      // Receipt is persisted to _data/receipts/{receipt_id}.json in the GitHub
+      // repo — same audit-ledger pattern as ATC. Verification endpoint:
+      //   GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx
+      // We emit best-effort: if persistence fails, the purchase still succeeds
+      // (the license is already issued). The receipt is returned in the
+      // response so the agent has the signed proof immediately, and the agent
+      // can re-verify later even if persistence failed.
+      let receipt = null;
+      let receiptPersisted = false;
+      try {
+        receipt = buildReceipt({
+          skillId: skill.id,
+          licenseKey: lic,
+          mandateId: mandate.id,
+          txHash,
+          atcCardId: null,
+          amountUsd: skill.price,
+          network: 'base',
+          contentSha256: skill.sha256 || null,
+        });
+        const r = await persistReceipt(receipt);
+        receiptPersisted = r.persisted;
+      } catch (receiptErr) {
+        // Best-effort: don't fail the purchase over receipt persistence
+        console.error('Receipt emission failed (non-fatal):', receiptErr.message);
+      }
+
       return res.status(200).json({
         success: true,
         mode: 'instant_purchase',
@@ -509,13 +541,25 @@ export default async function handler(req, res) {
           key: lic, type: 'perpetual', expires: null,
           sellerEarnings, marketnowCommission: marketnowRevenue,
         },
+        // Signed delivery proof — agents can verify offline with the CA public key.
+        // Interop with Vibe (doteyeso-ops): receipt_id → vibe_action_receipt,
+        // mandate.id → vibe_decision_ref, txHash → vibe_settle_coordinate.
+        receipt: receipt
+          ? {
+              receipt_id: receipt.receipt_id,
+              issued_at: receipt.issued_at,
+              signature: receipt.signature,
+              verify_url: `https://marketnow.site/api/atc?action=verify-receipt&receipt_id=${receipt.receipt_id}`,
+              persisted_to_ledger: receiptPersisted,
+            }
+          : null,
         system_prompt: skill.doc?.system_prompt || '',
         sentinel: skill.sentinel || {},
         capabilities: skill.capabilities || {},
         setup: skill.doc?.setup || {},
         install: skill.install || `npx -y @marketnow/install ${skill.slug}`,
         agentId: agentId || mandate.agentId || null,
-        message: 'Payment verified on Base. Mandate spend recorded. License issued.',
+        message: 'Payment verified on Base. Mandate spend recorded. License issued. Signed delivery proof (receipt) emitted.',
       });
     }
 
@@ -581,6 +625,30 @@ export default async function handler(req, res) {
 
       const sellerEarnings = skill.price * (1 - COMMISSION_RATE);
       const marketnowRevenue = skill.price * COMMISSION_RATE;
+
+      // ACTION-RECEIPT: same as instant_purchase mode — emit signed delivery proof.
+      // mandate_id is null here (direct purchase, no mandate), which is the
+      // correct signal to Vibe that this was a direct settlement without
+      // pre-authorized spending authority.
+      let receipt = null;
+      let receiptPersisted = false;
+      try {
+        receipt = buildReceipt({
+          skillId: skill.id,
+          licenseKey: lic,
+          mandateId: null,
+          txHash,
+          atcCardId: null,
+          amountUsd: skill.price,
+          network: 'base',
+          contentSha256: skill.sha256 || null,
+        });
+        const r = await persistReceipt(receipt);
+        receiptPersisted = r.persisted;
+      } catch (receiptErr) {
+        console.error('Receipt emission failed (non-fatal):', receiptErr.message);
+      }
+
       return res.status(200).json({
         success: true,
         mode: 'direct_purchase',
@@ -594,13 +662,23 @@ export default async function handler(req, res) {
           key: lic, type: 'perpetual', expires: null,
           sellerEarnings, marketnowCommission: marketnowRevenue,
         },
+        // Signed delivery proof — same shape as instant_purchase mode.
+        receipt: receipt
+          ? {
+              receipt_id: receipt.receipt_id,
+              issued_at: receipt.issued_at,
+              signature: receipt.signature,
+              verify_url: `https://marketnow.site/api/atc?action=verify-receipt&receipt_id=${receipt.receipt_id}`,
+              persisted_to_ledger: receiptPersisted,
+            }
+          : null,
         system_prompt: skill.doc?.system_prompt || '',
         sentinel: skill.sentinel || {},
         capabilities: skill.capabilities || {},
         setup: skill.doc?.setup || {},
         install: skill.install || `npx -y @marketnow/install ${skill.slug}`,
         agentId: agentId || null,
-        message: 'Direct USDC payment verified on Base. License issued.',
+        message: 'Direct USDC payment verified on Base. License issued. Signed delivery proof (receipt) emitted.',
       });
     }
 

@@ -40,6 +40,11 @@ import { getMandate as getMandateDirect, recordSpend as recordSpendDirect } from
 // Every successful paid purchase now emits a signed delivery proof that
 // agents (and the Vibe action-ref system) can verify offline.
 import { buildReceipt, persistReceipt } from '../lib/action-receipt.mjs';
+// REFERRAL TRACKING (July 2026 — closes the "agent magnet" gap):
+// If the agent includes a ref_code in the request, we credit the referrer
+// 5% commission on the purchase. Best-effort: a failed credit does NOT
+// fail the purchase. Called after the license is issued.
+import { creditReferral } from '../lib/referral-tracker.mjs';
 
 const USDC_CONTRACT = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
 const PAYMENT_WALLET = '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee';
@@ -235,7 +240,7 @@ export default async function handler(req, res) {
   if (checkRateLimit(req, res, 'purchase')) return;
 
   try {
-    const { skillId, walletAddress, txHash, agentId, mandateId } = req.body || {};
+    const { skillId, walletAddress, txHash, agentId, mandateId, refCode } = req.body || {};
 
     if (!skillId) {
       return res.status(400).json({
@@ -519,6 +524,23 @@ export default async function handler(req, res) {
         console.error('Receipt emission failed (non-fatal):', receiptErr.message);
       }
 
+      // REFERRAL CREDIT (closes the "agent magnet" gap): if the request
+      // included a ref_code, credit the referrer 5% commission. Best-effort.
+      let referralCredited = null;
+      if (refCode && receipt) {
+        try {
+          referralCredited = await creditReferral(refCode, {
+            skill_id: skill.id,
+            license_key: lic,
+            amount_usd: skill.price,
+            tx_hash: txHash,
+            receipt_id: receipt.receipt_id,
+          });
+        } catch (refErr) {
+          console.error('Referral credit failed (non-fatal):', refErr.message);
+        }
+      }
+
       return res.status(200).json({
         success: true,
         mode: 'instant_purchase',
@@ -553,6 +575,14 @@ export default async function handler(req, res) {
               persisted_to_ledger: receiptPersisted,
             }
           : null,
+        referral: referralCredited
+          ? {
+              ref_code: refCode,
+              commission_earned_usd: Number((skill.price * 0.05).toFixed(2)),
+              referrer_total_earned_usd: referralCredited.total_earned_usd,
+              message: 'Referrer credited 5% commission. Check stats at GET /api/referrals?action=lookup.',
+            }
+          : (refCode ? { ref_code: refCode, message: 'Referral not found or revoked. No credit applied.' } : null),
         system_prompt: skill.doc?.system_prompt || '',
         sentinel: skill.sentinel || {},
         capabilities: skill.capabilities || {},
@@ -649,6 +679,22 @@ export default async function handler(req, res) {
         console.error('Receipt emission failed (non-fatal):', receiptErr.message);
       }
 
+      // REFERRAL CREDIT (same as instant_purchase mode)
+      let referralCredited = null;
+      if (refCode && receipt) {
+        try {
+          referralCredited = await creditReferral(refCode, {
+            skill_id: skill.id,
+            license_key: lic,
+            amount_usd: skill.price,
+            tx_hash: txHash,
+            receipt_id: receipt.receipt_id,
+          });
+        } catch (refErr) {
+          console.error('Referral credit failed (non-fatal):', refErr.message);
+        }
+      }
+
       return res.status(200).json({
         success: true,
         mode: 'direct_purchase',
@@ -672,6 +718,13 @@ export default async function handler(req, res) {
               persisted_to_ledger: receiptPersisted,
             }
           : null,
+        referral: referralCredited
+          ? {
+              ref_code: refCode,
+              commission_earned_usd: Number((skill.price * 0.05).toFixed(2)),
+              referrer_total_earned_usd: referralCredited.total_earned_usd,
+            }
+          : (refCode ? { ref_code: refCode, message: 'Referral not found or revoked. No credit applied.' } : null),
         system_prompt: skill.doc?.system_prompt || '',
         sentinel: skill.sentinel || {},
         capabilities: skill.capabilities || {},

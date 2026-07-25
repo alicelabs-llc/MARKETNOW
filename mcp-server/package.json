@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.6.0",
-  "description": "MarketNow MCP Server v1.6.0 \u2014 Trust layer for agent commerce. 9 MCP tools: search_skills, get_skill, list_categories, get_manifest, get_install_command, verify_trust (ATC), verify_receipt (signed delivery proof), submit_skill, recommend_skills. ATC schema v1.1.0 with sentinel_review_score + decision_authority. Action-receipts for x402 + Vibe interop. 8,845 security-audited skills. Maintained by AliceLabs LLC (Wyoming, USA, 2026).",
+  "version": "1.7.0",
+  "description": "MarketNow MCP Server v1.7.0 \u2014 Trust layer for agent commerce. 11 MCP tools: search_skills, get_skill, list_categories, get_manifest, get_install_command, verify_trust (ATC), verify_receipt (signed delivery proof), submit_skill (REAL submission via /api/submit-skill), mint_referral, lookup_referral, recommend_skills. ATC schema v1.1.0. Action-receipts for x402 + Vibe interop. Real referral tracking (5% commission). 8,845 security-audited skills. Maintained by AliceLabs LLC (Wyoming, USA, 2026).",
   "type": "module",
   "main": "index.js",
   "bin": {

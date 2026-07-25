@@ -48,6 +48,15 @@ import {
   fetchReceipt,
   verifyReceipt,
 } from '../lib/action-receipt.mjs';
+import { runL17 } from '../lib/sentinel-l17.mjs';
+import {
+  mintReferral,
+  creditReferral,
+  recordReferralClick,
+  lookupReferral,
+  listReferralsByAgent,
+} from '../lib/referral-tracker.mjs';
+import { checkRateLimit } from '../lib/rate-limit.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -288,7 +297,33 @@ export default async function handler(req, res) {
 
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
 
-  const action = req.query.action || (req.body || {}).action;
+  // Derive action from URL path if not explicitly set.
+  // Vercel rewrites /api/submit-skill and /api/referrals to /api/atc,
+  // so we detect the original path here.
+  const urlPath = req.url?.split('?')[0] || req.path || '';
+  const bodyAction = (req.body || {}).action;
+  let action = req.query.action;
+
+  if (urlPath.endsWith('/submit-skill')) {
+    // POST /api/submit-skill → action=submit-skill
+    // GET  /api/submit-skill?submission_id=sub_xxx → action=submission-status
+    action = req.method === 'POST' ? 'submit-skill' : 'submission-status';
+  } else if (urlPath.endsWith('/referrals')) {
+    // Map /api/referrals body.action values to internal action names
+    if (req.method === 'POST') {
+      if (bodyAction === 'mint') action = 'mint-referral';
+      else if (bodyAction === 'credit') action = 'credit-referral';
+      else if (bodyAction === 'click') action = 'click-referral';
+      else action = 'referrals-help';
+    } else {
+      // GET /api/referrals?action=lookup&ref_code=xxx
+      if (req.query.action === 'lookup') action = 'referral-lookup';
+      else if (req.query.action === 'list') action = 'referral-list';
+      else action = 'referrals-help';
+    }
+  } else if (!action && bodyAction) {
+    action = bodyAction;
+  }
 
   try {
     // ─── GET handlers ──────────────────────────────────────────────────
@@ -541,6 +576,108 @@ export default async function handler(req, res) {
         });
       }
 
+      // ── submission-status: check submission status (GET) ──
+      // Routed via vercel.json rewrite: GET /api/submit-skill?submission_id=sub_xxx → /api/atc?action=submission-status&submission_id=sub_xxx
+      if (action === 'submission-status') {
+        const { submission_id } = req.query;
+        if (!submission_id) {
+          return res.status(200).json({
+            endpoint: 'POST /api/submit-skill',
+            description: 'Submit a GitHub repo to the MarketNow marketplace.',
+            body: {
+              repo_url: 'string (required) — https://github.com/owner/repo',
+              name: 'string (optional)',
+              description: 'string (optional)',
+              submitter_agent_id: 'string (optional)',
+              submitter_email: 'string (optional)',
+              ref_code: 'string (optional)',
+            },
+            rate_limit: '5 submissions per hour per IP',
+          });
+        }
+        if (!GITHUB_TOKEN) {
+          return res.status(503).json({ error: 'GitHub token not configured' });
+        }
+        const url = `https://api.github.com/repos/${REPO}/contents/_data/pending_submissions/${encodeURIComponent(submission_id)}.json?ref=${encodeURIComponent(BRANCH)}`;
+        try {
+          const r = await fetch(url, {
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN}`,
+              Accept: 'application/vnd.github+json',
+              'User-Agent': 'marketnow-submit',
+            },
+          });
+          if (r.status === 404) {
+            return res.status(404).json({ error: 'submission_not_found', submission_id });
+          }
+          if (!r.ok) throw new Error(`GitHub ${r.status}`);
+          const meta = await r.json();
+          const content = Buffer.from(meta.content, 'base64').toString('utf8');
+          const submission = JSON.parse(content);
+          return res.status(200).json({
+            submission_id: submission.submission_id,
+            skill_id: submission.skill_id,
+            status: submission.status,
+            submitted_at: submission.submitted_at,
+            repo: submission.repo,
+            audit: submission.audit,
+            atc_preallocated: submission.atc_preallocated,
+            atc_card_id: submission.atc_card_id,
+            ledger_url: `https://github.com/${REPO}/blob/${BRANCH}/_data/pending_submissions/${submission_id}.json`,
+          });
+        } catch (e) {
+          return res.status(500).json({ error: 'fetch_failed', message: e.message });
+        }
+      }
+
+      // ── referral-lookup: get referral stats (GET) ──
+      // Routed via vercel.json rewrite: GET /api/referrals?action=lookup&ref_code=ref_xxx → /api/atc?action=referral-lookup&ref_code=ref_xxx
+      if (action === 'referral-lookup') {
+        const { ref_code } = req.query;
+        if (!ref_code) {
+          return res.status(400).json({ error: 'ref_code required' });
+        }
+        const referral = await lookupReferral(ref_code);
+        if (!referral) {
+          return res.status(404).json({
+            error: 'referral_not_found',
+            ref_code,
+            message: `No referral with code ${ref_code} exists.`,
+          });
+        }
+        return res.status(200).json(referral);
+      }
+
+      // ── referral-list: list referrals by agent (GET) ──
+      if (action === 'referral-list') {
+        const { agent_id } = req.query;
+        if (!agent_id) {
+          return res.status(400).json({ error: 'agent_id required' });
+        }
+        const referrals = await listReferralsByAgent(agent_id);
+        return res.status(200).json({
+          agent_id,
+          total_ref_codes: referrals.length,
+          referrals,
+        });
+      }
+
+      // ── referrals-help: spec (GET) ──
+      if (action === 'referrals-help') {
+        return res.status(200).json({
+          endpoint: '/api/referrals',
+          description: 'Referral tracking for the MarketNow viral loop.',
+          commission_rate: 0.05,
+          endpoints: {
+            mint: 'POST /api/referrals { action: "mint", agent_id }',
+            lookup: 'GET /api/referrals?action=lookup&ref_code=ref_xxxxxxxx',
+            list: 'GET /api/referrals?action=list&agent_id=agent_xxx',
+            credit: 'POST /api/referrals { action: "credit", ref_code, skill_id, amount_usd, ... }',
+            click: 'POST /api/referrals { action: "click", ref_code }',
+          },
+        });
+      }
+
       // ── list (default GET): list all ATCs ──
       const atcs = await listATCs();
       return res.status(200).json({
@@ -573,7 +710,9 @@ export default async function handler(req, res) {
 
     if (req.method === 'POST') {
       const body = req.body || {};
-      const postAction = body.action;
+      // postAction prefers the derived `action` variable (set from URL path
+      // or query string), falling back to body.action for backward compat.
+      const postAction = action || body.action;
 
       // ── issue: create + sign + persist a new ATC ──
       if (postAction === 'issue') {
@@ -797,9 +936,294 @@ export default async function handler(req, res) {
         });
       }
 
+      // ── submit-skill: real submission (L1.5 + L1.7 sync, L2 queued) ──
+      // Closes the "agent magnet" gap — submit_skill is now real.
+      // Routed via vercel.json rewrite: POST /api/submit-skill → /api/atc?action=submit-skill
+      if (postAction === 'submit-skill') {
+        const { repo_url, name, description, submitter_agent_id, submitter_email, ref_code } = body;
+        if (!repo_url) {
+          return res.status(400).json({
+            error: 'repo_url required',
+            example: { repo_url: 'https://github.com/user/my-mcp-server' },
+          });
+        }
+
+        // Rate limit: 5 submissions per hour per IP
+        const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress || 'unknown';
+        const rl = checkRateLimit(`submit-skill:${ip}`, { windowMs: 60 * 60 * 1000, max: 5 });
+        if (!rl.ok) {
+          return res.status(429).json({
+            error: 'rate_limited',
+            message: `Too many submissions. Try again in ${Math.ceil((rl.resetAt - Date.now()) / 60000)} minutes.`,
+          });
+        }
+
+        // Parse repo URL
+        const patterns = [
+          /github\.com[/:]([^/]+)\/([^/]+?)(?:\.git)?(?:\/|$)/i,
+          /^([^/\s]+)\/([^/\s]+)$/,
+        ];
+        let owner = null, repoName = null;
+        for (const p of patterns) {
+          const m = repo_url.match(p);
+          if (m) { owner = m[1]; repoName = m[2]; break; }
+        }
+        if (!owner) {
+          return res.status(400).json({
+            error: 'invalid_repo_url',
+            message: 'Could not parse repo_url. Expected: https://github.com/owner/repo',
+          });
+        }
+
+        // Fetch repo metadata
+        let repoMeta;
+        try {
+          const r = await fetch(`https://api.github.com/repos/${owner}/${repoName}`, {
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN}`,
+              Accept: 'application/vnd.github+json',
+              'User-Agent': 'marketnow-submit',
+            },
+          });
+          if (r.status === 404) {
+            return res.status(404).json({ error: 'repo_not_found', message: `${owner}/${repoName} not found` });
+          }
+          if (!r.ok) throw new Error(`GitHub ${r.status}`);
+          repoMeta = await r.json();
+        } catch (e) {
+          return res.status(502).json({ error: 'github_fetch_failed', message: e.message });
+        }
+
+        // Fetch README + package.json
+        let readmeText = null;
+        for (const ref of ['main', 'master', 'HEAD']) {
+          try {
+            const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repoName}/${ref}/README.md`, {
+              headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-submit' },
+            });
+            if (r.ok) { readmeText = await r.text(); break; }
+          } catch {}
+        }
+        let pkgJson = null;
+        for (const ref of ['main', 'master', 'HEAD']) {
+          try {
+            const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repoName}/${ref}/package.json`, {
+              headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-submit' },
+            });
+            if (r.ok) { pkgJson = JSON.parse(await r.text()); break; }
+          } catch {}
+        }
+
+        // L1.5 lightweight checks
+        const findings = [];
+        if (!readmeText) findings.push({ severity: 'medium', code: 'no_readme' });
+        if (!repoMeta.description) findings.push({ severity: 'low', code: 'no_description' });
+        if (!repoMeta.license) findings.push({ severity: 'medium', code: 'no_license' });
+        if (repoMeta.archived) findings.push({ severity: 'high', code: 'archived' });
+        if (repoMeta.disabled) findings.push({ severity: 'high', code: 'disabled' });
+        let l15Score = 10;
+        for (const f of findings) {
+          if (f.severity === 'high') l15Score -= 3;
+          else if (f.severity === 'medium') l15Score -= 1;
+          else l15Score -= 0.5;
+        }
+        l15Score = Math.max(0, l15Score);
+
+        // L1.7 malware pattern check
+        let l17Blocked = false;
+        let l17Findings = [];
+        try {
+          const l17Result = runL17({
+            name: name || repoMeta.name,
+            description: description || repoMeta.description || '',
+            readme: readmeText || '',
+            package_json: pkgJson || {},
+          });
+          l17Blocked = l17Result.blocked;
+          l17Findings = l17Result.findings;
+        } catch (e) {
+          console.error('L1.7 error (non-fatal):', e.message);
+        }
+
+        if (l17Blocked) {
+          return res.status(422).json({
+            status: 'rejected',
+            reason: 'malware_pattern_detected',
+            repo_url,
+            findings: l17Findings,
+          });
+        }
+        if (l15Score < 4) {
+          return res.status(422).json({
+            status: 'rejected',
+            reason: 'low_metadata_score',
+            l15_score: l15Score,
+            findings,
+          });
+        }
+
+        // Build submission record
+        const submissionId = 'sub_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+        const skillId = `mn-sub-${Math.floor(Math.random() * 99999).toString().padStart(5, '0')}`;
+        const now = new Date().toISOString();
+        const submission = {
+          submission_id: submissionId,
+          skill_id: skillId,
+          status: 'pending_l2_audit',
+          submitted_at: now,
+          submitter: {
+            agent_id: submitter_agent_id || null,
+            email: submitter_email || null,
+            ref_code: ref_code || null,
+            ip_hash: crypto.createHash('sha256').update(ip).digest('hex').slice(0, 16),
+          },
+          repo: {
+            url: repo_url,
+            full_name: repoMeta.full_name,
+            owner, name: repoName,
+            description: repoMeta.description,
+            stars: repoMeta.stargazers_count || 0,
+            language: repoMeta.language,
+            license: repoMeta.license?.spdx_id || null,
+            pushed_at: repoMeta.pushed_at,
+            archived: repoMeta.archived,
+            topics: repoMeta.topics || [],
+          },
+          skill: {
+            id: skillId,
+            name: name || repoMeta.name,
+            slug: `${repoName.toLowerCase().replace(/[^a-z0-9-]/g, '-')}-${skillId.slice(-4)}`,
+            description: description || repoMeta.description || '',
+            category: 'Community Submitted',
+            price: 0,
+            review_status: 'auto-scanned',
+            source: { type: 'community-submitted', url: repo_url, submitted_at: now },
+            install: pkgJson?.name ? `npx -y ${pkgJson.name}` : `git clone ${repo_url}`,
+            author: owner,
+            version: pkgJson?.version || '0.0.0',
+          },
+          audit: {
+            l15_score: l15Score,
+            l15_findings: findings,
+            l17_blocked: false,
+            l17_findings: l17Findings,
+            l2_status: 'queued',
+            l2_scheduled_at: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+          },
+          atc_preallocated: false,
+          atc_card_id: null,
+        };
+
+        // Persist to GitHub
+        let persisted = false;
+        try {
+          const filePath = `_data/pending_submissions/${encodeURIComponent(submissionId)}.json`;
+          const content = Buffer.from(JSON.stringify(submission, null, 2)).toString('base64');
+          const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${filePath}`, {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN}`,
+              Accept: 'application/vnd.github+json',
+              'User-Agent': 'marketnow-submit',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              message: `submit skill ${submissionId} (${repoMeta.full_name})`,
+              content,
+              branch: BRANCH,
+            }),
+          });
+          persisted = r.ok;
+        } catch (e) {
+          console.error('Submission persist failed (non-fatal):', e.message);
+        }
+
+        return res.status(201).json({
+          status: 'submitted',
+          submission_id: submissionId,
+          skill_id: skillId,
+          repo: {
+            full_name: repoMeta.full_name,
+            stars: repoMeta.stargazers_count || 0,
+            language: repoMeta.language,
+            license: repoMeta.license?.spdx_id || null,
+          },
+          audit: {
+            l15_score: l15Score,
+            l15_findings: findings,
+            l17_blocked: false,
+            l2_status: 'queued',
+            l2_estimated_completion: submission.audit.l2_scheduled_at,
+          },
+          persisted_to_ledger: persisted,
+          ledger_url: persisted ? `https://github.com/${REPO}/blob/${BRANCH}/_data/pending_submissions/${submissionId}.json` : null,
+          next_steps: [
+            '1. L2 sandbox audit will run within ~1 hour via GitHub Actions',
+            '2. If L2 passes (score ≥ 7), the skill is promoted to the main catalog',
+            '3. An ATC (Agent Trust Card) is issued automatically',
+            `4. Check status: GET /api/submit-skill?submission_id=${submissionId}`,
+            '5. The skill becomes discoverable via search_skills in the MCP server',
+          ],
+          check_status_url: `https://marketnow.site/api/submit-skill?submission_id=${submissionId}`,
+          message: `Submission accepted. L1.5 score ${l15Score}/10. L2 audit queued.`,
+        });
+      }
+
+      // ── mint-referral: mint a new referral code ──
+      // Routed via vercel.json rewrite: POST /api/referrals?action=mint → /api/atc?action=mint-referral
+      if (postAction === 'mint-referral') {
+        const { agent_id } = body;
+        if (!agent_id) {
+          return res.status(400).json({ error: 'agent_id required' });
+        }
+        const referral = await mintReferral(agent_id);
+        return res.status(201).json({
+          status: 'minted',
+          ...referral,
+          share_url: `https://marketnow.site/?ref=${referral.ref_code}`,
+          note: 'Share this ref_code. When other agents use it for purchases, you earn 5% commission.',
+        });
+      }
+
+      // ── credit-referral: record a credit (called internally by agent-purchase) ──
+      if (postAction === 'credit-referral') {
+        const { ref_code, skill_id, license_key, amount_usd, tx_hash, receipt_id } = body;
+        if (!ref_code || !skill_id || amount_usd == null) {
+          return res.status(400).json({ error: 'ref_code, skill_id, amount_usd required' });
+        }
+        const updated = await creditReferral(ref_code, {
+          skill_id, license_key, amount_usd: Number(amount_usd), tx_hash, receipt_id,
+        });
+        if (!updated) {
+          return res.status(200).json({ status: 'no_credit', ref_code, message: 'Referral not found or revoked.' });
+        }
+        return res.status(200).json({
+          status: 'credited',
+          ref_code,
+          commission_earned_usd: Number((amount_usd * 0.05).toFixed(2)),
+          new_total_earned_usd: updated.total_earned_usd,
+          total_purchases: updated.purchases,
+        });
+      }
+
+      // ── click-referral: record a click ──
+      if (postAction === 'click-referral') {
+        const { ref_code } = body;
+        if (!ref_code) return res.status(400).json({ error: 'ref_code required' });
+        const updated = await recordReferralClick(ref_code);
+        if (!updated) {
+          return res.status(200).json({ status: 'no_click_recorded', ref_code });
+        }
+        return res.status(200).json({ status: 'click_recorded', ref_code, new_click_count: updated.clicks });
+      }
+
       return res.status(400).json({
         error: 'Unknown action',
-        supported: ['issue', 'verify (GET)', 'verify-receipt (GET)', 'revoke', 'list (GET)', 'ca-key (GET)', 'spec (GET)', 'translate'],
+        supported: [
+          'issue', 'verify (GET)', 'verify-receipt (GET)', 'revoke', 'list (GET)',
+          'ca-key (GET)', 'spec (GET)', 'translate',
+          'submit-skill (POST)', 'mint-referral (POST)', 'credit-referral (POST)', 'click-referral (POST)',
+        ],
       });
     }
 

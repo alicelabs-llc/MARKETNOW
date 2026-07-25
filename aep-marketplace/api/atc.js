@@ -56,7 +56,6 @@ import {
   lookupReferral,
   listReferralsByAgent,
 } from '../lib/referral-tracker.mjs';
-import { checkRateLimit } from '../lib/rate-limit.mjs';
 
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
 const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
@@ -70,6 +69,8 @@ let _caPublicKey = null;
 let _caPublicKeyPem = null;
 let _atcCache = new Map(); // card_id → { data, fetchedAt }
 const ATC_CACHE_TTL_MS = 5 * 1000; // 5s — short to avoid stale revocation across instances
+// Rate limit map for submit-skill (per warm instance)
+const _submitRateLimitMap = new Map();
 
 // ─── CA key loading ──────────────────────────────────────────────────────
 
@@ -948,15 +949,29 @@ export default async function handler(req, res) {
           });
         }
 
-        // Rate limit: 5 submissions per hour per IP
-        const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress || 'unknown';
-        const rl = checkRateLimit(`submit-skill:${ip}`, { windowMs: 60 * 60 * 1000, max: 5 });
-        if (!rl.ok) {
-          return res.status(429).json({
-            error: 'rate_limited',
-            message: `Too many submissions. Try again in ${Math.ceil((rl.resetAt - Date.now()) / 60000)} minutes.`,
-          });
+        // Rate limit: 5 submissions per hour per IP (anti-spam)
+        // Uses Vercel's x-vercel-forwarded-for header (trusted, can't be spoofed)
+        const vercelIp = req.headers['x-vercel-forwarded-for'] || 'unknown';
+        const ipKey = `submit-skill:${vercelIp}`;
+        if (_submitRateLimitMap.has(ipKey)) {
+          const entry = _submitRateLimitMap.get(ipKey);
+          const windowMs = 60 * 60 * 1000; // 1 hour
+          const max = 5;
+          if (Date.now() - entry.startedAt < windowMs) {
+            if (entry.count >= max) {
+              return res.status(429).json({
+                error: 'rate_limited',
+                message: `Too many submissions. Try again in ${Math.ceil((entry.startedAt + windowMs - Date.now()) / 60000)} minutes.`,
+              });
+            }
+            entry.count += 1;
+          } else {
+            _submitRateLimitMap.set(ipKey, { count: 1, startedAt: Date.now() });
+          }
+        } else {
+          _submitRateLimitMap.set(ipKey, { count: 1, startedAt: Date.now() });
         }
+        const ip = vercelIp;
 
         // Parse repo URL
         const patterns = [

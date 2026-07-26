@@ -1,82 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-0000NaN",
+  "certificate_id": "MN-SC-2026-0215034",
   "skill_id": "mn-real-elispdevmcp",
   "skill_name": "elisp-dev-mcp",
-  "timestamp": "2026-07-24T03:11:43.708Z",
-  "auditor": "Sentinel L1.5 + L1.6 + L1.7 + L1.8 + L1.9 (Deep Individual Audit)",
-  "overall_score": 9,
+  "issued_at": "2026-07-26T04:30:15.034Z",
+  "expires_at": "2026-08-02T04:30:15.034Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 8,
   "max_score": 10,
   "risk_level": "medium",
   "risk_breakdown": {
-    "l15_l16_l17_l18_l19": "medium",
+    "l15_l16_l17": "medium",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "medium"
   },
-  "quarantine_recommended": false,
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l17": true,
-    "l18": true,
-    "l19": true,
-    "l2": false,
-    "l3": false
+    "l2": false
   },
-  "checks": [
-    {
-      "name": "L1.5 AUTH",
-      "status": "warning",
-      "risk": "medium",
-      "detail": "No auth required"
-    },
-    {
-      "name": "L1.6 SEMGREP",
-      "status": "pass",
-      "risk": "low",
-      "detail": "18 rules, 0 findings"
-    },
-    {
-      "name": "L1.6 SECRETS",
-      "status": "pass",
-      "risk": "low",
-      "detail": "18 patterns, 0 findings"
-    },
-    {
-      "name": "L1.7 BINARY",
-      "status": "pass",
-      "risk": "low",
-      "detail": "No binaries or launchers detected"
-    },
-    {
-      "name": "L1.7 MALWARE",
-      "status": "pass",
-      "risk": "low",
-      "detail": "7 patterns checked, 0 findings"
-    },
-    {
-      "name": "L1.8 FAMILIES",
-      "status": "pass",
-      "risk": "low",
-      "detail": "28 families checked, 0 matches"
-    },
-    {
-      "name": "L1.9 INJECTION",
-      "status": "pass",
-      "risk": "low",
-      "detail": "32 rules checked, 0 injections"
-    }
-  ],
-  "source": {
-    "type": "github",
-    "url": "https://github.com/laurynas-biveinis/elisp-dev-mcp",
-    "note": "Real MCP server. 46 stars. Language: Emacs Lisp. Last push: 2026-06-30T11:20:14Z.",
-    "stars": 46,
-    "language": "Emacs Lisp",
-    "last_push": "2026-06-30T11:20:14Z"
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
   },
-  "signature": {
-    "algorithm": "SHA-256",
-    "value": "2b02b2aac8fe5a3f8bf9ac7aefb4c66acc85d58888db4478eda0686830f929b6",
-    "signed_by": "Sentinel Deep Auditor"
-  }
+  "signature": "7b80aa114d697ea453c4e81f9b7c292bd932f691d85bd33f03d90edccc2b8adf",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-elispdevmcp"
 }

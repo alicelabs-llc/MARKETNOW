@@ -1,0 +1,32 @@
+{
+  "certificate_id": "MN-SC-2026-0937206",
+  "skill_id": "mn-real-gate402mcp",
+  "skill_name": "gate402-mcp",
+  "issued_at": "2026-07-26T04:42:17.206Z",
+  "expires_at": "2026-08-02T04:42:17.206Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 1,
+  "max_score": 10,
+  "risk_level": "critical",
+  "risk_breakdown": {
+    "l15_l16_l17": "critical",
+    "l17_quarantine_recommended": false,
+    "l2": "not_available",
+    "final": "critical"
+  },
+  "layers_run": {
+    "l15": true,
+    "l16": true,
+    "l2": false
+  },
+  "layer_details": {
+    "l15_findings": 4,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 0,
+    "l2_execution_status": null
+  },
+  "signature": "eb2c17489ad622604effe8122b2f216d6019406f919289b0610ac4f51b4412a1",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-gate402mcp"
+}

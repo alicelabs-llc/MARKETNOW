@@ -331,6 +331,50 @@ ${newSkills.map(s => `- ${s.id} (${s.name}) — Sentinel ${s.sentinel_score}/10`
     } catch (e) {
       log(`⚠️  skills-lite.json update failed (non-fatal): ${e.message}`);
     }
+
+    // Also update skills_index.json (read by generate_skills.cjs during build)
+    // Without this, promoted skills won't appear in production builds.
+    try {
+      const indexR = await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/aep-marketplace/public/api/skills_index.json`, {
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-promote' },
+      });
+      if (indexR.ok) {
+        const index = await indexR.json();
+        const newIndex = newSkills.map(s => ({
+          id: s.id, name: s.name, slug: s.slug, description: s.description,
+          category: s.category, tags: s.tags, price: s.price,
+          sentinel_score: s.sentinel_score, install: s.install,
+          author: s.author, version: s.version, source: s.source,
+        }));
+        await ghPut(
+          'aep-marketplace/public/api/skills_index.json',
+          [...index, ...newIndex],
+          `promote ${newIndex.length} skill(s) to skills_index.json (build source)`
+        );
+        log(`✓ Updated skills_index.json (build source)`);
+      }
+    } catch (e) {
+      log(`⚠️  skills_index.json update failed (non-fatal): ${e.message}`);
+    }
+
+    // Also update src/data/all_skills.json (read by the SPA at runtime)
+    // Without this, the React app won't show promoted skills in the catalog UI.
+    try {
+      const allR = await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/aep-marketplace/src/data/all_skills.json`, {
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-promote' },
+      });
+      if (allR.ok) {
+        const all = await allR.json();
+        await ghPut(
+          'aep-marketplace/src/data/all_skills.json',
+          [...all, ...newSkills],
+          `promote ${newSkills.length} skill(s) to all_skills.json (SPA source)`
+        );
+        log(`✓ Updated all_skills.json (SPA source)`);
+      }
+    } catch (e) {
+      log(`⚠️  all_skills.json update failed (non-fatal): ${e.message}`);
+    }
   }
 
   log(`\n=== Summary ===`);

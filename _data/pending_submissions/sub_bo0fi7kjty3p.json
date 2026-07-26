@@ -1,7 +1,7 @@
 {
   "submission_id": "sub_bo0fi7kjty3p",
   "skill_id": "mn-sub-46018",
-  "status": "pending_l2_audit",
+  "status": "promoted",
   "submitted_at": "2026-07-25T04:41:54.661Z",
   "submitter": {
     "agent_id": "agent_e2e_final",
@@ -43,9 +43,11 @@
     "l15_score": 10,
     "l15_findings": [],
     "l17_blocked": false,
-    "l2_status": "queued",
-    "l2_scheduled_at": "2026-07-25T05:41:54.661Z"
+    "l2_status": "completed",
+    "l2_scheduled_at": "2026-07-25T05:41:54.661Z",
+    "overall_score": 10
   },
-  "atc_preallocated": false,
-  "atc_card_id": null
+  "atc_preallocated": true,
+  "atc_card_id": "ATC-2026-6202714",
+  "promoted_at": "2026-07-26T03:23:23.811Z"
 }

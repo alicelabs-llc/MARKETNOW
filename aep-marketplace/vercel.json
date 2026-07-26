@@ -28,6 +28,14 @@
   ],
   "rewrites": [
     {
+      "source": "/api/submit-skill",
+      "destination": "/api/atc"
+    },
+    {
+      "source": "/api/referrals",
+      "destination": "/api/atc"
+    },
+    {
       "source": "/api/agent-analytics",
       "destination": "/api/security?view=analytics"
     },

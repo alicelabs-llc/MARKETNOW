@@ -1,82 +1,32 @@
 {
-  "certificate_id": "MN-SC-2026-0000NaN",
+  "certificate_id": "MN-SC-2026-0170613",
   "skill_id": "mn-real-mcpmermaid",
   "skill_name": "mcp-mermaid",
-  "timestamp": "2026-07-24T03:09:18.337Z",
-  "auditor": "Sentinel L1.5 + L1.6 + L1.7 + L1.8 + L1.9 (Deep Individual Audit)",
-  "overall_score": 7,
+  "issued_at": "2026-07-26T04:29:30.613Z",
+  "expires_at": "2026-08-02T04:29:30.613Z",
+  "auditor": "Sentinel L1.5 + L1.6 + L2",
+  "overall_score": 6,
   "max_score": 10,
   "risk_level": "high",
   "risk_breakdown": {
-    "l15_l16_l17_l18_l19": "high",
+    "l15_l16_l17": "high",
+    "l17_quarantine_recommended": false,
     "l2": "not_available",
     "final": "high"
   },
-  "quarantine_recommended": false,
   "layers_run": {
     "l15": true,
     "l16": true,
-    "l17": true,
-    "l18": true,
-    "l19": true,
-    "l2": false,
-    "l3": false
+    "l2": false
   },
-  "checks": [
-    {
-      "name": "L1.5 AUTH",
-      "status": "warning",
-      "risk": "medium",
-      "detail": "No auth required"
-    },
-    {
-      "name": "L1.6 SEMGREP",
-      "status": "pass",
-      "risk": "low",
-      "detail": "18 rules, 0 findings"
-    },
-    {
-      "name": "L1.6 SECRETS",
-      "status": "pass",
-      "risk": "low",
-      "detail": "18 patterns, 0 findings"
-    },
-    {
-      "name": "L1.7 BINARY",
-      "status": "pass",
-      "risk": "low",
-      "detail": "No binaries or launchers detected"
-    },
-    {
-      "name": "L1.7 MALWARE",
-      "status": "pass",
-      "risk": "low",
-      "detail": "7 patterns checked, 0 findings"
-    },
-    {
-      "name": "L1.8 FAMILIES",
-      "status": "pass",
-      "risk": "low",
-      "detail": "28 families checked, 0 matches (README scanned)"
-    },
-    {
-      "name": "L1.9 INJECTION",
-      "status": "pass",
-      "risk": "low",
-      "detail": "32 rules checked, 0 injections"
-    }
-  ],
-  "source": {
-    "type": "github",
-    "url": "https://github.com/hustcc/mcp-mermaid",
-    "note": "Real MCP server. 604 stars. Language: TypeScript. Last push: 2026-05-15T12:16:57Z.",
-    "stars": 604,
-    "language": "TypeScript",
-    "last_push": "2026-05-15T12:16:57Z"
+  "layer_details": {
+    "l15_findings": 2,
+    "l16_semgrep_findings": 0,
+    "l16_secret_findings": 0,
+    "l16_osv_findings": 1,
+    "l2_execution_status": null
   },
-  "signature": {
-    "algorithm": "SHA-256",
-    "value": "b2e8d0f153322426708a879eb6d51c6bc6c26755ac3298642cec3870faa62c66",
-    "signed_by": "Sentinel Deep Auditor"
-  }
+  "signature": "ff917402acd31016a7d50c9219d8700c9972d3af30ed4e449db62a3f001388f7",
+  "signature_algorithm": "SHA-256",
+  "verification_url": "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-real-mcpmermaid"
 }

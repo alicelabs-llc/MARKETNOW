@@ -1,7 +1,7 @@
 {
   "submission_id": "sub_h457gwie78nx",
   "skill_id": "mn-sub-66889",
-  "status": "pending_l2_audit",
+  "status": "promoted",
   "submitted_at": "2026-07-27T03:59:36.093Z",
   "submitter": {
     "agent_id": "agent_marketnow_outreach_v4",
@@ -53,9 +53,11 @@
     "l15_score": 10,
     "l15_findings": [],
     "l17_blocked": false,
-    "l2_status": "queued",
-    "l2_scheduled_at": "2026-07-27T04:59:36.093Z"
+    "l2_status": "completed",
+    "l2_scheduled_at": "2026-07-27T04:59:36.093Z",
+    "overall_score": 10
   },
-  "atc_preallocated": false,
-  "atc_card_id": null
+  "atc_preallocated": true,
+  "atc_card_id": "ATC-2026-4996294",
+  "promoted_at": "2026-07-27T04:03:17.118Z"
 }

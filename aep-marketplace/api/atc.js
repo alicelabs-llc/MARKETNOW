@@ -369,6 +369,7 @@ export default async function handler(req, res) {
             issue: 'POST /api/atc {action:"issue", agent_id, public_key, capabilities?, skill_id?, wallet_address?}',
             verify: 'GET /api/atc?action=verify&card_id=ATC-2026-XXXXX',
             verify_receipt: 'GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx',
+            verify_vibe_receipt: 'GET /api/atc?action=verify-vibe-receipt (fetches Vibe sample + verifies) or POST {action: "verify-vibe-receipt", receipt: {...}}',
             revoke: 'POST /api/atc {action:"revoke", card_id, reason}',
             list: 'GET /api/atc',
             ca_key: 'GET /api/atc?action=ca-key',
@@ -574,6 +575,100 @@ export default async function handler(req, res) {
             'v1.1.0: added decision_authority="consumer" (consumer makes the trust decision, not the card)',
             'v1.0.0: original schema (sentinel_score, no decision_authority)',
           ],
+        });
+      }
+
+      // ── verify-vibe-receipt: verify a Vibe action-receipt ──
+      // Completes the MarketNow ↔ Vibe mutual hop: Vibe can verify our
+      // receipts via /api/atc?action=verify-receipt, and we can verify
+      // their receipts via this endpoint.
+      //
+      // GET /api/atc?action=verify-vibe-receipt
+      //   → fetches the Vibe sample receipt and verifies it
+      // POST /api/atc {action: "verify-vibe-receipt", receipt: {...}}
+      //   → verifies a Vibe receipt passed in the body
+      if (action === 'verify-vibe-receipt') {
+        // Dynamic import to avoid loading the verifier unless needed
+        const { verifyVibeReceipt, fetchVibePublicKey, fetchAndVerifyVibeSample } =
+          await import('../lib/vibe-verifier.mjs');
+
+        // If GET with no body, fetch and verify the Vibe sample
+        if (req.method === 'GET') {
+          try {
+            const { receipt, verification } = await fetchAndVerifyVibeSample();
+            return res.status(200).json({
+              valid: verification.valid,
+              source: 'vibe_sample',
+              receipt_id: receipt.receipt_id,
+              agent_id: receipt.agent_id,
+              action: receipt.action,
+              ref_code: receipt.ref_code,
+              ref_bound: receipt.ref_bound,
+              ref_bound_match: verification.ref_bound_match,
+              signature_algorithm: receipt.algorithm,
+              signature_valid: verification.valid,
+              message: verification.valid
+                ? 'Vibe receipt verified cryptographically against the Vibe CA public key. Mutual hop confirmed.'
+                : `Verification failed: ${verification.reason}`,
+              interop: {
+                marketnow_endpoint: 'GET /api/atc?action=verify-vibe-receipt',
+                vibe_endpoint: 'GET https://vibes-coded.com/api/v1/outcomes/action-receipt/sample?with_ref=true',
+                mutual_hop: verification.valid ? 'bidirectional_verified' : 'verification_failed',
+              },
+              receipt: receipt,
+            });
+          } catch (e) {
+            return res.status(502).json({
+              valid: false,
+              error: 'vibe_fetch_failed',
+              message: `Could not fetch Vibe sample: ${e.message}`,
+            });
+          }
+        }
+
+        // POST with receipt in body
+        const body = req.body || {};
+        const receipt = body.receipt;
+        if (!receipt) {
+          return res.status(400).json({
+            error: 'receipt required',
+            example: {
+              action: 'verify-vibe-receipt',
+              receipt: {
+                receipt_id: 'rcpt_xxx',
+                agent_id: 'vibes-sample',
+                action: 'sample.ping',
+                payload_digest: '...',
+                nonce: '...',
+                quote: '...',
+                ts: '2026-07-24T...',
+                receipt_type: 'raw',
+                ed25519_signature: '...',
+                ref_code: 'ref_xxx',
+                ref_bound: true,
+              },
+            },
+          });
+        }
+
+        const refBound = body.ref_bound ?? receipt.ref_bound ?? false;
+        const verification = await verifyVibeReceipt(receipt, { ref_bound: refBound });
+
+        return res.status(200).json({
+          valid: verification.valid,
+          receipt_id: receipt.receipt_id,
+          agent_id: receipt.agent_id,
+          ref_bound_match: verification.ref_bound_match,
+          signature_valid: verification.valid,
+          reason: verification.reason || null,
+          message: verification.valid
+            ? 'Vibe receipt verified against Vibe CA public key.'
+            : `Verification failed: ${verification.reason}`,
+          interop: {
+            marketnow_endpoint: 'POST /api/atc {action: "verify-vibe-receipt", receipt: {...}}',
+            vibe_preimage_format: 'agent_id|action|payload_digest|nonce|quote|ts|rt:<receipt_type>(|decision_ref)(|ref:<ref_code>)',
+            mutual_hop: verification.valid ? 'bidirectional_verified' : 'verification_failed',
+          },
         });
       }
 
@@ -1235,7 +1330,7 @@ export default async function handler(req, res) {
       return res.status(400).json({
         error: 'Unknown action',
         supported: [
-          'issue', 'verify (GET)', 'verify-receipt (GET)', 'revoke', 'list (GET)',
+          'issue', 'verify (GET)', 'verify-receipt (GET)', 'verify-vibe-receipt (GET)', 'revoke', 'list (GET)',
           'ca-key (GET)', 'spec (GET)', 'translate',
           'submit-skill (POST)', 'mint-referral (POST)', 'credit-referral (POST)', 'click-referral (POST)',
         ],

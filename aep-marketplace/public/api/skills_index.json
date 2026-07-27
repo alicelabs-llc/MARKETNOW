@@ -587553,6 +587553,23 @@
     }
   },
   {
+    "id": "mn-sub-81212",
+    "name": "inspector",
+    "slug": "inspector-1212",
+    "description": "Visual testing tool for MCP servers",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y @modelcontextprotocol/inspector",
+    "author": "modelcontextprotocol",
+    "version": "1.0.0",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/modelcontextprotocol/inspector",
+      "submitted_at": "2026-07-26T23:51:15.270Z"
+    }
+  },
+  {
     "id": "mn-sub-27364",
     "name": "chrome-devtools-mcp",
     "slug": "chrome-devtools-mcp-7364",

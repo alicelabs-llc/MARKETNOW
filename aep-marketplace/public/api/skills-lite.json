@@ -409378,5 +409378,17 @@
     "install": "npx -y chrome-devtools-mcp",
     "author": "ChromeDevTools",
     "version": "1.6.0"
+  },
+  {
+    "id": "mn-sub-19264",
+    "name": "n8n",
+    "slug": "n8n-9264",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y n8n-monorepo",
+    "author": "n8n-io",
+    "version": "2.32.0"
   }
 ]

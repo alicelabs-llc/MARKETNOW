@@ -587704,5 +587704,73 @@
       "url": "https://github.com/bytedance/UI-TARS-desktop",
       "submitted_at": "2026-07-27T01:17:51.815Z"
     }
+  },
+  {
+    "id": "mn-sub-22629",
+    "name": "worldmonitor",
+    "slug": "worldmonitor-2629",
+    "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y world-monitor",
+    "author": "koala73",
+    "version": "2.10.0",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/koala73/worldmonitor",
+      "submitted_at": "2026-07-27T01:17:59.677Z"
+    }
+  },
+  {
+    "id": "mn-sub-66889",
+    "name": "fastmcp",
+    "slug": "fastmcp-6889",
+    "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "git clone https://github.com/jlowin/fastmcp",
+    "author": "jlowin",
+    "version": "0.0.0",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/jlowin/fastmcp",
+      "submitted_at": "2026-07-27T03:59:36.093Z"
+    }
+  },
+  {
+    "id": "mn-sub-10093",
+    "name": "mcp-hub",
+    "slug": "mcp-hub-0093",
+    "description": "A centralized manager for Model Context Protocol (MCP) servers with dynamic server management and monitoring",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y mcp-hub",
+    "author": "ravitemer",
+    "version": "4.2.1",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/ravitemer/mcp-hub",
+      "submitted_at": "2026-07-27T03:59:43.384Z"
+    }
+  },
+  {
+    "id": "mn-sub-86149",
+    "name": "langchain-mcp-adapters",
+    "slug": "langchain-mcp-adapters-6149",
+    "description": "LangChain 🔌 MCP",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "git clone https://github.com/langchain-ai/langchain-mcp-adapters",
+    "author": "langchain-ai",
+    "version": "0.0.0",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/langchain-ai/langchain-mcp-adapters",
+      "submitted_at": "2026-07-27T03:59:33.273Z"
+    }
   }
 ]

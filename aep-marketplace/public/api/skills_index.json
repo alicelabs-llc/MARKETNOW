@@ -587602,5 +587602,56 @@
       "url": "https://github.com/n8n-io/n8n",
       "submitted_at": "2026-07-27T00:47:05.370Z"
     }
+  },
+  {
+    "id": "mn-sub-45998",
+    "name": "context7",
+    "slug": "context7-5998",
+    "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y @upstash/context7",
+    "author": "upstash",
+    "version": "1.0.0",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/upstash/context7",
+      "submitted_at": "2026-07-27T00:47:10.953Z"
+    }
+  },
+  {
+    "id": "mn-sub-79641",
+    "name": "ruflo",
+    "slug": "ruflo-9641",
+    "description": "🌊 The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y claude-flow",
+    "author": "ruvnet",
+    "version": "3.32.13",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/ruvnet/ruflo",
+      "submitted_at": "2026-07-27T00:47:09.576Z"
+    }
+  },
+  {
+    "id": "mn-sub-57505",
+    "name": "Scrapling",
+    "slug": "scrapling-7505",
+    "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "git clone https://github.com/D4Vinci/Scrapling",
+    "author": "D4Vinci",
+    "version": "0.0.0",
+    "source": {
+      "type": "community-submitted",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "submitted_at": "2026-07-27T00:47:08.069Z"
+    }
   }
 ]

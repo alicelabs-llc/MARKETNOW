@@ -409342,5 +409342,29 @@
     "install": "git clone https://github.com/doteyeso-ops/mcp-server-vibes-coded",
     "author": "doteyeso-ops",
     "version": "0.0.0"
+  },
+  {
+    "id": "mn-sub-71989",
+    "name": "context7",
+    "slug": "context7-1989",
+    "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y @upstash/context7",
+    "author": "upstash",
+    "version": "1.0.0"
+  },
+  {
+    "id": "mn-sub-27364",
+    "name": "chrome-devtools-mcp",
+    "slug": "chrome-devtools-mcp-7364",
+    "description": "Chrome DevTools for coding agents",
+    "category": "Community Submitted",
+    "price": 0,
+    "sentinel_score": 10,
+    "install": "npx -y chrome-devtools-mcp",
+    "author": "ChromeDevTools",
+    "version": "1.6.0"
   }
 ]

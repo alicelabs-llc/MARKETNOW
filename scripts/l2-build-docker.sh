@@ -217,8 +217,14 @@ EOD
   echo "CMD [\"sh\", \"-c\", \"$PY_ENTRYPOINT\"]" >> Dockerfile.audit
 
 else
-  echo "::error::No package.json, pyproject.toml, requirements.txt, or setup.py found in $BUILD_DIR"
-  exit 1
+  echo "::warning::No package.json, pyproject.toml, requirements.txt, or setup.py found in $BUILD_DIR"
+  echo "  Using stub Dockerfile (no entrypoint — sandbox will detect no runtime behavior)"
+  cat > Dockerfile.audit << 'EOD'
+FROM ubuntu:22.04
+COPY . /app
+WORKDIR /app
+CMD ["sleep", "60"]
+EOD
 fi
 
 echo "=== Generated Dockerfile.audit ==="

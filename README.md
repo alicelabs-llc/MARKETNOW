@@ -269,13 +269,38 @@ curl "https://marketnow.site/api/submit-skill?submission_id=sub_bo0fi7kjty3p"
 ## 🔗 Links
 
 - **Website**: https://marketnow.site
+- **Submit your MCP server (FREE)**: https://marketnow.site/submit
+- **🏆 Free MCP Security Challenge**: [issue #23](https://github.com/edgarfloresguerra2011-a11y/marketnow/issues/23)
 - **Verify a certificate**: https://marketnow.site/verify
+- **Verify an ATC**: https://marketnow.site/api/atc?action=verify&card_id=ATC-2026-7777670
+- **Verify a Vibe receipt (mutual hop)**: https://marketnow.site/api/atc?action=verify-vibe-receipt
+- **ATC spec**: https://marketnow.site/api/atc?action=spec
 - **Transparency dashboard**: https://marketnow.site/sentinel-transparency
 - **Security details**: https://marketnow.site/security
 - **npm**: https://www.npmjs.com/package/marketnow-mcp
 - **Smithery**: https://smithery.ai/servers/alicelabs/marketnow
 - **OpenAPI**: https://marketnow.site/api/openapi.json
 - **Agent instructions**: https://marketnow.site/api/agent.json
+- **Blog (mutual hop)**: https://dev.to/edison_flores_6d2cd381b13/two-agent-trust-systems-zero-merged-code-the-marketnow-vibe-mutual-hop-3a8n
+- **Blog (free challenge)**: https://dev.to/edison_flores_6d2cd381b13/free-mcp-security-challenge-submit-your-server-get-a-10-layer-audit
+
+## 🆓 Everything is Free
+
+| Feature | Price |
+|---------|-------|
+| All 9,248 skills | $0 |
+| 10-layer security audit | $0 |
+| Agent Trust Card (ATC) | $0 |
+| Action-receipts | $0 |
+| Referral tracking | $0 |
+| MCP server (11 tools) | $0 |
+| API endpoints | $0 |
+| Catalog listing | $0 |
+| Submit your server | $0 |
+| L2 Docker sandbox audit | $0 |
+| Vibe cross-verification | $0 |
+
+**No payment required for anything in the marketplace.** Revenue comes from Sentinel subscriptions for sellers who want priority audits, analytics, and SOC2 mapping — not from buyers who need trust.
 
 ## 📜 License & IP Protection
 

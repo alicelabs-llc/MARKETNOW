@@ -1,38 +1,63 @@
-# MarketNow — 代理商业的信任层
+# MarketNow — MCP技能市场（安全优先）
 
-> 8,764个MCP技能，Sentinel L2.5 gVisor沙盒安全审计，x402支付（HTTP 402 + Base上的USDC），AP2委托授权。
+> MarketNow是MCP（模型上下文协议）服务器的安全优先市场。9,248个经过安全审计的技能，10层安全审计管道，Ed25519签名的代理信任卡（ATC），以及与Vibe的跨代理互验证。
 
-## 什么是 MarketNow？
+## 一切免费
 
-MarketNow 是一个 MCP（模型上下文协议）技能市场。发现已经解决了（MCP Registry、Smithery、Glama）。信任还没有。
+| 功能 | 价格 |
+|------|------|
+| 所有9,248个技能 | 免费 |
+| 10层安全审计 | 免费 |
+| 代理信任卡（ATC） | 免费 |
+| 动作收据 | 免费 |
+| MCP服务器（11个工具） | 免费 |
+| 提交你的服务器 | 免费 |
+| L2 Docker沙箱审计 | 免费 |
 
-npm 包在偷钱包。PyPI 包在窃取代理对话。安装错误 MCP 服务器的代理会在几秒钟内被攻破。
-
-## 功能
-
-- 🔒 8,764个MCP技能，每个都有Sentinel L2.5 gVisor沙盒安全审计
-- 💳 x402支付（HTTP 402 + Base上的USDC）或Stripe
-- 🛡️ AP2委托授权 — 默认人类在环
-- 🌍 5种语言：EN, ES, PT, 中文, FR
-- 💰 /bin/bash.99–.99 一次性付款，43个免费技能
-- 📜 MNNC-1.0 许可证（源代码可用）
-
-## 安装
+## 如何提交你的MCP服务器
 
 ```bash
-npx -y marketnow-mcp
+curl -X POST https://marketnow.site/api/submit-skill \
+  -H "Content-Type: application/json" \
+  -d '{"repo_url": "https://github.com/your-username/your-mcp-server"}'
 ```
 
-兼容 Claude Desktop、Cursor、Cline、Continue、Aider。
+提交后：
+1. L1.5元数据检查（同步，~5秒）
+2. L1.7恶意软件检测（同步）
+3. L2 Docker沙箱审计（~2分钟，GitHub Actions）
+4. 如果通过（分数≥7）：自动加入目录 + 签发ATC
+
+## 10层安全审计
+
+| 层 | 检查内容 |
+|----|---------|
+| L1.5 | 元数据（README、许可证、未归档、未过期） |
+| L1.6 | 36条Semgrep规则 + 18种密钥模式 + OSV依赖扫描 |
+| L1.7 | 8种恶意软件模式 + 二进制/启动器检测 |
+| L1.8 | 28种恶意软件家族签名（Emotet、LockBit等） |
+| L1.9 | 32条提示注入防御规则 |
+| L2 | Docker沙箱（gVisor，无网络，只读文件系统） |
+| L3 | 持续运行时监控（每周重新审计） |
+| WAF | 38种攻击签名 |
+| 蜜罐 | 50+虚假路径，24小时自动封禁 |
+| 威胁情报 | abuse.ch数据源 |
+
+## 跨代理互验证（与Vibe的互跳）
+
+MarketNow和Vibe（vibes-coded.com）实现了双向收据验证：
+- MarketNow验证Vibe收据：`GET /api/atc?action=verify-vibe-receipt`
+- Vibe验证MarketNow收据：`GET /api/atc?action=verify-receipt&receipt_id=...`
+- 两个独立的CA，无合并代码，公开账本
 
 ## 链接
 
 - 网站：https://marketnow.site
+- 提交：https://marketnow.site/submit
+- 规范：https://marketnow.site/api/atc?action=spec
 - GitHub：https://github.com/edgarfloresguerra2011-a11y/marketnow
-- npm：https://www.npmjs.com/package/marketnow-mcp
-- 信任路线图：https://marketnow.site/trust
-- 安全：https://marketnow.site/security
+- npm：`npx -y marketnow-mcp@1.7.0`
 
-## 公司
+## 免责声明
 
-AliceLabs LLC — 美国怀俄明州，2025年。创始人：Edison Flores。无投资者，无员工，公开构建。
+MarketNow由AliceLabs LLC（美国怀俄明州）运营。所有市场功能免费。收入来自需要优先审计、分析和SOC2映射的卖家的Sentinel订阅。

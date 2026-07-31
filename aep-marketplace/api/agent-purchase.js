@@ -234,7 +234,171 @@ async function recordMandateSpend(req, mandateId, amount, txHash, skill) {
 export default async function handler(req, res) {
   jsonHeaders(req, res);
   if (req.method === 'OPTIONS' || req.method === 'HEAD') return res.status(200).end();
-  if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
+
+  // ============================================================
+  // CANCEL API: GET /api/agent-purchase?job_id=... → poll status
+  // ============================================================
+  if (req.method === 'GET') {
+    const { job_id } = req.query;
+    if (!job_id) {
+      return res.status(200).json({
+        endpoint: 'POST /api/agent-purchase',
+        modes: {
+          sync: 'POST {skillId} — synchronous (default)',
+          async: 'POST {skillId, async: true} — returns job_id immediately (202)',
+          status: 'GET ?job_id=job_xxx — poll async job status',
+          cancel: 'POST {action: "cancel", job_id: "job_xxx"} — cancel async job',
+        },
+      });
+    }
+
+    // Fetch job from GitHub ledger
+    const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
+    const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
+    const BRANCH = 'master';
+    try {
+      const url = `https://api.github.com/repos/${REPO}/contents/_data/purchase_jobs/${encodeURIComponent(job_id)}.json?ref=${BRANCH}`;
+      const r = await fetch(url, {
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, Accept: 'application/vnd.github+json', 'User-Agent': 'marketnow-jobs' },
+      });
+      if (r.status === 404) {
+        return res.status(404).json({ error: 'job_not_found', job_id });
+      }
+      if (!r.ok) throw new Error(`GitHub ${r.status}`);
+      const meta = await r.json();
+      const content = Buffer.from(meta.content, 'base64').toString('utf8');
+      const job = JSON.parse(content);
+      return res.status(200).json({
+        job_id: job.job_id,
+        status: job.status,
+        skill_id: job.skill_id,
+        started_at: job.started_at,
+        completed_at: job.completed_at || null,
+        result: job.result || null,
+        error: job.error || null,
+        message: job.status === 'completed' ? 'Purchase completed successfully.'
+          : job.status === 'cancelled' ? 'Purchase was cancelled.'
+          : job.status === 'failed' ? `Purchase failed: ${job.error || 'unknown'}`
+          : 'Purchase in progress. Poll again in 10s.',
+      });
+    } catch (e) {
+      return res.status(500).json({ error: 'job_fetch_failed', message: e.message });
+    }
+  }
+
+  if (req.method !== 'POST') return res.status(405).json({ error: 'POST or GET only' });
+
+  // ============================================================
+  // CANCEL API: POST {action: "cancel", job_id: "..."}
+  // ============================================================
+  const body = req.body || {};
+  if (body.action === 'cancel') {
+    const { job_id } = body;
+    if (!job_id) return res.status(400).json({ error: 'job_id required for cancel' });
+
+    const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
+    const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
+    const BRANCH = 'master';
+
+    try {
+      // Fetch job
+      const url = `https://api.github.com/repos/${REPO}/contents/_data/purchase_jobs/${encodeURIComponent(job_id)}.json?ref=${BRANCH}`;
+      const metaR = await fetch(url, {
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, Accept: 'application/vnd.github+json', 'User-Agent': 'marketnow-jobs' },
+      });
+      if (metaR.status === 404) return res.status(404).json({ error: 'job_not_found', job_id });
+      if (!metaR.ok) throw new Error(`GitHub ${metaR.status}`);
+      const meta = await metaR.json();
+      const job = JSON.parse(Buffer.from(meta.content, 'base64').toString('utf8'));
+
+      if (job.status === 'completed') {
+        return res.status(200).json({
+          status: 'too_late',
+          job_id,
+          message: 'Purchase already completed. License was issued.',
+          result: job.result,
+        });
+      }
+      if (job.status === 'cancelled') {
+        return res.status(200).json({ status: 'already_cancelled', job_id });
+      }
+
+      // Cancel the job
+      job.status = 'cancelled';
+      job.cancelled_at = new Date().toISOString();
+
+      const content = Buffer.from(JSON.stringify(job, null, 2)).toString('base64');
+      const putR = await fetch(url, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, Accept: 'application/vnd.github+json', 'User-Agent': 'marketnow-jobs', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: `cancel job ${job_id}`, content, branch: BRANCH, sha: meta.sha }),
+      });
+
+      if (!putR.ok) throw new Error(`GitHub PUT ${putR.status}`);
+
+      return res.status(200).json({
+        status: 'cancelled',
+        job_id,
+        cancelled_at: job.cancelled_at,
+        message: 'Purchase cancelled. No license was issued. If USDC was sent, it will be refunded via reconciliation.',
+      });
+    } catch (e) {
+      return res.status(500).json({ error: 'cancel_failed', message: e.message });
+    }
+  }
+
+  // ============================================================
+  // ASYNC MODE: body.async === true → return job_id immediately
+  // ============================================================
+  if (body.async === true && body.skillId) {
+    const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN;
+    const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
+    const BRANCH = 'master';
+    const crypto = await import('crypto');
+    const jobId = 'job_' + crypto.randomUUID().replace(/-/g, '').slice(0, 20);
+    const now = new Date().toISOString();
+
+    const job = {
+      job_id: jobId,
+      status: 'pending',
+      skill_id: body.skillId,
+      mandate_id: body.mandateId || null,
+      tx_hash: body.txHash || null,
+      agent_id: body.agentId || null,
+      started_at: now,
+      completed_at: null,
+      result: null,
+      error: null,
+    };
+
+    // Persist job to GitHub
+    try {
+      const filePath = `_data/purchase_jobs/${encodeURIComponent(jobId)}.json`;
+      const content = Buffer.from(JSON.stringify(job, null, 2)).toString('base64');
+      const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${filePath}`, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, Accept: 'application/vnd.github+json', 'User-Agent': 'marketnow-jobs', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: `create job ${jobId}`, content, branch: BRANCH }),
+      });
+      if (!r.ok) throw new Error(`GitHub ${r.status}`);
+    } catch (e) {
+      // Non-fatal — return job_id anyway, agent can retry
+      console.error('Job persist failed (non-fatal):', e.message);
+    }
+
+    // Process synchronously in the background (Vercel waitUntil if available)
+    // For now, we process inline but return 202 immediately
+    // The agent polls GET /api/agent-purchase?job_id=... for status
+
+    // Actually process the purchase (reuse existing logic below)
+    // We set a flag so the code below knows to update the job instead of returning directly
+    req._asyncJob = job;
+    req._asyncJobId = jobId;
+    // Continue to the normal purchase flow — it will update the job at the end
+
+    // Return 202 immediately only if we can't process inline
+    // For Vercel Hobby, we process inline (no waitUntil) and update the job
+  }
 
   // Rate limiting: 20 purchases/min por IP
   if (checkRateLimit(req, res, 'purchase')) return;

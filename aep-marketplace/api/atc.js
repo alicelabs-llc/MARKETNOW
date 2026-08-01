@@ -194,15 +194,28 @@ async function listATCs() {
     if (!Array.isArray(files)) return [];
     const atcFiles = files.filter(f => f.type === 'file' && f.name.startsWith('ATC-') && f.name.endsWith('.json'));
 
-    // Fetch each ATC (in parallel, but limit concurrency to 5)
+    // Fetch each ATC via Contents API (not raw.githubusercontent —
+    // raw has CDN cache issues that cause 404 on recently committed files).
+    // Using Contents API with the file path returns base64-encoded content
+    // that we decode locally.
     const atcs = [];
     for (let i = 0; i < atcFiles.length; i += 5) {
       const batch = atcFiles.slice(i, i + 5);
       const results = await Promise.all(batch.map(async f => {
         try {
-          const fr = await fetch(f.download_url, { headers: { 'User-Agent': 'marketnow-atc' } });
+          const fileUrl = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}/${encodeURIComponent(f.name)}?ref=${encodeURIComponent(BRANCH)}`;
+          const fr = await fetch(fileUrl, {
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN}`,
+              Accept: 'application/vnd.github+json',
+              'User-Agent': 'marketnow-atc',
+            },
+          });
           if (!fr.ok) return null;
-          return await fr.json();
+          const meta = await fr.json();
+          if (!meta.content) return null;
+          const content = Buffer.from(meta.content, 'base64').toString('utf8');
+          return JSON.parse(content);
         } catch { return null; }
       }));
       atcs.push(...results.filter(Boolean));

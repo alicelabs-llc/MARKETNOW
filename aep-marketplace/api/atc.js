@@ -233,13 +233,14 @@ async function listATCs() {
             },
           },
         }));
-        
+
         _atcIndexCache = atcs;
         _atcIndexFetchedAt = Date.now();
         return atcs;
-      }
     }
-  } catch {}
+  } catch (e) {
+    // _index.json not found or parse error — fall through to old method
+  }
   
   // ── FALLBACK: Old method (58 API calls) if _index.json doesn't exist ──
   const url = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}?ref=${encodeURIComponent(BRANCH)}`;

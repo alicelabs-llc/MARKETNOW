@@ -199,22 +199,20 @@ async function listATCs() {
     return _atcIndexCache;
   }
   
-  // Try reading _index.json (1 API call)
+  // Try reading _index.json via raw.githubusercontent (CDN, no rate limit)
+  // raw with Authorization header bypasses the Contents API secondary rate limit
   try {
-    const indexUrl = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}/_index.json?ref=${encodeURIComponent(BRANCH)}`;
-    const r = await fetch(indexUrl, {
+    const rawUrl = `https://raw.githubusercontent.com/${REPO}/${encodeURIComponent(BRANCH)}/${ATC_DIR}/_index.json`;
+    const r = await fetch(rawUrl, {
       headers: {
         Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: 'application/vnd.github+json',
         'User-Agent': 'marketnow-atc',
       },
     });
     
     if (r.ok) {
-      const meta = await r.json();
-      if (meta.content) {
-        const content = Buffer.from(meta.content, 'base64').toString('utf8');
-        const index = JSON.parse(content);
+      const text = await r.text();
+      const index = JSON.parse(text);
         
         // Convert index entries to the format expected by callers
         const atcs = (index.cards || []).map(c => ({

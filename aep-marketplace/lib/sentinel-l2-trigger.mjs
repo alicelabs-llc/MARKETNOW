@@ -144,7 +144,7 @@ export async function getL2Results(skillId) {
   const url = `https://raw.githubusercontent.com/${REPO}/master/_data/l2_results/${skillId}.json`;
   try {
     const res = await fetch(url, {
-      headers: { 'User-Agent': 'marketnow-sentinel' },
+      headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-sentinel' },
     });
     if (res.status === 200) {
       return await res.json();

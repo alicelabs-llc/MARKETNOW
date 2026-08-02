@@ -166,7 +166,7 @@ async function isTxHashUsed(txHash) {
   if (!cfg.token) return { used: false, error: 'no_token' };
   const url = `https://raw.githubusercontent.com/${cfg.repo}/${encodeURIComponent(cfg.branch)}/${encodeURIComponent(cfg.path)}/${txHash.toLowerCase()}.json`;
   try {
-    const r = await fetch(url, { headers: { 'User-Agent': 'marketnow-agent-purchase' } });
+    const r = await fetch(url, { headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-agent-purchase' } });
     if (r.status === 200) {
       const data = await r.json();
       return { used: true, data };

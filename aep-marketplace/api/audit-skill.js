@@ -91,7 +91,7 @@ async function fetchL2ResultsIndex() {
       const summaries = await Promise.all(files.map(async f => {
         try {
           const fileRes = await fetch(f.download_url, {
-            headers: { 'User-Agent': 'marketnow-sentinel' },
+            headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-sentinel' },
           });
           if (!fileRes.ok) return null;
           const d = await fileRes.json();
@@ -239,7 +239,7 @@ async function fetchCertificateIndex() {
   const summaryUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/_data/sentinel_certificates/_summary.json`;
   try {
     const res = await fetch(summaryUrl, {
-      headers: { 'User-Agent': 'marketnow-sentinel' },
+      headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'marketnow-sentinel' },
     });
     if (res.ok) {
       const summary = await res.json();

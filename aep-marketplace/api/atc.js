@@ -72,6 +72,15 @@ const ATC_CACHE_TTL_MS = 5 * 1000; // 5s — short to avoid stale revocation acr
 // Rate limit map for submit-skill (per warm instance)
 const _submitRateLimitMap = new Map();
 
+// ─── ATC Index Cache (reduces 58 API calls to 1) ────────────────────────
+// Instead of listing the _data/atc/ directory (1 call) then fetching each
+// ATC file individually (57 calls), we read a single _index.json file
+// that contains a summary of all ATCs. The index is updated automatically
+// when a new ATC is issued (see persistATC + updateATCIndex).
+let _atcIndexCache = null;
+let _atcIndexFetchedAt = 0;
+const ATC_INDEX_CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes (was 5 seconds)
+
 // ─── CA key loading ──────────────────────────────────────────────────────
 
 function loadCAKeys() {
@@ -180,6 +189,61 @@ async function fetchATC(card_id, { skipCache = false } = {}) {
 }
 
 async function listATCs() {
+  // ── OPTIMIZED: Read _index.json (1 API call) instead of 58 ──
+  // The _index.json file contains a summary of all ATCs (card_id, status,
+  // agent_id, score, etc.) — enough for the list endpoint.
+  // Falls back to the old method (58 calls) if _index.json doesn't exist.
+  
+  // Check cache first (5 minute TTL)
+  if (_atcIndexCache && (Date.now() - _atcIndexFetchedAt) < ATC_INDEX_CACHE_TTL_MS) {
+    return _atcIndexCache;
+  }
+  
+  // Try reading _index.json (1 API call)
+  try {
+    const indexUrl = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}/_index.json?ref=${encodeURIComponent(BRANCH)}`;
+    const r = await fetch(indexUrl, {
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'marketnow-atc',
+      },
+    });
+    
+    if (r.ok) {
+      const meta = await r.json();
+      if (meta.content) {
+        const content = Buffer.from(meta.content, 'base64').toString('utf8');
+        const index = JSON.parse(content);
+        
+        // Convert index entries to the format expected by callers
+        const atcs = (index.cards || []).map(c => ({
+          card_id: c.card_id,
+          status: c.status,
+          payload: {
+            card_id: c.card_id,
+            agent_id: c.agent_id,
+            agent_name: c.agent_name,
+            trust: {
+              sentinel_review_score: c.sentinel_review_score,
+              sentinel_score: c.sentinel_review_score, // backward compat
+              risk_level: c.risk_level,
+            },
+            metadata: {
+              issued_at: c.issued_at,
+              expires_at: c.expires_at,
+            },
+          },
+        }));
+        
+        _atcIndexCache = atcs;
+        _atcIndexFetchedAt = Date.now();
+        return atcs;
+      }
+    }
+  } catch {}
+  
+  // ── FALLBACK: Old method (58 API calls) if _index.json doesn't exist ──
   const url = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}?ref=${encodeURIComponent(BRANCH)}`;
   try {
     const r = await fetch(url, {
@@ -194,10 +258,6 @@ async function listATCs() {
     if (!Array.isArray(files)) return [];
     const atcFiles = files.filter(f => f.type === 'file' && f.name.startsWith('ATC-') && f.name.endsWith('.json'));
 
-    // Fetch each ATC via Contents API (not raw.githubusercontent —
-    // raw has CDN cache issues that cause 404 on recently committed files).
-    // Using Contents API with the file path returns base64-encoded content
-    // that we decode locally.
     const atcs = [];
     for (let i = 0; i < atcFiles.length; i += 5) {
       const batch = atcFiles.slice(i, i + 5);
@@ -220,6 +280,10 @@ async function listATCs() {
       }));
       atcs.push(...results.filter(Boolean));
     }
+    
+    // Cache the result
+    _atcIndexCache = atcs;
+    _atcIndexFetchedAt = Date.now();
     return atcs;
   } catch (e) {
     return [];

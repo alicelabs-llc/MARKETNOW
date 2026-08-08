@@ -378,6 +378,12 @@ async function persistATC(card_id, atc) {
 
   // Invalidate cache
   _atcCache.delete(card_id);
+
+  // ── Trigger sync-atc-static workflow to update static files + redeploy Vercel ──
+  // The GitHub push above will trigger the sync-atc-static.yml workflow (via
+  // `paths: _data/atc/**`), which regenerates public/api/atc-index.json +
+  // public/api/atc/{card_id}.json and triggers a Vercel deploy.
+  // No explicit trigger needed here — GitHub Actions handles it automatically.
   return true;
 }
 

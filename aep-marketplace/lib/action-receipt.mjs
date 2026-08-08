@@ -257,6 +257,22 @@ export async function persistReceipt(receipt) {
  */
 export async function fetchReceipt(receiptId) {
   if (!receiptId) return null;
+
+  // ── WORKAROUND: GitHub account shadowbanned. Use static file bundled in
+  // this deployment first. Falls back to GitHub Contents API if not found.
+  try {
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'https://marketnow.site';
+    const r = await fetch(`${baseUrl}/api/receipts/${encodeURIComponent(receiptId)}.json`);
+    if (r.ok) {
+      return await r.json();
+    }
+  } catch {
+    // Static file not available — fall through to GitHub API
+  }
+
+  // ── FALLBACK: GitHub Contents API (works for non-flagged accounts) ──
   const filePath = `${RECEIPTS_DIR}/${encodeURIComponent(receiptId)}.json`;
   const url = `https://api.github.com/repos/${REPO}/contents/${filePath}?ref=${encodeURIComponent(BRANCH)}`;
 

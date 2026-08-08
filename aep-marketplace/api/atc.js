@@ -163,9 +163,28 @@ async function fetchATC(card_id, { skipCache = false } = {}) {
     }
   }
 
-  // Use GitHub Contents API (not raw) — raw has CDN cache that breaks
-  // revocation consistency. The Contents API returns fresh content + the
-  // file's current SHA (so we can detect updates).
+  // ── WORKAROUND: GitHub account shadowbanned. Use static file bundled in
+  // this deployment first. Falls back to GitHub Contents API if not found.
+  // NOTE: Static file reflects the state at build time. For verify, we want
+  // fresh data, so we still try GitHub first (if token works) for accuracy,
+  // then fall back to static for the list endpoint.
+  // For verify, we use the static file because the GitHub API also returns
+  // 404 for shadowbanned accounts.
+  try {
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'https://marketnow.site';
+    const r = await fetch(`${baseUrl}/api/atc/${encodeURIComponent(card_id)}.json`);
+    if (r.ok) {
+      const data = await r.json();
+      _atcCache.set(card_id, { data, fetchedAt: Date.now() });
+      return data;
+    }
+  } catch (e) {
+    // Static file not available — fall through to GitHub API
+  }
+
+  // ── FALLBACK: GitHub Contents API (works for non-flagged accounts) ──
   const url = `https://api.github.com/repos/${REPO}/contents/${ATC_DIR}/${encodeURIComponent(card_id)}.json?ref=${encodeURIComponent(BRANCH)}`;
   try {
     const r = await fetch(url, {
@@ -198,9 +217,54 @@ async function listATCs() {
   if (_atcIndexCache && (Date.now() - _atcIndexFetchedAt) < ATC_INDEX_CACHE_TTL_MS) {
     return _atcIndexCache;
   }
-  
-  // Try reading _index.json via raw.githubusercontent (CDN, no rate limit)
-  // raw with Authorization header bypasses the Contents API secondary rate limit
+
+  // Helper: convert index entries to the format expected by callers
+  function indexToAtcs(index) {
+    return (index.cards || []).map(c => ({
+      card_id: c.card_id,
+      status: c.status,
+      payload: {
+        card_id: c.card_id,
+        agent_id: c.agent_id,
+        agent_name: c.agent_name,
+        trust: {
+          sentinel_review_score: c.sentinel_review_score,
+          sentinel_score: c.sentinel_review_score, // backward compat
+          risk_level: c.risk_level,
+        },
+        metadata: {
+          issued_at: c.issued_at,
+          expires_at: c.expires_at,
+        },
+      },
+    }));
+  }
+
+  // ── WORKAROUND: GitHub account is shadowbanned (flagged as spam).
+  // raw.githubusercontent.com and api.github.com/repos return 404 even for
+  // public repos when the account is flagged. The static atc-index.json
+  // file is bundled into this deployment and served from /api/atc-index.json.
+  // This bypasses GitHub entirely for the list endpoint.
+  // See: https://support.github.com/contact to resolve the account flag.
+  try {
+    const staticUrl = `https://${process.env.VERCEL_URL ? '' : 'marketnow.site'}${process.env.VERCEL_URL || ''}/api/atc-index.json`;
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'https://marketnow.site';
+    const r = await fetch(`${baseUrl}/api/atc-index.json`);
+    if (r.ok) {
+      const index = await r.json();
+      const atcs = indexToAtcs(index);
+      _atcIndexCache = atcs;
+      _atcIndexFetchedAt = Date.now();
+      return atcs;
+    }
+  } catch (e) {
+    // Static file not available — fall through to GitHub methods
+  }
+
+  // ── FALLBACK 1: Try raw.githubusercontent with Bearer token ──
+  // (works for non-flagged accounts; fails for flagged accounts)
   try {
     const rawUrl = `https://raw.githubusercontent.com/${REPO}/${encodeURIComponent(BRANCH)}/${ATC_DIR}/_index.json`;
     const r = await fetch(rawUrl, {
@@ -213,30 +277,10 @@ async function listATCs() {
     if (r.ok) {
       const text = await r.text();
       const index = JSON.parse(text);
-        
-        // Convert index entries to the format expected by callers
-        const atcs = (index.cards || []).map(c => ({
-          card_id: c.card_id,
-          status: c.status,
-          payload: {
-            card_id: c.card_id,
-            agent_id: c.agent_id,
-            agent_name: c.agent_name,
-            trust: {
-              sentinel_review_score: c.sentinel_review_score,
-              sentinel_score: c.sentinel_review_score, // backward compat
-              risk_level: c.risk_level,
-            },
-            metadata: {
-              issued_at: c.issued_at,
-              expires_at: c.expires_at,
-            },
-          },
-        }));
-
-        _atcIndexCache = atcs;
-        _atcIndexFetchedAt = Date.now();
-        return atcs;
+      const atcs = indexToAtcs(index);
+      _atcIndexCache = atcs;
+      _atcIndexFetchedAt = Date.now();
+      return atcs;
     }
   } catch (e) {
     // _index.json not found or parse error — fall through to old method

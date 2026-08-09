@@ -1002,6 +1002,9 @@ export default async function handler(req, res) {
         if (!public_key || public_key.length < 10) {
           return res.status(400).json({
             error: 'public_key required (min 10 chars)',
+            example: {
+              agent_id: 'agent.example.myagent',
+              public_key: 'Ed25519 public key (SPKI PEM or base64 raw)',
               capabilities: ['search', 'recommend'],
               protocol_language: 'mcp',
               wallet_address: '0x...',

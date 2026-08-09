@@ -28,6 +28,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/trust-score",
+      "destination": "/api/atc?action=trust"
+    },
+    {
       "source": "/api/execute",
       "destination": "/api/agent-economy?_mode=execute"
     },

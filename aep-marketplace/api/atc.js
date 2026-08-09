@@ -457,6 +457,45 @@ export default async function handler(req, res) {
     // ─── GET handlers ──────────────────────────────────────────────────
 
     if (req.method === 'GET') {
+      // ── trust: compact trust score for install decisions ──
+      if (action === 'trust') {
+        const skillId = req.query?.skillId || searchParams.get('skillId');
+        if (!skillId) {
+          return res.status(200).json({
+            service: 'MarketNow Trust API',
+            description: 'Consume trust evidence without re-running the full audit. Agents query this before executing any tool.',
+            usage: 'GET /api/atc?action=trust&skillId=mn-real-xxx',
+            response_shape: {
+              trust_score: '0-10',
+              recommendation: 'safe_to_install | install_with_caution | do_not_install',
+              certificate_url: 'signed Sentinel certificate URL',
+              risk_level: 'low | medium | high | critical | not_audited',
+            },
+          });
+        }
+        try {
+          const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://marketnow.site';
+          const resp = await fetch(`${baseUrl}/api/skills-lite.json`);
+          const skills = await resp.json();
+          const skill = skills.find(s => s.id === skillId || s.slug === skillId);
+          if (!skill) return res.status(404).json({ error: 'Skill not found', skillId });
+          const score = skill.sentinel_score || 0;
+          const risk = skill.risk_level || 'not_audited';
+          let recommendation;
+          if (score >= 8) recommendation = 'safe_to_install';
+          else if (score >= 5) recommendation = 'install_with_caution';
+          else recommendation = 'do_not_install';
+          return res.status(200).json({
+            skill_id: skill.id, skill_name: skill.name,
+            trust_score: score, max_score: 10, risk_level: risk,
+            recommendation,
+            certificate_url: `https://marketnow.site/api/audit-skill?certificate=1&skillId=${skill.id}`,
+            layers_passed: { l15: true, l16: score > 0, l25: skill.l2_eligible || false, l3: false },
+            consume_note: 'This trust evidence was produced by Sentinel. Agents should consume this API instead of re-running the audit locally — saving tokens, CPU, and time.',
+          });
+        } catch (e) { return res.status(500).json({ error: 'Trust lookup failed', detail: e.message }); }
+      }
+
       // ── ca-key: return CA public key ──
       if (action === 'ca-key') {
         let pubPem;

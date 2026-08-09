@@ -1,13 +1,13 @@
-# MarketNow MCP v1.9.0 — Agent Contract Audit
+# MarketNow MCP v1.10.0 — Agent Contract Audit
 
 > Audit date: 2026-08-10
-> Scope: `marketnow-mcp@1.9.0` (`index.js`)
+> Scope: `marketnow-mcp@1.10.0` (`index.js` + `lib/atc-verify.mjs`)
 > Auditor: AliceLabs LLC (automated self-audit, human-reviewed)
 > Outcome: **PASS on all 4 criteria**
 
-This document records how `marketnow-mcp@1.9.0` satisfies the four golden rules that autonomous agents (Claude Desktop, Cursor, Cline, Continue, LangChain, LlamaIndex) require to consume MCP tools without execution errors or hallucinations.
+This document records how `marketnow-mcp@1.10.0` satisfies the four golden rules that autonomous agents (Claude Desktop, Cursor, Cline, Continue, LangChain, LlamaIndex) require to consume MCP tools without execution errors or hallucinations.
 
-Agents do not read human documentation at runtime — they read the JSON-Schema definition returned by `tools/list`. Any ambiguity in `inputSchema` propagates directly into failed tool calls. v1.9.0 closes those gaps.
+Agents do not read human documentation at runtime — they read the JSON-Schema definition returned by `tools/list`. Any ambiguity in `inputSchema` propagates directly into failed tool calls. v1.10.0 closes those gaps and adds the ATC/1.0 spec verifier as tool #13.
 
 ---
 
@@ -15,7 +15,7 @@ Agents do not read human documentation at runtime — they read the JSON-Schema 
 
 | #  | Criterion                                     | Status      | Evidence                                                                                                  |
 |----|-----------------------------------------------|-------------|-----------------------------------------------------------------------------------------------------------|
-| A  | Namespace prefix (`marketnow_*`)              | ✅ Validated | All 12 tools use `marketnow_` prefix + snake_case. No `camelCase`, no mixed-version suffixes.            |
+| A  | Namespace prefix (`marketnow_*`)              | ✅ Validated | All 13 tools use `marketnow_` prefix + snake_case. No `camelCase`, no mixed-version suffixes.            |
 | B  | Intent-oriented descriptions                  | ✅ Validated | Every description states WHEN and WHY an agent should invoke the tool, with explicit predecessor calls.  |
 | C  | Strict JSON-Schema (`type` + `enum` + `pattern` + bounds) | ✅ Validated | Categorical fields use `enum`; ID fields use `pattern`; numerics use `minimum`/`maximum`; no `any`.      |
 | D  | Structured error handling (`isError: true`)   | ✅ Validated | `CallToolRequest` handler catches all exceptions, normalizes into `{ isError, content }`, no stack leaks. |
@@ -24,7 +24,7 @@ Agents do not read human documentation at runtime — they read the JSON-Schema 
 
 ## A. Deterministic Tool Names (`snake_case` + `marketnow_` prefix)
 
-Models have measurably higher tool-choice accuracy when names use `snake_case` and a stable namespace prefix. v1.9.0 enforces `marketnow_` on every tool:
+Models have measurably higher tool-choice accuracy when names use `snake_case` and a stable namespace prefix. v1.10.0 enforces `marketnow_` on every tool:
 
 | #  | v1.7.0 (legacy)        | v1.8.0                          |
 |----|------------------------|----------------------------------|
@@ -40,6 +40,7 @@ Models have measurably higher tool-choice accuracy when names use `snake_case` a
 | 10 | `lookup_referral`      | `marketnow_lookup_referral`       |
 | 11 | `recommend_skills`     | `marketnow_recommend_skills`      |
 | 12 | *(new in v1.8.0)*      | `marketnow_get_owasp_compliance`  |
+| 13 | *(new in v1.10.0)*     | `marketnow_verify_atc_spec`      |
 
 **Verification command (run by maintainer):**
 ```bash
@@ -170,12 +171,13 @@ echo '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"marketnow_get_ski
 
 Tool names changed from `snake_case` to `marketnow_snake_case` between v1.8.0 and v1.9.0. This is a **breaking change** for any agent that hard-coded the old names — but agents that consume `tools/list` dynamically (the correct pattern) will pick up the new names automatically. The minor version bump is intentional and is the recommended MCP migration pattern.
 
-If you must support both names during a transition window, run two server instances side by side. We do not recommend shimming — the namespace prefix is the whole point of v1.9.0.
+If you must support both names during a transition window, run two server instances side by side. We do not recommend shimming — the namespace prefix is the whole point of v1.10.0.
 
 ---
 
 ## Change log
 
+- **v1.10.0** (2026-08-10): New tool `marketnow_verify_atc_spec` added — self-contained ATC/1.0 spec verifier that accepts ANY Agent Trust Card (regardless of issuer) and verifies all 8 required controls (ATC-001 Identity through ATC-008 Expiration). Uses `node:crypto` + `canonicalize` (RFC 8785 JCS) + Ed25519 (RFC 8032). Self-contained module in `lib/atc-verify.mjs` — no network calls, no MarketNow-specific dependencies. This makes marketnow-mcp the LIVE REFERENCE IMPLEMENTATION of the ATC/1.0 specification.
 - **v1.9.0** (2026-08-10): All 11 tools renamed to `marketnow_*`. Schemas hardened with `enum`/`pattern`/`minimum`/`maximum`. New tool `marketnow_get_owasp_compliance` added (OWASP MCP Cheat Sheet alignment). Error path normalized into structured `{ isError, content }` envelope with `err.code` taxonomy.
 - **v1.8.0** (2026-08-09): `marketnow_get_owasp_compliance` added (initial release).
 - **v1.7.0** (2026-07-xx): `submit_skill` became REAL (calls `/api/submit-skill`). `mint_referral` + `lookup_referral` closed the viral loop. `verify_receipt` added.

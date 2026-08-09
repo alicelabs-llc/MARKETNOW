@@ -1,26 +1,44 @@
 #!/usr/bin/env node
 /**
- * MarketNow MCP Server v1.9.0 — Agent Contract Hardening
+ * MarketNow MCP Server v1.10.0 — ATC/1.0 Spec Verifier
  * =======================================================
  *
  * Security Infrastructure for AI Agents.
  *
- * Tools exposed (12) — all use the `marketnow_` namespace prefix so MCP
+ * Tools exposed (13) — all use the `marketnow_` namespace prefix so MCP
  * clients (Claude Desktop, Cursor, Cline, Continue, LangChain, LlamaIndex)
  * can disambiguate them from other servers' tools at tool-choice time.
  *
- *   1. marketnow_search_skills        — keyword/category/price-bounded search
- *   2. marketnow_get_skill            — full skill detail by ID/slug
- *   3. marketnow_list_categories      — marketplace taxonomy with counts
- *   4. marketnow_get_manifest         — marketplace metadata + security metrics
- *   5. marketnow_get_install_command  — npx install command for a skill
- *   6. marketnow_verify_trust         — verify an Agent Trust Card (ATC)
- *   7. marketnow_verify_receipt       — verify a signed delivery proof (rcpt_)
- *   8. marketnow_submit_skill         — submit a GitHub repo (L1.5+L1.7 sync, L2 queued)
- *   9. marketnow_mint_referral        — mint ref_xxxxxxxx (5% commission)
- *  10. marketnow_lookup_referral      — referral stats (clicks, installs, earnings)
- *  11. marketnow_recommend_skills     — AI-ranked skill recommendations for a task
- *  12. marketnow_get_owasp_compliance — OWASP MCP Cheat Sheet compliance status
+ *   1. marketnow_search_skills         — keyword/category/price-bounded search
+ *   2. marketnow_get_skill             — full skill detail by ID/slug
+ *   3. marketnow_list_categories       — marketplace taxonomy with counts
+ *   4. marketnow_get_manifest          — marketplace metadata + security metrics
+ *   5. marketnow_get_install_command   — npx install command for a skill
+ *   6. marketnow_verify_trust          — verify an Agent Trust Card (ATC) on the MarketNow CA
+ *   7. marketnow_verify_receipt        — verify a signed delivery proof (rcpt_)
+ *   8. marketnow_submit_skill          — submit a GitHub repo (L1.5+L1.7 sync, L2 queued)
+ *   9. marketnow_mint_referral         — mint ref_xxxxxxxx (5% commission)
+ *  10. marketnow_lookup_referral       — referral stats (clicks, installs, earnings)
+ *  11. marketnow_recommend_skills      — AI-ranked skill recommendations for a task
+ *  12. marketnow_get_owasp_compliance  — OWASP MCP Cheat Sheet compliance status
+ *  13. marketnow_verify_atc_spec       — verify ANY ATC against the ATC/1.0 spec (NEW)
+ *
+ * v1.10.0 (August 2026) — ATC/1.0 Spec Verifier
+ *   - New tool: marketnow_verify_atc_spec — accepts ANY Agent Trust Card
+ *     (regardless of issuer — MarketNow Sentinel CA, a third-party CA, or a
+ *     self-signed test CA) and verifies ATC/1.0 conformance:
+ *       * ATC-001 Identity          (structural)
+ *       * ATC-002 Attestation        (structural + crypto)
+ *       * ATC-003 Capabilities       (structural + enum validation)
+ *       * ATC-004 Evidence           (structural)
+ *       * ATC-005 Risk               (structural + range)
+ *       * ATC-006 Signature          (Ed25519 + RFC 8785 JCS + SHA-256)
+ *       * ATC-007 Revocation         (structural — list fetch is opt-in)
+ *       * ATC-008 Expiration         (date window)
+ *   - This makes marketnow-mcp the LIVE REFERENCE IMPLEMENTATION of ATC/1.0.
+ *     Any agent that loads this MCP server can verify ATCs from any issuer.
+ *   - Self-contained verifier in lib/atc-verify.mjs (no external crypto deps
+ *     beyond node:crypto + canonicalize).
  *
  * v1.9.0 (August 2026) — Agent Contract Hardening
  *   - All 12 tools renamed to `marketnow_*` namespace prefix (was `search_skills`, etc.)
@@ -38,7 +56,7 @@
  * v1.7.0 (July 2026):   submit_skill became REAL; mint_referral + lookup_referral
  *                       closed the viral loop (5% commission); verify_receipt added.
  *
- * AGENT CONTRACT (v1.9.0) — see AUDIT.md in this package for the full checklist.
+ * AGENT CONTRACT (v1.10.0) — see AUDIT.md in this package for the full checklist.
  * The four golden rules enforced here:
  *   A. Tool names are deterministic snake_case with `marketnow_` prefix.
  *   B. Descriptions tell the agent WHEN to call, not WHAT the code does.
@@ -52,6 +70,9 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
+
+// ATC/1.0 spec verifier (NEW in v1.10.0)
+import { verifyATC as verifyATCSpec } from './lib/atc-verify.mjs';
 
 const API_BASE = 'https://marketnow.site/api';
 
@@ -407,7 +428,7 @@ async function recommendSkills(args) {
 const server = new Server(
   {
     name: 'marketnow',
-    version: '1.9.0',
+    version: '1.10.0',
   },
   {
     capabilities: {
@@ -687,6 +708,32 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         required: [],
       },
     },
+
+    // ── 13. ATC/1.0 Spec Verifier (NEW v1.10.0) ─────────────────────────
+    {
+      name: 'marketnow_verify_atc_spec',
+      description:
+        'Verify ANY Agent Trust Card (ATC) against the open ATC/1.0 specification — works regardless of issuer (MarketNow Sentinel CA, a third-party CA, or a self-signed test CA). Returns per-control pass/fail status for all 8 required controls (ATC-001 Identity, ATC-002 Attestation, ATC-003 Capabilities, ATC-004 Evidence, ATC-005 Risk, ATC-006 Signature, ATC-007 Revocation, ATC-008 Expiration). Use this BEFORE trusting an ATC from any source — the verifier is self-contained (does not call MarketNow servers) and uses node:crypto + RFC 8785 JCS canonical JSON + Ed25519 (RFC 8032) per the spec. This tool makes marketnow-mcp the LIVE REFERENCE IMPLEMENTATION of ATC/1.0.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          atc: {
+            type: 'object',
+            description: 'The complete ATC JSON document to verify. Must include spec_version="ATC/1.0", card_id (pattern: ATC-YYYY-NNNNNNN), issuer, identity, attestation (with subject_public_key, signature, signed_payload_hash), capabilities (5 categories: filesystem/network/shell/credentials/process), evidence, risk (with trust_score 0-10), revocation, and validity (with issued_at, expires_at, max_ttl_days). Pass the entire ATC envelope as received from the issuing CA.',
+          },
+          ca_public_key: {
+            type: 'string',
+            description: 'Optional override for the CA public key (base64 SPKI). If omitted, the verifier uses atc.issuer.ca_public_key. Use this when you have an out-of-band trusted CA key and want to detect CA substitution attacks.',
+          },
+          fetch_revocation: {
+            type: 'boolean',
+            description: 'If true, indicates the caller wants revocation list fetch attempted. NOTE: this verifier does not perform network calls — it only checks the structural fields. The caller MUST fetch the revocation list at atc.revocation.revocation_check_url separately if revocation_check_required=true.',
+            default: false,
+          },
+        },
+        required: ['atc'],
+      },
+    },
   ],
 }));
 
@@ -733,8 +780,27 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       case 'marketnow_get_owasp_compliance':
         result = await fetchOwaspCompliance();
         break;
+      case 'marketnow_verify_atc_spec': {
+        // ATC/1.0 spec verifier — accepts ANY ATC, not just MarketNow ones.
+        // Self-contained: no network calls. Uses node:crypto + canonicalize.
+        if (!args || typeof args !== 'object' || !args.atc) {
+          const err = new Error('marketnow_verify_atc_spec requires an `atc` argument (the complete ATC JSON document)');
+          err.code = 'INVALID_ARGUMENT';
+          throw err;
+        }
+        if (typeof args.atc !== 'object' || Array.isArray(args.atc) || args.atc === null) {
+          const err = new Error('marketnow_verify_atc_spec: `atc` must be an object (the ATC envelope)');
+          err.code = 'INVALID_ARGUMENT';
+          throw err;
+        }
+        result = verifyATCSpec(args.atc, {
+          ca_public_key: args.ca_public_key,
+          fetch_revocation: args.fetch_revocation === true,
+        });
+        break;
+      }
       default: {
-        const err = new Error(`Unknown tool: ${name}. Valid tools are 12 marketnow_* names — see ListTools.`);
+        const err = new Error(`Unknown tool: ${name}. Valid tools are 13 marketnow_* names — see ListTools.`);
         err.code = 'UNKNOWN_TOOL';
         throw err;
       }
@@ -782,4 +848,4 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 // ─── Start server ───────────────────────────────────────────────────────────
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error('MarketNow MCP Server v1.9.0 running on stdio (12 tools, marketnow_* namespace)');
+console.error('MarketNow MCP Server v1.10.0 running on stdio (13 tools, marketnow_* namespace, ATC/1.0 spec verifier)');

@@ -1,359 +1,125 @@
-[![GitHub stars](https://img.shields.io/github/stars/edgarfloresguerra2011-a11y/marketnow?style=social)](https://github.com/edgarfloresguerra2011-a11y/marketnow)
+# MarketNow — Security Infrastructure for AI Agents
+
+> **MarketNow doesn't sell AI tools. It determines whether AI agents should be allowed to trust and execute them.**
+
+[![npm version](https://img.shields.io/npm/v/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
 [![npm downloads](https://img.shields.io/npm/dw/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/LICENSE)
-[![Sentinel L2.5](https://img.shields.io/badge/Sentinel-L2.5%20gVisor%20sandbox-00F299)](https://marketnow.site/security)
+[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
 
-# MarketNow — Trust Layer for Agent Commerce
+## What is MarketNow?
 
-> ⭐ **If MarketNow is useful to you, please star the repo. It helps other developers discover it.**
+MarketNow is **security infrastructure for AI agents**. Not a marketplace.
 
-> **7,063 MCP servers. Each Sentinel-audited with 6 layers (L1.5 → L2.5 gVisor sandbox). Signed SHA-256 certificates. Public verification at marketnow.site/verify.**
+The marketplace (9,248 MCP skills, all free) is distribution. The product is **Sentinel** — a 10-layer security audit pipeline that determines whether AI agents should be allowed to trust and execute tools.
 
-<!-- CANONICAL METADATA — for crawlers and directories that scrape this README.
-     If you are maintaining an external directory listing for MarketNow,
-     use these values as the source of truth. Last updated: 2026-07-06. -->
+## Products
 
-| Field | Value |
-|---|---|
-| **Name** | MarketNow |
-| **Tagline** | Trust layer for agent commerce — every skill Sentinel-certified |
-| **Description** | MarketNow is the first MCP marketplace with security certification. Every one of 7,063 MCP servers is audited by Sentinel (6-layer pipeline: L1.5 metadata + L1.6 Semgrep/secrets/OSV + L2 active probe + L2.5 gVisor sandbox) and gets a signed SHA-256 certificate, publicly verifiable at marketnow.site/verify. B2B pricing: Community (Free) / Team ($99/mo) / Enterprise (Custom). AliceLabs LLC proprietary, maintained by AliceLabs LLC (Wyoming, USA). |
-| **Total skills** | 7,063 |
-| **Certified skills** | 7,063 (100%) |
-| **Free skills** | 65 |
-| **Categories** | 23 |
-| **Pricing** | B2B: Community (Free) / Team ($99/mo, COMING SOON) / Enterprise (Custom) |
-| **Payment methods** | Stripe (credit card) + USDC on Base |
-| **Languages** | EN, ES, ZH, PT, FR |
-| **License** | AliceLabs LLC Proprietary |
-| **Maintainer** | AliceLabs LLC (Wyoming, USA) — founder Edison Flores |
-| **MCP server** | `npx -y marketnow-mcp` |
-| **npm** | https://www.npmjs.com/package/marketnow-mcp |
-| **GitHub** | https://github.com/edgarfloresguerra2011-a11y/marketnow |
-| **Website** | https://marketnow.site |
-| **Verify certificate** | https://marketnow.site/verify |
-| **Transparency dashboard** | https://marketnow.site/sentinel-transparency |
-| **API docs** | https://marketnow.site/api/agent.json |
-| **Standards** | x402 (implementing), AP2 (implementing), MCP Server Cards (monitoring) |
-| **Sentinel layers** | L1.5 (6 metadata checks) + L1.6 (18 Semgrep rules + 18 secret patterns + OSV API) + L2 v2.0 (active MCP probe, 60+ adversarial inputs) + L2.5 (gVisor sandbox: --runtime=runsc, userspace kernel) + L3 (Firecracker microVM, Q1 2027) + L4 (supply chain attestation, Q4 2026) + L5 (third-party audit, Q3 2027) |
+### Sentinel — AI Agent Security Engine
+10-layer audit pipeline:
 
-<!-- END CANONICAL METADATA -->
+| Layer | What it does | Type |
+|-------|-------------|------|
+| L1.5 | Metadata analysis (auth, CORS, OAuth, rate limiting) | Static |
+| L1.6 | Semgrep rules + secret detection + OSV dependency scan | Static |
+| L1.7 | Malware pattern detection (binary launchers, install scripts) | Static |
+| L1.8 | Malware family signatures (48 YARA-equivalent rules) | Static |
+| L1.9 | Prompt injection screening (32 rules, 10 categories) | Static |
+| L2.5 | gVisor sandbox (network=none, read-only, cap-drop ALL) | Dynamic |
+| L3 | Runtime MCP Interceptor (real-time JSON-RPC guardrail) | Runtime |
+| ATC | Agent Trust Card (Ed25519 signed, RFC 8785 JCS) | Identity |
+| x402 | Streaming metered billing ($0.01 USDC per call on Base) | Payment |
+| A2A | Remote agent execution | Execution |
 
-[![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/LICENSE)
-[![Sentinel Certified](https://img.shields.io/badge/🛡️_Sentinel-Certified%208%2C582-00F299)](https://marketnow.site/sentinel-transparency)
+### Trust Card — Cryptographically verifiable identity
+- Ed25519 signatures (RFC 8032)
+- RFC 8785 JCS canonical JSON
+- Public CA key: `GET https://marketnow.site/api/atc?action=ca-key`
+- Verify any card: `GET https://marketnow.site/api/atc?action=verify&card_id=ATC-2026-XXXXX`
 
-## 🤖 What is MarketNow?
+### Interceptor — Real-time JSON-RPC guardrail
+5 policy rules:
+- Block reads of `.env`, `.aws/credentials`, `.ssh/id_rsa`
+- Block dangerous commands (`rm -rf`, `DROP TABLE`, `mkfs`)
+- Block process spawns (`exec`, `spawn`, `child_process`)
+- Block system writes (`/etc/`, `/root/`, `C:\Windows`)
+- Warn on non-allowlisted network calls
 
-MarketNow is the open marketplace for MCP-compatible agent skills. It allows any agent (Claude Desktop, Cursor, Cline, VS Code) to search, discover, and install **Sentinel-certified** skills via the Model Context Protocol.
-
-**The code is open source. What you pay for is trust, certification, and integration.**
-
-## 🛡️ Sentinel Certification
-
-Every skill in MarketNow is audited by Sentinel, a 6-layer security pipeline:
-
-### L1.5 — Metadata Checks (real-time, ~200ms on Vercel)
-- AUTH (does the server require authentication?)
-- Tool description injection (prompt injection patterns)
-- Input validation (fs/db/http access detection)
-- CORS policy
-- OAuth scopes
-- Rate limiting + error leakage
-
-### L1.6 — Static Analysis (real-time + weekly batch)
-- 18 Semgrep-equivalent rules (prompt injection, command injection, SSRF, path traversal, tool forgery)
-- 18 secret patterns (Stripe, AWS, GitHub, JWT, private keys, wallet mnemonics)
-- OSV API real-time dependency vulnerability check
-
-### L2 v2.0 — Active MCP Probe + Docker Sandbox (async via GitHub Actions)
-
-L2.5 adds gVisor (runsc) userspace kernel isolation on top of Docker. The MCP server never touches the host kernel.
-Runs the actual MCP server in isolation:
 ```bash
-docker run --rm \
-  --network none \
-  --read-only \
-  --cap-drop ALL \
-  --security-opt no-new-privileges \
-  --memory 256m --cpus 0.5 \
-  mcp-audit-target
-```
-Analyzes stdout for: network attempts, fs writes, process spawns, credential leakage, crashes, dynamic imports.
-
-### Results (live at [marketnow.site/sentinel-transparency](https://marketnow.site/sentinel-transparency))
-
-| Risk Level | Count | Score |
-|---|---|---|
-| Low | 6 | 10/10 |
-| Medium | 8,473 | 6-9/10 |
-| High | 92 | 2-4/10 |
-| Critical | 11 | 0-1/10 |
-
-**L2 coverage**: 206 of 7,063 skills have L2.5 gVisor sandbox results. The remaining 8,558 are certified with L1.5+L1.6 (static analysis). L2 coverage grows weekly via automated GitHub Actions.
-
-Each skill gets a **signed SHA-256 certificate** with:
-- `certificate_id` (MN-SC-2026-XXXXXXX)
-- `overall_score` (0-10)
-- `risk_level` (low/medium/high/critical)
-- 7-day validity (regenerated weekly by GitHub Actions cron)
-
-**Verify any certificate**: https://marketnow.site/verify
-**Transparency dashboard**: https://marketnow.site/sentinel-transparency
-**All certificates**: [_data/sentinel_certificates/](./_data/sentinel_certificates/)
-
-### Markdown Badges
-
-Skill authors can embed a certified badge in their READMEs:
-```markdown
-[![Sentinel Certified](https://marketnow.site/badges/sentinel-certified-mn-gen-00003.svg)](https://marketnow.site/skill/mn-gen-00003)
+curl -X POST https://marketnow.site/api/interceptor \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"execute","arguments":{"command":"rm -rf /"}}}'
+# → {"allowed": false, "decision": "block"}
 ```
 
-## 📊 Stats
+### Trust API — Machine-readable trust decisions
+```bash
+curl https://marketnow.site/api/trust-score?skillId=mn-gen-00003
+# → {"trust_score": 8, "recommendation": "safe_to_install"}
+```
+
+## Stats (all verified real)
 
 | Metric | Value |
-|---|---|
-| Total skills | 7,063 |
-| Certified skills | 7,063 (100%) |
-| Categories | 61 |
-| Free skills | 65 |
-| L2.5 sandbox runs | 206 |
-| Languages | EN, ES, ZH, PT, FR |
-| MCP server tools | 5 |
+|--------|-------|
+| MCP skills catalogued | 9,248 |
+| Audited by Sentinel | 5,662 |
+| gVisor sandbox runs | 257 |
+| Agent Trust Cards issued | 57 |
+| CA algorithm | Ed25519 (RFC 8032) |
+| npm packages | marketnow-mcp v1.8.0, marketnow-install-stack v1.1.0 |
 
-## 🚀 Quick Start
+## Quick start
 
-### Install MCP Server (Claude Desktop, Cursor, Cline)
-
-```json
-{
-  "mcpServers": {
-    "marketnow": {
-      "command": "npx",
-      "args": ["-y", "marketnow-mcp"]
-    }
-  }
-}
+### Install MCP server
+```bash
+npx -y marketnow-mcp
 ```
 
-Now your agent can:
-- Search 7,063 certified skills by query, category, or language
-- Get full skill details with system prompts and Sentinel security reports
-- Verify any skill's signed certificate
-- Get install commands for any skill
-
-### Verify a Certificate
-
+### Install a skill stack
 ```bash
-# Check any skill's certificate via API
-curl "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00003" | jq
-
-# Or verify visually at:
-# https://marketnow.site/verify?skillId=mn-gen-00003
+npx -y marketnow-install-stack security-analyst
+npx -y marketnow-install-stack dev-productivity
 ```
 
-### Search Skills
-
+### Check trust score
 ```bash
-# Search for web scrapers
-curl "https://marketnow.site/api/search?q=scrape" | jq
-
-# Search in Chinese
-curl "https://marketnow.site/api/search?q=数据库&language=zh" | jq
+curl https://marketnow.site/api/trust-score?skillId=mn-gen-00003
 ```
 
-## 💰 Business model — Sentinel subscriptions for sellers, free marketplace for everyone else
-
-**MarketNow does NOT sell skills.** We administer a free marketplace of 7,063 MCP servers. All skills are free to install and use.
-
-**Our revenue comes from sellers** who want to list/sell THEIR skills on MarketNow. They subscribe to Sentinel (the security audit pipeline) and we take a commission on each sale.
-
-### Seller tiers (Sentinel subscriptions)
-
-| Tier | Price | Max skills | Includes |
-|---|---|---|---|
-| **FREE** | $0 | 3 | Basic Sentinel L1 scan, standard review queue (24-48h) |
-| **PRO** | $9.99/mo | 25 | Priority Sentinel scan (<6h), featured badge, analytics dashboard |
-| **ENTERPRISE** | $49.99/mo | unlimited | Instant Sentinel scan (<1h), API access, dedicated account manager, custom commission |
-
-### Add-ons
-
-- **Featured Listing** — $4.99 / 30 days (boost in search results)
-- **Verified Seller Badge** — $19.99 one-time (KYC verification, ✓ badge)
-- **Priority Review** — $2.99 / skill (skip queue, <6h review)
-- **Storage fee** — $0.50/skill/month after 3 skills (FREE tier only)
-
-### Commission on sales
-
-| Party | Share |
-|---|---|
-| Seller | 80% |
-| MarketNow | 20% (15% if affiliate is used) |
-| Affiliate | 5% (deducted from MarketNow's share) |
-
-### Affiliate program
-
-5% commission on every sale you refer. Monthly payouts via Stripe Connect (min $50 threshold).
-
-**Sign up as a seller:** https://marketnow.site/submit
-
-## 📡 Public API (no auth required)
-
-| Endpoint | Description |
-|---|---|
-| `GET /api/skills.json` | All 7,063 skills (bulk download) |
-| `GET /api/search?q=query` | Server-side search with relevance scoring |
-| `GET /api/free-skills.json` | 65 free skills |
-| `GET /api/categories.json` | 61 categories with counts |
-| `GET /api/manifest.json` | Marketplace metadata |
-| `GET /api/agent.json` | Machine-readable agent instructions |
-| `POST /api/audit-skill` | Run Sentinel L1.5+L1.6+L2+L2.5 real-time audit |
-| `GET /api/audit-skill?certificate=1&skillId=X` | Retrieve signed Sentinel certificate |
-| `GET /api/audit-skill?sentinel-status=1` | Aggregate Sentinel status (batch audit + L2 coverage + certified count) |
-| `GET /api/verify-purchase?sessionId=X` | Verify a Stripe purchase |
-| `GET /.well-known/mcp/server-card.json` | MCP server discovery |
-
-## 🔧 MCP Server Tools (v1.7.0 — 11 tools)
-
-| Tool | Description |
-|---|---|
-| `search_skills` | Search by query, category, language |
-| `get_skill` | Get full details (system prompt, sentinel, setup) |
-| `list_categories` | List all 61 categories |
-| `get_manifest` | Marketplace metadata |
-| `get_install_command` | Get npx install command |
-| `verify_trust` | Verify an Agent Trust Card (ATC) — schema v1.1.0 |
-| `verify_receipt` | Verify a signed delivery proof (action-receipt) — NEW v1.6.0 |
-| `submit_skill` | REAL submission — runs L1.5+L1.7 sync, queues L2 audit — NEW v1.7.0 |
-| `mint_referral` | Mint a unique ref code (5% commission on referred purchases) — NEW v1.7.0 |
-| `lookup_referral` | Check referral stats (clicks, installs, purchases, total earned) — NEW v1.7.0 |
-| `recommend_skills` | AI-powered skill recommendations for any task |
-
-## 🔁 Viral Loop (now real, was theoretical before v1.7.0)
-
-The "agent magnet" is now technically real:
-
-1. **Agent A** calls `mint_referral(agent_id)` → gets `ref_xxxxxxxx`
-2. **Agent A** shares `ref_xxxxxxxx` with **Agent B**
-3. **Agent B** calls `agent-purchase` with `ref_code=ref_xxxxxxxx`
-4. `/api/agent-purchase` credits **Agent A** 5% commission
-5. **Agent A** checks stats with `lookup_referral(ref_code)`
-
-Network effect: more agents → more ref codes → more purchases → more agents.
-
-Any agent can also call `submit_skill(repo_url)` to submit a GitHub repo. The flow:
-- L1.5 metadata checks (sync) → score 0-10
-- L1.7 malware pattern check (sync) → blocks typosquats
-- L2 Docker sandbox audit (queued, ~1h via GitHub Actions)
-- If L2 passes (score ≥ 7) → skill is promoted to catalog + gets an ATC
-- Submission persisted to public GitHub ledger (`_data/pending_submissions/`)
-
-Real example (live on production):
+### Test the interceptor
 ```bash
-# Mint a referral
-curl -X POST https://marketnow.site/api/referrals \
+curl -X POST https://marketnow.site/api/interceptor \
   -H "Content-Type: application/json" \
-  -d '{"action": "mint", "agent_id": "agent_claude_001"}'
-# → {"ref_code": "ref_d5444f97", "share_url": "..."}
-
-# Submit a real MCP server
-curl -X POST https://marketnow.site/api/submit-skill \
-  -H "Content-Type: application/json" \
-  -d '{"repo_url": "https://github.com/modelcontextprotocol/servers"}'
-# → {"submission_id": "sub_bo0fi7kjty3p", "l15_score": 10, "l2_status": "queued"}
-
-# Check submission status
-curl "https://marketnow.site/api/submit-skill?submission_id=sub_bo0fi7kjty3p"
+  -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"read_file","arguments":{"path":"/.env"}}}'
 ```
 
-## 🔗 Links
+## Pricing
 
-- **Website**: https://marketnow.site
-- **Submit your MCP server (FREE)**: https://marketnow.site/submit
-- **🏆 Free MCP Security Challenge**: [issue #23](https://github.com/edgarfloresguerra2011-a11y/marketnow/issues/23)
-- **Verify a certificate**: https://marketnow.site/verify
-- **Verify an ATC**: https://marketnow.site/api/atc?action=verify&card_id=ATC-2026-7777670
-- **Verify a Vibe receipt (mutual hop)**: https://marketnow.site/api/atc?action=verify-vibe-receipt
-- **ATC spec**: https://marketnow.site/api/atc?action=spec
-- **Transparency dashboard**: https://marketnow.site/sentinel-transparency
-- **Security details**: https://marketnow.site/security
-- **npm**: https://www.npmjs.com/package/marketnow-mcp
-- **Smithery**: https://smithery.ai/servers/alicelabs/marketnow
-- **OpenAPI**: https://marketnow.site/api/openapi.json
-- **Agent instructions**: https://marketnow.site/api/agent.json
-- **Blog (mutual hop)**: https://dev.to/edison_flores_6d2cd381b13/two-agent-trust-systems-zero-merged-code-the-marketnow-vibe-mutual-hop-3a8n
-- **Blog (free challenge)**: https://dev.to/edison_flores_6d2cd381b13/free-mcp-security-challenge-submit-your-server-get-a-10-layer-audit
+| Tier | Price | Features |
+|------|-------|----------|
+| Free | $0 | Basic scan, trust score, public report |
+| Developer | $49-99 | Deep audit, signed report |
+| Professional | $199-499 | Runtime testing, Trust Card, re-audit |
+| Continuous | $99-499/mo | Monitoring, CVE tracking, auto re-audit |
+| Enterprise | $5k-50k+/yr | Private audits, API, SLA |
 
-## 🆓 Everything is Free
+## Links
 
-| Feature | Price |
-|---------|-------|
-| All 9,248 skills | $0 |
-| 10-layer security audit | $0 |
-| Agent Trust Card (ATC) | $0 |
-| Action-receipts | $0 |
-| Referral tracking | $0 |
-| MCP server (11 tools) | $0 |
-| API endpoints | $0 |
-| Catalog listing | $0 |
-| Submit your server | $0 |
-| L2 Docker sandbox audit | $0 |
-| Vibe cross-verification | $0 |
+- **Website:** https://marketnow.site
+- **GitHub:** https://github.com/edgarfloresguerra2011-a11y/marketnow
+- **npm:** https://www.npmjs.com/package/marketnow-mcp
+- **MCP Server:** `npx -y marketnow-mcp`
+- **Trust API:** https://marketnow.site/api/trust-score
+- **Interceptor:** https://marketnow.site/api/interceptor
+- **ATC Spec:** https://marketnow.site/api/atc?action=spec
+- **CA Public Key:** https://marketnow.site/api/atc?action=ca-key
 
-**No payment required for anything in the marketplace.** Revenue comes from Sentinel subscriptions for sellers who want priority audits, analytics, and SOC2 mapping — not from buyers who need trust.
+## License
 
-## 📜 License & IP Protection
+AL code in this repository is PROPRIETARY — property of AliceLabs LLC.
 
-**ALL code in this repository is PROPRIETARY — property of AliceLabs LLC.**
+For licensing: legal@alicelabs.site
+For support: support@alicelabs.site
+General: info@alicelabs.site
 
-| Component | License | Can copy? | Can build competing product? | Can commercialize? |
-|-----------|---------|-----------|------------------------------|-------------------|
-| **Marketplace code** (UI, API, search) | AliceLabs LLC Proprietary | ❌ No | ❌ No | ❌ Requires written permission |
-| **Sentinel audit engine** | AliceLabs LLC Proprietary | ❌ No | ❌ No | ❌ Requires written permission |
-| **Sentinel badges** (SVG) | CC-BY 4.0 (display only) | ✅ Display only | ❌ No | ❌ No |
-| **"Sentinel" name & logo** | Trademark™ AliceLabs LLC | ❌ No | ❌ No | ❌ No |
-| **"MarketNow" name** | Trademark™ AliceLabs LLC | ❌ No | ❌ No | ❌ No |
-
-**Anyone who wants to commercialize, redistribute, or build upon any part of this codebase MUST obtain written permission from AliceLabs LLC.**
-
-See:
-- [LICENSE](./LICENSE) — Full license terms (Proprietary)
-- [SENTINEL-LICENSE](./SENTINEL-LICENSE) — Sentinel proprietary license terms
-- [TRADEMARK_NOTICE](./TRADEMARK_NOTICE) — Trademark usage guidelines
-- [CLA](./CLA) — Contributor License Agreement
-
-**Patent pending** on the 6-layer audit pipeline design (L1.5 → L1.6 → L2 → L2.5 → L3 → L4 → L5).
-
-For licensing inquiries: **legal@alicelabs.site**
-For support: **support@alicelabs.site**
-General inquiries: **info@alicelabs.site**
-
-Report IP violations: **legal@alicelabs.site**
-
----
-
-**Built for autonomous agents. Every skill has a signed Sentinel certificate, a ready-to-use system prompt, and auto-configured install. ALL code is proprietary property of AliceLabs LLC. Commercial use requires written permission.**
-
-## 🤝 Contributing
-
-We need help! All contributions are welcome — code, security research, translations, docs.
-
-**Good first issues:** https://github.com/edgarfloresguerra2011-a11y/marketnow/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
-
-**Contributing guide:** [CONTRIBUTING.md](./CONTRIBUTING.md)
-
-**Roadmap:** [ROADMAP.md](./ROADMAP.md)
-
-### Contributors
-
-- [@rushabdev](https://github.com/AmitabhainArunachala) — pro bono peer review (11 findings fixed)
-- [@mario-andreschak](https://github.com/mario-andreschak) — reported the prospector trojan (#9)
-- [@Sravan1011](https://github.com/Sravan1011) — AutoGen integration (in progress)
-- [@Correctover](https://github.com/Correctover) — L3 runtime monitoring feedback
-- [@wrencalloway](https://github.com/wrencalloway) — runtime trust gap analysis
-- [@mads_hansen](https://dev.to/mads_hansen_27b33ebfee4c9) — provenance + runtime security feedback
-- [@anp2network](https://dev.to/anp2network) — canonicalization bug report
-- [@0xbrainkid](https://github.com/0xbrainkid) — pluggable trust policy design
-- [@mayank609](https://github.com/mayank609) — runtime behavior monitoring feedback
-
-Want your name here? Open a PR.
+Built by AliceLabs LLC (Wyoming, USA) — founder Edison Flores.

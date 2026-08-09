@@ -118,3 +118,64 @@ export default async function handler(req, res) {
     });
   }
 }
+
+// ─── Also handle /api/recommend via POST ───
+// This consolidates recommend.js into search.js to stay under 12 lambdas
+export async function recommendHandler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  const body = req.body || {};
+  const { current_tools = [], agent_type = 'general' } = body;
+
+  try {
+    const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://marketnow.site';
+    const skillsResp = await fetch(`${baseUrl}/api/skills-lite.json`);
+    const skills = await skillsResp.json();
+
+    // Simple recommendation: skills that complement current_tools
+    const toolNames = current_tools.map(t => t.toLowerCase());
+    const recommended = skills
+      .filter(s => !toolNames.includes((s.name || '').toLowerCase()))
+      .filter(s => {
+        if (agent_type === 'coding') return ['Developer Tools', 'AI/ML', 'Web/API'].includes(s.category);
+        if (agent_type === 'data') return ['Data', 'Analytics', 'AI/ML'].includes(s.category);
+        if (agent_type === 'security') return ['Security', 'Developer Tools'].includes(s.category);
+        return true;
+      })
+      .sort((a, b) => (b.sentinel_score || 0) - (a.sentinel_score || 0))
+      .slice(0, 10)
+      .map(s => ({
+        id: s.id,
+        name: s.name,
+        category: s.category,
+        description: (s.description || '').slice(0, 200),
+        sentinel_score: s.sentinel_score || 0,
+        risk_level: s.risk_level || 'unknown',
+      }));
+
+    res.status(200).json({ recommended, agent_type, based_on: current_tools });
+  } catch (err) {
+    res.status(500).json({ error: 'Recommendation failed', detail: err.message });
+  }
+}
+
+// ─── Also handle /api/skills/{id} for skill detail ───
+export async function skillDetailHandler(req, res) {
+  const { id } = req.query;
+  if (!id) return res.status(400).json({ error: 'Skill ID required' });
+
+  try {
+    const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://marketnow.site';
+    const skillsResp = await fetch(`${baseUrl}/api/skills-lite.json`);
+    const skills = await skillsResp.json();
+    const skill = skills.find(s => s.id === id) || skills.find(s => s.slug === id);
+
+    if (!skill) return res.status(404).json({ error: 'Skill not found', id });
+
+    res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=600');
+    res.status(200).json(skill);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch skill', detail: err.message });
+  }
+}

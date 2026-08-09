@@ -1,7 +1,7 @@
 {
   "name": "MarketNow Skills API",
-  "version": "2.0.0",
-  "description": "Open marketplace for AI agent skills — MCP compatible. Every skill has a real description from its source repository.",
+  "version": "5.0.0",
+  "description": "Security infrastructure for AI agents. Sentinel audits MCP servers and agent tools, produces security evidence and trust scores.",
   "base_url": "https://www.marketnow.site/api",
   "total_skills": 9248,
   "categories_count": 16,
@@ -17,5 +17,8 @@
     "by_tag": "Filter client-side: skills.filter(s => s.tags.includes('mcp'))",
     "search": "Filter client-side: skills.filter(s => s.name.toLowerCase().includes(query))"
   },
-  "generated_at": "2026-08-09T01:58:57.634Z"
+  "generated_at": "2026-08-09T01:58:57.634Z",
+  "positioning": "Security infrastructure \u2014 not a marketplace. The marketplace is distribution; Sentinel is the product.",
+  "free_skills": 9248,
+  "audited": 9238
 }

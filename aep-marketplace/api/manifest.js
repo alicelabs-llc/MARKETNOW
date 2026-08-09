@@ -1,166 +1,92 @@
-// MarketNow — Enhanced Agent Manifest
-// GET /api/manifest — returns all agent-discoverable endpoints in one call
-// Agents fetch this ONCE to discover everything MarketNow offers
+import { setCorsHeaders } from '../lib/cors.mjs';
 
-import { secureLight } from '../lib/secure.mjs';
-
-export default secureLight(async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=600');
+export default async function handler(req, res) {
+  setCorsHeaders(req, res);
 
   res.status(200).json({
     service: 'MarketNow',
-    version: '4.0.0',
-    description: 'Trust layer for agent commerce. 9,248 MCP servers, each security-audited by Sentinel (10-layer pipeline). Agent Trust Cards (ATC) for agent identity verification.',
+    version: '5.0.0',
+    description: 'Security infrastructure for AI agents. Sentinel audits MCP servers and agent tools, produces security evidence and trust scores, and enables agents and organizations to determine which tools are safe to use.',
+    positioning: 'Security infrastructure for AI agents — not a marketplace. The marketplace is distribution; Sentinel is the product.',
     homepage: 'https://marketnow.site',
     
-    // Agent connection methods
+    products: {
+      sentinel: {
+        name: 'Sentinel',
+        tagline: 'AI Agent Security Engine',
+        description: '10-layer security audit pipeline for MCP servers and agent tools',
+        layers: [
+          { id: 'L1.5', name: 'Metadata Analysis', type: 'static' },
+          { id: 'L1.6', name: 'Semgrep + Secrets + OSV', type: 'static' },
+          { id: 'L1.7', name: 'Malware Pattern Detection', type: 'static' },
+          { id: 'L1.8', name: 'Malware Family Signatures (48)', type: 'static' },
+          { id: 'L1.9', name: 'Prompt Injection Screening (32 rules)', type: 'static' },
+          { id: 'L2.5', name: 'gVisor Sandbox Isolation', type: 'dynamic' },
+          { id: 'L3', name: 'Runtime MCP Interceptor', type: 'runtime' },
+          { id: 'ATC', name: 'Agent Trust Card (Ed25519)', type: 'identity' },
+          { id: 'x402', name: 'Streaming Metered Billing', type: 'payment' },
+          { id: 'A2A', name: 'Remote Agent Execution', type: 'execution' },
+        ],
+      },
+      trust_card: {
+        name: 'Trust Card',
+        tagline: 'Cryptographically verifiable security identity for AI tools',
+        algorithm: 'Ed25519 (RFC 8032)',
+        canonical_json: 'RFC 8785 JCS',
+        verify_endpoint: 'GET /api/atc?action=verify&card_id=ATC-2026-XXXXX',
+        ca_key_endpoint: 'GET /api/atc?action=ca-key',
+      },
+      interceptor: {
+        name: 'MCP Interceptor',
+        tagline: 'Real-time JSON-RPC guardrail',
+        endpoint: 'POST /api/interceptor',
+        rules: 5,
+        actions: ['allow', 'block', 'warn'],
+      },
+    },
+
+    pricing: {
+      free: { price: 0, features: ['Basic Sentinel scan', 'Trust score', 'Public report', 'Public listing'] },
+      developer: { price: '$49-99', features: ['Deep static analysis', 'Dependency analysis', 'Malware scan', 'Prompt injection', 'Sandbox', 'Signed report'] },
+      professional: { price: '$199-499', features: ['Deep audit', 'Runtime testing', 'Remediation', 'Trust Card', 'Re-audit'] },
+      continuous: { price: '$99-499/month', features: ['Continuous monitoring', 'CVE tracking', 'Dependency drift', 'Auto re-audit', 'Trust score updates'] },
+      enterprise: { price: '$5k-50k+/year', features: ['Private MCP audits', 'Custom policies', 'Compliance evidence', 'API', 'Dashboards', 'SLA'] },
+    },
+
     connect: {
-      mcp_stdio: {
-        command: 'npx -y marketnow-mcp',
-        npm: 'https://www.npmjs.com/package/marketnow-mcp',
-      },
-      mcp_http: {
-        url: 'https://marketnow.site/api/mcp',
-        transport: 'SSE + JSON-RPC',
-        protocol_version: '2024-11-05',
-      },
-      rest_api: {
-        base_url: 'https://marketnow.site/api',
-        openapi: 'https://marketnow.site/api/openapi.yaml',
-      },
+      mcp_stdio: { command: 'npx -y marketnow-mcp', npm: 'https://www.npmjs.com/package/marketnow-mcp' },
+      mcp_http: { url: 'https://marketnow.site/api/mcp', transport: 'SSE + JSON-RPC', protocol_version: '2024-11-05' },
+      rest_api: { base_url: 'https://marketnow.site/api' },
     },
-    
-    // Agent-useful endpoints (compact, machine-readable)
+
     endpoints: {
-      search: {
-        method: 'GET',
-        path: '/api/search?q={query}&max_price={price}&limit={limit}',
-        description: 'Search MCP skills by keyword, category, or price',
-        auth: 'none',
-      },
-      skill_detail: {
-        method: 'GET',
-        path: '/api/skills/{skillId}',
-        description: 'Get full details of a specific skill',
-        auth: 'none',
-      },
-      trust_score: {
-        method: 'GET',
-        path: '/api/trust-score?skillId={skillId}',
-        description: 'Get a compact trust score for install decisions',
-        auth: 'none',
-        returns: ['trust_score (0-10)', 'recommendation (safe_to_install|install_with_caution|do_not_install)', 'certificate_url'],
-      },
-      recommend: {
-        method: 'POST',
-        path: '/api/recommend',
-        description: 'Get skill recommendations based on current tools',
-        body: '{ "current_tools": ["filesystem"], "agent_type": "coding" }',
-        auth: 'none',
-      },
-      certificate: {
-        method: 'GET',
-        path: '/api/audit-skill?certificate=1&skillId={skillId}',
-        description: 'Get signed SHA-256 security certificate',
-        auth: 'none',
-      },
-      free_skills: {
-        method: 'GET',
-        path: '/api/free-skills.json',
-        description: '9,248 free skills (no signup, no payment)',
-        auth: 'none',
-      },
-      purchase: {
-        method: 'POST',
-        path: '/api/agent-purchase',
-        description: 'Purchase a skill (USDC on Base or Stripe)',
-        auth: 'payment_proof',
-        payment_methods: ['usdc_base', 'stripe'],
-      },
-      audit_request: {
-        method: 'POST',
-        path: '/api/audit-skill',
-        description: 'Trigger a security audit for a new MCP server',
-        auth: 'github',
-      },
-      sbom: {
-        method: 'GET',
-        path: '/api/audit-skill?sbom=1&skillId={skillId}',
-        description: 'L4 Supply Chain Audit — SBOM + OSV vulnerability check',
-        auth: 'none',
-      },
-      content_fingerprint: {
-        method: 'GET',
-        path: '/sbom-schema.json',
-        description: 'L4.5 Content fingerprint schema — SHA-256 of repo HEAD',
-        auth: 'none',
-      },
-      atc: {
-        method: 'ANY',
-        path: '/api/atc',
-        description: 'Agent Trust Card — identity, trust, payment for AI agents. The trust layer for A2A + MCP.',
-        auth: 'none',
-        spec: '/atc-spec.json',
-      },
-      egress_allowlist: {
-        method: 'GET',
-        path: '/egress-allowlist.json',
-        description: 'L2.6 egress proxy allowlist — domains that MCP servers can contact during sandbox testing',
-        auth: 'none',
-      },
-      failure_taxonomy: {
-        method: 'GET',
-        path: '/failure-taxonomy.json',
-        description: 'Structured failure codes for agent self-diagnosis (15 categories)',
-        auth: 'none',
-        returns: ['failure_categories', 'agent_decision_tree'],
-      },
-      mcp_protocol: {
-        method: 'POST',
-        path: '/api/mcp',
-        description: 'MCP JSON-RPC 2.0 endpoint (initialize, tools/list, tools/call)',
-        auth: 'none',
-        tools: ['search_skills', 'get_skill', 'list_categories', 'health'],
-      },
+      search: { method: 'GET', path: '/api/search?q={query}', description: 'Search MCP skills', auth: 'none' },
+      atc: { method: 'ANY', path: '/api/atc', description: 'Agent Trust Card — issue, verify, revoke', auth: 'rate-limited' },
+      interceptor: { method: 'POST', path: '/api/interceptor', description: 'Real-time MCP call interceptor', auth: 'none' },
+      stream: { method: 'POST', path: '/api/stream', description: 'Streaming metered billing (x402 USDC)', auth: 'payment' },
+      stacks: { method: 'GET', path: '/api/stacks', description: 'Agent skill bundles', auth: 'none' },
+      execute: { method: 'POST', path: '/api/execute', description: 'A2A remote execution', auth: 'ATC + mandate' },
+      trust_score: { method: 'GET', path: '/api/trust-score?skillId={id}', description: 'Compact trust score', auth: 'none' },
+      audit: { method: 'POST', path: '/api/audit-skill', description: 'Trigger Sentinel audit', auth: 'github' },
     },
-    
-    // Stats (cached, fast)
+
     stats: {
       total_skills: 9248,
       audited: 9238,
       l25_tested: 9229,
       free_skills: 9248,
-      categories: 23,
-      sentinel_version: 'L1.5 → L1.9 + L2 + L3 (10 layers)',
+      atc_issued: 57,
+      sentinel_version: 'L1.5 → L3 (10 layers) + Interceptor + ATC + x402 + A2A',
     },
-    
-    // Security
+
     security: {
-      audit_pipeline: 'Sentinel L1.5 → L1.6 → L2 v2.0 → L2.5 gVisor sandbox',
-      certificate_algorithm: 'SHA-256',
+      audit_pipeline: 'Sentinel L1.5 → L1.9 → L2.5 gVisor → L3 Interceptor',
+      certificate_algorithm: 'Ed25519 (RFC 8032)',
+      canonical_json: 'RFC 8785 JCS',
       verify_url: 'https://marketnow.site/verify',
-      methodology_url: 'https://marketnow.site/security',
+      interceptor_url: 'https://marketnow.site/api/interceptor',
     },
-    
-    // Payment
-    payment: {
-      methods: ['stripe', 'usdc_base'],
-      usdc_contract: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
-      payment_wallet: '0x39Dddf5aEdb58A559CF195fB8bdF23F0604Bf5Ee',
-      network: 'base (chainId 8453)',
-      dispute_window: '7 days',
-    },
-    
-    // Agent discovery
-    discovery: {
-      agent_card: '/.well-known/agent.json',
-      mcp_discovery: '/.well-known/mcp.json',
-      ai_plugin: '/.well-known/ai-plugin.json',
-      llms_txt: '/llms.txt',
-      llms_full_txt: '/llms-full.txt',
-    },
-    
+
     timestamp: new Date().toISOString(),
   });
-});
+}

@@ -127,10 +127,10 @@ export default secureLight(async function handler(req, res) {
     
     // Stats (cached, fast)
     stats: {
-      total_skills: 8845,
-      audited: 5120,
-      l25_tested: 206,
-      free_skills: 8845,
+      total_skills: 9248,
+      audited: 9238,
+      l25_tested: 9229,
+      free_skills: 9248,
       categories: 23,
       sentinel_version: 'L1.5 → L1.9 + L2 + L3 (10 layers)',
     },

@@ -72,8 +72,8 @@ export default async function handler(req, res) {
 
     stats: {
       total_skills: 9248,
-      audited: 9238,
-      l25_tested: 9229,
+      audited: 5662,
+      l25_tested: 257,
       free_skills: 9248,
       atc_issued: 57,
       sentinel_version: 'L1.5 → L3 (10 layers) + Interceptor + ATC + x402 + A2A',

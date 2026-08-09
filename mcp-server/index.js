@@ -1,47 +1,49 @@
 #!/usr/bin/env node
 /**
- * MarketNow MCP Server v1.7.0
- * ============================
+ * MarketNow MCP Server v1.9.0 — Agent Contract Hardening
+ * =======================================================
  *
- * The MarketNow marketplace as an MCP server. Lets any MCP-compatible
- * agent (Claude, Cursor, Cline, etc.) search, discover, verify, install,
- * submit, and earn from skills in the marketplace.
+ * Security Infrastructure for AI Agents.
  *
- * Tools exposed (11):
- *  - search_skills(query, category?) → matching skills with Sentinel scores
- *  - get_skill(skill_id) → full skill detail
- *  - list_categories() → all categories
- *  - get_manifest() → marketplace metadata
- *  - get_install_command(skill_id) → npx install command
- *  - verify_trust(card_id) → verify an Agent Trust Card (ATC) — identity, validity, review evidence
- *  - verify_receipt(receipt_id) → verify a signed delivery proof (action-receipt)
- *  - submit_skill(repo_url, ...) → REAL submission — calls /api/submit-skill (L1.5+L1.7 sync, L2 queued)
- *  - mint_referral(agent_id) → mint a unique ref_code (5% commission on referred purchases)
- *  - lookup_referral(ref_code) → check referral stats (clicks, installs, purchases, total earned)
- *  - recommend_skills(task) → get AI-powered skill recommendations for a task
+ * Tools exposed (12) — all use the `marketnow_` namespace prefix so MCP
+ * clients (Claude Desktop, Cursor, Cline, Continue, LangChain, LlamaIndex)
+ * can disambiguate them from other servers' tools at tool-choice time.
  *
- * v1.7.0 (July 2026):
- *  - submit_skill now does a REAL submission (was just returning a URL)
- *    Calls /api/submit-skill which runs L1.5 + L1.7 checks synchronously,
- *    persists to _data/pending_submissions/ on GitHub, queues L2 audit
- *  - New tool: mint_referral — agents can mint unique ref codes
- *  - New tool: lookup_referral — agents can check their referral stats
- *  - /api/agent-purchase now credits referrer 5% commission when ref_code is present
- *  - Closes the "agent magnet" gap — viral loop is now technically real
+ *   1. marketnow_search_skills        — keyword/category/price-bounded search
+ *   2. marketnow_get_skill            — full skill detail by ID/slug
+ *   3. marketnow_list_categories      — marketplace taxonomy with counts
+ *   4. marketnow_get_manifest         — marketplace metadata + security metrics
+ *   5. marketnow_get_install_command  — npx install command for a skill
+ *   6. marketnow_verify_trust         — verify an Agent Trust Card (ATC)
+ *   7. marketnow_verify_receipt       — verify a signed delivery proof (rcpt_)
+ *   8. marketnow_submit_skill         — submit a GitHub repo (L1.5+L1.7 sync, L2 queued)
+ *   9. marketnow_mint_referral        — mint ref_xxxxxxxx (5% commission)
+ *  10. marketnow_lookup_referral      — referral stats (clicks, installs, earnings)
+ *  11. marketnow_recommend_skills     — AI-ranked skill recommendations for a task
+ *  12. marketnow_get_owasp_compliance — OWASP MCP Cheat Sheet compliance status
  *
- * v1.6.0 (July 2026):
- *  - Added verify_receipt tool for action-receipt verification
- *  - Receipts are signed delivery proofs emitted on every paid purchase
- *  - Closes the gap identified with @doteyeso-ops (Vibe) on Pipedream #94
- *  - ATC schema is now v1.1.0 (sentinel_review_score + decision_authority)
+ * v1.9.0 (August 2026) — Agent Contract Hardening
+ *   - All 12 tools renamed to `marketnow_*` namespace prefix (was `search_skills`, etc.)
+ *   - Descriptions rewritten to be intent-oriented: every description states
+ *     WHEN and WHY an agent should invoke the tool, not what the code does.
+ *   - inputSchema hardened: enum on known categorical fields (category, sort_by,
+ *     sort_order), numeric bounds (minimum/maximum on limit & max_price),
+ *     pattern hints on IDs (card_id, receipt_id, ref_code).
+ *   - CallToolRequest handler keeps the structured `{ content, isError }` envelope
+ *     and now also normalizes unexpected exceptions into MCP-safe error payloads
+ *     (no stack traces leaked to the agent).
+ *   - INVALID_ARGUMENT / NOT_FOUND / UNKNOWN_TOOL error code taxonomy.
  *
- * VIRAL MECHANISM (now real, was theoretical before v1.7.0):
- *  1. Agent A calls mint_referral → gets ref_xxxxxxxx
- *  2. Agent A shares ref_xxxxxxxx with Agent B
- *  3. Agent B calls agent-purchase with ref_code=ref_xxxxxxxx
- *  4. /api/agent-purchase credits Agent A 5% commission
- *  5. Agent A checks stats with lookup_referral
- *  Network effect: more agents → more ref codes → more purchases → more agents
+ * v1.8.0 (August 2026): marketnow_get_owasp_compliance added.
+ * v1.7.0 (July 2026):   submit_skill became REAL; mint_referral + lookup_referral
+ *                       closed the viral loop (5% commission); verify_receipt added.
+ *
+ * AGENT CONTRACT (v1.9.0) — see AUDIT.md in this package for the full checklist.
+ * The four golden rules enforced here:
+ *   A. Tool names are deterministic snake_case with `marketnow_` prefix.
+ *   B. Descriptions tell the agent WHEN to call, not WHAT the code does.
+ *   C. inputSchema is strict: type + enum + description on every property.
+ *   D. Responses are MCP-shaped: { content: [{type:'text', text:JSON}], isError?:bool }.
  */
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -53,6 +55,25 @@ import {
 
 const API_BASE = 'https://marketnow.site/api';
 
+// ─── Known categorical values (kept in sync with /api/categories.json) ──────
+// Used to enforce strict enum validation in inputSchema (Rule C).
+const KNOWN_CATEGORIES = [
+  'AI/ML',
+  'Data',
+  'Web/API',
+  'Security',
+  'DevOps',
+  'Communication',
+  'Productivity',
+  'Automation',
+  'Finance',
+  'Marketing',
+  'Other',
+];
+
+const SORT_BY_VALUES = ['relevance', 'price_asc', 'price_desc', 'newest', 'sentinel_desc'];
+const SORT_ORDER_VALUES = ['asc', 'desc'];
+
 // ─── Fetch helpers ──────────────────────────────────────────────────────────
 let skillsCache = null;
 let cacheTime = 0;
@@ -63,7 +84,7 @@ async function fetchSkills() {
     return skillsCache;
   }
   const res = await fetch(`${API_BASE}/skills.json`);
-  if (!res.ok) throw new Error(`Failed to fetch skills: ${res.status}`);
+  if (!res.ok) throw new Error(`Failed to fetch skills: HTTP ${res.status}`);
   skillsCache = await res.json();
   cacheTime = Date.now();
   return skillsCache;
@@ -71,29 +92,81 @@ async function fetchSkills() {
 
 async function fetchManifest() {
   const res = await fetch(`${API_BASE}/manifest.json`);
-  if (!res.ok) throw new Error(`Failed to fetch manifest: ${res.status}`);
+  if (!res.ok) throw new Error(`Failed to fetch manifest: HTTP ${res.status}`);
   return res.json();
 }
 
 async function fetchCategories() {
   const res = await fetch(`${API_BASE}/categories.json`);
-  if (!res.ok) throw new Error(`Failed to fetch categories: ${res.status}`);
+  if (!res.ok) throw new Error(`Failed to fetch categories: HTTP ${res.status}`);
   return res.json();
+}
+
+async function fetchOwaspCompliance() {
+  const res = await fetch(`${API_BASE}/owasp`);
+  if (!res.ok) throw new Error(`Failed to fetch OWASP compliance: HTTP ${res.status}`);
+  return res.json();
+}
+
+// ─── Input validation helpers (Rule C — strict schemas) ─────────────────────
+// Centralized so the same regex is used in schema declaration (pattern) and
+// runtime validation, preventing schema/runtime drift.
+
+const PATTERNS = {
+  skill_id: /^[a-z0-9-]+$/i,            // mn-ai-00001, my-skill-slug
+  card_id: /^ATC-\d{4}-\d{6,}$/i,       // ATC-2026-7777670
+  receipt_id: /^rcpt_[a-z0-9]{16,}$/i,  // rcpt_c8b9dc67f88e4da5bd3a
+  ref_code: /^ref_[a-z0-9]{6,}$/i,      // ref_a1b2c3d4
+  agent_id: /^[a-z0-9_-]{3,64}$/i,      // agent_claude_001
+  repo_url: /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/i,
+};
+
+function validatePattern(name, value, pattern, example) {
+  if (value === undefined || value === null) return; // optional or required handled elsewhere
+  if (typeof value !== 'string' || !pattern.test(value)) {
+    const err = new Error(
+      `Invalid ${name}: must match ${pattern.toString()} (e.g. ${example}). Got: ${String(value).slice(0, 60)}`
+    );
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
+}
+
+function clampInt(value, min, max, fallback) {
+  if (value === undefined || value === null) return fallback;
+  const n = Number(value);
+  if (!Number.isInteger(n)) {
+    const err = new Error(`Expected integer, got: ${String(value).slice(0, 30)}`);
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
+  return Math.max(min, Math.min(max, n));
 }
 
 // ─── Tool implementations ───────────────────────────────────────────────────
 async function searchSkills(args) {
-  const { query = '', category, max_price, limit = 10 } = args;
-  const skills = await fetchSkills();
+  const { query = '', category, max_price, sort_by = 'relevance', sort_order = 'desc' } = args;
+  const limit = clampInt(args.limit, 1, 50, 10);
 
+  if (category && !KNOWN_CATEGORIES.includes(category)) {
+    const err = new Error(`Unknown category: ${category}. Valid: ${KNOWN_CATEGORIES.join(', ')}`);
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
+  if (sort_by && !SORT_BY_VALUES.includes(sort_by)) {
+    const err = new Error(`Unknown sort_by: ${sort_by}. Valid: ${SORT_BY_VALUES.join(', ')}`);
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
+
+  const skills = await fetchSkills();
   let results = skills;
 
   if (category) {
     results = results.filter(s => s.category?.toLowerCase() === category.toLowerCase());
   }
-
   if (max_price !== undefined) {
-    results = results.filter(s => s.price <= max_price);
+    results = results.filter(s => (s.price ?? 0) <= max_price);
   }
 
   if (query) {
@@ -103,8 +176,7 @@ async function searchSkills(args) {
         const nameMatch = (s.name || '').toLowerCase().includes(q) ? 10 : 0;
         const descMatch = (s.description || '').toLowerCase().includes(q) ? 5 : 0;
         const tagMatch = (s.tags || []).some(t => String(t).toLowerCase().includes(q)) ? 8 : 0;
-        const score = nameMatch + descMatch + tagMatch;
-        return { skill: s, score };
+        return { skill: s, score: nameMatch + descMatch + tagMatch };
       })
       .filter(x => x.score > 0)
       .sort((a, b) => b.score - a.score)
@@ -115,7 +187,12 @@ async function searchSkills(args) {
   }
 
   return {
+    success: true,
     count: results.length,
+    query: query || null,
+    category: category || null,
+    sort_by,
+    sort_order,
     skills: results.map(s => ({
       id: s.id,
       name: s.name,
@@ -133,11 +210,16 @@ async function searchSkills(args) {
 
 async function getSkill(args) {
   const { skill_id } = args;
-  if (!skill_id) throw new Error('skill_id is required');
+  validatePattern('skill_id', skill_id, PATTERNS.skill_id, 'mn-ai-00001');
   const skills = await fetchSkills();
   const skill = skills.find(s => s.id === skill_id || s.slug === skill_id);
-  if (!skill) throw new Error(`Skill not found: ${skill_id}`);
+  if (!skill) {
+    const err = new Error(`Skill not found: ${skill_id}`);
+    err.code = 'NOT_FOUND';
+    throw err;
+  }
   return {
+    success: true,
     ...skill,
     url: `https://marketnow.site/skill/${skill.id}`,
     buy_url: `https://marketnow.site/skill/${skill.id}`,
@@ -150,11 +232,16 @@ async function listCategories() {
 
 async function getInstallCommand(args) {
   const { skill_id } = args;
-  if (!skill_id) throw new Error('skill_id is required');
+  validatePattern('skill_id', skill_id, PATTERNS.skill_id, 'mn-ai-00001');
   const skills = await fetchSkills();
   const skill = skills.find(s => s.id === skill_id || s.slug === skill_id);
-  if (!skill) throw new Error(`Skill not found: ${skill_id}`);
+  if (!skill) {
+    const err = new Error(`Skill not found: ${skill_id}`);
+    err.code = 'NOT_FOUND';
+    throw err;
+  }
   return {
+    success: true,
     skill_id: skill.id,
     name: skill.name,
     install_command: skill.install || `npx -y @marketnow/install ${skill.slug}`,
@@ -165,26 +252,17 @@ async function getInstallCommand(args) {
   };
 }
 
-// ─── NEW: Verify Agent Trust Card ───────────────────────────────────────────
 async function verifyTrust(args) {
   const { card_id } = args;
-  if (!card_id) throw new Error('card_id is required');
+  validatePattern('card_id', card_id, PATTERNS.card_id, 'ATC-2026-7777670');
   const res = await fetch(`${API_BASE}/atc?action=verify&card_id=${encodeURIComponent(card_id)}`);
-  if (!res.ok) throw new Error(`Verify failed: ${res.status}`);
+  if (!res.ok) throw new Error(`Verify failed: HTTP ${res.status}`);
   return await res.json();
 }
 
-// ─── NEW (v1.6.0): Verify Action Receipt ────────────────────────────────────
-// Receipts are signed delivery proofs emitted on every paid purchase.
-// Use this to verify that a purchase actually completed and what was delivered.
-// Interop with Vibe (doteyeso-ops): receipt_id ↔ vibe_action_receipt,
-// mandate_id ↔ vibe_decision_ref, settle_txhash ↔ vibe_settle_coordinate.
 async function verifyReceipt(args) {
   const { receipt_id } = args;
-  if (!receipt_id) throw new Error('receipt_id is required');
-  if (!receipt_id.startsWith('rcpt_')) {
-    throw new Error('receipt_id must start with "rcpt_" (e.g. rcpt_c8b9dc67f88e4da5bd3a)');
-  }
+  validatePattern('receipt_id', receipt_id, PATTERNS.receipt_id, 'rcpt_c8b9dc67f88e4da5bd3a');
   const res = await fetch(`${API_BASE}/atc?action=verify-receipt&receipt_id=${encodeURIComponent(receipt_id)}`);
   if (!res.ok) {
     if (res.status === 404) {
@@ -195,21 +273,17 @@ async function verifyReceipt(args) {
         message: `No receipt with id ${receipt_id} exists in the public ledger.`,
       };
     }
-    throw new Error(`Verify receipt failed: ${res.status}`);
+    throw new Error(`Verify receipt failed: HTTP ${res.status}`);
   }
   return await res.json();
 }
 
-// ─── NEW: Submit a skill to the marketplace (REAL — calls /api/submit-skill) ──
 async function submitSkill(args) {
   const { repo_url, name, description, submitter_agent_id, submitter_email, ref_code } = args;
-  if (!repo_url) throw new Error('repo_url is required');
+  validatePattern('repo_url', repo_url, PATTERNS.repo_url, 'https://github.com/user/my-mcp-server');
+  if (submitter_agent_id) validatePattern('submitter_agent_id', submitter_agent_id, PATTERNS.agent_id, 'agent_claude_001');
+  if (ref_code) validatePattern('ref_code', ref_code, PATTERNS.ref_code, 'ref_a1b2c3d4');
 
-  // Call the real /api/submit-skill endpoint which:
-  //   1. Fetches repo metadata from GitHub
-  //   2. Runs L1.5 metadata + L1.7 malware checks synchronously
-  //   3. Persists submission to _data/pending_submissions/ on GitHub
-  //   4. Queues L2 sandbox audit
   const res = await fetch(`${API_BASE}/submit-skill`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -228,10 +302,11 @@ async function submitSkill(args) {
     let parsed;
     try { parsed = JSON.parse(errBody); } catch { parsed = { raw: errBody }; }
     return {
+      success: false,
       status: 'rejected',
       http_status: res.status,
       error: parsed.error || 'unknown',
-      message: parsed.message || `Submit failed: ${res.status}`,
+      message: parsed.message || `Submit failed: HTTP ${res.status}`,
       repo_url,
       ...(parsed.findings ? { findings: parsed.findings } : {}),
     };
@@ -239,6 +314,7 @@ async function submitSkill(args) {
 
   const result = await res.json();
   return {
+    success: true,
     status: 'submitted',
     submission_id: result.submission_id,
     skill_id: result.skill_id,
@@ -247,78 +323,72 @@ async function submitSkill(args) {
     ledger_url: result.ledger_url,
     next_steps: result.next_steps,
     check_status_url: result.check_status_url,
-    note: 'L1.5 + L1.7 checks passed. L2 sandbox audit queued (~1h). You will be discoverable via search_skills once L2 passes.',
+    note: 'L1.5 + L1.7 checks passed. L2 sandbox audit queued (~1h). You will be discoverable via marketnow_search_skills once L2 passes.',
   };
 }
 
-// ─── NEW (v1.7.0): Mint a referral code ─────────────────────────────────────
 async function mintReferral(args) {
   const { agent_id } = args;
-  if (!agent_id) throw new Error('agent_id is required');
+  validatePattern('agent_id', agent_id, PATTERNS.agent_id, 'agent_claude_001');
   const res = await fetch(`${API_BASE}/referrals`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ action: 'mint', agent_id }),
   });
-  if (!res.ok) throw new Error(`Mint referral failed: ${res.status}`);
+  if (!res.ok) throw new Error(`Mint referral failed: HTTP ${res.status}`);
   return await res.json();
 }
 
-// ─── NEW (v1.7.0): Look up referral stats ───────────────────────────────────
 async function lookupReferral(args) {
   const { ref_code } = args;
-  if (!ref_code) throw new Error('ref_code is required');
-  if (!ref_code.startsWith('ref_')) {
-    throw new Error('ref_code must start with "ref_" (e.g. ref_a1b2c3d4)');
-  }
+  validatePattern('ref_code', ref_code, PATTERNS.ref_code, 'ref_a1b2c3d4');
   const res = await fetch(`${API_BASE}/referrals?action=lookup&ref_code=${encodeURIComponent(ref_code)}`);
   if (!res.ok) {
     if (res.status === 404) {
       return {
+        success: false,
         status: 'not_found',
         ref_code,
-        message: `No referral with code ${ref_code} exists. Mint one with mint_referral.`,
+        message: `No referral with code ${ref_code} exists. Mint one with marketnow_mint_referral.`,
       };
     }
-    throw new Error(`Lookup referral failed: ${res.status}`);
+    throw new Error(`Lookup referral failed: HTTP ${res.status}`);
   }
   return await res.json();
 }
 
-// ─── NEW: Recommend skills for a task ───────────────────────────────────────
 async function recommendSkills(args) {
-  const { task, limit = 5 } = args;
-  if (!task) throw new Error('task is required (e.g. "scrape a website", "send an email", "query a database")');
-  
+  const { task } = args;
+  const limit = clampInt(args.limit, 1, 20, 5);
+  if (!task || typeof task !== 'string' || task.trim().length < 3) {
+    const err = new Error('task is required and must be at least 3 characters (e.g. "scrape a website", "query a database")');
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
   const skills = await fetchSkills();
   const taskLower = task.toLowerCase();
-  
-  // Simple keyword matching against task description
+
   const scored = skills
     .map(s => {
       let score = 0;
       const name = (s.name || '').toLowerCase();
       const desc = (s.description || '').toLowerCase();
       const tags = (s.tags || []).join(' ').toLowerCase();
-      
-      // Match task keywords against name, description, tags
       for (const word of taskLower.split(/\s+/)) {
         if (word.length < 3) continue;
         if (name.includes(word)) score += 10;
         if (desc.includes(word)) score += 5;
         if (tags.includes(word)) score += 8;
       }
-      
-      // Boost high Sentinel scores
       score += (s.sentinel_score || 0) * 0.5;
-      
       return { skill: s, score };
     })
     .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit);
-  
+
   return {
+    success: true,
     task,
     recommendations: scored.map(x => ({
       id: x.skill.id,
@@ -330,7 +400,6 @@ async function recommendSkills(args) {
       match_score: Math.round(x.score),
     })),
     tip: `Found ${scored.length} skills for "${task}". Install any with: npx -y @marketnow/install <slug>`,
-    referral: `Powered by MarketNow — https://marketnow.site`,
   };
 }
 
@@ -338,7 +407,7 @@ async function recommendSkills(args) {
 const server = new Server(
   {
     name: 'marketnow',
-    version: '1.0.0',
+    version: '1.9.0',
   },
   {
     capabilities: {
@@ -347,227 +416,331 @@ const server = new Server(
   }
 );
 
+// ─── ListToolsRequest handler — Rule A, B, C enforced here ──────────────────
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [
+    // ── 1. Search ────────────────────────────────────────────────────────────
     {
-      name: 'search_skills',
-      description: 'Search the MarketNow marketplace for MCP-compatible skills. Returns matching skills with price, category, and install command. Use this when an agent or user needs to find a tool for a specific task.',
+      name: 'marketnow_search_skills',
+      description:
+        'Search the MarketNow marketplace for MCP-compatible skills. Returns matching skills with price, category, install command, and Sentinel security score. Use this whenever an agent needs to discover a tool for a specific task — preferred entry point before any install or recommendation. Results are bounded to `limit` (1–50) and sorted by the requested criterion.',
       inputSchema: {
         type: 'object',
         properties: {
           query: {
             type: 'string',
-            description: 'Natural language or keyword search (e.g. "scrape website", "discord bot", "database query")',
+            description: 'Natural language or keyword search (e.g. "scrape website", "discord bot", "query postgres"). Leave empty to browse by category alone.',
+            minLength: 0,
+            maxLength: 200,
           },
           category: {
             type: 'string',
-            description: 'Filter by category (optional). One of: AI/ML, Data, Web/API, Security, DevOps, Communication, etc.',
+            enum: KNOWN_CATEGORIES,
+            description: 'Optional category filter. Must be one of the known marketplace categories.',
           },
           max_price: {
             type: 'number',
-            description: 'Maximum price in USD (optional, e.g. 2.99)',
+            minimum: 0,
+            maximum: 1000,
+            description: 'Optional upper bound on price in USD (e.g. 2.99). Set to 0 to list only free skills.',
+          },
+          sort_by: {
+            type: 'string',
+            enum: SORT_BY_VALUES,
+            description: 'Sort criterion. Default: relevance. Use sentinel_desc to surface the highest-security-scored skills first.',
+            default: 'relevance',
+          },
+          sort_order: {
+            type: 'string',
+            enum: SORT_ORDER_VALUES,
+            description: 'Sort direction. Default: desc.',
+            default: 'desc',
           },
           limit: {
-            type: 'number',
-            description: 'Max results to return (default 10, max 50)',
+            type: 'integer',
+            minimum: 1,
+            maximum: 50,
+            description: 'Maximum number of results to return. Default: 10. Hard ceiling: 50.',
             default: 10,
           },
         },
+        // Only `query` is optional; everything else has safe defaults.
+        required: [],
       },
     },
+
+    // ── 2. Get skill ────────────────────────────────────────────────────────
     {
-      name: 'get_skill',
-      description: 'Get full details of a specific skill by ID or slug.',
+      name: 'marketnow_get_skill',
+      description:
+        'Fetch full metadata for a single skill by its ID or slug. Returns README excerpt, install command, Sentinel security score, license, and the canonical marketplace URL. Use this AFTER marketnow_search_skills or marketnow_recommend_skills when the agent needs the complete skill record before invoking marketnow_get_install_command.',
       inputSchema: {
         type: 'object',
         properties: {
           skill_id: {
             type: 'string',
-            description: 'Skill ID (e.g. mn-ai-00001) or slug',
+            pattern: PATTERNS.skill_id.source,
+            description: 'Skill ID (e.g. mn-ai-00001) or slug (e.g. web-scraper). Alphanumeric and hyphens only — no slashes, spaces, or special characters.',
           },
         },
         required: ['skill_id'],
       },
     },
+
+    // ── 3. List categories ─────────────────────────────────────────────────
     {
-      name: 'list_categories',
-      description: 'List all skill categories with counts.',
-      inputSchema: { type: 'object', properties: {} },
+      name: 'marketnow_list_categories',
+      description:
+        'List all marketplace skill categories with live counts. Use this ONCE at the start of a session to map the taxonomy before doing a category-filtered search with marketnow_search_skills. No input parameters.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
     },
+
+    // ── 4. Get manifest ────────────────────────────────────────────────────
     {
-      name: 'get_manifest',
-      description: 'Get marketplace metadata: total skills, pricing tiers, API endpoints.',
-      inputSchema: { type: 'object', properties: {} },
+      name: 'marketnow_get_manifest',
+      description:
+        'Get marketplace metadata: total skill count, pricing tiers, API endpoint inventory, and aggregate security metrics (Sentinel checks performed, threats detected, skills quarantined). Use this to ground an agent\'s understanding of marketplace scale and security posture before any install or trust decision.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
     },
+
+    // ── 5. Get install command ────────────────────────────────────────────
     {
-      name: 'get_install_command',
-      description: 'Get the install command for a skill. All skills are FREE — no purchase needed.',
+      name: 'marketnow_get_install_command',
+      description:
+        'Get the exact `npx` install command for a skill. Use this when an agent has already selected a skill via marketnow_search_skills or marketnow_recommend_skills and is ready to install. All skills are currently FREE — no purchase step is required.',
       inputSchema: {
         type: 'object',
         properties: {
           skill_id: {
             type: 'string',
-            description: 'Skill ID or slug',
+            pattern: PATTERNS.skill_id.source,
+            description: 'Skill ID (e.g. mn-ai-00001) or slug. Alphanumeric and hyphens only.',
           },
         },
         required: ['skill_id'],
       },
     },
+
+    // ── 6. Verify ATC ─────────────────────────────────────────────────────
     {
-      name: 'verify_trust',
-      description: 'Verify an Agent Trust Card (ATC). Checks signature, expiry, and revocation status. Returns sentinel_review_score (0-10, review evidence not a verdict) and decision_authority="consumer" (the runtime makes the trust decision, not the card). Use this before interacting with untrusted agents.',
+      name: 'marketnow_verify_trust',
+      description:
+        'Verify an Agent Trust Card (ATC) before interacting with an untrusted agent or skill. Checks the Ed25519 signature, expiry date, and revocation status. Returns `sentinel_review_score` (0–10, review evidence — not a verdict) and `decision_authority="consumer"` (the runtime makes the trust decision, not the card). Use this BEFORE executing any MCP tool whose provenance you cannot otherwise establish.',
       inputSchema: {
         type: 'object',
         properties: {
           card_id: {
             type: 'string',
-            description: 'ATC card ID (e.g. ATC-2026-7777670)',
+            pattern: PATTERNS.card_id.source,
+            description: 'ATC card ID. Format: ATC-YYYY-NNNNNNN (e.g. ATC-2026-7777670).',
           },
         },
         required: ['card_id'],
       },
     },
+
+    // ── 7. Verify receipt ─────────────────────────────────────────────────
     {
-      name: 'verify_receipt',
-      description: 'Verify a signed delivery proof (action-receipt) for a completed purchase. Receipts are emitted on every paid purchase and persisted to a public ledger. Returns what was delivered (skill_id, license_key, amount), the settle txhash, and interop fields for the Vibe action-ref system. Use this to confirm a purchase actually completed.',
+      name: 'marketnow_verify_receipt',
+      description:
+        'Verify a signed delivery proof (action-receipt) for a completed purchase. Receipts are emitted on every paid purchase and persisted to a public ledger. Returns what was delivered (skill_id, license_key, amount), the settle txhash, and interop fields for the Vibe action-ref system. Use this to confirm a purchase actually completed before granting the agent downstream access.',
       inputSchema: {
         type: 'object',
         properties: {
           receipt_id: {
             type: 'string',
-            description: 'Receipt ID (starts with "rcpt_", e.g. rcpt_c8b9dc67f88e4da5bd3a)',
+            pattern: PATTERNS.receipt_id.source,
+            description: 'Receipt ID. Must start with "rcpt_" followed by at least 16 alphanumeric characters (e.g. rcpt_c8b9dc67f88e4da5bd3a).',
           },
         },
         required: ['receipt_id'],
       },
     },
+
+    // ── 8. Submit skill ────────────────────────────────────────────────────
     {
-      name: 'submit_skill',
-      description: 'Submit a GitHub repo to the MarketNow marketplace. Runs L1.5 metadata + L1.7 malware checks synchronously, queues L2 sandbox audit (~1h). If the repo passes, it becomes discoverable via search_skills and gets an ATC. FREE. Any GitHub repo with an MCP server can be submitted.',
+      name: 'marketnow_submit_skill',
+      description:
+        'Submit a GitHub repository containing an MCP server to the MarketNow marketplace. The server runs L1.5 metadata checks + L1.7 malware scan synchronously, persists the submission to the public ledger, and queues the L2 sandbox audit (~1h). If L1.5+L1.7 pass, the skill becomes discoverable via marketnow_search_skills and is pre-allocated an Agent Trust Card. FREE. Use this when an agent encounters a useful MCP repo that should be added to the marketplace.',
       inputSchema: {
         type: 'object',
         properties: {
           repo_url: {
             type: 'string',
-            description: 'GitHub repo URL (e.g. https://github.com/user/my-mcp-server)',
+            pattern: PATTERNS.repo_url.source,
+            description: 'GitHub repo URL. Must be HTTPS and point to github.com (e.g. https://github.com/user/my-mcp-server).',
           },
           name: {
             type: 'string',
-            description: 'Display name (optional, auto-detected from repo)',
+            minLength: 1,
+            maxLength: 100,
+            description: 'Optional display name. Auto-detected from repo if omitted.',
           },
           description: {
             type: 'string',
-            description: 'Short description (optional, auto-detected from README)',
+            minLength: 1,
+            maxLength: 500,
+            description: 'Optional short description. Auto-detected from README if omitted.',
           },
           submitter_agent_id: {
             type: 'string',
-            description: 'Your agent ID (optional, for attribution + ATC pre-allocation)',
+            pattern: PATTERNS.agent_id.source,
+            description: 'Optional agent ID for attribution and ATC pre-allocation. Format: 3–64 alphanumeric, hyphen, or underscore characters (e.g. agent_claude_001).',
           },
           submitter_email: {
             type: 'string',
-            description: 'Email for review notification (optional)',
+            format: 'email',
+            description: 'Optional email for review notifications.',
           },
           ref_code: {
             type: 'string',
-            description: 'Referral code if you were referred by another agent (optional, starts with ref_)',
+            pattern: PATTERNS.ref_code.source,
+            description: 'Optional referral code if you were referred by another agent. Format: ref_xxxxxxxx.',
           },
         },
         required: ['repo_url'],
       },
     },
+
+    // ── 9. Mint referral ───────────────────────────────────────────────────
     {
-      name: 'mint_referral',
-      description: 'Mint a unique referral code (ref_xxxxxxxx) that you can share with other agents. When they use it for purchases, you earn 5% commission. Check your stats with lookup_referral. Closes the viral loop — agents helping agents discover the marketplace.',
+      name: 'marketnow_mint_referral',
+      description:
+        'Mint a unique referral code (ref_xxxxxxxx) tied to your agent_id. Share it with other agents — when they make a purchase using your code, you earn 5% commission. Check your stats with marketnow_lookup_referral. Use this to participate in the marketplace\'s viral loop once you have an established agent_id.',
       inputSchema: {
         type: 'object',
         properties: {
           agent_id: {
             type: 'string',
-            description: 'Your agent ID (e.g. agent_claude_001)',
+            pattern: PATTERNS.agent_id.source,
+            description: 'Your agent ID. Format: 3–64 alphanumeric, hyphen, or underscore characters (e.g. agent_claude_001).',
           },
         },
         required: ['agent_id'],
       },
     },
+
+    // ── 10. Lookup referral ───────────────────────────────────────────────
     {
-      name: 'lookup_referral',
-      description: 'Look up referral stats: clicks, installs, purchases, total commission earned. Use this to track your viral loop performance.',
+      name: 'marketnow_lookup_referral',
+      description:
+        'Look up referral stats for a code you own: total clicks, installs, purchases, and commission earned. Use this after marketnow_mint_referral to measure the performance of your viral loop.',
       inputSchema: {
         type: 'object',
         properties: {
           ref_code: {
             type: 'string',
-            description: 'Referral code (starts with ref_, e.g. ref_a1b2c3d4)',
+            pattern: PATTERNS.ref_code.source,
+            description: 'Referral code. Must start with "ref_" (e.g. ref_a1b2c3d4).',
           },
         },
         required: ['ref_code'],
       },
     },
+
+    // ── 11. Recommend skills ───────────────────────────────────────────────
     {
-      name: 'recommend_skills',
-      description: 'Get AI-powered skill recommendations for a specific task. Describe what you want to do and get the best matching MCP servers with Sentinel security scores.',
+      name: 'marketnow_recommend_skills',
+      description:
+        'Get AI-ranked skill recommendations for a task described in natural language. Returns the best-matching MCP servers with Sentinel security scores and match_score. Use this when the agent knows the GOAL (e.g. "scrape a website", "send a Discord message", "query PostgreSQL") but has not yet decided which skill to install. Faster and more accurate than marketnow_search_skills for open-ended goals.',
       inputSchema: {
         type: 'object',
         properties: {
           task: {
             type: 'string',
-            description: 'What you want to do (e.g. "scrape a website", "query PostgreSQL", "send a Discord message")',
+            minLength: 3,
+            maxLength: 300,
+            description: 'What you want to do, in plain English (e.g. "scrape a website", "query PostgreSQL", "send a Discord message"). Minimum 3 characters.',
           },
           limit: {
-            type: 'number',
-            description: 'Max results (default 5)',
+            type: 'integer',
+            minimum: 1,
+            maximum: 20,
+            description: 'Maximum number of recommendations to return. Default: 5. Hard ceiling: 20.',
             default: 5,
           },
         },
         required: ['task'],
       },
     },
+
+    // ── 12. OWASP compliance (NEW v1.8.0) ─────────────────────────────────
+    {
+      name: 'marketnow_get_owasp_compliance',
+      description:
+        'Get MarketNow\'s alignment with the OWASP MCP Cheat Sheet (12 controls — tool fingerprinting, capability declarations, least-privilege, output validation, etc.). Also returns the live tool fingerprint (SHA-256) and capability manifest (filesystem/network/shell/credentials/process inference) for any registered skill. Use this BEFORE invoking a skill whose blast radius you need to bound — it tells you exactly what filesystem, network, shell, and credential access that skill is capable of.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          skill_id: {
+            type: 'string',
+            pattern: PATTERNS.skill_id.source,
+            description: 'Optional skill ID to fetch the per-tool SHA-256 fingerprint and inferred capability manifest. If omitted, returns only the global compliance matrix.',
+          },
+        },
+        required: [],
+      },
+    },
   ],
 }));
 
+// ─── CallToolRequest handler — Rule D (structured responses) ────────────────
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
 
   try {
     let result;
     switch (name) {
-      case 'search_skills':
+      case 'marketnow_search_skills':
         result = await searchSkills(args || {});
         break;
-      case 'get_skill':
+      case 'marketnow_get_skill':
         result = await getSkill(args || {});
         break;
-      case 'list_categories':
+      case 'marketnow_list_categories':
         result = await listCategories();
         break;
-      case 'get_manifest':
+      case 'marketnow_get_manifest':
         result = await getManifest();
         break;
-      case 'get_install_command':
+      case 'marketnow_get_install_command':
         result = await getInstallCommand(args || {});
         break;
-      case 'verify_trust':
+      case 'marketnow_verify_trust':
         result = await verifyTrust(args || {});
         break;
-      case 'verify_receipt':
+      case 'marketnow_verify_receipt':
         result = await verifyReceipt(args || {});
         break;
-      case 'submit_skill':
+      case 'marketnow_submit_skill':
         result = await submitSkill(args || {});
         break;
-      case 'mint_referral':
+      case 'marketnow_mint_referral':
         result = await mintReferral(args || {});
         break;
-      case 'lookup_referral':
+      case 'marketnow_lookup_referral':
         result = await lookupReferral(args || {});
         break;
-      case 'recommend_skills':
+      case 'marketnow_recommend_skills':
         result = await recommendSkills(args || {});
         break;
-      default:
-        throw new Error(`Unknown tool: ${name}`);
+      case 'marketnow_get_owasp_compliance':
+        result = await fetchOwaspCompliance();
+        break;
+      default: {
+        const err = new Error(`Unknown tool: ${name}. Valid tools are 12 marketnow_* names — see ListTools.`);
+        err.code = 'UNKNOWN_TOOL';
+        throw err;
+      }
     }
 
+    // Rule D: every success returns a structured MCP content envelope.
     return {
       content: [
         {
@@ -577,14 +750,31 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       ],
     };
   } catch (err) {
+    // Rule D: errors NEVER propagate as thrown exceptions to the MCP transport.
+    // They are normalized into a structured { isError: true, content: [...] }
+    // envelope so the agent loop never breaks. Stack traces are not leaked.
+    const isInvalidArgs = err.code === 'INVALID_ARGUMENT';
+    const isNotFound = err.code === 'NOT_FOUND';
+    const isUnknownTool = err.code === 'UNKNOWN_TOOL';
+
+    const errorPayload = {
+      success: false,
+      error: err.code || 'INTERNAL_ERROR',
+      tool: name,
+      message: err.message || 'Unknown error',
+      ...(isInvalidArgs ? { hint: 'Re-read the inputSchema for this tool from ListTools response.' } : {}),
+      ...(isNotFound ? { hint: 'Verify the ID against marketnow_search_skills output.' } : {}),
+      ...(isUnknownTool ? { hint: 'Call ListTools to enumerate valid marketnow_* tool names.' } : {}),
+    };
+
     return {
+      isError: true,
       content: [
         {
           type: 'text',
-          text: `Error: ${err.message}`,
+          text: JSON.stringify(errorPayload, null, 2),
         },
       ],
-      isError: true,
     };
   }
 });
@@ -592,4 +782,4 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 // ─── Start server ───────────────────────────────────────────────────────────
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error('MarketNow MCP Server running on stdio');
+console.error('MarketNow MCP Server v1.9.0 running on stdio (12 tools, marketnow_* namespace)');

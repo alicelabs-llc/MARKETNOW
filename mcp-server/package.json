@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.7.0",
-  "description": "MarketNow MCP Server v1.7.0 \u2014 Trust layer for agent commerce. 11 MCP tools: search_skills, get_skill, list_categories, get_manifest, get_install_command, verify_trust (ATC), verify_receipt (signed delivery proof), submit_skill (REAL submission via /api/submit-skill), mint_referral, lookup_referral, recommend_skills. ATC schema v1.1.0. Action-receipts for x402 + Vibe interop. Real referral tracking (5% commission). 8,845 security-audited skills. Maintained by AliceLabs LLC (Wyoming, USA, 2026).",
+  "version": "1.9.0",
+  "description": "MarketNow MCP Server v1.9.0 — Agent Contract Hardening release. All 12 tools renamed to `marketnow_*` namespace prefix (snake_case + deterministic prefix) for unambiguous tool choice by Claude Desktop, Cursor, Cline, LangChain, and LlamaIndex agents. Tools: marketnow_search_skills, marketnow_get_skill, marketnow_list_categories, marketnow_get_manifest, marketnow_get_install_command, marketnow_verify_trust (ATC), marketnow_verify_receipt (rcpt_), marketnow_submit_skill (REAL /api/submit-skill submission with L1.5+L1.7 sync), marketnow_mint_referral, marketnow_lookup_referral, marketnow_recommend_skills, marketnow_get_owasp_compliance (OWASP MCP Cheat Sheet alignment + tool fingerprinting + capability manifest). Strict JSON-Schema (type+enum+pattern+bounds), intent-oriented descriptions, structured {content, isError} responses, INVALID_ARGUMENT/NOT_FOUND/UNKNOWN_TOOL error taxonomy. ATC schema v1.1.0 (Ed25519, RFC 8032). Action-receipts for x402 + Vibe interop. Real referral tracking (5% commission). OWASP MCP Cheat Sheet compliance (12 controls, 4 live). 8,845 security-audited skills, 80 quarantined. Maintained by AliceLabs LLC (Wyoming, USA, 2026).",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -20,10 +20,12 @@
     "mcp-registry",
     "mcp-skills",
     "mcp-tools",
+    "mcp-security",
     "ai-agents",
     "agent-skills",
     "agent-commerce",
     "agent-payments",
+    "agent-trust",
     "claude",
     "claude-desktop",
     "cursor",
@@ -33,12 +35,17 @@
     "anthropic",
     "openai",
     "gemini",
+    "langchain",
+    "llamaindex",
     "x402",
     "ap2",
     "agent-payments-protocol",
     "sentinel",
     "security-audit",
-    "mcp-security",
+    "owasp",
+    "owasp-mcp-cheat-sheet",
+    "tool-fingerprinting",
+    "capability-manifest",
     "marketplace",
     "skills",
     "tools",
@@ -47,6 +54,7 @@
     "base",
     "blockchain-payments",
     "trust-layer",
+    "ed25519",
     "aliceLabs"
   ],
   "author": "AliceLabs LLC <info@alicelabs.site>",
@@ -69,7 +77,8 @@
   "files": [
     "index.js",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "AUDIT.md"
   ],
   "mcpName": "io.github.edgarfloresguerra2011-a11y/marketnow"
 }

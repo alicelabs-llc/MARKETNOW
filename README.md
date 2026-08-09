@@ -61,12 +61,29 @@ curl https://marketnow.site/api/trust-score?skillId=mn-gen-00003
 
 | Metric | Value |
 |--------|-------|
-| MCP skills catalogued | 9,248 |
-| Audited by Sentinel | 5,662 |
+| Security checks performed | **1,211,488** |
+| MCP skills analyzed | 9,248 |
+| Threats detected | **1,030** |
+| Skills quarantined (critical) | **80** |
+| Skills flagged risky | 71 |
+| Skills flagged caution | 879 |
+| Verified safe (score ≥ 8) | **8,288** |
 | gVisor sandbox runs | 257 |
 | Agent Trust Cards issued | 57 |
 | CA algorithm | Ed25519 (RFC 8032) |
 | npm packages | marketnow-mcp v1.8.0, marketnow-install-stack v1.1.0 |
+
+### What Sentinel caught
+
+80 skills quarantined for:
+- Malware patterns (binary launchers, suspicious install scripts)
+- Malware family signatures (48 YARA-equivalent rules matched)
+- Prompt injection (32 rules, jailbreak attempts detected)
+- Hacking tools (Kali Linux, darknet, OSINT attack frameworks)
+- Credential exfiltration patterns
+- Failed sandbox execution (container crashes, unresponsive)
+
+Full transparency report: `GET https://marketnow.site/api/audit-report.json`
 
 ## Quick start
 

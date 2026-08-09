@@ -252,7 +252,7 @@ export default async function handler(req, res) {
           example: {
             action: 'fingerprint',
             skill_id: 'mn-real-xxx',
-            tools_list_response: { tools: [{ name: 'read_file', description: '...', inputSchema: {...} }] },
+            tools_list_response: { tools: [{ name: 'read_file', description: '...', inputSchema: {type:'object'} }] },
           },
         });
       }

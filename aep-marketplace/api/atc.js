@@ -878,7 +878,7 @@ export default async function handler(req, res) {
         }
         const referrals = await listReferralsByAgent(agent_id);
         return res.status(200).json({
-          agent_id,
+          agent_id: safeAgentId,
           total_ref_codes: referrals.length,
           referrals,
         });
@@ -982,12 +982,26 @@ export default async function handler(req, res) {
       if (postAction === 'issue') {
         const { agent_id, agent_name, public_key, capabilities, protocol_language, wallet_address, skill_id, proof_signature, proof_message } = body;
 
-        if (!agent_id || !public_key) {
+        // ── INPUT SANITIZATION ──
+        // Prevent path traversal, XSS, command injection in agent_id
+        const sanitize = (str) => {
+          if (typeof str !== 'string') return '';
+          // Remove path traversal, null bytes, control chars
+          return str.replace(/[\x00-\x1f\x7f/<>"'`\\;|$&!]/g, '').slice(0, 200);
+        };
+        const safeAgentId = sanitize(agent_id);
+        const safeAgentName = sanitize(agent_name || agent_id);
+        
+        if (!safeAgentId || safeAgentId.length < 3) {
           return res.status(400).json({
-            error: 'agent_id and public_key required',
-            example: {
-              agent_id: 'agent.example.myagent',
-              public_key: 'Ed25519 public key (SPKI PEM or base64 raw)',
+            error: 'Invalid agent_id — must be 3+ alphanumeric chars, no special chars',
+            hint: 'Use format: agent.example.myagent',
+          });
+        }
+
+        if (!public_key || public_key.length < 10) {
+          return res.status(400).json({
+            error: 'public_key required (min 10 chars)',
               capabilities: ['search', 'recommend'],
               protocol_language: 'mcp',
               wallet_address: '0x...',
@@ -1083,8 +1097,8 @@ export default async function handler(req, res) {
           card_id,
           schema_version: '1.1.0',
           decision_authority: 'consumer',
-          agent_id,
-          agent_name: agent_name || agent_id,
+          agent_id: safeAgentId,
+          agent_name: safeAgentName,
           identity: {
             public_key,
             key_algorithm: 'Ed25519',
@@ -1163,12 +1177,29 @@ export default async function handler(req, res) {
 
       // ── revoke: mark an ATC as revoked ──
       if (postAction === 'revoke') {
-        const { card_id, reason } = body;
+        const { card_id, reason, ca_secret } = body;
+        
+        // SECURITY: Require CA secret to revoke (prevent unauthorized revocation)
+        const expectedSecret = process.env.MANDATES_INTERNAL_SECRET;
+        if (!ca_secret || ca_secret !== expectedSecret) {
+          return res.status(403).json({
+            error: 'Unauthorized',
+            message: 'Revocation requires ca_secret (MANDATES_INTERNAL_SECRET). Only the CA can revoke ATCs.',
+            hint: 'If you are the ATC holder and need to revoke, contact support@alicelabs.site',
+          });
+        }
+        
         if (!card_id) {
           return res.status(400).json({ error: 'card_id required' });
         }
 
-        const atc = await fetchATC(card_id, { skipCache: true }); // revoke reads fresh
+        // Sanitize card_id (prevent path traversal)
+        const safeCardId = card_id.replace(/[^a-zA-Z0-9-]/g, '');
+        if (safeCardId !== card_id) {
+          return res.status(400).json({ error: 'Invalid card_id format' });
+        }
+
+        const atc = await fetchATC(safeCardId, { skipCache: true }); // revoke reads fresh
         if (!atc) {
           return res.status(404).json({ error: 'ATC not found', card_id });
         }

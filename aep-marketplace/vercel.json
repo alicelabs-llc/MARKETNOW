@@ -28,6 +28,14 @@
   ],
   "rewrites": [
     {
+      "source": "/api/skills/:id",
+      "destination": "/api/search?_mode=detail"
+    },
+    {
+      "source": "/api/recommend",
+      "destination": "/api/search?_mode=recommend"
+    },
+    {
       "source": "/api/submit-skill",
       "destination": "/api/atc"
     },

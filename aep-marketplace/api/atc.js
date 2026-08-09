@@ -42,6 +42,7 @@ import crypto from 'crypto';
 import { setCorsHeaders } from '../lib/cors.mjs';
 import { applySecurityHeaders } from '../lib/waf.mjs';
 import { canonicalize as rfc8785Canonicalize } from '../lib/canonical-json.mjs';
+import { checkRateLimit } from '../lib/rate-limiter.mjs';
 import {
   buildReceipt,
   persistReceipt,

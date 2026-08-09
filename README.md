@@ -71,7 +71,7 @@ curl https://marketnow.site/api/trust-score?skillId=mn-gen-00003
 | gVisor sandbox runs | 257 |
 | Agent Trust Cards issued | 57 |
 | CA algorithm | Ed25519 (RFC 8032) |
-| npm packages | marketnow-mcp v1.8.0, marketnow-install-stack v1.1.0 |
+| npm packages | marketnow-mcp v1.9.0, marketnow-install-stack v1.1.0 |
 
 ### What Sentinel caught
 
@@ -110,11 +110,41 @@ curl -X POST https://marketnow.site/api/interceptor \
   -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"read_file","arguments":{"path":"/.env"}}}'
 ```
 
+## MCP Server v1.9.0 — Agent Contract
+
+The npm package `marketnow-mcp@1.9.0` exposes **12 tools, all under the `marketnow_*` namespace** so Claude Desktop, Cursor, Cline, LangChain, and LlamaIndex can disambiguate them at tool-choice time.
+
+The four golden rules enforced (full audit in [`mcp-server/AUDIT.md`](./mcp-server/AUDIT.md)):
+
+| # | Rule | What it means |
+|---|------|---------------|
+| A | Deterministic `marketnow_` snake_case tool names | e.g. `marketnow_search_skills`, never `searchSkills` or `do-stuff` |
+| B | Intent-oriented descriptions | Every description states WHEN and WHY an agent should call, not WHAT the code does |
+| C | Strict JSON-Schema | `type` + `enum` + `pattern` + `minimum`/`maximum` on every parameter, no `any` |
+| D | Structured `{ content, isError }` responses | Errors never throw into the agent loop — they normalize to `INVALID_ARGUMENT` / `NOT_FOUND` / `UNKNOWN_TOOL` / `INTERNAL_ERROR` with contextual hints |
+
+The 12 tools:
+
+1. `marketnow_search_skills` — keyword/category/price-bounded search
+2. `marketnow_get_skill` — full skill detail by ID/slug
+3. `marketnow_list_categories` — marketplace taxonomy with counts
+4. `marketnow_get_manifest` — marketplace metadata + security metrics
+5. `marketnow_get_install_command` — npx install command for a skill
+6. `marketnow_verify_trust` — verify an Agent Trust Card (ATC)
+7. `marketnow_verify_receipt` — verify a signed delivery proof (`rcpt_*`)
+8. `marketnow_submit_skill` — submit a GitHub repo (L1.5+L1.7 sync, L2 queued)
+9. `marketnow_mint_referral` — mint `ref_xxxxxxxx` (5% commission)
+10. `marketnow_lookup_referral` — referral stats
+11. `marketnow_recommend_skills` — AI-ranked recommendations for a task
+12. `marketnow_get_owasp_compliance` — OWASP MCP Cheat Sheet (12 controls) + SHA-256 tool fingerprints + capability manifest
+
 ## Pricing
+
+> **Pricing coherence note (v5.0.0):** MarketNow is **security infrastructure**, not a marketplace. The marketplace (9,248 MCP skills, all free to install) is **distribution**. The paid product is **Sentinel** — the security audit pipeline. The MCP server itself is free to install and use; paid actions kick in when you need a signed Trust Card, runtime testing, or continuous monitoring.
 
 | Tier | Price | Features |
 |------|-------|----------|
-| Free | $0 | Basic scan, trust score, public report |
+| Free | $0 | Basic Sentinel scan, trust score, public report |
 | Developer | $49-99 | Deep audit, signed report |
 | Professional | $199-499 | Runtime testing, Trust Card, re-audit |
 | Continuous | $99-499/mo | Monitoring, CVE tracking, auto re-audit |

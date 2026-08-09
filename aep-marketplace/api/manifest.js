@@ -75,7 +75,10 @@ export default async function handler(req, res) {
       total_skills: 9248,
       audited: 5662,
       l25_tested: 257,
-      free_skills: 9248,
+      // NOTE: All 9,248 skills in the catalog are free to INSTALL (it's distribution).
+      // The paid product is Sentinel (security audit). See `pricing` block above.
+      // The legacy `free_skills: 9248` field was removed in v5.0.0 to avoid implying
+      // the platform itself is free — Sentinel audits are paid at the Developer tier and above.
       atc_issued: 57,
       security_checks_performed: 1211488,
       threats_detected: 1030,

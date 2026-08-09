@@ -1,22 +1,22 @@
 # MarketNow MCP Server
 
-> **Security infrastructure for AI agents.** 12 MCP tools — all under the `marketnow_*` namespace — that let Claude Desktop, Cursor, Cline, Continue, LangChain, and LlamaIndex agents search the marketplace, verify trust, and consume the OWASP compliance API without execution errors or hallucinations.
+> **Security infrastructure for AI agents.** 13 MCP tools — all under the `marketnow_*` namespace — that let Claude Desktop, Cursor, Cline, Continue, LangChain, and LlamaIndex agents search the marketplace, verify trust, consume the OWASP compliance API, and verify ANY Agent Trust Card against the ATC/1.0 spec without execution errors or hallucinations.
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: AliceLabs Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Audit: PASS](https://img.shields.io/badge/Audit-v1.9.0%20PASS-brightgreen)](./AUDIT.md)
+[![Audit: PASS](https://img.shields.io/badge/Audit-v1.10.0%20PASS-brightgreen)](./AUDIT.md)
 
 ---
 
-## Why v1.9.0 is a breaking change
+## Why v1.10.0 is a breaking change
 
 Agents do not read human documentation at runtime — they read the JSON-Schema returned by `tools/list`. v1.7.0 had `search_skills`, `get_skill`, etc., with no namespace prefix and several free-form string fields. That ambiguity caused LLM tool-call failures.
 
-v1.9.0 enforces **four golden rules** (see [`AUDIT.md`](./AUDIT.md)):
+v1.10.0 enforces **four golden rules** (see [`AUDIT.md`](./AUDIT.md)) and adds the ATC/1.0 spec verifier:
 
 | # | Rule | What changed |
 |---|------|--------------|
-| A | Deterministic tool names with `marketnow_` prefix | All 12 tools renamed |
+| A | Deterministic tool names with `marketnow_` prefix | All 13 tools use the prefix |
 | B | Intent-oriented descriptions (WHEN/WHY, not WHAT) | Every description rewritten |
 | C | Strict JSON-Schema (`type` + `enum` + `pattern` + bounds) | No `any` left anywhere |
 | D | Structured `{ content, isError }` responses with taxonomy | `INVALID_ARGUMENT` / `NOT_FOUND` / `UNKNOWN_TOOL` / `INTERNAL_ERROR` |
@@ -54,7 +54,7 @@ Same `mcpServers` block — add it under Settings → MCP, or your project's `.m
 
 ---
 
-## Tools exposed (12, all `marketnow_*`)
+## Tools exposed (13, all `marketnow_*`)
 
 | # | Tool | Purpose |
 |---|------|---------|
@@ -70,6 +70,7 @@ Same `mcpServers` block — add it under Settings → MCP, or your project's `.m
 | 10 | `marketnow_lookup_referral` | Referral stats (clicks, installs, purchases, earnings) |
 | 11 | `marketnow_recommend_skills` | AI-ranked recommendations for a natural-language task |
 | 12 | `marketnow_get_owasp_compliance` | OWASP MCP Cheat Sheet (12 controls) + SHA-256 tool fingerprint + capability manifest (filesystem/network/shell/credentials/process) |
+| 13 | `marketnow_verify_atc_spec` | **ATC/1.0 spec verifier** — accepts ANY Agent Trust Card (any issuer, any CA) and verifies all 8 required controls (ATC-001 Identity through ATC-008 Expiration). Self-contained: uses `node:crypto` + RFC 8785 JCS + Ed25519 (RFC 8032). Makes this package the LIVE REFERENCE IMPLEMENTATION of the ATC/1.0 specification. |
 
 ### Strict inputSchema (Rule C in practice)
 
@@ -120,6 +121,8 @@ After the MCP config is loaded, ask Claude:
   → Claude calls `marketnow_verify_trust` with `card_id="ATC-2026-7777670"`
 - *"What OWASP MCP controls does this skill comply with? Does it touch the filesystem?"*
   → Claude calls `marketnow_get_owasp_compliance` with `skill_id="mn-gen-00003"`
+- *"Verify this ATC from a third-party CA against the open ATC/1.0 spec"*
+  → Claude calls `marketnow_verify_atc_spec` with `atc={...the card envelope...}` — returns per-control pass/fail + signature verification result
 
 ---
 

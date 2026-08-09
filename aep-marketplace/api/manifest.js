@@ -68,6 +68,7 @@ export default async function handler(req, res) {
       execute: { method: 'POST', path: '/api/execute', description: 'A2A remote execution', auth: 'ATC + mandate' },
       trust_score: { method: 'GET', path: '/api/trust-score?skillId={id}', description: 'Compact trust score', auth: 'none' },
       audit: { method: 'POST', path: '/api/audit-skill', description: 'Trigger Sentinel audit', auth: 'github' },
+      audit_report: { method: 'GET', path: '/api/audit-report.json', description: 'Full transparency report — safe, risky, and quarantined skills', auth: 'none' },
     },
 
     stats: {
@@ -76,6 +77,9 @@ export default async function handler(req, res) {
       l25_tested: 257,
       free_skills: 9248,
       atc_issued: 57,
+      quarantined: 81,
+      risky_skills: 54,
+      safe_skills: 8238,
       sentinel_version: 'L1.5 → L3 (10 layers) + Interceptor + ATC + x402 + A2A',
     },
 

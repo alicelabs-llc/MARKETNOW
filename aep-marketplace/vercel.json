@@ -28,6 +28,22 @@
   ],
   "rewrites": [
     {
+      "source": "/api/execute",
+      "destination": "/api/agent-economy?_mode=execute"
+    },
+    {
+      "source": "/api/stacks",
+      "destination": "/api/agent-economy?_mode=stacks"
+    },
+    {
+      "source": "/api/stream",
+      "destination": "/api/agent-economy?_mode=stream"
+    },
+    {
+      "source": "/api/interceptor",
+      "destination": "/api/agent-economy?_mode=interceptor"
+    },
+    {
       "source": "/api/skills/:id",
       "destination": "/api/search?_mode=detail"
     },

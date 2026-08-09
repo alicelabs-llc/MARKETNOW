@@ -4,7 +4,7 @@
  * GET /api/search?q=<query>&category=<cat>&limit=<n>&language=<lang>&max_price=<n>
  *
  * Searches skills by name, description, tags, category.
- * Uses pre-built skills_index.json for fast lookups.
+ * Uses pre-built skills-lite.json for fast lookups.
  */
 
 import { setCorsHeaders } from '../lib/cors.mjs';
@@ -34,13 +34,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Load skills-lite.json (smaller, faster) or skills_index.json
-    // Use skills_index.json which has name, description, category, tags
+    // Load skills-lite.json (smaller, faster) or skills-lite.json
+    // Use skills-lite.json which has name, description, category, tags
     const baseUrl = process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
       : 'https://marketnow.site';
 
-    const indexResp = await fetch(`${baseUrl}/api/skills_index.json`);
+    const indexResp = await fetch(`${baseUrl}/api/skills-lite.json`);
     if (!indexResp.ok) {
       throw new Error(`Index fetch failed: ${indexResp.status}`);
     }

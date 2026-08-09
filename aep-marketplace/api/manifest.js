@@ -11,7 +11,7 @@ export default secureLight(async function handler(req, res) {
   res.status(200).json({
     service: 'MarketNow',
     version: '4.0.0',
-    description: 'Trust layer for agent commerce. 8,845 MCP servers, each security-audited by Sentinel (10-layer pipeline). Agent Trust Cards (ATC) for agent identity verification.',
+    description: 'Trust layer for agent commerce. 9,248 MCP servers, each security-audited by Sentinel (10-layer pipeline). Agent Trust Cards (ATC) for agent identity verification.',
     homepage: 'https://marketnow.site',
     
     // Agent connection methods
@@ -68,7 +68,7 @@ export default secureLight(async function handler(req, res) {
       free_skills: {
         method: 'GET',
         path: '/api/free-skills.json',
-        description: '65 free skills (no signup, no payment)',
+        description: '9,248 free skills (no signup, no payment)',
         auth: 'none',
       },
       purchase: {

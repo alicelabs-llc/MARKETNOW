@@ -10,7 +10,7 @@ if(mode==='execute')return handleExecute(req,res);
 return res.status(404).json({error:'Unknown mode'});}
 
 const RULES=[
-{id:'BLOCK_SECRET_FILES',name:'Block reads of secret files',pattern:/\.env($|\?|#|\/)|\.env\.local|\.env\.production|\.aws\/credentials|\.ssh\/id_rsa|\.ssh\/id_ed25519|\.npmrc|\.pypirc/i,methods:['read_file','read','cat','open','get_file','get','load','parse'],action:'block',severity:'critical',message:'Secret file read detected'},
+{id:'BLOCK_SECRET_FILES',name:'Block reads of secret files',pattern:/\.env|\.aws\/credentials|\.ssh\/id_rsa|\.ssh\/id_ed25519|\.npmrc|\.pypirc/i,methods:['read_file','read','cat','open','get_file','get','load','parse'],action:'block',severity:'critical',message:'Secret file read detected'},
 {id:'BLOCK_DANGEROUS_CMDS',name:'Block dangerous commands',pattern:/rm\s+-rf|DROP\s+TABLE|DELETE\s+FROM|mkfs|dd\s+if=|:\(\)\s*\{|fork\s*bomb|chmod\s+777/i,methods:['execute','shell','run_command','exec','spawn','run','cmd'],action:'block',severity:'critical',message:'Dangerous command detected'},
 {id:'BLOCK_PROCESS_SPAWN',name:'Block process spawns',pattern:/child_process|exec\(|spawn\(|fork\(/i,methods:['execute','shell','run_command'],action:'block',severity:'high',message:'Process spawn detected'},
 {id:'BLOCK_SYSTEM_WRITES',name:'Block system writes',pattern:/\/etc\/|\/root\/|\/var\/log|\/boot\/|C:\\\\Windows\\\\|C:\\\\System32\\\\/i,methods:['write_file','write','save','create','mkdir','mv','cp'],action:'block',severity:'critical',message:'System write detected'},

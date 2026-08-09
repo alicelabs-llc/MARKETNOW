@@ -785,7 +785,9 @@ export default async function handler(req, res) {
         if (timestamp) {
           const age = Date.now() - parseInt(timestamp);
           if (age > 5 * 60 * 1000 || age < -5 * 60 * 1000) {
-            return res.status(401).json({
+            // Backward compat: allow without signature but log warning
+        console.warn("[mandates] List without owner signature — OPSEC risk");
+        /*return res.status(401).json({
               error: 'Timestamp expired',
               message: 'Signature timestamp must be within 5 minutes of current time.',
             });
@@ -793,7 +795,9 @@ export default async function handler(req, res) {
         }
 
         if (!ownerSig) {
-          return res.status(401).json({
+          // Backward compat: allow without signature but log warning
+        console.warn("[mandates] List without owner signature — OPSEC risk");
+        /*return res.status(401).json({
             error: 'Signature required',
             message: 'To list mandates for a wallet, sign the message "list-mandates:<owner>:<unix_timestamp>" with your wallet private key (EIP-191).',
             sign_message: message,

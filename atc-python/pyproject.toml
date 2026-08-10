@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-trust-card"
-version = "1.0.0"
+version = "1.0.1"
 description = "ATC/1.0 Python SDK — issue and verify Agent Trust Cards (Ed25519, RFC 8785 JCS, SHA-256)"
 readme = "README.md"
 requires-python = ">=3.9"

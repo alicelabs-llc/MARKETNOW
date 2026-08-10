@@ -312,12 +312,26 @@ def _fetch_revocation_list(url: str, timeout_ms: int = 5000) -> Dict:
 
 
 def _is_card_revoked(revocation_list: Dict, card_id: str) -> Dict:
-    """Check whether a card_id appears in the revocation list."""
-    if not revocation_list or not isinstance(revocation_list.get("revoked_cards"), list):
+    """Check whether a card_id appears in the revocation list.
+
+    Supports two formats:
+    - The MarketNow live CRL format: `cards` array with `status` per card
+      (cards with status:"revoked" are revoked; others are active).
+    - The ATC-007 spec format: `revoked_cards` array (presence = revoked).
+    """
+    if not revocation_list:
         return {"revoked": False}
-    for r in revocation_list["revoked_cards"]:
-        if r.get("card_id") == card_id:
-            return {"revoked": True, "reason": r.get("reason"), "revoked_at": r.get("revoked_at")}
+    cards = revocation_list.get("cards") or revocation_list.get("revoked_cards")
+    if not isinstance(cards, list):
+        return {"revoked": False}
+    for c in cards:
+        if c.get("card_id") == card_id:
+            # In `cards` format, status:"revoked" indicates revocation.
+            # In `revoked_cards` format, presence itself indicates revocation.
+            is_revoked = c.get("status") == "revoked" or "status" not in c
+            if is_revoked:
+                return {"revoked": True, "reason": c.get("reason"), "revoked_at": c.get("revoked_at")}
+            return {"revoked": False}
     return {"revoked": False}
 
 
@@ -453,9 +467,11 @@ def verify_atc(atc: Dict, ca_public_key: Optional[str] = None, fetch_revocation:
                     result["controls_failed"].append("ATC-007")
                     result["valid"] = False
                 else:
-                    rev_count = len(rev_list.get("revoked_cards", []))
+                    cards_list = rev_list.get("cards") or rev_list.get("revoked_cards") or []
+                    total = len(cards_list)
+                    revoked_count = sum(1 for c in cards_list if c.get("status") == "revoked") if rev_list.get("cards") else total
                     result["warnings"].append(
-                        f"ATC-007: revocation list fetched successfully ({rev_count} revoked cards, this card_id is not in the list)"
+                        f"ATC-007: revocation list fetched successfully ({total} total cards, {revoked_count} revoked — this card_id is not in the revoked set)"
                     )
             except Exception as e:
                 result["warnings"].append(f"ATC-007: revocation list fetch failed: {e}")

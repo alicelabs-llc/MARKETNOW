@@ -382,12 +382,27 @@ async function fetchRevocationList(url, options = {}) {
  * @returns {{ revoked: boolean, reason?: string, revokedAt?: string }}
  */
 function isCardRevoked(revocationList, cardId) {
-  if (!revocationList || !Array.isArray(revocationList.revoked_cards)) {
+  if (!revocationList) {
     return { revoked: false };
   }
-  for (const r of revocationList.revoked_cards) {
-    if (r.card_id === cardId) {
-      return { revoked: true, reason: r.reason, revokedAt: r.revoked_at };
+  // The MarketNow live CRL returns cards as `cards` array with `status` per card
+  // (some cards have status:"revoked", others "active").
+  // We also support the ATC-007 spec's `revoked_cards` format (array of just revoked cards).
+  const cards = Array.isArray(revocationList.cards) ? revocationList.cards :
+                Array.isArray(revocationList.revoked_cards) ? revocationList.revoked_cards : null;
+  if (!cards) {
+    return { revoked: false };
+  }
+  for (const c of cards) {
+    if (c.card_id === cardId) {
+      // In the `cards` format, status:"revoked" indicates revocation
+      // In the `revoked_cards` format, presence in the list itself indicates revocation
+      const isRevoked = c.status === 'revoked' || !('status' in c);
+      if (isRevoked) {
+        return { revoked: true, reason: c.reason, revokedAt: c.revoked_at };
+      }
+      // Card is in the list but status is "active" — not revoked
+      return { revoked: false };
     }
   }
   return { revoked: false };
@@ -509,7 +524,9 @@ export async function verifyATC(atc, options = {}) {
             controlsFailed.push('ATC-007');
           }
         } else {
-          warnings.push(`ATC-007: revocation list fetched successfully (${list.revoked_cards?.length || 0} revoked cards, this card_id is not in the list)`);
+          const totalCount = (list.cards?.length || list.revoked_cards?.length || 0);
+          const revokedCount = list.cards ? list.cards.filter(c => c.status === 'revoked').length : (list.revoked_cards?.length || 0);
+          warnings.push(`ATC-007: revocation list fetched successfully (${totalCount} total cards, ${revokedCount} revoked — this card_id is not in the revoked set)`);
         }
       } catch (err) {
         warnings.push(`ATC-007: revocation list fetch failed: ${err.message}`);

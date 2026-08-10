@@ -21,6 +21,7 @@ import {
   generateKeyPair,
   issueATC,
   verifyATC,
+  verifyATCSync,
   canonicalizeATC,
   computePayloadHash,
   ATC_SPEC_VERSION,
@@ -129,7 +130,7 @@ async function cmdIssue(options) {
 
 async function cmdVerify(cardPath) {
   const atc = loadJSON(cardPath);
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   console.log('');
   if (result.valid) {
     console.log(`${BOLD}${GREEN}✓ ATC VALID${RESET}  ${DIM}(${result.controls_passed.length}/8 controls passed)${RESET}`);

@@ -337,16 +337,74 @@ function check_ATC_008_expiration(atc) {
 // ─── Top-level verifier ─────────────────────────────────────────────────────
 
 /**
+ * Fetch the revocation list from `atc.revocation.revocation_check_url`.
+ * Returns the parsed JSON object, or throws on error.
+ *
+ * The list format (per ATC-007 spec, simple_json method):
+ *   {
+ *     ca_id: string,
+ *     issued_at: string (ISO 8601),
+ *     expires_at: string (ISO 8601),
+ *     revoked_cards: [
+ *       { card_id: string, revoked_at: string, reason: "compromised"|"malicious"|"superseded"|"unknown" }
+ *     ]
+ *   }
+ *
+ * @param {string} url
+ * @param {object} [options]
+ * @param {number} [options.timeoutMs=5000]
+ * @param {string} [options.method='simple_json']
+ * @returns {Promise<object>}
+ */
+async function fetchRevocationList(url, options = {}) {
+  const timeoutMs = options.timeoutMs || 5000;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, {
+      signal: controller.signal,
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status} fetching revocation list from ${url}`);
+    }
+    return await res.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * Check whether a card_id appears in the revocation list.
+ *
+ * @param {object} revocationList — parsed JSON returned by fetchRevocationList
+ * @param {string} cardId
+ * @returns {{ revoked: boolean, reason?: string, revokedAt?: string }}
+ */
+function isCardRevoked(revocationList, cardId) {
+  if (!revocationList || !Array.isArray(revocationList.revoked_cards)) {
+    return { revoked: false };
+  }
+  for (const r of revocationList.revoked_cards) {
+    if (r.card_id === cardId) {
+      return { revoked: true, reason: r.reason, revokedAt: r.revoked_at };
+    }
+  }
+  return { revoked: false };
+}
+
+/**
  * Verifies an ATC/1.0 card.
  *
  * @param {object} atc - The ATC JSON document to verify.
  * @param {object} [options]
  * @param {string} [options.ca_public_key] - Override the CA public key (base64 SPKI).
- * @param {boolean} [options.fetch_revocation] - If true, indicates the caller wants revocation list fetch attempted.
- *                                                NOTE: this verifier does not perform network calls.
- * @returns {object} Verification result.
+ * @param {boolean} [options.fetch_revocation] - If true, fetches the revocation list
+ *                                                via HTTP and checks if the card_id is revoked.
+ * @param {number} [options.revocation_timeout_ms=5000] - Timeout for the HTTP fetch.
+ * @returns {Promise<object>} Verification result.
  */
-export function verifyATC(atc, options = {}) {
+export async function verifyATC(atc, options = {}) {
   const errors = [];
   const warnings = [];
   const controlsPassed = [];
@@ -424,14 +482,52 @@ export function verifyATC(atc, options = {}) {
     errors.push('ATC-006: skipped because ATC-002 (attestation structure) failed');
   }
 
-  if (atc.delegation) {
+  // ATC-007 revocation list fetch (NEW in v1.1.0)
+  let revoked = false;
+  let revocationReason = null;
+  let revokedAt = null;
+  if (options.fetch_revocation && controlsPassed.includes('ATC-007')) {
+    const revUrl = atc.revocation?.revocation_check_url;
+    if (!revUrl) {
+      warnings.push('ATC-007: fetch_revocation=true but revocation_check_url is missing');
+    } else {
+      try {
+        const list = await fetchRevocationList(revUrl, {
+          timeoutMs: options.revocation_timeout_ms || 5000,
+          method: atc.revocation.revocation_check_method,
+        });
+        const r = isCardRevoked(list, atc.card_id);
+        revoked = r.revoked;
+        revocationReason = r.reason;
+        revokedAt = r.revokedAt;
+        if (revoked) {
+          errors.push(`ATC-007: card_id ${atc.card_id} is revoked (reason: ${revocationReason || 'unknown'}, revoked_at: ${revokedAt || '?'})`);
+          // Replace ATC-007 from passed to failed
+          const idx = controlsPassed.indexOf('ATC-007');
+          if (idx >= 0) {
+            controlsPassed.splice(idx, 1);
+            controlsFailed.push('ATC-007');
+          }
+        } else {
+          warnings.push(`ATC-007: revocation list fetched successfully (${list.revoked_cards?.length || 0} revoked cards, this card_id is not in the list)`);
+        }
+      } catch (err) {
+        warnings.push(`ATC-007: revocation list fetch failed: ${err.message}`);
+        if (atc.revocation.revocation_check_required === true) {
+          errors.push(`ATC-007: revocation list is required but unreachable (${err.message})`);
+          const idx = controlsPassed.indexOf('ATC-007');
+          if (idx >= 0) {
+            controlsPassed.splice(idx, 1);
+            controlsFailed.push('ATC-007');
+          }
+        }
+      }
+    }
+  } else if (atc.delegation) {
     warnings.push('ATC-009 (delegation) is present but not validated by this verifier');
   }
   if (atc.runtime_trust) {
     warnings.push('ATC-010 (runtime_trust) is present but not validated by this verifier');
-  }
-  if (options.fetch_revocation) {
-    warnings.push('fetch_revocation=true is not yet implemented — caller must check the revocation list separately');
   }
 
   controlsPassed.sort();
@@ -452,5 +548,96 @@ export function verifyATC(atc, options = {}) {
     expires_at: atc.validity?.expires_at || null,
     agent_id: atc.identity?.agent_id || null,
     agent_name: atc.identity?.agent_name || null,
+    revoked,
+    revocation_reason: revocationReason,
+    revoked_at: revokedAt,
+  };
+}
+
+// Synchronous verification (no revocation list fetch). For backward compat with v1.0 callers.
+export function verifyATCSync(atc, options = {}) {
+  // Strip fetch_revocation from options and call verifyATC — but verifyATC is async.
+  // For sync callers, we run all checks except the revocation list fetch.
+  const opts = { ...options, fetch_revocation: false };
+  // Reimplement the sync path here to avoid await.
+  // This is a copy of the verifyATC body up to the ATC-006 check.
+  const errors = [];
+  const warnings = [];
+  const controlsPassed = [];
+  const controlsFailed = [];
+
+  if (!isObject(atc)) {
+    return {
+      valid: false, spec_version: null, controls_passed: [], controls_failed: REQUIRED_CONTROLS,
+      errors: ['ATC must be an object'], warnings: [], card_id: null, issuer_ca_id: null,
+      trust_score: null, risk_level: null, expires_at: null,
+    };
+  }
+
+  if (atc.spec_version !== ATC_SPEC_VERSION) {
+    errors.push(`Invalid spec_version: expected '${ATC_SPEC_VERSION}', got '${atc.spec_version}'`);
+    return {
+      valid: false, spec_version: atc.spec_version || null, controls_passed: [], controls_failed: REQUIRED_CONTROLS,
+      errors, warnings, card_id: atc.card_id || null, issuer_ca_id: atc.issuer?.ca_id || null,
+      trust_score: atc.risk?.trust_score ?? null, risk_level: atc.risk?.risk_level || null,
+      expires_at: atc.validity?.expires_at || null,
+    };
+  }
+
+  if (typeof atc.card_id !== 'string' || !CARD_ID_PATTERN.test(atc.card_id)) {
+    errors.push(`card_id must match ${CARD_ID_PATTERN} (e.g. ATC-2026-7777670)`);
+  }
+
+  const checks = [
+    ['ATC-001', check_ATC_001_identity(atc)],
+    ['ATC-002', check_ATC_002_attestation(atc)],
+    ['ATC-003', check_ATC_003_capabilities(atc)],
+    ['ATC-004', check_ATC_004_evidence(atc)],
+    ['ATC-005', check_ATC_005_risk(atc)],
+    ['ATC-007', check_ATC_007_revocation(atc)],
+    ['ATC-008', check_ATC_008_expiration(atc)],
+  ];
+
+  for (const [id, result] of checks) {
+    if (result.errors.length === 0) controlsPassed.push(id);
+    else { controlsFailed.push(id); errors.push(...result.errors); }
+    warnings.push(...result.warnings);
+  }
+
+  if (controlsPassed.includes('ATC-002')) {
+    const sigResult = check_ATC_006_signature(atc, options.ca_public_key);
+    if (sigResult.errors.length === 0) controlsPassed.push('ATC-006');
+    else { controlsFailed.push('ATC-006'); errors.push(...sigResult.errors); }
+    warnings.push(...sigResult.warnings);
+  } else {
+    controlsFailed.push('ATC-006');
+    errors.push('ATC-006: skipped because ATC-002 (attestation structure) failed');
+  }
+
+  if (atc.delegation) warnings.push('ATC-009 (delegation) is present but not validated by this verifier');
+  if (atc.runtime_trust) warnings.push('ATC-010 (runtime_trust) is present but not validated by this verifier');
+  if (options.fetch_revocation) warnings.push('fetch_revocation=true is not supported in verifyATCSync — use verifyATC() (async) instead');
+
+  controlsPassed.sort();
+  controlsFailed.sort();
+
+  return {
+    valid: errors.length === 0,
+    spec_version: atc.spec_version,
+    controls_passed: controlsPassed,
+    controls_failed: controlsFailed,
+    errors,
+    warnings,
+    card_id: atc.card_id || null,
+    issuer_ca_id: atc.issuer?.ca_id || null,
+    issuer_ca_url: atc.issuer?.ca_url || null,
+    trust_score: atc.risk?.trust_score ?? null,
+    risk_level: atc.risk?.risk_level || null,
+    expires_at: atc.validity?.expires_at || null,
+    agent_id: atc.identity?.agent_id || null,
+    agent_name: atc.identity?.agent_name || null,
+    revoked: false,
+    revocation_reason: null,
+    revoked_at: null,
   };
 }

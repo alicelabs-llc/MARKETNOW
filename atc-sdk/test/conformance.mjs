@@ -11,7 +11,7 @@
 import {
   generateKeyPair,
   issueATC,
-  verifyATC,
+  verifyATCSync,
   resignATC,
 } from '../src/index.mjs';
 
@@ -87,7 +87,7 @@ console.log('Test 1: A valid ATC verifies all 8 controls');
     },
   });
 
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   assert(result.valid === true, 'Verification succeeds');
   assert(result.controls_passed.length === 8, 'All 8 required controls pass');
   assert(result.controls_failed.length === 0, 'No controls failed');
@@ -145,7 +145,7 @@ console.log('\nTest 2: Tampered payload fails ATC-006');
 
   // Tamper
   atc.risk.trust_score = 1;
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   assert(result.valid === false, 'Tampered ATC fails verification');
   assert(result.controls_failed.includes('ATC-006'), 'ATC-006 is in failed list');
   assert(result.errors.some(e => e.includes('signed_payload_hash mismatch')), 'Hash mismatch reported');
@@ -198,7 +198,7 @@ console.log('\nTest 3: Wrong CA key fails ATC-006');
     },
   });
 
-  const result = verifyATC(atc, { ca_public_key: wrongCA.publicKey });
+  const result = verifyATCSync(atc, { ca_public_key: wrongCA.publicKey });
   assert(result.valid === false, 'Wrong CA key fails verification');
   assert(result.controls_failed.includes('ATC-006'), 'ATC-006 failed');
 }
@@ -249,7 +249,7 @@ console.log('\nTest 4: Invalid card_id format');
     },
   });
 
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   assert(result.valid === false, 'Invalid card_id fails');
   assert(result.errors.some(e => e.includes('card_id must match')), 'card_id pattern error reported');
 }
@@ -300,7 +300,7 @@ console.log('\nTest 5: Invalid capability enum');
     },
   });
 
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   assert(result.valid === false, 'Invalid enum fails');
   assert(result.controls_failed.includes('ATC-003'), 'ATC-003 failed');
 }
@@ -354,7 +354,7 @@ console.log('\nTest 6: Trust score out of range');
   // Need to re-sign because we modified after issueATC (issueATC clamps to 10 via the spread, but let's force a bad value)
   atc.risk.trust_score = 15;
   resignATC(atc, ca);
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   assert(result.valid === false, 'trust_score=15 fails');
   assert(result.controls_failed.includes('ATC-005'), 'ATC-005 failed');
 }
@@ -410,7 +410,7 @@ console.log('\nTest 7: ATC expired');
     },
   });
 
-  const result = verifyATC(atc);
+  const result = verifyATCSync(atc);
   assert(result.valid === false, 'Expired ATC fails');
   assert(result.controls_failed.includes('ATC-008'), 'ATC-008 failed');
   assert(result.errors.some(e => e.includes('ATC expired')), 'Expiration error reported');
@@ -419,7 +419,7 @@ console.log('\nTest 7: ATC expired');
 // ─── Test 8: Missing required fields ───────────────────────────────────────
 console.log('\nTest 8: Missing required fields');
 {
-  const result = verifyATC({ spec_version: 'ATC/1.0' });
+  const result = verifyATCSync({ spec_version: 'ATC/1.0' });
   assert(result.valid === false, 'Empty ATC fails');
   assert(result.controls_failed.length === 8, 'All 8 controls fail');
 }

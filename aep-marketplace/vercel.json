@@ -124,6 +124,26 @@
       "destination": "/atc.html"
     },
     {
+      "source": "/atc/playground",
+      "destination": "/atc/playground.html"
+    },
+    {
+      "source": "/atc/spec",
+      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md"
+    },
+    {
+      "source": "/atc/conformance",
+      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/atc-sdk/CONFORMANCE.md"
+    },
+    {
+      "source": "/badges/atc-compatible.svg",
+      "destination": "/badges/atc-compatible.svg"
+    },
+    {
+      "source": "/badges/atc-verified.svg",
+      "destination": "/badges/atc-verified.svg"
+    },
+    {
       "source": "/((?!api/|for-agents|landing-pages/|tools/|acp|atc).*)",
       "destination": "/index.html"
     },

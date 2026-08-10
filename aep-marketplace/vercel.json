@@ -121,7 +121,11 @@
     },
     {
       "source": "/atc",
-      "destination": "/atc.html"
+      "destination": "/atc/index.html"
+    },
+    {
+      "source": "/atc/",
+      "destination": "/atc/index.html"
     },
     {
       "source": "/atc/playground",
@@ -129,13 +133,31 @@
     },
     {
       "source": "/atc/spec",
-      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md",
-      "statusCode": 302
+      "destination": "/atc/spec/SPEC.md"
     },
     {
       "source": "/atc/conformance",
-      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/atc-sdk/CONFORMANCE.md",
-      "statusCode": 302
+      "destination": "/atc/spec/CONFORMANCE.md"
+    },
+    {
+      "source": "/atc/prior-art",
+      "destination": "/atc/spec/PRIOR-ART-TIMELINE.md"
+    },
+    {
+      "source": "/atc/schema",
+      "destination": "/atc/spec/atc-1.0.json"
+    },
+    {
+      "source": "/atc/sdk-readme",
+      "destination": "/atc/spec/SDK-README.md"
+    },
+    {
+      "source": "/atc/mcp-audit",
+      "destination": "/atc/spec/MCP-AUDIT.md"
+    },
+    {
+      "source": "/atc/verification-log",
+      "destination": "/atc/spec/VERIFICATION-LOG.md"
     },
     {
       "source": "/badges/atc-compatible.svg",

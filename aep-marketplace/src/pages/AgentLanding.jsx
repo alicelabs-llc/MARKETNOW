@@ -195,6 +195,48 @@ export default function AgentLanding() {
           </section>
         )}
 
+        {/* ============ TRY ATC PLAYGROUND ============ */}
+        <section className="max-w-5xl mx-auto px-6 pb-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="premium-card p-6 md:p-8">
+            <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+              <div>
+                <h2 className="text-white text-2xl font-bold mb-1">Try ATC/1.0 — Issue & Verify in your browser</h2>
+                <p className="text-zinc-400 text-sm">The Agent Trust Card spec, live. Issue a card in 30 seconds, verify any ATC against the open spec. No signup, no install, no backend.</p>
+              </div>
+              <a href="/atc/playground" target="_blank" rel="noopener" className="px-4 py-2 bg-[#00F299] text-black font-bold rounded-lg hover:bg-[#00F299]/90 transition-all text-sm whitespace-nowrap">
+                Open Playground →
+              </a>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00F299] text-xl font-bold font-mono">10</div>
+                <div className="text-zinc-500 text-[10px] mt-1">controls in spec</div>
+              </div>
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00d1ff] text-xl font-bold font-mono">Ed25519</div>
+                <div className="text-zinc-500 text-[10px] mt-1">RFC 8032 signatures</div>
+              </div>
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00F299] text-xl font-bold font-mono">RFC 8785</div>
+                <div className="text-zinc-500 text-[10px] mt-1">JCS canonical JSON</div>
+              </div>
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00d1ff] text-xl font-bold font-mono">3 SDKs</div>
+                <div className="text-zinc-500 text-[10px] mt-1">JS / Python / Rust</div>
+              </div>
+            </div>
+            <div className="p-3 rounded-lg bg-black/40 border border-white/5 flex items-center gap-3 flex-wrap">
+              <span className="text-zinc-500 text-[10px]">Install:</span>
+              <code className="text-[#00F299] text-xs font-mono">npm install agent-trust-card</code>
+              <span className="text-zinc-700">·</span>
+              <code className="text-[#00d1ff] text-xs font-mono">pip install agent-trust-card</code>
+              <span className="text-zinc-700">·</span>
+              <code className="text-[#00d1ff] text-xs font-mono">cargo add agent-trust-card</code>
+              <a href="/atc/spec" target="_blank" rel="noopener" className="text-[#00F299] text-xs hover:underline ml-auto">Read spec →</a>
+            </div>
+          </motion.div>
+        </section>
+
         {/* ============ FOR DEVS ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>

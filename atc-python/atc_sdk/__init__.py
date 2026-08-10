@@ -1,6 +1,6 @@
 """ATC/1.0 Python SDK — Issue and verify Agent Trust Cards."""
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "AliceLabs LLC"
 __spec_version__ = "ATC/1.0"
 __algorithm__ = "Ed25519"

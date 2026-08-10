@@ -129,11 +129,13 @@
     },
     {
       "source": "/atc/spec",
-      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md"
+      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md",
+      "statusCode": 302
     },
     {
       "source": "/atc/conformance",
-      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/atc-sdk/CONFORMANCE.md"
+      "destination": "https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/atc-sdk/CONFORMANCE.md",
+      "statusCode": 302
     },
     {
       "source": "/badges/atc-compatible.svg",

@@ -47,11 +47,14 @@
   },
   "signature": {
     "algorithm": "Ed25519 (RFC 8032)",
-    "value": "51f01c00ad59cff90f5c86dc1b498cb5e9b4704a355486cc03089007bb6b46d8775b2eb73a7a755c715d8d4e233f1aa0731a4a54245bb4c2c843376e1c70940e",
+    "value": "c4e76ff095c2cf176fc4bed0f9f14cc1fea87063df2ecfe5425f5f96c0c651d28adf6446aeeb7acae1cdf75a373c63073a06e510f96be091aa878c0f4b28470a",
     "signed_by": "MarketNow Sentinel CA",
     "signed_at": "2026-07-18T03:38:56.297Z",
-    "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
-    "verify_with": "GET /api/atc?action=ca-key"
+    "canonical_json": "RFC 8785 JCS (JSON Canonicalization Scheme)",
+    "verify_with": "GET /api/atc?action=ca-key",
+    "signed_payload_hash": "4850474d5e8829c24a732a281c12c2a12d52e9b0a1d6c53cc641b13d84b20a93",
+    "resigned_at": "2026-08-12T22:53:26.166Z",
+    "resign_reason": "Aug 12, 2026: migrated from JSON.stringify_v8_sort to RFC 8785 JCS per @anp2network bug report"
   },
   "revoked_at": "2026-07-22T03:11:09.094Z",
   "revocation_reason": "Signed with buggy canonicalization — re-issuing with fixed recursive sort"

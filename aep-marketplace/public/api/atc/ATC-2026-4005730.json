@@ -39,10 +39,13 @@
   },
   "signature": {
     "algorithm": "Ed25519 (RFC 8032)",
-    "value": "161b23343083223e85666ff1cc26acc693b09543b4f5435068706f71f51f08961d72f537151e4bb22ae673d36a541d77d2c6022a4a92d58e35117f0127c77609",
+    "value": "75b8fe37d638f2c067f8f3dd125751a1218f9e99c4578ce5b2e58d49fc345c3579878ddaf8174bcfc0b337b38adf0c53e2052f942286472e6d1d7cce3da62b0b",
     "signed_by": "MarketNow Sentinel CA",
     "signed_at": "2026-07-30T15:06:45.730Z",
-    "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
-    "verify_with": "GET /api/atc?action=ca-key"
+    "canonical_json": "RFC 8785 JCS (JSON Canonicalization Scheme)",
+    "verify_with": "GET /api/atc?action=ca-key",
+    "signed_payload_hash": "b0d8ea124726ad3d917e5cff4f72c6b13cf71a43bdd485adf33141a5b5293329",
+    "resigned_at": "2026-08-12T22:53:26.163Z",
+    "resign_reason": "Aug 12, 2026: migrated from JSON.stringify_v8_sort to RFC 8785 JCS per @anp2network bug report"
   }
 }

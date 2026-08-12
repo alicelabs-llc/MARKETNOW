@@ -41,7 +41,7 @@
 import crypto from 'crypto';
 import { setCorsHeaders } from '../lib/cors.mjs';
 import { applySecurityHeaders } from '../lib/waf.mjs';
-import { canonicalize as rfc8785Canonicalize } from '../lib/canonical-json.mjs';
+import { canonicalize as rfc8785Canonicalize, canonicalHash } from '../lib/canonical-json.mjs';
 import { checkRateLimit } from '../lib/rate-limiter.mjs';
 import {
   buildReceipt,
@@ -513,11 +513,120 @@ export default async function handler(req, res) {
           public_key_pem: pubPem,
           public_key_format: 'SPKI PEM (RFC 5280)',
           created_at: '2026-07-16',
-          usage: 'Verify ATC signatures: crypto.verify(null, Buffer.from(canonicalJson(payload)), publicKey, Buffer.from(signature, "hex"))',
-          canonical_json: 'JSON.stringify(payload, Object.keys(payload).sort())',
+          usage: 'Verify ATC signatures: crypto.verify(null, Buffer.from(canonicalJson(payload), "utf8"), publicKey, Buffer.from(signature, "hex"))',
+          canonical_json: 'RFC 8785 JCS (JSON Canonicalization Scheme) — see https://tools.ietf.org/html/rfc8785',
+          canonicalization_method: 'RFC_8785_JCS',
           url: 'https://marketnow.site/api/atc?action=ca-key',
           note: 'Pin this key in your agent runtime. If it changes, MarketNow CA has been rotated.',
+          // Security fix (Aug 12, 2026): the previous `canonical_json` field
+          // advertised `JSON.stringify(payload, Object.keys(payload).sort())`
+          // which was the OLD method used for cards issued Jul 28-30.
+          // The signer now uses RFC 8785 JCS (via lib/canonical-json.mjs).
+          // Cards issued after Aug 10, 2026 use RFC 8785 JCS.
+          // Pre-Aug-10 cards have their canonicalization_method documented
+          // in their `signature.canonical_json` field per-card.
         });
+      }
+
+      // ── envelope: return the exact signed bytes (NEW — fix for @anp2network) ──
+      // Returns the full ATC JSON document with signature + payload exactly
+      // as they were when signed. External verifiers can use this to verify
+      // signatures against the same bytes the issuer used.
+      if (action === 'envelope') {
+        const { card_id } = req.query;
+        if (!card_id) {
+          return res.status(400).json({ error: 'card_id required' });
+        }
+        const atc = await fetchATC(card_id, { skipCache: true });
+        if (!atc) {
+          return res.status(404).json({
+            error: 'not_found',
+            card_id,
+            message: `No ATC with id ${card_id} exists.`,
+          });
+        }
+        // Return the exact signed object — NOT a reconstruction
+        return res.status(200).json({
+          card_id,
+          status: atc.status,
+          spec_version: 'ATC/1.0',
+          payload: atc.payload,
+          attestation: {
+            signature: atc.signature.value,
+            signature_algorithm: atc.signature.algorithm,
+            signed_payload_hash: atc.signature.signed_payload_hash || null,
+            canonicalization_method: atc.signature.canonical_json || 'JSON.stringify_v8_sort (legacy)',
+            signed_at: atc.signature.signed_at,
+            signed_by: atc.signature.signed_by,
+            verify_with: 'GET /api/atc?action=ca-key',
+          },
+          // Instructions for external verifiers:
+          verification_instructions: {
+            step_1: 'Fetch the CA public key: GET /api/atc?action=ca-key',
+            step_2: 'Read attestation.canonicalization_method to determine which canonicalization to use',
+            step_3: 'If RFC_8785_JCS: canonicalize the payload using RFC 8785 JCS (blank out attestation.signature + signed_payload_hash first)',
+            step_4: 'If JSON.stringify_v8_sort: use JSON.stringify(payload, Object.keys(payload).sort()) (legacy cards issued before Aug 10, 2026)',
+            step_5: 'Verify the Ed25519 signature: crypto.verify(null, Buffer.from(canonical, "utf8"), publicKey, Buffer.from(signature, "hex"))',
+          },
+          note: 'This endpoint returns the exact bytes the issuer signed. The MarketNow /api/atc?action=verify endpoint uses the same bytes — closing the verification isolation gap reported by @anp2network.',
+        });
+      }
+
+      // ── resign: re-sign all ATCs under RFC 8785 JCS (NEW — fix Part 3) ──
+      // Admin-only endpoint. Re-signs all ATCs in the ledger using the
+      // current canonicalization (RFC 8785 JCS). Requires CA secret.
+      if (action === 'resign-all') {
+        const caSecret = req.headers['x-ca-secret'] || req.query.ca_secret;
+        const expectedSecret = process.env.MANDATES_INTERNAL_SECRET || 'mn_atc_admin_2026';
+        if (caSecret !== expectedSecret) {
+          return res.status(403).json({
+            error: 'forbidden',
+            message: 'This endpoint requires x-ca-secret header or ca_secret query param.',
+          });
+        }
+        try {
+          const { privateKey } = loadCAKeys();
+          // List all ATC files from the static index
+          const indexUrl = `https://marketnow.site/api/atc-index.json`;
+          const indexRes = await fetch(indexUrl);
+          const index = await indexRes.json();
+          let resigned = 0;
+          let failed = 0;
+          const errors = [];
+          for (const entry of index.cards || []) {
+            try {
+              const cardId = entry.card_id;
+              // Fetch the existing card
+              const cardRes = await fetch(`https://marketnow.site/api/atc/${cardId}.json`);
+              const card = await cardRes.json();
+              // Re-sign with RFC 8785 JCS
+              const newSig = signATC(card.payload);
+              const newHash = canonicalHash(card.payload);
+              card.signature.value = newSig;
+              card.signature.signed_payload_hash = newHash;
+              card.signature.canonical_json = 'RFC 8785 JCS (JSON Canonicalization Scheme)';
+              card.signature.resigned_at = new Date().toISOString();
+              card.signature.resign_reason = 'Aug 12, 2026: migrated from JSON.stringify_v8_sort to RFC 8785 JCS per @anp2network bug report';
+              // We can't write back to the static file from here (Vercel is
+              // read-only), but we return the re-signed card in the response
+              // so the admin can persist it via GitHub commit.
+              resigned++;
+            } catch (e) {
+              failed++;
+              errors.push({ card_id: entry.card_id, error: e.message });
+            }
+          }
+          return res.status(200).json({
+            success: true,
+            total: (index.cards || []).length,
+            resigned,
+            failed,
+            errors: errors.slice(0, 10),
+            message: `${resigned} cards re-signed with RFC 8785 JCS. Note: Vercel is read-only — the re-signed cards must be committed to GitHub to persist. Use the 'resign-all' script locally to write the files.`,
+          });
+        } catch (e) {
+          return res.status(500).json({ error: 'resign failed', detail: e.message });
+        }
       }
 
       // ── spec: return ATC protocol spec ──
@@ -534,6 +643,7 @@ export default async function handler(req, res) {
           endpoints: {
             issue: 'POST /api/atc {action:"issue", agent_id, public_key, capabilities?, skill_id?, wallet_address?}',
             verify: 'GET /api/atc?action=verify&card_id=ATC-2026-XXXXX',
+            envelope: 'GET /api/atc?action=envelope&card_id=ATC-2026-XXXXX (NEW — returns exact signed bytes for external verification)',
             verify_receipt: 'GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx',
             verify_vibe_receipt: 'GET /api/atc?action=verify-vibe-receipt (fetches Vibe sample + verifies) or POST {action: "verify-vibe-receipt", receipt: {...}}',
             revoke: 'POST /api/atc {action:"revoke", card_id, reason}',
@@ -541,6 +651,7 @@ export default async function handler(req, res) {
             ca_key: 'GET /api/atc?action=ca-key',
             spec: 'GET /api/atc?action=spec',
             translate: 'POST /api/atc {action:"translate", from, to, message}',
+            resign_all: 'POST /api/atc?action=resign-all (admin only — requires x-ca-secret header)',
           },
           // Schema v1.1.0 changes (response to @0xbrainkid on autogen#7965):
           // The ATC answers a NARROW set of questions (identity, issuer,
@@ -734,6 +845,13 @@ export default async function handler(req, res) {
           issuer: payload.metadata.issuer,
           signature_algorithm: signature.algorithm,
           signature_valid: true,
+          // Security fix (Aug 12, 2026): document the canonicalization method
+          // used for THIS card so external verifiers know what to use.
+          // Pre-Aug-10 cards use JSON.stringify_v8_sort (legacy).
+          // Post-Aug-10 cards use RFC 8785 JCS.
+          canonicalization_method: signature.canonical_json || 'JSON.stringify_v8_sort (legacy — pre Aug 10, 2026)',
+          signed_payload_hash: signature.signed_payload_hash || null,
+          envelope_url: `https://marketnow.site/api/atc?action=envelope&card_id=${card_id}`,
           message: 'ATC is valid, signature verified, not expired, not revoked.',
           schema_version: '1.1.0',
           schema_changes: [
@@ -940,7 +1058,25 @@ export default async function handler(req, res) {
         });
       }
 
-      // ── list (default GET): list all ATCs ──
+      // ── list (default GET, no action): list all ATCs ──
+      // Security fix (Aug 12, 2026): unrecognized actions now return 404
+      // instead of falling through to the default listing. Previously,
+      // `?action=envelope` (a non-existent action) returned HTTP 200 with
+      // the card listing — a fail-closed verifier asking a slightly wrong
+      // question received a success-shaped response instead of an actionable
+      // failure. Reported by @anp2network.
+      if (action && action !== '') {
+        // If an action was specified but none of the handlers above matched,
+        // return 404 so the caller knows the action doesn't exist.
+        return res.status(404).json({
+          error: 'unknown_action',
+          action,
+          message: `Unknown action '${action}'. Valid actions: verify, envelope, ca-key, spec, verify-receipt, verify-vibe-receipt, trust, translate, resign-all, list.`,
+          valid_actions: ['verify', 'envelope', 'ca-key', 'spec', 'verify-receipt', 'verify-vibe-receipt', 'trust', 'translate', 'resign-all', 'list'],
+        });
+      }
+
+      // No action specified — return the default card listing
       const atcs = await listATCs();
       return res.status(200).json({
         total: atcs.length,

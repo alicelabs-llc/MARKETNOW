@@ -1058,25 +1058,24 @@ export default async function handler(req, res) {
         });
       }
 
-      // ── list (default GET, no action): list all ATCs ──
+      // ── list / revocation-list (default GET): list all ATCs ──
       // Security fix (Aug 12, 2026): unrecognized actions now return 404
-      // instead of falling through to the default listing. Previously,
-      // `?action=envelope` (a non-existent action) returned HTTP 200 with
-      // the card listing — a fail-closed verifier asking a slightly wrong
-      // question received a success-shaped response instead of an actionable
-      // failure. Reported by @anp2network.
-      if (action && action !== '') {
+      // instead of falling through to the default listing.
+      // Fix (Aug 13, 2026): 'revocation-list' is treated as an alias for the
+      // default listing — it was previously caught by the 404 handler because
+      // it was never an explicit action handler, just the default response.
+      if (action && action !== '' && action !== 'list' && action !== 'revocation-list') {
         // If an action was specified but none of the handlers above matched,
         // return 404 so the caller knows the action doesn't exist.
         return res.status(404).json({
           error: 'unknown_action',
           action,
-          message: `Unknown action '${action}'. Valid actions: verify, envelope, ca-key, spec, verify-receipt, verify-vibe-receipt, trust, translate, resign-all, list.`,
-          valid_actions: ['verify', 'envelope', 'ca-key', 'spec', 'verify-receipt', 'verify-vibe-receipt', 'trust', 'translate', 'resign-all', 'list'],
+          message: `Unknown action '${action}'. Valid actions: verify, envelope, ca-key, spec, verify-receipt, verify-vibe-receipt, trust, translate, resign-all, list, revocation-list.`,
+          valid_actions: ['verify', 'envelope', 'ca-key', 'spec', 'verify-receipt', 'verify-vibe-receipt', 'trust', 'translate', 'resign-all', 'list', 'revocation-list'],
         });
       }
 
-      // No action specified — return the default card listing
+      // No action specified (or action=list or action=revocation-list) — return the default card listing
       const atcs = await listATCs();
       return res.status(200).json({
         total: atcs.length,

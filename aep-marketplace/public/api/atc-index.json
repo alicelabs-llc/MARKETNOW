@@ -578,6 +578,7 @@
   "canonicalization_method": "RFC_8785_JCS",
   "ca_public_key": "MCowBQYDK2VwAyEATlD16v6Fy/+GM4je2SxwCz7yFEeo9d8LwqZf0yN8oFY=",
   "ca_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEATlD16v6Fy/+GM4je2SxwCz7yFEeo9d8LwqZf0yN8oFY=\n-----END PUBLIC KEY-----\n",
-  "resigned_at": "2026-08-12T22:53:26.167Z",
-  "resign_reason": "Aug 12, 2026: migrated from JSON.stringify_v8_sort to RFC 8785 JCS per @anp2network bug report"
+  "resigned_at": "2026-08-13T19:59:59.558Z",
+  "resign_reason": "Aug 13, 2026: fixed forward-slash escaping + removed sentinel_score alias + added ca_key_id",
+  "ca_key_id": "MCowBQYDK2VwAyEA"
 }

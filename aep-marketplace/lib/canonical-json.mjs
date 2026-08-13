@@ -46,7 +46,9 @@ function serializeString(str) {
     const ch = str.charCodeAt(i);
     if (ch === 0x22) result += '\\"';
     else if (ch === 0x5c) result += '\\\\';
-    else if (ch === 0x2f) result += '\\/';
+    // RFC 8785 §3.2.2.2: forward slash (0x2f) MUST NOT be escaped.
+    // Previous code had `else if (ch === 0x2f) result += '\\/';` which was wrong.
+    // Fix reported by @anp2network (Aug 13, 2026).
     else if (ch === 0x08) result += '\\b';
     else if (ch === 0x09) result += '\\t';
     else if (ch === 0x0a) result += '\\n';

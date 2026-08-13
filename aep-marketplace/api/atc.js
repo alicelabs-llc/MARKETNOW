@@ -556,6 +556,7 @@ export default async function handler(req, res) {
             signature_algorithm: atc.signature.algorithm,
             signed_payload_hash: atc.signature.signed_payload_hash || null,
             canonicalization_method: atc.signature.canonical_json || 'JSON.stringify_v8_sort (legacy)',
+            ca_key_id: atc.signature.ca_key_id || null,
             signed_at: atc.signature.signed_at,
             signed_by: atc.signature.signed_by,
             verify_with: 'GET /api/atc?action=ca-key',

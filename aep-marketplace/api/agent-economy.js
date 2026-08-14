@@ -2,7 +2,7 @@ import crypto from 'crypto';
 const CORS = {'Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'GET,POST,OPTIONS','Access-Control-Allow-Headers':'Content-Type,Authorization,X-ATC-Card-Id'};
 export default async function handler(req,res){Object.entries(CORS).forEach(([k,v])=>res.setHeader(k,v));
 const mode=req.query?._mode||new URL(req.url,'http://localhost').searchParams.get('_mode')||'help';
-if(mode==='help')return res.status(200).json({service:'MarketNow Agent Economy',version:'1.1.0',endpoints:{interceptor:'POST /api/interceptor — L3 Runtime Guardrail',stream:'POST /api/stream — Streaming Metered Billing (x402)',stacks:'GET /api/stacks — Agent Portfolios / Skill Bundles',execute:'POST /api/execute — A2A Remote Execution'}});
+if(mode==='help')return res.status(200).json({service:'MarketNow Agent Economy',version:'1.2.0',endpoints:{interceptor:'POST /api/interceptor — L3 Runtime Guardrail (8 rules)',stream:'POST /api/stream — Streaming Metered Billing (x402)',stacks:'GET /api/stacks — Agent Portfolios / Skill Bundles',execute:'POST /api/execute — A2A Remote Execution'}});
 if(mode==='interceptor')return handleInterceptor(req,res);
 if(mode==='stream')return handleStream(req,res);
 if(mode==='stacks')return handleStacks(req,res);
@@ -12,16 +12,18 @@ return res.status(404).json({error:'Unknown mode'});}
 const RULES=[
 {id:'BLOCK_SECRET_FILES',name:'Block reads of secret files',pattern:/\.env|\.aws\/credentials|\.ssh\/id_rsa|\.ssh\/id_ed25519|\.npmrc|\.pypirc/i,methods:['read_file','read','cat','open','get_file','get','load','parse'],action:'block',severity:'critical',message:'Secret file read detected'},
 {id:'BLOCK_DANGEROUS_CMDS',name:'Block dangerous commands',pattern:/rm\s+-rf|DROP\s+TABLE|DELETE\s+FROM|mkfs|dd\s+if=|:\(\)\s*\{|fork\s*bomb|chmod\s+777/i,methods:['execute','shell','run_command','exec','spawn','run','cmd'],action:'block',severity:'critical',message:'Dangerous command detected'},
-{id:'BLOCK_PROCESS_SPAWN',name:'Block process spawns',pattern:/child_process|exec\(|spawn\(|fork\(/i,methods:['execute','shell','run_command'],action:'block',severity:'high',message:'Process spawn detected'},
+{id:'BLOCK_PROCESS_SPAWN',name:'Block process spawns',pattern:/child_process|exec\(|spawn\(|fork\(/i,methods:['execute','shell','run_command','exec','spawn'],action:'block',severity:'high',message:'Process spawn detected'},
 {id:'BLOCK_SYSTEM_WRITES',name:'Block system writes',pattern:/\/etc\/|\/root\/|\/var\/log|\/boot\/|C:\\\\Windows\\\\|C:\\\\System32\\\\/i,methods:['write_file','write','save','create','mkdir','mv','cp'],action:'block',severity:'critical',message:'System write detected'},
+{id:'BLOCK_SYSTEM_READS',name:'Block system file reads',pattern:/\/etc\/passwd|\/etc\/shadow|\/etc\/sudoers|\/proc\/self|\/sys\/class/i,methods:['read_file','read','cat','open','get_file','get','load','exec','spawn','run','cmd','execute','shell','run_command'],action:'block',severity:'critical',message:'System file read detected'},
+{id:'BLOCK_REVERSE_SHELL',name:'Block reverse shell patterns',pattern:/bash\s+-i|sh\s+-i|nc\s+-l|ncat|\/dev\/tcp\/|python\s+-c|perl\s+-e|ruby\s+-e|socat/i,methods:['execute','shell','run_command','exec','spawn','run','cmd'],action:'block',severity:'critical',message:'Reverse shell pattern detected'},
+{id:'BLOCK_REMOTE_EXEC',name:'Block remote code execution',pattern:/curl\s+.*\|\s*(sh|bash)|wget\s+.*\|\s*(sh|bash)|eval\s*\(|os\.system|subprocess\.call/i,methods:['execute','shell','run_command','exec','spawn','run','cmd'],action:'block',severity:'critical',message:'Remote code execution detected'},
 {id:'WARN_NETWORK',name:'Warn non-allowlisted network',pattern:/^https?:\/\/(?!api\.marketnow\.site|api\.github\.com|registry\.npmjs\.org|pypi\.org)/i,methods:['fetch','http_request','get','post','curl','wget','request'],action:'warn',severity:'medium',message:'Non-allowlisted network call'},
 ];
 
 function handleInterceptor(req,res,method){
 const m=req.method;
-if(m!=='POST')return res.status(200).json({name:'Sentinel MCP Interceptor',version:'1.1.0',rules_count:RULES.length,rules:RULES.map(r=>({id:r.id,severity:r.severity,action:r.action}))});
+if(m!=='POST')return res.status(200).json({name:'Sentinel MCP Interceptor',version:'1.2.0',rules_count:RULES.length,rules:RULES.map(r=>({id:r.id,severity:r.severity,action:r.action}))});
 const body=req.body||{};
-// SECURITY: Limit payload size to prevent DoS
 const bodyStr=JSON.stringify(body);
 if(bodyStr.length>10000)return res.status(413).json({error:'Payload too large',max_size:10000,received:bodyStr.length});
 const{method:rpcMethod,params}=body;if(!rpcMethod)return res.status(400).json({error:'method required'});
@@ -29,9 +31,7 @@ const toolName=params?.name||'';const toolArgs=JSON.stringify(params?.arguments|
 const fullText=`${rpcMethod} ${toolName} ${toolArgs}`;
 const violations=[];const warnings=[];
 for(const rule of RULES){
-// Check if tool name matches any method keyword
 if(rule.methods.length>0&&!rule.methods.some(meth=>toolName.toLowerCase().includes(meth.toLowerCase())))continue;
-// Check pattern against arguments
 if(rule.pattern.test(toolArgs)||rule.pattern.test(fullText)){
 if(rule.action==='block')violations.push({rule_id:rule.id,severity:rule.severity,message:rule.message,matched:toolArgs.slice(0,200)});
 else warnings.push({rule_id:rule.id,severity:rule.severity,message:rule.message});}

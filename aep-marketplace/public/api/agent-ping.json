@@ -1,9 +1,9 @@
 {
   "status": "alive",
-  "message": "MarketNow — Security infrastructure for AI agents. Sentinel: 10-layer audit pipeline, 1.2M checks performed, 80 skills quarantined. 12 MCP tools (marketnow_* namespace) in v1.9.0.",
-  "positioning": "Security infrastructure for AI agents — not a marketplace. The marketplace (9,248 MCP skills, all free to install) is distribution; the product is Sentinel.",
+  "message": "MarketNow \u2014 Security infrastructure for AI agents. Sentinel: 10-layer audit pipeline, 1.2M checks performed, 80 skills quarantined. 12 MCP tools (marketnow_* namespace) in v1.9.0.",
+  "positioning": "Security infrastructure for AI agents \u2014 not a marketplace. The marketplace (9,248 MCP skills, all free to install) is distribution; the product is Sentinel.",
   "version": "5.0.0",
-  "mcp_version": "1.9.0",
+  "mcp_version": "1.10.0",
   "stats": {
     "total_skills": 9248,
     "categories": 58,
@@ -17,9 +17,9 @@
     "risky_skills": 54,
     "safe_skills": 8238,
     "atc_issued": 57,
-    "sentinel_version": "L1.5 → L3 (10 layers) + Interceptor + ATC + x402 + A2A",
+    "sentinel_version": "L1.5 \u2192 L3 (10 layers) + Interceptor + ATC + x402 + A2A",
     "mcp_server": "npx -y marketnow-mcp@1.9.0",
-    "mcp_tools_count": 12,
+    "mcp_tools_count": 13,
     "mcp_namespace": "marketnow_*",
     "ca_algorithm": "Ed25519 (RFC 8032)",
     "canonical_json": "RFC 8785 JCS",
@@ -31,11 +31,56 @@
     "founder": "Edison Flores"
   },
   "pricing": {
-    "free": { "price": "$0", "features": ["Basic Sentinel scan", "Trust score", "Public report", "Public listing"] },
-    "developer": { "price": "$49-99", "features": ["Deep static analysis", "Dependency analysis", "Malware scan", "Prompt injection", "Sandbox", "Signed report"] },
-    "professional": { "price": "$199-499", "features": ["Deep audit", "Runtime testing", "Remediation", "Trust Card", "Re-audit"] },
-    "continuous": { "price": "$99-499/month", "features": ["Continuous monitoring", "CVE tracking", "Dependency drift", "Auto re-audit"] },
-    "enterprise": { "price": "$5k-50k+/year", "features": ["Private MCP audits", "Custom policies", "Compliance evidence", "API", "Dashboards", "SLA"] }
+    "free": {
+      "price": "$0",
+      "features": [
+        "Basic Sentinel scan",
+        "Trust score",
+        "Public report",
+        "Public listing"
+      ]
+    },
+    "developer": {
+      "price": "$49-99",
+      "features": [
+        "Deep static analysis",
+        "Dependency analysis",
+        "Malware scan",
+        "Prompt injection",
+        "Sandbox",
+        "Signed report"
+      ]
+    },
+    "professional": {
+      "price": "$199-499",
+      "features": [
+        "Deep audit",
+        "Runtime testing",
+        "Remediation",
+        "Trust Card",
+        "Re-audit"
+      ]
+    },
+    "continuous": {
+      "price": "$99-499/month",
+      "features": [
+        "Continuous monitoring",
+        "CVE tracking",
+        "Dependency drift",
+        "Auto re-audit"
+      ]
+    },
+    "enterprise": {
+      "price": "$5k-50k+/year",
+      "features": [
+        "Private MCP audits",
+        "Custom policies",
+        "Compliance evidence",
+        "API",
+        "Dashboards",
+        "SLA"
+      ]
+    }
   },
   "endpoints": {
     "search": "GET /api/search?q=",

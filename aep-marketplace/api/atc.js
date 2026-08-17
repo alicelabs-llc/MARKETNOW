@@ -457,20 +457,19 @@ export default async function handler(req, res) {
     // ─── GET handlers ──────────────────────────────────────────────────
 
     if (req.method === 'GET') {
-      // ── trust: compact trust score for install decisions ──
+      // ── trust: compact trust score for install decisions (legacy) ──
+      // The full Trust API is at POST /api/atc?action=trust (see below).
+      // This GET handler provides the legacy compact trust score lookup.
       if (action === 'trust') {
-        const skillId = req.query?.skillId || searchParams.get('skillId');
+        const skillId = req.query?.skillId || req.query?.skill_id;
         if (!skillId) {
           return res.status(200).json({
             service: 'MarketNow Trust API',
-            description: 'Consume trust evidence without re-running the full audit. Agents query this before executing any tool.',
-            usage: 'GET /api/atc?action=trust&skillId=mn-real-xxx',
-            response_shape: {
-              trust_score: '0-10',
-              recommendation: 'safe_to_install | install_with_caution | do_not_install',
-              certificate_url: 'signed Sentinel certificate URL',
-              risk_level: 'low | medium | high | critical | not_audited',
-            },
+            version: '2.0.0',
+            description: 'Unified trust decision endpoint — combines Sentinel, ATC, Policy, and Interceptor.',
+            endpoint: 'POST /api/atc?action=trust',
+            architecture: 'DISCOVER → SENTINEL → IDENTITY → TRUST → POLICY → ENFORCEMENT → AUDIT',
+            legacy_endpoint: 'GET /api/atc?action=trust&skillId=X (compact trust score only)',
           });
         }
         try {
@@ -491,7 +490,7 @@ export default async function handler(req, res) {
             recommendation,
             certificate_url: `https://marketnow.site/api/audit-skill?certificate=1&skillId=${skill.id}`,
             layers_passed: { l15: true, l16: score > 0, l25: skill.l2_eligible || false, l3: false },
-            consume_note: 'This trust evidence was produced by Sentinel. Agents should consume this API instead of re-running the audit locally — saving tokens, CPU, and time.',
+            consume_note: 'This trust evidence was produced by Sentinel. For the full trust decision (with ATC + policy + interceptor), use POST /api/atc?action=trust.',
           });
         } catch (e) { return res.status(500).json({ error: 'Trust lookup failed', detail: e.message }); }
       }

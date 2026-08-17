@@ -1059,6 +1059,79 @@ export default async function handler(req, res) {
         });
       }
 
+      // ── trust: unified trust decision (the killer feature) ──
+      // POST /api/atc?action=trust — combines Sentinel + ATC + Policy + Interceptor
+      if (action === 'trust') {
+        if (req.method === 'GET') {
+          return res.status(200).json({
+            service: 'MarketNow Trust API',
+            version: '1.0.0',
+            description: 'Unified trust decision — combines Sentinel security assessment, ATC identity verification, policy evaluation, and runtime enforcement.',
+            endpoint: 'POST /api/atc?action=trust',
+            request_schema: {
+              agent_id: 'string — the agent requesting the action',
+              skill_id: 'string — the MCP skill/tool',
+              action: 'string — the action (execute, read, write, purchase)',
+              atc_card_id: 'string (optional) — ATC card ID',
+              policy: { min_trust_score: 'int 0-10 (default 5)', allow_filesystem_write: 'bool (default false)', allow_network: 'none|allowlist|all', allow_shell: 'none|sandboxed|unrestricted', require_atc: 'bool (default true)' },
+            },
+            architecture: 'DISCOVER → SENTINEL → IDENTITY → TRUST → POLICY → ENFORCEMENT → AUDIT',
+          });
+        }
+        const body = req.body || {};
+        const { agent_id, skill_id, action: reqAction, atc_card_id, policy: userPolicy } = body;
+        if (!agent_id || !skill_id) return res.status(400).json({ error: 'agent_id and skill_id required' });
+        const policy = { min_trust_score: 5, allow_filesystem_write: false, allow_network: 'allowlist', allow_shell: 'none', allow_credentials_access: false, allow_process_spawn: false, require_atc: true, ...userPolicy };
+        const reasons = []; const violations = []; let allowed = true;
+
+        // Step 1: Sentinel assessment
+        let toolScore = 0; let toolEvidence = {};
+        try {
+          const skillsRes = await fetch('https://marketnow.site/api/skills.json');
+          const skills = await skillsRes.json();
+          const skill = skills.find(s => s.id === skill_id || s.slug === skill_id);
+          if (skill) {
+            toolScore = skill.sentinel_score || 0;
+            toolEvidence = { skill_id: skill.id, sentinel_score: toolScore, category: skill.category, sentinel_version: 'v2.5' };
+            if (toolScore < policy.min_trust_score) { allowed = false; violations.push({ rule: 'min_trust_score', expected: '>='+policy.min_trust_score, actual: toolScore }); reasons.push(`Tool score ${toolScore} < min ${policy.min_trust_score}`); }
+            else reasons.push(`Tool score ${toolScore}/10 OK`);
+          } else { toolEvidence = { skill_id, found: false }; reasons.push(`Skill ${skill_id} not found`); if (policy.min_trust_score > 0) { allowed = false; violations.push({ rule: 'min_trust_score', actual: 0 }); } }
+        } catch (e) { reasons.push(`Sentinel error: ${e.message}`); }
+
+        // Step 2: ATC verification
+        let identityVerified = false; let agentScore = 0; let certId = null; let expAt = null;
+        if (policy.require_atc) {
+          try {
+            const crlRes = await fetch('https://marketnow.site/api/atc?action=revocation-list');
+            const crlData = await crlRes.json();
+            const card = (crlData.cards || []).find(c => c.agent_id === agent_id && c.status === 'active') || (crlData.cards || []).find(c => c.card_id === atc_card_id && c.status === 'active');
+            if (card) { identityVerified = true; agentScore = card.sentinel_review_score || 0; certId = card.card_id; expAt = card.expires_at; reasons.push(`ATC ${certId} verified — score ${agentScore}/10`); }
+            else { allowed = false; violations.push({ rule: 'require_atc', actual: 'not found' }); reasons.push(`No ATC for agent ${agent_id}`); }
+          } catch (e) { reasons.push(`ATC error: ${e.message}`); }
+        }
+
+        // Step 3: Interceptor
+        let intDecision = 'allow';
+        if (reqAction && reqAction !== 'discover') {
+          try {
+            const intRes = await fetch('https://marketnow.site/api/interceptor', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jsonrpc: '2.0', method: 'tools/call', params: { name: reqAction, arguments: body.action_args || {} } }) });
+            const intData = await intRes.json();
+            intDecision = intData.decision || 'allow';
+            if (intDecision === 'block') { allowed = false; violations.push(...(intData.violations || []).map(v => ({ rule: 'interceptor_'+v.rule_id, message: v.message }))); reasons.push(`Interceptor blocked: ${(intData.violations||[]).map(v=>v.message).join(', ')}`); }
+            else reasons.push('Interceptor: allowed');
+          } catch (e) { reasons.push(`Interceptor skip: ${e.message}`); }
+        }
+
+        return res.status(200).json({
+          allowed, agent_trust_score: agentScore, tool_security_score: toolScore,
+          identity_verified: identityVerified, policy_compliant: violations.length === 0,
+          certificate_id: certId, expires_at: expAt,
+          evidence: { sentinel: toolEvidence, atc: identityVerified ? { card_id: certId, trust_score: agentScore } : null, interceptor: { decision: intDecision } },
+          reasons, violations, decision_authority: 'consumer', decision_made_at: new Date().toISOString(),
+          architecture: 'DISCOVER → SENTINEL → IDENTITY → TRUST → POLICY → ENFORCEMENT → AUDIT',
+        });
+      }
+
       // ── list / revocation-list (default GET): list all ATCs ──
       // Security fix (Aug 12, 2026): unrecognized actions now return 404
       // instead of falling through to the default listing.

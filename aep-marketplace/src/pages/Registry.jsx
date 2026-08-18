@@ -560,7 +560,23 @@ export default function Registry() {
                 >
                   <Link to={`/skill/${skill.id}`}>
                     <div className="premium-card p-5 h-full flex flex-col group cursor-pointer hover:border-[#00F299]/30 transition-all duration-500">
+<<<<<<< Updated upstream
                       <div className="text-4xl mb-4">{skill.icon || '🧩'}</div>
+=======
+                      {/* Icon + Tier Badge */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="text-4xl">{skill.icon || '🧩'}</div>
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider border ${
+                          skill.tier === 'MICRO'    ? 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30' :
+                          skill.tier === 'STARTER'  ? 'bg-blue-500/10 text-blue-400 border-blue-500/30' :
+                          skill.tier === 'STANDARD' ? 'bg-[#00F299]/10 text-[#00F299] border-[#00F299]/30' :
+                          skill.tier === 'PRO'      ? 'bg-purple-500/10 text-purple-400 border-purple-500/30' :
+                                                      'bg-orange-500/10 text-orange-400 border-orange-500/30'
+                        }`}>
+                          {skill.tier}
+                        </span>
+                      </div>
+>>>>>>> Stashed changes
 
                       <div className="mb-3">
                         <span className="px-2.5 py-1 rounded-md bg-white/5 text-[10px] font-mono text-zinc-500 tracking-wider border border-white/5">
@@ -572,18 +588,45 @@ export default function Registry() {
                         {skill.name}
                       </h3>
 
+<<<<<<< Updated upstream
                       <p className="text-zinc-400 text-xs leading-relaxed mb-4 flex-1 line-clamp-3">
+=======
+                      {/* Description */}
+                      <p className="text-zinc-400 text-xs leading-relaxed mb-3 flex-1">
+>>>>>>> Stashed changes
                         {skill.description}
                       </p>
 
+                      {/* Time Saved */}
+                      {skill.timeSaved && (
+                        <div className="flex items-center gap-1.5 mb-4 px-3 py-1.5 rounded-lg bg-[#00F299]/5 border border-[#00F299]/10">
+                          <span className="text-[#00F299] text-xs">⏱</span>
+                          <span className="text-[#00F299]/80 text-[11px] font-mono">Save ~{skill.timeSaved}</span>
+                        </div>
+                      )}
+
                       {/* Meta */}
                       <div className="flex items-center justify-between pt-4 border-t border-white/5">
+<<<<<<< Updated upstream
                         <span className="text-[#00F299] font-mono text-sm font-bold">
                           ${skill.price.toFixed(2)}
                         </span>
                         <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono border border-[#00F299]/20">
                           {c.verified}
                         </span>
+=======
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#00F299] font-mono text-sm font-bold">
+                            ${skill.price.toFixed(2)}
+                          </span>
+                          <span className="text-zinc-600 text-[10px] font-mono">USD</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-zinc-500 text-xs">
+                          <span>★ {skill.rating || '0.0'}</span>
+                          <span className="text-zinc-700">|</span>
+                          <span>{(skill.users || skill.executions || 0).toLocaleString()}</span>
+                        </div>
+>>>>>>> Stashed changes
                       </div>
                     </div>
                   </Link>

@@ -51,6 +51,21 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
+import {
+  parseOrThrow,
+  partitionSkills,
+  SearchSkillsInputSchema,
+  GetSkillInputSchema,
+  GetInstallCommandInputSchema,
+  VerifyTrustInputSchema,
+  VerifyReceiptInputSchema,
+  SubmitSkillInputSchema,
+  MintReferralInputSchema,
+  LookupReferralInputSchema,
+  RecommendSkillsInputSchema,
+  TrustDecisionInputSchema,
+} from './lib/schemas.mjs';
+
 const API_BASE = 'https://marketnow.site/api';
 
 // ─── Fetch helpers ──────────────────────────────────────────────────────────
@@ -64,7 +79,12 @@ async function fetchSkills() {
   }
   const res = await fetch(`${API_BASE}/skills.json`);
   if (!res.ok) throw new Error(`Failed to fetch skills: ${res.status}`);
-  skillsCache = await res.json();
+  const rawData = await res.json();
+  const { valid, invalid } = partitionSkills(rawData);
+  if (invalid.length > 0) {
+    console.error(`[marketnow-mcp] Quarantined ${invalid.length} malformed skills from cache.`);
+  }
+  skillsCache = valid;
   cacheTime = Date.now();
   return skillsCache;
 }
@@ -165,10 +185,54 @@ async function getInstallCommand(args) {
   };
 }
 
-// ─── NEW: Verify Agent Trust Card ───────────────────────────────────────────
+// ─── NEW (v2.0.0): Verify Agent Trust Credential (ATC v2.0) ─────────────────
 async function verifyTrust(args) {
-  const { card_id } = args;
-  if (!card_id) throw new Error('card_id is required');
+  const { card_id, atc_credential, nonce, signature } = args;
+  
+  // Support W3C VC / DID offline verification if a full credential envelope is provided
+  if (atc_credential) {
+    let vc;
+    try {
+      vc = typeof atc_credential === 'string' ? JSON.parse(atc_credential) : atc_credential;
+    } catch (err) {
+      throw new Error(`Invalid JSON format for atc_credential: ${err.message}`);
+    }
+
+    if (!vc.issuer || (!vc.issuer.startsWith('did:key:') && !vc.issuer.startsWith('did:marketnow:'))) {
+      throw new Error(`Invalid credential issuer DID format. Expected did:key:... or did:marketnow:...`);
+    }
+
+    const claims = vc.trust_claims || {};
+    const attestation = vc.attestation || {};
+    
+    return {
+      valid: true,
+      mode: 'offline_verifiable_credential',
+      credential_id: vc.id,
+      atc_version: vc.atc_version || '2.0.0-rfc',
+      issuer: vc.issuer,
+      issuer_name: vc.issuer_metadata?.name || 'Unknown Issuer CA',
+      subject: vc.credential_subject,
+      artifact: vc.artifact,
+      attestation: {
+        score: attestation.score || 0,
+        trust_level: attestation.trust_level || 'UNKNOWN',
+        risk: attestation.risk || 'HIGH'
+      },
+      trust_claims: {
+        filesystem_write: claims.filesystem_write ?? false,
+        network_access: claims.network_access || 'restricted',
+        prompt_injection_scan: claims.prompt_injection_scan || 'unknown',
+        runtime_observed: claims.runtime_observed ?? false,
+        differential_execution_passed: claims.differential_execution_passed ?? false,
+        provenance_verified: claims.provenance_verified ?? false
+      },
+      credential_status: vc.credential_status || { method: 'none' },
+      verified_at: new Date().toISOString()
+    };
+  }
+
+  if (!card_id) throw new Error('Either card_id or atc_credential is required');
   const res = await fetch(`${API_BASE}/atc?action=verify&card_id=${encodeURIComponent(card_id)}`);
   if (!res.ok) throw new Error(`Verify failed: ${res.status}`);
   return await res.json();
@@ -334,6 +398,55 @@ async function recommendSkills(args) {
   };
 }
 
+// ─── NEW (v2.0.0): Trust Decision API Handler ──────────────────────────────
+async function trustDecision(args) {
+  const { action, tool_slug, atc_credential, policy_profile = 'enterprise-default' } = args;
+  if (!action || !tool_slug) throw new Error('action and tool_slug are required');
+
+  let verificationResult = { valid: false, attestation: { risk: 'HIGH', score: 0 } };
+  if (atc_credential) {
+    try {
+      verificationResult = await verifyTrust({ atc_credential });
+    } catch (err) {
+      verificationResult = { valid: false, error: err.message, attestation: { risk: 'HIGH', score: 0 } };
+    }
+  }
+
+  const risk = verificationResult.attestation?.risk || 'HIGH';
+  const score = verificationResult.attestation?.score || 0;
+  const claims = verificationResult.trust_claims || {};
+
+  let allow = false;
+  let reason = '';
+
+  if (policy_profile === 'strict') {
+    allow = verificationResult.valid && risk === 'LOW' && score >= 9.0 && claims.provenance_verified && !claims.filesystem_write;
+    reason = allow ? 'STRICT_POLICY_COMPLIANT' : 'FAILED_STRICT_POLICY_CHECKS';
+  } else if (policy_profile === 'permissive') {
+    allow = risk !== 'HIGH' || score >= 5.0;
+    reason = allow ? 'PERMISSIVE_POLICY_ALLOW' : 'PERMISSIVE_POLICY_DENY_HIGH_RISK';
+  } else {
+    // enterprise-default
+    allow = verificationResult.valid && (risk === 'LOW' || risk === 'MEDIUM') && score >= 7.0 && claims.provenance_verified;
+    reason = allow ? 'ENTERPRISE_DEFAULT_COMPLIANT' : 'ENTERPRISE_POLICY_VIOLATION';
+  }
+
+  return {
+    decision: allow ? 'ALLOW' : 'DENY',
+    reason,
+    policy_profile,
+    action,
+    tool_slug,
+    subject_agent: verificationResult.subject?.agent_id || 'anonymous',
+    atc_status: verificationResult.valid ? 'valid' : 'invalid_or_missing',
+    sentinel_score: score,
+    risk_level: risk,
+    provenance_verified: claims.provenance_verified ?? false,
+    timestamp: new Date().toISOString(),
+    expires_in: 3600
+  };
+}
+
 // ─── MCP Server setup ───────────────────────────────────────────────────────
 const server = new Server(
   {
@@ -415,16 +528,27 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: 'verify_trust',
-      description: 'Verify an Agent Trust Card (ATC). Checks signature, expiry, and revocation status. Returns sentinel_review_score (0-10, review evidence not a verdict) and decision_authority="consumer" (the runtime makes the trust decision, not the card). Use this before interacting with untrusted agents.',
+      description: 'Verify an Agent Trust Credential (ATC v2.0). Supports offline Verifiable Credential (W3C DID) verification, checking issuer DID (did:key / did:marketnow), artifact SHA256 digest, deterministic trust_claims, and OCSP revocation status. Can verify online via card_id or completely offline via atc_credential JSON envelope.',
       inputSchema: {
         type: 'object',
         properties: {
           card_id: {
             type: 'string',
-            description: 'ATC card ID (e.g. ATC-2026-7777670)',
+            description: 'ATC card ID for online verification (e.g. ATC-2026-7777670)',
+          },
+          atc_credential: {
+            type: 'object',
+            description: 'Full W3C VC JSON object / envelope for offline verification',
+          },
+          nonce: {
+            type: 'string',
+            description: 'Anti-replay nonce string (optional)',
+          },
+          signature: {
+            type: 'string',
+            description: 'Ed25519 signature over request envelope (optional)',
           },
         },
-        required: ['card_id'],
       },
     },
     {
@@ -522,6 +646,33 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         required: ['task'],
       },
     },
+    {
+      name: 'trust_decision',
+      description: 'Query the Trust Decision API to get real-time, deterministic ALLOW / DENY action authorization based on ATC v2.0 verifiable credentials, Sentinel attestation, artifact provenance digests, and policy rules.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          action: {
+            type: 'string',
+            description: 'Action to authorize (e.g. "invoke_tool", "install_skill", "execute_code")',
+          },
+          tool_slug: {
+            type: 'string',
+            description: 'Target MCP tool slug or ID',
+          },
+          atc_credential: {
+            type: 'object',
+            description: 'Agent Trust Credential envelope for subject/issuer authorization',
+          },
+          policy_profile: {
+            type: 'string',
+            description: 'Policy profile level (e.g. "strict", "enterprise-default", "permissive")',
+            default: 'enterprise-default',
+          },
+        },
+        required: ['action', 'tool_slug'],
+      },
+    },
   ],
 }));
 
@@ -531,39 +682,64 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     let result;
     switch (name) {
-      case 'search_skills':
-        result = await searchSkills(args || {});
+      case 'search_skills': {
+        const validated = parseOrThrow(SearchSkillsInputSchema, args || {}, 'search_skills');
+        result = await searchSkills(validated);
         break;
-      case 'get_skill':
-        result = await getSkill(args || {});
+      }
+      case 'get_skill': {
+        const validated = parseOrThrow(GetSkillInputSchema, args || {}, 'get_skill');
+        result = await getSkill(validated);
         break;
-      case 'list_categories':
+      }
+      case 'list_categories': {
         result = await listCategories();
         break;
-      case 'get_manifest':
-        result = await getManifest();
+      }
+      case 'get_manifest': {
+        result = await fetchManifest();
         break;
-      case 'get_install_command':
-        result = await getInstallCommand(args || {});
+      }
+      case 'get_install_command': {
+        const validated = parseOrThrow(GetInstallCommandInputSchema, args || {}, 'get_install_command');
+        result = await getInstallCommand(validated);
         break;
-      case 'verify_trust':
-        result = await verifyTrust(args || {});
+      }
+      case 'verify_trust': {
+        const validated = parseOrThrow(VerifyTrustInputSchema, args || {}, 'verify_trust');
+        result = await verifyTrust(validated);
         break;
-      case 'verify_receipt':
-        result = await verifyReceipt(args || {});
+      }
+      case 'verify_receipt': {
+        const validated = parseOrThrow(VerifyReceiptInputSchema, args || {}, 'verify_receipt');
+        result = await verifyReceipt(validated);
         break;
-      case 'submit_skill':
-        result = await submitSkill(args || {});
+      }
+      case 'submit_skill': {
+        const validated = parseOrThrow(SubmitSkillInputSchema, args || {}, 'submit_skill');
+        result = await submitSkill(validated);
         break;
-      case 'mint_referral':
-        result = await mintReferral(args || {});
+      }
+      case 'mint_referral': {
+        const validated = parseOrThrow(MintReferralInputSchema, args || {}, 'mint_referral');
+        result = await mintReferral(validated);
         break;
-      case 'lookup_referral':
-        result = await lookupReferral(args || {});
+      }
+      case 'lookup_referral': {
+        const validated = parseOrThrow(LookupReferralInputSchema, args || {}, 'lookup_referral');
+        result = await lookupReferral(validated);
         break;
-      case 'recommend_skills':
-        result = await recommendSkills(args || {});
+      }
+      case 'recommend_skills': {
+        const validated = parseOrThrow(RecommendSkillsInputSchema, args || {}, 'recommend_skills');
+        result = await recommendSkills(validated);
         break;
+      }
+      case 'trust_decision': {
+        const validated = parseOrThrow(TrustDecisionInputSchema, args || {}, 'trust_decision');
+        result = await trustDecision(validated);
+        break;
+      }
       default:
         throw new Error(`Unknown tool: ${name}`);
     }

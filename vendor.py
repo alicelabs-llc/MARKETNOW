@@ -5,7 +5,10 @@ import json, os, hmac, hashlib, base64, sys
 from pathlib import Path
 from datetime import datetime, timedelta
 
-MASTER_KEY = os.environ.get("MARKETNOW_MASTER_KEY", "marketnow-master-key-2026-alpha")
+MASTER_KEY = os.environ.get("MARKETNOW_MASTER_KEY")
+if not MASTER_KEY or len(MASTER_KEY) < 32:
+    sys.stderr.write("FATAL SECURITY ERROR: MARKETNOW_MASTER_KEY environment variable is not configured or is too short (min 32 chars required).\n")
+    sys.exit(1)
 DATA_DIR = Path.home() / ".marketnow"
 VENDOR_FILE = DATA_DIR / "vendors.json"
 SALES_FILE = DATA_DIR / "sales.json"

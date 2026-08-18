@@ -114,9 +114,22 @@ The sandbox sends a sequence of standard MCP protocol messages to the server:
 1. {"method": "initialize", "params": {"clientInfo": {"name": "sentinel-l2", "version": "1.0"}}}
 2. {"method": "tools/list"}
 3. {"method": "tools/call", "params": {"name": "<first_tool>", "arguments": {}}}
-4. Wait 30 seconds for background activity
-5. Kill sandbox, collect syscall log
+4. Execute sequence across Sentinel L2.5 Differential Environments
+5. Kill sandboxes, compare syscall trees across environments
 ```
+
+### Sentinel L2.5: Differential Execution Suite
+
+To prevent anti-analysis techniques (time bombs, sandbox detection, context awareness), each artifact is executed sequentially across 4 distinct virtual environments:
+
+| Environment | Purpose | Evasion Targeted |
+|-------------|---------|------------------|
+| **1. Base Normal** | Benchmark baseline execution | N/A |
+| **2. Accelerated Time (`faketime`)** | Fast-forwards internal clock to trigger delayed code | Time bombs (`setTimeout` > 30s) |
+| **3. Honeypot Environment** | Injects fake `.env`, `.ssh/id_rsa`, and AWS credentials | Passive recon / credential theft |
+| **4. Simulated Network** | Intercepts & logs all DNS and TCP socket connection attempts | Undeclared exfiltration endpoints |
+
+If syscall trees differ significantly between environments (e.g. honeypot access or delayed execve execution), Sentinel triggers **Behavioral Divergence Detected**, reducing score to 0 and raising a Critical Alert.
 
 ### Test inputs (adversarial)
 

@@ -1,41 +1,41 @@
 # MarketNow MCP Server
 
-> Trust layer for agent commerce. Search 8,560 MCP skills from any agent runtime.
+> **Security infrastructure for AI agents.** 13 MCP tools — all under the `marketnow_*` namespace — that let Claude Desktop, Cursor, Cline, Continue, LangChain, and LlamaIndex agents search the marketplace, verify trust, consume the OWASP compliance API, and verify ANY Agent Trust Card against the ATC/1.0 spec without execution errors or hallucinations.
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AliceLabs Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
+[![Audit: PASS](https://img.shields.io/badge/Audit-v1.10.0%20PASS-brightgreen)](./AUDIT.md)
 
-The [MarketNow](https://marketnow.site) marketplace as an MCP server. Allows any MCP-compatible agent (Claude Desktop, Cursor, Cline, etc.) to search and discover skills directly from their runtime — without leaving the conversation.
+---
 
-**Stats:** 8,560 skills · 58 categories · $0.99–$9.99 · 43 free · one-time payment
+## Why v1.10.0 is a breaking change
 
-## What is MarketNow?
+Agents do not read human documentation at runtime — they read the JSON-Schema returned by `tools/list`. v1.7.0 had `search_skills`, `get_skill`, etc., with no namespace prefix and several free-form string fields. That ambiguity caused LLM tool-call failures.
 
-MarketNow is the **trust layer for agent commerce**. Discovery is solved (MCP registry, Smithery, Glama); trust is not. MarketNow provides:
-- **Sentinel L1.5** security audit on every skill (6-point MCP security scan)
-- **review_status** on every skill: `auto-scanned` (8,517) | `human-reviewed` (43) | `maintainer-verified` (0)
-- **Declared permissions** per skill (network, filesystem, env_vars, subprocess)
-- **AP2-compatible mandates** — human-in-the-loop by default, silent mode requires explicit opt-in
-- **x402 payments** — HTTP 402 Payment Required protocol, USDC on Base
-- **Public audit log** — every mandate transaction is a git commit
+v1.10.0 enforces **four golden rules** (see [`AUDIT.md`](./AUDIT.md)) and adds the ATC/1.0 spec verifier:
+
+| # | Rule | What changed |
+|---|------|--------------|
+| A | Deterministic tool names with `marketnow_` prefix | All 13 tools use the prefix |
+| B | Intent-oriented descriptions (WHEN/WHY, not WHAT) | Every description rewritten |
+| C | Strict JSON-Schema (`type` + `enum` + `pattern` + bounds) | No `any` left anywhere |
+| D | Structured `{ content, isError }` responses with taxonomy | `INVALID_ARGUMENT` / `NOT_FOUND` / `UNKNOWN_TOOL` / `INTERNAL_ERROR` |
+
+---
 
 ## Install
 
 ```bash
 npm install -g marketnow-mcp
-```
-
-Or use directly with npx (no install needed):
-
-```bash
-npx marketnow-mcp
+# or use without install:
+npx -y marketnow-mcp
 ```
 
 ## Configuration
 
 ### Claude Desktop
 
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+`~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
 
 ```json
 {
@@ -48,89 +48,132 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 }
 ```
 
-### Cursor
+### Cursor / Cline / VS Code
 
-Add to Settings → MCP:
+Same `mcpServers` block — add it under Settings → MCP, or your project's `.mcp.json`.
 
-```json
+---
+
+## Tools exposed (13, all `marketnow_*`)
+
+| # | Tool | Purpose |
+|---|------|---------|
+| 1 | `marketnow_search_skills` | Search marketplace by query / category / price / sort |
+| 2 | `marketnow_get_skill` | Full metadata for one skill by ID or slug |
+| 3 | `marketnow_list_categories` | Marketplace taxonomy with live counts |
+| 4 | `marketnow_get_manifest` | Marketplace metadata + security metrics (1.2M checks, 1,030 threats, 80 quarantined) |
+| 5 | `marketnow_get_install_command` | `npx` install command for a skill |
+| 6 | `marketnow_verify_trust` | Verify an Agent Trust Card (Ed25519, RFC 8032) |
+| 7 | `marketnow_verify_receipt` | Verify a signed delivery proof (`rcpt_*`) |
+| 8 | `marketnow_submit_skill` | Submit a GitHub repo to the marketplace (L1.5 + L1.7 sync, L2 queued) |
+| 9 | `marketnow_mint_referral` | Mint `ref_xxxxxxxx` (5% commission on referred purchases) |
+| 10 | `marketnow_lookup_referral` | Referral stats (clicks, installs, purchases, earnings) |
+| 11 | `marketnow_recommend_skills` | AI-ranked recommendations for a natural-language task |
+| 12 | `marketnow_get_owasp_compliance` | OWASP MCP Cheat Sheet (12 controls) + SHA-256 tool fingerprint + capability manifest (filesystem/network/shell/credentials/process) |
+| 13 | `marketnow_verify_atc_spec` | **ATC/1.0 spec verifier** — accepts ANY Agent Trust Card (any issuer, any CA) and verifies all 8 required controls (ATC-001 Identity through ATC-008 Expiration). Self-contained: uses `node:crypto` + RFC 8785 JCS + Ed25519 (RFC 8032). Makes this package the LIVE REFERENCE IMPLEMENTATION of the ATC/1.0 specification. |
+
+### Strict inputSchema (Rule C in practice)
+
+Every input parameter declares `type` + `description`, plus one of:
+
+- **`enum`** on categorical fields — `category` (11 known values), `sort_by` (5), `sort_order` (2)
+- **`pattern`** on IDs — `skill_id`, `card_id`, `receipt_id`, `ref_code`, `agent_id`, `repo_url`
+- **`minimum`/`maximum`** on numerics — `limit` (1–50), `max_price` (0–1000)
+- **`minLength`/`maxLength`** on free-text — `task` (3–300 chars)
+
+Runtime validates every pattern with the same regex declared in the schema — no schema/runtime drift.
+
+### Structured error envelope (Rule D in practice)
+
+```js
+// SUCCESS
+{ content: [{ type: 'text', text: JSON.stringify({ success: true, ... }) }] }
+
+// FAILURE — never throws into the agent loop
 {
-  "mcpServers": {
-    "marketnow": {
-      "command": "npx",
-      "args": ["-y", "marketnow-mcp"]
-    }
-  }
+  isError: true,
+  content: [{
+    type: 'text',
+    text: JSON.stringify({
+      success: false,
+      error: 'INVALID_ARGUMENT',   // or NOT_FOUND / UNKNOWN_TOOL / INTERNAL_ERROR
+      tool: 'marketnow_get_skill',
+      message: 'Invalid skill_id: must match /^[a-z0-9-]+$/i ...',
+      hint: 'Re-read the inputSchema for this tool from ListTools response.'
+    })
+  }]
 }
 ```
 
-### Cline / VS Code
+No stack traces are leaked — only `err.message` + `err.code` + a contextual hint.
 
-Add to your MCP config:
+---
 
-```json
-{
-  "mcpServers": {
-    "marketnow": {
-      "command": "npx",
-      "args": ["-y", "marketnow-mcp"],
-      "env": {}
-    }
-  }
-}
-```
+## Example: agent-side usage
 
-## Tools Exposed
+After the MCP config is loaded, ask Claude:
 
-| Tool | Description |
-|---|---|
-| `search_skills` | Search skills by query, category, or max price |
-| `get_skill` | Get full details of a specific skill |
-| `list_categories` | List all 25 categories with counts |
-| `get_manifest` | Get marketplace metadata (totals, pricing) |
-| `get_install_command` | Get the npx install command for a skill |
+- *"Find me a skill to scrape websites and extract prices"*
+  → Claude calls `marketnow_search_skills` with `query="scrape websites extract prices"`
+- *"Show me all skills in the Security category, sorted by Sentinel score"*
+  → Claude calls `marketnow_search_skills` with `category="Security"`, `sort_by="sentinel_desc"`
+- *"Verify the ATC for the agent that published this skill"*
+  → Claude calls `marketnow_verify_trust` with `card_id="ATC-2026-7777670"`
+- *"What OWASP MCP controls does this skill comply with? Does it touch the filesystem?"*
+  → Claude calls `marketnow_get_owasp_compliance` with `skill_id="mn-gen-00003"`
+- *"Verify this ATC from a third-party CA against the open ATC/1.0 spec"*
+  → Claude calls `marketnow_verify_atc_spec` with `atc={...the card envelope...}` — returns per-control pass/fail + signature verification result
 
-## Example Usage
+---
 
-Once connected, you can ask Claude:
+## How it works
 
-- "Find me a skill to scrape websites and extract prices"
-- "What's the cheapest AI/ML skill on MarketNow?"
-- "Show me all skills in the Security category"
-- "Get the install command for mn-ai-00001"
+The server fetches `https://marketnow.site/api/skills.json` (cached 1 hour) and proxies reads to the public MarketNow REST API. No API key required for read operations. ATC verification, referral minting, and skill submission hit signed POST endpoints.
 
-Claude will use the MarketNow MCP server to search the marketplace and return results with prices, descriptions, and install commands.
+- **No API key** for reads
+- **1-hour cache** on the skill catalog
+- **Strict JSON-Schema** on every tool (Rule C)
+- **`isError: true`** on every failure path (Rule D)
 
-## How It Works
-
-The MCP server fetches the public API at `https://marketnow.site/api/skills.json` (cached for 1 hour). It exposes 5 tools that agents can call to discover skills without leaving their runtime.
-
-- **No API key required** for read operations
-- **CORS-enabled** — works from browser and Node.js
-- **1-hour cache** — minimizes bandwidth and latency
-- **5,000+ skills** — the largest curated MCP skill catalog
-
-To purchase a skill, the agent opens the buy URL in a browser.
+---
 
 ## Pricing
 
-All skills on MarketNow are micro-priced:
+MarketNow is **security infrastructure**, not a marketplace. The marketplace (9,248 MCP skills, all free to install) is distribution. The product is Sentinel — a 10-layer security audit pipeline.
 
-- **$0.99** — utility, single-function MCP servers
-- **$1.99** — standard integrations
-- **$2.99** — multi-feature tools (most common)
-- **$4.99** — sophisticated multi-endpoint tools
-- **$9.99** — enterprise-grade, specialized
+| Tier | Price | What you get |
+|------|-------|--------------|
+| Free | $0 | Basic Sentinel scan, trust score, public report |
+| Developer | $49–99 | Deep static analysis, dependency analysis, malware scan, prompt injection, sandbox, signed report |
+| Professional | $199–499 | Deep audit, runtime testing, remediation, Trust Card, re-audit |
+| Continuous | $99–499/mo | Continuous monitoring, CVE tracking, dependency drift, auto re-audit |
+| Enterprise | $5k–50k+/yr | Private MCP audits, custom policies, compliance evidence, API, dashboards, SLA |
 
-Average price: **$2.50**. One-time payment, lifetime license. No subscriptions.
+The MCP server itself is free to install and use. Tools #1–5 are read-only and free. Tools #6–12 hit endpoints that may require payment depending on the action (e.g. issuing an ATC requires a paid Trust Card allocation).
+
+---
+
+## Audit
+
+Full audit report — including the 4-rule checklist, smoke-test commands, and the v1.7 → v1.8 → v1.9 change log — is in [`AUDIT.md`](./AUDIT.md). It ships inside the npm tarball.
+
+---
 
 ## Links
 
-- **Website**: [https://marketnow.site](https://marketnow.site)
-- **Registry**: [https://marketnow.site/registry](https://marketnow.site/registry)
-- **Submit a skill**: [https://marketnow.site/submit](https://marketnow.site/submit)
-- **API docs**: [https://marketnow.site/api/agent.json](https://marketnow.site/api/agent.json)
-- **GitHub**: [https://github.com/edgarfloresguerra2011-a11y/marketnow](https://github.com/edgarfloresguerra2011-a11y/marketnow)
+- **Website:** https://marketnow.site
+- **GitHub:** https://github.com/edgarfloresguerra2011-a11y/marketnow
+- **npm:** https://www.npmjs.com/package/marketnow-mcp
+- **Audit:** https://marketnow.site/api/audit-report.json
+- **OWASP compliance:** https://marketnow.site/api/owasp
+- **Trust API:** https://marketnow.site/api/trust-score
+- **Interceptor:** https://marketnow.site/api/interceptor
+- **ATC CA key:** https://marketnow.site/api/atc?action=ca-key
+
+---
 
 ## License
 
-MIT
+AliceLabs LLC Proprietary (MNNC-1.0). For licensing: legal@alicelabs.site
+
+Built by AliceLabs LLC (Wyoming, USA) — founder Edison Flores.

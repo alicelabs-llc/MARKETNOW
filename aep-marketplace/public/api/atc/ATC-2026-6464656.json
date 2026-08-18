@@ -13,7 +13,6 @@
     },
     "trust": {
       "sentinel_review_score": 0,
-      "sentinel_score": 0,
       "audit_layers_passed": {},
       "composite_trust": 0,
       "risk_level": "not_audited",
@@ -39,10 +38,15 @@
   },
   "signature": {
     "algorithm": "Ed25519 (RFC 8032)",
-    "value": "7cee4215e4ad231acc0854dd615c766a629995e9b8e9bce224fd73e41cfe8ae6103e219f8e9fd7e276482a3dcab44b9c33ac1e122d3e5dc7edd465ac05696d05",
+    "value": "ebe1c367ecef9670b8cf50c1ac65fbf69d74466d4fa2ea938eb5c3b5f4aa3cbba14db1fb64045672719882f4266875cfafe0edbc522f212a689f8d167a6ef005",
     "signed_by": "MarketNow Sentinel CA",
     "signed_at": "2026-07-26T22:54:24.656Z",
-    "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
-    "verify_with": "GET /api/atc?action=ca-key"
+    "canonical_json": "RFC 8785 JCS (JSON Canonicalization Scheme)",
+    "verify_with": "GET /api/atc?action=ca-key",
+    "signed_payload_hash": "833a2afac2dc78021a9423cad5979aee818553906131f32031284fa9f0f7060f",
+    "resigned_at": "2026-08-13T19:59:59.557Z",
+    "resign_reason": "Aug 13, 2026: fixed forward-slash escaping per RFC 8785 §3.2.2.2, removed sentinel_score alias from signed payload, added ca_key_id. Bug reported by @anp2network.",
+    "canonicalization_method": "RFC_8785_JCS",
+    "ca_key_id": "MCowBQYDK2VwAyEA"
   }
 }

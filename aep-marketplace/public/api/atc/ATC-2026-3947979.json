@@ -13,7 +13,6 @@
     },
     "trust": {
       "sentinel_review_score": 0,
-      "sentinel_score": 0,
       "audit_layers_passed": {},
       "composite_trust": 0,
       "risk_level": "not_audited",
@@ -39,10 +38,15 @@
   },
   "signature": {
     "algorithm": "Ed25519 (RFC 8032)",
-    "value": "be0c657a8fe74ce987bbca23940033cfce01561d7a09af109ee846469844b3d84ac065bc7e200bc86be6e8000b5590d2c0dac7090299fcac77d1a03846b48006",
+    "value": "64d067a4611339884e5aaabb7cb146511d4892d6739bcefdba7d1f03f33dc8fc96808ee18aebef4926439fcd08d8f67104e1838acbb9254fcc571121c4c9c805",
     "signed_by": "MarketNow Sentinel CA",
     "signed_at": "2026-07-30T15:05:47.979Z",
-    "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
-    "verify_with": "GET /api/atc?action=ca-key"
+    "canonical_json": "RFC 8785 JCS (JSON Canonicalization Scheme)",
+    "verify_with": "GET /api/atc?action=ca-key",
+    "signed_payload_hash": "a2a714edcee49d28e9a6570e01578484899eef04ad589a6db55e3903512f6a7b",
+    "resigned_at": "2026-08-13T19:59:59.549Z",
+    "resign_reason": "Aug 13, 2026: fixed forward-slash escaping per RFC 8785 §3.2.2.2, removed sentinel_score alias from signed payload, added ca_key_id. Bug reported by @anp2network.",
+    "canonicalization_method": "RFC_8785_JCS",
+    "ca_key_id": "MCowBQYDK2VwAyEA"
   }
 }

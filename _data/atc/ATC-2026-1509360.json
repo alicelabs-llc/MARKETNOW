@@ -1,6 +1,6 @@
 {
   "card_id": "ATC-2026-1509360",
-  "status": "active",
+  "status": "revoked",
   "payload": {
     "card_id": "ATC-2026-1509360",
     "schema_version": "1.1.0",
@@ -44,5 +44,7 @@
     "signed_at": "2026-07-28T23:31:49.360Z",
     "canonical_json": "JSON.stringify(payload, Object.keys(payload).sort())",
     "verify_with": "GET /api/atc?action=ca-key"
-  }
+  },
+  "revoked_at": "2026-08-09T19:38:14.746Z",
+  "revocation_reason": "test"
 }

@@ -27,7 +27,7 @@ const POST_ENDPOINTS = [
   '/api/stripe-webhook',
 ];
 
-export function setCorsHeaders(res, req) {
+export function setCorsHeaders(req, res) {
   const origin = req?.headers?.origin || '';
   const path = req?.url?.split('?')[0] || '';
   const method = req?.method || 'GET';
@@ -39,15 +39,13 @@ export function setCorsHeaders(res, req) {
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-ATC-Card-Id, X-Proof-Signature');
       res.setHeader('Vary', 'Origin');
-    } else {
-      // No CORS header = browser blocks cross-origin POST
-      // But curl/agents without Origin header still work
-      if (!origin) {
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-ATC-Card-Id, X-Proof-Signature');
-      }
+    } else if (!origin) {
+      // Allow non-browser clients (curl, agents) without Origin header
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-ATC-Card-Id, X-Proof-Signature');
     }
+    // If origin is present but not in allowlist, NO CORS header = browser blocks
   } else {
     // GET endpoints: wildcard CORS
     res.setHeader('Access-Control-Allow-Origin', '*');

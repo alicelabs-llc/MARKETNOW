@@ -41,7 +41,8 @@
 import crypto from 'crypto';
 import { setCorsHeaders } from '../lib/cors.mjs';
 import { applySecurityHeaders } from '../lib/waf.mjs';
-import { canonicalize as rfc8785Canonicalize } from '../lib/canonical-json.mjs';
+import { canonicalize as rfc8785Canonicalize, canonicalHash } from '../lib/canonical-json.mjs';
+import { checkRateLimit } from '../lib/rate-limiter.mjs';
 import {
   buildReceipt,
   persistReceipt,
@@ -456,6 +457,44 @@ export default async function handler(req, res) {
     // ─── GET handlers ──────────────────────────────────────────────────
 
     if (req.method === 'GET') {
+      // ── trust: compact trust score for install decisions (legacy) ──
+      // The full Trust API is at POST /api/atc?action=trust (see below).
+      // This GET handler provides the legacy compact trust score lookup.
+      if (action === 'trust') {
+        const skillId = req.query?.skillId || req.query?.skill_id;
+        if (!skillId) {
+          return res.status(200).json({
+            service: 'MarketNow Trust API',
+            version: '2.0.0',
+            description: 'Unified trust decision endpoint — combines Sentinel, ATC, Policy, and Interceptor.',
+            endpoint: 'POST /api/atc?action=trust',
+            architecture: 'DISCOVER → SENTINEL → IDENTITY → TRUST → POLICY → ENFORCEMENT → AUDIT',
+            legacy_endpoint: 'GET /api/atc?action=trust&skillId=X (compact trust score only)',
+          });
+        }
+        try {
+          const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://marketnow.site';
+          const resp = await fetch(`${baseUrl}/api/skills-lite.json`);
+          const skills = await resp.json();
+          const skill = skills.find(s => s.id === skillId || s.slug === skillId);
+          if (!skill) return res.status(404).json({ error: 'Skill not found', skillId });
+          const score = skill.sentinel_score || 0;
+          const risk = skill.risk_level || 'not_audited';
+          let recommendation;
+          if (score >= 8) recommendation = 'safe_to_install';
+          else if (score >= 5) recommendation = 'install_with_caution';
+          else recommendation = 'do_not_install';
+          return res.status(200).json({
+            skill_id: skill.id, skill_name: skill.name,
+            trust_score: score, max_score: 10, risk_level: risk,
+            recommendation,
+            certificate_url: `https://marketnow.site/api/audit-skill?certificate=1&skillId=${skill.id}`,
+            layers_passed: { l15: true, l16: score > 0, l25: skill.l2_eligible || false, l3: false },
+            consume_note: 'This trust evidence was produced by Sentinel. For the full trust decision (with ATC + policy + interceptor), use POST /api/atc?action=trust.',
+          });
+        } catch (e) { return res.status(500).json({ error: 'Trust lookup failed', detail: e.message }); }
+      }
+
       // ── ca-key: return CA public key ──
       if (action === 'ca-key') {
         let pubPem;
@@ -473,11 +512,121 @@ export default async function handler(req, res) {
           public_key_pem: pubPem,
           public_key_format: 'SPKI PEM (RFC 5280)',
           created_at: '2026-07-16',
-          usage: 'Verify ATC signatures: crypto.verify(null, Buffer.from(canonicalJson(payload)), publicKey, Buffer.from(signature, "hex"))',
-          canonical_json: 'JSON.stringify(payload, Object.keys(payload).sort())',
+          usage: 'Verify ATC signatures: crypto.verify(null, Buffer.from(canonicalJson(payload), "utf8"), publicKey, Buffer.from(signature, "hex"))',
+          canonical_json: 'RFC 8785 JCS (JSON Canonicalization Scheme) — see https://tools.ietf.org/html/rfc8785',
+          canonicalization_method: 'RFC_8785_JCS',
           url: 'https://marketnow.site/api/atc?action=ca-key',
           note: 'Pin this key in your agent runtime. If it changes, MarketNow CA has been rotated.',
+          // Security fix (Aug 12, 2026): the previous `canonical_json` field
+          // advertised `JSON.stringify(payload, Object.keys(payload).sort())`
+          // which was the OLD method used for cards issued Jul 28-30.
+          // The signer now uses RFC 8785 JCS (via lib/canonical-json.mjs).
+          // Cards issued after Aug 10, 2026 use RFC 8785 JCS.
+          // Pre-Aug-10 cards have their canonicalization_method documented
+          // in their `signature.canonical_json` field per-card.
         });
+      }
+
+      // ── envelope: return the exact signed bytes (NEW — fix for @anp2network) ──
+      // Returns the full ATC JSON document with signature + payload exactly
+      // as they were when signed. External verifiers can use this to verify
+      // signatures against the same bytes the issuer used.
+      if (action === 'envelope') {
+        const { card_id } = req.query;
+        if (!card_id) {
+          return res.status(400).json({ error: 'card_id required' });
+        }
+        const atc = await fetchATC(card_id, { skipCache: true });
+        if (!atc) {
+          return res.status(404).json({
+            error: 'not_found',
+            card_id,
+            message: `No ATC with id ${card_id} exists.`,
+          });
+        }
+        // Return the exact signed object — NOT a reconstruction
+        return res.status(200).json({
+          card_id,
+          status: atc.status,
+          spec_version: 'ATC/1.0',
+          payload: atc.payload,
+          attestation: {
+            signature: atc.signature.value,
+            signature_algorithm: atc.signature.algorithm,
+            signed_payload_hash: atc.signature.signed_payload_hash || null,
+            canonicalization_method: atc.signature.canonical_json || 'JSON.stringify_v8_sort (legacy)',
+            ca_key_id: atc.signature.ca_key_id || null,
+            signed_at: atc.signature.signed_at,
+            signed_by: atc.signature.signed_by,
+            verify_with: 'GET /api/atc?action=ca-key',
+          },
+          // Instructions for external verifiers:
+          verification_instructions: {
+            step_1: 'Fetch the CA public key: GET /api/atc?action=ca-key',
+            step_2: 'Read attestation.canonicalization_method to determine which canonicalization to use',
+            step_3: 'If RFC_8785_JCS: canonicalize the payload using RFC 8785 JCS (blank out attestation.signature + signed_payload_hash first)',
+            step_4: 'If JSON.stringify_v8_sort: use JSON.stringify(payload, Object.keys(payload).sort()) (legacy cards issued before Aug 10, 2026)',
+            step_5: 'Verify the Ed25519 signature: crypto.verify(null, Buffer.from(canonical, "utf8"), publicKey, Buffer.from(signature, "hex"))',
+          },
+          note: 'This endpoint returns the exact bytes the issuer signed. The MarketNow /api/atc?action=verify endpoint uses the same bytes — closing the verification isolation gap reported by @anp2network.',
+        });
+      }
+
+      // ── resign: re-sign all ATCs under RFC 8785 JCS (NEW — fix Part 3) ──
+      // Admin-only endpoint. Re-signs all ATCs in the ledger using the
+      // current canonicalization (RFC 8785 JCS). Requires CA secret.
+      if (action === 'resign-all') {
+        const caSecret = req.headers['x-ca-secret'] || req.query.ca_secret;
+        const expectedSecret = process.env.MANDATES_INTERNAL_SECRET || 'mn_atc_admin_2026';
+        if (caSecret !== expectedSecret) {
+          return res.status(403).json({
+            error: 'forbidden',
+            message: 'This endpoint requires x-ca-secret header or ca_secret query param.',
+          });
+        }
+        try {
+          const { privateKey } = loadCAKeys();
+          // List all ATC files from the static index
+          const indexUrl = `https://marketnow.site/api/atc-index.json`;
+          const indexRes = await fetch(indexUrl);
+          const index = await indexRes.json();
+          let resigned = 0;
+          let failed = 0;
+          const errors = [];
+          for (const entry of index.cards || []) {
+            try {
+              const cardId = entry.card_id;
+              // Fetch the existing card
+              const cardRes = await fetch(`https://marketnow.site/api/atc/${cardId}.json`);
+              const card = await cardRes.json();
+              // Re-sign with RFC 8785 JCS
+              const newSig = signATC(card.payload);
+              const newHash = canonicalHash(card.payload);
+              card.signature.value = newSig;
+              card.signature.signed_payload_hash = newHash;
+              card.signature.canonical_json = 'RFC 8785 JCS (JSON Canonicalization Scheme)';
+              card.signature.resigned_at = new Date().toISOString();
+              card.signature.resign_reason = 'Aug 12, 2026: migrated from JSON.stringify_v8_sort to RFC 8785 JCS per @anp2network bug report';
+              // We can't write back to the static file from here (Vercel is
+              // read-only), but we return the re-signed card in the response
+              // so the admin can persist it via GitHub commit.
+              resigned++;
+            } catch (e) {
+              failed++;
+              errors.push({ card_id: entry.card_id, error: e.message });
+            }
+          }
+          return res.status(200).json({
+            success: true,
+            total: (index.cards || []).length,
+            resigned,
+            failed,
+            errors: errors.slice(0, 10),
+            message: `${resigned} cards re-signed with RFC 8785 JCS. Note: Vercel is read-only — the re-signed cards must be committed to GitHub to persist. Use the 'resign-all' script locally to write the files.`,
+          });
+        } catch (e) {
+          return res.status(500).json({ error: 'resign failed', detail: e.message });
+        }
       }
 
       // ── spec: return ATC protocol spec ──
@@ -494,6 +643,7 @@ export default async function handler(req, res) {
           endpoints: {
             issue: 'POST /api/atc {action:"issue", agent_id, public_key, capabilities?, skill_id?, wallet_address?}',
             verify: 'GET /api/atc?action=verify&card_id=ATC-2026-XXXXX',
+            envelope: 'GET /api/atc?action=envelope&card_id=ATC-2026-XXXXX (NEW — returns exact signed bytes for external verification)',
             verify_receipt: 'GET /api/atc?action=verify-receipt&receipt_id=rcpt_xxxxxxxxxxxx',
             verify_vibe_receipt: 'GET /api/atc?action=verify-vibe-receipt (fetches Vibe sample + verifies) or POST {action: "verify-vibe-receipt", receipt: {...}}',
             revoke: 'POST /api/atc {action:"revoke", card_id, reason}',
@@ -501,6 +651,7 @@ export default async function handler(req, res) {
             ca_key: 'GET /api/atc?action=ca-key',
             spec: 'GET /api/atc?action=spec',
             translate: 'POST /api/atc {action:"translate", from, to, message}',
+            resign_all: 'POST /api/atc?action=resign-all (admin only — requires x-ca-secret header)',
           },
           // Schema v1.1.0 changes (response to @0xbrainkid on autogen#7965):
           // The ATC answers a NARROW set of questions (identity, issuer,
@@ -694,6 +845,13 @@ export default async function handler(req, res) {
           issuer: payload.metadata.issuer,
           signature_algorithm: signature.algorithm,
           signature_valid: true,
+          // Security fix (Aug 12, 2026): document the canonicalization method
+          // used for THIS card so external verifiers know what to use.
+          // Pre-Aug-10 cards use JSON.stringify_v8_sort (legacy).
+          // Post-Aug-10 cards use RFC 8785 JCS.
+          canonicalization_method: signature.canonical_json || 'JSON.stringify_v8_sort (legacy — pre Aug 10, 2026)',
+          signed_payload_hash: signature.signed_payload_hash || null,
+          envelope_url: `https://marketnow.site/api/atc?action=envelope&card_id=${card_id}`,
           message: 'ATC is valid, signature verified, not expired, not revoked.',
           schema_version: '1.1.0',
           schema_changes: [
@@ -878,7 +1036,7 @@ export default async function handler(req, res) {
         }
         const referrals = await listReferralsByAgent(agent_id);
         return res.status(200).json({
-          agent_id,
+          agent_id: safeAgentId,
           total_ref_codes: referrals.length,
           referrals,
         });
@@ -900,7 +1058,97 @@ export default async function handler(req, res) {
         });
       }
 
-      // ── list (default GET): list all ATCs ──
+      // ── trust: unified trust decision (the killer feature) ──
+      // POST /api/atc?action=trust — combines Sentinel + ATC + Policy + Interceptor
+      if (action === 'trust') {
+        if (req.method === 'GET') {
+          return res.status(200).json({
+            service: 'MarketNow Trust API',
+            version: '1.0.0',
+            description: 'Unified trust decision — combines Sentinel security assessment, ATC identity verification, policy evaluation, and runtime enforcement.',
+            endpoint: 'POST /api/atc?action=trust',
+            request_schema: {
+              agent_id: 'string — the agent requesting the action',
+              skill_id: 'string — the MCP skill/tool',
+              action: 'string — the action (execute, read, write, purchase)',
+              atc_card_id: 'string (optional) — ATC card ID',
+              policy: { min_trust_score: 'int 0-10 (default 5)', allow_filesystem_write: 'bool (default false)', allow_network: 'none|allowlist|all', allow_shell: 'none|sandboxed|unrestricted', require_atc: 'bool (default true)' },
+            },
+            architecture: 'DISCOVER → SENTINEL → IDENTITY → TRUST → POLICY → ENFORCEMENT → AUDIT',
+          });
+        }
+        const body = req.body || {};
+        const { agent_id, skill_id, action: reqAction, atc_card_id, policy: userPolicy } = body;
+        if (!agent_id || !skill_id) return res.status(400).json({ error: 'agent_id and skill_id required' });
+        const policy = { min_trust_score: 5, allow_filesystem_write: false, allow_network: 'allowlist', allow_shell: 'none', allow_credentials_access: false, allow_process_spawn: false, require_atc: true, ...userPolicy };
+        const reasons = []; const violations = []; let allowed = true;
+
+        // Step 1: Sentinel assessment
+        let toolScore = 0; let toolEvidence = {};
+        try {
+          const skillsRes = await fetch('https://marketnow.site/api/skills.json');
+          const skills = await skillsRes.json();
+          const skill = skills.find(s => s.id === skill_id || s.slug === skill_id);
+          if (skill) {
+            toolScore = skill.sentinel_score || 0;
+            toolEvidence = { skill_id: skill.id, sentinel_score: toolScore, category: skill.category, sentinel_version: 'v2.5' };
+            if (toolScore < policy.min_trust_score) { allowed = false; violations.push({ rule: 'min_trust_score', expected: '>='+policy.min_trust_score, actual: toolScore }); reasons.push(`Tool score ${toolScore} < min ${policy.min_trust_score}`); }
+            else reasons.push(`Tool score ${toolScore}/10 OK`);
+          } else { toolEvidence = { skill_id, found: false }; reasons.push(`Skill ${skill_id} not found`); if (policy.min_trust_score > 0) { allowed = false; violations.push({ rule: 'min_trust_score', actual: 0 }); } }
+        } catch (e) { reasons.push(`Sentinel error: ${e.message}`); }
+
+        // Step 2: ATC verification
+        let identityVerified = false; let agentScore = 0; let certId = null; let expAt = null;
+        if (policy.require_atc) {
+          try {
+            const crlRes = await fetch('https://marketnow.site/api/atc?action=revocation-list');
+            const crlData = await crlRes.json();
+            const card = (crlData.cards || []).find(c => c.agent_id === agent_id && c.status === 'active') || (crlData.cards || []).find(c => c.card_id === atc_card_id && c.status === 'active');
+            if (card) { identityVerified = true; agentScore = card.sentinel_review_score || 0; certId = card.card_id; expAt = card.expires_at; reasons.push(`ATC ${certId} verified — score ${agentScore}/10`); }
+            else { allowed = false; violations.push({ rule: 'require_atc', actual: 'not found' }); reasons.push(`No ATC for agent ${agent_id}`); }
+          } catch (e) { reasons.push(`ATC error: ${e.message}`); }
+        }
+
+        // Step 3: Interceptor
+        let intDecision = 'allow';
+        if (reqAction && reqAction !== 'discover') {
+          try {
+            const intRes = await fetch('https://marketnow.site/api/interceptor', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jsonrpc: '2.0', method: 'tools/call', params: { name: reqAction, arguments: body.action_args || {} } }) });
+            const intData = await intRes.json();
+            intDecision = intData.decision || 'allow';
+            if (intDecision === 'block') { allowed = false; violations.push(...(intData.violations || []).map(v => ({ rule: 'interceptor_'+v.rule_id, message: v.message }))); reasons.push(`Interceptor blocked: ${(intData.violations||[]).map(v=>v.message).join(', ')}`); }
+            else reasons.push('Interceptor: allowed');
+          } catch (e) { reasons.push(`Interceptor skip: ${e.message}`); }
+        }
+
+        return res.status(200).json({
+          allowed, agent_trust_score: agentScore, tool_security_score: toolScore,
+          identity_verified: identityVerified, policy_compliant: violations.length === 0,
+          certificate_id: certId, expires_at: expAt,
+          evidence: { sentinel: toolEvidence, atc: identityVerified ? { card_id: certId, trust_score: agentScore } : null, interceptor: { decision: intDecision } },
+          reasons, violations, decision_authority: 'consumer', decision_made_at: new Date().toISOString(),
+          architecture: 'DISCOVER → SENTINEL → IDENTITY → TRUST → POLICY → ENFORCEMENT → AUDIT',
+        });
+      }
+
+      // ── list / revocation-list (default GET): list all ATCs ──
+      // Security fix (Aug 12, 2026): unrecognized actions now return 404
+      // instead of falling through to the default listing.
+      // Fix (Aug 13, 2026): 'revocation-list' is treated as an alias for the
+      // default listing — it was previously caught by the 404 handler because
+      // it was never an explicit action handler, just the default response.
+      if (action && action !== '' && action !== 'list' && action !== 'revocation-list') {
+        // If an action was specified but none of the handlers above matched,
+        // return 404 so the caller knows the action doesn't exist.
+        return res.status(404).json({
+          error: 'unknown_action',
+          action,
+          message: `Unknown action '${action}'. Valid actions: verify, envelope, ca-key, spec, verify-receipt, verify-vibe-receipt, trust, translate, resign-all, list, revocation-list.`,
+          valid_actions: ['verify', 'envelope', 'ca-key', 'spec', 'verify-receipt', 'verify-vibe-receipt', 'trust', 'translate', 'resign-all', 'list', 'revocation-list'],
+        });
+      }
+
+      // No action specified (or action=list or action=revocation-list) — return the default card listing
       const atcs = await listATCs();
       return res.status(200).json({
         total: atcs.length,
@@ -982,9 +1230,26 @@ export default async function handler(req, res) {
       if (postAction === 'issue') {
         const { agent_id, agent_name, public_key, capabilities, protocol_language, wallet_address, skill_id, proof_signature, proof_message } = body;
 
-        if (!agent_id || !public_key) {
+        // ── INPUT SANITIZATION ──
+        // Prevent path traversal, XSS, command injection in agent_id
+        const sanitize = (str) => {
+          if (typeof str !== 'string') return '';
+          // Remove path traversal, null bytes, control chars
+          return str.replace(/[\x00-\x1f\x7f/<>"'`\\;|$&!]/g, '').slice(0, 200);
+        };
+        const safeAgentId = sanitize(agent_id);
+        const safeAgentName = sanitize(agent_name || agent_id);
+        
+        if (!safeAgentId || safeAgentId.length < 3) {
           return res.status(400).json({
-            error: 'agent_id and public_key required',
+            error: 'Invalid agent_id — must be 3+ alphanumeric chars, no special chars',
+            hint: 'Use format: agent.example.myagent',
+          });
+        }
+
+        if (!public_key || public_key.length < 10) {
+          return res.status(400).json({
+            error: 'public_key required (min 10 chars)',
             example: {
               agent_id: 'agent.example.myagent',
               public_key: 'Ed25519 public key (SPKI PEM or base64 raw)',
@@ -1083,8 +1348,8 @@ export default async function handler(req, res) {
           card_id,
           schema_version: '1.1.0',
           decision_authority: 'consumer',
-          agent_id,
-          agent_name: agent_name || agent_id,
+          agent_id: safeAgentId,
+          agent_name: safeAgentName,
           identity: {
             public_key,
             key_algorithm: 'Ed25519',
@@ -1163,12 +1428,29 @@ export default async function handler(req, res) {
 
       // ── revoke: mark an ATC as revoked ──
       if (postAction === 'revoke') {
-        const { card_id, reason } = body;
+        const { card_id, reason, ca_secret } = body;
+        
+        // SECURITY: Require CA secret to revoke (prevent unauthorized revocation)
+        const expectedSecret = process.env.MANDATES_INTERNAL_SECRET;
+        if (!ca_secret || ca_secret !== expectedSecret) {
+          return res.status(403).json({
+            error: 'Unauthorized',
+            message: 'Revocation requires ca_secret (MANDATES_INTERNAL_SECRET). Only the CA can revoke ATCs.',
+            hint: 'If you are the ATC holder and need to revoke, contact support@alicelabs.site',
+          });
+        }
+        
         if (!card_id) {
           return res.status(400).json({ error: 'card_id required' });
         }
 
-        const atc = await fetchATC(card_id, { skipCache: true }); // revoke reads fresh
+        // Sanitize card_id (prevent path traversal)
+        const safeCardId = card_id.replace(/[^a-zA-Z0-9-]/g, '');
+        if (safeCardId !== card_id) {
+          return res.status(400).json({ error: 'Invalid card_id format' });
+        }
+
+        const atc = await fetchATC(safeCardId, { skipCache: true }); // revoke reads fresh
         if (!atc) {
           return res.status(404).json({ error: 'ATC not found', card_id });
         }

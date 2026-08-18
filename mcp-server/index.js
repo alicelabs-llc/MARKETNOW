@@ -71,9 +71,21 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
-// ATC/1.0 spec verifier (NEW in v1.10.0)
+// ATC/1.0 spec verifier
 import { verifyATC as verifyATCSpec } from './lib/atc-verify.mjs';
-import { partitionSkills } from './lib/schemas.mjs';
+import {
+  partitionSkills,
+  parseOrThrow,
+  SearchSkillsInputSchema,
+  GetSkillInputSchema,
+  GetInstallCommandInputSchema,
+  VerifyTrustInputSchema,
+  VerifyReceiptInputSchema,
+  SubmitSkillInputSchema,
+  MintReferralInputSchema,
+  LookupReferralInputSchema,
+  RecommendSkillsInputSchema,
+} from './lib/schemas.mjs';
 
 const API_BASE = 'https://marketnow.site/api';
 
@@ -434,7 +446,7 @@ async function recommendSkills(args) {
 const server = new Server(
   {
     name: 'marketnow',
-    version: '1.10.0',
+    version: '1.10.1',
   },
   {
     capabilities: {
@@ -750,39 +762,57 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     let result;
     switch (name) {
-      case 'marketnow_search_skills':
-        result = await searchSkills(args || {});
+      case 'marketnow_search_skills': {
+        const validated = parseOrThrow(SearchSkillsInputSchema, args || {}, 'marketnow_search_skills');
+        result = await searchSkills(validated);
         break;
-      case 'marketnow_get_skill':
-        result = await getSkill(args || {});
+      }
+      case 'marketnow_get_skill': {
+        const validated = parseOrThrow(GetSkillInputSchema, args || {}, 'marketnow_get_skill');
+        result = await getSkill(validated);
         break;
+      }
       case 'marketnow_list_categories':
         result = await listCategories();
         break;
       case 'marketnow_get_manifest':
         result = await fetchManifest();
         break;
-      case 'marketnow_get_install_command':
-        result = await getInstallCommand(args || {});
+      case 'marketnow_get_install_command': {
+        const validated = parseOrThrow(GetInstallCommandInputSchema, args || {}, 'marketnow_get_install_command');
+        result = await getInstallCommand(validated);
         break;
-      case 'marketnow_verify_trust':
-        result = await verifyTrust(args || {});
+      }
+      case 'marketnow_verify_trust': {
+        const validated = parseOrThrow(VerifyTrustInputSchema, args || {}, 'marketnow_verify_trust');
+        result = await verifyTrust(validated);
         break;
-      case 'marketnow_verify_receipt':
-        result = await verifyReceipt(args || {});
+      }
+      case 'marketnow_verify_receipt': {
+        const validated = parseOrThrow(VerifyReceiptInputSchema, args || {}, 'marketnow_verify_receipt');
+        result = await verifyReceipt(validated);
         break;
-      case 'marketnow_submit_skill':
-        result = await submitSkill(args || {});
+      }
+      case 'marketnow_submit_skill': {
+        const validated = parseOrThrow(SubmitSkillInputSchema, args || {}, 'marketnow_submit_skill');
+        result = await submitSkill(validated);
         break;
-      case 'marketnow_mint_referral':
-        result = await mintReferral(args || {});
+      }
+      case 'marketnow_mint_referral': {
+        const validated = parseOrThrow(MintReferralInputSchema, args || {}, 'marketnow_mint_referral');
+        result = await mintReferral(validated);
         break;
-      case 'marketnow_lookup_referral':
-        result = await lookupReferral(args || {});
+      }
+      case 'marketnow_lookup_referral': {
+        const validated = parseOrThrow(LookupReferralInputSchema, args || {}, 'marketnow_lookup_referral');
+        result = await lookupReferral(validated);
         break;
-      case 'marketnow_recommend_skills':
-        result = await recommendSkills(args || {});
+      }
+      case 'marketnow_recommend_skills': {
+        const validated = parseOrThrow(RecommendSkillsInputSchema, args || {}, 'marketnow_recommend_skills');
+        result = await recommendSkills(validated);
         break;
+      }
       case 'marketnow_get_owasp_compliance':
         result = await fetchOwaspCompliance();
         break;
@@ -854,4 +884,4 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 // ─── Start server ───────────────────────────────────────────────────────────
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error('MarketNow MCP Server v1.10.0 running on stdio (13 tools, marketnow_* namespace, ATC/1.0 spec verifier)');
+console.error('MarketNow MCP Server v1.10.1 running on stdio (13 tools, marketnow_* namespace, ATC/1.0 spec verifier)');

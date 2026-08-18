@@ -218,16 +218,24 @@ function createChatWindow() {
     document.body.appendChild(chatContainer);
 }
 
+function escapeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 function sendChatMessage() {
     const input = document.getElementById('chat-input');
     const messages = document.getElementById('chat-messages');
     
     if (!input || !messages || !input.value.trim()) return;
 
+    const safeValue = escapeHTML(input.value.trim());
+
     // User message
     messages.innerHTML += `
         <div style="background: #4361ee; color: white; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; align-self: flex-end; max-width: 80%; margin-left: auto;">
-            <strong>Tú:</strong> ${input.value}
+            <strong>Tú:</strong> ${safeValue}
         </div>
     `;
 

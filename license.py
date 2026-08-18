@@ -10,7 +10,10 @@ import sys
 from pathlib import Path
 
 # In production, this comes from an env variable or hardcoded for the marketplace
-MASTER_KEY = os.environ.get("MARKETNOW_MASTER_KEY", "marketnow-master-key-2026-alpha")
+MASTER_KEY = os.environ.get("MARKETNOW_MASTER_KEY")
+if not MASTER_KEY or len(MASTER_KEY) < 32:
+    sys.stderr.write("FATAL SECURITY ERROR: MARKETNOW_MASTER_KEY environment variable is not configured or is too short (min 32 chars required).\n")
+    sys.exit(1)
 
 LICENSE_DIR = Path.home() / ".marketnow"
 

@@ -28,6 +28,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/trust-score",
+      "destination": "/api/atc?action=trust"
+    },
+    {
       "source": "/api/execute",
       "destination": "/api/agent-economy?_mode=execute"
     },
@@ -117,7 +121,51 @@
     },
     {
       "source": "/atc",
-      "destination": "/atc.html"
+      "destination": "/atc/index.html"
+    },
+    {
+      "source": "/atc/",
+      "destination": "/atc/index.html"
+    },
+    {
+      "source": "/atc/playground",
+      "destination": "/atc/playground.html"
+    },
+    {
+      "source": "/atc/spec",
+      "destination": "/atc/spec/SPEC.md"
+    },
+    {
+      "source": "/atc/conformance",
+      "destination": "/atc/spec/CONFORMANCE.md"
+    },
+    {
+      "source": "/atc/prior-art",
+      "destination": "/atc/spec/PRIOR-ART-TIMELINE.md"
+    },
+    {
+      "source": "/atc/schema",
+      "destination": "/atc/spec/atc-1.0.json"
+    },
+    {
+      "source": "/atc/sdk-readme",
+      "destination": "/atc/spec/SDK-README.md"
+    },
+    {
+      "source": "/atc/mcp-audit",
+      "destination": "/atc/spec/MCP-AUDIT.md"
+    },
+    {
+      "source": "/atc/verification-log",
+      "destination": "/atc/spec/VERIFICATION-LOG.md"
+    },
+    {
+      "source": "/badges/atc-compatible.svg",
+      "destination": "/badges/atc-compatible.svg"
+    },
+    {
+      "source": "/badges/atc-verified.svg",
+      "destination": "/badges/atc-verified.svg"
     },
     {
       "source": "/((?!api/|for-agents|landing-pages/|tools/|acp|atc).*)",

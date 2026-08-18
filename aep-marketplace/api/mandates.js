@@ -771,48 +771,8 @@ export default async function handler(req, res) {
 
     // ---------- LIST ----------
     if (req.method === 'GET' && (query.owner || query.agent)) {
-      // SECURITY: Require owner signature to list their own mandates
-      // This prevents OPSEC leak (anyone could check if a wallet has mandates)
-      const ownerSig = query.signature || req.headers['x-owner-signature'];
-      const ownerAddr = query.owner || '';
-
-      if (ownerAddr && ownerAddr.startsWith('0x')) {
-        // Verify EIP-191 signature: message = "list-mandates:<owner>:<timestamp>"
-        const timestamp = query.timestamp || '';
-        const message = `list-mandates:${ownerAddr.toLowerCase()}:${timestamp}`;
-
-        // Check timestamp freshness (within 5 minutes)
-        if (timestamp) {
-          const age = Date.now() - parseInt(timestamp);
-          if (age > 5 * 60 * 1000 || age < -5 * 60 * 1000) {
-            return res.status(401).json({
-              error: 'Timestamp expired',
-              message: 'Signature timestamp must be within 5 minutes of current time.',
-            });
-          }
-        }
-
-        if (!ownerSig) {
-          return res.status(401).json({
-            error: 'Signature required',
-            message: 'To list mandates for a wallet, sign the message "list-mandates:<owner>:<unix_timestamp>" with your wallet private key (EIP-191).',
-            sign_message: message,
-            hint: 'Add ?timestamp=<unix_ms> and ?signature=<hex> to your request',
-          });
-        }
-
-        // Verify the signature
-        try {
-          const { recoverAddress } = await import('./verify-signature.mjs').catch(() => ({}));
-          // If verify module not available, use inline verification
-          // For now, warn but allow (backward compat)
-          console.warn('[mandates] List without signature verification — implement EIP-191 verify');
-        } catch (e) {
-          // Module not available — allow with warning
-          console.warn('[mandates] Signature verification module not available');
-        }
-      }
-
+      // OPSEC note: anyone can list mandates for any wallet.
+      // Future: require EIP-191 signature from owner.
       const out = await listMandates({
         owner: query.owner,
         agent: query.agent,

@@ -1,96 +1,148 @@
-# MarketNow Roadmap
+# MarketNow Roadmap — Security Infrastructure for AI Agents
 
 ## Vision
 
-Every AI agent has a trust card. Every MCP skill is security-audited. Every agent-to-agent interaction is verified.
+MarketNow is **the verification and enforcement layer for agentic systems**.
 
-We are the SSL for AI agents.
+Sentinel is the engine. Trust Card is the identity. Interceptor is the enforcement. Trust API is the consumption layer.
 
-## What's done (August 2026)
+The marketplace (9,248 skills) is distribution and dataset — not the product.
 
-### Security (10 layers + L4 prototype — all live or prototyped)
-- [x] L1.5 — 6 metadata checks
-- [x] L1.6 — 36 Semgrep rules + 18 secret patterns + OSV
-- [x] L1.7 — 8 malware patterns + binary/launcher detection
-- [x] L1.8 — 48 malware family signatures (YARA-equivalent)
-- [x] L1.9 — 32 prompt injection defense rules (10 categories)
-- [x] L2 — gVisor sandbox (network=none, read-only, cap-drop ALL)
-- [x] L3 — Continuous runtime monitoring (weekly re-audit, 6 drift types)
-- [x] WAF — 38 attack signatures + auto-ban
-- [x] Honeypot — 50+ fake paths + 24h ban
-- [x] Threat Intel — abuse.ch feeds (URLhaus + MalwareBazaar + ThreatFox)
-- [x] L4 — eBPF prototype (network + filesystem + process monitors) + policy engine + L3 integration
+## Current State — v5.0.0 (August 2026)
 
-### Trust
-- [x] ATC v1.1.0 — Ed25519 signed, RFC 8785 JCS, decision_authority="consumer"
-- [x] Action-receipts — signed delivery proof (Ed25519)
-- [x] Vibe mutual hop — bidirectional Ed25519 receipt verification
-- [x] Referral tracking — 5% commission, public ledger
-- [x] CA key rotation + key versioning
-- [x] Signed revocation list with TTL (OCSP-style, 60s)
-- [x] Multi-sig ATC schema v1.2.0 (2+ CAs for high-value agents)
-- [x] Code examples in Python, JavaScript, Go, Rust
+| Feature | Status | Evidence |
+|---------|--------|----------|
+| Sentinel 10-layer audit | ✅ Live | 1,211,488 checks performed |
+| 9,248 MCP skills analyzed | ✅ Live | All in skills-lite.json |
+| 1,030 threats detected | ✅ Live | 80 quarantined, 71 risky |
+| Agent Trust Card (ATC) | ✅ Live | 57 Ed25519-signed cards |
+| Runtime MCP Interceptor | ✅ Live | 5 policy rules, blocks .env/rm-rf |
+| Trust API | ✅ Live | /api/trust-score?skillId=X |
+| x402 Streaming payments | ✅ Live | /api/stream (USDC on Base) |
+| A2A Remote Execution | ✅ Live | /api/execute |
+| Skill Stacks | ✅ Live | 5 predefined kits |
+| npm packages | ✅ Live | marketnow-mcp v1.8.0 + install-stack v1.1.0 |
+| Public audit report | ✅ Live | /api/audit-report.json |
+| Ed25519 certificates | ✅ Live | RFC 8032 + RFC 8785 JCS |
 
-### Marketplace
-- [x] 9,248 audited skills
-- [x] 18 community-submitted servers
-- [x] 7 languages (EN, ES, ZH, JA, FR, DE, KO)
-- [x] npm v1.7.0 (11 MCP tools)
-- [x] Python SDK (marketnow-atc)
-- [x] GitHub Action (marketnow-audit@v1)
-- [x] CLI (marketnow-audit)
-- [x] Badge SVG (Verified + First 100)
-- [x] Cancel API (async mode + status + cancel)
-- [x] 23 dev.to articles (including MCP Security 101 course, 5 chapters)
-- [x] 3 free programs (Challenge, Partnership, Bug Bounty)
-- [x] 13 Hacktoberfest issues
+---
 
-### Tooling
-- [x] Tool catalog diffing (detect tool changes post-cert)
-- [x] Provenance verification (commit SHA tracking)
-- [x] npm provenance workflow (Sigstore, ready to enable)
+## v5.1 — VERIFICATION (Q4 2026)
 
-## Q3 2026 — COMPLETE (91%)
+**Goal: Move from "scanner" to "verification engine"**
 
-- [x] Python `marketnow-atc` package
-- [x] RFC 8785 canonical JSON
-- [x] CA key rotation
-- [x] L4 design document
-- [x] More malware signatures (48 total)
-- [x] Rust ATC verification example
-- [x] German + Korean translations
-- [x] Cancel API (#22)
-- [x] Signed revocation lists with TTL
-- [x] Japanese /trust translation
-- [ ] npm provenance (workflow ready, needs NPM_TOKEN secret in CI)
+### 1. Cryptographic Tool Fingerprinting
+- Hash the exact tool definitions (tools/list response) at audit time
+- Store: server_hash, tools_hash, schema_hash, description_hash, dependency_hash, commit_hash
+- Alert when any hash changes post-audit → auto-revoke Trust Card
 
-## Q4 2026 — 80% COMPLETE
+### 2. Provenance / SLSA-style
+- Trust Card includes: source repo, commit SHA, build hash, npm package hash, container hash
+- Full chain of custody from source → package → audit → Trust Card
 
-- [x] L4 — eBPF prototype (network + filesystem + process monitors)
-- [x] L4 — policy engine (Python, 4 alert levels, auto-revoke)
-- [x] L4 — integration with L3 (drift feed, revocation, baseline update)
-- [x] npm package provenance (Sigstore workflow ready)
-- [x] Tool catalog diffing
-- [x] Provenance checks (git commit SHA verification)
-- [x] Multi-sig ATC (schema v1.2.0, 2+ CAs)
-- [x] L4 design update (eBPF hooks, macOS ES, policy engine)
-- [ ] 100+ GitHub stars — pending external adoption
-- [ ] First paying seller — pending external adoption
+### 3. Evidence-First Findings
+- Each finding: Finding ID, Severity, **Confidence %**, Evidence, Location, Reproduction
+- Two scores: Risk Score (how dangerous) + Confidence Score (how sure)
+- Third metric: Evidence Coverage (% of tool surface verified)
 
-**Q4 engineering: 8/10 complete. Remaining 2 items depend on external adoption.**
+### 4. Reproducible Audits
+- Audit ID + Scanner version + Ruleset version + Sandbox image + Timestamp
+- Two audits of same version = identical results (or explain difference)
 
-## 2027
+### 5. ATC Revocation + Transparency Log
+- States: VALID, EXPIRED, REVOKED, SUSPENDED, SUPERSEDED
+- Public append-only log (Certificate Transparency for agents)
 
-- [ ] L5 — Third-party security audit
-- [ ] Self-hosted Sentinel (Enterprise tier)
-- [ ] A2A Agent Card integration (Google's protocol)
-- [ ] Mobile app (PWA)
-- [ ] 50,000+ skills
-- [ ] First $1,000 MRR
+---
 
-## What we will NOT do
+## v5.2 — BEHAVIOR (Q1 2027)
 
-- Pay for ads
-- Sell user data
-- Paywall trust verification
-- Charge for basic audits
+**Goal: Don't just scan code — verify runtime behavior**
+
+### 1. Behavioral Baseline
+- Record: API endpoints, request frequency, file access, network calls, process spawns
+- Store as baseline profile per tool version
+
+### 2. Drift Detection
+- Compare runtime vs baseline → auto-degrade score → auto-revoke on critical
+
+### 3. Network/Filesystem/Process Behavior Analysis
+- Map all outbound connections, file reads/writes, process spawns during sandbox
+- Flag: cloud metadata, .env, .aws, .ssh, /etc/passwd
+- Classify: read-only, write-capable, credential-accessing
+
+---
+
+## v5.3 — POLICY (Q2 2027)
+
+**Goal: Move from score → decision engine**
+
+### 1. Capability Graph
+- Trust Card declares: filesystem.read, network.discord.com, shell.execute=NO
+- Machine-readable capability manifest per tool
+
+### 2. Organization Policies
+- Enterprise: "score ≥ 8 AND no filesystem AND no shell"
+- Per-org risk context (same tool = safe for A, blocked for B)
+
+### 3. Agent Identity + Task Identity
+- Every execution: agent_id, task_id, session_id → full audit trail
+
+### 4. Approval Workflow
+- Score 5-7 → REQUIRE_APPROVAL | Score < 5 → BLOCK | No Trust Card → REQUIRE_APPROVAL
+
+---
+
+## v5.4 — TRAJECTORY (Q3 2027)
+
+**Goal: Detect multi-step attack chains**
+
+### 1. Multi-Tool Attack Chain Analysis
+- Track sequences: search → read → extract URL → download → execute → exfiltrate
+- Each action individually ALLOW, but chain = BLOCK
+
+### 2. Cross-Tool Privilege Escalation
+- Tool A (low) + Tool B (high) = CRITICAL (attack graph)
+
+### 3. Data Flow Tracking
+- Track: untrusted_input → LLM → MCP → tool → database → external API
+- Flag: USER_SECRET → external-domain (exfiltration)
+
+### 4. Trajectory Risk Scoring
+- Score entire session trajectory → block call #8 because 1-7 suspicious
+
+---
+
+## v6.0 — AGENT SECURITY PLATFORM (Q4 2027)
+
+### Multi-Protocol: MCP + A2A + OpenAI tools + Plugins + APIs
+### AgentBOM: Identity + Software + Capabilities + AI + Security + Trust
+### Cross-Agent Trust: Agent A delegates to Agent B (verify Trust Card first)
+### Memory Poisoning Detection
+### Typosquatting Detection: Levenshtein distance, package age, publisher
+### Supply Chain Graph: MCP → npm → GitHub → dependencies → CVEs
+### Continuous Verification: Every commit/CVE/dependency change triggers re-audit
+### External Adversarial Red-Team
+
+---
+
+## OWASP MCP Cheat Sheet Alignment
+
+| OWASP Recommendation | MarketNow Implementation | Version |
+|---------------------|------------------------|---------|
+| Verify tool descriptions haven't changed | Cryptographic fingerprinting | v5.1 |
+| Validate input/output schemas | Schema hash in Trust Card | v5.1 |
+| Monitor for tool poisoning | Runtime drift detection | v5.2 |
+| Implement least privilege | Capability graph + policies | v5.3 |
+| Log all tool invocations | Agent identity + audit trail | v5.3 |
+| Isolate tool execution | gVisor sandbox (already live) | v5.0 |
+| Scan for prompt injection | L1.9 (32 rules, already live) | v5.0 |
+| Monitor runtime behavior | Behavioral baseline + drift | v5.2 |
+| Verify supply chain integrity | Provenance + SLSA | v5.1 |
+| Implement revocation | ATC revocation + transparency log | v5.1 |
+
+## North Star
+
+> **MarketNow is the verification and enforcement layer for all agentic systems.**
+
+*Built by AliceLabs LLC — founder Edison Flores*

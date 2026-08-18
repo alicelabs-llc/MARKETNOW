@@ -5,8 +5,7 @@ import { useLang } from '../context/LanguageContext.jsx';
 
 export default function AgentLanding() {
   const { t, lang } = useLang();
-  const [stats, setStats] = useState({ total: 7156, free: 65, sellers: 15 });
-  const [topFree, setTopFree] = useState([]);
+  const [stats, setStats] = useState({ total: 9248, audited: 5662, checks: 1211488, quarantined: 80 });
   const [topPaid, setTopPaid] = useState([]);
 
   useEffect(() => {
@@ -14,18 +13,11 @@ export default function AgentLanding() {
       .then(r => r.json())
       .then(d => setStats(s => ({
         ...s,
-        total: d.stats?.total_skills || 7156,
-        free: d.stats?.free_skills || 43,
-        sellers: d.stats?.active_sellers || 15,
+        total: d.stats?.total_skills || 9248,
+        audited: d.stats?.audited || 5662,
+        checks: d.stats?.security_checks_performed || 1211488,
+        quarantined: d.stats?.critical_blocked || 80,
       })))
-      .catch(() => {});
-
-    fetch('/api/free-skills.json')
-      .then(r => r.json())
-      .then(d => {
-        const skills = (d.skills || d).slice(0, 3);
-        setTopFree(skills);
-      })
       .catch(() => {});
 
     fetch('/api/skills.json')
@@ -46,34 +38,35 @@ export default function AgentLanding() {
     { m: 'GET', p: '/api/policies.json', d: t('home.apiPolicies') },
     { m: 'POST', p: '/api/agent-purchase', d: t('home.apiPurchase') },
     { m: 'GET', p: '/api/mandates', d: t('home.apiMandates') },
-    { m: 'GET', p: '/api/free-skills.json', d: t('home.apiFreeSkills', { count: stats.free }) },
+    { m: 'GET', p: '/api/audit-report.json', d: 'Transparency report (safe / risky / quarantined)' },
+    { m: 'GET', p: '/api/owasp', d: 'OWASP MCP Cheat Sheet compliance matrix' },
     { m: 'GET', p: '/api/bundles.json', d: t('home.apiBundles') },
   ];
 
   const features = [
-    { icon: '🔓', title: t('home.feat.opensourceTitle'), desc: t('home.feat.opensourceDesc') },
-    { icon: '🛡️', title: t('home.feat.sentinelTitle'), desc: t('home.feat.sentinelDesc') },
-    { icon: '⚡', title: t('home.feat.freeTitle', { count: stats.free }), desc: t('home.feat.freeDesc') },
-    { icon: '💰', title: t('home.feat.pricingTitle'), desc: t('home.feat.pricingDesc') },
+    { icon: '🛡️', title: 'Sentinel 10-layer audit', desc: '1.2M checks, 80 quarantined, 8,288 verified safe' },
+    { icon: '🔑', title: 'Agent Trust Card (ATC)', desc: 'Ed25519 (RFC 8032) signed identity, RFC 8785 JCS canonical JSON' },
+    { icon: '🚦', title: 'Runtime Interceptor', desc: '5 policy rules: blocks .env, rm -rf, process spawns, system writes' },
+    { icon: '📋', title: 'OWASP MCP Cheat Sheet', desc: '12 controls mapped (4 live, 8 planned v5.1-v6.0)' },
     { icon: '🤝', title: t('home.feat.humanLoopTitle'), desc: t('home.feat.humanLoopDesc') },
     { icon: '📜', title: t('home.feat.auditLogTitle'), desc: t('home.feat.auditLogDesc') },
     { icon: '🌍', title: t('home.feat.langsTitle'), desc: t('home.feat.langsDesc') },
-    { icon: '📋', title: t('home.feat.roadmapTitle'), desc: t('home.feat.roadmapDesc') },
+    { icon: '📑', title: t('home.feat.roadmapTitle'), desc: t('home.feat.roadmapDesc') },
   ];
 
   const statItems = [
-    { v: stats.total.toLocaleString()+'+', l: t('home.statsSkills') },
-    { v: stats.free.toString(), l: t('home.statsFree') },
-    { v: '58', l: t('home.statsCategories') },
-    { v: '5', l: t('home.statsLanguages') },
+    { v: stats.total.toLocaleString()+'+', l: 'MCP skills analyzed' },
+    { v: (stats.checks/1_000_000).toFixed(2)+'M', l: 'Security checks performed' },
+    { v: stats.quarantined.toString(), l: 'Quarantined (critical)' },
+    { v: '12', l: 'MCP tools (marketnow_*)' },
   ];
 
   const tweetText = {
-    en: "Found marketnow.site — 'trust layer for agent commerce'. 8,845 MCP skills, Sentinel-scanned, AP2 mandates, x402 payments. 65 free. Source-available MNNC-1.0.",
-    es: "Encontré marketnow.site — 'capa de confianza para comercio de agentes'. 8,845 skills MCP, escaneadas por Sentinel, mandatos AP2, pagos x402. 65 gratis. Source-available MNNC-1.0.",
-    pt: "Encontrei marketnow.site — 'camada de confiança para comércio de agentes'. 8,845 skills MCP, escaneadas pelo Sentinel, mandatos AP2, pagamentos x402. 65 grátis. Source-available MNNC-1.0.",
-    zh: "发现 marketnow.site — '代理商业的信任层'。8,845 个 MCP 技能，Sentinel 扫描，AP2 授权，x402 支付。65 个免费。源代码可用 MNNC-1.0。",
-    fr: "J'ai trouvé marketnow.site — 'couche de confiance pour le commerce d'agents'. 8,845 skills MCP, scannées par Sentinel, mandats AP2, paiements x402. 65 gratuites. Source-available MNNC-1.0.",
+    en: "MarketNow — security infrastructure for AI agents. Sentinel: 10-layer audit pipeline, 1.2M checks, 1,030 threats detected, 80 quarantined. 12 MCP tools (marketnow_* namespace). v1.9.0.",
+    es: "MarketNow — infraestructura de seguridad para agentes IA. Sentinel: pipeline de auditoría de 10 capas, 1.2M chequeos, 1,030 amenazas detectadas, 80 en cuarentena. 12 herramientas MCP (namespace marketnow_*). v1.9.0.",
+    pt: "MarketNow — infraestrutura de segurança para agentes IA. Sentinel: pipeline de auditoria de 10 camadas, 1.2M verificações, 1.030 ameaças detectadas, 80 em quarentena. 12 ferramentas MCP (namespace marketnow_*). v1.9.0.",
+    zh: "MarketNow — AI 代理安全基础设施。Sentinel: 10 层审计管道, 120 万次检查, 1,030 个威胁已检测, 80 个已隔离。12 个 MCP 工具 (marketnow_* 命名空间)。v1.9.0。",
+    fr: "MarketNow — infrastructure de sécurité pour agents IA. Sentinel: pipeline d'audit 10 couches, 1.2M vérifications, 1.030 menaces détectées, 80 en quarantaine. 12 outils MCP (namespace marketnow_*). v1.9.0.",
   };
 
   return (
@@ -122,8 +115,8 @@ export default function AgentLanding() {
               <Link to="/registry" className="px-7 py-3.5 bg-[#00F299] text-black font-bold rounded-xl hover:bg-[#00F299]/90 hover:scale-[1.02] transition-all shadow-lg shadow-[#00F299]/20 text-sm">
                 {t('hero.ctaBrowse')}
               </Link>
-              <Link to="/registry?filter=free" className="px-7 py-3.5 border border-[#00d1ff]/30 bg-[#00d1ff]/10 text-[#00d1ff] font-bold rounded-xl hover:bg-[#00d1ff]/20 transition-all text-sm">
-                ⚡ {stats.free} {t('hero.ctaFree')}
+              <Link to="/registry" className="px-7 py-3.5 border border-[#00d1ff]/30 bg-[#00d1ff]/10 text-[#00d1ff] font-bold rounded-xl hover:bg-[#00d1ff]/20 transition-all text-sm">
+                🛡️ Sentinel Audit Report
               </Link>
               <Link to="/submit" className="px-7 py-3.5 border border-white/10 text-white font-medium rounded-xl hover:bg-white/5 transition-all text-sm">
                 {t('hero.ctaPublish')}
@@ -140,30 +133,41 @@ export default function AgentLanding() {
           </motion.div>
         </section>
 
-        {/* ============ FREE SKILLS MAGNET ============ */}
+        {/* ============ SENTINEL TRANSPARENCY ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="premium-card p-6 md:p-8">
             <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
               <div>
-                <h2 className="text-white text-2xl font-bold mb-1">{t('home.freeTitle', { count: stats.free })}</h2>
-                <p className="text-zinc-400 text-sm">{t('home.freeDesc')}</p>
+                <h2 className="text-white text-2xl font-bold mb-1">Sentinel Transparency Report</h2>
+                <p className="text-zinc-400 text-sm">1,211,488 checks · 1,030 threats detected · 80 quarantined · 8,288 verified safe</p>
               </div>
-              <Link to="/registry?filter=free" className="text-[#00F299] text-sm hover:underline">{t('home.seeAll', { count: stats.free })}</Link>
+              <a href="/api/audit-report.json" target="_blank" rel="noopener" className="text-[#00F299] text-sm hover:underline">View full report →</a>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              {topFree.length === 0 ? (
-                <div className="text-zinc-600 text-xs col-span-3">{t('home.loading')}</div>
-              ) : topFree.map(s => (
-                <Link key={s.id} to={`/skill/${s.id}`} className="block p-4 rounded-xl bg-black/40 border border-white/5 hover:border-[#00F299]/30 transition-all">
-                  <div className="flex items-start justify-between mb-2">
-                    <span className="px-2 py-0.5 rounded bg-[#00F299]/10 text-[#00F299] text-[10px] font-mono font-bold">{t('home.badgeFree')}</span>
-                    <span className="text-zinc-600 text-[10px]">{s.category}</span>
-                  </div>
-                  <div className="text-white text-sm font-bold mb-1 truncate">{s.name}</div>
-                  <p className="text-zinc-500 text-xs line-clamp-2">{s.description}</p>
-                  <code className="text-zinc-600 text-[10px] font-mono mt-2 block truncate">npx -y @marketnow/install {s.slug}</code>
-                </Link>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                <div className="text-[#00F299] text-2xl font-bold font-mono">1.2M</div>
+                <div className="text-zinc-500 text-xs mt-1">checks performed</div>
+              </div>
+              <div className="p-4 rounded-xl bg-black/40 border border-white/5">
+                <div className="text-[#00d1ff] text-2xl font-bold font-mono">1,030</div>
+                <div className="text-zinc-500 text-xs mt-1">threats detected</div>
+              </div>
+              <div className="p-4 rounded-xl bg-black/40 border border-red-500/20">
+                <div className="text-red-400 text-2xl font-bold font-mono">80</div>
+                <div className="text-zinc-500 text-xs mt-1">quarantined</div>
+              </div>
+              <div className="p-4 rounded-xl bg-black/40 border border-[#00F299]/20">
+                <div className="text-[#00F299] text-2xl font-bold font-mono">8,288</div>
+                <div className="text-zinc-500 text-xs mt-1">verified safe</div>
+              </div>
+            </div>
+            <div className="mt-4 p-3 rounded-lg bg-black/40 border border-white/5">
+              <div className="text-zinc-500 text-[10px] mb-1">Public audit report</div>
+              <code className="text-[#00F299] text-xs font-mono">GET /api/audit-report.json</code>
+              <span className="text-zinc-700 text-[10px] mx-2">·</span>
+              <code className="text-[#00d1ff] text-xs font-mono">GET /api/owasp</code>
+              <span className="text-zinc-700 text-[10px] mx-2">·</span>
+              <code className="text-[#00d1ff] text-xs font-mono">POST /api/interceptor</code>
             </div>
           </motion.div>
         </section>
@@ -191,6 +195,48 @@ export default function AgentLanding() {
           </section>
         )}
 
+        {/* ============ TRY ATC PLAYGROUND ============ */}
+        <section className="max-w-5xl mx-auto px-6 pb-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="premium-card p-6 md:p-8">
+            <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+              <div>
+                <h2 className="text-white text-2xl font-bold mb-1">Try ATC/1.0 — Issue & Verify in your browser</h2>
+                <p className="text-zinc-400 text-sm">The Agent Trust Card spec, live. Issue a card in 30 seconds, verify any ATC against the open spec. No signup, no install, no backend.</p>
+              </div>
+              <a href="/atc/playground" target="_blank" rel="noopener" className="px-4 py-2 bg-[#00F299] text-black font-bold rounded-lg hover:bg-[#00F299]/90 transition-all text-sm whitespace-nowrap">
+                Open Playground →
+              </a>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00F299] text-xl font-bold font-mono">10</div>
+                <div className="text-zinc-500 text-[10px] mt-1">controls in spec</div>
+              </div>
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00d1ff] text-xl font-bold font-mono">Ed25519</div>
+                <div className="text-zinc-500 text-[10px] mt-1">RFC 8032 signatures</div>
+              </div>
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00F299] text-xl font-bold font-mono">RFC 8785</div>
+                <div className="text-zinc-500 text-[10px] mt-1">JCS canonical JSON</div>
+              </div>
+              <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                <div className="text-[#00d1ff] text-xl font-bold font-mono">3 SDKs</div>
+                <div className="text-zinc-500 text-[10px] mt-1">JS / Python / Rust</div>
+              </div>
+            </div>
+            <div className="p-3 rounded-lg bg-black/40 border border-white/5 flex items-center gap-3 flex-wrap">
+              <span className="text-zinc-500 text-[10px]">Install:</span>
+              <code className="text-[#00F299] text-xs font-mono">npm install agent-trust-card</code>
+              <span className="text-zinc-700">·</span>
+              <code className="text-[#00d1ff] text-xs font-mono">pip install agent-trust-card</code>
+              <span className="text-zinc-700">·</span>
+              <code className="text-[#00d1ff] text-xs font-mono">cargo add agent-trust-card</code>
+              <a href="/atc/spec" target="_blank" rel="noopener" className="text-[#00F299] text-xs hover:underline ml-auto">Read spec →</a>
+            </div>
+          </motion.div>
+        </section>
+
         {/* ============ FOR DEVS ============ */}
         <section className="max-w-5xl mx-auto px-6 pb-16">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
@@ -209,7 +255,7 @@ export default function AgentLanding() {
                 <div className="text-3xl mb-3">💳</div>
                 <h3 className="text-white font-bold text-sm mb-2">{t('home.step2Title')}</h3>
                 <p className="text-zinc-400 text-xs leading-relaxed">
-                  {t('home.step2Desc', { count: stats.free })}
+                  {t('home.step2Desc')}
                 </p>
               </div>
               <div className="premium-card p-6">
@@ -292,7 +338,7 @@ export default function AgentLanding() {
               </a>
 
               <a
-                href={`https://news.ycombinator.com/submitlink?u=${encodeURIComponent("https://marketnow.site")}&t=${encodeURIComponent("MarketNow — Trust layer for agent commerce (8,845 MCP skills, x402, AP2)")}`}
+                href={`https://news.ycombinator.com/submitlink?u=${encodeURIComponent("https://marketnow.site")}&t=${encodeURIComponent("MarketNow — Security infrastructure for AI agents. Sentinel 10-layer audit pipeline (1.2M checks, 80 quarantined)")}`}
                 target="_blank"
                 rel="noopener"
                 className="flex items-center gap-3 p-3 rounded-lg bg-black/40 border border-white/5 hover:border-[#00F299]/30 transition-all"

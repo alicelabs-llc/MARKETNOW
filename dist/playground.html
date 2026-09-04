@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify Playground — MarketNow</title>
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300F299'/><stop offset='1' stop-color='%2300d1ff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%23050505'/><path d='M 12 14 L 24 14 L 32 30 L 40 14 L 52 14 L 52 52 L 42 52 L 42 30 L 36 42 L 28 42 L 22 30 L 22 52 L 12 52 Z' fill='url(%23g)'/></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#050505;--surface:#0a0a0a;--border:#1a1a1a;--green:#00F299;--cyan:#00d1ff;--red:#fb2c36;--yellow:#edb200;--text:#fff;--dim:#9f9fa9;--faint:#71717b}
+body{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(5,5,5,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-svg{width:32px;height:32px;border-radius:8px}
+.logo-txt{font-size:18px;font-weight:800;letter-spacing:-0.02em}
+.logo-txt .m{color:var(--text)}
+.logo-txt .n{color:var(--green)}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{color:var(--dim);font-size:14px;font-weight:500}
+.nav a:hover{color:var(--text)}
+.nav-dropdown{display:flex;align-items:center;gap:4px}
+.nav-dropdown::after{content:"▾";font-size:10px;color:var(--faint)}
+.hdr-right{display:flex;align-items:center;gap:12px}
+.lang-btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 10px;color:var(--dim);font-size:13px;cursor:pointer;font-weight:600}
+.btn-ingresar{background:var(--green);color:#000;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:700;cursor:pointer}
+.btn-api{background:transparent;border:1px solid var(--green);border-radius:8px;padding:6px 14px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-api::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.hero{padding:60px 0 40px;text-align:center}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:-0.03em;margin-bottom:12px}
+.hero h1 .acc{color:var(--green)}
+.hero p{color:var(--dim);font-size:18px;max-width:600px;margin:0 auto 24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:600px;margin:24px auto 0}
+.stat{border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;background:var(--surface)}
+.stat .n{font-family:ui-monospace,monospace;font-size:28px;font-weight:700;color:var(--green)}
+.stat .l{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+.section{padding:32px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+textarea{width:100%;min-height:180px;padding:14px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:ui-monospace,monospace;font-size:14px;resize:vertical;outline:none}
+textarea:focus{border-color:var(--green)}
+textarea::placeholder{color:var(--faint)}
+.examples{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.examples span{color:var(--faint);font-size:13px;margin-right:4px}
+.btn-ex{padding:6px 12px;background:transparent;border:1px solid var(--border);border-radius:999px;color:var(--dim);font-size:13px;cursor:pointer}
+.btn-ex:hover{border-color:var(--green);color:var(--green)}
+.btn-go{display:block;width:100%;padding:14px;margin-top:16px;background:var(--green);color:#000;border:none;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer}
+.btn-go:hover{opacity:.9}
+.btn-go:disabled{opacity:.4}
+.result{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;margin-top:16px;display:none}
+.result.show{display:block}
+.decision{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.badge{padding:6px 16px;border-radius:999px;font-family:ui-monospace,monospace;font-weight:700;font-size:14px;text-transform:uppercase}
+.b-PERMIT{background:rgba(0,242,153,.12);color:var(--green);border:1px solid var(--green)}
+.b-DENY{background:rgba(251,44,54,.12);color:var(--red);border:1px solid var(--red)}
+.b-UNDETERMINED{background:rgba(0,209,255,.12);color:var(--cyan);border:1px solid var(--cyan)}
+.meta{color:var(--dim);font-size:14px}
+.meta b{color:var(--text)}
+.h3{font-family:ui-monospace,monospace;font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin:16px 0 8px}
+.stages{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.stage{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px;font-size:13px}
+.stage.pass{border-color:#333}
+.stage.fail{border-color:var(--red)}
+.stage-n{font-family:ui-monospace,monospace;font-weight:600;margin-bottom:2px}
+.stage.pass .stage-n{color:var(--green)}
+.stage.fail .stage-n{color:var(--red)}
+.stage-r{color:var(--faint);font-size:12px}
+pre{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px;overflow-x:auto;font-family:ui-monospace,monospace;font-size:12px;color:var(--dim);white-space:pre-wrap;word-break:break-all}
+.pipeline{padding:48px 0;border-top:1px solid var(--border)}
+.pipeline h2{font-size:28px;font-weight:800;margin-bottom:24px;text-align:center}
+.pipeline h2 .acc{color:var(--green)}
+.pf{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.ps{padding:8px 14px;background:var(--surface);border:1px solid var(--border);border-radius:999px;font-family:ui-monospace,monospace;font-size:12px;color:var(--dim)}
+.ps .n{color:var(--green);margin-right:4px}
+.pa{color:var(--faint);align-self:center}
+.ftr{border-top:1px solid var(--border);padding:24px 0;margin-top:32px}
+.ftr-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-links{display:flex;gap:16px;flex-wrap:wrap}
+.ftr-links a{color:var(--faint);font-size:13px}
+.ftr-links a:hover{color:var(--green)}
+.ftr-copy{color:var(--faint);font-size:12px}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:28px}.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in"><a href="/" class="logo"><svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00F299"/><stop offset="1" stop-color="#00d1ff"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#050505"/><path d="M 12 14 L 24 14 L 32 30 L 40 14 L 52 14 L 52 52 L 42 52 L 42 30 L 36 42 L 28 42 L 22 30 L 22 52 L 12 52 Z" fill="url(#g)"/></svg><span class="logo-txt"><span class="m">MARKET</span><span class="n">NOW</span></span></a><nav class="nav"><a href="/" class="nav-dropdown">MARKETPLACE</a><a href="/" class="nav-dropdown">CONFIANZA</a><a href="/" class="nav-dropdown">RECURSOS</a><a href="/" class="nav-dropdown">CUENTA</a></nav><div class="hdr-right"><button class="lang-btn">ES</button><button class="btn-ingresar">INGRESAR</button><button class="btn-api">API</button></div></div></header>
+<section class="hero"><div class="wrap"><h1>Verify <span class="acc">Playground</span></h1><p>Paste any credential — see the 12-stage verification result. JWT, W3C VC, MCP Card, ATC, X.509 — all supported.</p><div class="stats"><div class="stat"><div class="n">8</div><div class="l">Formats</div></div><div class="stat"><div class="n">12</div><div class="l">Stages</div></div><div class="stat"><div class="n">6.7k</div><div class="l">Ver/sec</div></div><div class="stat"><div class="n">480+</div><div class="l">Tests</div></div></div></div></section>
+<section class="section"><div class="wrap"><div class="card"><label style="display:block;color:var(--faint);font-family:ui-monospace,monospace;font-size:12px;text-transform:uppercase;margin-bottom:6px">Paste Credential</label><textarea id="credentialInput" placeholder='Paste a JWT, W3C VC, MCP Card, ATC, or X.509 cert here...'></textarea><div class="examples"><span>Examples:</span><button class="btn-ex" onclick="loadJWT()">JWT</button><button class="btn-ex" onclick="loadW3CVC()">W3C VC</button><button class="btn-ex" onclick="loadMCPCard()">MCP Card</button><button class="btn-ex" onclick="loadATC()">ATC v3</button></div><button class="btn-go" onclick="verifyCredential()" id="verifyBtn">Verify Credential</button></div><div id="result" class="result"></div></div></section>
+<section class="pipeline"><div class="wrap"><h2>12-Stage <span class="acc">Pipeline</span></h2><div class="pf"><div class="ps"><span class="n">1</span>PARSER</div><span class="pa">→</span><div class="ps"><span class="n">2</span>DETECT</div><span class="pa">→</span><div class="ps"><span class="n">3</span>SCHEMA</div><span class="pa">→</span><div class="ps"><span class="n">4</span>CRYPTO</div><span class="pa">→</span><div class="ps"><span class="n">5</span>ISSUER</div><span class="pa">→</span><div class="ps"><span class="n">6</span>KEY_BINDING</div><span class="pa">→</span><div class="ps"><span class="n">7</span>POP</div><span class="pa">→</span><div class="ps"><span class="n">8</span>PROVENANCE</div><span class="pa">→</span><div class="ps"><span class="n">9</span>LIFECYCLE</div><span class="pa">→</span><div class="ps"><span class="n">10</span>EVIDENCE</div><span class="pa">→</span><div class="ps"><span class="n">11</span>POLICY</div><span class="pa">→</span><div class="ps"><span class="n">12</span>DECISION</div></div></div></section>
+<footer class="ftr"><div class="wrap ftr-in"><div class="ftr-links"><a href="/">Home</a><a href="/scam-checker.html">Scam Checker</a><a href="/translate.html">Translator</a><a href="/playground.html">Playground</a><a href="https://github.com/alicelabs-llc/universal-trust-adapter" target="_blank">GitHub</a><a href="https://t.me/uta_verify_bot" target="_blank">Telegram</a></div><div class="ftr-copy">© 2026 AliceLabs LLC</div></div></footer>
+<script>
+var EX={jwt:'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0ZXN0In0.signature',w3cvc:JSON.stringify({"@context":["https://www.w3.org/2018/credentials/v1"],"type":["VerifiableCredential"],"issuer":"did:web:alice.example","credentialSubject":{"id":"did:agent:bob","scope":"read:files"},"proof":{"type":"Ed25519Signature2020","verificationMethod":"did:web:alice.example#key-1","proofValue":"placeholder"}},null,2),mcp:JSON.stringify({"mcp_server_card_v1":{"issuer":"did:web:alice.example","server_id":"filesystem-server","scope":["read:files"],"expires_at":"2026-12-31T23:59:59Z"}},null,2),atc:JSON.stringify({"schema_version":"1.1.0","card_id":"ATC-EXAMPLE-001","issuer":"MarketNow Sentinel CA","identity":{"key_algorithm":"Ed25519","public_key":"marketnow-skill:example"},"trust":{"risk_level":"not_audited","sentinel_review_score":0}},null,2)};
+function loadJWT(){document.getElementById('credentialInput').value=EX.jwt}
+function loadW3CVC(){document.getElementById('credentialInput').value=EX.w3cvc}
+function loadMCPCard(){document.getElementById('credentialInput').value=EX.mcp}
+function loadATC(){document.getElementById('credentialInput').value=EX.atc}
+async function verifyCredential(){const i=document.getElementById('credentialInput').value.trim();if(!i){alert('Paste a credential first');return}const b=document.getElementById('verifyBtn');b.disabled=true;b.textContent='Verifying...';try{let p;try{p=JSON.parse(i)}catch{p=i}const r=await fetch('https://www.marketnow.site/api/trust?action=verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({payload:p})});const d=await r.json();show(d)}catch(e){var r=document.getElementById('result');r.classList.add('show');r.innerHTML='<p style="color:var(--red)">Error: '+e.message+'</p>'}b.disabled=false;b.textContent='Verify Credential'}
+function show(d){var r=document.getElementById('result');r.classList.add('show');var dec=d.decision||'UNKNOWN';var fmt=d.detected_format||'?';var iss=d.issuer||'?';var fs=d.failed_stage;var h='<div class="decision"><span class="badge b-'+dec+'">'+dec+'</span><div class="meta">Format: <b>'+fmt+'</b> · Issuer: <b>'+iss+'</b>'+(fs?' · <span style="color:var(--red)">Failed at: <b>'+fs+'</b></span>':'')+'</div></div>';if(d.stages){h+='<div class="h3">Stage Results</div><div class="stages">';for(var n in d.stages){var res=d.stages[n];var pass=res==='OK'||res==='PASS'||res==='ACTIVE';var cls=pass?'pass':'fail';var ic=pass?'✓':'⚠';h+='<div class="stage '+cls+'"><div class="stage-n">'+ic+' '+n+'</div><div class="stage-r">'+res+'</div></div>'}h+='</div>'}h+='<div class="h3">Full Response</div><pre>'+esc(JSON.stringify(d,null,2))+'</pre>';r.innerHTML=h}
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+</script>
+</body>
+</html>

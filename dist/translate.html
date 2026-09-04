@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credential Translator — MarketNow</title>
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300F299'/><stop offset='1' stop-color='%2300d1ff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%23050505'/><path d='M 12 14 L 24 14 L 32 30 L 40 14 L 52 14 L 52 52 L 42 52 L 42 30 L 36 42 L 28 42 L 22 30 L 22 52 L 12 52 Z' fill='url(%23g)'/></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#050505;--surface:#0a0a0a;--border:#1a1a1a;--green:#00F299;--cyan:#00d1ff;--red:#fb2c36;--yellow:#edb200;--text:#fff;--dim:#9f9fa9;--faint:#71717b}
+body{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(5,5,5,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-svg{width:32px;height:32px;border-radius:8px}
+.logo-txt{font-size:18px;font-weight:800;letter-spacing:-0.02em}
+.logo-txt .m{color:var(--text)}
+.logo-txt .n{color:var(--green)}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{color:var(--dim);font-size:14px;font-weight:500}
+.nav a:hover{color:var(--text)}
+.nav-dropdown{display:flex;align-items:center;gap:4px}
+.nav-dropdown::after{content:"▾";font-size:10px;color:var(--faint)}
+.hdr-right{display:flex;align-items:center;gap:12px}
+.lang-btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 10px;color:var(--dim);font-size:13px;cursor:pointer;font-weight:600}
+.btn-ingresar{background:var(--green);color:#000;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:700;cursor:pointer}
+.btn-api{background:transparent;border:1px solid var(--green);border-radius:8px;padding:6px 14px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-api::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.hero{padding:60px 0 40px;text-align:center}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:-0.03em;margin-bottom:12px}
+.hero h1 .acc{color:var(--green)}
+.hero p{color:var(--dim);font-size:18px;max-width:600px;margin:0 auto 24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:600px;margin:24px auto 0}
+.stat{border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;background:var(--surface)}
+.stat .n{font-family:ui-monospace,monospace;font-size:28px;font-weight:700;color:var(--green)}
+.stat .l{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+.section{padding:32px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+.fs{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:end;margin-bottom:16px}
+.fs label{display:block;color:var(--faint);font-family:ui-monospace,monospace;font-size:12px;text-transform:uppercase;margin-bottom:6px}
+select{width:100%;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:15px;outline:none}
+select:focus{border-color:var(--green)}
+.arrow{font-size:20px;color:var(--green);text-align:center;padding-bottom:4px}
+textarea{width:100%;min-height:160px;padding:14px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:ui-monospace,monospace;font-size:14px;resize:vertical;outline:none}
+textarea:focus{border-color:var(--green)}
+textarea::placeholder{color:var(--faint)}
+.btn-go{display:block;width:100%;padding:14px;margin-top:16px;background:var(--green);color:#000;border:none;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer}
+.btn-go:hover{opacity:.9}
+.btn-go:disabled{opacity:.4}
+.output{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;margin-top:16px;display:none}
+.output.show{display:block}
+.oh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.oh h3{font-size:18px}
+.cp{padding:6px 12px;background:var(--bg);border:1px solid var(--border);border-radius:999px;color:var(--dim);font-family:ui-monospace,monospace;font-size:12px;cursor:pointer}
+.cp:hover{color:var(--green);border-color:var(--green)}
+pre{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px;overflow-x:auto;font-family:ui-monospace,monospace;font-size:13px;color:var(--green);white-space:pre-wrap;word-break:break-all}
+.feat{padding:48px 0;border-top:1px solid var(--border)}
+.feat h2{font-size:28px;font-weight:800;margin-bottom:24px;text-align:center}
+.feat h2 .acc{color:var(--green)}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.fc{border:1px solid var(--border);border-radius:12px;padding:16px}
+.fc-ic{font-size:20px;margin-bottom:4px}
+.fc h3{font-size:15px;margin-bottom:2px}
+.fc p{font-size:13px;color:var(--dim)}
+.api{padding:48px 0;border-top:1px solid var(--border)}
+.api h2{font-size:28px;font-weight:800;margin-bottom:16px;text-align:center}
+.api h2 .acc{color:var(--green)}
+.code{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;max-width:800px;margin:0 auto}
+.code pre{font-family:ui-monospace,monospace;font-size:13px;color:var(--green)}
+.ftr{border-top:1px solid var(--border);padding:24px 0;margin-top:32px}
+.ftr-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-links{display:flex;gap:16px;flex-wrap:wrap}
+.ftr-links a{color:var(--faint);font-size:13px}
+.ftr-links a:hover{color:var(--green)}
+.ftr-copy{color:var(--faint);font-size:12px}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.fs{grid-template-columns:1fr}.hero h1{font-size:28px}.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in"><a href="/" class="logo"><svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00F299"/><stop offset="1" stop-color="#00d1ff"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#050505"/><path d="M 12 14 L 24 14 L 32 30 L 40 14 L 52 14 L 52 52 L 42 52 L 42 30 L 36 42 L 28 42 L 22 30 L 22 52 L 12 52 Z" fill="url(#g)"/></svg><span class="logo-txt"><span class="m">MARKET</span><span class="n">NOW</span></span></a><nav class="nav"><a href="/" class="nav-dropdown">MARKETPLACE</a><a href="/" class="nav-dropdown">CONFIANZA</a><a href="/" class="nav-dropdown">RECURSOS</a><a href="/" class="nav-dropdown">CUENTA</a></nav><div class="hdr-right"><button class="lang-btn">ES</button><button class="btn-ingresar">INGRESAR</button><button class="btn-api">API</button></div></div></header>
+<section class="hero"><div class="wrap"><h1>Credential <span class="acc">Translator</span></h1><p>Translate credentials between 8 trust formats — JWT, W3C VC, ATC, A2A, MCP Card, X.509 and more.</p><div class="stats"><div class="stat"><div class="n">8</div><div class="l">Formatos</div></div><div class="stat"><div class="n">56</div><div class="l">Pares</div></div><div class="stat"><div class="n">12</div><div class="l">Etapas</div></div><div class="stat"><div class="n">0</div><div class="l">API Keys</div></div></div></div></section>
+<section class="section"><div class="wrap"><div class="card"><div class="fs"><div><label>From</label><select id="fromFormat"><option value="jwt">JWT (OAuth/OIDC)</option><option value="w3c-vc">W3C Verifiable Credential</option><option value="atc-v3">ATC v3 (Agent Trust Card)</option><option value="a2a-card">A2A (Google Agent Card)</option><option value="mcp-card">MCP Server Card</option><option value="x509">X.509 Certificate</option></select></div><div class="arrow">→</div><div><label>To</label><select id="toFormat"><option value="w3c-vc">W3C Verifiable Credential</option><option value="jwt">JWT (OAuth/OIDC)</option><option value="atc-v3">ATC v3 (Agent Trust Card)</option><option value="a2a-card">A2A (Google Agent Card)</option><option value="mcp-card">MCP Server Card</option><option value="x509">X.509 Certificate</option></select></div></div><label style="display:block;color:var(--faint);font-family:ui-monospace,monospace;font-size:12px;text-transform:uppercase;margin-bottom:6px">Paste Credential (JSON or JWT)</label><textarea id="inputCredential" placeholder='{"iss":"did:web:alice.example","sub":"agent:bob","exp":1735689600,"scope":"read:files"}'></textarea><button class="btn-go" onclick="translateCredential()" id="translateBtn">Translate Credential</button></div><div id="output" class="output"><div class="oh"><h3 id="outputTitle">Translated Credential</h3><button class="cp" onclick="copyOutput()">Copy</button></div><pre id="outputPre"></pre></div></div></section>
+<section class="feat"><div class="wrap"><h2>Supported <span class="acc">Formats</span></h2><div class="fg"><div class="fc"><div class="fc-ic">🎫</div><h3>ATC v3</h3><p>AliceLabs · Ed25519</p></div><div class="fc"><div class="fc-ic">🔑</div><h3>JWT</h3><p>IETF · RS256/ES256</p></div><div class="fc"><div class="fc-ic">📜</div><h3>W3C VC</h3><p>W3C · Ed25519Sig2020</p></div><div class="fc"><div class="fc-ic">🤝</div><h3>A2A Card</h3><p>Google · Ed25519Sig2020</p></div><div class="fc"><div class="fc-ic">🔌</div><h3>MCP Card</h3><p>Anthropic · JSON</p></div><div class="fc"><div class="fc-ic">🔐</div><h3>X.509</h3><p>ITU-T · RSA/ECDSA</p></div></div></div></section>
+<section class="api"><div class="wrap"><h2>API for <span class="acc">Agents</span></h2><div class="code"><pre>curl -X POST "https://www.marketnow.site/api/trust?action=translate" -H "Content-Type: application/json" -d '{"from":"jwt","to":"w3c-vc","payload":{...}}'</pre></div></div></section>
+<footer class="ftr"><div class="wrap ftr-in"><div class="ftr-links"><a href="/">Home</a><a href="/scam-checker.html">Scam Checker</a><a href="/translate.html">Translator</a><a href="/playground.html">Playground</a><a href="https://github.com/alicelabs-llc/universal-trust-adapter" target="_blank">GitHub</a><a href="https://t.me/uta_verify_bot" target="_blank">Telegram</a></div><div class="ftr-copy">© 2026 AliceLabs LLC</div></div></footer>
+<script>
+async function translateCredential(){const i=document.getElementById('inputCredential').value.trim();const f=document.getElementById('fromFormat').value;const t=document.getElementById('toFormat').value;if(!i){alert('Paste a credential first');return}const b=document.getElementById('translateBtn');b.disabled=true;b.textContent='Translating...';try{let p;try{p=JSON.parse(i)}catch{p=i}const r=await fetch('https://www.marketnow.site/api/trust?action=translate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from:f,to:t,payload:p})});const d=await r.json();document.getElementById('output').classList.add('show');document.getElementById('outputTitle').textContent='Translated: '+f+' → '+t;if(d.error){document.getElementById('outputPre').textContent='Error: '+d.error;document.getElementById('outputPre').style.color='var(--red)'}else{document.getElementById('outputPre').textContent=JSON.stringify(d,null,2);document.getElementById('outputPre').style.color='var(--green)'}}catch(e){document.getElementById('output').classList.add('show');document.getElementById('outputPre').textContent='Error: '+e.message;document.getElementById('outputPre').style.color='var(--red)'}b.disabled=false;b.textContent='Translate Credential'}
+function copyOutput(){navigator.clipboard.writeText(document.getElementById('outputPre').textContent).then(function(){var b=document.querySelector('.cp');b.textContent='✓ Copied';setTimeout(function(){b.textContent='Copy'},2000)})}
+</script>
+</body>
+</html>

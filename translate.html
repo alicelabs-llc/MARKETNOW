@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credential Translator — MarketNow</title>
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300F299'/><stop offset='1' stop-color='%2300d1ff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%23050505'/><path d='M 12 14 L 24 14 L 32 30 L 40 14 L 52 14 L 52 52 L 42 52 L 42 30 L 36 42 L 28 42 L 22 30 L 22 52 L 12 52 Z' fill='url(%23g)'/></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#00F299;--cyan:#00d1ff;--red:#fb2c36;--yellow:#edb200;--bg:#050505;--text:#fff;--dim:#9f9fa9;--faint:#71717b;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;--sans:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--green);text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.hdr{position:sticky;top:0;z-index:1000;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border-bottom:1px solid #ffffff0d}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-ic{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#00F299,#00d1ff);display:flex;align-items:center;justify-content:center;color:#000;font-weight:700;font-size:18px}
+.logo-txt{font-size:14px;font-weight:700;color:#fff}
+.nav{display:flex;align-items:center;gap:24px}
+.nav-item{color:var(--dim);font-size:14px;font-weight:500}
+.nav-item::after{content:" ▾";font-size:10px;color:var(--faint)}
+.hdr-r{display:flex;align-items:center;gap:12px}
+.lang{background:transparent;border:1px solid #ffffff1a;border-radius:8px;padding:6px 10px;color:var(--dim);font-size:13px;font-weight:600;cursor:pointer}
+.btn-in{background:var(--green);color:#000;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-api{background:transparent;border:1px solid var(--green);border-radius:8px;padding:6px 14px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer}
+.btn-api::before{content:"●";color:var(--green);font-size:8px;margin-right:4px}
+.hero{padding:80px 0 48px;text-align:center}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:-0.03em;margin-bottom:12px}
+.hero h1 .acc{background:linear-gradient(135deg,var(--green),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--dim);font-size:18px;max-width:600px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:600px;margin:24px auto 0}
+.stat{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border:1px solid #ffffff0d;border-radius:16px;padding:16px;text-align:center}
+.stat:hover{border-color:#00f2994d;box-shadow:0 0 50px #00f2990d}
+.stat .n{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--green)}
+.stat .l{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+.sec{padding:32px 0}
+.card{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border:1px solid #ffffff0d;border-radius:40px;padding:32px}
+.fs{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:end;margin-bottom:16px}
+.fs label{display:block;color:var(--faint);font-family:var(--mono);font-size:12px;text-transform:uppercase;margin-bottom:6px}
+select{width:100%;padding:12px;background:#ffffff05;border:1px solid #ffffff1a;border-radius:12px;color:#fff;font-size:15px;outline:none;font-family:var(--sans)}
+select:focus{border-color:#00F29980}
+.arrow{font-size:20px;color:var(--green);text-align:center;padding-bottom:4px}
+textarea{width:100%;min-height:140px;padding:14px;background:#ffffff05;border:1px solid #ffffff1a;border-radius:12px;color:#fff;font-family:var(--mono);font-size:14px;resize:vertical;outline:none}
+textarea:focus{border-color:#00F29980}
+textarea::placeholder{color:var(--faint)}
+.btn-go{display:block;width:100%;padding:14px;margin-top:16px;background:var(--green);color:#000;border:none;border-radius:12px;font-weight:600;font-size:16px;cursor:pointer;transition:all .3s}
+.btn-go:hover{opacity:.9}
+.btn-go:disabled{opacity:.4;cursor:wait}
+.out{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border:1px solid #ffffff0d;border-radius:24px;padding:24px;margin-top:16px;display:none}
+.out.show{display:block}
+.oh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #ffffff0d}
+.oh h3{font-size:18px}
+.cp{padding:6px 12px;background:#ffffff05;border:1px solid #ffffff0d;border-radius:999px;color:var(--dim);font-family:var(--mono);font-size:12px;cursor:pointer}
+.cp:hover{color:var(--green);border-color:var(--green)}
+pre{background:#ffffff05;border:1px solid #ffffff0d;border-radius:12px;padding:14px;overflow-x:auto;font-family:var(--mono);font-size:13px;color:var(--green);white-space:pre-wrap;word-break:break-all}
+.h3{font-family:var(--mono);font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin:12px 0 8px}
+.badge-ok{display:inline-block;padding:4px 12px;border-radius:999px;background:#00F2991a;color:var(--green);border:1px solid var(--green);font-family:var(--mono);font-size:12px;font-weight:700;margin-bottom:8px}
+.ftr{border-top:1px solid #ffffff0d;padding:32px 0;margin-top:48px}
+.ftr-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-l{display:flex;gap:16px;flex-wrap:wrap}
+.ftr-l a{color:var(--faint);font-size:13px}.ftr-l a:hover{color:var(--green)}
+.ftr-c{color:var(--faint);font-size:12px}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.fs{grid-template-columns:1fr}.hero h1{font-size:28px}.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in"><a href="/" class="logo"><div class="logo-ic">M</div><span class="logo-txt">MarketNow</span></a><nav class="nav"><span class="nav-item">MARKETPLACE</span><span class="nav-item">CONFIANZA</span><span class="nav-item">RECURSOS</span><span class="nav-item">CUENTA</span></nav><div class="hdr-r"><button class="lang">ES</button><button class="btn-in">INGRESAR</button><button class="btn-api">API</button></div></div></header>
+<section class="hero"><div class="wrap"><h1>Credential <span class="acc">Translator</span></h1><p>Translate credentials between 8 trust formats via the UTA API. Lossless conversion through Universal Trust Schema (UTS).</p><div class="stats"><div class="stat"><div class="n">8</div><div class="l">Formatos</div></div><div class="stat"><div class="n">56</div><div class="l">Pares</div></div><div class="stat"><div class="n">12</div><div class="l">Etapas</div></div><div class="stat"><div class="n">100%</div><div class="l">Lossless</div></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="card"><div class="fs"><div><label>From</label><select id="fromFormat"><option value="atc-v3">ATC v3</option><option value="jwt">JWT</option><option value="w3c-vc">W3C VC</option><option value="a2a-card">A2A Card</option><option value="mcp-card">MCP Card</option><option value="x509">X.509</option></select></div><div class="arrow">→</div><div><label>To</label><select id="toFormat"><option value="w3c-vc">W3C VC</option><option value="atc-v3">ATC v3</option><option value="jwt">JWT</option><option value="a2a-card">A2A Card</option><option value="mcp-card">MCP Card</option><option value="x509">X.509</option></select></div></div><label style="display:block;color:var(--faint);font-family:var(--mono);font-size:12px;text-transform:uppercase;margin-bottom:6px">Paste Credential (JSON)</label><textarea id="inputCredential" placeholder='{"schema_version":"1.1.0","card_id":"ATC-TEST","issuer":"MarketNow Sentinel CA","identity":{"key_algorithm":"Ed25519","public_key":"test"},"trust":{"risk_level":"not_audited"}}'></textarea><button class="btn-go" onclick="translateCredential()" id="translateBtn">Translate Credential</button></div><div id="output" class="out"><div class="oh"><h3 id="outputTitle">Translated Credential</h3><button class="cp" onclick="copyOutput()">Copy</button></div><pre id="outputPre"></pre></div></div></section>
+<footer class="ftr"><div class="wrap ftr-in"><div class="ftr-l"><a href="/">Home</a><a href="/scam-checker.html">Scam Checker</a><a href="/translate.html">Translator</a><a href="/playground.html">Playground</a><a href="https://github.com/alicelabs-llc/universal-trust-adapter" target="_blank">GitHub</a></div><div class="ftr-c">© 2026 AliceLabs LLC · Built for developers and agents</div></div></footer>
+<script>
+async function translateCredential(){
+var i=document.getElementById('inputCredential').value.trim();
+var f=document.getElementById('fromFormat').value;
+var t=document.getElementById('toFormat').value;
+if(!i){alert('Paste a credential first');return}
+var b=document.getElementById('translateBtn');b.disabled=true;b.textContent='Translating...';
+try{
+var p;try{p=JSON.parse(i)}catch(e){p=i}
+var r=await fetch('https://www.marketnow.site/api/trust?action=translate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({from:f,to:t,payload:p})});
+var d=await r.json();
+document.getElementById('output').classList.add('show');
+document.getElementById('outputTitle').textContent='Translated: '+f+' → '+t;
+if(d.success){
+var h='<span class="badge-ok">✓ SUCCESS · '+(d.lossless?'LOSSLESS':'WITH WARNINGS')+'</span>\n\n';
+if(d.warnings&&d.warnings.length){h+='<div class="h3">Warnings</div>';d.warnings.forEach(function(w){h+='⚠ '+w+'\n'})}
+h+='<div class="h3">Translated Credential ('+t+')</div>';
+h+=JSON.stringify(d.payload,null,2);
+if(d.uts){h+='\n\n<div class="h3">UTS (Universal Trust Schema)</div>';h+=JSON.stringify(d.uts,null,2)}
+document.getElementById('outputPre').textContent=h;
+document.getElementById('outputPre').style.color='var(--green)'
+}else if(d.error){
+document.getElementById('outputPre').textContent='Error: '+d.error;
+document.getElementById('outputPre').style.color='var(--red)'
+}else{
+document.getElementById('outputPre').textContent=JSON.stringify(d,null,2);
+document.getElementById('outputPre').style.color='var(--cyan)'
+}
+}catch(e){
+document.getElementById('output').classList.add('show');
+document.getElementById('outputPre').textContent='Error: '+e.message;
+document.getElementById('outputPre').style.color='var(--red)'
+}
+b.disabled=false;b.textContent='Translate Credential'
+}
+function copyOutput(){navigator.clipboard.writeText(document.getElementById('outputPre').textContent).then(function(){var b=document.querySelector('.cp');b.textContent='✓ Copied';setTimeout(function(){b.textContent='Copy'},2000)})}
+</script>
+</body>
+</html>

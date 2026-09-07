@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scam Checker — MarketNow</title>
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300F299'/><stop offset='1' stop-color='%2300d1ff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%23050505'/><path d='M 12 14 L 24 14 L 32 30 L 40 14 L 52 14 L 52 52 L 42 52 L 42 30 L 36 42 L 28 42 L 22 30 L 22 52 L 12 52 Z' fill='url(%23g)'/></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#00F299;--cyan:#00d1ff;--red:#fb2c36;--yellow:#edb200;--bg:#050505;--text:#fff;--dim:#9f9fa9;--faint:#71717b;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;--sans:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--green);text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.hdr{position:sticky;top:0;z-index:1000;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border-bottom:1px solid #ffffff0d}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-ic{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#00F299,#00d1ff);display:flex;align-items:center;justify-content:center;color:#000;font-weight:700;font-size:18px}
+.logo-txt{font-size:14px;font-weight:700;color:#fff}
+.nav{display:flex;align-items:center;gap:24px}
+.nav-item{color:var(--dim);font-size:14px;font-weight:500}
+.nav-item::after{content:" ▾";font-size:10px;color:var(--faint)}
+.hdr-r{display:flex;align-items:center;gap:12px}
+.lang{background:transparent;border:1px solid #ffffff1a;border-radius:8px;padding:6px 10px;color:var(--dim);font-size:13px;font-weight:600;cursor:pointer}
+.btn-in{background:var(--green);color:#000;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-api{background:transparent;border:1px solid var(--green);border-radius:8px;padding:6px 14px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer}
+.btn-api::before{content:"●";color:var(--green);font-size:8px;margin-right:4px}
+.hero{padding:80px 0 48px;text-align:center}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:-0.03em;margin-bottom:12px}
+.hero h1 .acc{background:linear-gradient(135deg,var(--green),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--dim);font-size:18px;max-width:600px;margin:0 auto 24px}
+.tag{display:inline-block;padding:6px 16px;border:1px solid var(--green);border-radius:999px;color:var(--green);font-family:var(--mono);font-size:13px;margin-bottom:24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:600px;margin:24px auto 0}
+.stat{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border:1px solid #ffffff0d;border-radius:16px;padding:16px;text-align:center}
+.stat:hover{border-color:#00f2994d;box-shadow:0 0 50px #00f2990d}
+.stat .n{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--green)}
+.stat .l{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+.sec{padding:32px 0}
+.card{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border:1px solid #ffffff0d;border-radius:40px;padding:32px}
+.inp-row{display:flex;gap:8px;margin-bottom:12px}
+input[type=text]{flex:1;padding:14px 16px;background:#ffffff05;border:1px solid #ffffff1a;border-radius:12px;color:#fff;font-family:var(--mono);font-size:15px;outline:none}
+input[type=text]:focus{border-color:#00F29980}
+input[type=text]::placeholder{color:var(--faint)}
+.btn-go{padding:14px 28px;background:var(--green);color:#000;border:none;border-radius:12px;font-weight:600;font-size:15px;cursor:pointer;white-space:nowrap}
+.btn-go:hover{opacity:.9}
+.btn-ex{padding:6px 12px;background:transparent;border:1px solid #ffffff1a;border-radius:999px;color:var(--dim);font-size:13px;cursor:pointer}
+.btn-ex:hover{border-color:var(--green);color:var(--green)}
+.res{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#ffffff08;border:1px solid #ffffff0d;border-radius:24px;padding:24px;margin-top:16px;display:none}
+.res.show{display:block}
+.badge{padding:6px 16px;border-radius:999px;font-family:var(--mono);font-weight:700;font-size:14px;text-transform:uppercase}
+.b-safe{background:#00F2991a;color:var(--green);border:1px solid var(--green)}
+.b-caution{background:#edb2001a;color:var(--yellow);border:1px solid var(--yellow)}
+.b-danger{background:#fb2c361a;color:var(--red);border:1px solid var(--red)}
+.rbar{height:6px;background:#ffffff0d;border-radius:3px;overflow:hidden;margin:12px 0 16px}
+.rfill{height:100%;background:linear-gradient(90deg,var(--green),var(--yellow),var(--red));transition:width .5s;border-radius:3px}
+.h3{font-family:var(--mono);font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px}
+.reason{background:#fb2c360d;border-left:3px solid var(--red);padding:10px 12px;margin-bottom:6px;border-radius:6px;font-size:14px}
+.reason-ok{background:#00F2990d;border-left-color:var(--green)}
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;margin:12px 0}
+.chk{background:#ffffff05;border:1px solid #ffffff0d;border-radius:12px;padding:10px;font-size:13px}
+.chk.triggered{border-color:var(--red)}
+.chk-n{font-family:var(--mono);font-weight:600;margin-bottom:2px}
+.chk.triggered .chk-n{color:var(--red)}.chk:not(.triggered) .chk-n{color:var(--green)}
+.chk-d{color:var(--faint);font-size:12px}
+.disc{background:#ffffff05;border:1px solid #ffffff0d;border-radius:12px;padding:12px;font-size:13px;color:var(--dim);margin-top:12px}
+.disc b{color:var(--yellow)}
+.ftr{border-top:1px solid #ffffff0d;padding:32px 0;margin-top:48px}
+.ftr-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-l{display:flex;gap:16px;flex-wrap:wrap}
+.ftr-l a{color:var(--faint);font-size:13px}.ftr-l a:hover{color:var(--green)}
+.ftr-c{color:var(--faint);font-size:12px}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.inp-row{flex-direction:column}.hero h1{font-size:28px}.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap hdr-in"><a href="/" class="logo"><div class="logo-ic">M</div><span class="logo-txt">MarketNow</span></a><nav class="nav"><span class="nav-item">MARKETPLACE</span><span class="nav-item">CONFIANZA</span><span class="nav-item">RECURSOS</span><span class="nav-item">CUENTA</span></nav><div class="hdr-r"><button class="lang">ES</button><button class="btn-in">INGRESAR</button><button class="btn-api">API</button></div></div></header>
+<section class="hero"><div class="wrap"><h1>Scam <span class="acc">Checker</span></h1><p>Free domain reputation checker. Transparent heuristics. 100% client-side — no API needed.</p><div class="tag">🛡️ Your AI recommended a store. Is it a scam?</div><div class="stats"><div class="stat"><div class="n">8</div><div class="l">Checks</div></div><div class="stat"><div class="n">100%</div><div class="l">Client-side</div></div><div class="stat"><div class="n">0</div><div class="l">API Calls</div></div><div class="stat"><div class="n">∞</div><div class="l">Free</div></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="card"><div class="inp-row"><input type="text" id="domainInput" placeholder="example.com or https://suspicious-site.xyz" onkeypress="if(event.key==='Enter')checkDomain()"><button class="btn-go" onclick="checkDomain()" id="checkBtn">Check</button></div><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="color:var(--faint);font-size:13px;margin-right:4px">Try:</span><button class="btn-ex" onclick="loadEx('google.com')">google.com</button><button class="btn-ex" onclick="loadEx('bit.ly')">bit.ly</button><button class="btn-ex" onclick="loadEx('amaz0n-login.xyz')">amaz0n-login.xyz</button><button class="btn-ex" onclick="loadEx('paypa1-secure.com')">paypa1-secure.com</button></div></div><div id="result" class="res"></div></div></section>
+<footer class="ftr"><div class="wrap ftr-in"><div class="ftr-l"><a href="/">Home</a><a href="/scam-checker.html">Scam Checker</a><a href="/translate.html">Translator</a><a href="/playground.html">Playground</a><a href="https://github.com/alicelabs-llc/universal-trust-adapter" target="_blank">GitHub</a></div><div class="ftr-c">© 2026 AliceLabs LLC · Built for developers and agents</div></div></footer>
+<script>
+var SHORT=['bit.ly','tinyurl.com','t.co','goo.gl','ow.ly','is.gd','buff.ly','rebrand.ly','cutt.ly','shorturl.at','tiny.cc','rb.gy','t.ly'];
+var TLDS=['.zip','.mov','.xyz','.top','.click','.link','.country','.kim','.cricket','.science','.work','.party','.gq','.cf','.ml','.tk','.ga','.review','.trade','.date','.stream','.download','.win','.racing','.accountant','.faith','.loan'];
+var POP=['google.com','youtube.com','facebook.com','amazon.com','wikipedia.org','twitter.com','instagram.com','linkedin.com','github.com','reddit.com','apple.com','microsoft.com','netflix.com','spotify.com','tiktok.com','discord.com','telegram.org','whatsapp.com','zoom.us','slack.com','notion.so','figma.com','stripe.com','paypal.com'];
+var TYPOS=[{t:'google',p:['g00gle','googel','gooogle','goggle']},{t:'amazon',p:['amaz0n','amzon','amazn']},{t:'paypal',p:['paypa1','paypol','paypl']},{t:'apple',p:['app1e','applle','aple']},{t:'microsoft',p:['microsft','micr0soft','micosoft']},{t:'facebook',p:['faceb00k','faceboook','facbook']},{t:'netflix',p:['netfl1x','netfllix','netfix']}];
+function lev(a,b){var m=a.length,n=b.length,d=[];for(var i=0;i<=m;i++){d[i]=[i]}for(var j=0;j<=n;j++){d[0][j]=j}for(var i=1;i<=m;i++){for(var j=1;j<=n;j++){d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1))}}return d[m][n]}
+function checkDomain(){
+var raw=document.getElementById('domainInput').value.trim();if(!raw)return;
+var d=raw.replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0].split('?')[0].split('#')[0].toLowerCase();
+var risk=0;var reasons=[];var checks={};
+// URL shortener
+var isShort=SHORT.indexOf(d)>-1;
+checks.url_shortener={triggered:isShort,detail:isShort?'URL shortener ('+d+') — destination hidden':'Not a known URL shortener'};
+if(isShort){risk+=30;reasons.push('URL shortener ('+d+'): destination hidden, cannot inspect final URL')}
+// Suspicious TLD
+var tldBad=false;for(var i=0;i<TLDS.length;i++){if(d.endsWith(TLDS[i])){tldBad=true;break}}
+checks.suspicious_tld={triggered:tldBad,detail:tldBad?'TLD commonly abused for spam/scams':'TLD not in suspicious list'};
+if(tldBad){risk+=25;reasons.push('Suspicious TLD detected — commonly abused for spam/scams')}
+// Punycode
+var isPuny=d.indexOf('xn--')>-1||/[^\x00-\x7F]/.test(d);
+checks.punycode={triggered:isPuny,detail:isPuny?'Internationalized domain (punycode) — possible homograph attack':'No IDN/punycode detected'};
+if(isPuny){risk+=35;reasons.push('Punycode/IDN detected — possible homograph attack')}
+// Typosquatting
+var bare=d.split('.')[0];var isTypo=false;var typoTarget='';
+for(var i=0;i<TYPOS.length;i++){if(TYPOS[i].p.indexOf(bare)>-1){isTypo=true;typoTarget=TYPOS[i].t;break}if(Math.abs(bare.length-TYPOS[i].t.length)<=1&&lev(bare,TYPOS[i].t)===1){isTypo=true;typoTarget=TYPOS[i].t;break}}
+checks.typosquatting={triggered:isTypo,detail:isTypo?'Typosquatting: "'+bare+'" mimics "'+typoTarget+'"':'No typosquatting pattern matched'};
+if(isTypo){risk+=40;reasons.push('Typosquatting: "'+bare+'" mimics "'+typoTarget+'" — possible brand impersonation')}
+// Subdomain abuse
+var parts=d.split('.');var subAbuse=parts.length>4;
+if(!subAbuse){for(var i=0;i<POP.length;i++){var brand=POP[i].split('.')[0];if(d.indexOf(brand+'.')>-1&&!d.endsWith(POP[i])&&!d.endsWith('.'+POP[i])){subAbuse=true;break}}}
+checks.subdomain_abuse={triggered:subAbuse,detail:subAbuse?'Suspicious subdomain structure':'Subdomain structure normal'};
+if(subAbuse){risk+=30;reasons.push('Subdomain abuse detected — brand name in subdomain of unrelated root')}
+// HTTP tokens
+var hasTokens=d.indexOf('@')>-1||d.indexOf('//')>-1||/\d{4,}/.test(d);
+checks.http_tokens={triggered:hasTokens,detail:hasTokens?'Suspicious characters (@, //, or long numbers)':'No suspicious tokens'};
+if(hasTokens){risk+=20;reasons.push('Suspicious HTTP tokens detected in domain')}
+// Popular domain
+var isPop=POP.indexOf(d)>-1;
+checks.popular_domain={triggered:false,detail:isPop?'Domain is in known-popular list (established)':'Not in popular-domains list'};
+if(isPop){risk=0}
+risk=Math.min(risk,100);
+var decision=isPop?'SAFE':(risk>=40?'DANGEROUS':(risk>=20?'CAUTION':'UNKNOWN'));
+var r=document.getElementById('result');r.classList.add('show');
+var cls=decision==='SAFE'?'safe':(decision==='DANGEROUS'?'danger':'caution');
+var icon=decision==='SAFE'?'✓':(decision==='DANGEROUS'?'✗':'⚠');
+var h='<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #ffffff0d;flex-wrap:wrap"><span class="badge b-'+cls+'">'+icon+' '+decision+'</span><span style="font-family:var(--mono);color:var(--dim)">Risk: <b style="color:#fff;font-size:18px">'+risk+'/100</b></span></div>';
+h+='<div class="rbar"><div class="rfill" style="width:'+risk+'%"></div></div>';
+if(reasons.length){h+='<div class="h3">⚠️ Reasons</div>';reasons.forEach(function(r){h+='<div class="reason">'+esc(r)+'</div>'})}
+else if(decision==='SAFE'){h+='<div class="reason reason-ok">✓ Domain is in the trusted popular-domains list</div>'}
+h+='<div class="h3" style="margin-top:16px">🔬 All Checks (transparent)</div><div class="checks">';
+for(var n in checks){var c=checks[n];var cc=c.triggered?'triggered':'';var ci=c.triggered?'⚠':'✓';h+='<div class="chk '+cc+'"><div class="chk-n">'+ci+' '+n.replace(/_/g,' ')+'</div><div class="chk-d">'+esc(c.detail)+'</div></div>'}
+h+='</div>';
+h+='<div class="disc"><b>⚠️ Disclaimer:</b> Heuristic client-side check. No threat feeds. A new clean scam returns UNKNOWN, not SAFE. This is not a substitute for commercial threat intelligence.</div>';
+r.innerHTML=h
+}
+function loadEx(d){document.getElementById('domainInput').value=d;checkDomain()}
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+</script>
+</body>
+</html>

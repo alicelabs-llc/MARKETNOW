@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.alicelabs-llc/marketnow",
+  "title": "MarketNow",
+  "description": "Search 69,077 indexed MCP servers, install-risk scoring and Ed25519-signed Agent Trust Cards.",
+  "repository": {
+    "id": "1359597749",
+    "url": "https://github.com/alicelabs-llc/marketnow",
+    "source": "github"
+  },
+  "version": "1.10.1",
+  "websiteUrl": "https://www.marketnow.site",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.marketnow.site/api/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "marketnow-mcp",
+      "version": "1.10.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

@@ -69,6 +69,7 @@ import Dashboard from './pages/Dashboard';
 import Pricing from './pages/Pricing';
 import AgentLanding from "./pages/AgentLanding";
 import Mandates from "./pages/Mandates";
+import UTA from "./pages/UTA";
 import Trust from "./pages/Trust";
 import About from "./pages/About";
 import Catalog from "./pages/Catalog";
@@ -149,6 +150,7 @@ function App() {
         <ErrorBoundary>
         <Routes>
           <Route path="/" element={<AgentLanding />} />
+          <Route path="/uta" element={<UTA />} />
           <Route path="/skills" element={<Navigate to="/registry" replace />} />
           <Route path="/registry" element={<Registry />} />
           <Route path="/skill/:id" element={<SkillDetail />} />

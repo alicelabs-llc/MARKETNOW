@@ -92,7 +92,7 @@ const FAKE_RESPONSES = {
 
 DATABASE_URL=postgresql://honeypot:honeypot@localhost:5432/honeypot
 STRIPE_SECRET_KEY=sk_live_FAKE_HONEYPOT_KEY_do_not_use_this_is_a_canary_token
-MANDATES_GITHUB_TOKEN=ghp_FAKEHONEYPOTTOKENDONOTUSE2026XXXXXXXXXXXX
+MANDATES_GITHUB_TOKEN=ghp_REDACTEDXXXXX
 AWS_ACCESS_KEY_ID=AKIAFAKEHONEYPOT2026
 AWS_SECRET_ACCESS_KEY=FAKEHONEYPOTsecretkeydonotuse2026XXXXXXXXXXXXXXXXXXXX
 SLACK_TOKEN=xoxb-fake-honeypot-token-2026-do-not-use
@@ -105,7 +105,7 @@ SENTINEL_CERT_SECRET=honeypot-fake-cert-secret-do-not-use
         bare = false
         logallrefupdates = true
 [remote "origin"]
-        url = https://github.com/edgarfloresguerra2011-a11y/marketnow.git
+        url = https://github.com/alicelabs-llc/marketnow.git
         fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
         remote = origin

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MCP Security Scanner — MarketNow</title>
 <meta name="description" content="Scan your MCP server for security vulnerabilities. Free instant L1.5 static analysis.">
-<link rel="canonical" href="https://marketnow.site/tools/scan.html" />
+<link rel="canonical" href="https://www.marketnow.site/tools/scan.html" />
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#050505;color:#e2e8f0;line-height:1.6;padding:20px;max-width:700px;margin:0 auto}
@@ -54,10 +54,10 @@ a{color:#3b82f6}
   <li><strong>L2.5</strong> — gVisor sandbox isolation (userspace kernel)</li>
   <li><strong>Signed SHA-256 certificate</strong></li>
 </ul>
-<p>Open an issue: <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/issues">github.com/edgarfloresguerra2011-a11y/marketnow/issues</a></p>
+<p>Open an issue: <a href="https://github.com/alicelabs-llc/marketnow/issues">github.com/alicelabs-llc/marketnow/issues</a></p>
 
 <h2>Already audited servers</h2>
-<p>Check if a server is already certified: <a href="https://marketnow.site/verify">marketnow.site/verify</a></p>
+<p>Check if a server is already certified: <a href="https://www.marketnow.site/verify">marketnow.site/verify</a></p>
 
 <script>
 function scanRepo() {
@@ -75,7 +75,7 @@ function scanRepo() {
   result.innerHTML = '<div class="result-card"><span class="loading"></span> Running Sentinel L1.5 security checks...</div>';
   
   // Use the audit-skill API
-  const apiUrl = 'https://marketnow.site/api/audit-skill?repoUrl=' + encodeURIComponent(url) + '&quick=1';
+  const apiUrl = 'https://www.marketnow.site/api/audit-skill?repoUrl=' + encodeURIComponent(url) + '&quick=1';
   
   fetch(apiUrl)
     .then(r => {
@@ -92,7 +92,7 @@ function scanRepo() {
           <p style="color:#f97316">⚠ The instant scan API is not available for this repo.</p>
           <p style="margin-top:8px">To get a full 6-layer security audit (L1.5 → L2.5 gVisor sandbox):</p>
           <ol style="margin:8px 0 8px 20px">
-            <li>Open an issue: <a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/issues/new?title=Security%20audit%20request:%20${encodeURIComponent(url)}&body=Please%20audit%20this%20MCP%20server:%20${encodeURIComponent(url)}" target="_blank">Click here to request audit</a></li>
+            <li>Open an issue: <a href="https://github.com/alicelabs-llc/marketnow/issues/new?title=Security%20audit%20request:%20${encodeURIComponent(url)}&body=Please%20audit%20this%20MCP%20server:%20${encodeURIComponent(url)}" target="_blank">Click here to request audit</a></li>
             <li>The Sentinel pipeline will run: static analysis → active probe → gVisor sandbox</li>
             <li>Results are published within 24 hours</li>
           </ol>
@@ -133,7 +133,7 @@ function displayResult(data, url) {
     <div class="result-card">
       <p><strong>Want the full audit?</strong></p>
       <p>The free scan does L1.5 only. For L2 + L2.5 (gVisor sandbox, 60+ adversarial inputs, signed certificate):</p>
-      <p><a href="https://github.com/edgarfloresguerra2011-a11y/marketnow/issues/new?title=Full%20audit%20request:%20${encodeURIComponent(url)}&body=Requesting%20full%206-layer%20audit%20for:%20${encodeURIComponent(url)}" target="_blank" style="display:inline-block;background:#3b82f6;color:white;padding:8px 16px;border-radius:6px;text-decoration:none;margin-top:8px">Request Full Audit →</a></p>
+      <p><a href="https://github.com/alicelabs-llc/marketnow/issues/new?title=Full%20audit%20request:%20${encodeURIComponent(url)}&body=Requesting%20full%206-layer%20audit%20for:%20${encodeURIComponent(url)}" target="_blank" style="display:inline-block;background:#3b82f6;color:white;padding:8px 16px;border-radius:6px;text-decoration:none;margin-top:8px">Request Full Audit →</a></p>
     </div>
   `;
   

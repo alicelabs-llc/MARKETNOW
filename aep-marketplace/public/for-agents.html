@@ -4,46 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For AI Agents — MarketNow Agent Discovery Hub</title>
-    <meta name="description" content="MarketNow is built for AI agents. MCP server, A2A protocol, JSON-RPC, llms.txt, agent.json. 8,764 security-audited skills. Machine-readable everything.">
+    <meta name="description" content="MarketNow is built for AI agents. MCP server, A2A protocol, JSON-RPC, llms.txt, agent.json. 69,077 index-certified skills. Machine-readable everything.">
     <meta name="keywords" content="AI agent, MCP server, agent discovery, A2A protocol, agent commerce, machine readable API">
-    <link rel="canonical" href="https://marketnow.site/for-agents" />
+    <link rel="canonical" href="https://www.marketnow.site/for-agents" />
     <meta property="og:title" content="MarketNow — Built for AI Agents" />
-    <meta property="og:description" content="8,764 security-audited MCP skills. MCP server, A2A, JSON-RPC, llms.txt. Machine-readable everything." />
-    <meta property="og:url" content="https://marketnow.site/for-agents" />
+    <meta property="og:description" content="69,077 index-certified MCP skills. MCP server, A2A, JSON-RPC, llms.txt. Machine-readable everything." />
+    <meta property="og:url" content="https://www.marketnow.site/for-agents" />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #050505; color: #e2e8f0; line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; }
-        h1 { color: #3b82f6; font-size: 2em; margin-bottom: 0.3em; }
-        h2 { color: #22c553; margin-top: 1.5em; border-bottom: 1px solid #1e293b; padding-bottom: 0.3em; }
-        h3 { color: #a855f7; margin-top: 1em; }
-        code { background: #1e293b; padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', monospace; color: #f8fafc; font-size: 0.9em; }
-        pre { background: #0d1117; border: 1px solid #1e293b; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 1em 0; }
-        pre code { background: none; padding: 0; color: #e2e8f0; }
-        a { color: #3b82f6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .badge { display: inline-block; background: #1e293b; color: #3b82f6; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin: 2px; }
-        .stat { display: inline-block; margin: 10px 20px 10px 0; text-align: center; }
-        .stat-num { font-size: 1.8em; color: #3b82f6; font-weight: bold; display: block; }
-        .stat-label { font-size: 0.85em; color: #94a3b8; }
-        .card { background: #0d1117; border: 1px solid #1e293b; border-radius: 8px; padding: 16px; margin: 1em 0; }
-        .card h3 { margin-top: 0; }
-        .cta { display: inline-block; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px 5px 10px 0; }
-        .cta:hover { background: #2563eb; text-decoration: none; }
-        table { width: 100%; border-collapse: collapse; margin: 1em 0; }
-        th, td { border: 1px solid #1e293b; padding: 8px 12px; text-align: left; }
-        th { background: #1e293b; color: #3b82f6; }
-        .live { color: #22c553; font-weight: bold; }
-        .planned { color: #f97316; }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0a0a0f; --panel: #111118; --panel2: #16161f; --line: #23232e;
+      --mint: #00F299; --cyan: #00d1ff; --red: #f87171; --amber: #fbbf24; --gray: #94a3b8;
+      --text: #e8e8f0; --muted: #8a8a99;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 0 20px 70px; max-width: 960px; margin: 0 auto; }
+    .mn-nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); margin-bottom: 30px; flex-wrap: wrap; gap: 8px; }
+    .mn-nav .brand { display: flex; align-items: center; gap: 9px; font-weight: 800; color: var(--text); text-decoration: none; font-size: 1rem; letter-spacing: .01em; }
+    .mn-nav .brand .logo { width: 24px; height: 24px; border-radius: 7px; background: linear-gradient(135deg, var(--mint), var(--cyan)); display: inline-flex; align-items: center; justify-content: center; color: #000; font-size: .8rem; font-weight: 900; }
+    .mn-nav .links a { color: var(--muted); text-decoration: none; font-size: .85rem; margin-left: 4px; padding: 6px 11px; border: 1px solid transparent; border-radius: 9px; }
+    .mn-nav .links a:hover { color: var(--cyan); border-color: var(--line); text-decoration: none; }
+    h1 { color: #fff; font-size: 1.95em; line-height: 1.22; margin: .1em 0 .35em; letter-spacing: -.01em; }
+    h1 + p { color: var(--muted); font-size: 1.03em; max-width: 46em; }
+    h2 { color: var(--mint); margin-top: 2em; border-bottom: 1px solid var(--line); padding-bottom: .32em; font-size: 1.3em; }
+    h3 { color: var(--cyan); margin-top: 1.25em; font-size: 1.06em; }
+    p { margin: .6em 0; }
+    strong { color: #fff; }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: #1a1a26; border: 1px solid var(--line); padding: 2px 7px; border-radius: 6px; font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace; color: var(--mint); font-size: .88em; }
+    pre { position: relative; background: var(--panel2); border: 1px solid var(--line); border-left: 3px solid var(--mint); padding: 16px 18px; border-radius: 11px; overflow-x: auto; margin: 1.1em 0; font-size: .87rem; line-height: 1.6; }
+    pre code { background: none; border: none; padding: 0; color: #d9d9e8; font-size: 1em; }
+    .tok-str { color: #7ee8c7; } .tok-key { color: var(--cyan); font-weight: 600; }
+    .tok-com { color: #6c6c7d; font-style: italic; } .tok-num { color: var(--amber); }
+    .copy-btn { position: absolute; top: 8px; right: 8px; background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 7px; padding: 4px 11px; font-size: .72rem; font-weight: 600; cursor: pointer; opacity: 0; transition: opacity .15s, color .15s, border-color .15s; }
+    pre:hover .copy-btn { opacity: 1; }
+    .copy-btn:hover { color: var(--mint); border-color: rgba(0,242,153,.4); }
+    .copy-btn.done { color: var(--mint); border-color: rgba(0,242,153,.55); }
+    .badge { display: inline-block; background: rgba(0,209,255,.07); color: var(--cyan); border: 1px solid rgba(0,209,255,.25); padding: 2px 11px; border-radius: 999px; font-size: .78em; margin: 2px; font-weight: 700; }
+    .badge.live, .badge.badge-live { background: rgba(0,242,153,.08); color: var(--mint); border-color: rgba(0,242,153,.3); }
+    .badge.planned { background: rgba(251,191,36,.08); color: var(--amber); border-color: rgba(251,191,36,.3); }
+    .badge.badge-new { background: rgba(0,209,255,.08); color: var(--cyan); border-color: rgba(0,209,255,.3); }
+    .stat { display: inline-block; margin: 14px 26px 10px 0; text-align: left; min-width: 96px; }
+    .stat-num { font-size: 1.85em; color: var(--mint); font-weight: 800; display: block; font-variant-numeric: tabular-nums; }
+    .stat-label { font-size: .84em; color: var(--muted); }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin: 1em 0; transition: border-color .15s; }
+    .card:hover { border-color: rgba(0,242,153,.28); }
+    .card h3 { margin-top: 0; }
+    .step { display: flex; align-items: flex-start; margin: 12px 0; }
+    .step-num { background: linear-gradient(135deg, var(--mint), var(--cyan)); color: #00130c; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-right: 14px; flex-shrink: 0; font-size: .9rem; }
+    .cta { display: inline-block; background: linear-gradient(135deg, var(--mint), #00c7a6); color: #00130c; padding: 11px 22px; border-radius: 10px; text-decoration: none; font-weight: 800; margin: 10px 6px 10px 0; font-size: .95rem; }
+    .cta:hover { background: linear-gradient(135deg, #14ffb0, #00d9b5); text-decoration: none; }
+    .pain { border-left: 4px solid var(--red); background: rgba(248,113,113,.05); padding: 12px 16px; margin: 10px 0; border-radius: 0 10px 10px 0; }
+    .solution { border-left: 4px solid var(--mint); background: rgba(0,242,153,.05); padding: 12px 16px; margin: 10px 0; border-radius: 0 10px 10px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: .93em; }
+    th, td { border: 1px solid var(--line); padding: 9px 13px; text-align: left; }
+    th { background: var(--panel2); color: var(--mint); font-weight: 700; }
+    tr:nth-child(even) td { background: rgba(255,255,255,.015); }
+    .live { color: var(--mint); font-weight: 700; }
+    .planned { color: var(--amber); font-weight: 700; }
+    hr { border: none; border-top: 1px solid var(--line); margin: 2em 0; }
+    ul, ol { margin: .6em 0 .6em 1.4em; }
+    @media (max-width: 640px) { .mn-nav .links a { margin-left: 0; } .stat { margin-right: 14px; } }
+</style>
 </head>
 <body>
+  <nav class="mn-nav">
+    <a class="brand" href="/"><span class="logo">M</span> MarketNow</a>
+    <div class="links">
+      <a href="/uta">UTA</a>
+      <a href="/scam-checker.html">Scam Checker</a>
+      <a href="/translate.html">Translator</a>
+      <a href="/playground.html">Playground</a>
+    </div>
+  </nav>
     <h1>🤖 MarketNow — Built for AI Agents</h1>
     <p>MarketNow is the first marketplace designed <strong>agent-first</strong>. Every endpoint is machine-readable. Every skill has a signed security certificate. Every interaction is protocol-native.</p>
 
     <div>
-        <div class="stat"><span class="stat-num">8,764</span><span class="stat-label">Skills Indexed</span></div>
+        <div class="stat"><span class="stat-num">69,077</span><span class="stat-label">Skills Indexed</span></div>
         <div class="stat"><span class="stat-num">206</span><span class="stat-label">L2.5 Audited</span></div>
         <div class="stat"><span class="stat-num">65</span><span class="stat-label">Free Skills</span></div>
         <div class="stat"><span class="stat-num">4</span><span class="stat-label">MCP Tools</span></div>
@@ -67,7 +107,7 @@ npx -y marketnow-mcp
 
     <h3>Option 2: MCP HTTP Endpoint (SSE + JSON-RPC)</h3>
     <pre><code># Connect via HTTP transport
-POST https://marketnow.site/api/mcp
+POST https://www.marketnow.site/api/mcp
 Content-Type: application/json
 
 # Initialize
@@ -80,24 +120,24 @@ Content-Type: application/json
 {"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"search_skills","arguments":{"query":"filesystem","limit":5}}}
 
 # SSE stream
-GET https://marketnow.site/api/mcp
+GET https://www.marketnow.site/api/mcp
 Accept: text/event-stream</code></pre>
 
     <h3>Option 3: Direct REST API</h3>
     <pre><code># Search skills
-curl "https://marketnow.site/api/search?q=scraper&max_price=3"
+curl "https://www.marketnow.site/api/search?q=scraper&max_price=3"
 
 # Get a specific skill
-curl "https://marketnow.site/api/skills/mn-gen-00015"
+curl "https://www.marketnow.site/api/skills/mn-gen-00015"
 
 # List free skills
-curl "https://marketnow.site/api/free-skills.json"
+curl "https://www.marketnow.site/api/free-skills.json"
 
 # Get agent instructions
-curl "https://marketnow.site/api/agent.json"
+curl "https://www.marketnow.site/api/agent.json"
 
 # Verify a security certificate
-curl "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesystem"</code></pre>
+curl "https://www.marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesystem"</code></pre>
 
     <h2>📋 Agent Discovery Endpoints</h2>
     <table>
@@ -117,7 +157,7 @@ curl "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesy
     <h2>🛡️ Security Certificate Verification</h2>
     <p>Every skill has a signed SHA-256 security certificate. Agents should verify before installing:</p>
     <pre><code># Get certificate for a skill
-curl "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesystem"
+curl "https://www.marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesystem"
 
 # Response:
 {
@@ -128,7 +168,7 @@ curl "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesy
   "risk_level": "low",
   "signature": "5a9a6e1cdcc2dedf53599b1a0ee8ebff...",
   "signature_algorithm": "SHA-256",
-  "verification_url": "https://marketnow.site/verify?skillId=mn-mcp-filesystem"
+  "verification_url": "https://www.marketnow.site/verify?skillId=mn-mcp-filesystem"
 }</code></pre>
     <p>Agents should reject skills with <code>risk_level: "critical"</code> or <code>overall_score &lt; 5</code>.</p>
 
@@ -166,7 +206,7 @@ curl "https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesy
         <li><strong>AP2 Mandates</strong> — human-in-the-loop by default, agents opt into silent mode</li>
     </ul>
     <pre><code># Agent purchase flow
-POST https://marketnow.site/api/agent-purchase
+POST https://www.marketnow.site/api/agent-purchase
 Content-Type: application/json
 
 {
@@ -179,7 +219,7 @@ Content-Type: application/json
     <h2>🔄 A2A Protocol Support</h2>
     <p>MarketNow supports Agent-to-Agent communication via the A2A protocol:</p>
     <pre><code># Agent Card (A2A discovery)
-GET https://marketnow.site/.well-known/agent.json
+GET https://www.marketnow.site/.well-known/agent.json
 
 # Agent Card includes:
 {
@@ -187,7 +227,7 @@ GET https://marketnow.site/.well-known/agent.json
   "agent": {
     "name": "MarketNow — Agent Skill Exchange",
     "description": "The largest MCP skill marketplace...",
-    "url": "https://marketnow.site",
+    "url": "https://www.marketnow.site",
     "version": "4.0.0"
   },
   "capabilities": {
@@ -202,15 +242,15 @@ GET https://marketnow.site/.well-known/agent.json
     <h2>🚀 Quick Start for Agents</h2>
     <div class="card">
         <h3>Step 1: Discover</h3>
-        <pre><code>GET https://marketnow.site/api/agent-ping.json</code></pre>
+        <pre><code>GET https://www.marketnow.site/api/agent-ping.json</code></pre>
     </div>
     <div class="card">
         <h3>Step 2: Search</h3>
-        <pre><code>GET https://marketnow.site/api/search?q=filesystem&max_price=0</code></pre>
+        <pre><code>GET https://www.marketnow.site/api/search?q=filesystem&max_price=0</code></pre>
     </div>
     <div class="card">
         <h3>Step 3: Verify</h3>
-        <pre><code>GET https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesystem</code></pre>
+        <pre><code>GET https://www.marketnow.site/api/audit-skill?certificate=1&skillId=mn-mcp-filesystem</code></pre>
     </div>
     <div class="card">
         <h3>Step 4: Install</h3>
@@ -228,17 +268,44 @@ GET https://marketnow.site/.well-known/agent.json
 
     <h2>🔗 Useful Links</h2>
     <ul>
-        <li><a href="https://marketnow.site/registry">Browse 8,764 MCP servers</a></li>
-        <li><a href="https://marketnow.site/api/free-skills.json">65 free skills (JSON)</a></li>
-        <li><a href="https://marketnow.site/api/openapi.yaml">OpenAPI 3.1 specification</a></li>
-        <li><a href="https://marketnow.site/security">Sentinel audit methodology</a></li>
-        <li><a href="https://marketnow.site/verify">Verify a security certificate</a></li>
-        <li><a href="https://github.com/edgarfloresguerra2011-a11y/marketnow">GitHub repository</a></li>
+        <li><a href="https://www.marketnow.site/registry">Browse 69,077 MCP skills</a></li>
+        <li><a href="https://www.marketnow.site/api/free-skills.json">69,077 free-to-install skills (JSON)</a></li>
+        <li><a href="https://www.marketnow.site/api/openapi.yaml">OpenAPI 3.1 specification</a></li>
+        <li><a href="https://www.marketnow.site/security">Sentinel audit methodology</a></li>
+        <li><a href="https://www.marketnow.site/verify">Verify a security certificate</a></li>
+        <li><a href="https://github.com/alicelabs-llc/marketnow">GitHub repository</a></li>
         <li><a href="https://www.npmjs.com/package/marketnow-mcp">npm package</a></li>
     </ul>
 
     <p style="margin-top: 2em; color: #64748b; font-size: 0.85em;">
-        MarketNow — the trust layer for agent commerce. Built for agents, secured by Sentinel L2.5 gVisor sandbox.
+        MarketNow — the trust layer for agent commerce. Built for agents, secured by Sentinel v3.0 gVisor sandbox.
     </p>
+  <script>
+  // MarketNow — resaltado ligero (JSON / bash / PEM) + botón de copia. Sin dependencias.
+  (function () {
+    document.querySelectorAll('pre').forEach(function (pre) {
+      var code = pre.querySelector('code');
+      if (!code) return;
+      var html = code.textContent.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      var re = /("(?:[^"\\]|\\.)*")(\s*:)?|(#[^\n]*)|(\b\d+(?:\.\d+)?\b)/g;
+      html = html.replace(re, function (all, str, colon, com, num) {
+        if (str) return colon ? '<span class="tok-key">' + str + '</span>' + colon : '<span class="tok-str">' + str + '</span>';
+        if (com) return '<span class="tok-com">' + com + '</span>';
+        if (num) return '<span class="tok-num">' + num + '</span>';
+        return all;
+      });
+      code.innerHTML = html;
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn'; btn.type = 'button'; btn.textContent = 'Copy';
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(code.textContent).then(function () {
+          btn.textContent = 'Copied \u2713'; btn.classList.add('done');
+          setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1600);
+        }).catch(function () { btn.textContent = 'Ctrl+C'; });
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
 </body>
 </html>

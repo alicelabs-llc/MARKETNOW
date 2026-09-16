@@ -1,15 +1,27 @@
 /**
- * MarketNow — Translation Dictionary (5 languages)
+ * MarketNow — Translation Dictionary (13 languages)
  * ================================================
  *
- * Languages: English (en), Español (es), Português (pt), 中文 (zh), Français (fr)
+ * Base languages (inline): English (en), Español (es), Português (pt), 中文 (zh), Français (fr)
+ * Extended languages (./i18n/): Deutsch (de), Italiano (it), Русский (ru), Türkçe (tr),
+ *   日本語 (ja), 한국어 (ko), हिन्दी (hi), العربية (ar)
  *
  * All UI strings for navbar, hero, and all major pages are translated.
- * Deep content (long-form articles) may still be English-only on some pages,
- * but the page headers, CTAs, and navigation are fully translated.
+ * uta.* keys (UTA page) live in ./i18n/uta.js for the base languages and are
+ * included inline in each extended language file.
  */
 
-export const TRANSLATIONS = {
+import { UTA_KEYS } from './i18n/uta.js';
+import de from './i18n/de.js';
+import it from './i18n/it.js';
+import ru from './i18n/ru.js';
+import tr from './i18n/tr.js';
+import ja from './i18n/ja.js';
+import ko from './i18n/ko.js';
+import hi from './i18n/hi.js';
+import ar from './i18n/ar.js';
+
+const TRANSLATIONS_BASE = {
   // ═══════════════════════════════════════════════════════════════════════════
   // ENGLISH
   // ═══════════════════════════════════════════════════════════════════════════
@@ -23,6 +35,7 @@ export const TRANSLATIONS = {
     'nav.publish': 'Publish a Skill',
     'nav.pricing': 'Pricing',
     'nav.trustRoadmap': 'Trust Roadmap',
+    'nav.uta': 'UTA — Universal Trust Adapter',
     'nav.standards': 'Standards (x402, AP2)',
     'nav.sentinel': 'Sentinel Security',
     'nav.compare': 'vs Smithery vs Glama',
@@ -51,12 +64,12 @@ export const TRANSLATIONS = {
     'hero.title2': 'agent commerce.',
     'hero.body': 'Discovery is solved (MCP registry, Smithery, Glama). Trust is not. MarketNow is the trust layer — every skill Sentinel-scanned, every payment verified on-chain, every mandate human-approved by default.',
     'hero.meta': 'MCP servers · AP2-compatible mandates · x402 payments · Source-available MNNC-1.0 · AliceLabs LLC',
-    'hero.searchPlaceholder': 'Search 5,023 skills — try "scrape web", "postgres", "discord"...',
+    'hero.searchPlaceholder': 'Search 66,496 skills — try "scrape web", "postgres", "discord"...',
     'hero.ctaBrowse': 'BROWSE SKILLS →',
     'hero.ctaFree': 'FREE SKILLS',
     'hero.ctaPublish': '+ PUBLISH YOUR SKILL',
     'hero.or': 'or',
-    'hero.install': 'npx -y @marketnow/install <slug>',
+    'hero.install': 'npx -y marketnow-install-stack <slug>',
 
     // Common UI
     'common.loading': 'Loading...',
@@ -100,7 +113,7 @@ export const TRANSLATIONS = {
     'trust.spendCapsDesc': '$500 max total per mandate, $50 max per purchase, 90-day expiry. Mandates revocable instantly.',
     'trust.auditLog': 'Transparent audit log',
     'trust.auditLogDesc': 'Every mandate transaction is a git commit in the public repo. Anyone can verify the full history.',
-    'trust.sentinel': 'Sentinel L2.5 security audits',
+    'trust.sentinel': 'UTA v1.0.0 security audits',
     'trust.sentinelDesc': '18 MCP-specific Semgrep rules + Docker sandbox + OSV dependency check. Runs in production on every skill.',
     'trust.x402': 'x402 payment protocol',
     'trust.x402Desc': 'HTTP 402 Payment Required + USDC on Base. On-chain verifiable. No intermediaries.',
@@ -111,8 +124,8 @@ export const TRANSLATIONS = {
 
     // Security page
     'security.title': 'Sentinel Security',
-    'security.subtitle': 'Real-time security audits on every MCP skill. L1.5 metadata → L1.6 code analysis → L2 behavioral sandbox.',
-    'security.l15': 'L1.5 Metadata Audit',
+    'security.subtitle': 'Real-time security audits on every MCP skill. v3.0 metadata → L1.6 code analysis → L2 behavioral sandbox.',
+    'security.l15': 'v3.0 Metadata Audit',
     'security.l15Desc': '6-point MCP security scan: AUTH, tool description injection, input validation, CORS, OAuth scopes, rate limiting.',
     'security.l16': 'L1.6 Code Analysis',
     'security.l16Desc': '18 Semgrep rules for MCP-specific vulnerabilities + OSV dependency check + gitleaks secret scanning.',
@@ -189,7 +202,7 @@ export const TRANSLATIONS = {
     'pricing.title': 'Pricing',
     'pricing.subtitle': 'Simple, transparent pricing for buyers and sellers. No subscriptions, no credits.',
     'pricing.buyers': 'For Buyers',
-    'pricing.buyersDesc': 'One-time payment per skill. Lifetime license. No subscriptions.',
+    'pricing.buyersDesc': 'Free payment per skill. Lifetime license. No subscriptions.',
     'pricing.sellers': 'For Sellers',
     'pricing.sellersDesc': 'Free for first 3 skills. 20% commission on sales. No listing fees.',
     'pricing.free': 'Free',
@@ -203,19 +216,19 @@ export const TRANSLATIONS = {
     // Homepage sections
     'home.or': 'or',
     'home.compatibleWith': 'MCP server for Claude Desktop · Cursor · Cline · Continue · Aider',
-    'home.freeTitle': '⚡ {count} Free Skills — Install Now',
+    'home.freeTitle': 'Browse 66,496 skills. Free ones install instantly. Premium ones have a price set by the seller',
     'home.freeDesc': 'No payment, no signup, no mandate. Just install and use. The fastest way to test MarketNow.',
     'home.seeAll': 'See all {count} →',
-    'home.loading': 'Loading free skills…',
+    'home.loading': 'Loading skills…',
     'home.badgeFree': 'FREE',
     'home.trendingTitle': '🔥 Trending Skills',
     'home.trendingDesc': 'High Sentinel scores, fair prices. Verified by automated security audit.',
     'home.forDevsTitle': 'For Developers',
     'home.forDevsDesc': 'The fastest way to add a capability to your agent stack.',
     'home.step1Title': '1. Search',
-    'home.step1Desc': 'Browse 5,023 MCP servers by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.',
-    'home.step2Title': '2. Pay (or grab free)',
-    'home.step2Desc': 'Credit card via Stripe (full chargeback rights) or USDC on Base L2 via x402. {count} skills are free — no payment, no signup. Just install.',
+    'home.step1Desc': 'Browse 66,496 MCP skills by category, tag, or keyword. Filter by price, sentinel score, or language. See real GitHub stars, real npm downloads, real Sentinel reports.',
+    'home.step2Title': '2. Install (free for buyers)',
+    'home.step2Desc': 'Browse 66,496 skills. Free skills install instantly. Premium skills have a one-time price set by the seller. Sellers keep 80% of every sale.',
     'home.step3Title': '3. Install',
     'home.step3Desc': 'Works with Claude Desktop, Cursor, Cline, Continue, Aider, and any MCP-compatible runtime.',
     'home.forAgentsTitle': 'For Agents',
@@ -225,26 +238,26 @@ export const TRANSLATIONS = {
     'home.apiSearch': 'Server-side search',
     'home.apiAgentDocs': 'Machine-readable instructions',
     'home.apiPolicies': 'Refund, dispute, terms',
-    'home.apiPurchase': 'Buy a skill (x402 / 5 modes)',
+    'home.apiPurchase': 'Install any skill (free for buyers)',
     'home.apiMandates': 'Delegated mandates (AP2)',
-    'home.apiFreeSkills': '{count} free skills',
+    'home.apiFreeSkills': 'All skills free for buyers',
     'home.apiBundles': 'Discounted bundles',
     'home.whyTitle': 'Why people recommend us',
     'home.whyDesc': 'Honest reasons to share this with your team or followers.',
     'home.feat.opensourceTitle': 'Source-Available MNNC-1.0',
     'home.feat.opensourceDesc': 'Full code on GitHub. Every change is a public commit. No black box.',
-    'home.feat.sentinelTitle': 'Sentinel L2.5 Security',
+    'home.feat.sentinelTitle': 'UTA v1.0.0 Security',
     'home.feat.sentinelDesc': 'Real-time security audit on every skill. 18 Semgrep rules + Docker sandbox + OSV.',
-    'home.feat.freeTitle': '{count} Free Skills',
+    'home.feat.freeTitle': 'All Skills Free for Buyers',
     'home.feat.freeDesc': 'Real value, zero cost. No signup, no credit card, no mandate.',
     'home.feat.pricingTitle': 'B2B pricing One-Time',
-    'home.feat.pricingDesc': 'No subscriptions. No per-call fees. No tiered plans. Pay once, own forever.',
+    'home.feat.pricingDesc': 'Everything is free. Buyers install free. Sellers list free. No payments, ever.',
     'home.feat.humanLoopTitle': 'Human-in-Loop Default',
     'home.feat.humanLoopDesc': 'Mandates notify the principal on every purchase. Silent mode requires explicit opt-in.',
     'home.feat.auditLogTitle': 'Public Audit Log',
     'home.feat.auditLogDesc': 'Every mandate transaction is a git commit at _data/mandates/. Fully auditable.',
-    'home.feat.langsTitle': '5 Languages',
-    'home.feat.langsDesc': 'System prompts in EN, ES, ZH, PT, FR. Real translations, not auto-translated.',
+    'home.feat.langsTitle': '13 Languages',
+    'home.feat.langsDesc': 'UI and system prompts in EN, ES, PT, FR, DE, IT, RU, TR, ZH, JA, KO, HI, AR. Real translations, not auto-translated.',
     'home.feat.roadmapTitle': 'Honest Roadmap',
     'home.feat.roadmapDesc': '/trust page admits what\'s done, partial, and pending. No fake "verified" badges.',
     'home.shareTitle': '📢 Share MarketNow',
@@ -254,7 +267,7 @@ export const TRANSLATIONS = {
     'home.shareHn': 'Submit to Hacker News',
     'home.shareHnDesc': '"Show HN: Trust layer for agent commerce"',
     'home.shareReddit': 'Post on r/mcp',
-    'home.shareRedditDesc': '"MarketNow: trust layer, 5,023 skills, x402"',
+    'home.shareRedditDesc': '"MarketNow: trust layer, 66,496 skills, x402"',
     'home.shareBadge': 'Get a badge',
     'home.shareBadgeDesc': '"Powered by MarketNow" — embed in your README',
     'home.statsSkills': 'SKILLS',
@@ -303,6 +316,7 @@ export const TRANSLATIONS = {
     'nav.publish': 'Publicar una Skill',
     'nav.pricing': 'Precios',
     'nav.trustRoadmap': 'Hoja de Confianza',
+    'nav.uta': 'UTA — Adaptador Universal de Confianza',
     'nav.standards': 'Estándares (x402, AP2)',
     'nav.sentinel': 'Seguridad Sentinel',
     'nav.compare': 'vs Smithery vs Glama',
@@ -331,12 +345,12 @@ export const TRANSLATIONS = {
     'hero.title2': 'comercio de agentes.',
     'hero.body': 'El descubrimiento está resuelto (MCP registry, Smithery, Glama). La confianza no. MarketNow es la capa de confianza — cada skill escaneada por Sentinel, cada pago verificado on-chain, cada mandato aprobado por un humano por defecto.',
     'hero.meta': 'servidores MCP · Mandatos compatibles con AP2 · Pagos x402 · Source-available MNNC-1.0 · AliceLabs LLC',
-    'hero.searchPlaceholder': 'Buscar 5,023 skills — prueba "scrapear web", "postgres", "discord"...',
+    'hero.searchPlaceholder': 'Buscar 66,496 skills — prueba "scrapear web", "postgres", "discord"...',
     'hero.ctaBrowse': 'EXPLORAR SKILLS →',
     'hero.ctaFree': 'SKILLS GRATIS',
     'hero.ctaPublish': '+ PUBLICA TU SKILL',
     'hero.or': 'o',
-    'hero.install': 'npx -y @marketnow/install <slug>',
+    'hero.install': 'npx -y marketnow-install-stack <slug>',
 
     // Common UI
     'common.loading': 'Cargando...',
@@ -380,7 +394,7 @@ export const TRANSLATIONS = {
     'trust.spendCapsDesc': '$500 máximo total por mandato, $50 máximo por compra, expira a 90 días. Mandatos revocables al instante.',
     'trust.auditLog': 'Audit log transparente',
     'trust.auditLogDesc': 'Cada transacción de mandato es un git commit en el repo público. Cualquiera puede verificar el historial completo.',
-    'trust.sentinel': 'Auditorías de seguridad Sentinel L2.5',
+    'trust.sentinel': 'Auditorías de seguridad UTA v1.0.0',
     'trust.sentinelDesc': '18 reglas Semgrep específicas para MCP + sandbox Docker + check de dependencias OSV. Corre en producción en cada skill.',
     'trust.x402': 'Protocolo de pago x402',
     'trust.x402Desc': 'HTTP 402 Payment Required + USDC en Base. Verificable on-chain. Sin intermediarios.',
@@ -391,8 +405,8 @@ export const TRANSLATIONS = {
 
     // Security page
     'security.title': 'Seguridad Sentinel',
-    'security.subtitle': 'Auditorías de seguridad en tiempo real en cada skill MCP. L1.5 metadata → L1.6 análisis de código → L2 sandbox de comportamiento.',
-    'security.l15': 'Auditoría L1.5 de Metadata',
+    'security.subtitle': 'Auditorías de seguridad en tiempo real en cada skill MCP. v3.0 metadata → L1.6 análisis de código → L2 sandbox de comportamiento.',
+    'security.l15': 'Auditoría v3.0 de Metadata',
     'security.l15Desc': 'Escaneo de seguridad MCP de 6 puntos: AUTH, inyección en descripciones de tools, validación de inputs, CORS, scopes OAuth, rate limiting.',
     'security.l16': 'Análisis L1.6 de Código',
     'security.l16Desc': '18 reglas Semgrep para vulnerabilidades específicas de MCP + check de dependencias OSV + scanning de secretos gitleaks.',
@@ -493,9 +507,9 @@ export const TRANSLATIONS = {
     'home.forDevsTitle': 'Para Desarrolladores',
     'home.forDevsDesc': 'La forma más rápida de añadir una capacidad a tu stack de agentes.',
     'home.step1Title': '1. Buscar',
-    'home.step1Desc': 'Explora 5,023 servidores MCP por categoría, etiqueta o palabra clave. Filtra por precio, puntuación Sentinel o idioma. Ve estrellas reales de GitHub, descargas reales de npm, reportes reales de Sentinel.',
-    'home.step2Title': '2. Pagar (o agarrar gratis)',
-    'home.step2Desc': 'Tarjeta de crédito vía Stripe (derecho a contracargo completo) o USDC en Base L2 vía x402. {count} skills son gratis — sin pago, sin registro. Solo instala.',
+    'home.step1Desc': 'Explora 66,496 servidores MCP por categoría, etiqueta o palabra clave. Filtra por precio, puntuación Sentinel o idioma. Ve estrellas reales de GitHub, descargas reales de npm, reportes reales de Sentinel.',
+    'home.step2Title': '2. Instalar (gratis para buyers)',
+    'home.step2Desc': 'Explora 66,496 skills. Las gratuitas se instalan sin costo. Las premium tienen un precio fijado por el vendedor. Los vendedores reciben el 80% de cada venta.',
     'home.step3Title': '3. Instalar',
     'home.step3Desc': 'Funciona con Claude Desktop, Cursor, Cline, Continue, Aider y cualquier runtime compatible con MCP.',
     'home.forAgentsTitle': 'Para Agentes',
@@ -505,7 +519,7 @@ export const TRANSLATIONS = {
     'home.apiSearch': 'Búsqueda server-side',
     'home.apiAgentDocs': 'Instrucciones legibles por máquina',
     'home.apiPolicies': 'Reembolso, disputas, términos',
-    'home.apiPurchase': 'Comprar una skill (x402 / 5 modos)',
+    'home.apiPurchase': 'Instalar cualquier skill (gratis para buyers)',
     'home.apiMandates': 'Mandatos delegados (AP2)',
     'home.apiFreeSkills': '{count} skills gratis',
     'home.apiBundles': 'Paquetes con descuento',
@@ -513,7 +527,7 @@ export const TRANSLATIONS = {
     'home.whyDesc': 'Razones honestas para compartir esto con tu equipo o seguidores.',
     'home.feat.opensourceTitle': 'Source-Available MNNC-1.0',
     'home.feat.opensourceDesc': 'Código completo en GitHub. Cada cambio es un commit público. Sin caja negra.',
-    'home.feat.sentinelTitle': 'Seguridad Sentinel L2.5',
+    'home.feat.sentinelTitle': 'Seguridad UTA v1.0.0',
     'home.feat.sentinelDesc': 'Auditoría de seguridad en tiempo real en cada skill. 18 reglas Semgrep + sandbox Docker + OSV.',
     'home.feat.freeTitle': '{count} Skills Gratis',
     'home.feat.freeDesc': 'Valor real, costo cero. Sin registro, sin tarjeta de crédito, sin mandato.',
@@ -523,8 +537,8 @@ export const TRANSLATIONS = {
     'home.feat.humanLoopDesc': 'Los mandatos notifican al principal en cada compra. El modo silencioso requiere opt-in explícito.',
     'home.feat.auditLogTitle': 'Audit Log Público',
     'home.feat.auditLogDesc': 'Cada transacción de mandato es un git commit en _data/mandates/. Totalmente auditable.',
-    'home.feat.langsTitle': '5 Idiomas',
-    'home.feat.langsDesc': 'System prompts en EN, ES, ZH, PT, FR. Traducciones reales, no auto-traducidas.',
+    'home.feat.langsTitle': '13 Idiomas',
+    'home.feat.langsDesc': 'Interfaz y system prompts en EN, ES, PT, FR, DE, IT, RU, TR, ZH, JA, KO, HI, AR. Traducciones reales, no auto-traducidas.',
     'home.feat.roadmapTitle': 'Hoja de Ruta Honesta',
     'home.feat.roadmapDesc': 'La página /trust admite qué está hecho, parcial y pendiente. Sin falsos badges "verificado".',
     'home.shareTitle': '📢 Comparte MarketNow',
@@ -534,7 +548,7 @@ export const TRANSLATIONS = {
     'home.shareHn': 'Enviar a Hacker News',
     'home.shareHnDesc': '"Show HN: Capa de confianza para comercio de agentes"',
     'home.shareReddit': 'Postear en r/mcp',
-    'home.shareRedditDesc': '"MarketNow: capa de confianza, 5,023 skills, x402"',
+    'home.shareRedditDesc': '"MarketNow: capa de confianza, 66,496 skills, x402"',
     'home.shareBadge': 'Obtener un badge',
     'home.shareBadgeDesc': '"Powered by MarketNow" — embeber en tu README',
     'home.statsSkills': 'SKILLS',
@@ -583,6 +597,7 @@ export const TRANSLATIONS = {
     'nav.publish': 'Publicar uma Skill',
     'nav.pricing': 'Preços',
     'nav.trustRoadmap': 'Rota de Confiança',
+    'nav.uta': 'UTA — Adaptador Universal de Confiança',
     'nav.standards': 'Padrões (x402, AP2)',
     'nav.sentinel': 'Segurança Sentinel',
     'nav.compare': 'vs Smithery vs Glama',
@@ -611,12 +626,12 @@ export const TRANSLATIONS = {
     'hero.title2': 'comércio de agentes.',
     'hero.body': 'Descoberta está resolvida (MCP registry, Smithery, Glama). Confiança não. MarketNow é a camada de confiança — cada skill escaneada pelo Sentinel, cada pagamento verificado on-chain, cada mandato aprovado por humano por padrão.',
     'hero.meta': 'servidores MCP · Mandatos compatíveis com AP2 · Pagamentos x402 · Source-available MNNC-1.0 · AliceLabs LLC',
-    'hero.searchPlaceholder': 'Buscar 5,023 skills — tente "scrape web", "postgres", "discord"...',
+    'hero.searchPlaceholder': 'Buscar 66,496 skills — tente "scrape web", "postgres", "discord"...',
     'hero.ctaBrowse': 'EXPLORAR SKILLS →',
     'hero.ctaFree': 'SKILLS GRÁTIS',
     'hero.ctaPublish': '+ PUBlique SUA SKILL',
     'hero.or': 'ou',
-    'hero.install': 'npx -y @marketnow/install <slug>',
+    'hero.install': 'npx -y marketnow-install-stack <slug>',
 
     // Common UI
     'common.loading': 'Carregando...',
@@ -660,7 +675,7 @@ export const TRANSLATIONS = {
     'trust.spendCapsDesc': '$500 máximo total por mandato, $50 máximo por compra, expira em 90 dias. Mandatos revogáveis instantaneamente.',
     'trust.auditLog': 'Audit log transparente',
     'trust.auditLogDesc': 'Cada transação de mandato é um git commit no repo público. Qualquer um pode verificar o histórico completo.',
-    'trust.sentinel': 'Auditorias de segurança Sentinel L2.5',
+    'trust.sentinel': 'Auditorias de segurança UTA v1.0.0',
     'trust.sentinelDesc': '18 regras Semgrep específicas para MCP + sandbox Docker + check de dependências OSV. Roda em produção em cada skill.',
     'trust.x402': 'Protocolo de pagamento x402',
     'trust.x402Desc': 'HTTP 402 Payment Required + USDC na Base. Verificável on-chain. Sem intermediários.',
@@ -671,8 +686,8 @@ export const TRANSLATIONS = {
 
     // Security page
     'security.title': 'Segurança Sentinel',
-    'security.subtitle': 'Auditorias de segurança em tempo real em cada skill MCP. L1.5 metadata → L1.6 análise de código → L2 sandbox comportamental.',
-    'security.l15': 'Auditoria L1.5 de Metadata',
+    'security.subtitle': 'Auditorias de segurança em tempo real em cada skill MCP. v3.0 metadata → L1.6 análise de código → L2 sandbox comportamental.',
+    'security.l15': 'Auditoria v3.0 de Metadata',
     'security.l15Desc': 'Scan de segurança MCP de 6 pontos: AUTH, injeção em descrições de tools, validação de inputs, CORS, scopes OAuth, rate limiting.',
     'security.l16': 'Análise L1.6 de Código',
     'security.l16Desc': '18 regras Semgrep para vulnerabilidades específicas de MCP + check de dependências OSV + scanning de segredos gitleaks.',
@@ -773,9 +788,9 @@ export const TRANSLATIONS = {
     'home.forDevsTitle': 'Para Desenvolvedores',
     'home.forDevsDesc': 'A forma mais rápida de adicionar uma capacidade ao seu stack de agentes.',
     'home.step1Title': '1. Buscar',
-    'home.step1Desc': 'Explore 5,023 servidores MCP por categoria, tag ou palavra-chave. Filtre por preço, pontuação Sentinel ou idioma. Veja estrelas reais do GitHub, downloads reais do npm, relatórios reais do Sentinel.',
-    'home.step2Title': '2. Pagar (ou pegar grátis)',
-    'home.step2Desc': 'Cartão de crédito via Stripe (direito a chargeback completo) ou USDC na Base L2 via x402. {count} skills são grátis — sem pagamento, sem cadastro. Apenas instale.',
+    'home.step1Desc': 'Explore 66,496 servidores MCP por categoria, tag ou palavra-chave. Filtre por preço, pontuação Sentinel ou idioma. Veja estrelas reais do GitHub, downloads reais do npm, relatórios reais do Sentinel.',
+    'home.step2Title': '2. Instalar (grátis para buyers)',
+    'home.step2Desc': 'Todos os 66.496 skills instalam grátis para buyers. Sem pagamento, sem cartão de crédito, sem cadastro. Tudo é grátis. Sem pagamentos, nunca.',
     'home.step3Title': '3. Instalar',
     'home.step3Desc': 'Funciona com Claude Desktop, Cursor, Cline, Continue, Aider e qualquer runtime compatível com MCP.',
     'home.forAgentsTitle': 'Para Agentes',
@@ -785,7 +800,7 @@ export const TRANSLATIONS = {
     'home.apiSearch': 'Busca server-side',
     'home.apiAgentDocs': 'Instruções legíveis por máquina',
     'home.apiPolicies': 'Reembolso, disputas, termos',
-    'home.apiPurchase': 'Comprar uma skill (x402 / 5 modos)',
+    'home.apiPurchase': 'Instalar qualquer skill (grátis para buyers)',
     'home.apiMandates': 'Mandatos delegados (AP2)',
     'home.apiFreeSkills': '{count} skills grátis',
     'home.apiBundles': 'Pacotes com desconto',
@@ -793,7 +808,7 @@ export const TRANSLATIONS = {
     'home.whyDesc': 'Razões honestas para compartilhar com sua equipe ou seguidores.',
     'home.feat.opensourceTitle': 'Source-Available MNNC-1.0',
     'home.feat.opensourceDesc': 'Código completo no GitHub. Cada mudança é um commit público. Sem caixa preta.',
-    'home.feat.sentinelTitle': 'Segurança Sentinel L2.5',
+    'home.feat.sentinelTitle': 'Segurança UTA v1.0.0',
     'home.feat.sentinelDesc': 'Auditoria de segurança em tempo real em cada skill. 18 regras Semgrep + sandbox Docker + OSV.',
     'home.feat.freeTitle': '{count} Skills Grátis',
     'home.feat.freeDesc': 'Valor real, custo zero. Sem cadastro, sem cartão de crédito, sem mandato.',
@@ -803,8 +818,8 @@ export const TRANSLATIONS = {
     'home.feat.humanLoopDesc': 'Mandatos notificam o principal a cada compra. Modo silencioso requer opt-in explícito.',
     'home.feat.auditLogTitle': 'Audit Log Público',
     'home.feat.auditLogDesc': 'Cada transação de mandato é um git commit em _data/mandates/. Totalmente auditável.',
-    'home.feat.langsTitle': '5 Idiomas',
-    'home.feat.langsDesc': 'System prompts em EN, ES, ZH, PT, FR. Traduções reais, não auto-traduzidas.',
+    'home.feat.langsTitle': '13 Idiomas',
+    'home.feat.langsDesc': 'Interface e system prompts em EN, ES, PT, FR, DE, IT, RU, TR, ZH, JA, KO, HI, AR. Traduções reais, não auto-traduzidas.',
     'home.feat.roadmapTitle': 'Roadmap Honesto',
     'home.feat.roadmapDesc': 'A página /trust admite o que está feito, parcial e pendente. Sem falsos badges "verificado".',
     'home.shareTitle': '📢 Compartilhe o MarketNow',
@@ -814,7 +829,7 @@ export const TRANSLATIONS = {
     'home.shareHn': 'Enviar ao Hacker News',
     'home.shareHnDesc': '"Show HN: Camada de confiança para comércio de agentes"',
     'home.shareReddit': 'Postar no r/mcp',
-    'home.shareRedditDesc': '"MarketNow: camada de confiança, 5,023 skills, x402"',
+    'home.shareRedditDesc': '"MarketNow: camada de confiança, 66,496 skills, x402"',
     'home.shareBadge': 'Obter um badge',
     'home.shareBadgeDesc': '"Powered by MarketNow" — incorporar no seu README',
     'home.statsSkills': 'SKILLS',
@@ -857,6 +872,7 @@ export const TRANSLATIONS = {
     // Navbar
     'nav.marketplace': '市场',
     'nav.trust': '信任',
+    'nav.uta': 'UTA — 通用信任适配器',
     'nav.resources': '资源',
     'nav.account': '账户',
     'nav.browse': '浏览技能',
@@ -891,12 +907,12 @@ export const TRANSLATIONS = {
     'hero.title2': '信任层。',
     'hero.body': '发现已解决（MCP registry、Smithery、Glama）。信任尚未解决。MarketNow 是信任层 — 每个技能都经过 Sentinel 扫描，每笔支付都在链上验证，每个授权默认由人类批准。',
     'hero.meta': 'MCP 服务器 · 兼容 AP2 的授权 · x402 支付 · 源代码可用 MNNC-1.0 · AliceLabs LLC',
-    'hero.searchPlaceholder': '搜索 5,023 个技能 — 试试 "scrape web"、"postgres"、"discord"...',
+    'hero.searchPlaceholder': '搜索 66,496 个技能 — 试试 "scrape web"、"postgres"、"discord"...',
     'hero.ctaBrowse': '浏览技能 →',
     'hero.ctaFree': '免费技能',
     'hero.ctaPublish': '+ 发布你的技能',
     'hero.or': '或',
-    'hero.install': 'npx -y @marketnow/install <slug>',
+    'hero.install': 'npx -y marketnow-install-stack <slug>',
 
     // Common UI
     'common.loading': '加载中...',
@@ -940,7 +956,7 @@ export const TRANSLATIONS = {
     'trust.spendCapsDesc': '每个授权最高总额 $500，每次购买最高 $50，90 天过期。授权可即时撤销。',
     'trust.auditLog': '透明的审计日志',
     'trust.auditLogDesc': '每个授权交易都是公共仓库中的一个 git commit。任何人都可以验证完整历史。',
-    'trust.sentinel': 'Sentinel L2.5 安全审计',
+    'trust.sentinel': 'UTA v1.0.0 安全审计',
     'trust.sentinelDesc': '18 条 MCP 专用 Semgrep 规则 + Docker 沙箱 + OSV 依赖检查。在每个技能上在生产中运行。',
     'trust.x402': 'x402 支付协议',
     'trust.x402Desc': 'HTTP 402 Payment Required + Base 上的 USDC。链上可验证。无中介。',
@@ -951,8 +967,8 @@ export const TRANSLATIONS = {
 
     // Security page
     'security.title': 'Sentinel 安全',
-    'security.subtitle': '对每个 MCP 技能进行实时安全审计。L1.5 元数据 → L1.6 代码分析 → L2 行为沙箱。',
-    'security.l15': 'L1.5 元数据审计',
+    'security.subtitle': '对每个 MCP 技能进行实时安全审计。v3.0 元数据 → L1.6 代码分析 → L2 行为沙箱。',
+    'security.l15': 'v3.0 元数据审计',
     'security.l15Desc': '6 点 MCP 安全扫描：AUTH、工具描述注入、输入验证、CORS、OAuth 范围、速率限制。',
     'security.l16': 'L1.6 代码分析',
     'security.l16Desc': '18 条 MCP 专用 Semgrep 规则 + OSV 依赖检查 + gitleaks 密钥扫描。',
@@ -1053,9 +1069,9 @@ export const TRANSLATIONS = {
     'home.forDevsTitle': '开发者',
     'home.forDevsDesc': '为你的代理栈添加功能的最快方式。',
     'home.step1Title': '1. 搜索',
-    'home.step1Desc': '按类别、标签或关键词浏览 5,023 个 MCP 服务器。按价格、Sentinel 评分或语言筛选。查看真实的 GitHub 星标、npm 下载量、Sentinel 报告。',
-    'home.step2Title': '2. 付款（或获取免费）',
-    'home.step2Desc': '通过 Stripe 信用卡（完整退款权）或通过 x402 在 Base L2 上使用 USDC。{count} 个技能免费 — 无需付款、无需注册。只需安装。',
+    'home.step1Desc': '按类别、标签或关键词浏览 66,496 个 MCP 服务器。按价格、Sentinel 评分或语言筛选。查看真实的 GitHub 星标、npm 下载量、Sentinel 报告。',
+    'home.step2Title': '2. 安装（买家免费）',
+    'home.step2Desc': '所有 66,496 个技能对买家免费安装。无需付款、无需信用卡、无需注册。一切免费，永不收费。',
     'home.step3Title': '3. 安装',
     'home.step3Desc': '适用于 Claude Desktop、Cursor、Cline、Continue、Aider 以及任何兼容 MCP 的运行时。',
     'home.forAgentsTitle': '代理',
@@ -1073,7 +1089,7 @@ export const TRANSLATIONS = {
     'home.whyDesc': '与你的团队或关注者分享的诚实理由。',
     'home.feat.opensourceTitle': '源代码可用 MNNC-1.0',
     'home.feat.opensourceDesc': '完整代码在 GitHub 上。每次更改都是公开提交。没有黑盒。',
-    'home.feat.sentinelTitle': 'Sentinel L2.5 安全',
+    'home.feat.sentinelTitle': 'UTA v1.0.0 安全',
     'home.feat.sentinelDesc': '对每个技能进行实时安全审计。18 条 Semgrep 规则 + Docker 沙箱 + OSV。',
     'home.feat.freeTitle': '{count} 个免费技能',
     'home.feat.freeDesc': '真正价值，零成本。无需注册、无需信用卡、无需授权。',
@@ -1083,8 +1099,8 @@ export const TRANSLATIONS = {
     'home.feat.humanLoopDesc': '授权在每次购买时通知委托人。静默模式需要明确选择加入。',
     'home.feat.auditLogTitle': '公共审计日志',
     'home.feat.auditLogDesc': '每个授权交易都是 _data/mandates/ 中的一个 git commit。完全可审计。',
-    'home.feat.langsTitle': '5 种语言',
-    'home.feat.langsDesc': 'EN、ES、ZH、PT、FR 的系统提示。真实翻译，非自动翻译。',
+    'home.feat.langsTitle': '13 种语言',
+    'home.feat.langsDesc': '界面与 system prompts 支持 EN、ES、PT、FR、DE、IT、RU、TR、ZH、JA、KO、HI、AR。真实翻译，非自动翻译。',
     'home.feat.roadmapTitle': '诚实的路线图',
     'home.feat.roadmapDesc': '/trust 页面承认已完成、部分完成和待处理的内容。没有虚假的"已验证"徽章。',
     'home.shareTitle': '📢 分享 MarketNow',
@@ -1094,7 +1110,7 @@ export const TRANSLATIONS = {
     'home.shareHn': '提交到 Hacker News',
     'home.shareHnDesc': '"Show HN: 代理商业的信任层"',
     'home.shareReddit': '在 r/mcp 发帖',
-    'home.shareRedditDesc': '"MarketNow：信任层，5,023 个技能，x402"',
+    'home.shareRedditDesc': '"MarketNow：信任层，66,496 个技能，x402"',
     'home.shareBadge': '获取徽章',
     'home.shareBadgeDesc': '"Powered by MarketNow" — 嵌入你的 README',
     'home.statsSkills': '技能',
@@ -1143,6 +1159,7 @@ export const TRANSLATIONS = {
     'nav.publish': 'Publier une Skill',
     'nav.pricing': 'Tarifs',
     'nav.trustRoadmap': 'Feuille de Confiance',
+    'nav.uta': 'UTA — Adaptateur Universel de Confiance',
     'nav.standards': 'Standards (x402, AP2)',
     'nav.sentinel': 'Sécurité Sentinel',
     'nav.compare': 'vs Smithery vs Glama',
@@ -1171,12 +1188,12 @@ export const TRANSLATIONS = {
     'hero.title2': 'commerce d\'agents.',
     'hero.body': 'La découverte est résolue (MCP registry, Smithery, Glama). La confiance ne l\'est pas. MarketNow est la couche de confiance — chaque skill scannée par Sentinel, chaque paiement vérifié on-chain, chaque mandat approuvé par un humain par défaut.',
     'hero.meta': 'serveurs MCP · Mandats compatibles AP2 · Paiements x402 · Source-available MNNC-1.0 · AliceLabs LLC',
-    'hero.searchPlaceholder': 'Rechercher 5,023 skills — essayez "scrape web", "postgres", "discord"...',
+    'hero.searchPlaceholder': 'Rechercher 66,496 skills — essayez "scrape web", "postgres", "discord"...',
     'hero.ctaBrowse': 'PARCOURIR LES SKILLS →',
     'hero.ctaFree': 'SKILLS GRATUITES',
     'hero.ctaPublish': '+ PUBLIEZ VOTRE SKILL',
     'hero.or': 'ou',
-    'hero.install': 'npx -y @marketnow/install <slug>',
+    'hero.install': 'npx -y marketnow-install-stack <slug>',
 
     // Common UI
     'common.loading': 'Chargement...',
@@ -1220,7 +1237,7 @@ export const TRANSLATIONS = {
     'trust.spendCapsDesc': '500 $ max total par mandat, 50 $ max par achat, expiration 90 jours. Mandats révocables instantanément.',
     'trust.auditLog': 'Journal d\'audit transparent',
     'trust.auditLogDesc': 'Chaque transaction de mandat est un git commit dans le repo public. N\'importe qui peut vérifier l\'historique complet.',
-    'trust.sentinel': 'Audits de sécurité Sentinel L2.5',
+    'trust.sentinel': 'Audits de sécurité UTA v1.0.0',
     'trust.sentinelDesc': '18 règles Semgrep spécifiques à MCP + sandbox Docker + vérification OSV des dépendances. Tourne en production sur chaque skill.',
     'trust.x402': 'Protocole de paiement x402',
     'trust.x402Desc': 'HTTP 402 Payment Required + USDC sur Base. Vérifiable on-chain. Sans intermédiaires.',
@@ -1231,8 +1248,8 @@ export const TRANSLATIONS = {
 
     // Security page
     'security.title': 'Sécurité Sentinel',
-    'security.subtitle': 'Audits de sécurité en temps réel sur chaque skill MCP. L1.5 métadonnées → L1.6 analyse de code → L2 sandbox comportementale.',
-    'security.l15': 'Audit L1.5 des Métadonnées',
+    'security.subtitle': 'Audits de sécurité en temps réel sur chaque skill MCP. v3.0 métadonnées → L1.6 analyse de code → L2 sandbox comportementale.',
+    'security.l15': 'Audit v3.0 des Métadonnées',
     'security.l15Desc': 'Scan de sécurité MCP en 6 points : AUTH, injection dans les descriptions d\'outils, validation des entrées, CORS, scopes OAuth, rate limiting.',
     'security.l16': 'Analyse L1.6 du Code',
     'security.l16Desc': '18 règles Semgrep pour vulnérabilités spécifiques à MCP + vérification OSV des dépendances + scanning de secrets gitleaks.',
@@ -1333,9 +1350,9 @@ export const TRANSLATIONS = {
     'home.forDevsTitle': 'Pour les Développeurs',
     'home.forDevsDesc': 'Le moyen le plus rapide d\'ajouter une capacité à votre stack d\'agents.',
     'home.step1Title': '1. Rechercher',
-    'home.step1Desc': 'Parcourez 5,023 serveurs MCP par catégorie, tag ou mot-clé. Filtrez par prix, score Sentinel ou langue. Voir les étoiles GitHub réelles, les téléchargements npm réels, les rapports Sentinel réels.',
-    'home.step2Title': '2. Payer (ou gratuit)',
-    'home.step2Desc': 'Carte de crédit via Stripe (droit de rétractation complet) ou USDC sur Base L2 via x402. {count} skills sont gratuites — sans paiement, sans inscription. Installez simplement.',
+    'home.step1Desc': 'Parcourez 66,496 serveurs MCP par catégorie, tag ou mot-clé. Filtrez par prix, score Sentinel ou langue. Voir les étoiles GitHub réelles, les téléchargements npm réels, les rapports Sentinel réels.',
+    'home.step2Title': '2. Installer (gratuit pour buyers)',
+    'home.step2Desc': 'Les 66 496 skills s\'installent gratuitement pour les buyers. Aucun paiement, aucune carte de crédit, aucune inscription. Les sellers s\'abonnent à Sentinel (PRO 9,99 $/mois, ENTERPRISE 49,99 $/mois).',
     'home.step3Title': '3. Installer',
     'home.step3Desc': 'Fonctionne avec Claude Desktop, Cursor, Cline, Continue, Aider et tout runtime compatible MCP.',
     'home.forAgentsTitle': 'Pour les Agents',
@@ -1353,7 +1370,7 @@ export const TRANSLATIONS = {
     'home.whyDesc': 'Raisons honnêtes de partager avec votre équipe ou abonnés.',
     'home.feat.opensourceTitle': 'Source-Available MNNC-1.0',
     'home.feat.opensourceDesc': 'Code complet sur GitHub. Chaque changement est un commit public. Pas de boîte noire.',
-    'home.feat.sentinelTitle': 'Sécurité Sentinel L2.5',
+    'home.feat.sentinelTitle': 'Sécurité UTA v1.0.0',
     'home.feat.sentinelDesc': 'Audit de sécurité en temps réel sur chaque skill. 18 règles Semgrep + sandbox Docker + OSV.',
     'home.feat.freeTitle': '{count} Skills Gratuites',
     'home.feat.freeDesc': 'Valeur réelle, coût zéro. Sans inscription, sans carte de crédit, sans mandat.',
@@ -1363,8 +1380,8 @@ export const TRANSLATIONS = {
     'home.feat.humanLoopDesc': 'Les mandats informent le principal à chaque achat. Le mode silencieux nécessite un opt-in explicite.',
     'home.feat.auditLogTitle': 'Journal d\'Audit Public',
     'home.feat.auditLogDesc': 'Chaque transaction de mandat est un git commit dans _data/mandates/. Entièrement auditable.',
-    'home.feat.langsTitle': '5 Langues',
-    'home.feat.langsDesc': 'System prompts en EN, ES, ZH, PT, FR. Traductions réelles, non auto-traduites.',
+    'home.feat.langsTitle': '13 Langues',
+    'home.feat.langsDesc': 'Interface et system prompts en EN, ES, PT, FR, DE, IT, RU, TR, ZH, JA, KO, HI, AR. Traductions réelles, non auto-traduites.',
     'home.feat.roadmapTitle': 'Roadmap Honnête',
     'home.feat.roadmapDesc': 'La page /trust admet ce qui est fait, partiel et en attente. Pas de faux badges "vérifié".',
     'home.shareTitle': '📢 Partagez MarketNow',
@@ -1374,7 +1391,7 @@ export const TRANSLATIONS = {
     'home.shareHn': 'Soumettre à Hacker News',
     'home.shareHnDesc': '"Show HN : Couche de confiance pour le commerce d\'agents"',
     'home.shareReddit': 'Poster sur r/mcp',
-    'home.shareRedditDesc': '"MarketNow : couche de confiance, 5,023 skills, x402"',
+    'home.shareRedditDesc': '"MarketNow : couche de confiance, 66,496 skills, x402"',
     'home.shareBadge': 'Obtenir un badge',
     'home.shareBadgeDesc': '"Powered by MarketNow" — intégrer dans votre README',
     'home.statsSkills': 'SKILLS',
@@ -1411,12 +1428,37 @@ export const TRANSLATIONS = {
   },
 };
 
+// ═══════════════════════════════════════════════════════════════════════════
+// MERGE — uta.* keys into base languages + extended languages
+// ═══════════════════════════════════════════════════════════════════════════
+const TRANSLATIONS = {
+  en: { ...TRANSLATIONS_BASE.en, ...UTA_KEYS.en },
+  es: { ...TRANSLATIONS_BASE.es, ...UTA_KEYS.es },
+  pt: { ...TRANSLATIONS_BASE.pt, ...UTA_KEYS.pt },
+  zh: { ...TRANSLATIONS_BASE.zh, ...UTA_KEYS.zh },
+  fr: { ...TRANSLATIONS_BASE.fr, ...UTA_KEYS.fr },
+  de, it, ru, tr, ja, ko, hi, ar,
+};
+
+export { TRANSLATIONS };
+
 export const LANGUAGES = [
   { code: 'en', label: 'EN', name: 'English', flag: '🇺🇸' },
   { code: 'es', label: 'ES', name: 'Español', flag: '🇪🇸' },
   { code: 'pt', label: 'PT', name: 'Português', flag: '🇧🇷' },
-  { code: 'zh', label: '中', name: '中文', flag: '🇨🇳' },
   { code: 'fr', label: 'FR', name: 'Français', flag: '🇫🇷' },
+  { code: 'de', label: 'DE', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'it', label: 'IT', name: 'Italiano', flag: '🇮🇹' },
+  { code: 'ru', label: 'RU', name: 'Русский', flag: '🇷🇺' },
+  { code: 'tr', label: 'TR', name: 'Türkçe', flag: '🇹🇷' },
+  { code: 'zh', label: '中', name: '中文', flag: '🇨🇳' },
+  { code: 'ja', label: '日', name: '日本語', flag: '🇯🇵' },
+  { code: 'ko', label: '한', name: '한국어', flag: '🇰🇷' },
+  { code: 'hi', label: 'हि', name: 'हिन्दी', flag: '🇮🇳' },
+  { code: 'ar', label: 'ع', name: 'العربية', flag: '🇸🇦', rtl: true },
 ];
+
+// Languages that render right-to-left
+export const RTL_LANGS = ['ar'];
 
 export const DEFAULT_LANG = 'en';

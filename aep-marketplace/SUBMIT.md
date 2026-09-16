@@ -2,7 +2,7 @@
 
 ## 1. mcp.directory/submit (mejor impacto, auto-pull)
 1. Abrir https://mcp.directory/submit
-2. Ingresar GitHub URL: `https://github.com/edgarfloresguerra2011-a11y/marketnow`
+2. Ingresar GitHub URL: `https://github.com/alicelabs-llc/marketnow`
 3. Ellos auto-detectan: name, description, stars, README → publicado en 24h
 
 ---
@@ -13,7 +13,7 @@
 |---|---|
 | **Type** | MCP Server |
 | **Name** | MarketNow Skills Marketplace |
-| **URL** | `https://github.com/edgarfloresguerra2011-a11y/marketnow` |
+| **URL** | `https://github.com/alicelabs-llc/marketnow` |
 | **Server Config** | Ver JSON abajo |
 
 ```json
@@ -22,7 +22,7 @@
     "command": "",
     "url": "https://marketnow.site/mcp/sse",
     "type": "sse",
-    "description": "13,859 MCP skills with Sentinel verification"
+    "description": "9,248 MCP skills with Sentinel verification"
   }
 }
 ```
@@ -34,7 +34,7 @@
 2. Click "Submit" en la nav (requiere login)
 3. Datos:
    - Name: `MarketNow Skills Marketplace`
-   - Description: `Search and discover 13,859 MCP-compatible skills with Sentinel security verification`
+   - Description: `Search and discover 9,248 MCP-compatible skills with Sentinel security verification`
    - Endpoint: `https://marketnow.site/mcp/sse`
    - Website: `https://marketnow.site`
 

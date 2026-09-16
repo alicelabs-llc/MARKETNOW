@@ -19,7 +19,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< Updated upstream
 // ─── Cargar skills reales ────────────────────────────────────────────────
 let skills = [];
 try {
@@ -64,162 +63,6 @@ const categoryIndex = Array.from(categoryMap.values())
         ? 'This category contains exactly 30 items, indicating a bulk import from a community awesome-mcp list. Skills are Sentinel-scanned but not individually curated. See /catalog for full disclosure.'
         : null,
     };
-=======
-const categories = [
-  'Network', 'System', 'DevOps', 'Cognitive', 'Finance', 'Media',
-  'Security', 'Data', 'Blockchain', 'IoT', 'Sales', 'Automation',
-  'Research', 'Analysis', 'Voice', 'Messaging', 'AI', 'Compliance',
-  'Legal', 'Healthcare', 'Education', 'Logistics', 'Energy', 'Marketing'
-];
-
-const providers = [
-  'MCP_Core', 'AliceLabs_Nexus', 'AutoGrid', 'NeuralNet', 'DataSynapse',
-  'QuantCore', 'CyberSecOps', 'Web3_Oracle', 'Stitch_Integrated',
-  'Hermes_Protocol', 'VaultAI', 'NexusCRM', 'Meridian_Labs', 'PolyAgent'
-];
-
-const actions = [
-  'Extractor', 'Synthesizer', 'Validator', 'Analyzer', 'Generator',
-  'Optimizer', 'Auditor', 'Connector', 'Parser', 'Monitor',
-  'Orchestrator', 'Translator', 'Enricher', 'Indexer', 'Classifier',
-  'Detector', 'Summarizer', 'Scorer', 'Router', 'Aggregator'
-];
-
-const subjects = [
-  'DOM', 'Financial Reports', 'Smart Contracts', 'Log Files', 'Social Media',
-  'IoT Sensors', 'Git Repositories', 'SQL Databases', 'Cloud Infrastructure',
-  'Voice Audio', 'Images', 'Email Threads', 'Supply Chain', 'User Behavior',
-  'Market Trends', 'Encryption Keys', 'PDF Documents', 'API Responses',
-  'Calendar Events', 'Legal Contracts', 'Medical Records', 'News Feeds',
-  'Satellite Data', 'Network Traffic', 'Code Repositories'
-];
-
-// ─── Precios accesibles para todos los agentes ──────────────────────────────
-// Filosofía: skills que ahorran tiempo y aumentan productividad deben ser
-// asequibles. Escala progresiva sin precios exorbitantes.
-//
-//  FREE    ($0)       → skills community, onboarding
-//  MICRO   ($1–$5)    → utilidades simples, helpers
-//  STARTER ($9–$19)   → productividad esencial
-//  PRO     ($29–$49)  → skills avanzadas con ROI claro
-//  TEAM    ($79–$99)  → skills enterprise-lite para equipos
-//
-// Distribución ponderada: mayoría en rango accesible
-const pricePoints = [
-  // FREE (20% probabilidad) — community & onboarding
-  0, 0, 0, 0,
-  // MICRO (15%) — tareas simples que ahorran minutos
-  1, 2, 3, 5,
-  // STARTER (30%) — productividad diaria esencial
-  9, 9, 14, 19, 19, 19,
-  // PRO (25%) — capacidades avanzadas con ROI comprobable
-  29, 29, 39, 49, 49,
-  // TEAM (10%) — skills para equipos, máximo razonable
-  79, 99
-];
-
-// ─── Seeded pseudo-random para builds deterministas ────────────────────────
-let seed = 42;
-function rand() {
-  seed = (seed * 1664525 + 1013904223) & 0xffffffff;
-  return Math.abs(seed) / 0x7fffffff;
-}
-function pick(arr) { return arr[Math.floor(rand() * arr.length)]; }
-function randInt(min, max) { return Math.floor(rand() * (max - min + 1)) + min; }
-function randFloat(min, max, decimals = 1) {
-  return parseFloat((rand() * (max - min) + min).toFixed(decimals));
-}
-
-// ─── Helpers de valor / productividad ───────────────────────────────────────
-const timeSavings = [
-  '2–5 hrs/week', '3–8 hrs/week', '1–3 hrs/day', '30–90 min/day',
-  '4–10 hrs/week', '1–2 hrs/week', '5–15 min per task', '10–30 min/task',
-  '6–12 hrs/week', '20–45 min/day', '2–4 hrs/day', '1 hr/day'
-];
-
-const valueProps = [
-  'Automates repetitive workflows so your agent focuses on high-value tasks.',
-  'Reduces manual intervention by up to 90% on routine operations.',
-  'Boost team output without scaling headcount.',
-  'Eliminate bottlenecks in your agent pipeline with zero-config setup.',
-  'Plug-and-play productivity — operational in under 5 minutes.',
-  'Turns hours of manual work into seconds of automated execution.',
-  'Works autonomously 24/7 so your agents never miss a beat.',
-  'Proven across thousands of agent deployments with 99%+ success rate.',
-  'Save your team from context-switching — let the skill handle the routine.',
-  'Enterprise-grade automation at a fraction of the cost.'
-];
-
-function getTier(price) {
-  if (price === 0)        return 'FREE';
-  if (price <= 5)         return 'MICRO';
-  if (price <= 19)        return 'STARTER';
-  if (price <= 49)        return 'PRO';
-  return                         'TEAM';
-}
-
-// ─── Generación ───────────────────────────────────────────────────────────
-const TARGET = 13000;
-const skills = [];
-
-for (let i = 0; i < TARGET; i++) {
-  const action   = pick(actions);
-  const subject  = pick(subjects);
-  const cat      = pick(categories);
-  const prov     = pick(providers);
-  const price    = pick(pricePoints);
-  const rating   = randFloat(3.8, 5.0);
-  const trust    = randInt(80, 100);
-  const execs    = randInt(10, 900) + 'K';
-  const roi      = randFloat(1.5, 12.0) + 'x';
-  const latency  = randInt(10, 2500) + 'ms';
-  const success  = randFloat(92.0, 100.0);
-  const idx      = String(i).padStart(5, '0');
-  const id       = `mn-${cat.toLowerCase().substring(0, 3)}-${idx}`;
-
-  const tier       = getTier(price);
-  const timeSaved  = pick(timeSavings);
-  const valueProp  = pick(valueProps);
-
-  skills.push({
-    id,
-    name:        `${subject} ${action} Pro`,
-    tagline:     `Save ${timeSaved} — autonomous ${subject.toLowerCase()} ${action.toLowerCase()} for ${prov.replace(/_/g, ' ')}.`,
-    description: `${valueProp} This MCP skill provides ${action.toLowerCase()} for ${subject.toLowerCase()} data with ${trust}% verified trust score and ${latency} latency. Agents using this skill report saving ${timeSaved} on average. Verified by MarketNow Sentinel.`,
-    category:    cat,
-    provider:    prov,
-    price,
-    tier,
-    timeSaved,
-    rating,
-    executions:  execs,
-    roi,
-    latency,
-    successRate: success,
-    trustScore:  trust,
-    verified:    rand() > 0.1,
-    tags:        [cat.toLowerCase(), action.toLowerCase(), subject.split(' ')[0].toLowerCase(), tier.toLowerCase()],
-    doc: {
-      setup:   `1. Install via MCP CLI: \`npx -y @marketnow-registry/${id}\`\n2. Add to your MCP config\n3. Restart agent cluster.`,
-      usage:   `agent.call("${id}", { target: "input_data", precision: "high" })`,
-      mcpConfig: {
-        mcpServers: {
-          [id]: {
-            command:   "npx",
-            args:      ["-y", `@marketnow-registry/${id}`],
-            env:       { [`${id.toUpperCase().replace(/-/g, '_')}_API_KEY`]: "REQUIRED" },
-            transport: "stdio"
-          }
-        }
-      },
-      requirements: ['Node.js 20+', 'MarketNow License Key'],
-      benchmarks: {
-        peak_tps:   randInt(500, 5000),
-        avg_memory: randInt(64, 512) + 'MB',
-        cold_start: randInt(50, 800) + 'ms'
-      }
-    }
->>>>>>> Stashed changes
   });
 
 // ─── Manifest del API ────────────────────────────────────────────────────
@@ -318,7 +161,7 @@ for (const s of skills) {
     if (/(EXEC|SHELL|RUN|COMMAND)/.test(u)) subprocess = true;
   }
   const install = s.install || '';
-  if (/npx|npm |curl|bash/.test(install)) subprocess = true;
+  if (/npx|npm |uvx|pip |curl|bash/.test(install)) subprocess = true;
   s.permissions = {
     network: [...new Set(network)].slice(0, 10),
     filesystem: [...new Set(filesystem)].slice(0, 10),
@@ -327,17 +170,17 @@ for (const s of skills) {
     disclosure: 'Declarative — inferred from skill metadata. Not enforced at runtime. See /trust for roadmap.',
   };
 
-  // risk_level — Green/Yellow/Red based on permissions
-  // Green: pure prompts, no install command, no network, no subprocess
-  // Yellow: network access or env vars, but no arbitrary code execution
-  // Red: subprocess execution (npx/npm/bash/curl runs arbitrary code)
+  // risk_level — modelo documentado (changelog 5.2.0 + certificación L1):
+  // riesgo de INSTALACIÓN por mecánica (npx/uvx=red | source/remote=yellow | chain=green).
+  // El índice certificado ya asigna risk_level consistente — se PRESERVA.
+  // El fallback por permisos solo aplica a entradas sin risk_level (no debería haber).
   const isPromptOnly = s.id && s.id.startsWith('mn-prompt-');
   const installCmd = s.install || '';
-  // Only count as subprocess if install runs something beyond our wrapper
-  // @marketnow/install is our wrapper — the actual risk is what it installs
-  const hasExternalExec = /npx -y [^@]|npm install|curl |bash |pip install|python |node /.test(installCmd);
-  
-  if (isPromptOnly && !hasExternalExec) {
+  const hasExternalExec = /npx -y |uvx |npm install|curl |bash |pip install|python |node /.test(installCmd);
+
+  if (s.risk_level && ['red', 'yellow', 'green'].includes(s.risk_level)) {
+    // certified value — keep (consistency with /api/certification and badges)
+  } else if (isPromptOnly && !hasExternalExec) {
     s.risk_level = 'green';
   } else if (hasExternalExec || (subprocess && !installCmd.includes('@marketnow/install'))) {
     s.risk_level = 'red';
@@ -354,6 +197,56 @@ for (const s of skills) {
     // mn-prompt-* skills are SYNTHETIC — they should have been removed already.
     // If any remain, mark them as curated (not from GitHub).
     s.source = { type: 'curated', url: null, note: 'Hand-curated by AliceLabs — usually a system prompt, not a code package.' };
+  } else if (s.id && (s.id.startsWith('mn-npm-') || s.id.startsWith('mn-npm2-'))) {
+    // mn-npm-* / mn-npm2-* skills are indexed from the PUBLIC NPM REGISTRY (catalog expansion v1/v4).
+    s.source = { type: 'npm-registry', url: `https://www.npmjs.com/package/${s.name}`, note: 'Indexed from the public npm registry with Sentinel Index Heuristics (age, weekly downloads, typosquat distance, injection markers).' };
+  } else if (s.id && s.id.startsWith('mn-py2-')) {
+    // mn-py2-* are indexed from PYPI (catalog expansion v2) — preserve provenance.
+    s.source = {
+      type: 'pypi',
+      url: existingUrl,
+      note: 'Indexed from PyPI with Sentinel Index Heuristics (package age, GitHub repo link, curated lists, injection markers). Downloads from pypistats when available.',
+      ...(s.source?.pypi_downloads_wk != null ? { pypi_downloads_wk: s.source.pypi_downloads_wk } : {}),
+      ...(s.source?.repo_url ? { repo_url: s.source.repo_url } : {}),
+      ...(s.source?.curated ? { curated: true } : {}),
+    };
+  } else if (s.id && (s.id.startsWith('mn-sm-') || s.id.startsWith('mn-ofr-') || s.id.startsWith('mn-cr-') || s.id.startsWith('mn-pyc-') || s.id.startsWith('mn-sm2-') || s.id.startsWith('mn-dh-') || s.id.startsWith('mn-sub-'))) {
+    // v3/v4 expansion sources — PRESERVE the merged source object as-is:
+    //   mn-sm-* / mn-sm2-*  smithery registry (use_count/verified)
+    //   mn-ofr-* official MCP registry (publisher-verified remotes)
+    //   mn-cr-*  crates.io (downloads)
+    //   mn-pyc-* PyPI community tier (low adoption signal, trust capped 55)
+    //   mn-dh-*  Docker Hub (stars/pulls — docker pull = riesgo amarillo, aislado)
+    //   mn-sub-* community submission (POST /api/submit — Sentinel L1-sub certified)
+    s.source = {
+      ...s.source,
+      url: existingUrl || s.source?.url,
+      ...(s.source?.use_count != null ? { use_count: s.source.use_count } : {}),
+      ...(s.source?.verified != null ? { verified: s.source.verified } : {}),
+      ...(s.source?.downloads != null ? { downloads: s.source.downloads } : {}),
+      ...(s.source?.repo_url ? { repo_url: s.source.repo_url } : {}),
+      ...(s.source?.pypi_downloads_wk != null ? { pypi_downloads_wk: s.source.pypi_downloads_wk } : {}),
+    };
+  } else if (s.id && (s.id.startsWith('mn-gh3-') || s.id.startsWith('mn-aw2-'))) {
+    // mn-gh3-* / mn-aw2-* — batch 2 (2026-09-12): GitHub topic search + awesome-mcp-servers
+    // reconciliation. PRESERVE the merged source object (stars, language, last_push,
+    // verification notes, npm downloads) — only guarantee url is set.
+    s.source = { ...s.source, url: existingUrl || s.source?.url };
+  } else if (s.id && s.id.startsWith('mn-np3-')) {
+    // mn-np3-* — batch 2 (2026-09-12): npm registry (search + 27 vendor packages).
+    // npm-registry provenance, preserve repo_url/downloads from the ingest.
+    s.source = { ...s.source, type: 'npm-registry', url: existingUrl || `https://www.npmjs.com/package/${s.name}` };
+  } else if (s.id && s.id.startsWith('mn-gh2-')) {
+    // mn-gh2-* are from GitHub Search + awesome-mcp-servers curation (expansion v2).
+    s.source = {
+      type: 'github',
+      url: existingUrl,
+      note: 'Indexed via GitHub search + awesome-mcp-servers curation. Sentinel Index Heuristics applied (stars, age, activity, typosquat, injection).',
+      stars: s.source?.stars ?? null,
+      language: s.source?.language ?? null,
+      last_push: s.source?.last_push ?? null,
+      ...(s.source?.curated ? { curated: true } : {}),
+    };
   } else if (s.id && s.id.startsWith('mn-gen-')) {
     // mn-gen-* skills ARE from GitHub repos (imported by massive-indexer.cjs).
     // PRESERVE their source.url — don't overwrite with null.
@@ -374,16 +267,19 @@ for (const s of skills) {
   s.usdc_disclaimer = USDC_DISCLAIMER;
 }
 
-// SPA data
+// SPA data — compacto (sin pretty-print: 66k entradas * ~1.7KB ahorrados)
 fs.writeFileSync(
   path.join(__dirname, 'src', 'data', 'all_skills.json'),
-  JSON.stringify(skills, null, 2)
+  JSON.stringify(skills)
 );
 
 // Public API — accesible por agentes via HTTP GET
+// COMPACTO (v5.5): el dump pretty-printado a 66,496 entradas superaba el limite
+// de 100MB por archivo de Vercel; compacto queda en ~75MB. La paginacion
+// humana vive en /api/skills (endpoint), no en este dump para agentes.
 fs.writeFileSync(
   path.join(__dirname, 'public', 'api', 'skills.json'),
-  JSON.stringify(skills, null, 2)
+  JSON.stringify(skills)
 );
 
 fs.writeFileSync(
@@ -401,6 +297,31 @@ const agentJsonPath = path.join(__dirname, 'public', 'api', 'agent.json');
 if (fs.existsSync(agentJsonPath)) {
   // Update total_skills in agent.json to match current count
   const agentJson = JSON.parse(fs.readFileSync(agentJsonPath, 'utf8'));
+  // sync counts in description strings and metrics (catalog growth)
+  // v5.5: cubre TODOS los conteos historicos del catalogo (9,248 -> 14,517 -> 23,206
+  // -> 40,718 -> 66,496 -> ...) para que el sync no se quede corto nunca mas.
+  const HISTORICAL = [9248, 14517, 23206, 40718, 59846, 57366];
+  const totalStr = skills.length.toLocaleString('en-US');
+  const syncCounts = (o) => {
+    if (o && typeof o === 'object' && !Array.isArray(o)) {
+      const out = {};
+      for (const [k, v] of Object.entries(o)) {
+        if (typeof v === 'number' && HISTORICAL.includes(v)) out[k] = skills.length;
+        else out[k] = syncCounts(v);
+      }
+      return out;
+    }
+    if (Array.isArray(o)) return o.map(syncCounts);
+    if (typeof o === 'string') return v_safeReplace(o);
+    return o;
+  };
+  const v_safeReplace = (s) => {
+    for (const h of HISTORICAL) s = s.replace(new RegExp('\\b' + h.toLocaleString('en-US') + '\\b', 'g'), totalStr);
+    for (const h of HISTORICAL) s = s.replace(new RegExp('\\b' + h + '\\b', 'g'), String(skills.length));
+    return s;
+  };
+  const synced = syncCounts(agentJson);
+  Object.assign(agentJson, synced); // sync de TODO el objeto (descripciones, métricas, stats)
   if (agentJson.pricing) {
     // Recompute average from current skills
     const prices = skills.map(s => s.price).filter(p => typeof p === 'number');
@@ -431,6 +352,12 @@ const liteSkills = skills.map(s => {
     sentinel_score: s.sentinel_score, review_status: s.review_status,
     risk_level: s.risk_level, install: s.install,
     author: s.author, version: s.version, tags: (s.tags || []).slice(0, 5),
+    // Task 44: catalog expansion fields (npm registry crawl)
+    ...(s.source ? { source: s.source } : {}),
+    ...(s.indexed_at ? { indexed_at: s.indexed_at } : {}),
+    ...(s.tier ? { tier: s.tier } : {}),
+    ...(Number.isFinite(s.npm_downloads_wk) ? { npm_downloads_wk: s.npm_downloads_wk } : {}),
+    ...(Number.isFinite(s.trust_score_100) ? { trust_score_100: s.trust_score_100 } : {}),
   };
   // FIX: include translations (language codes only, not full content)
   if (s.translations && typeof s.translations === 'object') {

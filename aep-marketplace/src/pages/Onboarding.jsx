@@ -14,7 +14,7 @@ const CONTENT = {
     runLabel: 'RUN:',
     securityChecksLabel: '6 SECURITY CHECKS:',
     fieldsLabel: 'FIELDS TO FILL:',
-    payoutExampleLabel: 'PAYOUT EXAMPLE ($2.99 skill):',
+    payoutExampleLabel: 'PAYOUT EXAMPLE (all skills free):',
     tipLabel: 'TIP:',
     readyTitle: 'Ready to publish?',
     readyBody:
@@ -37,7 +37,7 @@ const CONTENT = {
       },
       {
         n: 2,
-        title: 'Run Sentinel L1.5 on your server',
+        title: 'Run Sentinel v3.0 on your server',
         what: 'Before submitting, run our open source security scanner. Fix any issues found.',
         command:
           'curl -X POST https://marketnow.site/api/audit-skill \\\n  -H "Content-Type: application/json" \\\n  -d \'{"repo_url": "https://github.com/yourname/your-mcp-server"}\'',
@@ -61,7 +61,7 @@ const CONTENT = {
           'GitHub repo URL (required)',
           'Skill name and description',
           'Category (58 to choose from)',
-          'Price ($0.99–$9.99, or free)',
+          'Price: Free (always)',
           'System prompt (for agents to use your skill)',
           'Setup requirements (env vars, API keys needed)',
         ],
@@ -70,7 +70,7 @@ const CONTENT = {
       {
         n: 4,
         title: 'Wait for review',
-        what: 'Sentinel L1.5 runs automatically. Human review takes 24-48h for paid skills, faster for free.',
+        what: 'Sentinel v3.0 runs automatically. Human review takes 24-48h for paid skills, faster for free.',
         statuses: [
           {
             status: 'auto-scanned',
@@ -91,10 +91,10 @@ const CONTENT = {
         title: 'Earn from sales',
         what: 'When someone buys your skill, you keep 80%. We take 20% commission. Payouts monthly via Stripe Connect.',
         math: [
-          'Skill price: $2.99',
-          'Your earnings: $2.39 (80%)',
-          'MarketNow commission: $0.60 (20%)',
-          'Affiliate commission: $0.15 (5%, if referred)',
+          'Skill price: Free',
+          'Your earnings: 100% (free forever)',
+          'MarketNow commission: none',
+          'Affiliate commission: none (nothing to buy)',
         ],
         link: '/pricing',
         linkText: 'See pricing tiers',
@@ -110,7 +110,7 @@ const CONTENT = {
     runLabel: 'EJECUTAR:',
     securityChecksLabel: '6 VERIFICACIONES DE SEGURIDAD:',
     fieldsLabel: 'CAMPOS A COMPLETAR:',
-    payoutExampleLabel: 'EJEMPLO DE PAGO (skill de $2.99):',
+    payoutExampleLabel: 'EJEMPLO (todas las skills gratis):',
     tipLabel: 'CONSEJO:',
     readyTitle: '¿Listo para publicar?',
     readyBody:
@@ -133,7 +133,7 @@ const CONTENT = {
       },
       {
         n: 2,
-        title: 'Ejecuta Sentinel L1.5 en tu servidor',
+        title: 'Ejecuta Sentinel v3.0 en tu servidor',
         what: 'Antes de enviar, ejecuta nuestro escáner de seguridad de código abierto. Corrige cualquier problema detectado.',
         command:
           'curl -X POST https://marketnow.site/api/audit-skill \\\n  -H "Content-Type: application/json" \\\n  -d \'{"repo_url": "https://github.com/yourname/your-mcp-server"}\'',
@@ -157,7 +157,7 @@ const CONTENT = {
           'URL del repo de GitHub (obligatorio)',
           'Nombre y descripción de la skill',
           'Categoría (58 para elegir)',
-          'Precio ($0.99–$9.99, o gratis)',
+          'Precio: Gratis (siempre)',
           'System prompt (para que los agentes usen tu skill)',
           'Requisitos de configuración (env vars, API keys necesarias)',
         ],
@@ -166,7 +166,7 @@ const CONTENT = {
       {
         n: 4,
         title: 'Espera la revisión',
-        what: 'Sentinel L1.5 se ejecuta automáticamente. La revisión humana tarda 24-48h para skills de pago, menos para las gratuitas.',
+        what: 'Sentinel v3.0 se ejecuta automáticamente. La revisión humana tarda 24-48h para skills de pago, menos para las gratuitas.',
         statuses: [
           {
             status: 'auto-scanned',
@@ -187,10 +187,10 @@ const CONTENT = {
         title: 'Gana con tus ventas',
         what: 'Cuando alguien compra tu skill, tú te quedas con el 80%. Nosotros cobramos un 20% de comisión. Pagos mensuales vía Stripe Connect.',
         math: [
-          'Precio de la skill: $2.99',
-          'Tus ganancias: $2.39 (80%)',
-          'Comisión MarketNow: $0.60 (20%)',
-          'Comisión de afiliado: $0.15 (5%, si fue referido)',
+          'Precio de la skill: Gratis',
+          'Tus ganancias: 100% (gratis para siempre)',
+          'Comisión MarketNow: ninguna',
+          'Comisión de afiliado: ninguna (no hay nada que comprar)',
         ],
         link: '/pricing',
         linkText: 'Ver niveles de precios',
@@ -206,7 +206,7 @@ const CONTENT = {
     runLabel: 'EXECUTAR:',
     securityChecksLabel: '6 VERIFICAÇÕES DE SEGURANÇA:',
     fieldsLabel: 'CAMPOS A PREENCHER:',
-    payoutExampleLabel: 'EXEMPLO DE PAGAMENTO (skill de $2.99):',
+    payoutExampleLabel: 'EXEMPLO (todas as skills grátis):',
     tipLabel: 'DICA:',
     readyTitle: 'Pronto para publicar?',
     readyBody:
@@ -229,7 +229,7 @@ const CONTENT = {
       },
       {
         n: 2,
-        title: 'Rode o Sentinel L1.5 no seu servidor',
+        title: 'Rode o Sentinel v3.0 no seu servidor',
         what: 'Antes de enviar, rode nosso scanner de segurança open source. Corrija quaisquer problemas encontrados.',
         command:
           'curl -X POST https://marketnow.site/api/audit-skill \\\n  -H "Content-Type: application/json" \\\n  -d \'{"repo_url": "https://github.com/yourname/your-mcp-server"}\'',
@@ -253,7 +253,7 @@ const CONTENT = {
           'URL do repo do GitHub (obrigatório)',
           'Nome e descrição da skill',
           'Categoria (58 para escolher)',
-          'Preço ($0.99–$9.99, ou grátis)',
+          'Preço: Grátis (sempre)',
           'System prompt (para agentes usarem sua skill)',
           'Requisitos de setup (env vars, API keys necessárias)',
         ],
@@ -262,7 +262,7 @@ const CONTENT = {
       {
         n: 4,
         title: 'Aguarde a revisão',
-        what: 'O Sentinel L1.5 roda automaticamente. A revisão humana leva 24-48h para skills pagas, menos para gratuitas.',
+        what: 'O Sentinel v3.0 roda automaticamente. A revisão humana leva 24-48h para skills pagas, menos para gratuitas.',
         statuses: [
           {
             status: 'auto-scanned',
@@ -283,10 +283,10 @@ const CONTENT = {
         title: 'Ganhe com as vendas',
         what: 'Quando alguém compra sua skill, você fica com 80%. Nós cobramos 20% de comissão. Pagamentos mensais via Stripe Connect.',
         math: [
-          'Preço da skill: $2.99',
-          'Seus ganhos: $2.39 (80%)',
-          'Comissão MarketNow: $0.60 (20%)',
-          'Comissão de afiliado: $0.15 (5%, se indicado)',
+          'Preço da skill: Grátis',
+          'Seus ganhos: 100% (grátis para sempre)',
+          'Comissão MarketNow: nenhuma',
+          'Comissão de afiliado: nenhuma (não há nada para comprar)',
         ],
         link: '/pricing',
         linkText: 'Ver faixas de preços',
@@ -301,7 +301,7 @@ const CONTENT = {
     runLabel: '运行：',
     securityChecksLabel: '6 项安全检查：',
     fieldsLabel: '需填写字段：',
-    payoutExampleLabel: '收益示例（$2.99 的 skill）：',
+    payoutExampleLabel: '收益示例（所有技能免费）：',
     tipLabel: '提示：',
     readyTitle: '准备好发布了吗？',
     readyBody:
@@ -324,7 +324,7 @@ const CONTENT = {
       },
       {
         n: 2,
-        title: '在你的 server 上运行 Sentinel L1.5',
+        title: '在你的 server 上运行 Sentinel v3.0',
         what: '提交前，运行我们的开源安全扫描器。修复发现的所有问题。',
         command:
           'curl -X POST https://marketnow.site/api/audit-skill \\\n  -H "Content-Type: application/json" \\\n  -d \'{"repo_url": "https://github.com/yourname/your-mcp-server"}\'',
@@ -348,7 +348,7 @@ const CONTENT = {
           'GitHub 仓库 URL（必填）',
           'Skill 名称与描述',
           '分类（58 个可选）',
-          '价格（$0.99–$9.99，或免费）',
+          '价格：免费（永远）',
           'System prompt（供 agents 使用你的 skill）',
           '配置要求（所需 env vars、API keys）',
         ],
@@ -357,7 +357,7 @@ const CONTENT = {
       {
         n: 4,
         title: '等待审核',
-        what: 'Sentinel L1.5 自动运行。付费 skill 人工审核约 24-48 小时，免费 skill 更快。',
+        what: 'Sentinel v3.0 自动运行。付费 skill 人工审核约 24-48 小时，免费 skill 更快。',
         statuses: [
           {
             status: 'auto-scanned',
@@ -378,10 +378,10 @@ const CONTENT = {
         title: '从销售中赚取收益',
         what: '有人购买你的 skill 时，你保留 80%。我们收取 20% 佣金。每月通过 Stripe Connect 付款。',
         math: [
-          'Skill 价格：$2.99',
-          '你的收益：$2.39（80%）',
-          'MarketNow 佣金：$0.60（20%）',
-          '联盟佣金：$0.15（5%，若为推荐）',
+          'Skill 价格：免费',
+          '你的收益：100%（永久免费）',
+          'MarketNow 佣金：无',
+          '联盟佣金：无（没有可购买的东西）',
         ],
         link: '/pricing',
         linkText: '查看定价档位',
@@ -397,7 +397,7 @@ const CONTENT = {
     runLabel: 'EXÉCUTER :',
     securityChecksLabel: '6 VÉRIFICATIONS DE SÉCURITÉ :',
     fieldsLabel: 'CHAMPS À REMPLIR :',
-    payoutExampleLabel: 'EXEMPLE DE PAIEMENT (skill à $2.99) :',
+    payoutExampleLabel: 'EXEMPLE (toutes les skills gratuites) :',
     tipLabel: 'CONSEIL :',
     readyTitle: 'Prêt à publier ?',
     readyBody:
@@ -420,7 +420,7 @@ const CONTENT = {
       },
       {
         n: 2,
-        title: 'Exécutez Sentinel L1.5 sur votre serveur',
+        title: 'Exécutez Sentinel v3.0 sur votre serveur',
         what: 'Avant de soumettre, lancez notre scanner de sécurité open source. Corrigez tout problème détecté.',
         command:
           'curl -X POST https://marketnow.site/api/audit-skill \\\n  -H "Content-Type: application/json" \\\n  -d \'{"repo_url": "https://github.com/yourname/your-mcp-server"}\'',
@@ -444,7 +444,7 @@ const CONTENT = {
           'URL du repo GitHub (obligatoire)',
           'Nom et description de la skill',
           'Catégorie (58 au choix)',
-          'Prix ($0.99–$9.99, ou gratuit)',
+          'Prix : Gratuit (toujours)',
           'System prompt (pour que les agents utilisent votre skill)',
           'Prérequis de configuration (env vars, API keys nécessaires)',
         ],
@@ -453,7 +453,7 @@ const CONTENT = {
       {
         n: 4,
         title: 'Attendez la revue',
-        what: 'Sentinel L1.5 s\'exécute automatiquement. La revue humaine prend 24-48h pour les skills payantes, moins pour les gratuites.',
+        what: 'Sentinel v3.0 s\'exécute automatiquement. La revue humaine prend 24-48h pour les skills payantes, moins pour les gratuites.',
         statuses: [
           {
             status: 'auto-scanned',
@@ -474,10 +474,10 @@ const CONTENT = {
         title: 'Gagnez avec vos ventes',
         what: 'Quand quelqu\'un achète votre skill, vous gardez 80%. Nous prenons 20% de commission. Paiements mensuels via Stripe Connect.',
         math: [
-          'Prix de la skill : $2.99',
-          'Vos gains : $2.39 (80%)',
-          'Commission MarketNow : $0.60 (20%)',
-          'Commission d\'affiliation : $0.15 (5%, si parrainé)',
+          'Prix de la skill : Gratuit',
+          'Vos gains : 100% (gratuit pour toujours)',
+          'Commission MarketNow : aucune',
+          'Commission d\'affiliation : aucune (rien à acheter)',
         ],
         link: '/pricing',
         linkText: 'Voir les paliers de prix',

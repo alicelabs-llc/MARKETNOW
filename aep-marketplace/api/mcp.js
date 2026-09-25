@@ -368,7 +368,7 @@ async function handleRequest(method, params, id) {
         }
 
         default:
-          return { error: { code: -32601, message: `Unknown tool: ${toolName}` } };
+          return rpcError(-32601, `Unknown tool: ${toolName}`);
       }
     }
 
@@ -376,7 +376,7 @@ async function handleRequest(method, params, id) {
       return {};
 
     default:
-      return { error: { code: -32601, message: `Unknown method: ${method}` } };
+      return rpcError(-32601, `Method not found: ${method}`);
   }
 }
 

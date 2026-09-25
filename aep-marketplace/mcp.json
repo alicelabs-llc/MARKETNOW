@@ -2,7 +2,7 @@
   "mcpServers": {
     "marketnow": {
       "url": "https://marketnow.site/api/mcp",
-      "type": "sse"
+      "type": "streamable-http"
     }
   }
 }

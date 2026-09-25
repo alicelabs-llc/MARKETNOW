@@ -320,6 +320,37 @@ if (fs.existsSync(agentJsonPath)) {
     for (const h of HISTORICAL) s = s.replace(new RegExp('\\b' + h + '\\b', 'g'), String(skills.length));
     return s;
   };
+  // Keep the machine-readable agent contract aligned with the canonical remote MCP endpoint.
+  // Do not advertise legacy SSE/WebSocket endpoints or the old 4-tool contract.
+  agentJson.capabilities = agentJson.capabilities || {};
+  agentJson.capabilities.protocols = agentJson.capabilities.protocols || {};
+  agentJson.capabilities.protocols.mcp = {
+    versions: ["2025-03-26"],
+    transport: "streamable-http",
+    endpoint: "https://marketnow.site/api/mcp",
+    tools: [
+      "marketnow_verify_trust",
+      "marketnow_translate_credential",
+      "marketnow_list_formats",
+      "marketnow_get_pipeline",
+      "marketnow_check_domain",
+      "marketnow_search_skills",
+      "marketnow_check_revocation",
+      "marketnow_fingerprint_tool",
+      "marketnow_submit_skill"
+    ]
+  };
+  agentJson.metrics = agentJson.metrics || {};
+  agentJson.metrics.skills_indexed = skills.length;
+  agentJson.metrics.skills_tracked_all_sources = 133426;
+  agentJson.metrics.as_of = new Date().toISOString();
+  agentJson.api_notes = {
+    ...(agentJson.api_notes || {}),
+    remote_mcp: "https://marketnow.site/api/mcp",
+    remote_mcp_transport: "streamable-http",
+    remote_mcp_tools: 9,
+    stdio_mcp: "npx -y marketnow-mcp"
+  };
   const synced = syncCounts(agentJson);
   Object.assign(agentJson, synced); // sync de TODO el objeto (descripciones, métricas, stats)
   if (agentJson.pricing) {

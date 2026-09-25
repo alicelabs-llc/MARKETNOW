@@ -68,22 +68,21 @@ const categoryIndex = Array.from(categoryMap.values())
 // ─── Manifest del API ────────────────────────────────────────────────────
 const apiManifest = {
   name:        "MarketNow Skills API",
-  version:     "2.0.0",
-  description: "Open marketplace for AI agent skills — MCP compatible. Every skill has a real description from its source repository.",
-  base_url:    "https://www.marketnow.site/api",
+  version:     "2.1.0",
+  description: "Open index of AI-agent skills and MCP servers with source metadata and trust signals. MCP compatible.",
+  base_url:    "https://marketnow.site/api",
   total_skills: skills.length,
   categories_count: categoryIndex.length,
   endpoints: {
-    all_skills:  "/api/skills.json",
+    skills:      "/api/skills",
     categories:  "/api/categories.json",
     manifest:    "/api/manifest.json",
     stats:       "/api/skills_stats.json",
   },
   usage: {
-    fetch_all:    "GET https://www.marketnow.site/api/skills.json",
-    by_category:  "Filter client-side: skills.filter(s => s.category === 'Finance')",
-    by_tag:       "Filter client-side: skills.filter(s => s.tags.includes('mcp'))",
-    search:       "Filter client-side: skills.filter(s => s.name.toLowerCase().includes(query))",
+    fetch_page:   "GET https://marketnow.site/api/skills?page=1&limit=100",
+    by_category:  "Use /api/skills with category filtering when supported",
+    search:       "Use /api/mcp with marketnow_search_skills for agent-native search",
   },
   generated_at: new Date().toISOString(),
 };
@@ -295,8 +294,30 @@ fs.writeFileSync(
 // Copy agent.json (machine-readable instructions for autonomous agents) if it exists
 const agentJsonPath = path.join(__dirname, 'public', 'api', 'agent.json');
 if (fs.existsSync(agentJsonPath)) {
-  // Update total_skills in agent.json to match current count
+  // Rebuild mutable public metadata from a small canonical contract.
+  // Historical pricing, wallet, audit and referral claims must not survive regeneration.
   const agentJson = JSON.parse(fs.readFileSync(agentJsonPath, 'utf8'));
+  delete agentJson.economy;
+  delete agentJson.blockchain;
+  delete agentJson.audit_applied;
+  delete agentJson.pricing_source_of_truth;
+  delete agentJson.buyer_pricing;
+  agentJson.agent = {
+    name: "MarketNow — Security Infrastructure for AI Agents",
+    description: "Machine-readable discovery and trust infrastructure for AI agents. MarketNow indexes MCP servers and skills and exposes Sentinel/ATC trust signals; catalog entries are not guarantees of safety.",
+    url: "https://marketnow.site",
+    version: "5.0.0"
+  };
+  if (agentJson.capabilities?.protocols?.a2a?.services) {
+    delete agentJson.capabilities.protocols.a2a.services;
+  }
+  agentJson.capabilities = agentJson.capabilities || {};
+  agentJson.capabilities.atc = {
+    version: "1.0.0",
+    endpoint: "https://marketnow.site/api/atc",
+    spec: "https://marketnow.site/atc-spec.json",
+    description: "Agent Trust Card for machine-readable identity and trust signals."
+  };
   // sync counts in description strings and metrics (catalog growth)
   // v5.5: cubre TODOS los conteos historicos del catalogo (9,248 -> 14,517 -> 23,206
   // -> 40,718 -> 66,496 -> ...) para que el sync no se quede corto nunca mas.
@@ -340,10 +361,22 @@ if (fs.existsSync(agentJsonPath)) {
       "marketnow_submit_skill"
     ]
   };
-  agentJson.metrics = agentJson.metrics || {};
-  agentJson.metrics.skills_indexed = skills.length;
-  agentJson.metrics.skills_tracked_all_sources = 133426;
-  agentJson.metrics.as_of = new Date().toISOString();
+  agentJson.security = {
+    index_certified_entries: skills.length,
+    certificate_scores_available: 16366,
+    npm_sentinel_scan: {
+      tarballs: 2839,
+      rules: 29,
+      clean: 885,
+      warning: 791,
+      error: 1156
+    }
+  };
+  agentJson.metrics = {
+    skills_indexed: skills.length,
+    skills_tracked_all_sources: 133426,
+    as_of: new Date().toISOString()
+  };
   agentJson.api_notes = {
     ...(agentJson.api_notes || {}),
     remote_mcp: "https://marketnow.site/api/mcp",

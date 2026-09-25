@@ -26,13 +26,17 @@ const SERVER_CAPABILITIES = {
 const TOOLS = [
   {
     name: "marketnow_verify_trust",
-    description: "Verify any AI agent credential (JWT, W3C VC, MCP Card, ATC v3, A2A, EAT-AI, ZTA, X.509) through the UTA 12-stage verification pipeline. Returns validity, format, trust score, and issues.",
+    description: "Verify an AI-agent credential (JWT, W3C VC, MCP Card, ATC v3, A2A, EAT-AI, ZTA, X.509) through the UTA 12-stage verification pipeline. Returns validity, detected format, trust score, and issues. Custom CA verification is supported when ca_public_key is supplied.",
     inputSchema: {
       type: "object",
       properties: {
         credential: {
           type: "string",
-          description: "The credential to verify (JSON string or JWT)"
+          description: "The credential to verify (JSON string, JWT, or X.509 PEM)"
+        },
+        ca_public_key: {
+          type: "string",
+          description: "Optional PEM-encoded public CA key for verifying credentials issued by a caller-controlled trust anchor"
         }
       },
       required: ["credential"]
@@ -40,12 +44,12 @@ const TOOLS = [
   },
   {
     name: "marketnow_translate_credential",
-    description: "Translate a credential between 8 formats (ATC v3, JWT, W3C VC, A2A, EAT-AI, ZTA, MCP Card, X.509). Lossless conversion through Universal Trust Schema (UTS).",
+    description: "Translate credentials between 8 supported formats (ATC v3, JWT, W3C VC, A2A, EAT-AI, ZTA, MCP Card, X.509) through the Universal Trust Schema (UTS). Conversion preserves supported semantics; format-specific fields may not map one-to-one.",
     inputSchema: {
       type: "object",
       properties: {
-        from: { type: "string", description: "Source format: atc-v3, jwt, w3c-vc, a2a-card, mcp-card, x509" },
-        to: { type: "string", description: "Target format: atc-v3, jwt, w3c-vc, a2a-card, mcp-card, x509" },
+        from: { type: "string", description: "Source format: atc-v3, jwt, w3c-vc, a2a-card, eat-ai, zta, mcp-card, x509" },
+        to: { type: "string", description: "Target format: atc-v3, jwt, w3c-vc, a2a-card, eat-ai, zta, mcp-card, x509" },
         payload: { type: "string", description: "The credential JSON to translate" }
       },
       required: ["from", "to", "payload"]
@@ -74,7 +78,7 @@ const TOOLS = [
   },
   {
     name: "marketnow_search_skills",
-    description: "Search the MarketNow registry of indexed MCP servers (69k+ across GitHub, npm and PyPI, security-first scored).",
+    description: "Search the MarketNow registry of indexed MCP servers. Supports query and category filters and returns a bounded result set with source and trust metadata.",
     inputSchema: {
       type: "object",
       properties: {
@@ -298,7 +302,7 @@ async function handleRequest(method, params, id) {
         }
 
         case "marketnow_search_skills": {
-          const resp = await fetch(`https://www.marketnow.site/api/skills.json?q=${encodeURIComponent(args.query || "")}`);
+          const resp = await fetch(`https://www.marketnow.site/api/skills?q=${encodeURIComponent(args.query || "")}&category=${encodeURIComponent(args.category || "")}&limit=10&page=1`);
           const data = await resp.json();
           const skills = Array.isArray(data) ? data.slice(0, 10) : (data.skills || []).slice(0, 10);
           return {

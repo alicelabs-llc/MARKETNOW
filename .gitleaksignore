@@ -23,10 +23,8 @@ scripts/e2e-*.mjs
 
 # Documentation with example tokens
 HONEYPOTS.md
-*.md
 
 # GitHub Actions workflows with example tokens
-.github/workflows/*.yml
 
 # Env example files
 .env.example

@@ -1,125 +1,42 @@
 {
   "$schema": "https://marketnow.site/.well-known/mcp.schema.json",
   "name": "marketnow",
-  "description": "MarketNow — Trust layer for agent commerce. 69,077 index-certified MCP-compatible skills (133,426 total tracked). Sentinel L1 index certification on every entry, L2 deep-scan on top npm tarballs, x402 payments (HTTP 402 + USDC on Base), and AP2 delegated mandates. AliceLabs LLC Proprietary. Maintained by AliceLabs LLC (Wyoming, USA).",
-  "version": "1.4.0",
+  "description": "MarketNow — security and trust infrastructure for AI agents. The remote MCP endpoint exposes the MarketNow trust, discovery, fingerprinting and submission tools.",
+  "version": "1.11.0",
   "homepage": "https://marketnow.site",
   "repository": "https://github.com/alicelabs-llc/marketnow",
-  "npm_package": "marketnow-mcp",
-  "npm_url": "https://www.npmjs.com/package/marketnow-mcp",
-  "install": "npx -y marketnow-mcp",
-  "transport": {
-    "type": "http+sse",
-    "http_url": "https://marketnow.site/api/mcp",
-    "stdio_command": "npx -y marketnow-mcp",
-    "sse_url": "https://marketnow.site/api/mcp",
-    "note": "Supports both HTTP (SSE + JSON-RPC) and stdio transport."
+  "remote_mcp": {
+    "url": "https://marketnow.site/api/mcp",
+    "transport": "streamable-http",
+    "tools": 9
+  },
+  "stdio": {
+    "package": "marketnow-mcp",
+    "install": "npx -y marketnow-mcp"
   },
   "tools": [
-    {
-      "name": "search_skills",
-      "description": "Search skills by query, category, or max price"
-    },
-    {
-      "name": "get_skill",
-      "description": "Get full details of a specific skill by ID or slug"
-    },
-    {
-      "name": "list_categories",
-      "description": "List all 16 categories with counts"
-    },
-    {
-      "name": "get_manifest",
-      "description": "Get marketplace metadata (69,077 skills, pricing tiers, commission)"
-    },
-    {
-      "name": "get_install_command",
-      "description": "Get the npx install command for a skill"
-    }
+    {"name":"marketnow_verify_trust","description":"Verify an AI-agent credential through the UTA verification pipeline."},
+    {"name":"marketnow_translate_credential","description":"Translate a credential between supported trust formats."},
+    {"name":"marketnow_list_formats","description":"List supported credential formats."},
+    {"name":"marketnow_get_pipeline","description":"Return the verification pipeline details."},
+    {"name":"marketnow_check_domain","description":"Check a domain with the MarketNow scam checker."},
+    {"name":"marketnow_search_skills","description":"Search the MarketNow indexed skill registry."},
+    {"name":"marketnow_check_revocation","description":"Check ATC or CA-key revocation status."},
+    {"name":"marketnow_fingerprint_tool","description":"Fingerprint MCP tool definitions and detect tool-surface drift."},
+    {"name":"marketnow_submit_skill","description":"Submit a skill for MarketNow validation and review."}
   ],
-  "config_examples": {
-    "claude_desktop": {
-      "mcpServers": {
-        "marketnow": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "marketnow-mcp"
-          ]
-        }
-      }
-    },
-    "cursor": {
-      "mcpServers": {
-        "marketnow": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "marketnow-mcp"
-          ]
-        }
-      }
-    },
-    "cline": {
-      "mcpServers": {
-        "marketnow": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "marketnow-mcp"
-          ]
-        }
-      }
-    }
+  "catalog": {
+    "index_certified_skills": 69077,
+    "tracked_entries": 133426,
+    "category_count": 16
   },
-  "marketplace_stats": {
-    "total_skills": 69077,
-    "categories": 58,
-    "price_min_usd": 0.99,
-    "price_max_usd": 9.99,
-    "price_avg_usd": 3.8,
-    "currency": "USD",
-    "payment_model": "one-time",
-    "no_subscriptions": true,
-    "no_credits": true
-  },
-  "verification": {
-    "sentinel_l1": "Automated static analysis on every submission (repo exists, README, package manifest, license, no hardcoded secrets, no malicious patterns)",
-    "human_review": "Manual review by MarketNow team before listing (24-48h)",
-    "score_range": "0-10 (minimum 4/6 required to list)"
-  },
-  "security": {
-    "csp": true,
-    "hsts": true,
-    "x_frame_options": "DENY",
-    "cors": "Open for GET /api/* read endpoints",
-    "no_secrets_in_client": true
-  },
-  "listings": [
-    {
-      "directory": "mcp.so",
-      "url": "https://mcp.so/server/marketnow-mcp---aep-agent-exchange-protocol/edgarfloresguerra2011-a11y",
-      "status": "listed",
-      "note": "Listed but data is outdated (shows 9,248 skills, mentions crypto payments that don't exist). Contact mcp.so to update."
-    },
-    {
-      "directory": "glama.ai",
-      "url": "https://glama.ai/mcp/connectors?query=MarketNow+MCP",
-      "status": "listed"
-    },
-    {
-      "directory": "npm",
-      "url": "https://www.npmjs.com/package/marketnow-mcp",
-      "status": "published",
-      "version": "1.0.0"
-    }
-  ],
-  "contact": {
-    "email": "info@alicelabs.site",
-    "github": "edgarfloresguerra2011-a11y"
+  "discovery": {
+    "agent": "https://marketnow.site/api/agent.json",
+    "manifest": "https://marketnow.site/api/manifest.json"
   },
   "license": "MNNC-1.0",
-  "maintainer": "AliceLabs LLC (Wyoming, USA, 2025)",
-  "founder": "Edison Flores",
-  "generated_at": "2026-07-04T00:00:00Z"
+  "maintainer": "AliceLabs LLC",
+  "contact": {
+    "email": "info@alicelabs.site"
+  }
 }

@@ -25,27 +25,27 @@
     },
     {
       "source": "/api/execute",
-      "destination": "/api/agent-economy?_mode=execute"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/stacks",
-      "destination": "/api/agent-economy?_mode=stacks"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/stream",
-      "destination": "/api/agent-economy?_mode=stream"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/interceptor",
-      "destination": "/api/agent-economy?_mode=interceptor"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/skills/:id",
-      "destination": "/api/search?_mode=detail"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/recommend",
-      "destination": "/api/search?_mode=recommend"
+      "destination": "/api/not-found"
     },
     {
       "source": "/s/:slug",
@@ -65,19 +65,19 @@
     },
     {
       "source": "/api/agent-analytics",
-      "destination": "/api/security?view=analytics"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/quarantine",
-      "destination": "/api/security?view=quarantine"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/honeypot",
-      "destination": "/api/security?view=honeypot"
+      "destination": "/api/not-found"
     },
     {
       "source": "/api/threat-intel",
-      "destination": "/api/security?view=threat-intel"
+      "destination": "/api/not-found"
     },
     {
       "source": "/((?!api/|uta/|trust/|policies/|security/|for-agents|landing-pages/|tools/|acp|atc|status|\\.well-known/).*)",

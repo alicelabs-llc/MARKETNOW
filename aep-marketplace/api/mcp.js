@@ -221,6 +221,12 @@ function fingerprintTools(tools, pinned) {
   return result;
 }
 
+// JSON-RPC error marker. The HTTP wrapper converts this to a top-level
+// JSON-RPC "error" member instead of incorrectly nesting it under "result".
+function rpcError(code, message, data) {
+  return { __jsonrpc_error: { code, message, ...(data === undefined ? {} : { data }) } };
+}
+
 // Handle JSON-RPC requests
 async function handleRequest(method, params, id) {
   switch (method) {
@@ -408,38 +414,79 @@ export default async function handler(req, res) {
   // POST: handle JSON-RPC
   if (req.method === "POST") {
     try {
-      const body = req.body;
-      
-      // Handle batch requests
-      if (Array.isArray(body)) {
-        const results = [];
-        for (const req of body) {
-          const result = await handleRequest(req.method, req.params, req.id);
-          if (result !== null) {
-            results.push({ jsonrpc: "2.0", result, id: req.id });
-          }
+      let body = req.body;
+      if (typeof body === "string") {
+        try {
+          body = JSON.parse(body);
+        } catch {
+          return res.status(200).json({
+            jsonrpc: "2.0",
+            error: { code: -32700, message: "Parse error" },
+            id: null
+          });
         }
-        return res.status(200).json(results);
       }
 
-      // Single request
+      const validateRequest = (item) => {
+        if (!item || typeof item !== "object" || Array.isArray(item)) {
+          return rpcError(-32600, "Invalid Request");
+        }
+        if (item.jsonrpc !== "2.0" || typeof item.method !== "string" || item.method.length === 0) {
+          return rpcError(-32600, "Invalid Request");
+        }
+        return null;
+      };
+
+      const buildResponse = (item, result) => {
+        if (item.id === undefined) return null; // notification
+        if (result && result.__jsonrpc_error) {
+          return { jsonrpc: "2.0", error: result.__jsonrpc_error, id: item.id };
+        }
+        return { jsonrpc: "2.0", result, id: item.id };
+      };
+
+      // Handle batch requests. An empty batch is an invalid request.
+      if (Array.isArray(body)) {
+        if (body.length === 0) {
+          return res.status(200).json({
+            jsonrpc: "2.0",
+            error: { code: -32600, message: "Invalid Request" },
+            id: null
+          });
+        }
+        const results = [];
+        for (const item of body) {
+          const validationError = validateRequest(item);
+          const result = validationError
+            ? validationError
+            : await handleRequest(item.method, item.params, item.id);
+          const response = buildResponse(item, result);
+          if (response) results.push(response);
+        }
+        return results.length
+          ? res.status(200).json(results)
+          : res.status(202).end();
+      }
+
+      const validationError = validateRequest(body);
+      if (validationError) {
+        return res.status(200).json({
+          jsonrpc: "2.0",
+          error: validationError.__jsonrpc_error,
+          id: body && typeof body === "object" && "id" in body ? body.id : null
+        });
+      }
+
       const result = await handleRequest(body.method, body.params, body.id);
-      
-      // Notification (no id) — no response
-      if (body.id === undefined || body.id === null) {
-        return res.status(202).end();
-      }
-
-      return res.status(200).json({
-        jsonrpc: "2.0",
-        result,
-        id: body.id
-      });
+      const response = buildResponse(body, result);
+      return response
+        ? res.status(200).json(response)
+        : res.status(202).end();
     } catch (error) {
       return res.status(200).json({
         jsonrpc: "2.0",
         error: { code: -32603, message: error.message },
-        id: req.body?.id || null
+        id: null
       });
     }
   }

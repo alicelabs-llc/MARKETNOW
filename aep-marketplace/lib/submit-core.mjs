@@ -220,10 +220,27 @@ function scanText(blob, patterns, findings, source) {
   }
 }
 
-async function reachabilityProbe(url) {
-  if (!/^https:\/\//i.test(url)) return { check: 'REACHABILITY', severity: 'medium', source: 'test.url', reason: 'test url must be https' };
+function isSafeProbeHost(rawUrl, allowedHosts = []) {
   try {
-    const r = await fetch(url, { method: 'GET', signal: AbortSignal.timeout(PROBE_TIMEOUT_MS), redirect: 'follow' });
+    const u = new URL(String(rawUrl));
+    if (u.protocol !== 'https:') return false;
+    const host = u.hostname.toLowerCase();
+    if (host === 'localhost' || host.endsWith('.localhost') || host === 'metadata.google.internal' || host === 'instance-data.ec2.internal') return false;
+    if (/^(127\.|10\.|192\.168\.|169\.254\.|0\.)/.test(host)) return false;
+    const parts = host.split('.');
+    if (parts.length === 4 && parts.every(p => /^\d+$/.test(p))) return false;
+    return allowedHosts.length === 0 || allowedHosts.some(h => host === h || host.endsWith('.' + h));
+  } catch {
+    return false;
+  }
+}
+
+async function reachabilityProbe(url) {
+  if (!isSafeProbeHost(url)) {
+    return { check: 'REACHABILITY', severity: 'low', source: 'test.url', reason: 'test URL was not probed; only explicitly allowed public hosts are fetched' };
+  }
+  try {
+    const r = await fetch(url, { method: 'GET', signal: AbortSignal.timeout(PROBE_TIMEOUT_MS), redirect: 'manual' });
     if (r.status >= 200 && r.status < 500) return { ok: true, status: r.status };
     return { check: 'REACHABILITY', severity: 'medium', source: 'test.url', reason: `probe returned HTTP ${r.status}` };
   } catch (e) {
@@ -307,7 +324,13 @@ async function verifyClaims(skill) {
   const claims = { repo_url: null, install: null, homepage: null, findings: [] };
 
   if (skill.repo_url && /^https?:\/\//i.test(String(skill.repo_url))) {
-    const p = await probeClaim(String(skill.repo_url));
+    const repoUrl = String(skill.repo_url);
+    const repoProbeAllowed = isSafeProbeHost(repoUrl, ['github.com', 'gitlab.com', 'bitbucket.org', 'codeberg.org']);
+    if (!repoProbeAllowed) {
+      claims.repo_url = { url: repoUrl.slice(0, 120), ok: false, status: 0 };
+      claims.findings.push({ check: 'CLAIMS', severity: 'low', source: 'repo_url', reason: 'repo URL not probed because its host is outside the public repository allowlist' });
+    } else {
+    const p = await probeClaim(repoUrl);
     claims.repo_url = { url: String(skill.repo_url).slice(0, 120), ...p };
     if (p.status === 404 || p.status === 410) {
       claims.findings.push({ check: 'CLAIMS', severity: 'high', source: 'repo_url', reason: `claimed repo does not exist (HTTP ${p.status}) — fix the URL or remove the field`, match: String(skill.repo_url).slice(0, 60) });
@@ -315,6 +338,7 @@ async function verifyClaims(skill) {
       claims.findings.push({ check: 'CLAIMS', severity: 'medium', source: 'repo_url', reason: `repo unreachable from scanner${p.err ? ' (' + p.err + ')' : ''}` });
     } else if (p.status === 403 || p.status === 429) {
       claims.findings.push({ check: 'CLAIMS', severity: 'low', source: 'repo_url', reason: `repo probe blocked (HTTP ${p.status}) — claim not verified` });
+    }
     }
   }
 
@@ -332,11 +356,7 @@ async function verifyClaims(skill) {
   }
 
   if (skill.homepage && /^https?:\/\//i.test(String(skill.homepage))) {
-    const p = await probeClaim(String(skill.homepage));
-    claims.homepage = { url: String(skill.homepage).slice(0, 120), ok: p.ok, status: p.status };
-    if (p.status === 404 || p.status === 410) {
-      claims.findings.push({ check: 'CLAIMS', severity: 'medium', source: 'homepage', reason: 'homepage does not resolve (HTTP 404) — warning only' });
-    }
+    claims.homepage = { url: String(skill.homepage).slice(0, 120), probed: false };
   }
   return claims;
 }
@@ -419,9 +439,13 @@ export async function processSubmission(payload, { dryRun = false, remoteIp = 'u
     findings.push({ check: 'DEDUP', severity: 'high', source: 'name', reason: `"${skill.name}" already exists in the catalog (${catalog.size.toLocaleString()} entries) — submit an update instead (version bump + repo_url)` });
   }
 
-  // 5. reachability opcional
+  // 5. reachability: never fetch arbitrary user-controlled URLs.
+  // This avoids SSRF against loopback, metadata services, private DNS, and internal hosts.
   let probe = null;
-  if (skill.test?.url) { probe = await reachabilityProbe(skill.test.url); if (probe && !probe.ok) findings.push(probe); }
+  if (skill.test?.url) {
+    probe = await reachabilityProbe(skill.test.url);
+    if (probe && probe.check) findings.push(probe);
+  }
 
   // 5.5 L1.5 — claim verification: "verify it serves" (repo, install, homepage)
   const claims = await verifyClaims(skill);

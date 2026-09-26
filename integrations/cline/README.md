@@ -37,7 +37,7 @@ In the same Cline MCP settings file:
   "mcpServers": {
     "marketnow": {
       "command": "npx",
-      "args": ["-y", "marketnow-mcp@1.15.0"],
+      "args": ["-y", "marketnow-mcp@1.14.1"],
       "env": {},
       "disabled": false,
       "autoApprove": [
@@ -53,6 +53,26 @@ In the same Cline MCP settings file:
   }
 }
 ```
+
+`marketnow-mcp@1.14.1` is the latest version actually published to npm;
+the Docker image in Option A is the repo-exact audited build (1.15.0) —
+two release channels, npm trailing Docker. Keep the pin; `@latest` can
+drift from the audited repo tree.
+
+### If Docker pulls are denied (private package until first visibility flip)
+
+GHCR packages start private. Until an org owner flips the package public
+(once — https://github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp/settings
+→ Danger Zone → Change visibility → Public), `docker pull` needs a login:
+
+```bash
+echo "ghp_YOUR_READ_PACKAGES_TOKEN" | docker login ghcr.io -u YOUR_GITHUB_USER --password-stdin
+```
+
+The token only needs `read:packages`. After the one-time flip, anonymous
+pulls work and the login step disappears. (CI already tries to flip it
+automatically after every push; GitHub currently rejects the API call,
+so it stays a manual one-click.)
 
 `autoApprove` whitelists the read-only tools so Cline does not prompt on
 every search. Submission, trust verification, referral minting and any

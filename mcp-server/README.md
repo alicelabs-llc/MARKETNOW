@@ -62,7 +62,8 @@ docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
 
 Any MCP client that can spawn a Docker stdio process can use this. The
 image is built, handshake-tested and published by CI from this repository
-(`integrations/docker/README.md` has the full hardening model). It is also
+(`integrations/docker/README.md` has the full hardening model and the
+one-time `docker login ghcr.io` note for private-package pulls). It is also
 the payload for the Docker MCP Toolkit:
 
 ```bash

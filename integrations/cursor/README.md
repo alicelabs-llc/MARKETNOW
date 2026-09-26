@@ -24,15 +24,30 @@ Edit `.cursor/mcp.json` (project) or your global `~/.cursor/mcp.json`:
   "mcpServers": {
     "marketnow": {
       "command": "npx",
-      "args": ["-y", "marketnow-mcp@1.15.0"]
+      "args": ["-y", "marketnow-mcp@1.14.1"]
     }
   }
 }
 ```
 
-Keep the version pinned to the audited release (the repo's
-`mcp-server/package.json` is the source of truth; CI's version-sync gate
-validates the shipped config against it).
+`marketnow-mcp@1.14.1` is the latest version actually published to npm;
+the Docker image the shipped config uses is the repo-exact audited build
+(1.15.0). Keep the version pinned — the repo's `mcp-server/package.json`
+is the source of truth and CI's version-sync gate validates the shipped
+config against it.
+
+### If Docker pulls are denied
+
+GHCR packages start private. Until an org owner flips the package public
+once (https://github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp/settings
+→ Danger Zone → Change visibility → Public), prefix the command with a
+one-time login:
+
+```bash
+echo "ghp_YOUR_READ_PACKAGES_TOKEN" | docker login ghcr.io -u YOUR_GITHUB_USER --password-stdin
+```
+
+The token only needs `read:packages`. After the flip, anonymous pulls work.
 
 ## Global install (all Cursor projects)
 

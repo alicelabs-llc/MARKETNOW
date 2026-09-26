@@ -1,5 +1,10 @@
 {
-  "_comment": "Paste the mcpServers block below into Cline > MCP Settings (cline_mcp_settings.json). Option A (Docker) runs the exact image CI builds from this repository — recommended. Option B (npx) runs the npm release channel. Use ONE of them, not both. The version pin (1.15.0) matches mcp-server/package.json; scripts/check-version-sync.mjs validates it.",
+  "_comment": "Paste ONLY the mcpServers block below into Cline > MCP Servers > Configure (cline_mcp_settings.json) — Cline ignores this documentation key. Option A (Docker, the live entry) runs the exact image CI builds from this repository — recommended, pinned to mcp-server/package.json (scripts/check-version-sync.mjs validates it). Option B (npm channel, below in _alternative_npx) needs no Docker: replace the docker entry's command/args with the npx ones. Use ONE, not both.",
+  "_alternative_npx": {
+    "command": "npx",
+    "args": ["-y", "marketnow-mcp@1.14.1"],
+    "note": "npm release channel (latest actually published to npm). The Docker entry is the repo-exact audited build (1.15.0); npm publishes trail Docker. Keep the version pinned — @latest may drift from the audited tree."
+  },
   "mcpServers": {
     "marketnow": {
       "command": "docker",
@@ -27,12 +32,7 @@
         "marketnow_get_install_command",
         "marketnow_recommend_skills",
         "marketnow_get_owasp_compliance"
-      ],
-      "_alternative_npx": {
-        "command": "npx",
-        "args": ["-y", "marketnow-mcp@1.15.0"],
-        "note": "npm channel — same package, no Docker required. Keep the version pinned; @latest may drift from the audited repo tree."
-      }
+      ]
     }
   }
 }

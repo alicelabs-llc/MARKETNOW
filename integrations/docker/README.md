@@ -40,6 +40,13 @@ Pull it without cloning anything:
 docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
 ```
 
+> **Pull denied?** GHCR packages start private. A one-time org-owner flip —
+> https://github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp/settings
+> → Danger Zone → Change visibility → Public — makes pulls anonymous.
+> Until then: `echo "ghp_TOKEN_read_packages" | docker login ghcr.io -u USER --password-stdin`.
+> CI attempts the visibility flip via API after every push (idempotent);
+> GitHub currently rejects that call, so it remains a manual one-click.
+
 ## Hardening model (why the flags exist)
 
 | Flag | Reason |

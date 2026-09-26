@@ -58,3 +58,14 @@ Thumbs.db
 # To work with them locally, clone them into a SEPARATE repo or just drop
 # the folder back in for development — it won't be tracked by git.
 n8n-workflows/
+
+# ─── Local operational notes — NEVER commit (security incident 2026-09-26) ──
+# TOOLS.md / ESTADO_SISTEMA_ACTUAL.md / MEMORY.md are personal/agent local
+# notes (credentials, infrastructure details, business strategy) that were
+# accidentally committed to this public repository and had to be purged
+# from git history. They must NEVER be re-committed. Keep them OUTSIDE the
+# repo (e.g. in ~/.openclaw/ or an untracked private vault).
+TOOLS.md
+ESTADO_SISTEMA_ACTUAL.md
+MEMORY.md
+BOOTSTRAP.md

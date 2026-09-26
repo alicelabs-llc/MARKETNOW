@@ -85,16 +85,40 @@ console.log(JSON.stringify(atc, null, 2));
 
 ### 3. Verify a card
 
+**For any real trust decision** (execute, grant, transact) use `verifyTrust` — it is fail-closed by construction:
+
+```javascript
+import { verifyTrust } from 'agent-trust-card';
+
+// 1. Obtain the CA public key OUT-OF-BAND from the issuer's official channel
+//    (e.g. https://www.marketnow.site/api/atc?action=ca-key) — NEVER from the
+//    card itself: a malicious card can carry the very key that verifies its
+//    own signature.
+const caPublicKey = await fetch('https://www.marketnow.site/api/atc?action=ca-key')
+  .then(r => r.json()).then(j => j.ca_public_key);
+
+// 2. Strict verification: signature against the trusted CA + automatic
+//    revocation check (the CRL is fetched for you when the card requires it).
+const result = await verifyTrust(atc, { trusted_ca: caPublicKey });
+
+if (result.trust_decision !== 'TRUST') {
+  throw new Error(`DENY: ${result.errors.join(', ')}`);
+}
+```
+
+For a quick structural/math check without a trusted CA (debugging/interop
+only — explicitly **not a trust decision**):
+
 ```javascript
 import { verifyATC } from 'agent-trust-card';
 
-const result = verifyATC(atc);
+const result = await verifyATC(atc); // self-described mode: card-embedded key, loud warning
 
 if (!result.valid) {
-  throw new Error(`Untrusted agent: ${result.errors.join(', ')}`);
+  throw new Error(`Invalid card: ${result.errors.join(', ')}`);
 }
 
-console.log(`✓ ${atc.card_id} — ${result.controls_passed.length}/8 controls passed`);
+console.log(`${atc.card_id} — ${result.controls_passed.length}/8 controls, mode=${result.verification_mode}`);
 ```
 
 ### 4. CLI
@@ -136,6 +160,8 @@ Verifies an ATC against ATC/1.0. Returns:
 ```typescript
 {
   valid: boolean,
+  verification_mode: 'TRUST' | 'SELF_DESCRIBED',   // v1.2.0
+  trust_decision: 'TRUST' | 'DENY' | 'NOT_APPLICABLE', // v1.2.0
   spec_version: string,
   controls_passed: string[],   // e.g. ['ATC-001', 'ATC-002', ..., 'ATC-008']
   controls_failed: string[],
@@ -148,12 +174,53 @@ Verifies an ATC against ATC/1.0. Returns:
   expires_at: string | null,
   agent_id: string | null,
   agent_name: string | null,
+  revoked?: boolean,
+  revocation_reason?: string | null,
+  revoked_at?: string | null,
 }
 ```
 
-`options.ca_public_key` — Override the CA public key (base64 SPKI). Use this when you have an out-of-band trusted CA key and want to detect CA substitution attacks.
+**Security model (v1.2.0):**
 
-`options.fetch_revocation` — Not yet implemented. The verifier checks structural fields only. If `revocation_check_required=true`, the caller must fetch the revocation list at `atc.revocation.revocation_check_url` separately.
+- **Default (no options)** — self-described: the signature is checked against
+  `atc.issuer.ca_public_key`. The result carries
+  `verification_mode:'SELF_DESCRIBED'`, `trust_decision:'NOT_APPLICABLE'` and a
+  loud warning — a malicious card can carry its own key, so this is NOT a
+  trust decision.
+- **TRUST mode** — activated by `options.mode:'trust'` OR by supplying
+  `options.trusted_ca` / `options.ca_public_key` (out-of-band key):
+  - `trusted_ca` is REQUIRED on the explicit trust path — missing →
+    `CONFIGURATION_ERROR`, `valid:false` (DENY, fail-closed). The verifier
+    never anchors a trust decision on a key embedded in the document.
+  - When the card sets `revocation_check_required=true` the check is ENFORCED:
+    the CRL is auto-fetched (async API), or taken from `options.revocation`
+    (pre-fetched list). Any failure to check → DENY.
+
+`options.trusted_ca` — Trusted CA public key (base64 SPKI) obtained
+out-of-band. Activates TRUST mode and pins the verification anchor.
+
+`options.ca_public_key` — Alias of `trusted_ca` (backward compatibility).
+
+`options.mode` — `'trust'` | `'self_described'` (default).
+
+`options.revocation` — Pre-fetched revocation list (`{cards:[...]}` or
+`{revoked_cards:[...]}`) — skips the network fetch.
+
+`options.fetch_revocation` — If true, fetches the revocation list via HTTP
+(async API only) and checks whether the card_id is revoked.
+
+### `verifyTrust(atc, options?)` — async (v1.2.0)
+
+Strict fail-closed wrapper around `verifyATC`. Forces TRUST mode:
+`trusted_ca` REQUIRED (missing → CONFIGURATION_ERROR / DENY), revocation
+auto-enforced when the card requires it, unreachable CRL → DENY. Use this for
+any real trust decision.
+
+### `verifyATCSync(atc, options?)`
+
+Synchronous verification with the same security model. On the TRUST path with
+`revocation_check_required=true`, supply `options.revocation` (pre-fetched
+list) — the sync API cannot fetch, and missing evidence → DENY (fail-closed).
 
 ### `canonicalizeATC(atc)`
 

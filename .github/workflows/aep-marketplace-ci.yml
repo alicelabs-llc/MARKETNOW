@@ -5,10 +5,16 @@ on:
     branches: [master]
     paths:
       - "aep-marketplace/**"
+      - "mcp-server/**"
+      - "atc-sdk/**"
+      - "scripts/check-version-sync.mjs"
       - ".github/workflows/aep-marketplace-ci.yml"
   pull_request:
     paths:
       - "aep-marketplace/**"
+      - "mcp-server/**"
+      - "atc-sdk/**"
+      - "scripts/check-version-sync.mjs"
       - ".github/workflows/aep-marketplace-ci.yml"
 
 permissions:
@@ -42,3 +48,73 @@ jobs:
 
       - name: Validate submission-core syntax
         run: node --check lib/submit-core.mjs
+
+  mcp-server:
+    # marketnow-mcp npm package: syntax + fail-closed trust security tests
+    # (audit 2026-09-26: verifyATC trusted-CA + revocation enforcement)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install atc-sdk dependencies (used by tests)
+        run: npm --prefix atc-sdk install --no-audit --no-fund
+
+      - name: Install mcp-server dependencies
+        run: npm --prefix mcp-server install --no-audit --no-fund
+
+      - name: Validate index.js syntax
+        run: node --check mcp-server/index.js
+
+      - name: Validate atc-verify.mjs syntax
+        run: node --check mcp-server/lib/atc-verify.mjs
+
+      - name: Validate schemas.mjs syntax
+        run: node --check mcp-server/lib/schemas.mjs
+
+      - name: Fail-closed trust model tests (26 cases)
+        run: node mcp-server/test/security-fail-closed.mjs
+
+  atc-sdk:
+    # agent-trust-card npm package: conformance (23 assertions) + trust mode
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: atc-sdk
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: atc-sdk/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Conformance + trust-mode tests
+        run: npm test
+
+  version-sync:
+    # Audit 2026-09-26 follow-up: package.json ↔ server.json ↔ README ↔
+    # AUDIT.md changelog ↔ endpoint version drift gate.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Version consistency gate
+        run: node scripts/check-version-sync.mjs

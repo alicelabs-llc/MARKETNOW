@@ -239,9 +239,9 @@ function check_ATC_006_signature(atc, caPublicKeyBase64) {
     errors.push(`ATC-006: signed_payload_hash mismatch — expected ${computedHash.slice(0, 16)}..., got ${(atc.attestation?.signed_payload_hash || '').slice(0, 16)}...`);
   }
 
-  const caKey = caPublicKeyBase64 || atc.issuer?.ca_public_key;
+  const caKey = caPublicKeyBase64;
   if (!caKey) {
-    errors.push('ATC-006: no CA public key provided (neither in argument nor in atc.issuer.ca_public_key)');
+    errors.push("ATC-006: CONFIGURATION_ERROR — no CA public key supplied. On the TRUST path the key must be obtained out-of-band (options.trusted_ca). The self-described path resolves the document-embedded key before calling this function; if neither is present the signature cannot be checked.");
     return { errors, warnings };
   }
 
@@ -411,9 +411,25 @@ function isCardRevoked(revocationList, cardId) {
 /**
  * Verifies an ATC/1.0 card.
  *
+ * SECURITY MODEL (v1.2.0):
+ *   - SELF_DESCRIBED (default, backward compatible): the signature is checked
+ *     against atc.issuer.ca_public_key. A warning is emitted that this is NOT
+ *     a trust decision (a malicious card can carry its own key).
+ *   - TRUST: activated by options.mode:'trust' or by supplying
+ *     options.trusted_ca / options.ca_public_key (out-of-band key). trusted_ca
+ *     becomes REQUIRED (missing → CONFIGURATION_ERROR, fail-closed) and
+ *     revocation_check_required=true is ENFORCED: the list is auto-fetched
+ *     (or taken from options.revocation) and failures DENY.
+ *   - verifyTrust(atc, options) forces TRUST mode — use it for any real
+ *     trust decision.
+ *
  * @param {object} atc - The ATC JSON document to verify.
  * @param {object} [options]
- * @param {string} [options.ca_public_key] - Override the CA public key (base64 SPKI).
+ * @param {string} [options.trusted_ca] - Trusted CA public key (base64 SPKI),
+ *        obtained OUT-OF-BAND. Activates TRUST mode.
+ * @param {string} [options.ca_public_key] - Alias of trusted_ca (backward compat).
+ * @param {string} [options.mode] - 'trust' | 'self_described' (default).
+ * @param {object} [options.revocation] - Pre-fetched revocation list (CRL).
  * @param {boolean} [options.fetch_revocation] - If true, fetches the revocation list
  *                                                via HTTP and checks if the card_id is revoked.
  * @param {number} [options.revocation_timeout_ms=5000] - Timeout for the HTTP fetch.
@@ -424,6 +440,24 @@ export async function verifyATC(atc, options = {}) {
   const warnings = [];
   const controlsPassed = [];
   const controlsFailed = [];
+
+  // Mode resolution (v1.2.0): explicit trust, or implicit trust whenever a
+  // caller-supplied CA key is present. Default remains self-described for
+  // backward compatibility, but it is now loudly labeled.
+  const trustedCA = options.trusted_ca || options.ca_public_key || null;
+  const isTrust = options.mode === 'trust' || trustedCA !== null;
+  const MODE = isTrust ? 'TRUST' : 'SELF_DESCRIBED';
+  const verificationKey = isTrust ? trustedCA : (atc?.issuer?.ca_public_key || null);
+
+  // Move ATC-007 from the passed set to the failed set (used by the
+  // fail-closed revocation enforcement below).
+  function markRevocationFailed() {
+    const idx = controlsPassed.indexOf('ATC-007');
+    if (idx >= 0) {
+      controlsPassed.splice(idx, 1);
+      controlsFailed.push('ATC-007');
+    }
+  }
 
   if (!isObject(atc)) {
     return {
@@ -482,65 +516,101 @@ export async function verifyATC(atc, options = {}) {
     warnings.push(...result.warnings);
   }
 
-  // ATC-006 (signature) is checked last — only if ATC-002 passed
+  // ATC-006 (signature) is checked last — only if ATC-002 passed.
+  // SECURITY (v1.2.0): the key is resolved by MODE, never by an implicit
+  // document fallback on the trust path.
   if (controlsPassed.includes('ATC-002')) {
-    const sigResult = check_ATC_006_signature(atc, options.ca_public_key);
-    if (sigResult.errors.length === 0) {
-      controlsPassed.push('ATC-006');
-    } else {
+    if (isTrust && !trustedCA) {
+      // Fail-closed: trust requested but no out-of-band anchor supplied.
       controlsFailed.push('ATC-006');
-      errors.push(...sigResult.errors);
+      errors.push("ATC-006: CONFIGURATION_ERROR — TRUST mode requires a trusted CA public key (options.trusted_ca, obtained out-of-band). The verifier never anchors a trust decision on a key embedded in the document under verification. DENY (fail-closed).");
+    } else if (!verificationKey) {
+      controlsFailed.push('ATC-006');
+      errors.push('ATC-006: no CA public key available (none supplied and the document carries no issuer.ca_public_key) — signature cannot be verified');
+    } else {
+      const sigResult = check_ATC_006_signature(atc, verificationKey);
+      if (sigResult.errors.length === 0) {
+        controlsPassed.push('ATC-006');
+      } else {
+        controlsFailed.push('ATC-006');
+        errors.push(...sigResult.errors);
+      }
+      warnings.push(...sigResult.warnings);
     }
-    warnings.push(...sigResult.warnings);
+    if (!isTrust) {
+      warnings.push('SELF-DESCRIBED MODE: the signature was verified against the CA key embedded in the document itself. A malicious card can carry the very key that verifies its own signature — this result is NOT a trust decision. For a trust decision, obtain the CA key out-of-band and use TRUST mode (verifyTrust(atc, { trusted_ca })).');
+    }
   } else {
     controlsFailed.push('ATC-006');
     errors.push('ATC-006: skipped because ATC-002 (attestation structure) failed');
   }
 
-  // ATC-007 revocation list fetch (NEW in v1.1.0)
+  // ATC-007 revocation (SECURITY v1.2.0 — enforced on the TRUST path)
   let revoked = false;
   let revocationReason = null;
   let revokedAt = null;
-  if (options.fetch_revocation && controlsPassed.includes('ATC-007')) {
-    const revUrl = atc.revocation?.revocation_check_url;
-    if (!revUrl) {
-      warnings.push('ATC-007: fetch_revocation=true but revocation_check_url is missing');
+  const revRequired = atc.revocation?.revocation_check_required === true;
+  const evidence = options.revocation ?? options.revocation_status ?? null;
+  // Trust mode + required → ALWAYS check (auto-fetch or pre-fetched evidence).
+  // Self-described mode → only if the caller opted in via fetch_revocation.
+  const mustCheckRevocation = (isTrust && revRequired) || options.fetch_revocation === true;
+  if (mustCheckRevocation && controlsPassed.includes('ATC-007')) {
+    if (evidence) {
+      const r = isCardRevoked(evidence, atc.card_id);
+      revoked = r.revoked;
+      revocationReason = r.reason;
+      revokedAt = r.revokedAt;
+      if (revoked) {
+        errors.push(`ATC-007: card_id ${atc.card_id} is revoked (reason: ${revocationReason || 'unknown'}, revoked_at: ${revokedAt || '?'}) — DENY`);
+        markRevocationFailed();
+      } else {
+        warnings.push('ATC-007: revocation evidence supplied by caller — card is not revoked per the provided list.');
+      }
     } else {
-      try {
-        const list = await fetchRevocationList(revUrl, {
-          timeoutMs: options.revocation_timeout_ms || 5000,
-          method: atc.revocation.revocation_check_method,
-        });
-        const r = isCardRevoked(list, atc.card_id);
-        revoked = r.revoked;
-        revocationReason = r.reason;
-        revokedAt = r.revokedAt;
-        if (revoked) {
-          errors.push(`ATC-007: card_id ${atc.card_id} is revoked (reason: ${revocationReason || 'unknown'}, revoked_at: ${revokedAt || '?'})`);
-          // Replace ATC-007 from passed to failed
-          const idx = controlsPassed.indexOf('ATC-007');
-          if (idx >= 0) {
-            controlsPassed.splice(idx, 1);
-            controlsFailed.push('ATC-007');
-          }
+      const revUrl = atc.revocation?.revocation_check_url;
+      if (!revUrl) {
+        if (isTrust && revRequired) {
+          errors.push('ATC-007: DENY (fail-closed) — revocation_check_required=true but revocation_check_url is missing, so the check cannot be performed.');
+          markRevocationFailed();
         } else {
-          const totalCount = (list.cards?.length || list.revoked_cards?.length || 0);
-          const revokedCount = list.cards ? list.cards.filter(c => c.status === 'revoked').length : (list.revoked_cards?.length || 0);
-          warnings.push(`ATC-007: revocation list fetched successfully (${totalCount} total cards, ${revokedCount} revoked — this card_id is not in the revoked set)`);
+          warnings.push('ATC-007: fetch_revocation=true but revocation_check_url is missing');
         }
-      } catch (err) {
-        warnings.push(`ATC-007: revocation list fetch failed: ${err.message}`);
-        if (atc.revocation.revocation_check_required === true) {
-          errors.push(`ATC-007: revocation list is required but unreachable (${err.message})`);
-          const idx = controlsPassed.indexOf('ATC-007');
-          if (idx >= 0) {
-            controlsPassed.splice(idx, 1);
-            controlsFailed.push('ATC-007');
+      } else {
+        try {
+          const list = await fetchRevocationList(revUrl, {
+            timeoutMs: options.revocation_timeout_ms || 5000,
+            method: atc.revocation.revocation_check_method,
+          });
+          const r = isCardRevoked(list, atc.card_id);
+          revoked = r.revoked;
+          revocationReason = r.reason;
+          revokedAt = r.revokedAt;
+          if (revoked) {
+            errors.push(`ATC-007: card_id ${atc.card_id} is revoked (reason: ${revocationReason || 'unknown'}, revoked_at: ${revokedAt || '?'}) — DENY`);
+            markRevocationFailed();
+          } else {
+            const totalCount = (list.cards?.length || list.revoked_cards?.length || 0);
+            const revokedCount = list.cards ? list.cards.filter(c => c.status === 'revoked').length : (list.revoked_cards?.length || 0);
+            warnings.push(`ATC-007: revocation list fetched successfully (${totalCount} total cards, ${revokedCount} revoked — this card_id is not in the revoked set)`);
+          }
+        } catch (err) {
+          if (isTrust && revRequired) {
+            errors.push(`ATC-007: DENY (fail-closed) — revocation list is REQUIRED but unreachable (${err.message}). A valid signature never means currently-trusted.`);
+            markRevocationFailed();
+          } else {
+            warnings.push(`ATC-007: revocation list fetch failed: ${err.message}`);
+            if (revRequired) {
+              errors.push(`ATC-007: revocation list is required but unreachable (${err.message})`);
+              markRevocationFailed();
+            }
           }
         }
       }
     }
-  } else if (atc.delegation) {
+  } else if (revRequired && !isTrust) {
+    warnings.push('ATC-007: revocation_check_required=true but no revocation check was performed (self-described mode). Signature validity does NOT mean the credential is currently trusted — use verifyTrust() or pass fetch_revocation/revocation evidence.');
+  }
+  if (atc.delegation) {
     warnings.push('ATC-009 (delegation) is present but not validated by this verifier');
   }
   if (atc.runtime_trust) {
@@ -552,6 +622,8 @@ export async function verifyATC(atc, options = {}) {
 
   return {
     valid: errors.length === 0,
+    verification_mode: MODE,
+    trust_decision: isTrust ? (errors.length === 0 ? 'TRUST' : 'DENY') : 'NOT_APPLICABLE',
     spec_version: atc.spec_version,
     controls_passed: controlsPassed,
     controls_failed: controlsFailed,
@@ -571,17 +643,40 @@ export async function verifyATC(atc, options = {}) {
   };
 }
 
-// Synchronous verification (no revocation list fetch). For backward compat with v1.0 callers.
+// ─── verifyTrust — strict fail-closed wrapper (SECURITY v1.2.0) ─────────────
+
+/**
+ * STRICT trust verification — the function to call before ANY trust decision
+ * (execute, grant, transact). Forces TRUST mode:
+ *   - options.trusted_ca is REQUIRED (out-of-band CA key, base64 SPKI).
+ *     Missing → ATC-006 CONFIGURATION_ERROR, valid:false (DENY).
+ *   - When the card sets revocation_check_required=true the revocation list
+ *     is AUTO-FETCHED (this is async — network allowed), or taken from
+ *     options.revocation (pre-fetched list). Any failure to check → DENY.
+ *
+ * @param {object} atc - The ATC JSON document to verify.
+ * @param {object} [options] - { trusted_ca (REQUIRED), revocation?, revocation_timeout_ms?, ca_public_key? (alias) }
+ * @returns {Promise<object>} Verification result (verification_mode:'TRUST').
+ */
+export async function verifyTrust(atc, options = {}) {
+  return verifyATC(atc, { ...options, mode: 'trust' });
+}
+
+// Synchronous verification (no network — revocation evidence must be
+// supplied by the caller). For backward compat with v1.0 callers.
 export function verifyATCSync(atc, options = {}) {
-  // Strip fetch_revocation from options and call verifyATC — but verifyATC is async.
-  // For sync callers, we run all checks except the revocation list fetch.
+  // Strip fetch_revocation from options — sync callers cannot fetch.
   const opts = { ...options, fetch_revocation: false };
-  // Reimplement the sync path here to avoid await.
-  // This is a copy of the verifyATC body up to the ATC-006 check.
   const errors = [];
   const warnings = [];
   const controlsPassed = [];
   const controlsFailed = [];
+
+  // Mode resolution (v1.2.0) — mirrors verifyATC().
+  const trustedCA = opts.trusted_ca || opts.ca_public_key || null;
+  const isTrust = opts.mode === 'trust' || trustedCA !== null;
+  const MODE = isTrust ? 'TRUST' : 'SELF_DESCRIBED';
+  const verificationKey = isTrust ? trustedCA : (atc?.issuer?.ca_public_key || null);
 
   if (!isObject(atc)) {
     return {
@@ -622,13 +717,60 @@ export function verifyATCSync(atc, options = {}) {
   }
 
   if (controlsPassed.includes('ATC-002')) {
-    const sigResult = check_ATC_006_signature(atc, options.ca_public_key);
-    if (sigResult.errors.length === 0) controlsPassed.push('ATC-006');
-    else { controlsFailed.push('ATC-006'); errors.push(...sigResult.errors); }
-    warnings.push(...sigResult.warnings);
+    // SECURITY (v1.2.0): mode-resolved key — no implicit document fallback on
+    // the trust path; fail-closed when trust is requested without an anchor.
+    if (isTrust && !trustedCA) {
+      controlsFailed.push('ATC-006');
+      errors.push("ATC-006: CONFIGURATION_ERROR — TRUST mode requires a trusted CA public key (options.trusted_ca, obtained out-of-band). The verifier never anchors a trust decision on a key embedded in the document under verification. DENY (fail-closed).");
+    } else if (!verificationKey) {
+      controlsFailed.push('ATC-006');
+      errors.push('ATC-006: no CA public key available (none supplied and the document carries no issuer.ca_public_key) — signature cannot be verified');
+    } else {
+      const sigResult = check_ATC_006_signature(atc, verificationKey);
+      if (sigResult.errors.length === 0) controlsPassed.push('ATC-006');
+      else { controlsFailed.push('ATC-006'); errors.push(...sigResult.errors); }
+      warnings.push(...sigResult.warnings);
+    }
+    if (!isTrust) {
+      warnings.push('SELF-DESCRIBED MODE: the signature was verified against the CA key embedded in the document itself. A malicious card can carry the very key that verifies its own signature — this result is NOT a trust decision. For a trust decision, obtain the CA key out-of-band and use verifyTrust().');
+    }
   } else {
     controlsFailed.push('ATC-006');
     errors.push('ATC-006: skipped because ATC-002 (attestation structure) failed');
+  }
+
+  // SECURITY (v1.2.0): fail-closed revocation enforcement on the sync TRUST
+  // path. The sync API cannot fetch, so the caller must supply evidence via
+  // options.revocation (pre-fetched CRL list). No evidence → DENY.
+  let revoked = false;
+  let revocationReason = null;
+  let revokedAt = null;
+  if (isTrust && atc.revocation?.revocation_check_required === true) {
+    const evidence = opts.revocation ?? opts.revocation_status ?? null;
+    const markRevocationFailedSync = () => {
+      const idx = controlsPassed.indexOf('ATC-007');
+      if (idx >= 0) {
+        controlsPassed.splice(idx, 1);
+        controlsFailed.push('ATC-007');
+      }
+    };
+    if (evidence) {
+      const r = isCardRevoked(evidence, atc.card_id);
+      revoked = r.revoked;
+      revocationReason = r.reason;
+      revokedAt = r.revokedAt;
+      if (revoked) {
+        errors.push(`ATC-007: card_id ${atc.card_id} is revoked (reason: ${revocationReason || 'unknown'}, revoked_at: ${revokedAt || '?'}) — DENY`);
+        markRevocationFailedSync();
+      } else {
+        warnings.push('ATC-007: revocation evidence supplied by caller — card is not revoked per the provided list.');
+      }
+    } else {
+      errors.push('ATC-007: DENY (fail-closed) — revocation_check_required=true but no revocation evidence supplied and the sync API cannot fetch. Use the async verifyTrust()/verifyATC() (auto-fetches the list) or pass options.revocation (pre-fetched list).');
+      markRevocationFailedSync();
+    }
+  } else if (!isTrust && atc.revocation?.revocation_check_required === true) {
+    warnings.push('ATC-007: revocation_check_required=true but no revocation check was performed (self-described mode). Signature validity does NOT mean the credential is currently trusted — use verifyTrust() (async, auto-fetch) or pass revocation evidence.');
   }
 
   if (atc.delegation) warnings.push('ATC-009 (delegation) is present but not validated by this verifier');
@@ -640,6 +782,8 @@ export function verifyATCSync(atc, options = {}) {
 
   return {
     valid: errors.length === 0,
+    verification_mode: MODE,
+    trust_decision: isTrust ? (errors.length === 0 ? 'TRUST' : 'DENY') : 'NOT_APPLICABLE',
     spec_version: atc.spec_version,
     controls_passed: controlsPassed,
     controls_failed: controlsFailed,
@@ -653,8 +797,8 @@ export function verifyATCSync(atc, options = {}) {
     expires_at: atc.validity?.expires_at || null,
     agent_id: atc.identity?.agent_id || null,
     agent_name: atc.identity?.agent_name || null,
-    revoked: false,
-    revocation_reason: null,
-    revoked_at: null,
+    revoked,
+    revocation_reason: revocationReason,
+    revoked_at: revokedAt,
   };
 }

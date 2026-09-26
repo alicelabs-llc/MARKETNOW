@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.10.1",
-  "description": "MarketNow MCP Server v1.10.1 — Fix get_manifest ReferenceError and Zod runtime schema validation. Adds lib/schemas.mjs Zod validation for all tool inputs and cache partitioning.",
+  "version": "1.11.0",
+  "description": "MarketNow MCP Server v1.11.0 — SECURITY: fail-closed ATC trust verification (trusted CA required, revocation evidence enforced, self-described mode explicitly separated as NOT a trust decision) + Zod runtime schema validation for all tool inputs and cache partitioning.",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "test": "npm --prefix ../atc-sdk install --silent && node test/security-fail-closed.mjs"
   },
   "keywords": [
     "mcp",

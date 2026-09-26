@@ -727,11 +727,11 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
       },
     },
 
-    // ── 13. ATC/1.0 Spec Verifier (NEW v1.10.0) ─────────────────────────
+    // ── 13. ATC/1.0 Spec Verifier (SECURITY v1.11.0 — fail-closed trust model) ─
     {
       name: 'marketnow_verify_atc_spec',
       description:
-        'Verify ANY Agent Trust Card (ATC) against the open ATC/1.0 specification — works regardless of issuer (MarketNow Sentinel CA, a third-party CA, or a self-signed test CA). Returns per-control pass/fail status for all 8 required controls (ATC-001 Identity, ATC-002 Attestation, ATC-003 Capabilities, ATC-004 Evidence, ATC-005 Risk, ATC-006 Signature, ATC-007 Revocation, ATC-008 Expiration). Use this BEFORE trusting an ATC from any source — the verifier is self-contained (does not call MarketNow servers) and uses node:crypto + RFC 8785 JCS canonical JSON + Ed25519 (RFC 8032) per the spec. This tool makes marketnow-mcp the LIVE REFERENCE IMPLEMENTATION of ATC/1.0.',
+        'Verify ANY Agent Trust Card (ATC) against the open ATC/1.0 specification — works regardless of issuer (MarketNow Sentinel CA, a third-party CA, or a self-signed test CA). SECURITY MODEL (v1.11.0, fail-closed): default mode is TRUST — you MUST pass ca_public_key (a trusted CA key you obtained OUT-OF-BAND from the issuer\'s official channel, base64 SPKI). Without it the result is DENY/CONFIGURATION_ERROR, because a card can carry the very key that verifies its own signature. When the card sets revocation.revocation_check_required=true you MUST also pass revocation_status (a pre-fetched revocation list or {revoked:boolean} status) — otherwise DENY. For debugging/interop ONLY, mode:\'self_described\' verifies the signature math against the card-embedded key and is explicitly labeled NOT a trust decision. Returns per-control pass/fail for all 8 required controls (ATC-001 Identity, ATC-002 Attestation, ATC-003 Capabilities, ATC-004 Evidence, ATC-005 Risk, ATC-006 Signature, ATC-007 Revocation, ATC-008 Expiration) plus verification_mode (TRUST|SELF_DESCRIBED) and trust_decision (TRUST|DENY|NOT_APPLICABLE). Self-contained: node:crypto + RFC 8785 JCS + Ed25519 (RFC 8032), no network calls.',
       inputSchema: {
         type: 'object',
         properties: {
@@ -741,11 +741,21 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           },
           ca_public_key: {
             type: 'string',
-            description: 'Optional override for the CA public key (base64 SPKI). If omitted, the verifier uses atc.issuer.ca_public_key. Use this when you have an out-of-band trusted CA key and want to detect CA substitution attacks.',
+            description: 'TRUSTED CA public key (base64 SPKI) that YOU obtained out-of-band from the issuer\'s official channel (e.g. https://www.marketnow.site/api/atc?action=ca-key for MarketNow cards). REQUIRED for a trust decision in default TRUST mode — the verifier never trusts a key embedded in the document being verified. Supplying the issuer key from the card itself defeats the purpose and will not detect CA substitution.',
+          },
+          mode: {
+            type: 'string',
+            enum: ['trust', 'self_described'],
+            default: 'trust',
+            description: "trust (DEFAULT): fail-closed verification — ca_public_key required, revocation evidence required when the card demands it, never falls back to the card-embedded key. self_described: debugging/interop only — verifies signature math against the card-embedded issuer key; the result is explicitly labeled NOT a trust decision.",
+          },
+          revocation_status: {
+            type: 'object',
+            description: 'Revocation evidence, required in TRUST mode when atc.revocation.revocation_check_required=true. Accepts: (a) a pre-fetched revocation list — MarketNow live CRL format {cards:[{card_id,status,reason?,revoked_at?}]} from https://www.marketnow.site/api/atc?action=revocation-list, or ATC-007 spec format {revoked_cards:[...]}; or (b) a simple status {revoked: boolean, reason?, revoked_at?}. Without this evidence a required revocation check DENIES (fail-closed) — a valid signature never means currently-trusted.',
           },
           fetch_revocation: {
             type: 'boolean',
-            description: 'If true, indicates the caller wants revocation list fetch attempted. NOTE: this verifier does not perform network calls — it only checks the structural fields. The caller MUST fetch the revocation list at atc.revocation.revocation_check_url separately if revocation_check_required=true.',
+            description: 'Deprecated/no-op: this verifier is self-contained (no network). Pass revocation_status instead.',
             default: false,
           },
         },
@@ -819,6 +829,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       case 'marketnow_verify_atc_spec': {
         // ATC/1.0 spec verifier — accepts ANY ATC, not just MarketNow ones.
         // Self-contained: no network calls. Uses node:crypto + canonicalize.
+        // SECURITY (v1.11.0): fail-closed trust model — default TRUST mode
+        // requires an out-of-band trusted CA; 'self_described' is an explicit
+        // opt-in for debugging/interop and is labeled NOT a trust decision.
         if (!args || typeof args !== 'object' || !args.atc) {
           const err = new Error('marketnow_verify_atc_spec requires an `atc` argument (the complete ATC JSON document)');
           err.code = 'INVALID_ARGUMENT';
@@ -829,8 +842,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           err.code = 'INVALID_ARGUMENT';
           throw err;
         }
+        const atcMode = args.mode === 'self_described' ? 'self_described' : 'trust';
+        if (args.mode !== undefined && atcMode !== args.mode) {
+          const err = new Error("marketnow_verify_atc_spec: `mode` must be 'trust' (default, fail-closed) or 'self_described' (debugging only — NOT a trust decision)");
+          err.code = 'INVALID_ARGUMENT';
+          throw err;
+        }
         result = verifyATCSpec(args.atc, {
-          ca_public_key: args.ca_public_key,
+          mode: atcMode,
+          trusted_ca: typeof args.ca_public_key === 'string' ? args.ca_public_key : undefined,
+          ca_public_key: typeof args.ca_public_key === 'string' ? args.ca_public_key : undefined,
+          revocation_status:
+            args.revocation_status && typeof args.revocation_status === 'object' && !Array.isArray(args.revocation_status)
+              ? args.revocation_status
+              : undefined,
           fetch_revocation: args.fetch_revocation === true,
         });
         break;

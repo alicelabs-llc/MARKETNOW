@@ -12,15 +12,45 @@
  *   - ATC-004 Evidence           (structural)
  *   - ATC-005 Risk               (structural + range)
  *   - ATC-006 Signature          (Ed25519 + RFC 8785 JCS + SHA-256)
- *   - ATC-007 Revocation         (structural — revocation LIST fetch is optional)
+ *   - ATC-007 Revocation         (structural + fail-closed enforcement in TRUST mode)
  *   - ATC-008 Expiration         (date window)
  *
  * Optional controls ATC-009 (Delegation) and ATC-010 (Runtime Trust)
  * are parsed if present but do not affect the verdict.
  *
+ * ─── SECURITY MODEL (v1.11.0 — fail-closed trust verification) ──────────────
+ *
+ * v1.10.x accepted the CA verification key from the document under
+ * verification (atc.issuer.ca_public_key) when the caller did not supply
+ * one. That is a security footgun: a malicious card can ship the very key
+ * that verifies its own signature, yielding a cryptographically valid but
+ * meaningless result. v1.11.0 separates the two verification intents:
+ *
+ *   TRUST mode (DEFAULT, fail-closed)
+ *     verifyATC(atc, { trusted_ca: <base64 SPKI> })
+ *     verifyTrust(atc, { trusted_ca, revocation_status })
+ *     - trusted_ca is REQUIRED. Missing trusted_ca → CONFIGURATION_ERROR
+ *       (ATC-006 fails, valid:false). The verifier NEVER falls back to
+ *       atc.issuer.ca_public_key on this path.
+ *     - ATC-007 fail-closed: if revocation_check_required=true, the caller
+ *       MUST supply revocation evidence via options.revocation_status
+ *       (pre-fetched list or simple status). No evidence → DENY. A valid
+ *       signature on a revoked card must never return valid:true.
+ *
+ *   SELF_DESCRIBED mode (explicit opt-in, NOT a trust decision)
+ *     verifyATC(atc, { mode: 'self_described' })
+ *     verifySelfDescribedSignature(atc)
+ *     - For debugging/interop only: verifies the signature math against
+ *       the CA key embedded in the document. Result carries
+ *       verification_mode:'SELF_DESCRIBED', trust_decision:'NOT_APPLICABLE'
+ *       and an explicit warning that a malicious card can carry its own
+ *       key. It is impossible to confuse with a trust decision.
+ *
  * The verifier returns a structured result:
  *   {
- *     valid: boolean,
+ *     valid: boolean,             // TRUST mode: full trust pipeline result
+ *     verification_mode: 'TRUST' | 'SELF_DESCRIBED',
+ *     trust_decision: 'TRUST' | 'DENY' | 'NOT_APPLICABLE',
  *     spec_version: string,
  *     controls_passed: string[],   // e.g. ['ATC-001', 'ATC-002', ...]
  *     controls_failed: string[],
@@ -289,11 +319,15 @@ function check_ATC_006_signature(atc, caPublicKeyBase64) {
     errors.push(`ATC-006: signed_payload_hash mismatch — expected ${computedHash.slice(0, 16)}..., got ${(atc.attestation?.signed_payload_hash || '').slice(0, 16)}...`);
   }
 
-  // 3. Determine the CA public key to use
-  //    Priority: explicit argument > atc.issuer.ca_public_key
-  const caKey = caPublicKeyBase64 || atc.issuer?.ca_public_key;
+  // 3. The CA public key MUST be supplied by the caller (out-of-band trust
+  //    anchor). SECURITY (v1.11.0): never fall back to atc.issuer.ca_public_key
+  //    here — the document under verification is untrusted input; a key
+  //    embedded in it cannot anchor its own signature. Mode resolution
+  //    (trusted vs self-described) happens in verifyATC(), which decides
+  //    WHICH key is passed into this function.
+  const caKey = caPublicKeyBase64;
   if (!caKey) {
-    errors.push('ATC-006: no CA public key provided (neither in argument nor in atc.issuer.ca_public_key)');
+    errors.push("ATC-006: CONFIGURATION_ERROR — no trusted CA public key supplied. Obtain the CA key out-of-band from the issuer's official channel and pass it via options.trusted_ca. For debugging/interop only, use mode:'self_described' or verifySelfDescribedSignature() — that result is NOT a trust decision.");
     return { errors, warnings };
   }
 
@@ -321,7 +355,7 @@ function check_ATC_006_signature(atc, caPublicKeyBase64) {
   return { errors, warnings };
 }
 
-function check_ATC_007_revocation(atc) {
+function check_ATC_007_revocation(atc, options) {
   const errors = [];
   const warnings = [];
   const rev = atc.revocation || {};
@@ -336,13 +370,78 @@ function check_ATC_007_revocation(atc) {
   if (rev.revocation_check_method && !['ocsp', 'crl', 'simple_json'].includes(rev.revocation_check_method)) {
     errors.push(`ATC-007: revocation_check_method must be ocsp/crl/simple_json (got ${rev.revocation_check_method})`);
   }
-  // Note: this verifier does NOT fetch the revocation list by default —
-  // that would require network access in the MCP server runtime.
-  // Callers can opt in to fetching by passing { fetch_revocation: true }.
+
+  // SECURITY (v1.11.0): fail-closed revocation enforcement in TRUST mode.
+  // This verifier is self-contained by design (no network calls), so the
+  // caller supplies revocation evidence out-of-band via
+  // options.revocation_status, which may be:
+  //   - a pre-fetched revocation list: MarketNow live CRL format
+  //     { cards: [{card_id, status, reason?, revoked_at?}] } or the ATC-007
+  //     spec format { revoked_cards: [{card_id, reason?, revoked_at?}] }
+  //   - a simple status object { revoked: true|false, reason?, revoked_at? }
+  //     obtained from the issuer's revocation endpoint.
+  // In SELF_DESCRIBED mode we keep the informational warning only (the
+  // entire mode is explicitly NOT a trust decision).
   if (rev.revocation_check_required === true) {
-    warnings.push('ATC-007: revocation_check_required=true but this verifier does not fetch the list by default. Caller must check separately.');
+    if (options && options.mode === 'self_described') {
+      warnings.push('ATC-007: revocation_check_required=true and NO revocation evidence was evaluated (self-described mode). Signature validity does NOT mean the credential is currently trusted — the card may be revoked. Fetch the list at revocation_check_url before making a trust decision.');
+    } else {
+      const evidence = options ? options.revocation_status : undefined;
+      if (evidence === undefined || evidence === null) {
+        errors.push(`ATC-007: DENY (fail-closed) — revocation_check_required=true but no revocation evidence was supplied. Fetch the revocation list at ${rev.revocation_check_url || '(missing revocation_check_url)'} out-of-band and pass it via options.revocation_status (a pre-fetched CRL list or a simple {revoked:boolean} status). A cryptographically valid signature on a possibly-revoked card is not a trust decision.`);
+      } else {
+        const verdict = evaluateRevocationStatus(atc, evidence);
+        if (isRevokedVerdict(verdict)) {
+          errors.push(`ATC-007: card ${atc.card_id || '(no card_id)'} is REVOKED${verdict.reason ? ' — reason: ' + verdict.reason : ''}${verdict.revokedAt ? ' — revoked_at: ' + verdict.revokedAt : ''}. DENY.`);
+        } else {
+          warnings.push('ATC-007: revocation evidence supplied by caller — card is not revoked per the provided list/status. Keep revocation evidence fresh: re-fetch within your decision window.');
+        }
+      }
+    }
   }
   return { errors, warnings };
+}
+
+// ─── Evaluate caller-supplied revocation evidence ──────────────────────────
+// Mirrors atc-sdk/src/verify.mjs isCardRevoked() semantics exactly:
+//   - `cards` array with per-card `status` (MarketNow live CRL format)
+//   - `revoked_cards` array (ATC-007 spec format — presence = revoked)
+//   - simple { revoked: boolean } status object
+function evaluateRevocationStatus(atc, evidence) {
+  if (!isObject(evidence)) {
+    return { revoked: false, malformed: true };
+  }
+  // Simple status object
+  if (typeof evidence.revoked === 'boolean' && !Array.isArray(evidence.cards) && !Array.isArray(evidence.revoked_cards)) {
+    return {
+      revoked: evidence.revoked,
+      reason: evidence.reason || null,
+      revokedAt: evidence.revoked_at || evidence.revokedAt || null,
+    };
+  }
+  // List formats
+  const cards = Array.isArray(evidence.cards) ? evidence.cards :
+                Array.isArray(evidence.revoked_cards) ? evidence.revoked_cards : null;
+  if (!cards) {
+    return { revoked: false, malformed: true };
+  }
+  const cardId = atc.card_id;
+  for (const c of cards) {
+    if (isObject(c) && c.card_id === cardId) {
+      const isRevoked = c.status === 'revoked' || !('status' in c);
+      if (isRevoked) {
+        return { revoked: true, reason: c.reason || null, revokedAt: c.revoked_at || null };
+      }
+      // Present in the list but status active — not revoked
+      return { revoked: false };
+    }
+  }
+  return { revoked: false };
+}
+
+// Small helper so the revoked check reads unambiguously at the call site.
+function isRevokedVerdict(verdict) {
+  return verdict && verdict.revoked === true;
 }
 
 function check_ATC_008_expiration(atc) {
@@ -396,13 +495,32 @@ function check_ATC_008_expiration(atc) {
 /**
  * Verifies an ATC/1.0 card.
  *
+ * TRUST mode (default, fail-closed):
+ *   verifyATC(atc, { trusted_ca }) — trusted_ca REQUIRED (base64 SPKI,
+ *   obtained out-of-band). Missing trusted_ca → ATC-006 CONFIGURATION_ERROR,
+ *   valid:false. When revocation_check_required=true, options.revocation_status
+ *   (pre-fetched list or {revoked:boolean}) is also REQUIRED — no evidence →
+ *   ATC-007 DENY (fail-closed). Never falls back to atc.issuer.ca_public_key.
+ *
+ * SELF_DESCRIBED mode (debugging/interop only — NOT a trust decision):
+ *   verifyATC(atc, { mode: 'self_described' }) — verifies the signature math
+ *   against the CA key embedded in the document. Result is labeled
+ *   verification_mode:'SELF_DESCRIBED' / trust_decision:'NOT_APPLICABLE'.
+ *   See also verifySelfDescribedSignature().
+ *
  * @param {object} atc - The ATC JSON document to verify.
  * @param {object} [options]
- * @param {string} [options.ca_public_key] - Override the CA public key (base64 SPKI).
- *                                           If omitted, uses atc.issuer.ca_public_key.
- * @param {boolean} [options.fetch_revocation] - If true, fetches the revocation list
- *                                                (not yet implemented — emits warning).
- * @returns {object} Verification result.
+ * @param {string} [options.trusted_ca] - Trusted CA public key (base64 SPKI),
+ *                                        obtained OUT-OF-BAND. Required in TRUST mode.
+ * @param {string} [options.ca_public_key] - Alias of trusted_ca (backward compat).
+ * @param {string} [options.mode] - 'trust' (default) | 'self_described'.
+ * @param {object} [options.revocation_status] - Revocation evidence (pre-fetched
+ *        CRL list or simple {revoked:boolean} status). Required in TRUST mode
+ *        when the card sets revocation_check_required=true.
+ * @param {boolean} [options.fetch_revocation] - Accepted for backward compat;
+ *        this verifier is self-contained (no network) — pass revocation_status
+ *        instead. Emits a warning explaining this.
+ * @returns {object} Verification result (see file header for shape).
  */
 export function verifyATC(atc, options = {}) {
   const errors = [];
@@ -410,9 +528,21 @@ export function verifyATC(atc, options = {}) {
   const controlsPassed = [];
   const controlsFailed = [];
 
+  // Mode resolution: TRUST is the DEFAULT (fail-closed security path).
+  // 'self_described' must be requested EXPLICITLY — it is never implicit.
+  const selfDescribed = options.mode === 'self_described';
+  const MODE = selfDescribed ? 'SELF_DESCRIBED' : 'TRUST';
+  // The trusted CA anchor: caller-supplied ONLY. Never read from the document
+  // on the trust path. (ca_public_key kept as a backward-compatible alias.)
+  const trustedCA = !selfDescribed ? (options.trusted_ca || options.ca_public_key || null) : null;
+  // The self-described key: ONLY meaningful in self-described mode.
+  const selfDescribedCA = selfDescribed ? (atc?.issuer?.ca_public_key || null) : null;
+
   if (!isObject(atc)) {
     return {
       valid: false,
+      verification_mode: MODE,
+      trust_decision: 'DENY',
       spec_version: null,
       controls_passed: [],
       controls_failed: REQUIRED_CONTROLS,
@@ -431,6 +561,8 @@ export function verifyATC(atc, options = {}) {
     errors.push(`Invalid spec_version: expected '${ATC_SPEC_VERSION}', got '${atc.spec_version}'`);
     return {
       valid: false,
+      verification_mode: MODE,
+      trust_decision: 'DENY',
       spec_version: atc.spec_version || null,
       controls_passed: [],
       controls_failed: REQUIRED_CONTROLS,
@@ -450,13 +582,15 @@ export function verifyATC(atc, options = {}) {
   }
 
   // Run per-control checks
+  // ATC-007 receives the full options so it can enforce fail-closed
+  // revocation in TRUST mode (mode + revocation_status).
   const checks = [
     ['ATC-001', check_ATC_001_identity(atc)],
     ['ATC-002', check_ATC_002_attestation(atc)],
     ['ATC-003', check_ATC_003_capabilities(atc)],
     ['ATC-004', check_ATC_004_evidence(atc)],
     ['ATC-005', check_ATC_005_risk(atc)],
-    ['ATC-007', check_ATC_007_revocation(atc)],
+    ['ATC-007', check_ATC_007_revocation(atc, options)],
     ['ATC-008', check_ATC_008_expiration(atc)],
   ];
 
@@ -471,15 +605,27 @@ export function verifyATC(atc, options = {}) {
   }
 
   // ATC-006 (signature) is checked last — only if ATC-002 passed (so we have a signature to verify)
+  // The verification key is chosen by MODE, never by an implicit fallback:
+  //   TRUST mode          → trustedCA (caller-supplied, out-of-band). May be null → CONFIGURATION_ERROR.
+  //   SELF_DESCRIBED mode → selfDescribedCA (document-embedded). May be null → error.
   if (controlsPassed.includes('ATC-002')) {
-    const sigResult = check_ATC_006_signature(atc, options.ca_public_key);
-    if (sigResult.errors.length === 0) {
-      controlsPassed.push('ATC-006');
-    } else {
+    const verificationKey = selfDescribed ? selfDescribedCA : trustedCA;
+    if (selfDescribed && !selfDescribedCA) {
       controlsFailed.push('ATC-006');
-      errors.push(...sigResult.errors);
+      errors.push('ATC-006: self-described mode selected but the document carries no issuer.ca_public_key to check the signature math against');
+    } else {
+      const sigResult = check_ATC_006_signature(atc, verificationKey);
+      if (sigResult.errors.length === 0) {
+        controlsPassed.push('ATC-006');
+      } else {
+        controlsFailed.push('ATC-006');
+        errors.push(...sigResult.errors);
+      }
+      warnings.push(...sigResult.warnings);
     }
-    warnings.push(...sigResult.warnings);
+    if (selfDescribed) {
+      warnings.push('SELF-DESCRIBED MODE: the signature was verified against the CA key embedded in the document itself. A malicious card can carry the very key that verifies its own signature — this result is NOT a trust decision. For a trust decision, obtain the CA key out-of-band and use TRUST mode (verifyATC(atc, { trusted_ca }) or verifyTrust()).');
+    }
   } else {
     controlsFailed.push('ATC-006');
     errors.push('ATC-006: skipped because ATC-002 (attestation structure) failed');
@@ -493,7 +639,7 @@ export function verifyATC(atc, options = {}) {
     warnings.push('ATC-010 (runtime_trust) is present but not validated by this verifier');
   }
   if (options.fetch_revocation) {
-    warnings.push('fetch_revocation=true is not yet implemented — caller must check the revocation list separately');
+    warnings.push('fetch_revocation=true is not supported — this verifier is self-contained (no network calls). Fetch the revocation list out-of-band and pass it via options.revocation_status instead.');
   }
 
   // Sort controls arrays for stable output
@@ -502,6 +648,8 @@ export function verifyATC(atc, options = {}) {
 
   return {
     valid: errors.length === 0,
+    verification_mode: MODE,
+    trust_decision: errors.length === 0 ? (selfDescribed ? 'NOT_APPLICABLE' : 'TRUST') : (selfDescribed ? 'NOT_APPLICABLE' : 'DENY'),
     spec_version: atc.spec_version,
     controls_passed: controlsPassed,
     controls_failed: controlsFailed,
@@ -516,4 +664,40 @@ export function verifyATC(atc, options = {}) {
     agent_id: atc.identity?.agent_id || null,
     agent_name: atc.identity?.agent_name || null,
   };
+}
+
+// ─── Convenience exports for the two verification intents ──────────────────
+
+/**
+ * Strict TRUST verification — fail-closed by construction.
+ *
+ * This is the function to call before making ANY trust decision (execute,
+ * grant, transact). It forces TRUST mode: a caller-supplied trusted CA is
+ * mandatory, and revocation evidence is mandatory whenever the card sets
+ * revocation_check_required=true. Any missing input → DENY with a
+ * CONFIGURATION_ERROR-style message, never a silent pass.
+ *
+ * @param {object} atc - The ATC JSON document to verify.
+ * @param {object} options - { trusted_ca (REQUIRED), revocation_status?, ca_public_key? (alias) }
+ * @returns {object} Verification result (verification_mode:'TRUST').
+ */
+export function verifyTrust(atc, options = {}) {
+  return verifyATC(atc, { ...options, mode: 'trust' });
+}
+
+/**
+ * Self-described signature verification — debugging/interop ONLY.
+ *
+ * Verifies the signature math against the CA key embedded in the document
+ * (atc.issuer.ca_public_key). Useful to confirm a card is self-consistent
+ * (canonicalization, hash binding, Ed25519 math) when debugging an issuer.
+ * The result is explicitly NOT a trust decision: a malicious card can carry
+ * the very key that verifies its own signature.
+ *
+ * @param {object} atc - The ATC JSON document to check.
+ * @returns {object} Verification result (verification_mode:'SELF_DESCRIBED',
+ *                   trust_decision:'NOT_APPLICABLE').
+ */
+export function verifySelfDescribedSignature(atc) {
+  return verifyATC(atc, { mode: 'self_described' });
 }

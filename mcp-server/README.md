@@ -4,15 +4,19 @@
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: AliceLabs Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Audit: PASS](https://img.shields.io/badge/Audit-v1.10.0%20PASS-brightgreen)](./AUDIT.md)
+[![Audit: PASS](https://img.shields.io/badge/Audit-v1.11.0%20PASS-brightgreen)](./AUDIT.md)
 
 ---
 
-## Why v1.10.0 is a breaking change
+## Why v1.11.0 is a security release (fail-closed trust)
 
-Agents do not read human documentation at runtime — they read the JSON-Schema returned by `tools/list`. v1.7.0 had `search_skills`, `get_skill`, etc., with no namespace prefix and several free-form string fields. That ambiguity caused LLM tool-call failures.
+Agents do not read human documentation at runtime — they read the JSON-Schema returned by `tools/list`. v1.7.0 had `search_skills`, `get_skill`, etc., with no namespace prefix and several free-form string fields. That ambiguity caused LLM tool-call failures. v1.10.0 fixed that with **four golden rules** (see [`AUDIT.md`](./AUDIT.md)) and added the ATC/1.0 spec verifier.
 
-v1.10.0 enforces **four golden rules** (see [`AUDIT.md`](./AUDIT.md)) and adds the ATC/1.0 spec verifier:
+**v1.11.0 closes the trust gap in `marketnow_verify_atc_spec`:**
+
+- **TRUST mode is the default and it is fail-closed.** You MUST pass `ca_public_key` — a trusted CA key obtained OUT-OF-BAND from the issuer's official channel. Without it: `DENY` / `CONFIGURATION_ERROR`. Rationale: a malicious ATC can carry the very key that verifies its own signature, so the verifier no longer falls back to `atc.issuer.ca_public_key` on the trust path.
+- **Revocation is enforced, not suggested.** If the card sets `revocation_check_required=true`, you must also pass `revocation_status` (a pre-fetched revocation list or a `{revoked:boolean}` status). No evidence → `DENY`. A mathematically valid signature on a revoked card never returns `valid:true`.
+- **Self-described verification is a separate, explicit opt-in** (`mode:'self_described'`) for debugging/interop, labeled `trust_decision:'NOT_APPLICABLE'` with a loud warning — impossible to confuse with a trust decision.
 
 | # | Rule | What changed |
 |---|------|--------------|
@@ -20,6 +24,7 @@ v1.10.0 enforces **four golden rules** (see [`AUDIT.md`](./AUDIT.md)) and adds t
 | B | Intent-oriented descriptions (WHEN/WHY, not WHAT) | Every description rewritten |
 | C | Strict JSON-Schema (`type` + `enum` + `pattern` + bounds) | No `any` left anywhere |
 | D | Structured `{ content, isError }` responses with taxonomy | `INVALID_ARGUMENT` / `NOT_FOUND` / `UNKNOWN_TOOL` / `INTERNAL_ERROR` |
+| E | Fail-closed trust verification (v1.11.0) | Trusted CA required · revocation evidence required · self-described mode clearly separated |
 
 ---
 
@@ -70,7 +75,7 @@ Same `mcpServers` block — add it under Settings → MCP, or your project's `.m
 | 10 | `marketnow_lookup_referral` | Referral stats (clicks, installs, purchases, earnings) |
 | 11 | `marketnow_recommend_skills` | AI-ranked recommendations for a natural-language task |
 | 12 | `marketnow_get_owasp_compliance` | OWASP MCP Cheat Sheet (12 controls) + SHA-256 tool fingerprint + capability manifest (filesystem/network/shell/credentials/process) |
-| 13 | `marketnow_verify_atc_spec` | **ATC/1.0 spec verifier** — accepts ANY Agent Trust Card (any issuer, any CA) and verifies all 8 required controls (ATC-001 Identity through ATC-008 Expiration). Self-contained: uses `node:crypto` + RFC 8785 JCS + Ed25519 (RFC 8032). Makes this package the LIVE REFERENCE IMPLEMENTATION of the ATC/1.0 specification. |
+| 13 | `marketnow_verify_atc_spec` | **ATC/1.0 spec verifier (v1.11.0 — fail-closed trust model)** — accepts ANY Agent Trust Card (any issuer). Default TRUST mode: `ca_public_key` (out-of-band trusted CA) is REQUIRED — without it the result is DENY/CONFIGURATION_ERROR; if the card sets `revocation_check_required=true`, `revocation_status` evidence is REQUIRED — no evidence → DENY. `mode:'self_described'` (explicit opt-in) verifies the signature math against the card-embedded key and is labeled NOT a trust decision. Verifies all 8 required controls (ATC-001 through ATC-008) + `verification_mode`/`trust_decision` fields. Self-contained: `node:crypto` + RFC 8785 JCS + Ed25519 (RFC 8032). Makes this package the LIVE REFERENCE IMPLEMENTATION of the ATC/1.0 specification. |
 
 ### Strict inputSchema (Rule C in practice)
 

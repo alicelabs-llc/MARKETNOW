@@ -171,6 +171,7 @@ function fingerprintTools(tools, pinned) {
   if (!Array.isArray(tools) || tools.length === 0) {
     return { error: "INVALID_ARGUMENT", message: "tools must be a non-empty array of tool definitions" };
   }
+  if (tools.length > 200) return { error: "INVALID_ARGUMENT", message: "tools must contain at most 200 definitions" };
   const seen = new Set();
   for (const t of tools) {
     if (!t || typeof t.name !== "string" || !t.name) {

@@ -1,0 +1,44 @@
+name: MarketNow CI
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "aep-marketplace/**"
+      - ".github/workflows/aep-marketplace-ci.yml"
+  pull_request:
+    paths:
+      - "aep-marketplace/**"
+      - ".github/workflows/aep-marketplace-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: aep-marketplace
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: aep-marketplace/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Validate MCP entrypoint syntax
+        run: node --check api/mcp.js
+
+      - name: Validate submission-core syntax
+        run: node --check lib/submit-core.mjs

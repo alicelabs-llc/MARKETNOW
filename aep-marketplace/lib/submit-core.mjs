@@ -252,7 +252,7 @@ async function reachabilityProbe(url) {
 async function probeClaim(url, accept) {
   try {
     const r = await fetch(url, {
-      method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(PROBE_TIMEOUT_MS),
+      method: 'GET', redirect: 'manual', signal: AbortSignal.timeout(PROBE_TIMEOUT_MS),
       headers: { 'User-Agent': 'marketnow-claims-verify/1.0', ...(accept ? { Accept: accept } : {}) },
     });
     return { ok: r.ok, status: r.status };
@@ -345,12 +345,19 @@ async function verifyClaims(skill) {
   if (skill.install) {
     const pkg = parseInstallPackage(skill.install);
     if (pkg && REGISTRY_PROBE[pkg.registry]) {
-      const p = await probeClaim(REGISTRY_PROBE[pkg.registry](pkg.package), 'application/json');
+      const probeUrl = REGISTRY_PROBE[pkg.registry](pkg.package);
+      const allowedRegistryProbe = pkg.registry !== 'url' || isSafeProbeHost(probeUrl, ['github.com', 'gitlab.com', 'bitbucket.org', 'codeberg.org']);
+      if (!allowedRegistryProbe) {
+        claims.install = { command: String(skill.install).slice(0, 100), registry: pkg.registry, package: pkg.package, ok: false, status: 0 };
+        claims.findings.push({ check: 'CLAIMS', severity: 'low', source: 'install', reason: 'Go module URL was not probed because its host is outside the public repository allowlist' });
+      } else {
+      const p = await probeClaim(probeUrl, 'application/json');
       claims.install = { command: String(skill.install).slice(0, 100), registry: pkg.registry, package: pkg.package, ...p };
       if (p.status === 404) {
         claims.findings.push({ check: 'CLAIMS', severity: 'high', source: 'install', reason: `install references "${pkg.package}" which does not exist on ${pkg.registry} (HTTP 404) — use a real package or remove the field`, match: String(skill.install).slice(0, 60) });
       } else if (p.status === 0 || p.status >= 500) {
         claims.findings.push({ check: 'CLAIMS', severity: 'low', source: 'install', reason: `registry ${pkg.registry} unreachable (${p.status || 'network'}) — claim not verified` });
+      }
       }
     }
   }

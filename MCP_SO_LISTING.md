@@ -21,7 +21,7 @@ MarketNow — Security Infrastructure for AI Agents
 
 ### Tagline / Short Description
 ```
-12 MCP tools (marketnow_* namespace) backed by Sentinel — a 10-layer security audit pipeline that has run 1.2M checks, detected 1,030 threats, and quarantined 80 malicious skills.
+15 MCP tools (marketnow_* namespace) backed by Sentinel — a 10-layer security audit pipeline that has run 1.2M checks, detected 1,030 threats, and quarantined 80 malicious skills.
 ```
 
 ### Full Description
@@ -56,8 +56,8 @@ VERIFIED STATS (all real, all public at /api/audit-report.json)
   - 57 Agent Trust Cards issued
   - 5 runtime interceptor policy rules live
 
-THE MCP SERVER (v1.9.0 — Agent Contract Hardening)
-The npm package `marketnow-mcp@1.9.0` exposes 12 tools, all under the
+THE MCP SERVER (v1.14.1 — Agent Contract Hardening)
+The npm package `marketnow-mcp@1.14.1` exposes 15 tools, all under the
 `marketnow_*` namespace prefix for unambiguous tool choice by Claude
 Desktop, Cursor, Cline, LangChain, and LlamaIndex agents:
 
@@ -74,7 +74,7 @@ Desktop, Cursor, Cline, LangChain, and LlamaIndex agents:
   11. marketnow_recommend_skills   — AI-ranked skill recommendations for a task
   12. marketnow_get_owasp_compliance — OWASP MCP Cheat Sheet (12 controls) + tool fingerprints + capability manifest
 
-The 12 tools follow four golden rules (see AUDIT.md inside the npm package):
+The 15 tools follow four golden rules (see AUDIT.md inside the npm package):
   A. Deterministic `marketnow_` snake_case names
   B. Intent-oriented descriptions (WHEN/WHY, not WHAT)
   C. Strict JSON-Schema (type + enum + pattern + bounds, no `any`)
@@ -127,7 +127,7 @@ npx -y marketnow-mcp
 Use the MarketNow favicon: https://marketnow.site/favicon.svg
 
 ### Features to highlight
-- ✅ 12 MCP tools under `marketnow_*` namespace (v1.9.0)
+- ✅ 15 MCP tools under `marketnow_*` namespace (v1.14.1)
 - ✅ 10-layer Sentinel security audit pipeline (L1.5 → L3)
 - ✅ 1,211,488 security checks performed (real, public)
 - ✅ 80 malicious skills quarantined (transparency report)
@@ -148,12 +148,12 @@ The current listing (https://mcp.so/server/marketnow-mcp---aep-agent-exchange-pr
 
 | Field | Current (WRONG) | Should be |
 |-------|-----------------|-----------|
-| Tagline | "13,859 verified MCP-compatible skills" | "Security infrastructure for AI agents — 12 MCP tools backed by Sentinel" |
+| Tagline | "13,859 verified MCP-compatible skills" | "Security infrastructure for AI agents — 15 MCP tools backed by Sentinel" |
 | Stats | "13,859 skills" | 9,248 skills analyzed, 1,211,488 checks, 80 quarantined |
 | Pricing | "Crypto payments (ETH/BSC/SOL/BTC)" | "Free / $49-99 / $199-499 / $99-499/mo / $5k-50k+/yr" |
 | Tools | "Transport: SSE/WebSocket/JSON-RPC" | "Transport: stdio only (via `npx marketnow-mcp`)" |
 | Config | `"url": "https://marketnow.site/api/mcp"` | `{"mcpServers":{"marketnow":{"command":"npx","args":["-y","marketnow-mcp"]}}}` |
-| Tool count | "5 tools" | "12 tools (all `marketnow_*` namespaced)" |
+| Tool count | "5 tools" | "15 tools (all `marketnow_*` namespaced)" |
 
 ---
 
@@ -171,7 +171,7 @@ The current listing (https://mcp.so/server/marketnow-mcp---aep-agent-exchange-pr
 - [x] mcp.so — https://mcp.so/server/marketnow-mcp---aep-agent-exchange-protocol/edgarfloresguerra2011-a11y (UPDATE NEEDED)
 - [ ] chat.mcp.so — mirror, updates with mcp.so
 - [x] glama.ai — https://glama.ai/mcp/connectors?query=MarketNow+MCP (verify data)
-- [x] npm — https://www.npmjs.com/package/marketnow-mcp (auto-updated to v1.9.0)
+- [x] npm — https://www.npmjs.com/package/marketnow-mcp (auto-updated to v1.14.1)
 - [ ] Smithery — https://smithery.ai
 - [ ] OpenTools — https://opentools.ai
 - [ ] Product Hunt (for v5.0 launch)

@@ -5,16 +5,22 @@ on:
   push:
     branches: [master]
     paths:
-      - "aep-marketplace/**"
       - "mcp-server/**"
       - "atc-sdk/**"
+      - "atc-python/**"
+      - "atc-rust/**"
+      - "integrations/**"
+      - "docker/**"
       - "scripts/check-version-sync.mjs"
       - ".github/workflows/aep-marketplace-ci.yml"
   pull_request:
     paths:
-      - "aep-marketplace/**"
       - "mcp-server/**"
       - "atc-sdk/**"
+      - "atc-python/**"
+      - "atc-rust/**"
+      - "integrations/**"
+      - "docker/**"
       - "scripts/check-version-sync.mjs"
       - ".github/workflows/aep-marketplace-ci.yml"
 
@@ -22,34 +28,10 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: aep-marketplace
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-          cache-dependency-path: aep-marketplace/package-lock.json
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Validate MCP entrypoint syntax
-        run: node --check api/mcp.js
-
-      - name: Validate submission-core syntax
-        run: node --check lib/submit-core.mjs
-
+  # NOTE (repo split 2026-09-26): the `build` job for the aep-marketplace
+  # site was REMOVED — the site (dist + api + catalog data) now lives and
+  # is CI'd in eddyflores100-lang/marketnow. This repo owns product code
+  # only: mcp-server, atc-sdk, integrations, CLIs.
   mcp-server:
     # marketnow-mcp npm package: syntax + fail-closed trust security tests
     # (audit 2026-09-26: verifyATC trusted-CA + revocation enforcement)

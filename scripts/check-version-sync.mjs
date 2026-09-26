@@ -12,16 +12,39 @@
  *      == mcp-server/server.json packages[0].version
  *   2. mcp-server/AUDIT.md contains a changelog entry for the current version
  *   3. mcp-server/README.md badge mentions the current version
- *   4. aep-marketplace/api/mcp.js SERVER_INFO.version is mentioned in the
- *      root README.md (remote endpoint vs npm package are two artifacts —
- *      they do not need to be equal, but the root README must state exactly
- *      what the endpoint reports)
+ *   4. LIVE remote endpoint (https://marketnow.site/api/mcp initialize ->
+ *      serverInfo.version) is mentioned in the root README.md (remote
+ *      endpoint vs npm package are two artifacts — they do not need to be
+ *      equal, but the root README must state exactly what the endpoint
+ *      reports. The site itself lives in eddyflores100-lang/marketnow)
  *   5. atc-sdk/package.json version == atc-sdk README "current version"
  *      mention (best-effort; fails loud so humans fix it)
  *
  * Exit code 0 = consistent. Non-zero = drift (CI fails).
  */
 import { readFileSync } from 'node:fs';
+
+// Live endpoint probe (CI runners have network; sandboxed runs fall back to info)
+async function probeEndpointVersion() {
+  const ENDPOINT = 'https://marketnow.site/api/mcp';
+  try {
+    const ac = new AbortController();
+    const t = setTimeout(() => ac.abort(), 10000);
+    const res = await fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'version-sync-gate', version: '0.0.0' } } }),
+      signal: ac.signal,
+    });
+    clearTimeout(t);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = (await res.text()).slice(0, 4000);
+    const m = text.match(/"version"\s*:\s*"([^"]+)"/);
+    return m ? m[1] : null;
+  } catch {
+    return null; // network unavailable — non-blocking (documented in info)
+  }
+}
 
 const root = new URL('..', import.meta.url).pathname;
 const fail = [];
@@ -57,16 +80,18 @@ if (!mcpReadme.includes(npmVersion)) {
 }
 
 // ─── 4. Remote endpoint version is stated in root README ───────────────────
-const mcpApi = read('aep-marketplace/api/mcp.js');
-const endpointMatch = mcpApi.match(/version:\s*"([^"]+)"/);
-if (endpointMatch) {
-  const endpointVersion = endpointMatch[1];
+// The site lives in eddyflores100-lang/marketnow (repo split 2026-09-26):
+// the endpoint version is probed LIVE instead of reading a local copy.
+const endpointVersion = await probeEndpointVersion();
+if (endpointVersion) {
   const rootReadme = read('README.md');
   if (!rootReadme.includes(endpointVersion)) {
-    fail.push(`root README.md does not mention the remote endpoint version ${endpointVersion} (api/mcp.js)`);
+    fail.push(`root README.md does not mention the remote endpoint version ${endpointVersion} (https://marketnow.site/api/mcp)`);
   } else {
     info.push(`remote endpoint ${endpointVersion} ↔ npm package ${npmVersion} (two artifacts, both documented)`);
   }
+} else {
+  info.push('remote endpoint unreachable from CI — endpoint-version check skipped (non-blocking)');
 }
 
 // ─── 5. atc-sdk version sanity ──────────────────────────────────────────────

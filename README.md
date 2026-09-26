@@ -1,5 +1,17 @@
 # MarketNow — Trust Infrastructure for AI Agents
 
+> **Repo ecosystem (one owner per concern, split 2026-09-26):**
+>
+> | Repo | Sole owner of |
+> |------|----------------|
+> | `alicelabs-llc/MARKETNOW` (this repo) | Product code: `mcp-server` (npm `marketnow-mcp`), `atc-sdk`/`atc-python`/`atc-rust`, Docker/Cline/Cursor integrations, CLIs, security audits |
+> | `eddyflores100-lang/marketnow` | Live marketplace: site (`aep-marketplace/`), catalog data (`_data/`, `skills/`, `public/api/`), the 21 scheduled data pipelines, Vercel deploys of marketnow.site |
+> | `alicelabs-llc/universal-trust-adapter` | ATC/1.0 protocol: spec, adapters, reference implementation, plugins |
+> | `alicelabs-llc/marketnow-submissions` | Public skill submissions queue |
+> | `alicelabs-llc/status` | Live status page |
+>
+> Data and site questions go to the marketplace repo; protocol questions to UTA; everything else lives here.
+
 > **MarketNow doesn't sell AI tools. It determines whether AI agents should be allowed to trust and execute them.**
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
@@ -8,11 +20,11 @@
 
 ## What is MarketNow?
 
-MarketNow is **trust infrastructure for AI agents**: a hosted registry that verifies skills, credentials and domains across **69,077 indexed MCP servers** (133,426 tracked across GitHub, npm and PyPI), with signed skill submissions, revocation checks and a 9-tool MCP API.
+MarketNow is **trust infrastructure for AI agents**: a hosted registry that verifies skills, credentials and domains across **68,388 indexed MCP servers** (132,737 tracked across GitHub, npm and PyPI), with signed skill submissions, revocation checks and a 9-tool MCP API.
 
-Every indexed entry is security-first scored. The MCP API is **free** — all 69,077 indexed servers are free to install (`paid: 0` in the public [stats API](https://www.marketnow.site/api/stats.json)).
+Every indexed entry is security-first scored. The MCP API is **free** — 68,387 of the 68,388 indexed servers are free to install (`paid: 1` in the public [stats API](https://www.marketnow.site/api/stats.json)).
 
-## The 9 MCP tools (endpoint v1.11.0)
+## The 9 MCP tools (endpoint v1.14.1)
 
 The MCP server exposes 9 tools, all under the `marketnow_*` namespace so Claude Desktop, Cursor, Cline, LangChain and LlamaIndex can disambiguate them at tool-choice time:
 
@@ -72,12 +84,12 @@ curl "https://www.marketnow.site/api/atc?action=verify&card_id=ATC-2026-XXXXX"
 
 | Metric | Value |
 |--------|-------|
-| MCP servers indexed | **69,077** |
-| Tracked across all sources | **133,426** |
+| MCP servers indexed | **68,388** |
+| Tracked across all sources | **132,737** |
 | Core certified (L1) | 59,946 |
 | Community indexed | 9,131 |
-| Free to install | 69,077 (all of them) |
-| Paid | 0 |
+| Free to install | 68,387 of 68,388 (paid: 1) |
+| Paid | 1 |
 | L1 index checks | 10/10 passing |
 | L2 Sentinel scans | 2,839 of 2,868 npm tarballs |
 | Credential formats | 8 (ATC v3, JWT, W3C VC, A2A, EAT-AI, ZTA, MCP Card, X.509) |
@@ -90,7 +102,7 @@ Source of truth: [`https://www.marketnow.site/api/stats.json`](https://www.marke
 
 Two levels:
 
-- **L1 — index certification**: all 69,077 entries pass 10 metadata/security checks before being indexed.
+- **L1 — index certification**: all 68,388 entries pass 10 metadata/security checks before being indexed.
 - **L2 — Sentinel scans**: shipped npm tarballs are scanned (2,839 to date) for injection patterns, embedded secrets and dangerous capabilities. Skills that fail are quarantined and published in the transparency report.
 
 ## Conformance

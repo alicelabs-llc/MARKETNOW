@@ -1,0 +1,36 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# MarketNow MCP Server — local compose (v1.15.0)
+# ══════════════════════════════════════════════════════════════════════════════
+# MCP stdio servers are meant to be spawned by an MCP client (Cline, Cursor,
+# Claude Desktop, Docker MCP Toolkit) attached to stdin/stdout. Compose exists
+# here for local debugging of the exact image CI publishes to GHCR:
+#
+#   docker compose build
+#   printf '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"probe","version":"0"}}}\n' \
+#     | docker compose run --rm -T marketnow-mcp
+#
+# For real client integration, use the snippets in integrations/cline and
+# integrations/cursor (or .cursor/mcp.json in this repo).
+# ══════════════════════════════════════════════════════════════════════════════
+services:
+  marketnow-mcp:
+    build:
+      context: ./mcp-server
+      args:
+        VERSION: "1.15.0"
+        VCS_URL: "https://github.com/alicelabs-llc/MARKETNOW"
+    image: ghcr.io/alicelabs-llc/marketnow-mcp:latest
+    # stdio transport: keep stdin open, no ports, read-only root filesystem,
+    # no new privileges, dropped capabilities, seccomp default profile.
+    stdin_open: true
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    user: "1000:1000"
+    environment:
+      NODE_ENV: production

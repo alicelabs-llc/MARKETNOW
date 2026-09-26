@@ -48,6 +48,19 @@ Tool contract: deterministic `marketnow_` snake_case names · intent-oriented de
 npx -y marketnow-mcp
 ```
 
+### Run it in Docker (audited repo tree, published by CI)
+```bash
+docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+# or register it in the Docker MCP Toolkit:
+docker mcp gateway add --docker ghcr.io/alicelabs-llc/marketnow-mcp
+```
+
+### Cline
+Paste the ready block from [`integrations/cline/cline_mcp_settings.json`](integrations/cline/cline_mcp_settings.json) into Cline → MCP Servers → Configure. The repo also ships [`.clinerules/`](.clinerules/) house rules. Guide: [`integrations/cline/README.md`](integrations/cline/README.md).
+
+### Cursor
+Open this repo as your Cursor workspace — [`.cursor/mcp.json`](.cursor/mcp.json) auto-registers the server, and [`.cursor/rules/marketnow.mdc`](.cursor/rules/marketnow.mdc) teaches Cursor the house rules. Guide: [`integrations/cursor/README.md`](integrations/cursor/README.md).
+
 ### Verify an Agent Trust Card (ATC/1.3)
 ```bash
 curl "https://www.marketnow.site/api/atc?action=ca-key"    # public CA key (Ed25519, RFC 8032)

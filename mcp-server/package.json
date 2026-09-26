@@ -1,7 +1,7 @@
 {
   "name": "marketnow-mcp",
-  "version": "1.11.0",
-  "description": "MarketNow MCP Server v1.11.0 — SECURITY: fail-closed ATC trust verification (trusted CA required, revocation evidence enforced, self-described mode explicitly separated as NOT a trust decision) + Zod runtime schema validation for all tool inputs and cache partitioning.",
+  "version": "1.15.0",
+  "description": "MarketNow MCP Server v1.15.0 — SECURITY: fail-closed ATC trust verification (trusted CA required, revocation evidence enforced, self-described mode explicitly separated as NOT a trust decision) + Zod runtime schema validation for all tool inputs and cache partitioning. INTEGRATIONS: first-class Docker (ghcr.io image + Docker MCP Toolkit catalog entry), Cline and Cursor support.",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -93,5 +93,5 @@
     "AUDIT.md",
     "VERIFICATION-LOG.md"
   ],
-  "mcpName": "io.github.edgarfloresguerra2011-a11y/marketnow"
+  "mcpName": "io.github.alicelabs-llc/marketnow"
 }

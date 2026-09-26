@@ -1,0 +1,38 @@
+{
+  "_comment": "Paste the mcpServers block below into Cline > MCP Settings (cline_mcp_settings.json). Option A (Docker) runs the exact image CI builds from this repository — recommended. Option B (npx) runs the npm release channel. Use ONE of them, not both. The version pin (1.15.0) matches mcp-server/package.json; scripts/check-version-sync.mjs validates it.",
+  "mcpServers": {
+    "marketnow": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--init",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges:true",
+        "-e",
+        "NODE_ENV=production",
+        "ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
+      ],
+      "env": {},
+      "disabled": false,
+      "autoApprove": [
+        "marketnow_search_skills",
+        "marketnow_get_skill",
+        "marketnow_list_categories",
+        "marketnow_get_manifest",
+        "marketnow_get_install_command",
+        "marketnow_recommend_skills",
+        "marketnow_get_owasp_compliance"
+      ],
+      "_alternative_npx": {
+        "command": "npx",
+        "args": ["-y", "marketnow-mcp@1.15.0"],
+        "note": "npm channel — same package, no Docker required. Keep the version pinned; @latest may drift from the audited repo tree."
+      }
+    }
+  }
+}

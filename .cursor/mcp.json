@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "marketnow": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--init",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges:true",
+        "-e",
+        "NODE_ENV=production",
+        "ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
+      ],
+      "env": {}
+    }
+  }
+}

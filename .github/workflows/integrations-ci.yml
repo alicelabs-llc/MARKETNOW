@@ -1,0 +1,118 @@
+name: Integrations CI (Docker / Cline / Cursor)
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "mcp-server/**"
+      - "docker/**"
+      - "integrations/**"
+      - ".cursor/**"
+      - ".clinerules/**"
+      - "docker-compose.yml"
+      - "scripts/docker-smoke-test.sh"
+      - "scripts/check-version-sync.mjs"
+      - ".github/workflows/integrations-ci.yml"
+  pull_request:
+    paths:
+      - "mcp-server/**"
+      - "docker/**"
+      - "integrations/**"
+      - ".cursor/**"
+      - ".clinerules/**"
+      - "docker-compose.yml"
+      - "scripts/docker-smoke-test.sh"
+      - "scripts/check-version-sync.mjs"
+      - ".github/workflows/integrations-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  docker:
+    name: Docker build + MCP handshake gate + GHCR publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Read package version (single source of truth)
+        id: ver
+        run: echo "version=$(node -p "require('./mcp-server/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Build image (hardened Dockerfile)
+        run: >-
+          docker build
+          --build-arg VERSION=${{ steps.ver.outputs.version }}
+          --build-arg VCS_REF=${{ github.sha }}
+          -t marketnow-mcp:ci
+          ./mcp-server
+
+      - name: Smoke test — real MCP session over stdio (initialize + tools/list)
+        run: bash scripts/docker-smoke-test.sh marketnow-mcp:ci "$GITHUB_WORKSPACE"
+
+      - name: Login to GHCR
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push pinned + latest tags
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          V="${{ steps.ver.outputs.version }}"
+          docker tag marketnow-mcp:ci "ghcr.io/alicelabs-llc/marketnow-mcp:${V}"
+          docker tag marketnow-mcp:ci ghcr.io/alicelabs-llc/marketnow-mcp:latest
+          docker push "ghcr.io/alicelabs-llc/marketnow-mcp:${V}"
+          docker push ghcr.io/alicelabs-llc/marketnow-mcp:latest
+
+  configs:
+    name: Integration artifacts consistency (Cline / Cursor / server.json)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Version + metadata + integration consistency gate
+        run: node scripts/check-version-sync.mjs
+
+      - name: Integration release artifacts present
+        run: |
+          set -e
+          test -f mcp-server/Dockerfile
+          test -f mcp-server/.dockerignore
+          test -f docker-compose.yml
+          test -f docker/mcp-registry-entry.yaml
+          test -f .cursor/mcp.json
+          test -f .cursor/rules/marketnow.mdc
+          test -f .clinerules/00-marketnow.md
+          test -f integrations/cline/cline_mcp_settings.json
+          test -f integrations/cline/README.md
+          test -f integrations/cursor/README.md
+          test -f integrations/docker/README.md
+          test -f scripts/docker-smoke-test.sh
+          echo "✓ All Docker / Cline / Cursor release artifacts present"
+
+      - name: Catalog entry declares the 13-tool surface
+        run: |
+          set -e
+          TOOLS=$(grep -c "^  - name: marketnow_" docker/mcp-registry-entry.yaml)
+          if [ "$TOOLS" -ne 13 ]; then
+            echo "✗ docker/mcp-registry-entry.yaml lists $TOOLS tools (expected 13 — tool surface changed without updating the catalog entry)"
+            exit 1
+          fi
+          echo "✓ Docker MCP catalog entry lists all 13 marketnow_* tools"

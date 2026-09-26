@@ -3,8 +3,9 @@
 > **Security infrastructure for AI agents.** 13 MCP tools — all under the `marketnow_*` namespace — that let Claude Desktop, Cursor, Cline, Continue, LangChain, and LlamaIndex agents search the marketplace, verify trust, consume the OWASP compliance API, and verify ANY Agent Trust Card against the ATC/1.0 spec without execution errors or hallucinations.
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: AliceLabs Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Audit: PASS](https://img.shields.io/badge/Audit-v1.11.0%20PASS-brightgreen)](./AUDIT.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
+[![Docker](https://img.shields.io/badge/Docker-ghcr.io%2Falicelabs--llc%2Fmarketnow--mcp-2496ED?logo=docker&logoColor=white)](./../integrations/docker/README.md)
+[![Audit: PASS](https://img.shields.io/badge/Audit-v1.15.0%20PASS-brightgreen)](./AUDIT.md)
 
 ---
 
@@ -53,7 +54,40 @@ npx -y marketnow-mcp
 }
 ```
 
-### Cursor / Cline / VS Code
+### Docker (runs the audited repo tree)
+
+```bash
+docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+```
+
+Any MCP client that can spawn a Docker stdio process can use this. The
+image is built, handshake-tested and published by CI from this repository
+(`integrations/docker/README.md` has the full hardening model). It is also
+the payload for the Docker MCP Toolkit:
+
+```bash
+docker mcp gateway add --docker ghcr.io/alicelabs-llc/marketnow-mcp
+```
+
+### Cursor
+
+This repo ships a project-level config — open the repo as your Cursor
+workspace and `marketnow` appears under Settings → MCP:
+
+- Config: [`.cursor/mcp.json`](./../.cursor/mcp.json)
+- House rules for agents working on this repo: [`.cursor/rules/marketnow.mdc`](./../.cursor/rules/marketnow.mdc)
+- Guide: [`integrations/cursor/README.md`](./../integrations/cursor/README.md)
+
+### Cline
+
+Paste the ready block from [`integrations/cline/cline_mcp_settings.json`](./../integrations/cline/cline_mcp_settings.json)
+into Cline → MCP Servers → Configure. Docker and npx variants both live
+there; read-only tools are pre-whitelisted in `autoApprove`. The repo also
+ships [`.clinerules/`](./../.clinerules/) so Cline learns the house rules
+(fail-closed security, version discipline) automatically when the workspace
+is this repo. Guide: [`integrations/cline/README.md`](./../integrations/cline/README.md).
+
+### VS Code / Continue / others
 
 Same `mcpServers` block — add it under Settings → MCP, or your project's `.mcp.json`.
 

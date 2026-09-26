@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 /**
- * MarketNow MCP Server v1.10.0 — ATC/1.0 Spec Verifier
+ * MarketNow MCP Server — ATC/1.0 Spec Verifier
  * =======================================================
  *
  * Security Infrastructure for AI Agents.
  *
+ * The single source of truth for the server version is package.json —
+ * PKG_VERSION is read at startup so the MCP handshake (serverInfo), the
+ * startup banner and the npm manifest can NEVER drift apart again.
  * Tools exposed (13) — all use the `marketnow_` namespace prefix so MCP
  * clients (Claude Desktop, Cursor, Cline, Continue, LangChain, LlamaIndex)
  * can disambiguate them from other servers' tools at tool-choice time.
@@ -70,6 +73,15 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
+
+// Single source of truth for the version: package.json (no hardcoded strings
+// in the handshake, the banner or the header comment — audit finding 2026-09).
+import { readFileSync } from 'node:fs';
+const PKG = JSON.parse(
+  readFileSync(new URL('./package.json', import.meta.url), 'utf8'),
+);
+const PKG_VERSION = PKG.version;
+const PKG_LICENSE = PKG.license;
 
 // ATC/1.0 spec verifier
 import { verifyATC as verifyATCSpec } from './lib/atc-verify.mjs';
@@ -446,7 +458,7 @@ async function recommendSkills(args) {
 const server = new Server(
   {
     name: 'marketnow',
-    version: '1.10.1',
+    version: PKG_VERSION,
   },
   {
     capabilities: {
@@ -909,4 +921,4 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 // ─── Start server ───────────────────────────────────────────────────────────
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error('MarketNow MCP Server v1.10.1 running on stdio (13 tools, marketnow_* namespace, ATC/1.0 spec verifier)');
+console.error(`MarketNow MCP Server v${PKG_VERSION} (license ${PKG_LICENSE}) running on stdio (13 tools, marketnow_* namespace, ATC/1.0 spec verifier)`);

@@ -1,0 +1,81 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# MarketNow — Docker MCP Toolkit / MCP Registry catalog entry (v1.15.0)
+# ══════════════════════════════════════════════════════════════════════════════
+# This is the ready-to-submit entry for the Docker MCP Registry
+# (https://github.com/docker/mcp-registry). Once the image below is public,
+# open a PR against the registry's catalog adding this file's contents under
+# `catalog/quantummcp/marketnow.yaml` — then every Docker Desktop user gets
+# MarketNow via:
+#
+#   docker mcp gateway add --docker ghcr.io/alicelabs-llc/marketnow-mcp
+#   # or from the catalog, after merge:
+#   docker mcp gateway catalog install marketnow
+#
+# Image is built and pushed by CI (integrations-ci.yml) from THIS repository
+# on every push to master — no local build step, no manual publishing.
+# ══════════════════════════════════════════════════════════════════════════════
+
+name: MarketNow
+description: >-
+  MCP marketplace with 9,248 security-audited skills (Sentinel L1.5/L1.7
+  sync scans, L2.5 gVisor sandbox). Fail-closed ATC/1.0 trust verification
+  with Ed25519 + RFC 8785 JCS. 13 marketnow_* tools over stdio.
+source: github
+repo: https://github.com/alicelabs-llc/MARKETNOW
+license: MIT
+vendor: AliceLabs LLC
+homepage: https://marketnow.site
+version: 1.15.0
+dockerImage: ghcr.io/alicelabs-llc/marketnow-mcp
+transport: stdio
+run: docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:latest
+
+# Least-privilege runtime posture (matches docker-compose.yml in the repo):
+runtime:
+  user: "1000:1000"
+  readOnlyRootFilesystem: true
+  capDrop: ["ALL"]
+  noNewPrivileges: true
+
+# The server reads marketplace data from the MarketNow public API on first
+# tool call (startup is offline-safe; ATC signature verification is fully
+# self-contained node:crypto — no network involved in trust decisions).
+security:
+  network:
+    allow:
+      - "https://marketnow.site/api/*"
+    default: deny
+  filesystem:
+    writes: []
+  notes: >-
+    Trust decisions (marketnow_verify_trust / marketnow_verify_atc_spec) are
+    computed locally with node:crypto + Ed25519; the only egress is the
+    read-only marketplace data API above.
+
+tools:
+  - name: marketnow_search_skills
+    description: Keyword/category/price-bounded search across 9,248 security-audited skills.
+  - name: marketnow_get_skill
+    description: Full skill detail (ATC, receipts, install command) by ID or slug.
+  - name: marketnow_list_categories
+    description: Marketplace taxonomy with live counts.
+  - name: marketnow_get_manifest
+    description: Marketplace metadata + security metrics.
+  - name: marketnow_get_install_command
+    description: npx install command for a skill.
+  - name: marketnow_verify_trust
+    description: Verify an Agent Trust Card (ATC) on the MarketNow CA — fail-closed.
+  - name: marketnow_verify_receipt
+    description: Verify a signed delivery proof (rcpt_).
+  - name: marketnow_submit_skill
+    description: Submit a GitHub repo for L1.5+L1.7 scanning (L2 sandbox queued).
+  - name: marketnow_mint_referral
+    description: Mint a referral code (ref_xxxxxxxx, 5% commission).
+  - name: marketnow_lookup_referral
+    description: Referral stats (clicks, installs, earnings).
+  - name: marketnow_recommend_skills
+    description: AI-ranked skill recommendations for a task.
+  - name: marketnow_get_owasp_compliance
+    description: OWASP MCP Cheat Sheet compliance status.
+  - name: marketnow_verify_atc_spec
+    description: Verify ANY ATC against the ATC/1.0 spec — 8 controls, fail-closed trust model.

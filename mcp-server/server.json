@@ -1,14 +1,14 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.edgarfloresguerra2011-a11y/marketnow",
-  "description": "MCP marketplace with 8,764 security-audited skills. Sentinel L2.5 gVisor sandbox.",
+  "name": "io.github.alicelabs-llc/marketnow",
+  "description": "MCP marketplace with 9,248 security-audited skills (Sentinel L1.5/L1.7 sync scans, L2.5 gVisor sandbox). Fail-closed ATC/1.0 trust verification. Runs over stdio from npm or Docker (ghcr.io/alicelabs-llc/marketnow-mcp).",
   "repository": {
-    "url": "https://github.com/edgarfloresguerra2011-a11y/marketnow",
+    "url": "https://github.com/alicelabs-llc/MARKETNOW",
     "source": "github"
   },
-  "version": "1.11.0",
+  "version": "1.15.0",
   "homepage": "https://marketnow.site",
-  "license": "Proprietary",
+  "license": "MIT",
   "author": {
     "name": "AliceLabs LLC",
     "email": "info@alicelabs.site"
@@ -29,10 +29,19 @@
     {
       "registryType": "npm",
       "identifier": "marketnow-mcp",
-      "version": "1.11.0",
+      "version": "1.15.0",
       "transport": {
         "type": "stdio"
       }
+    },
+    {
+      "registryType": "docker",
+      "identifier": "ghcr.io/alicelabs-llc/marketnow-mcp",
+      "version": "1.15.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "run_command": "docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
     }
   ]
 }

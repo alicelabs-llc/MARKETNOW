@@ -1,0 +1,59 @@
+---
+description: MarketNow house rules — fail-closed security, version sync, MCP tool discipline, Docker/Cline/Cursor integration artifacts
+globs:
+  - "mcp-server/**"
+  - "atc-sdk/**"
+  - "docker/**"
+  - "integrations/**"
+  - ".cursor/**"
+  - "scripts/**"
+  - ".github/workflows/**"
+alwaysApply: false
+---
+
+# MarketNow — project rules
+
+## What this repo is
+
+MarketNow (`marketnow.site`) — trust infrastructure for AI agents: an MCP
+marketplace of security-audited skills, the Sentinel audit engine
+(L1.5/L1.7 → L2.5 gVisor sandbox), and ATC/1.0 Agent Trust Card
+verification. The MCP server in `mcp-server/` (13 `marketnow_*` tools,
+stdio) is the product's front door; it ships as npm `marketnow-mcp` AND
+as the Docker image `ghcr.io/alicelabs-llc/marketnow-mcp`.
+
+## Non-negotiable rules
+
+1. **Fail-closed, always.** Trust/security decisions DENY when evidence is
+   missing. Valid signature ≠ trusted. Trusted CA required; revocation
+   evidence required when the card demands it. Any default-allow path in
+   security code is a critical bug.
+2. **Version truth = `mcp-server/package.json`.** Never hardcode version
+   strings. `index.js` reads the manifest at startup (PKG_VERSION) — keep
+   it that way. A bump touches: package.json, server.json (+packages[]),
+   README badge, AUDIT.md changelog, `.cursor/mcp.json`,
+   `integrations/cline/cline_mcp_settings.json`, Dockerfile ARG VERSION,
+   `docker/mcp-registry-entry.yaml`, `docker-compose.yml` — same commit.
+   `scripts/check-version-sync.mjs` is the CI gate.
+3. **Tool surface is frozen: 13 `marketnow_*` snake_case tools.** Adding/
+   renaming a tool means updating: index.js, schemas.mjs, the smoke test's
+   EXPECTED_TOOLS, the Docker catalog entry, and the integration docs —
+   same commit.
+4. **Secrets never enter the repo.** Not in code, docs, status files, or
+   history. See a credential → stop and report; rotation first.
+5. **Marketing matches ROADMAP.** L1.x = static scanning (shipped).
+   Runtime/behavioral guarantees are L2+ (ROADMAP) — never describe
+   current features with future capabilities.
+6. **Integration artifacts are release artifacts.** The Dockerfile, the
+   Cline settings, `.cursor/mcp.json` and the Docker MCP Registry entry
+   must always describe the same version and the same tool set as the
+   code. CI validates all of them on every push.
+
+## Definition of done (mcp-server changes)
+
+- `node --check` passes on every touched .js/.mjs
+- Version surfaces all bumped together (see rule 2)
+- `bash scripts/docker-smoke-test.sh <image>` passes when runtime or tools
+  changed (initialize handshake + tools/list + version match)
+- CI green: syntax, 26 fail-closed cases, version sync, integrations
+  validation, Docker build + smoke

@@ -60,15 +60,17 @@ function jcs(o) {
   );
 }
 
-function baseUrl(req) {
-  const host = (req.headers && req.headers.host) || 'www.marketnow.site';
-  const proto = host.startsWith('localhost') || host.startsWith('127.') ? 'http' : 'https';
-  return proto + '://' + host;
+const CANONICAL_PUBLIC_ORIGIN = 'https://www.marketnow.site';
+
+function baseUrl() {
+  // Never derive a server-side fetch target from the untrusted Host header.
+  // The endpoint verifies the canonical public deployment, preventing Host-header SSRF.
+  return CANONICAL_PUBLIC_ORIGIN;
 }
 
 // Fetch the exact bytes a stranger would download from this deployment.
 async function fetchServed(req, path) {
-  const url = baseUrl(req) + path;
+  const url = baseUrl() + path;
   const r = await fetch(url, {
     redirect: 'follow',
     headers: { 'user-agent': 'marketnow-atc-verifier/1.0 (self-check)' },
@@ -254,7 +256,7 @@ export default async function handler(req, res) {
     return res.status(502).json({
       error: 'verification_internal_error',
       card_id: cardId,
-      detail: String(e && e.message ? e.message : e),
+      detail: 'verification failed internally';
     });
   }
 

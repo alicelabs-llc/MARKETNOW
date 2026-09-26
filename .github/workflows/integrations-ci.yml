@@ -129,12 +129,12 @@ jobs:
           test -f scripts/docker-smoke-test.sh
           echo "✓ All Docker / Cline / Cursor release artifacts present"
 
-      - name: Catalog entry declares the 13-tool surface
+      - name: Catalog entry declares the 15-tool surface
         run: |
           set -e
           TOOLS=$(grep -c "^  - name: marketnow_" docker/mcp-registry-entry.yaml)
-          if [ "$TOOLS" -ne 13 ]; then
-            echo "✗ docker/mcp-registry-entry.yaml lists $TOOLS tools (expected 13 — tool surface changed without updating the catalog entry)"
+          if [ "$TOOLS" -ne 15 ]; then
+            echo "✗ docker/mcp-registry-entry.yaml lists $TOOLS tools (expected 15 — tool surface changed without updating the catalog entry)"
             exit 1
           fi
-          echo "✓ Docker MCP catalog entry lists all 13 marketnow_* tools"
+          echo "✓ Docker MCP catalog entry lists all 15 marketnow_* tools"

@@ -79,3 +79,7 @@ tools:
     description: OWASP MCP Cheat Sheet compliance status.
   - name: marketnow_verify_atc_spec
     description: Verify ANY ATC against the ATC/1.0 spec — 8 controls, fail-closed trust model.
+  - name: marketnow_check_revocation
+    description: OCSP-style revocation status for ATC cards and CA keys (MNR-CRL-1.0) — fail-closed.
+  - name: marketnow_fingerprint_tool
+    description: TFP-1.0 tool fingerprinting + drift detection (OWASP tool-poisoning control).

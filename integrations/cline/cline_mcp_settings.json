@@ -1,27 +1,27 @@
 {
-  "_comment": "Paste ONLY the mcpServers block below into Cline > MCP Servers > Configure (cline_mcp_settings.json) — Cline ignores this documentation key. Option A (Docker, the live entry) runs the exact image CI builds from this repository — recommended, pinned to mcp-server/package.json (scripts/check-version-sync.mjs validates it). Option B (npm channel, below in _alternative_npx) needs no Docker: replace the docker entry's command/args with the npx ones. Use ONE, not both.",
-  "_alternative_npx": {
-    "command": "npx",
-    "args": ["-y", "marketnow-mcp@1.14.1"],
-    "note": "npm release channel (latest actually published to npm). The Docker entry is the repo-exact audited build (1.15.0); npm publishes trail Docker. Keep the version pinned — @latest may drift from the audited tree."
+  "_comment": "Paste ONLY the mcpServers block below into Cline > MCP Servers > Configure (cline_mcp_settings.json) — Cline ignores this documentation key. Option A (npx, the ACTIVE entry below) works for every user right now: no Docker, no login — pinned to the latest npm release of marketnow-mcp (scripts/check-version-sync.mjs validates the pin against the live npm registry). Option B (Docker, in _alternative_docker) runs the repo-exact audited image CI builds from this repository — it requires the GHCR package to be public (org owners: one click at https://github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp/settings → Danger Zone → Change visibility → Public) or `docker login ghcr.io` with a read:packages PAT (see integrations/cline/README.md). Use ONE, not both.",
+  "_alternative_docker": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "--init",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges:true",
+      "-e",
+      "NODE_ENV=production",
+      "ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
+    ],
+    "note": "Repo-exact audited build (mcp-server/package.json version; CI-built, handshake-tested). Needs the GHCR package public or docker login. Swap this into the marketnow entry below to use it."
   },
   "mcpServers": {
     "marketnow": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "--init",
-        "--read-only",
-        "--cap-drop",
-        "ALL",
-        "--security-opt",
-        "no-new-privileges:true",
-        "-e",
-        "NODE_ENV=production",
-        "ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
-      ],
+      "command": "npx",
+      "args": ["-y", "marketnow-mcp@1.14.1"],
       "env": {},
       "disabled": false,
       "autoApprove": [
@@ -31,7 +31,9 @@
         "marketnow_get_manifest",
         "marketnow_get_install_command",
         "marketnow_recommend_skills",
-        "marketnow_get_owasp_compliance"
+        "marketnow_get_owasp_compliance",
+        "marketnow_check_revocation",
+        "marketnow_fingerprint_tool"
       ]
     }
   }

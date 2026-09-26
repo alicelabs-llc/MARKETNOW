@@ -1,6 +1,6 @@
 # MarketNow MCP Server
 
-> **Security infrastructure for AI agents.** 13 MCP tools — all under the `marketnow_*` namespace — that let Claude Desktop, Cursor, Cline, Continue, LangChain, and LlamaIndex agents search the marketplace, verify trust, consume the OWASP compliance API, and verify ANY Agent Trust Card against the ATC/1.0 spec without execution errors or hallucinations.
+> **Security infrastructure for AI agents.** 15 MCP tools — all under the `marketnow_*` namespace — that let Claude Desktop, Cursor, Cline, Continue, LangChain, and LlamaIndex agents search the marketplace, verify trust, consume the OWASP compliance API, verify ANY Agent Trust Card against the ATC/1.0 spec, check revocation status, and fingerprint tool surfaces — without execution errors or hallucinations.
 
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
@@ -21,7 +21,7 @@ Agents do not read human documentation at runtime — they read the JSON-Schema 
 
 | # | Rule | What changed |
 |---|------|--------------|
-| A | Deterministic tool names with `marketnow_` prefix | All 13 tools use the prefix |
+| A | Deterministic tool names with `marketnow_` prefix | All 15 tools use the prefix |
 | B | Intent-oriented descriptions (WHEN/WHY, not WHAT) | Every description rewritten |
 | C | Strict JSON-Schema (`type` + `enum` + `pattern` + bounds) | No `any` left anywhere |
 | D | Structured `{ content, isError }` responses with taxonomy | `INVALID_ARGUMENT` / `NOT_FOUND` / `UNKNOWN_TOOL` / `INTERNAL_ERROR` |
@@ -94,7 +94,7 @@ Same `mcpServers` block — add it under Settings → MCP, or your project's `.m
 
 ---
 
-## Tools exposed (13, all `marketnow_*`)
+## Tools exposed (15, all `marketnow_*`)
 
 | # | Tool | Purpose |
 |---|------|---------|

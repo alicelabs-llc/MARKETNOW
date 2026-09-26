@@ -150,23 +150,54 @@ if (!registryEntry.includes(`version: ${npmVersion}`)) {
   fail.push(`docker/mcp-registry-entry.yaml does not declare version ${npmVersion}`);
 }
 
-// 6d. .cursor/mcp.json — valid JSON, runs the canonical image at the right tag
+// 6d. .cursor/mcp.json — valid JSON; active entry pins a REAL marketnow-mcp version
+//     npx entries must pin the PUBLISHED npm latest; docker entries the source version.
+async function probeNpmLatest() {
+  try {
+    const ac = new AbortController();
+    const t = setTimeout(() => ac.abort(), 10000);
+    const res = await fetch('https://registry.npmjs.org/marketnow-mcp', { signal: ac.signal });
+    clearTimeout(t);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const d = await res.json();
+    return d?.['dist-tags']?.latest || null;
+  } catch {
+    return null; // registry unreachable — non-blocking
+  }
+}
+const publishedVersion = await probeNpmLatest();
+if (publishedVersion) info.push(`npm registry latest: marketnow-mcp@${publishedVersion} (repo source: ${npmVersion} — npm trails by design)`);
+
 const cursorCfg = JSON.parse(read('.cursor/mcp.json'));
 const cursorServer = cursorCfg.mcpServers?.marketnow;
 if (!cursorServer) fail.push('.cursor/mcp.json has no mcpServers.marketnow entry');
-if (cursorServer && !cursorServer.args?.includes(`ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`)) {
-  fail.push(`.cursor/mcp.json does not pin ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`);
+if (cursorServer?.command === 'npx') {
+  const pin = cursorServer.args?.find(a => /^marketnow-mcp@\d+\.\d+\.\d+$/.test(a));
+  if (!pin) fail.push('.cursor/mcp.json npx entry must pin marketnow-mcp@<exact semver> (no @latest)');
+  else if (publishedVersion && pin !== `marketnow-mcp@${publishedVersion}`)
+    fail.push(`.cursor/mcp.json pins ${pin} but npm latest is @${publishedVersion} — repin the published release`);
+} else if (cursorServer?.command === 'docker') {
+  if (!cursorServer.args?.includes(`ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`))
+    fail.push(`.cursor/mcp.json docker entry must pin ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`);
 }
 
-// 6e. Cline settings — valid JSON, canonical image at the right tag
+// 6e. Cline settings — valid JSON, same policy as 6d + documented alternative
 const clineCfg = JSON.parse(read('integrations/cline/cline_mcp_settings.json'));
 const clineServer = clineCfg.mcpServers?.marketnow;
 if (!clineServer) fail.push('integrations/cline/cline_mcp_settings.json has no mcpServers.marketnow entry');
-if (clineServer && !clineServer.args?.includes(`ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`)) {
-  fail.push(`integrations/cline/cline_mcp_settings.json does not pin ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`);
+if (clineServer?.command === 'npx') {
+  const pin = clineServer.args?.find(a => /^marketnow-mcp@\d+\.\d+\.\d+$/.test(a));
+  if (!pin) fail.push('integrations/cline/cline_mcp_settings.json npx entry must pin marketnow-mcp@<exact semver> (no @latest)');
+  else if (publishedVersion && pin !== `marketnow-mcp@${publishedVersion}`)
+    fail.push(`integrations/cline/cline_mcp_settings.json pins ${pin} but npm latest is @${publishedVersion} — repin the published release`);
+} else if (clineServer?.command === 'docker') {
+  if (!clineServer.args?.includes(`ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`))
+    fail.push(`integrations/cline/cline_mcp_settings.json docker entry must pin ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`);
 }
-if (clineServer?.command === 'npx' && !clineServer.args?.includes(`marketnow-mcp@${npmVersion}`)) {
-  fail.push(`integrations/cline/cline_mcp_settings.json npx variant must pin marketnow-mcp@${npmVersion}`);
+// The documented Docker alternative (works once the GHCR package is public / with login)
+const clineAlt = clineCfg._alternative_docker;
+if (clineAlt && !clineAlt.args?.includes(`ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`)) {
+  fail.push(`integrations/cline _alternative_docker must pin ghcr.io/alicelabs-llc/marketnow-mcp:${npmVersion}`);
 }
 
 // 6f. docker image tag sanity in server.json docker package entry
@@ -175,6 +206,34 @@ if (!dockerPkg || dockerPkg.identifier !== 'ghcr.io/alicelabs-llc/marketnow-mcp'
   fail.push('mcp-server/server.json must declare the docker package ghcr.io/alicelabs-llc/marketnow-mcp');
 } else if (dockerPkg.version !== npmVersion) {
   fail.push(`mcp-server/server.json docker package version (${dockerPkg.version}) != package.json (${npmVersion})`);
+}
+
+// ─── 7. Registry root server.json (official MCP registry manifest) ──────────
+// The ROOT server.json is what the official MCP registry lists. It must describe
+// what clients actually GET today: the PUBLISHED npm release and the live remote,
+// not the repo source train (mcp-server/ = next release).
+const rootManifest = JSON.parse(read('server.json'));
+if (rootManifest.name !== CANONICAL_NAME) {
+  fail.push(`root server.json name (${rootManifest.name}) != ${CANONICAL_NAME}`);
+}
+if (rootManifest.repository?.url !== CANONICAL_REPO) {
+  fail.push(`root server.json repository.url (${rootManifest.repository?.url}) != ${CANONICAL_REPO}`);
+}
+const remoteEntry = (rootManifest.remotes || []).find(r => r.type === 'streamable-http');
+if (remoteEntry?.url !== 'https://www.marketnow.site/api/mcp') {
+  fail.push(`root server.json remote url (${remoteEntry?.url}) != https://www.marketnow.site/api/mcp`);
+}
+const rootNpmPkg = (rootManifest.packages || []).find(p => p.identifier === 'marketnow-mcp');
+if (!rootNpmPkg) fail.push('root server.json must declare the npm package marketnow-mcp');
+if (rootNpmPkg && rootManifest.version !== rootNpmPkg.version) {
+  fail.push(`root server.json version (${rootManifest.version}) != npm package version (${rootNpmPkg.version})`);
+}
+if (rootNpmPkg && publishedVersion && rootNpmPkg.version !== publishedVersion) {
+  fail.push(`root server.json npm package version (${rootNpmPkg.version}) != registry latest (${publishedVersion}) — the registry manifest must list the published release`);
+}
+const rootDockerPkg = (rootManifest.packages || []).find(p => p.registryType === 'docker');
+if (rootDockerPkg && rootDockerPkg.version !== npmVersion) {
+  fail.push(`root server.json docker package version (${rootDockerPkg.version}) != source version (${npmVersion}) — the image tag CI pushes is the source version`);
 }
 
 // ─── Report ─────────────────────────────────────────────────────────────────

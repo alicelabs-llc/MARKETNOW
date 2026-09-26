@@ -25,6 +25,8 @@
  *  11. marketnow_recommend_skills      — AI-ranked skill recommendations for a task
  *  12. marketnow_get_owasp_compliance  — OWASP MCP Cheat Sheet compliance status
  *  13. marketnow_verify_atc_spec       — verify ANY ATC against the ATC/1.0 spec (NEW)
+ *  14. marketnow_check_revocation      — OCSP-style revocation status (card_id | kid) (NEW)
+ *  15. marketnow_fingerprint_tool      — TFP-1.0 tool fingerprinting + drift detection (NEW)
  *
  * v1.10.0 (August 2026) — ATC/1.0 Spec Verifier
  *   - New tool: marketnow_verify_atc_spec — accepts ANY Agent Trust Card
@@ -77,6 +79,8 @@ import {
 // Single source of truth for the version: package.json (no hardcoded strings
 // in the handshake, the banner or the header comment — audit finding 2026-09).
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import canonicalize from 'canonicalize';
 const PKG = JSON.parse(
   readFileSync(new URL('./package.json', import.meta.url), 'utf8'),
 );
@@ -454,6 +458,85 @@ async function recommendSkills(args) {
   };
 }
 
+// ─── 14. Revocation check (MNR-CRL-1.0) — restored v1.15.0 ─────────────────
+// Mirrors the npm 1.14.x surface: an OCSP-style status check for ATC cards
+// and CA keys, fail-closed on responder errors.
+async function checkRevocation(args) {
+  const subject = args.card_id ? `card_id=${encodeURIComponent(args.card_id)}` : args.kid ? `kid=${encodeURIComponent(args.kid)}` : null;
+  if (!subject) {
+    const err = new Error('marketnow_check_revocation requires card_id (ATC) or kid (CA key)');
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
+  const url = `${API_BASE}/ocsp?${subject}${args.nonce ? `&nonce=${encodeURIComponent(args.nonce)}` : ''}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Revocation responder HTTP ${res.status} — fail-closed: treat as UNKNOWN/DENY`);
+  return res.json();
+}
+
+// ─── 15. Tool fingerprinting (TFP-1.0) — restored v1.15.0 ───────────────────
+// Self-contained: node:crypto + canonicalize (RFC 8785 JCS). No network calls.
+async function fingerprintToolDefs(args) {
+  const tools = args?.tools;
+  if (!Array.isArray(tools) || tools.length === 0 || tools.length > 200) {
+    const err = new Error('marketnow_fingerprint_tool requires `tools`: a non-empty array (max 200) of tool definitions from tools/list');
+    err.code = 'INVALID_ARGUMENT';
+    throw err;
+  }
+  const seen = new Set();
+  for (const t of tools) {
+    if (!t || typeof t.name !== 'string' || !t.name) {
+      const err = new Error('every tool definition needs a non-empty string `name`');
+      err.code = 'INVALID_ARGUMENT';
+      throw err;
+    }
+    if (seen.has(t.name)) {
+      const err = new Error(`duplicate tool name in input: ${t.name}`);
+      err.code = 'INVALID_ARGUMENT';
+      throw err;
+    }
+    seen.add(t.name);
+  }
+  const fp = (t) => createHash('sha256').update(Buffer.from(canonicalize(t), 'utf-8')).digest('hex');
+  const perTool = tools
+    .map((t) => ({ name: t.name, fingerprint_sha256: fp(t) }))
+    .sort((a, b) => (a.name < b.name ? -1 : 1));
+  const manifestFingerprint = createHash('sha256')
+    .update(Buffer.from(canonicalize(perTool.map((p) => [p.name, p.fingerprint_sha256])), 'utf-8'))
+    .digest('hex');
+
+  const result = {
+    format: 'TFP-1.0',
+    algorithm: 'sha256 over RFC 8785 JCS canonical tool definition',
+    computed_at: new Date().toISOString(),
+    tool_count: perTool.length,
+    tools: perTool,
+    manifest_fingerprint_sha256: manifestFingerprint,
+    pinning: {
+      how: 'Store the `tools` array + manifest_fingerprint_sha256. On every subsequent tools/list, re-run this tool with `pinned` to detect drift.',
+      owasp: 'MCP Cheat Sheet — verify tool descriptions haven’t changed (tool poisoning / rug-pull detection)',
+    },
+  };
+
+  const pinned = args?.pinned;
+  if (pinned && Array.isArray(pinned.tools)) {
+    const current = new Map(perTool.map((p) => [p.name, p.fingerprint_sha256]));
+    const before = new Map(pinned.tools.map((p) => [p.name, p.fingerprint_sha256]));
+    const drift = {
+      added: [...current.keys()].filter((n) => !before.has(n)),
+      removed: [...before.keys()].filter((n) => !current.has(n)),
+      changed: [...current.keys()].filter((n) => before.has(n) && before.get(n) !== current.get(n)),
+    };
+    drift.unchanged_count = [...current.keys()].filter((n) => before.has(n) && before.get(n) === current.get(n)).length;
+    drift.verdict = drift.changed.length || drift.removed.length || drift.added.length ? 'DRIFT_DETECTED' : 'MATCH';
+    if (pinned.manifest_fingerprint_sha256) {
+      drift.pinned_manifest_matches = pinned.manifest_fingerprint_sha256 === manifestFingerprint;
+    }
+    result.drift = drift;
+  }
+  return result;
+}
+
 // ─── MCP Server setup ───────────────────────────────────────────────────────
 const server = new Server(
   {
@@ -774,6 +857,58 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         required: ['atc'],
       },
     },
+
+    // ── 14. Revocation check (restored v1.15.0 — parity with npm 1.14.x) ──
+    {
+      name: 'marketnow_check_revocation',
+      description:
+        'Check the revocation status of an Agent Trust Card (card_id) or CA key (kid) against the signed MarketNow Revocation Registry (MNR-CRL-1.0) + live ledger. Use this BEFORE trusting or caching any ATC — a card that verified cryptographically yesterday may be REVOKED today (e.g. mn-ca-002 was revoked for key compromise on 2026-09-08). Returns status (VALID/EXPIRED/REVOKED/SUPERSEDED/UNKNOWN) + recommendation (PERMIT/DENY), fail-closed on unknown subjects, with the CRL signature embedded so you can verify the signed layer independently.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          card_id: {
+            type: 'string',
+            pattern: '^ATC-[0-9]{4}-[0-9]+$',
+            description: 'Agent Trust Card ID (e.g. ATC-2026-1509360). Exactly one of card_id / kid.',
+          },
+          kid: {
+            type: 'string',
+            pattern: '^[a-z0-9-]+$',
+            description: 'CA key ID (e.g. mn-ca-002, mn-ca-003). Exactly one of card_id / kid.',
+          },
+          nonce: {
+            type: 'string',
+            minLength: 1,
+            maxLength: 128,
+            description: 'Optional client nonce — echoed in the response for anti-replay assurance.',
+          },
+        },
+      },
+    },
+
+    // ── 15. Tool fingerprinting (restored v1.15.0 — parity with npm 1.14.x) ──
+    {
+      name: 'marketnow_fingerprint_tool',
+      description:
+        'Cryptographically fingerprint MCP tool definitions (TFP-1.0): SHA-256 over the RFC 8785 JCS canonical form of each tool plus a manifest fingerprint for the whole tools/list surface. Use this (1) on first contact with any MCP server to PIN its tool surface, and (2) on every subsequent tools/list with the pinned manifest to detect drift — the OWASP MCP Cheat Sheet control \'verify tool descriptions haven\'t changed\' (tool poisoning / rug-pull redefinitions). Fully self-contained: no network calls.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          tools: {
+            type: 'array',
+            minItems: 1,
+            maxItems: 200,
+            description: 'Tool definitions exactly as returned by tools/list: [{ name, description, inputSchema }].',
+            items: { type: 'object' },
+          },
+          pinned: {
+            type: 'object',
+            description: 'Optional: the manifest from a previous marketnow_fingerprint_tool call ({ tools: [{name, fingerprint_sha256}], manifest_fingerprint_sha256 }) — enables the drift report (added/removed/changed).',
+          },
+        },
+        required: ['tools'],
+      },
+    },
   ],
 }));
 
@@ -872,8 +1007,14 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         });
         break;
       }
+      case 'marketnow_check_revocation':
+        result = await checkRevocation(args || {});
+        break;
+      case 'marketnow_fingerprint_tool':
+        result = await fingerprintToolDefs(args || {});
+        break;
       default: {
-        const err = new Error(`Unknown tool: ${name}. Valid tools are 13 marketnow_* names — see ListTools.`);
+        const err = new Error(`Unknown tool: ${name}. Valid tools are 15 marketnow_* names — see ListTools.`);
         err.code = 'UNKNOWN_TOOL';
         throw err;
       }

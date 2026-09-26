@@ -4,7 +4,7 @@
 # Sends a real MCP JSON-RPC session over the container's stdio and asserts:
 #   1. initialize → serverInfo.name == "marketnow"
 #   2. initialize → serverInfo.version == package.json version (repo truth)
-#   3. tools/list → exactly the 13 marketnow_* tools, snake_case, no unknowns
+#   3. tools/list → exactly the 15 marketnow_* tools, snake_case, no unknowns
 #   4. no stdout pollution before the JSON-RPC frames (log lines go to stderr)
 #
 # Usage: bash scripts/docker-smoke-test.sh <IMAGE> [REPO_ROOT]
@@ -33,6 +33,8 @@ EXPECTED_TOOLS=(
   marketnow_recommend_skills
   marketnow_get_owasp_compliance
   marketnow_verify_atc_spec
+  marketnow_check_revocation
+  marketnow_fingerprint_tool
 )
 
 # One-shot JSON-RPC session: initialize + tools/list, framed by newline.

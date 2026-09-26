@@ -284,7 +284,7 @@ function check_ATC_007_revocation(atc) {
     errors.push(`ATC-007: revocation_check_method must be ocsp/crl/simple_json (got ${rev.revocation_check_method})`);
   }
   if (rev.revocation_check_required === true) {
-    warnings.push('ATC-007: revocation_check_required=true but this verifier does not fetch the list by default. Caller must check separately.');
+    warnings.push('ATC-007: revocation_check_required=true — the revocation check is ENFORCED in TRUST mode (verifyTrust / trusted_ca supplied): auto-fetch or caller evidence, fail-closed. In self-described mode it remains the caller\'s responsibility: signature validity never means currently-trusted.');
   }
   return { errors, warnings };
 }

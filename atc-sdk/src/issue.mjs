@@ -81,7 +81,7 @@ export function issueATC(caKeyPair, agentKeyPair, partialPayload) {
       decision_authority: 'consumer',  // ATC/1.0 mandates this
     },
     revocation: partialPayload.revocation || {
-      revocation_check_url: 'https://marketnow.site/api/atc?action=revocation-list',
+      revocation_check_url: 'https://www.marketnow.site/api/atc?action=ledger',
       revocation_check_method: 'simple_json',
       revocation_check_required: true,
     },

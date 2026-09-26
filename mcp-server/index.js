@@ -751,7 +751,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           },
           revocation_status: {
             type: 'object',
-            description: 'Revocation evidence, required in TRUST mode when atc.revocation.revocation_check_required=true. Accepts: (a) a pre-fetched revocation list — MarketNow live CRL format {cards:[{card_id,status,reason?,revoked_at?}]} from https://www.marketnow.site/api/atc?action=revocation-list, or ATC-007 spec format {revoked_cards:[...]}; or (b) a simple status {revoked: boolean, reason?, revoked_at?}. Without this evidence a required revocation check DENIES (fail-closed) — a valid signature never means currently-trusted.',
+            description: 'Revocation evidence, required in TRUST mode when atc.revocation.revocation_check_required=true. Accepts: (a) a pre-fetched revocation list — MarketNow live CRL/ledger {cards:[{card_id,status,reason?,revoked_at?}]} from https://www.marketnow.site/api/atc?action=ledger, or ATC-007 spec format {revoked_cards:[...]}; or (b) a simple status {revoked: boolean, reason?, revoked_at?}. Without this evidence a required revocation check DENIES (fail-closed) — a valid signature never means currently-trusted.',
           },
           fetch_revocation: {
             type: 'boolean',

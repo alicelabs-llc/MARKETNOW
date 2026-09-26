@@ -317,7 +317,8 @@ async function handleRequest(method, params, id) {
         }
 
         case "marketnow_submit_skill": {
-          const result = await processSubmission(args.skill || {}, { dryRun: !!args.dry_run, remoteIp: "mcp-client" });
+          const clientIp = String(req.headers["x-forwarded-for"] || req.headers["x-real-ip"] || "mcp-client").split(",")[0].trim();
+          const result = await processSubmission(args.skill || {}, { dryRun: !!args.dry_run, remoteIp: clientIp });
           return {
             content: [{ type: "text", text: JSON.stringify({
               ok: result.accepted,
@@ -485,7 +486,7 @@ export default async function handler(req, res) {
     } catch (error) {
       return res.status(200).json({
         jsonrpc: "2.0",
-        error: { code: -32603, message: error.message },
+        error: { code: -32603, message: "Internal server error" },
         id: null
       });
     }

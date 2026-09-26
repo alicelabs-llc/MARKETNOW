@@ -75,6 +75,28 @@ jobs:
           docker push "ghcr.io/alicelabs-llc/marketnow-mcp:${V}"
           docker push ghcr.io/alicelabs-llc/marketnow-mcp:latest
 
+      - name: Ensure GHCR package is public (idempotent)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          set -e
+          # GITHUB_TOKEN is admin on the package it just pushed. New GHCR
+          # packages default to private; anonymous `docker pull` (Cline,
+          # Cursor, Docker MCP Toolkit users) requires public visibility.
+          # 404/no-change responses are logged, never fatal — visibility
+          # is also flippable by hand in the package settings page.
+          HTTP=$(curl -s -o /tmp/pkg.json -w "%{http_code}" \
+            -X PATCH \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Content-Type: application/json" \
+            "https://api.github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp" \
+            -d '{"visibility":"public"}')
+          echo "PATCH visibility → HTTP ${HTTP}"
+          cat /tmp/pkg.json || true
+          if [ "$HTTP" != "200" ]; then
+            echo "::warning::Could not set package visibility via API (HTTP ${HTTP}) — flip it manually at https://github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp/settings if pulls fail"
+          fi
+
   configs:
     name: Integration artifacts consistency (Cline / Cursor / server.json)
     runs-on: ubuntu-latest

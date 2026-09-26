@@ -37,7 +37,7 @@ In the same Cline MCP settings file:
   "mcpServers": {
     "marketnow": {
       "command": "npx",
-      "args": ["-y", "marketnow-mcp@1.14.1"],
+      "args": ["-y", "marketnow-mcp@1.15.0"],
       "env": {},
       "disabled": false,
       "autoApprove": [
@@ -47,16 +47,18 @@ In the same Cline MCP settings file:
         "marketnow_get_manifest",
         "marketnow_get_install_command",
         "marketnow_recommend_skills",
-        "marketnow_get_owasp_compliance"
+        "marketnow_get_owasp_compliance",
+        "marketnow_check_revocation",
+        "marketnow_fingerprint_tool"
       ]
     }
   }
 }
 ```
 
-`marketnow-mcp@1.14.1` is the latest version actually published to npm;
-the Docker image in Option A is the repo-exact audited build (1.15.0) —
-two release channels, npm trailing Docker. Keep the pin; `@latest` can
+`marketnow-mcp@1.15.0` is the latest version actually published to npm;
+the Docker image in Option A is the same release (repo-exact audited build
+1.15.0) — both channels in lockstep. Keep the pin; `@latest` can
 drift from the audited repo tree.
 
 ### If Docker pulls are denied (private package until first visibility flip)
@@ -88,7 +90,7 @@ picks it up automatically when the workspace is the repo.
 
 ## Verify it works
 
-Ask Cline: *"List the MarketNow MCP tools"*. You should see all 13
+Ask Cline: *"List the MarketNow MCP tools"*. You should see all 15
 `marketnow_*` tools. Then: *"Use marketnow_list_categories"*. If the tool
 responds, the pipeline (Cline → stdio → container → MarketNow API) is
 healthy.

@@ -24,15 +24,15 @@ Edit `.cursor/mcp.json` (project) or your global `~/.cursor/mcp.json`:
   "mcpServers": {
     "marketnow": {
       "command": "npx",
-      "args": ["-y", "marketnow-mcp@1.14.1"]
+      "args": ["-y", "marketnow-mcp@1.15.0"]
     }
   }
 }
 ```
 
-`marketnow-mcp@1.14.1` is the latest version actually published to npm;
-the Docker image the shipped config uses is the repo-exact audited build
-(1.15.0). Keep the version pinned — the repo's `mcp-server/package.json`
+`marketnow-mcp@1.15.0` is the latest version actually published to npm;
+the Docker image the shipped config uses is the same release
+(repo-exact audited build 1.15.0). Keep the version pinned — the repo's `mcp-server/package.json`
 is the source of truth and CI's version-sync gate validates the shipped
 config against it.
 

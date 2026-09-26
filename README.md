@@ -24,7 +24,9 @@ MarketNow is **trust infrastructure for AI agents**: a hosted registry that veri
 
 Every indexed entry is security-first scored. The MCP API is **free** — 68,387 of the 68,388 indexed servers are free to install (`paid: 1` in the public [stats API](https://www.marketnow.site/api/stats.json)).
 
-## The 9 MCP tools (endpoint v1.14.1)
+## The 9 MCP tools (endpoint v1.15.0)
+
+> Endpoint tracks the npm train: **v1.15.0** (2026-09-26 — repository-field repair → `alicelabs-llc/MARKETNOW`, npm ↔ endpoint lockstep); previously v1.14.1 (2026-09-20).
 
 The MCP server exposes 9 tools, all under the `marketnow_*` namespace so Claude Desktop, Cursor, Cline, LangChain and LlamaIndex can disambiguate them at tool-choice time:
 

@@ -56,8 +56,8 @@ VERIFIED STATS (all real, all public at /api/audit-report.json)
   - 57 Agent Trust Cards issued
   - 5 runtime interceptor policy rules live
 
-THE MCP SERVER (v1.14.1 — Agent Contract Hardening)
-The npm package `marketnow-mcp@1.14.1` exposes 15 tools, all under the
+THE MCP SERVER (v1.15.0 — Integrations + repository-field repair)
+The npm package `marketnow-mcp@1.15.0` exposes 15 tools, all under the
 `marketnow_*` namespace prefix for unambiguous tool choice by Claude
 Desktop, Cursor, Cline, LangChain, and LlamaIndex agents:
 
@@ -105,7 +105,7 @@ https://marketnow.site
 
 ### GitHub Repository
 ```
-https://github.com/edgarfloresguerra2011-a11y/marketnow
+https://github.com/alicelabs-llc/MARKETNOW
 ```
 
 ### Categories
@@ -127,7 +127,7 @@ npx -y marketnow-mcp
 Use the MarketNow favicon: https://marketnow.site/favicon.svg
 
 ### Features to highlight
-- ✅ 15 MCP tools under `marketnow_*` namespace (v1.14.1)
+- ✅ 15 MCP tools under `marketnow_*` namespace (v1.15.0)
 - ✅ 10-layer Sentinel security audit pipeline (L1.5 → L3)
 - ✅ 1,211,488 security checks performed (real, public)
 - ✅ 80 malicious skills quarantined (transparency report)
@@ -171,7 +171,7 @@ The current listing (https://mcp.so/server/marketnow-mcp---aep-agent-exchange-pr
 - [x] mcp.so — https://mcp.so/server/marketnow-mcp---aep-agent-exchange-protocol/edgarfloresguerra2011-a11y (UPDATE NEEDED)
 - [ ] chat.mcp.so — mirror, updates with mcp.so
 - [x] glama.ai — https://glama.ai/mcp/connectors?query=MarketNow+MCP (verify data)
-- [x] npm — https://www.npmjs.com/package/marketnow-mcp (auto-updated to v1.14.1)
+- [x] npm — https://www.npmjs.com/package/marketnow-mcp (auto-updated to v1.15.0)
 - [ ] Smithery — https://smithery.ai
 - [ ] OpenTools — https://opentools.ai
 - [ ] Product Hunt (for v5.0 launch)

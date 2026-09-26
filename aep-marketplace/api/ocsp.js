@@ -47,6 +47,10 @@ export default async function handler(req, res) {
     nonce = b.nonce || null;
   }
 
+  if (nonce !== null && String(nonce).length > 256) {
+    return res.status(400).json({ protocol: 'MNR-OCSP-1.0', error: 'INVALID_REQUEST', message: 'nonce must be 256 characters or fewer' });
+  }
+
   if (!subject) {
     return res.status(400).json({
       protocol: 'MNR-OCSP-1.0',

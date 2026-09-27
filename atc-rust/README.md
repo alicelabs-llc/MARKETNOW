@@ -1,10 +1,10 @@
 # agent-trust-card (Rust)
 
-> **Issue and verify Agent Trust Cards in Rust.** A small, framework-agnostic SDK for the [ATC/1.0 specification](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md).
+> **Issue and verify Agent Trust Cards in Rust.** A small, framework-agnostic SDK for the [ATC/1.0 specification](https://github.com/alicelabs-llc/MARKETNOW/blob/master/docs/atc-spec/SPEC.md).
 
 [![Crates.io](https://img.shields.io/crates/v/agent-trust-card.svg)](https://crates.io/crates/agent-trust-card)
 [![License: AliceLabs Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Spec: ATC/1.0](https://img.shields.io/badge/Spec-ATC%2F1.0-brightgreen)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md)
+[![Spec: ATC/1.0](https://img.shields.io/badge/Spec-ATC%2F1.0-brightgreen)](https://github.com/alicelabs-llc/MARKETNOW/blob/master/docs/atc-spec/SPEC.md)
 
 ## Install
 

@@ -181,7 +181,7 @@ def main():
     print('[3/3] Verifying signature locally against CA key...')
     # Fetch the raw receipt JSON from GitHub for client-side verification
     raw_url = (
-        f'https://raw.githubusercontent.com/edgarfloresguerra2011-a11y/'
+        f'https://raw.githubusercontent.com/eddyflores100-lang/'
         f'marketnow/master/_data/receipts/{receipt_id}.json'
     )
     raw_r = requests.get(raw_url, timeout=10)

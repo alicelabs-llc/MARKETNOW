@@ -74,7 +74,7 @@ func verifyATC(cardID string) (map[string]interface{}, error) {
 	}
 
 	// 3. Fetch full ATC record from GitHub
-	rawURL := fmt.Sprintf("https://raw.githubusercontent.com/edgarfloresguerra2011-a11y/marketnow/master/_data/atc/%s.json", cardID)
+	rawURL := fmt.Sprintf("https://raw.githubusercontent.com/eddyflores100-lang/marketnow/master/_data/atc/%s.json", cardID)
 	rawResp, err := http.Get(rawURL)
 	if err != nil {
 		return nil, err

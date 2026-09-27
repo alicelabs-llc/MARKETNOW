@@ -47,4 +47,4 @@ Pin it in your agent runtime. If it changes, the CA has been rotated.
 
 - Live: https://marketnow.site/atc
 - Spec: https://marketnow.site/atc-spec.json
-- GitHub: https://github.com/edgarfloresguerra2011-a11y/marketnow
+- GitHub: https://github.com/alicelabs-llc/MARKETNOW

@@ -192,7 +192,7 @@ This email was sent by the MarketNow dev.to Monitor (GitHub Actions).
 The monitor runs every hour. You only receive an email when there's new activity.
 
 To stop these emails: disable the workflow at
-https://github.com/edgarfloresguerra2011-a11y/marketnow/actions/workflows/devto-monitor.yml
+https://github.com/alicelabs-llc/MARKETNOW/actions/workflows/devto-monitor.yml
 
 — MarketNow Bot
 info@alicelabs.site

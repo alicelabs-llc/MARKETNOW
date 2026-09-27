@@ -202,7 +202,7 @@ Full audit report — including the 4-rule checklist, smoke-test commands, and t
 ## Links
 
 - **Website:** https://marketnow.site
-- **GitHub:** https://github.com/edgarfloresguerra2011-a11y/marketnow
+- **GitHub:** https://github.com/alicelabs-llc/MARKETNOW
 - **npm:** https://www.npmjs.com/package/marketnow-mcp
 - **Audit:** https://marketnow.site/api/audit-report.json
 - **OWASP compliance:** https://marketnow.site/api/owasp

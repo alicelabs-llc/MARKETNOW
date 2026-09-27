@@ -27,5 +27,5 @@ curl -X POST https://marketnow.site/api/submit-skill \
 - ウェブサイト: https://marketnow.site
 - 提出: https://marketnow.site/submit
 - 仕様: https://marketnow.site/api/atc?action=spec
-- GitHub: https://github.com/edgarfloresguerra2011-a11y/marketnow
+- GitHub: https://github.com/alicelabs-llc/MARKETNOW
 - npm: `npx -y marketnow-mcp@1.7.0`

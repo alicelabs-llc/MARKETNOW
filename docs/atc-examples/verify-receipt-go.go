@@ -196,7 +196,7 @@ func fetchReceipt(receiptID string) (*receiptResponse, error) {
 
 func fetchRawReceipt(receiptID string) (map[string]interface{}, error) {
 	url := fmt.Sprintf(
-		"https://raw.githubusercontent.com/edgarfloresguerra2011-a11y/marketnow/master/_data/receipts/%s.json",
+		"https://raw.githubusercontent.com/eddyflores100-lang/marketnow/master/_data/receipts/%s.json",
 		receiptID,
 	)
 	r, err := http.Get(url)

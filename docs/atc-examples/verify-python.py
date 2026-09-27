@@ -38,7 +38,7 @@ def verify_atc(card_id: str) -> dict:
     # 4. Fetch the full ATC record (with signature) for independent verification
     # The verify endpoint returns a summary; for full signature check,
     # fetch the raw record from GitHub
-    raw_url = f"https://raw.githubusercontent.com/edgarfloresguerra2011-a11y/marketnow/master/_data/atc/{card_id}.json"
+    raw_url = f"https://raw.githubusercontent.com/eddyflores100-lang/marketnow/master/_data/atc/{card_id}.json"
     raw_resp = requests.get(raw_url, timeout=10)
     if raw_resp.status_code != 200:
         return {"valid": False, "reason": "could_not_fetch_record"}

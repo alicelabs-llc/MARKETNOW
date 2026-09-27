@@ -64,7 +64,7 @@
  *   }
  *
  * License: MNNC-1.0 (AliceLabs LLC Proprietary)
- * Spec: https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md
+ * Spec: https://github.com/alicelabs-llc/MARKETNOW/blob/master/docs/atc-spec/SPEC.md
  */
 
 import {

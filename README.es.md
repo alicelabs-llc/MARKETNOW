@@ -124,7 +124,7 @@ Matriz pública: `GET https://marketnow.site/api/owasp`
 - Reporte de auditoría: https://marketnow.site/api/audit-report.json
 - OWASP compliance: https://marketnow.site/api/owasp
 - Spec ATC: https://marketnow.site/api/atc?action=spec
-- GitHub: https://github.com/edgarfloresguerra2011-a11y/marketnow
+- GitHub: https://github.com/alicelabs-llc/MARKETNOW
 - npm: `npx -y marketnow-mcp@1.9.0`
 
 ---

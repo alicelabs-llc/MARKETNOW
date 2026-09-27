@@ -55,7 +55,7 @@ MarketNow和Vibe（vibes-coded.com）实现了双向收据验证：
 - 网站：https://marketnow.site
 - 提交：https://marketnow.site/submit
 - 规范：https://marketnow.site/api/atc?action=spec
-- GitHub：https://github.com/edgarfloresguerra2011-a11y/marketnow
+- GitHub：https://github.com/alicelabs-llc/MARKETNOW
 - npm：`npx -y marketnow-mcp@1.7.0`
 
 ## 免责声明

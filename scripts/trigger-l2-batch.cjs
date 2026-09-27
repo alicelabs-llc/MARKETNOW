@@ -22,7 +22,7 @@ const path = require('path');
 
 // ─── Config ──────────────────────────────────────────────────────────────
 const GITHUB_TOKEN = process.env.MANDATES_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
-const REPO = process.env.MANDATES_REPO || 'edgarfloresguerra2011-a11y/marketnow';
+const REPO = process.env.MANDATES_REPO || 'eddyflores100-lang/marketnow';
 const BRANCH = 'master';
 
 if (!GITHUB_TOKEN) {

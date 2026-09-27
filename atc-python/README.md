@@ -1,10 +1,10 @@
 # agent-trust-card (Python)
 
-> **Issue and verify Agent Trust Cards in Python.** A small, framework-agnostic SDK for the [ATC/1.0 specification](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md). Works in Python 3.9+.
+> **Issue and verify Agent Trust Cards in Python.** A small, framework-agnostic SDK for the [ATC/1.0 specification](https://github.com/alicelabs-llc/MARKETNOW/blob/master/docs/atc-spec/SPEC.md). Works in Python 3.9+.
 
 [![PyPI version](https://img.shields.io/pypi/v/agent-trust-card.svg)](https://pypi.org/project/agent-trust-card/)
 [![License: AliceLabs Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Spec: ATC/1.0](https://img.shields.io/badge/Spec-ATC%2F1.0-brightgreen)](https://github.com/edgarfloresguerra2011-a11y/marketnow/blob/master/docs/atc-spec/SPEC.md)
+[![Spec: ATC/1.0](https://img.shields.io/badge/Spec-ATC%2F1.0-brightgreen)](https://github.com/alicelabs-llc/MARKETNOW/blob/master/docs/atc-spec/SPEC.md)
 
 ## Install
 
@@ -92,7 +92,7 @@ If you issue an ATC in Python and verify it in Node.js (or vice versa), the sign
 ## Conformance tests
 
 ```bash
-git clone https://github.com/edgarfloresguerra2011-a11y/marketnow.git
+git clone https://github.com/alicelabs-llc/MARKETNOW.git
 cd marketnow/atc-python
 pip install cryptography requests
 python3 tests/test_conformance.py

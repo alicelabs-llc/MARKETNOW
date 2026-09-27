@@ -34,7 +34,7 @@ if (!GITHUB_TOKEN) {
   process.exit(1);
 }
 
-const REPO = 'edgarfloresguerra2011-a11y/marketnow';
+const REPO = 'eddyflores100-lang/marketnow';
 const SKILLS_PATH = path.join(__dirname, '..', 'aep-marketplace', 'public', 'api', 'skills_index.json');
 
 // CLI args

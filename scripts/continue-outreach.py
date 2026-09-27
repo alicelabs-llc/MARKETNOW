@@ -10,7 +10,7 @@ GH_TOKEN = os.environ.get("MANDATES_GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 if not GH_TOKEN:
     print("ERROR: Set MANDATES_GITHUB_TOKEN or GH_TOKEN env var")
     sys.exit(1)
-REPO = "edgarfloresguerra2011-a11y/marketnow"
+REPO = 'eddyflores100-lang/marketnow'
 
 # Step 1: Re-trigger 3 pending L2 audits
 print("═══ STEP 1: RE-TRIGGER 3 PENDING L2 AUDITS ═══\n")

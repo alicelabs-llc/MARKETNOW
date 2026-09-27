@@ -65,7 +65,7 @@ SERVERS = [
 ]
 
 GH_TOKEN = os.environ.get("MANDATES_GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-REPO = "edgarfloresguerra2011-a11y/marketnow"
+REPO = 'eddyflores100-lang/marketnow'
 dispatch_url = f"https://api.github.com/repos/{REPO}/dispatches"
 
 submitted = []

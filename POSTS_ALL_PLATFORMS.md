@@ -64,7 +64,7 @@ API: `GET https://marketnow.site/api/audit-skill?certificate=1&skillId=mn-gen-00
 3. 8,550 of 8,582 skills used the same npm package — OSV API caching reduced 8,577 calls to 28
 4. Vercel Hobby caps at 12 serverless functions — had to merge endpoints
 
-Source: https://github.com/edgarfloresguerra2011-a11y/marketnow
+Source: https://github.com/alicelabs-llc/MARKETNOW
 
 What do you think? Is security certification for MCP servers something the ecosystem needs?
 
@@ -150,7 +150,7 @@ Live stats:
 - 206 with L2 Docker sandbox results
 - Weekly cron re-audits everything
 
-All code: github.com/edgarfloresguerra2011-a11y/marketnow
+All code: github.com/alicelabs-llc/MARKETNOW
 
 #MCP #AI #Security
 

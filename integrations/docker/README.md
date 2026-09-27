@@ -40,12 +40,14 @@ Pull it without cloning anything:
 docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
 ```
 
-> **Pull denied?** GHCR packages start private. A one-time org-owner flip —
-> https://github.com/orgs/alicelabs-llc/packages/container/marketnow-mcp/settings
-> → Danger Zone → Change visibility → Public — makes pulls anonymous.
-> Until then: `echo "ghp_TOKEN_read_packages" | docker login ghcr.io -u USER --password-stdin`.
-> CI attempts the visibility flip via API after every push (idempotent);
-> GitHub currently rejects that call, so it remains a manual one-click.
+> **Visibility: PUBLIC** (flipped 2026-09-27; anonymous pull verified from a
+> clean client — no `docker login` needed). Two footnotes for the record:
+> GHCR creates every new package private by default, and org policy blocks
+> the Public option until an org admin enables public package creation
+> under org Settings → Packages. The CI still attempts the API flip after
+> every push (idempotent, best-effort); GitHub retired that REST endpoint,
+> so if the package ever regresses to private, the one-click fix is the
+> settings page above.
 
 ## Hardening model (why the flags exist)
 
@@ -75,12 +77,16 @@ An image that fails the handshake is never pushed.
 
 ## Docker MCP Toolkit / Registry
 
-`docker/mcp-registry-entry.yaml` is the ready-to-submit catalog entry for
-the [Docker MCP Registry](https://github.com/docker/mcp-registry). Users
-of Docker Desktop's MCP Toolkit then get one-command install:
+Submitted to the [Docker MCP Registry](https://github.com/docker/mcp-registry)
+on 2026-09-27 as **PR #5263** — `servers/marketnow-mcp/server.yaml`
+(the registry moved from `catalog/` to `servers/<name>/server.yaml`;
+`docker/mcp-registry-entry.yaml` in this repo is the exact copy submitted,
+pinned to the audited release tree `222842c0`). A remote (hosted) entry for
+the same server is pending as PR #5175. While review is pending, Docker
+Desktop users can already connect directly — the image is public:
 
 ```bash
 docker mcp gateway add --docker ghcr.io/alicelabs-llc/marketnow-mcp
 ```
 
-See the file header for the submission procedure.
+After the catalog PR merges: `docker mcp gateway catalog install marketnow-mcp`.

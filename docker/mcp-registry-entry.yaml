@@ -27,8 +27,24 @@ meta:
     - marketplace
 about:
   title: MarketNow
-  description: MCP marketplace and trust layer — search 9,300+ security-audited skills, verify Agent Trust Cards (fail-closed ATC/1.0, Ed25519 + RFC 8785 JCS), check revocation status, and fingerprint tool definitions against tool poisoning. 13 tools, no API key required.
+  description: MCP marketplace and trust layer — search 9,300+ security-audited skills, verify Agent Trust Cards (fail-closed ATC/1.0, Ed25519 + RFC 8785 JCS), check revocation status, and fingerprint tool definitions against tool poisoning. 15 tools, no API key required.
   icon: https://www.google.com/s2/favicons?domain=marketnow.site&sz=64
+tools:
+  - name: marketnow_search_skills
+  - name: marketnow_get_skill
+  - name: marketnow_get_manifest
+  - name: marketnow_list_categories
+  - name: marketnow_recommend_skills
+  - name: marketnow_get_install_command
+  - name: marketnow_submit_skill
+  - name: marketnow_verify_trust
+  - name: marketnow_verify_atc_spec
+  - name: marketnow_verify_receipt
+  - name: marketnow_check_revocation
+  - name: marketnow_fingerprint_tool
+  - name: marketnow_mint_referral
+  - name: marketnow_lookup_referral
+  - name: marketnow_get_owasp_compliance
 source:
   project: https://github.com/alicelabs-llc/MARKETNOW
   commit: 222842c063c6578ddc4e186edc254f0757be9c95

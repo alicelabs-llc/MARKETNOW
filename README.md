@@ -47,6 +47,9 @@ Tool contract: deterministic `marketnow_` snake_case names · intent-oriented de
 
 ## Quick start
 
+### Add to Cursor — 1 click (no terminal)
+[![Add to Cursor](https://img.shields.io/badge/Cursor-Add_MarketNow-00F299?style=for-the-badge&logo=cursor)](https://cursor.com/install-mcp?name=MarketNow&config=%7B%22url%22%3A%20%22https%3A%2F%2Fmarketnow.site%2Fapi%2Fmcp%22%7D)
+
 ### Connect any MCP client (Streamable HTTP)
 ```json
 {

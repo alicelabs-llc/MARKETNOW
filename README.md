@@ -17,6 +17,7 @@
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
 [![npm downloads](https://img.shields.io/npm/dw/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
+[![Official MCP Registry](https://img.shields.io/badge/MCP_Registry-official-4f46e5)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.alicelabs-llc%2Fmarketnow/versions/1.15.0)
 
 ## What is MarketNow?
 

@@ -1,5 +1,5 @@
 # ══════════════════════════════════════════════════════════════════════════════
-# MarketNow — Docker MCP Registry entry (version: 1.15.0)
+# MarketNow — Docker MCP Registry entry (version: 1.16.0)
 # ══════════════════════════════════════════════════════════════════════════════
 # SUBMITTED 2026-09-27 as docker/mcp-registry PR #5263:
 #   https://github.com/docker/mcp-registry/pull/5263
@@ -27,7 +27,7 @@ meta:
     - marketplace
 about:
   title: MarketNow
-  description: MCP marketplace and trust layer — search 9,300+ security-audited skills, verify Agent Trust Cards (fail-closed ATC/1.0, Ed25519 + RFC 8785 JCS), check revocation status, and fingerprint tool definitions against tool poisoning. 15 tools, no API key required.
+  description: MCP marketplace and trust layer — search 70,510 cataloged skills with live auth-gate state (requires_auth + rfc9728_valid from the 6,165-endpoint official-registry probe), verify Agent Trust Cards (fail-closed ATC/1.0, Ed25519 + RFC 8785 JCS), check revocation status, and fingerprint tool definitions against tool poisoning. 15 tools, no API key required.
   icon: https://www.google.com/s2/favicons?domain=marketnow.site&sz=64
 tools:
   - name: marketnow_search_skills

@@ -12,7 +12,7 @@ The shipped config runs:
 docker run -i --rm --init --read-only \
   --cap-drop ALL --security-opt no-new-privileges:true \
   -e NODE_ENV=production \
-  ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+  ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0
 ```
 
 ## No Docker? Use the npm channel
@@ -31,8 +31,8 @@ Edit `.cursor/mcp.json` (project) or your global `~/.cursor/mcp.json`:
 ```
 
 `marketnow-mcp@1.15.0` is the latest version actually published to npm;
-the Docker image the shipped config uses is the same release
-(repo-exact audited build 1.15.0). Keep the version pinned — the repo's `mcp-server/package.json`
+the Docker image the shipped config uses is the repo-exact audited build
+(1.16.0 — the repo leads npm by design until the next publish). Keep the version pinned — the repo's `mcp-server/package.json`
 is the source of truth and CI's version-sync gate validates the shipped
 config against it.
 
@@ -56,7 +56,7 @@ cursor mcp add --transport stdio marketnow -- \
   docker run -i --rm --init --read-only \
   --cap-drop ALL --security-opt no-new-privileges:true \
   -e NODE_ENV=production \
-  ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+  ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0
 ```
 
 ## Project rules

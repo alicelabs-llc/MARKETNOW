@@ -14,7 +14,7 @@
       "no-new-privileges:true",
       "-e",
       "NODE_ENV=production",
-      "ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
+      "ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0"
     ],
     "note": "Repo-exact audited build (mcp-server/package.json version; CI-built, handshake-tested). Needs the GHCR package public or docker login. Swap this into the marketnow entry below to use it."
   },

@@ -6,7 +6,7 @@
     "url": "https://github.com/alicelabs-llc/MARKETNOW",
     "source": "github"
   },
-  "version": "1.15.0",
+  "version": "1.16.0",
   "homepage": "https://marketnow.site",
   "license": "MIT",
   "author": {
@@ -29,7 +29,7 @@
     {
       "registryType": "npm",
       "identifier": "marketnow-mcp",
-      "version": "1.15.0",
+      "version": "1.16.0",
       "transport": {
         "type": "stdio"
       }
@@ -37,11 +37,11 @@
     {
       "registryType": "docker",
       "identifier": "ghcr.io/alicelabs-llc/marketnow-mcp",
-      "version": "1.15.0",
+      "version": "1.16.0",
       "transport": {
         "type": "stdio"
       },
-      "run_command": "docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0"
+      "run_command": "docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0"
     }
   ]
 }

@@ -19,7 +19,7 @@ The command it runs is:
 docker run -i --rm --init --read-only \
   --cap-drop ALL --security-opt no-new-privileges:true \
   -e NODE_ENV=production \
-  ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+  ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0
 ```
 
 Why the flags: `--init` gives clean PID-1 signal handling, `--read-only`
@@ -57,8 +57,8 @@ In the same Cline MCP settings file:
 ```
 
 `marketnow-mcp@1.15.0` is the latest version actually published to npm;
-the Docker image in Option A is the same release (repo-exact audited build
-1.15.0) — both channels in lockstep. Keep the pin; `@latest` can
+the Docker image in Option A is the repo-exact audited build (1.16.0 —
+the repo leads npm by design until the next publish). Keep the pin; `@latest` can
 drift from the audited repo tree.
 
 ### If Docker pulls are denied (private package until first visibility flip)

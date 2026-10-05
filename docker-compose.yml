@@ -1,5 +1,5 @@
 # ══════════════════════════════════════════════════════════════════════════════
-# MarketNow MCP Server — local compose (v1.15.0)
+# MarketNow MCP Server — local compose (v1.16.0)
 # ══════════════════════════════════════════════════════════════════════════════
 # MCP stdio servers are meant to be spawned by an MCP client (Cline, Cursor,
 # Claude Desktop, Docker MCP Toolkit) attached to stdin/stdout. Compose exists
@@ -17,7 +17,7 @@ services:
     build:
       context: ./mcp-server
       args:
-        VERSION: "1.15.0"
+        VERSION: "1.16.0"
         VCS_URL: "https://github.com/alicelabs-llc/MARKETNOW"
     image: ghcr.io/alicelabs-llc/marketnow-mcp:latest
     # stdio transport: keep stdin open, no ports, read-only root filesystem,

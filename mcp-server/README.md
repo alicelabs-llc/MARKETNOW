@@ -5,7 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp.svg)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 [![Docker](https://img.shields.io/badge/Docker-ghcr.io%2Falicelabs--llc%2Fmarketnow--mcp-2496ED?logo=docker&logoColor=white)](./../integrations/docker/README.md)
-[![Audit: PASS](https://img.shields.io/badge/Audit-v1.15.0%20PASS-brightgreen)](./AUDIT.md)
+[![Audit: PASS](https://img.shields.io/badge/Audit-v1.16.0%20PASS-brightgreen)](./AUDIT.md)
 
 ---
 
@@ -57,7 +57,7 @@ npx -y marketnow-mcp
 ### Docker (runs the audited repo tree)
 
 ```bash
-docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0
 ```
 
 Any MCP client that can spawn a Docker stdio process can use this. The

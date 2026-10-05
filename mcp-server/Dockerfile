@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # ══════════════════════════════════════════════════════════════════════════════
-# MarketNow MCP Server — production container (v1.15.0)
+# MarketNow MCP Server — production container (v1.16.0)
 # ══════════════════════════════════════════════════════════════════════════════
 # The server speaks MCP over stdio. Run it attached to stdin/stdout:
 #
@@ -31,7 +31,7 @@ WORKDIR /app
 
 # OCI + GHCR metadata (org.opencontainers.image.* is what `docker inspect`
 # and registries display; keep in sync with package.json — CI validates it).
-ARG VERSION=1.15.0
+ARG VERSION=1.16.0
 ARG VCS_URL=https://github.com/alicelabs-llc/MARKETNOW
 ARG VCS_REF
 LABEL org.opencontainers.image.title="MarketNow MCP Server" \

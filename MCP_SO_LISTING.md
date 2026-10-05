@@ -56,7 +56,7 @@ VERIFIED STATS (all real, all public at /api/audit-report.json)
   - 57 Agent Trust Cards issued
   - 5 runtime interceptor policy rules live
 
-THE MCP SERVER (v1.15.0 — Integrations + repository-field repair)
+THE MCP SERVER (v1.16.0 — Auth-gate parity; previously v1.15.0 — Integrations + repository-field repair)
 The npm package `marketnow-mcp@1.15.0` exposes 15 tools, all under the
 `marketnow_*` namespace prefix for unambiguous tool choice by Claude
 Desktop, Cursor, Cline, LangChain, and LlamaIndex agents:
@@ -127,7 +127,7 @@ npx -y marketnow-mcp
 Use the MarketNow favicon: https://marketnow.site/favicon.svg
 
 ### Features to highlight
-- ✅ 15 MCP tools under `marketnow_*` namespace (v1.15.0)
+- ✅ 15 MCP tools under `marketnow_*` namespace (v1.16.0)
 - ✅ 10-layer Sentinel security audit pipeline (L1.5 → L3)
 - ✅ 1,211,488 security checks performed (real, public)
 - ✅ 80 malicious skills quarantined (transparency report)

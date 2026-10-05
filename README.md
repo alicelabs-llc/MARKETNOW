@@ -18,7 +18,7 @@
 [![npm version](https://img.shields.io/npm/v/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
 [![npm downloads](https://img.shields.io/npm/dw/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
 [![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Official MCP Registry](https://img.shields.io/badge/MCP_Registry-official-4f46e5)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.alicelabs-llc%2Fmarketnow/versions/1.15.0)
+[![Official MCP Registry](https://img.shields.io/badge/MCP_Registry-official-4f46e5)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.alicelabs-llc%2Fmarketnow/versions/1.16.0)
 
 ## What is MarketNow?
 
@@ -26,9 +26,9 @@ MarketNow is **trust infrastructure for AI agents**: a hosted registry that veri
 
 Every indexed entry is security-first scored. The MCP API is **free** — 68,387 of the 68,388 indexed servers are free to install (`paid: 1` in the public [stats API](https://www.marketnow.site/api/stats.json)).
 
-## The 9 MCP tools (endpoint v1.15.0)
+## The 9 MCP tools (endpoint v1.16.0)
 
-> Endpoint tracks the npm train: **v1.15.0** (2026-09-26 — repository-field repair → `alicelabs-llc/MARKETNOW`, npm ↔ endpoint lockstep); previously v1.14.1 (2026-09-20).
+> Endpoint tracks the npm train: **v1.16.0** (2026-10-05 — auth-gate join in /api/skills: requires_auth / auth_state / rfc9728_valid on 6,165 probed skills, ?auth= filters, auth_gate response block); previously v1.15.0 (2026-09-26).
 
 The MCP server exposes 9 tools, all under the `marketnow_*` namespace so Claude Desktop, Cursor, Cline, LangChain and LlamaIndex can disambiguate them at tool-choice time:
 
@@ -69,7 +69,7 @@ npx -y marketnow-mcp
 
 ### Run it in Docker (audited repo tree, published by CI)
 ```bash
-docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.15.0
+docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0
 # or register it in the Docker MCP Toolkit:
 docker mcp gateway add --docker ghcr.io/alicelabs-llc/marketnow-mcp
 ```

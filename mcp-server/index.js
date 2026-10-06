@@ -8,7 +8,7 @@
  * The single source of truth for the server version is package.json —
  * PKG_VERSION is read at startup so the MCP handshake (serverInfo), the
  * startup banner and the npm manifest can NEVER drift apart again.
- * Tools exposed (13) — all use the `marketnow_` namespace prefix so MCP
+ * Tools exposed (15) — all use the `marketnow_` namespace prefix so MCP
  * clients (Claude Desktop, Cursor, Cline, Continue, LangChain, LlamaIndex)
  * can disambiguate them from other servers' tools at tool-choice time.
  *
@@ -1062,4 +1062,4 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 // ─── Start server ───────────────────────────────────────────────────────────
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error(`MarketNow MCP Server v${PKG_VERSION} (license ${PKG_LICENSE}) running on stdio (13 tools, marketnow_* namespace, ATC/1.0 spec verifier)`);
+console.error(`MarketNow MCP Server v${PKG_VERSION} (license ${PKG_LICENSE}) running on stdio (15 tools, marketnow_* namespace, ATC/1.0 spec verifier)`);

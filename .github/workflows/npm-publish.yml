@@ -1,0 +1,81 @@
+# MarketNow — Publish mcp-server (marketnow-mcp) to npm
+# =================================================================
+#
+# Closes the repo<->npm version drift class of failures (2026-10-05:
+# live api/mcp.js = 1.16.0 while npm stayed at 1.15.0 because the
+# 1.16.0 publish failed with an expiring granular token, which broke
+# the marketplace audit gate [VERSIONS] + [STALE-DRIFT] checks).
+#
+# Usage:
+#   1. Bump mcp-server/package.json version + commit to master.
+#   2. Run this workflow (Actions -> "Publish mcp-server (npm)" -> Run),
+#      or push a tag "mcp-v*".
+#   3. Verify: npm view marketnow-mcp version == package.json version.
+#
+# Requires secret NPM_TOKEN (npm granular token, packages read+write
+# scoped to marketnow-mcp) in repo Settings -> Secrets -> Actions.
+
+name: Publish mcp-server (npm)
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "mcp-v*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: npm-publish-marketnow-mcp
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: npm publish (marketnow-mcp)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mcp-server
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Pre-publish version gate
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          echo "package.json version: ${PKG_VERSION}"
+          REGISTRY_VERSION=$(npm view marketnow-mcp version 2>/dev/null || echo "none")
+          echo "npm registry version: ${REGISTRY_VERSION}"
+          if [ "${PKG_VERSION}" = "${REGISTRY_VERSION}" ]; then
+            echo "::error::marketnow-mcp@${PKG_VERSION} is already published - bump mcp-server/package.json first."
+            exit 1
+          fi
+
+      - name: Tests
+        run: npm test
+
+      - name: Publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Post-publish verification
+        run: |
+          sleep 15
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          REGISTRY_VERSION=$(npm view marketnow-mcp version 2>/dev/null || echo "none")
+          if [ "${PKG_VERSION}" = "${REGISTRY_VERSION}" ]; then
+            echo "OK: marketnow-mcp@${PKG_VERSION} is live on the npm registry"
+          else
+            echo "::warning::Registry still shows ${REGISTRY_VERSION} (propagation delay) - re-check with: npm view marketnow-mcp version"
+          fi

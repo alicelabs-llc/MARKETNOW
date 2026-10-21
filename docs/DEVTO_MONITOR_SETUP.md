@@ -35,7 +35,7 @@ Click "New repository secret" for each of these:
 | `SMTP_USER` | `support@alicelabs.site` |
 | `SMTP_PASS` | your 16-char Gmail App Password (no spaces) |
 | `NOTIFY_EMAIL` | `support@alicelabs.site` (or any email you want notifications sent to) |
-| `DEVTO_API_KEY` | `WYK9tdVMev3K7xwtbWxvkwNu` (already hardcoded as fallback, but add it as secret for security) |
+| `DEVTO_API_KEY` | `REDACTED-ROTATED` (already hardcoded as fallback, but add it as secret for security) |
 
 ### Step 3: Verify the workflow is enabled
 

@@ -1,10 +1,60 @@
 version: 2
 updates:
+  # Motor MCP (npm)
   - package-ecosystem: npm
-    directory: /aep-marketplace
+    directory: /mcp-server
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
     labels:
       - dependencies
       - security
+
+  # SDK ATC (npm)
+  - package-ecosystem: npm
+    directory: /atc-sdk
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - security
+
+  # Spec + suite de conformidad ATC (npm)
+  - package-ecosystem: npm
+    directory: /docs/atc-spec
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - security
+
+  # CLI de instalacion del stack
+  - package-ecosystem: npm
+    directory: /install-stack-cli
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - security
+
+  # CLI de MarketNow
+  - package-ecosystem: npm
+    directory: /marketnow-cli
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - security
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies

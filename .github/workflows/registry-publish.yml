@@ -1,10 +1,15 @@
-# MarketNow — Publish mcp-server/server.json to the official MCP registry
-# Publishes the CURRENT mcp-server/server.json as a new registry version,
-# authenticated with GitHub OIDC (no stored secrets).
+# MarketNow — Publish the official MCP registry manifest (root server.json)
+# Publishes the ROOT server.json (the manifest the official MCP registry lists,
+# see scripts/check-version-sync.mjs check #7) as a new registry version,
+# authenticated with GitHub OIDC (no stored secrets needed).
 #
-# Usage: bump mcp-server/server.json version (and npm package) -> Actions ->
-#        "Publish to MCP registry" -> Run workflow.
-# Verify: https://registry.modelcontextprotocol.io/v0/servers?search=alicelabs
+# Usage:
+#   1. Bump root server.json version to the next unpublished version.
+#   2. Actions -> "Publish to MCP registry" -> Run workflow.
+#   3. Verify: https://registry.modelcontextprotocol.io/v0/servers?search=alicelabs
+#
+# Namespace mapping: OIDC claim repository == alicelabs-llc/MARKETNOW
+#                    -> io.github.alicelabs-llc/* (matches server.json name).
 
 name: Publish to MCP registry
 
@@ -29,34 +34,28 @@ jobs:
       - name: Mint OIDC token
         id: oidc
         run: |
-          TOK=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \\
-            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=modelcontextprotocol" | jq -r '.value // empty')
+          TOK=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=modelcontextprotocol" | jq -r '.value // empty')
           if [ -z "$TOK" ]; then
-            echo "audience=modelcontextprotocol failed, retrying with default audience"
-            TOK=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \\
-              "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value // empty')
+            echo "audience=modelcontextprotocol gave no token, retrying with default audience"
+            TOK=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value // empty')
           fi
-          [ -n "$TOK" ] || { echo "::error::no OIDC token minted"; exit 1; }
+          if [ -z "$TOK" ]; then echo "::error::no OIDC token minted"; exit 1; fi
           echo "token=$TOK" >> "$GITHUB_OUTPUT"
 
-      - name: Publish server.json
+      - name: Publish root server.json
+        env:
+          OIDC_TOKEN: ${{ steps.oidc.outputs.token }}
         run: |
-          HTTP=$(curl -sS -o /tmp/pub_resp.json -w '%{http_code}' \\
-            -X POST https://registry.modelcontextprotocol.io/v0/publish \\
-            -H "Authorization: Bearer ${{ steps.oidc.outputs.token }}" \\
-            -H "Content-Type: application/json" \\
-            --data @mcp-server/server.json)
+          HTTP=$(curl -sS -o /tmp/pub_resp.json -w '%{http_code}' -X POST https://registry.modelcontextprotocol.io/v0/publish -H "Authorization: Bearer $OIDC_TOKEN" -H "Content-Type: application/json" --data @server.json)
           echo "HTTP $HTTP"
           cat /tmp/pub_resp.json
+          echo
           case "$HTTP" in
             200|201) echo "OK: published to the MCP registry" ;;
-            *) echo "::error::registry publish failed with HTTP $HTTP"; exit 1 ;;
+            *) echo "::error::registry publish returned HTTP $HTTP"; exit 1 ;;
           esac
 
-      - name: Verify published version
+      - name: Verify published remote
         run: |
           sleep 5
-          VER=$(node -p "require('./mcp-server/server.json').version")
-          curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=alicelabs" \\
-            | jq -r '.servers[]?.server | select(.name=="io.github.alicelabs-llc/marketnow") | .version' | sort -u
-          echo "expected latest: $VER"
+          curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=alicelabs" | jq -r '.servers[]?.server | [.name, .version, (.remotes[0].url // "")] | @tsv'

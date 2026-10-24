@@ -225,8 +225,15 @@ if (remoteEntry?.url !== 'https://marketnow.site/api/mcp') {
 }
 const rootNpmPkg = (rootManifest.packages || []).find(p => p.identifier === 'marketnow-mcp');
 if (!rootNpmPkg) fail.push('root server.json must declare the npm package marketnow-mcp');
-if (rootNpmPkg && rootManifest.version !== rootNpmPkg.version) {
-  fail.push(`root server.json version (${rootManifest.version}) != npm package version (${rootNpmPkg.version})`);
+if (rootNpmPkg) {
+  // Registry-first flow: the official registry manifest may lead the npm train
+  // (npm trails by design until the granular token renewal allows the npm publish).
+  // Rule: root version >= npm package version (same major.minor line not required).
+  const v = (s) => s.split('.').map(Number);
+  const [aR, bR, cR] = v(rootManifest.version);
+  const [aN, bN, cN] = v(rootNpmPkg.version);
+  const gte = (aR > aN) || (aR === aN && bR > bN) || (aR === aN && bR === bN && cR >= cN);
+  if (!gte) fail.push(`root server.json version (${rootManifest.version}) is older than npm package version (${rootNpmPkg.version}) — the registry manifest must not regress`);
 }
 if (rootNpmPkg && publishedVersion && rootNpmPkg.version !== publishedVersion) {
   fail.push(`root server.json npm package version (${rootNpmPkg.version}) != registry latest (${publishedVersion}) — the registry manifest must list the published release`);

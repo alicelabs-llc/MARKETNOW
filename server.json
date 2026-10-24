@@ -8,19 +8,19 @@
     "url": "https://github.com/alicelabs-llc/MARKETNOW",
     "source": "github"
   },
-  "version": "1.15.0",
+  "version": "1.16.0",
   "websiteUrl": "https://www.marketnow.site",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://www.marketnow.site/api/mcp"
+      "url": "https://marketnow.site/api/mcp"
     }
   ],
   "packages": [
     {
       "registryType": "npm",
       "identifier": "marketnow-mcp",
-      "version": "1.15.0",
+      "version": "1.16.0",
       "transport": {
         "type": "stdio"
       }
@@ -28,7 +28,7 @@
     {
       "registryType": "docker",
       "identifier": "ghcr.io/alicelabs-llc/marketnow-mcp",
-      "version": "1.16.0",
+      "version": "1.16.1",
       "transport": {
         "type": "stdio"
       }

@@ -17,7 +17,7 @@ services:
     build:
       context: ./mcp-server
       args:
-        VERSION: "1.16.0"
+        VERSION: "1.16.1"
         VCS_URL: "https://github.com/alicelabs-llc/MARKETNOW"
     image: ghcr.io/alicelabs-llc/marketnow-mcp:latest
     # stdio transport: keep stdin open, no ports, read-only root filesystem,

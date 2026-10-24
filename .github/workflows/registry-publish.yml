@@ -36,7 +36,7 @@ jobs:
         run: |
           curl -sSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" -o mcp-publisher.tar.gz
           echo "5dc2fd415369c73551259f31cd33e2aacc9e0d1021e7f08fef1492d93b781628  mcp-publisher.tar.gz" | sha256sum -c -
-          tar xz mcp-publisher.tar.gz mcp-publisher
+          tar xzf mcp-publisher.tar.gz
 
       - name: Login to MCP Registry (GitHub OIDC)
         run: ./mcp-publisher login github-oidc

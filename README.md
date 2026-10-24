@@ -56,7 +56,7 @@ Tool contract: deterministic `marketnow_` snake_case names · intent-oriented de
 {
   "mcpServers": {
     "marketnow": {
-      "url": "https://www.marketnow.site/api/mcp"
+      "url": "https://marketnow.site/api/mcp"
     }
   }
 }
@@ -121,7 +121,7 @@ Canonical conformance vectors for the UTA pipeline: [`/uta/conformance/vectors/_
 - **Website:** https://www.marketnow.site
 - **GitHub:** https://github.com/alicelabs-llc/marketnow
 - **npm:** https://www.npmjs.com/package/marketnow-mcp
-- **MCP endpoint:** https://www.marketnow.site/api/mcp
+- **MCP endpoint:** https://marketnow.site/api/mcp (live endpoint reports serverInfo.version 4.0.0)
 - **Stats API:** https://www.marketnow.site/api/stats.json
 - **ATC spec:** https://www.marketnow.site/api/atc?action=spec
 - **CA public key:** https://www.marketnow.site/api/atc?action=ca-key

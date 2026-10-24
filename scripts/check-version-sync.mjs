@@ -220,8 +220,8 @@ if (rootManifest.repository?.url !== CANONICAL_REPO) {
   fail.push(`root server.json repository.url (${rootManifest.repository?.url}) != ${CANONICAL_REPO}`);
 }
 const remoteEntry = (rootManifest.remotes || []).find(r => r.type === 'streamable-http');
-if (remoteEntry?.url !== 'https://www.marketnow.site/api/mcp') {
-  fail.push(`root server.json remote url (${remoteEntry?.url}) != https://www.marketnow.site/api/mcp`);
+if (remoteEntry?.url !== 'https://marketnow.site/api/mcp') {
+  fail.push(`root server.json remote url (${remoteEntry?.url}) != https://marketnow.site/api/mcp`);
 }
 const rootNpmPkg = (rootManifest.packages || []).find(p => p.identifier === 'marketnow-mcp');
 if (!rootNpmPkg) fail.push('root server.json must declare the npm package marketnow-mcp');

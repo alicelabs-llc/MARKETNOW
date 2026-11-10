@@ -1,6 +1,6 @@
 # MarketNow — Trust Infrastructure for AI Agents
 [![mcpservers.org](https://img.shields.io/badge/mcpservers.org-listed-2EA44F)](https://mcpservers.org/servers/alicelabs-llc/marketnow)
-[![mcptry](https://img.shields.io/badge/mcptry-86%2F100_%C2%B7_%23454%2F4704_AI_%26_Agents-24292f)](https://mcptry.com/servers/io.github.alicelabs-llc/marketnow)
+[![mcptry](https://mcptry.com/badge/io.github.alicelabs-llc/marketnow.svg)](https://mcptry.com/servers/io.github.alicelabs-llc/marketnow)
 
 > **Repo ecosystem (one owner per concern, split 2026-09-26):**
 >

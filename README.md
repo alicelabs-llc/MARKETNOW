@@ -1,58 +1,79 @@
-# MarketNow — Trust Infrastructure for AI Agents
-[![mcpservers.org](https://img.shields.io/badge/mcpservers.org-listed-2EA44F)](https://mcpservers.org/servers/alicelabs-llc/marketnow)
-[![mcptry](https://mcptry.com/badge/io.github.alicelabs-llc/marketnow.svg)](https://mcptry.com/servers/io.github.alicelabs-llc/marketnow) [![status](https://img.shields.io/website?url=https%3A%2F%2Fstatus.marketnow.site&label=status)](https://status.marketnow.site)
+# MarketNow
 
-> **Repo ecosystem (one owner per concern, split 2026-09-26):**
->
-> | Repo | Sole owner of |
-> |------|----------------|
-> | `alicelabs-llc/MARKETNOW` (this repo) | Product code: `mcp-server` (npm `marketnow-mcp`), `atc-sdk`/`atc-python`/`atc-rust`, Docker/Cline/Cursor integrations, CLIs, security audits |
-> | `eddyflores100-lang/marketnow` | Live marketplace: site (`aep-marketplace/`), catalog data (`_data/`, `skills/`, `public/api/`), the 21 scheduled data pipelines, Vercel deploys of marketnow.site |
-> | `alicelabs-llc/universal-trust-adapter` | ATC/1.0 protocol: spec, adapters, reference implementation, plugins |
-> | `alicelabs-llc/marketnow-submissions` | Public skill submissions queue |
-> | `alicelabs-llc/status` | Live status page |
->
-> Data and site questions go to the marketplace repo; protocol questions to UTA; everything else lives here.
+**Trust infrastructure for AI agents.** MarketNow reúne un servidor MCP, herramientas de verificación de confianza y una integración con un catálogo de skills para que los agentes puedan consultar información y validar evidencias antes de actuar.
 
-> **MarketNow doesn't sell AI tools. It determines whether AI agents should be allowed to trust and execute them.**
+- **Marketplace:** https://marketnow.site
+- **MCP endpoint:** https://marketnow.site/api/mcp
+- **MCP package:** [marketnow-mcp en npm](https://www.npmjs.com/package/marketnow-mcp)
+- **Status:** https://status.marketnow.site
+- **MCP Registry:** [io.github.alicelabs-llc/marketnow](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.alicelabs-llc%2Fmarketnow/versions/1.16.0)
 
-[![npm version](https://img.shields.io/npm/v/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
-[![npm downloads](https://img.shields.io/npm/dw/marketnow-mcp)](https://www.npmjs.com/package/marketnow-mcp)
-[![License: AliceLabs LLC Proprietary](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
-[![Official MCP Registry](https://img.shields.io/badge/MCP_Registry-official-4f46e5)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.alicelabs-llc%2Fmarketnow/versions/1.16.0)
+> Este repositorio contiene el servidor MCP, SDKs, integraciones y material de seguridad. El sitio del marketplace y sus pipelines de catálogo viven en el repositorio separado `eddyflores100-lang/marketnow`.
 
-## What is MarketNow?
+## Qué contiene este repositorio
 
-MarketNow is **trust infrastructure for AI agents**: a hosted registry that verifies skills, credentials and domains across **68,388 indexed MCP servers** (132,737 tracked across GitHub, npm and PyPI), with signed skill submissions, revocation checks and a 9-tool MCP API.
+| Área | Responsabilidad |
+| --- | --- |
+| `mcp-server/` | Paquete npm `marketnow-mcp`, herramientas MCP y validación de confianza |
+| `atc-sdk/` | SDK relacionado con Agent Trust Cards |
+| `atc-python/`, `atc-rust/` | Implementaciones y utilidades por lenguaje |
+| `integrations/` | Configuraciones y guías para clientes MCP |
+| `docker/` | Artefactos de distribución para Docker MCP |
+| `scripts/` | Comprobaciones, generación de índices y tareas de mantenimiento |
+| `docs/` | Especificaciones, ejemplos, guías y material de auditoría |
 
-Every indexed entry is security-first scored. The MCP API is **free** — 68,387 of the 68,388 indexed servers are free to install (`paid: 1` in the public [stats API](https://www.marketnow.site/api/stats.json)).
+Consulta los README de cada subproyecto antes de asumir que un comando o requisito del servidor también aplica a los SDKs.
 
-## The 9 MCP tools (endpoint v1.16.0)
+## Servidor MCP
 
-> Endpoint tracks the npm train: **v1.16.0** (2026-10-05 — auth-gate join in /api/skills: requires_auth / auth_state / rfc9728_valid on 6,165 probed skills, ?auth= filters, auth_gate response block); previously v1.15.0 (2026-09-26).
+El paquete publicable está en `mcp-server/`. Su versión fuente se declara en `mcp-server/package.json` (actualmente **1.16.2**).
 
-The MCP server exposes 9 tools, all under the `marketnow_*` namespace so Claude Desktop, Cursor, Cline, LangChain and LlamaIndex can disambiguate them at tool-choice time:
+El servidor expone 15 herramientas con prefijo `marketnow_*`. Entre sus capacidades se encuentran:
 
-| # | Tool | What it does |
-|---|------|--------------|
-| 1 | `marketnow_verify_trust` | Verify any AI-agent credential (JWT, W3C VC, MCP Card, ATC v3, A2A, EAT-AI, ZTA, X.509) through the UTA 12-stage verification pipeline |
-| 2 | `marketnow_translate_credential` | Translate a credential between 8 formats (ATC v3, JWT, W3C VC, A2A, EAT-AI, ZTA, MCP Card, X.509) losslessly via the Universal Trust Schema |
-| 3 | `marketnow_list_formats` | List the 8 supported credential formats with their algorithms and status |
-| 4 | `marketnow_get_pipeline` | Get the 12-stage verification pipeline details |
-| 5 | `marketnow_check_domain` | Scam checker: returns a domain risk score with reasons |
-| 6 | `marketnow_search_skills` | Search the registry of indexed MCP servers (GitHub, npm, PyPI), security-first scored |
-| 7 | `marketnow_check_revocation` | Check revocation of an Agent Trust Card or CA key against the signed Revocation Registry (MNR-CRL-1.0) + live ledger |
-| 8 | `marketnow_fingerprint_tool` | Cryptographically fingerprint MCP tool definitions (OWASP MCP Cheat Sheet) with RFC 8785 JCS + SHA-256 |
-| 9 | `marketnow_submit_skill` | Publish a skill to the catalog: validated and Sentinel-scanned (injection patterns, embedded secrets, dangerous capabilities) |
+- Buscar skills y consultar sus metadatos.
+- Consultar categorías y manifiestos del catálogo.
+- Obtener instrucciones de instalación.
+- Verificar Agent Trust Cards y recibos firmados.
+- Consultar revocación y datos de confianza.
+- Revisar controles de seguridad y huellas de herramientas.
+- Enviar skills y consultar referencias.
 
-Tool contract: deterministic `marketnow_` snake_case names · intent-oriented descriptions · strict JSON-Schema parameters · structured `{ content, isError }` responses.
+La lista exacta, los esquemas de entrada, los modos de verificación y los ejemplos de configuración se mantienen en **[mcp-server/README.md](mcp-server/README.md)**. Ese documento es la referencia operativa del paquete; evita duplicar aquí una lista que pueda quedar desactualizada.
 
-## Quick start
+### Instalar con npx
 
-### Add to Cursor — 1 click (no terminal)
-[![Add to Cursor](https://img.shields.io/badge/Cursor-Add_MarketNow-00F299?style=for-the-badge&logo=cursor)](https://cursor.com/install-mcp?name=MarketNow&config=%7B%22url%22%3A%20%22https%3A%2F%2Fmarketnow.site%2Fapi%2Fmcp%22%7D)
+```bash
+npx -y marketnow-mcp
+```
 
-### Connect any MCP client (Streamable HTTP)
+### Ejecutar desde el repositorio
+
+```bash
+cd mcp-server
+npm install
+npm start
+```
+
+El servidor usa el transporte y la configuración documentados por el paquete. Para clientes como Claude Desktop, Cursor o Cline, sigue las guías específicas en [integrations](integrations/).
+
+### Docker
+
+```bash
+docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.16.2
+```
+
+Comprueba la etiqueta publicada y los requisitos de acceso del paquete antes de desplegar en producción. La integración Docker tiene una prueba de handshake MCP en CI.
+
+## Conectar un cliente MCP por HTTP
+
+Para clientes que admiten MCP mediante Streamable HTTP, la URL publicada es:
+
+```text
+https://marketnow.site/api/mcp
+```
+
+Ejemplo de configuración (adapta la estructura al cliente):
+
 ```json
 {
   "mcpServers": {
@@ -63,76 +84,49 @@ Tool contract: deterministic `marketnow_` snake_case names · intent-oriented de
 }
 ```
 
-### Run the MCP server
+La disponibilidad del endpoint alojado es independiente de ejecutar el paquete localmente.
+
+## Arquitectura de repositorios
+
+El ecosistema se divide por responsabilidad para evitar mezclar el producto, el catálogo y el protocolo:
+
+| Repositorio | Propietario funcional |
+| --- | --- |
+| `alicelabs-llc/MARKETNOW` (este repositorio) | Servidor MCP, SDKs, integraciones y herramientas de confianza |
+| `eddyflores100-lang/marketnow` | Sitio del marketplace, datos del catálogo y pipelines de publicación |
+| `alicelabs-llc/universal-trust-adapter` | Especificación y adaptadores del protocolo UTA |
+| `alicelabs-llc/marketnow-submissions` | Cola de propuestas públicas |
+| `alicelabs-llc/status` | Página de estado |
+
+## Desarrollo y validación
+
+El CI de integraciones verifica la construcción de Docker, realiza un handshake MCP por stdio, comprueba la consistencia de versiones y valida la presencia de los artefactos para Cline, Cursor y Docker MCP.
+
+Para el servidor MCP:
+
 ```bash
-npx -y marketnow-mcp
+cd mcp-server
+npm install
+npm test
 ```
 
-### Run it in Docker (audited repo tree, published by CI)
-```bash
-docker run -i --rm ghcr.io/alicelabs-llc/marketnow-mcp:1.16.0
-# or register it in the Docker MCP Toolkit:
-docker mcp gateway add --docker ghcr.io/alicelabs-llc/marketnow-mcp
-```
+Para las comprobaciones del ecosistema, revisa los workflows de [GitHub Actions](.github/workflows/) y ejecuta cada script desde la raíz según su documentación. No existe un único comando de instalación que prepare automáticamente todos los subproyectos y sus toolchains.
 
-### Cline
-Paste the ready block from [`integrations/cline/cline_mcp_settings.json`](integrations/cline/cline_mcp_settings.json) into Cline → MCP Servers → Configure. The repo also ships [`.clinerules/`](.clinerules/) house rules. Guide: [`integrations/cline/README.md`](integrations/cline/README.md).
+## Seguridad y modelo de confianza
 
-### Cursor
-Open this repo as your Cursor workspace — [`.cursor/mcp.json`](.cursor/mcp.json) auto-registers the server, and [`.cursor/rules/marketnow.mdc`](.cursor/rules/marketnow.mdc) teaches Cursor the house rules. Guide: [`integrations/cursor/README.md`](integrations/cursor/README.md).
+La verificación criptográfica no equivale por sí sola a confiar en un emisor. En particular, una clave incluida dentro de una credencial no debe tratarse automáticamente como una raíz de confianza. El servidor documenta los requisitos de clave de CA confiable, evidencia de revocación y el modo explícito de verificación auto-descrita.
 
-### Verify an Agent Trust Card (ATC/1.3)
-```bash
-curl "https://www.marketnow.site/api/atc?action=ca-key"    # public CA key (Ed25519, RFC 8032)
-curl "https://www.marketnow.site/api/atc?action=spec"      # ATC/1.3 specification
-curl "https://www.marketnow.site/api/atc?action=verify&card_id=ATC-2026-XXXXX"
-```
+- [Auditoría del servidor MCP](mcp-server/AUDIT.md)
+- [Registro de verificación](mcp-server/VERIFICATION-LOG.md)
+- [Política de seguridad](SECURITY.md)
+- [Guía de contribución](CONTRIBUTING.md)
 
-## Stats (public, machine-readable)
+Usa claves confiables obtenidas por un canal independiente y verifica el estado de revocación cuando el formato lo requiera. No uses un resultado de modo auto-descrito como una decisión de confianza.
 
-| Metric | Value |
-|--------|-------|
-| MCP servers indexed | **68,388** |
-| Tracked across all sources | **132,737** |
-| Core certified (L1) | 59,946 |
-| Community indexed | 9,131 |
-| Free to install | 68,387 of 68,388 (paid: 1) |
-| Paid | 1 |
-| L1 index checks | 10/10 passing |
-| L2 Sentinel scans | 2,839 of 2,868 npm tarballs |
-| Credential formats | 8 (ATC v3, JWT, W3C VC, A2A, EAT-AI, ZTA, MCP Card, X.509) |
-| Verification pipeline | 12 stages (UTA) |
-| CA | Ed25519 (RFC 8032) |
+## Datos del marketplace
 
-Source of truth: [`https://www.marketnow.site/api/stats.json`](https://www.marketnow.site/api/stats.json) — CI fails if any surface diverges.
+Los recuentos del catálogo, los estados de escaneo y las métricas operativas cambian con los pipelines. Consulta la [API pública de estadísticas](https://www.marketnow.site/api/stats.json) para obtener valores actuales; este README evita fijar cifras que se vuelven obsoletas.
 
-## Security model
+## Licencia
 
-Two levels:
-
-- **L1 — index certification**: all 68,388 entries pass 10 metadata/security checks before being indexed.
-- **L2 — Sentinel scans**: shipped npm tarballs are scanned (2,839 to date) for injection patterns, embedded secrets and dangerous capabilities. Skills that fail are quarantined and published in the transparency report.
-
-## Conformance
-
-Canonical conformance vectors for the UTA pipeline: [`/uta/conformance/vectors/_index.json`](https://www.marketnow.site/uta/conformance/vectors/_index.json) (schema 1.5.0).
-
-## Links
-
-- **Website:** https://www.marketnow.site
-- **GitHub:** https://github.com/alicelabs-llc/marketnow
-- **npm:** https://www.npmjs.com/package/marketnow-mcp
-- **MCP endpoint:** https://marketnow.site/api/mcp (live endpoint reports serverInfo.version 4.0.0)
-- **Stats API:** https://www.marketnow.site/api/stats.json
-- **ATC spec:** https://www.marketnow.site/api/atc?action=spec
-- **CA public key:** https://www.marketnow.site/api/atc?action=ca-key
-
-## License
-
-All code in this repository is PROPRIETARY — property of AliceLabs LLC.
-
-For licensing: legal@alicelabs.site
-For support: support@alicelabs.site
-General: info@alicelabs.site
-
-Built by AliceLabs LLC (Wyoming, USA) — founder Edison Flores.
+El repositorio principal se distribuye bajo los términos indicados en [LICENSE](LICENSE). El paquete `mcp-server` incluye su propio archivo [LICENSE](mcp-server/LICENSE); revisa ambos documentos antes de reutilizar o redistribuir componentes.

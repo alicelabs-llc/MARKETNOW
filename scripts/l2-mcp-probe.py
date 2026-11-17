@@ -25,6 +25,7 @@
 # Output: /tmp/l2_output/probe_results.json
 
 import json
+import shlex
 import subprocess
 import sys
 import os
@@ -169,8 +170,7 @@ def run_probe(command, timeout=30):
     # Start the MCP server process
     try:
         proc = subprocess.Popen(
-            command,
-            shell=True,
+            shlex.split(command),
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
